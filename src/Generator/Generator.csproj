@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MessagePack" Version="2.4.35" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta2" />
+    <PackageReference Include="Microsoft.Windows.SDK.Win32Docs" Version="0.1.8-alpha" />
   </ItemGroup>
 
   <ItemGroup>

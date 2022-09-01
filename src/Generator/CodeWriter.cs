@@ -12,10 +12,12 @@ public sealed class CodeWriter : IDisposable
 
     public int IndentLevel { get; private set; }
     public string Api { get; }
+    public string DocFileName { get; }
 
-    public CodeWriter(string fileName, string api, string ns, params string[] usingNamespaces)
+    public CodeWriter(string fileName, string api, string docFileName, string ns, params string[] usingNamespaces)
     {
         Api = api;
+        DocFileName = docFileName;
 
         _indentStrings = new string[10];
         for (int i = 0; i < _indentStrings.Length; i++)
