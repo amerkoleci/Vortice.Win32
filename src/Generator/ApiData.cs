@@ -14,6 +14,8 @@ public class ApiDataType
 {
     public string Kind { get; set; }
     public string Name { get; set; }
+    public string TargetKind { get; set; }
+    public string Api { get; set; }
 
     // Kind == Array
     public ApiDataArrayShape Shape { get; set; }

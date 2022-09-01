@@ -1,10 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.ComponentModel.DataAnnotations;
 using System.Text;
-using System.Xml.Linq;
-using Microsoft.VisualBasic.FileIO;
 using Newtonsoft.Json;
 
 namespace Generator;
@@ -32,7 +29,7 @@ public static class Program
         {"Single", "float" },
         {"Double", "double" },
 
-        { "BOOL", "Bool32" },
+        { "Foundation.BOOL", "Bool32" },
     };
 
     private static readonly Dictionary<string, string> s_knownTypesPrefixes = new()
@@ -74,26 +71,43 @@ public static class Program
 
         foreach (string jsonFile in jsons)
         {
-            string outputFolder = Path.Combine(outputPath, "Graphics");
-            if (!Directory.Exists(outputFolder))
-            {
-                Directory.CreateDirectory(outputFolder);
-            }
-
             string finalPath = Path.Combine(AppContext.BaseDirectory, "win32json", "api", jsonFile);
             string jsonData = File.ReadAllText(finalPath);
             ApiData? api = JsonConvert.DeserializeObject<ApiData>(jsonData);
-            Generate(api!, outputFolder);
+            Generate(api!, outputPath, jsonFile);
         }
 
         return 0;
     }
 
-    private static void Generate(ApiData api, string outputPath)
+    private static void Generate(ApiData api, string outputPath, string jsonFile)
     {
+        string[] splits = jsonFile.Split(".", StringSplitOptions.RemoveEmptyEntries);
+        string folderRoot = splits[0];
+        string outputFolder = Path.Combine(outputPath, folderRoot);
+
+        if (!Directory.Exists(outputFolder))
+        {
+            Directory.CreateDirectory(outputFolder);
+        }
+
+        string fileName = string.Empty;
+        for (int i = 1; i < splits.Length - 1; i++)
+        {
+            if(string.IsNullOrEmpty(fileName) == false)
+            {
+                fileName += ".";
+            }
+
+            fileName += splits[i];
+        }
+        string ns = fileName;
+        fileName += ".cs";
+
         using var writer = new CodeWriter(
-            Path.Combine(outputPath, "Dxgi.Common.cs"),
-            "Win32.Graphics.Dxgi");
+            Path.Combine(outputFolder, fileName),
+            $"{folderRoot}.{ns}",
+            $"Win32.{folderRoot}.{ns}");
 
         GenerateConstants(writer, api);
         GenerateTypes(writer, api);
@@ -143,7 +157,7 @@ public static class Program
 
         string csTypeName = GetDataTypeName(enumType.Name, out string enumPrefix);
         string baseTypeName = GetTypeName(enumType.IntegerBase);
-        AddCsMapping(enumType.Name, csTypeName);
+        AddCsMapping(writer.Api, enumType.Name, csTypeName);
 
         writer.WriteLine($"/// <unmanaged>{enumType.Name}</unmanaged>");
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
@@ -166,7 +180,7 @@ public static class Program
     private static void GenerateStruct(CodeWriter writer, ApiType structType)
     {
         string csTypeName = GetDataTypeName(structType.Name, out string structPrefix);
-        AddCsMapping(structType.Name, csTypeName);
+        AddCsMapping(writer.Api, structType.Name, csTypeName);
 
         writer.WriteLine($"/// <unmanaged>{structType.Name}</unmanaged>");
         using (writer.PushBlock($"public partial struct {csTypeName}"))
@@ -189,6 +203,7 @@ public static class Program
                     }
 
                     fieldTypeName = GetTypeName(field.Type.Child);
+                    fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
 
                     if (canUseFixed)
                     {
@@ -233,6 +248,7 @@ public static class Program
                 }
                 else
                 {
+                    fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
                     writer.WriteLine($"public {fieldTypeName} {fieldValueName};");
                 }
             }
@@ -249,6 +265,14 @@ public static class Program
         }
 
         return false;
+    }
+
+    private static string NormalizeTypeName(string api, string typeName)
+    {
+        if (!typeName.StartsWith(api))
+            return typeName;
+
+        return typeName.Replace(api + ".", "");
     }
 
     private static string GetDataTypeName(string typeName, out string prefix)
@@ -414,7 +438,7 @@ public static class Program
     {
         if (dataType.Kind == "ApiRef")
         {
-            return GetTypeName(dataType.Name);
+            return GetTypeName($"{dataType.Api}.{dataType.Name}");
         }
         else if (dataType.Kind == "Array")
         {
@@ -428,9 +452,9 @@ public static class Program
         return GetTypeName(dataType.Name);
     }
 
-    private static void AddCsMapping(string typeName, string csTypeName)
+    private static void AddCsMapping(string api, string typeName, string csTypeName)
     {
-        s_csNameMappings[typeName] = csTypeName;
+        s_csNameMappings[$"{api}.{typeName}"] = $"{api}.{csTypeName}";
     }
 
     private static string GetTypeName(string name)

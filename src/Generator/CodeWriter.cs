@@ -11,9 +11,12 @@ public sealed class CodeWriter : IDisposable
     private readonly StreamWriter _writer;
 
     public int IndentLevel { get; private set; }
+    public string Api { get; }
 
-    public CodeWriter(string fileName, string ns, params string[] usingNamespaces)
+    public CodeWriter(string fileName, string api, string ns, params string[] usingNamespaces)
     {
+        Api = api;
+
         _indentStrings = new string[10];
         for (int i = 0; i < _indentStrings.Length; i++)
         {
