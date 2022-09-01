@@ -12,7 +12,7 @@ public sealed class CodeWriter : IDisposable
 
     public int IndentLevel { get; private set; }
 
-    public CodeWriter(string fileName, bool enableNullable, params string[] namespaces)
+    public CodeWriter(string fileName, string ns, params string[] usingNamespaces)
     {
         _indentStrings = new string[10];
         for (int i = 0; i < _indentStrings.Length; i++)
@@ -31,23 +31,18 @@ public sealed class CodeWriter : IDisposable
         _writer.WriteLine("// ------------------------------------------------------------------------------");
         _writer.WriteLine();
 
-        if (enableNullable)
+        _writer.WriteLine($"using System;");
+        _writer.WriteLine($"using System.Runtime.CompilerServices;");
+        _writer.WriteLine($"using System.Diagnostics.CodeAnalysis;");
+
+        foreach (string usingNamespace in usingNamespaces)
         {
-            _writer.WriteLine($"#nullable enable");
-            _writer.WriteLine();
+            _writer.WriteLine($"using {usingNamespace};");
         }
 
-        foreach (string ns in namespaces)
-        {
-            _writer.WriteLine($"using {ns};");
-        }
+        _writer.WriteLine();
 
-        if (namespaces.Length > 0)
-        {
-            _writer.WriteLine();
-        }
-
-        _writer.WriteLine("namespace Vortice.Vulkan;");
+        _writer.WriteLine($"namespace {ns};");
         _writer.WriteLine();
     }
 
@@ -76,6 +71,12 @@ public sealed class CodeWriter : IDisposable
     {
         WriteIndented(@string);
         _writer.WriteLine();
+        _shouldIndent = true;
+    }
+
+    public void WriteUndindented(string @string)
+    {
+        _writer.WriteLine(@string);
         _shouldIndent = true;
     }
 

@@ -8,10 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="vulkan/*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="vk_video/*.*">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="win32json/api/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
