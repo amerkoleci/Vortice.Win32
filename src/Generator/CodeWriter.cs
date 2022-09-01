@@ -42,7 +42,11 @@ public sealed class CodeWriter : IDisposable
         {
             _writer.WriteLine($"using {usingNamespace};");
         }
+        _writer.WriteLine();
 
+        _writer.WriteLine("#if NETSTANDARD2_0");
+        _writer.WriteLine("using MemoryMarshal = Win32.MemoryMarshal;");
+        _writer.WriteLine("#endif");
         _writer.WriteLine();
 
         _writer.WriteLine($"namespace {ns};");

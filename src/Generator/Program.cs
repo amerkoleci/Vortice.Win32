@@ -10,7 +10,8 @@ public static class Program
 {
     private static readonly string[] jsons = new[]
     {
-        "Graphics.Dxgi.Common.json"
+        "Graphics.Dxgi.Common.json",
+        "Graphics.Dxgi.json"
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -29,12 +30,26 @@ public static class Program
         {"Single", "float" },
         {"Double", "double" },
 
+        {"IntPtr", "nint" },
+        {"UIntPtr", "nuint" },
+
         { "Foundation.BOOL", "Bool32" },
+        { "Foundation.HRESULT", "HResult" },
+        { "Foundation.LUID", "Luid" },
+        { "Foundation.LARGE_INTEGER", "LargeInterger" },
+
+        // TODO: Understand those ->
+        { "Foundation.HWND", "IntPtr" },
+        { "Foundation.HANDLE", "IntPtr" },
+        { "Foundation.POINT", "System.Drawing.Point" },
+        { "Foundation.RECT", "RawRect" },
+        { "Graphics.Gdi.HMONITOR", "IntPtr" },
     };
 
     private static readonly Dictionary<string, string> s_knownTypesPrefixes = new()
     {
         { "DXGI_COLOR_SPACE_TYPE", "DXGI_COLOR_SPACE" },
+        { "DXGI_COMPUTE_PREEMPTION_GRANULARITY", "DXGI_COMPUTE_PREEMPTION" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -122,8 +137,19 @@ public static class Program
                 if (ShouldSkipConstant(constant))
                     continue;
 
-                string typeName = GetTypeName(constant.ValueType);
-                writer.WriteLine($"public const {typeName} {constant.Name} = {constant.Value};");
+                string typeName = GetTypeName(constant.Type);
+                if (typeName == "Guid")
+                {
+                    writer.WriteLine($"public static readonly Guid {constant.Name} = {FormatGuid(constant.Value.ToString())};");
+                }
+                else if (typeName == "HResult")
+                {
+                    writer.WriteLine($"public static readonly HResult {constant.Name} = {constant.Value};");
+                }
+                else
+                {
+                    writer.WriteLine($"public const {typeName} {constant.Name} = {constant.Value};");
+                }
             }
         }
         writer.WriteLine();
@@ -150,16 +176,16 @@ public static class Program
 
     private static void GenerateEnum(CodeWriter writer, ApiType enumType)
     {
-        if (enumType.Flags)
-        {
-            writer.WriteLine("[Flags]");
-        }
-
         string csTypeName = GetDataTypeName(enumType.Name, out string enumPrefix);
         string baseTypeName = GetTypeName(enumType.IntegerBase);
         AddCsMapping(writer.Api, enumType.Name, csTypeName);
 
         writer.WriteLine($"/// <unmanaged>{enumType.Name}</unmanaged>");
+
+        if (enumType.Flags)
+        {
+            writer.WriteLine("[Flags]");
+        }
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
         {
             foreach (ApiEnumValue value in enumType.Values)
@@ -237,19 +263,21 @@ public static class Program
                             writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
                             using (writer.PushBlock($"public Span<{fieldTypeName}> AsSpan()"))
                             {
-                                writer.WriteUndindented("#if NET6_0_OR_GREATER");
                                 writer.WriteLine($"return MemoryMarshal.CreateSpan(ref e0, {field.Type.Shape.Size});");
-                                writer.WriteUndindented("#else");
-                                writer.WriteLine($"return new(Unsafe.AsPointer(ref e0), {field.Type.Shape.Size});");
-                                writer.WriteUndindented("#endif");
                             }
                         }
                     }
                 }
                 else
                 {
+                    string unsafePrefix = string.Empty;
                     fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
-                    writer.WriteLine($"public {fieldTypeName} {fieldValueName};");
+                    if(fieldTypeName.EndsWith("*"))
+                    {
+                        unsafePrefix += "unsafe ";
+                    }
+
+                    writer.WriteLine($"public {unsafePrefix}{fieldTypeName} {fieldValueName};");
                 }
             }
         }
@@ -434,6 +462,26 @@ public static class Program
         return (char.IsNumber(prettyName[0])) ? "_" + prettyName : prettyName;
     }
 
+    private static string FormatGuid(string value)
+    {
+        var guid = Guid.Parse(value).ToString("N");
+
+        var a = "0x" + guid.Substring(0, 8);
+        var b = "0x" + guid.Substring(8, 4);
+        var c = "0x" + guid.Substring(12, 4);
+        var d = "0x" + guid.Substring(16, 2);
+        var e = "0x" + guid.Substring(18, 2);
+        var f = "0x" + guid.Substring(20, 2);
+        var g = "0x" + guid.Substring(22, 2);
+        var h = "0x" + guid.Substring(24, 2);
+        var i = "0x" + guid.Substring(26, 2);
+        var j = "0x" + guid.Substring(28, 2);
+        var k = "0x" + guid.Substring(30, 2);
+
+        return $"new Guid({a}, {b}, {c}, {d}, {e}, {f}, {g}, {h}, {i}, {j}, {k})";
+    }
+
+
     private static string GetTypeName(ApiDataType dataType)
     {
         if (dataType.Kind == "ApiRef")
@@ -446,7 +494,7 @@ public static class Program
         }
         else if (dataType.Kind == "PointerTo")
         {
-            throw new NotImplementedException();
+            return GetTypeName(dataType.Child) + "*";
         }
 
         return GetTypeName(dataType.Name);

@@ -11,6 +11,10 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Diagnostics.CodeAnalysis;
 
+#if NETSTANDARD2_0
+using MemoryMarshal = Win32.MemoryMarshal;
+#endif
+
 namespace Win32.Graphics.Dxgi.Common;
 
 public static partial class Apis
@@ -1456,11 +1460,7 @@ public partial struct GammaControl
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public Span<Rgb> AsSpan()
 		{
-#if NET6_0_OR_GREATER
 			return MemoryMarshal.CreateSpan(ref e0, 1025);
-#else
-			return new(Unsafe.AsPointer(ref e0), 1025);
-#endif
 		}
 	}
 }
