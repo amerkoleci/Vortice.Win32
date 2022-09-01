@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31808.319
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32", "src\Vortice.Win32\Vortice.Win32.csproj", "{428306C9-6B88-4296-AD5C-82778B3D675B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generator", "src\Generator\Generator.csproj", "{41382FC3-7129-46CA-9D0F-52302C1ED692}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{08F6AF96-809B-45C5-BE6C-5BAB7D9AFB60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-ClearScreen", "src\samples\01-ClearScreen\01-ClearScreen.csproj", "{5A10816D-90A4-4AEA-B06E-6A463DA4A891}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{065268A8-16E6-4CFF-8F67-3FD99155877F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		LICENSE = LICENSE
+		NuGet.config = NuGet.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{428306C9-6B88-4296-AD5C-82778B3D675B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428306C9-6B88-4296-AD5C-82778B3D675B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428306C9-6B88-4296-AD5C-82778B3D675B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428306C9-6B88-4296-AD5C-82778B3D675B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41382FC3-7129-46CA-9D0F-52302C1ED692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41382FC3-7129-46CA-9D0F-52302C1ED692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41382FC3-7129-46CA-9D0F-52302C1ED692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41382FC3-7129-46CA-9D0F-52302C1ED692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A10816D-90A4-4AEA-B06E-6A463DA4A891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A10816D-90A4-4AEA-B06E-6A463DA4A891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A10816D-90A4-4AEA-B06E-6A463DA4A891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A10816D-90A4-4AEA-B06E-6A463DA4A891}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A10816D-90A4-4AEA-B06E-6A463DA4A891} = {08F6AF96-809B-45C5-BE6C-5BAB7D9AFB60}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF0375B3-E304-4A53-8E5F-FC9D23743647}
+	EndGlobalSection
+EndGlobal
