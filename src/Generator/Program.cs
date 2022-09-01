@@ -3,7 +3,6 @@
 
 using System.Text;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Generator;
 
@@ -58,11 +57,23 @@ public static class Program
         { "DXGI_RECLAIM_RESOURCE_RESULTS", "DXGI_RECLAIM_RESOURCE_RESULT" },
         { "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS", "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG" },
         { "DXGI_DEBUG_RLO_FLAGS", "DXGI_DEBUG_RLO" },
+        { "DXGI_OFFER_RESOURCE_FLAGS", "DXGI_OFFER_RESOURCE_FLAG" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
     {
-        { "DXGI_FORMAT_420_OPAQUE", "Opaque420" }
+        { "DXGI_FORMAT_420_OPAQUE", "Opaque420" },
+        { "DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY", "CompositedUICaptureOnly" },
+    };
+
+    private static readonly Dictionary<string, bool> s_generatedEnums = new()
+    {
+        {"DXGI_CPU_ACCESS", false },
+        {"DXGI_USAGE", true },
+        {"DXGI_MAP", true },
+        {"DXGI_PRESENT", true },
+        {"DXGI_MWA", true },
+        {"DXGI_ENUM_MODES", true },
     };
 
     private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
@@ -81,7 +92,12 @@ public static class Program
     {
         { "DXGI_ADAPTER_FLAG", "AdapterFlags" },
         { "DXGI_ADAPTER_FLAG3", "AdapterFlags3" },
-        { "DXGI_SWAP_CHAIN_FLAG", "SwapChainFlags" }
+        { "DXGI_SWAP_CHAIN_FLAG", "SwapChainFlags" },
+
+        // Generated
+        { "DXGI_MAP", "MapFlags" },
+        { "DXGI_ENUM_MODES", "EnumModesFlags" },
+        { "DXGI_MWA", "WindowAssociationFlags" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -93,6 +109,8 @@ public static class Program
         { "DXGI_SWAP_CHAIN_DESC1::BufferUsage", "Usage" },
         { "DXGI_SWAP_CHAIN_DESC1::Flags", "DXGI_SWAP_CHAIN_FLAG" },
     };
+
+    private static bool s_generateUnmanagedDocs = true;
 
     public static int Main(string[] args)
     {
@@ -165,6 +183,19 @@ public static class Program
                 if (ShouldSkipConstant(constant))
                     continue;
 
+                bool skipValue = false;
+                foreach (var enumToGenerate in s_generatedEnums)
+                {
+                    if (constant.Name.StartsWith(enumToGenerate.Key))
+                    {
+                        skipValue = true;
+                        break;
+                    }
+                }
+
+                if (skipValue)
+                    continue;
+
                 string typeName = GetTypeName(constant.Type);
                 if (typeName == "Guid")
                 {
@@ -193,6 +224,59 @@ public static class Program
         writer.WriteLine($"#endregion Enums");
         writer.WriteLine();
 
+        // Generated enums -> from constants
+        writer.WriteLine($"#region Generated Enums");
+        var createdEnums = new Dictionary<string, ApiType>();
+
+        foreach (var constant in api.Constants)
+        {
+            if (ShouldSkipConstant(constant))
+                continue;
+
+            foreach (var enumToGenerate in s_generatedEnums)
+            {
+                if (constant.Name.StartsWith(enumToGenerate.Key))
+                {
+                    ApiType createdEnumType;
+                    if (!createdEnums.ContainsKey(enumToGenerate.Key))
+                    {
+                        ApiType apiType = new()
+                        {
+                            Name = enumToGenerate.Key,
+                            Kind = "Enum",
+                            Flags = enumToGenerate.Value,
+                            Scoped = false,
+                            IntegerBase = constant.Type.Name
+                        };
+                        createdEnums.Add(enumToGenerate.Key, apiType);
+                        createdEnumType = apiType;
+                    }
+                    else
+                    {
+                        createdEnumType = createdEnums[enumToGenerate.Key];
+                    }
+
+                    ApiEnumValue enumValue = new ApiEnumValue
+                    {
+                        Name = constant.Name,
+                        Value = constant.Value
+                    };
+                    createdEnumType.Values.Add(enumValue);
+
+                    //string enumValueName = GetPrettyFieldName(constant.Name, createdEnumName);
+                    //writer.WriteLine($"{enumValueName} = {constant.Value},");
+                }
+            }
+        }
+
+        foreach (ApiType enumType in createdEnums.Values)
+        {
+            GenerateEnum(writer, enumType);
+        }
+
+        writer.WriteLine($"#endregion Generated Enums");
+        writer.WriteLine();
+
         writer.WriteLine($"#region Structs");
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
@@ -208,14 +292,24 @@ public static class Program
         string baseTypeName = GetTypeName(enumType.IntegerBase);
         AddCsMapping(writer.Api, enumType.Name, csTypeName);
 
-        writer.WriteLine($"/// <unmanaged>{enumType.Name}</unmanaged>");
+        if (s_generateUnmanagedDocs)
+            writer.WriteLine($"/// <unmanaged>{enumType.Name}</unmanaged>");
 
         if (enumType.Flags)
         {
             writer.WriteLine("[Flags]");
         }
+
+        bool noneAdded = false;
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
         {
+            if (enumType.Flags &&
+                !enumType.Values.Any(item => GetPrettyFieldName(item.Name, enumPrefix) == "None"))
+            {
+                writer.WriteLine("None = 0,");
+                noneAdded = true;
+            }
+
             foreach (ApiEnumValue value in enumType.Values)
             {
                 if (value.Name.EndsWith("_FORCE_DWORD") ||
@@ -223,7 +317,16 @@ public static class Program
                     continue;
 
                 string enumValueName = GetPrettyFieldName(value.Name, enumPrefix);
-                writer.WriteLine($"/// <unmanaged>{value.Name}</unmanaged>");
+                if (s_generateUnmanagedDocs)
+                {
+                    writer.WriteLine($"/// <unmanaged>{value.Name}</unmanaged>");
+                }
+
+                if (enumValueName.StartsWith("DXGI_MSG_"))
+                {
+                    enumValueName = enumValueName.Substring("DXGI_MSG_".Length);
+                }
+
                 writer.WriteLine($"{enumValueName} = {value.Value},");
             }
         }
@@ -236,7 +339,11 @@ public static class Program
         string csTypeName = GetDataTypeName(structType.Name, out string structPrefix);
         AddCsMapping(writer.Api, structType.Name, csTypeName);
 
-        writer.WriteLine($"/// <unmanaged>{structType.Name}</unmanaged>");
+        if (s_generateUnmanagedDocs)
+        {
+            writer.WriteLine($"/// <unmanaged>{structType.Name}</unmanaged>");
+        }
+
         using (writer.PushBlock($"public partial struct {csTypeName}"))
         {
             foreach (ApiStructField field in structType.Fields)
@@ -246,7 +353,10 @@ public static class Program
 
                 string fieldValueName = GetPrettyFieldName(field.Name, structPrefix);
                 string fieldTypeName = GetTypeName(field.Type);
-                //writer.WriteLine($"/// <unmanaged>{field.Name}</unmanaged>");
+                if (s_generateUnmanagedDocs)
+                {
+                    //writer.WriteLine($"/// <unmanaged>{field.Name}</unmanaged>");
+                }
 
                 string remapFieldLookUp = $"{structType.Name}::{field.Name}";
                 if (s_structFieldTypeRemap.TryGetValue(remapFieldLookUp, out string? remapType))
@@ -321,7 +431,8 @@ public static class Program
 
     private static bool ShouldSkipConstant(ApiDataConstant constant)
     {
-        if (constant.Name == "_FACDXGI")
+        if (constant.Name == "_FACDXGI" ||
+            constant.Name == "DXGI_FORMAT_DEFINED")
         {
             return true;
         }

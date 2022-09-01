@@ -19,34 +19,7 @@ namespace Win32.Graphics.Dxgi;
 
 public static partial class Apis
 {
-	public const uint DXGI_USAGE_SHADER_INPUT = 16;
-	public const uint DXGI_USAGE_RENDER_TARGET_OUTPUT = 32;
-	public const uint DXGI_USAGE_BACK_BUFFER = 64;
-	public const uint DXGI_USAGE_SHARED = 128;
-	public const uint DXGI_USAGE_READ_ONLY = 256;
-	public const uint DXGI_USAGE_DISCARD_ON_PRESENT = 512;
-	public const uint DXGI_USAGE_UNORDERED_ACCESS = 1024;
-	public const uint DXGI_MAP_READ = 1;
-	public const uint DXGI_MAP_WRITE = 2;
-	public const uint DXGI_MAP_DISCARD = 4;
-	public const uint DXGI_ENUM_MODES_INTERLACED = 1;
-	public const uint DXGI_ENUM_MODES_SCALING = 2;
 	public const uint DXGI_MAX_SWAP_CHAIN_BUFFERS = 16;
-	public const uint DXGI_PRESENT_TEST = 1;
-	public const uint DXGI_PRESENT_DO_NOT_SEQUENCE = 2;
-	public const uint DXGI_PRESENT_RESTART = 4;
-	public const uint DXGI_PRESENT_DO_NOT_WAIT = 8;
-	public const uint DXGI_PRESENT_STEREO_PREFER_RIGHT = 16;
-	public const uint DXGI_PRESENT_STEREO_TEMPORARY_MONO = 32;
-	public const uint DXGI_PRESENT_RESTRICT_TO_OUTPUT = 64;
-	public const uint DXGI_PRESENT_USE_DURATION = 256;
-	public const uint DXGI_PRESENT_ALLOW_TEARING = 512;
-	public const uint DXGI_MWA_NO_WINDOW_CHANGES = 1;
-	public const uint DXGI_MWA_NO_ALT_ENTER = 2;
-	public const uint DXGI_MWA_NO_PRINT_SCREEN = 4;
-	public const uint DXGI_MWA_VALID = 7;
-	public const uint DXGI_ENUM_MODES_STEREO = 4;
-	public const uint DXGI_ENUM_MODES_DISABLED_STEREO = 8;
 	public const uint DXGI_SHARED_RESOURCE_READ = 2147483648;
 	public const uint DXGI_SHARED_RESOURCE_WRITE = 1;
 	public const uint DXGI_DEBUG_BINARY_VERSION = 1;
@@ -299,7 +272,7 @@ public enum MemorySegmentGroup : int
 public enum OutduplFlag : int
 {
 	/// <unmanaged>DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY</unmanaged>
-	DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY = 1,
+	CompositedUICaptureOnly = 1,
 }
 
 /// <unmanaged>DXGI_HDR_METADATA_TYPE</unmanaged>
@@ -317,7 +290,7 @@ public enum HdrMetadataType : int
 public enum OfferResourceFlags : int
 {
 	/// <unmanaged>DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT</unmanaged>
-	DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT = 1,
+	AllowDecommit = 1,
 }
 
 /// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULTS</unmanaged>
@@ -362,6 +335,7 @@ public enum AdapterFlags3 : uint
 [Flags]
 public enum HardwareCompositionSupportFlags : uint
 {
+	None = 0,
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN</unmanaged>
 	Fullscreen = 1,
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED</unmanaged>
@@ -385,6 +359,7 @@ public enum GpuPreference : int
 [Flags]
 public enum DebugRloFlags : uint
 {
+	None = 0,
 	/// <unmanaged>DXGI_DEBUG_RLO_SUMMARY</unmanaged>
 	Summary = 1,
 	/// <unmanaged>DXGI_DEBUG_RLO_DETAIL</unmanaged>
@@ -441,670 +416,762 @@ public enum InfoQueueMessageSeverity : int
 public enum MessageId : int
 {
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow</unmanaged>
-	DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow = 0,
+	IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow = 0,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferWidthInferred</unmanaged>
-	DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferWidthInferred = 1,
+	IDXGISwapChain_CreationOrResizeBuffers_BufferWidthInferred = 1,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferHeightInferred</unmanaged>
-	DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferHeightInferred = 2,
+	IDXGISwapChain_CreationOrResizeBuffers_BufferHeightInferred = 2,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_NoScanoutFlagChanged</unmanaged>
-	DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_NoScanoutFlagChanged = 3,
+	IDXGISwapChain_CreationOrResizeBuffers_NoScanoutFlagChanged = 3,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_MaxBufferCountExceeded</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Creation_MaxBufferCountExceeded = 4,
+	IDXGISwapChain_Creation_MaxBufferCountExceeded = 4,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_TooFewBuffers</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Creation_TooFewBuffers = 5,
+	IDXGISwapChain_Creation_TooFewBuffers = 5,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_NoOutputWindow</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Creation_NoOutputWindow = 6,
+	IDXGISwapChain_Creation_NoOutputWindow = 6,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Destruction_OtherMethodsCalled</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Destruction_OtherMethodsCalled = 7,
+	IDXGISwapChain_Destruction_OtherMethodsCalled = 7,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetDesc_pDescIsNULL</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetDesc_pDescIsNULL = 8,
+	IDXGISwapChain_GetDesc_pDescIsNULL = 8,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetBuffer_ppSurfaceIsNULL</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetBuffer_ppSurfaceIsNULL = 9,
+	IDXGISwapChain_GetBuffer_ppSurfaceIsNULL = 9,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetBuffer_NoAllocatedBuffers</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetBuffer_NoAllocatedBuffers = 10,
+	IDXGISwapChain_GetBuffer_NoAllocatedBuffers = 10,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferMustBeZero</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferMustBeZero = 11,
+	IDXGISwapChain_GetBuffer_iBufferMustBeZero = 11,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferOOB</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferOOB = 12,
+	IDXGISwapChain_GetBuffer_iBufferOOB = 12,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetContainingOutput_ppOutputIsNULL</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetContainingOutput_ppOutputIsNULL = 13,
+	IDXGISwapChain_GetContainingOutput_ppOutputIsNULL = 13,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_SyncIntervalOOB</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_SyncIntervalOOB = 14,
+	IDXGISwapChain_Present_SyncIntervalOOB = 14,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_InvalidNonPreRotatedFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_InvalidNonPreRotatedFlag = 15,
+	IDXGISwapChain_Present_InvalidNonPreRotatedFlag = 15,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_NoAllocatedBuffers</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_NoAllocatedBuffers = 16,
+	IDXGISwapChain_Present_NoAllocatedBuffers = 16,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_GetDXGIAdapterFailed</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_GetDXGIAdapterFailed = 17,
+	IDXGISwapChain_Present_GetDXGIAdapterFailed = 17,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOB</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOB = 18,
+	IDXGISwapChain_ResizeBuffers_BufferCountOOB = 18,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_UnreleasedReferences</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_UnreleasedReferences = 19,
+	IDXGISwapChain_ResizeBuffers_UnreleasedReferences = 19,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidSwapChainFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidSwapChainFlag = 20,
+	IDXGISwapChain_ResizeBuffers_InvalidSwapChainFlag = 20,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidNonPreRotatedFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidNonPreRotatedFlag = 21,
+	IDXGISwapChain_ResizeBuffers_InvalidNonPreRotatedFlag = 21,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeTarget_RefreshRateDivideByZero</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeTarget_RefreshRateDivideByZero = 22,
+	IDXGISwapChain_ResizeTarget_RefreshRateDivideByZero = 22,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_InvalidTarget</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_InvalidTarget = 23,
+	IDXGISwapChain_SetFullscreenState_InvalidTarget = 23,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetFrameStatistics_pStatsIsNULL</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetFrameStatistics_pStatsIsNULL = 24,
+	IDXGISwapChain_GetFrameStatistics_pStatsIsNULL = 24,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetLastPresentCount_pLastPresentCountIsNULL</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetLastPresentCount_pLastPresentCountIsNULL = 25,
+	IDXGISwapChain_GetLastPresentCount_pLastPresentCountIsNULL = 25,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_RemoteNotSupported</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_RemoteNotSupported = 26,
+	IDXGISwapChain_SetFullscreenState_RemoteNotSupported = 26,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_FailedToAcquireFullscreenMutex</unmanaged>
-	DXGI_MSG_IDXGIOutput_TakeOwnership_FailedToAcquireFullscreenMutex = 27,
+	IDXGIOutput_TakeOwnership_FailedToAcquireFullscreenMutex = 27,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ppAdapterInterfaceIsNULL</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ppAdapterInterfaceIsNULL = 28,
+	IDXGIFactory_CreateSoftwareAdapter_ppAdapterInterfaceIsNULL = 28,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_EnumAdapters_ppAdapterInterfaceIsNULL</unmanaged>
-	DXGI_MSG_IDXGIFactory_EnumAdapters_ppAdapterInterfaceIsNULL = 29,
+	IDXGIFactory_EnumAdapters_ppAdapterInterfaceIsNULL = 29,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ppSwapChainIsNULL</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_ppSwapChainIsNULL = 30,
+	IDXGIFactory_CreateSwapChain_ppSwapChainIsNULL = 30,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_pDescIsNULL</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_pDescIsNULL = 31,
+	IDXGIFactory_CreateSwapChain_pDescIsNULL = 31,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_UnknownSwapEffect</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_UnknownSwapEffect = 32,
+	IDXGIFactory_CreateSwapChain_UnknownSwapEffect = 32,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFlags</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFlags = 33,
+	IDXGIFactory_CreateSwapChain_InvalidFlags = 33,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedFlagAndWindowed</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedFlagAndWindowed = 34,
+	IDXGIFactory_CreateSwapChain_NonPreRotatedFlagAndWindowed = 34,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_NullDeviceInterface</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_NullDeviceInterface = 35,
+	IDXGIFactory_CreateSwapChain_NullDeviceInterface = 35,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetWindowAssociation_phWndIsNULL</unmanaged>
-	DXGI_MSG_IDXGIFactory_GetWindowAssociation_phWndIsNULL = 36,
+	IDXGIFactory_GetWindowAssociation_phWndIsNULL = 36,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_MakeWindowAssociation_InvalidFlags</unmanaged>
-	DXGI_MSG_IDXGIFactory_MakeWindowAssociation_InvalidFlags = 37,
+	IDXGIFactory_MakeWindowAssociation_InvalidFlags = 37,
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_InvalidSurface</unmanaged>
-	DXGI_MSG_IDXGISurface_Map_InvalidSurface = 38,
+	IDXGISurface_Map_InvalidSurface = 38,
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_FlagsSetToZero</unmanaged>
-	DXGI_MSG_IDXGISurface_Map_FlagsSetToZero = 39,
+	IDXGISurface_Map_FlagsSetToZero = 39,
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_DiscardAndReadFlagSet</unmanaged>
-	DXGI_MSG_IDXGISurface_Map_DiscardAndReadFlagSet = 40,
+	IDXGISurface_Map_DiscardAndReadFlagSet = 40,
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_DiscardButNotWriteFlagSet</unmanaged>
-	DXGI_MSG_IDXGISurface_Map_DiscardButNotWriteFlagSet = 41,
+	IDXGISurface_Map_DiscardButNotWriteFlagSet = 41,
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_NoCPUAccess</unmanaged>
-	DXGI_MSG_IDXGISurface_Map_NoCPUAccess = 42,
+	IDXGISurface_Map_NoCPUAccess = 42,
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_ReadFlagSetButCPUAccessIsDynamic</unmanaged>
-	DXGI_MSG_IDXGISurface_Map_ReadFlagSetButCPUAccessIsDynamic = 43,
+	IDXGISurface_Map_ReadFlagSetButCPUAccessIsDynamic = 43,
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_DiscardFlagSetButCPUAccessIsNotDynamic</unmanaged>
-	DXGI_MSG_IDXGISurface_Map_DiscardFlagSetButCPUAccessIsNotDynamic = 44,
+	IDXGISurface_Map_DiscardFlagSetButCPUAccessIsNotDynamic = 44,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplayModeList_pNumModesIsNULL</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetDisplayModeList_pNumModesIsNULL = 45,
+	IDXGIOutput_GetDisplayModeList_pNumModesIsNULL = 45,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasInvalidWidthOrHeight</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasInvalidWidthOrHeight = 46,
+	IDXGIOutput_FindClosestMatchingMode_ModeHasInvalidWidthOrHeight = 46,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetCammaControlCapabilities_NoOwnerDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetCammaControlCapabilities_NoOwnerDevice = 47,
+	IDXGIOutput_GetCammaControlCapabilities_NoOwnerDevice = 47,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_pDeviceIsNULL</unmanaged>
-	DXGI_MSG_IDXGIOutput_TakeOwnership_pDeviceIsNULL = 48,
+	IDXGIOutput_TakeOwnership_pDeviceIsNULL = 48,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_NoOwnerDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_NoOwnerDevice = 49,
+	IDXGIOutput_GetDisplaySurfaceData_NoOwnerDevice = 49,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_pDestinationIsNULL</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_pDestinationIsNULL = 50,
+	IDXGIOutput_GetDisplaySurfaceData_pDestinationIsNULL = 50,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_MapOfDestinationFailed</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_MapOfDestinationFailed = 51,
+	IDXGIOutput_GetDisplaySurfaceData_MapOfDestinationFailed = 51,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetFrameStatistics_NoOwnerDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetFrameStatistics_NoOwnerDevice = 52,
+	IDXGIOutput_GetFrameStatistics_NoOwnerDevice = 52,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetFrameStatistics_pStatsIsNULL</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetFrameStatistics_pStatsIsNULL = 53,
+	IDXGIOutput_GetFrameStatistics_pStatsIsNULL = 53,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetGammaControl_NoOwnerDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput_SetGammaControl_NoOwnerDevice = 54,
+	IDXGIOutput_SetGammaControl_NoOwnerDevice = 54,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetGammaControl_NoOwnerDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetGammaControl_NoOwnerDevice = 55,
+	IDXGIOutput_GetGammaControl_NoOwnerDevice = 55,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetGammaControl_NoGammaControls</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetGammaControl_NoGammaControls = 56,
+	IDXGIOutput_GetGammaControl_NoGammaControls = 56,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetDisplaySurface_IDXGIResourceNotSupportedBypPrimary</unmanaged>
-	DXGI_MSG_IDXGIOutput_SetDisplaySurface_IDXGIResourceNotSupportedBypPrimary = 57,
+	IDXGIOutput_SetDisplaySurface_IDXGIResourceNotSupportedBypPrimary = 57,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetDisplaySurface_pPrimaryIsInvalid</unmanaged>
-	DXGI_MSG_IDXGIOutput_SetDisplaySurface_pPrimaryIsInvalid = 58,
+	IDXGIOutput_SetDisplaySurface_pPrimaryIsInvalid = 58,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetDisplaySurface_NoOwnerDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput_SetDisplaySurface_NoOwnerDevice = 59,
+	IDXGIOutput_SetDisplaySurface_NoOwnerDevice = 59,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteDeviceNotSupported</unmanaged>
-	DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteDeviceNotSupported = 60,
+	IDXGIOutput_TakeOwnership_RemoteDeviceNotSupported = 60,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteDeviceNotSupported</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteDeviceNotSupported = 61,
+	IDXGIOutput_GetDisplayModeList_RemoteDeviceNotSupported = 61,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteDeviceNotSupported</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteDeviceNotSupported = 62,
+	IDXGIOutput_FindClosestMatchingMode_RemoteDeviceNotSupported = 62,
 	/// <unmanaged>DXGI_MSG_IDXGIDevice_CreateSurface_InvalidParametersWithpSharedResource</unmanaged>
-	DXGI_MSG_IDXGIDevice_CreateSurface_InvalidParametersWithpSharedResource = 63,
+	IDXGIDevice_CreateSurface_InvalidParametersWithpSharedResource = 63,
 	/// <unmanaged>DXGI_MSG_IDXGIObject_GetPrivateData_puiDataSizeIsNULL</unmanaged>
-	DXGI_MSG_IDXGIObject_GetPrivateData_puiDataSizeIsNULL = 64,
+	IDXGIObject_GetPrivateData_puiDataSizeIsNULL = 64,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_InvalidOutputWindow</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Creation_InvalidOutputWindow = 65,
+	IDXGISwapChain_Creation_InvalidOutputWindow = 65,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Release_SwapChainIsFullscreen</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Release_SwapChainIsFullscreen = 66,
+	IDXGISwapChain_Release_SwapChainIsFullscreen = 66,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_InvalidTargetSurfaceFormat</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_InvalidTargetSurfaceFormat = 67,
+	IDXGIOutput_GetDisplaySurfaceData_InvalidTargetSurfaceFormat = 67,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ModuleIsNULL</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ModuleIsNULL = 68,
+	IDXGIFactory_CreateSoftwareAdapter_ModuleIsNULL = 68,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_IDXGIDeviceNotSupportedBypConcernedDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_IDXGIDeviceNotSupportedBypConcernedDevice = 69,
+	IDXGIOutput_FindClosestMatchingMode_IDXGIDeviceNotSupportedBypConcernedDevice = 69,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_pModeToMatchOrpClosestMatchIsNULL</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_pModeToMatchOrpClosestMatchIsNULL = 70,
+	IDXGIOutput_FindClosestMatchingMode_pModeToMatchOrpClosestMatchIsNULL = 70,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasRefreshRateDenominatorZero</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasRefreshRateDenominatorZero = 71,
+	IDXGIOutput_FindClosestMatchingMode_ModeHasRefreshRateDenominatorZero = 71,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_UnknownFormatIsInvalidForConfiguration</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_UnknownFormatIsInvalidForConfiguration = 72,
+	IDXGIOutput_FindClosestMatchingMode_UnknownFormatIsInvalidForConfiguration = 72,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScanlineOrdering</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScanlineOrdering = 73,
+	IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScanlineOrdering = 73,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScaling</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScaling = 74,
+	IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScaling = 74,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeFormatAndDeviceCombination</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeFormatAndDeviceCombination = 75,
+	IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeFormatAndDeviceCombination = 75,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_Creation_CalledFromDllMain</unmanaged>
-	DXGI_MSG_IDXGIFactory_Creation_CalledFromDllMain = 76,
+	IDXGIFactory_Creation_CalledFromDllMain = 76,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_OutputNotOwnedBySwapChainDevice</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_OutputNotOwnedBySwapChainDevice = 77,
+	IDXGISwapChain_SetFullscreenState_OutputNotOwnedBySwapChainDevice = 77,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_InvalidWindowStyle</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Creation_InvalidWindowStyle = 78,
+	IDXGISwapChain_Creation_InvalidWindowStyle = 78,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetFrameStatistics_UnsupportedStatistics</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetFrameStatistics_UnsupportedStatistics = 79,
+	IDXGISwapChain_GetFrameStatistics_UnsupportedStatistics = 79,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetContainingOutput_SwapchainAdapterDoesNotControlOutput</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetContainingOutput_SwapchainAdapterDoesNotControlOutput = 80,
+	IDXGISwapChain_GetContainingOutput_SwapchainAdapterDoesNotControlOutput = 80,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetOrGetGammaControl_pArrayIsNULL</unmanaged>
-	DXGI_MSG_IDXGIOutput_SetOrGetGammaControl_pArrayIsNULL = 81,
+	IDXGIOutput_SetOrGetGammaControl_pArrayIsNULL = 81,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_FullscreenInvalidForChildWindows</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_FullscreenInvalidForChildWindows = 82,
+	IDXGISwapChain_SetFullscreenState_FullscreenInvalidForChildWindows = 82,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_Release_CalledFromDllMain</unmanaged>
-	DXGI_MSG_IDXGIFactory_Release_CalledFromDllMain = 83,
+	IDXGIFactory_Release_CalledFromDllMain = 83,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_UnreleasedHDC</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_UnreleasedHDC = 84,
+	IDXGISwapChain_Present_UnreleasedHDC = 84,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_NonPreRotatedAndGDICompatibleFlags</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_NonPreRotatedAndGDICompatibleFlags = 85,
+	IDXGISwapChain_ResizeBuffers_NonPreRotatedAndGDICompatibleFlags = 85,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedAndGDICompatibleFlags</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedAndGDICompatibleFlags = 86,
+	IDXGIFactory_CreateSwapChain_NonPreRotatedAndGDICompatibleFlags = 86,
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_pHdcIsNULL</unmanaged>
-	DXGI_MSG_IDXGISurface1_GetDC_pHdcIsNULL = 87,
+	IDXGISurface1_GetDC_pHdcIsNULL = 87,
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_SurfaceNotTexture2D</unmanaged>
-	DXGI_MSG_IDXGISurface1_GetDC_SurfaceNotTexture2D = 88,
+	IDXGISurface1_GetDC_SurfaceNotTexture2D = 88,
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_GDICompatibleFlagNotSet</unmanaged>
-	DXGI_MSG_IDXGISurface1_GetDC_GDICompatibleFlagNotSet = 89,
+	IDXGISurface1_GetDC_GDICompatibleFlagNotSet = 89,
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_UnreleasedHDC</unmanaged>
-	DXGI_MSG_IDXGISurface1_GetDC_UnreleasedHDC = 90,
+	IDXGISurface1_GetDC_UnreleasedHDC = 90,
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_NoCPUAccess2</unmanaged>
-	DXGI_MSG_IDXGISurface_Map_NoCPUAccess2 = 91,
+	IDXGISurface_Map_NoCPUAccess2 = 91,
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_ReleaseDC_GetDCNotCalled</unmanaged>
-	DXGI_MSG_IDXGISurface1_ReleaseDC_GetDCNotCalled = 92,
+	IDXGISurface1_ReleaseDC_GetDCNotCalled = 92,
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_ReleaseDC_InvalidRectangleDimensions</unmanaged>
-	DXGI_MSG_IDXGISurface1_ReleaseDC_InvalidRectangleDimensions = 93,
+	IDXGISurface1_ReleaseDC_InvalidRectangleDimensions = 93,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteOutputNotSupported</unmanaged>
-	DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteOutputNotSupported = 94,
+	IDXGIOutput_TakeOwnership_RemoteOutputNotSupported = 94,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteOutputNotSupported</unmanaged>
-	DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteOutputNotSupported = 95,
+	IDXGIOutput_FindClosestMatchingMode_RemoteOutputNotSupported = 95,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteOutputNotSupported</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteOutputNotSupported = 96,
+	IDXGIOutput_GetDisplayModeList_RemoteOutputNotSupported = 96,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_pDeviceHasMismatchedDXGIFactory</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_pDeviceHasMismatchedDXGIFactory = 97,
+	IDXGIFactory_CreateSwapChain_pDeviceHasMismatchedDXGIFactory = 97,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_NonOptimalFSConfiguration</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_NonOptimalFSConfiguration = 98,
+	IDXGISwapChain_Present_NonOptimalFSConfiguration = 98,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSequentialNotSupportedOnD3D10</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSequentialNotSupportedOnD3D10 = 99,
+	IDXGIFactory_CreateSwapChain_FlipSequentialNotSupportedOnD3D10 = 99,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_BufferCountOOBForFlipSequential</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_BufferCountOOBForFlipSequential = 100,
+	IDXGIFactory_CreateSwapChain_BufferCountOOBForFlipSequential = 100,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFormatForFlipSequential</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFormatForFlipSequential = 101,
+	IDXGIFactory_CreateSwapChain_InvalidFormatForFlipSequential = 101,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_MultiSamplingNotSupportedForFlipSequential</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_MultiSamplingNotSupportedForFlipSequential = 102,
+	IDXGIFactory_CreateSwapChain_MultiSamplingNotSupportedForFlipSequential = 102,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOBForFlipSequential</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOBForFlipSequential = 103,
+	IDXGISwapChain_ResizeBuffers_BufferCountOOBForFlipSequential = 103,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidFormatForFlipSequential</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidFormatForFlipSequential = 104,
+	IDXGISwapChain_ResizeBuffers_InvalidFormatForFlipSequential = 104,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_PartialPresentationBeforeStandardPresentation</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_PartialPresentationBeforeStandardPresentation = 105,
+	IDXGISwapChain_Present_PartialPresentationBeforeStandardPresentation = 105,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_FullscreenPartialPresentIsInvalid</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_FullscreenPartialPresentIsInvalid = 106,
+	IDXGISwapChain_Present_FullscreenPartialPresentIsInvalid = 106,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_InvalidPresentTestOrDoNotSequenceFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_InvalidPresentTestOrDoNotSequenceFlag = 107,
+	IDXGISwapChain_Present_InvalidPresentTestOrDoNotSequenceFlag = 107,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ScrollInfoWithNoDirtyRectsSpecified</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_ScrollInfoWithNoDirtyRectsSpecified = 108,
+	IDXGISwapChain_Present_ScrollInfoWithNoDirtyRectsSpecified = 108,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_EmptyScrollRect</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_EmptyScrollRect = 109,
+	IDXGISwapChain_Present_EmptyScrollRect = 109,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBounds</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBounds = 110,
+	IDXGISwapChain_Present_ScrollRectOutOfBackbufferBounds = 110,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBoundsWithOffset</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBoundsWithOffset = 111,
+	IDXGISwapChain_Present_ScrollRectOutOfBackbufferBoundsWithOffset = 111,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_EmptyDirtyRect</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_EmptyDirtyRect = 112,
+	IDXGISwapChain_Present_EmptyDirtyRect = 112,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_DirtyRectOutOfBackbufferBounds</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_DirtyRectOutOfBackbufferBounds = 113,
+	IDXGISwapChain_Present_DirtyRectOutOfBackbufferBounds = 113,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_UnsupportedBufferUsageFlags</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_UnsupportedBufferUsageFlags = 114,
+	IDXGIFactory_CreateSwapChain_UnsupportedBufferUsageFlags = 114,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_DoNotSequenceFlagSetButPreviousBufferIsUndefined</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_DoNotSequenceFlagSetButPreviousBufferIsUndefined = 115,
+	IDXGISwapChain_Present_DoNotSequenceFlagSetButPreviousBufferIsUndefined = 115,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_UnsupportedFlags</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_UnsupportedFlags = 116,
+	IDXGISwapChain_Present_UnsupportedFlags = 116,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_FlipModelChainMustResizeOrCreateOnFSTransition</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_FlipModelChainMustResizeOrCreateOnFSTransition = 117,
+	IDXGISwapChain_Present_FlipModelChainMustResizeOrCreateOnFSTransition = 117,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_pRestrictToOutputFromOtherIDXGIFactory</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_pRestrictToOutputFromOtherIDXGIFactory = 118,
+	IDXGIFactory_CreateSwapChain_pRestrictToOutputFromOtherIDXGIFactory = 118,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictOutputNotSupportedOnAdapter</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictOutputNotSupportedOnAdapter = 119,
+	IDXGIFactory_CreateSwapChain_RestrictOutputNotSupportedOnAdapter = 119,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagSetButInvalidpRestrictToOutput</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagSetButInvalidpRestrictToOutput = 120,
+	IDXGISwapChain_Present_RestrictToOutputFlagSetButInvalidpRestrictToOutput = 120,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagdWithFullscreen</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagdWithFullscreen = 121,
+	IDXGISwapChain_Present_RestrictToOutputFlagdWithFullscreen = 121,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_RestrictOutputFlagWithStaleSwapChain</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_RestrictOutputFlagWithStaleSwapChain = 122,
+	IDXGISwapChain_Present_RestrictOutputFlagWithStaleSwapChain = 122,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_OtherFlagsCausingInvalidPresentTestFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_OtherFlagsCausingInvalidPresentTestFlag = 123,
+	IDXGISwapChain_Present_OtherFlagsCausingInvalidPresentTestFlag = 123,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_UnavailableInSession0</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_UnavailableInSession0 = 124,
+	IDXGIFactory_CreateSwapChain_UnavailableInSession0 = 124,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_MakeWindowAssociation_UnavailableInSession0</unmanaged>
-	DXGI_MSG_IDXGIFactory_MakeWindowAssociation_UnavailableInSession0 = 125,
+	IDXGIFactory_MakeWindowAssociation_UnavailableInSession0 = 125,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetWindowAssociation_UnavailableInSession0</unmanaged>
-	DXGI_MSG_IDXGIFactory_GetWindowAssociation_UnavailableInSession0 = 126,
+	IDXGIFactory_GetWindowAssociation_UnavailableInSession0 = 126,
 	/// <unmanaged>DXGI_MSG_IDXGIAdapter_EnumOutputs_UnavailableInSession0</unmanaged>
-	DXGI_MSG_IDXGIAdapter_EnumOutputs_UnavailableInSession0 = 127,
+	IDXGIAdapter_EnumOutputs_UnavailableInSession0 = 127,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_StereoDisabled</unmanaged>
-	DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_StereoDisabled = 128,
+	IDXGISwapChain_CreationOrSetFullscreenState_StereoDisabled = 128,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_UnregisterStatus_CookieNotFound</unmanaged>
-	DXGI_MSG_IDXGIFactory2_UnregisterStatus_CookieNotFound = 129,
+	IDXGIFactory2_UnregisterStatus_CookieNotFound = 129,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFSOrOverlay</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFSOrOverlay = 130,
+	IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFSOrOverlay = 130,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFlipSequential</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFlipSequential = 131,
+	IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFlipSequential = 131,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedContentWithRDPDriver</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_ProtectedContentWithRDPDriver = 132,
+	IDXGISwapChain_Present_ProtectedContentWithRDPDriver = 132,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithDWMOffOrInvalidDisplayAffinity</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithDWMOffOrInvalidDisplayAffinity = 133,
+	IDXGISwapChain_Present_ProtectedContentInWindowedModeWithDWMOffOrInvalidDisplayAffinity = 133,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_WidthOrHeightIsZero</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_WidthOrHeightIsZero = 134,
+	IDXGIFactory_CreateSwapChainForComposition_WidthOrHeightIsZero = 134,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_OnlyFlipSequentialSupported</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_OnlyFlipSequentialSupported = 135,
+	IDXGIFactory_CreateSwapChainForComposition_OnlyFlipSequentialSupported = 135,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnAdapter</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnAdapter = 136,
+	IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnAdapter = 136,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnWindows7</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnWindows7 = 137,
+	IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnWindows7 = 137,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSTransitionWithCompositionSwapChain</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSTransitionWithCompositionSwapChain = 138,
+	IDXGISwapChain_SetFullscreenState_FSTransitionWithCompositionSwapChain = 138,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeTarget_InvalidWithCompositionSwapChain</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeTarget_InvalidWithCompositionSwapChain = 139,
+	IDXGISwapChain_ResizeTarget_InvalidWithCompositionSwapChain = 139,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_WidthOrHeightIsZero</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_WidthOrHeightIsZero = 140,
+	IDXGISwapChain_ResizeBuffers_WidthOrHeightIsZero = 140,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneIsFlipModelOnly</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneIsFlipModelOnly = 141,
+	IDXGIFactory_CreateSwapChain_ScalingNoneIsFlipModelOnly = 141,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingUnrecognized</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingUnrecognized = 142,
+	IDXGIFactory_CreateSwapChain_ScalingUnrecognized = 142,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyFullscreenUnsupported</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyFullscreenUnsupported = 143,
+	IDXGIFactory_CreateSwapChain_DisplayOnlyFullscreenUnsupported = 143,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyUnsupported</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyUnsupported = 144,
+	IDXGIFactory_CreateSwapChain_DisplayOnlyUnsupported = 144,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_RestartIsFullscreenOnly</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_RestartIsFullscreenOnly = 145,
+	IDXGISwapChain_Present_RestartIsFullscreenOnly = 145,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedWindowlessPresentationRequiresDisplayOnly</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_ProtectedWindowlessPresentationRequiresDisplayOnly = 146,
+	IDXGISwapChain_Present_ProtectedWindowlessPresentationRequiresDisplayOnly = 146,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_DisplayOnlyUnsupported</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_DisplayOnlyUnsupported = 147,
+	IDXGISwapChain_SetFullscreenState_DisplayOnlyUnsupported = 147,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_SetBackgroundColor_OutOfRange</unmanaged>
-	DXGI_MSG_IDXGISwapChain1_SetBackgroundColor_OutOfRange = 148,
+	IDXGISwapChain1_SetBackgroundColor_OutOfRange = 148,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyFullscreenUnsupported</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyFullscreenUnsupported = 149,
+	IDXGISwapChain_ResizeBuffers_DisplayOnlyFullscreenUnsupported = 149,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyUnsupported</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyUnsupported = 150,
+	IDXGISwapChain_ResizeBuffers_DisplayOnlyUnsupported = 150,
 	/// <unmanaged>DXGI_MSG_IDXGISwapchain_Present_ScrollUnsupported</unmanaged>
-	DXGI_MSG_IDXGISwapchain_Present_ScrollUnsupported = 151,
+	IDXGISwapchain_Present_ScrollUnsupported = 151,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_SetRotation_UnsupportedOS</unmanaged>
-	DXGI_MSG_IDXGISwapChain1_SetRotation_UnsupportedOS = 152,
+	IDXGISwapChain1_SetRotation_UnsupportedOS = 152,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_GetRotation_UnsupportedOS</unmanaged>
-	DXGI_MSG_IDXGISwapChain1_GetRotation_UnsupportedOS = 153,
+	IDXGISwapChain1_GetRotation_UnsupportedOS = 153,
 	/// <unmanaged>DXGI_MSG_IDXGISwapchain_Present_FullscreenRotation</unmanaged>
-	DXGI_MSG_IDXGISwapchain_Present_FullscreenRotation = 154,
+	IDXGISwapchain_Present_FullscreenRotation = 154,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithMSAABuffers</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithMSAABuffers = 155,
+	IDXGISwapChain_Present_PartialPresentationWithMSAABuffers = 155,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_SetRotation_FlipSequentialRequired</unmanaged>
-	DXGI_MSG_IDXGISwapChain1_SetRotation_FlipSequentialRequired = 156,
+	IDXGISwapChain1_SetRotation_FlipSequentialRequired = 156,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_SetRotation_InvalidRotation</unmanaged>
-	DXGI_MSG_IDXGISwapChain1_SetRotation_InvalidRotation = 157,
+	IDXGISwapChain1_SetRotation_InvalidRotation = 157,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_GetRotation_FlipSequentialRequired</unmanaged>
-	DXGI_MSG_IDXGISwapChain1_GetRotation_FlipSequentialRequired = 158,
+	IDXGISwapChain1_GetRotation_FlipSequentialRequired = 158,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetHwnd_WrongType</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetHwnd_WrongType = 159,
+	IDXGISwapChain_GetHwnd_WrongType = 159,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetCompositionSurface_WrongType</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetCompositionSurface_WrongType = 160,
+	IDXGISwapChain_GetCompositionSurface_WrongType = 160,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetCoreWindow_WrongType</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetCoreWindow_WrongType = 161,
+	IDXGISwapChain_GetCoreWindow_WrongType = 161,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetFullscreenDesc_NonHwnd</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetFullscreenDesc_NonHwnd = 162,
+	IDXGISwapChain_GetFullscreenDesc_NonHwnd = 162,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_CoreWindow</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_CoreWindow = 163,
+	IDXGISwapChain_SetFullscreenState_CoreWindow = 163,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_UnsupportedOnWindows7</unmanaged>
-	DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_UnsupportedOnWindows7 = 164,
+	IDXGIFactory2_CreateSwapChainForCoreWindow_UnsupportedOnWindows7 = 164,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsNULL</unmanaged>
-	DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsNULL = 165,
+	IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsNULL = 165,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_FSUnsupportedForModernApps</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_FSUnsupportedForModernApps = 166,
+	IDXGIFactory_CreateSwapChain_FSUnsupportedForModernApps = 166,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_MakeWindowAssociation_ModernApp</unmanaged>
-	DXGI_MSG_IDXGIFactory_MakeWindowAssociation_ModernApp = 167,
+	IDXGIFactory_MakeWindowAssociation_ModernApp = 167,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeTarget_ModernApp</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeTarget_ModernApp = 168,
+	IDXGISwapChain_ResizeTarget_ModernApp = 168,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeTarget_pNewTargetParametersIsNULL</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeTarget_pNewTargetParametersIsNULL = 169,
+	IDXGISwapChain_ResizeTarget_pNewTargetParametersIsNULL = 169,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetDisplaySurface_ModernApp</unmanaged>
-	DXGI_MSG_IDXGIOutput_SetDisplaySurface_ModernApp = 170,
+	IDXGIOutput_SetDisplaySurface_ModernApp = 170,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_ModernApp</unmanaged>
-	DXGI_MSG_IDXGIOutput_TakeOwnership_ModernApp = 171,
+	IDXGIOutput_TakeOwnership_ModernApp = 171,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsInvalid</unmanaged>
-	DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsInvalid = 172,
+	IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsInvalid = 172,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCompositionSurface_InvalidHandle</unmanaged>
-	DXGI_MSG_IDXGIFactory2_CreateSwapChainForCompositionSurface_InvalidHandle = 173,
+	IDXGIFactory2_CreateSwapChainForCompositionSurface_InvalidHandle = 173,
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_ModernApp</unmanaged>
-	DXGI_MSG_IDXGISurface1_GetDC_ModernApp = 174,
+	IDXGISurface1_GetDC_ModernApp = 174,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneRequiresWindows8OrNewer</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneRequiresWindows8OrNewer = 175,
+	IDXGIFactory_CreateSwapChain_ScalingNoneRequiresWindows8OrNewer = 175,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoAndPreferRight</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoAndPreferRight = 176,
+	IDXGISwapChain_Present_TemporaryMonoAndPreferRight = 176,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithDoNotSequence</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithDoNotSequence = 177,
+	IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithDoNotSequence = 177,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithoutStereo</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithoutStereo = 178,
+	IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithoutStereo = 178,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoUnsupported</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoUnsupported = 179,
+	IDXGISwapChain_Present_TemporaryMonoUnsupported = 179,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_ArraySizeMismatch</unmanaged>
-	DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_ArraySizeMismatch = 180,
+	IDXGIOutput_GetDisplaySurfaceData_ArraySizeMismatch = 180,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithSwapEffectDiscard</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithSwapEffectDiscard = 181,
+	IDXGISwapChain_Present_PartialPresentationWithSwapEffectDiscard = 181,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaUnrecognized</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaUnrecognized = 182,
+	IDXGIFactory_CreateSwapChain_AlphaUnrecognized = 182,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsWindowlessOnly</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsWindowlessOnly = 183,
+	IDXGIFactory_CreateSwapChain_AlphaIsWindowlessOnly = 183,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsFlipModelOnly</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsFlipModelOnly = 184,
+	IDXGIFactory_CreateSwapChain_AlphaIsFlipModelOnly = 184,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictToOutputAdapterMismatch</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictToOutputAdapterMismatch = 185,
+	IDXGIFactory_CreateSwapChain_RestrictToOutputAdapterMismatch = 185,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyOnLegacy</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyOnLegacy = 186,
+	IDXGIFactory_CreateSwapChain_DisplayOnlyOnLegacy = 186,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyOnLegacy</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyOnLegacy = 187,
+	IDXGISwapChain_ResizeBuffers_DisplayOnlyOnLegacy = 187,
 	/// <unmanaged>DXGI_MSG_IDXGIResource1_CreateSubresourceSurface_InvalidIndex</unmanaged>
-	DXGI_MSG_IDXGIResource1_CreateSubresourceSurface_InvalidIndex = 188,
+	IDXGIResource1_CreateSubresourceSurface_InvalidIndex = 188,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidScaling</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidScaling = 189,
+	IDXGIFactory_CreateSwapChainForComposition_InvalidScaling = 189,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForCoreWindow_InvalidSwapEffect</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainForCoreWindow_InvalidSwapEffect = 190,
+	IDXGIFactory_CreateSwapChainForCoreWindow_InvalidSwapEffect = 190,
 	/// <unmanaged>DXGI_MSG_IDXGIResource1_CreateSharedHandle_UnsupportedOS</unmanaged>
-	DXGI_MSG_IDXGIResource1_CreateSharedHandle_UnsupportedOS = 191,
+	IDXGIResource1_CreateSharedHandle_UnsupportedOS = 191,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusWindow_UnsupportedOS</unmanaged>
-	DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusWindow_UnsupportedOS = 192,
+	IDXGIFactory2_RegisterOcclusionStatusWindow_UnsupportedOS = 192,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusEvent_UnsupportedOS</unmanaged>
-	DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusEvent_UnsupportedOS = 193,
+	IDXGIFactory2_RegisterOcclusionStatusEvent_UnsupportedOS = 193,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_DuplicateOutput_UnsupportedOS</unmanaged>
-	DXGI_MSG_IDXGIOutput1_DuplicateOutput_UnsupportedOS = 194,
+	IDXGIOutput1_DuplicateOutput_UnsupportedOS = 194,
 	/// <unmanaged>DXGI_MSG_IDXGIDisplayControl_IsStereoEnabled_UnsupportedOS</unmanaged>
-	DXGI_MSG_IDXGIDisplayControl_IsStereoEnabled_UnsupportedOS = 195,
+	IDXGIDisplayControl_IsStereoEnabled_UnsupportedOS = 195,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidAlphaMode</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidAlphaMode = 196,
+	IDXGIFactory_CreateSwapChainForComposition_InvalidAlphaMode = 196,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidResource</unmanaged>
-	DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidResource = 197,
+	IDXGIFactory_GetSharedResourceAdapterLuid_InvalidResource = 197,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidLUID</unmanaged>
-	DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidLUID = 198,
+	IDXGIFactory_GetSharedResourceAdapterLuid_InvalidLUID = 198,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_UnsupportedOS</unmanaged>
-	DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_UnsupportedOS = 199,
+	IDXGIFactory_GetSharedResourceAdapterLuid_UnsupportedOS = 199,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_2DOnly</unmanaged>
-	DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_2DOnly = 200,
+	IDXGIOutput1_GetDisplaySurfaceData1_2DOnly = 200,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_StagingOnly</unmanaged>
-	DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_StagingOnly = 201,
+	IDXGIOutput1_GetDisplaySurfaceData1_StagingOnly = 201,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NeedCPUAccessWrite</unmanaged>
-	DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NeedCPUAccessWrite = 202,
+	IDXGIOutput1_GetDisplaySurfaceData1_NeedCPUAccessWrite = 202,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NoShared</unmanaged>
-	DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NoShared = 203,
+	IDXGIOutput1_GetDisplaySurfaceData1_NoShared = 203,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_OnlyMipLevels1</unmanaged>
-	DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_OnlyMipLevels1 = 204,
+	IDXGIOutput1_GetDisplaySurfaceData1_OnlyMipLevels1 = 204,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_MappedOrOfferedResource</unmanaged>
-	DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_MappedOrOfferedResource = 205,
+	IDXGIOutput1_GetDisplaySurfaceData1_MappedOrOfferedResource = 205,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSUnsupportedForModernApps</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSUnsupportedForModernApps = 206,
+	IDXGISwapChain_SetFullscreenState_FSUnsupportedForModernApps = 206,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_FailedToGoFSButNonPreRotated</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_FailedToGoFSButNonPreRotated = 207,
+	IDXGIFactory_CreateSwapChain_FailedToGoFSButNonPreRotated = 207,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainOrRegisterOcclusionStatus_BlitModelUsedWhileRegisteredForOcclusionStatusEvents</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainOrRegisterOcclusionStatus_BlitModelUsedWhileRegisteredForOcclusionStatusEvents = 208,
+	IDXGIFactory_CreateSwapChainOrRegisterOcclusionStatus_BlitModelUsedWhileRegisteredForOcclusionStatusEvents = 208,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_BlitModelUsedWhileRegisteredForOcclusionStatusEvents</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_BlitModelUsedWhileRegisteredForOcclusionStatusEvents = 209,
+	IDXGISwapChain_Present_BlitModelUsedWhileRegisteredForOcclusionStatusEvents = 209,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreFlipModelOnly</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreFlipModelOnly = 210,
+	IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreFlipModelOnly = 210,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreNotFullscreen</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreNotFullscreen = 211,
+	IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreNotFullscreen = 211,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_Waitable</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_Waitable = 212,
+	IDXGISwapChain_SetFullscreenState_Waitable = 212,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveWaitableFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveWaitableFlag = 213,
+	IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveWaitableFlag = 213,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetFrameLatencyWaitableObject_OnlyWaitable</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetFrameLatencyWaitableObject_OnlyWaitable = 214,
+	IDXGISwapChain_GetFrameLatencyWaitableObject_OnlyWaitable = 214,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_OnlyWaitable</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_OnlyWaitable = 215,
+	IDXGISwapChain_GetMaximumFrameLatency_OnlyWaitable = 215,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_pMaxLatencyIsNULL</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_pMaxLatencyIsNULL = 216,
+	IDXGISwapChain_GetMaximumFrameLatency_pMaxLatencyIsNULL = 216,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_OnlyWaitable</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_OnlyWaitable = 217,
+	IDXGISwapChain_SetMaximumFrameLatency_OnlyWaitable = 217,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_MaxLatencyIsOutOfBounds</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_MaxLatencyIsOutOfBounds = 218,
+	IDXGISwapChain_SetMaximumFrameLatency_MaxLatencyIsOutOfBounds = 218,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ForegroundIsCoreWindowOnly</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_ForegroundIsCoreWindowOnly = 219,
+	IDXGIFactory_CreateSwapChain_ForegroundIsCoreWindowOnly = 219,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_ForegroundUnsupportedOnAdapter</unmanaged>
-	DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_ForegroundUnsupportedOnAdapter = 220,
+	IDXGIFactory2_CreateSwapChainForCoreWindow_ForegroundUnsupportedOnAdapter = 220,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidScaling</unmanaged>
-	DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidScaling = 221,
+	IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidScaling = 221,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidAlphaMode</unmanaged>
-	DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidAlphaMode = 222,
+	IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidAlphaMode = 222,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveForegroundFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveForegroundFlag = 223,
+	IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveForegroundFlag = 223,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixPointerCannotBeNull</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixPointerCannotBeNull = 224,
+	IDXGISwapChain_SetMatrixTransform_MatrixPointerCannotBeNull = 224,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_RequiresCompositionSwapChain</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetMatrixTransform_RequiresCompositionSwapChain = 225,
+	IDXGISwapChain_SetMatrixTransform_RequiresCompositionSwapChain = 225,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeFinite</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeFinite = 226,
+	IDXGISwapChain_SetMatrixTransform_MatrixMustBeFinite = 226,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeTranslateAndOrScale</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeTranslateAndOrScale = 227,
+	IDXGISwapChain_SetMatrixTransform_MatrixMustBeTranslateAndOrScale = 227,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMatrixTransform_MatrixPointerCannotBeNull</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetMatrixTransform_MatrixPointerCannotBeNull = 228,
+	IDXGISwapChain_GetMatrixTransform_MatrixPointerCannotBeNull = 228,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMatrixTransform_RequiresCompositionSwapChain</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetMatrixTransform_RequiresCompositionSwapChain = 229,
+	IDXGISwapChain_GetMatrixTransform_RequiresCompositionSwapChain = 229,
 	/// <unmanaged>DXGI_MSG_DXGIGetDebugInterface1_NULL_ppDebug</unmanaged>
-	DXGI_MSG_DXGIGetDebugInterface1_NULL_ppDebug = 230,
+	DXGIGetDebugInterface1_NULL_ppDebug = 230,
 	/// <unmanaged>DXGI_MSG_DXGIGetDebugInterface1_InvalidFlags</unmanaged>
-	DXGI_MSG_DXGIGetDebugInterface1_InvalidFlags = 231,
+	DXGIGetDebugInterface1_InvalidFlags = 231,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_Decode</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_Decode = 232,
+	IDXGISwapChain_Present_Decode = 232,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_Decode</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_Decode = 233,
+	IDXGISwapChain_ResizeBuffers_Decode = 233,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetSourceSize_FlipModel</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetSourceSize_FlipModel = 234,
+	IDXGISwapChain_SetSourceSize_FlipModel = 234,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetSourceSize_Decode</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetSourceSize_Decode = 235,
+	IDXGISwapChain_SetSourceSize_Decode = 235,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetSourceSize_WidthHeight</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetSourceSize_WidthHeight = 236,
+	IDXGISwapChain_SetSourceSize_WidthHeight = 236,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetSourceSize_NullPointers</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetSourceSize_NullPointers = 237,
+	IDXGISwapChain_GetSourceSize_NullPointers = 237,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetSourceSize_Decode</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetSourceSize_Decode = 238,
+	IDXGISwapChain_GetSourceSize_Decode = 238,
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_SetColorSpace_InvalidFlags</unmanaged>
-	DXGI_MSG_IDXGIDecodeSwapChain_SetColorSpace_InvalidFlags = 239,
+	IDXGIDecodeSwapChain_SetColorSpace_InvalidFlags = 239,
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_SetSourceRect_InvalidRect</unmanaged>
-	DXGI_MSG_IDXGIDecodeSwapChain_SetSourceRect_InvalidRect = 240,
+	IDXGIDecodeSwapChain_SetSourceRect_InvalidRect = 240,
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_SetTargetRect_InvalidRect</unmanaged>
-	DXGI_MSG_IDXGIDecodeSwapChain_SetTargetRect_InvalidRect = 241,
+	IDXGIDecodeSwapChain_SetTargetRect_InvalidRect = 241,
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_SetDestSize_InvalidSize</unmanaged>
-	DXGI_MSG_IDXGIDecodeSwapChain_SetDestSize_InvalidSize = 242,
+	IDXGIDecodeSwapChain_SetDestSize_InvalidSize = 242,
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_GetSourceRect_InvalidPointer</unmanaged>
-	DXGI_MSG_IDXGIDecodeSwapChain_GetSourceRect_InvalidPointer = 243,
+	IDXGIDecodeSwapChain_GetSourceRect_InvalidPointer = 243,
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_GetTargetRect_InvalidPointer</unmanaged>
-	DXGI_MSG_IDXGIDecodeSwapChain_GetTargetRect_InvalidPointer = 244,
+	IDXGIDecodeSwapChain_GetTargetRect_InvalidPointer = 244,
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_GetDestSize_InvalidPointer</unmanaged>
-	DXGI_MSG_IDXGIDecodeSwapChain_GetDestSize_InvalidPointer = 245,
+	IDXGIDecodeSwapChain_GetDestSize_InvalidPointer = 245,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_PresentBuffer_YUV</unmanaged>
-	DXGI_MSG_IDXGISwapChain_PresentBuffer_YUV = 246,
+	IDXGISwapChain_PresentBuffer_YUV = 246,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetSourceSize_YUV</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetSourceSize_YUV = 247,
+	IDXGISwapChain_SetSourceSize_YUV = 247,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetSourceSize_YUV</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetSourceSize_YUV = 248,
+	IDXGISwapChain_GetSourceSize_YUV = 248,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_YUV</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetMatrixTransform_YUV = 249,
+	IDXGISwapChain_SetMatrixTransform_YUV = 249,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMatrixTransform_YUV</unmanaged>
-	DXGI_MSG_IDXGISwapChain_GetMatrixTransform_YUV = 250,
+	IDXGISwapChain_GetMatrixTransform_YUV = 250,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_PartialPresentation_YUV</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_PartialPresentation_YUV = 251,
+	IDXGISwapChain_Present_PartialPresentation_YUV = 251,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveFlag_YUV</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveFlag_YUV = 252,
+	IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveFlag_YUV = 252,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_Alignment_YUV</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_Alignment_YUV = 253,
+	IDXGISwapChain_ResizeBuffers_Alignment_YUV = 253,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ShaderInputUnsupported_YUV</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_ShaderInputUnsupported_YUV = 254,
+	IDXGIFactory_CreateSwapChain_ShaderInputUnsupported_YUV = 254,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_NullPointers</unmanaged>
-	DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_NullPointers = 255,
+	IDXGIOutput3_CheckOverlaySupport_NullPointers = 255,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_IDXGIDeviceNotSupportedBypConcernedDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_IDXGIDeviceNotSupportedBypConcernedDevice = 256,
+	IDXGIOutput3_CheckOverlaySupport_IDXGIDeviceNotSupportedBypConcernedDevice = 256,
 	/// <unmanaged>DXGI_MSG_IDXGIAdapter_EnumOutputs2_InvalidEnumOutputs2Flag</unmanaged>
-	DXGI_MSG_IDXGIAdapter_EnumOutputs2_InvalidEnumOutputs2Flag = 257,
+	IDXGIAdapter_EnumOutputs2_InvalidEnumOutputs2Flag = 257,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_FSUnsupportedForFlipDiscard</unmanaged>
-	DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_FSUnsupportedForFlipDiscard = 258,
+	IDXGISwapChain_CreationOrSetFullscreenState_FSUnsupportedForFlipDiscard = 258,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_NullPointers</unmanaged>
-	DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_NullPointers = 259,
+	IDXGIOutput4_CheckOverlayColorSpaceSupport_NullPointers = 259,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_IDXGIDeviceNotSupportedBypConcernedDevice</unmanaged>
-	DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_IDXGIDeviceNotSupportedBypConcernedDevice = 260,
+	IDXGIOutput4_CheckOverlayColorSpaceSupport_IDXGIDeviceNotSupportedBypConcernedDevice = 260,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_CheckColorSpaceSupport_NullPointers</unmanaged>
-	DXGI_MSG_IDXGISwapChain3_CheckColorSpaceSupport_NullPointers = 261,
+	IDXGISwapChain3_CheckColorSpaceSupport_NullPointers = 261,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_SetColorSpace1_InvalidColorSpace</unmanaged>
-	DXGI_MSG_IDXGISwapChain3_SetColorSpace1_InvalidColorSpace = 262,
+	IDXGISwapChain3_SetColorSpace1_InvalidColorSpace = 262,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidHwProtect</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidHwProtect = 263,
+	IDXGIFactory_CreateSwapChain_InvalidHwProtect = 263,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_HwProtectUnsupported</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_HwProtectUnsupported = 264,
+	IDXGIFactory_CreateSwapChain_HwProtectUnsupported = 264,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtect</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtect = 265,
+	IDXGISwapChain_ResizeBuffers_InvalidHwProtect = 265,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_HwProtectUnsupported</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_HwProtectUnsupported = 266,
+	IDXGISwapChain_ResizeBuffers_HwProtectUnsupported = 266,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers1_D3D12Only</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers1_D3D12Only = 267,
+	IDXGISwapChain_ResizeBuffers1_D3D12Only = 267,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers1_FlipModel</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers1_FlipModel = 268,
+	IDXGISwapChain_ResizeBuffers1_FlipModel = 268,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers1_NodeMaskAndQueueRequired</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers1_NodeMaskAndQueueRequired = 269,
+	IDXGISwapChain_ResizeBuffers1_NodeMaskAndQueueRequired = 269,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreateSwapChain_InvalidHwProtectGdiFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_CreateSwapChain_InvalidHwProtectGdiFlag = 270,
+	IDXGISwapChain_CreateSwapChain_InvalidHwProtectGdiFlag = 270,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtectGdiFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtectGdiFlag = 271,
+	IDXGISwapChain_ResizeBuffers_InvalidHwProtectGdiFlag = 271,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_10BitFormatNotSupported</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_10BitFormatNotSupported = 272,
+	IDXGIFactory_CreateSwapChain_10BitFormatNotSupported = 272,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSwapEffectRequired</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSwapEffectRequired = 273,
+	IDXGIFactory_CreateSwapChain_FlipSwapEffectRequired = 273,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidDevice</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidDevice = 274,
+	IDXGIFactory_CreateSwapChain_InvalidDevice = 274,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_Unsupported</unmanaged>
-	DXGI_MSG_IDXGIOutput_TakeOwnership_Unsupported = 275,
+	IDXGIOutput_TakeOwnership_Unsupported = 275,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidQueue</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidQueue = 276,
+	IDXGIFactory_CreateSwapChain_InvalidQueue = 276,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_ResizeBuffers1_InvalidQueue</unmanaged>
-	DXGI_MSG_IDXGISwapChain3_ResizeBuffers1_InvalidQueue = 277,
+	IDXGISwapChain3_ResizeBuffers1_InvalidQueue = 277,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForHwnd_InvalidScaling</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChainForHwnd_InvalidScaling = 278,
+	IDXGIFactory_CreateSwapChainForHwnd_InvalidScaling = 278,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidSize</unmanaged>
-	DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidSize = 279,
+	IDXGISwapChain3_SetHDRMetaData_InvalidSize = 279,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidPointer</unmanaged>
-	DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidPointer = 280,
+	IDXGISwapChain3_SetHDRMetaData_InvalidPointer = 280,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidType</unmanaged>
-	DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidType = 281,
+	IDXGISwapChain3_SetHDRMetaData_InvalidType = 281,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_FullscreenAllowTearingIsInvalid</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_FullscreenAllowTearingIsInvalid = 282,
+	IDXGISwapChain_Present_FullscreenAllowTearingIsInvalid = 282,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresPresentIntervalZero</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresPresentIntervalZero = 283,
+	IDXGISwapChain_Present_AllowTearingRequiresPresentIntervalZero = 283,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresCreationFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresCreationFlag = 284,
+	IDXGISwapChain_Present_AllowTearingRequiresCreationFlag = 284,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveAllowTearingFlag</unmanaged>
-	DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveAllowTearingFlag = 285,
+	IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveAllowTearingFlag = 285,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_AllowTearingFlagIsFlipModelOnly</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_AllowTearingFlagIsFlipModelOnly = 286,
+	IDXGIFactory_CreateSwapChain_AllowTearingFlagIsFlipModelOnly = 286,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidFeature</unmanaged>
-	DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidFeature = 287,
+	IDXGIFactory_CheckFeatureSupport_InvalidFeature = 287,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidSize</unmanaged>
-	DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidSize = 288,
+	IDXGIFactory_CheckFeatureSupport_InvalidSize = 288,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput6_CheckHardwareCompositionSupport_NullPointer</unmanaged>
-	DXGI_MSG_IDXGIOutput6_CheckHardwareCompositionSupport_NullPointer = 289,
+	IDXGIOutput6_CheckHardwareCompositionSupport_NullPointer = 289,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_PerMonitorDpiShimApplied</unmanaged>
-	DXGI_MSG_IDXGISwapChain_SetFullscreenState_PerMonitorDpiShimApplied = 290,
+	IDXGISwapChain_SetFullscreenState_PerMonitorDpiShimApplied = 290,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_DuplicateOutput_PerMonitorDpiShimApplied</unmanaged>
-	DXGI_MSG_IDXGIOutput_DuplicateOutput_PerMonitorDpiShimApplied = 291,
+	IDXGIOutput_DuplicateOutput_PerMonitorDpiShimApplied = 291,
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_DuplicateOutput1_PerMonitorDpiRequired</unmanaged>
-	DXGI_MSG_IDXGIOutput_DuplicateOutput1_PerMonitorDpiRequired = 292,
+	IDXGIOutput_DuplicateOutput1_PerMonitorDpiRequired = 292,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory7_UnregisterAdaptersChangedEvent_CookieNotFound</unmanaged>
-	DXGI_MSG_IDXGIFactory7_UnregisterAdaptersChangedEvent_CookieNotFound = 293,
+	IDXGIFactory7_UnregisterAdaptersChangedEvent_CookieNotFound = 293,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_LegacyBltModelSwapEffect</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_LegacyBltModelSwapEffect = 294,
+	IDXGIFactory_CreateSwapChain_LegacyBltModelSwapEffect = 294,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain4_SetHDRMetaData_MetadataUnchanged</unmanaged>
-	DXGI_MSG_IDXGISwapChain4_SetHDRMetaData_MetadataUnchanged = 295,
+	IDXGISwapChain4_SetHDRMetaData_MetadataUnchanged = 295,
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_11On12_Released_Resource</unmanaged>
-	DXGI_MSG_IDXGISwapChain_Present_11On12_Released_Resource = 296,
+	IDXGISwapChain_Present_11On12_Released_Resource = 296,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_MultipleSwapchainRefToSurface_DeferredDtr</unmanaged>
-	DXGI_MSG_IDXGIFactory_CreateSwapChain_MultipleSwapchainRefToSurface_DeferredDtr = 297,
+	IDXGIFactory_CreateSwapChain_MultipleSwapchainRefToSurface_DeferredDtr = 297,
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_MakeWindowAssociation_NoOpBehavior</unmanaged>
-	DXGI_MSG_IDXGIFactory_MakeWindowAssociation_NoOpBehavior = 298,
+	IDXGIFactory_MakeWindowAssociation_NoOpBehavior = 298,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow</unmanaged>
-	DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow = 1000,
+	Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow = 1000,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_DISCARD_BufferCount</unmanaged>
-	DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_DISCARD_BufferCount = 1001,
+	Phone_IDXGIFactory_CreateSwapChain_DISCARD_BufferCount = 1001,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_SetFullscreenState_NotAvailable</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_SetFullscreenState_NotAvailable = 1002,
+	Phone_IDXGISwapChain_SetFullscreenState_NotAvailable = 1002,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_ResizeBuffers_NotAvailable</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_ResizeBuffers_NotAvailable = 1003,
+	Phone_IDXGISwapChain_ResizeBuffers_NotAvailable = 1003,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_ResizeTarget_NotAvailable</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_ResizeTarget_NotAvailable = 1004,
+	Phone_IDXGISwapChain_ResizeTarget_NotAvailable = 1004,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerIndex</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerIndex = 1005,
+	Phone_IDXGISwapChain_Present_InvalidLayerIndex = 1005,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleLayerIndex</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleLayerIndex = 1006,
+	Phone_IDXGISwapChain_Present_MultipleLayerIndex = 1006,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerFlag</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerFlag = 1007,
+	Phone_IDXGISwapChain_Present_InvalidLayerFlag = 1007,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidRotation</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidRotation = 1008,
+	Phone_IDXGISwapChain_Present_InvalidRotation = 1008,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidBlend</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidBlend = 1009,
+	Phone_IDXGISwapChain_Present_InvalidBlend = 1009,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidResource</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidResource = 1010,
+	Phone_IDXGISwapChain_Present_InvalidResource = 1010,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidMultiPlaneOverlayResource</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidMultiPlaneOverlayResource = 1011,
+	Phone_IDXGISwapChain_Present_InvalidMultiPlaneOverlayResource = 1011,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForPrimary</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForPrimary = 1012,
+	Phone_IDXGISwapChain_Present_InvalidIndexForPrimary = 1012,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForOverlay</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForOverlay = 1013,
+	Phone_IDXGISwapChain_Present_InvalidIndexForOverlay = 1013,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSubResourceIndex</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSubResourceIndex = 1014,
+	Phone_IDXGISwapChain_Present_InvalidSubResourceIndex = 1014,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSourceRect</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSourceRect = 1015,
+	Phone_IDXGISwapChain_Present_InvalidSourceRect = 1015,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidDestinationRect</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidDestinationRect = 1016,
+	Phone_IDXGISwapChain_Present_InvalidDestinationRect = 1016,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleResource</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleResource = 1017,
+	Phone_IDXGISwapChain_Present_MultipleResource = 1017,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_NotSharedResource</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_NotSharedResource = 1018,
+	Phone_IDXGISwapChain_Present_NotSharedResource = 1018,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidFlag</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidFlag = 1019,
+	Phone_IDXGISwapChain_Present_InvalidFlag = 1019,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidInterval</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidInterval = 1020,
+	Phone_IDXGISwapChain_Present_InvalidInterval = 1020,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_MSAA_NotSupported</unmanaged>
-	DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_MSAA_NotSupported = 1021,
+	Phone_IDXGIFactory_CreateSwapChain_MSAA_NotSupported = 1021,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_ScalingAspectRatioStretch_Supported_ModernApp</unmanaged>
-	DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_ScalingAspectRatioStretch_Supported_ModernApp = 1022,
+	Phone_IDXGIFactory_CreateSwapChain_ScalingAspectRatioStretch_Supported_ModernApp = 1022,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_GetFrameStatistics_NotAvailable_ModernApp</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_GetFrameStatistics_NotAvailable_ModernApp = 1023,
+	Phone_IDXGISwapChain_GetFrameStatistics_NotAvailable_ModernApp = 1023,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_ReplaceInterval0With1</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present_ReplaceInterval0With1 = 1024,
+	Phone_IDXGISwapChain_Present_ReplaceInterval0With1 = 1024,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FailedRegisterWithCompositor</unmanaged>
-	DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FailedRegisterWithCompositor = 1025,
+	Phone_IDXGIFactory_CreateSwapChain_FailedRegisterWithCompositor = 1025,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow_AtRendering</unmanaged>
-	DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow_AtRendering = 1026,
+	Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow_AtRendering = 1026,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_SEQUENTIAL_BufferCount</unmanaged>
-	DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_SEQUENTIAL_BufferCount = 1027,
+	Phone_IDXGIFactory_CreateSwapChain_FLIP_SEQUENTIAL_BufferCount = 1027,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_Modern_CoreWindow_Only</unmanaged>
-	DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_Modern_CoreWindow_Only = 1028,
+	Phone_IDXGIFactory_CreateSwapChain_FLIP_Modern_CoreWindow_Only = 1028,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present1_RequiresOverlays</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_Present1_RequiresOverlays = 1029,
+	Phone_IDXGISwapChain_Present1_RequiresOverlays = 1029,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired = 1030,
+	Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired = 1030,
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired</unmanaged>
-	DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired = 1031,
+	Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired = 1031,
 }
 
 #endregion Enums
+
+#region Generated Enums
+/// <unmanaged>DXGI_USAGE</unmanaged>
+[Flags]
+public enum Usage : uint
+{
+	None = 0,
+	/// <unmanaged>DXGI_USAGE_SHADER_INPUT</unmanaged>
+	ShaderInput = 16,
+	/// <unmanaged>DXGI_USAGE_RENDER_TARGET_OUTPUT</unmanaged>
+	RenderTargetOutput = 32,
+	/// <unmanaged>DXGI_USAGE_BACK_BUFFER</unmanaged>
+	BackBuffer = 64,
+	/// <unmanaged>DXGI_USAGE_SHARED</unmanaged>
+	Shared = 128,
+	/// <unmanaged>DXGI_USAGE_READ_ONLY</unmanaged>
+	ReadOnly = 256,
+	/// <unmanaged>DXGI_USAGE_DISCARD_ON_PRESENT</unmanaged>
+	DiscardOnPresent = 512,
+	/// <unmanaged>DXGI_USAGE_UNORDERED_ACCESS</unmanaged>
+	UnorderedAccess = 1024,
+}
+
+/// <unmanaged>DXGI_MAP</unmanaged>
+[Flags]
+public enum MapFlags : uint
+{
+	None = 0,
+	/// <unmanaged>DXGI_MAP_READ</unmanaged>
+	Read = 1,
+	/// <unmanaged>DXGI_MAP_WRITE</unmanaged>
+	Write = 2,
+	/// <unmanaged>DXGI_MAP_DISCARD</unmanaged>
+	Discard = 4,
+}
+
+/// <unmanaged>DXGI_ENUM_MODES</unmanaged>
+[Flags]
+public enum EnumModesFlags : uint
+{
+	None = 0,
+	/// <unmanaged>DXGI_ENUM_MODES_INTERLACED</unmanaged>
+	Interlaced = 1,
+	/// <unmanaged>DXGI_ENUM_MODES_SCALING</unmanaged>
+	Scaling = 2,
+	/// <unmanaged>DXGI_ENUM_MODES_STEREO</unmanaged>
+	Stereo = 4,
+	/// <unmanaged>DXGI_ENUM_MODES_DISABLED_STEREO</unmanaged>
+	DisabledStereo = 8,
+}
+
+/// <unmanaged>DXGI_PRESENT</unmanaged>
+[Flags]
+public enum Present : uint
+{
+	None = 0,
+	/// <unmanaged>DXGI_PRESENT_TEST</unmanaged>
+	Test = 1,
+	/// <unmanaged>DXGI_PRESENT_DO_NOT_SEQUENCE</unmanaged>
+	DoNotSequence = 2,
+	/// <unmanaged>DXGI_PRESENT_RESTART</unmanaged>
+	Restart = 4,
+	/// <unmanaged>DXGI_PRESENT_DO_NOT_WAIT</unmanaged>
+	DoNotWait = 8,
+	/// <unmanaged>DXGI_PRESENT_STEREO_PREFER_RIGHT</unmanaged>
+	StereoPreferRight = 16,
+	/// <unmanaged>DXGI_PRESENT_STEREO_TEMPORARY_MONO</unmanaged>
+	StereoTemporaryMono = 32,
+	/// <unmanaged>DXGI_PRESENT_RESTRICT_TO_OUTPUT</unmanaged>
+	RestrictToOutput = 64,
+	/// <unmanaged>DXGI_PRESENT_USE_DURATION</unmanaged>
+	UseDuration = 256,
+	/// <unmanaged>DXGI_PRESENT_ALLOW_TEARING</unmanaged>
+	AllowTearing = 512,
+}
+
+/// <unmanaged>DXGI_MWA</unmanaged>
+[Flags]
+public enum WindowAssociationFlags : uint
+{
+	None = 0,
+	/// <unmanaged>DXGI_MWA_NO_WINDOW_CHANGES</unmanaged>
+	NoWindowChanges = 1,
+	/// <unmanaged>DXGI_MWA_NO_ALT_ENTER</unmanaged>
+	NoAltEnter = 2,
+	/// <unmanaged>DXGI_MWA_NO_PRINT_SCREEN</unmanaged>
+	NoPrintScreen = 4,
+	/// <unmanaged>DXGI_MWA_VALID</unmanaged>
+	Valid = 7,
+}
+
+#endregion Generated Enums
 
 #region Structs
 /// <unmanaged>DXGI_RGBA</unmanaged>

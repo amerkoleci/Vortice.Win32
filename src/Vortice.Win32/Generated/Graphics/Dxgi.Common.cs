@@ -19,12 +19,6 @@ namespace Win32.Graphics.Dxgi.Common;
 
 public static partial class Apis
 {
-	public const uint DXGI_CPU_ACCESS_NONE = 0;
-	public const uint DXGI_CPU_ACCESS_DYNAMIC = 1;
-	public const uint DXGI_CPU_ACCESS_READ_WRITE = 2;
-	public const uint DXGI_CPU_ACCESS_SCRATCH = 3;
-	public const uint DXGI_CPU_ACCESS_FIELD = 15;
-	public const uint DXGI_FORMAT_DEFINED = 1;
 	public const uint DXGI_STANDARD_MULTISAMPLE_QUALITY_PATTERN = 4294967295;
 	public const uint DXGI_CENTER_MULTISAMPLE_QUALITY_PATTERN = 4294967294;
 }
@@ -387,6 +381,24 @@ public enum AlphaMode : uint
 }
 
 #endregion Enums
+
+#region Generated Enums
+/// <unmanaged>DXGI_CPU_ACCESS</unmanaged>
+public enum CpuAccess : uint
+{
+	/// <unmanaged>DXGI_CPU_ACCESS_NONE</unmanaged>
+	None = 0,
+	/// <unmanaged>DXGI_CPU_ACCESS_DYNAMIC</unmanaged>
+	Dynamic = 1,
+	/// <unmanaged>DXGI_CPU_ACCESS_READ_WRITE</unmanaged>
+	ReadWrite = 2,
+	/// <unmanaged>DXGI_CPU_ACCESS_SCRATCH</unmanaged>
+	Scratch = 3,
+	/// <unmanaged>DXGI_CPU_ACCESS_FIELD</unmanaged>
+	Field = 15,
+}
+
+#endregion Generated Enums
 
 #region Structs
 /// <unmanaged>DXGI_RATIONAL</unmanaged>

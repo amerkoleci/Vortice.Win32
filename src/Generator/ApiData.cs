@@ -51,7 +51,7 @@ public class ApiType
     public bool Flags { get; set; }
     public bool Scoped { get; set; }
     public string IntegerBase { get; set; }
-    public ApiEnumValue[] Values { get; set; }
+    public IList<ApiEnumValue> Values { get; set; } = new List<ApiEnumValue>();
 
     // Struct
     public int Size { get; set; }
