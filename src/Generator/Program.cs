@@ -3,6 +3,7 @@
 
 using System.Text;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Generator;
 
@@ -33,6 +34,8 @@ public static class Program
         {"IntPtr", "nint" },
         {"UIntPtr", "nuint" },
 
+        {"Char", "ushort" },
+
         { "Foundation.BOOL", "Bool32" },
         { "Foundation.HRESULT", "HResult" },
         { "Foundation.LUID", "Luid" },
@@ -49,7 +52,12 @@ public static class Program
     private static readonly Dictionary<string, string> s_knownTypesPrefixes = new()
     {
         { "DXGI_COLOR_SPACE_TYPE", "DXGI_COLOR_SPACE" },
+        { "DXGI_GRAPHICS_PREEMPTION_GRANULARITY", "DXGI_GRAPHICS_PREEMPTION" },
         { "DXGI_COMPUTE_PREEMPTION_GRANULARITY", "DXGI_COMPUTE_PREEMPTION" },
+        { "DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS", "DXGI_MULTIPLANE_OVERLAY" },
+        { "DXGI_RECLAIM_RESOURCE_RESULTS", "DXGI_RECLAIM_RESOURCE_RESULT" },
+        { "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS", "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG" },
+        { "DXGI_DEBUG_RLO_FLAGS", "DXGI_DEBUG_RLO" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -64,6 +72,26 @@ public static class Program
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
     {
+        "HW",
+        "YUV",
+        "GDI",
+    };
+
+    private static readonly Dictionary<string, string> s_typesNameRemap = new()
+    {
+        { "DXGI_ADAPTER_FLAG", "AdapterFlags" },
+        { "DXGI_ADAPTER_FLAG3", "AdapterFlags3" },
+        { "DXGI_SWAP_CHAIN_FLAG", "SwapChainFlags" }
+    };
+
+    private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
+    {
+        { "DXGI_ADAPTER_DESC1::Flags", "DXGI_ADAPTER_FLAG" },
+        { "DXGI_ADAPTER_DESC3::Flags", "DXGI_ADAPTER_FLAG3" },
+        { "DXGI_SWAP_CHAIN_DESC::BufferUsage", "Usage" },
+        { "DXGI_SWAP_CHAIN_DESC::Flags", "DXGI_SWAP_CHAIN_FLAG" },
+        { "DXGI_SWAP_CHAIN_DESC1::BufferUsage", "Usage" },
+        { "DXGI_SWAP_CHAIN_DESC1::Flags", "DXGI_SWAP_CHAIN_FLAG" },
     };
 
     public static int Main(string[] args)
@@ -109,7 +137,7 @@ public static class Program
         string fileName = string.Empty;
         for (int i = 1; i < splits.Length - 1; i++)
         {
-            if(string.IsNullOrEmpty(fileName) == false)
+            if (string.IsNullOrEmpty(fileName) == false)
             {
                 fileName += ".";
             }
@@ -220,6 +248,12 @@ public static class Program
                 string fieldTypeName = GetTypeName(field.Type);
                 //writer.WriteLine($"/// <unmanaged>{field.Name}</unmanaged>");
 
+                string remapFieldLookUp = $"{structType.Name}::{field.Name}";
+                if (s_structFieldTypeRemap.TryGetValue(remapFieldLookUp, out string? remapType))
+                {
+                    fieldTypeName = GetTypeName(remapType);
+                }
+
                 if (fieldTypeName == "Array")
                 {
                     bool canUseFixed = false;
@@ -272,7 +306,7 @@ public static class Program
                 {
                     string unsafePrefix = string.Empty;
                     fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
-                    if(fieldTypeName.EndsWith("*"))
+                    if (fieldTypeName.EndsWith("*"))
                     {
                         unsafePrefix += "unsafe ";
                     }
@@ -311,6 +345,11 @@ public static class Program
             prefix = knowPrefix!;
         }
 
+        if (s_typesNameRemap.TryGetValue(typeName, out string? remapName))
+        {
+            return remapName!;
+        }
+
         string[] parts = typeName.Split(new[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
 
         var sb = new StringBuilder();
@@ -330,6 +369,18 @@ public static class Program
                 if (part.Equals("DESC", StringComparison.OrdinalIgnoreCase))
                 {
                     sb.Append("Description");
+                }
+                else if (part.Equals("DESC1", StringComparison.OrdinalIgnoreCase))
+                {
+                    sb.Append("Description1");
+                }
+                else if (part.Equals("DESC2", StringComparison.OrdinalIgnoreCase))
+                {
+                    sb.Append("Description2");
+                }
+                else if (part.Equals("DESC3", StringComparison.OrdinalIgnoreCase))
+                {
+                    sb.Append("Description3");
                 }
                 else
                 {
@@ -449,10 +500,17 @@ public static class Program
                 }
                 else
                 {
-                    sb.Append(char.ToUpper(part[0]));
-                    for (int i = 1; i < part.Length; i++)
+                    if (part.Equals("NONPREROTATED", StringComparison.OrdinalIgnoreCase))
                     {
-                        sb.Append(char.ToLower(part[i]));
+                        sb.Append("NonPrerotated");
+                    }
+                    else
+                    {
+                        sb.Append(char.ToUpper(part[0]));
+                        for (int i = 1; i < part.Length; i++)
+                        {
+                            sb.Append(char.ToLower(part[i]));
+                        }
                     }
                 }
             }
@@ -507,9 +565,14 @@ public static class Program
 
     private static string GetTypeName(string name)
     {
-        if (s_csNameMappings.TryGetValue(name, out string? mappedName))
+        string? mappedName;
+        if (s_csNameMappings.TryGetValue(name, out mappedName))
         {
-            return mappedName;
+            return mappedName!;
+        }
+        else if (s_typesNameRemap.TryGetValue(name, out mappedName))
+        {
+            return mappedName!;
         }
 
         return name;

@@ -132,14 +132,14 @@ public enum SwapEffect : int
 }
 
 /// <unmanaged>DXGI_SWAP_CHAIN_FLAG</unmanaged>
-public enum SwapChainFlag : int
+public enum SwapChainFlags : int
 {
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_NONPREROTATED</unmanaged>
-	Nonprerotated = 1,
+	NonPrerotated = 1,
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH</unmanaged>
 	AllowModeSwitch = 2,
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_GDI_COMPATIBLE</unmanaged>
-	GdiCompatible = 4,
+	GDICompatible = 4,
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICTED_CONTENT</unmanaged>
 	RestrictedContent = 8,
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICT_SHARED_RESOURCE_DRIVER</unmanaged>
@@ -153,9 +153,9 @@ public enum SwapChainFlag : int
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_FULLSCREEN_VIDEO</unmanaged>
 	FullscreenVideo = 256,
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_YUV_VIDEO</unmanaged>
-	YuvVideo = 512,
+	YUVVideo = 512,
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED</unmanaged>
-	HwProtected = 1024,
+	HWProtected = 1024,
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING</unmanaged>
 	AllowTearing = 2048,
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICTED_TO_ALL_HOLOGRAPHIC_DISPLAYS</unmanaged>
@@ -164,7 +164,7 @@ public enum SwapChainFlag : int
 
 /// <unmanaged>DXGI_ADAPTER_FLAG</unmanaged>
 [Flags]
-public enum AdapterFlag : uint
+public enum AdapterFlags : uint
 {
 	/// <unmanaged>DXGI_ADAPTER_FLAG_NONE</unmanaged>
 	None = 0,
@@ -211,15 +211,15 @@ public enum Scaling : int
 public enum GraphicsPreemptionGranularity : int
 {
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY</unmanaged>
-	DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY = 0,
+	DmaBufferBoundary = 0,
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY</unmanaged>
-	DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY = 1,
+	PrimitiveBoundary = 1,
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY</unmanaged>
-	DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY = 2,
+	TriangleBoundary = 2,
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY</unmanaged>
-	DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY = 3,
+	PixelBoundary = 3,
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY</unmanaged>
-	DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY = 4,
+	InstructionBoundary = 4,
 }
 
 /// <unmanaged>DXGI_COMPUTE_PREEMPTION_GRANULARITY</unmanaged>
@@ -241,11 +241,11 @@ public enum ComputePreemptionGranularity : int
 public enum MultiplaneOverlayYcbcrFlags : int
 {
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE</unmanaged>
-	DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE = 1,
+	YcbcrFlagNominalRange = 1,
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709</unmanaged>
-	DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709 = 2,
+	YcbcrFlagBt709 = 2,
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC</unmanaged>
-	DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC = 4,
+	YcbcrFlagXvycc = 4,
 }
 
 /// <unmanaged>DXGI_FRAME_PRESENTATION_MODE</unmanaged>
@@ -324,11 +324,11 @@ public enum OfferResourceFlags : int
 public enum ReclaimResourceResults : int
 {
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_OK</unmanaged>
-	DXGI_RECLAIM_RESOURCE_RESULT_OK = 0,
+	Ok = 0,
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED</unmanaged>
-	DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED = 1,
+	Discarded = 1,
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED</unmanaged>
-	DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED = 2,
+	NotCommitted = 2,
 }
 
 /// <unmanaged>DXGI_FEATURE</unmanaged>
@@ -340,7 +340,7 @@ public enum Feature : int
 
 /// <unmanaged>DXGI_ADAPTER_FLAG3</unmanaged>
 [Flags]
-public enum AdapterFlag3 : uint
+public enum AdapterFlags3 : uint
 {
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_NONE</unmanaged>
 	None = 0,
@@ -363,11 +363,11 @@ public enum AdapterFlag3 : uint
 public enum HardwareCompositionSupportFlags : uint
 {
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN</unmanaged>
-	DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN = 1,
+	Fullscreen = 1,
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED</unmanaged>
-	DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED = 2,
+	Windowed = 2,
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED</unmanaged>
-	DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED = 4,
+	CursorStretched = 4,
 }
 
 /// <unmanaged>DXGI_GPU_PREFERENCE</unmanaged>
@@ -386,13 +386,13 @@ public enum GpuPreference : int
 public enum DebugRloFlags : uint
 {
 	/// <unmanaged>DXGI_DEBUG_RLO_SUMMARY</unmanaged>
-	DXGI_DEBUG_RLO_SUMMARY = 1,
+	Summary = 1,
 	/// <unmanaged>DXGI_DEBUG_RLO_DETAIL</unmanaged>
-	DXGI_DEBUG_RLO_DETAIL = 2,
+	Detail = 2,
 	/// <unmanaged>DXGI_DEBUG_RLO_IGNORE_INTERNAL</unmanaged>
-	DXGI_DEBUG_RLO_IGNORE_INTERNAL = 4,
+	IgnoreInternal = 4,
 	/// <unmanaged>DXGI_DEBUG_RLO_ALL</unmanaged>
-	DXGI_DEBUG_RLO_ALL = 7,
+	All = 7,
 }
 
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY</unmanaged>
@@ -1136,7 +1136,7 @@ public partial struct MappedRect
 /// <unmanaged>DXGI_ADAPTER_DESC</unmanaged>
 public partial struct AdapterDescription
 {
-	public unsafe fixed Char Description[128];
+	public unsafe fixed ushort Description[128];
 	public uint VendorId;
 	public uint DeviceId;
 	public uint SubSysId;
@@ -1150,7 +1150,7 @@ public partial struct AdapterDescription
 /// <unmanaged>DXGI_OUTPUT_DESC</unmanaged>
 public partial struct OutputDescription
 {
-	public unsafe fixed Char DeviceName[32];
+	public unsafe fixed ushort DeviceName[32];
 	public RawRect DesktopCoordinates;
 	public Bool32 AttachedToDesktop;
 	public Common.ModeRotation Rotation;
@@ -1177,18 +1177,18 @@ public partial struct SwapChainDescription
 {
 	public Common.ModeDescription BufferDesc;
 	public Common.SampleDescription SampleDesc;
-	public uint BufferUsage;
+	public Usage BufferUsage;
 	public uint BufferCount;
 	public IntPtr OutputWindow;
 	public Bool32 Windowed;
 	public SwapEffect SwapEffect;
-	public uint Flags;
+	public SwapChainFlags Flags;
 }
 
 /// <unmanaged>DXGI_ADAPTER_DESC1</unmanaged>
-public partial struct AdapterDesc1
+public partial struct AdapterDescription1
 {
-	public unsafe fixed Char Description[128];
+	public unsafe fixed ushort Description[128];
 	public uint VendorId;
 	public uint DeviceId;
 	public uint SubSysId;
@@ -1197,7 +1197,7 @@ public partial struct AdapterDesc1
 	public nuint DedicatedSystemMemory;
 	public nuint SharedSystemMemory;
 	public Luid AdapterLuid;
-	public uint Flags;
+	public AdapterFlags Flags;
 }
 
 /// <unmanaged>DXGI_DISPLAY_COLOR_SPACE</unmanaged>
@@ -1253,7 +1253,7 @@ public partial struct OutduplFrameInfo
 }
 
 /// <unmanaged>DXGI_MODE_DESC1</unmanaged>
-public partial struct ModeDesc1
+public partial struct ModeDescription1
 {
 	public uint Width;
 	public uint Height;
@@ -1265,19 +1265,19 @@ public partial struct ModeDesc1
 }
 
 /// <unmanaged>DXGI_SWAP_CHAIN_DESC1</unmanaged>
-public partial struct SwapChainDesc1
+public partial struct SwapChainDescription1
 {
 	public uint Width;
 	public uint Height;
 	public Common.Format Format;
 	public Bool32 Stereo;
 	public Common.SampleDescription SampleDesc;
-	public uint BufferUsage;
+	public Usage BufferUsage;
 	public uint BufferCount;
 	public Scaling Scaling;
 	public SwapEffect SwapEffect;
 	public Common.AlphaMode AlphaMode;
-	public uint Flags;
+	public SwapChainFlags Flags;
 }
 
 /// <unmanaged>DXGI_SWAP_CHAIN_FULLSCREEN_DESC</unmanaged>
@@ -1299,9 +1299,9 @@ public partial struct PresentParameters
 }
 
 /// <unmanaged>DXGI_ADAPTER_DESC2</unmanaged>
-public partial struct AdapterDesc2
+public partial struct AdapterDescription2
 {
-	public unsafe fixed Char Description[128];
+	public unsafe fixed ushort Description[128];
 	public uint VendorId;
 	public uint DeviceId;
 	public uint SubSysId;
@@ -1373,9 +1373,9 @@ public partial struct HdrMetadataHdr10plus
 }
 
 /// <unmanaged>DXGI_ADAPTER_DESC3</unmanaged>
-public partial struct AdapterDesc3
+public partial struct AdapterDescription3
 {
-	public unsafe fixed Char Description[128];
+	public unsafe fixed ushort Description[128];
 	public uint VendorId;
 	public uint DeviceId;
 	public uint SubSysId;
@@ -1384,15 +1384,15 @@ public partial struct AdapterDesc3
 	public nuint DedicatedSystemMemory;
 	public nuint SharedSystemMemory;
 	public Luid AdapterLuid;
-	public AdapterFlag3 Flags;
+	public AdapterFlags3 Flags;
 	public GraphicsPreemptionGranularity GraphicsPreemptionGranularity;
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
 }
 
 /// <unmanaged>DXGI_OUTPUT_DESC1</unmanaged>
-public partial struct OutputDesc1
+public partial struct OutputDescription1
 {
-	public unsafe fixed Char DeviceName[32];
+	public unsafe fixed ushort DeviceName[32];
 	public RawRect DesktopCoordinates;
 	public Bool32 AttachedToDesktop;
 	public Common.ModeRotation Rotation;
