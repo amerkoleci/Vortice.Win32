@@ -8,10 +8,11 @@
 // ------------------------------------------------------------------------------
 
 using System;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Diagnostics.CodeAnalysis;
 
-#if NETSTANDARD2_0
+#if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
 #endif
 
@@ -1723,4 +1724,7 @@ public partial struct JpegQuantizationTable
 }
 
 #endregion Structs
+
+#region COM Types
+#endregion COM Types
 

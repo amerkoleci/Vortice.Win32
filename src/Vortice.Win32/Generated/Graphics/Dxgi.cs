@@ -8,10 +8,11 @@
 // ------------------------------------------------------------------------------
 
 using System;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Diagnostics.CodeAnalysis;
 
-#if NETSTANDARD2_0
+#if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
 #endif
 
@@ -2173,4 +2174,123 @@ public partial struct InfoQueueFilter
 }
 
 #endregion Structs
+
+#region COM Types
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject"]/*' />
+/// <unmanaged>IDXGIObject</unmanaged>
+[Guid("aec22fb8-76f3-4639-9be0-28eb43a67a2e")]
+[NativeTypeName("struct IDXGIObject : IUnknown")]
+[NativeInheritance("IUnknown")]
+public unsafe partial struct IDXGIObject : IDXGIObject.Interface
+{
+	[NativeTypeName("const GUID")]
+	public static ref readonly Guid IID_IDXGIObject
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xB8, 0x2F, 0xC2, 0xAE,
+				0xF3, 0x76,
+				0x39, 0x46,
+				0x9B,
+				0xE0,
+				0x28,
+				0xEB,
+				0x43,
+				0xA6,
+				0x7A,
+				0x2E
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIObject));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::SetPrivateData"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIObject*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::SetPrivateDataInterface"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIObject*, Guid*, IUnknown, int>)(lpVtbl[4]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, IUnknown, int>)(lpVtbl[4]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::GetPrivateData"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIObject*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::GetParent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIObject*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIObject*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	public interface Interface : IUnknown.Interface
+	{
+	}
+
+}
+
+#endregion COM Types
 

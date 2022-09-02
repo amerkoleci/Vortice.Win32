@@ -10,9 +10,5 @@ public static unsafe class Program
 {
     public static void Main()
     {
-        SampleDescription desc = new(1, 0);
-        desc.Count
-
-        Scaling scaling = Scaling.Stretch;
     }
 }

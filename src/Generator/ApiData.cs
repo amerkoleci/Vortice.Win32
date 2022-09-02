@@ -42,6 +42,21 @@ public class ApiStructField
     public ApiDataType Type { get; set; }
 }
 
+public class ApiParameter
+{
+    public string Name { get; set; }
+    public ApiDataType Type { get; set; }
+}
+
+public class ApiFunction
+{
+    public string Name { get; set; }
+    public bool SetLastError { get; set; }
+    public ApiDataType ReturnType { get; set; }
+    public IList<ApiParameter> Params { get; set; } = new List<ApiParameter>();
+    public List<object> Attrs { get; set; }
+}
+
 public class ApiType
 {
     public string Name { get; set; }
@@ -57,6 +72,11 @@ public class ApiType
     public int Size { get; set; }
     public int PackingSize { get; set; }
     public ApiStructField[] Fields { get; set; }
+
+    // Com
+    public string Guid { get; set; }
+    public ApiDataType Interface { get; set; }
+    public IList<ApiFunction> Methods { get; set; } = new List<ApiFunction>();
 }
 
 public sealed class ApiData

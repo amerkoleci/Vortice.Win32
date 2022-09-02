@@ -37,6 +37,7 @@ public sealed class CodeWriter : IDisposable
         _writer.WriteLine();
 
         _writer.WriteLine($"using System;");
+        _writer.WriteLine($"using System.Diagnostics;");
         _writer.WriteLine($"using System.Runtime.CompilerServices;");
         _writer.WriteLine($"using System.Diagnostics.CodeAnalysis;");
 
@@ -46,7 +47,7 @@ public sealed class CodeWriter : IDisposable
         }
         _writer.WriteLine();
 
-        _writer.WriteLine("#if NETSTANDARD2_0");
+        _writer.WriteLine("#if !NET6_0_OR_GREATER");
         _writer.WriteLine("using MemoryMarshal = Win32.MemoryMarshal;");
         _writer.WriteLine("#endif");
         _writer.WriteLine();
@@ -83,7 +84,7 @@ public sealed class CodeWriter : IDisposable
         _shouldIndent = true;
     }
 
-    public void WriteUndindented(string @string)
+    public void WriteLineUndindented(string @string)
     {
         _writer.WriteLine(@string);
         _shouldIndent = true;

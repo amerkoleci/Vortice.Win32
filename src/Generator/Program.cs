@@ -7,7 +7,6 @@ using System.Xml;
 using MessagePack;
 using Microsoft.Windows.SDK.Win32Docs;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Generator;
 
@@ -44,6 +43,8 @@ public static class Program
         { "Foundation.HRESULT", "HResult" },
         { "Foundation.LUID", "Luid" },
         { "Foundation.LARGE_INTEGER", "LargeInterger" },
+
+        { "System.Com.IUnknown", "IUnknown" },
 
         // TODO: Understand those ->
         { "Foundation.HWND", "IntPtr" },
@@ -208,38 +209,38 @@ public static class Program
                                 {
                                     writer.WriteStartElement(null, "param", null);
                                     string paramName = param.Key;
-                                    if (paramName.StartsWith("pp") && char.IsUpper(paramName[2]))
-                                    {
-                                        paramName = paramName.Substring(2);
-                                        paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    }
-                                    else if (paramName.StartsWith("p") && char.IsUpper(paramName[1]))
-                                    {
-                                        paramName = paramName.Substring(1);
-                                        paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    }
-                                    else if (paramName.StartsWith("u") && char.IsUpper(paramName[1]))
-                                    {
-                                        paramName = paramName.Substring(1);
-                                        paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    }
-                                    else if (paramName.StartsWith("b") && char.IsUpper(paramName[1])) // bEnable
-                                    {
-                                        paramName = paramName.Substring(1);
-                                        paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    }
-                                    else if (char.IsUpper(paramName[0]) && paramName.Length > 1 && char.IsLower(paramName[1]))
-                                    {
-                                        paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    }
-                                    else if (paramName == "ID")
-                                    {
-                                        paramName = "id";
-                                    }
-                                    else if (paramName == "dwCookie")
-                                    {
-                                        paramName = "cookie";
-                                    }
+                                    //if (paramName.StartsWith("pp") && char.IsUpper(paramName[2]))
+                                    //{
+                                    //    paramName = paramName.Substring(2);
+                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
+                                    //}
+                                    //else if (paramName.StartsWith("p") && char.IsUpper(paramName[1]))
+                                    //{
+                                    //    paramName = paramName.Substring(1);
+                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
+                                    //}
+                                    //else if (paramName.StartsWith("u") && char.IsUpper(paramName[1]))
+                                    //{
+                                    //    paramName = paramName.Substring(1);
+                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
+                                    //}
+                                    //else if (paramName.StartsWith("b") && char.IsUpper(paramName[1])) // bEnable
+                                    //{
+                                    //    paramName = paramName.Substring(1);
+                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
+                                    //}
+                                    //else if (char.IsUpper(paramName[0]) && paramName.Length > 1 && char.IsLower(paramName[1]))
+                                    //{
+                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
+                                    //}
+                                    //else if (paramName == "ID")
+                                    //{
+                                    //    paramName = "id";
+                                    //}
+                                    //else if (paramName == "dwCookie")
+                                    //{
+                                    //    paramName = "cookie";
+                                    //}
 
                                     writer.WriteAttributeString("name", paramName);
 
@@ -492,6 +493,15 @@ public static class Program
         }
         writer.WriteLine($"#endregion Structs");
         writer.WriteLine();
+
+        // Com types
+        writer.WriteLine($"#region COM Types");
+        foreach (ApiType comType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "com"))
+        {
+            GenerateComType(writer, comType);
+        }
+        writer.WriteLine($"#endregion COM Types");
+        writer.WriteLine();
     }
 
     private static void GenerateEnum(CodeWriter writer, ApiType enumType, bool autoGenerated)
@@ -648,6 +658,192 @@ public static class Program
                     writer.WriteLine($"public {unsafePrefix}{fieldTypeName} {fieldValueName};");
                 }
             }
+        }
+
+        writer.WriteLine();
+    }
+
+    private static void GenerateComType(CodeWriter writer, ApiType comType)
+    {
+        if (comType.Name != "IDXGIObject" /*&&
+            comType.Name != "IDXGIDeviceSubObject"*/)
+        {
+            return;
+        }
+
+        string csTypeName = comType.Name;
+        //AddCsMapping(writer.Api, comType.Name, csTypeName);
+
+        writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}\"]/*' />");
+
+        if (s_generateUnmanagedDocs)
+        {
+            writer.WriteLine($"/// <unmanaged>{comType.Name}</unmanaged>");
+        }
+
+        writer.WriteLine($"[Guid(\"{comType.Guid}\")]");
+        writer.WriteLine($"[NativeTypeName(\"struct {comType.Name} : {comType.Interface.Name}\")]");
+        writer.WriteLine($"[NativeInheritance(\"{comType.Interface.Name}\")]");
+        using (writer.PushBlock($"public unsafe partial struct {csTypeName} : {csTypeName}.Interface"))
+        {
+            // Generate IID
+            writer.WriteLine($"[NativeTypeName(\"const GUID\")]");
+            using (writer.PushBlock($"public static ref readonly Guid IID_{csTypeName}"))
+            {
+                writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                using (writer.PushBlock("get"))
+                {
+                    var guid = Guid.Parse(comType.Guid).ToString("N");
+                    var _1 = "0x" + guid.Substring(6, 2).ToUpperInvariant();
+                    var _2 = "0x" + guid.Substring(4, 2).ToUpperInvariant();
+                    var _3 = "0x" + guid.Substring(2, 2).ToUpperInvariant();
+                    var _4 = "0x" + guid.Substring(0, 2).ToUpperInvariant();
+
+                    var _5 = "0x" + guid.Substring(10, 2).ToUpperInvariant();
+                    var _6 = "0x" + guid.Substring(8, 2).ToUpperInvariant();
+
+                    var _7 = "0x" + guid.Substring(14, 2).ToUpperInvariant();
+                    var _8 = "0x" + guid.Substring(12, 2).ToUpperInvariant();
+
+                    var d = "0x" + guid.Substring(16, 2).ToUpperInvariant();
+                    var e = "0x" + guid.Substring(18, 2).ToUpperInvariant();
+                    var f = "0x" + guid.Substring(20, 2).ToUpperInvariant();
+                    var g = "0x" + guid.Substring(22, 2).ToUpperInvariant();
+                    var h = "0x" + guid.Substring(24, 2).ToUpperInvariant();
+                    var i = "0x" + guid.Substring(26, 2).ToUpperInvariant();
+                    var j = "0x" + guid.Substring(28, 2).ToUpperInvariant();
+                    var k = "0x" + guid.Substring(30, 2).ToUpperInvariant();
+
+                    writer.WriteLine("ReadOnlySpan<byte> data = new byte[] {");
+                    writer.WriteLine($"{'\t'}{_1}, {_2}, {_3}, {_4},");
+                    writer.WriteLine($"{'\t'}{_5}, {_6},");
+                    writer.WriteLine($"{'\t'}{_7}, {_8},");
+                    writer.WriteLine($"{'\t'}{d},");
+                    writer.WriteLine($"{'\t'}{e},");
+                    writer.WriteLine($"{'\t'}{f},");
+                    writer.WriteLine($"{'\t'}{g},");
+                    writer.WriteLine($"{'\t'}{h},");
+                    writer.WriteLine($"{'\t'}{i},");
+                    writer.WriteLine($"{'\t'}{j},");
+                    writer.WriteLine($"{'\t'}{k}");
+                    writer.WriteLine("};");
+                    writer.WriteLine();
+
+                    writer.WriteLine("Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());");
+                    writer.WriteLine("return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));");
+                }
+            }
+            writer.WriteLine();
+
+            writer.WriteLine($"public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
+            writer.WriteLine();
+
+            writer.WriteLine($"public void** lpVtbl;");
+            writer.WriteLine();
+
+            int vtblIndex = 0;
+            if (comType.Interface.Name == "IUnknown")
+            {
+                writer.WriteLine("/// <inheritdoc cref=\"IUnknown.QueryInterface\" />");
+                writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                writer.WriteLine("[VtblIndex(0)]");
+                using (writer.PushBlock($"public HResult QueryInterface([NativeTypeName(\"const IID &\")] Guid* riid, void** ppvObject)"))
+                {
+                    writer.WriteLine("return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);");
+                }
+                writer.WriteLine();
+
+                // AddRef
+                writer.WriteLine("/// <inheritdoc cref=\"IUnknown.AddRef\" />");
+                writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                writer.WriteLine("[VtblIndex(1)]");
+                writer.WriteLine("[return: NativeTypeName(\"ULONG\")]");
+                using (writer.PushBlock($"public uint AddRef()"))
+                {
+                    writer.WriteLine("return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));");
+                }
+                writer.WriteLine();
+
+                // Release
+                writer.WriteLine("/// <inheritdoc cref=\"IUnknown.Release\" />");
+                writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                writer.WriteLine("[VtblIndex(2)]");
+                writer.WriteLine("[return: NativeTypeName(\"ULONG\")]");
+                using (writer.PushBlock($"public uint Release()"))
+                {
+                    writer.WriteLine("return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));");
+                }
+                writer.WriteLine();
+                vtblIndex = 3;
+            }
+
+            foreach (var method in comType.Methods)
+            {
+                // TODO: Handle inherit
+                string returnType = GetTypeName(method.ReturnType);
+
+                StringBuilder argumentBuilder = new();
+                StringBuilder argumentsTypesBuilder = new();
+                StringBuilder argumentsNameBuilder = new();
+                int parameterIndex = 0;
+
+                foreach (var parameter in method.Params)
+                {
+                    string parameterType = GetTypeName(parameter.Type);
+                    string parameterName = parameter.Name;
+
+                    argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
+                    argumentsTypesBuilder.Append(parameterType);
+                    argumentsNameBuilder.Append(parameterName);
+
+                    if (parameterIndex < method.Params.Count - 1)
+                    {
+                        argumentBuilder.Append(", ");
+                        argumentsTypesBuilder.Append(", ");
+                        argumentsNameBuilder.Append(", ");
+                    }
+
+                    parameterIndex++;
+                }
+
+                // Return type
+                string returnMarshalType = returnType;
+                if (returnMarshalType.ToLower() == "hresult")
+                {
+                    returnMarshalType = "int";
+                }
+
+                argumentsTypesBuilder.Append(", ").Append(returnMarshalType);
+
+                string argumentsString = argumentBuilder.ToString();
+                string argumentTypesString = argumentsTypesBuilder.ToString();
+                string argumentNamesString = argumentsNameBuilder.ToString();
+
+                writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}::{method.Name}\"]/*' />");
+                writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                writer.WriteLine($"[VtblIndex({vtblIndex})]");
+                using (writer.PushBlock($"public {returnType} {method.Name}({argumentsString})"))
+                {
+                    writer.WriteLineUndindented("#if NET6_0_OR_GREATER");
+                    if (returnType != "void")
+                        writer.Write("return ");
+                    writer.WriteLine($"((delegate* unmanaged<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), {argumentNamesString});");
+                    writer.WriteLineUndindented("#else");
+                    if (returnType != "void")
+                        writer.Write("return ");
+                    writer.WriteLine($"((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), {argumentNamesString});");
+                    writer.WriteLineUndindented("#endif");
+                }
+
+                writer.WriteLine();
+
+                vtblIndex++;
+            }
+
+            using (writer.PushBlock($"public interface Interface : {comType.Interface.Name}.Interface"))
+            {
+            }
+            writer.WriteLine();
         }
 
         writer.WriteLine();
