@@ -3,6 +3,8 @@
 
 #nullable disable
 
+using System.Text;
+
 namespace Generator;
 
 public class ApiDataArrayShape
@@ -20,6 +22,11 @@ public class ApiDataType
     // Kind == Array
     public ApiDataArrayShape Shape { get; set; }
     public ApiDataType Child { get; set; }
+
+    // Kind == LPArray
+    public bool NullNullTerm { get; set; }
+    public int CountParamIndex { get; set; }
+    public int CountConst { get; set; }
 }
 
 public class ApiDataConstant
@@ -46,6 +53,7 @@ public class ApiParameter
 {
     public string Name { get; set; }
     public ApiDataType Type { get; set; }
+    public List<object> Attrs { get; set; } = new();
 }
 
 public class ApiFunction
@@ -55,6 +63,34 @@ public class ApiFunction
     public ApiDataType ReturnType { get; set; }
     public IList<ApiParameter> Params { get; set; } = new List<ApiParameter>();
     public List<object> Attrs { get; set; }
+
+    private string _toString = default;
+
+    public override string ToString()
+    {
+        if (string.IsNullOrEmpty(_toString))
+        {
+            StringBuilder builder = new();
+            builder.Append(ReturnType.Name).Append(' ');
+            builder.Append(Name).Append('(');
+            int parameterIndex = 0;
+            foreach (var parameter in Params)
+            {
+                // TODO: Handle PointerTo, Array etc
+                builder.Append(parameter.Type.Name).Append(' ').Append(parameter.Name);
+                if (parameterIndex < Params.Count - 1)
+                {
+                    builder.Append(", ");
+                }
+                parameterIndex++;
+            }
+
+            builder.Append(')');
+            _toString = builder.ToString();
+        }
+
+        return _toString;
+    }
 }
 
 public class ApiType

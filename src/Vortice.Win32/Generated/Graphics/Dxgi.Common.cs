@@ -577,8 +577,10 @@ public partial struct Rational
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RATIONAL::Numerator"]/*' />
 	public uint Numerator;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RATIONAL::Denominator"]/*' />
 	public uint Denominator;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SAMPLE_DESC"]/*' />
@@ -587,8 +589,10 @@ public partial struct SampleDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SAMPLE_DESC::Count"]/*' />
 	public uint Count;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SAMPLE_DESC::Quality"]/*' />
 	public uint Quality;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGB"]/*' />
@@ -597,10 +601,13 @@ public partial struct Rgb
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGB::Red"]/*' />
 	public float Red;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGB::Green"]/*' />
 	public float Green;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGB::Blue"]/*' />
 	public float Blue;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL"]/*' />
@@ -609,8 +616,10 @@ public partial struct GammaControl
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::Scale"]/*' />
 	public Rgb Scale;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::Offset"]/*' />
 	public Rgb Offset;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::GammaCurve"]/*' />
 	public GammaCurve__FixedBuffer GammaCurve;
 
@@ -1659,6 +1668,7 @@ public partial struct GammaControl
 			return MemoryMarshal.CreateSpan(ref e0, 1025);
 		}
 	}
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES"]/*' />
@@ -1667,14 +1677,19 @@ public partial struct GammaControlCapabilities
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ScaleAndOffsetSupported"]/*' />
 	public Bool32 ScaleAndOffsetSupported;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::MaxConvertedValue"]/*' />
 	public float MaxConvertedValue;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::MinConvertedValue"]/*' />
 	public float MinConvertedValue;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::NumGammaControlPoints"]/*' />
 	public uint NumGammaControlPoints;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ControlPointPositions"]/*' />
 	public unsafe fixed float ControlPointPositions[1025];
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC"]/*' />
@@ -1683,16 +1698,22 @@ public partial struct ModeDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::Width"]/*' />
 	public uint Width;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::Height"]/*' />
 	public uint Height;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::RefreshRate"]/*' />
 	public Rational RefreshRate;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::Format"]/*' />
 	public Format Format;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::ScanlineOrdering"]/*' />
 	public ModeScanlineOrder ScanlineOrdering;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::Scaling"]/*' />
 	public ModeScaling Scaling;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE"]/*' />
@@ -1701,8 +1722,10 @@ public partial struct JpegDcHuffmanTable
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE::CodeCounts"]/*' />
 	public unsafe fixed byte CodeCounts[12];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE::CodeValues"]/*' />
 	public unsafe fixed byte CodeValues[12];
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE"]/*' />
@@ -1711,8 +1734,10 @@ public partial struct JpegAcHuffmanTable
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeCounts"]/*' />
 	public unsafe fixed byte CodeCounts[16];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeValues"]/*' />
 	public unsafe fixed byte CodeValues[162];
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE"]/*' />
@@ -1721,10 +1746,10 @@ public partial struct JpegQuantizationTable
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE::Elements"]/*' />
 	public unsafe fixed byte Elements[64];
+
 }
 
 #endregion Structs
 
 #region COM Types
-#endregion COM Types
-
+#endregion Com Types

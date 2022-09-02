@@ -3,7 +3,7 @@
 
 namespace Win32;
 
-public readonly partial struct Bool32 : IComparable, IComparable<Bool32>, IEquatable<Bool32>, IFormattable
+public readonly partial struct Bool32 : IComparable, IComparable<Bool32>, IEquatable<Bool32>
 {
     public readonly int Value;
 
@@ -93,7 +93,5 @@ public readonly partial struct Bool32 : IComparable, IComparable<Bool32>, IEquat
 
     public override int GetHashCode() => Value.GetHashCode();
 
-    public override string ToString() => Value.ToString();
-
-    public string ToString(string? format, IFormatProvider? formatProvider) => Value.ToString(format, formatProvider);
+    public override string ToString() => Value != 0 ? "True" : "False";
 }

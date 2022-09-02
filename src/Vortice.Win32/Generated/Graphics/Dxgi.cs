@@ -1643,12 +1643,16 @@ public partial struct Rgba
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA::r"]/*' />
 	public float r;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA::g"]/*' />
 	public float g;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA::b"]/*' />
 	public float b;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA::a"]/*' />
 	public float a;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS"]/*' />
@@ -1657,14 +1661,19 @@ public partial struct FrameStatistics
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentCount"]/*' />
 	public uint PresentCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentRefreshCount"]/*' />
 	public uint PresentRefreshCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncRefreshCount"]/*' />
 	public uint SyncRefreshCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncQPCTime"]/*' />
 	public LargeInterger SyncQPCTime;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncGPUTime"]/*' />
 	public LargeInterger SyncGPUTime;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT"]/*' />
@@ -1673,8 +1682,10 @@ public partial struct MappedRect
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT::Pitch"]/*' />
 	public int Pitch;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT::pBits"]/*' />
 	public unsafe byte* pBits;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC"]/*' />
@@ -1683,22 +1694,31 @@ public partial struct AdapterDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
 	public unsafe fixed ushort Description[128];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::VendorId"]/*' />
 	public uint VendorId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DeviceId"]/*' />
 	public uint DeviceId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SubSysId"]/*' />
 	public uint SubSysId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Revision"]/*' />
 	public uint Revision;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC"]/*' />
@@ -1707,14 +1727,19 @@ public partial struct OutputDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DeviceName"]/*' />
 	public unsafe fixed ushort DeviceName[32];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DesktopCoordinates"]/*' />
 	public RawRect DesktopCoordinates;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::AttachedToDesktop"]/*' />
 	public Bool32 AttachedToDesktop;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Monitor"]/*' />
 	public IntPtr Monitor;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE"]/*' />
@@ -1723,6 +1748,7 @@ public partial struct SharedResource
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE::Handle"]/*' />
 	public IntPtr Handle;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC"]/*' />
@@ -1731,12 +1757,16 @@ public partial struct SurfaceDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Width"]/*' />
 	public uint Width;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Height"]/*' />
 	public uint Height;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Format"]/*' />
 	public Common.Format Format;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC"]/*' />
@@ -1745,20 +1775,28 @@ public partial struct SwapChainDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferDesc"]/*' />
 	public Common.ModeDescription BufferDesc;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferUsage"]/*' />
 	public Usage BufferUsage;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferCount"]/*' />
 	public uint BufferCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::OutputWindow"]/*' />
 	public IntPtr OutputWindow;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Windowed"]/*' />
 	public Bool32 Windowed;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SwapEffect"]/*' />
 	public SwapEffect SwapEffect;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Flags"]/*' />
 	public SwapChainFlags Flags;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1"]/*' />
@@ -1767,24 +1805,34 @@ public partial struct AdapterDescription1
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
 	public unsafe fixed ushort Description[128];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::VendorId"]/*' />
 	public uint VendorId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DeviceId"]/*' />
 	public uint DeviceId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::SubSysId"]/*' />
 	public uint SubSysId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Revision"]/*' />
 	public uint Revision;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Flags"]/*' />
 	public AdapterFlags Flags;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE"]/*' />
@@ -1793,8 +1841,10 @@ public partial struct DisplayColorSpace
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::PrimaryCoordinates"]/*' />
 	public unsafe fixed float PrimaryCoordinates[16];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::WhitePoints"]/*' />
 	public unsafe fixed float WhitePoints[32];
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT"]/*' />
@@ -1803,8 +1853,10 @@ public partial struct OutduplMoveRect
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::SourcePoint"]/*' />
 	public System.Drawing.Point SourcePoint;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::DestinationRect"]/*' />
 	public RawRect DestinationRect;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC"]/*' />
@@ -1813,10 +1865,13 @@ public partial struct OutduplDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::ModeDesc"]/*' />
 	public Common.ModeDescription ModeDesc;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::DesktopImageInSystemMemory"]/*' />
 	public Bool32 DesktopImageInSystemMemory;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION"]/*' />
@@ -1825,8 +1880,10 @@ public partial struct OutduplPointerPosition
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Position"]/*' />
 	public System.Drawing.Point Position;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Visible"]/*' />
 	public Bool32 Visible;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO"]/*' />
@@ -1835,14 +1892,19 @@ public partial struct OutduplPointerShapeInfo
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Type"]/*' />
 	public uint Type;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Width"]/*' />
 	public uint Width;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Height"]/*' />
 	public uint Height;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Pitch"]/*' />
 	public uint Pitch;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::HotSpot"]/*' />
 	public System.Drawing.Point HotSpot;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO"]/*' />
@@ -1851,20 +1913,28 @@ public partial struct OutduplFrameInfo
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastPresentTime"]/*' />
 	public LargeInterger LastPresentTime;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastMouseUpdateTime"]/*' />
 	public LargeInterger LastMouseUpdateTime;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::AccumulatedFrames"]/*' />
 	public uint AccumulatedFrames;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::RectsCoalesced"]/*' />
 	public Bool32 RectsCoalesced;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::ProtectedContentMaskedOut"]/*' />
 	public Bool32 ProtectedContentMaskedOut;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerPosition"]/*' />
 	public OutduplPointerPosition PointerPosition;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::TotalMetadataBufferSize"]/*' />
 	public uint TotalMetadataBufferSize;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerShapeBufferSize"]/*' />
 	public uint PointerShapeBufferSize;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1"]/*' />
@@ -1873,18 +1943,25 @@ public partial struct ModeDescription1
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Width"]/*' />
 	public uint Width;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Height"]/*' />
 	public uint Height;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::RefreshRate"]/*' />
 	public Common.Rational RefreshRate;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Format"]/*' />
 	public Common.Format Format;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::ScanlineOrdering"]/*' />
 	public Common.ModeScanlineOrder ScanlineOrdering;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Scaling"]/*' />
 	public Common.ModeScaling Scaling;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Stereo"]/*' />
 	public Bool32 Stereo;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1"]/*' />
@@ -1893,26 +1970,37 @@ public partial struct SwapChainDescription1
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Width"]/*' />
 	public uint Width;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Height"]/*' />
 	public uint Height;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Format"]/*' />
 	public Common.Format Format;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Stereo"]/*' />
 	public Bool32 Stereo;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferUsage"]/*' />
 	public Usage BufferUsage;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferCount"]/*' />
 	public uint BufferCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Scaling"]/*' />
 	public Scaling Scaling;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SwapEffect"]/*' />
 	public SwapEffect SwapEffect;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::AlphaMode"]/*' />
 	public Common.AlphaMode AlphaMode;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Flags"]/*' />
 	public SwapChainFlags Flags;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC"]/*' />
@@ -1921,12 +2009,16 @@ public partial struct SwapChainFullscreenDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::RefreshRate"]/*' />
 	public Common.Rational RefreshRate;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::ScanlineOrdering"]/*' />
 	public Common.ModeScanlineOrder ScanlineOrdering;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Scaling"]/*' />
 	public Common.ModeScaling Scaling;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Windowed"]/*' />
 	public Bool32 Windowed;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS"]/*' />
@@ -1935,12 +2027,16 @@ public partial struct PresentParameters
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::DirtyRectsCount"]/*' />
 	public uint DirtyRectsCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pDirtyRects"]/*' />
 	public unsafe RawRect* pDirtyRects;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollRect"]/*' />
 	public unsafe RawRect* pScrollRect;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollOffset"]/*' />
 	public unsafe System.Drawing.Point* pScrollOffset;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2"]/*' />
@@ -1949,28 +2045,40 @@ public partial struct AdapterDescription2
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
 	public unsafe fixed ushort Description[128];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::VendorId"]/*' />
 	public uint VendorId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DeviceId"]/*' />
 	public uint DeviceId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::SubSysId"]/*' />
 	public uint SubSysId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Revision"]/*' />
 	public uint Revision;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Flags"]/*' />
 	public uint Flags;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::GraphicsPreemptionGranularity"]/*' />
 	public GraphicsPreemptionGranularity GraphicsPreemptionGranularity;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::ComputePreemptionGranularity"]/*' />
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F"]/*' />
@@ -1979,16 +2087,22 @@ public partial struct Matrix3x2F
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_11"]/*' />
 	public float _11;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_12"]/*' />
 	public float _12;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_21"]/*' />
 	public float _21;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_22"]/*' />
 	public float _22;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_31"]/*' />
 	public float _31;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_32"]/*' />
 	public float _32;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC"]/*' />
@@ -1997,6 +2111,7 @@ public partial struct DecodeSwapChainDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC::Flags"]/*' />
 	public uint Flags;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA"]/*' />
@@ -2005,18 +2120,25 @@ public partial struct FrameStatisticsMedia
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentCount"]/*' />
 	public uint PresentCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentRefreshCount"]/*' />
 	public uint PresentRefreshCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncRefreshCount"]/*' />
 	public uint SyncRefreshCount;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncQPCTime"]/*' />
 	public LargeInterger SyncQPCTime;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncGPUTime"]/*' />
 	public LargeInterger SyncGPUTime;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::CompositionMode"]/*' />
 	public FramePresentationMode CompositionMode;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::ApprovedPresentDuration"]/*' />
 	public uint ApprovedPresentDuration;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO"]/*' />
@@ -2025,12 +2147,16 @@ public partial struct QueryVideoMemoryInfo
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::Budget"]/*' />
 	public ulong Budget;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentUsage"]/*' />
 	public ulong CurrentUsage;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::AvailableForReservation"]/*' />
 	public ulong AvailableForReservation;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentReservation"]/*' />
 	public ulong CurrentReservation;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10"]/*' />
@@ -2039,20 +2165,28 @@ public partial struct HdrMetadataHdr10
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::RedPrimary"]/*' />
 	public unsafe fixed ushort RedPrimary[2];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::GreenPrimary"]/*' />
 	public unsafe fixed ushort GreenPrimary[2];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::BluePrimary"]/*' />
 	public unsafe fixed ushort BluePrimary[2];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::WhitePoint"]/*' />
 	public unsafe fixed ushort WhitePoint[2];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxMasteringLuminance"]/*' />
 	public uint MaxMasteringLuminance;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MinMasteringLuminance"]/*' />
 	public uint MinMasteringLuminance;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxContentLightLevel"]/*' />
 	public ushort MaxContentLightLevel;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxFrameAverageLightLevel"]/*' />
 	public ushort MaxFrameAverageLightLevel;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS"]/*' />
@@ -2061,6 +2195,7 @@ public partial struct HdrMetadataHdr10plus
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS::Data"]/*' />
 	public unsafe fixed byte Data[72];
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3"]/*' />
@@ -2069,28 +2204,40 @@ public partial struct AdapterDescription3
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Description"]/*' />
 	public unsafe fixed ushort Description[128];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::VendorId"]/*' />
 	public uint VendorId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DeviceId"]/*' />
 	public uint DeviceId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SubSysId"]/*' />
 	public uint SubSysId;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Revision"]/*' />
 	public uint Revision;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Flags"]/*' />
 	public AdapterFlags3 Flags;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::GraphicsPreemptionGranularity"]/*' />
 	public GraphicsPreemptionGranularity GraphicsPreemptionGranularity;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::ComputePreemptionGranularity"]/*' />
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1"]/*' />
@@ -2099,32 +2246,46 @@ public partial struct OutputDescription1
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DeviceName"]/*' />
 	public unsafe fixed ushort DeviceName[32];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DesktopCoordinates"]/*' />
 	public RawRect DesktopCoordinates;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::AttachedToDesktop"]/*' />
 	public Bool32 AttachedToDesktop;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Monitor"]/*' />
 	public IntPtr Monitor;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BitsPerColor"]/*' />
 	public uint BitsPerColor;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::ColorSpace"]/*' />
 	public Common.ColorSpaceType ColorSpace;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::RedPrimary"]/*' />
 	public unsafe fixed float RedPrimary[2];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::GreenPrimary"]/*' />
 	public unsafe fixed float GreenPrimary[2];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BluePrimary"]/*' />
 	public unsafe fixed float BluePrimary[2];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::WhitePoint"]/*' />
 	public unsafe fixed float WhitePoint[2];
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MinLuminance"]/*' />
 	public float MinLuminance;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxLuminance"]/*' />
 	public float MaxLuminance;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxFullFrameLuminance"]/*' />
 	public float MaxFullFrameLuminance;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE"]/*' />
@@ -2133,16 +2294,22 @@ public partial struct InfoQueueMessage
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Producer"]/*' />
 	public Guid Producer;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Category"]/*' />
 	public InfoQueueMessageCategory Category;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Severity"]/*' />
 	public InfoQueueMessageSeverity Severity;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::ID"]/*' />
 	public int ID;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::pDescription"]/*' />
 	public unsafe byte* pDescription;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::DescriptionByteLength"]/*' />
 	public nuint DescriptionByteLength;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC"]/*' />
@@ -2151,16 +2318,22 @@ public partial struct InfoQueueFilterDescription
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumCategories"]/*' />
 	public uint NumCategories;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pCategoryList"]/*' />
 	public unsafe InfoQueueMessageCategory* pCategoryList;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumSeverities"]/*' />
 	public uint NumSeverities;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pSeverityList"]/*' />
 	public unsafe InfoQueueMessageSeverity* pSeverityList;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumIDs"]/*' />
 	public uint NumIDs;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
 	public unsafe int* pIDList;
+
 }
 
 /// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER"]/*' />
@@ -2169,8 +2342,10 @@ public partial struct InfoQueueFilter
 {
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::AllowList"]/*' />
 	public InfoQueueFilterDescription AllowList;
+
 	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::DenyList"]/*' />
 	public InfoQueueFilterDescription DenyList;
+
 }
 
 #endregion Structs
@@ -2183,7 +2358,6 @@ public partial struct InfoQueueFilter
 [NativeInheritance("IUnknown")]
 public unsafe partial struct IDXGIObject : IDXGIObject.Interface
 {
-	[NativeTypeName("const GUID")]
 	public static ref readonly Guid IID_IDXGIObject
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -2253,12 +2427,12 @@ public unsafe partial struct IDXGIObject : IDXGIObject.Interface
 	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::SetPrivateDataInterface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetPrivateDataInterface(Guid* Name, IUnknown pUnknown)
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
 #if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIObject*, Guid*, IUnknown, int>)(lpVtbl[4]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
+		return ((delegate* unmanaged<IDXGIObject*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
 #else
-		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, IUnknown, int>)(lpVtbl[4]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
+		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
 #endif
 	}
 
@@ -2289,8 +2463,11766 @@ public unsafe partial struct IDXGIObject : IDXGIObject.Interface
 	public interface Interface : IUnknown.Interface
 	{
 	}
-
 }
 
-#endregion COM Types
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDeviceSubObject"]/*' />
+/// <unmanaged>IDXGIDeviceSubObject</unmanaged>
+[Guid("3d3e0379-f9de-4d58-bb6c-18d62992f1a6")]
+[NativeTypeName("struct IDXGIDeviceSubObject : IDXGIObject")]
+[NativeInheritance("IDXGIObject")]
+public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interface
+{
+	public static ref readonly Guid IID_IDXGIDeviceSubObject
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x79, 0x03, 0x3E, 0x3D,
+				0xDE, 0xF9,
+				0x58, 0x4D,
+				0xBB,
+				0x6C,
+				0x18,
+				0xD6,
+				0x29,
+				0x92,
+				0xF1,
+				0xA6
+			};
 
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDeviceSubObject));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDeviceSubObject*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDeviceSubObject*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDeviceSubObject*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDeviceSubObject*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDeviceSubObject*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDeviceSubObject*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDeviceSubObject::GetDevice"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	public interface Interface : IDXGIObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource"]/*' />
+/// <unmanaged>IDXGIResource</unmanaged>
+[Guid("035f3ab4-482e-4e50-b41f-8a7f8bd8960b")]
+[NativeTypeName("struct IDXGIResource : IDXGIDeviceSubObject")]
+[NativeInheritance("IDXGIDeviceSubObject")]
+public unsafe partial struct IDXGIResource : IDXGIResource.Interface
+{
+	public static ref readonly Guid IID_IDXGIResource
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xB4, 0x3A, 0x5F, 0x03,
+				0x2E, 0x48,
+				0x50, 0x4E,
+				0xB4,
+				0x1F,
+				0x8A,
+				0x7F,
+				0x8B,
+				0xD8,
+				0x96,
+				0x0B
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIResource));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, Guid*, void**, int>)(lpVtbl[3]))((IDXGIResource*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Guid*, void**, int>)(lpVtbl[3]))((IDXGIResource*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, Guid*, uint, void*, int>)(lpVtbl[4]))((IDXGIResource*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Guid*, uint, void*, int>)(lpVtbl[4]))((IDXGIResource*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, Guid*, IUnknown*, int>)(lpVtbl[5]))((IDXGIResource*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Guid*, IUnknown*, int>)(lpVtbl[5]))((IDXGIResource*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, Guid*, uint*, void*, int>)(lpVtbl[6]))((IDXGIResource*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Guid*, uint*, void*, int>)(lpVtbl[6]))((IDXGIResource*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIResource*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIResource*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource::GetSharedHandle"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetSharedHandle(IntPtr* pSharedHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, IntPtr*, int>)(lpVtbl[8]))((IDXGIResource*)Unsafe.AsPointer(ref this), pSharedHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, IntPtr*, int>)(lpVtbl[8]))((IDXGIResource*)Unsafe.AsPointer(ref this), pSharedHandle);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource::GetUsage"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetUsage(uint* pUsage)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, uint*, int>)(lpVtbl[9]))((IDXGIResource*)Unsafe.AsPointer(ref this), pUsage);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, uint*, int>)(lpVtbl[9]))((IDXGIResource*)Unsafe.AsPointer(ref this), pUsage);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource::SetEvictionPriority"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource::GetEvictionPriority"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetEvictionPriority(uint* pEvictionPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource*, uint*, int>)(lpVtbl[11]))((IDXGIResource*)Unsafe.AsPointer(ref this), pEvictionPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, uint*, int>)(lpVtbl[11]))((IDXGIResource*)Unsafe.AsPointer(ref this), pEvictionPriority);
+#endif
+	}
+
+	public interface Interface : IDXGIDeviceSubObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex"]/*' />
+/// <unmanaged>IDXGIKeyedMutex</unmanaged>
+[Guid("9d8e1289-d7b3-465f-8126-250e349af85d")]
+[NativeTypeName("struct IDXGIKeyedMutex : IDXGIDeviceSubObject")]
+[NativeInheritance("IDXGIDeviceSubObject")]
+public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface
+{
+	public static ref readonly Guid IID_IDXGIKeyedMutex
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x89, 0x12, 0x8E, 0x9D,
+				0xB3, 0xD7,
+				0x5F, 0x46,
+				0x81,
+				0x26,
+				0x25,
+				0x0E,
+				0x34,
+				0x9A,
+				0xF8,
+				0x5D
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIKeyedMutex));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[3]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[3]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIKeyedMutex*, Guid*, uint, void*, int>)(lpVtbl[4]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, Guid*, uint, void*, int>)(lpVtbl[4]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIKeyedMutex*, Guid*, IUnknown*, int>)(lpVtbl[5]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, Guid*, IUnknown*, int>)(lpVtbl[5]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIKeyedMutex*, Guid*, uint*, void*, int>)(lpVtbl[6]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, Guid*, uint*, void*, int>)(lpVtbl[6]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex::AcquireSync"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult AcquireSync(ulong Key, uint dwMilliseconds)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIKeyedMutex*, ulong, uint, int>)(lpVtbl[8]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key, dwMilliseconds);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, ulong, uint, int>)(lpVtbl[8]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key, dwMilliseconds);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex::ReleaseSync"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult ReleaseSync(ulong Key)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIKeyedMutex*, ulong, int>)(lpVtbl[9]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, ulong, int>)(lpVtbl[9]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key);
+#endif
+	}
+
+	public interface Interface : IDXGIDeviceSubObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface"]/*' />
+/// <unmanaged>IDXGISurface</unmanaged>
+[Guid("cafcb56c-6ac3-4889-bf47-9e23bbd260ec")]
+[NativeTypeName("struct IDXGISurface : IDXGIDeviceSubObject")]
+[NativeInheritance("IDXGIDeviceSubObject")]
+public unsafe partial struct IDXGISurface : IDXGISurface.Interface
+{
+	public static ref readonly Guid IID_IDXGISurface
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x6C, 0xB5, 0xFC, 0xCA,
+				0xC3, 0x6A,
+				0x89, 0x48,
+				0xBF,
+				0x47,
+				0x9E,
+				0x23,
+				0xBB,
+				0xD2,
+				0x60,
+				0xEC
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface*, Guid*, void**, int>)(lpVtbl[3]))((IDXGISurface*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, Guid*, void**, int>)(lpVtbl[3]))((IDXGISurface*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface*, Guid*, uint, void*, int>)(lpVtbl[4]))((IDXGISurface*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, Guid*, uint, void*, int>)(lpVtbl[4]))((IDXGISurface*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface*, Guid*, IUnknown*, int>)(lpVtbl[5]))((IDXGISurface*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, Guid*, IUnknown*, int>)(lpVtbl[5]))((IDXGISurface*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface*, Guid*, uint*, void*, int>)(lpVtbl[6]))((IDXGISurface*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, Guid*, uint*, void*, int>)(lpVtbl[6]))((IDXGISurface*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISurface*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISurface*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface::GetDesc"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetDesc(SurfaceDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface*, SurfaceDescription*, int>)(lpVtbl[8]))((IDXGISurface*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, SurfaceDescription*, int>)(lpVtbl[8]))((IDXGISurface*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface::Map"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult Map(MappedRect* pLockedRect, uint MapFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface*, MappedRect*, uint, int>)(lpVtbl[9]))((IDXGISurface*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, MappedRect*, uint, int>)(lpVtbl[9]))((IDXGISurface*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface::Unmap"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult Unmap()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface*, int>)(lpVtbl[10]))((IDXGISurface*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, int>)(lpVtbl[10]))((IDXGISurface*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IDXGIDeviceSubObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface1"]/*' />
+/// <unmanaged>IDXGISurface1</unmanaged>
+[Guid("4ae63092-6327-4c1b-80ae-bfe12ea32b86")]
+[NativeTypeName("struct IDXGISurface1 : IDXGISurface")]
+[NativeInheritance("IDXGISurface")]
+public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface
+{
+	public static ref readonly Guid IID_IDXGISurface1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x92, 0x30, 0xE6, 0x4A,
+				0x27, 0x63,
+				0x1B, 0x4C,
+				0x80,
+				0xAE,
+				0xBF,
+				0xE1,
+				0x2E,
+				0xA3,
+				0x2B,
+				0x86
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface1));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGISurface.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDesc(SurfaceDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, SurfaceDescription*, int>)(lpVtbl[3]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, SurfaceDescription*, int>)(lpVtbl[3]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISurface.Map" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult Map(MappedRect* pLockedRect, uint MapFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, MappedRect*, uint, int>)(lpVtbl[4]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, MappedRect*, uint, int>)(lpVtbl[4]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISurface.Unmap" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult Unmap()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, int>)(lpVtbl[5]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, int>)(lpVtbl[5]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, uint, void*, int>)(lpVtbl[7]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, uint, void*, int>)(lpVtbl[7]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, IUnknown*, int>)(lpVtbl[8]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, IUnknown*, int>)(lpVtbl[8]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, uint*, void*, int>)(lpVtbl[9]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, uint*, void*, int>)(lpVtbl[9]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[10]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[10]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface1::GetDC"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetDC(Bool32* Discard, IntPtr* phdc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Bool32*, IntPtr*, int>)(lpVtbl[11]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Discard, phdc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Bool32*, IntPtr*, int>)(lpVtbl[11]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Discard, phdc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface1::ReleaseDC"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult ReleaseDC(RawRect* pDirtyRect)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, RawRect*, int>)(lpVtbl[12]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDirtyRect);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, RawRect*, int>)(lpVtbl[12]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDirtyRect);
+#endif
+	}
+
+	public interface Interface : IDXGISurface.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter"]/*' />
+/// <unmanaged>IDXGIAdapter</unmanaged>
+[Guid("2411e7e1-12ac-4ccf-bd14-9798e8534dc0")]
+[NativeTypeName("struct IDXGIAdapter : IDXGIObject")]
+[NativeInheritance("IDXGIObject")]
+public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface
+{
+	public static ref readonly Guid IID_IDXGIAdapter
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xE1, 0xE7, 0x11, 0x24,
+				0xAC, 0x12,
+				0xCF, 0x4C,
+				0xBD,
+				0x14,
+				0x97,
+				0x98,
+				0xE8,
+				0x53,
+				0x4D,
+				0xC0
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIAdapter));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter::EnumOutputs"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter*, uint, IDXGIOutput**, int>)(lpVtbl[7]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, uint, IDXGIOutput**, int>)(lpVtbl[7]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter::GetDesc"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetDesc(AdapterDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter::CheckInterfaceSupport"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter*, Guid*, LargeInterger*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, LargeInterger*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#endif
+	}
+
+	public interface Interface : IDXGIObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput"]/*' />
+/// <unmanaged>IDXGIOutput</unmanaged>
+[Guid("ae02eedb-c735-4690-8d52-5a8dc20213aa")]
+[NativeTypeName("struct IDXGIOutput : IDXGIObject")]
+[NativeInheritance("IDXGIObject")]
+public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
+{
+	public static ref readonly Guid IID_IDXGIOutput
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xDB, 0xEE, 0x02, 0xAE,
+				0x35, 0xC7,
+				0x90, 0x46,
+				0x8D,
+				0x52,
+				0x5A,
+				0x8D,
+				0xC2,
+				0x02,
+				0x13,
+				0xAA
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIOutput*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIOutput*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutput*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutput*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIOutput*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIOutput*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIOutput*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIOutput*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetDesc"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetDesc(OutputDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, OutputDescription*, int>)(lpVtbl[7]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, OutputDescription*, int>)(lpVtbl[7]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetDisplayModeList"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetDisplayModeList(Common.Format EnumFormat, uint Flags, uint* pNumModes, Common.ModeDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[8]))((IDXGIOutput*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[8]))((IDXGIOutput*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::FindClosestMatchingMode"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::WaitForVBlank"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult WaitForVBlank()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, int>)(lpVtbl[10]))((IDXGIOutput*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, int>)(lpVtbl[10]))((IDXGIOutput*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::TakeOwnership"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult TakeOwnership(IUnknown* pDevice, Bool32* Exclusive)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, IUnknown*, Bool32*, int>)(lpVtbl[11]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, IUnknown*, Bool32*, int>)(lpVtbl[11]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::ReleaseOwnership"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public void ReleaseOwnership()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIOutput*, void>)(lpVtbl[12]))((IDXGIOutput*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIOutput*, void>)(lpVtbl[12]))((IDXGIOutput*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetGammaControlCapabilities"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Common.GammaControlCapabilities*, int>)(lpVtbl[13]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pGammaCaps);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Common.GammaControlCapabilities*, int>)(lpVtbl[13]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pGammaCaps);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::SetGammaControl"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult SetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Common.GammaControl*, int>)(lpVtbl[14]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Common.GammaControl*, int>)(lpVtbl[14]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetGammaControl"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult GetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::SetDisplaySurface"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, IDXGISurface*, int>)(lpVtbl[16]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, IDXGISurface*, int>)(lpVtbl[16]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetDisplaySurfaceData"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetFrameStatistics"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	public interface Interface : IDXGIObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain"]/*' />
+/// <unmanaged>IDXGISwapChain</unmanaged>
+[Guid("310d36a0-d2e7-4c0a-aa04-6a9d23b8886a")]
+[NativeTypeName("struct IDXGISwapChain : IDXGIDeviceSubObject")]
+[NativeInheritance("IDXGIDeviceSubObject")]
+public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
+{
+	public static ref readonly Guid IID_IDXGISwapChain
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA0, 0x36, 0x0D, 0x31,
+				0xE7, 0xD2,
+				0x0A, 0x4C,
+				0xAA,
+				0x04,
+				0x6A,
+				0x9D,
+				0x23,
+				0xB8,
+				0x88,
+				0x6A
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, Guid*, void**, int>)(lpVtbl[3]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Guid*, void**, int>)(lpVtbl[3]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, Guid*, uint, void*, int>)(lpVtbl[4]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Guid*, uint, void*, int>)(lpVtbl[4]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, Guid*, IUnknown*, int>)(lpVtbl[5]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Guid*, IUnknown*, int>)(lpVtbl[5]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, Guid*, uint*, void*, int>)(lpVtbl[6]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Guid*, uint*, void*, int>)(lpVtbl[6]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::Present"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult Present(uint SyncInterval, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, uint, uint, int>)(lpVtbl[8]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, uint, int>)(lpVtbl[8]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetBuffer"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, uint, Guid*, void**, int>)(lpVtbl[9]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, Guid*, void**, int>)(lpVtbl[9]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::SetFullscreenState"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetFullscreenState(Bool32* Fullscreen, IDXGIOutput* pTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, Bool32*, IDXGIOutput*, int>)(lpVtbl[10]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Bool32*, IDXGIOutput*, int>)(lpVtbl[10]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetFullscreenState"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, Bool32*, IDXGIOutput**, int>)(lpVtbl[11]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Bool32*, IDXGIOutput**, int>)(lpVtbl[11]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetDesc"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetDesc(SwapChainDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, SwapChainDescription*, int>)(lpVtbl[12]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, SwapChainDescription*, int>)(lpVtbl[12]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::ResizeBuffers"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, uint SwapChainFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[13]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[13]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::ResizeTarget"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, Common.ModeDescription*, int>)(lpVtbl[14]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Common.ModeDescription*, int>)(lpVtbl[14]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetContainingOutput"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult GetContainingOutput(IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, IDXGIOutput**, int>)(lpVtbl[15]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, IDXGIOutput**, int>)(lpVtbl[15]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), ppOutput);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetFrameStatistics"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, FrameStatistics*, int>)(lpVtbl[16]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, FrameStatistics*, int>)(lpVtbl[16]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetLastPresentCount"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetLastPresentCount(uint* pLastPresentCount)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain*, uint*, int>)(lpVtbl[17]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint*, int>)(lpVtbl[17]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#endif
+	}
+
+	public interface Interface : IDXGIDeviceSubObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory"]/*' />
+/// <unmanaged>IDXGIFactory</unmanaged>
+[Guid("7b7166ec-21c7-44ae-b21a-c9ae321ae369")]
+[NativeTypeName("struct IDXGIFactory : IDXGIObject")]
+[NativeInheritance("IDXGIObject")]
+public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactory
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xEC, 0x66, 0x71, 0x7B,
+				0xC7, 0x21,
+				0xAE, 0x44,
+				0xB2,
+				0x1A,
+				0xC9,
+				0xAE,
+				0x32,
+				0x1A,
+				0xE3,
+				0x69
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIFactory*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIFactory*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::EnumAdapters"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, uint, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, uint, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::MakeWindowAssociation"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, IntPtr*, uint, int>)(lpVtbl[8]))((IDXGIFactory*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr*, uint, int>)(lpVtbl[8]))((IDXGIFactory*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::GetWindowAssociation"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, IntPtr*, int>)(lpVtbl[9]))((IDXGIFactory*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr*, int>)(lpVtbl[9]))((IDXGIFactory*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::CreateSwapChain"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::CreateSoftwareAdapter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
+	}
+
+	public interface Interface : IDXGIObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice"]/*' />
+/// <unmanaged>IDXGIDevice</unmanaged>
+[Guid("54ec77fa-1377-44e6-8c32-88fd5f44c84c")]
+[NativeTypeName("struct IDXGIDevice : IDXGIObject")]
+[NativeInheritance("IDXGIObject")]
+public unsafe partial struct IDXGIDevice : IDXGIDevice.Interface
+{
+	public static ref readonly Guid IID_IDXGIDevice
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xFA, 0x77, 0xEC, 0x54,
+				0x77, 0x13,
+				0xE6, 0x44,
+				0x8C,
+				0x32,
+				0x88,
+				0xFD,
+				0x5F,
+				0x44,
+				0xC8,
+				0x4C
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIDevice*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIDevice*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::GetAdapter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetAdapter(IDXGIAdapter** pAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pAdapter);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::CreateSurface"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, uint Usage, SharedResource* pSharedResource, IDXGISurface* ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[8]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[8]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::QueryResourceResidency"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult QueryResourceResidency(IUnknown* ppResources, Residency* pResidencyStatus, uint NumResources)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, IUnknown*, Residency*, uint, int>)(lpVtbl[9]))((IDXGIDevice*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, IUnknown*, Residency*, uint, int>)(lpVtbl[9]))((IDXGIDevice*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::SetGPUThreadPriority"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetGPUThreadPriority(int Priority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, int, int>)(lpVtbl[10]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Priority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, int, int>)(lpVtbl[10]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Priority);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::GetGPUThreadPriority"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetGPUThreadPriority(int* pPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice*, int*, int>)(lpVtbl[11]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, int*, int>)(lpVtbl[11]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pPriority);
+#endif
+	}
+
+	public interface Interface : IDXGIObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory1"]/*' />
+/// <unmanaged>IDXGIFactory1</unmanaged>
+[Guid("770aae78-f26f-4dba-a829-253c83d1b387")]
+[NativeTypeName("struct IDXGIFactory1 : IDXGIFactory")]
+[NativeInheritance("IDXGIFactory")]
+public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactory1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x78, 0xAE, 0x0A, 0x77,
+				0x6F, 0xF2,
+				0xBA, 0x4D,
+				0xA8,
+				0x29,
+				0x25,
+				0x3C,
+				0x83,
+				0xD1,
+				0xB3,
+				0x87
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory1));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, uint, IDXGIAdapter**, int>)(lpVtbl[3]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, uint, IDXGIAdapter**, int>)(lpVtbl[3]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, IntPtr*, uint, int>)(lpVtbl[4]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, IntPtr*, uint, int>)(lpVtbl[4]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, IntPtr*, int>)(lpVtbl[5]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, IntPtr*, int>)(lpVtbl[5]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[6]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[6]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, Guid*, uint, void*, int>)(lpVtbl[8]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, Guid*, uint, void*, int>)(lpVtbl[8]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, Guid*, IUnknown*, int>)(lpVtbl[9]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, Guid*, IUnknown*, int>)(lpVtbl[9]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, Guid*, uint*, void*, int>)(lpVtbl[10]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, Guid*, uint*, void*, int>)(lpVtbl[10]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, Guid*, void**, int>)(lpVtbl[11]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, Guid*, void**, int>)(lpVtbl[11]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory1::EnumAdapters1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, uint, IDXGIAdapter1**, int>)(lpVtbl[12]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, uint, IDXGIAdapter1**, int>)(lpVtbl[12]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory1::IsCurrent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public Bool32 IsCurrent()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory1*, Bool32>)(lpVtbl[13]))((IDXGIFactory1*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, Bool32>)(lpVtbl[13]))((IDXGIFactory1*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IDXGIFactory.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter1"]/*' />
+/// <unmanaged>IDXGIAdapter1</unmanaged>
+[Guid("29038f61-3839-4626-91fd-086879011a05")]
+[NativeTypeName("struct IDXGIAdapter1 : IDXGIAdapter")]
+[NativeInheritance("IDXGIAdapter")]
+public unsafe partial struct IDXGIAdapter1 : IDXGIAdapter1.Interface
+{
+	public static ref readonly Guid IID_IDXGIAdapter1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x61, 0x8F, 0x03, 0x29,
+				0x39, 0x38,
+				0x26, 0x46,
+				0x91,
+				0xFD,
+				0x08,
+				0x68,
+				0x79,
+				0x01,
+				0x1A,
+				0x05
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIAdapter1));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.EnumOutputs" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter1*, uint, IDXGIOutput**, int>)(lpVtbl[3]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, uint, IDXGIOutput**, int>)(lpVtbl[3]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetDesc(AdapterDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter1*, AdapterDescription*, int>)(lpVtbl[4]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, AdapterDescription*, int>)(lpVtbl[4]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter1*, Guid*, LargeInterger*, int>)(lpVtbl[5]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, Guid*, LargeInterger*, int>)(lpVtbl[5]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter1*, Guid*, uint, void*, int>)(lpVtbl[6]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, Guid*, uint, void*, int>)(lpVtbl[6]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter1*, Guid*, IUnknown*, int>)(lpVtbl[7]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, Guid*, IUnknown*, int>)(lpVtbl[7]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter1*, Guid*, uint*, void*, int>)(lpVtbl[8]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, Guid*, uint*, void*, int>)(lpVtbl[8]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter1*, Guid*, void**, int>)(lpVtbl[9]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, Guid*, void**, int>)(lpVtbl[9]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter1::GetDesc1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetDesc1(AdapterDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter1*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	public interface Interface : IDXGIAdapter.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice1"]/*' />
+/// <unmanaged>IDXGIDevice1</unmanaged>
+[Guid("77db970f-6276-48ba-ba28-070143b4392c")]
+[NativeTypeName("struct IDXGIDevice1 : IDXGIDevice")]
+[NativeInheritance("IDXGIDevice")]
+public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface
+{
+	public static ref readonly Guid IID_IDXGIDevice1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x0F, 0x97, 0xDB, 0x77,
+				0x76, 0x62,
+				0xBA, 0x48,
+				0xBA,
+				0x28,
+				0x07,
+				0x01,
+				0x43,
+				0xB4,
+				0x39,
+				0x2C
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice1));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.GetAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetAdapter(IDXGIAdapter** pAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, IDXGIAdapter**, int>)(lpVtbl[3]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, IDXGIAdapter**, int>)(lpVtbl[3]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.CreateSurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, uint Usage, SharedResource* pSharedResource, IDXGISurface* ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[4]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[4]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.QueryResourceResidency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult QueryResourceResidency(IUnknown* ppResources, Residency* pResidencyStatus, uint NumResources)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, IUnknown*, Residency*, uint, int>)(lpVtbl[5]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, IUnknown*, Residency*, uint, int>)(lpVtbl[5]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.SetGPUThreadPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult SetGPUThreadPriority(int Priority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, int, int>)(lpVtbl[6]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Priority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, int, int>)(lpVtbl[6]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Priority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.GetGPUThreadPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetGPUThreadPriority(int* pPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, int*, int>)(lpVtbl[7]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, int*, int>)(lpVtbl[7]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pPriority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, Guid*, uint, void*, int>)(lpVtbl[8]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, Guid*, uint, void*, int>)(lpVtbl[8]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, Guid*, IUnknown*, int>)(lpVtbl[9]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, Guid*, IUnknown*, int>)(lpVtbl[9]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, Guid*, uint*, void*, int>)(lpVtbl[10]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, Guid*, uint*, void*, int>)(lpVtbl[10]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, Guid*, void**, int>)(lpVtbl[11]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, Guid*, void**, int>)(lpVtbl[11]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice1::SetMaximumFrameLatency"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult SetMaximumFrameLatency(uint MaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, uint, int>)(lpVtbl[12]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), MaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, uint, int>)(lpVtbl[12]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), MaxLatency);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice1::GetMaximumFrameLatency"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice1*, uint*, int>)(lpVtbl[13]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pMaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, uint*, int>)(lpVtbl[13]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pMaxLatency);
+#endif
+	}
+
+	public interface Interface : IDXGIDevice.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDisplayControl"]/*' />
+/// <unmanaged>IDXGIDisplayControl</unmanaged>
+[Guid("ea9dbf1a-c88e-4486-854a-98aa0138f30c")]
+[NativeTypeName("struct IDXGIDisplayControl : IUnknown")]
+[NativeInheritance("IUnknown")]
+public unsafe partial struct IDXGIDisplayControl : IDXGIDisplayControl.Interface
+{
+	public static ref readonly Guid IID_IDXGIDisplayControl
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x1A, 0xBF, 0x9D, 0xEA,
+				0x8E, 0xC8,
+				0x86, 0x44,
+				0x85,
+				0x4A,
+				0x98,
+				0xAA,
+				0x01,
+				0x38,
+				0xF3,
+				0x0C
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDisplayControl));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDisplayControl::IsStereoEnabled"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public Bool32 IsStereoEnabled()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDisplayControl*, Bool32>)(lpVtbl[3]))((IDXGIDisplayControl*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDisplayControl*, Bool32>)(lpVtbl[3]))((IDXGIDisplayControl*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDisplayControl::SetStereoEnabled"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public void SetStereoEnabled(Bool32* enabled)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIDisplayControl*, Bool32*, void>)(lpVtbl[4]))((IDXGIDisplayControl*)Unsafe.AsPointer(ref this), enabled);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIDisplayControl*, Bool32*, void>)(lpVtbl[4]))((IDXGIDisplayControl*)Unsafe.AsPointer(ref this), enabled);
+#endif
+	}
+
+	public interface Interface : IUnknown.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication"]/*' />
+/// <unmanaged>IDXGIOutputDuplication</unmanaged>
+[Guid("191cfac3-a341-470d-b26e-a864f428319c")]
+[NativeTypeName("struct IDXGIOutputDuplication : IDXGIObject")]
+[NativeInheritance("IDXGIObject")]
+public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Interface
+{
+	public static ref readonly Guid IID_IDXGIOutputDuplication
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xC3, 0xFA, 0x1C, 0x19,
+				0x41, 0xA3,
+				0x0D, 0x47,
+				0xB2,
+				0x6E,
+				0xA8,
+				0x64,
+				0xF4,
+				0x28,
+				0x31,
+				0x9C
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutputDuplication));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::GetDesc"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public void GetDesc(OutduplDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIOutputDuplication*, OutduplDescription*, void>)(lpVtbl[7]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, OutduplDescription*, void>)(lpVtbl[7]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::AcquireNextFrame"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult AcquireNextFrame(uint TimeoutInMilliseconds, OutduplFrameInfo* pFrameInfo, IDXGIResource** ppDesktopResource)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, uint, OutduplFrameInfo*, IDXGIResource**, int>)(lpVtbl[8]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), TimeoutInMilliseconds, pFrameInfo, ppDesktopResource);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, uint, OutduplFrameInfo*, IDXGIResource**, int>)(lpVtbl[8]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), TimeoutInMilliseconds, pFrameInfo, ppDesktopResource);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameDirtyRects"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, RawRect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, uint, RawRect*, uint*, int>)(lpVtbl[9]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), DirtyRectsBufferSize, pDirtyRectsBuffer, pDirtyRectsBufferSizeRequired);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, uint, RawRect*, uint*, int>)(lpVtbl[9]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), DirtyRectsBufferSize, pDirtyRectsBuffer, pDirtyRectsBufferSizeRequired);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameMoveRects"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetFrameMoveRects(uint MoveRectsBufferSize, OutduplMoveRect* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, uint, OutduplMoveRect*, uint*, int>)(lpVtbl[10]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), MoveRectsBufferSize, pMoveRectBuffer, pMoveRectsBufferSizeRequired);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, uint, OutduplMoveRect*, uint*, int>)(lpVtbl[10]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), MoveRectsBufferSize, pMoveRectBuffer, pMoveRectsBufferSizeRequired);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFramePointerShape"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, OutduplPointerShapeInfo* pPointerShapeInfo)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, uint, void*, uint*, OutduplPointerShapeInfo*, int>)(lpVtbl[11]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), PointerShapeBufferSize, pPointerShapeBuffer, pPointerShapeBufferSizeRequired, pPointerShapeInfo);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, uint, void*, uint*, OutduplPointerShapeInfo*, int>)(lpVtbl[11]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), PointerShapeBufferSize, pPointerShapeBuffer, pPointerShapeBufferSizeRequired, pPointerShapeInfo);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::MapDesktopSurface"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult MapDesktopSurface(MappedRect* pLockedRect)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, MappedRect*, int>)(lpVtbl[12]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pLockedRect);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, MappedRect*, int>)(lpVtbl[12]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), pLockedRect);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::UnMapDesktopSurface"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult UnMapDesktopSurface()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, int>)(lpVtbl[13]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, int>)(lpVtbl[13]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::ReleaseFrame"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult ReleaseFrame()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutputDuplication*, int>)(lpVtbl[14]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, int>)(lpVtbl[14]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IDXGIObject.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface2"]/*' />
+/// <unmanaged>IDXGISurface2</unmanaged>
+[Guid("aba496dd-b617-4cb8-a866-bc44d7eb1fa2")]
+[NativeTypeName("struct IDXGISurface2 : IDXGISurface1")]
+[NativeInheritance("IDXGISurface1")]
+public unsafe partial struct IDXGISurface2 : IDXGISurface2.Interface
+{
+	public static ref readonly Guid IID_IDXGISurface2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xDD, 0x96, 0xA4, 0xAB,
+				0x17, 0xB6,
+				0xB8, 0x4C,
+				0xA8,
+				0x66,
+				0xBC,
+				0x44,
+				0xD7,
+				0xEB,
+				0x1F,
+				0xA2
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface2));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGISurface1.GetDC" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDC(Bool32* Discard, IntPtr* phdc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, Bool32*, IntPtr*, int>)(lpVtbl[3]))((IDXGISurface2*)Unsafe.AsPointer(ref this), Discard, phdc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Bool32*, IntPtr*, int>)(lpVtbl[3]))((IDXGISurface2*)Unsafe.AsPointer(ref this), Discard, phdc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISurface1.ReleaseDC" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult ReleaseDC(RawRect* pDirtyRect)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, RawRect*, int>)(lpVtbl[4]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pDirtyRect);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, RawRect*, int>)(lpVtbl[4]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pDirtyRect);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISurface.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetDesc(SurfaceDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, SurfaceDescription*, int>)(lpVtbl[5]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, SurfaceDescription*, int>)(lpVtbl[5]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISurface.Map" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult Map(MappedRect* pLockedRect, uint MapFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, MappedRect*, uint, int>)(lpVtbl[6]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, MappedRect*, uint, int>)(lpVtbl[6]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISurface.Unmap" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult Unmap()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, int>)(lpVtbl[7]))((IDXGISurface2*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, int>)(lpVtbl[7]))((IDXGISurface2*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, Guid*, void**, int>)(lpVtbl[8]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, void**, int>)(lpVtbl[8]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, Guid*, uint, void*, int>)(lpVtbl[9]))((IDXGISurface2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, uint, void*, int>)(lpVtbl[9]))((IDXGISurface2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, Guid*, IUnknown*, int>)(lpVtbl[10]))((IDXGISurface2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, IUnknown*, int>)(lpVtbl[10]))((IDXGISurface2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, Guid*, uint*, void*, int>)(lpVtbl[11]))((IDXGISurface2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, uint*, void*, int>)(lpVtbl[11]))((IDXGISurface2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, Guid*, void**, int>)(lpVtbl[12]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, void**, int>)(lpVtbl[12]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface2::GetResource"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetResource(Guid* riid, void** ppParentResource, uint* pSubresourceIndex)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface2*, Guid*, void**, uint*, int>)(lpVtbl[13]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppParentResource, pSubresourceIndex);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, void**, uint*, int>)(lpVtbl[13]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppParentResource, pSubresourceIndex);
+#endif
+	}
+
+	public interface Interface : IDXGISurface1.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource1"]/*' />
+/// <unmanaged>IDXGIResource1</unmanaged>
+[Guid("30961379-4609-4a41-998e-54fe567ee0c1")]
+[NativeTypeName("struct IDXGIResource1 : IDXGIResource")]
+[NativeInheritance("IDXGIResource")]
+public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface
+{
+	public static ref readonly Guid IID_IDXGIResource1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x79, 0x13, 0x96, 0x30,
+				0x09, 0x46,
+				0x41, 0x4A,
+				0x99,
+				0x8E,
+				0x54,
+				0xFE,
+				0x56,
+				0x7E,
+				0xE0,
+				0xC1
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIResource1));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIResource.GetSharedHandle" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetSharedHandle(IntPtr* pSharedHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, IntPtr*, int>)(lpVtbl[3]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pSharedHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, IntPtr*, int>)(lpVtbl[3]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pSharedHandle);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIResource.GetUsage" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetUsage(uint* pUsage)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, uint*, int>)(lpVtbl[4]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pUsage);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint*, int>)(lpVtbl[4]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pUsage);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIResource.SetEvictionPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, ResourcePriority, int>)(lpVtbl[5]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, ResourcePriority, int>)(lpVtbl[5]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIResource.GetEvictionPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetEvictionPriority(uint* pEvictionPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, uint*, int>)(lpVtbl[6]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint*, int>)(lpVtbl[6]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIResource1*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIResource1*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, Guid*, uint, void*, int>)(lpVtbl[8]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Guid*, uint, void*, int>)(lpVtbl[8]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, Guid*, IUnknown*, int>)(lpVtbl[9]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Guid*, IUnknown*, int>)(lpVtbl[9]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, Guid*, uint*, void*, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Guid*, uint*, void*, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, Guid*, void**, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Guid*, void**, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, uint, IDXGISurface2**, int>)(lpVtbl[12]))((IDXGIResource1*)Unsafe.AsPointer(ref this), index, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint, IDXGISurface2**, int>)(lpVtbl[12]))((IDXGIResource1*)Unsafe.AsPointer(ref this), index, ppSurface);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char** lpName, IntPtr* pHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+#endif
+	}
+
+	public interface Interface : IDXGIResource.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice2"]/*' />
+/// <unmanaged>IDXGIDevice2</unmanaged>
+[Guid("05008617-fbfd-4051-a790-144884b4f6a9")]
+[NativeTypeName("struct IDXGIDevice2 : IDXGIDevice1")]
+[NativeInheritance("IDXGIDevice1")]
+public unsafe partial struct IDXGIDevice2 : IDXGIDevice2.Interface
+{
+	public static ref readonly Guid IID_IDXGIDevice2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x17, 0x86, 0x00, 0x05,
+				0xFD, 0xFB,
+				0x51, 0x40,
+				0xA7,
+				0x90,
+				0x14,
+				0x48,
+				0x84,
+				0xB4,
+				0xF6,
+				0xA9
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice2));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDevice1.SetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetMaximumFrameLatency(uint MaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, uint, int>)(lpVtbl[3]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), MaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, uint, int>)(lpVtbl[3]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), MaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice1.GetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, uint*, int>)(lpVtbl[4]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pMaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, uint*, int>)(lpVtbl[4]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pMaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.GetAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetAdapter(IDXGIAdapter** pAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, IDXGIAdapter**, int>)(lpVtbl[5]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, IDXGIAdapter**, int>)(lpVtbl[5]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.CreateSurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, uint Usage, SharedResource* pSharedResource, IDXGISurface* ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[6]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[6]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.QueryResourceResidency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult QueryResourceResidency(IUnknown* ppResources, Residency* pResidencyStatus, uint NumResources)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, IUnknown*, Residency*, uint, int>)(lpVtbl[7]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, IUnknown*, Residency*, uint, int>)(lpVtbl[7]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.SetGPUThreadPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult SetGPUThreadPriority(int Priority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, int, int>)(lpVtbl[8]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), Priority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, int, int>)(lpVtbl[8]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), Priority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.GetGPUThreadPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetGPUThreadPriority(int* pPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, int*, int>)(lpVtbl[9]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, int*, int>)(lpVtbl[9]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pPriority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, Guid*, uint, void*, int>)(lpVtbl[10]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, Guid*, uint, void*, int>)(lpVtbl[10]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, Guid*, IUnknown*, int>)(lpVtbl[11]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, Guid*, IUnknown*, int>)(lpVtbl[11]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, Guid*, uint*, void*, int>)(lpVtbl[12]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, Guid*, uint*, void*, int>)(lpVtbl[12]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, Guid*, void**, int>)(lpVtbl[13]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, Guid*, void**, int>)(lpVtbl[13]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice2::OfferResources"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult OfferResources(uint NumResources, IDXGIResource* ppResources, OfferResourcePriority Priority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, uint, IDXGIResource*, OfferResourcePriority, int>)(lpVtbl[14]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, uint, IDXGIResource*, OfferResourcePriority, int>)(lpVtbl[14]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice2::ReclaimResources"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult ReclaimResources(uint NumResources, IDXGIResource* ppResources, Bool32* pDiscarded)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, uint, IDXGIResource*, Bool32*, int>)(lpVtbl[15]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), NumResources, ppResources, pDiscarded);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, uint, IDXGIResource*, Bool32*, int>)(lpVtbl[15]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), NumResources, ppResources, pDiscarded);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice2::EnqueueSetEvent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult EnqueueSetEvent(IntPtr* hEvent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice2*, IntPtr*, int>)(lpVtbl[16]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), hEvent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, IntPtr*, int>)(lpVtbl[16]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), hEvent);
+#endif
+	}
+
+	public interface Interface : IDXGIDevice1.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1"]/*' />
+/// <unmanaged>IDXGISwapChain1</unmanaged>
+[Guid("790a45f7-0d42-4876-983a-0a55cfe6f4aa")]
+[NativeTypeName("struct IDXGISwapChain1 : IDXGISwapChain")]
+[NativeInheritance("IDXGISwapChain")]
+public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
+{
+	public static ref readonly Guid IID_IDXGISwapChain1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xF7, 0x45, 0x0A, 0x79,
+				0x42, 0x0D,
+				0x76, 0x48,
+				0x98,
+				0x3A,
+				0x0A,
+				0x55,
+				0xCF,
+				0xE6,
+				0xF4,
+				0xAA
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain1));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.Present" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult Present(uint SyncInterval, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, uint, uint, int>)(lpVtbl[3]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, uint, uint, int>)(lpVtbl[3]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetBuffer" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, uint, Guid*, void**, int>)(lpVtbl[4]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, uint, Guid*, void**, int>)(lpVtbl[4]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.SetFullscreenState" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetFullscreenState(Bool32* Fullscreen, IDXGIOutput* pTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Bool32*, IDXGIOutput*, int>)(lpVtbl[5]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Bool32*, IDXGIOutput*, int>)(lpVtbl[5]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetFullscreenState" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Bool32*, IDXGIOutput**, int>)(lpVtbl[6]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Bool32*, IDXGIOutput**, int>)(lpVtbl[6]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetDesc(SwapChainDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, SwapChainDescription*, int>)(lpVtbl[7]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, SwapChainDescription*, int>)(lpVtbl[7]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.ResizeBuffers" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, uint SwapChainFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[8]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[8]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.ResizeTarget" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Common.ModeDescription*, int>)(lpVtbl[9]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Common.ModeDescription*, int>)(lpVtbl[9]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetContainingOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetContainingOutput(IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, IDXGIOutput**, int>)(lpVtbl[10]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, IDXGIOutput**, int>)(lpVtbl[10]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), ppOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, FrameStatistics*, int>)(lpVtbl[11]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, FrameStatistics*, int>)(lpVtbl[11]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetLastPresentCount" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetLastPresentCount(uint* pLastPresentCount)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, uint*, int>)(lpVtbl[12]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, uint*, int>)(lpVtbl[12]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Guid*, void**, int>)(lpVtbl[13]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Guid*, void**, int>)(lpVtbl[13]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Guid*, uint, void*, int>)(lpVtbl[14]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Guid*, uint, void*, int>)(lpVtbl[14]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Guid*, IUnknown*, int>)(lpVtbl[15]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Guid*, IUnknown*, int>)(lpVtbl[15]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Guid*, uint*, void*, int>)(lpVtbl[16]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Guid*, uint*, void*, int>)(lpVtbl[16]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Guid*, void**, int>)(lpVtbl[17]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Guid*, void**, int>)(lpVtbl[17]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetDesc1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetDesc1(SwapChainDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, SwapChainDescription1*, int>)(lpVtbl[18]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, SwapChainDescription1*, int>)(lpVtbl[18]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetFullscreenDesc"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult GetFullscreenDesc(SwapChainFullscreenDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, SwapChainFullscreenDescription*, int>)(lpVtbl[19]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, SwapChainFullscreenDescription*, int>)(lpVtbl[19]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetHwnd"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult GetHwnd(IntPtr* pHwnd)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, IntPtr*, int>)(lpVtbl[20]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pHwnd);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, IntPtr*, int>)(lpVtbl[20]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pHwnd);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetCoreWindow"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult GetCoreWindow(Guid* refiid, void** ppUnk)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Guid*, void**, int>)(lpVtbl[21]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), refiid, ppUnk);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Guid*, void**, int>)(lpVtbl[21]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), refiid, ppUnk);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::Present1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, uint, uint, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, uint, uint, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::IsTemporaryMonoSupported"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public Bool32 IsTemporaryMonoSupported()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Bool32>)(lpVtbl[23]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Bool32>)(lpVtbl[23]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetRestrictToOutput"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, IDXGIOutput*, int>)(lpVtbl[24]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, IDXGIOutput*, int>)(lpVtbl[24]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::SetBackgroundColor"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult SetBackgroundColor(Rgba* pColor)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Rgba*, int>)(lpVtbl[25]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pColor);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Rgba*, int>)(lpVtbl[25]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pColor);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetBackgroundColor"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult GetBackgroundColor(Rgba* pColor)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Rgba*, int>)(lpVtbl[26]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pColor);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Rgba*, int>)(lpVtbl[26]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pColor);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::SetRotation"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult SetRotation(Common.ModeRotation Rotation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Common.ModeRotation, int>)(lpVtbl[27]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Rotation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Common.ModeRotation, int>)(lpVtbl[27]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), Rotation);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetRotation"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public HResult GetRotation(Common.ModeRotation* pRotation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain1*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pRotation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pRotation);
+#endif
+	}
+
+	public interface Interface : IDXGISwapChain.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2"]/*' />
+/// <unmanaged>IDXGIFactory2</unmanaged>
+[Guid("50c83a1c-e072-4c48-87b0-3630fa36a6d0")]
+[NativeTypeName("struct IDXGIFactory2 : IDXGIFactory1")]
+[NativeInheritance("IDXGIFactory1")]
+public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactory2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x1C, 0x3A, 0xC8, 0x50,
+				0x72, 0xE0,
+				0x48, 0x4C,
+				0x87,
+				0xB0,
+				0x36,
+				0x30,
+				0xFA,
+				0x36,
+				0xA6,
+				0xD0
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory2));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.EnumAdapters1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, uint, IDXGIAdapter1**, int>)(lpVtbl[3]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, uint, IDXGIAdapter1**, int>)(lpVtbl[3]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.IsCurrent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public Bool32 IsCurrent()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, Bool32>)(lpVtbl[4]))((IDXGIFactory2*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Bool32>)(lpVtbl[4]))((IDXGIFactory2*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, uint, IDXGIAdapter**, int>)(lpVtbl[5]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, uint, IDXGIAdapter**, int>)(lpVtbl[5]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IntPtr*, uint, int>)(lpVtbl[6]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr*, uint, int>)(lpVtbl[6]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IntPtr*, int>)(lpVtbl[7]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr*, int>)(lpVtbl[7]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[8]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[8]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[9]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[9]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, Guid*, uint, void*, int>)(lpVtbl[10]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Guid*, uint, void*, int>)(lpVtbl[10]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, Guid*, IUnknown*, int>)(lpVtbl[11]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Guid*, IUnknown*, int>)(lpVtbl[11]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, Guid*, uint*, void*, int>)(lpVtbl[12]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Guid*, uint*, void*, int>)(lpVtbl[12]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, Guid*, void**, int>)(lpVtbl[13]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Guid*, void**, int>)(lpVtbl[13]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::IsWindowedStereoEnabled"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public Bool32 IsWindowedStereoEnabled()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, Bool32>)(lpVtbl[14]))((IDXGIFactory2*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Bool32>)(lpVtbl[14]))((IDXGIFactory2*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForHwnd"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr* hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[15]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[15]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForCoreWindow"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[16]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[16]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::GetSharedResourceAdapterLuid"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetSharedResourceAdapterLuid(IntPtr* hResource, Luid* pLuid)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IntPtr*, Luid*, int>)(lpVtbl[17]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr*, Luid*, int>)(lpVtbl[17]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusWindow"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult RegisterStereoStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IntPtr*, uint, uint*, int>)(lpVtbl[18]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr*, uint, uint*, int>)(lpVtbl[18]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusEvent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult RegisterStereoStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IntPtr*, uint*, int>)(lpVtbl[19]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr*, uint*, int>)(lpVtbl[19]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::UnregisterStereoStatus"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public void UnregisterStereoStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory2*, uint, void>)(lpVtbl[20]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory2*, uint, void>)(lpVtbl[20]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusWindow"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult RegisterOcclusionStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IntPtr*, uint, uint*, int>)(lpVtbl[21]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr*, uint, uint*, int>)(lpVtbl[21]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusEvent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult RegisterOcclusionStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IntPtr*, uint*, int>)(lpVtbl[22]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr*, uint*, int>)(lpVtbl[22]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::UnregisterOcclusionStatus"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public void UnregisterOcclusionStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory2*, uint, void>)(lpVtbl[23]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory2*, uint, void>)(lpVtbl[23]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForComposition"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory2*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[24]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[24]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	public interface Interface : IDXGIFactory1.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter2"]/*' />
+/// <unmanaged>IDXGIAdapter2</unmanaged>
+[Guid("0aa1ae0a-fa0e-4b84-8644-e05ff8e5acb5")]
+[NativeTypeName("struct IDXGIAdapter2 : IDXGIAdapter1")]
+[NativeInheritance("IDXGIAdapter1")]
+public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface
+{
+	public static ref readonly Guid IID_IDXGIAdapter2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x0A, 0xAE, 0xA1, 0x0A,
+				0x0E, 0xFA,
+				0x84, 0x4B,
+				0x86,
+				0x44,
+				0xE0,
+				0x5F,
+				0xF8,
+				0xE5,
+				0xAC,
+				0xB5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIAdapter2));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter1.GetDesc1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDesc1(AdapterDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, AdapterDescription1*, int>)(lpVtbl[3]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, AdapterDescription1*, int>)(lpVtbl[3]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.EnumOutputs" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, uint, IDXGIOutput**, int>)(lpVtbl[4]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, uint, IDXGIOutput**, int>)(lpVtbl[4]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetDesc(AdapterDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, AdapterDescription*, int>)(lpVtbl[5]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, AdapterDescription*, int>)(lpVtbl[5]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, LargeInterger*, int>)(lpVtbl[6]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, LargeInterger*, int>)(lpVtbl[6]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, uint, void*, int>)(lpVtbl[7]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, uint, void*, int>)(lpVtbl[7]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, IUnknown*, int>)(lpVtbl[8]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, IUnknown*, int>)(lpVtbl[8]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, uint*, void*, int>)(lpVtbl[9]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, uint*, void*, int>)(lpVtbl[9]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, void**, int>)(lpVtbl[10]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, void**, int>)(lpVtbl[10]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter2::GetDesc2"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetDesc2(AdapterDescription2* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	public interface Interface : IDXGIAdapter1.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1"]/*' />
+/// <unmanaged>IDXGIOutput1</unmanaged>
+[Guid("00cddea8-939b-4b83-a340-a685226666cc")]
+[NativeTypeName("struct IDXGIOutput1 : IDXGIOutput")]
+[NativeInheritance("IDXGIOutput")]
+public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface
+{
+	public static ref readonly Guid IID_IDXGIOutput1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA8, 0xDE, 0xCD, 0x00,
+				0x9B, 0x93,
+				0x83, 0x4B,
+				0xA3,
+				0x40,
+				0xA6,
+				0x85,
+				0x22,
+				0x66,
+				0x66,
+				0xCC
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput1));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDesc(OutputDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, OutputDescription*, int>)(lpVtbl[3]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, OutputDescription*, int>)(lpVtbl[3]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplayModeList" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetDisplayModeList(Common.Format EnumFormat, uint Flags, uint* pNumModes, Common.ModeDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[4]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[4]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.FindClosestMatchingMode" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[5]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[5]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.WaitForVBlank" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult WaitForVBlank()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, int>)(lpVtbl[6]))((IDXGIOutput1*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, int>)(lpVtbl[6]))((IDXGIOutput1*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.TakeOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult TakeOwnership(IUnknown* pDevice, Bool32* Exclusive)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, IUnknown*, Bool32*, int>)(lpVtbl[7]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, IUnknown*, Bool32*, int>)(lpVtbl[7]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.ReleaseOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public void ReleaseOwnership()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIOutput1*, void>)(lpVtbl[8]))((IDXGIOutput1*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIOutput1*, void>)(lpVtbl[8]))((IDXGIOutput1*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControlCapabilities" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Common.GammaControlCapabilities*, int>)(lpVtbl[9]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pGammaCaps);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Common.GammaControlCapabilities*, int>)(lpVtbl[9]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pGammaCaps);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Common.GammaControl*, int>)(lpVtbl[10]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Common.GammaControl*, int>)(lpVtbl[10]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Common.GammaControl*, int>)(lpVtbl[11]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Common.GammaControl*, int>)(lpVtbl[11]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetDisplaySurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, IDXGISurface*, int>)(lpVtbl[12]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, IDXGISurface*, int>)(lpVtbl[12]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplaySurfaceData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, IDXGISurface*, int>)(lpVtbl[13]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, IDXGISurface*, int>)(lpVtbl[13]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, FrameStatistics*, int>)(lpVtbl[14]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, FrameStatistics*, int>)(lpVtbl[14]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Guid*, uint, void*, int>)(lpVtbl[15]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Guid*, uint, void*, int>)(lpVtbl[15]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Guid*, IUnknown*, int>)(lpVtbl[16]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Guid*, IUnknown*, int>)(lpVtbl[16]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Guid*, uint*, void*, int>)(lpVtbl[17]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Guid*, uint*, void*, int>)(lpVtbl[17]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Guid*, void**, int>)(lpVtbl[18]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Guid*, void**, int>)(lpVtbl[18]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1::GetDisplayModeList1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1::FindClosestMatchingMode1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1::GetDisplaySurfaceData1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, IDXGIResource*, int>)(lpVtbl[21]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, IDXGIResource*, int>)(lpVtbl[21]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1::DuplicateOutput"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput1*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#endif
+	}
+
+	public interface Interface : IDXGIOutput.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice3"]/*' />
+/// <unmanaged>IDXGIDevice3</unmanaged>
+[Guid("6007896c-3244-4afd-bf18-a6d3beda5023")]
+[NativeTypeName("struct IDXGIDevice3 : IDXGIDevice2")]
+[NativeInheritance("IDXGIDevice2")]
+public unsafe partial struct IDXGIDevice3 : IDXGIDevice3.Interface
+{
+	public static ref readonly Guid IID_IDXGIDevice3
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x6C, 0x89, 0x07, 0x60,
+				0x44, 0x32,
+				0xFD, 0x4A,
+				0xBF,
+				0x18,
+				0xA6,
+				0xD3,
+				0xBE,
+				0xDA,
+				0x50,
+				0x23
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice3));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDevice2.OfferResources" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult OfferResources(uint NumResources, IDXGIResource* ppResources, OfferResourcePriority Priority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, uint, IDXGIResource*, OfferResourcePriority, int>)(lpVtbl[3]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, uint, IDXGIResource*, OfferResourcePriority, int>)(lpVtbl[3]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice2.ReclaimResources" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult ReclaimResources(uint NumResources, IDXGIResource* ppResources, Bool32* pDiscarded)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, uint, IDXGIResource*, Bool32*, int>)(lpVtbl[4]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), NumResources, ppResources, pDiscarded);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, uint, IDXGIResource*, Bool32*, int>)(lpVtbl[4]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), NumResources, ppResources, pDiscarded);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice2.EnqueueSetEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult EnqueueSetEvent(IntPtr* hEvent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, IntPtr*, int>)(lpVtbl[5]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), hEvent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, IntPtr*, int>)(lpVtbl[5]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), hEvent);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice1.SetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult SetMaximumFrameLatency(uint MaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, uint, int>)(lpVtbl[6]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), MaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, uint, int>)(lpVtbl[6]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), MaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice1.GetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, uint*, int>)(lpVtbl[7]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), pMaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, uint*, int>)(lpVtbl[7]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), pMaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.GetAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetAdapter(IDXGIAdapter** pAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, IDXGIAdapter**, int>)(lpVtbl[8]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), pAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, IDXGIAdapter**, int>)(lpVtbl[8]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), pAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.CreateSurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, uint Usage, SharedResource* pSharedResource, IDXGISurface* ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[9]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[9]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.QueryResourceResidency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult QueryResourceResidency(IUnknown* ppResources, Residency* pResidencyStatus, uint NumResources)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, IUnknown*, Residency*, uint, int>)(lpVtbl[10]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, IUnknown*, Residency*, uint, int>)(lpVtbl[10]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.SetGPUThreadPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult SetGPUThreadPriority(int Priority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, int, int>)(lpVtbl[11]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), Priority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, int, int>)(lpVtbl[11]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), Priority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.GetGPUThreadPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetGPUThreadPriority(int* pPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, int*, int>)(lpVtbl[12]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), pPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, int*, int>)(lpVtbl[12]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), pPriority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, Guid*, uint, void*, int>)(lpVtbl[13]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, Guid*, uint, void*, int>)(lpVtbl[13]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, Guid*, IUnknown*, int>)(lpVtbl[14]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, Guid*, IUnknown*, int>)(lpVtbl[14]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, Guid*, uint*, void*, int>)(lpVtbl[15]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, Guid*, uint*, void*, int>)(lpVtbl[15]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice3*, Guid*, void**, int>)(lpVtbl[16]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, Guid*, void**, int>)(lpVtbl[16]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice3::Trim"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public void Trim()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIDevice3*, void>)(lpVtbl[17]))((IDXGIDevice3*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIDevice3*, void>)(lpVtbl[17]))((IDXGIDevice3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IDXGIDevice2.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2"]/*' />
+/// <unmanaged>IDXGISwapChain2</unmanaged>
+[Guid("a8be2ac4-199f-4946-b331-79599fb98de7")]
+[NativeTypeName("struct IDXGISwapChain2 : IDXGISwapChain1")]
+[NativeInheritance("IDXGISwapChain1")]
+public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
+{
+	public static ref readonly Guid IID_IDXGISwapChain2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xC4, 0x2A, 0xBE, 0xA8,
+				0x9F, 0x19,
+				0x46, 0x49,
+				0xB3,
+				0x31,
+				0x79,
+				0x59,
+				0x9F,
+				0xB9,
+				0x8D,
+				0xE7
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain2));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetDesc1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDesc1(SwapChainDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, SwapChainDescription1*, int>)(lpVtbl[3]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, SwapChainDescription1*, int>)(lpVtbl[3]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetFullscreenDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetFullscreenDesc(SwapChainFullscreenDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, SwapChainFullscreenDescription*, int>)(lpVtbl[4]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, SwapChainFullscreenDescription*, int>)(lpVtbl[4]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetHwnd" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetHwnd(IntPtr* pHwnd)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, IntPtr*, int>)(lpVtbl[5]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pHwnd);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, IntPtr*, int>)(lpVtbl[5]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pHwnd);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetCoreWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetCoreWindow(Guid* refiid, void** ppUnk)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), refiid, ppUnk);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), refiid, ppUnk);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.Present1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint, uint, PresentParameters*, int>)(lpVtbl[7]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint, uint, PresentParameters*, int>)(lpVtbl[7]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.IsTemporaryMonoSupported" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public Bool32 IsTemporaryMonoSupported()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Bool32>)(lpVtbl[8]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Bool32>)(lpVtbl[8]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetRestrictToOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, IDXGIOutput*, int>)(lpVtbl[9]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, IDXGIOutput*, int>)(lpVtbl[9]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.SetBackgroundColor" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetBackgroundColor(Rgba* pColor)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Rgba*, int>)(lpVtbl[10]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pColor);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Rgba*, int>)(lpVtbl[10]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pColor);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetBackgroundColor" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetBackgroundColor(Rgba* pColor)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Rgba*, int>)(lpVtbl[11]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pColor);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Rgba*, int>)(lpVtbl[11]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pColor);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.SetRotation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult SetRotation(Common.ModeRotation Rotation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Common.ModeRotation, int>)(lpVtbl[12]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Rotation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Common.ModeRotation, int>)(lpVtbl[12]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Rotation);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetRotation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetRotation(Common.ModeRotation* pRotation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Common.ModeRotation*, int>)(lpVtbl[13]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pRotation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Common.ModeRotation*, int>)(lpVtbl[13]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pRotation);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.Present" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult Present(uint SyncInterval, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint, uint, int>)(lpVtbl[14]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint, uint, int>)(lpVtbl[14]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetBuffer" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint, Guid*, void**, int>)(lpVtbl[15]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint, Guid*, void**, int>)(lpVtbl[15]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.SetFullscreenState" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult SetFullscreenState(Bool32* Fullscreen, IDXGIOutput* pTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Bool32*, IDXGIOutput*, int>)(lpVtbl[16]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Bool32*, IDXGIOutput*, int>)(lpVtbl[16]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetFullscreenState" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Bool32*, IDXGIOutput**, int>)(lpVtbl[17]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Bool32*, IDXGIOutput**, int>)(lpVtbl[17]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetDesc(SwapChainDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, SwapChainDescription*, int>)(lpVtbl[18]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, SwapChainDescription*, int>)(lpVtbl[18]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.ResizeBuffers" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, uint SwapChainFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[19]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[19]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.ResizeTarget" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Common.ModeDescription*, int>)(lpVtbl[20]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Common.ModeDescription*, int>)(lpVtbl[20]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetContainingOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult GetContainingOutput(IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, IDXGIOutput**, int>)(lpVtbl[21]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, IDXGIOutput**, int>)(lpVtbl[21]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), ppOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, FrameStatistics*, int>)(lpVtbl[22]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, FrameStatistics*, int>)(lpVtbl[22]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetLastPresentCount" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult GetLastPresentCount(uint* pLastPresentCount)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint*, int>)(lpVtbl[23]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint*, int>)(lpVtbl[23]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Guid*, void**, int>)(lpVtbl[24]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Guid*, void**, int>)(lpVtbl[24]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Guid*, uint, void*, int>)(lpVtbl[25]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Guid*, uint, void*, int>)(lpVtbl[25]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Guid*, IUnknown*, int>)(lpVtbl[26]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Guid*, IUnknown*, int>)(lpVtbl[26]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Guid*, uint*, void*, int>)(lpVtbl[27]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Guid*, uint*, void*, int>)(lpVtbl[27]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Guid*, void**, int>)(lpVtbl[28]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Guid*, void**, int>)(lpVtbl[28]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetSourceSize"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(29)]
+	public HResult SetSourceSize(uint Width, uint Height)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint, uint, int>)(lpVtbl[29]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Width, Height);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint, uint, int>)(lpVtbl[29]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Width, Height);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetSourceSize"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(30)]
+	public HResult GetSourceSize(uint* pWidth, uint* pHeight)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint*, uint*, int>)(lpVtbl[30]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pWidth, pHeight);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint*, uint*, int>)(lpVtbl[30]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pWidth, pHeight);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetMaximumFrameLatency"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(31)]
+	public HResult SetMaximumFrameLatency(uint MaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint, int>)(lpVtbl[31]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), MaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint, int>)(lpVtbl[31]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), MaxLatency);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetMaximumFrameLatency"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(32)]
+	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, uint*, int>)(lpVtbl[32]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint*, int>)(lpVtbl[32]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMaxLatency);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetFrameLatencyWaitableObject"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(33)]
+	public IntPtr GetFrameLatencyWaitableObject()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, IntPtr>)(lpVtbl[33]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, IntPtr>)(lpVtbl[33]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetMatrixTransform"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(34)]
+	public HResult SetMatrixTransform(Matrix3x2F* pMatrix)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Matrix3x2F*, int>)(lpVtbl[34]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMatrix);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Matrix3x2F*, int>)(lpVtbl[34]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMatrix);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetMatrixTransform"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(35)]
+	public HResult GetMatrixTransform(Matrix3x2F* pMatrix)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain2*, Matrix3x2F*, int>)(lpVtbl[35]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMatrix);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Matrix3x2F*, int>)(lpVtbl[35]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMatrix);
+#endif
+	}
+
+	public interface Interface : IDXGISwapChain1.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput2"]/*' />
+/// <unmanaged>IDXGIOutput2</unmanaged>
+[Guid("595e39d1-2724-4663-99b1-da969de28364")]
+[NativeTypeName("struct IDXGIOutput2 : IDXGIOutput1")]
+[NativeInheritance("IDXGIOutput1")]
+public unsafe partial struct IDXGIOutput2 : IDXGIOutput2.Interface
+{
+	public static ref readonly Guid IID_IDXGIOutput2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xD1, 0x39, 0x5E, 0x59,
+				0x24, 0x27,
+				0x63, 0x46,
+				0x99,
+				0xB1,
+				0xDA,
+				0x96,
+				0x9D,
+				0xE2,
+				0x83,
+				0x64
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput2));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplayModeList1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[3]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[3]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.FindClosestMatchingMode1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplaySurfaceData1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, IDXGIResource*, int>)(lpVtbl[5]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, IDXGIResource*, int>)(lpVtbl[5]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.DuplicateOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[6]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[6]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetDesc(OutputDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, OutputDescription*, int>)(lpVtbl[7]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, OutputDescription*, int>)(lpVtbl[7]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplayModeList" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetDisplayModeList(Common.Format EnumFormat, uint Flags, uint* pNumModes, Common.ModeDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[8]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[8]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.FindClosestMatchingMode" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.WaitForVBlank" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult WaitForVBlank()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, int>)(lpVtbl[10]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, int>)(lpVtbl[10]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.TakeOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult TakeOwnership(IUnknown* pDevice, Bool32* Exclusive)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, IUnknown*, Bool32*, int>)(lpVtbl[11]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, IUnknown*, Bool32*, int>)(lpVtbl[11]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.ReleaseOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public void ReleaseOwnership()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIOutput2*, void>)(lpVtbl[12]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIOutput2*, void>)(lpVtbl[12]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControlCapabilities" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Common.GammaControlCapabilities*, int>)(lpVtbl[13]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pGammaCaps);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Common.GammaControlCapabilities*, int>)(lpVtbl[13]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pGammaCaps);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult SetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Common.GammaControl*, int>)(lpVtbl[14]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Common.GammaControl*, int>)(lpVtbl[14]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult GetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetDisplaySurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, IDXGISurface*, int>)(lpVtbl[16]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, IDXGISurface*, int>)(lpVtbl[16]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplaySurfaceData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Guid*, uint, void*, int>)(lpVtbl[19]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Guid*, uint, void*, int>)(lpVtbl[19]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Guid*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Guid*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Guid*, uint*, void*, int>)(lpVtbl[21]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Guid*, uint*, void*, int>)(lpVtbl[21]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Guid*, void**, int>)(lpVtbl[22]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Guid*, void**, int>)(lpVtbl[22]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput2::SupportsOverlays"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public Bool32 SupportsOverlays()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput2*, Bool32>)(lpVtbl[23]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Bool32>)(lpVtbl[23]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IDXGIOutput1.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory3"]/*' />
+/// <unmanaged>IDXGIFactory3</unmanaged>
+[Guid("25483823-cd46-4c7d-86ca-47aa95b837bd")]
+[NativeTypeName("struct IDXGIFactory3 : IDXGIFactory2")]
+[NativeInheritance("IDXGIFactory2")]
+public unsafe partial struct IDXGIFactory3 : IDXGIFactory3.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactory3
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x23, 0x38, 0x48, 0x25,
+				0x46, 0xCD,
+				0x7D, 0x4C,
+				0x86,
+				0xCA,
+				0x47,
+				0xAA,
+				0x95,
+				0xB8,
+				0x37,
+				0xBD
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory3));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.IsWindowedStereoEnabled" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public Bool32 IsWindowedStereoEnabled()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, Bool32>)(lpVtbl[3]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Bool32>)(lpVtbl[3]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForHwnd" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr* hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[4]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[4]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForCoreWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[5]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[5]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.GetSharedResourceAdapterLuid" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetSharedResourceAdapterLuid(IntPtr* hResource, Luid* pLuid)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IntPtr*, Luid*, int>)(lpVtbl[6]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr*, Luid*, int>)(lpVtbl[6]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult RegisterStereoStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IntPtr*, uint, uint*, int>)(lpVtbl[7]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr*, uint, uint*, int>)(lpVtbl[7]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult RegisterStereoStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IntPtr*, uint*, int>)(lpVtbl[8]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr*, uint*, int>)(lpVtbl[8]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterStereoStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public void UnregisterStereoStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory3*, uint, void>)(lpVtbl[9]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory3*, uint, void>)(lpVtbl[9]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult RegisterOcclusionStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IntPtr*, uint, uint*, int>)(lpVtbl[10]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr*, uint, uint*, int>)(lpVtbl[10]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult RegisterOcclusionStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IntPtr*, uint*, int>)(lpVtbl[11]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr*, uint*, int>)(lpVtbl[11]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterOcclusionStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public void UnregisterOcclusionStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory3*, uint, void>)(lpVtbl[12]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory3*, uint, void>)(lpVtbl[12]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForComposition" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[13]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[13]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.EnumAdapters1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, uint, IDXGIAdapter1**, int>)(lpVtbl[14]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, uint, IDXGIAdapter1**, int>)(lpVtbl[14]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.IsCurrent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public Bool32 IsCurrent()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, Bool32>)(lpVtbl[15]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Bool32>)(lpVtbl[15]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, uint, IDXGIAdapter**, int>)(lpVtbl[16]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, uint, IDXGIAdapter**, int>)(lpVtbl[16]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IntPtr*, uint, int>)(lpVtbl[17]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr*, uint, int>)(lpVtbl[17]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IntPtr*, int>)(lpVtbl[18]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr*, int>)(lpVtbl[18]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[19]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[19]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[20]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[20]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, Guid*, uint, void*, int>)(lpVtbl[21]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Guid*, uint, void*, int>)(lpVtbl[21]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, Guid*, IUnknown*, int>)(lpVtbl[22]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Guid*, IUnknown*, int>)(lpVtbl[22]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, Guid*, uint*, void*, int>)(lpVtbl[23]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Guid*, uint*, void*, int>)(lpVtbl[23]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, Guid*, void**, int>)(lpVtbl[24]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Guid*, void**, int>)(lpVtbl[24]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory3::GetCreationFlags"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public uint GetCreationFlags()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory3*, uint>)(lpVtbl[25]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, uint>)(lpVtbl[25]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IDXGIFactory2.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain"]/*' />
+/// <unmanaged>IDXGIDecodeSwapChain</unmanaged>
+[Guid("2633066b-4514-4c7a-8fd8-12ea98059d18")]
+[NativeTypeName("struct IDXGIDecodeSwapChain : IUnknown")]
+[NativeInheritance("IUnknown")]
+public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interface
+{
+	public static ref readonly Guid IID_IDXGIDecodeSwapChain
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x6B, 0x06, 0x33, 0x26,
+				0x14, 0x45,
+				0x7A, 0x4C,
+				0x8F,
+				0xD8,
+				0x12,
+				0xEA,
+				0x98,
+				0x05,
+				0x9D,
+				0x18
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDecodeSwapChain));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::PresentBuffer"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, uint, uint, uint, int>)(lpVtbl[3]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), BufferToPresent, SyncInterval, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, uint, uint, uint, int>)(lpVtbl[3]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), BufferToPresent, SyncInterval, Flags);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetSourceRect"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetSourceRect(RawRect* pRect)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[4]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[4]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetTargetRect"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetTargetRect(RawRect* pRect)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[5]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[5]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetDestSize"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult SetDestSize(uint Width, uint Height)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, uint, uint, int>)(lpVtbl[6]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), Width, Height);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, uint, uint, int>)(lpVtbl[6]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), Width, Height);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetSourceRect"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetSourceRect(RawRect* pRect)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[7]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[7]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetTargetRect"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetTargetRect(RawRect* pRect)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[8]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[8]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetDestSize"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetDestSize(uint* pWidth, uint* pHeight)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, uint*, uint*, int>)(lpVtbl[9]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pWidth, pHeight);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, uint*, uint*, int>)(lpVtbl[9]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pWidth, pHeight);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetColorSpace"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult SetColorSpace(MultiplaneOverlayYcbcrFlags ColorSpace)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, MultiplaneOverlayYcbcrFlags, int>)(lpVtbl[10]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), ColorSpace);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, MultiplaneOverlayYcbcrFlags, int>)(lpVtbl[10]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), ColorSpace);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetColorSpace"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public Graphics.Dxgi.MultiplaneOverlayYcbcrFlags GetColorSpace()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDecodeSwapChain*, Graphics.Dxgi.MultiplaneOverlayYcbcrFlags>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, Graphics.Dxgi.MultiplaneOverlayYcbcrFlags>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IUnknown.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia"]/*' />
+/// <unmanaged>IDXGIFactoryMedia</unmanaged>
+[Guid("41e7d1f2-a591-4f7b-a2e5-fa9c843e1c12")]
+[NativeTypeName("struct IDXGIFactoryMedia : IUnknown")]
+[NativeInheritance("IUnknown")]
+public unsafe partial struct IDXGIFactoryMedia : IDXGIFactoryMedia.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactoryMedia
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xF2, 0xD1, 0xE7, 0x41,
+				0x91, 0xA5,
+				0x7B, 0x4F,
+				0xA2,
+				0xE5,
+				0xFA,
+				0x9C,
+				0x84,
+				0x3E,
+				0x1C,
+				0x12
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactoryMedia));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateSwapChainForCompositionSurfaceHandle"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult CreateSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, IntPtr* hSurface, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactoryMedia*, IUnknown*, IntPtr*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[3]))((IDXGIFactoryMedia*)Unsafe.AsPointer(ref this), pDevice, hSurface, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactoryMedia*, IUnknown*, IntPtr*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[3]))((IDXGIFactoryMedia*)Unsafe.AsPointer(ref this), pDevice, hSurface, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateDecodeSwapChainForCompositionSurfaceHandle"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult CreateDecodeSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, IntPtr* hSurface, DecodeSwapChainDescription* pDesc, IDXGIResource* pYuvDecodeBuffers, IDXGIOutput* pRestrictToOutput, IDXGIDecodeSwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactoryMedia*, IUnknown*, IntPtr*, DecodeSwapChainDescription*, IDXGIResource*, IDXGIOutput*, IDXGIDecodeSwapChain**, int>)(lpVtbl[4]))((IDXGIFactoryMedia*)Unsafe.AsPointer(ref this), pDevice, hSurface, pDesc, pYuvDecodeBuffers, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactoryMedia*, IUnknown*, IntPtr*, DecodeSwapChainDescription*, IDXGIResource*, IDXGIOutput*, IDXGIDecodeSwapChain**, int>)(lpVtbl[4]))((IDXGIFactoryMedia*)Unsafe.AsPointer(ref this), pDevice, hSurface, pDesc, pYuvDecodeBuffers, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	public interface Interface : IUnknown.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
+/// <unmanaged>IDXGISwapChainMedia</unmanaged>
+[Guid("dd95b90b-f05f-4f6a-bd65-25bfb264bd84")]
+[NativeTypeName("struct IDXGISwapChainMedia : IUnknown")]
+[NativeInheritance("IUnknown")]
+public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
+{
+	public static ref readonly Guid IID_IDXGISwapChainMedia
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x0B, 0xB9, 0x95, 0xDD,
+				0x5F, 0xF0,
+				0x6A, 0x4F,
+				0xBD,
+				0x65,
+				0x25,
+				0xBF,
+				0xB2,
+				0x64,
+				0xBD,
+				0x84
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChainMedia));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetFrameStatisticsMedia(FrameStatisticsMedia* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, FrameStatisticsMedia*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, FrameStatisticsMedia*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult SetPresentDuration(uint Duration)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, uint, int>)(lpVtbl[4]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), Duration);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint, int>)(lpVtbl[4]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), Duration);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, uint, uint*, uint*, int>)(lpVtbl[5]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), DesiredPresentDuration, pClosestSmallerPresentDuration, pClosestLargerPresentDuration);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint, uint*, uint*, int>)(lpVtbl[5]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), DesiredPresentDuration, pClosestSmallerPresentDuration, pClosestLargerPresentDuration);
+#endif
+	}
+
+	public interface Interface : IUnknown.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
+/// <unmanaged>IDXGIOutput3</unmanaged>
+[Guid("8a6bb301-7e7e-41f4-a8e0-5b32f7f99b18")]
+[NativeTypeName("struct IDXGIOutput3 : IDXGIOutput2")]
+[NativeInheritance("IDXGIOutput2")]
+public unsafe partial struct IDXGIOutput3 : IDXGIOutput3.Interface
+{
+	public static ref readonly Guid IID_IDXGIOutput3
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x01, 0xB3, 0x6B, 0x8A,
+				0x7E, 0x7E,
+				0xF4, 0x41,
+				0xA8,
+				0xE0,
+				0x5B,
+				0x32,
+				0xF7,
+				0xF9,
+				0x9B,
+				0x18
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput3));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIOutput2.SupportsOverlays" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public Bool32 SupportsOverlays()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Bool32>)(lpVtbl[3]))((IDXGIOutput3*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Bool32>)(lpVtbl[3]))((IDXGIOutput3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplayModeList1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[4]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[4]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.FindClosestMatchingMode1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[5]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[5]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplaySurfaceData1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, IDXGIResource*, int>)(lpVtbl[6]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, IDXGIResource*, int>)(lpVtbl[6]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.DuplicateOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[7]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[7]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetDesc(OutputDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, OutputDescription*, int>)(lpVtbl[8]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, OutputDescription*, int>)(lpVtbl[8]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplayModeList" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetDisplayModeList(Common.Format EnumFormat, uint Flags, uint* pNumModes, Common.ModeDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[9]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[9]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.FindClosestMatchingMode" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[10]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[10]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.WaitForVBlank" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult WaitForVBlank()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, int>)(lpVtbl[11]))((IDXGIOutput3*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, int>)(lpVtbl[11]))((IDXGIOutput3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.TakeOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult TakeOwnership(IUnknown* pDevice, Bool32* Exclusive)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, IUnknown*, Bool32*, int>)(lpVtbl[12]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, IUnknown*, Bool32*, int>)(lpVtbl[12]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.ReleaseOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public void ReleaseOwnership()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIOutput3*, void>)(lpVtbl[13]))((IDXGIOutput3*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIOutput3*, void>)(lpVtbl[13]))((IDXGIOutput3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControlCapabilities" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Common.GammaControlCapabilities*, int>)(lpVtbl[14]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pGammaCaps);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.GammaControlCapabilities*, int>)(lpVtbl[14]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pGammaCaps);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult SetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Common.GammaControl*, int>)(lpVtbl[16]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.GammaControl*, int>)(lpVtbl[16]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetDisplaySurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplaySurfaceData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, IDXGISurface*, int>)(lpVtbl[18]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, IDXGISurface*, int>)(lpVtbl[18]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, FrameStatistics*, int>)(lpVtbl[19]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, FrameStatistics*, int>)(lpVtbl[19]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Guid*, uint, void*, int>)(lpVtbl[20]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Guid*, uint, void*, int>)(lpVtbl[20]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Guid*, IUnknown*, int>)(lpVtbl[21]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Guid*, IUnknown*, int>)(lpVtbl[21]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Guid*, uint*, void*, int>)(lpVtbl[22]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Guid*, uint*, void*, int>)(lpVtbl[22]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Guid*, void**, int>)(lpVtbl[23]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Guid*, void**, int>)(lpVtbl[23]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput3::CheckOverlaySupport"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput3*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+#endif
+	}
+
+	public interface Interface : IDXGIOutput2.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3"]/*' />
+/// <unmanaged>IDXGISwapChain3</unmanaged>
+[Guid("94d99bdb-f1f8-4ab0-b236-7da0170edab1")]
+[NativeTypeName("struct IDXGISwapChain3 : IDXGISwapChain2")]
+[NativeInheritance("IDXGISwapChain2")]
+public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface
+{
+	public static ref readonly Guid IID_IDXGISwapChain3
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xDB, 0x9B, 0xD9, 0x94,
+				0xF8, 0xF1,
+				0xB0, 0x4A,
+				0xB2,
+				0x36,
+				0x7D,
+				0xA0,
+				0x17,
+				0x0E,
+				0xDA,
+				0xB1
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain3));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.SetSourceSize" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetSourceSize(uint Width, uint Height)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, int>)(lpVtbl[3]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Width, Height);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, int>)(lpVtbl[3]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Width, Height);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.GetSourceSize" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetSourceSize(uint* pWidth, uint* pHeight)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint*, uint*, int>)(lpVtbl[4]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pWidth, pHeight);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint*, uint*, int>)(lpVtbl[4]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pWidth, pHeight);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.SetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetMaximumFrameLatency(uint MaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint, int>)(lpVtbl[5]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), MaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, int>)(lpVtbl[5]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), MaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.GetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint*, int>)(lpVtbl[6]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint*, int>)(lpVtbl[6]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.GetFrameLatencyWaitableObject" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public IntPtr GetFrameLatencyWaitableObject()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, IntPtr>)(lpVtbl[7]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IntPtr>)(lpVtbl[7]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.SetMatrixTransform" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult SetMatrixTransform(Matrix3x2F* pMatrix)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Matrix3x2F*, int>)(lpVtbl[8]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2F*, int>)(lpVtbl[8]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.GetMatrixTransform" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetMatrixTransform(Matrix3x2F* pMatrix)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Matrix3x2F*, int>)(lpVtbl[9]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2F*, int>)(lpVtbl[9]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetDesc1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetDesc1(SwapChainDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, SwapChainDescription1*, int>)(lpVtbl[10]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, SwapChainDescription1*, int>)(lpVtbl[10]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetFullscreenDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetFullscreenDesc(SwapChainFullscreenDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, SwapChainFullscreenDescription*, int>)(lpVtbl[11]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, SwapChainFullscreenDescription*, int>)(lpVtbl[11]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetHwnd" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetHwnd(IntPtr* pHwnd)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, IntPtr*, int>)(lpVtbl[12]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pHwnd);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IntPtr*, int>)(lpVtbl[12]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pHwnd);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetCoreWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetCoreWindow(Guid* refiid, void** ppUnk)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[13]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), refiid, ppUnk);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[13]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), refiid, ppUnk);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.Present1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, PresentParameters*, int>)(lpVtbl[14]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, PresentParameters*, int>)(lpVtbl[14]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.IsTemporaryMonoSupported" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public Bool32 IsTemporaryMonoSupported()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Bool32>)(lpVtbl[15]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Bool32>)(lpVtbl[15]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetRestrictToOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, IDXGIOutput*, int>)(lpVtbl[16]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IDXGIOutput*, int>)(lpVtbl[16]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.SetBackgroundColor" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult SetBackgroundColor(Rgba* pColor)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Rgba*, int>)(lpVtbl[17]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Rgba*, int>)(lpVtbl[17]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetBackgroundColor" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetBackgroundColor(Rgba* pColor)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Rgba*, int>)(lpVtbl[18]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Rgba*, int>)(lpVtbl[18]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.SetRotation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult SetRotation(Common.ModeRotation Rotation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ModeRotation, int>)(lpVtbl[19]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Rotation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ModeRotation, int>)(lpVtbl[19]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Rotation);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetRotation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult GetRotation(Common.ModeRotation* pRotation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ModeRotation*, int>)(lpVtbl[20]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pRotation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ModeRotation*, int>)(lpVtbl[20]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pRotation);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.Present" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult Present(uint SyncInterval, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, int>)(lpVtbl[21]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, int>)(lpVtbl[21]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetBuffer" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint, Guid*, void**, int>)(lpVtbl[22]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, Guid*, void**, int>)(lpVtbl[22]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.SetFullscreenState" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult SetFullscreenState(Bool32* Fullscreen, IDXGIOutput* pTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Bool32*, IDXGIOutput*, int>)(lpVtbl[23]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Bool32*, IDXGIOutput*, int>)(lpVtbl[23]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetFullscreenState" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Bool32*, IDXGIOutput**, int>)(lpVtbl[24]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Bool32*, IDXGIOutput**, int>)(lpVtbl[24]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult GetDesc(SwapChainDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, SwapChainDescription*, int>)(lpVtbl[25]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, SwapChainDescription*, int>)(lpVtbl[25]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.ResizeBuffers" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, uint SwapChainFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[26]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[26]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.ResizeTarget" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ModeDescription*, int>)(lpVtbl[27]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ModeDescription*, int>)(lpVtbl[27]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetContainingOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public HResult GetContainingOutput(IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[28]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[28]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(29)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, FrameStatistics*, int>)(lpVtbl[29]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, FrameStatistics*, int>)(lpVtbl[29]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetLastPresentCount" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(30)]
+	public HResult GetLastPresentCount(uint* pLastPresentCount)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint*, int>)(lpVtbl[30]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint*, int>)(lpVtbl[30]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(31)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[31]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[31]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(32)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, uint, void*, int>)(lpVtbl[32]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, uint, void*, int>)(lpVtbl[32]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(33)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, IUnknown*, int>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, IUnknown*, int>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(34)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, uint*, void*, int>)(lpVtbl[34]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, uint*, void*, int>)(lpVtbl[34]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(35)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[35]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[35]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3::GetCurrentBackBufferIndex"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(36)]
+	public uint GetCurrentBackBufferIndex()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint>)(lpVtbl[36]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint>)(lpVtbl[36]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3::CheckColorSpaceSupport"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(37)]
+	public HResult CheckColorSpaceSupport(Common.ColorSpaceType ColorSpace, uint* pColorSpaceSupport)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ColorSpaceType, uint*, int>)(lpVtbl[37]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ColorSpaceType, uint*, int>)(lpVtbl[37]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3::SetColorSpace1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(38)]
+	public HResult SetColorSpace1(Common.ColorSpaceType ColorSpace)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ColorSpaceType, int>)(lpVtbl[38]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ColorSpaceType, int>)(lpVtbl[38]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3::ResizeBuffers1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(39)]
+	public HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.Format Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown* ppPresentQueue)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, uint*, IUnknown*, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, uint*, IUnknown*, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
+#endif
+	}
+
+	public interface Interface : IDXGISwapChain2.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput4"]/*' />
+/// <unmanaged>IDXGIOutput4</unmanaged>
+[Guid("dc7dca35-2196-414d-9f53-617884032a60")]
+[NativeTypeName("struct IDXGIOutput4 : IDXGIOutput3")]
+[NativeInheritance("IDXGIOutput3")]
+public unsafe partial struct IDXGIOutput4 : IDXGIOutput4.Interface
+{
+	public static ref readonly Guid IID_IDXGIOutput4
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x35, 0xCA, 0x7D, 0xDC,
+				0x96, 0x21,
+				0x4D, 0x41,
+				0x9F,
+				0x53,
+				0x61,
+				0x78,
+				0x84,
+				0x03,
+				0x2A,
+				0x60
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput4));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIOutput3.CheckOverlaySupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[3]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[3]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput2.SupportsOverlays" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public Bool32 SupportsOverlays()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Bool32>)(lpVtbl[4]))((IDXGIOutput4*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Bool32>)(lpVtbl[4]))((IDXGIOutput4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplayModeList1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[5]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[5]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.FindClosestMatchingMode1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[6]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[6]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplaySurfaceData1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, IDXGIResource*, int>)(lpVtbl[7]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, IDXGIResource*, int>)(lpVtbl[7]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.DuplicateOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[8]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[8]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetDesc(OutputDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, OutputDescription*, int>)(lpVtbl[9]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, OutputDescription*, int>)(lpVtbl[9]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplayModeList" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetDisplayModeList(Common.Format EnumFormat, uint Flags, uint* pNumModes, Common.ModeDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[10]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[10]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.FindClosestMatchingMode" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[11]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[11]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.WaitForVBlank" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult WaitForVBlank()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, int>)(lpVtbl[12]))((IDXGIOutput4*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, int>)(lpVtbl[12]))((IDXGIOutput4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.TakeOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult TakeOwnership(IUnknown* pDevice, Bool32* Exclusive)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, IUnknown*, Bool32*, int>)(lpVtbl[13]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, IUnknown*, Bool32*, int>)(lpVtbl[13]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.ReleaseOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public void ReleaseOwnership()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIOutput4*, void>)(lpVtbl[14]))((IDXGIOutput4*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIOutput4*, void>)(lpVtbl[14]))((IDXGIOutput4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControlCapabilities" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Common.GammaControlCapabilities*, int>)(lpVtbl[15]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pGammaCaps);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.GammaControlCapabilities*, int>)(lpVtbl[15]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pGammaCaps);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult SetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Common.GammaControl*, int>)(lpVtbl[16]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.GammaControl*, int>)(lpVtbl[16]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Common.GammaControl*, int>)(lpVtbl[17]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.GammaControl*, int>)(lpVtbl[17]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetDisplaySurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, IDXGISurface*, int>)(lpVtbl[18]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, IDXGISurface*, int>)(lpVtbl[18]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplaySurfaceData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, IDXGISurface*, int>)(lpVtbl[19]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, IDXGISurface*, int>)(lpVtbl[19]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, FrameStatistics*, int>)(lpVtbl[20]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, FrameStatistics*, int>)(lpVtbl[20]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Guid*, uint, void*, int>)(lpVtbl[21]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Guid*, uint, void*, int>)(lpVtbl[21]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Guid*, IUnknown*, int>)(lpVtbl[22]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Guid*, IUnknown*, int>)(lpVtbl[22]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Guid*, uint*, void*, int>)(lpVtbl[23]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Guid*, uint*, void*, int>)(lpVtbl[23]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Guid*, void**, int>)(lpVtbl[24]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Guid*, void**, int>)(lpVtbl[24]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput4::CheckOverlayColorSpaceSupport"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput4*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[25]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[25]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
+#endif
+	}
+
+	public interface Interface : IDXGIOutput3.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory4"]/*' />
+/// <unmanaged>IDXGIFactory4</unmanaged>
+[Guid("1bc6ea02-ef36-464f-bf0c-21ca39e5168a")]
+[NativeTypeName("struct IDXGIFactory4 : IDXGIFactory3")]
+[NativeInheritance("IDXGIFactory3")]
+public unsafe partial struct IDXGIFactory4 : IDXGIFactory4.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactory4
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x02, 0xEA, 0xC6, 0x1B,
+				0x36, 0xEF,
+				0x4F, 0x46,
+				0xBF,
+				0x0C,
+				0x21,
+				0xCA,
+				0x39,
+				0xE5,
+				0x16,
+				0x8A
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory4));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIFactory3.GetCreationFlags" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public uint GetCreationFlags()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, uint>)(lpVtbl[3]))((IDXGIFactory4*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, uint>)(lpVtbl[3]))((IDXGIFactory4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.IsWindowedStereoEnabled" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public Bool32 IsWindowedStereoEnabled()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, Bool32>)(lpVtbl[4]))((IDXGIFactory4*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Bool32>)(lpVtbl[4]))((IDXGIFactory4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForHwnd" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr* hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[5]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[5]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForCoreWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[6]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[6]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.GetSharedResourceAdapterLuid" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetSharedResourceAdapterLuid(IntPtr* hResource, Luid* pLuid)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IntPtr*, Luid*, int>)(lpVtbl[7]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IntPtr*, Luid*, int>)(lpVtbl[7]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult RegisterStereoStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IntPtr*, uint, uint*, int>)(lpVtbl[8]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IntPtr*, uint, uint*, int>)(lpVtbl[8]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult RegisterStereoStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IntPtr*, uint*, int>)(lpVtbl[9]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IntPtr*, uint*, int>)(lpVtbl[9]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterStereoStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public void UnregisterStereoStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory4*, uint, void>)(lpVtbl[10]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory4*, uint, void>)(lpVtbl[10]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult RegisterOcclusionStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IntPtr*, uint, uint*, int>)(lpVtbl[11]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IntPtr*, uint, uint*, int>)(lpVtbl[11]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult RegisterOcclusionStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IntPtr*, uint*, int>)(lpVtbl[12]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IntPtr*, uint*, int>)(lpVtbl[12]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterOcclusionStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public void UnregisterOcclusionStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory4*, uint, void>)(lpVtbl[13]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory4*, uint, void>)(lpVtbl[13]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForComposition" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[14]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[14]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.EnumAdapters1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, uint, IDXGIAdapter1**, int>)(lpVtbl[15]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, uint, IDXGIAdapter1**, int>)(lpVtbl[15]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.IsCurrent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public Bool32 IsCurrent()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, Bool32>)(lpVtbl[16]))((IDXGIFactory4*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Bool32>)(lpVtbl[16]))((IDXGIFactory4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, uint, IDXGIAdapter**, int>)(lpVtbl[17]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, uint, IDXGIAdapter**, int>)(lpVtbl[17]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IntPtr*, uint, int>)(lpVtbl[18]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IntPtr*, uint, int>)(lpVtbl[18]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IntPtr*, int>)(lpVtbl[19]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IntPtr*, int>)(lpVtbl[19]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[20]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[20]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[21]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[21]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, Guid*, uint, void*, int>)(lpVtbl[22]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Guid*, uint, void*, int>)(lpVtbl[22]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, Guid*, IUnknown*, int>)(lpVtbl[23]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Guid*, IUnknown*, int>)(lpVtbl[23]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, Guid*, uint*, void*, int>)(lpVtbl[24]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Guid*, uint*, void*, int>)(lpVtbl[24]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, Guid*, void**, int>)(lpVtbl[25]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Guid*, void**, int>)(lpVtbl[25]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory4::EnumAdapterByLuid"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, Luid*, Guid*, void**, int>)(lpVtbl[26]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Luid*, Guid*, void**, int>)(lpVtbl[26]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory4::EnumWarpAdapter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory4*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#endif
+	}
+
+	public interface Interface : IDXGIFactory3.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3"]/*' />
+/// <unmanaged>IDXGIAdapter3</unmanaged>
+[Guid("645967a4-1392-4310-a798-8053ce3e93fd")]
+[NativeTypeName("struct IDXGIAdapter3 : IDXGIAdapter2")]
+[NativeInheritance("IDXGIAdapter2")]
+public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface
+{
+	public static ref readonly Guid IID_IDXGIAdapter3
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA4, 0x67, 0x59, 0x64,
+				0x92, 0x13,
+				0x10, 0x43,
+				0xA7,
+				0x98,
+				0x80,
+				0x53,
+				0xCE,
+				0x3E,
+				0x93,
+				0xFD
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIAdapter3));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter2.GetDesc2" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult GetDesc2(AdapterDescription2* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, AdapterDescription2*, int>)(lpVtbl[3]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, AdapterDescription2*, int>)(lpVtbl[3]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter1.GetDesc1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult GetDesc1(AdapterDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, AdapterDescription1*, int>)(lpVtbl[4]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, AdapterDescription1*, int>)(lpVtbl[4]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.EnumOutputs" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, uint, IDXGIOutput**, int>)(lpVtbl[5]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, IDXGIOutput**, int>)(lpVtbl[5]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetDesc(AdapterDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, AdapterDescription*, int>)(lpVtbl[6]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, AdapterDescription*, int>)(lpVtbl[6]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, LargeInterger*, int>)(lpVtbl[7]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, LargeInterger*, int>)(lpVtbl[7]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, uint, void*, int>)(lpVtbl[8]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, uint, void*, int>)(lpVtbl[8]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, IUnknown*, int>)(lpVtbl[9]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, IUnknown*, int>)(lpVtbl[9]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, uint*, void*, int>)(lpVtbl[10]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, uint*, void*, int>)(lpVtbl[10]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, void**, int>)(lpVtbl[11]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, void**, int>)(lpVtbl[11]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::RegisterHardwareContentProtectionTeardownStatusEvent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult RegisterHardwareContentProtectionTeardownStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, IntPtr*, uint*, int>)(lpVtbl[12]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, IntPtr*, uint*, int>)(lpVtbl[12]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterHardwareContentProtectionTeardownStatus"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public void UnregisterHardwareContentProtectionTeardownStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIAdapter3*, uint, void>)(lpVtbl[13]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, void>)(lpVtbl[13]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::QueryVideoMemoryInfo"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult QueryVideoMemoryInfo(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, QueryVideoMemoryInfo* pVideoMemoryInfo)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, uint, MemorySegmentGroup, QueryVideoMemoryInfo*, int>)(lpVtbl[14]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, MemorySegmentGroup, QueryVideoMemoryInfo*, int>)(lpVtbl[14]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::SetVideoMemoryReservation"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult SetVideoMemoryReservation(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, ulong Reservation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, uint, MemorySegmentGroup, ulong, int>)(lpVtbl[15]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, MemorySegmentGroup, ulong, int>)(lpVtbl[15]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::RegisterVideoMemoryBudgetChangeNotificationEvent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult RegisterVideoMemoryBudgetChangeNotificationEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, IntPtr*, uint*, int>)(lpVtbl[16]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, IntPtr*, uint*, int>)(lpVtbl[16]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterVideoMemoryBudgetChangeNotification"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public void UnregisterVideoMemoryBudgetChangeNotification(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIAdapter3*, uint, void>)(lpVtbl[17]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, void>)(lpVtbl[17]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	public interface Interface : IDXGIAdapter2.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput5"]/*' />
+/// <unmanaged>IDXGIOutput5</unmanaged>
+[Guid("80a07424-ab52-42eb-833c-0c42fd282d98")]
+[NativeTypeName("struct IDXGIOutput5 : IDXGIOutput4")]
+[NativeInheritance("IDXGIOutput4")]
+public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface
+{
+	public static ref readonly Guid IID_IDXGIOutput5
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x24, 0x74, 0xA0, 0x80,
+				0x52, 0xAB,
+				0xEB, 0x42,
+				0x83,
+				0x3C,
+				0x0C,
+				0x42,
+				0xFD,
+				0x28,
+				0x2D,
+				0x98
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput5));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIOutput4.CheckOverlayColorSpaceSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[3]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[3]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput3.CheckOverlaySupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[4]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[4]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput2.SupportsOverlays" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public Bool32 SupportsOverlays()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Bool32>)(lpVtbl[5]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Bool32>)(lpVtbl[5]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplayModeList1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[6]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[6]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.FindClosestMatchingMode1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[7]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[7]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplaySurfaceData1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, IDXGIResource*, int>)(lpVtbl[8]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IDXGIResource*, int>)(lpVtbl[8]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.DuplicateOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[9]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[9]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetDesc(OutputDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, OutputDescription*, int>)(lpVtbl[10]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, OutputDescription*, int>)(lpVtbl[10]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplayModeList" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetDisplayModeList(Common.Format EnumFormat, uint Flags, uint* pNumModes, Common.ModeDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[11]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[11]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.FindClosestMatchingMode" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[12]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[12]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.WaitForVBlank" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult WaitForVBlank()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, int>)(lpVtbl[13]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, int>)(lpVtbl[13]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.TakeOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult TakeOwnership(IUnknown* pDevice, Bool32* Exclusive)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, IUnknown*, Bool32*, int>)(lpVtbl[14]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, Bool32*, int>)(lpVtbl[14]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.ReleaseOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public void ReleaseOwnership()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIOutput5*, void>)(lpVtbl[15]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIOutput5*, void>)(lpVtbl[15]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControlCapabilities" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Common.GammaControlCapabilities*, int>)(lpVtbl[16]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pGammaCaps);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.GammaControlCapabilities*, int>)(lpVtbl[16]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pGammaCaps);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult SetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[17]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[17]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[18]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[18]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetDisplaySurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[19]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[19]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplaySurfaceData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[20]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[20]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, FrameStatistics*, int>)(lpVtbl[21]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, FrameStatistics*, int>)(lpVtbl[21]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, uint, void*, int>)(lpVtbl[22]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, uint, void*, int>)(lpVtbl[22]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, IUnknown*, int>)(lpVtbl[23]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, IUnknown*, int>)(lpVtbl[23]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, uint*, void*, int>)(lpVtbl[24]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, uint*, void*, int>)(lpVtbl[24]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, void**, int>)(lpVtbl[25]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, void**, int>)(lpVtbl[25]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput5::DuplicateOutput1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult DuplicateOutput1(IUnknown* pDevice, uint Flags, uint SupportedFormatsCount, Common.Format* pSupportedFormats, IDXGIOutputDuplication** ppOutputDuplication)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput5*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
+#endif
+	}
+
+	public interface Interface : IDXGIOutput4.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain4"]/*' />
+/// <unmanaged>IDXGISwapChain4</unmanaged>
+[Guid("3d585d5a-bd4a-489e-b1f4-3dbcb6452ffb")]
+[NativeTypeName("struct IDXGISwapChain4 : IDXGISwapChain3")]
+[NativeInheritance("IDXGISwapChain3")]
+public unsafe partial struct IDXGISwapChain4 : IDXGISwapChain4.Interface
+{
+	public static ref readonly Guid IID_IDXGISwapChain4
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x5A, 0x5D, 0x58, 0x3D,
+				0x4A, 0xBD,
+				0x9E, 0x48,
+				0xB1,
+				0xF4,
+				0x3D,
+				0xBC,
+				0xB6,
+				0x45,
+				0x2F,
+				0xFB
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain4));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain3.GetCurrentBackBufferIndex" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public uint GetCurrentBackBufferIndex()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint>)(lpVtbl[3]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint>)(lpVtbl[3]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain3.CheckColorSpaceSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult CheckColorSpaceSupport(Common.ColorSpaceType ColorSpace, uint* pColorSpaceSupport)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Common.ColorSpaceType, uint*, int>)(lpVtbl[4]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Common.ColorSpaceType, uint*, int>)(lpVtbl[4]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain3.SetColorSpace1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult SetColorSpace1(Common.ColorSpaceType ColorSpace)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Common.ColorSpaceType, int>)(lpVtbl[5]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ColorSpace);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Common.ColorSpaceType, int>)(lpVtbl[5]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ColorSpace);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain3.ResizeBuffers1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.Format Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown* ppPresentQueue)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint, uint, uint, Common.Format, uint, uint*, IUnknown*, int>)(lpVtbl[6]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, uint, uint, Common.Format, uint, uint*, IUnknown*, int>)(lpVtbl[6]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.SetSourceSize" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult SetSourceSize(uint Width, uint Height)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint, uint, int>)(lpVtbl[7]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Width, Height);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, uint, int>)(lpVtbl[7]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Width, Height);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.GetSourceSize" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetSourceSize(uint* pWidth, uint* pHeight)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint*, uint*, int>)(lpVtbl[8]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pWidth, pHeight);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint*, uint*, int>)(lpVtbl[8]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pWidth, pHeight);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.SetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult SetMaximumFrameLatency(uint MaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint, int>)(lpVtbl[9]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), MaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, int>)(lpVtbl[9]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), MaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.GetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint*, int>)(lpVtbl[10]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pMaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint*, int>)(lpVtbl[10]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pMaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.GetFrameLatencyWaitableObject" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public IntPtr GetFrameLatencyWaitableObject()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, IntPtr>)(lpVtbl[11]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, IntPtr>)(lpVtbl[11]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.SetMatrixTransform" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult SetMatrixTransform(Matrix3x2F* pMatrix)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Matrix3x2F*, int>)(lpVtbl[12]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pMatrix);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Matrix3x2F*, int>)(lpVtbl[12]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pMatrix);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain2.GetMatrixTransform" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetMatrixTransform(Matrix3x2F* pMatrix)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Matrix3x2F*, int>)(lpVtbl[13]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pMatrix);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Matrix3x2F*, int>)(lpVtbl[13]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pMatrix);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetDesc1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult GetDesc1(SwapChainDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, SwapChainDescription1*, int>)(lpVtbl[14]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, SwapChainDescription1*, int>)(lpVtbl[14]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetFullscreenDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult GetFullscreenDesc(SwapChainFullscreenDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, SwapChainFullscreenDescription*, int>)(lpVtbl[15]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, SwapChainFullscreenDescription*, int>)(lpVtbl[15]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetHwnd" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetHwnd(IntPtr* pHwnd)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, IntPtr*, int>)(lpVtbl[16]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pHwnd);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, IntPtr*, int>)(lpVtbl[16]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pHwnd);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetCoreWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetCoreWindow(Guid* refiid, void** ppUnk)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Guid*, void**, int>)(lpVtbl[17]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), refiid, ppUnk);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Guid*, void**, int>)(lpVtbl[17]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), refiid, ppUnk);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.Present1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint, uint, PresentParameters*, int>)(lpVtbl[18]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, uint, PresentParameters*, int>)(lpVtbl[18]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.IsTemporaryMonoSupported" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public Bool32 IsTemporaryMonoSupported()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Bool32>)(lpVtbl[19]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Bool32>)(lpVtbl[19]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetRestrictToOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, IDXGIOutput*, int>)(lpVtbl[20]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, IDXGIOutput*, int>)(lpVtbl[20]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.SetBackgroundColor" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult SetBackgroundColor(Rgba* pColor)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Rgba*, int>)(lpVtbl[21]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pColor);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Rgba*, int>)(lpVtbl[21]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pColor);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetBackgroundColor" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult GetBackgroundColor(Rgba* pColor)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Rgba*, int>)(lpVtbl[22]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pColor);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Rgba*, int>)(lpVtbl[22]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pColor);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.SetRotation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult SetRotation(Common.ModeRotation Rotation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Common.ModeRotation, int>)(lpVtbl[23]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Rotation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Common.ModeRotation, int>)(lpVtbl[23]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Rotation);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain1.GetRotation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult GetRotation(Common.ModeRotation* pRotation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Common.ModeRotation*, int>)(lpVtbl[24]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pRotation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Common.ModeRotation*, int>)(lpVtbl[24]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pRotation);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.Present" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult Present(uint SyncInterval, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint, uint, int>)(lpVtbl[25]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, uint, int>)(lpVtbl[25]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetBuffer" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint, Guid*, void**, int>)(lpVtbl[26]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, Guid*, void**, int>)(lpVtbl[26]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.SetFullscreenState" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult SetFullscreenState(Bool32* Fullscreen, IDXGIOutput* pTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Bool32*, IDXGIOutput*, int>)(lpVtbl[27]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Bool32*, IDXGIOutput*, int>)(lpVtbl[27]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetFullscreenState" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Bool32*, IDXGIOutput**, int>)(lpVtbl[28]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Bool32*, IDXGIOutput**, int>)(lpVtbl[28]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(29)]
+	public HResult GetDesc(SwapChainDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, SwapChainDescription*, int>)(lpVtbl[29]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, SwapChainDescription*, int>)(lpVtbl[29]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.ResizeBuffers" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(30)]
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, uint SwapChainFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[30]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[30]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.ResizeTarget" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(31)]
+	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Common.ModeDescription*, int>)(lpVtbl[31]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Common.ModeDescription*, int>)(lpVtbl[31]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pNewTargetParameters);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetContainingOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(32)]
+	public HResult GetContainingOutput(IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, IDXGIOutput**, int>)(lpVtbl[32]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, IDXGIOutput**, int>)(lpVtbl[32]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ppOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(33)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, FrameStatistics*, int>)(lpVtbl[33]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, FrameStatistics*, int>)(lpVtbl[33]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGISwapChain.GetLastPresentCount" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(34)]
+	public HResult GetLastPresentCount(uint* pLastPresentCount)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, uint*, int>)(lpVtbl[34]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint*, int>)(lpVtbl[34]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pLastPresentCount);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(35)]
+	public HResult GetDevice(Guid* riid, void** ppDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Guid*, void**, int>)(lpVtbl[35]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Guid*, void**, int>)(lpVtbl[35]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(36)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Guid*, uint, void*, int>)(lpVtbl[36]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Guid*, uint, void*, int>)(lpVtbl[36]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(37)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Guid*, IUnknown*, int>)(lpVtbl[37]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Guid*, IUnknown*, int>)(lpVtbl[37]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(38)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Guid*, uint*, void*, int>)(lpVtbl[38]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Guid*, uint*, void*, int>)(lpVtbl[38]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(39)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, Guid*, void**, int>)(lpVtbl[39]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Guid*, void**, int>)(lpVtbl[39]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain4::SetHDRMetaData"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(40)]
+	public HResult SetHDRMetaData(HdrMetadataType Type, uint Size, void* pMetaData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChain4*, HdrMetadataType, uint, void*, int>)(lpVtbl[40]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Type, Size, pMetaData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, HdrMetadataType, uint, void*, int>)(lpVtbl[40]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Type, Size, pMetaData);
+#endif
+	}
+
+	public interface Interface : IDXGISwapChain3.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice4"]/*' />
+/// <unmanaged>IDXGIDevice4</unmanaged>
+[Guid("95b4f95f-d8da-4ca4-9ee6-3b76d5968a10")]
+[NativeTypeName("struct IDXGIDevice4 : IDXGIDevice3")]
+[NativeInheritance("IDXGIDevice3")]
+public unsafe partial struct IDXGIDevice4 : IDXGIDevice4.Interface
+{
+	public static ref readonly Guid IID_IDXGIDevice4
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x5F, 0xF9, 0xB4, 0x95,
+				0xDA, 0xD8,
+				0xA4, 0x4C,
+				0x9E,
+				0xE6,
+				0x3B,
+				0x76,
+				0xD5,
+				0x96,
+				0x8A,
+				0x10
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice4));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDevice3.Trim" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public void Trim()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIDevice4*, void>)(lpVtbl[3]))((IDXGIDevice4*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIDevice4*, void>)(lpVtbl[3]))((IDXGIDevice4*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice2.OfferResources" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult OfferResources(uint NumResources, IDXGIResource* ppResources, OfferResourcePriority Priority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, uint, IDXGIResource*, OfferResourcePriority, int>)(lpVtbl[4]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, uint, IDXGIResource*, OfferResourcePriority, int>)(lpVtbl[4]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice2.ReclaimResources" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult ReclaimResources(uint NumResources, IDXGIResource* ppResources, Bool32* pDiscarded)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, uint, IDXGIResource*, Bool32*, int>)(lpVtbl[5]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, pDiscarded);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, uint, IDXGIResource*, Bool32*, int>)(lpVtbl[5]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, pDiscarded);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice2.EnqueueSetEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult EnqueueSetEvent(IntPtr* hEvent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, IntPtr*, int>)(lpVtbl[6]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), hEvent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, IntPtr*, int>)(lpVtbl[6]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), hEvent);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice1.SetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult SetMaximumFrameLatency(uint MaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, uint, int>)(lpVtbl[7]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), MaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, uint, int>)(lpVtbl[7]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), MaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice1.GetMaximumFrameLatency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, uint*, int>)(lpVtbl[8]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pMaxLatency);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, uint*, int>)(lpVtbl[8]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pMaxLatency);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.GetAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetAdapter(IDXGIAdapter** pAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, IDXGIAdapter**, int>)(lpVtbl[9]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, IDXGIAdapter**, int>)(lpVtbl[9]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.CreateSurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, uint Usage, SharedResource* pSharedResource, IDXGISurface* ppSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[10]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, SurfaceDescription*, uint, uint, SharedResource*, IDXGISurface*, int>)(lpVtbl[10]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.QueryResourceResidency" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult QueryResourceResidency(IUnknown* ppResources, Residency* pResidencyStatus, uint NumResources)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, IUnknown*, Residency*, uint, int>)(lpVtbl[11]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, IUnknown*, Residency*, uint, int>)(lpVtbl[11]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.SetGPUThreadPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult SetGPUThreadPriority(int Priority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, int, int>)(lpVtbl[12]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), Priority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, int, int>)(lpVtbl[12]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), Priority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIDevice.GetGPUThreadPriority" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetGPUThreadPriority(int* pPriority)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, int*, int>)(lpVtbl[13]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pPriority);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, int*, int>)(lpVtbl[13]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), pPriority);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, Guid*, uint, void*, int>)(lpVtbl[14]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, Guid*, uint, void*, int>)(lpVtbl[14]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, Guid*, IUnknown*, int>)(lpVtbl[15]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, Guid*, IUnknown*, int>)(lpVtbl[15]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, Guid*, uint*, void*, int>)(lpVtbl[16]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, Guid*, uint*, void*, int>)(lpVtbl[16]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, Guid*, void**, int>)(lpVtbl[17]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, Guid*, void**, int>)(lpVtbl[17]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice4::OfferResources1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult OfferResources1(uint NumResources, IDXGIResource* ppResources, OfferResourcePriority Priority, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, uint, IDXGIResource*, OfferResourcePriority, uint, int>)(lpVtbl[18]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, uint, IDXGIResource*, OfferResourcePriority, uint, int>)(lpVtbl[18]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority, Flags);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice4::ReclaimResources1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult ReclaimResources1(uint NumResources, IDXGIResource* ppResources, ReclaimResourceResults* pResults)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDevice4*, uint, IDXGIResource*, ReclaimResourceResults*, int>)(lpVtbl[19]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, pResults);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, uint, IDXGIResource*, ReclaimResourceResults*, int>)(lpVtbl[19]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, pResults);
+#endif
+	}
+
+	public interface Interface : IDXGIDevice3.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory5"]/*' />
+/// <unmanaged>IDXGIFactory5</unmanaged>
+[Guid("7632e1f5-ee65-4dca-87fd-84cd75f8838d")]
+[NativeTypeName("struct IDXGIFactory5 : IDXGIFactory4")]
+[NativeInheritance("IDXGIFactory4")]
+public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactory5
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xF5, 0xE1, 0x32, 0x76,
+				0x65, 0xEE,
+				0xCA, 0x4D,
+				0x87,
+				0xFD,
+				0x84,
+				0xCD,
+				0x75,
+				0xF8,
+				0x83,
+				0x8D
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory5));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIFactory4.EnumAdapterByLuid" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Luid*, Guid*, void**, int>)(lpVtbl[3]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Luid*, Guid*, void**, int>)(lpVtbl[3]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory4.EnumWarpAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[4]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[4]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory3.GetCreationFlags" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public uint GetCreationFlags()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, uint>)(lpVtbl[5]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint>)(lpVtbl[5]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.IsWindowedStereoEnabled" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public Bool32 IsWindowedStereoEnabled()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Bool32>)(lpVtbl[6]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Bool32>)(lpVtbl[6]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForHwnd" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr* hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[7]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[7]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForCoreWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[8]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[8]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.GetSharedResourceAdapterLuid" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetSharedResourceAdapterLuid(IntPtr* hResource, Luid* pLuid)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IntPtr*, Luid*, int>)(lpVtbl[9]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, Luid*, int>)(lpVtbl[9]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult RegisterStereoStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IntPtr*, uint, uint*, int>)(lpVtbl[10]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, uint, uint*, int>)(lpVtbl[10]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult RegisterStereoStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IntPtr*, uint*, int>)(lpVtbl[11]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, uint*, int>)(lpVtbl[11]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterStereoStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public void UnregisterStereoStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory5*, uint, void>)(lpVtbl[12]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint, void>)(lpVtbl[12]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult RegisterOcclusionStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IntPtr*, uint, uint*, int>)(lpVtbl[13]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, uint, uint*, int>)(lpVtbl[13]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult RegisterOcclusionStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IntPtr*, uint*, int>)(lpVtbl[14]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, uint*, int>)(lpVtbl[14]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterOcclusionStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public void UnregisterOcclusionStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory5*, uint, void>)(lpVtbl[15]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint, void>)(lpVtbl[15]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForComposition" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[16]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[16]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.EnumAdapters1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, uint, IDXGIAdapter1**, int>)(lpVtbl[17]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint, IDXGIAdapter1**, int>)(lpVtbl[17]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.IsCurrent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public Bool32 IsCurrent()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Bool32>)(lpVtbl[18]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Bool32>)(lpVtbl[18]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, uint, IDXGIAdapter**, int>)(lpVtbl[19]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint, IDXGIAdapter**, int>)(lpVtbl[19]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IntPtr*, uint, int>)(lpVtbl[20]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, uint, int>)(lpVtbl[20]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IntPtr*, int>)(lpVtbl[21]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, int>)(lpVtbl[21]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[22]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[22]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[23]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[23]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, uint, void*, int>)(lpVtbl[24]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, uint, void*, int>)(lpVtbl[24]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, IUnknown*, int>)(lpVtbl[25]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, IUnknown*, int>)(lpVtbl[25]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, uint*, void*, int>)(lpVtbl[26]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, uint*, void*, int>)(lpVtbl[26]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory5::CheckFeatureSupport"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Feature, void*, uint, int>)(lpVtbl[28]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Feature, void*, uint, int>)(lpVtbl[28]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+#endif
+	}
+
+	public interface Interface : IDXGIFactory4.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter4"]/*' />
+/// <unmanaged>IDXGIAdapter4</unmanaged>
+[Guid("3c8d99d1-4fbf-4181-a82c-af66bf7bd24e")]
+[NativeTypeName("struct IDXGIAdapter4 : IDXGIAdapter3")]
+[NativeInheritance("IDXGIAdapter3")]
+public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface
+{
+	public static ref readonly Guid IID_IDXGIAdapter4
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xD1, 0x99, 0x8D, 0x3C,
+				0xBF, 0x4F,
+				0x81, 0x41,
+				0xA8,
+				0x2C,
+				0xAF,
+				0x66,
+				0xBF,
+				0x7B,
+				0xD2,
+				0x4E
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIAdapter4));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter3.RegisterHardwareContentProtectionTeardownStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult RegisterHardwareContentProtectionTeardownStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, IntPtr*, uint*, int>)(lpVtbl[3]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, IntPtr*, uint*, int>)(lpVtbl[3]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter3.UnregisterHardwareContentProtectionTeardownStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public void UnregisterHardwareContentProtectionTeardownStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIAdapter4*, uint, void>)(lpVtbl[4]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, uint, void>)(lpVtbl[4]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter3.QueryVideoMemoryInfo" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult QueryVideoMemoryInfo(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, QueryVideoMemoryInfo* pVideoMemoryInfo)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, uint, MemorySegmentGroup, QueryVideoMemoryInfo*, int>)(lpVtbl[5]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, uint, MemorySegmentGroup, QueryVideoMemoryInfo*, int>)(lpVtbl[5]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter3.SetVideoMemoryReservation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult SetVideoMemoryReservation(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, ulong Reservation)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, uint, MemorySegmentGroup, ulong, int>)(lpVtbl[6]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, uint, MemorySegmentGroup, ulong, int>)(lpVtbl[6]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter3.RegisterVideoMemoryBudgetChangeNotificationEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult RegisterVideoMemoryBudgetChangeNotificationEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, IntPtr*, uint*, int>)(lpVtbl[7]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, IntPtr*, uint*, int>)(lpVtbl[7]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter3.UnregisterVideoMemoryBudgetChangeNotification" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public void UnregisterVideoMemoryBudgetChangeNotification(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIAdapter4*, uint, void>)(lpVtbl[8]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, uint, void>)(lpVtbl[8]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter2.GetDesc2" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetDesc2(AdapterDescription2* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, AdapterDescription2*, int>)(lpVtbl[9]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, AdapterDescription2*, int>)(lpVtbl[9]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter1.GetDesc1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetDesc1(AdapterDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.EnumOutputs" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, uint, IDXGIOutput**, int>)(lpVtbl[11]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, uint, IDXGIOutput**, int>)(lpVtbl[11]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetDesc(AdapterDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, AdapterDescription*, int>)(lpVtbl[12]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, AdapterDescription*, int>)(lpVtbl[12]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, Guid*, LargeInterger*, int>)(lpVtbl[13]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, Guid*, LargeInterger*, int>)(lpVtbl[13]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, Guid*, uint, void*, int>)(lpVtbl[14]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, Guid*, uint, void*, int>)(lpVtbl[14]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, Guid*, IUnknown*, int>)(lpVtbl[15]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, Guid*, IUnknown*, int>)(lpVtbl[15]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, Guid*, uint*, void*, int>)(lpVtbl[16]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, Guid*, uint*, void*, int>)(lpVtbl[16]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, Guid*, void**, int>)(lpVtbl[17]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, Guid*, void**, int>)(lpVtbl[17]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter4::GetDesc3"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult GetDesc3(AdapterDescription3* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter4*, AdapterDescription3*, int>)(lpVtbl[18]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, AdapterDescription3*, int>)(lpVtbl[18]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	public interface Interface : IDXGIAdapter3.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput6"]/*' />
+/// <unmanaged>IDXGIOutput6</unmanaged>
+[Guid("068346e8-aaec-4b84-add7-137f513f77a1")]
+[NativeTypeName("struct IDXGIOutput6 : IDXGIOutput5")]
+[NativeInheritance("IDXGIOutput5")]
+public unsafe partial struct IDXGIOutput6 : IDXGIOutput6.Interface
+{
+	public static ref readonly Guid IID_IDXGIOutput6
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xE8, 0x46, 0x83, 0x06,
+				0xEC, 0xAA,
+				0x84, 0x4B,
+				0xAD,
+				0xD7,
+				0x13,
+				0x7F,
+				0x51,
+				0x3F,
+				0x77,
+				0xA1
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput6));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIOutput5.DuplicateOutput1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult DuplicateOutput1(IUnknown* pDevice, uint Flags, uint SupportedFormatsCount, Common.Format* pSupportedFormats, IDXGIOutputDuplication** ppOutputDuplication)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[3]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[3]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput4.CheckOverlayColorSpaceSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[4]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[4]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput3.CheckOverlaySupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[5]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[5]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput2.SupportsOverlays" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public Bool32 SupportsOverlays()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Bool32>)(lpVtbl[6]))((IDXGIOutput6*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Bool32>)(lpVtbl[6]))((IDXGIOutput6*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplayModeList1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[7]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[7]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.FindClosestMatchingMode1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[8]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[8]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.GetDisplaySurfaceData1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, IDXGIResource*, int>)(lpVtbl[9]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, IDXGIResource*, int>)(lpVtbl[9]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput1.DuplicateOutput" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[10]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[10]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDesc" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetDesc(OutputDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, OutputDescription*, int>)(lpVtbl[11]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, OutputDescription*, int>)(lpVtbl[11]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplayModeList" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult GetDisplayModeList(Common.Format EnumFormat, uint Flags, uint* pNumModes, Common.ModeDescription* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[12]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Common.Format, uint, uint*, Common.ModeDescription*, int>)(lpVtbl[12]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.FindClosestMatchingMode" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[13]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[13]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.WaitForVBlank" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult WaitForVBlank()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, int>)(lpVtbl[14]))((IDXGIOutput6*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, int>)(lpVtbl[14]))((IDXGIOutput6*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.TakeOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult TakeOwnership(IUnknown* pDevice, Bool32* Exclusive)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, IUnknown*, Bool32*, int>)(lpVtbl[15]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, IUnknown*, Bool32*, int>)(lpVtbl[15]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.ReleaseOwnership" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public void ReleaseOwnership()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIOutput6*, void>)(lpVtbl[16]))((IDXGIOutput6*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIOutput6*, void>)(lpVtbl[16]))((IDXGIOutput6*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControlCapabilities" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Common.GammaControlCapabilities*, int>)(lpVtbl[17]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pGammaCaps);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Common.GammaControlCapabilities*, int>)(lpVtbl[17]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pGammaCaps);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult SetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Common.GammaControl*, int>)(lpVtbl[18]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Common.GammaControl*, int>)(lpVtbl[18]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetGammaControl" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult GetGammaControl(Common.GammaControl* pArray)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Common.GammaControl*, int>)(lpVtbl[19]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pArray);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Common.GammaControl*, int>)(lpVtbl[19]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pArray);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.SetDisplaySurface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, IDXGISurface*, int>)(lpVtbl[20]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, IDXGISurface*, int>)(lpVtbl[20]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pScanoutSurface);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetDisplaySurfaceData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, IDXGISurface*, int>)(lpVtbl[21]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDestination);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, IDXGISurface*, int>)(lpVtbl[21]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDestination);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIOutput.GetFrameStatistics" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult GetFrameStatistics(FrameStatistics* pStats)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, FrameStatistics*, int>)(lpVtbl[22]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pStats);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, FrameStatistics*, int>)(lpVtbl[22]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pStats);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Guid*, uint, void*, int>)(lpVtbl[23]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Guid*, uint, void*, int>)(lpVtbl[23]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Guid*, IUnknown*, int>)(lpVtbl[24]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Guid*, IUnknown*, int>)(lpVtbl[24]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Guid*, uint*, void*, int>)(lpVtbl[25]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Guid*, uint*, void*, int>)(lpVtbl[25]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, Guid*, void**, int>)(lpVtbl[26]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, Guid*, void**, int>)(lpVtbl[26]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput6::GetDesc1"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult GetDesc1(OutputDescription1* pDesc)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, OutputDescription1*, int>)(lpVtbl[27]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDesc);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, OutputDescription1*, int>)(lpVtbl[27]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDesc);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput6::CheckHardwareCompositionSupport"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public HResult CheckHardwareCompositionSupport(uint* pFlags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIOutput6*, uint*, int>)(lpVtbl[28]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pFlags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, uint*, int>)(lpVtbl[28]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pFlags);
+#endif
+	}
+
+	public interface Interface : IDXGIOutput5.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory6"]/*' />
+/// <unmanaged>IDXGIFactory6</unmanaged>
+[Guid("c1b6694f-ff09-44a9-b03c-77900a0a1d17")]
+[NativeTypeName("struct IDXGIFactory6 : IDXGIFactory5")]
+[NativeInheritance("IDXGIFactory5")]
+public unsafe partial struct IDXGIFactory6 : IDXGIFactory6.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactory6
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x4F, 0x69, 0xB6, 0xC1,
+				0x09, 0xFF,
+				0xA9, 0x44,
+				0xB0,
+				0x3C,
+				0x77,
+				0x90,
+				0x0A,
+				0x0A,
+				0x1D,
+				0x17
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory6));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIFactory5.CheckFeatureSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Feature, void*, uint, int>)(lpVtbl[3]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Feature, void*, uint, int>)(lpVtbl[3]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory4.EnumAdapterByLuid" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Luid*, Guid*, void**, int>)(lpVtbl[4]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Luid*, Guid*, void**, int>)(lpVtbl[4]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory4.EnumWarpAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Guid*, void**, int>)(lpVtbl[5]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Guid*, void**, int>)(lpVtbl[5]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory3.GetCreationFlags" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public uint GetCreationFlags()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, uint>)(lpVtbl[6]))((IDXGIFactory6*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, uint>)(lpVtbl[6]))((IDXGIFactory6*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.IsWindowedStereoEnabled" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public Bool32 IsWindowedStereoEnabled()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Bool32>)(lpVtbl[7]))((IDXGIFactory6*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Bool32>)(lpVtbl[7]))((IDXGIFactory6*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForHwnd" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr* hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[8]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[8]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForCoreWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[9]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[9]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.GetSharedResourceAdapterLuid" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult GetSharedResourceAdapterLuid(IntPtr* hResource, Luid* pLuid)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IntPtr*, Luid*, int>)(lpVtbl[10]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IntPtr*, Luid*, int>)(lpVtbl[10]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult RegisterStereoStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IntPtr*, uint, uint*, int>)(lpVtbl[11]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IntPtr*, uint, uint*, int>)(lpVtbl[11]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult RegisterStereoStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IntPtr*, uint*, int>)(lpVtbl[12]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IntPtr*, uint*, int>)(lpVtbl[12]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterStereoStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public void UnregisterStereoStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory6*, uint, void>)(lpVtbl[13]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory6*, uint, void>)(lpVtbl[13]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public HResult RegisterOcclusionStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IntPtr*, uint, uint*, int>)(lpVtbl[14]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IntPtr*, uint, uint*, int>)(lpVtbl[14]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult RegisterOcclusionStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IntPtr*, uint*, int>)(lpVtbl[15]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IntPtr*, uint*, int>)(lpVtbl[15]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterOcclusionStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public void UnregisterOcclusionStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory6*, uint, void>)(lpVtbl[16]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory6*, uint, void>)(lpVtbl[16]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForComposition" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[17]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[17]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.EnumAdapters1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, uint, IDXGIAdapter1**, int>)(lpVtbl[18]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, uint, IDXGIAdapter1**, int>)(lpVtbl[18]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.IsCurrent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public Bool32 IsCurrent()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Bool32>)(lpVtbl[19]))((IDXGIFactory6*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Bool32>)(lpVtbl[19]))((IDXGIFactory6*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, uint, IDXGIAdapter**, int>)(lpVtbl[20]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, uint, IDXGIAdapter**, int>)(lpVtbl[20]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IntPtr*, uint, int>)(lpVtbl[21]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IntPtr*, uint, int>)(lpVtbl[21]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IntPtr*, int>)(lpVtbl[22]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IntPtr*, int>)(lpVtbl[22]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[23]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[23]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[24]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[24]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Guid*, uint, void*, int>)(lpVtbl[25]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Guid*, uint, void*, int>)(lpVtbl[25]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Guid*, IUnknown*, int>)(lpVtbl[26]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Guid*, IUnknown*, int>)(lpVtbl[26]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Guid*, uint*, void*, int>)(lpVtbl[27]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Guid*, uint*, void*, int>)(lpVtbl[27]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, Guid*, void**, int>)(lpVtbl[28]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Guid*, void**, int>)(lpVtbl[28]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory6::EnumAdapterByGpuPreference"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(29)]
+	public HResult EnumAdapterByGpuPreference(uint Adapter, GpuPreference GpuPreference, Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory6*, uint, GpuPreference, Guid*, void**, int>)(lpVtbl[29]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Adapter, GpuPreference, riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, uint, GpuPreference, Guid*, void**, int>)(lpVtbl[29]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Adapter, GpuPreference, riid, ppvAdapter);
+#endif
+	}
+
+	public interface Interface : IDXGIFactory5.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory7"]/*' />
+/// <unmanaged>IDXGIFactory7</unmanaged>
+[Guid("a4966eed-76db-44da-84c1-ee9a7afb20a8")]
+[NativeTypeName("struct IDXGIFactory7 : IDXGIFactory6")]
+[NativeInheritance("IDXGIFactory6")]
+public unsafe partial struct IDXGIFactory7 : IDXGIFactory7.Interface
+{
+	public static ref readonly Guid IID_IDXGIFactory7
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xED, 0x6E, 0x96, 0xA4,
+				0xDB, 0x76,
+				0xDA, 0x44,
+				0x84,
+				0xC1,
+				0xEE,
+				0x9A,
+				0x7A,
+				0xFB,
+				0x20,
+				0xA8
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory7));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIFactory6.EnumAdapterByGpuPreference" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult EnumAdapterByGpuPreference(uint Adapter, GpuPreference GpuPreference, Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, uint, GpuPreference, Guid*, void**, int>)(lpVtbl[3]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Adapter, GpuPreference, riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, GpuPreference, Guid*, void**, int>)(lpVtbl[3]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Adapter, GpuPreference, riid, ppvAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory5.CheckFeatureSupport" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Feature, void*, uint, int>)(lpVtbl[4]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Feature, void*, uint, int>)(lpVtbl[4]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory4.EnumAdapterByLuid" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Luid*, Guid*, void**, int>)(lpVtbl[5]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Luid*, Guid*, void**, int>)(lpVtbl[5]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory4.EnumWarpAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory3.GetCreationFlags" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public uint GetCreationFlags()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, uint>)(lpVtbl[7]))((IDXGIFactory7*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint>)(lpVtbl[7]))((IDXGIFactory7*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.IsWindowedStereoEnabled" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public Bool32 IsWindowedStereoEnabled()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Bool32>)(lpVtbl[8]))((IDXGIFactory7*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Bool32>)(lpVtbl[8]))((IDXGIFactory7*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForHwnd" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr* hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[9]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IUnknown*, IntPtr*, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[9]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForCoreWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[10]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[10]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.GetSharedResourceAdapterLuid" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public HResult GetSharedResourceAdapterLuid(IntPtr* hResource, Luid* pLuid)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, Luid*, int>)(lpVtbl[11]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, Luid*, int>)(lpVtbl[11]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult RegisterStereoStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, uint, uint*, int>)(lpVtbl[12]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, uint, uint*, int>)(lpVtbl[12]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult RegisterStereoStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, uint*, int>)(lpVtbl[13]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, uint*, int>)(lpVtbl[13]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterStereoStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public void UnregisterStereoStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory7*, uint, void>)(lpVtbl[14]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, void>)(lpVtbl[14]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusWindow" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult RegisterOcclusionStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, uint, uint*, int>)(lpVtbl[15]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, uint, uint*, int>)(lpVtbl[15]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusEvent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult RegisterOcclusionStatusEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, uint*, int>)(lpVtbl[16]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, uint*, int>)(lpVtbl[16]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.UnregisterOcclusionStatus" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public void UnregisterOcclusionStatus(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory7*, uint, void>)(lpVtbl[17]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, void>)(lpVtbl[17]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForComposition" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[18]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[18]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.EnumAdapters1" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, uint, IDXGIAdapter1**, int>)(lpVtbl[19]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, IDXGIAdapter1**, int>)(lpVtbl[19]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory1.IsCurrent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public Bool32 IsCurrent()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Bool32>)(lpVtbl[20]))((IDXGIFactory7*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Bool32>)(lpVtbl[20]))((IDXGIFactory7*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, uint, IDXGIAdapter**, int>)(lpVtbl[21]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, IDXGIAdapter**, int>)(lpVtbl[21]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, uint, int>)(lpVtbl[22]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, uint, int>)(lpVtbl[22]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, int>)(lpVtbl[23]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, int>)(lpVtbl[23]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[24]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[24]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[25]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, IDXGIAdapter**, int>)(lpVtbl[25]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Guid*, uint, void*, int>)(lpVtbl[26]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Guid*, uint, void*, int>)(lpVtbl[26]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Guid*, IUnknown*, int>)(lpVtbl[27]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Guid*, IUnknown*, int>)(lpVtbl[27]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Guid*, uint*, void*, int>)(lpVtbl[28]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Guid*, uint*, void*, int>)(lpVtbl[28]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
+	}
+
+	/// <inheritdoc cref="IDXGIObject.GetParent" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(29)]
+	public HResult GetParent(Guid* riid, void** ppParent)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, Guid*, void**, int>)(lpVtbl[29]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Guid*, void**, int>)(lpVtbl[29]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory7::RegisterAdaptersChangedEvent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(30)]
+	public HResult RegisterAdaptersChangedEvent(IntPtr* hEvent, uint* pdwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, IntPtr*, uint*, int>)(lpVtbl[30]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, IntPtr*, uint*, int>)(lpVtbl[30]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory7::UnregisterAdaptersChangedEvent"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(31)]
+	public HResult UnregisterAdaptersChangedEvent(uint dwCookie)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory7*, uint, int>)(lpVtbl[31]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, int>)(lpVtbl[31]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
+	}
+
+	public interface Interface : IDXGIFactory6.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue"]/*' />
+/// <unmanaged>IDXGIInfoQueue</unmanaged>
+[Guid("d67441c7-672a-476f-9e82-cd55b44949ce")]
+[NativeTypeName("struct IDXGIInfoQueue : IUnknown")]
+[NativeInheritance("IUnknown")]
+public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
+{
+	public static ref readonly Guid IID_IDXGIInfoQueue
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xC7, 0x41, 0x74, 0xD6,
+				0x2A, 0x67,
+				0x6F, 0x47,
+				0x9E,
+				0x82,
+				0xCD,
+				0x55,
+				0xB4,
+				0x49,
+				0x49,
+				0xCE
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIInfoQueue));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetMessageCountLimit"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult SetMessageCountLimit(Guid Producer, ulong MessageCountLimit)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, ulong, int>)(lpVtbl[3]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, MessageCountLimit);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, ulong, int>)(lpVtbl[3]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, MessageCountLimit);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::ClearStoredMessages"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public void ClearStoredMessages(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIInfoQueue*, Guid, void>)(lpVtbl[4]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, void>)(lpVtbl[4]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetMessage"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public HResult GetMessage(Guid Producer, ulong MessageIndex, InfoQueueMessage* pMessage, nuint* pMessageByteLength)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, ulong, InfoQueueMessage*, nuint*, int>)(lpVtbl[5]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, MessageIndex, pMessage, pMessageByteLength);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, ulong, InfoQueueMessage*, nuint*, int>)(lpVtbl[5]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, MessageIndex, pMessage, pMessageByteLength);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumStoredMessagesAllowedByRetrievalFilters"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public ulong GetNumStoredMessagesAllowedByRetrievalFilters(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[6]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[6]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumStoredMessages"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(7)]
+	public ulong GetNumStoredMessages(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[7]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[7]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesDiscardedByMessageCountLimit"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public ulong GetNumMessagesDiscardedByMessageCountLimit(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[8]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[8]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetMessageCountLimit"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(9)]
+	public ulong GetMessageCountLimit(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[9]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[9]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesAllowedByStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(10)]
+	public ulong GetNumMessagesAllowedByStorageFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[10]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[10]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesDeniedByStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(11)]
+	public ulong GetNumMessagesDeniedByStorageFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[11]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, ulong>)(lpVtbl[11]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::AddStorageFilterEntries"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(12)]
+	public HResult AddStorageFilterEntries(Guid Producer, InfoQueueFilter* pFilter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[12]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[12]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(13)]
+	public HResult GetStorageFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter, pFilterByteLength);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter, pFilterByteLength);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::ClearStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
+	public void ClearStorageFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIInfoQueue*, Guid, void>)(lpVtbl[14]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, void>)(lpVtbl[14]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushEmptyStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(15)]
+	public HResult PushEmptyStorageFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, int>)(lpVtbl[15]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, int>)(lpVtbl[15]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushDenyAllStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(16)]
+	public HResult PushDenyAllStorageFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, int>)(lpVtbl[16]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, int>)(lpVtbl[16]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushCopyOfStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(17)]
+	public HResult PushCopyOfStorageFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, int>)(lpVtbl[17]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, int>)(lpVtbl[17]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(18)]
+	public HResult PushStorageFilter(Guid Producer, InfoQueueFilter* pFilter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[18]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[18]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PopStorageFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(19)]
+	public void PopStorageFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIInfoQueue*, Guid, void>)(lpVtbl[19]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, void>)(lpVtbl[19]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetStorageFilterStackSize"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(20)]
+	public uint GetStorageFilterStackSize(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, uint>)(lpVtbl[20]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, uint>)(lpVtbl[20]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::AddRetrievalFilterEntries"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(21)]
+	public HResult AddRetrievalFilterEntries(Guid Producer, InfoQueueFilter* pFilter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[21]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[21]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetRetrievalFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(22)]
+	public HResult GetRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueFilter*, nuint*, int>)(lpVtbl[22]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter, pFilterByteLength);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, nuint*, int>)(lpVtbl[22]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter, pFilterByteLength);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::ClearRetrievalFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(23)]
+	public void ClearRetrievalFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIInfoQueue*, Guid, void>)(lpVtbl[23]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, void>)(lpVtbl[23]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushEmptyRetrievalFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(24)]
+	public HResult PushEmptyRetrievalFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, int>)(lpVtbl[24]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, int>)(lpVtbl[24]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushDenyAllRetrievalFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(25)]
+	public HResult PushDenyAllRetrievalFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, int>)(lpVtbl[25]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, int>)(lpVtbl[25]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushCopyOfRetrievalFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(26)]
+	public HResult PushCopyOfRetrievalFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, int>)(lpVtbl[26]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, int>)(lpVtbl[26]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushRetrievalFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(27)]
+	public HResult PushRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[27]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueFilter*, int>)(lpVtbl[27]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, pFilter);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PopRetrievalFilter"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(28)]
+	public void PopRetrievalFilter(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIInfoQueue*, Guid, void>)(lpVtbl[28]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, void>)(lpVtbl[28]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetRetrievalFilterStackSize"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(29)]
+	public uint GetRetrievalFilterStackSize(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, uint>)(lpVtbl[29]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, uint>)(lpVtbl[29]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::AddMessage"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(30)]
+	public HResult AddMessage(Guid Producer, InfoQueueMessageCategory Category, InfoQueueMessageSeverity Severity, int ID, byte** pDescription)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, InfoQueueMessageSeverity, int, byte**, int>)(lpVtbl[30]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, Severity, ID, pDescription);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, InfoQueueMessageSeverity, int, byte**, int>)(lpVtbl[30]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, Severity, ID, pDescription);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::AddApplicationMessage"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(31)]
+	public HResult AddApplicationMessage(InfoQueueMessageSeverity Severity, byte** pDescription)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, InfoQueueMessageSeverity, byte**, int>)(lpVtbl[31]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, InfoQueueMessageSeverity, byte**, int>)(lpVtbl[31]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnCategory"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(32)]
+	public HResult SetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category, Bool32* bEnable)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, Bool32*, int>)(lpVtbl[32]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, bEnable);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, Bool32*, int>)(lpVtbl[32]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, bEnable);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnSeverity"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(33)]
+	public HResult SetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity, Bool32* bEnable)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueMessageSeverity, Bool32*, int>)(lpVtbl[33]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Severity, bEnable);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueMessageSeverity, Bool32*, int>)(lpVtbl[33]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Severity, bEnable);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnID"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(34)]
+	public HResult SetBreakOnID(Guid Producer, int ID, Bool32* bEnable)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, int, Bool32*, int>)(lpVtbl[34]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, ID, bEnable);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, int, Bool32*, int>)(lpVtbl[34]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, ID, bEnable);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnCategory"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(35)]
+	public Bool32 GetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, Bool32>)(lpVtbl[35]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, Bool32>)(lpVtbl[35]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnSeverity"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(36)]
+	public Bool32 GetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, InfoQueueMessageSeverity, Bool32>)(lpVtbl[36]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Severity);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueMessageSeverity, Bool32>)(lpVtbl[36]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Severity);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnID"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(37)]
+	public Bool32 GetBreakOnID(Guid Producer, int ID)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, int, Bool32>)(lpVtbl[37]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, ID);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, int, Bool32>)(lpVtbl[37]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, ID);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetMuteDebugOutput"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(38)]
+	public void SetMuteDebugOutput(Guid Producer, Bool32* bMute)
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIInfoQueue*, Guid, Bool32*, void>)(lpVtbl[38]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, bMute);
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, Bool32*, void>)(lpVtbl[38]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, bMute);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetMuteDebugOutput"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(39)]
+	public Bool32 GetMuteDebugOutput(Guid Producer)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIInfoQueue*, Guid, Bool32>)(lpVtbl[39]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, Bool32>)(lpVtbl[39]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+#endif
+	}
+
+	public interface Interface : IUnknown.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug"]/*' />
+/// <unmanaged>IDXGIDebug</unmanaged>
+[Guid("119e7452-de9e-40fe-8806-88f90c12b441")]
+[NativeTypeName("struct IDXGIDebug : IUnknown")]
+[NativeInheritance("IUnknown")]
+public unsafe partial struct IDXGIDebug : IDXGIDebug.Interface
+{
+	public static ref readonly Guid IID_IDXGIDebug
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x52, 0x74, 0x9E, 0x11,
+				0x9E, 0xDE,
+				0xFE, 0x40,
+				0x88,
+				0x06,
+				0x88,
+				0xF9,
+				0x0C,
+				0x12,
+				0xB4,
+				0x41
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDebug));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult ReportLiveObjects(Guid apiid, DebugRloFlags flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDebug*, Guid, DebugRloFlags, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDebug*, Guid, DebugRloFlags, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
+#endif
+	}
+
+	public interface Interface : IUnknown.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug1"]/*' />
+/// <unmanaged>IDXGIDebug1</unmanaged>
+[Guid("c5a05f0c-16f2-4adf-9f4d-a8c4d58ac550")]
+[NativeTypeName("struct IDXGIDebug1 : IDXGIDebug")]
+[NativeInheritance("IDXGIDebug")]
+public unsafe partial struct IDXGIDebug1 : IDXGIDebug1.Interface
+{
+	public static ref readonly Guid IID_IDXGIDebug1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x0C, 0x5F, 0xA0, 0xC5,
+				0xF2, 0x16,
+				0xDF, 0x4A,
+				0x9F,
+				0x4D,
+				0xA8,
+				0xC4,
+				0xD5,
+				0x8A,
+				0xC5,
+				0x50
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDebug1));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IDXGIDebug.ReportLiveObjects" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult ReportLiveObjects(Guid apiid, DebugRloFlags flags)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDebug1*, Guid, DebugRloFlags, int>)(lpVtbl[3]))((IDXGIDebug1*)Unsafe.AsPointer(ref this), apiid, flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDebug1*, Guid, DebugRloFlags, int>)(lpVtbl[3]))((IDXGIDebug1*)Unsafe.AsPointer(ref this), apiid, flags);
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug1::EnableLeakTrackingForThread"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public void EnableLeakTrackingForThread()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIDebug1*, void>)(lpVtbl[4]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIDebug1*, void>)(lpVtbl[4]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug1::DisableLeakTrackingForThread"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(5)]
+	public void DisableLeakTrackingForThread()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIDebug1*, void>)(lpVtbl[5]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGIDebug1*, void>)(lpVtbl[5]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug1::IsLeakTrackingEnabledForThread"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public Bool32 IsLeakTrackingEnabledForThread()
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIDebug1*, Bool32>)(lpVtbl[6]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIDebug1*, Bool32>)(lpVtbl[6]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IDXGIDebug.Interface
+	{
+	}
+}
+
+/// <include file='../DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis"]/*' />
+/// <unmanaged>IDXGraphicsAnalysis</unmanaged>
+[Guid("9f251514-9d4d-4902-9d60-18988ab7d4b5")]
+[NativeTypeName("struct IDXGraphicsAnalysis : IUnknown")]
+[NativeInheritance("IUnknown")]
+public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
+{
+	public static ref readonly Guid IID_IDXGraphicsAnalysis
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x14, 0x15, 0x25, 0x9F,
+				0x4D, 0x9D,
+				0x02, 0x49,
+				0x9D,
+				0x60,
+				0x18,
+				0x98,
+				0x8A,
+				0xB7,
+				0xD4,
+				0xB5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGraphicsAnalysis));
+
+	public void** lpVtbl;
+
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis::BeginCapture"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public void BeginCapture()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGraphicsAnalysis*, void>)(lpVtbl[3]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, void>)(lpVtbl[3]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis::EndCapture"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(4)]
+	public void EndCapture()
+	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGraphicsAnalysis*, void>)(lpVtbl[4]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#else
+		((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, void>)(lpVtbl[4]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#endif
+	}
+
+	public interface Interface : IUnknown.Interface
+	{
+	}
+}
+
+#endregion Com Types
