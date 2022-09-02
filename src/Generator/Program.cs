@@ -40,17 +40,31 @@ public static class Program
         {"Char", "ushort" },
 
         { "Foundation.BOOL", "Bool32" },
+        { "Foundation.BOOLEAN", "byte" },
+        { "Foundation.BSTR", "char*" },
+        { "Foundation.HANDLE", "IntPtr" },
+        { "Foundation.HINSTANCE", "IntPtr" },
         { "Foundation.HRESULT", "HResult" },
+        { "Foundation.HWND", "IntPtr" },
+        { "Foundation.LPARAM", "IntPtr" },
+        { "Foundation.LRESULT", "IntPtr" },
+        { "Foundation.WPARAM", "UIntPtr" },
+        { "Foundation.PSTR", "byte*" },
+        { "Foundation.PWSTR", "char*" },
+        { "Foundation.CHAR", "byte" },
+
         { "Foundation.LUID", "Luid" },
         { "Foundation.LARGE_INTEGER", "LargeInterger" },
 
         { "System.Com.IUnknown", "IUnknown" },
 
         // TODO: Understand those ->
-        { "Foundation.HWND", "IntPtr" },
-        { "Foundation.HANDLE", "IntPtr" },
-        { "Foundation.POINT", "System.Drawing.Point" },
         { "Foundation.RECT", "RawRect" },
+        { "Foundation.RECTL", "RawRect" },
+        { "Foundation.POINT", "System.Drawing.Point" },
+        { "Foundation.POINTL", "System.Drawing.Point" },
+        { "Foundation.SIZE", "System.Drawing.Size" },
+
         { "Graphics.Gdi.HMONITOR", "IntPtr" },
     };
 

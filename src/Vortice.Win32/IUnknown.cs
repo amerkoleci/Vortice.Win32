@@ -17,7 +17,11 @@ public unsafe partial struct IUnknown : IUnknown.Interface
     [VtblIndex(0)]
     public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
     {
+#if NET6_0_OR_GREATER
+        return ((delegate* unmanaged<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
         return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -25,7 +29,11 @@ public unsafe partial struct IUnknown : IUnknown.Interface
     [return: NativeTypeName("ULONG")]
     public uint AddRef()
     {
+#if NET6_0_OR_GREATER
+        return ((delegate* unmanaged<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+#else
         return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+#endif
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -33,7 +41,11 @@ public unsafe partial struct IUnknown : IUnknown.Interface
     [return: NativeTypeName("ULONG")]
     public uint Release()
     {
+#if NET6_0_OR_GREATER
+        return ((delegate* unmanaged<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+#else
         return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+#endif
     }
 
     public interface Interface
@@ -53,6 +65,16 @@ public unsafe partial struct IUnknown : IUnknown.Interface
     public partial struct Vtbl<TSelf>
         where TSelf : unmanaged, Interface
     {
+#if NET6_0_OR_GREATER
+        [NativeTypeName("HRESULT (const IID &, void **) __attribute__((stdcall))")]
+        public delegate* unmanaged<TSelf*, Guid*, void**, int> QueryInterface;
+
+        [NativeTypeName("ULONG () __attribute__((stdcall))")]
+        public delegate* unmanaged<TSelf*, uint> AddRef;
+
+        [NativeTypeName("ULONG () __attribute__((stdcall))")]
+        public delegate* unmanaged<TSelf*, uint> Release;
+#else
         [NativeTypeName("HRESULT (const IID &, void **) __attribute__((stdcall))")]
         public delegate* unmanaged[Stdcall]<TSelf*, Guid*, void**, int> QueryInterface;
 
@@ -61,5 +83,6 @@ public unsafe partial struct IUnknown : IUnknown.Interface
 
         [NativeTypeName("ULONG () __attribute__((stdcall))")]
         public delegate* unmanaged[Stdcall]<TSelf*, uint> Release;
+#endif
     }
 }
