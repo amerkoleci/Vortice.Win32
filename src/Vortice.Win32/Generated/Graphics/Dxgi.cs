@@ -122,8 +122,10 @@ public enum SwapEffect : int
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_FLAG</unmanaged>
+[Flags]
 public enum SwapChainFlags : int
 {
+	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_NONPREROTATED"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_NONPREROTATED</unmanaged>
 	NonPrerotated = 1,
@@ -270,8 +272,10 @@ public enum ComputePreemptionGranularity : int
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS"]/*' />
 /// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS</unmanaged>
+[Flags]
 public enum MultiplaneOverlayYcbcrFlags : int
 {
+	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE</unmanaged>
 	YcbcrFlagNominalRange = 1,
@@ -372,8 +376,10 @@ public enum HdrMetadataType : int
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS"]/*' />
 /// <unmanaged>DXGI_OFFER_RESOURCE_FLAGS</unmanaged>
+[Flags]
 public enum OfferResourceFlags : int
 {
+	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS::DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT</unmanaged>
 	AllowDecommit = 1,

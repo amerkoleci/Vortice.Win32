@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using MessagePack;
 using Microsoft.Windows.SDK.Win32Docs;
+using Newtonsoft.Json.Linq;
 
 namespace Generator;
 
@@ -33,6 +34,21 @@ public static class DocGenerator
             {
                 if (key.StartsWith(prefix) || key.StartsWith("I" + prefix))
                 {
+                    if (prefix == "D3D")
+                    {
+                        if (key.StartsWith("D3D10") ||
+                            key.StartsWith("D3D11") ||
+                            key.StartsWith("D3DX11") ||
+                            key.StartsWith("D3D12") ||
+                            key.StartsWith("ID3D10") ||
+                            key.StartsWith("ID3D11") ||
+                            key.StartsWith("ID3D12") ||
+                            key.StartsWith("ID3DX"))
+                        {
+                            continue;
+                        }
+                    }
+
                     documentationData.Add(key, data[key]);
                 }
             }

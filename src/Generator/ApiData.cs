@@ -61,6 +61,8 @@ public class ApiFunction
     public string Name { get; set; }
     public bool SetLastError { get; set; }
     public ApiDataType ReturnType { get; set; }
+    public List<object> ReturnAttrs { get; set; }
+
     public IList<ApiParameter> Params { get; set; } = new List<ApiParameter>();
     public List<object> Attrs { get; set; }
 
@@ -97,6 +99,7 @@ public class ApiType
 {
     public string Name { get; set; }
     public string Kind { get; set; }
+    public List<object> Attrs { get; set; }
 
     // Enum
     public bool Flags { get; set; }
@@ -113,6 +116,12 @@ public class ApiType
     public string Guid { get; set; }
     public ApiDataType Interface { get; set; }
     public IList<ApiFunction> Methods { get; set; } = new List<ApiFunction>();
+
+    // Function
+    public bool SetLastError { get; set; }
+    public ApiDataType ReturnType { get; set; }
+    public List<object> ReturnAttrs { get; set; }
+    public IList<ApiParameter> Params { get; set; } = new List<ApiParameter>();
 }
 
 public sealed class ApiData

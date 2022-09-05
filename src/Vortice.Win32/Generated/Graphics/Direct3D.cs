@@ -440,10 +440,10 @@ public enum IncludeType : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D_INCLUDE_LOCAL"]/*' />
 	/// <unmanaged>D3D_INCLUDE_LOCAL</unmanaged>
-	D3D_INCLUDE_LOCAL = 0,
+	Local = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D_INCLUDE_SYSTEM"]/*' />
 	/// <unmanaged>D3D_INCLUDE_SYSTEM</unmanaged>
-	D3D_INCLUDE_SYSTEM = 1,
+	System = 1,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS"]/*' />
@@ -452,46 +452,48 @@ public enum ShaderVariableClass : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_SCALAR"]/*' />
 	/// <unmanaged>D3D_SVC_SCALAR</unmanaged>
-	D3D_SVC_SCALAR = 0,
+	Scalar = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_VECTOR"]/*' />
 	/// <unmanaged>D3D_SVC_VECTOR</unmanaged>
-	D3D_SVC_VECTOR = 1,
+	Vector = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_MATRIX_ROWS"]/*' />
 	/// <unmanaged>D3D_SVC_MATRIX_ROWS</unmanaged>
-	D3D_SVC_MATRIX_ROWS = 2,
+	MatrixRows = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_MATRIX_COLUMNS"]/*' />
 	/// <unmanaged>D3D_SVC_MATRIX_COLUMNS</unmanaged>
-	D3D_SVC_MATRIX_COLUMNS = 3,
+	MatrixColumns = 3,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_OBJECT"]/*' />
 	/// <unmanaged>D3D_SVC_OBJECT</unmanaged>
-	D3D_SVC_OBJECT = 4,
+	Object = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_STRUCT"]/*' />
 	/// <unmanaged>D3D_SVC_STRUCT</unmanaged>
-	D3D_SVC_STRUCT = 5,
+	Struct = 5,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_INTERFACE_CLASS"]/*' />
 	/// <unmanaged>D3D_SVC_INTERFACE_CLASS</unmanaged>
-	D3D_SVC_INTERFACE_CLASS = 6,
+	InterfaceClass = 6,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_INTERFACE_POINTER"]/*' />
 	/// <unmanaged>D3D_SVC_INTERFACE_POINTER</unmanaged>
-	D3D_SVC_INTERFACE_POINTER = 7,
+	InterfacePointer = 7,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_VARIABLE_FLAGS</unmanaged>
+[Flags]
 public enum ShaderVariableFlags : int
 {
+	None = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D_SVF_USERPACKED"]/*' />
 	/// <unmanaged>D3D_SVF_USERPACKED</unmanaged>
-	D3D_SVF_USERPACKED = 1,
+	UserPacked = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D_SVF_USED"]/*' />
 	/// <unmanaged>D3D_SVF_USED</unmanaged>
-	D3D_SVF_USED = 2,
+	Used = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D_SVF_INTERFACE_POINTER"]/*' />
 	/// <unmanaged>D3D_SVF_INTERFACE_POINTER</unmanaged>
-	D3D_SVF_INTERFACE_POINTER = 4,
+	InterfacePointer = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D_SVF_INTERFACE_PARAMETER"]/*' />
 	/// <unmanaged>D3D_SVF_INTERFACE_PARAMETER</unmanaged>
-	D3D_SVF_INTERFACE_PARAMETER = 8,
+	InterfaceParameter = 8,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE"]/*' />
@@ -500,217 +502,219 @@ public enum ShaderVariableType : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_VOID"]/*' />
 	/// <unmanaged>D3D_SVT_VOID</unmanaged>
-	D3D_SVT_VOID = 0,
+	Void = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_BOOL"]/*' />
 	/// <unmanaged>D3D_SVT_BOOL</unmanaged>
-	D3D_SVT_BOOL = 1,
+	Bool = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_INT"]/*' />
 	/// <unmanaged>D3D_SVT_INT</unmanaged>
-	D3D_SVT_INT = 2,
+	Int = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_FLOAT"]/*' />
 	/// <unmanaged>D3D_SVT_FLOAT</unmanaged>
-	D3D_SVT_FLOAT = 3,
+	Float = 3,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_STRING"]/*' />
 	/// <unmanaged>D3D_SVT_STRING</unmanaged>
-	D3D_SVT_STRING = 4,
+	String = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE</unmanaged>
-	D3D_SVT_TEXTURE = 5,
+	Texture = 5,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE1D"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE1D</unmanaged>
-	D3D_SVT_TEXTURE1D = 6,
+	Texture1D = 6,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE2D"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE2D</unmanaged>
-	D3D_SVT_TEXTURE2D = 7,
+	Texture2D = 7,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE3D"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE3D</unmanaged>
-	D3D_SVT_TEXTURE3D = 8,
+	Texture3D = 8,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURECUBE"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURECUBE</unmanaged>
-	D3D_SVT_TEXTURECUBE = 9,
+	TextureCube = 9,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_SAMPLER"]/*' />
 	/// <unmanaged>D3D_SVT_SAMPLER</unmanaged>
-	D3D_SVT_SAMPLER = 10,
+	Sampler = 10,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_SAMPLER1D"]/*' />
 	/// <unmanaged>D3D_SVT_SAMPLER1D</unmanaged>
-	D3D_SVT_SAMPLER1D = 11,
+	Sampler1D = 11,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_SAMPLER2D"]/*' />
 	/// <unmanaged>D3D_SVT_SAMPLER2D</unmanaged>
-	D3D_SVT_SAMPLER2D = 12,
+	Sampler2D = 12,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_SAMPLER3D"]/*' />
 	/// <unmanaged>D3D_SVT_SAMPLER3D</unmanaged>
-	D3D_SVT_SAMPLER3D = 13,
+	Sampler3D = 13,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_SAMPLERCUBE"]/*' />
 	/// <unmanaged>D3D_SVT_SAMPLERCUBE</unmanaged>
-	D3D_SVT_SAMPLERCUBE = 14,
+	SamplerCube = 14,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_PIXELSHADER"]/*' />
 	/// <unmanaged>D3D_SVT_PIXELSHADER</unmanaged>
-	D3D_SVT_PIXELSHADER = 15,
+	PixelShader = 15,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_VERTEXSHADER"]/*' />
 	/// <unmanaged>D3D_SVT_VERTEXSHADER</unmanaged>
-	D3D_SVT_VERTEXSHADER = 16,
+	VertexShader = 16,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_PIXELFRAGMENT"]/*' />
 	/// <unmanaged>D3D_SVT_PIXELFRAGMENT</unmanaged>
-	D3D_SVT_PIXELFRAGMENT = 17,
+	PixelFragment = 17,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_VERTEXFRAGMENT"]/*' />
 	/// <unmanaged>D3D_SVT_VERTEXFRAGMENT</unmanaged>
-	D3D_SVT_VERTEXFRAGMENT = 18,
+	VertexFragment = 18,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_UINT"]/*' />
 	/// <unmanaged>D3D_SVT_UINT</unmanaged>
-	D3D_SVT_UINT = 19,
+	Uint = 19,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_UINT8"]/*' />
 	/// <unmanaged>D3D_SVT_UINT8</unmanaged>
-	D3D_SVT_UINT8 = 20,
+	Uint8 = 20,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_GEOMETRYSHADER"]/*' />
 	/// <unmanaged>D3D_SVT_GEOMETRYSHADER</unmanaged>
-	D3D_SVT_GEOMETRYSHADER = 21,
+	GeometryShader = 21,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RASTERIZER"]/*' />
 	/// <unmanaged>D3D_SVT_RASTERIZER</unmanaged>
-	D3D_SVT_RASTERIZER = 22,
+	Rasterizer = 22,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_DEPTHSTENCIL"]/*' />
 	/// <unmanaged>D3D_SVT_DEPTHSTENCIL</unmanaged>
-	D3D_SVT_DEPTHSTENCIL = 23,
+	DepthStencil = 23,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_BLEND"]/*' />
 	/// <unmanaged>D3D_SVT_BLEND</unmanaged>
-	D3D_SVT_BLEND = 24,
+	Blend = 24,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_BUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_BUFFER</unmanaged>
-	D3D_SVT_BUFFER = 25,
+	Buffer = 25,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_CBUFFER</unmanaged>
-	D3D_SVT_CBUFFER = 26,
+	CBuffer = 26,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TBUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_TBUFFER</unmanaged>
-	D3D_SVT_TBUFFER = 27,
+	TBuffer = 27,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE1DARRAY"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE1DARRAY</unmanaged>
-	D3D_SVT_TEXTURE1DARRAY = 28,
+	Texture1DArray = 28,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE2DARRAY"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE2DARRAY</unmanaged>
-	D3D_SVT_TEXTURE2DARRAY = 29,
+	Texture2DArray = 29,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RENDERTARGETVIEW"]/*' />
 	/// <unmanaged>D3D_SVT_RENDERTARGETVIEW</unmanaged>
-	D3D_SVT_RENDERTARGETVIEW = 30,
+	RenderTargetView = 30,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_DEPTHSTENCILVIEW"]/*' />
 	/// <unmanaged>D3D_SVT_DEPTHSTENCILVIEW</unmanaged>
-	D3D_SVT_DEPTHSTENCILVIEW = 31,
+	DepthStencilView = 31,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE2DMS"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE2DMS</unmanaged>
-	D3D_SVT_TEXTURE2DMS = 32,
+	Texture2DMs = 32,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE2DMSARRAY"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE2DMSARRAY</unmanaged>
-	D3D_SVT_TEXTURE2DMSARRAY = 33,
+	Texture2DMsArray = 33,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURECUBEARRAY"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURECUBEARRAY</unmanaged>
-	D3D_SVT_TEXTURECUBEARRAY = 34,
+	TextureCubeArray = 34,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_HULLSHADER"]/*' />
 	/// <unmanaged>D3D_SVT_HULLSHADER</unmanaged>
-	D3D_SVT_HULLSHADER = 35,
+	Hullshader = 35,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_DOMAINSHADER"]/*' />
 	/// <unmanaged>D3D_SVT_DOMAINSHADER</unmanaged>
-	D3D_SVT_DOMAINSHADER = 36,
+	DomainShader = 36,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_INTERFACE_POINTER"]/*' />
 	/// <unmanaged>D3D_SVT_INTERFACE_POINTER</unmanaged>
-	D3D_SVT_INTERFACE_POINTER = 37,
+	InterfacePointer = 37,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_COMPUTESHADER"]/*' />
 	/// <unmanaged>D3D_SVT_COMPUTESHADER</unmanaged>
-	D3D_SVT_COMPUTESHADER = 38,
+	ComputeShader = 38,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_DOUBLE"]/*' />
 	/// <unmanaged>D3D_SVT_DOUBLE</unmanaged>
-	D3D_SVT_DOUBLE = 39,
+	Double = 39,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RWTEXTURE1D"]/*' />
 	/// <unmanaged>D3D_SVT_RWTEXTURE1D</unmanaged>
-	D3D_SVT_RWTEXTURE1D = 40,
+	RwTexture1D = 40,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RWTEXTURE1DARRAY"]/*' />
 	/// <unmanaged>D3D_SVT_RWTEXTURE1DARRAY</unmanaged>
-	D3D_SVT_RWTEXTURE1DARRAY = 41,
+	RwTexture1DArray = 41,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RWTEXTURE2D"]/*' />
 	/// <unmanaged>D3D_SVT_RWTEXTURE2D</unmanaged>
-	D3D_SVT_RWTEXTURE2D = 42,
+	RwTexture2D = 42,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RWTEXTURE2DARRAY"]/*' />
 	/// <unmanaged>D3D_SVT_RWTEXTURE2DARRAY</unmanaged>
-	D3D_SVT_RWTEXTURE2DARRAY = 43,
+	RwTexture2DArray = 43,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RWTEXTURE3D"]/*' />
 	/// <unmanaged>D3D_SVT_RWTEXTURE3D</unmanaged>
-	D3D_SVT_RWTEXTURE3D = 44,
+	RwTexture3D = 44,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RWBUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_RWBUFFER</unmanaged>
-	D3D_SVT_RWBUFFER = 45,
+	RwBuffer = 45,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_BYTEADDRESS_BUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_BYTEADDRESS_BUFFER</unmanaged>
-	D3D_SVT_BYTEADDRESS_BUFFER = 46,
+	ByteAddressBuffer = 46,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RWBYTEADDRESS_BUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_RWBYTEADDRESS_BUFFER</unmanaged>
-	D3D_SVT_RWBYTEADDRESS_BUFFER = 47,
+	RwByteAddressBuffer = 47,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_STRUCTURED_BUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_STRUCTURED_BUFFER</unmanaged>
-	D3D_SVT_STRUCTURED_BUFFER = 48,
+	StructuredBuffer = 48,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_RWSTRUCTURED_BUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_RWSTRUCTURED_BUFFER</unmanaged>
-	D3D_SVT_RWSTRUCTURED_BUFFER = 49,
+	RwStructuredBuffer = 49,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_APPEND_STRUCTURED_BUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_APPEND_STRUCTURED_BUFFER</unmanaged>
-	D3D_SVT_APPEND_STRUCTURED_BUFFER = 50,
+	AppendStructuredBuffer = 50,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_CONSUME_STRUCTURED_BUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_CONSUME_STRUCTURED_BUFFER</unmanaged>
-	D3D_SVT_CONSUME_STRUCTURED_BUFFER = 51,
+	ConsumeStructuredBuffer = 51,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_MIN8FLOAT"]/*' />
 	/// <unmanaged>D3D_SVT_MIN8FLOAT</unmanaged>
-	D3D_SVT_MIN8FLOAT = 52,
+	Min8Float = 52,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_MIN10FLOAT"]/*' />
 	/// <unmanaged>D3D_SVT_MIN10FLOAT</unmanaged>
-	D3D_SVT_MIN10FLOAT = 53,
+	Min10Float = 53,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_MIN16FLOAT"]/*' />
 	/// <unmanaged>D3D_SVT_MIN16FLOAT</unmanaged>
-	D3D_SVT_MIN16FLOAT = 54,
+	Min16Float = 54,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_MIN12INT"]/*' />
 	/// <unmanaged>D3D_SVT_MIN12INT</unmanaged>
-	D3D_SVT_MIN12INT = 55,
+	Min12Int = 55,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_MIN16INT"]/*' />
 	/// <unmanaged>D3D_SVT_MIN16INT</unmanaged>
-	D3D_SVT_MIN16INT = 56,
+	Min16Int = 56,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_MIN16UINT"]/*' />
 	/// <unmanaged>D3D_SVT_MIN16UINT</unmanaged>
-	D3D_SVT_MIN16UINT = 57,
+	Min16Uint = 57,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_INT16"]/*' />
 	/// <unmanaged>D3D_SVT_INT16</unmanaged>
-	D3D_SVT_INT16 = 58,
+	Int16 = 58,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_UINT16"]/*' />
 	/// <unmanaged>D3D_SVT_UINT16</unmanaged>
-	D3D_SVT_UINT16 = 59,
+	Uint16 = 59,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_FLOAT16"]/*' />
 	/// <unmanaged>D3D_SVT_FLOAT16</unmanaged>
-	D3D_SVT_FLOAT16 = 60,
+	Float16 = 60,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_INT64"]/*' />
 	/// <unmanaged>D3D_SVT_INT64</unmanaged>
-	D3D_SVT_INT64 = 61,
+	Int64 = 61,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_UINT64"]/*' />
 	/// <unmanaged>D3D_SVT_UINT64</unmanaged>
-	D3D_SVT_UINT64 = 62,
+	Uint64 = 62,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_INPUT_FLAGS</unmanaged>
+[Flags]
 public enum ShaderInputFlags : int
 {
+	None = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_USERPACKED"]/*' />
 	/// <unmanaged>D3D_SIF_USERPACKED</unmanaged>
-	D3D_SIF_USERPACKED = 1,
+	UserPacked = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_COMPARISON_SAMPLER"]/*' />
 	/// <unmanaged>D3D_SIF_COMPARISON_SAMPLER</unmanaged>
-	D3D_SIF_COMPARISON_SAMPLER = 2,
+	ComparisonSampler = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENT_0"]/*' />
 	/// <unmanaged>D3D_SIF_TEXTURE_COMPONENT_0</unmanaged>
-	D3D_SIF_TEXTURE_COMPONENT_0 = 4,
+	TextureComponent0 = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENT_1"]/*' />
 	/// <unmanaged>D3D_SIF_TEXTURE_COMPONENT_1</unmanaged>
-	D3D_SIF_TEXTURE_COMPONENT_1 = 8,
+	TextureComponent1 = 8,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENTS"]/*' />
 	/// <unmanaged>D3D_SIF_TEXTURE_COMPONENTS</unmanaged>
-	D3D_SIF_TEXTURE_COMPONENTS = 12,
+	TextureComponents = 12,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_UNUSED"]/*' />
 	/// <unmanaged>D3D_SIF_UNUSED</unmanaged>
-	D3D_SIF_UNUSED = 16,
+	Unused = 16,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE"]/*' />
@@ -719,73 +723,75 @@ public enum ShaderInputType : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_SIT_CBUFFER</unmanaged>
-	D3D_SIT_CBUFFER = 0,
+	CBuffer = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_TBUFFER"]/*' />
 	/// <unmanaged>D3D_SIT_TBUFFER</unmanaged>
-	D3D_SIT_TBUFFER = 1,
+	TBuffer = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_TEXTURE"]/*' />
 	/// <unmanaged>D3D_SIT_TEXTURE</unmanaged>
-	D3D_SIT_TEXTURE = 2,
+	Texture = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_SAMPLER"]/*' />
 	/// <unmanaged>D3D_SIT_SAMPLER</unmanaged>
-	D3D_SIT_SAMPLER = 3,
+	Sampler = 3,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWTYPED"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_RWTYPED</unmanaged>
-	D3D_SIT_UAV_RWTYPED = 4,
+	UavRwTyped = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_STRUCTURED"]/*' />
 	/// <unmanaged>D3D_SIT_STRUCTURED</unmanaged>
-	D3D_SIT_STRUCTURED = 5,
+	Structured = 5,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWSTRUCTURED"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_RWSTRUCTURED</unmanaged>
-	D3D_SIT_UAV_RWSTRUCTURED = 6,
+	UavRwStructured = 6,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_BYTEADDRESS"]/*' />
 	/// <unmanaged>D3D_SIT_BYTEADDRESS</unmanaged>
-	D3D_SIT_BYTEADDRESS = 7,
+	ByteAddress = 7,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWBYTEADDRESS"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_RWBYTEADDRESS</unmanaged>
-	D3D_SIT_UAV_RWBYTEADDRESS = 8,
+	UavRwByteAddress = 8,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_APPEND_STRUCTURED"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_APPEND_STRUCTURED</unmanaged>
-	D3D_SIT_UAV_APPEND_STRUCTURED = 9,
+	UavAppendStructured = 9,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_CONSUME_STRUCTURED"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_CONSUME_STRUCTURED</unmanaged>
-	D3D_SIT_UAV_CONSUME_STRUCTURED = 10,
+	UavConsumeStructured = 10,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWSTRUCTURED_WITH_COUNTER"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_RWSTRUCTURED_WITH_COUNTER</unmanaged>
-	D3D_SIT_UAV_RWSTRUCTURED_WITH_COUNTER = 11,
+	UavRwStructuredWithCounter = 11,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_RTACCELERATIONSTRUCTURE"]/*' />
 	/// <unmanaged>D3D_SIT_RTACCELERATIONSTRUCTURE</unmanaged>
-	D3D_SIT_RTACCELERATIONSTRUCTURE = 12,
+	RtAccelerationStructure = 12,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_FEEDBACKTEXTURE"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_FEEDBACKTEXTURE</unmanaged>
-	D3D_SIT_UAV_FEEDBACKTEXTURE = 13,
+	UavFeedbackTexture = 13,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_CBUFFER_FLAGS</unmanaged>
-public enum ShaderCbufferFlags : int
+[Flags]
+public enum ShaderCBufferFlags : int
 {
+	None = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS::D3D_CBF_USERPACKED"]/*' />
 	/// <unmanaged>D3D_CBF_USERPACKED</unmanaged>
-	D3D_CBF_USERPACKED = 1,
+	UserPacked = 1,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE"]/*' />
 /// <unmanaged>D3D_CBUFFER_TYPE</unmanaged>
-public enum CbufferType : int
+public enum CBufferType : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_CT_CBUFFER</unmanaged>
-	D3D_CT_CBUFFER = 0,
+	CBuffer = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_TBUFFER"]/*' />
 	/// <unmanaged>D3D_CT_TBUFFER</unmanaged>
-	D3D_CT_TBUFFER = 1,
+	TBuffer = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_INTERFACE_POINTERS"]/*' />
 	/// <unmanaged>D3D_CT_INTERFACE_POINTERS</unmanaged>
-	D3D_CT_INTERFACE_POINTERS = 2,
+	InterfacePointers = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_RESOURCE_BIND_INFO"]/*' />
 	/// <unmanaged>D3D_CT_RESOURCE_BIND_INFO</unmanaged>
-	D3D_CT_RESOURCE_BIND_INFO = 3,
+	ResourceBindInfo = 3,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME"]/*' />
@@ -827,31 +833,31 @@ public enum Name : int
 	SampleIndex = 10,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_FINAL_QUAD_EDGE_TESSFACTOR"]/*' />
 	/// <unmanaged>D3D_NAME_FINAL_QUAD_EDGE_TESSFACTOR</unmanaged>
-	FinalQuadEdgeTessfactor = 11,
+	FinalQuadEdgeTessFactor = 11,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_FINAL_QUAD_INSIDE_TESSFACTOR"]/*' />
 	/// <unmanaged>D3D_NAME_FINAL_QUAD_INSIDE_TESSFACTOR</unmanaged>
-	FinalQuadInsideTessfactor = 12,
+	FinalQuadInsideTessFactor = 12,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_FINAL_TRI_EDGE_TESSFACTOR"]/*' />
 	/// <unmanaged>D3D_NAME_FINAL_TRI_EDGE_TESSFACTOR</unmanaged>
-	FinalTriEdgeTessfactor = 13,
+	FinalTriEdgeTessFactor = 13,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_FINAL_TRI_INSIDE_TESSFACTOR"]/*' />
 	/// <unmanaged>D3D_NAME_FINAL_TRI_INSIDE_TESSFACTOR</unmanaged>
-	FinalTriInsideTessfactor = 14,
+	FinalTriInsideTessFactor = 14,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_FINAL_LINE_DETAIL_TESSFACTOR"]/*' />
 	/// <unmanaged>D3D_NAME_FINAL_LINE_DETAIL_TESSFACTOR</unmanaged>
-	FinalLineDetailTessfactor = 15,
+	FinalLineDetailTessFactor = 15,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_FINAL_LINE_DENSITY_TESSFACTOR"]/*' />
 	/// <unmanaged>D3D_NAME_FINAL_LINE_DENSITY_TESSFACTOR</unmanaged>
-	FinalLineDensityTessfactor = 16,
+	FinalLineDensityTessFactor = 16,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_BARYCENTRICS"]/*' />
 	/// <unmanaged>D3D_NAME_BARYCENTRICS</unmanaged>
 	Barycentrics = 23,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_SHADINGRATE"]/*' />
 	/// <unmanaged>D3D_NAME_SHADINGRATE</unmanaged>
-	Shadingrate = 24,
+	ShadingRate = 24,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_CULLPRIMITIVE"]/*' />
 	/// <unmanaged>D3D_NAME_CULLPRIMITIVE</unmanaged>
-	Cullprimitive = 25,
+	CullPrimitive = 25,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_TARGET"]/*' />
 	/// <unmanaged>D3D_NAME_TARGET</unmanaged>
 	Target = 64,
@@ -873,15 +879,6 @@ public enum Name : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_INNER_COVERAGE"]/*' />
 	/// <unmanaged>D3D_NAME_INNER_COVERAGE</unmanaged>
 	InnerCoverage = 70,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D12_NAME_BARYCENTRICS"]/*' />
-	/// <unmanaged>D3D12_NAME_BARYCENTRICS</unmanaged>
-	D3D12_NAME_BARYCENTRICS = 23,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D12_NAME_SHADINGRATE"]/*' />
-	/// <unmanaged>D3D12_NAME_SHADINGRATE</unmanaged>
-	D3D12_NAME_SHADINGRATE = 24,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D12_NAME_CULLPRIMITIVE"]/*' />
-	/// <unmanaged>D3D12_NAME_CULLPRIMITIVE</unmanaged>
-	D3D12_NAME_CULLPRIMITIVE = 25,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE"]/*' />
@@ -1054,6 +1051,7 @@ public enum InterpolationMode : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS"]/*' />
 /// <unmanaged>D3D_PARAMETER_FLAGS</unmanaged>
+[Flags]
 public enum ParameterFlags : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_NONE"]/*' />
@@ -1242,12 +1240,12 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::RegisterDestructionCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult RegisterDestructionCallback(PFN_DESTRUCTION_CALLBACK callbackFn, void* pData, uint* pCallbackID)
+	public HResult RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID)
 	{
 #if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDestructionNotifier*, PFN_DESTRUCTION_CALLBACK, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
+		return ((delegate* unmanaged<ID3DDestructionNotifier*, delegate* unmanaged[Stdcall]<void*, void>, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
 #else
-		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, PFN_DESTRUCTION_CALLBACK, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
+		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, delegate* unmanaged[Stdcall]<void*, void>, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
 #endif
 	}
 

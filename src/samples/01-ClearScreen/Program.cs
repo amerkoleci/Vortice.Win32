@@ -12,9 +12,6 @@ public static unsafe class Program
 {
     public static void Main()
     {
-        string test = StringUtilities.GetString(new sbyte[] { (sbyte)'A', (sbyte)'B', (sbyte)'C' });
-        test = StringUtilities.GetString(new ushort[] { 'A', 'B', 'C' });
-
         using ComPtr<IDXGIFactory1> factory = default;
         HResult hr = CreateDXGIFactory1(__uuidof<IDXGIFactory4>(), (void**)&factory);
 

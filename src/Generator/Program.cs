@@ -86,6 +86,14 @@ public static class Program
         { "D3D_TESSELLATOR_OUTPUT_PRIMITIVE", "D3D_TESSELLATOR_OUTPUT" },
         { "D3D_REGISTER_COMPONENT_TYPE", "D3D_REGISTER_COMPONENT" },
         { "D3D_RESOURCE_RETURN_TYPE", "D3D_RETURN_TYPE" },
+        { "D3D_CBUFFER_TYPE", "D3D_CT" },
+        { "D3D_INCLUDE_TYPE", "D3D_INCLUDE" },
+        { "D3D_SHADER_VARIABLE_CLASS", "D3D_SVC" },
+        { "D3D_SHADER_VARIABLE_FLAGS", "D3D_SVF" },
+        { "D3D_SHADER_VARIABLE_TYPE", "D3D_SVT" },
+        { "D3D_SHADER_INPUT_FLAGS", "D3D_SIF" },
+        { "D3D_SHADER_INPUT_TYPE", "D3D_SIT" },
+        { "D3D_SHADER_CBUFFER_FLAGS", "D3D_CBF" },
     };
 
     private static readonly Dictionary<string, string> s_partRenames = new()
@@ -98,6 +106,8 @@ public static class Program
         { "TRIANGLESTRIP", "TriangleStrip" },
         { "PATCHLIST", "PatchList" },
 
+        { "CBUFFER", "CBuffer" },
+        { "TBUFFER", "TBuffer" },
         { "NOPERSPECTIVE", "NoPerspective" },
         { "TEXTURE1D", "Texture1D" },
         { "TEXTURE1DARRAY", "Texture1DArray" },
@@ -108,7 +118,43 @@ public static class Program
         { "TEXTURE3D", "Texture3D" },
         { "TEXTURECUBE", "TextureCube" },
         { "TEXTURECUBEARRAY", "TextureCubeArray" },
+        { "RWTEXTURE1D", "RwTexture1D" },
+        { "RWTEXTURE1DARRAY", "RwTexture1DArray" },
+        { "RWTEXTURE2D", "RwTexture2D" },
+        { "RWTEXTURE2DARRAY", "RwTexture2DArray" },
+        { "RWTEXTURE3D", "RwTexture3D" },
+        { "RWBUFFER", "RwBuffer" },
         { "BUFFEREX", "BufferExtended" },
+        { "USERPACKED", "UserPacked" },
+        { "SAMPLER1D", "Sampler1D" },
+        { "SAMPLER2D", "Sampler2D" },
+        { "SAMPLER3D", "Sampler3D" },
+        { "SAMPLERCUBE", "SamplerCube" },
+        { "RWTYPED", "RwTyped" },
+        { "RWSTRUCTURED", "RwStructured" },
+        { "BYTEADDRESS", "ByteAddress" },
+        { "RWBYTEADDRESS", "RwByteAddress" },
+        { "RTACCELERATIONSTRUCTURE", "RtAccelerationStructure" },
+        { "FEEDBACKTEXTURE", "FeedbackTexture" },
+        { "TESSFACTOR", "TessFactor" },
+        { "SHADINGRATE", "ShadingRate" },
+        { "CULLPRIMITIVE", "CullPrimitive" },
+        { "VERTEXSHADER", "VertexShader" },
+        { "PIXELSHADER", "PixelShader" },
+        { "VERTEXFRAGMENT", "VertexFragment" },
+        { "PIXELFRAGMENT", "PixelFragment" },
+        { "GEOMETRYSHADER", "GeometryShader" },
+        { "DOMAINSHADER", "DomainShader" },
+        { "COMPUTESHADER", "ComputeShader" },
+        { "DEPTHSTENCIL", "DepthStencil" },
+        { "RENDERTARGETVIEW", "RenderTargetView" },
+        { "DEPTHSTENCILVIEW", "DepthStencilView" },
+        { "MIN8FLOAT", "Min8Float" },
+        { "MIN10FLOAT", "Min10Float" },
+        { "MIN16FLOAT", "Min16Float" },
+        { "MIN12INT", "Min12Int" },
+        { "MIN16INT", "Min16Int" },
+        { "MIN16UINT", "Min16Uint" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -198,8 +244,8 @@ public static class Program
         }
 
         // Generate docs
+        DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
         DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(outputPath, "Dxgi.xml"));
-        //DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
         DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(outputPath, "D3D11.xml"));
         return 0;
     }
@@ -409,15 +455,17 @@ public static class Program
         if (s_generateUnmanagedDocs)
             writer.WriteLine($"/// <unmanaged>{enumType.Name}</unmanaged>");
 
-        if (enumType.Flags)
+        bool isFlags = false;
+        if (enumType.Flags || csTypeName.EndsWith("Flags"))
         {
+            isFlags = true;
             writer.WriteLine("[Flags]");
         }
 
         bool noneAdded = false;
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
         {
-            if (enumType.Flags &&
+            if (isFlags &&
                 !enumType.Values.Any(item => GetPrettyFieldName(item.Name, enumPrefix) == "None"))
             {
                 writer.WriteLine("None = 0,");
@@ -432,11 +480,12 @@ public static class Program
                     continue;
                 }
 
-                // Ignore D3D10 and D3D11 in D3D
+                // Ignore D3D10, D3D11 and D3D12 in D3D
                 if (enumType.Name.StartsWith("D3D_"))
                 {
                     if (value.Name.StartsWith("D3D10_") ||
-                        value.Name.StartsWith("D3D11_"))
+                        value.Name.StartsWith("D3D11_") ||
+                        value.Name.StartsWith("D3D12_"))
                     {
                         continue;
                     }
@@ -444,7 +493,7 @@ public static class Program
 
                 string enumValueName = GetPrettyFieldName(value.Name, enumPrefix);
 
-                if (enumType.Name == "D3D_PRIMITIVE_TOPOLOGY")
+                if (enumType.Name == "D3D_SHADER_VARIABLE_TYPE")
                 {
                 }
 
@@ -568,7 +617,6 @@ public static class Program
                 writer.WriteLine();
             }
         }
-
         writer.WriteLine();
     }
 
@@ -728,10 +776,13 @@ public static class Program
                 foreach (var parameter in method.Params)
                 {
                     bool asPointer = false;
+                    string parameterType = default;
                     if (parameter.Type.Kind == "ApiRef")
                     {
                         if (parameter.Type.TargetKind == "FunctionPointer")
                         {
+                            var functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
+                            parameterType = "delegate* unmanaged[Stdcall]<void*, void>";
                         }
                         else
                         {
@@ -743,7 +794,11 @@ public static class Program
                         }
                     }
 
-                    string parameterType = GetTypeName(parameter.Type, asPointer);
+                    if (string.IsNullOrEmpty(parameterType))
+                    {
+                        parameterType = GetTypeName(parameter.Type, asPointer);
+                    }
+
                     parameterType = NormalizeTypeName(writer.Api, parameterType);
                     string parameterName = parameter.Name;
 
@@ -890,21 +945,19 @@ public static class Program
             }
             else
             {
-                if (part.Equals("DESC", StringComparison.OrdinalIgnoreCase))
+                if (s_partRenames.TryGetValue(part, out string? partRemap))
+                {
+                    sb.Append(partRemap!);
+                }
+                else if (part.StartsWith("DESC", StringComparison.OrdinalIgnoreCase))
                 {
                     sb.Append("Description");
-                }
-                else if (part.Equals("DESC1", StringComparison.OrdinalIgnoreCase))
-                {
-                    sb.Append("Description1");
-                }
-                else if (part.Equals("DESC2", StringComparison.OrdinalIgnoreCase))
-                {
-                    sb.Append("Description2");
-                }
-                else if (part.Equals("DESC3", StringComparison.OrdinalIgnoreCase))
-                {
-                    sb.Append("Description3");
+                    string numericPart = part.Replace("DESC", string.Empty);
+                    if (string.IsNullOrEmpty(numericPart) == false &&
+                        int.TryParse(numericPart, out int numericValue))
+                    {
+                        sb.Append(numericValue);
+                    }
                 }
                 else
                 {
