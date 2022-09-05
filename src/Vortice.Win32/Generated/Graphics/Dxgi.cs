@@ -1650,6 +1650,9 @@ public enum WindowAssociationFlags : uint
 
 #endregion Generated Enums
 
+#region Unions
+#endregion Unions
+
 #region Structs
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA"]/*' />
 /// <unmanaged>DXGI_RGBA</unmanaged>

@@ -2,6 +2,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -97,13 +98,7 @@ public static class Program
         { "D3D_SHADER_INPUT_TYPE", "D3D_SIT" },
         { "D3D_SHADER_CBUFFER_FLAGS", "D3D_CBF" },
 
-        // D3D11
-        { "D3D11_INPUT_CLASSIFICATION", "D3D11_INPUT" },
-        { "D3D11_FILL_MODE", "D3D11_FILL" },
-        { "D3D11_CULL_MODE", "D3D11_CULL" },
-        { "D3D11_BIND_FLAG", "D3D11_BIND" },
-        { "D3D11_CPU_ACCESS_FLAG", "D3D11_CPU_ACCESS" },
-        { "D3D11_RESOURCE_MISC_FLAG", "D3D11_RESOURCE_MISC" },
+        // D3D11 -> handled in code
     };
 
     private static readonly Dictionary<string, string> s_partRenames = new()
@@ -173,6 +168,16 @@ public static class Program
         { "DXGI_FORMAT_420_OPAQUE", "Opaque420" },
         { "DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY", "CompositedUICaptureOnly" },
         { "D3D_FEATURE_LEVEL_9_1", "Level_9_1" },
+
+        // D3D11
+        { "D3D11_STANDARD_MULTISAMPLE_PATTERN", "Standard" },
+        { "D3D11_CENTER_MULTISAMPLE_PATTERN", "Center" },
+        { "D3D11_SHADER_MIN_PRECISION_10_BIT", "Bit10" },
+        { "D3D11_SHADER_MIN_PRECISION_16_BIT", "Bit16" },
+        { "D3D11_SHARED_RESOURCE_TIER_0", "Tier0" },
+        { "D3D11_SHARED_RESOURCE_TIER_1", "Tier1" },
+        { "D3D11_SHARED_RESOURCE_TIER_2", "Tier2" },
+        { "D3D11_SHARED_RESOURCE_TIER_3", "Tier3" },
     };
 
     private static readonly Dictionary<string, bool> s_generatedEnums = new()
@@ -185,12 +190,16 @@ public static class Program
         {"DXGI_ENUM_MODES", true },
     };
 
-    private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
+    private static readonly HashSet<string> s_ignoredStartParts = new(StringComparer.OrdinalIgnoreCase)
     {
         "DXGI",
         "D3D",
         "D3D10",
         "D3D11",
+    };
+
+    private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
+    {
         "PF" // D3D_PF_
     };
 
@@ -211,6 +220,14 @@ public static class Program
         { "DXGI_MAP", "MapFlags" },
         { "DXGI_ENUM_MODES", "EnumModesFlags" },
         { "DXGI_MWA", "WindowAssociationFlags" },
+
+        // D3D11
+        { "D3D11_BIND_FLAG", "BindFlags" },
+        { "D3D11_CPU_ACCESS_FLAG", "CpuAccessFlags" },
+        { "D3D11_RESOURCE_MISC_FLAG", "ResourceMiscFlags" },
+        { "D3D11_MAP_FLAG", "MapFlags" },
+        { "D3D11_FORMAT_SUPPORT", "FormatSupport" },
+        { "D3D11_FORMAT_SUPPORT2", "FormatSupport2" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -221,6 +238,26 @@ public static class Program
         { "DXGI_SWAP_CHAIN_DESC::Flags", "DXGI_SWAP_CHAIN_FLAG" },
         { "DXGI_SWAP_CHAIN_DESC1::BufferUsage", "Usage" },
         { "DXGI_SWAP_CHAIN_DESC1::Flags", "DXGI_SWAP_CHAIN_FLAG" },
+
+        // D3D11
+        { "D3D11_BUFFER_DESC::BindFlags", "D3D11_BIND_FLAG" },
+        { "D3D11_BUFFER_DESC::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_BUFFER_DESC::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+
+        { "D3D11_TEXTURE1D_DESC::BindFlags", "D3D11_BIND_FLAG" },
+        { "D3D11_TEXTURE1D_DESC::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_TEXTURE1D_DESC::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+
+        { "D3D11_TEXTURE2D_DESC::BindFlags", "D3D11_BIND_FLAG" },
+        { "D3D11_TEXTURE2D_DESC::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_TEXTURE2D_DESC::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+
+        { "D3D11_TEXTURE3D_DESC::BindFlags", "D3D11_BIND_FLAG" },
+        { "D3D11_TEXTURE3D_DESC::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_TEXTURE3D_DESC::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+
+        { "D3D11_FEATURE_DATA_FORMAT_SUPPORT::OutFormatSupport", "D3D11_FORMAT_SUPPORT" },
+        { "D3D11_FEATURE_DATA_FORMAT_SUPPORT2::OutFormatSupport2", "D3D11_FORMAT_SUPPORT2" },
     };
 
     private static readonly HashSet<string> s_visitedEnums = new();
@@ -255,9 +292,9 @@ public static class Program
         }
 
         // Generate docs
-        DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
-        DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(outputPath, "Dxgi.xml"));
-        DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(outputPath, "Direct3D11.xml"));
+        //DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
+        //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(outputPath, "Dxgi.xml"));
+        //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(outputPath, "Direct3D11.xml"));
         return 0;
     }
 
@@ -412,6 +449,23 @@ public static class Program
         writer.WriteLine($"#endregion Generated Enums");
         writer.WriteLine();
 
+        // Unions
+        writer.WriteLine($"#region Unions");
+        foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
+        {
+            if (s_csNameMappings.ContainsKey($"{writer.Api}.{structType.Name}"))
+            {
+                continue;
+            }
+
+            GenerateStruct(writer, structType);
+
+            s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
+        }
+        writer.WriteLine($"#endregion Unions");
+        writer.WriteLine();
+
+        // Structs
         writer.WriteLine($"#region Structs");
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
@@ -485,20 +539,23 @@ public static class Program
             writer.WriteLine("[Flags]");
         }
 
-        bool noneAdded = false;
+        if (csTypeName == "ShaderCacheSupportFlags")
+        {
+
+        }
+
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
         {
             if (isFlags &&
-                !enumType.Values.Any(item => GetPrettyFieldName(item.Name, enumPrefix) == "None"))
+                !enumType.Values.Any(item => GetEnumItemName(enumType, item, enumPrefix) == "None"))
             {
                 writer.WriteLine("None = 0,");
-                noneAdded = true;
             }
 
-            foreach (ApiEnumValue value in enumType.Values)
+            foreach (ApiEnumValue enumItem in enumType.Values)
             {
-                if (value.Name.EndsWith("_FORCE_DWORD") ||
-                    value.Name.EndsWith("_FORCE_UINT"))
+                if (enumItem.Name.EndsWith("_FORCE_DWORD") ||
+                    enumItem.Name.EndsWith("_FORCE_UINT"))
                 {
                     continue;
                 }
@@ -506,34 +563,30 @@ public static class Program
                 // Ignore D3D10, D3D11 and D3D12 in D3D
                 if (enumType.Name.StartsWith("D3D_"))
                 {
-                    if (value.Name.StartsWith("D3D10_") ||
-                        value.Name.StartsWith("D3D11_") ||
-                        value.Name.StartsWith("D3D12_"))
+                    if (enumItem.Name.StartsWith("D3D10_") ||
+                        enumItem.Name.StartsWith("D3D11_") ||
+                        enumItem.Name.StartsWith("D3D12_"))
                     {
                         continue;
                     }
                 }
 
-                if (value.Name.EndsWith("_MESSAGES_START") ||
-                    value.Name.EndsWith("_MESSAGES_END"))
+                if (enumItem.Name.EndsWith("_MESSAGES_START") ||
+                    enumItem.Name.EndsWith("_MESSAGES_END"))
                 {
                     continue;
                 }
 
-                string enumValueName = GetPrettyFieldName(value.Name, enumPrefix);
-
-                if (enumType.Name == "D3D_SHADER_VARIABLE_TYPE")
-                {
-                }
+                string enumValueName = GetEnumItemName(enumType, enumItem, enumPrefix);
 
                 if (!autoGenerated)
                 {
-                    writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{enumType.Name}::{value.Name}\"]/*' />");
+                    writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{enumType.Name}::{enumItem.Name}\"]/*' />");
                 }
 
                 if (s_generateUnmanagedDocs)
                 {
-                    writer.WriteLine($"/// <unmanaged>{value.Name}</unmanaged>");
+                    writer.WriteLine($"/// <unmanaged>{enumItem.Name}</unmanaged>");
                 }
 
                 if (enumValueName.StartsWith("DXGI_MSG_"))
@@ -541,11 +594,27 @@ public static class Program
                     enumValueName = enumValueName.Substring("DXGI_MSG_".Length);
                 }
 
-                writer.WriteLine($"{enumValueName} = {value.Value},");
+                writer.WriteLine($"{enumValueName} = {enumItem.Value},");
             }
         }
 
         writer.WriteLine();
+    }
+
+    private static string GetEnumItemName(ApiType enumType, ApiEnumValue enumItem, string enumPrefix)
+    {
+        string enumValueName = GetPrettyFieldName(enumItem.Name, enumPrefix);
+
+        // D3D11 has some enum name "issues"
+        // D3D11_FILL_MODE -> D3D11_FILL_*
+        if (enumValueName.StartsWith("D3D11_"))
+        {
+            string[] parts = enumType.Name.Split(new[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
+            enumPrefix = string.Join("_", parts.Take(parts.Length - 1));
+            enumValueName = GetPrettyFieldName(enumItem.Name, enumPrefix);
+        }
+
+        return enumValueName;
     }
 
     private static void GenerateStruct(CodeWriter writer, ApiType structType, bool nestedType = false)
@@ -570,6 +639,12 @@ public static class Program
             }
         }
 
+        bool isUnion = structType.Kind == "Union";
+        if (isUnion)
+        {
+            writer.WriteLine("[StructLayout(LayoutKind.Explicit)]");
+        }
+
         using (writer.PushBlock($"public partial struct {csTypeName}"))
         {
             int fieldIndex = 0;
@@ -586,6 +661,11 @@ public static class Program
                 else
                 {
                     fieldValueName = GetPrettyFieldName(field.Name, structPrefix);
+                }
+
+                if (structType.Name == "D3D11_OMAC")
+                {
+                    fieldValueName = "Buffer";
                 }
 
                 string fieldTypeName = GetTypeName(field.Type);
@@ -616,6 +696,11 @@ public static class Program
 
                     if (canUseFixed)
                     {
+                        if (isUnion)
+                        {
+                            writer.WriteLine("[FieldOffset(0)]");
+                        }
+
                         writer.WriteLine($"public unsafe fixed {fieldTypeName} {fieldValueName}[{field.Type.Shape.Size}];");
                     }
                     else
@@ -660,6 +745,10 @@ public static class Program
                         unsafePrefix += "unsafe ";
                     }
 
+                    if (isUnion)
+                    {
+                        writer.WriteLine("[FieldOffset(0)]");
+                    }
                     writer.WriteLine($"public {unsafePrefix}{fieldTypeName} {fieldValueName};");
                 }
 
@@ -675,6 +764,51 @@ public static class Program
             if (structType.NestedTypes.Length > 0)
             {
                 writer.WriteLine();
+
+                if (isUnion == false)
+                {
+                    foreach (ApiType nestedTypeToGenerate in structType.NestedTypes)
+                    {
+                        foreach (ApiStructField field in nestedTypeToGenerate.Fields)
+                        {
+                            ApiStructField parentMemberAccess = structType.Fields.First(item => item.Type.Name == nestedTypeToGenerate.Name);
+                            string fieldTypeName = GetTypeName(field.Type);
+                            string fieldName = GetPrettyFieldName(field.Name, structPrefix);
+
+                            writer.WriteLine("[UnscopedRef]");
+                            if (fieldTypeName == "Array")
+                            {
+                                fieldTypeName = GetTypeName(field.Type.Child);
+
+                                using (writer.PushBlock($"public unsafe Span<{fieldTypeName}> {fieldName}"))
+                                {
+                                    writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                                    using (writer.PushBlock("get"))
+                                    {
+                                        writer.WriteLine($"return MemoryMarshal.CreateSpan(ref {parentMemberAccess.Name}.{fieldName}[0], {field.Type.Shape.Size});");
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                using (writer.PushBlock($"public ref {fieldTypeName} {fieldName}"))
+                                {
+                                    writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                                    using (writer.PushBlock("get"))
+                                    {
+                                        writer.WriteLineUndindented("#if NET7_0_OR_GREATER");
+                                        writer.WriteLine($"return ref {parentMemberAccess.Name}.{fieldName};");
+                                        writer.WriteLineUndindented("#else");
+                                        writer.WriteLine($"return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref {parentMemberAccess.Name}.{fieldName}, 1));");
+                                        writer.WriteLineUndindented("#endif");
+                                    }
+                                }
+                            }
+
+                            writer.WriteLine();
+                        }
+                    }
+                }
 
                 foreach (ApiType nestedTypeToGenerate in structType.NestedTypes)
                 {
@@ -965,7 +1099,8 @@ public static class Program
     {
         if (constant.Name == "_FACDXGI" ||
             constant.Name == "DXGI_FORMAT_DEFINED" ||
-            constant.Name == "D3D11_FLOAT32_MAX")
+            constant.Name == "D3D11_FLOAT32_MAX" ||
+            constant.Name.StartsWith("D3DX11_"))
         {
             return true;
         }
@@ -999,8 +1134,15 @@ public static class Program
         string[] parts = typeName.Split(new[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
 
         var sb = new StringBuilder();
-        foreach (string part in parts)
+        for (int i = 0; i < parts.Length; i++)
         {
+            string part = parts[i];
+
+            if (i == 0 && s_ignoredStartParts.Contains(part))
+            {
+                continue;
+            }
+
             if (s_ignoredParts.Contains(part))
             {
                 continue;
@@ -1029,9 +1171,9 @@ public static class Program
                 else
                 {
                     sb.Append(char.ToUpper(part[0]));
-                    for (int i = 1; i < part.Length; i++)
+                    for (int j = 1; j < part.Length; j++)
                     {
-                        sb.Append(char.ToLower(part[i]));
+                        sb.Append(char.ToLower(part[j]));
                     }
                 }
             }
@@ -1077,12 +1219,17 @@ public static class Program
             sb.Append('P');
         }
 
-        int partIndex = 0;
-        foreach (string part in parts)
+        for (int i = 0; i < parts.Length; i++)
         {
+            string part = parts[i];
+
+            if (i == 0 && s_ignoredStartParts.Contains(part))
+            {
+                continue;
+            }
+
             if (s_ignoredParts.Contains(part))
             {
-                partIndex++;
                 continue;
             }
 
@@ -1172,9 +1319,9 @@ public static class Program
                     else
                     {
                         sb.Append(char.ToUpper(part[0]));
-                        for (int i = 1; i < part.Length; i++)
+                        for (int j = 1; j < part.Length; j++)
                         {
-                            sb.Append(char.ToLower(part[i]));
+                            sb.Append(char.ToLower(part[j]));
                         }
                     }
                 }
@@ -1182,16 +1329,19 @@ public static class Program
 
             if (appendUnderscore)
             {
-                if (partIndex < parts.Length - 1)
+                if (i < parts.Length - 1)
                 {
                     sb.Append('_');
                 }
-
-                partIndex++;
             }
         }
 
         string prettyName = sb.ToString();
+        if (string.IsNullOrEmpty(prettyName))
+        {
+            return parts[0];
+        }
+
         return (char.IsNumber(prettyName[0])) ? "_" + prettyName : prettyName;
     }
 

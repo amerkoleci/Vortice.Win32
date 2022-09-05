@@ -500,9 +500,6 @@ public static partial class Apis
 	public const uint D3D11_TRACE_MISC_GS_CUT_STREAM = 16;
 	public const uint D3D11_TRACE_MISC_HALT = 32;
 	public const uint D3D11_TRACE_MISC_MESSAGE = 64;
-	public const uint D3DX11_FFT_MAX_PRECOMPUTE_BUFFERS = 4;
-	public const uint D3DX11_FFT_MAX_TEMP_BUFFERS = 4;
-	public const uint D3DX11_FFT_MAX_DIMENSIONS = 32;
 }
 
 #region Enums
@@ -674,7 +671,7 @@ public enum Usage : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG"]/*' />
 /// <unmanaged>D3D11_BIND_FLAG</unmanaged>
 [Flags]
-public enum BindFlag : uint
+public enum BindFlags : uint
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_VERTEX_BUFFER"]/*' />
@@ -712,7 +709,7 @@ public enum BindFlag : uint
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CPU_ACCESS_FLAG"]/*' />
 /// <unmanaged>D3D11_CPU_ACCESS_FLAG</unmanaged>
 [Flags]
-public enum CpuAccessFlag : uint
+public enum CpuAccessFlags : uint
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CPU_ACCESS_FLAG::D3D11_CPU_ACCESS_WRITE"]/*' />
@@ -726,7 +723,7 @@ public enum CpuAccessFlag : uint
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG"]/*' />
 /// <unmanaged>D3D11_RESOURCE_MISC_FLAG</unmanaged>
 [Flags]
-public enum ResourceMiscFlag : uint
+public enum ResourceMiscFlags : uint
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_GENERATE_MIPS"]/*' />
@@ -812,7 +809,7 @@ public enum Map : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP_FLAG"]/*' />
 /// <unmanaged>D3D11_MAP_FLAG</unmanaged>
 [Flags]
-public enum MapFlag : int
+public enum MapFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP_FLAG::D3D11_MAP_FLAG_DO_NOT_WAIT"]/*' />
@@ -839,10 +836,10 @@ public enum ClearFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CLEAR_FLAG::D3D11_CLEAR_DEPTH"]/*' />
 	/// <unmanaged>D3D11_CLEAR_DEPTH</unmanaged>
-	D3D11_CLEAR_DEPTH = 1,
+	Depth = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CLEAR_FLAG::D3D11_CLEAR_STENCIL"]/*' />
 	/// <unmanaged>D3D11_CLEAR_STENCIL</unmanaged>
-	D3D11_CLEAR_STENCIL = 2,
+	Stencil = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC"]/*' />
@@ -851,28 +848,28 @@ public enum ComparisonFunc : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_NEVER"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_NEVER</unmanaged>
-	D3D11_COMPARISON_NEVER = 1,
+	Never = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_LESS"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_LESS</unmanaged>
-	D3D11_COMPARISON_LESS = 2,
+	Less = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_EQUAL"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_EQUAL</unmanaged>
-	D3D11_COMPARISON_EQUAL = 3,
+	Equal = 3,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_LESS_EQUAL"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_LESS_EQUAL</unmanaged>
-	D3D11_COMPARISON_LESS_EQUAL = 4,
+	LessEqual = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_GREATER"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_GREATER</unmanaged>
-	D3D11_COMPARISON_GREATER = 5,
+	Greater = 5,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_NOT_EQUAL"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_NOT_EQUAL</unmanaged>
-	D3D11_COMPARISON_NOT_EQUAL = 6,
+	NotEqual = 6,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_GREATER_EQUAL"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_GREATER_EQUAL</unmanaged>
-	D3D11_COMPARISON_GREATER_EQUAL = 7,
+	GreaterEqual = 7,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_ALWAYS"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_ALWAYS</unmanaged>
-	D3D11_COMPARISON_ALWAYS = 8,
+	Always = 8,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_WRITE_MASK"]/*' />
@@ -1059,10 +1056,10 @@ public enum DsvFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG::D3D11_DSV_READ_ONLY_DEPTH"]/*' />
 	/// <unmanaged>D3D11_DSV_READ_ONLY_DEPTH</unmanaged>
-	D3D11_DSV_READ_ONLY_DEPTH = 1,
+	ReadOnlyDepth = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG::D3D11_DSV_READ_ONLY_STENCIL"]/*' />
 	/// <unmanaged>D3D11_DSV_READ_ONLY_STENCIL</unmanaged>
-	D3D11_DSV_READ_ONLY_STENCIL = 2,
+	ReadOnlyStencil = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG"]/*' />
@@ -1232,19 +1229,19 @@ public enum TextureAddressMode : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_WRAP"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_WRAP</unmanaged>
-	D3D11_TEXTURE_ADDRESS_WRAP = 1,
+	Wrap = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_MIRROR"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_MIRROR</unmanaged>
-	D3D11_TEXTURE_ADDRESS_MIRROR = 2,
+	Mirror = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_CLAMP"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_CLAMP</unmanaged>
-	D3D11_TEXTURE_ADDRESS_CLAMP = 3,
+	Clamp = 3,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_BORDER"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_BORDER</unmanaged>
-	D3D11_TEXTURE_ADDRESS_BORDER = 4,
+	Border = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_MIRROR_ONCE"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_MIRROR_ONCE</unmanaged>
-	D3D11_TEXTURE_ADDRESS_MIRROR_ONCE = 5,
+	MirrorOnce = 5,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FORMAT_SUPPORT"]/*' />
@@ -1396,7 +1393,7 @@ public enum AsyncGetdataFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG::D3D11_ASYNC_GETDATA_DONOTFLUSH"]/*' />
 	/// <unmanaged>D3D11_ASYNC_GETDATA_DONOTFLUSH</unmanaged>
-	D3D11_ASYNC_GETDATA_DONOTFLUSH = 1,
+	Donotflush = 1,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY"]/*' />
@@ -1461,7 +1458,7 @@ public enum QueryMiscFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG::D3D11_QUERY_MISC_PREDICATEHINT"]/*' />
 	/// <unmanaged>D3D11_QUERY_MISC_PREDICATEHINT</unmanaged>
-	D3D11_QUERY_MISC_PREDICATEHINT = 1,
+	Predicatehint = 1,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER"]/*' />
@@ -1497,10 +1494,10 @@ public enum StandardMultisampleQualityLevels : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D11_STANDARD_MULTISAMPLE_PATTERN"]/*' />
 	/// <unmanaged>D3D11_STANDARD_MULTISAMPLE_PATTERN</unmanaged>
-	D3D11_STANDARD_MULTISAMPLE_PATTERN = -1,
+	Standard = -1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D11_CENTER_MULTISAMPLE_PATTERN"]/*' />
 	/// <unmanaged>D3D11_CENTER_MULTISAMPLE_PATTERN</unmanaged>
-	D3D11_CENTER_MULTISAMPLE_PATTERN = -2,
+	Center = -2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE"]/*' />
@@ -1509,10 +1506,10 @@ public enum DeviceContextType : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE::D3D11_DEVICE_CONTEXT_IMMEDIATE"]/*' />
 	/// <unmanaged>D3D11_DEVICE_CONTEXT_IMMEDIATE</unmanaged>
-	D3D11_DEVICE_CONTEXT_IMMEDIATE = 0,
+	Immediate = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE::D3D11_DEVICE_CONTEXT_DEFERRED"]/*' />
 	/// <unmanaged>D3D11_DEVICE_CONTEXT_DEFERRED</unmanaged>
-	D3D11_DEVICE_CONTEXT_DEFERRED = 1,
+	Deferred = 1,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE"]/*' />
@@ -1590,10 +1587,10 @@ public enum ShaderMinPrecisionSupport : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_10_BIT"]/*' />
 	/// <unmanaged>D3D11_SHADER_MIN_PRECISION_10_BIT</unmanaged>
-	D3D11_SHADER_MIN_PRECISION_10_BIT = 1,
+	Bit10 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_16_BIT"]/*' />
 	/// <unmanaged>D3D11_SHADER_MIN_PRECISION_16_BIT</unmanaged>
-	D3D11_SHADER_MIN_PRECISION_16_BIT = 2,
+	Bit16 = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER"]/*' />
@@ -1602,7 +1599,7 @@ public enum TiledResourcesTier : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER::D3D11_TILED_RESOURCES_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_TILED_RESOURCES_NOT_SUPPORTED</unmanaged>
-	D3D11_TILED_RESOURCES_NOT_SUPPORTED = 0,
+	NotSupported = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER::D3D11_TILED_RESOURCES_TIER_1"]/*' />
 	/// <unmanaged>D3D11_TILED_RESOURCES_TIER_1</unmanaged>
 	_1 = 1,
@@ -1620,7 +1617,7 @@ public enum ConservativeRasterizationTier : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_TIER::D3D11_CONSERVATIVE_RASTERIZATION_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_NOT_SUPPORTED</unmanaged>
-	D3D11_CONSERVATIVE_RASTERIZATION_NOT_SUPPORTED = 0,
+	NotSupported = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_TIER::D3D11_CONSERVATIVE_RASTERIZATION_TIER_1"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_TIER_1</unmanaged>
 	_1 = 1,
@@ -1637,16 +1634,15 @@ public enum ConservativeRasterizationTier : int
 [Flags]
 public enum ShaderCacheSupportFlags : int
 {
-	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_NONE"]/*' />
 	/// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_NONE</unmanaged>
-	D3D11_SHADER_CACHE_SUPPORT_NONE = 0,
+	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE"]/*' />
 	/// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE</unmanaged>
-	D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE = 1,
+	AutomaticInprocCache = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE"]/*' />
 	/// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE</unmanaged>
-	D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE = 2,
+	AutomaticDiskCache = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER"]/*' />
@@ -1655,16 +1651,16 @@ public enum SharedResourceTier : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_0"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_0</unmanaged>
-	_0 = 0,
+	Tier0 = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_1"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_1</unmanaged>
-	_1 = 1,
+	Tier1 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_2"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_2</unmanaged>
-	_2 = 2,
+	Tier2 = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_3"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_3</unmanaged>
-	_3 = 3,
+	Tier3 = 3,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE"]/*' />
@@ -1673,31 +1669,31 @@ public enum VideoDecoderBufferType : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_PICTURE_PARAMETERS"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_PICTURE_PARAMETERS</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_PICTURE_PARAMETERS = 0,
+	PictureParameters = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_MACROBLOCK_CONTROL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_MACROBLOCK_CONTROL</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_MACROBLOCK_CONTROL = 1,
+	MacroblockControl = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_RESIDUAL_DIFFERENCE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_RESIDUAL_DIFFERENCE</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_RESIDUAL_DIFFERENCE = 2,
+	ResidualDifference = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_DEBLOCKING_CONTROL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_DEBLOCKING_CONTROL</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_DEBLOCKING_CONTROL = 3,
+	DeblockingControl = 3,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_INVERSE_QUANTIZATION_MATRIX"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_INVERSE_QUANTIZATION_MATRIX</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_INVERSE_QUANTIZATION_MATRIX = 4,
+	InverseQuantizationMatrix = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_SLICE_CONTROL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_SLICE_CONTROL</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_SLICE_CONTROL = 5,
+	SliceControl = 5,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_BITSTREAM"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_BITSTREAM</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_BITSTREAM = 6,
+	Bitstream = 6,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_MOTION_VECTOR"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_MOTION_VECTOR</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_MOTION_VECTOR = 7,
+	MotionVector = 7,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN</unmanaged>
-	D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN = 8,
+	FilmGrain = 8,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT"]/*' />
@@ -2132,13 +2128,13 @@ public enum VideoProcessorStereoFlipMode : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE::D3D11_VIDEO_PROCESSOR_STEREO_FLIP_NONE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_FLIP_NONE</unmanaged>
-	D3D11_VIDEO_PROCESSOR_STEREO_FLIP_NONE = 0,
+	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE::D3D11_VIDEO_PROCESSOR_STEREO_FLIP_FRAME0"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_FLIP_FRAME0</unmanaged>
-	D3D11_VIDEO_PROCESSOR_STEREO_FLIP_FRAME0 = 1,
+	Frame0 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE::D3D11_VIDEO_PROCESSOR_STEREO_FLIP_FRAME1"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_FLIP_FRAME1</unmanaged>
-	D3D11_VIDEO_PROCESSOR_STEREO_FLIP_FRAME1 = 2,
+	Frame1 = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION"]/*' />
@@ -2165,13 +2161,13 @@ public enum AuthenticatedChannelType : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CHANNEL_TYPE::D3D11_AUTHENTICATED_CHANNEL_D3D11"]/*' />
 	/// <unmanaged>D3D11_AUTHENTICATED_CHANNEL_D3D11</unmanaged>
-	D3D11_AUTHENTICATED_CHANNEL_D3D11 = 1,
+	D3D11 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CHANNEL_TYPE::D3D11_AUTHENTICATED_CHANNEL_DRIVER_SOFTWARE"]/*' />
 	/// <unmanaged>D3D11_AUTHENTICATED_CHANNEL_DRIVER_SOFTWARE</unmanaged>
-	D3D11_AUTHENTICATED_CHANNEL_DRIVER_SOFTWARE = 2,
+	DriverSoftware = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CHANNEL_TYPE::D3D11_AUTHENTICATED_CHANNEL_DRIVER_HARDWARE"]/*' />
 	/// <unmanaged>D3D11_AUTHENTICATED_CHANNEL_DRIVER_HARDWARE</unmanaged>
-	D3D11_AUTHENTICATED_CHANNEL_DRIVER_HARDWARE = 3,
+	DriverHardware = 3,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE"]/*' />
@@ -2210,22 +2206,22 @@ public enum BusType : int
 	Agp = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE::D3D11_BUS_IMPL_MODIFIER_INSIDE_OF_CHIPSET"]/*' />
 	/// <unmanaged>D3D11_BUS_IMPL_MODIFIER_INSIDE_OF_CHIPSET</unmanaged>
-	D3D11_BUS_IMPL_MODIFIER_INSIDE_OF_CHIPSET = 65536,
+	ImplModifierInsideOfChipset = 65536,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE::D3D11_BUS_IMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_CHIP"]/*' />
 	/// <unmanaged>D3D11_BUS_IMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_CHIP</unmanaged>
-	D3D11_BUS_IMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_CHIP = 131072,
+	ImplModifierTracksOnMotherBoardToChip = 131072,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE::D3D11_BUS_IMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_SOCKET"]/*' />
 	/// <unmanaged>D3D11_BUS_IMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_SOCKET</unmanaged>
-	D3D11_BUS_IMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_SOCKET = 196608,
+	ImplModifierTracksOnMotherBoardToSocket = 196608,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE::D3D11_BUS_IMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR"]/*' />
 	/// <unmanaged>D3D11_BUS_IMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR</unmanaged>
-	D3D11_BUS_IMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR = 262144,
+	ImplModifierDaughterBoardConnector = 262144,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE::D3D11_BUS_IMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR_INSIDE_OF_NUAE"]/*' />
 	/// <unmanaged>D3D11_BUS_IMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR_INSIDE_OF_NUAE</unmanaged>
-	D3D11_BUS_IMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR_INSIDE_OF_NUAE = 327680,
+	ImplModifierDaughterBoardConnectorInsideOfNuae = 327680,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE::D3D11_BUS_IMPL_MODIFIER_NON_STANDARD"]/*' />
 	/// <unmanaged>D3D11_BUS_IMPL_MODIFIER_NON_STANDARD</unmanaged>
-	D3D11_BUS_IMPL_MODIFIER_NON_STANDARD = -2147483648,
+	ImplModifierNonStandard = -2147483648,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION"]/*' />
@@ -2275,31 +2271,31 @@ public enum CreateDeviceFlag : uint
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_SINGLETHREADED"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_SINGLETHREADED</unmanaged>
-	D3D11_CREATE_DEVICE_SINGLETHREADED = 1,
+	Singlethreaded = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DEBUG"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_DEBUG</unmanaged>
-	D3D11_CREATE_DEVICE_DEBUG = 2,
+	Debug = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_SWITCH_TO_REF"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_SWITCH_TO_REF</unmanaged>
-	D3D11_CREATE_DEVICE_SWITCH_TO_REF = 4,
+	SwitchToRef = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_PREVENT_INTERNAL_THREADING_OPTIMIZATIONS"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_PREVENT_INTERNAL_THREADING_OPTIMIZATIONS</unmanaged>
-	D3D11_CREATE_DEVICE_PREVENT_INTERNAL_THREADING_OPTIMIZATIONS = 8,
+	PreventInternalThreadingOptimizations = 8,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_BGRA_SUPPORT"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_BGRA_SUPPORT</unmanaged>
-	D3D11_CREATE_DEVICE_BGRA_SUPPORT = 32,
+	BgraSupport = 32,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DEBUGGABLE"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_DEBUGGABLE</unmanaged>
-	D3D11_CREATE_DEVICE_DEBUGGABLE = 64,
+	Debuggable = 64,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_PREVENT_ALTERING_LAYER_SETTINGS_FROM_REGISTRY"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_PREVENT_ALTERING_LAYER_SETTINGS_FROM_REGISTRY</unmanaged>
-	D3D11_CREATE_DEVICE_PREVENT_ALTERING_LAYER_SETTINGS_FROM_REGISTRY = 128,
+	PreventAlteringLayerSettingsFromRegistry = 128,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT</unmanaged>
-	D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT = 256,
+	DisableGpuTimeout = 256,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_VIDEO_SUPPORT"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_VIDEO_SUPPORT</unmanaged>
-	D3D11_CREATE_DEVICE_VIDEO_SUPPORT = 2048,
+	VideoSupport = 2048,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RLDO_FLAGS"]/*' />
@@ -2310,13 +2306,13 @@ public enum RldoFlags : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RLDO_FLAGS::D3D11_RLDO_SUMMARY"]/*' />
 	/// <unmanaged>D3D11_RLDO_SUMMARY</unmanaged>
-	D3D11_RLDO_SUMMARY = 1,
+	Summary = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RLDO_FLAGS::D3D11_RLDO_DETAIL"]/*' />
 	/// <unmanaged>D3D11_RLDO_DETAIL</unmanaged>
-	D3D11_RLDO_DETAIL = 2,
+	Detail = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RLDO_FLAGS::D3D11_RLDO_IGNORE_INTERNAL"]/*' />
 	/// <unmanaged>D3D11_RLDO_IGNORE_INTERNAL</unmanaged>
-	D3D11_RLDO_IGNORE_INTERNAL = 4,
+	IgnoreInternal = 4,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE"]/*' />
@@ -2355,49 +2351,49 @@ public enum ShaderTrackingOptions : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_IGNORE"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_IGNORE</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_IGNORE = 0,
+	OptionIgnore = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_UNINITIALIZED"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_UNINITIALIZED</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_UNINITIALIZED = 1,
+	OptionTrackUninitialized = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_RAW"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_RAW</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_RAW = 2,
+	OptionTrackRaw = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_WAR"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_WAR</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_WAR = 4,
+	OptionTrackWar = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_WAW"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_WAW</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_WAW = 8,
+	OptionTrackWaw = 8,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_ALLOW_SAME"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_ALLOW_SAME</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_ALLOW_SAME = 16,
+	OptionAllowSame = 16,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_ATOMIC_CONSISTENCY"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_ATOMIC_CONSISTENCY</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_ATOMIC_CONSISTENCY = 32,
+	OptionTrackAtomicConsistency = 32,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_RAW_ACROSS_THREADGROUPS"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_RAW_ACROSS_THREADGROUPS</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_RAW_ACROSS_THREADGROUPS = 64,
+	OptionTrackRawAcrossThreadgroups = 64,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_WAR_ACROSS_THREADGROUPS"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_WAR_ACROSS_THREADGROUPS</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_WAR_ACROSS_THREADGROUPS = 128,
+	OptionTrackWarAcrossThreadgroups = 128,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_WAW_ACROSS_THREADGROUPS"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_WAW_ACROSS_THREADGROUPS</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_WAW_ACROSS_THREADGROUPS = 256,
+	OptionTrackWawAcrossThreadgroups = 256,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_TRACK_ATOMIC_CONSISTENCY_ACROSS_THREADGROUPS"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_TRACK_ATOMIC_CONSISTENCY_ACROSS_THREADGROUPS</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_TRACK_ATOMIC_CONSISTENCY_ACROSS_THREADGROUPS = 512,
+	OptionTrackAtomicConsistencyAcrossThreadgroups = 512,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_UAV_SPECIFIC_FLAGS"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_UAV_SPECIFIC_FLAGS</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_UAV_SPECIFIC_FLAGS = 960,
+	OptionUavSpecificFlags = 960,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_ALL_HAZARDS"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_ALL_HAZARDS</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_ALL_HAZARDS = 1006,
+	OptionAllHazards = 1006,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_ALL_HAZARDS_ALLOWING_SAME"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_ALL_HAZARDS_ALLOWING_SAME</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_ALL_HAZARDS_ALLOWING_SAME = 1022,
+	OptionAllHazardsAllowingSame = 1022,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_ALL_OPTIONS"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_ALL_OPTIONS</unmanaged>
-	D3D11_SHADER_TRACKING_OPTION_ALL_OPTIONS = 1023,
+	OptionAllOptions = 1023,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_CATEGORY"]/*' />
@@ -3915,7 +3911,7 @@ public enum MessageId : int
 	CreateresourceNoAutogenForVolumes = 1048616,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERESOURCE_DXGI_FORMAT_R8G8B8A8_CANNOT_BE_SHARED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERESOURCE_DXGI_FORMAT_R8G8B8A8_CANNOT_BE_SHARED</unmanaged>
-	CreateresourceFormatR8g8b8a8CannotBeShared = 1048617,
+	CreateresourceDxgiFormatR8g8b8a8CannotBeShared = 1048617,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VSSHADERRESOURCES_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VSSHADERRESOURCES_NOT_SUPPORTED</unmanaged>
 	VsshaderresourcesNotSupported = 1048618,
@@ -3963,7 +3959,7 @@ public enum MessageId : int
 	DeviceRssetscissorrectsNegativescissor = 1048632,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_SLOT_ZERO_MUST_BE_D3D10_INPUT_PER_VERTEX_DATA"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_SLOT_ZERO_MUST_BE_D3D10_INPUT_PER_VERTEX_DATA</unmanaged>
-	SlotZeroMustBeInputPerVertexData = 1048633,
+	SlotZeroMustBeD3d10InputPerVertexData = 1048633,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERESOURCE_NON_POW_2_MIPMAP"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERESOURCE_NON_POW_2_MIPMAP</unmanaged>
 	CreateresourceNonPow2Mipmap = 1048634,
@@ -6443,10 +6439,10 @@ public enum CopyFlags : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS::D3D11_COPY_NO_OVERWRITE"]/*' />
 	/// <unmanaged>D3D11_COPY_NO_OVERWRITE</unmanaged>
-	D3D11_COPY_NO_OVERWRITE = 1,
+	NoOverwrite = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS::D3D11_COPY_DISCARD"]/*' />
 	/// <unmanaged>D3D11_COPY_DISCARD</unmanaged>
-	D3D11_COPY_DISCARD = 2,
+	Discard = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LOGIC_OP"]/*' />
@@ -6511,7 +6507,7 @@ public enum _1CreateDeviceContextStateFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG::D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED"]/*' />
 	/// <unmanaged>D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED</unmanaged>
-	D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED = 1,
+	Singlethreaded = 1,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS"]/*' />
@@ -6541,16 +6537,16 @@ public enum VideoProcessorBehaviorHints : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINTS::D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_ROTATION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_ROTATION</unmanaged>
-	D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_ROTATION = 1,
+	HintMultiplaneOverlayRotation = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINTS::D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_RESIZE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_RESIZE</unmanaged>
-	D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_RESIZE = 2,
+	HintMultiplaneOverlayResize = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINTS::D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_COLOR_SPACE_CONVERSION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_COLOR_SPACE_CONVERSION</unmanaged>
-	D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_COLOR_SPACE_CONVERSION = 4,
+	HintMultiplaneOverlayColorSpaceConversion = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINTS::D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_TRIPLE_BUFFER_OUTPUT"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_TRIPLE_BUFFER_OUTPUT</unmanaged>
-	D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_TRIPLE_BUFFER_OUTPUT = 8,
+	HintTripleBufferOutput = 8,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS"]/*' />
@@ -6576,7 +6572,7 @@ public enum TileMappingFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG::D3D11_TILE_MAPPING_NO_OVERWRITE"]/*' />
 	/// <unmanaged>D3D11_TILE_MAPPING_NO_OVERWRITE</unmanaged>
-	D3D11_TILE_MAPPING_NO_OVERWRITE = 1,
+	NoOverwrite = 1,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_RANGE_FLAG"]/*' />
@@ -6587,13 +6583,13 @@ public enum TileRangeFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_RANGE_FLAG::D3D11_TILE_RANGE_NULL"]/*' />
 	/// <unmanaged>D3D11_TILE_RANGE_NULL</unmanaged>
-	D3D11_TILE_RANGE_NULL = 1,
+	Null = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_RANGE_FLAG::D3D11_TILE_RANGE_SKIP"]/*' />
 	/// <unmanaged>D3D11_TILE_RANGE_SKIP</unmanaged>
-	D3D11_TILE_RANGE_SKIP = 2,
+	Skip = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_RANGE_FLAG::D3D11_TILE_RANGE_REUSE_SINGLE_TILE"]/*' />
 	/// <unmanaged>D3D11_TILE_RANGE_REUSE_SINGLE_TILE</unmanaged>
-	D3D11_TILE_RANGE_REUSE_SINGLE_TILE = 4,
+	ReuseSingleTile = 4,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG"]/*' />
@@ -6604,7 +6600,7 @@ public enum CheckMultisampleQualityLevelsFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG::D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_TILED_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_TILED_RESOURCE</unmanaged>
-	D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_TILED_RESOURCE = 1,
+	TiledResource = 1,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG"]/*' />
@@ -6615,13 +6611,13 @@ public enum TileCopyFlag : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_NO_OVERWRITE"]/*' />
 	/// <unmanaged>D3D11_TILE_COPY_NO_OVERWRITE</unmanaged>
-	D3D11_TILE_COPY_NO_OVERWRITE = 1,
+	NoOverwrite = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_TILE_COPY_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE</unmanaged>
-	D3D11_TILE_COPY_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE = 2,
+	LinearBufferToSwizzledTiledResource = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER"]/*' />
 	/// <unmanaged>D3D11_TILE_COPY_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER</unmanaged>
-	D3D11_TILE_COPY_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER = 4,
+	SwizzledTiledResourceToLinearBuffer = 4,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE"]/*' />
@@ -6735,28 +6731,28 @@ public enum VideoDecoderHistogramComponentFlags : uint
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_NONE</unmanaged>
-	D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_NONE = 0,
+	FlagNone = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_Y"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_Y</unmanaged>
-	D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_Y = 1,
+	FlagY = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_U"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_U</unmanaged>
-	D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_U = 2,
+	FlagU = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_V"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_V</unmanaged>
-	D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_V = 4,
+	FlagV = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_R"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_R</unmanaged>
-	D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_R = 1,
+	FlagR = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_G"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_G</unmanaged>
-	D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_G = 2,
+	FlagG = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_B"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_B</unmanaged>
-	D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_B = 4,
+	FlagB = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_A"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_A</unmanaged>
-	D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_A = 8,
+	FlagA = 8,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS"]/*' />
@@ -6767,7 +6763,7 @@ public enum CryptoSessionKeyExchangeFlags : uint
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS::D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAG_NONE</unmanaged>
-	D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAG_NONE = 0,
+	FlagNone = 0,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE"]/*' />
@@ -7055,6 +7051,30 @@ public enum D3dx11FftCreateFlag : int
 
 #region Generated Enums
 #endregion Generated Enums
+
+#region Unions
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS"]/*' />
+/// <unmanaged>D3D11_AUTHENTICATED_PROTECTION_FLAGS</unmanaged>
+[StructLayout(LayoutKind.Explicit)]
+public partial struct AuthenticatedProtectionFlags
+{
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS::Flags"]/*' />
+	[FieldOffset(0)]
+	public _Flags_e__Struct Flags;
+
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS::Value"]/*' />
+	[FieldOffset(0)]
+	public uint Value;
+
+	public partial struct _Flags_e__Struct
+	{
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Flags_e__Struct::_bitfield"]/*' />
+		public uint _bitfield;
+	}
+
+}
+
+#endregion Unions
 
 #region Structs
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INPUT_ELEMENT_DESC"]/*' />
@@ -7381,13 +7401,13 @@ public partial struct BufferDescription
 	public Usage Usage;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::BindFlags"]/*' />
-	public uint BindFlags;
+	public BindFlags BindFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::CPUAccessFlags"]/*' />
-	public uint CPUAccessFlags;
+	public CpuAccessFlags CPUAccessFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::MiscFlags"]/*' />
-	public uint MiscFlags;
+	public ResourceMiscFlags MiscFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::StructureByteStride"]/*' />
 	public uint StructureByteStride;
@@ -7413,13 +7433,13 @@ public partial struct Texture1DDescription
 	public Usage Usage;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE1D_DESC::BindFlags"]/*' />
-	public uint BindFlags;
+	public BindFlags BindFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE1D_DESC::CPUAccessFlags"]/*' />
-	public uint CPUAccessFlags;
+	public CpuAccessFlags CPUAccessFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE1D_DESC::MiscFlags"]/*' />
-	public uint MiscFlags;
+	public ResourceMiscFlags MiscFlags;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC"]/*' />
@@ -7448,13 +7468,13 @@ public partial struct Texture2DDescription
 	public Usage Usage;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC::BindFlags"]/*' />
-	public BindFlag BindFlags;
+	public BindFlags BindFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC::CPUAccessFlags"]/*' />
-	public CpuAccessFlag CPUAccessFlags;
+	public CpuAccessFlags CPUAccessFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC::MiscFlags"]/*' />
-	public ResourceMiscFlag MiscFlags;
+	public ResourceMiscFlags MiscFlags;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE3D_DESC"]/*' />
@@ -7480,13 +7500,13 @@ public partial struct Texture3DDescription
 	public Usage Usage;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE3D_DESC::BindFlags"]/*' />
-	public uint BindFlags;
+	public BindFlags BindFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE3D_DESC::CPUAccessFlags"]/*' />
-	public uint CPUAccessFlags;
+	public CpuAccessFlags CPUAccessFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE3D_DESC::MiscFlags"]/*' />
-	public uint MiscFlags;
+	public ResourceMiscFlags MiscFlags;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_SRV"]/*' />
@@ -7499,21 +7519,83 @@ public partial struct BufferSrv
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_SRV::Anonymous2"]/*' />
 	public _Anonymous2_e__Union Anonymous2;
 
+	[UnscopedRef]
+	public ref uint FirstElement
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous1.FirstElement;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.FirstElement, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref uint ElementOffset
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous1.ElementOffset;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.ElementOffset, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref uint NumElements
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous2.NumElements;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.NumElements, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref uint ElementWidth
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous2.ElementWidth;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.ElementWidth, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous1_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::FirstElement"]/*' />
+		[FieldOffset(0)]
 		public uint FirstElement;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::ElementOffset"]/*' />
+		[FieldOffset(0)]
 		public uint ElementOffset;
 	}
 
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous2_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::NumElements"]/*' />
+		[FieldOffset(0)]
 		public uint NumElements;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::ElementWidth"]/*' />
+		[FieldOffset(0)]
 		public uint ElementWidth;
 	}
 
@@ -7660,39 +7742,205 @@ public partial struct ShaderResourceViewDescription
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_RESOURCE_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.BufferSrv Buffer
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Buffer;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dSrv Texture1D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dArraySrv Texture1DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dSrv Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dArraySrv Texture2DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsSrv Texture2DMS
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMS;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMS, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsArraySrv Texture2DMSArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMSArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMSArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex3dSrv Texture3D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture3D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.TexcubeSrv TextureCube
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.TextureCube;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.TextureCube, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.TexcubeArraySrv TextureCubeArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.TextureCubeArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.TextureCubeArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.BufferExtendedSrv BufferEx
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.BufferEx;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.BufferEx, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		[FieldOffset(0)]
 		public BufferSrv Buffer;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		[FieldOffset(0)]
 		public Tex1dSrv Texture1D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex1dArraySrv Texture1DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dSrv Texture2D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dArraySrv Texture2DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsSrv Texture2DMS;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsArraySrv Texture2DMSArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		[FieldOffset(0)]
 		public Tex3dSrv Texture3D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCube"]/*' />
+		[FieldOffset(0)]
 		public TexcubeSrv TextureCube;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCubeArray"]/*' />
+		[FieldOffset(0)]
 		public TexcubeArraySrv TextureCubeArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::BufferEx"]/*' />
+		[FieldOffset(0)]
 		public BufferExtendedSrv BufferEx;
 	}
 
@@ -7708,21 +7956,83 @@ public partial struct BufferRtv
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_RTV::Anonymous2"]/*' />
 	public _Anonymous2_e__Union Anonymous2;
 
+	[UnscopedRef]
+	public ref uint NumElements
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous2.NumElements;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.NumElements, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref uint ElementWidth
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous2.ElementWidth;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous2.ElementWidth, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref uint FirstElement
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous1.FirstElement;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.FirstElement, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref uint ElementOffset
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous1.ElementOffset;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous1.ElementOffset, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous2_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::NumElements"]/*' />
+		[FieldOffset(0)]
 		public uint NumElements;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::ElementWidth"]/*' />
+		[FieldOffset(0)]
 		public uint ElementWidth;
 	}
 
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous1_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::FirstElement"]/*' />
+		[FieldOffset(0)]
 		public uint FirstElement;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::ElementOffset"]/*' />
+		[FieldOffset(0)]
 		public uint ElementOffset;
 	}
 
@@ -7818,30 +8128,151 @@ public partial struct RenderTargetViewDescription
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.BufferRtv Buffer
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Buffer;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dRtv Texture1D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dArrayRtv Texture1DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dRtv Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dArrayRtv Texture2DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsRtv Texture2DMS
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMS;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMS, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsArrayRtv Texture2DMSArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMSArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMSArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex3dRtv Texture3D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture3D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		[FieldOffset(0)]
 		public BufferRtv Buffer;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		[FieldOffset(0)]
 		public Tex1dRtv Texture1D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex1dArrayRtv Texture1DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dRtv Texture2D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dArrayRtv Texture2DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsRtv Texture2DMS;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsArrayRtv Texture2DMSArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		[FieldOffset(0)]
 		public Tex3dRtv Texture3D;
 	}
 
@@ -7926,24 +8357,115 @@ public partial struct DepthStencilViewDescription
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dDsv Texture1D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dArrayDsv Texture1DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dDsv Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dArrayDsv Texture2DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsDsv Texture2DMS
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMS;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMS, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsArrayDsv Texture2DMSArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMSArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMSArray, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		[FieldOffset(0)]
 		public Tex1dDsv Texture1D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex1dArrayDsv Texture1DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dDsv Texture2D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dArrayDsv Texture2DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsDsv Texture2DMS;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsArrayDsv Texture2DMSArray;
 	}
 
@@ -8034,24 +8556,115 @@ public partial struct UnorderedAccessViewDescription
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.BufferUav Buffer
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Buffer;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dUav Texture1D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dArrayUav Texture1DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dUav Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dArrayUav Texture2DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex3dUav Texture3D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture3D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		[FieldOffset(0)]
 		public BufferUav Buffer;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		[FieldOffset(0)]
 		public Tex1dUav Texture1D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex1dArrayUav Texture1DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dUav Texture2D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dArrayUav Texture2DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		[FieldOffset(0)]
 		public Tex3dUav Texture3D;
 	}
 
@@ -8244,7 +8857,7 @@ public partial struct FeatureDataFormatSupport
 	public Graphics.Dxgi.Common.Format InFormat;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT::OutFormatSupport"]/*' />
-	public uint OutFormatSupport;
+	public FormatSupport OutFormatSupport;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT2"]/*' />
@@ -8255,12 +8868,12 @@ public partial struct FeatureDataFormatSupport2
 	public Graphics.Dxgi.Common.Format InFormat;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT2::OutFormatSupport2"]/*' />
-	public uint OutFormatSupport2;
+	public FormatSupport2 OutFormatSupport2;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS</unmanaged>
-public partial struct FeatureDataXHardwareOptions
+public partial struct FeatureDataD3d10XHardwareOptions
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
 	public Bool32 ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x;
@@ -8268,7 +8881,7 @@ public partial struct FeatureDataXHardwareOptions
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS</unmanaged>
-public partial struct FeatureDataOptions
+public partial struct FeatureDataD3d11Options
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS::OutputMergerLogicOp"]/*' />
 	public Bool32 OutputMergerLogicOp;
@@ -8350,7 +8963,7 @@ public partial struct FeatureDataShaderMinPrecisionSupport
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS1"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS1</unmanaged>
-public partial struct FeatureDataOptions1
+public partial struct FeatureDataD3d11Options1
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS1::TiledResourcesTier"]/*' />
 	public TiledResourcesTier TiledResourcesTier;
@@ -8400,7 +9013,7 @@ public partial struct FeatureDataD3d9Options1
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS2</unmanaged>
-public partial struct FeatureDataOptions2
+public partial struct FeatureDataD3d11Options2
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::PSSpecifiedStencilRefSupported"]/*' />
 	public Bool32 PSSpecifiedStencilRefSupported;
@@ -8429,7 +9042,7 @@ public partial struct FeatureDataOptions2
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS3"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS3</unmanaged>
-public partial struct FeatureDataOptions3
+public partial struct FeatureDataD3d11Options3
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS3::VPAndRTArrayIndexFromAnyShaderFeedingRasterizer"]/*' />
 	public Bool32 VPAndRTArrayIndexFromAnyShaderFeedingRasterizer;
@@ -8467,7 +9080,7 @@ public partial struct FeatureDataDisplayable
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS5"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS5</unmanaged>
-public partial struct FeatureDataOptions5
+public partial struct FeatureDataD3d11Options5
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS5::SharedResourceTier"]/*' />
 	public SharedResourceTier SharedResourceTier;
@@ -8823,12 +9436,43 @@ public partial struct VideoColor
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.VideoColorYcbcra YCbCr
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.YCbCr;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.YCbCr, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.VideoColorRgba RGBA
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.RGBA;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.RGBA, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::YCbCr"]/*' />
+		[FieldOffset(0)]
 		public VideoColorYcbcra YCbCr;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::RGBA"]/*' />
+		[FieldOffset(0)]
 		public VideoColorRgba RGBA;
 	}
 
@@ -8885,7 +9529,7 @@ public partial struct VideoProcessorStream
 public partial struct Omac
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_OMAC::Omac"]/*' />
-	public unsafe fixed byte OmacF[16];
+	public unsafe fixed byte Buffer[16];
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_INPUT"]/*' />
@@ -8930,7 +9574,7 @@ public partial struct AuthenticatedQueryProtectionOutput
 	public AuthenticatedQueryOutput Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT::ProtectionFlags"]/*' />
-	//public D3D11_AUTHENTICATED_PROTECTION_FLAGS ProtectionFlags;
+	public AuthenticatedProtectionFlags ProtectionFlags;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE_OUTPUT"]/*' />
@@ -9224,7 +9868,7 @@ public partial struct AuthenticatedConfigureProtectionInput
 	public AuthenticatedConfigureInput Parameters;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_PROTECTION_INPUT::Protections"]/*' />
-	//public D3D11_AUTHENTICATED_PROTECTION_FLAGS Protections;
+	public AuthenticatedProtectionFlags Protections;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT"]/*' />
@@ -9293,9 +9937,25 @@ public partial struct VideoDecoderOutputViewDescription
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dVdov Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dVdov Texture2D;
 	}
 
@@ -9325,9 +9985,25 @@ public partial struct VideoProcessorInputViewDescription
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dVpiv Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dVpiv Texture2D;
 	}
 
@@ -9365,12 +10041,43 @@ public partial struct VideoProcessorOutputViewDescription
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dVpov Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dArrayVpov Texture2DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dVpov Texture2D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dArrayVpov Texture2DArray;
 	}
 
@@ -9940,39 +10647,205 @@ public partial struct ShaderResourceViewDescription1
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_RESOURCE_VIEW_DESC1::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.BufferSrv Buffer
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Buffer;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dSrv Texture1D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dArraySrv Texture1DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dSrv1 Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dArraySrv1 Texture2DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsSrv Texture2DMS
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMS;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMS, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsArraySrv Texture2DMSArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMSArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMSArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex3dSrv Texture3D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture3D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.TexcubeSrv TextureCube
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.TextureCube;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.TextureCube, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.TexcubeArraySrv TextureCubeArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.TextureCubeArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.TextureCubeArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.BufferExtendedSrv BufferEx
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.BufferEx;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.BufferEx, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		[FieldOffset(0)]
 		public BufferSrv Buffer;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		[FieldOffset(0)]
 		public Tex1dSrv Texture1D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex1dArraySrv Texture1DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dSrv1 Texture2D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dArraySrv1 Texture2DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsSrv Texture2DMS;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsArraySrv Texture2DMSArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		[FieldOffset(0)]
 		public Tex3dSrv Texture3D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCube"]/*' />
+		[FieldOffset(0)]
 		public TexcubeSrv TextureCube;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCubeArray"]/*' />
+		[FieldOffset(0)]
 		public TexcubeArraySrv TextureCubeArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::BufferEx"]/*' />
+		[FieldOffset(0)]
 		public BufferExtendedSrv BufferEx;
 	}
 
@@ -10019,30 +10892,151 @@ public partial struct RenderTargetViewDescription1
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_VIEW_DESC1::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.BufferRtv Buffer
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Buffer;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dRtv Texture1D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dArrayRtv Texture1DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dRtv1 Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dArrayRtv1 Texture2DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsRtv Texture2DMS
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMS;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMS, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dmsArrayRtv Texture2DMSArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DMSArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMSArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex3dRtv Texture3D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture3D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		[FieldOffset(0)]
 		public BufferRtv Buffer;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		[FieldOffset(0)]
 		public Tex1dRtv Texture1D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex1dArrayRtv Texture1DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dRtv1 Texture2D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dArrayRtv1 Texture2DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsRtv Texture2DMS;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dmsArrayRtv Texture2DMSArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		[FieldOffset(0)]
 		public Tex3dRtv Texture3D;
 	}
 
@@ -10089,24 +11083,115 @@ public partial struct UnorderedAccessViewDescription1
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.BufferUav Buffer
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Buffer;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dUav Texture1D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex1dArrayUav Texture1DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture1DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dUav1 Texture2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex2dArrayUav1 Texture2DArray
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture2DArray;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.Tex3dUav Texture3D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Texture3D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		[FieldOffset(0)]
 		public BufferUav Buffer;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		[FieldOffset(0)]
 		public Tex1dUav Texture1D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex1dArrayUav Texture1DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		[FieldOffset(0)]
 		public Tex2dUav1 Texture2D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		[FieldOffset(0)]
 		public Tex2dArrayUav1 Texture2DArray;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		[FieldOffset(0)]
 		public Tex3dUav Texture3D;
 	}
 
@@ -10177,7 +11262,7 @@ public partial struct VideoDecoderBufferDescription2
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS4"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS4</unmanaged>
-public partial struct FeatureDataOptions4
+public partial struct FeatureDataD3d11Options4
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS4::ExtendedNV12SharedTextureSupported"]/*' />
 	public Bool32 ExtendedNV12SharedTextureSupported;
@@ -10679,24 +11764,115 @@ public partial struct ShaderTraceDescription
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.VertexShaderTraceDescription VertexShaderTraceDesc
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.VertexShaderTraceDesc;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.VertexShaderTraceDesc, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.HullShaderTraceDescription HullShaderTraceDesc
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.HullShaderTraceDesc;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.HullShaderTraceDesc, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.DomainShaderTraceDescription DomainShaderTraceDesc
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.DomainShaderTraceDesc;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.DomainShaderTraceDesc, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.GeometryShaderTraceDescription GeometryShaderTraceDesc
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.GeometryShaderTraceDesc;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.GeometryShaderTraceDesc, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.PixelShaderTraceDescription PixelShaderTraceDesc
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.PixelShaderTraceDesc;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.PixelShaderTraceDesc, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public ref Graphics.Direct3D11.ComputeShaderTraceDescription ComputeShaderTraceDesc
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.ComputeShaderTraceDesc;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ComputeShaderTraceDesc, 1));
+#endif
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::VertexShaderTraceDesc"]/*' />
+		[FieldOffset(0)]
 		public VertexShaderTraceDescription VertexShaderTraceDesc;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::HullShaderTraceDesc"]/*' />
+		[FieldOffset(0)]
 		public HullShaderTraceDescription HullShaderTraceDesc;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::DomainShaderTraceDesc"]/*' />
+		[FieldOffset(0)]
 		public DomainShaderTraceDescription DomainShaderTraceDesc;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::GeometryShaderTraceDesc"]/*' />
+		[FieldOffset(0)]
 		public GeometryShaderTraceDescription GeometryShaderTraceDesc;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::PixelShaderTraceDesc"]/*' />
+		[FieldOffset(0)]
 		public PixelShaderTraceDescription PixelShaderTraceDesc;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::ComputeShaderTraceDesc"]/*' />
+		[FieldOffset(0)]
 		public ComputeShaderTraceDescription ComputeShaderTraceDesc;
 	}
 
@@ -10803,12 +11979,39 @@ public partial struct TraceRegister
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::Flags"]/*' />
 	public byte Flags;
 
+	[UnscopedRef]
+	public ref ushort Index1D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+#if NET7_0_OR_GREATER
+			return ref Anonymous.Index1D;
+#else
+			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Index1D, 1));
+#endif
+		}
+	}
+
+	[UnscopedRef]
+	public unsafe Span<ushort> Index2D
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return MemoryMarshal.CreateSpan(ref Anonymous.Index2D[0], 2);
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Index1D"]/*' />
+		[FieldOffset(0)]
 		public ushort Index1D;
 
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Index2D"]/*' />
+		[FieldOffset(0)]
 		public unsafe fixed ushort Index2D[2];
 	}
 

@@ -1,12 +1,10 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using MessagePack;
 using Microsoft.Windows.SDK.Win32Docs;
-using Newtonsoft.Json.Linq;
 
 namespace Generator;
 

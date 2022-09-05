@@ -129,4 +129,5 @@ public sealed class ApiData
 {
     public ApiDataConstant[] Constants { get; set; }
     public ApiType[] Types { get; set; }
+    public ApiFunction[] Functions { get; set; }
 }
