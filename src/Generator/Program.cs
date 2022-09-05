@@ -16,7 +16,8 @@ public static class Program
     private static readonly string[] jsons = new[]
     {
         "Graphics.Dxgi.Common.json",
-        "Graphics.Dxgi.json"
+        "Graphics.Dxgi.json",
+        "Graphics.Direct3D.json"
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -59,15 +60,18 @@ public static class Program
 
         { "System.Com.IUnknown", "IUnknown" },
 
+        { "Graphics.Gdi.HMONITOR", "IntPtr" },
+        { "Graphics.Gdi.HDC", "IntPtr" },
+
+        { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
+        { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
+
         // TODO: Understand those ->
         { "Foundation.RECT", "RawRect" },
         { "Foundation.RECTL", "RawRect" },
         { "Foundation.POINT", "System.Drawing.Point" },
         { "Foundation.POINTL", "System.Drawing.Point" },
         { "Foundation.SIZE", "System.Drawing.Size" },
-
-        { "Graphics.Gdi.HMONITOR", "IntPtr" },
-        { "Graphics.Gdi.HDC", "IntPtr" },
     };
 
     private static readonly Dictionary<string, string> s_knownTypesPrefixes = new()
@@ -100,7 +104,8 @@ public static class Program
 
     private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
     {
-        "DXGI"
+        "DXGI",
+        "D3D"
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
@@ -164,208 +169,10 @@ public static class Program
         }
 
         // Generate docs
-        using FileStream docsStream = File.OpenRead(@"C:\Users\amerk\.nuget\packages\microsoft.windows.sdk.win32docs\0.1.8-alpha\apidocs.msgpack");
-        var data = MessagePackSerializer.Deserialize<Dictionary<string, ApiDetails>>(docsStream);
-        var documentationData = new Dictionary<string, ApiDetails>();
-
-        string[] prefixes = new[] { "DXGI" };
-        foreach (string key in data.Keys)
-        {
-            //Debug.WriteLine(key);
-
-            foreach (string prefix in prefixes)
-            {
-                if (key.StartsWith(prefix) || key.StartsWith("I" + prefix))
-                {
-                    documentationData.Add(key, data[key]);
-                }
-            }
-        }
-
-        XmlWriterSettings settings = new()
-        {
-            Indent = true,
-        };
-        //settings.ConformanceLevel = ConformanceLevel.Fragment;
-
-        using (var writer = XmlWriter.Create(Path.Combine(outputPath, "DXGI.xml"), settings))
-        {
-            writer.WriteStartDocument();
-            writer.WriteStartElement(null, "doc", null);
-
-            foreach (var item in documentationData.Keys)
-            {
-                var doc = documentationData[item];
-
-                if (!string.IsNullOrEmpty(doc.Description) || doc.Parameters.Count > 0)
-                {
-                    writer.WriteStartElement(null, "member", null);
-                    writer.WriteAttributeString("name", item.Replace(".", "::"));
-                    {
-                        writer.WriteStartElement(null, "summary", null);
-                        {
-                            if (!string.IsNullOrEmpty(doc.Description))
-                            {
-                                writer.WriteStartElement(null, "para", null);
-                                writer.WriteRaw(FormatMd(doc.Description));
-                                writer.WriteEndElement(); // para
-                            }
-
-                            if (doc.HelpLink != null)
-                            {
-                                writer.WriteStartElement(null, "para", null);
-                                writer.WriteString("Microsoft Docs: ");
-                                writer.WriteStartElement(null, "see", null);
-                                writer.WriteAttributeString("href", doc.HelpLink.ToString());
-                                writer.WriteEndElement(); // see
-                                writer.WriteEndElement(); // para
-                            }
-
-                            // Write params
-                            foreach (var param in doc.Parameters)
-                            {
-                                if (!string.IsNullOrEmpty(param.Value))
-                                {
-                                    writer.WriteStartElement(null, "param", null);
-                                    string paramName = param.Key;
-                                    //if (paramName.StartsWith("pp") && char.IsUpper(paramName[2]))
-                                    //{
-                                    //    paramName = paramName.Substring(2);
-                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    //}
-                                    //else if (paramName.StartsWith("p") && char.IsUpper(paramName[1]))
-                                    //{
-                                    //    paramName = paramName.Substring(1);
-                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    //}
-                                    //else if (paramName.StartsWith("u") && char.IsUpper(paramName[1]))
-                                    //{
-                                    //    paramName = paramName.Substring(1);
-                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    //}
-                                    //else if (paramName.StartsWith("b") && char.IsUpper(paramName[1])) // bEnable
-                                    //{
-                                    //    paramName = paramName.Substring(1);
-                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    //}
-                                    //else if (char.IsUpper(paramName[0]) && paramName.Length > 1 && char.IsLower(paramName[1]))
-                                    //{
-                                    //    paramName = paramName[0].ToString().ToLower() + paramName.Substring(1);
-                                    //}
-                                    //else if (paramName == "ID")
-                                    //{
-                                    //    paramName = "id";
-                                    //}
-                                    //else if (paramName == "dwCookie")
-                                    //{
-                                    //    paramName = "cookie";
-                                    //}
-
-                                    writer.WriteAttributeString("name", paramName);
-
-                                    if (!param.Value.StartsWith("Type:"))
-                                    {
-                                        writer.WriteRaw(FormatMd(param.Value));
-                                    }
-                                    else
-                                    {
-                                        var lines = param.Value.Split('\n');
-                                        writer.WriteRaw(FormatMd(string.Join("\r\n", lines.Skip(2))));
-                                    }
-
-                                    writer.WriteEndElement(); // param
-                                }
-
-                            }
-                        }
-                        writer.WriteEndElement(); // summary
-                    }
-                    writer.WriteEndElement(); // comment
-                }
-
-                // Write fields
-                foreach (var fieldName in doc.Fields.Keys)
-                {
-                    var field = doc.Fields[fieldName];
-
-                    if (string.IsNullOrEmpty(field))
-                    {
-                        continue;
-                    }
-
-                    if (!field.StartsWith("Type:"))
-                    {
-                        // Enum value
-                        writer.WriteStartElement(null, "member", null);
-                        writer.WriteAttributeString("name", $"{item.Replace(".", "::")}::{fieldName}");
-                        {
-                            writer.WriteStartElement(null, "summary", null);
-                            {
-                                var a = FormatMd(field);
-                                writer.WriteRaw(FormatMd(field));
-                            }
-                            writer.WriteEndElement(); // summary
-                        }
-                        writer.WriteEndElement(); // comment
-                    }
-                    else
-                    {
-                        // Struct field
-                        writer.WriteStartElement(null, "member", null);
-                        writer.WriteAttributeString("name", $"{item.Replace(".", "::")}::{fieldName}");
-                        {
-                            writer.WriteStartElement(null, "summary", null);
-                            {
-                                var lines = field.Split('\n');
-                                writer.WriteRaw(FormatMd(string.Join("\r\n", lines.Skip(2))));
-                            }
-                            writer.WriteEndElement(); // summary
-                        }
-                        writer.WriteEndElement(); // comment
-                    }
-                }
-            }
-
-            writer.WriteEndElement(); // comments
-            writer.WriteEndDocument();
-        }
-
+        DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(outputPath, "Dxgi.xml"));
+        //DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
+        DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(outputPath, "D3D11.xml"));
         return 0;
-    }
-
-    public static Regex MDLink = new(@"\[([A-z0-9<>\\]+)\]\(([^\)]+)\)");
-    public static Regex ImgLink = new(@"!\[([A-z0-9<>\\]+)\]\(([^\)]+)\)");
-    public static Regex Bold = new(@"\*\*([^ ^\*][^\*^\n]*)\*\*");
-    public static Regex Italics = new(@"\*([^ ^\*][^\*^\n]*)\*");
-    public static Regex MultilineCode = new(@"```[A-z]*([^`]+)```");
-    public static Regex InlineCode = new(@"`([^`]+)`");
-
-    public static Regex Struct = new Regex(@"struct DML_[A-z0-9_]+_OPERATOR_DESC\r\n{[^}]+};", RegexOptions.Multiline);
-
-    public static string FormatMd(string value)
-    {
-        value = ImgLink.Replace(value, "");
-        value = MDLink.Replace(value, "<a href=\"https://docs.microsoft.com$2\">$1</a>");
-        value = Bold.Replace(value, "<b>$1</b>");
-        value = Italics.Replace(value, "<i>$1</i>");
-        value = MultilineCode.Replace(value, "<code>$1</code>");
-        value = InlineCode.Replace(value, "<c>$1</c>");
-
-        value = value.Replace("<code>s<code>", "<c>s</c>");
-        value = value.Replace("ns-d3d12video-d3d12_video_process_luma_key\"\"", "\"ns-d3d12video-d3d12_video_process_luma_key\"");
-        value = value.Replace("&L", "&amp;l");
-
-        value = value.Replace("& ", "&amp; ");
-        value = value.Replace(" > ", " &gt; ");
-        value = value.Replace(" < ", " &lt; ");
-        value = value.Replace(" >= ", " &gt;= ");
-        value = value.Replace(" <= ", " &lt;= ");
-        value = value.Replace("<-", "&lt;-");
-        value = value.Replace("->", "-&gt;");
-        value = value.Replace("\n>", "\n&gt;");
-        value = value.Replace("&mdash;", "—");
-
-        return value;
     }
 
     private static void Generate(ApiData api, string outputPath, string jsonFile)
@@ -379,6 +186,7 @@ public static class Program
             Directory.CreateDirectory(outputFolder);
         }
 
+        string docFile = splits[1];
         string fileName = string.Empty;
         for (int i = 1; i < splits.Length - 1; i++)
         {
@@ -395,7 +203,7 @@ public static class Program
         using var writer = new CodeWriter(
             Path.Combine(outputFolder, fileName),
             $"{folderRoot}.{ns}",
-            $"DXGI",
+            docFile,
             $"Win32.{folderRoot}.{ns}");
 
         GenerateConstants(writer, api);
@@ -511,6 +319,11 @@ public static class Program
         writer.WriteLine($"#region Structs");
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
+            if (s_csNameMappings.ContainsKey($"{writer.Api}.{structType.Name}"))
+            {
+                continue;
+            }
+
             GenerateStruct(writer, structType);
 
             s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
@@ -730,61 +543,72 @@ public static class Program
             writer.WriteLine($"/// <unmanaged>{comType.Name}</unmanaged>");
         }
 
-        writer.WriteLine($"[Guid(\"{comType.Guid}\")]");
-        writer.WriteLine($"[NativeTypeName(\"struct {comType.Name} : {comType.Interface.Name}\")]");
-        writer.WriteLine($"[NativeInheritance(\"{comType.Interface.Name}\")]");
+        if (comType.Guid != null)
+        {
+            writer.WriteLine($"[Guid(\"{comType.Guid}\")]");
+        }
+
+        if (comType.Interface != null)
+        {
+            writer.WriteLine($"[NativeTypeName(\"struct {comType.Name} : {comType.Interface.Name}\")]");
+            writer.WriteLine($"[NativeInheritance(\"{comType.Interface.Name}\")]");
+        }
+
         using (writer.PushBlock($"public unsafe partial struct {csTypeName} : {csTypeName}.Interface"))
         {
-            // Generate IID
-            using (writer.PushBlock($"public static ref readonly Guid IID_{csTypeName}"))
+            if (comType.Guid != null)
             {
-                writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
-                using (writer.PushBlock("get"))
+                // Generate IID
+                using (writer.PushBlock($"public static ref readonly Guid IID_{csTypeName}"))
                 {
-                    var guid = Guid.Parse(comType.Guid).ToString("N");
-                    var _1 = "0x" + guid.Substring(6, 2).ToUpperInvariant();
-                    var _2 = "0x" + guid.Substring(4, 2).ToUpperInvariant();
-                    var _3 = "0x" + guid.Substring(2, 2).ToUpperInvariant();
-                    var _4 = "0x" + guid.Substring(0, 2).ToUpperInvariant();
+                    writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                    using (writer.PushBlock("get"))
+                    {
+                        var guid = Guid.Parse(comType.Guid).ToString("N");
+                        var _1 = "0x" + guid.Substring(6, 2).ToUpperInvariant();
+                        var _2 = "0x" + guid.Substring(4, 2).ToUpperInvariant();
+                        var _3 = "0x" + guid.Substring(2, 2).ToUpperInvariant();
+                        var _4 = "0x" + guid.Substring(0, 2).ToUpperInvariant();
 
-                    var _5 = "0x" + guid.Substring(10, 2).ToUpperInvariant();
-                    var _6 = "0x" + guid.Substring(8, 2).ToUpperInvariant();
+                        var _5 = "0x" + guid.Substring(10, 2).ToUpperInvariant();
+                        var _6 = "0x" + guid.Substring(8, 2).ToUpperInvariant();
 
-                    var _7 = "0x" + guid.Substring(14, 2).ToUpperInvariant();
-                    var _8 = "0x" + guid.Substring(12, 2).ToUpperInvariant();
+                        var _7 = "0x" + guid.Substring(14, 2).ToUpperInvariant();
+                        var _8 = "0x" + guid.Substring(12, 2).ToUpperInvariant();
 
-                    var d = "0x" + guid.Substring(16, 2).ToUpperInvariant();
-                    var e = "0x" + guid.Substring(18, 2).ToUpperInvariant();
-                    var f = "0x" + guid.Substring(20, 2).ToUpperInvariant();
-                    var g = "0x" + guid.Substring(22, 2).ToUpperInvariant();
-                    var h = "0x" + guid.Substring(24, 2).ToUpperInvariant();
-                    var i = "0x" + guid.Substring(26, 2).ToUpperInvariant();
-                    var j = "0x" + guid.Substring(28, 2).ToUpperInvariant();
-                    var k = "0x" + guid.Substring(30, 2).ToUpperInvariant();
+                        var d = "0x" + guid.Substring(16, 2).ToUpperInvariant();
+                        var e = "0x" + guid.Substring(18, 2).ToUpperInvariant();
+                        var f = "0x" + guid.Substring(20, 2).ToUpperInvariant();
+                        var g = "0x" + guid.Substring(22, 2).ToUpperInvariant();
+                        var h = "0x" + guid.Substring(24, 2).ToUpperInvariant();
+                        var i = "0x" + guid.Substring(26, 2).ToUpperInvariant();
+                        var j = "0x" + guid.Substring(28, 2).ToUpperInvariant();
+                        var k = "0x" + guid.Substring(30, 2).ToUpperInvariant();
 
-                    writer.WriteLine("ReadOnlySpan<byte> data = new byte[] {");
-                    writer.WriteLine($"{'\t'}{_1}, {_2}, {_3}, {_4},");
-                    writer.WriteLine($"{'\t'}{_5}, {_6},");
-                    writer.WriteLine($"{'\t'}{_7}, {_8},");
-                    writer.WriteLine($"{'\t'}{d},");
-                    writer.WriteLine($"{'\t'}{e},");
-                    writer.WriteLine($"{'\t'}{f},");
-                    writer.WriteLine($"{'\t'}{g},");
-                    writer.WriteLine($"{'\t'}{h},");
-                    writer.WriteLine($"{'\t'}{i},");
-                    writer.WriteLine($"{'\t'}{j},");
-                    writer.WriteLine($"{'\t'}{k}");
-                    writer.WriteLine("};");
-                    writer.WriteLine();
+                        writer.WriteLine("ReadOnlySpan<byte> data = new byte[] {");
+                        writer.WriteLine($"{'\t'}{_1}, {_2}, {_3}, {_4},");
+                        writer.WriteLine($"{'\t'}{_5}, {_6},");
+                        writer.WriteLine($"{'\t'}{_7}, {_8},");
+                        writer.WriteLine($"{'\t'}{d},");
+                        writer.WriteLine($"{'\t'}{e},");
+                        writer.WriteLine($"{'\t'}{f},");
+                        writer.WriteLine($"{'\t'}{g},");
+                        writer.WriteLine($"{'\t'}{h},");
+                        writer.WriteLine($"{'\t'}{i},");
+                        writer.WriteLine($"{'\t'}{j},");
+                        writer.WriteLine($"{'\t'}{k}");
+                        writer.WriteLine("};");
+                        writer.WriteLine();
 
-                    writer.WriteLine("Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());");
-                    writer.WriteLine("return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));");
+                        writer.WriteLine("Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());");
+                        writer.WriteLine("return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));");
+                    }
                 }
-            }
-            writer.WriteLine();
+                writer.WriteLine();
 
-            writer.WriteLine($"public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
-            writer.WriteLine();
+                writer.WriteLine($"public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
+                writer.WriteLine();
+            }
 
             writer.WriteLine($"public void** lpVtbl;");
             writer.WriteLine();
@@ -796,6 +620,9 @@ public static class Program
 
             while (iterateType != null)
             {
+                if (iterateType.Interface == null)
+                    break;
+
                 generateIUnknown = iterateType.Interface.Name == "IUnknown";
                 iterateType = api.Types.FirstOrDefault(item => item.Name == iterateType.Interface.Name);
             }
@@ -848,7 +675,7 @@ public static class Program
                 StringBuilder argumentsNameBuilder = new();
                 int parameterIndex = 0;
 
-                if (method.Name == "SetEvictionPriority")
+                if (method.Name == "RegisterDestructionCallback")
                 {
                     Console.WriteLine();
                 }
@@ -858,12 +685,17 @@ public static class Program
                     bool asPointer = false;
                     if (parameter.Type.Kind == "ApiRef")
                     {
-                        string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
-                        if (!IsEnum(fullTypeName))
+                        if (parameter.Type.TargetKind == "FunctionPointer")
                         {
-                            asPointer = true;
                         }
-                        //string typeName = GetTypeName($"{dataType.Api}.{dataType.Name}");
+                        else
+                        {
+                            string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
+                            if (!IsEnum(fullTypeName))
+                            {
+                                asPointer = true;
+                            }
+                        }
                     }
 
                     string parameterType = GetTypeName(parameter.Type, asPointer);
@@ -948,7 +780,13 @@ public static class Program
                 vtblIndex++;
             }
 
-            using (writer.PushBlock($"public interface Interface : {comType.Interface.Name}.Interface"))
+            string baseInterfaceType = string.Empty;
+            if (comType.Interface != null)
+            {
+                baseInterfaceType = $" : {comType.Interface.Name}.Interface";
+            }
+
+            using (writer.PushBlock($"public interface Interface{baseInterfaceType}"))
             {
             }
             //writer.WriteLine();

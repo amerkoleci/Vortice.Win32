@@ -66,1478 +66,1478 @@ public static partial class Apis
 }
 
 #region Enums
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY"]/*' />
 /// <unmanaged>DXGI_RESOURCE_PRIORITY</unmanaged>
 public enum ResourcePriority : uint
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MINIMUM"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MINIMUM"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_MINIMUM</unmanaged>
 	Minimum = 671088640,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_LOW"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_LOW"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_LOW</unmanaged>
 	Low = 1342177280,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_NORMAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_NORMAL</unmanaged>
 	Normal = 2013265920,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_HIGH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_HIGH"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_HIGH</unmanaged>
 	High = 2684354560,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MAXIMUM"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MAXIMUM"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_MAXIMUM</unmanaged>
 	Maximum = 3355443200,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESIDENCY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY"]/*' />
 /// <unmanaged>DXGI_RESIDENCY</unmanaged>
 public enum Residency : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_FULLY_RESIDENT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_FULLY_RESIDENT"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_FULLY_RESIDENT</unmanaged>
 	FullyResident = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY</unmanaged>
 	ResidentInSharedMemory = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_EVICTED_TO_DISK"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_EVICTED_TO_DISK"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_EVICTED_TO_DISK</unmanaged>
 	EvictedToDisk = 3,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT"]/*' />
 /// <unmanaged>DXGI_SWAP_EFFECT</unmanaged>
 public enum SwapEffect : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_DISCARD"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_DISCARD"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_DISCARD</unmanaged>
 	Discard = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_SEQUENTIAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_SEQUENTIAL"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_SEQUENTIAL</unmanaged>
 	Sequential = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL</unmanaged>
 	FlipSequential = 3,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_DISCARD"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_DISCARD"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_FLIP_DISCARD</unmanaged>
 	FlipDiscard = 4,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_FLAG</unmanaged>
 public enum SwapChainFlags : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_NONPREROTATED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_NONPREROTATED"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_NONPREROTATED</unmanaged>
 	NonPrerotated = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH</unmanaged>
 	AllowModeSwitch = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_GDI_COMPATIBLE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_GDI_COMPATIBLE</unmanaged>
 	GDICompatible = 4,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICTED_CONTENT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICTED_CONTENT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICTED_CONTENT</unmanaged>
 	RestrictedContent = 8,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICT_SHARED_RESOURCE_DRIVER"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICT_SHARED_RESOURCE_DRIVER"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICT_SHARED_RESOURCE_DRIVER</unmanaged>
 	RestrictSharedResourceDriver = 16,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_DISPLAY_ONLY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_DISPLAY_ONLY"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_DISPLAY_ONLY</unmanaged>
 	DisplayOnly = 32,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT</unmanaged>
 	FrameLatencyWaitableObject = 64,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER</unmanaged>
 	ForegroundLayer = 128,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FULLSCREEN_VIDEO"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_FULLSCREEN_VIDEO"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_FULLSCREEN_VIDEO</unmanaged>
 	FullscreenVideo = 256,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_YUV_VIDEO"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_YUV_VIDEO"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_YUV_VIDEO</unmanaged>
 	YUVVideo = 512,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED</unmanaged>
 	HWProtected = 1024,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING</unmanaged>
 	AllowTearing = 2048,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICTED_TO_ALL_HOLOGRAPHIC_DISPLAYS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FLAG::DXGI_SWAP_CHAIN_FLAG_RESTRICTED_TO_ALL_HOLOGRAPHIC_DISPLAYS"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_FLAG_RESTRICTED_TO_ALL_HOLOGRAPHIC_DISPLAYS</unmanaged>
 	RestrictedToAllHolographicDisplays = 4096,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG</unmanaged>
 [Flags]
 public enum AdapterFlags : uint
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_REMOTE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_REMOTE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_REMOTE</unmanaged>
 	Remote = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_SOFTWARE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_SOFTWARE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_SOFTWARE</unmanaged>
 	Software = 2,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_TYPE</unmanaged>
 public enum OutduplPointerShapeType : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MONOCHROME"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MONOCHROME"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MONOCHROME</unmanaged>
 	Monochrome = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_COLOR"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_COLOR"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_TYPE_COLOR</unmanaged>
 	Color = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MASKED_COLOR"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_TYPE::DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MASKED_COLOR"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_TYPE_MASKED_COLOR</unmanaged>
 	MaskedColor = 4,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY"]/*' />
 /// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY</unmanaged>
 public enum OfferResourcePriority : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_LOW"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_LOW"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_LOW</unmanaged>
 	Low = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_NORMAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_NORMAL</unmanaged>
 	Normal = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_HIGH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_HIGH"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_HIGH</unmanaged>
 	High = 3,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SCALING"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING"]/*' />
 /// <unmanaged>DXGI_SCALING</unmanaged>
 public enum Scaling : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_STRETCH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_STRETCH"]/*' />
 	/// <unmanaged>DXGI_SCALING_STRETCH</unmanaged>
 	Stretch = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_NONE"]/*' />
 	/// <unmanaged>DXGI_SCALING_NONE</unmanaged>
 	None = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_ASPECT_RATIO_STRETCH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_ASPECT_RATIO_STRETCH"]/*' />
 	/// <unmanaged>DXGI_SCALING_ASPECT_RATIO_STRETCH</unmanaged>
 	AspectRatioStretch = 2,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY"]/*' />
 /// <unmanaged>DXGI_GRAPHICS_PREEMPTION_GRANULARITY</unmanaged>
 public enum GraphicsPreemptionGranularity : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY</unmanaged>
 	DmaBufferBoundary = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY</unmanaged>
 	PrimitiveBoundary = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY</unmanaged>
 	TriangleBoundary = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY</unmanaged>
 	PixelBoundary = 3,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY</unmanaged>
 	InstructionBoundary = 4,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY"]/*' />
 /// <unmanaged>DXGI_COMPUTE_PREEMPTION_GRANULARITY</unmanaged>
 public enum ComputePreemptionGranularity : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY</unmanaged>
 	DmaBufferBoundary = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY</unmanaged>
 	DispatchBoundary = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY</unmanaged>
 	ThreadGroupBoundary = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY</unmanaged>
 	ThreadBoundary = 3,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY</unmanaged>
 	InstructionBoundary = 4,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS"]/*' />
 /// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS</unmanaged>
 public enum MultiplaneOverlayYcbcrFlags : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE</unmanaged>
 	YcbcrFlagNominalRange = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709</unmanaged>
 	YcbcrFlagBt709 = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC</unmanaged>
 	YcbcrFlagXvycc = 4,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE"]/*' />
 /// <unmanaged>DXGI_FRAME_PRESENTATION_MODE</unmanaged>
 public enum FramePresentationMode : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSED"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_COMPOSED</unmanaged>
 	Composed = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_OVERLAY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_OVERLAY"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_OVERLAY</unmanaged>
 	Overlay = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_NONE"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_NONE</unmanaged>
 	None = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE</unmanaged>
 	CompositionFailure = 3,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG</unmanaged>
 public enum OverlaySupportFlag : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_DIRECT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_DIRECT"]/*' />
 	/// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG_DIRECT</unmanaged>
 	Direct = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_SCALING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_SCALING"]/*' />
 	/// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG_SCALING</unmanaged>
 	Scaling = 2,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG</unmanaged>
 public enum SwapChainColorSpaceSupportFlag : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT</unmanaged>
 	Present = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT</unmanaged>
 	OverlayPresent = 2,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG</unmanaged>
 public enum OverlayColorSpaceSupportFlag : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG::DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG::DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
 	/// <unmanaged>DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG_PRESENT</unmanaged>
 	Present = 1,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP"]/*' />
 /// <unmanaged>DXGI_MEMORY_SEGMENT_GROUP</unmanaged>
 public enum MemorySegmentGroup : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP::DXGI_MEMORY_SEGMENT_GROUP_LOCAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP::DXGI_MEMORY_SEGMENT_GROUP_LOCAL"]/*' />
 	/// <unmanaged>DXGI_MEMORY_SEGMENT_GROUP_LOCAL</unmanaged>
 	Local = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP::DXGI_MEMORY_SEGMENT_GROUP_NON_LOCAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MEMORY_SEGMENT_GROUP::DXGI_MEMORY_SEGMENT_GROUP_NON_LOCAL"]/*' />
 	/// <unmanaged>DXGI_MEMORY_SEGMENT_GROUP_NON_LOCAL</unmanaged>
 	NonLocal = 1,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_FLAG</unmanaged>
 public enum OutduplFlag : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG::DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG::DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY</unmanaged>
 	CompositedUICaptureOnly = 1,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_TYPE</unmanaged>
 public enum HdrMetadataType : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_NONE"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_NONE</unmanaged>
 	None = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_HDR10</unmanaged>
 	Hdr10 = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10PLUS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10PLUS"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_HDR10PLUS</unmanaged>
 	Hdr10plus = 2,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS"]/*' />
 /// <unmanaged>DXGI_OFFER_RESOURCE_FLAGS</unmanaged>
 public enum OfferResourceFlags : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS::DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS::DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT</unmanaged>
 	AllowDecommit = 1,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS"]/*' />
 /// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULTS</unmanaged>
 public enum ReclaimResourceResults : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_OK"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_OK"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_OK</unmanaged>
 	Ok = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED</unmanaged>
 	Discarded = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED</unmanaged>
 	NotCommitted = 2,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FEATURE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FEATURE"]/*' />
 /// <unmanaged>DXGI_FEATURE</unmanaged>
 public enum Feature : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FEATURE::DXGI_FEATURE_PRESENT_ALLOW_TEARING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FEATURE::DXGI_FEATURE_PRESENT_ALLOW_TEARING"]/*' />
 	/// <unmanaged>DXGI_FEATURE_PRESENT_ALLOW_TEARING</unmanaged>
 	PresentAllowTearing = 0,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG3</unmanaged>
 [Flags]
 public enum AdapterFlags3 : uint
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_NONE</unmanaged>
 	None = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_REMOTE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_REMOTE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_REMOTE</unmanaged>
 	Remote = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SOFTWARE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SOFTWARE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SOFTWARE</unmanaged>
 	Software = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE</unmanaged>
 	AcgCompatible = 4,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES</unmanaged>
 	SupportMonitoredFences = 8,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES</unmanaged>
 	SupportNonMonitoredFences = 16,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE</unmanaged>
 	KeyedMutexConformance = 32,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS</unmanaged>
 [Flags]
 public enum HardwareCompositionSupportFlags : uint
 {
 	None = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN</unmanaged>
 	Fullscreen = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED</unmanaged>
 	Windowed = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED</unmanaged>
 	CursorStretched = 4,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE"]/*' />
 /// <unmanaged>DXGI_GPU_PREFERENCE</unmanaged>
 public enum GpuPreference : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_UNSPECIFIED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_UNSPECIFIED</unmanaged>
 	Unspecified = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_MINIMUM_POWER"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_MINIMUM_POWER"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_MINIMUM_POWER</unmanaged>
 	MinimumPower = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE</unmanaged>
 	HighPerformance = 2,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS"]/*' />
 /// <unmanaged>DXGI_DEBUG_RLO_FLAGS</unmanaged>
 [Flags]
 public enum DebugRloFlags : uint
 {
 	None = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_SUMMARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_SUMMARY"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_SUMMARY</unmanaged>
 	Summary = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_DETAIL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_DETAIL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_DETAIL</unmanaged>
 	Detail = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_IGNORE_INTERNAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_IGNORE_INTERNAL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_IGNORE_INTERNAL</unmanaged>
 	IgnoreInternal = 4,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_ALL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_ALL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_ALL</unmanaged>
 	All = 7,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY</unmanaged>
 public enum InfoQueueMessageCategory : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS</unmanaged>
 	Miscellaneous = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION</unmanaged>
 	Initialization = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP</unmanaged>
 	Cleanup = 3,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION</unmanaged>
 	Compilation = 4,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION</unmanaged>
 	StateCreation = 5,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING</unmanaged>
 	StateSetting = 6,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING</unmanaged>
 	StateGetting = 7,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION</unmanaged>
 	ResourceManipulation = 8,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION</unmanaged>
 	Execution = 9,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER</unmanaged>
 	Shader = 10,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY</unmanaged>
 public enum InfoQueueMessageSeverity : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION</unmanaged>
 	Corruption = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR</unmanaged>
 	Error = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING</unmanaged>
 	Warning = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO</unmanaged>
 	Info = 3,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE</unmanaged>
 	Message = 4,
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id"]/*' />
 /// <unmanaged>DXGI_Message_Id</unmanaged>
 public enum MessageId : int
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow</unmanaged>
 	IDXGISwapChain_CreationOrResizeBuffers_InvalidOutputWindow = 0,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferWidthInferred"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferWidthInferred"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferWidthInferred</unmanaged>
 	IDXGISwapChain_CreationOrResizeBuffers_BufferWidthInferred = 1,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferHeightInferred"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferHeightInferred"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_BufferHeightInferred</unmanaged>
 	IDXGISwapChain_CreationOrResizeBuffers_BufferHeightInferred = 2,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_NoScanoutFlagChanged"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_NoScanoutFlagChanged"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrResizeBuffers_NoScanoutFlagChanged</unmanaged>
 	IDXGISwapChain_CreationOrResizeBuffers_NoScanoutFlagChanged = 3,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_MaxBufferCountExceeded"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_MaxBufferCountExceeded"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_MaxBufferCountExceeded</unmanaged>
 	IDXGISwapChain_Creation_MaxBufferCountExceeded = 4,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_TooFewBuffers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_TooFewBuffers"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_TooFewBuffers</unmanaged>
 	IDXGISwapChain_Creation_TooFewBuffers = 5,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_NoOutputWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_NoOutputWindow"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_NoOutputWindow</unmanaged>
 	IDXGISwapChain_Creation_NoOutputWindow = 6,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Destruction_OtherMethodsCalled"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Destruction_OtherMethodsCalled"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Destruction_OtherMethodsCalled</unmanaged>
 	IDXGISwapChain_Destruction_OtherMethodsCalled = 7,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetDesc_pDescIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetDesc_pDescIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetDesc_pDescIsNULL</unmanaged>
 	IDXGISwapChain_GetDesc_pDescIsNULL = 8,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetBuffer_ppSurfaceIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetBuffer_ppSurfaceIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetBuffer_ppSurfaceIsNULL</unmanaged>
 	IDXGISwapChain_GetBuffer_ppSurfaceIsNULL = 9,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetBuffer_NoAllocatedBuffers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetBuffer_NoAllocatedBuffers"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetBuffer_NoAllocatedBuffers</unmanaged>
 	IDXGISwapChain_GetBuffer_NoAllocatedBuffers = 10,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferMustBeZero"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferMustBeZero"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferMustBeZero</unmanaged>
 	IDXGISwapChain_GetBuffer_iBufferMustBeZero = 11,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferOOB"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferOOB"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetBuffer_iBufferOOB</unmanaged>
 	IDXGISwapChain_GetBuffer_iBufferOOB = 12,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetContainingOutput_ppOutputIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetContainingOutput_ppOutputIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetContainingOutput_ppOutputIsNULL</unmanaged>
 	IDXGISwapChain_GetContainingOutput_ppOutputIsNULL = 13,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_SyncIntervalOOB"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_SyncIntervalOOB"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_SyncIntervalOOB</unmanaged>
 	IDXGISwapChain_Present_SyncIntervalOOB = 14,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_InvalidNonPreRotatedFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_InvalidNonPreRotatedFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_InvalidNonPreRotatedFlag</unmanaged>
 	IDXGISwapChain_Present_InvalidNonPreRotatedFlag = 15,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_NoAllocatedBuffers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_NoAllocatedBuffers"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_NoAllocatedBuffers</unmanaged>
 	IDXGISwapChain_Present_NoAllocatedBuffers = 16,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_GetDXGIAdapterFailed"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_GetDXGIAdapterFailed"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_GetDXGIAdapterFailed</unmanaged>
 	IDXGISwapChain_Present_GetDXGIAdapterFailed = 17,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOB"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOB"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOB</unmanaged>
 	IDXGISwapChain_ResizeBuffers_BufferCountOOB = 18,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_UnreleasedReferences"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_UnreleasedReferences"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_UnreleasedReferences</unmanaged>
 	IDXGISwapChain_ResizeBuffers_UnreleasedReferences = 19,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidSwapChainFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidSwapChainFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidSwapChainFlag</unmanaged>
 	IDXGISwapChain_ResizeBuffers_InvalidSwapChainFlag = 20,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidNonPreRotatedFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidNonPreRotatedFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidNonPreRotatedFlag</unmanaged>
 	IDXGISwapChain_ResizeBuffers_InvalidNonPreRotatedFlag = 21,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeTarget_RefreshRateDivideByZero"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeTarget_RefreshRateDivideByZero"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeTarget_RefreshRateDivideByZero</unmanaged>
 	IDXGISwapChain_ResizeTarget_RefreshRateDivideByZero = 22,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_InvalidTarget"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_InvalidTarget"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_InvalidTarget</unmanaged>
 	IDXGISwapChain_SetFullscreenState_InvalidTarget = 23,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetFrameStatistics_pStatsIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetFrameStatistics_pStatsIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetFrameStatistics_pStatsIsNULL</unmanaged>
 	IDXGISwapChain_GetFrameStatistics_pStatsIsNULL = 24,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetLastPresentCount_pLastPresentCountIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetLastPresentCount_pLastPresentCountIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetLastPresentCount_pLastPresentCountIsNULL</unmanaged>
 	IDXGISwapChain_GetLastPresentCount_pLastPresentCountIsNULL = 25,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_RemoteNotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_RemoteNotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_RemoteNotSupported</unmanaged>
 	IDXGISwapChain_SetFullscreenState_RemoteNotSupported = 26,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_FailedToAcquireFullscreenMutex"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_FailedToAcquireFullscreenMutex"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_FailedToAcquireFullscreenMutex</unmanaged>
 	IDXGIOutput_TakeOwnership_FailedToAcquireFullscreenMutex = 27,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ppAdapterInterfaceIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ppAdapterInterfaceIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ppAdapterInterfaceIsNULL</unmanaged>
 	IDXGIFactory_CreateSoftwareAdapter_ppAdapterInterfaceIsNULL = 28,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_EnumAdapters_ppAdapterInterfaceIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_EnumAdapters_ppAdapterInterfaceIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_EnumAdapters_ppAdapterInterfaceIsNULL</unmanaged>
 	IDXGIFactory_EnumAdapters_ppAdapterInterfaceIsNULL = 29,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ppSwapChainIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ppSwapChainIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ppSwapChainIsNULL</unmanaged>
 	IDXGIFactory_CreateSwapChain_ppSwapChainIsNULL = 30,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_pDescIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_pDescIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_pDescIsNULL</unmanaged>
 	IDXGIFactory_CreateSwapChain_pDescIsNULL = 31,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_UnknownSwapEffect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_UnknownSwapEffect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_UnknownSwapEffect</unmanaged>
 	IDXGIFactory_CreateSwapChain_UnknownSwapEffect = 32,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFlags"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFlags</unmanaged>
 	IDXGIFactory_CreateSwapChain_InvalidFlags = 33,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedFlagAndWindowed"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedFlagAndWindowed"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedFlagAndWindowed</unmanaged>
 	IDXGIFactory_CreateSwapChain_NonPreRotatedFlagAndWindowed = 34,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_NullDeviceInterface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_NullDeviceInterface"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_NullDeviceInterface</unmanaged>
 	IDXGIFactory_CreateSwapChain_NullDeviceInterface = 35,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetWindowAssociation_phWndIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetWindowAssociation_phWndIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetWindowAssociation_phWndIsNULL</unmanaged>
 	IDXGIFactory_GetWindowAssociation_phWndIsNULL = 36,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_MakeWindowAssociation_InvalidFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_MakeWindowAssociation_InvalidFlags"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_MakeWindowAssociation_InvalidFlags</unmanaged>
 	IDXGIFactory_MakeWindowAssociation_InvalidFlags = 37,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_InvalidSurface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_InvalidSurface"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_InvalidSurface</unmanaged>
 	IDXGISurface_Map_InvalidSurface = 38,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_FlagsSetToZero"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_FlagsSetToZero"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_FlagsSetToZero</unmanaged>
 	IDXGISurface_Map_FlagsSetToZero = 39,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_DiscardAndReadFlagSet"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_DiscardAndReadFlagSet"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_DiscardAndReadFlagSet</unmanaged>
 	IDXGISurface_Map_DiscardAndReadFlagSet = 40,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_DiscardButNotWriteFlagSet"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_DiscardButNotWriteFlagSet"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_DiscardButNotWriteFlagSet</unmanaged>
 	IDXGISurface_Map_DiscardButNotWriteFlagSet = 41,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_NoCPUAccess"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_NoCPUAccess"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_NoCPUAccess</unmanaged>
 	IDXGISurface_Map_NoCPUAccess = 42,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_ReadFlagSetButCPUAccessIsDynamic"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_ReadFlagSetButCPUAccessIsDynamic"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_ReadFlagSetButCPUAccessIsDynamic</unmanaged>
 	IDXGISurface_Map_ReadFlagSetButCPUAccessIsDynamic = 43,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_DiscardFlagSetButCPUAccessIsNotDynamic"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_DiscardFlagSetButCPUAccessIsNotDynamic"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_DiscardFlagSetButCPUAccessIsNotDynamic</unmanaged>
 	IDXGISurface_Map_DiscardFlagSetButCPUAccessIsNotDynamic = 44,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplayModeList_pNumModesIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplayModeList_pNumModesIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplayModeList_pNumModesIsNULL</unmanaged>
 	IDXGIOutput_GetDisplayModeList_pNumModesIsNULL = 45,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasInvalidWidthOrHeight"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasInvalidWidthOrHeight"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasInvalidWidthOrHeight</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_ModeHasInvalidWidthOrHeight = 46,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetCammaControlCapabilities_NoOwnerDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetCammaControlCapabilities_NoOwnerDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetCammaControlCapabilities_NoOwnerDevice</unmanaged>
 	IDXGIOutput_GetCammaControlCapabilities_NoOwnerDevice = 47,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_pDeviceIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_pDeviceIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_pDeviceIsNULL</unmanaged>
 	IDXGIOutput_TakeOwnership_pDeviceIsNULL = 48,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_NoOwnerDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_NoOwnerDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_NoOwnerDevice</unmanaged>
 	IDXGIOutput_GetDisplaySurfaceData_NoOwnerDevice = 49,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_pDestinationIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_pDestinationIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_pDestinationIsNULL</unmanaged>
 	IDXGIOutput_GetDisplaySurfaceData_pDestinationIsNULL = 50,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_MapOfDestinationFailed"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_MapOfDestinationFailed"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_MapOfDestinationFailed</unmanaged>
 	IDXGIOutput_GetDisplaySurfaceData_MapOfDestinationFailed = 51,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetFrameStatistics_NoOwnerDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetFrameStatistics_NoOwnerDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetFrameStatistics_NoOwnerDevice</unmanaged>
 	IDXGIOutput_GetFrameStatistics_NoOwnerDevice = 52,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetFrameStatistics_pStatsIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetFrameStatistics_pStatsIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetFrameStatistics_pStatsIsNULL</unmanaged>
 	IDXGIOutput_GetFrameStatistics_pStatsIsNULL = 53,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetGammaControl_NoOwnerDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetGammaControl_NoOwnerDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetGammaControl_NoOwnerDevice</unmanaged>
 	IDXGIOutput_SetGammaControl_NoOwnerDevice = 54,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetGammaControl_NoOwnerDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetGammaControl_NoOwnerDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetGammaControl_NoOwnerDevice</unmanaged>
 	IDXGIOutput_GetGammaControl_NoOwnerDevice = 55,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetGammaControl_NoGammaControls"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetGammaControl_NoGammaControls"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetGammaControl_NoGammaControls</unmanaged>
 	IDXGIOutput_GetGammaControl_NoGammaControls = 56,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetDisplaySurface_IDXGIResourceNotSupportedBypPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetDisplaySurface_IDXGIResourceNotSupportedBypPrimary"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetDisplaySurface_IDXGIResourceNotSupportedBypPrimary</unmanaged>
 	IDXGIOutput_SetDisplaySurface_IDXGIResourceNotSupportedBypPrimary = 57,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetDisplaySurface_pPrimaryIsInvalid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetDisplaySurface_pPrimaryIsInvalid"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetDisplaySurface_pPrimaryIsInvalid</unmanaged>
 	IDXGIOutput_SetDisplaySurface_pPrimaryIsInvalid = 58,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetDisplaySurface_NoOwnerDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetDisplaySurface_NoOwnerDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetDisplaySurface_NoOwnerDevice</unmanaged>
 	IDXGIOutput_SetDisplaySurface_NoOwnerDevice = 59,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteDeviceNotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteDeviceNotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteDeviceNotSupported</unmanaged>
 	IDXGIOutput_TakeOwnership_RemoteDeviceNotSupported = 60,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteDeviceNotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteDeviceNotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteDeviceNotSupported</unmanaged>
 	IDXGIOutput_GetDisplayModeList_RemoteDeviceNotSupported = 61,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteDeviceNotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteDeviceNotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteDeviceNotSupported</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_RemoteDeviceNotSupported = 62,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDevice_CreateSurface_InvalidParametersWithpSharedResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDevice_CreateSurface_InvalidParametersWithpSharedResource"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDevice_CreateSurface_InvalidParametersWithpSharedResource</unmanaged>
 	IDXGIDevice_CreateSurface_InvalidParametersWithpSharedResource = 63,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIObject_GetPrivateData_puiDataSizeIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIObject_GetPrivateData_puiDataSizeIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIObject_GetPrivateData_puiDataSizeIsNULL</unmanaged>
 	IDXGIObject_GetPrivateData_puiDataSizeIsNULL = 64,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_InvalidOutputWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_InvalidOutputWindow"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_InvalidOutputWindow</unmanaged>
 	IDXGISwapChain_Creation_InvalidOutputWindow = 65,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Release_SwapChainIsFullscreen"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Release_SwapChainIsFullscreen"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Release_SwapChainIsFullscreen</unmanaged>
 	IDXGISwapChain_Release_SwapChainIsFullscreen = 66,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_InvalidTargetSurfaceFormat"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_InvalidTargetSurfaceFormat"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_InvalidTargetSurfaceFormat</unmanaged>
 	IDXGIOutput_GetDisplaySurfaceData_InvalidTargetSurfaceFormat = 67,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ModuleIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ModuleIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSoftwareAdapter_ModuleIsNULL</unmanaged>
 	IDXGIFactory_CreateSoftwareAdapter_ModuleIsNULL = 68,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_IDXGIDeviceNotSupportedBypConcernedDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_IDXGIDeviceNotSupportedBypConcernedDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_IDXGIDeviceNotSupportedBypConcernedDevice</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_IDXGIDeviceNotSupportedBypConcernedDevice = 69,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_pModeToMatchOrpClosestMatchIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_pModeToMatchOrpClosestMatchIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_pModeToMatchOrpClosestMatchIsNULL</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_pModeToMatchOrpClosestMatchIsNULL = 70,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasRefreshRateDenominatorZero"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasRefreshRateDenominatorZero"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_ModeHasRefreshRateDenominatorZero</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_ModeHasRefreshRateDenominatorZero = 71,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_UnknownFormatIsInvalidForConfiguration"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_UnknownFormatIsInvalidForConfiguration"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_UnknownFormatIsInvalidForConfiguration</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_UnknownFormatIsInvalidForConfiguration = 72,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScanlineOrdering"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScanlineOrdering"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScanlineOrdering</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScanlineOrdering = 73,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScaling"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScaling</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeScaling = 74,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeFormatAndDeviceCombination"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeFormatAndDeviceCombination"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeFormatAndDeviceCombination</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_InvalidDisplayModeFormatAndDeviceCombination = 75,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_Creation_CalledFromDllMain"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_Creation_CalledFromDllMain"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_Creation_CalledFromDllMain</unmanaged>
 	IDXGIFactory_Creation_CalledFromDllMain = 76,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_OutputNotOwnedBySwapChainDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_OutputNotOwnedBySwapChainDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_OutputNotOwnedBySwapChainDevice</unmanaged>
 	IDXGISwapChain_SetFullscreenState_OutputNotOwnedBySwapChainDevice = 77,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_InvalidWindowStyle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Creation_InvalidWindowStyle"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Creation_InvalidWindowStyle</unmanaged>
 	IDXGISwapChain_Creation_InvalidWindowStyle = 78,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetFrameStatistics_UnsupportedStatistics"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetFrameStatistics_UnsupportedStatistics"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetFrameStatistics_UnsupportedStatistics</unmanaged>
 	IDXGISwapChain_GetFrameStatistics_UnsupportedStatistics = 79,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetContainingOutput_SwapchainAdapterDoesNotControlOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetContainingOutput_SwapchainAdapterDoesNotControlOutput"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetContainingOutput_SwapchainAdapterDoesNotControlOutput</unmanaged>
 	IDXGISwapChain_GetContainingOutput_SwapchainAdapterDoesNotControlOutput = 80,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetOrGetGammaControl_pArrayIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetOrGetGammaControl_pArrayIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetOrGetGammaControl_pArrayIsNULL</unmanaged>
 	IDXGIOutput_SetOrGetGammaControl_pArrayIsNULL = 81,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_FullscreenInvalidForChildWindows"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_FullscreenInvalidForChildWindows"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_FullscreenInvalidForChildWindows</unmanaged>
 	IDXGISwapChain_SetFullscreenState_FullscreenInvalidForChildWindows = 82,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_Release_CalledFromDllMain"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_Release_CalledFromDllMain"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_Release_CalledFromDllMain</unmanaged>
 	IDXGIFactory_Release_CalledFromDllMain = 83,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_UnreleasedHDC"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_UnreleasedHDC"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_UnreleasedHDC</unmanaged>
 	IDXGISwapChain_Present_UnreleasedHDC = 84,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_NonPreRotatedAndGDICompatibleFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_NonPreRotatedAndGDICompatibleFlags"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_NonPreRotatedAndGDICompatibleFlags</unmanaged>
 	IDXGISwapChain_ResizeBuffers_NonPreRotatedAndGDICompatibleFlags = 85,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedAndGDICompatibleFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedAndGDICompatibleFlags"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_NonPreRotatedAndGDICompatibleFlags</unmanaged>
 	IDXGIFactory_CreateSwapChain_NonPreRotatedAndGDICompatibleFlags = 86,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_pHdcIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_pHdcIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_pHdcIsNULL</unmanaged>
 	IDXGISurface1_GetDC_pHdcIsNULL = 87,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_SurfaceNotTexture2D"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_SurfaceNotTexture2D"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_SurfaceNotTexture2D</unmanaged>
 	IDXGISurface1_GetDC_SurfaceNotTexture2D = 88,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_GDICompatibleFlagNotSet"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_GDICompatibleFlagNotSet"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_GDICompatibleFlagNotSet</unmanaged>
 	IDXGISurface1_GetDC_GDICompatibleFlagNotSet = 89,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_UnreleasedHDC"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_UnreleasedHDC"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_UnreleasedHDC</unmanaged>
 	IDXGISurface1_GetDC_UnreleasedHDC = 90,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_NoCPUAccess2"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface_Map_NoCPUAccess2"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface_Map_NoCPUAccess2</unmanaged>
 	IDXGISurface_Map_NoCPUAccess2 = 91,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_ReleaseDC_GetDCNotCalled"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_ReleaseDC_GetDCNotCalled"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_ReleaseDC_GetDCNotCalled</unmanaged>
 	IDXGISurface1_ReleaseDC_GetDCNotCalled = 92,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_ReleaseDC_InvalidRectangleDimensions"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_ReleaseDC_InvalidRectangleDimensions"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_ReleaseDC_InvalidRectangleDimensions</unmanaged>
 	IDXGISurface1_ReleaseDC_InvalidRectangleDimensions = 93,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteOutputNotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteOutputNotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_RemoteOutputNotSupported</unmanaged>
 	IDXGIOutput_TakeOwnership_RemoteOutputNotSupported = 94,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteOutputNotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteOutputNotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_FindClosestMatchingMode_RemoteOutputNotSupported</unmanaged>
 	IDXGIOutput_FindClosestMatchingMode_RemoteOutputNotSupported = 95,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteOutputNotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteOutputNotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplayModeList_RemoteOutputNotSupported</unmanaged>
 	IDXGIOutput_GetDisplayModeList_RemoteOutputNotSupported = 96,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_pDeviceHasMismatchedDXGIFactory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_pDeviceHasMismatchedDXGIFactory"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_pDeviceHasMismatchedDXGIFactory</unmanaged>
 	IDXGIFactory_CreateSwapChain_pDeviceHasMismatchedDXGIFactory = 97,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_NonOptimalFSConfiguration"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_NonOptimalFSConfiguration"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_NonOptimalFSConfiguration</unmanaged>
 	IDXGISwapChain_Present_NonOptimalFSConfiguration = 98,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSequentialNotSupportedOnD3D10"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSequentialNotSupportedOnD3D10"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSequentialNotSupportedOnD3D10</unmanaged>
 	IDXGIFactory_CreateSwapChain_FlipSequentialNotSupportedOnD3D10 = 99,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_BufferCountOOBForFlipSequential"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_BufferCountOOBForFlipSequential"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_BufferCountOOBForFlipSequential</unmanaged>
 	IDXGIFactory_CreateSwapChain_BufferCountOOBForFlipSequential = 100,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFormatForFlipSequential"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFormatForFlipSequential"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidFormatForFlipSequential</unmanaged>
 	IDXGIFactory_CreateSwapChain_InvalidFormatForFlipSequential = 101,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_MultiSamplingNotSupportedForFlipSequential"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_MultiSamplingNotSupportedForFlipSequential"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_MultiSamplingNotSupportedForFlipSequential</unmanaged>
 	IDXGIFactory_CreateSwapChain_MultiSamplingNotSupportedForFlipSequential = 102,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOBForFlipSequential"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOBForFlipSequential"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_BufferCountOOBForFlipSequential</unmanaged>
 	IDXGISwapChain_ResizeBuffers_BufferCountOOBForFlipSequential = 103,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidFormatForFlipSequential"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidFormatForFlipSequential"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidFormatForFlipSequential</unmanaged>
 	IDXGISwapChain_ResizeBuffers_InvalidFormatForFlipSequential = 104,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_PartialPresentationBeforeStandardPresentation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_PartialPresentationBeforeStandardPresentation"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_PartialPresentationBeforeStandardPresentation</unmanaged>
 	IDXGISwapChain_Present_PartialPresentationBeforeStandardPresentation = 105,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_FullscreenPartialPresentIsInvalid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_FullscreenPartialPresentIsInvalid"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_FullscreenPartialPresentIsInvalid</unmanaged>
 	IDXGISwapChain_Present_FullscreenPartialPresentIsInvalid = 106,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_InvalidPresentTestOrDoNotSequenceFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_InvalidPresentTestOrDoNotSequenceFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_InvalidPresentTestOrDoNotSequenceFlag</unmanaged>
 	IDXGISwapChain_Present_InvalidPresentTestOrDoNotSequenceFlag = 107,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ScrollInfoWithNoDirtyRectsSpecified"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ScrollInfoWithNoDirtyRectsSpecified"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ScrollInfoWithNoDirtyRectsSpecified</unmanaged>
 	IDXGISwapChain_Present_ScrollInfoWithNoDirtyRectsSpecified = 108,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_EmptyScrollRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_EmptyScrollRect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_EmptyScrollRect</unmanaged>
 	IDXGISwapChain_Present_EmptyScrollRect = 109,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBounds"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBounds"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBounds</unmanaged>
 	IDXGISwapChain_Present_ScrollRectOutOfBackbufferBounds = 110,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBoundsWithOffset"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBoundsWithOffset"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ScrollRectOutOfBackbufferBoundsWithOffset</unmanaged>
 	IDXGISwapChain_Present_ScrollRectOutOfBackbufferBoundsWithOffset = 111,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_EmptyDirtyRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_EmptyDirtyRect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_EmptyDirtyRect</unmanaged>
 	IDXGISwapChain_Present_EmptyDirtyRect = 112,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_DirtyRectOutOfBackbufferBounds"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_DirtyRectOutOfBackbufferBounds"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_DirtyRectOutOfBackbufferBounds</unmanaged>
 	IDXGISwapChain_Present_DirtyRectOutOfBackbufferBounds = 113,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_UnsupportedBufferUsageFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_UnsupportedBufferUsageFlags"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_UnsupportedBufferUsageFlags</unmanaged>
 	IDXGIFactory_CreateSwapChain_UnsupportedBufferUsageFlags = 114,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_DoNotSequenceFlagSetButPreviousBufferIsUndefined"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_DoNotSequenceFlagSetButPreviousBufferIsUndefined"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_DoNotSequenceFlagSetButPreviousBufferIsUndefined</unmanaged>
 	IDXGISwapChain_Present_DoNotSequenceFlagSetButPreviousBufferIsUndefined = 115,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_UnsupportedFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_UnsupportedFlags"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_UnsupportedFlags</unmanaged>
 	IDXGISwapChain_Present_UnsupportedFlags = 116,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_FlipModelChainMustResizeOrCreateOnFSTransition"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_FlipModelChainMustResizeOrCreateOnFSTransition"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_FlipModelChainMustResizeOrCreateOnFSTransition</unmanaged>
 	IDXGISwapChain_Present_FlipModelChainMustResizeOrCreateOnFSTransition = 117,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_pRestrictToOutputFromOtherIDXGIFactory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_pRestrictToOutputFromOtherIDXGIFactory"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_pRestrictToOutputFromOtherIDXGIFactory</unmanaged>
 	IDXGIFactory_CreateSwapChain_pRestrictToOutputFromOtherIDXGIFactory = 118,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictOutputNotSupportedOnAdapter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictOutputNotSupportedOnAdapter"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictOutputNotSupportedOnAdapter</unmanaged>
 	IDXGIFactory_CreateSwapChain_RestrictOutputNotSupportedOnAdapter = 119,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagSetButInvalidpRestrictToOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagSetButInvalidpRestrictToOutput"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagSetButInvalidpRestrictToOutput</unmanaged>
 	IDXGISwapChain_Present_RestrictToOutputFlagSetButInvalidpRestrictToOutput = 120,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagdWithFullscreen"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagdWithFullscreen"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_RestrictToOutputFlagdWithFullscreen</unmanaged>
 	IDXGISwapChain_Present_RestrictToOutputFlagdWithFullscreen = 121,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_RestrictOutputFlagWithStaleSwapChain"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_RestrictOutputFlagWithStaleSwapChain"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_RestrictOutputFlagWithStaleSwapChain</unmanaged>
 	IDXGISwapChain_Present_RestrictOutputFlagWithStaleSwapChain = 122,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_OtherFlagsCausingInvalidPresentTestFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_OtherFlagsCausingInvalidPresentTestFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_OtherFlagsCausingInvalidPresentTestFlag</unmanaged>
 	IDXGISwapChain_Present_OtherFlagsCausingInvalidPresentTestFlag = 123,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_UnavailableInSession0"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_UnavailableInSession0"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_UnavailableInSession0</unmanaged>
 	IDXGIFactory_CreateSwapChain_UnavailableInSession0 = 124,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_MakeWindowAssociation_UnavailableInSession0"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_MakeWindowAssociation_UnavailableInSession0"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_MakeWindowAssociation_UnavailableInSession0</unmanaged>
 	IDXGIFactory_MakeWindowAssociation_UnavailableInSession0 = 125,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetWindowAssociation_UnavailableInSession0"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetWindowAssociation_UnavailableInSession0"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetWindowAssociation_UnavailableInSession0</unmanaged>
 	IDXGIFactory_GetWindowAssociation_UnavailableInSession0 = 126,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIAdapter_EnumOutputs_UnavailableInSession0"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIAdapter_EnumOutputs_UnavailableInSession0"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIAdapter_EnumOutputs_UnavailableInSession0</unmanaged>
 	IDXGIAdapter_EnumOutputs_UnavailableInSession0 = 127,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_StereoDisabled"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_StereoDisabled"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_StereoDisabled</unmanaged>
 	IDXGISwapChain_CreationOrSetFullscreenState_StereoDisabled = 128,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_UnregisterStatus_CookieNotFound"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_UnregisterStatus_CookieNotFound"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_UnregisterStatus_CookieNotFound</unmanaged>
 	IDXGIFactory2_UnregisterStatus_CookieNotFound = 129,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFSOrOverlay"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFSOrOverlay"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFSOrOverlay</unmanaged>
 	IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFSOrOverlay = 130,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFlipSequential"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFlipSequential"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFlipSequential</unmanaged>
 	IDXGISwapChain_Present_ProtectedContentInWindowedModeWithoutFlipSequential = 131,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedContentWithRDPDriver"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedContentWithRDPDriver"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedContentWithRDPDriver</unmanaged>
 	IDXGISwapChain_Present_ProtectedContentWithRDPDriver = 132,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithDWMOffOrInvalidDisplayAffinity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithDWMOffOrInvalidDisplayAffinity"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedContentInWindowedModeWithDWMOffOrInvalidDisplayAffinity</unmanaged>
 	IDXGISwapChain_Present_ProtectedContentInWindowedModeWithDWMOffOrInvalidDisplayAffinity = 133,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_WidthOrHeightIsZero"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_WidthOrHeightIsZero"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_WidthOrHeightIsZero</unmanaged>
 	IDXGIFactory_CreateSwapChainForComposition_WidthOrHeightIsZero = 134,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_OnlyFlipSequentialSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_OnlyFlipSequentialSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_OnlyFlipSequentialSupported</unmanaged>
 	IDXGIFactory_CreateSwapChainForComposition_OnlyFlipSequentialSupported = 135,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnAdapter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnAdapter"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnAdapter</unmanaged>
 	IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnAdapter = 136,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnWindows7"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnWindows7"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnWindows7</unmanaged>
 	IDXGIFactory_CreateSwapChainForComposition_UnsupportedOnWindows7 = 137,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSTransitionWithCompositionSwapChain"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSTransitionWithCompositionSwapChain"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSTransitionWithCompositionSwapChain</unmanaged>
 	IDXGISwapChain_SetFullscreenState_FSTransitionWithCompositionSwapChain = 138,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeTarget_InvalidWithCompositionSwapChain"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeTarget_InvalidWithCompositionSwapChain"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeTarget_InvalidWithCompositionSwapChain</unmanaged>
 	IDXGISwapChain_ResizeTarget_InvalidWithCompositionSwapChain = 139,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_WidthOrHeightIsZero"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_WidthOrHeightIsZero"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_WidthOrHeightIsZero</unmanaged>
 	IDXGISwapChain_ResizeBuffers_WidthOrHeightIsZero = 140,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneIsFlipModelOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneIsFlipModelOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneIsFlipModelOnly</unmanaged>
 	IDXGIFactory_CreateSwapChain_ScalingNoneIsFlipModelOnly = 141,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingUnrecognized"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingUnrecognized"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingUnrecognized</unmanaged>
 	IDXGIFactory_CreateSwapChain_ScalingUnrecognized = 142,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyFullscreenUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyFullscreenUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyFullscreenUnsupported</unmanaged>
 	IDXGIFactory_CreateSwapChain_DisplayOnlyFullscreenUnsupported = 143,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyUnsupported</unmanaged>
 	IDXGIFactory_CreateSwapChain_DisplayOnlyUnsupported = 144,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_RestartIsFullscreenOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_RestartIsFullscreenOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_RestartIsFullscreenOnly</unmanaged>
 	IDXGISwapChain_Present_RestartIsFullscreenOnly = 145,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedWindowlessPresentationRequiresDisplayOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_ProtectedWindowlessPresentationRequiresDisplayOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_ProtectedWindowlessPresentationRequiresDisplayOnly</unmanaged>
 	IDXGISwapChain_Present_ProtectedWindowlessPresentationRequiresDisplayOnly = 146,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_DisplayOnlyUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_DisplayOnlyUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_DisplayOnlyUnsupported</unmanaged>
 	IDXGISwapChain_SetFullscreenState_DisplayOnlyUnsupported = 147,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_SetBackgroundColor_OutOfRange"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_SetBackgroundColor_OutOfRange"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_SetBackgroundColor_OutOfRange</unmanaged>
 	IDXGISwapChain1_SetBackgroundColor_OutOfRange = 148,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyFullscreenUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyFullscreenUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyFullscreenUnsupported</unmanaged>
 	IDXGISwapChain_ResizeBuffers_DisplayOnlyFullscreenUnsupported = 149,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyUnsupported</unmanaged>
 	IDXGISwapChain_ResizeBuffers_DisplayOnlyUnsupported = 150,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapchain_Present_ScrollUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapchain_Present_ScrollUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapchain_Present_ScrollUnsupported</unmanaged>
 	IDXGISwapchain_Present_ScrollUnsupported = 151,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_SetRotation_UnsupportedOS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_SetRotation_UnsupportedOS"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_SetRotation_UnsupportedOS</unmanaged>
 	IDXGISwapChain1_SetRotation_UnsupportedOS = 152,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_GetRotation_UnsupportedOS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_GetRotation_UnsupportedOS"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_GetRotation_UnsupportedOS</unmanaged>
 	IDXGISwapChain1_GetRotation_UnsupportedOS = 153,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapchain_Present_FullscreenRotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapchain_Present_FullscreenRotation"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapchain_Present_FullscreenRotation</unmanaged>
 	IDXGISwapchain_Present_FullscreenRotation = 154,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithMSAABuffers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithMSAABuffers"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithMSAABuffers</unmanaged>
 	IDXGISwapChain_Present_PartialPresentationWithMSAABuffers = 155,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_SetRotation_FlipSequentialRequired"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_SetRotation_FlipSequentialRequired"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_SetRotation_FlipSequentialRequired</unmanaged>
 	IDXGISwapChain1_SetRotation_FlipSequentialRequired = 156,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_SetRotation_InvalidRotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_SetRotation_InvalidRotation"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_SetRotation_InvalidRotation</unmanaged>
 	IDXGISwapChain1_SetRotation_InvalidRotation = 157,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_GetRotation_FlipSequentialRequired"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain1_GetRotation_FlipSequentialRequired"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain1_GetRotation_FlipSequentialRequired</unmanaged>
 	IDXGISwapChain1_GetRotation_FlipSequentialRequired = 158,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetHwnd_WrongType"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetHwnd_WrongType"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetHwnd_WrongType</unmanaged>
 	IDXGISwapChain_GetHwnd_WrongType = 159,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetCompositionSurface_WrongType"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetCompositionSurface_WrongType"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetCompositionSurface_WrongType</unmanaged>
 	IDXGISwapChain_GetCompositionSurface_WrongType = 160,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetCoreWindow_WrongType"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetCoreWindow_WrongType"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetCoreWindow_WrongType</unmanaged>
 	IDXGISwapChain_GetCoreWindow_WrongType = 161,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetFullscreenDesc_NonHwnd"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetFullscreenDesc_NonHwnd"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetFullscreenDesc_NonHwnd</unmanaged>
 	IDXGISwapChain_GetFullscreenDesc_NonHwnd = 162,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_CoreWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_CoreWindow"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_CoreWindow</unmanaged>
 	IDXGISwapChain_SetFullscreenState_CoreWindow = 163,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_UnsupportedOnWindows7"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_UnsupportedOnWindows7"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_UnsupportedOnWindows7</unmanaged>
 	IDXGIFactory2_CreateSwapChainForCoreWindow_UnsupportedOnWindows7 = 164,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsNULL</unmanaged>
 	IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsNULL = 165,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_FSUnsupportedForModernApps"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_FSUnsupportedForModernApps"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_FSUnsupportedForModernApps</unmanaged>
 	IDXGIFactory_CreateSwapChain_FSUnsupportedForModernApps = 166,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_MakeWindowAssociation_ModernApp"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_MakeWindowAssociation_ModernApp"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_MakeWindowAssociation_ModernApp</unmanaged>
 	IDXGIFactory_MakeWindowAssociation_ModernApp = 167,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeTarget_ModernApp"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeTarget_ModernApp"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeTarget_ModernApp</unmanaged>
 	IDXGISwapChain_ResizeTarget_ModernApp = 168,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeTarget_pNewTargetParametersIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeTarget_pNewTargetParametersIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeTarget_pNewTargetParametersIsNULL</unmanaged>
 	IDXGISwapChain_ResizeTarget_pNewTargetParametersIsNULL = 169,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetDisplaySurface_ModernApp"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_SetDisplaySurface_ModernApp"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_SetDisplaySurface_ModernApp</unmanaged>
 	IDXGIOutput_SetDisplaySurface_ModernApp = 170,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_ModernApp"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_ModernApp"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_ModernApp</unmanaged>
 	IDXGIOutput_TakeOwnership_ModernApp = 171,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsInvalid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsInvalid"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsInvalid</unmanaged>
 	IDXGIFactory2_CreateSwapChainForCoreWindow_pWindowIsInvalid = 172,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCompositionSurface_InvalidHandle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCompositionSurface_InvalidHandle"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCompositionSurface_InvalidHandle</unmanaged>
 	IDXGIFactory2_CreateSwapChainForCompositionSurface_InvalidHandle = 173,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_ModernApp"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISurface1_GetDC_ModernApp"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISurface1_GetDC_ModernApp</unmanaged>
 	IDXGISurface1_GetDC_ModernApp = 174,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneRequiresWindows8OrNewer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneRequiresWindows8OrNewer"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ScalingNoneRequiresWindows8OrNewer</unmanaged>
 	IDXGIFactory_CreateSwapChain_ScalingNoneRequiresWindows8OrNewer = 175,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoAndPreferRight"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoAndPreferRight"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoAndPreferRight</unmanaged>
 	IDXGISwapChain_Present_TemporaryMonoAndPreferRight = 176,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithDoNotSequence"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithDoNotSequence"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithDoNotSequence</unmanaged>
 	IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithDoNotSequence = 177,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithoutStereo"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithoutStereo"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithoutStereo</unmanaged>
 	IDXGISwapChain_Present_TemporaryMonoOrPreferRightWithoutStereo = 178,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_TemporaryMonoUnsupported</unmanaged>
 	IDXGISwapChain_Present_TemporaryMonoUnsupported = 179,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_ArraySizeMismatch"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_ArraySizeMismatch"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_GetDisplaySurfaceData_ArraySizeMismatch</unmanaged>
 	IDXGIOutput_GetDisplaySurfaceData_ArraySizeMismatch = 180,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithSwapEffectDiscard"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithSwapEffectDiscard"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_PartialPresentationWithSwapEffectDiscard</unmanaged>
 	IDXGISwapChain_Present_PartialPresentationWithSwapEffectDiscard = 181,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaUnrecognized"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaUnrecognized"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaUnrecognized</unmanaged>
 	IDXGIFactory_CreateSwapChain_AlphaUnrecognized = 182,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsWindowlessOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsWindowlessOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsWindowlessOnly</unmanaged>
 	IDXGIFactory_CreateSwapChain_AlphaIsWindowlessOnly = 183,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsFlipModelOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsFlipModelOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_AlphaIsFlipModelOnly</unmanaged>
 	IDXGIFactory_CreateSwapChain_AlphaIsFlipModelOnly = 184,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictToOutputAdapterMismatch"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictToOutputAdapterMismatch"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_RestrictToOutputAdapterMismatch</unmanaged>
 	IDXGIFactory_CreateSwapChain_RestrictToOutputAdapterMismatch = 185,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyOnLegacy"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyOnLegacy"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_DisplayOnlyOnLegacy</unmanaged>
 	IDXGIFactory_CreateSwapChain_DisplayOnlyOnLegacy = 186,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyOnLegacy"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyOnLegacy"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_DisplayOnlyOnLegacy</unmanaged>
 	IDXGISwapChain_ResizeBuffers_DisplayOnlyOnLegacy = 187,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIResource1_CreateSubresourceSurface_InvalidIndex"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIResource1_CreateSubresourceSurface_InvalidIndex"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIResource1_CreateSubresourceSurface_InvalidIndex</unmanaged>
 	IDXGIResource1_CreateSubresourceSurface_InvalidIndex = 188,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidScaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidScaling"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidScaling</unmanaged>
 	IDXGIFactory_CreateSwapChainForComposition_InvalidScaling = 189,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForCoreWindow_InvalidSwapEffect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForCoreWindow_InvalidSwapEffect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForCoreWindow_InvalidSwapEffect</unmanaged>
 	IDXGIFactory_CreateSwapChainForCoreWindow_InvalidSwapEffect = 190,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIResource1_CreateSharedHandle_UnsupportedOS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIResource1_CreateSharedHandle_UnsupportedOS"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIResource1_CreateSharedHandle_UnsupportedOS</unmanaged>
 	IDXGIResource1_CreateSharedHandle_UnsupportedOS = 191,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusWindow_UnsupportedOS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusWindow_UnsupportedOS"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusWindow_UnsupportedOS</unmanaged>
 	IDXGIFactory2_RegisterOcclusionStatusWindow_UnsupportedOS = 192,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusEvent_UnsupportedOS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusEvent_UnsupportedOS"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_RegisterOcclusionStatusEvent_UnsupportedOS</unmanaged>
 	IDXGIFactory2_RegisterOcclusionStatusEvent_UnsupportedOS = 193,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_DuplicateOutput_UnsupportedOS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_DuplicateOutput_UnsupportedOS"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_DuplicateOutput_UnsupportedOS</unmanaged>
 	IDXGIOutput1_DuplicateOutput_UnsupportedOS = 194,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDisplayControl_IsStereoEnabled_UnsupportedOS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDisplayControl_IsStereoEnabled_UnsupportedOS"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDisplayControl_IsStereoEnabled_UnsupportedOS</unmanaged>
 	IDXGIDisplayControl_IsStereoEnabled_UnsupportedOS = 195,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidAlphaMode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidAlphaMode"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForComposition_InvalidAlphaMode</unmanaged>
 	IDXGIFactory_CreateSwapChainForComposition_InvalidAlphaMode = 196,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidResource"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidResource</unmanaged>
 	IDXGIFactory_GetSharedResourceAdapterLuid_InvalidResource = 197,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidLUID"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidLUID"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_InvalidLUID</unmanaged>
 	IDXGIFactory_GetSharedResourceAdapterLuid_InvalidLUID = 198,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_UnsupportedOS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_UnsupportedOS"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_GetSharedResourceAdapterLuid_UnsupportedOS</unmanaged>
 	IDXGIFactory_GetSharedResourceAdapterLuid_UnsupportedOS = 199,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_2DOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_2DOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_2DOnly</unmanaged>
 	IDXGIOutput1_GetDisplaySurfaceData1_2DOnly = 200,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_StagingOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_StagingOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_StagingOnly</unmanaged>
 	IDXGIOutput1_GetDisplaySurfaceData1_StagingOnly = 201,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NeedCPUAccessWrite"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NeedCPUAccessWrite"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NeedCPUAccessWrite</unmanaged>
 	IDXGIOutput1_GetDisplaySurfaceData1_NeedCPUAccessWrite = 202,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NoShared"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NoShared"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_NoShared</unmanaged>
 	IDXGIOutput1_GetDisplaySurfaceData1_NoShared = 203,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_OnlyMipLevels1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_OnlyMipLevels1"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_OnlyMipLevels1</unmanaged>
 	IDXGIOutput1_GetDisplaySurfaceData1_OnlyMipLevels1 = 204,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_MappedOrOfferedResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_MappedOrOfferedResource"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput1_GetDisplaySurfaceData1_MappedOrOfferedResource</unmanaged>
 	IDXGIOutput1_GetDisplaySurfaceData1_MappedOrOfferedResource = 205,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSUnsupportedForModernApps"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSUnsupportedForModernApps"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_FSUnsupportedForModernApps</unmanaged>
 	IDXGISwapChain_SetFullscreenState_FSUnsupportedForModernApps = 206,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_FailedToGoFSButNonPreRotated"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_FailedToGoFSButNonPreRotated"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_FailedToGoFSButNonPreRotated</unmanaged>
 	IDXGIFactory_CreateSwapChain_FailedToGoFSButNonPreRotated = 207,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainOrRegisterOcclusionStatus_BlitModelUsedWhileRegisteredForOcclusionStatusEvents"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainOrRegisterOcclusionStatus_BlitModelUsedWhileRegisteredForOcclusionStatusEvents"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainOrRegisterOcclusionStatus_BlitModelUsedWhileRegisteredForOcclusionStatusEvents</unmanaged>
 	IDXGIFactory_CreateSwapChainOrRegisterOcclusionStatus_BlitModelUsedWhileRegisteredForOcclusionStatusEvents = 208,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_BlitModelUsedWhileRegisteredForOcclusionStatusEvents"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_BlitModelUsedWhileRegisteredForOcclusionStatusEvents"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_BlitModelUsedWhileRegisteredForOcclusionStatusEvents</unmanaged>
 	IDXGISwapChain_Present_BlitModelUsedWhileRegisteredForOcclusionStatusEvents = 209,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreFlipModelOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreFlipModelOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreFlipModelOnly</unmanaged>
 	IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreFlipModelOnly = 210,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreNotFullscreen"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreNotFullscreen"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreNotFullscreen</unmanaged>
 	IDXGIFactory_CreateSwapChain_WaitableSwapChainsAreNotFullscreen = 211,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_Waitable"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_Waitable"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_Waitable</unmanaged>
 	IDXGISwapChain_SetFullscreenState_Waitable = 212,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveWaitableFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveWaitableFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveWaitableFlag</unmanaged>
 	IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveWaitableFlag = 213,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetFrameLatencyWaitableObject_OnlyWaitable"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetFrameLatencyWaitableObject_OnlyWaitable"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetFrameLatencyWaitableObject_OnlyWaitable</unmanaged>
 	IDXGISwapChain_GetFrameLatencyWaitableObject_OnlyWaitable = 214,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_OnlyWaitable"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_OnlyWaitable"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_OnlyWaitable</unmanaged>
 	IDXGISwapChain_GetMaximumFrameLatency_OnlyWaitable = 215,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_pMaxLatencyIsNULL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_pMaxLatencyIsNULL"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMaximumFrameLatency_pMaxLatencyIsNULL</unmanaged>
 	IDXGISwapChain_GetMaximumFrameLatency_pMaxLatencyIsNULL = 216,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_OnlyWaitable"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_OnlyWaitable"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_OnlyWaitable</unmanaged>
 	IDXGISwapChain_SetMaximumFrameLatency_OnlyWaitable = 217,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_MaxLatencyIsOutOfBounds"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_MaxLatencyIsOutOfBounds"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMaximumFrameLatency_MaxLatencyIsOutOfBounds</unmanaged>
 	IDXGISwapChain_SetMaximumFrameLatency_MaxLatencyIsOutOfBounds = 218,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ForegroundIsCoreWindowOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ForegroundIsCoreWindowOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ForegroundIsCoreWindowOnly</unmanaged>
 	IDXGIFactory_CreateSwapChain_ForegroundIsCoreWindowOnly = 219,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_ForegroundUnsupportedOnAdapter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_ForegroundUnsupportedOnAdapter"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_ForegroundUnsupportedOnAdapter</unmanaged>
 	IDXGIFactory2_CreateSwapChainForCoreWindow_ForegroundUnsupportedOnAdapter = 220,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidScaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidScaling"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidScaling</unmanaged>
 	IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidScaling = 221,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidAlphaMode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidAlphaMode"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidAlphaMode</unmanaged>
 	IDXGIFactory2_CreateSwapChainForCoreWindow_InvalidAlphaMode = 222,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveForegroundFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveForegroundFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveForegroundFlag</unmanaged>
 	IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveForegroundFlag = 223,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixPointerCannotBeNull"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixPointerCannotBeNull"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixPointerCannotBeNull</unmanaged>
 	IDXGISwapChain_SetMatrixTransform_MatrixPointerCannotBeNull = 224,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_RequiresCompositionSwapChain"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_RequiresCompositionSwapChain"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_RequiresCompositionSwapChain</unmanaged>
 	IDXGISwapChain_SetMatrixTransform_RequiresCompositionSwapChain = 225,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeFinite"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeFinite"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeFinite</unmanaged>
 	IDXGISwapChain_SetMatrixTransform_MatrixMustBeFinite = 226,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeTranslateAndOrScale"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeTranslateAndOrScale"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_MatrixMustBeTranslateAndOrScale</unmanaged>
 	IDXGISwapChain_SetMatrixTransform_MatrixMustBeTranslateAndOrScale = 227,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMatrixTransform_MatrixPointerCannotBeNull"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMatrixTransform_MatrixPointerCannotBeNull"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMatrixTransform_MatrixPointerCannotBeNull</unmanaged>
 	IDXGISwapChain_GetMatrixTransform_MatrixPointerCannotBeNull = 228,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMatrixTransform_RequiresCompositionSwapChain"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMatrixTransform_RequiresCompositionSwapChain"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMatrixTransform_RequiresCompositionSwapChain</unmanaged>
 	IDXGISwapChain_GetMatrixTransform_RequiresCompositionSwapChain = 229,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_DXGIGetDebugInterface1_NULL_ppDebug"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_DXGIGetDebugInterface1_NULL_ppDebug"]/*' />
 	/// <unmanaged>DXGI_MSG_DXGIGetDebugInterface1_NULL_ppDebug</unmanaged>
 	DXGIGetDebugInterface1_NULL_ppDebug = 230,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_DXGIGetDebugInterface1_InvalidFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_DXGIGetDebugInterface1_InvalidFlags"]/*' />
 	/// <unmanaged>DXGI_MSG_DXGIGetDebugInterface1_InvalidFlags</unmanaged>
 	DXGIGetDebugInterface1_InvalidFlags = 231,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_Decode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_Decode"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_Decode</unmanaged>
 	IDXGISwapChain_Present_Decode = 232,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_Decode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_Decode"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_Decode</unmanaged>
 	IDXGISwapChain_ResizeBuffers_Decode = 233,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetSourceSize_FlipModel"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetSourceSize_FlipModel"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetSourceSize_FlipModel</unmanaged>
 	IDXGISwapChain_SetSourceSize_FlipModel = 234,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetSourceSize_Decode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetSourceSize_Decode"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetSourceSize_Decode</unmanaged>
 	IDXGISwapChain_SetSourceSize_Decode = 235,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetSourceSize_WidthHeight"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetSourceSize_WidthHeight"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetSourceSize_WidthHeight</unmanaged>
 	IDXGISwapChain_SetSourceSize_WidthHeight = 236,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetSourceSize_NullPointers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetSourceSize_NullPointers"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetSourceSize_NullPointers</unmanaged>
 	IDXGISwapChain_GetSourceSize_NullPointers = 237,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetSourceSize_Decode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetSourceSize_Decode"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetSourceSize_Decode</unmanaged>
 	IDXGISwapChain_GetSourceSize_Decode = 238,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_SetColorSpace_InvalidFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_SetColorSpace_InvalidFlags"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_SetColorSpace_InvalidFlags</unmanaged>
 	IDXGIDecodeSwapChain_SetColorSpace_InvalidFlags = 239,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_SetSourceRect_InvalidRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_SetSourceRect_InvalidRect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_SetSourceRect_InvalidRect</unmanaged>
 	IDXGIDecodeSwapChain_SetSourceRect_InvalidRect = 240,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_SetTargetRect_InvalidRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_SetTargetRect_InvalidRect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_SetTargetRect_InvalidRect</unmanaged>
 	IDXGIDecodeSwapChain_SetTargetRect_InvalidRect = 241,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_SetDestSize_InvalidSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_SetDestSize_InvalidSize"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_SetDestSize_InvalidSize</unmanaged>
 	IDXGIDecodeSwapChain_SetDestSize_InvalidSize = 242,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_GetSourceRect_InvalidPointer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_GetSourceRect_InvalidPointer"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_GetSourceRect_InvalidPointer</unmanaged>
 	IDXGIDecodeSwapChain_GetSourceRect_InvalidPointer = 243,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_GetTargetRect_InvalidPointer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_GetTargetRect_InvalidPointer"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_GetTargetRect_InvalidPointer</unmanaged>
 	IDXGIDecodeSwapChain_GetTargetRect_InvalidPointer = 244,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_GetDestSize_InvalidPointer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIDecodeSwapChain_GetDestSize_InvalidPointer"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIDecodeSwapChain_GetDestSize_InvalidPointer</unmanaged>
 	IDXGIDecodeSwapChain_GetDestSize_InvalidPointer = 245,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_PresentBuffer_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_PresentBuffer_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_PresentBuffer_YUV</unmanaged>
 	IDXGISwapChain_PresentBuffer_YUV = 246,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetSourceSize_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetSourceSize_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetSourceSize_YUV</unmanaged>
 	IDXGISwapChain_SetSourceSize_YUV = 247,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetSourceSize_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetSourceSize_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetSourceSize_YUV</unmanaged>
 	IDXGISwapChain_GetSourceSize_YUV = 248,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetMatrixTransform_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetMatrixTransform_YUV</unmanaged>
 	IDXGISwapChain_SetMatrixTransform_YUV = 249,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMatrixTransform_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_GetMatrixTransform_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_GetMatrixTransform_YUV</unmanaged>
 	IDXGISwapChain_GetMatrixTransform_YUV = 250,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_PartialPresentation_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_PartialPresentation_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_PartialPresentation_YUV</unmanaged>
 	IDXGISwapChain_Present_PartialPresentation_YUV = 251,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveFlag_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveFlag_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveFlag_YUV</unmanaged>
 	IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveFlag_YUV = 252,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_Alignment_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_Alignment_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_Alignment_YUV</unmanaged>
 	IDXGISwapChain_ResizeBuffers_Alignment_YUV = 253,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ShaderInputUnsupported_YUV"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_ShaderInputUnsupported_YUV"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_ShaderInputUnsupported_YUV</unmanaged>
 	IDXGIFactory_CreateSwapChain_ShaderInputUnsupported_YUV = 254,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_NullPointers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_NullPointers"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_NullPointers</unmanaged>
 	IDXGIOutput3_CheckOverlaySupport_NullPointers = 255,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_IDXGIDeviceNotSupportedBypConcernedDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_IDXGIDeviceNotSupportedBypConcernedDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput3_CheckOverlaySupport_IDXGIDeviceNotSupportedBypConcernedDevice</unmanaged>
 	IDXGIOutput3_CheckOverlaySupport_IDXGIDeviceNotSupportedBypConcernedDevice = 256,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIAdapter_EnumOutputs2_InvalidEnumOutputs2Flag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIAdapter_EnumOutputs2_InvalidEnumOutputs2Flag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIAdapter_EnumOutputs2_InvalidEnumOutputs2Flag</unmanaged>
 	IDXGIAdapter_EnumOutputs2_InvalidEnumOutputs2Flag = 257,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_FSUnsupportedForFlipDiscard"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_FSUnsupportedForFlipDiscard"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreationOrSetFullscreenState_FSUnsupportedForFlipDiscard</unmanaged>
 	IDXGISwapChain_CreationOrSetFullscreenState_FSUnsupportedForFlipDiscard = 258,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_NullPointers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_NullPointers"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_NullPointers</unmanaged>
 	IDXGIOutput4_CheckOverlayColorSpaceSupport_NullPointers = 259,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_IDXGIDeviceNotSupportedBypConcernedDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_IDXGIDeviceNotSupportedBypConcernedDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput4_CheckOverlayColorSpaceSupport_IDXGIDeviceNotSupportedBypConcernedDevice</unmanaged>
 	IDXGIOutput4_CheckOverlayColorSpaceSupport_IDXGIDeviceNotSupportedBypConcernedDevice = 260,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_CheckColorSpaceSupport_NullPointers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_CheckColorSpaceSupport_NullPointers"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_CheckColorSpaceSupport_NullPointers</unmanaged>
 	IDXGISwapChain3_CheckColorSpaceSupport_NullPointers = 261,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_SetColorSpace1_InvalidColorSpace"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_SetColorSpace1_InvalidColorSpace"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_SetColorSpace1_InvalidColorSpace</unmanaged>
 	IDXGISwapChain3_SetColorSpace1_InvalidColorSpace = 262,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidHwProtect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidHwProtect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidHwProtect</unmanaged>
 	IDXGIFactory_CreateSwapChain_InvalidHwProtect = 263,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_HwProtectUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_HwProtectUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_HwProtectUnsupported</unmanaged>
 	IDXGIFactory_CreateSwapChain_HwProtectUnsupported = 264,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtect</unmanaged>
 	IDXGISwapChain_ResizeBuffers_InvalidHwProtect = 265,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_HwProtectUnsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_HwProtectUnsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_HwProtectUnsupported</unmanaged>
 	IDXGISwapChain_ResizeBuffers_HwProtectUnsupported = 266,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers1_D3D12Only"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers1_D3D12Only"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers1_D3D12Only</unmanaged>
 	IDXGISwapChain_ResizeBuffers1_D3D12Only = 267,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers1_FlipModel"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers1_FlipModel"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers1_FlipModel</unmanaged>
 	IDXGISwapChain_ResizeBuffers1_FlipModel = 268,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers1_NodeMaskAndQueueRequired"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers1_NodeMaskAndQueueRequired"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers1_NodeMaskAndQueueRequired</unmanaged>
 	IDXGISwapChain_ResizeBuffers1_NodeMaskAndQueueRequired = 269,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreateSwapChain_InvalidHwProtectGdiFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_CreateSwapChain_InvalidHwProtectGdiFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_CreateSwapChain_InvalidHwProtectGdiFlag</unmanaged>
 	IDXGISwapChain_CreateSwapChain_InvalidHwProtectGdiFlag = 270,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtectGdiFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtectGdiFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_InvalidHwProtectGdiFlag</unmanaged>
 	IDXGISwapChain_ResizeBuffers_InvalidHwProtectGdiFlag = 271,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_10BitFormatNotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_10BitFormatNotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_10BitFormatNotSupported</unmanaged>
 	IDXGIFactory_CreateSwapChain_10BitFormatNotSupported = 272,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSwapEffectRequired"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSwapEffectRequired"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_FlipSwapEffectRequired</unmanaged>
 	IDXGIFactory_CreateSwapChain_FlipSwapEffectRequired = 273,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidDevice"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidDevice</unmanaged>
 	IDXGIFactory_CreateSwapChain_InvalidDevice = 274,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_Unsupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_TakeOwnership_Unsupported"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_TakeOwnership_Unsupported</unmanaged>
 	IDXGIOutput_TakeOwnership_Unsupported = 275,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidQueue"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidQueue"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_InvalidQueue</unmanaged>
 	IDXGIFactory_CreateSwapChain_InvalidQueue = 276,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_ResizeBuffers1_InvalidQueue"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_ResizeBuffers1_InvalidQueue"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_ResizeBuffers1_InvalidQueue</unmanaged>
 	IDXGISwapChain3_ResizeBuffers1_InvalidQueue = 277,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForHwnd_InvalidScaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChainForHwnd_InvalidScaling"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChainForHwnd_InvalidScaling</unmanaged>
 	IDXGIFactory_CreateSwapChainForHwnd_InvalidScaling = 278,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidSize"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidSize</unmanaged>
 	IDXGISwapChain3_SetHDRMetaData_InvalidSize = 279,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidPointer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidPointer"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidPointer</unmanaged>
 	IDXGISwapChain3_SetHDRMetaData_InvalidPointer = 280,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidType"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidType"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain3_SetHDRMetaData_InvalidType</unmanaged>
 	IDXGISwapChain3_SetHDRMetaData_InvalidType = 281,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_FullscreenAllowTearingIsInvalid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_FullscreenAllowTearingIsInvalid"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_FullscreenAllowTearingIsInvalid</unmanaged>
 	IDXGISwapChain_Present_FullscreenAllowTearingIsInvalid = 282,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresPresentIntervalZero"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresPresentIntervalZero"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresPresentIntervalZero</unmanaged>
 	IDXGISwapChain_Present_AllowTearingRequiresPresentIntervalZero = 283,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresCreationFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresCreationFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_AllowTearingRequiresCreationFlag</unmanaged>
 	IDXGISwapChain_Present_AllowTearingRequiresCreationFlag = 284,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveAllowTearingFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveAllowTearingFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveAllowTearingFlag</unmanaged>
 	IDXGISwapChain_ResizeBuffers_CannotAddOrRemoveAllowTearingFlag = 285,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_AllowTearingFlagIsFlipModelOnly"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_AllowTearingFlagIsFlipModelOnly"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_AllowTearingFlagIsFlipModelOnly</unmanaged>
 	IDXGIFactory_CreateSwapChain_AllowTearingFlagIsFlipModelOnly = 286,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidFeature"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidFeature"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidFeature</unmanaged>
 	IDXGIFactory_CheckFeatureSupport_InvalidFeature = 287,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidSize"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CheckFeatureSupport_InvalidSize</unmanaged>
 	IDXGIFactory_CheckFeatureSupport_InvalidSize = 288,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput6_CheckHardwareCompositionSupport_NullPointer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput6_CheckHardwareCompositionSupport_NullPointer"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput6_CheckHardwareCompositionSupport_NullPointer</unmanaged>
 	IDXGIOutput6_CheckHardwareCompositionSupport_NullPointer = 289,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_PerMonitorDpiShimApplied"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_SetFullscreenState_PerMonitorDpiShimApplied"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_SetFullscreenState_PerMonitorDpiShimApplied</unmanaged>
 	IDXGISwapChain_SetFullscreenState_PerMonitorDpiShimApplied = 290,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_DuplicateOutput_PerMonitorDpiShimApplied"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_DuplicateOutput_PerMonitorDpiShimApplied"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_DuplicateOutput_PerMonitorDpiShimApplied</unmanaged>
 	IDXGIOutput_DuplicateOutput_PerMonitorDpiShimApplied = 291,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_DuplicateOutput1_PerMonitorDpiRequired"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIOutput_DuplicateOutput1_PerMonitorDpiRequired"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIOutput_DuplicateOutput1_PerMonitorDpiRequired</unmanaged>
 	IDXGIOutput_DuplicateOutput1_PerMonitorDpiRequired = 292,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory7_UnregisterAdaptersChangedEvent_CookieNotFound"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory7_UnregisterAdaptersChangedEvent_CookieNotFound"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory7_UnregisterAdaptersChangedEvent_CookieNotFound</unmanaged>
 	IDXGIFactory7_UnregisterAdaptersChangedEvent_CookieNotFound = 293,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_LegacyBltModelSwapEffect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_LegacyBltModelSwapEffect"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_LegacyBltModelSwapEffect</unmanaged>
 	IDXGIFactory_CreateSwapChain_LegacyBltModelSwapEffect = 294,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain4_SetHDRMetaData_MetadataUnchanged"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain4_SetHDRMetaData_MetadataUnchanged"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain4_SetHDRMetaData_MetadataUnchanged</unmanaged>
 	IDXGISwapChain4_SetHDRMetaData_MetadataUnchanged = 295,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_11On12_Released_Resource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGISwapChain_Present_11On12_Released_Resource"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGISwapChain_Present_11On12_Released_Resource</unmanaged>
 	IDXGISwapChain_Present_11On12_Released_Resource = 296,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_MultipleSwapchainRefToSurface_DeferredDtr"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_CreateSwapChain_MultipleSwapchainRefToSurface_DeferredDtr"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_CreateSwapChain_MultipleSwapchainRefToSurface_DeferredDtr</unmanaged>
 	IDXGIFactory_CreateSwapChain_MultipleSwapchainRefToSurface_DeferredDtr = 297,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_MakeWindowAssociation_NoOpBehavior"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_IDXGIFactory_MakeWindowAssociation_NoOpBehavior"]/*' />
 	/// <unmanaged>DXGI_MSG_IDXGIFactory_MakeWindowAssociation_NoOpBehavior</unmanaged>
 	IDXGIFactory_MakeWindowAssociation_NoOpBehavior = 298,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow</unmanaged>
 	Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow = 1000,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_DISCARD_BufferCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_DISCARD_BufferCount"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_DISCARD_BufferCount</unmanaged>
 	Phone_IDXGIFactory_CreateSwapChain_DISCARD_BufferCount = 1001,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_SetFullscreenState_NotAvailable"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_SetFullscreenState_NotAvailable"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_SetFullscreenState_NotAvailable</unmanaged>
 	Phone_IDXGISwapChain_SetFullscreenState_NotAvailable = 1002,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_ResizeBuffers_NotAvailable"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_ResizeBuffers_NotAvailable"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_ResizeBuffers_NotAvailable</unmanaged>
 	Phone_IDXGISwapChain_ResizeBuffers_NotAvailable = 1003,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_ResizeTarget_NotAvailable"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_ResizeTarget_NotAvailable"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_ResizeTarget_NotAvailable</unmanaged>
 	Phone_IDXGISwapChain_ResizeTarget_NotAvailable = 1004,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerIndex"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerIndex"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerIndex</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidLayerIndex = 1005,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleLayerIndex"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleLayerIndex"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleLayerIndex</unmanaged>
 	Phone_IDXGISwapChain_Present_MultipleLayerIndex = 1006,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidLayerFlag</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidLayerFlag = 1007,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidRotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidRotation"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidRotation</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidRotation = 1008,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidBlend"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidBlend"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidBlend</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidBlend = 1009,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidResource"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidResource</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidResource = 1010,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidMultiPlaneOverlayResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidMultiPlaneOverlayResource"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidMultiPlaneOverlayResource</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidMultiPlaneOverlayResource = 1011,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForPrimary"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForPrimary</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidIndexForPrimary = 1012,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForOverlay"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForOverlay"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidIndexForOverlay</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidIndexForOverlay = 1013,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSubResourceIndex"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSubResourceIndex"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSubResourceIndex</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidSubResourceIndex = 1014,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSourceRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSourceRect"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidSourceRect</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidSourceRect = 1015,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidDestinationRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidDestinationRect"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidDestinationRect</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidDestinationRect = 1016,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleResource"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_MultipleResource</unmanaged>
 	Phone_IDXGISwapChain_Present_MultipleResource = 1017,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_NotSharedResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_NotSharedResource"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_NotSharedResource</unmanaged>
 	Phone_IDXGISwapChain_Present_NotSharedResource = 1018,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidFlag"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidFlag"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidFlag</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidFlag = 1019,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidInterval"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidInterval"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_InvalidInterval</unmanaged>
 	Phone_IDXGISwapChain_Present_InvalidInterval = 1020,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_MSAA_NotSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_MSAA_NotSupported"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_MSAA_NotSupported</unmanaged>
 	Phone_IDXGIFactory_CreateSwapChain_MSAA_NotSupported = 1021,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_ScalingAspectRatioStretch_Supported_ModernApp"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_ScalingAspectRatioStretch_Supported_ModernApp"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_ScalingAspectRatioStretch_Supported_ModernApp</unmanaged>
 	Phone_IDXGIFactory_CreateSwapChain_ScalingAspectRatioStretch_Supported_ModernApp = 1022,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_GetFrameStatistics_NotAvailable_ModernApp"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_GetFrameStatistics_NotAvailable_ModernApp"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_GetFrameStatistics_NotAvailable_ModernApp</unmanaged>
 	Phone_IDXGISwapChain_GetFrameStatistics_NotAvailable_ModernApp = 1023,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_ReplaceInterval0With1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present_ReplaceInterval0With1"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present_ReplaceInterval0With1</unmanaged>
 	Phone_IDXGISwapChain_Present_ReplaceInterval0With1 = 1024,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FailedRegisterWithCompositor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FailedRegisterWithCompositor"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FailedRegisterWithCompositor</unmanaged>
 	Phone_IDXGIFactory_CreateSwapChain_FailedRegisterWithCompositor = 1025,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow_AtRendering"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow_AtRendering"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow_AtRendering</unmanaged>
 	Phone_IDXGIFactory_CreateSwapChain_NotForegroundWindow_AtRendering = 1026,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_SEQUENTIAL_BufferCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_SEQUENTIAL_BufferCount"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_SEQUENTIAL_BufferCount</unmanaged>
 	Phone_IDXGIFactory_CreateSwapChain_FLIP_SEQUENTIAL_BufferCount = 1027,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_Modern_CoreWindow_Only"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_Modern_CoreWindow_Only"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGIFactory_CreateSwapChain_FLIP_Modern_CoreWindow_Only</unmanaged>
 	Phone_IDXGIFactory_CreateSwapChain_FLIP_Modern_CoreWindow_Only = 1028,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present1_RequiresOverlays"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_Present1_RequiresOverlays"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_Present1_RequiresOverlays</unmanaged>
 	Phone_IDXGISwapChain_Present1_RequiresOverlays = 1029,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired</unmanaged>
 	Phone_IDXGISwapChain_SetBackgroundColor_FlipSequentialRequired = 1030,
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired</unmanaged>
 	Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired = 1031,
 }
@@ -1637,713 +1637,713 @@ public enum WindowAssociationFlags : uint
 #endregion Generated Enums
 
 #region Structs
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA"]/*' />
 /// <unmanaged>DXGI_RGBA</unmanaged>
 public partial struct Rgba
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA::r"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA::r"]/*' />
 	public float r;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA::g"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA::g"]/*' />
 	public float g;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA::b"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA::b"]/*' />
 	public float b;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_RGBA::a"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA::a"]/*' />
 	public float a;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS"]/*' />
 /// <unmanaged>DXGI_FRAME_STATISTICS</unmanaged>
 public partial struct FrameStatistics
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentCount"]/*' />
 	public uint PresentCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentRefreshCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentRefreshCount"]/*' />
 	public uint PresentRefreshCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncRefreshCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncRefreshCount"]/*' />
 	public uint SyncRefreshCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncQPCTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncQPCTime"]/*' />
 	public LargeInterger SyncQPCTime;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncGPUTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncGPUTime"]/*' />
 	public LargeInterger SyncGPUTime;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT"]/*' />
 /// <unmanaged>DXGI_MAPPED_RECT</unmanaged>
 public partial struct MappedRect
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT::Pitch"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT::Pitch"]/*' />
 	public int Pitch;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT::pBits"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT::pBits"]/*' />
 	public unsafe byte* pBits;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC</unmanaged>
 public partial struct AdapterDescription
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
 	public unsafe fixed ushort Description[128];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::VendorId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::VendorId"]/*' />
 	public uint VendorId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DeviceId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DeviceId"]/*' />
 	public uint DeviceId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SubSysId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SubSysId"]/*' />
 	public uint SubSysId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Revision"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Revision"]/*' />
 	public uint Revision;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedVideoMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SharedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::AdapterLuid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC"]/*' />
 /// <unmanaged>DXGI_OUTPUT_DESC</unmanaged>
 public partial struct OutputDescription
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DeviceName"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DeviceName"]/*' />
 	public unsafe fixed ushort DeviceName[32];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DesktopCoordinates"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DesktopCoordinates"]/*' />
 	public RawRect DesktopCoordinates;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::AttachedToDesktop"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::AttachedToDesktop"]/*' />
 	public Bool32 AttachedToDesktop;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Rotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Monitor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Monitor"]/*' />
 	public IntPtr Monitor;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE"]/*' />
 /// <unmanaged>DXGI_SHARED_RESOURCE</unmanaged>
 public partial struct SharedResource
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE::Handle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE::Handle"]/*' />
 	public IntPtr Handle;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC"]/*' />
 /// <unmanaged>DXGI_SURFACE_DESC</unmanaged>
 public partial struct SurfaceDescription
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Width"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Width"]/*' />
 	public uint Width;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Height"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Height"]/*' />
 	public uint Height;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Format"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Format"]/*' />
 	public Common.Format Format;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::SampleDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_DESC</unmanaged>
 public partial struct SwapChainDescription
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferDesc"]/*' />
 	public Common.ModeDescription BufferDesc;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SampleDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferUsage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferUsage"]/*' />
 	public Usage BufferUsage;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferCount"]/*' />
 	public uint BufferCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::OutputWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::OutputWindow"]/*' />
 	public IntPtr OutputWindow;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Windowed"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Windowed"]/*' />
 	public Bool32 Windowed;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SwapEffect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SwapEffect"]/*' />
 	public SwapEffect SwapEffect;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Flags"]/*' />
 	public SwapChainFlags Flags;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC1</unmanaged>
 public partial struct AdapterDescription1
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
 	public unsafe fixed ushort Description[128];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::VendorId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::VendorId"]/*' />
 	public uint VendorId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DeviceId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DeviceId"]/*' />
 	public uint DeviceId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::SubSysId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::SubSysId"]/*' />
 	public uint SubSysId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Revision"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Revision"]/*' />
 	public uint Revision;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DedicatedVideoMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DedicatedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::SharedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::AdapterLuid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Flags"]/*' />
 	public AdapterFlags Flags;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE"]/*' />
 /// <unmanaged>DXGI_DISPLAY_COLOR_SPACE</unmanaged>
 public partial struct DisplayColorSpace
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::PrimaryCoordinates"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::PrimaryCoordinates"]/*' />
 	public unsafe fixed float PrimaryCoordinates[16];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::WhitePoints"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::WhitePoints"]/*' />
 	public unsafe fixed float WhitePoints[32];
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_MOVE_RECT</unmanaged>
 public partial struct OutduplMoveRect
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::SourcePoint"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::SourcePoint"]/*' />
 	public System.Drawing.Point SourcePoint;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::DestinationRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::DestinationRect"]/*' />
 	public RawRect DestinationRect;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_DESC</unmanaged>
 public partial struct OutduplDescription
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::ModeDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::ModeDesc"]/*' />
 	public Common.ModeDescription ModeDesc;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::Rotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::DesktopImageInSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::DesktopImageInSystemMemory"]/*' />
 	public Bool32 DesktopImageInSystemMemory;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_POINTER_POSITION</unmanaged>
 public partial struct OutduplPointerPosition
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Position"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Position"]/*' />
 	public System.Drawing.Point Position;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Visible"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Visible"]/*' />
 	public Bool32 Visible;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_INFO</unmanaged>
 public partial struct OutduplPointerShapeInfo
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Type"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Type"]/*' />
 	public uint Type;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Width"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Width"]/*' />
 	public uint Width;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Height"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Height"]/*' />
 	public uint Height;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Pitch"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Pitch"]/*' />
 	public uint Pitch;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::HotSpot"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::HotSpot"]/*' />
 	public System.Drawing.Point HotSpot;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_FRAME_INFO</unmanaged>
 public partial struct OutduplFrameInfo
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastPresentTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastPresentTime"]/*' />
 	public LargeInterger LastPresentTime;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastMouseUpdateTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastMouseUpdateTime"]/*' />
 	public LargeInterger LastMouseUpdateTime;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::AccumulatedFrames"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::AccumulatedFrames"]/*' />
 	public uint AccumulatedFrames;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::RectsCoalesced"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::RectsCoalesced"]/*' />
 	public Bool32 RectsCoalesced;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::ProtectedContentMaskedOut"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::ProtectedContentMaskedOut"]/*' />
 	public Bool32 ProtectedContentMaskedOut;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerPosition"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerPosition"]/*' />
 	public OutduplPointerPosition PointerPosition;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::TotalMetadataBufferSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::TotalMetadataBufferSize"]/*' />
 	public uint TotalMetadataBufferSize;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerShapeBufferSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerShapeBufferSize"]/*' />
 	public uint PointerShapeBufferSize;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1"]/*' />
 /// <unmanaged>DXGI_MODE_DESC1</unmanaged>
 public partial struct ModeDescription1
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Width"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1::Width"]/*' />
 	public uint Width;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Height"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1::Height"]/*' />
 	public uint Height;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::RefreshRate"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1::RefreshRate"]/*' />
 	public Common.Rational RefreshRate;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Format"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1::Format"]/*' />
 	public Common.Format Format;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::ScanlineOrdering"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1::ScanlineOrdering"]/*' />
 	public Common.ModeScanlineOrder ScanlineOrdering;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Scaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1::Scaling"]/*' />
 	public Common.ModeScaling Scaling;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC1::Stereo"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1::Stereo"]/*' />
 	public Bool32 Stereo;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_DESC1</unmanaged>
 public partial struct SwapChainDescription1
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Width"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Width"]/*' />
 	public uint Width;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Height"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Height"]/*' />
 	public uint Height;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Format"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Format"]/*' />
 	public Common.Format Format;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Stereo"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Stereo"]/*' />
 	public Bool32 Stereo;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SampleDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferUsage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferUsage"]/*' />
 	public Usage BufferUsage;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferCount"]/*' />
 	public uint BufferCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Scaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Scaling"]/*' />
 	public Scaling Scaling;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SwapEffect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SwapEffect"]/*' />
 	public SwapEffect SwapEffect;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::AlphaMode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::AlphaMode"]/*' />
 	public Common.AlphaMode AlphaMode;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Flags"]/*' />
 	public SwapChainFlags Flags;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_FULLSCREEN_DESC</unmanaged>
 public partial struct SwapChainFullscreenDescription
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::RefreshRate"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::RefreshRate"]/*' />
 	public Common.Rational RefreshRate;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::ScanlineOrdering"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::ScanlineOrdering"]/*' />
 	public Common.ModeScanlineOrder ScanlineOrdering;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Scaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Scaling"]/*' />
 	public Common.ModeScaling Scaling;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Windowed"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Windowed"]/*' />
 	public Bool32 Windowed;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS"]/*' />
 /// <unmanaged>DXGI_PRESENT_PARAMETERS</unmanaged>
 public partial struct PresentParameters
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::DirtyRectsCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::DirtyRectsCount"]/*' />
 	public uint DirtyRectsCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pDirtyRects"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pDirtyRects"]/*' />
 	public unsafe RawRect* pDirtyRects;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollRect"]/*' />
 	public unsafe RawRect* pScrollRect;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollOffset"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollOffset"]/*' />
 	public unsafe System.Drawing.Point* pScrollOffset;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC2</unmanaged>
 public partial struct AdapterDescription2
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
 	public unsafe fixed ushort Description[128];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::VendorId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::VendorId"]/*' />
 	public uint VendorId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DeviceId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DeviceId"]/*' />
 	public uint DeviceId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::SubSysId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::SubSysId"]/*' />
 	public uint SubSysId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Revision"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Revision"]/*' />
 	public uint Revision;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DedicatedVideoMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DedicatedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::SharedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::AdapterLuid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Flags"]/*' />
 	public uint Flags;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::GraphicsPreemptionGranularity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::GraphicsPreemptionGranularity"]/*' />
 	public GraphicsPreemptionGranularity GraphicsPreemptionGranularity;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::ComputePreemptionGranularity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::ComputePreemptionGranularity"]/*' />
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F"]/*' />
 /// <unmanaged>DXGI_MATRIX_3X2_F</unmanaged>
 public partial struct Matrix3x2F
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_11"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_11"]/*' />
 	public float _11;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_12"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_12"]/*' />
 	public float _12;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_21"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_21"]/*' />
 	public float _21;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_22"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_22"]/*' />
 	public float _22;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_31"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_31"]/*' />
 	public float _31;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_32"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_32"]/*' />
 	public float _32;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC"]/*' />
 /// <unmanaged>DXGI_DECODE_SWAP_CHAIN_DESC</unmanaged>
 public partial struct DecodeSwapChainDescription
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC::Flags"]/*' />
 	public uint Flags;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA"]/*' />
 /// <unmanaged>DXGI_FRAME_STATISTICS_MEDIA</unmanaged>
 public partial struct FrameStatisticsMedia
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentCount"]/*' />
 	public uint PresentCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentRefreshCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentRefreshCount"]/*' />
 	public uint PresentRefreshCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncRefreshCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncRefreshCount"]/*' />
 	public uint SyncRefreshCount;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncQPCTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncQPCTime"]/*' />
 	public LargeInterger SyncQPCTime;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncGPUTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncGPUTime"]/*' />
 	public LargeInterger SyncGPUTime;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::CompositionMode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::CompositionMode"]/*' />
 	public FramePresentationMode CompositionMode;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::ApprovedPresentDuration"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::ApprovedPresentDuration"]/*' />
 	public uint ApprovedPresentDuration;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO"]/*' />
 /// <unmanaged>DXGI_QUERY_VIDEO_MEMORY_INFO</unmanaged>
 public partial struct QueryVideoMemoryInfo
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::Budget"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::Budget"]/*' />
 	public ulong Budget;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentUsage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentUsage"]/*' />
 	public ulong CurrentUsage;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::AvailableForReservation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::AvailableForReservation"]/*' />
 	public ulong AvailableForReservation;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentReservation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentReservation"]/*' />
 	public ulong CurrentReservation;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_HDR10</unmanaged>
 public partial struct HdrMetadataHdr10
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::RedPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::RedPrimary"]/*' />
 	public unsafe fixed ushort RedPrimary[2];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::GreenPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::GreenPrimary"]/*' />
 	public unsafe fixed ushort GreenPrimary[2];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::BluePrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::BluePrimary"]/*' />
 	public unsafe fixed ushort BluePrimary[2];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::WhitePoint"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::WhitePoint"]/*' />
 	public unsafe fixed ushort WhitePoint[2];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxMasteringLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxMasteringLuminance"]/*' />
 	public uint MaxMasteringLuminance;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MinMasteringLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MinMasteringLuminance"]/*' />
 	public uint MinMasteringLuminance;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxContentLightLevel"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxContentLightLevel"]/*' />
 	public ushort MaxContentLightLevel;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxFrameAverageLightLevel"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxFrameAverageLightLevel"]/*' />
 	public ushort MaxFrameAverageLightLevel;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_HDR10PLUS</unmanaged>
 public partial struct HdrMetadataHdr10plus
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS::Data"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS::Data"]/*' />
 	public unsafe fixed byte Data[72];
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC3</unmanaged>
 public partial struct AdapterDescription3
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Description"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Description"]/*' />
 	public unsafe fixed ushort Description[128];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::VendorId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::VendorId"]/*' />
 	public uint VendorId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DeviceId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DeviceId"]/*' />
 	public uint DeviceId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SubSysId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SubSysId"]/*' />
 	public uint SubSysId;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Revision"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Revision"]/*' />
 	public uint Revision;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedVideoMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SharedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::AdapterLuid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Flags"]/*' />
 	public AdapterFlags3 Flags;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::GraphicsPreemptionGranularity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::GraphicsPreemptionGranularity"]/*' />
 	public GraphicsPreemptionGranularity GraphicsPreemptionGranularity;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::ComputePreemptionGranularity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::ComputePreemptionGranularity"]/*' />
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1"]/*' />
 /// <unmanaged>DXGI_OUTPUT_DESC1</unmanaged>
 public partial struct OutputDescription1
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DeviceName"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DeviceName"]/*' />
 	public unsafe fixed ushort DeviceName[32];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DesktopCoordinates"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DesktopCoordinates"]/*' />
 	public RawRect DesktopCoordinates;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::AttachedToDesktop"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::AttachedToDesktop"]/*' />
 	public Bool32 AttachedToDesktop;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Rotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Monitor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Monitor"]/*' />
 	public IntPtr Monitor;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BitsPerColor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BitsPerColor"]/*' />
 	public uint BitsPerColor;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::ColorSpace"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::ColorSpace"]/*' />
 	public Common.ColorSpaceType ColorSpace;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::RedPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::RedPrimary"]/*' />
 	public unsafe fixed float RedPrimary[2];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::GreenPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::GreenPrimary"]/*' />
 	public unsafe fixed float GreenPrimary[2];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BluePrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BluePrimary"]/*' />
 	public unsafe fixed float BluePrimary[2];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::WhitePoint"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::WhitePoint"]/*' />
 	public unsafe fixed float WhitePoint[2];
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MinLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MinLuminance"]/*' />
 	public float MinLuminance;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxLuminance"]/*' />
 	public float MaxLuminance;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxFullFrameLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxFullFrameLuminance"]/*' />
 	public float MaxFullFrameLuminance;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE</unmanaged>
 public partial struct InfoQueueMessage
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Producer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Producer"]/*' />
 	public Guid Producer;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Category"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Category"]/*' />
 	public InfoQueueMessageCategory Category;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Severity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Severity"]/*' />
 	public InfoQueueMessageSeverity Severity;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::ID"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::ID"]/*' />
 	public int ID;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::pDescription"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::pDescription"]/*' />
 	public unsafe byte* pDescription;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::DescriptionByteLength"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::DescriptionByteLength"]/*' />
 	public nuint DescriptionByteLength;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_FILTER_DESC</unmanaged>
 public partial struct InfoQueueFilterDescription
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumCategories"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumCategories"]/*' />
 	public uint NumCategories;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pCategoryList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pCategoryList"]/*' />
 	public unsafe InfoQueueMessageCategory* pCategoryList;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumSeverities"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumSeverities"]/*' />
 	public uint NumSeverities;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pSeverityList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pSeverityList"]/*' />
 	public unsafe InfoQueueMessageSeverity* pSeverityList;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumIDs"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumIDs"]/*' />
 	public uint NumIDs;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
 	public unsafe int* pIDList;
 
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_FILTER</unmanaged>
 public partial struct InfoQueueFilter
 {
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::AllowList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::AllowList"]/*' />
 	public InfoQueueFilterDescription AllowList;
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::DenyList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::DenyList"]/*' />
 	public InfoQueueFilterDescription DenyList;
 
 }
@@ -2351,7 +2351,7 @@ public partial struct InfoQueueFilter
 #endregion Structs
 
 #region COM Types
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIObject"]/*' />
 /// <unmanaged>IDXGIObject</unmanaged>
 [Guid("aec22fb8-76f3-4639-9be0-28eb43a67a2e")]
 [NativeTypeName("struct IDXGIObject : IUnknown")]
@@ -2412,7 +2412,7 @@ public unsafe partial struct IDXGIObject : IDXGIObject.Interface
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::SetPrivateData"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIObject::SetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
@@ -2424,7 +2424,7 @@ public unsafe partial struct IDXGIObject : IDXGIObject.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::SetPrivateDataInterface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIObject::SetPrivateDataInterface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
@@ -2436,7 +2436,7 @@ public unsafe partial struct IDXGIObject : IDXGIObject.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::GetPrivateData"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIObject::GetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
@@ -2448,7 +2448,7 @@ public unsafe partial struct IDXGIObject : IDXGIObject.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIObject::GetParent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIObject::GetParent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetParent(Guid* riid, void** ppParent)
@@ -2465,7 +2465,7 @@ public unsafe partial struct IDXGIObject : IDXGIObject.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDeviceSubObject"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDeviceSubObject"]/*' />
 /// <unmanaged>IDXGIDeviceSubObject</unmanaged>
 [Guid("3d3e0379-f9de-4d58-bb6c-18d62992f1a6")]
 [NativeTypeName("struct IDXGIDeviceSubObject : IDXGIObject")]
@@ -2574,7 +2574,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDeviceSubObject::GetDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDeviceSubObject::GetDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetDevice(Guid* riid, void** ppDevice)
@@ -2591,7 +2591,7 @@ public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interfa
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource"]/*' />
 /// <unmanaged>IDXGIResource</unmanaged>
 [Guid("035f3ab4-482e-4e50-b41f-8a7f8bd8960b")]
 [NativeTypeName("struct IDXGIResource : IDXGIDeviceSubObject")]
@@ -2712,7 +2712,7 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource::GetSharedHandle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetSharedHandle(IntPtr* pSharedHandle)
@@ -2724,7 +2724,7 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource::GetUsage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetUsage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetUsage(uint* pUsage)
@@ -2736,7 +2736,7 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource::SetEvictionPriority"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::SetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
@@ -2748,7 +2748,7 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource::GetEvictionPriority"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetEvictionPriority(uint* pEvictionPriority)
@@ -2765,7 +2765,7 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex"]/*' />
 /// <unmanaged>IDXGIKeyedMutex</unmanaged>
 [Guid("9d8e1289-d7b3-465f-8126-250e349af85d")]
 [NativeTypeName("struct IDXGIKeyedMutex : IDXGIDeviceSubObject")]
@@ -2886,7 +2886,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex::AcquireSync"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex::AcquireSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult AcquireSync(ulong Key, uint dwMilliseconds)
@@ -2898,7 +2898,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex::ReleaseSync"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex::ReleaseSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult ReleaseSync(ulong Key)
@@ -2915,7 +2915,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface"]/*' />
 /// <unmanaged>IDXGISurface</unmanaged>
 [Guid("cafcb56c-6ac3-4889-bf47-9e23bbd260ec")]
 [NativeTypeName("struct IDXGISurface : IDXGIDeviceSubObject")]
@@ -3036,7 +3036,7 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface::GetDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetDesc(SurfaceDescription* pDesc)
@@ -3048,7 +3048,7 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface::Map"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult Map(MappedRect* pLockedRect, uint MapFlags)
@@ -3060,7 +3060,7 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface::Unmap"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface::Unmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult Unmap()
@@ -3077,7 +3077,7 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface1"]/*' />
 /// <unmanaged>IDXGISurface1</unmanaged>
 [Guid("4ae63092-6327-4c1b-80ae-bfe12ea32b86")]
 [NativeTypeName("struct IDXGISurface1 : IDXGISurface")]
@@ -3234,7 +3234,7 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface1::GetDC"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface1::GetDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetDC(Bool32* Discard, IntPtr* phdc)
@@ -3246,7 +3246,7 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface1::ReleaseDC"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface1::ReleaseDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult ReleaseDC(RawRect* pDirtyRect)
@@ -3263,7 +3263,7 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter"]/*' />
 /// <unmanaged>IDXGIAdapter</unmanaged>
 [Guid("2411e7e1-12ac-4ccf-bd14-9798e8534dc0")]
 [NativeTypeName("struct IDXGIAdapter : IDXGIObject")]
@@ -3372,7 +3372,7 @@ public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter::EnumOutputs"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter::EnumOutputs"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
@@ -3384,7 +3384,7 @@ public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter::GetDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetDesc(AdapterDescription* pDesc)
@@ -3396,7 +3396,7 @@ public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter::CheckInterfaceSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter::CheckInterfaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
@@ -3413,7 +3413,7 @@ public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput"]/*' />
 /// <unmanaged>IDXGIOutput</unmanaged>
 [Guid("ae02eedb-c735-4690-8d52-5a8dc20213aa")]
 [NativeTypeName("struct IDXGIOutput : IDXGIObject")]
@@ -3522,7 +3522,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetDesc(OutputDescription* pDesc)
@@ -3534,7 +3534,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetDisplayModeList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetDisplayModeList"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetDisplayModeList(Common.Format EnumFormat, uint Flags, uint* pNumModes, Common.ModeDescription* pDesc)
@@ -3546,7 +3546,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::FindClosestMatchingMode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::FindClosestMatchingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
@@ -3558,7 +3558,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::WaitForVBlank"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::WaitForVBlank"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult WaitForVBlank()
@@ -3570,7 +3570,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::TakeOwnership"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::TakeOwnership"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult TakeOwnership(IUnknown* pDevice, Bool32* Exclusive)
@@ -3582,7 +3582,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::ReleaseOwnership"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::ReleaseOwnership"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public void ReleaseOwnership()
@@ -3594,7 +3594,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetGammaControlCapabilities"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetGammaControlCapabilities"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
@@ -3606,7 +3606,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::SetGammaControl"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::SetGammaControl"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult SetGammaControl(Common.GammaControl* pArray)
@@ -3618,7 +3618,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetGammaControl"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetGammaControl"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult GetGammaControl(Common.GammaControl* pArray)
@@ -3630,7 +3630,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::SetDisplaySurface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::SetDisplaySurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
@@ -3642,7 +3642,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetDisplaySurfaceData"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetDisplaySurfaceData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
@@ -3654,7 +3654,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput::GetFrameStatistics"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput::GetFrameStatistics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult GetFrameStatistics(FrameStatistics* pStats)
@@ -3671,7 +3671,7 @@ public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain"]/*' />
 /// <unmanaged>IDXGISwapChain</unmanaged>
 [Guid("310d36a0-d2e7-4c0a-aa04-6a9d23b8886a")]
 [NativeTypeName("struct IDXGISwapChain : IDXGIDeviceSubObject")]
@@ -3792,7 +3792,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::Present"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::Present"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Present(uint SyncInterval, uint Flags)
@@ -3804,7 +3804,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetBuffer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface)
@@ -3816,7 +3816,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::SetFullscreenState"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::SetFullscreenState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetFullscreenState(Bool32* Fullscreen, IDXGIOutput* pTarget)
@@ -3828,7 +3828,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetFullscreenState"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetFullscreenState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget)
@@ -3840,7 +3840,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetDesc(SwapChainDescription* pDesc)
@@ -3852,7 +3852,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::ResizeBuffers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::ResizeBuffers"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, uint SwapChainFlags)
@@ -3864,7 +3864,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::ResizeTarget"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::ResizeTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
@@ -3876,7 +3876,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetContainingOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetContainingOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult GetContainingOutput(IDXGIOutput** ppOutput)
@@ -3888,7 +3888,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetFrameStatistics"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetFrameStatistics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult GetFrameStatistics(FrameStatistics* pStats)
@@ -3900,7 +3900,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetLastPresentCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetLastPresentCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetLastPresentCount(uint* pLastPresentCount)
@@ -3917,7 +3917,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory"]/*' />
 /// <unmanaged>IDXGIFactory</unmanaged>
 [Guid("7b7166ec-21c7-44ae-b21a-c9ae321ae369")]
 [NativeTypeName("struct IDXGIFactory : IDXGIObject")]
@@ -4026,7 +4026,7 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::EnumAdapters"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::EnumAdapters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
@@ -4038,7 +4038,7 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::MakeWindowAssociation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::MakeWindowAssociation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult MakeWindowAssociation(IntPtr* WindowHandle, uint Flags)
@@ -4050,7 +4050,7 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::GetWindowAssociation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::GetWindowAssociation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
@@ -4062,7 +4062,7 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::CreateSwapChain"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::CreateSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
@@ -4074,7 +4074,7 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory::CreateSoftwareAdapter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::CreateSoftwareAdapter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult CreateSoftwareAdapter(IntPtr* Module, IDXGIAdapter** ppAdapter)
@@ -4091,7 +4091,7 @@ public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice"]/*' />
 /// <unmanaged>IDXGIDevice</unmanaged>
 [Guid("54ec77fa-1377-44e6-8c32-88fd5f44c84c")]
 [NativeTypeName("struct IDXGIDevice : IDXGIObject")]
@@ -4200,7 +4200,7 @@ public unsafe partial struct IDXGIDevice : IDXGIDevice.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::GetAdapter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::GetAdapter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetAdapter(IDXGIAdapter** pAdapter)
@@ -4212,7 +4212,7 @@ public unsafe partial struct IDXGIDevice : IDXGIDevice.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::CreateSurface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::CreateSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, uint Usage, SharedResource* pSharedResource, IDXGISurface* ppSurface)
@@ -4224,7 +4224,7 @@ public unsafe partial struct IDXGIDevice : IDXGIDevice.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::QueryResourceResidency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::QueryResourceResidency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult QueryResourceResidency(IUnknown* ppResources, Residency* pResidencyStatus, uint NumResources)
@@ -4236,7 +4236,7 @@ public unsafe partial struct IDXGIDevice : IDXGIDevice.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::SetGPUThreadPriority"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::SetGPUThreadPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetGPUThreadPriority(int Priority)
@@ -4248,7 +4248,7 @@ public unsafe partial struct IDXGIDevice : IDXGIDevice.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice::GetGPUThreadPriority"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::GetGPUThreadPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetGPUThreadPriority(int* pPriority)
@@ -4265,7 +4265,7 @@ public unsafe partial struct IDXGIDevice : IDXGIDevice.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory1"]/*' />
 /// <unmanaged>IDXGIFactory1</unmanaged>
 [Guid("770aae78-f26f-4dba-a829-253c83d1b387")]
 [NativeTypeName("struct IDXGIFactory1 : IDXGIFactory")]
@@ -4434,7 +4434,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory1::EnumAdapters1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory1::EnumAdapters1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
@@ -4446,7 +4446,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory1::IsCurrent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory1::IsCurrent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public Bool32 IsCurrent()
@@ -4463,7 +4463,7 @@ public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter1"]/*' />
 /// <unmanaged>IDXGIAdapter1</unmanaged>
 [Guid("29038f61-3839-4626-91fd-086879011a05")]
 [NativeTypeName("struct IDXGIAdapter1 : IDXGIAdapter")]
@@ -4608,7 +4608,7 @@ public unsafe partial struct IDXGIAdapter1 : IDXGIAdapter1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter1::GetDesc1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetDesc1(AdapterDescription1* pDesc)
@@ -4625,7 +4625,7 @@ public unsafe partial struct IDXGIAdapter1 : IDXGIAdapter1.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1"]/*' />
 /// <unmanaged>IDXGIDevice1</unmanaged>
 [Guid("77db970f-6276-48ba-ba28-070143b4392c")]
 [NativeTypeName("struct IDXGIDevice1 : IDXGIDevice")]
@@ -4794,7 +4794,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice1::SetMaximumFrameLatency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1::SetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult SetMaximumFrameLatency(uint MaxLatency)
@@ -4806,7 +4806,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice1::GetMaximumFrameLatency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1::GetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
@@ -4823,7 +4823,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDisplayControl"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDisplayControl"]/*' />
 /// <unmanaged>IDXGIDisplayControl</unmanaged>
 [Guid("ea9dbf1a-c88e-4486-854a-98aa0138f30c")]
 [NativeTypeName("struct IDXGIDisplayControl : IUnknown")]
@@ -4884,7 +4884,7 @@ public unsafe partial struct IDXGIDisplayControl : IDXGIDisplayControl.Interface
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDisplayControl::IsStereoEnabled"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDisplayControl::IsStereoEnabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public Bool32 IsStereoEnabled()
@@ -4896,7 +4896,7 @@ public unsafe partial struct IDXGIDisplayControl : IDXGIDisplayControl.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDisplayControl::SetStereoEnabled"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDisplayControl::SetStereoEnabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetStereoEnabled(Bool32* enabled)
@@ -4913,7 +4913,7 @@ public unsafe partial struct IDXGIDisplayControl : IDXGIDisplayControl.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication"]/*' />
 /// <unmanaged>IDXGIOutputDuplication</unmanaged>
 [Guid("191cfac3-a341-470d-b26e-a864f428319c")]
 [NativeTypeName("struct IDXGIOutputDuplication : IDXGIObject")]
@@ -5022,7 +5022,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::GetDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetDesc(OutduplDescription* pDesc)
@@ -5034,7 +5034,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::AcquireNextFrame"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::AcquireNextFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult AcquireNextFrame(uint TimeoutInMilliseconds, OutduplFrameInfo* pFrameInfo, IDXGIResource** ppDesktopResource)
@@ -5046,7 +5046,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameDirtyRects"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameDirtyRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, RawRect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired)
@@ -5058,7 +5058,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameMoveRects"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameMoveRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetFrameMoveRects(uint MoveRectsBufferSize, OutduplMoveRect* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired)
@@ -5070,7 +5070,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFramePointerShape"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFramePointerShape"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, OutduplPointerShapeInfo* pPointerShapeInfo)
@@ -5082,7 +5082,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::MapDesktopSurface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::MapDesktopSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult MapDesktopSurface(MappedRect* pLockedRect)
@@ -5094,7 +5094,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::UnMapDesktopSurface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::UnMapDesktopSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult UnMapDesktopSurface()
@@ -5106,7 +5106,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutputDuplication::ReleaseFrame"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::ReleaseFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult ReleaseFrame()
@@ -5123,7 +5123,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface2"]/*' />
 /// <unmanaged>IDXGISurface2</unmanaged>
 [Guid("aba496dd-b617-4cb8-a866-bc44d7eb1fa2")]
 [NativeTypeName("struct IDXGISurface2 : IDXGISurface1")]
@@ -5304,7 +5304,7 @@ public unsafe partial struct IDXGISurface2 : IDXGISurface2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISurface2::GetResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface2::GetResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetResource(Guid* riid, void** ppParentResource, uint* pSubresourceIndex)
@@ -5321,7 +5321,7 @@ public unsafe partial struct IDXGISurface2 : IDXGISurface2.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1"]/*' />
 /// <unmanaged>IDXGIResource1</unmanaged>
 [Guid("30961379-4609-4a41-998e-54fe567ee0c1")]
 [NativeTypeName("struct IDXGIResource1 : IDXGIResource")]
@@ -5490,7 +5490,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface)
@@ -5502,7 +5502,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char** lpName, IntPtr* pHandle)
@@ -5519,7 +5519,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2"]/*' />
 /// <unmanaged>IDXGIDevice2</unmanaged>
 [Guid("05008617-fbfd-4051-a790-144884b4f6a9")]
 [NativeTypeName("struct IDXGIDevice2 : IDXGIDevice1")]
@@ -5712,7 +5712,7 @@ public unsafe partial struct IDXGIDevice2 : IDXGIDevice2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice2::OfferResources"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2::OfferResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult OfferResources(uint NumResources, IDXGIResource* ppResources, OfferResourcePriority Priority)
@@ -5724,7 +5724,7 @@ public unsafe partial struct IDXGIDevice2 : IDXGIDevice2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice2::ReclaimResources"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2::ReclaimResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult ReclaimResources(uint NumResources, IDXGIResource* ppResources, Bool32* pDiscarded)
@@ -5736,7 +5736,7 @@ public unsafe partial struct IDXGIDevice2 : IDXGIDevice2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice2::EnqueueSetEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2::EnqueueSetEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult EnqueueSetEvent(IntPtr* hEvent)
@@ -5753,7 +5753,7 @@ public unsafe partial struct IDXGIDevice2 : IDXGIDevice2.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1"]/*' />
 /// <unmanaged>IDXGISwapChain1</unmanaged>
 [Guid("790a45f7-0d42-4876-983a-0a55cfe6f4aa")]
 [NativeTypeName("struct IDXGISwapChain1 : IDXGISwapChain")]
@@ -5994,7 +5994,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetDesc1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult GetDesc1(SwapChainDescription1* pDesc)
@@ -6006,7 +6006,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetFullscreenDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::GetFullscreenDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult GetFullscreenDesc(SwapChainFullscreenDescription* pDesc)
@@ -6018,7 +6018,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetHwnd"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::GetHwnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult GetHwnd(IntPtr* pHwnd)
@@ -6030,7 +6030,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetCoreWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::GetCoreWindow"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult GetCoreWindow(Guid* refiid, void** ppUnk)
@@ -6042,7 +6042,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::Present1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::Present1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters)
@@ -6054,7 +6054,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::IsTemporaryMonoSupported"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::IsTemporaryMonoSupported"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public Bool32 IsTemporaryMonoSupported()
@@ -6066,7 +6066,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetRestrictToOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::GetRestrictToOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
@@ -6078,7 +6078,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::SetBackgroundColor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::SetBackgroundColor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult SetBackgroundColor(Rgba* pColor)
@@ -6090,7 +6090,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetBackgroundColor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::GetBackgroundColor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult GetBackgroundColor(Rgba* pColor)
@@ -6102,7 +6102,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::SetRotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::SetRotation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public HResult SetRotation(Common.ModeRotation Rotation)
@@ -6114,7 +6114,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain1::GetRotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::GetRotation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult GetRotation(Common.ModeRotation* pRotation)
@@ -6131,7 +6131,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2"]/*' />
 /// <unmanaged>IDXGIFactory2</unmanaged>
 [Guid("50c83a1c-e072-4c48-87b0-3630fa36a6d0")]
 [NativeTypeName("struct IDXGIFactory2 : IDXGIFactory1")]
@@ -6324,7 +6324,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::IsWindowedStereoEnabled"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::IsWindowedStereoEnabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public Bool32 IsWindowedStereoEnabled()
@@ -6336,7 +6336,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForHwnd"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForHwnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr* hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
@@ -6348,7 +6348,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForCoreWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForCoreWindow"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
@@ -6360,7 +6360,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::GetSharedResourceAdapterLuid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::GetSharedResourceAdapterLuid"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetSharedResourceAdapterLuid(IntPtr* hResource, Luid* pLuid)
@@ -6372,7 +6372,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusWindow"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult RegisterStereoStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
@@ -6384,7 +6384,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult RegisterStereoStatusEvent(IntPtr* hEvent, uint* pdwCookie)
@@ -6396,7 +6396,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::UnregisterStereoStatus"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::UnregisterStereoStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public void UnregisterStereoStatus(uint dwCookie)
@@ -6408,7 +6408,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusWindow"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult RegisterOcclusionStatusWindow(IntPtr* WindowHandle, uint wMsg, uint* pdwCookie)
@@ -6420,7 +6420,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult RegisterOcclusionStatusEvent(IntPtr* hEvent, uint* pdwCookie)
@@ -6432,7 +6432,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::UnregisterOcclusionStatus"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::UnregisterOcclusionStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public void UnregisterOcclusionStatus(uint dwCookie)
@@ -6444,7 +6444,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForComposition"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForComposition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
@@ -6461,7 +6461,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter2"]/*' />
 /// <unmanaged>IDXGIAdapter2</unmanaged>
 [Guid("0aa1ae0a-fa0e-4b84-8644-e05ff8e5acb5")]
 [NativeTypeName("struct IDXGIAdapter2 : IDXGIAdapter1")]
@@ -6618,7 +6618,7 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter2::GetDesc2"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter2::GetDesc2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetDesc2(AdapterDescription2* pDesc)
@@ -6635,7 +6635,7 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1"]/*' />
 /// <unmanaged>IDXGIOutput1</unmanaged>
 [Guid("00cddea8-939b-4b83-a340-a685226666cc")]
 [NativeTypeName("struct IDXGIOutput1 : IDXGIOutput")]
@@ -6888,7 +6888,7 @@ public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1::GetDisplayModeList1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::GetDisplayModeList1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
@@ -6900,7 +6900,7 @@ public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1::FindClosestMatchingMode1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::FindClosestMatchingMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
@@ -6912,7 +6912,7 @@ public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1::GetDisplaySurfaceData1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::GetDisplaySurfaceData1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
@@ -6924,7 +6924,7 @@ public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput1::DuplicateOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::DuplicateOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
@@ -6941,7 +6941,7 @@ public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice3"]/*' />
 /// <unmanaged>IDXGIDevice3</unmanaged>
 [Guid("6007896c-3244-4afd-bf18-a6d3beda5023")]
 [NativeTypeName("struct IDXGIDevice3 : IDXGIDevice2")]
@@ -7170,7 +7170,7 @@ public unsafe partial struct IDXGIDevice3 : IDXGIDevice3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice3::Trim"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice3::Trim"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void Trim()
@@ -7187,7 +7187,7 @@ public unsafe partial struct IDXGIDevice3 : IDXGIDevice3.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2"]/*' />
 /// <unmanaged>IDXGISwapChain2</unmanaged>
 [Guid("a8be2ac4-199f-4946-b331-79599fb98de7")]
 [NativeTypeName("struct IDXGISwapChain2 : IDXGISwapChain1")]
@@ -7560,7 +7560,7 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetSourceSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::SetSourceSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult SetSourceSize(uint Width, uint Height)
@@ -7572,7 +7572,7 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetSourceSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::GetSourceSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult GetSourceSize(uint* pWidth, uint* pHeight)
@@ -7584,7 +7584,7 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetMaximumFrameLatency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::SetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult SetMaximumFrameLatency(uint MaxLatency)
@@ -7596,7 +7596,7 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetMaximumFrameLatency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::GetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
@@ -7608,7 +7608,7 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetFrameLatencyWaitableObject"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::GetFrameLatencyWaitableObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public IntPtr GetFrameLatencyWaitableObject()
@@ -7620,7 +7620,7 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetMatrixTransform"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::SetMatrixTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult SetMatrixTransform(Matrix3x2F* pMatrix)
@@ -7632,7 +7632,7 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetMatrixTransform"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::GetMatrixTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
 	public HResult GetMatrixTransform(Matrix3x2F* pMatrix)
@@ -7649,7 +7649,7 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput2"]/*' />
 /// <unmanaged>IDXGIOutput2</unmanaged>
 [Guid("595e39d1-2724-4663-99b1-da969de28364")]
 [NativeTypeName("struct IDXGIOutput2 : IDXGIOutput1")]
@@ -7950,7 +7950,7 @@ public unsafe partial struct IDXGIOutput2 : IDXGIOutput2.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput2::SupportsOverlays"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput2::SupportsOverlays"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public Bool32 SupportsOverlays()
@@ -7967,7 +7967,7 @@ public unsafe partial struct IDXGIOutput2 : IDXGIOutput2.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory3"]/*' />
 /// <unmanaged>IDXGIFactory3</unmanaged>
 [Guid("25483823-cd46-4c7d-86ca-47aa95b837bd")]
 [NativeTypeName("struct IDXGIFactory3 : IDXGIFactory2")]
@@ -8292,7 +8292,7 @@ public unsafe partial struct IDXGIFactory3 : IDXGIFactory3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory3::GetCreationFlags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory3::GetCreationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public uint GetCreationFlags()
@@ -8309,7 +8309,7 @@ public unsafe partial struct IDXGIFactory3 : IDXGIFactory3.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain"]/*' />
 /// <unmanaged>IDXGIDecodeSwapChain</unmanaged>
 [Guid("2633066b-4514-4c7a-8fd8-12ea98059d18")]
 [NativeTypeName("struct IDXGIDecodeSwapChain : IUnknown")]
@@ -8370,7 +8370,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::PresentBuffer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::PresentBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, uint Flags)
@@ -8382,7 +8382,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetSourceRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetSourceRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetSourceRect(RawRect* pRect)
@@ -8394,7 +8394,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetTargetRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetTargetRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult SetTargetRect(RawRect* pRect)
@@ -8406,7 +8406,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetDestSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetDestSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult SetDestSize(uint Width, uint Height)
@@ -8418,7 +8418,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetSourceRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetSourceRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetSourceRect(RawRect* pRect)
@@ -8430,7 +8430,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetTargetRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetTargetRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetTargetRect(RawRect* pRect)
@@ -8442,7 +8442,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetDestSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetDestSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetDestSize(uint* pWidth, uint* pHeight)
@@ -8454,7 +8454,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetColorSpace"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetColorSpace(MultiplaneOverlayYcbcrFlags ColorSpace)
@@ -8466,7 +8466,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetColorSpace"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public Graphics.Dxgi.MultiplaneOverlayYcbcrFlags GetColorSpace()
@@ -8483,7 +8483,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactoryMedia"]/*' />
 /// <unmanaged>IDXGIFactoryMedia</unmanaged>
 [Guid("41e7d1f2-a591-4f7b-a2e5-fa9c843e1c12")]
 [NativeTypeName("struct IDXGIFactoryMedia : IUnknown")]
@@ -8544,7 +8544,7 @@ public unsafe partial struct IDXGIFactoryMedia : IDXGIFactoryMedia.Interface
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateSwapChainForCompositionSurfaceHandle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateSwapChainForCompositionSurfaceHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, IntPtr* hSurface, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
@@ -8556,7 +8556,7 @@ public unsafe partial struct IDXGIFactoryMedia : IDXGIFactoryMedia.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateDecodeSwapChainForCompositionSurfaceHandle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateDecodeSwapChainForCompositionSurfaceHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateDecodeSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, IntPtr* hSurface, DecodeSwapChainDescription* pDesc, IDXGIResource* pYuvDecodeBuffers, IDXGIOutput* pRestrictToOutput, IDXGIDecodeSwapChain** ppSwapChain)
@@ -8573,7 +8573,7 @@ public unsafe partial struct IDXGIFactoryMedia : IDXGIFactoryMedia.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
 /// <unmanaged>IDXGISwapChainMedia</unmanaged>
 [Guid("dd95b90b-f05f-4f6a-bd65-25bfb264bd84")]
 [NativeTypeName("struct IDXGISwapChainMedia : IUnknown")]
@@ -8634,7 +8634,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetFrameStatisticsMedia(FrameStatisticsMedia* pStats)
@@ -8646,7 +8646,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetPresentDuration(uint Duration)
@@ -8658,7 +8658,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration)
@@ -8675,7 +8675,7 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
 /// <unmanaged>IDXGIOutput3</unmanaged>
 [Guid("8a6bb301-7e7e-41f4-a8e0-5b32f7f99b18")]
 [NativeTypeName("struct IDXGIOutput3 : IDXGIOutput2")]
@@ -8988,7 +8988,7 @@ public unsafe partial struct IDXGIOutput3 : IDXGIOutput3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput3::CheckOverlaySupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput3::CheckOverlaySupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
@@ -9005,7 +9005,7 @@ public unsafe partial struct IDXGIOutput3 : IDXGIOutput3.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3"]/*' />
 /// <unmanaged>IDXGISwapChain3</unmanaged>
 [Guid("94d99bdb-f1f8-4ab0-b236-7da0170edab1")]
 [NativeTypeName("struct IDXGISwapChain3 : IDXGISwapChain2")]
@@ -9462,7 +9462,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3::GetCurrentBackBufferIndex"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::GetCurrentBackBufferIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
 	public uint GetCurrentBackBufferIndex()
@@ -9474,7 +9474,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3::CheckColorSpaceSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::CheckColorSpaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
 	public HResult CheckColorSpaceSupport(Common.ColorSpaceType ColorSpace, uint* pColorSpaceSupport)
@@ -9486,7 +9486,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3::SetColorSpace1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::SetColorSpace1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
 	public HResult SetColorSpace1(Common.ColorSpaceType ColorSpace)
@@ -9498,7 +9498,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain3::ResizeBuffers1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::ResizeBuffers1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
 	public HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.Format Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown* ppPresentQueue)
@@ -9515,7 +9515,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput4"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput4"]/*' />
 /// <unmanaged>IDXGIOutput4</unmanaged>
 [Guid("dc7dca35-2196-414d-9f53-617884032a60")]
 [NativeTypeName("struct IDXGIOutput4 : IDXGIOutput3")]
@@ -9840,7 +9840,7 @@ public unsafe partial struct IDXGIOutput4 : IDXGIOutput4.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput4::CheckOverlayColorSpaceSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput4::CheckOverlayColorSpaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags)
@@ -9857,7 +9857,7 @@ public unsafe partial struct IDXGIOutput4 : IDXGIOutput4.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory4"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory4"]/*' />
 /// <unmanaged>IDXGIFactory4</unmanaged>
 [Guid("1bc6ea02-ef36-464f-bf0c-21ca39e5168a")]
 [NativeTypeName("struct IDXGIFactory4 : IDXGIFactory3")]
@@ -10194,7 +10194,7 @@ public unsafe partial struct IDXGIFactory4 : IDXGIFactory4.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory4::EnumAdapterByLuid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory4::EnumAdapterByLuid"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
@@ -10206,7 +10206,7 @@ public unsafe partial struct IDXGIFactory4 : IDXGIFactory4.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory4::EnumWarpAdapter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory4::EnumWarpAdapter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter)
@@ -10223,7 +10223,7 @@ public unsafe partial struct IDXGIFactory4 : IDXGIFactory4.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3"]/*' />
 /// <unmanaged>IDXGIAdapter3</unmanaged>
 [Guid("645967a4-1392-4310-a798-8053ce3e93fd")]
 [NativeTypeName("struct IDXGIAdapter3 : IDXGIAdapter2")]
@@ -10392,7 +10392,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::RegisterHardwareContentProtectionTeardownStatusEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::RegisterHardwareContentProtectionTeardownStatusEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult RegisterHardwareContentProtectionTeardownStatusEvent(IntPtr* hEvent, uint* pdwCookie)
@@ -10404,7 +10404,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterHardwareContentProtectionTeardownStatus"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterHardwareContentProtectionTeardownStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public void UnregisterHardwareContentProtectionTeardownStatus(uint dwCookie)
@@ -10416,7 +10416,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::QueryVideoMemoryInfo"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::QueryVideoMemoryInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult QueryVideoMemoryInfo(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, QueryVideoMemoryInfo* pVideoMemoryInfo)
@@ -10428,7 +10428,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::SetVideoMemoryReservation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::SetVideoMemoryReservation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult SetVideoMemoryReservation(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, ulong Reservation)
@@ -10440,7 +10440,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::RegisterVideoMemoryBudgetChangeNotificationEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::RegisterVideoMemoryBudgetChangeNotificationEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult RegisterVideoMemoryBudgetChangeNotificationEvent(IntPtr* hEvent, uint* pdwCookie)
@@ -10452,7 +10452,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterVideoMemoryBudgetChangeNotification"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterVideoMemoryBudgetChangeNotification"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void UnregisterVideoMemoryBudgetChangeNotification(uint dwCookie)
@@ -10469,7 +10469,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput5"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput5"]/*' />
 /// <unmanaged>IDXGIOutput5</unmanaged>
 [Guid("80a07424-ab52-42eb-833c-0c42fd282d98")]
 [NativeTypeName("struct IDXGIOutput5 : IDXGIOutput4")]
@@ -10806,7 +10806,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput5::DuplicateOutput1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput5::DuplicateOutput1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult DuplicateOutput1(IUnknown* pDevice, uint Flags, uint SupportedFormatsCount, Common.Format* pSupportedFormats, IDXGIOutputDuplication** ppOutputDuplication)
@@ -10823,7 +10823,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain4"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain4"]/*' />
 /// <unmanaged>IDXGISwapChain4</unmanaged>
 [Guid("3d585d5a-bd4a-489e-b1f4-3dbcb6452ffb")]
 [NativeTypeName("struct IDXGISwapChain4 : IDXGISwapChain3")]
@@ -11328,7 +11328,7 @@ public unsafe partial struct IDXGISwapChain4 : IDXGISwapChain4.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGISwapChain4::SetHDRMetaData"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain4::SetHDRMetaData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
 	public HResult SetHDRMetaData(HdrMetadataType Type, uint Size, void* pMetaData)
@@ -11345,7 +11345,7 @@ public unsafe partial struct IDXGISwapChain4 : IDXGISwapChain4.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice4"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice4"]/*' />
 /// <unmanaged>IDXGIDevice4</unmanaged>
 [Guid("95b4f95f-d8da-4ca4-9ee6-3b76d5968a10")]
 [NativeTypeName("struct IDXGIDevice4 : IDXGIDevice3")]
@@ -11586,7 +11586,7 @@ public unsafe partial struct IDXGIDevice4 : IDXGIDevice4.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice4::OfferResources1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice4::OfferResources1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult OfferResources1(uint NumResources, IDXGIResource* ppResources, OfferResourcePriority Priority, uint Flags)
@@ -11598,7 +11598,7 @@ public unsafe partial struct IDXGIDevice4 : IDXGIDevice4.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDevice4::ReclaimResources1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice4::ReclaimResources1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult ReclaimResources1(uint NumResources, IDXGIResource* ppResources, ReclaimResourceResults* pResults)
@@ -11615,7 +11615,7 @@ public unsafe partial struct IDXGIDevice4 : IDXGIDevice4.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory5"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory5"]/*' />
 /// <unmanaged>IDXGIFactory5</unmanaged>
 [Guid("7632e1f5-ee65-4dca-87fd-84cd75f8838d")]
 [NativeTypeName("struct IDXGIFactory5 : IDXGIFactory4")]
@@ -11976,7 +11976,7 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory5::CheckFeatureSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory5::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
@@ -11993,7 +11993,7 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter4"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter4"]/*' />
 /// <unmanaged>IDXGIAdapter4</unmanaged>
 [Guid("3c8d99d1-4fbf-4181-a82c-af66bf7bd24e")]
 [NativeTypeName("struct IDXGIAdapter4 : IDXGIAdapter3")]
@@ -12234,7 +12234,7 @@ public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIAdapter4::GetDesc3"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter4::GetDesc3"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult GetDesc3(AdapterDescription3* pDesc)
@@ -12251,7 +12251,7 @@ public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput6"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput6"]/*' />
 /// <unmanaged>IDXGIOutput6</unmanaged>
 [Guid("068346e8-aaec-4b84-add7-137f513f77a1")]
 [NativeTypeName("struct IDXGIOutput6 : IDXGIOutput5")]
@@ -12600,7 +12600,7 @@ public unsafe partial struct IDXGIOutput6 : IDXGIOutput6.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput6::GetDesc1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput6::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public HResult GetDesc1(OutputDescription1* pDesc)
@@ -12612,7 +12612,7 @@ public unsafe partial struct IDXGIOutput6 : IDXGIOutput6.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIOutput6::CheckHardwareCompositionSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput6::CheckHardwareCompositionSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult CheckHardwareCompositionSupport(uint* pFlags)
@@ -12629,7 +12629,7 @@ public unsafe partial struct IDXGIOutput6 : IDXGIOutput6.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory6"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory6"]/*' />
 /// <unmanaged>IDXGIFactory6</unmanaged>
 [Guid("c1b6694f-ff09-44a9-b03c-77900a0a1d17")]
 [NativeTypeName("struct IDXGIFactory6 : IDXGIFactory5")]
@@ -13002,7 +13002,7 @@ public unsafe partial struct IDXGIFactory6 : IDXGIFactory6.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory6::EnumAdapterByGpuPreference"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory6::EnumAdapterByGpuPreference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult EnumAdapterByGpuPreference(uint Adapter, GpuPreference GpuPreference, Guid* riid, void** ppvAdapter)
@@ -13019,7 +13019,7 @@ public unsafe partial struct IDXGIFactory6 : IDXGIFactory6.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory7"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory7"]/*' />
 /// <unmanaged>IDXGIFactory7</unmanaged>
 [Guid("a4966eed-76db-44da-84c1-ee9a7afb20a8")]
 [NativeTypeName("struct IDXGIFactory7 : IDXGIFactory6")]
@@ -13404,7 +13404,7 @@ public unsafe partial struct IDXGIFactory7 : IDXGIFactory7.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory7::RegisterAdaptersChangedEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory7::RegisterAdaptersChangedEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult RegisterAdaptersChangedEvent(IntPtr* hEvent, uint* pdwCookie)
@@ -13416,7 +13416,7 @@ public unsafe partial struct IDXGIFactory7 : IDXGIFactory7.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIFactory7::UnregisterAdaptersChangedEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory7::UnregisterAdaptersChangedEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult UnregisterAdaptersChangedEvent(uint dwCookie)
@@ -13433,7 +13433,7 @@ public unsafe partial struct IDXGIFactory7 : IDXGIFactory7.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue"]/*' />
 /// <unmanaged>IDXGIInfoQueue</unmanaged>
 [Guid("d67441c7-672a-476f-9e82-cd55b44949ce")]
 [NativeTypeName("struct IDXGIInfoQueue : IUnknown")]
@@ -13494,7 +13494,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetMessageCountLimit"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetMessageCountLimit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetMessageCountLimit(Guid Producer, ulong MessageCountLimit)
@@ -13506,7 +13506,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::ClearStoredMessages"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::ClearStoredMessages"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void ClearStoredMessages(Guid Producer)
@@ -13518,7 +13518,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetMessage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetMessage(Guid Producer, ulong MessageIndex, InfoQueueMessage* pMessage, nuint* pMessageByteLength)
@@ -13530,7 +13530,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumStoredMessagesAllowedByRetrievalFilters"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumStoredMessagesAllowedByRetrievalFilters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public ulong GetNumStoredMessagesAllowedByRetrievalFilters(Guid Producer)
@@ -13542,7 +13542,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumStoredMessages"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumStoredMessages"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public ulong GetNumStoredMessages(Guid Producer)
@@ -13554,7 +13554,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesDiscardedByMessageCountLimit"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesDiscardedByMessageCountLimit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public ulong GetNumMessagesDiscardedByMessageCountLimit(Guid Producer)
@@ -13566,7 +13566,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetMessageCountLimit"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetMessageCountLimit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public ulong GetMessageCountLimit(Guid Producer)
@@ -13578,7 +13578,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesAllowedByStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesAllowedByStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public ulong GetNumMessagesAllowedByStorageFilter(Guid Producer)
@@ -13590,7 +13590,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesDeniedByStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetNumMessagesDeniedByStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public ulong GetNumMessagesDeniedByStorageFilter(Guid Producer)
@@ -13602,7 +13602,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::AddStorageFilterEntries"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddStorageFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult AddStorageFilterEntries(Guid Producer, InfoQueueFilter* pFilter)
@@ -13614,7 +13614,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetStorageFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength)
@@ -13626,7 +13626,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::ClearStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::ClearStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public void ClearStorageFilter(Guid Producer)
@@ -13638,7 +13638,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushEmptyStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushEmptyStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult PushEmptyStorageFilter(Guid Producer)
@@ -13650,7 +13650,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushDenyAllStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushDenyAllStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult PushDenyAllStorageFilter(Guid Producer)
@@ -13662,7 +13662,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushCopyOfStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushCopyOfStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult PushCopyOfStorageFilter(Guid Producer)
@@ -13674,7 +13674,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult PushStorageFilter(Guid Producer, InfoQueueFilter* pFilter)
@@ -13686,7 +13686,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PopStorageFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PopStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public void PopStorageFilter(Guid Producer)
@@ -13698,7 +13698,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetStorageFilterStackSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetStorageFilterStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public uint GetStorageFilterStackSize(Guid Producer)
@@ -13710,7 +13710,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::AddRetrievalFilterEntries"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddRetrievalFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult AddRetrievalFilterEntries(Guid Producer, InfoQueueFilter* pFilter)
@@ -13722,7 +13722,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetRetrievalFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult GetRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength)
@@ -13734,7 +13734,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::ClearRetrievalFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::ClearRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public void ClearRetrievalFilter(Guid Producer)
@@ -13746,7 +13746,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushEmptyRetrievalFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushEmptyRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult PushEmptyRetrievalFilter(Guid Producer)
@@ -13758,7 +13758,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushDenyAllRetrievalFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushDenyAllRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult PushDenyAllRetrievalFilter(Guid Producer)
@@ -13770,7 +13770,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushCopyOfRetrievalFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushCopyOfRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult PushCopyOfRetrievalFilter(Guid Producer)
@@ -13782,7 +13782,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PushRetrievalFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PushRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public HResult PushRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter)
@@ -13794,7 +13794,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::PopRetrievalFilter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::PopRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public void PopRetrievalFilter(Guid Producer)
@@ -13806,7 +13806,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetRetrievalFilterStackSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetRetrievalFilterStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public uint GetRetrievalFilterStackSize(Guid Producer)
@@ -13818,7 +13818,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::AddMessage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult AddMessage(Guid Producer, InfoQueueMessageCategory Category, InfoQueueMessageSeverity Severity, int ID, byte** pDescription)
@@ -13830,7 +13830,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::AddApplicationMessage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult AddApplicationMessage(InfoQueueMessageSeverity Severity, byte** pDescription)
@@ -13842,7 +13842,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnCategory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult SetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category, Bool32* bEnable)
@@ -13854,7 +13854,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnSeverity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public HResult SetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity, Bool32* bEnable)
@@ -13866,7 +13866,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnID"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult SetBreakOnID(Guid Producer, int ID, Bool32* bEnable)
@@ -13878,7 +13878,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnCategory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
 	public Bool32 GetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category)
@@ -13890,7 +13890,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnSeverity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
 	public Bool32 GetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity)
@@ -13902,7 +13902,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnID"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetBreakOnID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
 	public Bool32 GetBreakOnID(Guid Producer, int ID)
@@ -13914,7 +13914,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::SetMuteDebugOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetMuteDebugOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
 	public void SetMuteDebugOutput(Guid Producer, Bool32* bMute)
@@ -13926,7 +13926,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIInfoQueue::GetMuteDebugOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::GetMuteDebugOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
 	public Bool32 GetMuteDebugOutput(Guid Producer)
@@ -13943,7 +13943,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug"]/*' />
 /// <unmanaged>IDXGIDebug</unmanaged>
 [Guid("119e7452-de9e-40fe-8806-88f90c12b441")]
 [NativeTypeName("struct IDXGIDebug : IUnknown")]
@@ -14004,7 +14004,7 @@ public unsafe partial struct IDXGIDebug : IDXGIDebug.Interface
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult ReportLiveObjects(Guid apiid, DebugRloFlags flags)
@@ -14021,7 +14021,7 @@ public unsafe partial struct IDXGIDebug : IDXGIDebug.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1"]/*' />
 /// <unmanaged>IDXGIDebug1</unmanaged>
 [Guid("c5a05f0c-16f2-4adf-9f4d-a8c4d58ac550")]
 [NativeTypeName("struct IDXGIDebug1 : IDXGIDebug")]
@@ -14094,7 +14094,7 @@ public unsafe partial struct IDXGIDebug1 : IDXGIDebug1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug1::EnableLeakTrackingForThread"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1::EnableLeakTrackingForThread"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void EnableLeakTrackingForThread()
@@ -14106,7 +14106,7 @@ public unsafe partial struct IDXGIDebug1 : IDXGIDebug1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug1::DisableLeakTrackingForThread"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1::DisableLeakTrackingForThread"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void DisableLeakTrackingForThread()
@@ -14118,7 +14118,7 @@ public unsafe partial struct IDXGIDebug1 : IDXGIDebug1.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGIDebug1::IsLeakTrackingEnabledForThread"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1::IsLeakTrackingEnabledForThread"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public Bool32 IsLeakTrackingEnabledForThread()
@@ -14135,7 +14135,7 @@ public unsafe partial struct IDXGIDebug1 : IDXGIDebug1.Interface
 	}
 }
 
-/// <include file='../DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis"]/*' />
 /// <unmanaged>IDXGraphicsAnalysis</unmanaged>
 [Guid("9f251514-9d4d-4902-9d60-18988ab7d4b5")]
 [NativeTypeName("struct IDXGraphicsAnalysis : IUnknown")]
@@ -14196,7 +14196,7 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis::BeginCapture"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis::BeginCapture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void BeginCapture()
@@ -14208,7 +14208,7 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 #endif
 	}
 
-	/// <include file='../DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis::EndCapture"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis::EndCapture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void EndCapture()
