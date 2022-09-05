@@ -12,6 +12,9 @@ public static unsafe class Program
 {
     public static void Main()
     {
+        string test = StringUtilities.GetString(new sbyte[] { (sbyte)'A', (sbyte)'B', (sbyte)'C' });
+        test = StringUtilities.GetString(new ushort[] { 'A', 'B', 'C' });
+
         using ComPtr<IDXGIFactory1> factory = default;
         HResult hr = CreateDXGIFactory1(__uuidof<IDXGIFactory4>(), (void**)&factory);
 
@@ -24,15 +27,34 @@ public static unsafe class Program
         }
 
         using ComPtr<IDXGIAdapter1> adapter = default;
+
+        using ComPtr<IDXGIFactory6> factory6 = default;
+        if (factory.CopyTo(&factory6).Success)
+        {
+            for (uint adapterIndex = 0;
+                factory6.Get()->EnumAdapterByGpuPreference(
+                    adapterIndex,
+                    GpuPreference.HighPerformance,
+                    __uuidof<IDXGIAdapter1>(),
+                    (void**)adapter.ReleaseAndGetAddressOf()).Success;
+                adapterIndex++)
+            {
+                AdapterDescription1 desc = default;
+                adapter.Get()->GetDesc1(&desc);
+
+                string name = desc.DescriptionStr;
+            }
+        }
+
         for (uint adapterIndex = 0;
             factory.Get()->EnumAdapters1(adapterIndex, adapter.ReleaseAndGetAddressOf()).Success;
             adapterIndex++)
         {
             AdapterDescription1 desc = default;
             adapter.Get()->GetDesc1(&desc);
+
+            string name = desc.DescriptionStr;
         }
-
-
     }
 
     [DllImport("dxgi", ExactSpelling = true)]
