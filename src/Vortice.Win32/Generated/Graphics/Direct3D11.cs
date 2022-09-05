@@ -39829,3 +39829,14 @@ public unsafe partial struct ID3DX11FFT : ID3DX11FFT.Interface
 }
 
 #endregion Com Types
+#region Functions
+public static unsafe partial class Apis
+{
+	[DllImport("d3d11", ExactSpelling = true)]
+	public static extern HResult D3D11CreateDevice(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.DriverType DriverType, IntPtr Software, CreateDeviceFlag Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, ID3D11Device** ppDevice, Graphics.Direct3D.FeatureLevel* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
+
+	[DllImport("d3d11", ExactSpelling = true)]
+	public static extern HResult D3D11CreateDeviceAndSwapChain(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.DriverType DriverType, IntPtr Software, CreateDeviceFlag Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Graphics.Dxgi.SwapChainDescription* pSwapChainDesc, Graphics.Dxgi.IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, Graphics.Direct3D.FeatureLevel* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
+
+}
+#endregion Functions

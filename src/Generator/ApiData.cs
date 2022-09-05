@@ -60,6 +60,7 @@ public class ApiFunction
 {
     public string Name { get; set; }
     public bool SetLastError { get; set; }
+    public string DllImport { get; set; }
     public ApiDataType ReturnType { get; set; }
     public List<object> ReturnAttrs { get; set; }
 

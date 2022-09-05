@@ -2,6 +2,8 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Runtime.CompilerServices;
+using Win32.Graphics.Direct3D;
+using Win32.Graphics.Dxgi;
 using static Win32.Graphics.Dxgi.Apis;
 using static Win32.StringUtilities;
 
@@ -52,6 +54,34 @@ public partial struct AuthenticatedProtectionFlags
             {
                 _bitfield = (_bitfield & ~(0x3FFFFFFFu << 2)) | ((value & 0x3FFFFFFFu) << 2);
             }
+        }
+    }
+}
+
+public static unsafe partial class Apis
+{
+    public static HResult D3D11CreateDevice(
+        IDXGIAdapter* pAdapter,
+        DriverType driverType,
+        CreateDeviceFlag flags,
+        ReadOnlySpan<FeatureLevel> featureLevels,
+        ID3D11Device** ppDevice,
+        FeatureLevel* pFeatureLevel,
+        ID3D11DeviceContext** ppImmediateContext)
+    {
+        fixed (FeatureLevel* pfeatureLevels = featureLevels)
+        {
+            return D3D11CreateDevice(
+                pAdapter,
+                driverType,
+                IntPtr.Zero,
+                flags,
+                pfeatureLevels,
+                (uint)featureLevels.Length,
+                D3D11_SDK_VERSION,
+                ppDevice,
+                pFeatureLevel,
+                ppImmediateContext);
         }
     }
 }

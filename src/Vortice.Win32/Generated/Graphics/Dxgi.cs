@@ -14212,3 +14212,23 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 }
 
 #endregion Com Types
+#region Functions
+public static unsafe partial class Apis
+{
+	[DllImport("dxgi", ExactSpelling = true)]
+	public static extern HResult CreateDXGIFactory(Guid* riid, void** ppFactory);
+
+	[DllImport("dxgi", ExactSpelling = true)]
+	public static extern HResult CreateDXGIFactory1(Guid* riid, void** ppFactory);
+
+	[DllImport("dxgi", ExactSpelling = true)]
+	public static extern HResult CreateDXGIFactory2(uint Flags, Guid* riid, void** ppFactory);
+
+	[DllImport("dxgi", ExactSpelling = true)]
+	public static extern HResult DXGIGetDebugInterface1(uint Flags, Guid* riid, void** pDebug);
+
+	[DllImport("dxgi", ExactSpelling = true)]
+	public static extern HResult DXGIDeclareAdapterRemovalSupport();
+
+}
+#endregion Functions
