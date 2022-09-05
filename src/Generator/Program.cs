@@ -1,6 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using System.Globalization;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -12,7 +13,8 @@ public static class Program
     {
         "Graphics.Dxgi.Common.json",
         "Graphics.Dxgi.json",
-        "Graphics.Direct3D.json"
+        "Graphics.Direct3D.json",
+        "Graphics.Direct3D11.json"
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -94,6 +96,14 @@ public static class Program
         { "D3D_SHADER_INPUT_FLAGS", "D3D_SIF" },
         { "D3D_SHADER_INPUT_TYPE", "D3D_SIT" },
         { "D3D_SHADER_CBUFFER_FLAGS", "D3D_CBF" },
+
+        // D3D11
+        { "D3D11_INPUT_CLASSIFICATION", "D3D11_INPUT" },
+        { "D3D11_FILL_MODE", "D3D11_FILL" },
+        { "D3D11_CULL_MODE", "D3D11_CULL" },
+        { "D3D11_BIND_FLAG", "D3D11_BIND" },
+        { "D3D11_CPU_ACCESS_FLAG", "D3D11_CPU_ACCESS" },
+        { "D3D11_RESOURCE_MISC_FLAG", "D3D11_RESOURCE_MISC" },
     };
 
     private static readonly Dictionary<string, string> s_partRenames = new()
@@ -155,6 +165,7 @@ public static class Program
         { "MIN12INT", "Min12Int" },
         { "MIN16INT", "Min16Int" },
         { "MIN16UINT", "Min16Uint" },
+        { "KEYEDMUTEX", "KeyedMutex" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -246,7 +257,7 @@ public static class Program
         // Generate docs
         DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
         DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(outputPath, "Dxgi.xml"));
-        DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(outputPath, "D3D11.xml"));
+        DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(outputPath, "Direct3D11.xml"));
         return 0;
     }
 
@@ -315,6 +326,16 @@ public static class Program
                 else if (typeName == "HResult")
                 {
                     writer.WriteLine($"public static readonly HResult {constant.Name} = {constant.Value};");
+                }
+                else if (typeName == "float")
+                {
+                    float floatValue = Convert.ToSingle(constant.Value);
+                    writer.WriteLine($"public const float {constant.Name} = {floatValue.ToString(CultureInfo.InvariantCulture)}f;");
+                }
+                else if (typeName == "double")
+                {
+                    double dblValue = Convert.ToDouble(constant.Value);
+                    writer.WriteLine($"public const double {constant.Name} = {dblValue.ToString(CultureInfo.InvariantCulture)};");
                 }
                 else
                 {
@@ -456,7 +477,9 @@ public static class Program
             writer.WriteLine($"/// <unmanaged>{enumType.Name}</unmanaged>");
 
         bool isFlags = false;
-        if (enumType.Flags || csTypeName.EndsWith("Flags"))
+        if (enumType.Flags ||
+            csTypeName.EndsWith("Flag") ||
+            csTypeName.EndsWith("Flags"))
         {
             isFlags = true;
             writer.WriteLine("[Flags]");
@@ -491,6 +514,12 @@ public static class Program
                     }
                 }
 
+                if (value.Name.EndsWith("_MESSAGES_START") ||
+                    value.Name.EndsWith("_MESSAGES_END"))
+                {
+                    continue;
+                }
+
                 string enumValueName = GetPrettyFieldName(value.Name, enumPrefix);
 
                 if (enumType.Name == "D3D_SHADER_VARIABLE_TYPE")
@@ -519,26 +548,46 @@ public static class Program
         writer.WriteLine();
     }
 
-    private static void GenerateStruct(CodeWriter writer, ApiType structType)
+    private static void GenerateStruct(CodeWriter writer, ApiType structType, bool nestedType = false)
     {
-        string csTypeName = GetDataTypeName(structType.Name, out string structPrefix);
-        AddCsMapping(writer.Api, structType.Name, csTypeName);
+        string csTypeName;
+        string structPrefix = string.Empty;
 
-        writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}\"]/*' />");
-
-        if (s_generateUnmanagedDocs)
+        if (nestedType)
         {
-            writer.WriteLine($"/// <unmanaged>{structType.Name}</unmanaged>");
+            csTypeName = structType.Name;
+        }
+        else
+        {
+            csTypeName = GetDataTypeName(structType.Name, out structPrefix);
+            AddCsMapping(writer.Api, structType.Name, csTypeName);
+
+            writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}\"]/*' />");
+
+            if (s_generateUnmanagedDocs)
+            {
+                writer.WriteLine($"/// <unmanaged>{structType.Name}</unmanaged>");
+            }
         }
 
         using (writer.PushBlock($"public partial struct {csTypeName}"))
         {
+            int fieldIndex = 0;
             foreach (ApiStructField field in structType.Fields)
             {
                 if (field.Name.EndsWith("_FORCE_DWORD"))
                     continue;
 
-                string fieldValueName = GetPrettyFieldName(field.Name, structPrefix);
+                string fieldValueName;
+                if (nestedType)
+                {
+                    fieldValueName = field.Name;
+                }
+                else
+                {
+                    fieldValueName = GetPrettyFieldName(field.Name, structPrefix);
+                }
+
                 string fieldTypeName = GetTypeName(field.Type);
 
                 writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}::{field.Name}\"]/*' />");
@@ -614,9 +663,26 @@ public static class Program
                     writer.WriteLine($"public {unsafePrefix}{fieldTypeName} {fieldValueName};");
                 }
 
+                if (fieldIndex < structType.Fields.Length - 1)
+                {
+                    writer.WriteLine();
+                }
+
+                fieldIndex++;
+            }
+
+            // Generate nested types
+            if (structType.NestedTypes.Length > 0)
+            {
                 writer.WriteLine();
+
+                foreach (ApiType nestedTypeToGenerate in structType.NestedTypes)
+                {
+                    GenerateStruct(writer, nestedTypeToGenerate, true);
+                }
             }
         }
+
         writer.WriteLine();
     }
 
@@ -898,7 +964,8 @@ public static class Program
     private static bool ShouldSkipConstant(ApiDataConstant constant)
     {
         if (constant.Name == "_FACDXGI" ||
-            constant.Name == "DXGI_FORMAT_DEFINED")
+            constant.Name == "DXGI_FORMAT_DEFINED" ||
+            constant.Name == "D3D11_FLOAT32_MAX")
         {
             return true;
         }

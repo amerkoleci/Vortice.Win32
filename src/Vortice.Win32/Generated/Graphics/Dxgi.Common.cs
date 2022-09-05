@@ -580,7 +580,6 @@ public partial struct Rational
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL::Denominator"]/*' />
 	public uint Denominator;
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC"]/*' />
@@ -592,7 +591,6 @@ public partial struct SampleDescription
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC::Quality"]/*' />
 	public uint Quality;
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGB"]/*' />
@@ -607,7 +605,6 @@ public partial struct Rgb
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGB::Blue"]/*' />
 	public float Blue;
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL"]/*' />
@@ -1668,7 +1665,6 @@ public partial struct GammaControl
 			return MemoryMarshal.CreateSpan(ref e0, 1025);
 		}
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES"]/*' />
@@ -1689,7 +1685,6 @@ public partial struct GammaControlCapabilities
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ControlPointPositions"]/*' />
 	public unsafe fixed float ControlPointPositions[1025];
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC"]/*' />
@@ -1713,7 +1708,6 @@ public partial struct ModeDescription
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC::Scaling"]/*' />
 	public ModeScaling Scaling;
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE"]/*' />
@@ -1725,7 +1719,6 @@ public partial struct JpegDcHuffmanTable
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE::CodeValues"]/*' />
 	public unsafe fixed byte CodeValues[12];
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE"]/*' />
@@ -1737,7 +1730,6 @@ public partial struct JpegAcHuffmanTable
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeValues"]/*' />
 	public unsafe fixed byte CodeValues[162];
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE"]/*' />
@@ -1746,7 +1738,6 @@ public partial struct JpegQuantizationTable
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE::Elements"]/*' />
 	public unsafe fixed byte Elements[64];
-
 }
 
 #endregion Structs

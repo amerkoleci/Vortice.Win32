@@ -1080,7 +1080,6 @@ public partial struct ShaderMacro
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Definition"]/*' />
 	public unsafe byte* Definition;
-
 }
 
 #endregion Structs

@@ -111,6 +111,7 @@ public class ApiType
     public int Size { get; set; }
     public int PackingSize { get; set; }
     public ApiStructField[] Fields { get; set; }
+    public ApiType[] NestedTypes { get; set; }
 
     // Com
     public string Guid { get; set; }
