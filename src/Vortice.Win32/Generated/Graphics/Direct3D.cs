@@ -107,37 +107,37 @@ public enum FeatureLevel : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_1_0_CORE"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_1_0_CORE</unmanaged>
-	_10Core = 4096,
+	Level_1_0_Core = 4096,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_1"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_9_1</unmanaged>
-	_91 = 37120,
+	Level_9_1 = 37120,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_2"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_9_2</unmanaged>
-	_92 = 37376,
+	Level_9_2 = 37376,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_3"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_9_3</unmanaged>
-	_93 = 37632,
+	Level_9_3 = 37632,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_10_0"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_10_0</unmanaged>
-	_100 = 40960,
+	Level_10_0 = 40960,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_10_1"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_10_1</unmanaged>
-	_101 = 41216,
+	Level_10_1 = 41216,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_11_0"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_11_0</unmanaged>
-	_110 = 45056,
+	Level_11_0 = 45056,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_11_1"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_11_1</unmanaged>
-	_111 = 45312,
+	Level_11_1 = 45312,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_0"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_12_0</unmanaged>
-	_120 = 49152,
+	Level_12_0 = 49152,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_1"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_12_1</unmanaged>
-	_121 = 49408,
+	Level_12_1 = 49408,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_2"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_12_2</unmanaged>
-	_122 = 49664,
+	Level_12_2 = 49664,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY"]/*' />
@@ -149,283 +149,127 @@ public enum PrimitiveTopology : int
 	Undefined = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_POINTLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_POINTLIST</unmanaged>
-	Pointlist = 1,
+	PointList = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINELIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINELIST</unmanaged>
-	Linelist = 2,
+	LineList = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINESTRIP"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINESTRIP</unmanaged>
-	Linestrip = 3,
+	LineStrip = 3,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST</unmanaged>
-	Trianglelist = 4,
+	TriangleList = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP</unmanaged>
-	Trianglestrip = 5,
+	TriangleStrip = 5,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ</unmanaged>
-	LinelistAdj = 10,
+	LineListAdj = 10,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ</unmanaged>
-	LinestripAdj = 11,
+	LineStripAdj = 11,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ</unmanaged>
-	TrianglelistAdj = 12,
+	TriangleListAdj = 12,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ</unmanaged>
-	TrianglestripAdj = 13,
+	TriangleStripAdj = 13,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST</unmanaged>
-	_1ControlPointPatchlist = 33,
+	P1ControlPointPatchList = 33,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_2_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_2_CONTROL_POINT_PATCHLIST</unmanaged>
-	_2ControlPointPatchlist = 34,
+	P2ControlPointPatchList = 34,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_3_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_3_CONTROL_POINT_PATCHLIST</unmanaged>
-	_3ControlPointPatchlist = 35,
+	P3ControlPointPatchList = 35,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST</unmanaged>
-	_4ControlPointPatchlist = 36,
+	P4ControlPointPatchList = 36,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_5_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_5_CONTROL_POINT_PATCHLIST</unmanaged>
-	_5ControlPointPatchlist = 37,
+	P5ControlPointPatchList = 37,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_6_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_6_CONTROL_POINT_PATCHLIST</unmanaged>
-	_6ControlPointPatchlist = 38,
+	P6ControlPointPatchList = 38,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_7_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_7_CONTROL_POINT_PATCHLIST</unmanaged>
-	_7ControlPointPatchlist = 39,
+	P7ControlPointPatchList = 39,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_8_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_8_CONTROL_POINT_PATCHLIST</unmanaged>
-	_8ControlPointPatchlist = 40,
+	P8ControlPointPatchList = 40,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_9_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_9_CONTROL_POINT_PATCHLIST</unmanaged>
-	_9ControlPointPatchlist = 41,
+	P9ControlPointPatchList = 41,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_10_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_10_CONTROL_POINT_PATCHLIST</unmanaged>
-	_10ControlPointPatchlist = 42,
+	P10ControlPointPatchList = 42,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_11_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_11_CONTROL_POINT_PATCHLIST</unmanaged>
-	_11ControlPointPatchlist = 43,
+	P11ControlPointPatchList = 43,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_12_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_12_CONTROL_POINT_PATCHLIST</unmanaged>
-	_12ControlPointPatchlist = 44,
+	P12ControlPointPatchList = 44,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_13_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_13_CONTROL_POINT_PATCHLIST</unmanaged>
-	_13ControlPointPatchlist = 45,
+	P13ControlPointPatchList = 45,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_14_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_14_CONTROL_POINT_PATCHLIST</unmanaged>
-	_14ControlPointPatchlist = 46,
+	P14ControlPointPatchList = 46,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_15_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_15_CONTROL_POINT_PATCHLIST</unmanaged>
-	_15ControlPointPatchlist = 47,
+	P15ControlPointPatchList = 47,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_16_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_16_CONTROL_POINT_PATCHLIST</unmanaged>
-	_16ControlPointPatchlist = 48,
+	P16ControlPointPatchList = 48,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_17_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_17_CONTROL_POINT_PATCHLIST</unmanaged>
-	_17ControlPointPatchlist = 49,
+	P17ControlPointPatchList = 49,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_18_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_18_CONTROL_POINT_PATCHLIST</unmanaged>
-	_18ControlPointPatchlist = 50,
+	P18ControlPointPatchList = 50,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_19_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_19_CONTROL_POINT_PATCHLIST</unmanaged>
-	_19ControlPointPatchlist = 51,
+	P19ControlPointPatchList = 51,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_20_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_20_CONTROL_POINT_PATCHLIST</unmanaged>
-	_20ControlPointPatchlist = 52,
+	P20ControlPointPatchList = 52,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_21_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_21_CONTROL_POINT_PATCHLIST</unmanaged>
-	_21ControlPointPatchlist = 53,
+	P21ControlPointPatchList = 53,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_22_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_22_CONTROL_POINT_PATCHLIST</unmanaged>
-	_22ControlPointPatchlist = 54,
+	P22ControlPointPatchList = 54,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_23_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_23_CONTROL_POINT_PATCHLIST</unmanaged>
-	_23ControlPointPatchlist = 55,
+	P23ControlPointPatchList = 55,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_24_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_24_CONTROL_POINT_PATCHLIST</unmanaged>
-	_24ControlPointPatchlist = 56,
+	P24ControlPointPatchList = 56,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_25_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_25_CONTROL_POINT_PATCHLIST</unmanaged>
-	_25ControlPointPatchlist = 57,
+	P25ControlPointPatchList = 57,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_26_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_26_CONTROL_POINT_PATCHLIST</unmanaged>
-	_26ControlPointPatchlist = 58,
+	P26ControlPointPatchList = 58,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_27_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_27_CONTROL_POINT_PATCHLIST</unmanaged>
-	_27ControlPointPatchlist = 59,
+	P27ControlPointPatchList = 59,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_28_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_28_CONTROL_POINT_PATCHLIST</unmanaged>
-	_28ControlPointPatchlist = 60,
+	P28ControlPointPatchList = 60,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_29_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_29_CONTROL_POINT_PATCHLIST</unmanaged>
-	_29ControlPointPatchlist = 61,
+	P29ControlPointPatchList = 61,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_30_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_30_CONTROL_POINT_PATCHLIST</unmanaged>
-	_30ControlPointPatchlist = 62,
+	P30ControlPointPatchList = 62,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_31_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_31_CONTROL_POINT_PATCHLIST</unmanaged>
-	_31ControlPointPatchlist = 63,
+	P31ControlPointPatchList = 63,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_32_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_32_CONTROL_POINT_PATCHLIST</unmanaged>
-	_32ControlPointPatchlist = 64,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_UNDEFINED"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_UNDEFINED</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_UNDEFINED = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_POINTLIST"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_POINTLIST</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_POINTLIST = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_LINELIST"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_LINELIST</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_LINELIST = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_LINESTRIP"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_LINESTRIP</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_LINESTRIP = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_LINELIST_ADJ"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_LINELIST_ADJ</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_LINELIST_ADJ = 10,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ = 11,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ = 12,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D10_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ</unmanaged>
-	D3D10_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ = 13,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_UNDEFINED"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_UNDEFINED</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_UNDEFINED = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_POINTLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_POINTLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_POINTLIST = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_LINELIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_LINELIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_LINELIST = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_LINELIST_ADJ"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_LINELIST_ADJ</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_LINELIST_ADJ = 10,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ = 11,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ = 12,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ = 13,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST = 33,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_2_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_2_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_2_CONTROL_POINT_PATCHLIST = 34,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_3_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_3_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_3_CONTROL_POINT_PATCHLIST = 35,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST = 36,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_5_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_5_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_5_CONTROL_POINT_PATCHLIST = 37,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_6_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_6_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_6_CONTROL_POINT_PATCHLIST = 38,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_7_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_7_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_7_CONTROL_POINT_PATCHLIST = 39,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_8_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_8_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_8_CONTROL_POINT_PATCHLIST = 40,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_9_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_9_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_9_CONTROL_POINT_PATCHLIST = 41,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_10_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_10_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_10_CONTROL_POINT_PATCHLIST = 42,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_11_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_11_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_11_CONTROL_POINT_PATCHLIST = 43,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_12_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_12_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_12_CONTROL_POINT_PATCHLIST = 44,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_13_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_13_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_13_CONTROL_POINT_PATCHLIST = 45,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_14_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_14_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_14_CONTROL_POINT_PATCHLIST = 46,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_15_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_15_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_15_CONTROL_POINT_PATCHLIST = 47,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_16_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_16_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_16_CONTROL_POINT_PATCHLIST = 48,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_17_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_17_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_17_CONTROL_POINT_PATCHLIST = 49,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_18_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_18_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_18_CONTROL_POINT_PATCHLIST = 50,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_19_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_19_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_19_CONTROL_POINT_PATCHLIST = 51,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_20_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_20_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_20_CONTROL_POINT_PATCHLIST = 52,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_21_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_21_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_21_CONTROL_POINT_PATCHLIST = 53,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_22_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_22_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_22_CONTROL_POINT_PATCHLIST = 54,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_23_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_23_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_23_CONTROL_POINT_PATCHLIST = 55,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_24_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_24_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_24_CONTROL_POINT_PATCHLIST = 56,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_25_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_25_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_25_CONTROL_POINT_PATCHLIST = 57,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_26_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_26_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_26_CONTROL_POINT_PATCHLIST = 58,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_27_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_27_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_27_CONTROL_POINT_PATCHLIST = 59,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_28_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_28_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_28_CONTROL_POINT_PATCHLIST = 60,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_29_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_29_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_29_CONTROL_POINT_PATCHLIST = 61,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_30_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_30_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_30_CONTROL_POINT_PATCHLIST = 62,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_31_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_31_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_31_CONTROL_POINT_PATCHLIST = 63,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_32_CONTROL_POINT_PATCHLIST"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TOPOLOGY_32_CONTROL_POINT_PATCHLIST</unmanaged>
-	D3D11_PRIMITIVE_TOPOLOGY_32_CONTROL_POINT_PATCHLIST = 64,
+	P32ControlPointPatchList = 64,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE"]/*' />
@@ -452,232 +296,100 @@ public enum Primitive : int
 	TriangleAdj = 7,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_1_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_1_CONTROL_POINT_PATCH</unmanaged>
-	_1ControlPointPatch = 8,
+	P1ControlPointPatch = 8,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_2_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_2_CONTROL_POINT_PATCH</unmanaged>
-	_2ControlPointPatch = 9,
+	P2ControlPointPatch = 9,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_3_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_3_CONTROL_POINT_PATCH</unmanaged>
-	_3ControlPointPatch = 10,
+	P3ControlPointPatch = 10,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_4_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_4_CONTROL_POINT_PATCH</unmanaged>
-	_4ControlPointPatch = 11,
+	P4ControlPointPatch = 11,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_5_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_5_CONTROL_POINT_PATCH</unmanaged>
-	_5ControlPointPatch = 12,
+	P5ControlPointPatch = 12,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_6_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_6_CONTROL_POINT_PATCH</unmanaged>
-	_6ControlPointPatch = 13,
+	P6ControlPointPatch = 13,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_7_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_7_CONTROL_POINT_PATCH</unmanaged>
-	_7ControlPointPatch = 14,
+	P7ControlPointPatch = 14,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_8_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_8_CONTROL_POINT_PATCH</unmanaged>
-	_8ControlPointPatch = 15,
+	P8ControlPointPatch = 15,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_9_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_9_CONTROL_POINT_PATCH</unmanaged>
-	_9ControlPointPatch = 16,
+	P9ControlPointPatch = 16,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_10_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_10_CONTROL_POINT_PATCH</unmanaged>
-	_10ControlPointPatch = 17,
+	P10ControlPointPatch = 17,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_11_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_11_CONTROL_POINT_PATCH</unmanaged>
-	_11ControlPointPatch = 18,
+	P11ControlPointPatch = 18,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_12_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_12_CONTROL_POINT_PATCH</unmanaged>
-	_12ControlPointPatch = 19,
+	P12ControlPointPatch = 19,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_13_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_13_CONTROL_POINT_PATCH</unmanaged>
-	_13ControlPointPatch = 20,
+	P13ControlPointPatch = 20,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_14_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_14_CONTROL_POINT_PATCH</unmanaged>
-	_14ControlPointPatch = 21,
+	P14ControlPointPatch = 21,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_15_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_15_CONTROL_POINT_PATCH</unmanaged>
-	_15ControlPointPatch = 22,
+	P15ControlPointPatch = 22,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_16_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_16_CONTROL_POINT_PATCH</unmanaged>
-	_16ControlPointPatch = 23,
+	P16ControlPointPatch = 23,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_17_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_17_CONTROL_POINT_PATCH</unmanaged>
-	_17ControlPointPatch = 24,
+	P17ControlPointPatch = 24,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_18_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_18_CONTROL_POINT_PATCH</unmanaged>
-	_18ControlPointPatch = 25,
+	P18ControlPointPatch = 25,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_19_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_19_CONTROL_POINT_PATCH</unmanaged>
-	_19ControlPointPatch = 26,
+	P19ControlPointPatch = 26,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_20_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_20_CONTROL_POINT_PATCH</unmanaged>
-	_20ControlPointPatch = 27,
+	P20ControlPointPatch = 27,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_21_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_21_CONTROL_POINT_PATCH</unmanaged>
-	_21ControlPointPatch = 28,
+	P21ControlPointPatch = 28,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_22_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_22_CONTROL_POINT_PATCH</unmanaged>
-	_22ControlPointPatch = 29,
+	P22ControlPointPatch = 29,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_23_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_23_CONTROL_POINT_PATCH</unmanaged>
-	_23ControlPointPatch = 30,
+	P23ControlPointPatch = 30,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_24_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_24_CONTROL_POINT_PATCH</unmanaged>
-	_24ControlPointPatch = 31,
+	P24ControlPointPatch = 31,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_25_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_25_CONTROL_POINT_PATCH</unmanaged>
-	_25ControlPointPatch = 32,
+	P25ControlPointPatch = 32,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_26_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_26_CONTROL_POINT_PATCH</unmanaged>
-	_26ControlPointPatch = 33,
+	P26ControlPointPatch = 33,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_27_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_27_CONTROL_POINT_PATCH</unmanaged>
-	_27ControlPointPatch = 34,
+	P27ControlPointPatch = 34,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_28_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_28_CONTROL_POINT_PATCH</unmanaged>
-	_28ControlPointPatch = 35,
+	P28ControlPointPatch = 35,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_29_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_29_CONTROL_POINT_PATCH</unmanaged>
-	_29ControlPointPatch = 36,
+	P29ControlPointPatch = 36,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_30_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_30_CONTROL_POINT_PATCH</unmanaged>
-	_30ControlPointPatch = 37,
+	P30ControlPointPatch = 37,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_31_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_31_CONTROL_POINT_PATCH</unmanaged>
-	_31ControlPointPatch = 38,
+	P31ControlPointPatch = 38,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_32_CONTROL_POINT_PATCH"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_32_CONTROL_POINT_PATCH</unmanaged>
-	_32ControlPointPatch = 39,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D10_PRIMITIVE_UNDEFINED"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_UNDEFINED</unmanaged>
-	D3D10_PRIMITIVE_UNDEFINED = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D10_PRIMITIVE_POINT"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_POINT</unmanaged>
-	D3D10_PRIMITIVE_POINT = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D10_PRIMITIVE_LINE"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_LINE</unmanaged>
-	D3D10_PRIMITIVE_LINE = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D10_PRIMITIVE_TRIANGLE"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TRIANGLE</unmanaged>
-	D3D10_PRIMITIVE_TRIANGLE = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D10_PRIMITIVE_LINE_ADJ"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_LINE_ADJ</unmanaged>
-	D3D10_PRIMITIVE_LINE_ADJ = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D10_PRIMITIVE_TRIANGLE_ADJ"]/*' />
-	/// <unmanaged>D3D10_PRIMITIVE_TRIANGLE_ADJ</unmanaged>
-	D3D10_PRIMITIVE_TRIANGLE_ADJ = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_UNDEFINED"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_UNDEFINED</unmanaged>
-	D3D11_PRIMITIVE_UNDEFINED = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_POINT"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_POINT</unmanaged>
-	D3D11_PRIMITIVE_POINT = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_LINE"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_LINE</unmanaged>
-	D3D11_PRIMITIVE_LINE = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_TRIANGLE"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TRIANGLE</unmanaged>
-	D3D11_PRIMITIVE_TRIANGLE = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_LINE_ADJ"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_LINE_ADJ</unmanaged>
-	D3D11_PRIMITIVE_LINE_ADJ = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_TRIANGLE_ADJ"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_TRIANGLE_ADJ</unmanaged>
-	D3D11_PRIMITIVE_TRIANGLE_ADJ = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_1_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_1_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_1_CONTROL_POINT_PATCH = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_2_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_2_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_2_CONTROL_POINT_PATCH = 9,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_3_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_3_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_3_CONTROL_POINT_PATCH = 10,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_4_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_4_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_4_CONTROL_POINT_PATCH = 11,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_5_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_5_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_5_CONTROL_POINT_PATCH = 12,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_6_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_6_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_6_CONTROL_POINT_PATCH = 13,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_7_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_7_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_7_CONTROL_POINT_PATCH = 14,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_8_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_8_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_8_CONTROL_POINT_PATCH = 15,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_9_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_9_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_9_CONTROL_POINT_PATCH = 16,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_10_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_10_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_10_CONTROL_POINT_PATCH = 17,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_11_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_11_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_11_CONTROL_POINT_PATCH = 18,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_12_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_12_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_12_CONTROL_POINT_PATCH = 19,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_13_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_13_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_13_CONTROL_POINT_PATCH = 20,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_14_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_14_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_14_CONTROL_POINT_PATCH = 21,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_15_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_15_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_15_CONTROL_POINT_PATCH = 22,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_16_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_16_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_16_CONTROL_POINT_PATCH = 23,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_17_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_17_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_17_CONTROL_POINT_PATCH = 24,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_18_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_18_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_18_CONTROL_POINT_PATCH = 25,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_19_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_19_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_19_CONTROL_POINT_PATCH = 26,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_20_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_20_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_20_CONTROL_POINT_PATCH = 27,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_21_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_21_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_21_CONTROL_POINT_PATCH = 28,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_22_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_22_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_22_CONTROL_POINT_PATCH = 29,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_23_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_23_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_23_CONTROL_POINT_PATCH = 30,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_24_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_24_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_24_CONTROL_POINT_PATCH = 31,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_25_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_25_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_25_CONTROL_POINT_PATCH = 32,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_26_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_26_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_26_CONTROL_POINT_PATCH = 33,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_27_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_27_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_27_CONTROL_POINT_PATCH = 34,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_28_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_28_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_28_CONTROL_POINT_PATCH = 35,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_29_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_29_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_29_CONTROL_POINT_PATCH = 36,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_30_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_30_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_30_CONTROL_POINT_PATCH = 37,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_31_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_31_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_31_CONTROL_POINT_PATCH = 38,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D11_PRIMITIVE_32_CONTROL_POINT_PATCH"]/*' />
-	/// <unmanaged>D3D11_PRIMITIVE_32_CONTROL_POINT_PATCH</unmanaged>
-	D3D11_PRIMITIVE_32_CONTROL_POINT_PATCH = 39,
+	P32ControlPointPatch = 39,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION"]/*' />
@@ -692,133 +404,34 @@ public enum SrvDimension : int
 	Buffer = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURE1D"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURE1D</unmanaged>
-	Texture1d = 2,
+	Texture1D = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURE1DARRAY"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURE1DARRAY</unmanaged>
-	Texture1darray = 3,
+	Texture1DArray = 3,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURE2D"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURE2D</unmanaged>
-	Texture2d = 4,
+	Texture2D = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURE2DARRAY"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURE2DARRAY</unmanaged>
-	Texture2darray = 5,
+	Texture2DArray = 5,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURE2DMS"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURE2DMS</unmanaged>
-	Texture2dms = 6,
+	Texture2DMs = 6,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURE2DMSARRAY"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURE2DMSARRAY</unmanaged>
-	Texture2dmsarray = 7,
+	Texture2DMsArray = 7,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURE3D"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURE3D</unmanaged>
-	Texture3d = 8,
+	Texture3D = 8,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURECUBE"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURECUBE</unmanaged>
-	Texturecube = 9,
+	TextureCube = 9,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_TEXTURECUBEARRAY"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_TEXTURECUBEARRAY</unmanaged>
-	Texturecubearray = 10,
+	TextureCubeArray = 10,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_BUFFEREX"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_BUFFEREX</unmanaged>
-	Bufferex = 11,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_UNKNOWN"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_UNKNOWN</unmanaged>
-	D3D10_SRV_DIMENSION_UNKNOWN = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_BUFFER"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_BUFFER</unmanaged>
-	D3D10_SRV_DIMENSION_BUFFER = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_TEXTURE1D"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_TEXTURE1D</unmanaged>
-	D3D10_SRV_DIMENSION_TEXTURE1D = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_TEXTURE1DARRAY"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_TEXTURE1DARRAY</unmanaged>
-	D3D10_SRV_DIMENSION_TEXTURE1DARRAY = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_TEXTURE2D"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_TEXTURE2D</unmanaged>
-	D3D10_SRV_DIMENSION_TEXTURE2D = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_TEXTURE2DARRAY"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_TEXTURE2DARRAY</unmanaged>
-	D3D10_SRV_DIMENSION_TEXTURE2DARRAY = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_TEXTURE2DMS"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_TEXTURE2DMS</unmanaged>
-	D3D10_SRV_DIMENSION_TEXTURE2DMS = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_TEXTURE2DMSARRAY"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_TEXTURE2DMSARRAY</unmanaged>
-	D3D10_SRV_DIMENSION_TEXTURE2DMSARRAY = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_TEXTURE3D"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_TEXTURE3D</unmanaged>
-	D3D10_SRV_DIMENSION_TEXTURE3D = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_SRV_DIMENSION_TEXTURECUBE"]/*' />
-	/// <unmanaged>D3D10_SRV_DIMENSION_TEXTURECUBE</unmanaged>
-	D3D10_SRV_DIMENSION_TEXTURECUBE = 9,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_UNKNOWN"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_UNKNOWN</unmanaged>
-	D3D10_1_SRV_DIMENSION_UNKNOWN = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_BUFFER"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_BUFFER</unmanaged>
-	D3D10_1_SRV_DIMENSION_BUFFER = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURE1D"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURE1D</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURE1D = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURE1DARRAY"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURE1DARRAY</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURE1DARRAY = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURE2D"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURE2D</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURE2D = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURE2DARRAY"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURE2DARRAY</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURE2DARRAY = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURE2DMS"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURE2DMS</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURE2DMS = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURE2DMSARRAY"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURE2DMSARRAY</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURE2DMSARRAY = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURE3D"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURE3D</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURE3D = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURECUBE"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURECUBE</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURECUBE = 9,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D10_1_SRV_DIMENSION_TEXTURECUBEARRAY"]/*' />
-	/// <unmanaged>D3D10_1_SRV_DIMENSION_TEXTURECUBEARRAY</unmanaged>
-	D3D10_1_SRV_DIMENSION_TEXTURECUBEARRAY = 10,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_UNKNOWN"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_UNKNOWN</unmanaged>
-	D3D11_SRV_DIMENSION_UNKNOWN = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_BUFFER"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_BUFFER</unmanaged>
-	D3D11_SRV_DIMENSION_BUFFER = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURE1D"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURE1D</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURE1D = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURE1DARRAY"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURE1DARRAY</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURE1DARRAY = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURE2D"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURE2D</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURE2D = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURE2DARRAY"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURE2DARRAY</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURE2DARRAY = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURE2DMS"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURE2DMS</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURE2DMS = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURE2DMSARRAY"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURE2DMSARRAY</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURE2DMSARRAY = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURE3D"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURE3D</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURE3D = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURECUBE"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURECUBE</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURECUBE = 9,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_TEXTURECUBEARRAY"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_TEXTURECUBEARRAY</unmanaged>
-	D3D11_SRV_DIMENSION_TEXTURECUBEARRAY = 10,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D11_SRV_DIMENSION_BUFFEREX"]/*' />
-	/// <unmanaged>D3D11_SRV_DIMENSION_BUFFEREX</unmanaged>
-	D3D11_SRV_DIMENSION_BUFFEREX = 11,
+	BufferExtended = 11,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE"]/*' />
@@ -831,12 +444,6 @@ public enum IncludeType : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D_INCLUDE_SYSTEM"]/*' />
 	/// <unmanaged>D3D_INCLUDE_SYSTEM</unmanaged>
 	D3D_INCLUDE_SYSTEM = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D10_INCLUDE_LOCAL"]/*' />
-	/// <unmanaged>D3D10_INCLUDE_LOCAL</unmanaged>
-	D3D10_INCLUDE_LOCAL = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D10_INCLUDE_SYSTEM"]/*' />
-	/// <unmanaged>D3D10_INCLUDE_SYSTEM</unmanaged>
-	D3D10_INCLUDE_SYSTEM = 1,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS"]/*' />
@@ -867,30 +474,6 @@ public enum ShaderVariableClass : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_INTERFACE_POINTER"]/*' />
 	/// <unmanaged>D3D_SVC_INTERFACE_POINTER</unmanaged>
 	D3D_SVC_INTERFACE_POINTER = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D10_SVC_SCALAR"]/*' />
-	/// <unmanaged>D3D10_SVC_SCALAR</unmanaged>
-	D3D10_SVC_SCALAR = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D10_SVC_VECTOR"]/*' />
-	/// <unmanaged>D3D10_SVC_VECTOR</unmanaged>
-	D3D10_SVC_VECTOR = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D10_SVC_MATRIX_ROWS"]/*' />
-	/// <unmanaged>D3D10_SVC_MATRIX_ROWS</unmanaged>
-	D3D10_SVC_MATRIX_ROWS = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D10_SVC_MATRIX_COLUMNS"]/*' />
-	/// <unmanaged>D3D10_SVC_MATRIX_COLUMNS</unmanaged>
-	D3D10_SVC_MATRIX_COLUMNS = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D10_SVC_OBJECT"]/*' />
-	/// <unmanaged>D3D10_SVC_OBJECT</unmanaged>
-	D3D10_SVC_OBJECT = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D10_SVC_STRUCT"]/*' />
-	/// <unmanaged>D3D10_SVC_STRUCT</unmanaged>
-	D3D10_SVC_STRUCT = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D11_SVC_INTERFACE_CLASS"]/*' />
-	/// <unmanaged>D3D11_SVC_INTERFACE_CLASS</unmanaged>
-	D3D11_SVC_INTERFACE_CLASS = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D11_SVC_INTERFACE_POINTER"]/*' />
-	/// <unmanaged>D3D11_SVC_INTERFACE_POINTER</unmanaged>
-	D3D11_SVC_INTERFACE_POINTER = 7,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS"]/*' />
@@ -909,18 +492,6 @@ public enum ShaderVariableFlags : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D_SVF_INTERFACE_PARAMETER"]/*' />
 	/// <unmanaged>D3D_SVF_INTERFACE_PARAMETER</unmanaged>
 	D3D_SVF_INTERFACE_PARAMETER = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D10_SVF_USERPACKED"]/*' />
-	/// <unmanaged>D3D10_SVF_USERPACKED</unmanaged>
-	D3D10_SVF_USERPACKED = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D10_SVF_USED"]/*' />
-	/// <unmanaged>D3D10_SVF_USED</unmanaged>
-	D3D10_SVF_USED = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D11_SVF_INTERFACE_POINTER"]/*' />
-	/// <unmanaged>D3D11_SVF_INTERFACE_POINTER</unmanaged>
-	D3D11_SVF_INTERFACE_POINTER = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D11_SVF_INTERFACE_PARAMETER"]/*' />
-	/// <unmanaged>D3D11_SVF_INTERFACE_PARAMETER</unmanaged>
-	D3D11_SVF_INTERFACE_PARAMETER = 8,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE"]/*' />
@@ -1116,162 +687,6 @@ public enum ShaderVariableType : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_UINT64"]/*' />
 	/// <unmanaged>D3D_SVT_UINT64</unmanaged>
 	D3D_SVT_UINT64 = 62,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_VOID"]/*' />
-	/// <unmanaged>D3D10_SVT_VOID</unmanaged>
-	D3D10_SVT_VOID = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_BOOL"]/*' />
-	/// <unmanaged>D3D10_SVT_BOOL</unmanaged>
-	D3D10_SVT_BOOL = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_INT"]/*' />
-	/// <unmanaged>D3D10_SVT_INT</unmanaged>
-	D3D10_SVT_INT = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_FLOAT"]/*' />
-	/// <unmanaged>D3D10_SVT_FLOAT</unmanaged>
-	D3D10_SVT_FLOAT = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_STRING"]/*' />
-	/// <unmanaged>D3D10_SVT_STRING</unmanaged>
-	D3D10_SVT_STRING = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURE"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURE</unmanaged>
-	D3D10_SVT_TEXTURE = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURE1D"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURE1D</unmanaged>
-	D3D10_SVT_TEXTURE1D = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURE2D"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURE2D</unmanaged>
-	D3D10_SVT_TEXTURE2D = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURE3D"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURE3D</unmanaged>
-	D3D10_SVT_TEXTURE3D = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURECUBE"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURECUBE</unmanaged>
-	D3D10_SVT_TEXTURECUBE = 9,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_SAMPLER"]/*' />
-	/// <unmanaged>D3D10_SVT_SAMPLER</unmanaged>
-	D3D10_SVT_SAMPLER = 10,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_SAMPLER1D"]/*' />
-	/// <unmanaged>D3D10_SVT_SAMPLER1D</unmanaged>
-	D3D10_SVT_SAMPLER1D = 11,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_SAMPLER2D"]/*' />
-	/// <unmanaged>D3D10_SVT_SAMPLER2D</unmanaged>
-	D3D10_SVT_SAMPLER2D = 12,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_SAMPLER3D"]/*' />
-	/// <unmanaged>D3D10_SVT_SAMPLER3D</unmanaged>
-	D3D10_SVT_SAMPLER3D = 13,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_SAMPLERCUBE"]/*' />
-	/// <unmanaged>D3D10_SVT_SAMPLERCUBE</unmanaged>
-	D3D10_SVT_SAMPLERCUBE = 14,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_PIXELSHADER"]/*' />
-	/// <unmanaged>D3D10_SVT_PIXELSHADER</unmanaged>
-	D3D10_SVT_PIXELSHADER = 15,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_VERTEXSHADER"]/*' />
-	/// <unmanaged>D3D10_SVT_VERTEXSHADER</unmanaged>
-	D3D10_SVT_VERTEXSHADER = 16,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_PIXELFRAGMENT"]/*' />
-	/// <unmanaged>D3D10_SVT_PIXELFRAGMENT</unmanaged>
-	D3D10_SVT_PIXELFRAGMENT = 17,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_VERTEXFRAGMENT"]/*' />
-	/// <unmanaged>D3D10_SVT_VERTEXFRAGMENT</unmanaged>
-	D3D10_SVT_VERTEXFRAGMENT = 18,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_UINT"]/*' />
-	/// <unmanaged>D3D10_SVT_UINT</unmanaged>
-	D3D10_SVT_UINT = 19,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_UINT8"]/*' />
-	/// <unmanaged>D3D10_SVT_UINT8</unmanaged>
-	D3D10_SVT_UINT8 = 20,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_GEOMETRYSHADER"]/*' />
-	/// <unmanaged>D3D10_SVT_GEOMETRYSHADER</unmanaged>
-	D3D10_SVT_GEOMETRYSHADER = 21,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_RASTERIZER"]/*' />
-	/// <unmanaged>D3D10_SVT_RASTERIZER</unmanaged>
-	D3D10_SVT_RASTERIZER = 22,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_DEPTHSTENCIL"]/*' />
-	/// <unmanaged>D3D10_SVT_DEPTHSTENCIL</unmanaged>
-	D3D10_SVT_DEPTHSTENCIL = 23,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_BLEND"]/*' />
-	/// <unmanaged>D3D10_SVT_BLEND</unmanaged>
-	D3D10_SVT_BLEND = 24,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_BUFFER"]/*' />
-	/// <unmanaged>D3D10_SVT_BUFFER</unmanaged>
-	D3D10_SVT_BUFFER = 25,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_CBUFFER"]/*' />
-	/// <unmanaged>D3D10_SVT_CBUFFER</unmanaged>
-	D3D10_SVT_CBUFFER = 26,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TBUFFER"]/*' />
-	/// <unmanaged>D3D10_SVT_TBUFFER</unmanaged>
-	D3D10_SVT_TBUFFER = 27,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURE1DARRAY"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURE1DARRAY</unmanaged>
-	D3D10_SVT_TEXTURE1DARRAY = 28,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURE2DARRAY"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURE2DARRAY</unmanaged>
-	D3D10_SVT_TEXTURE2DARRAY = 29,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_RENDERTARGETVIEW"]/*' />
-	/// <unmanaged>D3D10_SVT_RENDERTARGETVIEW</unmanaged>
-	D3D10_SVT_RENDERTARGETVIEW = 30,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_DEPTHSTENCILVIEW"]/*' />
-	/// <unmanaged>D3D10_SVT_DEPTHSTENCILVIEW</unmanaged>
-	D3D10_SVT_DEPTHSTENCILVIEW = 31,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURE2DMS"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURE2DMS</unmanaged>
-	D3D10_SVT_TEXTURE2DMS = 32,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURE2DMSARRAY"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURE2DMSARRAY</unmanaged>
-	D3D10_SVT_TEXTURE2DMSARRAY = 33,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D10_SVT_TEXTURECUBEARRAY"]/*' />
-	/// <unmanaged>D3D10_SVT_TEXTURECUBEARRAY</unmanaged>
-	D3D10_SVT_TEXTURECUBEARRAY = 34,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_HULLSHADER"]/*' />
-	/// <unmanaged>D3D11_SVT_HULLSHADER</unmanaged>
-	D3D11_SVT_HULLSHADER = 35,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_DOMAINSHADER"]/*' />
-	/// <unmanaged>D3D11_SVT_DOMAINSHADER</unmanaged>
-	D3D11_SVT_DOMAINSHADER = 36,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_INTERFACE_POINTER"]/*' />
-	/// <unmanaged>D3D11_SVT_INTERFACE_POINTER</unmanaged>
-	D3D11_SVT_INTERFACE_POINTER = 37,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_COMPUTESHADER"]/*' />
-	/// <unmanaged>D3D11_SVT_COMPUTESHADER</unmanaged>
-	D3D11_SVT_COMPUTESHADER = 38,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_DOUBLE"]/*' />
-	/// <unmanaged>D3D11_SVT_DOUBLE</unmanaged>
-	D3D11_SVT_DOUBLE = 39,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_RWTEXTURE1D"]/*' />
-	/// <unmanaged>D3D11_SVT_RWTEXTURE1D</unmanaged>
-	D3D11_SVT_RWTEXTURE1D = 40,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_RWTEXTURE1DARRAY"]/*' />
-	/// <unmanaged>D3D11_SVT_RWTEXTURE1DARRAY</unmanaged>
-	D3D11_SVT_RWTEXTURE1DARRAY = 41,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_RWTEXTURE2D"]/*' />
-	/// <unmanaged>D3D11_SVT_RWTEXTURE2D</unmanaged>
-	D3D11_SVT_RWTEXTURE2D = 42,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_RWTEXTURE2DARRAY"]/*' />
-	/// <unmanaged>D3D11_SVT_RWTEXTURE2DARRAY</unmanaged>
-	D3D11_SVT_RWTEXTURE2DARRAY = 43,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_RWTEXTURE3D"]/*' />
-	/// <unmanaged>D3D11_SVT_RWTEXTURE3D</unmanaged>
-	D3D11_SVT_RWTEXTURE3D = 44,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_RWBUFFER"]/*' />
-	/// <unmanaged>D3D11_SVT_RWBUFFER</unmanaged>
-	D3D11_SVT_RWBUFFER = 45,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_BYTEADDRESS_BUFFER"]/*' />
-	/// <unmanaged>D3D11_SVT_BYTEADDRESS_BUFFER</unmanaged>
-	D3D11_SVT_BYTEADDRESS_BUFFER = 46,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_RWBYTEADDRESS_BUFFER"]/*' />
-	/// <unmanaged>D3D11_SVT_RWBYTEADDRESS_BUFFER</unmanaged>
-	D3D11_SVT_RWBYTEADDRESS_BUFFER = 47,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_STRUCTURED_BUFFER"]/*' />
-	/// <unmanaged>D3D11_SVT_STRUCTURED_BUFFER</unmanaged>
-	D3D11_SVT_STRUCTURED_BUFFER = 48,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_RWSTRUCTURED_BUFFER"]/*' />
-	/// <unmanaged>D3D11_SVT_RWSTRUCTURED_BUFFER</unmanaged>
-	D3D11_SVT_RWSTRUCTURED_BUFFER = 49,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_APPEND_STRUCTURED_BUFFER"]/*' />
-	/// <unmanaged>D3D11_SVT_APPEND_STRUCTURED_BUFFER</unmanaged>
-	D3D11_SVT_APPEND_STRUCTURED_BUFFER = 50,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D11_SVT_CONSUME_STRUCTURED_BUFFER"]/*' />
-	/// <unmanaged>D3D11_SVT_CONSUME_STRUCTURED_BUFFER</unmanaged>
-	D3D11_SVT_CONSUME_STRUCTURED_BUFFER = 51,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS"]/*' />
@@ -1296,21 +711,6 @@ public enum ShaderInputFlags : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_UNUSED"]/*' />
 	/// <unmanaged>D3D_SIF_UNUSED</unmanaged>
 	D3D_SIF_UNUSED = 16,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D10_SIF_USERPACKED"]/*' />
-	/// <unmanaged>D3D10_SIF_USERPACKED</unmanaged>
-	D3D10_SIF_USERPACKED = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D10_SIF_COMPARISON_SAMPLER"]/*' />
-	/// <unmanaged>D3D10_SIF_COMPARISON_SAMPLER</unmanaged>
-	D3D10_SIF_COMPARISON_SAMPLER = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D10_SIF_TEXTURE_COMPONENT_0"]/*' />
-	/// <unmanaged>D3D10_SIF_TEXTURE_COMPONENT_0</unmanaged>
-	D3D10_SIF_TEXTURE_COMPONENT_0 = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D10_SIF_TEXTURE_COMPONENT_1"]/*' />
-	/// <unmanaged>D3D10_SIF_TEXTURE_COMPONENT_1</unmanaged>
-	D3D10_SIF_TEXTURE_COMPONENT_1 = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D10_SIF_TEXTURE_COMPONENTS"]/*' />
-	/// <unmanaged>D3D10_SIF_TEXTURE_COMPONENTS</unmanaged>
-	D3D10_SIF_TEXTURE_COMPONENTS = 12,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE"]/*' />
@@ -1359,42 +759,6 @@ public enum ShaderInputType : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_FEEDBACKTEXTURE"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_FEEDBACKTEXTURE</unmanaged>
 	D3D_SIT_UAV_FEEDBACKTEXTURE = 13,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D10_SIT_CBUFFER"]/*' />
-	/// <unmanaged>D3D10_SIT_CBUFFER</unmanaged>
-	D3D10_SIT_CBUFFER = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D10_SIT_TBUFFER"]/*' />
-	/// <unmanaged>D3D10_SIT_TBUFFER</unmanaged>
-	D3D10_SIT_TBUFFER = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D10_SIT_TEXTURE"]/*' />
-	/// <unmanaged>D3D10_SIT_TEXTURE</unmanaged>
-	D3D10_SIT_TEXTURE = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D10_SIT_SAMPLER"]/*' />
-	/// <unmanaged>D3D10_SIT_SAMPLER</unmanaged>
-	D3D10_SIT_SAMPLER = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D11_SIT_UAV_RWTYPED"]/*' />
-	/// <unmanaged>D3D11_SIT_UAV_RWTYPED</unmanaged>
-	D3D11_SIT_UAV_RWTYPED = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D11_SIT_STRUCTURED"]/*' />
-	/// <unmanaged>D3D11_SIT_STRUCTURED</unmanaged>
-	D3D11_SIT_STRUCTURED = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D11_SIT_UAV_RWSTRUCTURED"]/*' />
-	/// <unmanaged>D3D11_SIT_UAV_RWSTRUCTURED</unmanaged>
-	D3D11_SIT_UAV_RWSTRUCTURED = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D11_SIT_BYTEADDRESS"]/*' />
-	/// <unmanaged>D3D11_SIT_BYTEADDRESS</unmanaged>
-	D3D11_SIT_BYTEADDRESS = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D11_SIT_UAV_RWBYTEADDRESS"]/*' />
-	/// <unmanaged>D3D11_SIT_UAV_RWBYTEADDRESS</unmanaged>
-	D3D11_SIT_UAV_RWBYTEADDRESS = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D11_SIT_UAV_APPEND_STRUCTURED"]/*' />
-	/// <unmanaged>D3D11_SIT_UAV_APPEND_STRUCTURED</unmanaged>
-	D3D11_SIT_UAV_APPEND_STRUCTURED = 9,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D11_SIT_UAV_CONSUME_STRUCTURED"]/*' />
-	/// <unmanaged>D3D11_SIT_UAV_CONSUME_STRUCTURED</unmanaged>
-	D3D11_SIT_UAV_CONSUME_STRUCTURED = 10,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D11_SIT_UAV_RWSTRUCTURED_WITH_COUNTER"]/*' />
-	/// <unmanaged>D3D11_SIT_UAV_RWSTRUCTURED_WITH_COUNTER</unmanaged>
-	D3D11_SIT_UAV_RWSTRUCTURED_WITH_COUNTER = 11,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS"]/*' />
@@ -1404,9 +768,6 @@ public enum ShaderCbufferFlags : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS::D3D_CBF_USERPACKED"]/*' />
 	/// <unmanaged>D3D_CBF_USERPACKED</unmanaged>
 	D3D_CBF_USERPACKED = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS::D3D10_CBF_USERPACKED"]/*' />
-	/// <unmanaged>D3D10_CBF_USERPACKED</unmanaged>
-	D3D10_CBF_USERPACKED = 1,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE"]/*' />
@@ -1425,24 +786,6 @@ public enum CbufferType : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_RESOURCE_BIND_INFO"]/*' />
 	/// <unmanaged>D3D_CT_RESOURCE_BIND_INFO</unmanaged>
 	D3D_CT_RESOURCE_BIND_INFO = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D10_CT_CBUFFER"]/*' />
-	/// <unmanaged>D3D10_CT_CBUFFER</unmanaged>
-	D3D10_CT_CBUFFER = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D10_CT_TBUFFER"]/*' />
-	/// <unmanaged>D3D10_CT_TBUFFER</unmanaged>
-	D3D10_CT_TBUFFER = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D11_CT_CBUFFER"]/*' />
-	/// <unmanaged>D3D11_CT_CBUFFER</unmanaged>
-	D3D11_CT_CBUFFER = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D11_CT_TBUFFER"]/*' />
-	/// <unmanaged>D3D11_CT_TBUFFER</unmanaged>
-	D3D11_CT_TBUFFER = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D11_CT_INTERFACE_POINTERS"]/*' />
-	/// <unmanaged>D3D11_CT_INTERFACE_POINTERS</unmanaged>
-	D3D11_CT_INTERFACE_POINTERS = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D11_CT_RESOURCE_BIND_INFO"]/*' />
-	/// <unmanaged>D3D11_CT_RESOURCE_BIND_INFO</unmanaged>
-	D3D11_CT_RESOURCE_BIND_INFO = 3,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME"]/*' />
@@ -1530,78 +873,6 @@ public enum Name : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_INNER_COVERAGE"]/*' />
 	/// <unmanaged>D3D_NAME_INNER_COVERAGE</unmanaged>
 	InnerCoverage = 70,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_UNDEFINED"]/*' />
-	/// <unmanaged>D3D10_NAME_UNDEFINED</unmanaged>
-	D3D10_NAME_UNDEFINED = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_POSITION"]/*' />
-	/// <unmanaged>D3D10_NAME_POSITION</unmanaged>
-	D3D10_NAME_POSITION = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_CLIP_DISTANCE"]/*' />
-	/// <unmanaged>D3D10_NAME_CLIP_DISTANCE</unmanaged>
-	D3D10_NAME_CLIP_DISTANCE = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_CULL_DISTANCE"]/*' />
-	/// <unmanaged>D3D10_NAME_CULL_DISTANCE</unmanaged>
-	D3D10_NAME_CULL_DISTANCE = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_RENDER_TARGET_ARRAY_INDEX"]/*' />
-	/// <unmanaged>D3D10_NAME_RENDER_TARGET_ARRAY_INDEX</unmanaged>
-	D3D10_NAME_RENDER_TARGET_ARRAY_INDEX = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_VIEWPORT_ARRAY_INDEX"]/*' />
-	/// <unmanaged>D3D10_NAME_VIEWPORT_ARRAY_INDEX</unmanaged>
-	D3D10_NAME_VIEWPORT_ARRAY_INDEX = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_VERTEX_ID"]/*' />
-	/// <unmanaged>D3D10_NAME_VERTEX_ID</unmanaged>
-	D3D10_NAME_VERTEX_ID = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_PRIMITIVE_ID"]/*' />
-	/// <unmanaged>D3D10_NAME_PRIMITIVE_ID</unmanaged>
-	D3D10_NAME_PRIMITIVE_ID = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_INSTANCE_ID"]/*' />
-	/// <unmanaged>D3D10_NAME_INSTANCE_ID</unmanaged>
-	D3D10_NAME_INSTANCE_ID = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_IS_FRONT_FACE"]/*' />
-	/// <unmanaged>D3D10_NAME_IS_FRONT_FACE</unmanaged>
-	D3D10_NAME_IS_FRONT_FACE = 9,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_SAMPLE_INDEX"]/*' />
-	/// <unmanaged>D3D10_NAME_SAMPLE_INDEX</unmanaged>
-	D3D10_NAME_SAMPLE_INDEX = 10,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_TARGET"]/*' />
-	/// <unmanaged>D3D10_NAME_TARGET</unmanaged>
-	D3D10_NAME_TARGET = 64,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_DEPTH"]/*' />
-	/// <unmanaged>D3D10_NAME_DEPTH</unmanaged>
-	D3D10_NAME_DEPTH = 65,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D10_NAME_COVERAGE"]/*' />
-	/// <unmanaged>D3D10_NAME_COVERAGE</unmanaged>
-	D3D10_NAME_COVERAGE = 66,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_FINAL_QUAD_EDGE_TESSFACTOR"]/*' />
-	/// <unmanaged>D3D11_NAME_FINAL_QUAD_EDGE_TESSFACTOR</unmanaged>
-	D3D11_NAME_FINAL_QUAD_EDGE_TESSFACTOR = 11,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_FINAL_QUAD_INSIDE_TESSFACTOR"]/*' />
-	/// <unmanaged>D3D11_NAME_FINAL_QUAD_INSIDE_TESSFACTOR</unmanaged>
-	D3D11_NAME_FINAL_QUAD_INSIDE_TESSFACTOR = 12,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_FINAL_TRI_EDGE_TESSFACTOR"]/*' />
-	/// <unmanaged>D3D11_NAME_FINAL_TRI_EDGE_TESSFACTOR</unmanaged>
-	D3D11_NAME_FINAL_TRI_EDGE_TESSFACTOR = 13,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_FINAL_TRI_INSIDE_TESSFACTOR"]/*' />
-	/// <unmanaged>D3D11_NAME_FINAL_TRI_INSIDE_TESSFACTOR</unmanaged>
-	D3D11_NAME_FINAL_TRI_INSIDE_TESSFACTOR = 14,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_FINAL_LINE_DETAIL_TESSFACTOR"]/*' />
-	/// <unmanaged>D3D11_NAME_FINAL_LINE_DETAIL_TESSFACTOR</unmanaged>
-	D3D11_NAME_FINAL_LINE_DETAIL_TESSFACTOR = 15,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_FINAL_LINE_DENSITY_TESSFACTOR"]/*' />
-	/// <unmanaged>D3D11_NAME_FINAL_LINE_DENSITY_TESSFACTOR</unmanaged>
-	D3D11_NAME_FINAL_LINE_DENSITY_TESSFACTOR = 16,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_DEPTH_GREATER_EQUAL"]/*' />
-	/// <unmanaged>D3D11_NAME_DEPTH_GREATER_EQUAL</unmanaged>
-	D3D11_NAME_DEPTH_GREATER_EQUAL = 67,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_DEPTH_LESS_EQUAL"]/*' />
-	/// <unmanaged>D3D11_NAME_DEPTH_LESS_EQUAL</unmanaged>
-	D3D11_NAME_DEPTH_LESS_EQUAL = 68,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_STENCIL_REF"]/*' />
-	/// <unmanaged>D3D11_NAME_STENCIL_REF</unmanaged>
-	D3D11_NAME_STENCIL_REF = 69,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D11_NAME_INNER_COVERAGE"]/*' />
-	/// <unmanaged>D3D11_NAME_INNER_COVERAGE</unmanaged>
-	D3D11_NAME_INNER_COVERAGE = 70,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D12_NAME_BARYCENTRICS"]/*' />
 	/// <unmanaged>D3D12_NAME_BARYCENTRICS</unmanaged>
 	D3D12_NAME_BARYCENTRICS = 23,
@@ -1619,70 +890,28 @@ public enum ResourceReturnType : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_UNORM"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_UNORM</unmanaged>
-	D3D_RETURN_TYPE_UNORM = 1,
+	Unorm = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_SNORM"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_SNORM</unmanaged>
-	D3D_RETURN_TYPE_SNORM = 2,
+	Snorm = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_SINT"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_SINT</unmanaged>
-	D3D_RETURN_TYPE_SINT = 3,
+	Sint = 3,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_UINT"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_UINT</unmanaged>
-	D3D_RETURN_TYPE_UINT = 4,
+	Uint = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_FLOAT"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_FLOAT</unmanaged>
-	D3D_RETURN_TYPE_FLOAT = 5,
+	Float = 5,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_MIXED"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_MIXED</unmanaged>
-	D3D_RETURN_TYPE_MIXED = 6,
+	Mixed = 6,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_DOUBLE"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_DOUBLE</unmanaged>
-	D3D_RETURN_TYPE_DOUBLE = 7,
+	Double = 7,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_CONTINUED"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_CONTINUED</unmanaged>
-	D3D_RETURN_TYPE_CONTINUED = 8,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D10_RETURN_TYPE_UNORM"]/*' />
-	/// <unmanaged>D3D10_RETURN_TYPE_UNORM</unmanaged>
-	D3D10_RETURN_TYPE_UNORM = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D10_RETURN_TYPE_SNORM"]/*' />
-	/// <unmanaged>D3D10_RETURN_TYPE_SNORM</unmanaged>
-	D3D10_RETURN_TYPE_SNORM = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D10_RETURN_TYPE_SINT"]/*' />
-	/// <unmanaged>D3D10_RETURN_TYPE_SINT</unmanaged>
-	D3D10_RETURN_TYPE_SINT = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D10_RETURN_TYPE_UINT"]/*' />
-	/// <unmanaged>D3D10_RETURN_TYPE_UINT</unmanaged>
-	D3D10_RETURN_TYPE_UINT = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D10_RETURN_TYPE_FLOAT"]/*' />
-	/// <unmanaged>D3D10_RETURN_TYPE_FLOAT</unmanaged>
-	D3D10_RETURN_TYPE_FLOAT = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D10_RETURN_TYPE_MIXED"]/*' />
-	/// <unmanaged>D3D10_RETURN_TYPE_MIXED</unmanaged>
-	D3D10_RETURN_TYPE_MIXED = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D11_RETURN_TYPE_UNORM"]/*' />
-	/// <unmanaged>D3D11_RETURN_TYPE_UNORM</unmanaged>
-	D3D11_RETURN_TYPE_UNORM = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D11_RETURN_TYPE_SNORM"]/*' />
-	/// <unmanaged>D3D11_RETURN_TYPE_SNORM</unmanaged>
-	D3D11_RETURN_TYPE_SNORM = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D11_RETURN_TYPE_SINT"]/*' />
-	/// <unmanaged>D3D11_RETURN_TYPE_SINT</unmanaged>
-	D3D11_RETURN_TYPE_SINT = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D11_RETURN_TYPE_UINT"]/*' />
-	/// <unmanaged>D3D11_RETURN_TYPE_UINT</unmanaged>
-	D3D11_RETURN_TYPE_UINT = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D11_RETURN_TYPE_FLOAT"]/*' />
-	/// <unmanaged>D3D11_RETURN_TYPE_FLOAT</unmanaged>
-	D3D11_RETURN_TYPE_FLOAT = 5,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D11_RETURN_TYPE_MIXED"]/*' />
-	/// <unmanaged>D3D11_RETURN_TYPE_MIXED</unmanaged>
-	D3D11_RETURN_TYPE_MIXED = 6,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D11_RETURN_TYPE_DOUBLE"]/*' />
-	/// <unmanaged>D3D11_RETURN_TYPE_DOUBLE</unmanaged>
-	D3D11_RETURN_TYPE_DOUBLE = 7,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D11_RETURN_TYPE_CONTINUED"]/*' />
-	/// <unmanaged>D3D11_RETURN_TYPE_CONTINUED</unmanaged>
-	D3D11_RETURN_TYPE_CONTINUED = 8,
+	Continued = 8,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE"]/*' />
@@ -1691,28 +920,16 @@ public enum RegisterComponentType : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UNKNOWN"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_UNKNOWN</unmanaged>
-	D3D_REGISTER_COMPONENT_UNKNOWN = 0,
+	Unknown = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UINT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_UINT32</unmanaged>
-	D3D_REGISTER_COMPONENT_UINT32 = 1,
+	Uint32 = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_SINT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_SINT32</unmanaged>
-	D3D_REGISTER_COMPONENT_SINT32 = 2,
+	Sint32 = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_FLOAT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_FLOAT32</unmanaged>
-	D3D_REGISTER_COMPONENT_FLOAT32 = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D10_REGISTER_COMPONENT_UNKNOWN"]/*' />
-	/// <unmanaged>D3D10_REGISTER_COMPONENT_UNKNOWN</unmanaged>
-	D3D10_REGISTER_COMPONENT_UNKNOWN = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D10_REGISTER_COMPONENT_UINT32"]/*' />
-	/// <unmanaged>D3D10_REGISTER_COMPONENT_UINT32</unmanaged>
-	D3D10_REGISTER_COMPONENT_UINT32 = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D10_REGISTER_COMPONENT_SINT32"]/*' />
-	/// <unmanaged>D3D10_REGISTER_COMPONENT_SINT32</unmanaged>
-	D3D10_REGISTER_COMPONENT_SINT32 = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D10_REGISTER_COMPONENT_FLOAT32"]/*' />
-	/// <unmanaged>D3D10_REGISTER_COMPONENT_FLOAT32</unmanaged>
-	D3D10_REGISTER_COMPONENT_FLOAT32 = 3,
+	Float32 = 3,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN"]/*' />
@@ -1731,18 +948,6 @@ public enum TessellatorDomain : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN::D3D_TESSELLATOR_DOMAIN_QUAD"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_DOMAIN_QUAD</unmanaged>
 	Quad = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN::D3D11_TESSELLATOR_DOMAIN_UNDEFINED"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_DOMAIN_UNDEFINED</unmanaged>
-	D3D11_TESSELLATOR_DOMAIN_UNDEFINED = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN::D3D11_TESSELLATOR_DOMAIN_ISOLINE"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_DOMAIN_ISOLINE</unmanaged>
-	D3D11_TESSELLATOR_DOMAIN_ISOLINE = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN::D3D11_TESSELLATOR_DOMAIN_TRI"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_DOMAIN_TRI</unmanaged>
-	D3D11_TESSELLATOR_DOMAIN_TRI = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN::D3D11_TESSELLATOR_DOMAIN_QUAD"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_DOMAIN_QUAD</unmanaged>
-	D3D11_TESSELLATOR_DOMAIN_QUAD = 3,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING"]/*' />
@@ -1764,21 +969,6 @@ public enum TessellatorPartitioning : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING::D3D_TESSELLATOR_PARTITIONING_FRACTIONAL_EVEN"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_PARTITIONING_FRACTIONAL_EVEN</unmanaged>
 	FractionalEven = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING::D3D11_TESSELLATOR_PARTITIONING_UNDEFINED"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_PARTITIONING_UNDEFINED</unmanaged>
-	D3D11_TESSELLATOR_PARTITIONING_UNDEFINED = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING::D3D11_TESSELLATOR_PARTITIONING_INTEGER"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_PARTITIONING_INTEGER</unmanaged>
-	D3D11_TESSELLATOR_PARTITIONING_INTEGER = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING::D3D11_TESSELLATOR_PARTITIONING_POW2"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_PARTITIONING_POW2</unmanaged>
-	D3D11_TESSELLATOR_PARTITIONING_POW2 = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING::D3D11_TESSELLATOR_PARTITIONING_FRACTIONAL_ODD"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_PARTITIONING_FRACTIONAL_ODD</unmanaged>
-	D3D11_TESSELLATOR_PARTITIONING_FRACTIONAL_ODD = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING::D3D11_TESSELLATOR_PARTITIONING_FRACTIONAL_EVEN"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_PARTITIONING_FRACTIONAL_EVEN</unmanaged>
-	D3D11_TESSELLATOR_PARTITIONING_FRACTIONAL_EVEN = 4,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE"]/*' />
@@ -1787,34 +977,19 @@ public enum TessellatorOutputPrimitive : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_UNDEFINED</unmanaged>
-	D3D_TESSELLATOR_OUTPUT_UNDEFINED = 0,
+	Undefined = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_POINT"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_POINT</unmanaged>
-	D3D_TESSELLATOR_OUTPUT_POINT = 1,
+	Point = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_LINE"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_LINE</unmanaged>
-	D3D_TESSELLATOR_OUTPUT_LINE = 2,
+	Line = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_TRIANGLE_CW"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_TRIANGLE_CW</unmanaged>
-	D3D_TESSELLATOR_OUTPUT_TRIANGLE_CW = 3,
+	TriangleCw = 3,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_TRIANGLE_CCW"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_TRIANGLE_CCW</unmanaged>
-	D3D_TESSELLATOR_OUTPUT_TRIANGLE_CCW = 4,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D11_TESSELLATOR_OUTPUT_UNDEFINED"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_OUTPUT_UNDEFINED</unmanaged>
-	D3D11_TESSELLATOR_OUTPUT_UNDEFINED = 0,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D11_TESSELLATOR_OUTPUT_POINT"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_OUTPUT_POINT</unmanaged>
-	D3D11_TESSELLATOR_OUTPUT_POINT = 1,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D11_TESSELLATOR_OUTPUT_LINE"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_OUTPUT_LINE</unmanaged>
-	D3D11_TESSELLATOR_OUTPUT_LINE = 2,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D11_TESSELLATOR_OUTPUT_TRIANGLE_CW"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_OUTPUT_TRIANGLE_CW</unmanaged>
-	D3D11_TESSELLATOR_OUTPUT_TRIANGLE_CW = 3,
-	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D11_TESSELLATOR_OUTPUT_TRIANGLE_CCW"]/*' />
-	/// <unmanaged>D3D11_TESSELLATOR_OUTPUT_TRIANGLE_CCW</unmanaged>
-	D3D11_TESSELLATOR_OUTPUT_TRIANGLE_CCW = 4,
+	TriangleCcw = 4,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_MIN_PRECISION"]/*' />
@@ -1853,28 +1028,28 @@ public enum InterpolationMode : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_UNDEFINED</unmanaged>
-	D3D_INTERPOLATION_UNDEFINED = 0,
+	Undefined = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_CONSTANT"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_CONSTANT</unmanaged>
-	D3D_INTERPOLATION_CONSTANT = 1,
+	Constant = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR</unmanaged>
-	D3D_INTERPOLATION_LINEAR = 2,
+	Linear = 2,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_CENTROID"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_CENTROID</unmanaged>
-	D3D_INTERPOLATION_LINEAR_CENTROID = 3,
+	LinearCentroid = 3,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE</unmanaged>
-	D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE = 4,
+	LinearNoPerspective = 4,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_CENTROID"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_CENTROID</unmanaged>
-	D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_CENTROID = 5,
+	LinearNoPerspectiveCentroid = 5,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_SAMPLE"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_SAMPLE</unmanaged>
-	D3D_INTERPOLATION_LINEAR_SAMPLE = 6,
+	LinearSample = 6,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_SAMPLE"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_SAMPLE</unmanaged>
-	D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_SAMPLE = 7,
+	LinearNoPerspectiveSample = 7,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS"]/*' />
@@ -1883,13 +1058,13 @@ public enum ParameterFlags : int
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_NONE"]/*' />
 	/// <unmanaged>D3D_PF_NONE</unmanaged>
-	D3D_PF_NONE = 0,
+	None = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_IN"]/*' />
 	/// <unmanaged>D3D_PF_IN</unmanaged>
-	D3D_PF_IN = 1,
+	In = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_OUT"]/*' />
 	/// <unmanaged>D3D_PF_OUT</unmanaged>
-	D3D_PF_OUT = 2,
+	Out = 2,
 }
 
 #endregion Enums
@@ -2064,7 +1239,17 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	
+	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::RegisterDestructionCallback"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
+	public HResult RegisterDestructionCallback(PFN_DESTRUCTION_CALLBACK callbackFn, void* pData, uint* pCallbackID)
+	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DDestructionNotifier*, PFN_DESTRUCTION_CALLBACK, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
+#else
+		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, PFN_DESTRUCTION_CALLBACK, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
+#endif
+	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::UnregisterDestructionCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
