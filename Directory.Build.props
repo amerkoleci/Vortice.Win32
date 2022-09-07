@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <!-- https://github.com/dotnet/sourcelink -->
-  <!--<PropertyGroup>
+  <PropertyGroup>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>false</IncludeSymbols>
@@ -37,6 +37,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-  </ItemGroup>-->
+  </ItemGroup>
 
 </Project>
