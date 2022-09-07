@@ -10,6 +10,8 @@ using static Win32.Graphics.Direct3D11.Apis;
 using static Win32.Graphics.Dxgi.Apis;
 using MessageId = Win32.Graphics.Direct3D11.MessageId;
 using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
+using Win32.Graphics.Dxgi.Common;
+using System.Numerics;
 
 namespace ClearScreen;
 
@@ -39,6 +41,7 @@ public static unsafe class Program
     {
         using ComPtr<IDXGIFactory2> factory = default;
         uint factoryFlags = 0;
+
 #if DEBUG
         {
             using ComPtr<IDXGIInfoQueue> dxgiInfoQueue = default;
@@ -119,7 +122,7 @@ public static unsafe class Program
 
         using ComPtr<ID3D11Device> tempDevice = default;
         FeatureLevel featureLevel;
-        using ComPtr<ID3D11DeviceContext> immediateContext = default;
+        using ComPtr<ID3D11DeviceContext> tempImmediateContext = default;
 
         D3D11CreateDevice(
             (IDXGIAdapter*)adapter.Get(),
@@ -128,7 +131,7 @@ public static unsafe class Program
             featureLevels,
             tempDevice.GetAddressOf(),
             &featureLevel,
-            immediateContext.GetAddressOf()).ThrowIfFailed();
+            tempImmediateContext.GetAddressOf()).ThrowIfFailed();
 
 #if DEBUG
         using ComPtr<ID3D11Debug> d3dDebug = default;
@@ -152,5 +155,29 @@ public static unsafe class Program
             }
         }
 #endif
+
+        using ComPtr<ID3D11Device1> d3dDevice = default;
+        using ComPtr<ID3D11DeviceContext1> immediateContext = default;
+
+        tempDevice.CopyTo(&d3dDevice).ThrowIfFailed();
+        tempImmediateContext.CopyTo(&immediateContext).ThrowIfFailed();
+
+        ReadOnlySpan<VertexPositionColor> triangleVertices = stackalloc VertexPositionColor[]
+        {
+            new VertexPositionColor(new Vector3(0f, 0.5f, 0.0f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f)),
+            new VertexPositionColor(new Vector3(0.5f, -0.5f, 0.0f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f)),
+            new VertexPositionColor(new Vector3(-0.5f, -0.5f, 0.0f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f))
+        };
+
+        using ComPtr<ID3D11Buffer> vertexBuffer = ((ID3D11Device*)d3dDevice.Get())->CreateBuffer(triangleVertices, BindFlags.VertexBuffer);
+
+        using ComPtr<ID3D11Texture2D> depthStencilTexture = default;
+        using ComPtr<ID3D11DepthStencilView> depthStencilTextureView = default;
+
+        Texture2DDescription texture2DDesc = new(Format.D32Float, 256, 256, 1, 1, BindFlags.DepthStencil);
+        tempDevice.Get()->CreateTexture2D(&texture2DDesc, null, depthStencilTexture.GetAddressOf()).ThrowIfFailed();
+        depthStencilTexture.Get()->GetDesc(&texture2DDesc);
+
+        tempDevice.Get()->CreateDepthStencilView((ID3D11Resource*)depthStencilTexture.Get(), null, depthStencilTextureView.GetAddressOf()).ThrowIfFailed();
     }
 }

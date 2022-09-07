@@ -51,7 +51,7 @@ public partial struct SampleDescription
     public static readonly SampleDescription Default = new(1, 0);
 
     /// <summary>
-    /// Create new instance of <see cref="SampleDescription"/> struct.
+    /// Initializes a new instance of the <see cref="SampleDescription"/> struct.
     /// </summary>
     /// <param name="count"></param>
     /// <param name="quality"></param>

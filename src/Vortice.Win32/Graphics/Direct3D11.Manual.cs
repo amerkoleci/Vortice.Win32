@@ -4,7 +4,8 @@
 using System.Runtime.CompilerServices;
 using Win32.Graphics.Direct3D;
 using Win32.Graphics.Dxgi;
-using static Win32.Graphics.Dxgi.Apis;
+using Win32.Graphics.Dxgi.Common;
+using static Win32.Graphics.Direct3D11.Apis;
 using static Win32.StringUtilities;
 
 namespace Win32.Graphics.Direct3D11;
@@ -57,6 +58,7 @@ public partial struct AuthenticatedProtectionFlags
         }
     }
 }
+
 
 public static unsafe partial class Apis
 {

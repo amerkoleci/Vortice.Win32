@@ -262,6 +262,20 @@ public unsafe struct ComPtr<T> : IDisposable
         return GetAddressOf();
     }
 
+    /// <summary>
+    /// Moves the current <see cref="ComPtr{T}"/> instance and resets it without releasing the reference.
+    /// </summary>
+    /// <returns>The moved <see cref="ComPtr{T}"/> instance.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public ComPtr<T> Move()
+    {
+        ComPtr<T> copy = default;
+
+        Unsafe.AsRef(in this).Swap(ref copy);
+
+        return copy;
+    }
+
     /// <summary>Resets the current instance by decrementing the reference count for the target COM object and setting the internal raw pointer to <see langword="null"/>.</summary>
     /// <returns>The updated reference count for the COM object that was in use, if any.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]

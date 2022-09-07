@@ -1051,7 +1051,7 @@ public enum BufferExtendedSrvFlag : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG"]/*' />
 /// <unmanaged>D3D11_DSV_FLAG</unmanaged>
 [Flags]
-public enum DsvFlag : int
+public enum DsvFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG::D3D11_DSV_READ_ONLY_DEPTH"]/*' />
@@ -8352,7 +8352,7 @@ public partial struct DepthStencilViewDescription
 	public DsvDimension ViewDimension;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_VIEW_DESC::Flags"]/*' />
-	public uint Flags;
+	public DsvFlags Flags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;

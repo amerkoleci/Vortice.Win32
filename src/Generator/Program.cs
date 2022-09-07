@@ -228,6 +228,7 @@ public static class Program
         { "D3D11_MAP_FLAG", "MapFlags" },
         { "D3D11_FORMAT_SUPPORT", "FormatSupport" },
         { "D3D11_FORMAT_SUPPORT2", "FormatSupport2" },
+        { "D3D11_DSV_FLAG", "DsvFlags" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -258,6 +259,8 @@ public static class Program
 
         { "D3D11_FEATURE_DATA_FORMAT_SUPPORT::OutFormatSupport", "D3D11_FORMAT_SUPPORT" },
         { "D3D11_FEATURE_DATA_FORMAT_SUPPORT2::OutFormatSupport2", "D3D11_FORMAT_SUPPORT2" },
+
+        { "D3D11_DEPTH_STENCIL_VIEW_DESC::Flags", "D3D11_DSV_FLAG" },
     };
 
     private static readonly HashSet<string> s_visitedEnums = new();
