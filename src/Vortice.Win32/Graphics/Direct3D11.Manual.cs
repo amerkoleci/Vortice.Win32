@@ -62,7 +62,7 @@ public static unsafe partial class Apis
     public static HResult D3D11CreateDevice(
         IDXGIAdapter* pAdapter,
         DriverType driverType,
-        CreateDeviceFlag flags,
+        CreateDeviceFlags flags,
         ReadOnlySpan<FeatureLevel> featureLevels,
         ID3D11Device** ppDevice,
         FeatureLevel* pFeatureLevel,

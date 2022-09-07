@@ -1,6 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -220,25 +221,10 @@ public static class Program
 
     private static readonly Dictionary<string, string> s_typesNameRemap = new()
     {
-        { "DXGI_ADAPTER_FLAG", "AdapterFlags" },
-        { "DXGI_ADAPTER_FLAG3", "AdapterFlags3" },
-        { "DXGI_SWAP_CHAIN_FLAG", "SwapChainFlags" },
-
         // Generated
         { "DXGI_MAP", "MapFlags" },
         { "DXGI_ENUM_MODES", "EnumModesFlags" },
         { "DXGI_MWA", "WindowAssociationFlags" },
-
-        // D3D11
-        { "D3D11_BIND_FLAG", "BindFlags" },
-        { "D3D11_CPU_ACCESS_FLAG", "CpuAccessFlags" },
-        { "D3D11_RESOURCE_MISC_FLAG", "ResourceMiscFlags" },
-        { "D3D11_MAP_FLAG", "MapFlags" },
-        { "D3D11_FORMAT_SUPPORT", "FormatSupport" },
-        { "D3D11_FORMAT_SUPPORT2", "FormatSupport2" },
-        { "D3D11_DSV_FLAG", "DsvFlags" },
-        { "D3D11_COLOR_WRITE_ENABLE", "ColorWriteEnable" },
-        { "D3D12_COLOR_WRITE_ENABLE", "ColorWriteEnable" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -406,6 +392,11 @@ public static class Program
         writer.WriteLine($"#region Enums");
         foreach (ApiType enumType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "enum"))
         {
+            if (enumType.Name.StartsWith("D3DX11"))
+            {
+                continue;
+            }
+
             GenerateEnum(writer, enumType, false);
 
             s_visitedEnums.Add($"{writer.Api}.{enumType.Name}");
@@ -471,6 +462,11 @@ public static class Program
         writer.WriteLine($"#region Unions");
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
         {
+            if (structType.Name.StartsWith("D3DX11"))
+            {
+                continue;
+            }
+
             if (s_csNameMappings.ContainsKey($"{writer.Api}.{structType.Name}"))
             {
                 continue;
@@ -487,6 +483,11 @@ public static class Program
         writer.WriteLine($"#region Structs");
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
+            if (structType.Name.StartsWith("D3DX11"))
+            {
+                continue;
+            }
+
             if (s_csNameMappings.ContainsKey($"{writer.Api}.{structType.Name}"))
             {
                 continue;
@@ -503,11 +504,10 @@ public static class Program
         writer.WriteLine($"#region COM Types");
         foreach (ApiType comType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "com"))
         {
-            //if (comType.Name != "IDXGIObject" &&
-            //    comType.Name != "IDXGIDeviceSubObject")
-            //{
-            //    break;
-            //}
+            if (comType.Name.StartsWith("ID3DX11"))
+            {
+                continue;
+            }
 
             // Generate methods
             List<KeyValuePair<ApiFunction, string>> methodsToGenerate = new();
@@ -546,7 +546,9 @@ public static class Program
             {
                 if (function.Name.StartsWith("D3DX11") ||
                     function.Name == "D3DDisassemble11Trace")
+                {
                     continue;
+                }
 
                 WriteFunction(writer, api, function);
                 writer.WriteLine();
@@ -675,6 +677,11 @@ public static class Program
             enumType.Name == "D3D12_COLOR_WRITE_ENABLE")
         {
             baseTypeName = "byte";
+        }
+
+        if (enumType.Name == "DXGI_ADAPTER_FLAG")
+        {
+
         }
 
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
@@ -825,7 +832,7 @@ public static class Program
                 string remapFieldLookUp = $"{structType.Name}::{field.Name}";
                 if (s_structFieldTypeRemap.TryGetValue(remapFieldLookUp, out string? remapType))
                 {
-                    fieldTypeName = GetTypeName(remapType);
+                    fieldTypeName = GetTypeName($"{writer.Api}.{remapType}");
                 }
 
                 if (fieldTypeName == "Array")
@@ -1339,6 +1346,10 @@ public static class Program
                 else if (part == "DESC3")
                 {
                     sb.Append("Description3");
+                }
+                else if (part == "FLAG")
+                {
+                    sb.Append("Flags");
                 }
                 else
                 {

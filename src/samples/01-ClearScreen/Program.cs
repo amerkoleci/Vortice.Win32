@@ -24,7 +24,7 @@ public static unsafe class Program
             null,
             DriverType.Null,       // There is no need to create a real hardware device.
             IntPtr.Zero,
-            CreateDeviceFlag.Debug,  // Check for the SDK layers.
+            CreateDeviceFlags.Debug,  // Check for the SDK layers.
             null,                    // Any feature level will do.
             0,
             D3D11_SDK_VERSION,
@@ -111,12 +111,12 @@ public static unsafe class Program
             FeatureLevel.Level_11_0
         };
 
-        CreateDeviceFlag creationFlags = CreateDeviceFlag.BgraSupport;
+        CreateDeviceFlags creationFlags = CreateDeviceFlags.BgraSupport;
 #if DEBUG
         if (SdkLayersAvailable())
         {
             // If the project is in a debug build, enable debugging via SDK Layers with this flag.
-            creationFlags |= CreateDeviceFlag.Debug;
+            creationFlags |= CreateDeviceFlags.Debug;
         }
 #endif
 

@@ -308,7 +308,7 @@ public enum FramePresentationMode : int
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG</unmanaged>
 [Flags]
-public enum OverlaySupportFlag : int
+public enum OverlaySupportFlags : int
 {
 	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_DIRECT"]/*' />
@@ -322,7 +322,7 @@ public enum OverlaySupportFlag : int
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG</unmanaged>
 [Flags]
-public enum SwapChainColorSpaceSupportFlag : int
+public enum SwapChainColorSpaceSupportFlags : int
 {
 	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
@@ -336,7 +336,7 @@ public enum SwapChainColorSpaceSupportFlag : int
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG</unmanaged>
 [Flags]
-public enum OverlayColorSpaceSupportFlag : int
+public enum OverlayColorSpaceSupportFlags : int
 {
 	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG::DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
@@ -359,7 +359,7 @@ public enum MemorySegmentGroup : int
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_FLAG</unmanaged>
 [Flags]
-public enum OutduplFlag : int
+public enum OutduplFlags : int
 {
 	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG::DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY"]/*' />
@@ -420,7 +420,7 @@ public enum Feature : int
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG3</unmanaged>
 [Flags]
-public enum AdapterFlags3 : uint
+public enum AdapterFlag3 : uint
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_NONE</unmanaged>
@@ -2221,7 +2221,7 @@ public partial struct AdapterDescription3
 	public Luid AdapterLuid;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Flags"]/*' />
-	public AdapterFlags3 Flags;
+	public AdapterFlag3 Flags;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::GraphicsPreemptionGranularity"]/*' />
 	public GraphicsPreemptionGranularity GraphicsPreemptionGranularity;

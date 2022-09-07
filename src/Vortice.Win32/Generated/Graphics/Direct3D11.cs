@@ -820,7 +820,7 @@ public enum MapFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RAISE_FLAG"]/*' />
 /// <unmanaged>D3D11_RAISE_FLAG</unmanaged>
 [Flags]
-public enum RaiseFlag : int
+public enum RaiseFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RAISE_FLAG::D3D11_RAISE_FLAG_DRIVER_INTERNAL_ERROR"]/*' />
@@ -831,7 +831,7 @@ public enum RaiseFlag : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CLEAR_FLAG"]/*' />
 /// <unmanaged>D3D11_CLEAR_FLAG</unmanaged>
 [Flags]
-public enum ClearFlag : int
+public enum ClearFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CLEAR_FLAG::D3D11_CLEAR_DEPTH"]/*' />
@@ -1042,7 +1042,7 @@ public enum TextureCubeFace : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV_FLAG"]/*' />
 /// <unmanaged>D3D11_BUFFEREX_SRV_FLAG</unmanaged>
 [Flags]
-public enum BufferExtendedSrvFlag : int
+public enum BufferExtendedSrvFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV_FLAG::D3D11_BUFFEREX_SRV_FLAG_RAW"]/*' />
@@ -1067,7 +1067,7 @@ public enum DsvFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG"]/*' />
 /// <unmanaged>D3D11_BUFFER_UAV_FLAG</unmanaged>
 [Flags]
-public enum BufferUavFlag : int
+public enum BufferUavFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG::D3D11_BUFFER_UAV_FLAG_RAW"]/*' />
@@ -1394,7 +1394,7 @@ public enum FormatSupport2 : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG"]/*' />
 /// <unmanaged>D3D11_ASYNC_GETDATA_FLAG</unmanaged>
 [Flags]
-public enum AsyncGetDataFlag : int
+public enum AsyncGetDataFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG::D3D11_ASYNC_GETDATA_DONOTFLUSH"]/*' />
@@ -1459,7 +1459,7 @@ public enum Query : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG"]/*' />
 /// <unmanaged>D3D11_QUERY_MISC_FLAG</unmanaged>
 [Flags]
-public enum QueryMiscFlag : int
+public enum QueryMiscFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG::D3D11_QUERY_MISC_PREDICATEHINT"]/*' />
@@ -2272,7 +2272,7 @@ public enum VpovDimension : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG"]/*' />
 /// <unmanaged>D3D11_CREATE_DEVICE_FLAG</unmanaged>
 [Flags]
-public enum CreateDeviceFlag : uint
+public enum CreateDeviceFlags : uint
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_SINGLETHREADED"]/*' />
@@ -6508,7 +6508,7 @@ public enum LogicOp : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG"]/*' />
 /// <unmanaged>D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG</unmanaged>
 [Flags]
-public enum _1CreateDeviceContextStateFlag : int
+public enum _1CreateDeviceContextStateFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG::D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED"]/*' />
@@ -6573,7 +6573,7 @@ public enum CryptoSessionStatus : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG"]/*' />
 /// <unmanaged>D3D11_TILE_MAPPING_FLAG</unmanaged>
 [Flags]
-public enum TileMappingFlag : int
+public enum TileMappingFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG::D3D11_TILE_MAPPING_NO_OVERWRITE"]/*' />
@@ -6584,7 +6584,7 @@ public enum TileMappingFlag : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_RANGE_FLAG"]/*' />
 /// <unmanaged>D3D11_TILE_RANGE_FLAG</unmanaged>
 [Flags]
-public enum TileRangeFlag : int
+public enum TileRangeFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_RANGE_FLAG::D3D11_TILE_RANGE_NULL"]/*' />
@@ -6601,7 +6601,7 @@ public enum TileRangeFlag : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG"]/*' />
 /// <unmanaged>D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG</unmanaged>
 [Flags]
-public enum CheckMultisampleQualityLevelsFlag : int
+public enum CheckMultisampleQualityLevelsFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG::D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_TILED_RESOURCE"]/*' />
@@ -6612,7 +6612,7 @@ public enum CheckMultisampleQualityLevelsFlag : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG"]/*' />
 /// <unmanaged>D3D11_TILE_COPY_FLAG</unmanaged>
 [Flags]
-public enum TileCopyFlag : int
+public enum TileCopyFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_NO_OVERWRITE"]/*' />
@@ -6677,7 +6677,7 @@ public enum ConservativeRasterizationMode : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FENCE_FLAG"]/*' />
 /// <unmanaged>D3D11_FENCE_FLAG</unmanaged>
 [Flags]
-public enum FenceFlag : uint
+public enum FenceFlags : uint
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FENCE_FLAG::D3D11_FENCE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D11_FENCE_FLAG_NONE</unmanaged>
@@ -6959,98 +6959,6 @@ public enum TraceRegisterType : int
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INTERFACE_POINTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INTERFACE_POINTER</unmanaged>
 	D3D11_TRACE_INTERFACE_POINTER = 35,
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_DATA_TYPE"]/*' />
-/// <unmanaged>D3DX11_SCAN_DATA_TYPE</unmanaged>
-public enum D3dx11ScanDataType : int
-{
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_DATA_TYPE::D3DX11_SCAN_DATA_TYPE_FLOAT"]/*' />
-	/// <unmanaged>D3DX11_SCAN_DATA_TYPE_FLOAT</unmanaged>
-	Float = 1,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_DATA_TYPE::D3DX11_SCAN_DATA_TYPE_INT"]/*' />
-	/// <unmanaged>D3DX11_SCAN_DATA_TYPE_INT</unmanaged>
-	Int = 2,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_DATA_TYPE::D3DX11_SCAN_DATA_TYPE_UINT"]/*' />
-	/// <unmanaged>D3DX11_SCAN_DATA_TYPE_UINT</unmanaged>
-	Uint = 3,
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_OPCODE"]/*' />
-/// <unmanaged>D3DX11_SCAN_OPCODE</unmanaged>
-public enum D3dx11ScanOpcode : int
-{
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_OPCODE::D3DX11_SCAN_OPCODE_ADD"]/*' />
-	/// <unmanaged>D3DX11_SCAN_OPCODE_ADD</unmanaged>
-	Add = 1,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_OPCODE::D3DX11_SCAN_OPCODE_MIN"]/*' />
-	/// <unmanaged>D3DX11_SCAN_OPCODE_MIN</unmanaged>
-	Min = 2,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_OPCODE::D3DX11_SCAN_OPCODE_MAX"]/*' />
-	/// <unmanaged>D3DX11_SCAN_OPCODE_MAX</unmanaged>
-	Max = 3,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_OPCODE::D3DX11_SCAN_OPCODE_MUL"]/*' />
-	/// <unmanaged>D3DX11_SCAN_OPCODE_MUL</unmanaged>
-	Mul = 4,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_OPCODE::D3DX11_SCAN_OPCODE_AND"]/*' />
-	/// <unmanaged>D3DX11_SCAN_OPCODE_AND</unmanaged>
-	And = 5,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_OPCODE::D3DX11_SCAN_OPCODE_OR"]/*' />
-	/// <unmanaged>D3DX11_SCAN_OPCODE_OR</unmanaged>
-	Or = 6,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_OPCODE::D3DX11_SCAN_OPCODE_XOR"]/*' />
-	/// <unmanaged>D3DX11_SCAN_OPCODE_XOR</unmanaged>
-	Xor = 7,
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_DIRECTION"]/*' />
-/// <unmanaged>D3DX11_SCAN_DIRECTION</unmanaged>
-public enum D3dx11ScanDirection : int
-{
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_DIRECTION::D3DX11_SCAN_DIRECTION_FORWARD"]/*' />
-	/// <unmanaged>D3DX11_SCAN_DIRECTION_FORWARD</unmanaged>
-	Forward = 1,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_SCAN_DIRECTION::D3DX11_SCAN_DIRECTION_BACKWARD"]/*' />
-	/// <unmanaged>D3DX11_SCAN_DIRECTION_BACKWARD</unmanaged>
-	Backward = 2,
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DATA_TYPE"]/*' />
-/// <unmanaged>D3DX11_FFT_DATA_TYPE</unmanaged>
-public enum D3dx11FftDataType : int
-{
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DATA_TYPE::D3DX11_FFT_DATA_TYPE_REAL"]/*' />
-	/// <unmanaged>D3DX11_FFT_DATA_TYPE_REAL</unmanaged>
-	Real = 0,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DATA_TYPE::D3DX11_FFT_DATA_TYPE_COMPLEX"]/*' />
-	/// <unmanaged>D3DX11_FFT_DATA_TYPE_COMPLEX</unmanaged>
-	Complex = 1,
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DIM_MASK"]/*' />
-/// <unmanaged>D3DX11_FFT_DIM_MASK</unmanaged>
-public enum D3dx11FftDimMask : int
-{
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DIM_MASK::D3DX11_FFT_DIM_MASK_1D"]/*' />
-	/// <unmanaged>D3DX11_FFT_DIM_MASK_1D</unmanaged>
-	_1d = 1,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DIM_MASK::D3DX11_FFT_DIM_MASK_2D"]/*' />
-	/// <unmanaged>D3DX11_FFT_DIM_MASK_2D</unmanaged>
-	_2d = 3,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DIM_MASK::D3DX11_FFT_DIM_MASK_3D"]/*' />
-	/// <unmanaged>D3DX11_FFT_DIM_MASK_3D</unmanaged>
-	_3d = 7,
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_CREATE_FLAG"]/*' />
-/// <unmanaged>D3DX11_FFT_CREATE_FLAG</unmanaged>
-[Flags]
-public enum D3dx11FftCreateFlag : int
-{
-	None = 0,
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_CREATE_FLAG::D3DX11_FFT_CREATE_FLAG_NO_PRECOMPUTE_BUFFERS"]/*' />
-	/// <unmanaged>D3DX11_FFT_CREATE_FLAG_NO_PRECOMPUTE_BUFFERS</unmanaged>
-	NoPrecomputeBuffers = 1,
 }
 
 #endregion Enums
@@ -12047,40 +11955,6 @@ public partial struct TraceStep
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STEP::CurrentGlobalCycle"]/*' />
 	public ulong CurrentGlobalCycle;
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DESC"]/*' />
-/// <unmanaged>D3DX11_FFT_DESC</unmanaged>
-public partial struct D3dx11FftDescription
-{
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DESC::NumDimensions"]/*' />
-	public uint NumDimensions;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DESC::ElementLengths"]/*' />
-	public unsafe fixed uint ElementLengths[32];
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DESC::DimensionMask"]/*' />
-	public uint DimensionMask;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_DESC::Type"]/*' />
-	public D3dx11FftDataType Type;
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_BUFFER_INFO"]/*' />
-/// <unmanaged>D3DX11_FFT_BUFFER_INFO</unmanaged>
-public partial struct D3dx11FftBufferInfo
-{
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_BUFFER_INFO::NumTempBufferSizes"]/*' />
-	public uint NumTempBufferSizes;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_BUFFER_INFO::TempBufferFloatSizes"]/*' />
-	public unsafe fixed uint TempBufferFloatSizes[4];
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_BUFFER_INFO::NumPrecomputeBufferSizes"]/*' />
-	public uint NumPrecomputeBufferSizes;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3DX11_FFT_BUFFER_INFO::PrecomputeBufferFloatSizes"]/*' />
-	public unsafe fixed uint PrecomputeBufferFloatSizes[4];
 }
 
 #endregion Structs
@@ -28864,9 +28738,9 @@ public unsafe partial struct ID3D11Device5
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device5::CreateFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
-	public HResult CreateFence(ulong InitialValue, FenceFlag Flags, Guid* ReturnedInterface, void** ppFence)
+	public HResult CreateFence(ulong InitialValue, FenceFlags Flags, Guid* ReturnedInterface, void** ppFence)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, ulong, FenceFlag, Guid*, void**, int>)(lpVtbl[68]))((ID3D11Device5*)Unsafe.AsPointer(ref this), InitialValue, Flags, ReturnedInterface, ppFence);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, ulong, FenceFlags, Guid*, void**, int>)(lpVtbl[68]))((ID3D11Device5*)Unsafe.AsPointer(ref this), InitialValue, Flags, ReturnedInterface, ppFence);
 	}
 
 }
@@ -32001,300 +31875,15 @@ public unsafe partial struct ID3D11ShaderTraceFactory
 
 }
 
-/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11Scan"]/*' />
-/// <unmanaged>ID3DX11Scan</unmanaged>
-[Guid("5089b68f-e71d-4d38-be8e-f363b95a9405")]
-[NativeTypeName("struct ID3DX11Scan : IUnknown")]
-[NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DX11Scan
-{
-	public static ref readonly Guid IID_ID3DX11Scan
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			ReadOnlySpan<byte> data = new byte[] {
-				0x8F, 0xB6, 0x89, 0x50,
-				0x1D, 0xE7,
-				0x38, 0x4D,
-				0xBE,
-				0x8E,
-				0xF3,
-				0x63,
-				0xB9,
-				0x5A,
-				0x94,
-				0x05
-			};
-
-			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
-			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
-		}
-	}
-
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DX11Scan));
-
-	public void** lpVtbl;
-
-	/// <inheritdoc cref="IUnknown.QueryInterface" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
-	}
-
-	/// <inheritdoc cref="IUnknown.AddRef" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(1)]
-	[return: NativeTypeName("ULONG")]
-	public uint AddRef()
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
-	}
-
-	/// <inheritdoc cref="IUnknown.Release" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(2)]
-	[return: NativeTypeName("ULONG")]
-	public uint Release()
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11Scan::SetScanDirection"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(3)]
-	public HResult SetScanDirection(D3dx11ScanDirection Direction)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11Scan*, D3dx11ScanDirection, int>)(lpVtbl[3]))((ID3DX11Scan*)Unsafe.AsPointer(ref this), Direction);
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11Scan::Scan"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(4)]
-	public HResult Scan(D3dx11ScanDataType ElementType, D3dx11ScanOpcode OpCode, uint ElementScanSize, ID3D11UnorderedAccessView* pSrc, ID3D11UnorderedAccessView* pDst)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11Scan*, D3dx11ScanDataType, D3dx11ScanOpcode, uint, ID3D11UnorderedAccessView*, ID3D11UnorderedAccessView*, int>)(lpVtbl[4]))((ID3DX11Scan*)Unsafe.AsPointer(ref this), ElementType, OpCode, ElementScanSize, pSrc, pDst);
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11Scan::Multiscan"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(5)]
-	public HResult Multiscan(D3dx11ScanDataType ElementType, D3dx11ScanOpcode OpCode, uint ElementScanSize, uint ElementScanPitch, uint ScanCount, ID3D11UnorderedAccessView* pSrc, ID3D11UnorderedAccessView* pDst)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11Scan*, D3dx11ScanDataType, D3dx11ScanOpcode, uint, uint, uint, ID3D11UnorderedAccessView*, ID3D11UnorderedAccessView*, int>)(lpVtbl[5]))((ID3DX11Scan*)Unsafe.AsPointer(ref this), ElementType, OpCode, ElementScanSize, ElementScanPitch, ScanCount, pSrc, pDst);
-	}
-
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11SegmentedScan"]/*' />
-/// <unmanaged>ID3DX11SegmentedScan</unmanaged>
-[Guid("a915128c-d954-4c79-bfe1-64db923194d6")]
-[NativeTypeName("struct ID3DX11SegmentedScan : IUnknown")]
-[NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DX11SegmentedScan
-{
-	public static ref readonly Guid IID_ID3DX11SegmentedScan
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			ReadOnlySpan<byte> data = new byte[] {
-				0x8C, 0x12, 0x15, 0xA9,
-				0x54, 0xD9,
-				0x79, 0x4C,
-				0xBF,
-				0xE1,
-				0x64,
-				0xDB,
-				0x92,
-				0x31,
-				0x94,
-				0xD6
-			};
-
-			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
-			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
-		}
-	}
-
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DX11SegmentedScan));
-
-	public void** lpVtbl;
-
-	/// <inheritdoc cref="IUnknown.QueryInterface" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
-	}
-
-	/// <inheritdoc cref="IUnknown.AddRef" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(1)]
-	[return: NativeTypeName("ULONG")]
-	public uint AddRef()
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
-	}
-
-	/// <inheritdoc cref="IUnknown.Release" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(2)]
-	[return: NativeTypeName("ULONG")]
-	public uint Release()
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11SegmentedScan::SetScanDirection"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(3)]
-	public HResult SetScanDirection(D3dx11ScanDirection Direction)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11SegmentedScan*, D3dx11ScanDirection, int>)(lpVtbl[3]))((ID3DX11SegmentedScan*)Unsafe.AsPointer(ref this), Direction);
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11SegmentedScan::SegScan"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(4)]
-	public HResult SegScan(D3dx11ScanDataType ElementType, D3dx11ScanOpcode OpCode, uint ElementScanSize, ID3D11UnorderedAccessView* pSrc, ID3D11UnorderedAccessView* pSrcElementFlags, ID3D11UnorderedAccessView* pDst)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11SegmentedScan*, D3dx11ScanDataType, D3dx11ScanOpcode, uint, ID3D11UnorderedAccessView*, ID3D11UnorderedAccessView*, ID3D11UnorderedAccessView*, int>)(lpVtbl[4]))((ID3DX11SegmentedScan*)Unsafe.AsPointer(ref this), ElementType, OpCode, ElementScanSize, pSrc, pSrcElementFlags, pDst);
-	}
-
-}
-
-/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11FFT"]/*' />
-/// <unmanaged>ID3DX11FFT</unmanaged>
-[Guid("b3f7a938-4c93-4310-a675-b30d6de50553")]
-[NativeTypeName("struct ID3DX11FFT : IUnknown")]
-[NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DX11FFT
-{
-	public static ref readonly Guid IID_ID3DX11FFT
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			ReadOnlySpan<byte> data = new byte[] {
-				0x38, 0xA9, 0xF7, 0xB3,
-				0x93, 0x4C,
-				0x10, 0x43,
-				0xA6,
-				0x75,
-				0xB3,
-				0x0D,
-				0x6D,
-				0xE5,
-				0x05,
-				0x53
-			};
-
-			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
-			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
-		}
-	}
-
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DX11FFT));
-
-	public void** lpVtbl;
-
-	/// <inheritdoc cref="IUnknown.QueryInterface" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(0)]
-	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
-	}
-
-	/// <inheritdoc cref="IUnknown.AddRef" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(1)]
-	[return: NativeTypeName("ULONG")]
-	public uint AddRef()
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
-	}
-
-	/// <inheritdoc cref="IUnknown.Release" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(2)]
-	[return: NativeTypeName("ULONG")]
-	public uint Release()
-	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11FFT::SetForwardScale"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(3)]
-	public HResult SetForwardScale(float ForwardScale)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11FFT*, float, int>)(lpVtbl[3]))((ID3DX11FFT*)Unsafe.AsPointer(ref this), ForwardScale);
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11FFT::GetForwardScale"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(4)]
-	public float GetForwardScale()
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11FFT*, float>)(lpVtbl[4]))((ID3DX11FFT*)Unsafe.AsPointer(ref this));
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11FFT::SetInverseScale"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(5)]
-	public HResult SetInverseScale(float InverseScale)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11FFT*, float, int>)(lpVtbl[5]))((ID3DX11FFT*)Unsafe.AsPointer(ref this), InverseScale);
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11FFT::GetInverseScale"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(6)]
-	public float GetInverseScale()
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11FFT*, float>)(lpVtbl[6]))((ID3DX11FFT*)Unsafe.AsPointer(ref this));
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11FFT::AttachBuffersAndPrecompute"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(7)]
-	public HResult AttachBuffersAndPrecompute(uint NumTempBuffers, ID3D11UnorderedAccessView* ppTempBuffers, uint NumPrecomputeBuffers, ID3D11UnorderedAccessView* ppPrecomputeBufferSizes)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11FFT*, uint, ID3D11UnorderedAccessView*, uint, ID3D11UnorderedAccessView*, int>)(lpVtbl[7]))((ID3DX11FFT*)Unsafe.AsPointer(ref this), NumTempBuffers, ppTempBuffers, NumPrecomputeBuffers, ppPrecomputeBufferSizes);
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11FFT::ForwardTransform"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(8)]
-	public HResult ForwardTransform(ID3D11UnorderedAccessView* pInputBuffer, ID3D11UnorderedAccessView* ppOutputBuffer)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11FFT*, ID3D11UnorderedAccessView*, ID3D11UnorderedAccessView*, int>)(lpVtbl[8]))((ID3DX11FFT*)Unsafe.AsPointer(ref this), pInputBuffer, ppOutputBuffer);
-	}
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DX11FFT::InverseTransform"]/*' />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(9)]
-	public HResult InverseTransform(ID3D11UnorderedAccessView* pInputBuffer, ID3D11UnorderedAccessView* ppOutputBuffer)
-	{
-		return ((delegate* unmanaged[Stdcall]<ID3DX11FFT*, ID3D11UnorderedAccessView*, ID3D11UnorderedAccessView*, int>)(lpVtbl[9]))((ID3DX11FFT*)Unsafe.AsPointer(ref this), pInputBuffer, ppOutputBuffer);
-	}
-
-}
-
 #endregion Com Types
 #region Functions
 public static unsafe partial class Apis
 {
 	[DllImport("d3d11", ExactSpelling = true)]
-	public static extern HResult D3D11CreateDevice(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.DriverType DriverType, IntPtr Software, CreateDeviceFlag Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, ID3D11Device** ppDevice, Graphics.Direct3D.FeatureLevel* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
+	public static extern HResult D3D11CreateDevice(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.DriverType DriverType, IntPtr Software, CreateDeviceFlags Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, ID3D11Device** ppDevice, Graphics.Direct3D.FeatureLevel* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
 
 	[DllImport("d3d11", ExactSpelling = true)]
-	public static extern HResult D3D11CreateDeviceAndSwapChain(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.DriverType DriverType, IntPtr Software, CreateDeviceFlag Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Graphics.Dxgi.SwapChainDescription* pSwapChainDesc, Graphics.Dxgi.IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, Graphics.Direct3D.FeatureLevel* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
+	public static extern HResult D3D11CreateDeviceAndSwapChain(Graphics.Dxgi.IDXGIAdapter* pAdapter, Graphics.Direct3D.DriverType DriverType, IntPtr Software, CreateDeviceFlags Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Graphics.Dxgi.SwapChainDescription* pSwapChainDesc, Graphics.Dxgi.IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, Graphics.Direct3D.FeatureLevel* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext);
 
 }
 #endregion Functions
