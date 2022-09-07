@@ -1093,7 +1093,7 @@ public partial struct ShaderMacro
 [Guid("8ba5fb08-5195-40e2-ac58-0d989c3a0102")]
 [NativeTypeName("struct ID3DBlob : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DBlob : ID3DBlob.Interface
+public unsafe partial struct ID3DBlob
 {
 	public static ref readonly Guid IID_ID3DBlob
 	{
@@ -1154,11 +1154,7 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface
 	[VtblIndex(3)]
 	public void* GetBufferPointer()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DBlob*, void*>)(lpVtbl[3]))((ID3DBlob*)Unsafe.AsPointer(ref this));
-#else
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, void*>)(lpVtbl[3]))((ID3DBlob*)Unsafe.AsPointer(ref this));
-#endif
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DBlob::GetBufferSize"]/*' />
@@ -1166,16 +1162,9 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface
 	[VtblIndex(4)]
 	public nuint GetBufferSize()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DBlob*, nuint>)(lpVtbl[4]))((ID3DBlob*)Unsafe.AsPointer(ref this));
-#else
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, nuint>)(lpVtbl[4]))((ID3DBlob*)Unsafe.AsPointer(ref this));
-#endif
 	}
 
-	public interface Interface : IUnknown.Interface
-	{
-	}
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier"]/*' />
@@ -1183,7 +1172,7 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface
 [Guid("a06eb39a-50da-425b-8c31-4eecd6c270f3")]
 [NativeTypeName("struct ID3DDestructionNotifier : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.Interface
+public unsafe partial struct ID3DDestructionNotifier
 {
 	public static ref readonly Guid IID_ID3DDestructionNotifier
 	{
@@ -1244,11 +1233,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	[VtblIndex(3)]
 	public HResult RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDestructionNotifier*, delegate* unmanaged[Stdcall]<void*, void>, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
-#else
 		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, delegate* unmanaged[Stdcall]<void*, void>, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
-#endif
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::UnregisterDestructionCallback"]/*' />
@@ -1256,21 +1241,14 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	[VtblIndex(4)]
 	public HResult UnregisterDestructionCallback(uint callbackID)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDestructionNotifier*, uint, int>)(lpVtbl[4]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackID);
-#else
 		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, uint, int>)(lpVtbl[4]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackID);
-#endif
 	}
 
-	public interface Interface : IUnknown.Interface
-	{
-	}
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude"]/*' />
 /// <unmanaged>ID3DInclude</unmanaged>
-public unsafe partial struct ID3DInclude : ID3DInclude.Interface
+public unsafe partial struct ID3DInclude
 {
 	public void** lpVtbl;
 
@@ -1279,11 +1257,7 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	[VtblIndex(0)]
 	public HResult Open(IncludeType IncludeType, byte** pFileName, void* pParentData, void** ppData, uint* pBytes)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DInclude*, IncludeType, byte**, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
-#else
 		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, IncludeType, byte**, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
-#endif
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude::Close"]/*' />
@@ -1291,16 +1265,9 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	[VtblIndex(1)]
 	public HResult Close(void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
-#else
 		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
-#endif
 	}
 
-	public interface Interface
-	{
-	}
 }
 
 #endregion Com Types
