@@ -1747,3 +1747,4 @@ public partial struct JpegQuantizationTable
 
 #region COM Types
 #endregion Com Types
+

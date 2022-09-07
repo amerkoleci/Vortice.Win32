@@ -3711,10 +3711,10 @@ public enum ShaderCacheKindFlags : uint
 	None = 0,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CACHE_FOR_DRIVER"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CACHE_FOR_DRIVER</unmanaged>
-	ImplicitD3dCacheForDriver = 1,
+	ImplicitD3DCacheForDriver = 1,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CONVERSIONS"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CONVERSIONS</unmanaged>
-	ImplicitD3dConversions = 2,
+	ImplicitD3DConversions = 2,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_DRIVER_MANAGED"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_DRIVER_MANAGED</unmanaged>
 	ImplicitDriverManaged = 4,
@@ -7241,7 +7241,7 @@ public partial struct PipelineStateStreamDescription
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS</unmanaged>
-public partial struct FeatureDataD3d12Options
+public partial struct FeatureDataD3D12Options
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::DoublePrecisionFloatShaderOps"]/*' />
 	public Bool32 DoublePrecisionFloatShaderOps;
@@ -7291,7 +7291,7 @@ public partial struct FeatureDataD3d12Options
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS1"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS1</unmanaged>
-public partial struct FeatureDataD3d12Options1
+public partial struct FeatureDataD3D12Options1
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS1::WaveOps"]/*' />
 	public Bool32 WaveOps;
@@ -7314,7 +7314,7 @@ public partial struct FeatureDataD3d12Options1
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS2"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS2</unmanaged>
-public partial struct FeatureDataD3d12Options2
+public partial struct FeatureDataD3D12Options2
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS2::DepthBoundsTestSupported"]/*' />
 	public Bool32 DepthBoundsTestSupported;
@@ -7467,7 +7467,7 @@ public partial struct FeatureDataCommandQueuePriority
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS3"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS3</unmanaged>
-public partial struct FeatureDataD3d12Options3
+public partial struct FeatureDataD3D12Options3
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS3::CopyQueueTimestampQueriesSupported"]/*' />
 	public Bool32 CopyQueueTimestampQueriesSupported;
@@ -7506,7 +7506,7 @@ public partial struct FeatureDataDisplayable
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS4</unmanaged>
-public partial struct FeatureDataD3d12Options4
+public partial struct FeatureDataD3D12Options4
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4::MSAA64KBAlignedTextureSupported"]/*' />
 	public Bool32 MSAA64KBAlignedTextureSupported;
@@ -7542,7 +7542,7 @@ public partial struct FeatureDataCrossNode
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS5</unmanaged>
-public partial struct FeatureDataD3d12Options5
+public partial struct FeatureDataD3D12Options5
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5::SRVOnlyTiledResourceTier3"]/*' />
 	public Bool32 SRVOnlyTiledResourceTier3;
@@ -7556,7 +7556,7 @@ public partial struct FeatureDataD3d12Options5
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS6"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS6</unmanaged>
-public partial struct FeatureDataD3d12Options6
+public partial struct FeatureDataD3D12Options6
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS6::AdditionalShadingRatesSupported"]/*' />
 	public Bool32 AdditionalShadingRatesSupported;
@@ -7576,7 +7576,7 @@ public partial struct FeatureDataD3d12Options6
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS7</unmanaged>
-public partial struct FeatureDataD3d12Options7
+public partial struct FeatureDataD3D12Options7
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7::MeshShaderTier"]/*' />
 	public MeshShaderTier MeshShaderTier;
@@ -7610,7 +7610,7 @@ public partial struct FeatureDataQueryMetaCommand
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS8"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS8</unmanaged>
-public partial struct FeatureDataD3d12Options8
+public partial struct FeatureDataD3D12Options8
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS8::UnalignedBlockTexturesSupported"]/*' />
 	public Bool32 UnalignedBlockTexturesSupported;
@@ -7618,7 +7618,7 @@ public partial struct FeatureDataD3d12Options8
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS9</unmanaged>
-public partial struct FeatureDataD3d12Options9
+public partial struct FeatureDataD3D12Options9
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::MeshShaderPipelineStatsSupported"]/*' />
 	public Bool32 MeshShaderPipelineStatsSupported;
@@ -7641,7 +7641,7 @@ public partial struct FeatureDataD3d12Options9
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS10</unmanaged>
-public partial struct FeatureDataD3d12Options10
+public partial struct FeatureDataD3D12Options10
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10::VariableRateShadingSumCombinerSupported"]/*' />
 	public Bool32 VariableRateShadingSumCombinerSupported;
@@ -7652,7 +7652,7 @@ public partial struct FeatureDataD3d12Options10
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS11"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS11</unmanaged>
-public partial struct FeatureDataD3d12Options11
+public partial struct FeatureDataD3D12Options11
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS11::AtomicInt64OnDescriptorHeapResourceSupported"]/*' />
 	public Bool32 AtomicInt64OnDescriptorHeapResourceSupported;
@@ -8248,7 +8248,7 @@ public partial struct BufferSrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_SRV"]/*' />
 /// <unmanaged>D3D12_TEX1D_SRV</unmanaged>
-public partial struct Tex1dSrv
+public partial struct Texture1DSrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
@@ -8262,7 +8262,7 @@ public partial struct Tex1dSrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_SRV</unmanaged>
-public partial struct Tex1dArraySrv
+public partial struct Texture1DArraySrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
@@ -8282,7 +8282,7 @@ public partial struct Tex1dArraySrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2D_SRV</unmanaged>
-public partial struct Tex2dSrv
+public partial struct Texture2DSrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
@@ -8299,7 +8299,7 @@ public partial struct Tex2dSrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_SRV</unmanaged>
-public partial struct Tex2dArraySrv
+public partial struct Texture2DArraySrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
@@ -8322,7 +8322,7 @@ public partial struct Tex2dArraySrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_SRV"]/*' />
 /// <unmanaged>D3D12_TEX3D_SRV</unmanaged>
-public partial struct Tex3dSrv
+public partial struct Texture3DSrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
@@ -8336,7 +8336,7 @@ public partial struct Tex3dSrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV"]/*' />
 /// <unmanaged>D3D12_TEXCUBE_SRV</unmanaged>
-public partial struct TexcubeSrv
+public partial struct TexureCubeSrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
@@ -8350,7 +8350,7 @@ public partial struct TexcubeSrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEXCUBE_ARRAY_SRV</unmanaged>
-public partial struct TexcubeArraySrv
+public partial struct TexureCubeArraySrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
@@ -8370,7 +8370,7 @@ public partial struct TexcubeArraySrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_SRV</unmanaged>
-public partial struct Tex2dmsSrv
+public partial struct Texture2DMsSrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_SRV::UnusedField_NothingToDefine"]/*' />
 	public uint UnusedField_NothingToDefine;
@@ -8378,7 +8378,7 @@ public partial struct Tex2dmsSrv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_ARRAY_SRV</unmanaged>
-public partial struct Tex2dmsArraySrv
+public partial struct Texture2DMsArraySrv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV::FirstArraySlice"]/*' />
 	public uint FirstArraySlice;
@@ -8426,7 +8426,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex1dSrv Texture1D
+	public ref Texture1DSrv Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8440,7 +8440,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex1dArraySrv Texture1DArray
+	public ref Texture1DArraySrv Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8454,7 +8454,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dSrv Texture2D
+	public ref Texture2DSrv Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8468,7 +8468,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dArraySrv Texture2DArray
+	public ref Texture2DArraySrv Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8482,7 +8482,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dmsSrv Texture2DMS
+	public ref Texture2DMsSrv Texture2DMS
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8496,7 +8496,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dmsArraySrv Texture2DMSArray
+	public ref Texture2DMsArraySrv Texture2DMSArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8510,7 +8510,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex3dSrv Texture3D
+	public ref Texture3DSrv Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8524,7 +8524,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref TexcubeSrv TextureCube
+	public ref TexureCubeSrv TextureCube
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8538,7 +8538,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref TexcubeArraySrv TextureCubeArray
+	public ref TexureCubeArraySrv TextureCubeArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8574,39 +8574,39 @@ public partial struct ShaderResourceViewDescription
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
 		[FieldOffset(0)]
-		public Tex1dSrv Texture1D;
+		public Texture1DSrv Texture1D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
 		[FieldOffset(0)]
-		public Tex1dArraySrv Texture1DArray;
+		public Texture1DArraySrv Texture1DArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
-		public Tex2dSrv Texture2D;
+		public Texture2DSrv Texture2D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
-		public Tex2dArraySrv Texture2DArray;
+		public Texture2DArraySrv Texture2DArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
 		[FieldOffset(0)]
-		public Tex2dmsSrv Texture2DMS;
+		public Texture2DMsSrv Texture2DMS;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
 		[FieldOffset(0)]
-		public Tex2dmsArraySrv Texture2DMSArray;
+		public Texture2DMsArraySrv Texture2DMSArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
 		[FieldOffset(0)]
-		public Tex3dSrv Texture3D;
+		public Texture3DSrv Texture3D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCube"]/*' />
 		[FieldOffset(0)]
-		public TexcubeSrv TextureCube;
+		public TexureCubeSrv TextureCube;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCubeArray"]/*' />
 		[FieldOffset(0)]
-		public TexcubeArraySrv TextureCubeArray;
+		public TexureCubeArraySrv TextureCubeArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::RaytracingAccelerationStructure"]/*' />
 		[FieldOffset(0)]
@@ -8683,7 +8683,7 @@ public partial struct BufferUav
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_UAV"]/*' />
 /// <unmanaged>D3D12_TEX1D_UAV</unmanaged>
-public partial struct Tex1dUav
+public partial struct Texture1DUav
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_UAV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8691,7 +8691,7 @@ public partial struct Tex1dUav
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_UAV</unmanaged>
-public partial struct Tex1dArrayUav
+public partial struct Texture1DArrayUav
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8705,7 +8705,7 @@ public partial struct Tex1dArrayUav
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV"]/*' />
 /// <unmanaged>D3D12_TEX2D_UAV</unmanaged>
-public partial struct Tex2dUav
+public partial struct Texture2DUav
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8716,7 +8716,7 @@ public partial struct Tex2dUav
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_UAV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_UAV</unmanaged>
-public partial struct Tex2dArrayUav
+public partial struct Texture2DArrayUav
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_UAV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8733,7 +8733,7 @@ public partial struct Tex2dArrayUav
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_UAV"]/*' />
 /// <unmanaged>D3D12_TEX3D_UAV</unmanaged>
-public partial struct Tex3dUav
+public partial struct Texture3DUav
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_UAV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8773,7 +8773,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex1dUav Texture1D
+	public ref Texture1DUav Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8787,7 +8787,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex1dArrayUav Texture1DArray
+	public ref Texture1DArrayUav Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8801,7 +8801,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dUav Texture2D
+	public ref Texture2DUav Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8815,7 +8815,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dArrayUav Texture2DArray
+	public ref Texture2DArrayUav Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8829,7 +8829,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex3dUav Texture3D
+	public ref Texture3DUav Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8851,23 +8851,23 @@ public partial struct UnorderedAccessViewDescription
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
 		[FieldOffset(0)]
-		public Tex1dUav Texture1D;
+		public Texture1DUav Texture1D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
 		[FieldOffset(0)]
-		public Tex1dArrayUav Texture1DArray;
+		public Texture1DArrayUav Texture1DArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
-		public Tex2dUav Texture2D;
+		public Texture2DUav Texture2D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
-		public Tex2dArrayUav Texture2DArray;
+		public Texture2DArrayUav Texture2DArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
 		[FieldOffset(0)]
-		public Tex3dUav Texture3D;
+		public Texture3DUav Texture3D;
 	}
 
 }
@@ -8885,7 +8885,7 @@ public partial struct BufferRtv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_RTV"]/*' />
 /// <unmanaged>D3D12_TEX1D_RTV</unmanaged>
-public partial struct Tex1dRtv
+public partial struct Texture1DRtv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_RTV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8893,7 +8893,7 @@ public partial struct Tex1dRtv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_RTV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_RTV</unmanaged>
-public partial struct Tex1dArrayRtv
+public partial struct Texture1DArrayRtv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_RTV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8907,7 +8907,7 @@ public partial struct Tex1dArrayRtv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2D_RTV</unmanaged>
-public partial struct Tex2dRtv
+public partial struct Texture2DRtv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8918,7 +8918,7 @@ public partial struct Tex2dRtv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_RTV</unmanaged>
-public partial struct Tex2dmsRtv
+public partial struct Texture2DMsRtv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_RTV::UnusedField_NothingToDefine"]/*' />
 	public uint UnusedField_NothingToDefine;
@@ -8926,7 +8926,7 @@ public partial struct Tex2dmsRtv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_RTV</unmanaged>
-public partial struct Tex2dArrayRtv
+public partial struct Texture2DArrayRtv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8943,7 +8943,7 @@ public partial struct Tex2dArrayRtv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_ARRAY_RTV</unmanaged>
-public partial struct Tex2dmsArrayRtv
+public partial struct Texture2DMsArrayRtv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_RTV::FirstArraySlice"]/*' />
 	public uint FirstArraySlice;
@@ -8954,7 +8954,7 @@ public partial struct Tex2dmsArrayRtv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_RTV"]/*' />
 /// <unmanaged>D3D12_TEX3D_RTV</unmanaged>
-public partial struct Tex3dRtv
+public partial struct Texture3DRtv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_RTV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -8994,7 +8994,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex1dRtv Texture1D
+	public ref Texture1DRtv Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9008,7 +9008,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex1dArrayRtv Texture1DArray
+	public ref Texture1DArrayRtv Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9022,7 +9022,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dRtv Texture2D
+	public ref Texture2DRtv Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9036,7 +9036,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dArrayRtv Texture2DArray
+	public ref Texture2DArrayRtv Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9050,7 +9050,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dmsRtv Texture2DMS
+	public ref Texture2DMsRtv Texture2DMS
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9064,7 +9064,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dmsArrayRtv Texture2DMSArray
+	public ref Texture2DMsArrayRtv Texture2DMSArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9078,7 +9078,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex3dRtv Texture3D
+	public ref Texture3DRtv Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9100,38 +9100,38 @@ public partial struct RenderTargetViewDescription
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
 		[FieldOffset(0)]
-		public Tex1dRtv Texture1D;
+		public Texture1DRtv Texture1D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
 		[FieldOffset(0)]
-		public Tex1dArrayRtv Texture1DArray;
+		public Texture1DArrayRtv Texture1DArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
-		public Tex2dRtv Texture2D;
+		public Texture2DRtv Texture2D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
-		public Tex2dArrayRtv Texture2DArray;
+		public Texture2DArrayRtv Texture2DArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
 		[FieldOffset(0)]
-		public Tex2dmsRtv Texture2DMS;
+		public Texture2DMsRtv Texture2DMS;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
 		[FieldOffset(0)]
-		public Tex2dmsArrayRtv Texture2DMSArray;
+		public Texture2DMsArrayRtv Texture2DMSArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
 		[FieldOffset(0)]
-		public Tex3dRtv Texture3D;
+		public Texture3DRtv Texture3D;
 	}
 
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_DSV"]/*' />
 /// <unmanaged>D3D12_TEX1D_DSV</unmanaged>
-public partial struct Tex1dDsv
+public partial struct Texture1DDsv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_DSV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -9139,7 +9139,7 @@ public partial struct Tex1dDsv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_DSV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_DSV</unmanaged>
-public partial struct Tex1dArrayDsv
+public partial struct Texture1DArrayDsv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_DSV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -9153,7 +9153,7 @@ public partial struct Tex1dArrayDsv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2D_DSV</unmanaged>
-public partial struct Tex2dDsv
+public partial struct Texture2DDsv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_DSV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -9161,7 +9161,7 @@ public partial struct Tex2dDsv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_DSV</unmanaged>
-public partial struct Tex2dArrayDsv
+public partial struct Texture2DArrayDsv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_DSV::MipSlice"]/*' />
 	public uint MipSlice;
@@ -9175,7 +9175,7 @@ public partial struct Tex2dArrayDsv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_DSV</unmanaged>
-public partial struct Tex2dmsDsv
+public partial struct Texture2DMsDsv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_DSV::UnusedField_NothingToDefine"]/*' />
 	public uint UnusedField_NothingToDefine;
@@ -9183,7 +9183,7 @@ public partial struct Tex2dmsDsv
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_ARRAY_DSV</unmanaged>
-public partial struct Tex2dmsArrayDsv
+public partial struct Texture2DMsArrayDsv
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_DSV::FirstArraySlice"]/*' />
 	public uint FirstArraySlice;
@@ -9209,7 +9209,7 @@ public partial struct DepthStencilViewDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Tex1dDsv Texture1D
+	public ref Texture1DDsv Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9223,7 +9223,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex1dArrayDsv Texture1DArray
+	public ref Texture1DArrayDsv Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9237,7 +9237,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dDsv Texture2D
+	public ref Texture2DDsv Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9251,7 +9251,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dArrayDsv Texture2DArray
+	public ref Texture2DArrayDsv Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9265,7 +9265,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dmsDsv Texture2DMS
+	public ref Texture2DMsDsv Texture2DMS
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9279,7 +9279,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Tex2dmsArrayDsv Texture2DMSArray
+	public ref Texture2DMsArrayDsv Texture2DMSArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9297,27 +9297,27 @@ public partial struct DepthStencilViewDescription
 	{
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
 		[FieldOffset(0)]
-		public Tex1dDsv Texture1D;
+		public Texture1DDsv Texture1D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
 		[FieldOffset(0)]
-		public Tex1dArrayDsv Texture1DArray;
+		public Texture1DArrayDsv Texture1DArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
-		public Tex2dDsv Texture2D;
+		public Texture2DDsv Texture2D;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
-		public Tex2dArrayDsv Texture2DArray;
+		public Texture2DArrayDsv Texture2DArray;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
 		[FieldOffset(0)]
-		public Tex2dmsDsv Texture2DMS;
+		public Texture2DMsDsv Texture2DMS;
 
 		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
 		[FieldOffset(0)]
-		public Tex2dmsArrayDsv Texture2DMSArray;
+		public Texture2DMsArrayDsv Texture2DMSArray;
 	}
 
 }
@@ -28316,6 +28316,7 @@ public unsafe partial struct ID3D12FunctionParameterReflection
 }
 
 #endregion Com Types
+
 #region Functions
 public static unsafe partial class Apis
 {

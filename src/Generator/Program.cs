@@ -167,6 +167,11 @@ public static class Program
         { "GETDATA", "GetData" },
         { "DONOTFLUSH", "DoNotFlush" },
         { "PREDICATEHINT", "PredicateHint" },
+        { "TEX1D", "Texture1D" },
+        { "TEX2D", "Texture2D" },
+        { "TEX3D", "Texture3D" },
+        { "TEX2DMS", "Texture2DMs" },
+        { "TEXCUBE", "TexureCube" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -217,6 +222,9 @@ public static class Program
         "GDI",
         "IA",
         "SO",
+        "D3D",
+        "D3D11",
+        "D3D12",
     };
 
     private static readonly Dictionary<string, string> s_typesNameRemap = new()
@@ -259,8 +267,16 @@ public static class Program
         { "D3D11_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D11_COLOR_WRITE_ENABLE" },
         { "D3D11_RENDER_TARGET_BLEND_DESC1::RenderTargetWriteMask", "D3D11_COLOR_WRITE_ENABLE" },
         { "D3D11_DEPTH_STENCIL_VIEW_DESC::Flags", "D3D11_DSV_FLAG" },
+        { "D3D11_BUFFER_UAV::Flags", "D3D11_BUFFER_UAV_FLAG" },
+        { "D3D11_BUFFEREX_SRV::Flags", "D3D11_BUFFEREX_SRV_FLAG" },
 
+        // D3D12
         { "D3D12_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D12_COLOR_WRITE_ENABLE" },
+    };
+
+    private static readonly Dictionary<string, string> s_mapFunctionParameters = new()
+    {
+        { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" }
     };
 
     private static readonly HashSet<string> s_visitedEnums = new();
@@ -462,7 +478,8 @@ public static class Program
         writer.WriteLine($"#region Unions");
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
         {
-            if (structType.Name.StartsWith("D3DX11"))
+            if (structType.Name.StartsWith("D3DX11") ||
+                structType.Name.StartsWith("CD3D11"))
             {
                 continue;
             }
@@ -483,7 +500,8 @@ public static class Program
         writer.WriteLine($"#region Structs");
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
-            if (structType.Name.StartsWith("D3DX11"))
+            if (structType.Name.StartsWith("D3DX11") ||
+                structType.Name.StartsWith("CD3D11"))
             {
                 continue;
             }
@@ -516,14 +534,14 @@ public static class Program
             {
                 iterateType = api.Types.First(item => item.Name == iterateType.Interface.Name);
 
-                foreach (var method in iterateType.Methods)
+                foreach (ApiFunction method in iterateType.Methods)
                 {
                     methodsToGenerate.Add(new(method, iterateType.Name));
                 }
 
             }
 
-            foreach (var method in comType.Methods)
+            foreach (ApiFunction method in comType.Methods)
             {
                 methodsToGenerate.Add(new(method, comType.Name));
             }
@@ -532,6 +550,7 @@ public static class Program
         }
 
         writer.WriteLine($"#endregion Com Types");
+        writer.WriteLine();
     }
 
     private static void GenerateFunctions(CodeWriter writer, ApiData api)
@@ -1130,9 +1149,9 @@ public static class Program
                 vtblIndex = 3;
             }
 
-            foreach (var methodPair in methodsToGenerate)
+            foreach (KeyValuePair<ApiFunction, string> methodPair in methodsToGenerate)
             {
-                var method = methodPair.Key;
+                ApiFunction method = methodPair.Key;
                 string docName = methodPair.Value;
 
                 // TODO: Handle inherit
@@ -1148,13 +1167,8 @@ public static class Program
                     Console.WriteLine();
                 }
 
-                foreach (var parameter in method.Params)
+                foreach (ApiParameter parameter in method.Params)
                 {
-                    if (method.Name == "SetBreakOnSeverity")
-                    {
-
-                    }
-
                     bool asPointer = false;
                     string parameterType = default;
                     if (parameter.Type.Kind == "ApiRef")
@@ -1176,7 +1190,15 @@ public static class Program
 
                     if (string.IsNullOrEmpty(parameterType))
                     {
-                        parameterType = GetTypeName(parameter.Type, asPointer);
+                        string parameterNameLookup = $"{comType.Name}::{method.Name}::{parameter.Name}";
+                        if (s_mapFunctionParameters.TryGetValue(parameterNameLookup, out string? remapType))
+                        {
+                            parameterType = GetTypeName($"{writer.Api}.{remapType}");
+                        }
+                        else
+                        {
+                            parameterType = GetTypeName(parameter.Type, asPointer);
+                        }
                     }
 
                     parameterType = NormalizeTypeName(writer.Api, parameterType);

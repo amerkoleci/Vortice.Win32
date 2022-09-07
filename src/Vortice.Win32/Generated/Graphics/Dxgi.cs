@@ -11147,6 +11147,7 @@ public unsafe partial struct IDXGraphicsAnalysis
 }
 
 #endregion Com Types
+
 #region Functions
 public static unsafe partial class Apis
 {

@@ -1271,3 +1271,4 @@ public unsafe partial struct ID3DInclude
 }
 
 #endregion Com Types
+
