@@ -241,6 +241,17 @@ public unsafe struct ComPtr<T> : IDisposable
         return (T**)Unsafe.AsPointer(ref Unsafe.AsRef(in this));
     }
 
+    /// <summary>
+    /// Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <see langword="void"/> double pointer.
+    /// </summary>
+    /// <returns>The raw pointer to the input <see cref="ComPtr{T}"/> instance.</returns>
+    /// <remarks>This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.</remarks>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public unsafe void** GetVoidAddressOf()
+    {
+        return (void**)Unsafe.AsPointer(ref Unsafe.AsRef(in this));
+    }
+
     /// <summary>Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer.</summary>
     /// <returns>The raw pointer to the current <see cref="ComPtr{T}"/> instance.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]

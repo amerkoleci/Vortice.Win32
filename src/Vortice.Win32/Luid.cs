@@ -1,6 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using System;
 using System.Runtime.CompilerServices;
 
 namespace Win32;
@@ -8,7 +9,7 @@ namespace Win32;
 /// <summary>
 /// A locally unique identifier for a graphics device.
 /// </summary>
-public readonly struct Luid : IEquatable<Luid>
+public struct Luid : IEquatable<Luid>
 #if NET6_0_OR_GREATER
     , ISpanFormattable
 #endif
@@ -16,20 +17,20 @@ public readonly struct Luid : IEquatable<Luid>
     /// <summary>
     /// The low bits of the luid.
     /// </summary>
-    private readonly uint _lowPart;
+    public uint LowPart;
 
     /// <summary>
     /// The high bits of the luid.
     /// </summary>
-    private readonly int _highPart;
+    public int HighPart;
 
     /// <inheritdoc/>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public bool Equals(Luid other)
     {
         return
-            _lowPart == other._lowPart &&
-            _highPart == other._highPart;
+            LowPart == other.LowPart &&
+            HighPart == other.HighPart;
     }
 
     /// <inheritdoc/>
@@ -42,26 +43,45 @@ public readonly struct Luid : IEquatable<Luid>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public override int GetHashCode()
     {
-        return HashCode.Combine(_lowPart, _highPart);
+        return HashCode.Combine(LowPart, HighPart);
     }
 
     /// <inheritdoc/>
     public override string ToString()
     {
-        return (((long)this._highPart) << 32 | this._lowPart).ToString();
+        return (((long)HighPart) << 32 | LowPart).ToString();
+    }
+
+    public long ToInt64()
+    {
+        LargeInterger val = new();
+        val.Anonymous.LowPart = LowPart;
+        val.Anonymous.HighPart = HighPart;
+        return val.QuadPart;
+    }
+
+    public static Luid FromInt64(long Int64)
+    {
+        LargeInterger val = new();
+        val.QuadPart = Int64;
+
+        Luid luid = new();
+        luid.LowPart = val.Anonymous.LowPart;
+        luid.HighPart = val.Anonymous.HighPart;
+        return luid;
     }
 
 #if NET6_0_OR_GREATER
     /// <inheritdoc/>
     public string ToString(string? format, IFormatProvider? formatProvider)
     {
-        return (((long)_highPart) << 32 | _lowPart).ToString(format, formatProvider);
+        return (((long)HighPart) << 32 | LowPart).ToString(format, formatProvider);
     }
 
     /// <inheritdoc/>
     public bool TryFormat(Span<char> destination, out int charsWritten, ReadOnlySpan<char> format, IFormatProvider? provider)
     {
-        return (((long)_highPart) << 32 | _lowPart).TryFormat(destination, out charsWritten, format, provider);
+        return (((long)HighPart) << 32 | LowPart).TryFormat(destination, out charsWritten, format, provider);
     }
 #endif
 

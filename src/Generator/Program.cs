@@ -15,7 +15,8 @@ public static class Program
         "Graphics.Dxgi.Common.json",
         "Graphics.Dxgi.json",
         "Graphics.Direct3D.json",
-        "Graphics.Direct3D11.json"
+        "Graphics.Direct3D11.json",
+        "Graphics.Direct3D12.json",
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -196,6 +197,7 @@ public static class Program
         "D3D",
         "D3D10",
         "D3D11",
+        "D3D12",
     };
 
     private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
@@ -771,6 +773,10 @@ public static class Program
                 {
                     fieldValueName = "Buffer";
                 }
+                else if (structType.Name == "D3D12_NODE_MASK")
+                {
+                    fieldValueName = "Mask";
+                }
 
                 string fieldTypeName = GetTypeName(field.Type);
 
@@ -814,7 +820,9 @@ public static class Program
 
                         using (writer.PushBlock($"public unsafe struct {fieldValueName}__FixedBuffer"))
                         {
-                            for (int i = 0; i < field.Type.Shape.Size; i++)
+                            int arraySize = field.Type.Shape != null ? field.Type.Shape.Size : 1;
+
+                            for (int i = 0; i < arraySize; i++)
                             {
                                 writer.WriteLine($"public {fieldTypeName} e{i};");
                             }
@@ -835,7 +843,7 @@ public static class Program
                             writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
                             using (writer.PushBlock($"public Span<{fieldTypeName}> AsSpan()"))
                             {
-                                writer.WriteLine($"return MemoryMarshal.CreateSpan(ref e0, {field.Type.Shape.Size});");
+                                writer.WriteLine($"return MemoryMarshal.CreateSpan(ref e0, {arraySize});");
                             }
                         }
                     }
@@ -877,6 +885,8 @@ public static class Program
                         {
                             ApiStructField parentMemberAccess = structType.Fields.First(item => item.Type.Name == nestedTypeToGenerate.Name);
                             string fieldTypeName = GetTypeName(field.Type);
+                            fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
+
                             string fieldName = GetPrettyFieldName(field.Name, structPrefix);
 
                             writer.WriteLine("[UnscopedRef]");
@@ -895,7 +905,18 @@ public static class Program
                             }
                             else
                             {
-                                using (writer.PushBlock($"public ref {fieldTypeName} {fieldName}"))
+                                if (fieldName == "pGeometryDescs")
+                                {
+
+                                }
+
+                                string unsafePrefix = string.Empty;
+                                if (fieldTypeName.EndsWith("*"))
+                                {
+                                    unsafePrefix += "unsafe ";
+                                }
+
+                                using (writer.PushBlock($"public {unsafePrefix}ref {fieldTypeName} {fieldName}"))
                                 {
                                     writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
                                     using (writer.PushBlock("get"))
@@ -903,7 +924,15 @@ public static class Program
                                         writer.WriteLineUndindented("#if NET7_0_OR_GREATER");
                                         writer.WriteLine($"return ref {parentMemberAccess.Name}.{fieldName};");
                                         writer.WriteLineUndindented("#else");
-                                        writer.WriteLine($"return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref {parentMemberAccess.Name}.{fieldName}, 1));");
+                                        if (fieldTypeName.EndsWith("*"))
+                                        {
+                                            writer.WriteLine($"return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref this, 1)).{parentMemberAccess.Name}.{fieldName};");
+                                        }
+                                        else
+                                        {
+                                            writer.WriteLine($"return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref {parentMemberAccess.Name}.{fieldName}, 1));");
+                                        }
+
                                         writer.WriteLineUndindented("#endif");
                                     }
                                 }
@@ -1277,15 +1306,21 @@ public static class Program
                 {
                     sb.Append(partRemap!);
                 }
-                else if (part.StartsWith("DESC", StringComparison.OrdinalIgnoreCase))
+                else if (part == "DESC")
                 {
                     sb.Append("Description");
-                    string numericPart = part.Replace("DESC", string.Empty);
-                    if (string.IsNullOrEmpty(numericPart) == false &&
-                        int.TryParse(numericPart, out int numericValue))
-                    {
-                        sb.Append(numericValue);
-                    }
+                }
+                else if (part == "DESC1")
+                {
+                    sb.Append("Description1");
+                }
+                else if (part == "DESC2")
+                {
+                    sb.Append("Description2");
+                }
+                else if (part == "DESC3")
+                {
+                    sb.Append("Description3");
                 }
                 else
                 {
@@ -1487,7 +1522,14 @@ public static class Program
     {
         if (dataType.Kind == "ApiRef")
         {
-            string typeName = GetTypeName($"{dataType.Api}.{dataType.Name}");
+            string apiName = dataType.Api;
+            if (dataType.Parents?.Length > 0)
+            {
+                apiName += ".";
+                apiName += string.Join(".", dataType.Parents);
+            }
+
+            string typeName = GetTypeName($"{apiName}.{dataType.Name}");
             return asPointer ? typeName + "*" : typeName;
         }
         else if (dataType.Kind == "Array")

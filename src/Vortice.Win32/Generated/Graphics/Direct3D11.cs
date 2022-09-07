@@ -7743,7 +7743,7 @@ public partial struct ShaderResourceViewDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.BufferSrv Buffer
+	public ref BufferSrv Buffer
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7757,7 +7757,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dSrv Texture1D
+	public ref Tex1dSrv Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7771,7 +7771,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dArraySrv Texture1DArray
+	public ref Tex1dArraySrv Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7785,7 +7785,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dSrv Texture2D
+	public ref Tex2dSrv Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7799,7 +7799,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dArraySrv Texture2DArray
+	public ref Tex2dArraySrv Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7813,7 +7813,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsSrv Texture2DMS
+	public ref Tex2dmsSrv Texture2DMS
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7827,7 +7827,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsArraySrv Texture2DMSArray
+	public ref Tex2dmsArraySrv Texture2DMSArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7841,7 +7841,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex3dSrv Texture3D
+	public ref Tex3dSrv Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7855,7 +7855,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.TexcubeSrv TextureCube
+	public ref TexcubeSrv TextureCube
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7869,7 +7869,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.TexcubeArraySrv TextureCubeArray
+	public ref TexcubeArraySrv TextureCubeArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -7883,7 +7883,7 @@ public partial struct ShaderResourceViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.BufferExtendedSrv BufferEx
+	public ref BufferExtendedSrv BufferEx
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8129,7 +8129,7 @@ public partial struct RenderTargetViewDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.BufferRtv Buffer
+	public ref BufferRtv Buffer
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8143,7 +8143,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dRtv Texture1D
+	public ref Tex1dRtv Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8157,7 +8157,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dArrayRtv Texture1DArray
+	public ref Tex1dArrayRtv Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8171,7 +8171,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dRtv Texture2D
+	public ref Tex2dRtv Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8185,7 +8185,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dArrayRtv Texture2DArray
+	public ref Tex2dArrayRtv Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8199,7 +8199,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsRtv Texture2DMS
+	public ref Tex2dmsRtv Texture2DMS
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8213,7 +8213,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsArrayRtv Texture2DMSArray
+	public ref Tex2dmsArrayRtv Texture2DMSArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8227,7 +8227,7 @@ public partial struct RenderTargetViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex3dRtv Texture3D
+	public ref Tex3dRtv Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8358,7 +8358,7 @@ public partial struct DepthStencilViewDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dDsv Texture1D
+	public ref Tex1dDsv Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8372,7 +8372,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dArrayDsv Texture1DArray
+	public ref Tex1dArrayDsv Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8386,7 +8386,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dDsv Texture2D
+	public ref Tex2dDsv Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8400,7 +8400,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dArrayDsv Texture2DArray
+	public ref Tex2dArrayDsv Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8414,7 +8414,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsDsv Texture2DMS
+	public ref Tex2dmsDsv Texture2DMS
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8428,7 +8428,7 @@ public partial struct DepthStencilViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsArrayDsv Texture2DMSArray
+	public ref Tex2dmsArrayDsv Texture2DMSArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8557,7 +8557,7 @@ public partial struct UnorderedAccessViewDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.BufferUav Buffer
+	public ref BufferUav Buffer
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8571,7 +8571,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dUav Texture1D
+	public ref Tex1dUav Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8585,7 +8585,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dArrayUav Texture1DArray
+	public ref Tex1dArrayUav Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8599,7 +8599,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dUav Texture2D
+	public ref Tex2dUav Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8613,7 +8613,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dArrayUav Texture2DArray
+	public ref Tex2dArrayUav Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -8627,7 +8627,7 @@ public partial struct UnorderedAccessViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex3dUav Texture3D
+	public ref Tex3dUav Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9437,7 +9437,7 @@ public partial struct VideoColor
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.VideoColorYcbcra YCbCr
+	public ref VideoColorYcbcra YCbCr
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9451,7 +9451,7 @@ public partial struct VideoColor
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.VideoColorRgba RGBA
+	public ref VideoColorRgba RGBA
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9938,7 +9938,7 @@ public partial struct VideoDecoderOutputViewDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dVdov Texture2D
+	public ref Tex2dVdov Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -9986,7 +9986,7 @@ public partial struct VideoProcessorInputViewDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dVpiv Texture2D
+	public ref Tex2dVpiv Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10042,7 +10042,7 @@ public partial struct VideoProcessorOutputViewDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dVpov Texture2D
+	public ref Tex2dVpov Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10056,7 +10056,7 @@ public partial struct VideoProcessorOutputViewDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dArrayVpov Texture2DArray
+	public ref Tex2dArrayVpov Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10648,7 +10648,7 @@ public partial struct ShaderResourceViewDescription1
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.BufferSrv Buffer
+	public ref BufferSrv Buffer
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10662,7 +10662,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dSrv Texture1D
+	public ref Tex1dSrv Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10676,7 +10676,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dArraySrv Texture1DArray
+	public ref Tex1dArraySrv Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10690,7 +10690,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dSrv1 Texture2D
+	public ref Tex2dSrv1 Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10704,7 +10704,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dArraySrv1 Texture2DArray
+	public ref Tex2dArraySrv1 Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10718,7 +10718,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsSrv Texture2DMS
+	public ref Tex2dmsSrv Texture2DMS
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10732,7 +10732,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsArraySrv Texture2DMSArray
+	public ref Tex2dmsArraySrv Texture2DMSArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10746,7 +10746,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex3dSrv Texture3D
+	public ref Tex3dSrv Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10760,7 +10760,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.TexcubeSrv TextureCube
+	public ref TexcubeSrv TextureCube
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10774,7 +10774,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.TexcubeArraySrv TextureCubeArray
+	public ref TexcubeArraySrv TextureCubeArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10788,7 +10788,7 @@ public partial struct ShaderResourceViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.BufferExtendedSrv BufferEx
+	public ref BufferExtendedSrv BufferEx
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10893,7 +10893,7 @@ public partial struct RenderTargetViewDescription1
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.BufferRtv Buffer
+	public ref BufferRtv Buffer
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10907,7 +10907,7 @@ public partial struct RenderTargetViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dRtv Texture1D
+	public ref Tex1dRtv Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10921,7 +10921,7 @@ public partial struct RenderTargetViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dArrayRtv Texture1DArray
+	public ref Tex1dArrayRtv Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10935,7 +10935,7 @@ public partial struct RenderTargetViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dRtv1 Texture2D
+	public ref Tex2dRtv1 Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10949,7 +10949,7 @@ public partial struct RenderTargetViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dArrayRtv1 Texture2DArray
+	public ref Tex2dArrayRtv1 Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10963,7 +10963,7 @@ public partial struct RenderTargetViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsRtv Texture2DMS
+	public ref Tex2dmsRtv Texture2DMS
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10977,7 +10977,7 @@ public partial struct RenderTargetViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dmsArrayRtv Texture2DMSArray
+	public ref Tex2dmsArrayRtv Texture2DMSArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -10991,7 +10991,7 @@ public partial struct RenderTargetViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex3dRtv Texture3D
+	public ref Tex3dRtv Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11084,7 +11084,7 @@ public partial struct UnorderedAccessViewDescription1
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.BufferUav Buffer
+	public ref BufferUav Buffer
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11098,7 +11098,7 @@ public partial struct UnorderedAccessViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dUav Texture1D
+	public ref Tex1dUav Texture1D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11112,7 +11112,7 @@ public partial struct UnorderedAccessViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex1dArrayUav Texture1DArray
+	public ref Tex1dArrayUav Texture1DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11126,7 +11126,7 @@ public partial struct UnorderedAccessViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dUav1 Texture2D
+	public ref Tex2dUav1 Texture2D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11140,7 +11140,7 @@ public partial struct UnorderedAccessViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex2dArrayUav1 Texture2DArray
+	public ref Tex2dArrayUav1 Texture2DArray
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11154,7 +11154,7 @@ public partial struct UnorderedAccessViewDescription1
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.Tex3dUav Texture3D
+	public ref Tex3dUav Texture3D
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11765,7 +11765,7 @@ public partial struct ShaderTraceDescription
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.VertexShaderTraceDescription VertexShaderTraceDesc
+	public ref VertexShaderTraceDescription VertexShaderTraceDesc
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11779,7 +11779,7 @@ public partial struct ShaderTraceDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.HullShaderTraceDescription HullShaderTraceDesc
+	public ref HullShaderTraceDescription HullShaderTraceDesc
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11793,7 +11793,7 @@ public partial struct ShaderTraceDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.DomainShaderTraceDescription DomainShaderTraceDesc
+	public ref DomainShaderTraceDescription DomainShaderTraceDesc
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11807,7 +11807,7 @@ public partial struct ShaderTraceDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.GeometryShaderTraceDescription GeometryShaderTraceDesc
+	public ref GeometryShaderTraceDescription GeometryShaderTraceDesc
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11821,7 +11821,7 @@ public partial struct ShaderTraceDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.PixelShaderTraceDescription PixelShaderTraceDesc
+	public ref PixelShaderTraceDescription PixelShaderTraceDesc
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
@@ -11835,7 +11835,7 @@ public partial struct ShaderTraceDescription
 	}
 
 	[UnscopedRef]
-	public ref Graphics.Direct3D11.ComputeShaderTraceDescription ComputeShaderTraceDesc
+	public ref ComputeShaderTraceDescription ComputeShaderTraceDesc
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get

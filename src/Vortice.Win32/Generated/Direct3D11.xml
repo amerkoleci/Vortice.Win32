@@ -11394,7 +11394,7 @@
       <para>
         Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//d3d11shader/nf-d3d11shader-id3d11shaderreflection-getminfeaturelevel" />
       </para>
-      <param name="unnamedParam1">
+      <param name="pLevel">
         A pointer to one of the enumerated values in <a href="https://docs.microsoft.com/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_feature_level">D3D_FEATURE_LEVEL</a>, which represents the minimum feature level.
       </param>
     </summary>
@@ -13721,7 +13721,7 @@
   <member name="ID3D11ShaderTrace::GetInitialRegisterContents">
     <summary>
       <para>Retrieves the initial contents of the specified input register.</para>
-      <para>
+      <para name="pRegister">
         Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//d3d11shadertracing/nf-d3d11shadertracing-id3d11shadertrace-getinitialregistercontents" />
       </para>
       <param name="pValue">
