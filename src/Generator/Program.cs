@@ -98,8 +98,13 @@ public static class Program
         { "D3D_SHADER_INPUT_TYPE", "D3D_SIT" },
         { "D3D_SHADER_CBUFFER_FLAGS", "D3D_CBF" },
 
-        // D3D11 -> handled in code
-        // D3D12 -> handled in code
+        // D3D11 -> most is handled in code
+        { "D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE", "D3D11_PROCESSIDTYPE" },
+
+        // D3D12 -> most is handled in code
+        { "D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS", "D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG" },
+        { "D3D12_SHADER_CACHE_SUPPORT_FLAGS", "D3D12_SHADER_CACHE_SUPPORT" },
+        { "D3D12_RESOURCE_STATES", "D3D12_RESOURCE_STATE" },
     };
 
     private static readonly Dictionary<string, string> s_partRenames = new()
@@ -170,6 +175,13 @@ public static class Program
         { "TEX3D", "Texture3D" },
         { "TEX2DMS", "Texture2DMs" },
         { "TEXCUBE", "TexureCube" },
+
+        //{ "IB", "Ib" },
+        { "SINGLETHREADED", "SingleThreaded" },
+        { "SUBOBJECT", "SubObject" },
+        { "GROUPSHARED", "GroupShared" },
+        { "DEVICEMEMORY", "DeviceMemory" },
+        { "WRITEBUFFERIMMEDIATE", "WriteBufferImmediate" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -181,12 +193,17 @@ public static class Program
         // D3D11
         { "D3D11_STANDARD_MULTISAMPLE_PATTERN", "Standard" },
         { "D3D11_CENTER_MULTISAMPLE_PATTERN", "Center" },
-        { "D3D11_SHADER_MIN_PRECISION_10_BIT", "Bit10" },
-        { "D3D11_SHADER_MIN_PRECISION_16_BIT", "Bit16" },
-        { "D3D11_SHARED_RESOURCE_TIER_0", "Tier0" },
-        { "D3D11_SHARED_RESOURCE_TIER_1", "Tier1" },
-        { "D3D11_SHARED_RESOURCE_TIER_2", "Tier2" },
-        { "D3D11_SHARED_RESOURCE_TIER_3", "Tier3" },
+        { "D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_16_235", "Range_16_235" },
+        { "D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_0_255", "Range_0_255" },
+
+        // D3D12
+        { "D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFF", "I16Bits" },
+        { "D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFFFFFF", "I32Bits" },
+        { "D3D_ROOT_SIGNATURE_VERSION_1_0", "V1_0" },
+        { "D3D_ROOT_SIGNATURE_VERSION_1_1", "V1_1" },
+        { "D3D12_TEXTURE_LAYOUT_64KB_UNDEFINED_SWIZZLE", "L64KbUndefinedSwizzle" },
+        { "D3D12_TEXTURE_LAYOUT_64KB_STANDARD_SWIZZLE", "L64KbStandardSwizzle" },
+        { "D3D12_ROOT_PARAMETER_TYPE_32BIT_CONSTANTS", "T32BitConstants" },
     };
 
     private static readonly Dictionary<string, bool> s_generatedEnums = new()
@@ -220,6 +237,14 @@ public static class Program
         "GDI",
         "IA",
         "SO",
+        "VS",
+        "PS",
+        "DS",
+        "GS",
+        "HS",
+        "CS",
+        "AS",
+        "MS",
         "D3D",
         "D3D11",
         "D3D12",
@@ -231,6 +256,10 @@ public static class Program
         { "DXGI_MAP", "MapFlags" },
         { "DXGI_ENUM_MODES", "EnumModesFlags" },
         { "DXGI_MWA", "WindowAssociationFlags" },
+
+        // D3D11
+        { "D3D11_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
+        { "D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG", "CreateDeviceContextStateFlags" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -702,11 +731,6 @@ public static class Program
             baseTypeName = "byte";
         }
 
-        if (enumType.Name == "DXGI_ADAPTER_FLAG")
-        {
-
-        }
-
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
         {
             if (isFlags &&
@@ -718,7 +742,8 @@ public static class Program
             foreach (ApiEnumValue enumItem in enumType.Values)
             {
                 if (enumItem.Name.EndsWith("_FORCE_DWORD") ||
-                    enumItem.Name.EndsWith("_FORCE_UINT"))
+                    enumItem.Name.EndsWith("_FORCE_UINT") ||
+                    enumItem.Name == "D3D_ROOT_SIGNATURE_VERSION_1")
                 {
                     continue;
                 }
@@ -1391,7 +1416,12 @@ public static class Program
         }
 
         string prettyName = sb.ToString();
-        return (char.IsNumber(prettyName[0])) ? "_" + prettyName : prettyName;
+        if (char.IsNumber(prettyName[0]))
+        {
+            return "_" + prettyName;
+        }
+
+        return prettyName;
     }
 
     private static string GetPrettyFieldName(string value, string enumPrefix)
@@ -1553,7 +1583,32 @@ public static class Program
             return parts[0];
         }
 
-        return (char.IsNumber(prettyName[0])) ? "_" + prettyName : prettyName;
+        if (char.IsNumber(prettyName[0]))
+        {
+            if (enumPrefix.EndsWith("_TIER"))
+            {
+                if (prettyName.Length == 2) // D3D12_RAYTRACING_TIER_1_0
+                    return "Tier" + prettyName[0] + "_" + prettyName[1];
+
+                return "Tier" + prettyName;
+            }
+            else if (value.EndsWith("_BIT")) // D3D11_SHADER_MIN_PRECISION_10_BIT
+            {
+                return "P" + prettyName;
+            }
+            else if (enumPrefix.EndsWith("_ROTATION")) // D3D11_VIDEO_PROCESSOR_ROTATION
+            {
+                return "Rotation" + prettyName;
+            }
+            else if (enumPrefix.EndsWith("_SHADER_MODEL")) // D3D_SHADER_MODEL
+            {
+                return "SM_" + prettyName[0] + "_" + prettyName[1];
+            }
+
+            return "_" + prettyName;
+        }
+
+        return prettyName;
     }
 
     private static string FormatGuid(string value)
@@ -1675,7 +1730,7 @@ public static class Program
 
     private static bool IsStruct(string typeName)
     {
-        switch(typeName)
+        switch (typeName)
         {
             case "Foundation.RECT":
                 return true;

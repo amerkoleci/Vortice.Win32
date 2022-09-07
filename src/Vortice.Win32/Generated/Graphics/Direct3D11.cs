@@ -1593,10 +1593,10 @@ public enum ShaderMinPrecisionSupport : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_10_BIT"]/*' />
 	/// <unmanaged>D3D11_SHADER_MIN_PRECISION_10_BIT</unmanaged>
-	Bit10 = 1,
+	P10Bit = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_16_BIT"]/*' />
 	/// <unmanaged>D3D11_SHADER_MIN_PRECISION_16_BIT</unmanaged>
-	Bit16 = 2,
+	P16Bit = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER"]/*' />
@@ -1608,13 +1608,13 @@ public enum TiledResourcesTier : int
 	NotSupported = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER::D3D11_TILED_RESOURCES_TIER_1"]/*' />
 	/// <unmanaged>D3D11_TILED_RESOURCES_TIER_1</unmanaged>
-	_1 = 1,
+	Tier1 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER::D3D11_TILED_RESOURCES_TIER_2"]/*' />
 	/// <unmanaged>D3D11_TILED_RESOURCES_TIER_2</unmanaged>
-	_2 = 2,
+	Tier2 = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER::D3D11_TILED_RESOURCES_TIER_3"]/*' />
 	/// <unmanaged>D3D11_TILED_RESOURCES_TIER_3</unmanaged>
-	_3 = 3,
+	Tier3 = 3,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_TIER"]/*' />
@@ -1626,13 +1626,13 @@ public enum ConservativeRasterizationTier : int
 	NotSupported = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_TIER::D3D11_CONSERVATIVE_RASTERIZATION_TIER_1"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_TIER_1</unmanaged>
-	_1 = 1,
+	Tier1 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_TIER::D3D11_CONSERVATIVE_RASTERIZATION_TIER_2"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_TIER_2</unmanaged>
-	_2 = 2,
+	Tier2 = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_TIER::D3D11_CONSERVATIVE_RASTERIZATION_TIER_3"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_TIER_3</unmanaged>
-	_3 = 3,
+	Tier3 = 3,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS"]/*' />
@@ -2059,10 +2059,10 @@ public enum VideoProcessorNominalRange : int
 	Undefined = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_16_235"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_16_235</unmanaged>
-	_16235 = 1,
+	Range_16_235 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_0_255"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_0_255</unmanaged>
-	_0255 = 2,
+	Range_0_255 = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE"]/*' />
@@ -2152,13 +2152,13 @@ public enum VideoProcessorRotation : int
 	Identity = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_90"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION_90</unmanaged>
-	_90 = 1,
+	Rotation90 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_180"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION_180</unmanaged>
-	_180 = 2,
+	Rotation180 = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_270"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION_270</unmanaged>
-	_270 = 3,
+	Rotation270 = 3,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CHANNEL_TYPE"]/*' />
@@ -2182,13 +2182,13 @@ public enum AuthenticatedProcessIdentifierType : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE::D3D11_PROCESSIDTYPE_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_PROCESSIDTYPE_UNKNOWN</unmanaged>
-	D3D11_PROCESSIDTYPE_UNKNOWN = 0,
+	Unknown = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE::D3D11_PROCESSIDTYPE_DWM"]/*' />
 	/// <unmanaged>D3D11_PROCESSIDTYPE_DWM</unmanaged>
-	D3D11_PROCESSIDTYPE_DWM = 1,
+	Dwm = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE::D3D11_PROCESSIDTYPE_HANDLE"]/*' />
 	/// <unmanaged>D3D11_PROCESSIDTYPE_HANDLE</unmanaged>
-	D3D11_PROCESSIDTYPE_HANDLE = 2,
+	Handle = 2,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE"]/*' />
@@ -2277,7 +2277,7 @@ public enum CreateDeviceFlags : uint
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_SINGLETHREADED"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_SINGLETHREADED</unmanaged>
-	Singlethreaded = 1,
+	SingleThreaded = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DEBUG"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_DEBUG</unmanaged>
 	Debug = 2,
@@ -2307,7 +2307,7 @@ public enum CreateDeviceFlags : uint
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RLDO_FLAGS"]/*' />
 /// <unmanaged>D3D11_RLDO_FLAGS</unmanaged>
 [Flags]
-public enum RldoFlags : int
+public enum ReportLiveDeviceObjectFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RLDO_FLAGS::D3D11_RLDO_SUMMARY"]/*' />
@@ -2330,22 +2330,22 @@ public enum ShaderTrackingResourceType : int
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE::D3D11_SHADER_TRACKING_RESOURCE_TYPE_UAV_DEVICEMEMORY"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE_UAV_DEVICEMEMORY</unmanaged>
-	UavDevicememory = 1,
+	UavDeviceMemory = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE::D3D11_SHADER_TRACKING_RESOURCE_TYPE_NON_UAV_DEVICEMEMORY"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE_NON_UAV_DEVICEMEMORY</unmanaged>
-	NonUavDevicememory = 2,
+	NonUavDeviceMemory = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE::D3D11_SHADER_TRACKING_RESOURCE_TYPE_ALL_DEVICEMEMORY"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE_ALL_DEVICEMEMORY</unmanaged>
-	AllDevicememory = 3,
+	AllDeviceMemory = 3,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE::D3D11_SHADER_TRACKING_RESOURCE_TYPE_GROUPSHARED_MEMORY"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE_GROUPSHARED_MEMORY</unmanaged>
-	GroupsharedMemory = 4,
+	GroupSharedMemory = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE::D3D11_SHADER_TRACKING_RESOURCE_TYPE_ALL_SHARED_MEMORY"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE_ALL_SHARED_MEMORY</unmanaged>
 	AllSharedMemory = 5,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE::D3D11_SHADER_TRACKING_RESOURCE_TYPE_GROUPSHARED_NON_UAV"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE_GROUPSHARED_NON_UAV</unmanaged>
-	GroupsharedNonUav = 6,
+	GroupSharedNonUav = 6,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE::D3D11_SHADER_TRACKING_RESOURCE_TYPE_ALL"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE_ALL</unmanaged>
 	All = 7,
@@ -3548,7 +3548,7 @@ public enum MessageId : int
 	DeviceDrawIndexBufferTooSmall = 359,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_GS_INPUT_PRIMITIVE_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_GS_INPUT_PRIMITIVE_MISMATCH</unmanaged>
-	DeviceDrawGsInputPrimitiveMismatch = 360,
+	DeviceDrawGSInputPrimitiveMismatch = 360,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_RESOURCE_RETURN_TYPE_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_RESOURCE_RETURN_TYPE_MISMATCH</unmanaged>
 	DeviceDrawResourceReturnTypeMismatch = 361,
@@ -3713,7 +3713,7 @@ public enum MessageId : int
 	QueryGetDataInvalidCall = 414,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_PS_OUTPUT_TYPE_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_PS_OUTPUT_TYPE_MISMATCH</unmanaged>
-	DeviceDrawPsOutputTypeMismatch = 415,
+	DeviceDrawPSOutputTypeMismatch = 415,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_RESOURCE_FORMAT_GATHER_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_RESOURCE_FORMAT_GATHER_UNSUPPORTED</unmanaged>
 	DeviceDrawResourceFormatGatherUnsupported = 416,
@@ -3833,7 +3833,7 @@ public enum MessageId : int
 	CreateresourceDimensionOutOfRange = 1048588,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERESOURCE_NOT_BINDABLE_AS_SHADER_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERESOURCE_NOT_BINDABLE_AS_SHADER_RESOURCE</unmanaged>
-	CreateresourceNotBindableAsShaderResource = 1048589,
+	CreateresourceNotBindableASShaderResource = 1048589,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_OMSETRENDERTARGETS_TOO_MANY_RENDER_TARGETS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_OMSETRENDERTARGETS_TOO_MANY_RENDER_TARGETS</unmanaged>
 	OmsetrendertargetsTooManyRenderTargets = 1048590,
@@ -3890,7 +3890,7 @@ public enum MessageId : int
 	CreateshaderresourceviewCubesMustHave6Sides = 1048607,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERESOURCE_NOT_BINDABLE_AS_RENDER_TARGET"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERESOURCE_NOT_BINDABLE_AS_RENDER_TARGET</unmanaged>
-	CreateresourceNotBindableAsRenderTarget = 1048608,
+	CreateresourceNotBindableASRenderTarget = 1048608,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERESOURCE_NO_DWORD_INDEX_BUFFER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERESOURCE_NO_DWORD_INDEX_BUFFER</unmanaged>
 	CreateresourceNoDwordIndexBuffer = 1048609,
@@ -4007,7 +4007,7 @@ public enum MessageId : int
 	CreatedeferredcontextInvalidCommandlistflags = 2097161,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEDEFERREDCONTEXT_SINGLETHREADED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEDEFERREDCONTEXT_SINGLETHREADED</unmanaged>
-	CreatedeferredcontextSinglethreaded = 2097162,
+	CreatedeferredcontextSingleThreaded = 2097162,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEDEFERREDCONTEXT_INVALIDARG_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEDEFERREDCONTEXT_INVALIDARG_RETURN</unmanaged>
 	CreatedeferredcontextInvalidargReturn = 2097163,
@@ -4136,7 +4136,7 @@ public enum MessageId : int
 	DeviceDsgetsamplersSamplersEmpty = 2097204,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_HS_XOR_DS_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_HS_XOR_DS_MISMATCH</unmanaged>
-	DeviceDrawHsXorDsMismatch = 2097205,
+	DeviceDrawHSXorDSMismatch = 2097205,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEFERRED_CONTEXT_REMOVAL_PROCESS_AT_FAULT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEFERRED_CONTEXT_REMOVAL_PROCESS_AT_FAULT</unmanaged>
 	DeferredContextRemovalProcessAtFault = 2097206,
@@ -4184,16 +4184,16 @@ public enum MessageId : int
 	DeviceIasetprimitivetopologyTopologyUnsupported = 2097220,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_HS_DS_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_HS_DS_SIGNATURE_MISMATCH</unmanaged>
-	DeviceDrawHsDsSignatureMismatch = 2097221,
+	DeviceDrawHSDSSignatureMismatch = 2097221,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_HULL_SHADER_INPUT_TOPOLOGY_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_HULL_SHADER_INPUT_TOPOLOGY_MISMATCH</unmanaged>
 	DeviceDrawHullShaderInputTopologyMismatch = 2097222,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_HS_DS_CONTROL_POINT_COUNT_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_HS_DS_CONTROL_POINT_COUNT_MISMATCH</unmanaged>
-	DeviceDrawHsDsControlPointCountMismatch = 2097223,
+	DeviceDrawHSDSControlPointCountMismatch = 2097223,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_HS_DS_TESSELLATOR_DOMAIN_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_HS_DS_TESSELLATOR_DOMAIN_MISMATCH</unmanaged>
-	DeviceDrawHsDsTessellatorDomainMismatch = 2097224,
+	DeviceDrawHSDSTessellatorDomainMismatch = 2097224,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_CONTEXT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_CONTEXT</unmanaged>
 	CreateContext = 2097225,
@@ -6508,12 +6508,12 @@ public enum LogicOp : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG"]/*' />
 /// <unmanaged>D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG</unmanaged>
 [Flags]
-public enum _1CreateDeviceContextStateFlags : int
+public enum CreateDeviceContextStateFlags : int
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG::D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED"]/*' />
 	/// <unmanaged>D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED</unmanaged>
-	Singlethreaded = 1,
+	SingleThreaded = 1,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS"]/*' />
@@ -6825,7 +6825,7 @@ public enum ShaderType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE"]/*' />
 /// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE</unmanaged>
-public enum TraceGsInputPrimitive : int
+public enum TraceGSInputPrimitive : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_UNDEFINED"]/*' />
 	/// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE_UNDEFINED</unmanaged>
@@ -11848,7 +11848,7 @@ public partial struct TraceStats
 	public Bool32 PSOutputsMask;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::GSInputPrimitive"]/*' />
-	public TraceGsInputPrimitive GSInputPrimitive;
+	public TraceGSInputPrimitive GSInputPrimitive;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::GSInputsPrimitiveID"]/*' />
 	public Bool32 GSInputsPrimitiveID;
@@ -18249,9 +18249,9 @@ public unsafe partial struct ID3D11Debug
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ReportLiveDeviceObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult ReportLiveDeviceObjects(RldoFlags Flags)
+	public HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, RldoFlags, int>)(lpVtbl[10]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Flags);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[10]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Flags);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ValidateContextForDispatch"]/*' />
