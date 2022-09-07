@@ -1,9 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -276,7 +274,14 @@ public static class Program
 
     private static readonly Dictionary<string, string> s_mapFunctionParameters = new()
     {
-        { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" }
+        // DXGI
+        { "IDXGIDevice::CreateSurface::Usage", "DXGI_USAGE" },
+        { "IDXGIOutput::GetDisplayModeList::Flags", "DXGI_ENUM_MODES" },
+
+        // D3D11
+        { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" },
+
+        // D3D12
     };
 
     private static readonly HashSet<string> s_visitedEnums = new();
@@ -620,7 +625,6 @@ public static class Program
 
             parameterType = NormalizeTypeName(writer.Api, parameterType);
             string parameterName = parameter.Name;
-
 
             bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
             if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
@@ -1162,11 +1166,6 @@ public static class Program
                 StringBuilder argumentsNameBuilder = new();
                 int parameterIndex = 0;
 
-                if (method.Name == "RegisterDestructionCallback")
-                {
-                    Console.WriteLine();
-                }
-
                 foreach (ApiParameter parameter in method.Params)
                 {
                     bool asPointer = false;
@@ -1194,6 +1193,8 @@ public static class Program
                         if (s_mapFunctionParameters.TryGetValue(parameterNameLookup, out string? remapType))
                         {
                             parameterType = GetTypeName($"{writer.Api}.{remapType}");
+
+                            // TODO: Marshal enum types to base type
                         }
                         else
                         {
@@ -1203,6 +1204,11 @@ public static class Program
 
                     parameterType = NormalizeTypeName(writer.Api, parameterType);
                     string parameterName = parameter.Name;
+
+                    if (method.Name == "RSSetScissorRects" && parameterName == "pRects")
+                    {
+
+                    }
 
                     bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
                     if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
@@ -1214,10 +1220,10 @@ public static class Program
                     }
 
                     argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
-                    if (isOptional == true)
-                    {
-                        //argumentBuilder.Append(" = default");
-                    }
+                    //if (isOptional == true)
+                    //{
+                    //argumentBuilder.Append(" = default");
+                    //}
 
                     argumentsTypesBuilder.Append(parameterType);
                     argumentsNameBuilder.Append(parameterName);
@@ -1569,17 +1575,28 @@ public static class Program
         return $"new Guid({a}, {b}, {c}, {d}, {e}, {f}, {g}, {h}, {i}, {j}, {k})";
     }
 
+    private static string GetApiName(ApiDataType dataType)
+    {
+        if (dataType.Kind != "ApiRef")
+        {
+            throw new InvalidOperationException();
+        }
+
+        string apiName = dataType.Api;
+        if (dataType.Parents?.Length > 0)
+        {
+            apiName += ".";
+            apiName += string.Join(".", dataType.Parents);
+        }
+
+        return apiName;
+    }
+
     private static string GetTypeName(ApiDataType dataType, bool asPointer = false)
     {
         if (dataType.Kind == "ApiRef")
         {
-            string apiName = dataType.Api;
-            if (dataType.Parents?.Length > 0)
-            {
-                apiName += ".";
-                apiName += string.Join(".", dataType.Parents);
-            }
-
+            string apiName = GetApiName(dataType);
             string typeName = GetTypeName($"{apiName}.{dataType.Name}");
             return asPointer ? typeName + "*" : typeName;
         }
@@ -1589,7 +1606,17 @@ public static class Program
         }
         else if (dataType.Kind == "LPArray")
         {
-            return GetTypeName(dataType.Child) + "*";
+            if (dataType.Child.Kind == "ApiRef")
+            {
+                string apiName = GetApiName(dataType.Child);
+                string fullTypeName = $"{apiName}.{dataType.Child.Name}";
+                if (!IsPrimitive(dataType) && !IsStruct(fullTypeName) && !IsEnum(fullTypeName))
+                {
+                    asPointer = true;
+                }
+            }
+
+            return GetTypeName(dataType.Child, asPointer) + "*";
         }
         else if (dataType.Kind == "PointerTo")
         {
@@ -1648,7 +1675,15 @@ public static class Program
 
     private static bool IsStruct(string typeName)
     {
-        return s_visitedStructs.Contains(typeName);
+        switch(typeName)
+        {
+            case "Foundation.RECT":
+                return true;
+
+            default:
+                return s_visitedStructs.Contains(typeName);
+        }
+
     }
 
     private static void AddCsMapping(string api, string typeName, string csTypeName)

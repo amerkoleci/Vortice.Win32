@@ -13878,9 +13878,9 @@ public unsafe partial struct ID3D12GraphicsCommandList
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::SetDescriptorHeaps"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap* ppDescriptorHeaps)
+	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, uint, ID3D12DescriptorHeap*, void>)(lpVtbl[28]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[28]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::SetComputeRootSignature"]/*' />
@@ -14349,9 +14349,9 @@ public unsafe partial struct ID3D12GraphicsCommandList1
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetDescriptorHeaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap* ppDescriptorHeaps)
+	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, uint, ID3D12DescriptorHeap*, void>)(lpVtbl[22]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[22]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootSignature" />
@@ -14653,17 +14653,17 @@ public unsafe partial struct ID3D12GraphicsCommandList1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::AtomicCopyBufferUINT"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
-	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[60]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[60]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::AtomicCopyBufferUINT64"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[61]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[61]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::OMSetDepthBounds"]/*' />
@@ -14764,17 +14764,17 @@ public unsafe partial struct ID3D12GraphicsCommandList2
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[3]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[3]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT64" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[4]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[4]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.OMSetDepthBounds" />
@@ -14964,9 +14964,9 @@ public unsafe partial struct ID3D12GraphicsCommandList2
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetDescriptorHeaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap* ppDescriptorHeaps)
+	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, uint, ID3D12DescriptorHeap*, void>)(lpVtbl[28]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[28]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootSignature" />
@@ -15395,9 +15395,9 @@ public unsafe partial struct ID3D12CommandQueue
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::ExecuteCommandLists"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public void ExecuteCommandLists(uint NumCommandLists, ID3D12CommandList* ppCommandLists)
+	public void ExecuteCommandLists(uint NumCommandLists, ID3D12CommandList** ppCommandLists)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, uint, ID3D12CommandList*, void>)(lpVtbl[10]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), NumCommandLists, ppCommandLists);
+		((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, uint, ID3D12CommandList**, void>)(lpVtbl[10]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), NumCommandLists, ppCommandLists);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::SetMarker"]/*' />
@@ -15778,17 +15778,17 @@ public unsafe partial struct ID3D12Device
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::MakeResident"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, uint, ID3D12Pageable*, int>)(lpVtbl[34]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, uint, ID3D12Pageable**, int>)(lpVtbl[34]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::Evict"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, uint, ID3D12Pageable*, int>)(lpVtbl[35]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, uint, ID3D12Pageable**, int>)(lpVtbl[35]))((ID3D12Device*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateFence"]/*' />
@@ -16431,17 +16431,17 @@ public unsafe partial struct ID3D12Device1
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, ID3D12Pageable*, int>)(lpVtbl[30]))((ID3D12Device1*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, ID3D12Pageable**, int>)(lpVtbl[30]))((ID3D12Device1*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, ID3D12Pageable*, int>)(lpVtbl[31]))((ID3D12Device1*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, ID3D12Pageable**, int>)(lpVtbl[31]))((ID3D12Device1*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -16551,17 +16551,17 @@ public unsafe partial struct ID3D12Device1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device1::SetEventOnMultipleFenceCompletion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[45]))((ID3D12Device1*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[45]))((ID3D12Device1*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device1::SetResidencyPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[46]))((ID3D12Device1*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[46]))((ID3D12Device1*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 }
@@ -16638,17 +16638,17 @@ public unsafe partial struct ID3D12Device2
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[4]))((ID3D12Device2*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[4]))((ID3D12Device2*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[5]))((ID3D12Device2*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[5]))((ID3D12Device2*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -16870,17 +16870,17 @@ public unsafe partial struct ID3D12Device2
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, ID3D12Pageable*, int>)(lpVtbl[33]))((ID3D12Device2*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, ID3D12Pageable**, int>)(lpVtbl[33]))((ID3D12Device2*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, ID3D12Pageable*, int>)(lpVtbl[34]))((ID3D12Device2*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, ID3D12Pageable**, int>)(lpVtbl[34]))((ID3D12Device2*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -17069,17 +17069,17 @@ public unsafe partial struct ID3D12Device3
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[5]))((ID3D12Device3*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[5]))((ID3D12Device3*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[6]))((ID3D12Device3*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[6]))((ID3D12Device3*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -17301,17 +17301,17 @@ public unsafe partial struct ID3D12Device3
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, uint, ID3D12Pageable*, int>)(lpVtbl[34]))((ID3D12Device3*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, uint, ID3D12Pageable**, int>)(lpVtbl[34]))((ID3D12Device3*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, uint, ID3D12Pageable*, int>)(lpVtbl[35]))((ID3D12Device3*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, uint, ID3D12Pageable**, int>)(lpVtbl[35]))((ID3D12Device3*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -17429,9 +17429,9 @@ public unsafe partial struct ID3D12Device3
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device3::EnqueueMakeResident"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable* ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
+	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ResidencyFlags, uint, ID3D12Pageable*, ID3D12Fence*, ulong, int>)(lpVtbl[50]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[50]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
 
 }
@@ -17762,9 +17762,9 @@ public unsafe partial struct ID3D12Device4
 	/// <inheritdoc cref="ID3D12Device3.EnqueueMakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable* ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
+	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ResidencyFlags, uint, ID3D12Pageable*, ID3D12Fence*, ulong, int>)(lpVtbl[5]))((ID3D12Device4*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[5]))((ID3D12Device4*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
 
 	/// <inheritdoc cref="ID3D12Device2.CreatePipelineState" />
@@ -17786,17 +17786,17 @@ public unsafe partial struct ID3D12Device4
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[8]))((ID3D12Device4*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[8]))((ID3D12Device4*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[9]))((ID3D12Device4*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[9]))((ID3D12Device4*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -18018,17 +18018,17 @@ public unsafe partial struct ID3D12Device4
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, ID3D12Pageable*, int>)(lpVtbl[37]))((ID3D12Device4*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, ID3D12Pageable**, int>)(lpVtbl[37]))((ID3D12Device4*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, ID3D12Pageable*, int>)(lpVtbl[38]))((ID3D12Device4*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, ID3D12Pageable**, int>)(lpVtbl[38]))((ID3D12Device4*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -18780,9 +18780,9 @@ public unsafe partial struct ID3D12Device5
 	/// <inheritdoc cref="ID3D12Device3.EnqueueMakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable* ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
+	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ResidencyFlags, uint, ID3D12Pageable*, ID3D12Fence*, ulong, int>)(lpVtbl[11]))((ID3D12Device5*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[11]))((ID3D12Device5*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
 
 	/// <inheritdoc cref="ID3D12Device2.CreatePipelineState" />
@@ -18804,17 +18804,17 @@ public unsafe partial struct ID3D12Device5
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[14]))((ID3D12Device5*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[14]))((ID3D12Device5*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[15]))((ID3D12Device5*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[15]))((ID3D12Device5*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -19036,17 +19036,17 @@ public unsafe partial struct ID3D12Device5
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, ID3D12Pageable*, int>)(lpVtbl[43]))((ID3D12Device5*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, ID3D12Pageable**, int>)(lpVtbl[43]))((ID3D12Device5*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, ID3D12Pageable*, int>)(lpVtbl[44]))((ID3D12Device5*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, ID3D12Pageable**, int>)(lpVtbl[44]))((ID3D12Device5*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -19870,9 +19870,9 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Device3.EnqueueMakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable* ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
+	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, ResidencyFlags, uint, ID3D12Pageable*, ID3D12Fence*, ulong, int>)(lpVtbl[19]))((ID3D12Device6*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[19]))((ID3D12Device6*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
 
 	/// <inheritdoc cref="ID3D12Device2.CreatePipelineState" />
@@ -19894,17 +19894,17 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[22]))((ID3D12Device6*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[22]))((ID3D12Device6*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[23]))((ID3D12Device6*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[23]))((ID3D12Device6*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -20126,17 +20126,17 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, ID3D12Pageable*, int>)(lpVtbl[51]))((ID3D12Device6*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, ID3D12Pageable**, int>)(lpVtbl[51]))((ID3D12Device6*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, ID3D12Pageable*, int>)(lpVtbl[52]))((ID3D12Device6*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, ID3D12Pageable**, int>)(lpVtbl[52]))((ID3D12Device6*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -20580,9 +20580,9 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Device3.EnqueueMakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable* ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
+	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ResidencyFlags, uint, ID3D12Pageable*, ID3D12Fence*, ulong, int>)(lpVtbl[20]))((ID3D12Device7*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[20]))((ID3D12Device7*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
 
 	/// <inheritdoc cref="ID3D12Device2.CreatePipelineState" />
@@ -20604,17 +20604,17 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[23]))((ID3D12Device7*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[23]))((ID3D12Device7*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[24]))((ID3D12Device7*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[24]))((ID3D12Device7*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -20836,17 +20836,17 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, ID3D12Pageable*, int>)(lpVtbl[52]))((ID3D12Device7*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, ID3D12Pageable**, int>)(lpVtbl[52]))((ID3D12Device7*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, ID3D12Pageable*, int>)(lpVtbl[53]))((ID3D12Device7*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, ID3D12Pageable**, int>)(lpVtbl[53]))((ID3D12Device7*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -21179,9 +21179,9 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Device3.EnqueueMakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable* ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
+	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ResidencyFlags, uint, ID3D12Pageable*, ID3D12Fence*, ulong, int>)(lpVtbl[22]))((ID3D12Device8*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[22]))((ID3D12Device8*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
 
 	/// <inheritdoc cref="ID3D12Device2.CreatePipelineState" />
@@ -21203,17 +21203,17 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[25]))((ID3D12Device8*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[25]))((ID3D12Device8*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[26]))((ID3D12Device8*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[26]))((ID3D12Device8*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -21435,17 +21435,17 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, ID3D12Pageable*, int>)(lpVtbl[54]))((ID3D12Device8*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, ID3D12Pageable**, int>)(lpVtbl[54]))((ID3D12Device8*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(55)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, ID3D12Pageable*, int>)(lpVtbl[55]))((ID3D12Device8*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, ID3D12Pageable**, int>)(lpVtbl[55]))((ID3D12Device8*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -22119,17 +22119,17 @@ public unsafe partial struct ID3D12GraphicsCommandList3
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[4]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[4]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT64" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[5]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[5]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.OMSetDepthBounds" />
@@ -22319,9 +22319,9 @@ public unsafe partial struct ID3D12GraphicsCommandList3
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetDescriptorHeaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap* ppDescriptorHeaps)
+	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, uint, ID3D12DescriptorHeap*, void>)(lpVtbl[29]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[29]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootSignature" />
@@ -22821,17 +22821,17 @@ public unsafe partial struct ID3D12GraphicsCommandList4
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[5]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[5]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT64" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[6]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[6]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.OMSetDepthBounds" />
@@ -23021,9 +23021,9 @@ public unsafe partial struct ID3D12GraphicsCommandList4
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetDescriptorHeaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap* ppDescriptorHeaps)
+	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, uint, ID3D12DescriptorHeap*, void>)(lpVtbl[30]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[30]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootSignature" />
@@ -23787,9 +23787,9 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device3.EnqueueMakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable* ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
+	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ResidencyFlags, uint, ID3D12Pageable*, ID3D12Fence*, ulong, int>)(lpVtbl[27]))((ID3D12Device9*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[27]))((ID3D12Device9*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
 
 	/// <inheritdoc cref="ID3D12Device2.CreatePipelineState" />
@@ -23811,17 +23811,17 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence* ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ID3D12Fence*, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[30]))((ID3D12Device9*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[30]))((ID3D12Device9*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable* ppObjects, ResidencyPriority* pPriorities)
+	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, ID3D12Pageable*, ResidencyPriority*, int>)(lpVtbl[31]))((ID3D12Device9*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[31]))((ID3D12Device9*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -24043,17 +24043,17 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(59)]
-	public HResult MakeResident(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, ID3D12Pageable*, int>)(lpVtbl[59]))((ID3D12Device9*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, ID3D12Pageable**, int>)(lpVtbl[59]))((ID3D12Device9*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.Evict" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
-	public HResult Evict(uint NumObjects, ID3D12Pageable* ppObjects)
+	public HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, ID3D12Pageable*, int>)(lpVtbl[60]))((ID3D12Device9*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, ID3D12Pageable**, int>)(lpVtbl[60]))((ID3D12Device9*)Unsafe.AsPointer(ref this), NumObjects, ppObjects);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateFence" />
@@ -26440,17 +26440,17 @@ public unsafe partial struct ID3D12GraphicsCommandList5
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[14]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[14]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT64" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[15]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[15]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.OMSetDepthBounds" />
@@ -26640,9 +26640,9 @@ public unsafe partial struct ID3D12GraphicsCommandList5
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetDescriptorHeaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
-	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap* ppDescriptorHeaps)
+	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ID3D12DescriptorHeap*, void>)(lpVtbl[39]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[39]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootSignature" />
@@ -27127,17 +27127,17 @@ public unsafe partial struct ID3D12GraphicsCommandList6
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[16]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[16]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT64" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource* ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
+	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUint64* pDependentSubresourceRanges)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource*, SubresourceRangeUint64*, void>)(lpVtbl[17]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUint64*, void>)(lpVtbl[17]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.OMSetDepthBounds" />
@@ -27327,9 +27327,9 @@ public unsafe partial struct ID3D12GraphicsCommandList6
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetDescriptorHeaps" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap* ppDescriptorHeaps)
+	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, uint, ID3D12DescriptorHeap*, void>)(lpVtbl[41]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[41]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootSignature" />
