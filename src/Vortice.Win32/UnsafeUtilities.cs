@@ -2,12 +2,7 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
-
-#if !NET6_0_OR_GREATER
-using MemoryMarshal = Win32.MemoryMarshal;
-#endif
 
 namespace Win32;
 
@@ -16,25 +11,12 @@ public static unsafe class UnsafeUtilities
 {
     /// <inheritdoc cref="Unsafe.As{TFrom, TTo}(ref TFrom)" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ref TTo As<TFrom, TTo>(ref TFrom source)
-        => ref Unsafe.As<TFrom, TTo>(ref source);
-
-    /// <inheritdoc cref="Unsafe.As{TFrom, TTo}(ref TFrom)" />
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static ReadOnlySpan<TTo> As<TFrom, TTo>(this ReadOnlySpan<TFrom> span)
         where TFrom : unmanaged
         where TTo : unmanaged
     {
         //Assert(AssertionsEnabled && (SizeOf<TFrom>() == SizeOf<TTo>()));
         return CreateReadOnlySpan(in AsReadOnly<TFrom, TTo>(in span.GetReference()), span.Length);
-    }
-
-    /// <inheritdoc cref="Unsafe.AsRef{T}(in T)" />
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ref TTo AsRef<TFrom, TTo>(in TFrom source)
-    {
-        ref var mutable = ref Unsafe.AsRef(in source);
-        return ref As<TFrom, TTo>(ref mutable);
     }
 
     /// <inheritdoc cref="Unsafe.AsPointer{T}(ref T)" />
@@ -54,9 +36,6 @@ public static unsafe class UnsafeUtilities
     /// <inheritdoc cref="Unsafe.IsNullRef{T}(ref T)" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool IsNullRef<T>(in T source) => Unsafe.IsNullRef(ref Unsafe.AsRef(in source));
-
-    /// <inheritdoc cref="MemoryMarshal.CreateSpan{T}(ref T, int)" />
-    public static Span<T> CreateSpan<T>(ref T reference, int length) => MemoryMarshal.CreateSpan(ref reference, length);
 
     /// <inheritdoc cref="MemoryMarshal.CreateReadOnlySpan{T}(ref T, int)" />
     public static ReadOnlySpan<T> CreateReadOnlySpan<T>(in T reference, int length) => MemoryMarshal.CreateReadOnlySpan(ref Unsafe.AsRef(in reference), length);

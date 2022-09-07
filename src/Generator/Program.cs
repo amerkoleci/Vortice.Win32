@@ -100,6 +100,7 @@ public static class Program
         { "D3D_SHADER_CBUFFER_FLAGS", "D3D_CBF" },
 
         // D3D11 -> handled in code
+        // D3D12 -> handled in code
     };
 
     private static readonly Dictionary<string, string> s_partRenames = new()
@@ -162,6 +163,9 @@ public static class Program
         { "MIN16INT", "Min16Int" },
         { "MIN16UINT", "Min16Uint" },
         { "KEYEDMUTEX", "KeyedMutex" },
+        { "GETDATA", "GetData" },
+        { "DONOTFLUSH", "DoNotFlush" },
+        { "PREDICATEHINT", "PredicateHint" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -210,6 +214,8 @@ public static class Program
         "HW",
         "YUV",
         "GDI",
+        "IA",
+        "SO",
     };
 
     private static readonly Dictionary<string, string> s_typesNameRemap = new()
@@ -231,6 +237,8 @@ public static class Program
         { "D3D11_FORMAT_SUPPORT", "FormatSupport" },
         { "D3D11_FORMAT_SUPPORT2", "FormatSupport2" },
         { "D3D11_DSV_FLAG", "DsvFlags" },
+        { "D3D11_COLOR_WRITE_ENABLE", "ColorWriteEnable" },
+        { "D3D12_COLOR_WRITE_ENABLE", "ColorWriteEnable" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -262,7 +270,11 @@ public static class Program
         { "D3D11_FEATURE_DATA_FORMAT_SUPPORT::OutFormatSupport", "D3D11_FORMAT_SUPPORT" },
         { "D3D11_FEATURE_DATA_FORMAT_SUPPORT2::OutFormatSupport2", "D3D11_FORMAT_SUPPORT2" },
 
+        { "D3D11_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D11_COLOR_WRITE_ENABLE" },
+        { "D3D11_RENDER_TARGET_BLEND_DESC1::RenderTargetWriteMask", "D3D11_COLOR_WRITE_ENABLE" },
         { "D3D11_DEPTH_STENCIL_VIEW_DESC::Flags", "D3D11_DSV_FLAG" },
+
+        { "D3D12_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D12_COLOR_WRITE_ENABLE" },
     };
 
     private static readonly HashSet<string> s_visitedEnums = new();
@@ -642,12 +654,27 @@ public static class Program
             csTypeName.EndsWith("Flags"))
         {
             isFlags = true;
+
+        }
+
+        // Know flag members
+        if (enumType.Name == "D3D11_FORMAT_SUPPORT" ||
+            enumType.Name == "D3D11_FORMAT_SUPPORT2" ||
+            enumType.Name == "D3D11_COLOR_WRITE_ENABLE" ||
+            enumType.Name == "D3D12_COLOR_WRITE_ENABLE")
+        {
+            isFlags = true;
+        }
+
+        if (isFlags)
+        {
             writer.WriteLine("[Flags]");
         }
 
-        if (csTypeName == "ShaderCacheSupportFlags")
+        if (enumType.Name == "D3D11_COLOR_WRITE_ENABLE" ||
+            enumType.Name == "D3D12_COLOR_WRITE_ENABLE")
         {
-
+            baseTypeName = "byte";
         }
 
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
@@ -717,6 +744,14 @@ public static class Program
         {
             string[] parts = enumType.Name.Split(new[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
             enumPrefix = string.Join("_", parts.Take(parts.Length - 1));
+            enumValueName = GetPrettyFieldName(enumItem.Name, enumPrefix);
+        }
+
+        // D3D12 FLAGS/FLAG
+        // D3D12_COMMAND_QUEUE_FLAGS -> D3D12_COMMAND_QUEUE_FLAG_NONE
+        if (enumValueName.StartsWith("D3D12_") && enumType.Name.EndsWith("FLAGS"))
+        {
+            enumPrefix = enumType.Name.Substring(0, enumType.Name.Length - 1);
             enumValueName = GetPrettyFieldName(enumItem.Name, enumPrefix);
         }
 
@@ -980,7 +1015,7 @@ public static class Program
             writer.WriteLine($"[NativeInheritance(\"{comType.Interface.Name}\")]");
         }
 
-        using (writer.PushBlock($"public unsafe partial struct {csTypeName} : {csTypeName}.Interface"))
+        using (writer.PushBlock($"public unsafe partial struct {csTypeName}"))
         {
             if (comType.Guid != null)
             {
@@ -1213,31 +1248,14 @@ public static class Program
 
                 using (writer.PushBlock($"public {methodSuffix}{returnType} {method.Name}({argumentsString})"))
                 {
-                    writer.WriteLineUndindented("#if NET6_0_OR_GREATER");
-                    if (returnType != "void")
-                        writer.Write("return ");
-                    writer.WriteLine($"((delegate* unmanaged<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
-                    writer.WriteLineUndindented("#else");
                     if (returnType != "void")
                         writer.Write("return ");
                     writer.WriteLine($"((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
-                    writer.WriteLineUndindented("#endif");
                 }
                 writer.WriteLine();
 
                 vtblIndex++;
             }
-
-            string baseInterfaceType = string.Empty;
-            if (comType.Interface != null)
-            {
-                baseInterfaceType = $" : {comType.Interface.Name}.Interface";
-            }
-
-            using (writer.PushBlock($"public interface Interface{baseInterfaceType}"))
-            {
-            }
-            //writer.WriteLine();
         }
 
         writer.WriteLine();
