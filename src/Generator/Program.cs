@@ -568,7 +568,7 @@ public static class Program
                 else
                 {
                     string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
-                    if (!IsEnum(fullTypeName))
+                    if (!IsPrimitive(parameter.Type) && !IsEnum(fullTypeName))
                     {
                         asPointer = true;
                     }
@@ -582,6 +582,7 @@ public static class Program
 
             parameterType = NormalizeTypeName(writer.Api, parameterType);
             string parameterName = parameter.Name;
+
 
             bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
             if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
@@ -1075,6 +1076,11 @@ public static class Program
 
                 foreach (var parameter in method.Params)
                 {
+                    if (method.Name == "SetBreakOnSeverity")
+                    {
+
+                    }
+
                     bool asPointer = false;
                     string parameterType = default;
                     if (parameter.Type.Kind == "ApiRef")
@@ -1087,7 +1093,7 @@ public static class Program
                         else
                         {
                             string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
-                            if (!IsEnum(fullTypeName))
+                            if (!IsPrimitive(parameter.Type) && !IsEnum(fullTypeName))
                             {
                                 asPointer = true;
                             }
@@ -1163,7 +1169,17 @@ public static class Program
 
                 writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
                 writer.WriteLine($"[VtblIndex({vtblIndex})]");
-                using (writer.PushBlock($"public {returnType} {method.Name}({argumentsString})"))
+
+                string methodSuffix = string.Empty;
+                if (method.Name == "GetType")
+                {
+                    if (string.IsNullOrEmpty(argumentsString))
+                    {
+                        methodSuffix = "new ";
+                    }
+                }
+
+                using (writer.PushBlock($"public {methodSuffix}{returnType} {method.Name}({argumentsString})"))
                 {
                     writer.WriteLineUndindented("#if NET6_0_OR_GREATER");
                     if (returnType != "void")
@@ -1487,11 +1503,33 @@ public static class Program
         return GetTypeName(dataType.Name);
     }
 
+    private static bool IsPrimitive(string typeName)
+    {
+        switch (typeName)
+        {
+            case "void":
+            case "bool":
+            case "int":
+            case "uint":
+            case "Bool32":
+                return true;
+
+            case "nint":
+            case "nuint":
+            case "IntPtr":
+            case "UIntPtr":
+                return true;
+        }
+
+        return false;
+    }
+
     private static bool IsPrimitive(ApiDataType dataType)
     {
         if (dataType.Kind == "ApiRef")
         {
             string apiRefType = GetTypeName($"{dataType.Api}.{dataType.Name}");
+            return IsPrimitive(apiRefType);
         }
         else if (dataType.Kind == "PointerTo")
         {
@@ -1504,19 +1542,7 @@ public static class Program
         }
 
         string typeName = GetTypeName(dataType.Name);
-        switch (typeName)
-        {
-            case "void":
-            case "int":
-            case "uint":
-                return true;
-
-            case "nint":
-            case "nuint":
-                return true;
-        }
-
-        return false;
+        return IsPrimitive(typeName);
     }
 
     private static bool IsEnum(string typeName)
