@@ -72,40 +72,6 @@ public static class Program
         { "Foundation.SIZE", "System.Drawing.Size" },
     };
 
-    private static readonly Dictionary<string, string> s_knownTypesPrefixes = new()
-    {
-        { "DXGI_COLOR_SPACE_TYPE", "DXGI_COLOR_SPACE" },
-        { "DXGI_GRAPHICS_PREEMPTION_GRANULARITY", "DXGI_GRAPHICS_PREEMPTION" },
-        { "DXGI_COMPUTE_PREEMPTION_GRANULARITY", "DXGI_COMPUTE_PREEMPTION" },
-        { "DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS", "DXGI_MULTIPLANE_OVERLAY" },
-        { "DXGI_RECLAIM_RESOURCE_RESULTS", "DXGI_RECLAIM_RESOURCE_RESULT" },
-        { "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS", "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG" },
-        { "DXGI_DEBUG_RLO_FLAGS", "DXGI_DEBUG_RLO" },
-        { "DXGI_OFFER_RESOURCE_FLAGS", "DXGI_OFFER_RESOURCE_FLAG" },
-
-        // D3D
-        { "D3D_INTERPOLATION_MODE", "D3D_INTERPOLATION" },
-        { "D3D_PARAMETER_FLAGS", "D3D" },
-        { "D3D_TESSELLATOR_OUTPUT_PRIMITIVE", "D3D_TESSELLATOR_OUTPUT" },
-        { "D3D_REGISTER_COMPONENT_TYPE", "D3D_REGISTER_COMPONENT" },
-        { "D3D_RESOURCE_RETURN_TYPE", "D3D_RETURN_TYPE" },
-        { "D3D_CBUFFER_TYPE", "D3D_CT" },
-        { "D3D_INCLUDE_TYPE", "D3D_INCLUDE" },
-        { "D3D_SHADER_VARIABLE_CLASS", "D3D_SVC" },
-        { "D3D_SHADER_VARIABLE_FLAGS", "D3D_SVF" },
-        { "D3D_SHADER_VARIABLE_TYPE", "D3D_SVT" },
-        { "D3D_SHADER_INPUT_FLAGS", "D3D_SIF" },
-        { "D3D_SHADER_INPUT_TYPE", "D3D_SIT" },
-        { "D3D_SHADER_CBUFFER_FLAGS", "D3D_CBF" },
-
-        // D3D11 -> most is handled in code
-        { "D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE", "D3D11_PROCESSIDTYPE" },
-
-        // D3D12 -> most is handled in code
-        { "D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS", "D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG" },
-        { "D3D12_SHADER_CACHE_SUPPORT_FLAGS", "D3D12_SHADER_CACHE_SUPPORT" },
-        { "D3D12_RESOURCE_STATES", "D3D12_RESOURCE_STATE" },
-    };
 
     private static readonly Dictionary<string, string> s_partRenames = new()
     {
@@ -182,6 +148,124 @@ public static class Program
         { "GROUPSHARED", "GroupShared" },
         { "DEVICEMEMORY", "DeviceMemory" },
         { "WRITEBUFFERIMMEDIATE", "WriteBufferImmediate" },
+        { "OVERBUDGET", "OverBudget" },
+        { "SETMARKER", "SetMarker" },
+        { "BEGINEVENT", "BeginEvent" },
+        { "ENDEVENT", "EndEvent" },
+        { "CRYPTOSESSION", "CryptoSession" },
+        { "CRYPTOSESSIONPOLICY", "CryptoSessionPolicy" },
+        { "PROTECTEDRESOURCESESSION", "ProtectedResourceSession" },
+        { "METACOMMAND", "MetaCommand" },
+        { "SCHEDULINGGROUP", "SchedulingGroup" },
+    };
+
+    private static readonly HashSet<string> s_partRenamesSet = new(StringComparer.OrdinalIgnoreCase)
+    {
+        "DispatchMesh",
+        "EncodeFrame",
+        "DrawInstanced",
+        "DrawIndexedInstanced",
+        "ExecuteIndirect",
+        "CopyBufferRegion",
+        "CopyTextureRegion",
+        "CopyResource",
+        "CopyTiles",
+        "ResolveSubresource",
+        "ClearRenderTargetView",
+        "ClearUnorderedAccessView",
+        "ClearDepthStencilView",
+        "ResourceBarrier",
+        "ExecuteBundle",
+        "ResolveQueryData",
+        "BeginSubmission",
+        "EndSubmission",
+        "DecodeFrame",
+        "DecodeFrame1",
+        "DecodeFrame2",
+        "ProcessFrames",
+        "ProcessFrames1",
+        "AtomicCopyBufferUInt",
+        "AtomicCopyBufferUInt64",
+        "DispatchRays",
+        "InitializeMetaCommand",
+        "ExecuteMetaCommand",
+        "SetProtectedResourceSession",
+        "BuildRaytracingAccelerationStructure",
+        "EmitRaytracingAccelerationStructurePostBuildInfo",
+        "CopyRaytracingAccelerationStructure",
+        "EstimateMotion",
+        "ResolveMotionVectorHeap",
+        "SetPipelineState1",
+        "InitializeExtensionCommand",
+        "ExecuteExtensionCommand",
+        "ResolveEncoderOutputMetadata",
+        "ResolveSubresourceRegion",
+    };
+
+    private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
+    {
+        "HW",
+        "YUV",
+        "GDI",
+        "IA",
+        "SO",
+        "VS",
+        "PS",
+        "DS",
+        "GS",
+        "HS",
+        "CS",
+        "AS",
+        "MS",
+        "RS",
+        "OM",
+        "D3D",
+        "D3D11",
+        "D3D12",
+    };
+
+
+    private static readonly Dictionary<string, string> s_knownTypesPrefixes = new()
+    {
+        { "DXGI_COLOR_SPACE_TYPE", "DXGI_COLOR_SPACE" },
+        { "DXGI_GRAPHICS_PREEMPTION_GRANULARITY", "DXGI_GRAPHICS_PREEMPTION" },
+        { "DXGI_COMPUTE_PREEMPTION_GRANULARITY", "DXGI_COMPUTE_PREEMPTION" },
+        { "DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS", "DXGI_MULTIPLANE_OVERLAY" },
+        { "DXGI_RECLAIM_RESOURCE_RESULTS", "DXGI_RECLAIM_RESOURCE_RESULT" },
+        { "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS", "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG" },
+        { "DXGI_DEBUG_RLO_FLAGS", "DXGI_DEBUG_RLO" },
+        { "DXGI_OFFER_RESOURCE_FLAGS", "DXGI_OFFER_RESOURCE_FLAG" },
+
+        // D3D
+        { "D3D_INTERPOLATION_MODE", "D3D_INTERPOLATION" },
+        { "D3D_PARAMETER_FLAGS", "D3D" },
+        { "D3D_TESSELLATOR_OUTPUT_PRIMITIVE", "D3D_TESSELLATOR_OUTPUT" },
+        { "D3D_REGISTER_COMPONENT_TYPE", "D3D_REGISTER_COMPONENT" },
+        { "D3D_RESOURCE_RETURN_TYPE", "D3D_RETURN_TYPE" },
+        { "D3D_CBUFFER_TYPE", "D3D_CT" },
+        { "D3D_INCLUDE_TYPE", "D3D_INCLUDE" },
+        { "D3D_SHADER_VARIABLE_CLASS", "D3D_SVC" },
+        { "D3D_SHADER_VARIABLE_FLAGS", "D3D_SVF" },
+        { "D3D_SHADER_VARIABLE_TYPE", "D3D_SVT" },
+        { "D3D_SHADER_INPUT_FLAGS", "D3D_SIF" },
+        { "D3D_SHADER_INPUT_TYPE", "D3D_SIT" },
+        { "D3D_SHADER_CBUFFER_FLAGS", "D3D_CBF" },
+
+        // D3D11 -> most is handled in code
+        { "D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE", "D3D11_PROCESSIDTYPE" },
+
+        // D3D12 -> most is handled in code
+        { "D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS", "D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG" },
+        { "D3D12_SHADER_CACHE_SUPPORT_FLAGS", "D3D12_SHADER_CACHE_SUPPORT" },
+        { "D3D12_RESOURCE_STATES", "D3D12_RESOURCE_STATE" },
+        { "D3D12_GRAPHICS_STATES", "D3D12_GRAPHICS_STATE" },
+        { "D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_TYPE", "D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO" },
+        { "D3D12_SERIALIZED_DATA_TYPE", "D3D12_SERIALIZED_DATA" },
+        { "D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS", "D3D12_DRIVER_MATCHING_IDENTIFIER" },
+        { "D3D12_RLDO_FLAGS", "D3D12_RLDO" },
+        { "D3D12_DEBUG_DEVICE_PARAMETER_TYPE", "D3D12_DEBUG_DEVICE_PARAMETER" },
+        { "D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE", "D3D12_DEBUG_COMMAND_LIST_PARAMETER" },
+        { "D3D12_SHADER_VERSION_TYPE", "D3D12_SHVER" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -204,6 +288,8 @@ public static class Program
         { "D3D12_TEXTURE_LAYOUT_64KB_UNDEFINED_SWIZZLE", "L64KbUndefinedSwizzle" },
         { "D3D12_TEXTURE_LAYOUT_64KB_STANDARD_SWIZZLE", "L64KbStandardSwizzle" },
         { "D3D12_ROOT_PARAMETER_TYPE_32BIT_CONSTANTS", "T32BitConstants" },
+        { "NUM_D3D12_GPU_BASED_VALIDATION_SHADER_PATCH_MODES", "Count" },
+        { "D3D12_MESSAGE_CALLBACK_IGNORE_FILTERS", "IgnoreFilters" },
     };
 
     private static readonly Dictionary<string, bool> s_generatedEnums = new()
@@ -230,25 +316,6 @@ public static class Program
         "PF" // D3D_PF_
     };
 
-    private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
-    {
-        "HW",
-        "YUV",
-        "GDI",
-        "IA",
-        "SO",
-        "VS",
-        "PS",
-        "DS",
-        "GS",
-        "HS",
-        "CS",
-        "AS",
-        "MS",
-        "D3D",
-        "D3D11",
-        "D3D12",
-    };
 
     private static readonly Dictionary<string, string> s_typesNameRemap = new()
     {
@@ -260,6 +327,9 @@ public static class Program
         // D3D11
         { "D3D11_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
         { "D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG", "CreateDeviceContextStateFlags" },
+
+        // D3D12
+        { "D3D12_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -1384,6 +1454,11 @@ public static class Program
                 {
                     sb.Append(partRemap!);
                 }
+                else if (s_partRenamesSet.Contains(part))
+                {
+                    partRemap = s_partRenamesSet.First(item => item.Equals(part, StringComparison.OrdinalIgnoreCase));
+                    sb.Append(partRemap!);
+                }
                 else if (part == "DESC")
                 {
                     sb.Append("Description");
@@ -1557,6 +1632,11 @@ public static class Program
                     {
                         sb.Append(partRemap!);
                     }
+                    else if (s_partRenamesSet.Contains(part))
+                    {
+                        partRemap = s_partRenamesSet.First(item => item.Equals(part, StringComparison.OrdinalIgnoreCase));
+                        sb.Append(partRemap!);
+                    }
                     else
                     {
                         sb.Append(char.ToUpper(part[0]));
@@ -1603,6 +1683,17 @@ public static class Program
             else if (enumPrefix.EndsWith("_SHADER_MODEL")) // D3D_SHADER_MODEL
             {
                 return "SM_" + prettyName[0] + "_" + prettyName[1];
+            }
+            else if (enumPrefix.EndsWith("_VERSION"))
+            {
+                if (prettyName.Length == 2) // D3D12_DRED_VERSION_1_0
+                    return "V" + prettyName[0] + "_" + prettyName[1];
+
+                return "V" + prettyName;
+            }
+            else if (enumPrefix.EndsWith("_RATE"))
+            {
+                return "Rate" + prettyName;
             }
 
             return "_" + prettyName;

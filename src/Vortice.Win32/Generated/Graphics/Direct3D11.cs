@@ -3251,13 +3251,13 @@ public enum MessageId : int
 	DeviceRssetscissorrectsInvalidscissor = 260,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARRENDERTARGETVIEW_DENORMFLUSH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARRENDERTARGETVIEW_DENORMFLUSH</unmanaged>
-	ClearrendertargetviewDenormflush = 261,
+	ClearRenderTargetViewDenormflush = 261,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_DENORMFLUSH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_DENORMFLUSH</unmanaged>
-	CleardepthstencilviewDenormflush = 262,
+	ClearDepthStencilViewDenormflush = 262,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_INVALID"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_INVALID</unmanaged>
-	CleardepthstencilviewInvalid = 263,
+	ClearDepthStencilViewInvalid = 263,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_IAGETVERTEXBUFFERS_BUFFERS_EMPTY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_IAGETVERTEXBUFFERS_BUFFERS_EMPTY</unmanaged>
 	DeviceIagetvertexbuffersBuffersEmpty = 264,
@@ -3320,13 +3320,13 @@ public enum MessageId : int
 	CopysubresourceregionInvalidsourcestate = 283,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYRESOURCE_INVALIDSOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYRESOURCE_INVALIDSOURCE</unmanaged>
-	CopyresourceInvalidsource = 284,
+	CopyResourceInvalidsource = 284,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYRESOURCE_INVALIDDESTINATIONSTATE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYRESOURCE_INVALIDDESTINATIONSTATE</unmanaged>
-	CopyresourceInvaliddestinationstate = 285,
+	CopyResourceInvaliddestinationstate = 285,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYRESOURCE_INVALIDSOURCESTATE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYRESOURCE_INVALIDSOURCESTATE</unmanaged>
-	CopyresourceInvalidsourcestate = 286,
+	CopyResourceInvalidsourcestate = 286,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_UPDATESUBRESOURCE_INVALIDDESTINATIONSUBRESOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_UPDATESUBRESOURCE_INVALIDDESTINATIONSUBRESOURCE</unmanaged>
 	UpdatesubresourceInvaliddestinationsubresource = 287,
@@ -3338,19 +3338,19 @@ public enum MessageId : int
 	UpdatesubresourceInvaliddestinationstate = 289,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_DESTINATION_INVALID"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_DESTINATION_INVALID</unmanaged>
-	DeviceResolvesubresourceDestinationInvalid = 290,
+	DeviceResolveSubresourceDestinationInvalid = 290,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_DESTINATION_SUBRESOURCE_INVALID"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_DESTINATION_SUBRESOURCE_INVALID</unmanaged>
-	DeviceResolvesubresourceDestinationSubresourceInvalid = 291,
+	DeviceResolveSubresourceDestinationSubresourceInvalid = 291,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_SOURCE_INVALID"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_SOURCE_INVALID</unmanaged>
-	DeviceResolvesubresourceSourceInvalid = 292,
+	DeviceResolveSubresourceSourceInvalid = 292,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_SOURCE_SUBRESOURCE_INVALID"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_SOURCE_SUBRESOURCE_INVALID</unmanaged>
-	DeviceResolvesubresourceSourceSubresourceInvalid = 293,
+	DeviceResolveSubresourceSourceSubresourceInvalid = 293,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_FORMAT_INVALID"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_RESOLVESUBRESOURCE_FORMAT_INVALID</unmanaged>
-	DeviceResolvesubresourceFormatInvalid = 294,
+	DeviceResolveSubresourceFormatInvalid = 294,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_BUFFER_MAP_INVALIDMAPTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_BUFFER_MAP_INVALIDMAPTYPE</unmanaged>
 	BufferMapInvalidmaptype = 295,
@@ -3479,16 +3479,16 @@ public enum MessageId : int
 	DeviceDrawindexedIndexposOverflow = 336,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAWINSTANCED_VERTEXPOS_OVERFLOW"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAWINSTANCED_VERTEXPOS_OVERFLOW</unmanaged>
-	DeviceDrawinstancedVertexposOverflow = 337,
+	DeviceDrawInstancedVertexposOverflow = 337,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAWINSTANCED_INSTANCEPOS_OVERFLOW"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAWINSTANCED_INSTANCEPOS_OVERFLOW</unmanaged>
-	DeviceDrawinstancedInstanceposOverflow = 338,
+	DeviceDrawInstancedInstanceposOverflow = 338,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAWINDEXEDINSTANCED_INSTANCEPOS_OVERFLOW"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAWINDEXEDINSTANCED_INSTANCEPOS_OVERFLOW</unmanaged>
-	DeviceDrawindexedinstancedInstanceposOverflow = 339,
+	DeviceDrawIndexedInstancedInstanceposOverflow = 339,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAWINDEXEDINSTANCED_INDEXPOS_OVERFLOW"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAWINDEXEDINSTANCED_INDEXPOS_OVERFLOW</unmanaged>
-	DeviceDrawindexedinstancedIndexposOverflow = 340,
+	DeviceDrawIndexedInstancedIndexposOverflow = 340,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_VERTEX_SHADER_NOT_SET"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_VERTEX_SHADER_NOT_SET</unmanaged>
 	DeviceDrawVertexShaderNotSet = 341,
@@ -3596,10 +3596,10 @@ public enum MessageId : int
 	DeviceDrawSOStrideLargerThanBuffer = 375,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_OM_RENDER_TARGET_DOES_NOT_SUPPORT_BLENDING"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_OM_RENDER_TARGET_DOES_NOT_SUPPORT_BLENDING</unmanaged>
-	DeviceDrawOmRenderTargetDoesNotSupportBlending = 376,
+	DeviceDrawOMRenderTargetDoesNotSupportBlending = 376,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_OM_DUAL_SOURCE_BLENDING_CAN_ONLY_HAVE_RENDER_TARGET_0"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_OM_DUAL_SOURCE_BLENDING_CAN_ONLY_HAVE_RENDER_TARGET_0</unmanaged>
-	DeviceDrawOmDualSourceBlendingCanOnlyHaveRenderTarget0 = 377,
+	DeviceDrawOMDualSourceBlendingCanOnlyHaveRenderTarget0 = 377,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_REMOVAL_PROCESS_AT_FAULT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_REMOVAL_PROCESS_AT_FAULT</unmanaged>
 	DeviceRemovalProcessAtFault = 378,
@@ -3854,13 +3854,13 @@ public enum MessageId : int
 	DeviceRssetscissorrectsTooManyScissors = 1048595,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYRESOURCE_ONLY_TEXTURE_2D_WITHIN_GPU_MEMORY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYRESOURCE_ONLY_TEXTURE_2D_WITHIN_GPU_MEMORY</unmanaged>
-	CopyresourceOnlyTexture2dWithinGpuMemory = 1048596,
+	CopyResourceOnlyTexture2dWithinGpuMemory = 1048596,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYRESOURCE_NO_TEXTURE_3D_READBACK"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYRESOURCE_NO_TEXTURE_3D_READBACK</unmanaged>
-	CopyresourceNoTexture3dReadback = 1048597,
+	CopyResourceNoTexture3dReadback = 1048597,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYRESOURCE_NO_TEXTURE_ONLY_READBACK"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYRESOURCE_NO_TEXTURE_ONLY_READBACK</unmanaged>
-	CopyresourceNoTextureOnlyReadback = 1048598,
+	CopyResourceNoTextureOnlyReadback = 1048598,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEINPUTLAYOUT_UNSUPPORTED_FORMAT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEINPUTLAYOUT_UNSUPPORTED_FORMAT</unmanaged>
 	CreateinputlayoutUnsupportedFormat = 1048599,
@@ -3944,10 +3944,10 @@ public enum MessageId : int
 	CreatesamplerstateNoMirroronce = 1048625,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DRAWINSTANCED_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DRAWINSTANCED_NOT_SUPPORTED</unmanaged>
-	DrawinstancedNotSupported = 1048626,
+	DrawInstancedNotSupported = 1048626,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DRAWINDEXEDINSTANCED_NOT_SUPPORTED_BELOW_9_3"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DRAWINDEXEDINSTANCED_NOT_SUPPORTED_BELOW_9_3</unmanaged>
-	DrawindexedinstancedNotSupportedBelow93 = 1048627,
+	DrawIndexedInstancedNotSupportedBelow93 = 1048627,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DRAWINDEXED_POINTLIST_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DRAWINDEXED_POINTLIST_UNSUPPORTED</unmanaged>
 	DrawindexedPointListUnsupported = 1048628,
@@ -3977,7 +3977,7 @@ public enum MessageId : int
 	OmsetrendertargetsNoSrgbMrt = 1048636,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYRESOURCE_NO_3D_MISMATCHED_UPDATES"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYRESOURCE_NO_3D_MISMATCHED_UPDATES</unmanaged>
-	CopyresourceNo3dMismatchedUpdates = 1048637,
+	CopyResourceNo3dMismatchedUpdates = 1048637,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEDEPTHSTENCILVIEW_INVALIDFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEDEPTHSTENCILVIEW_INVALIDFLAGS</unmanaged>
 	CreatedepthstencilviewInvalidflags = 2097153,
@@ -4586,7 +4586,7 @@ public enum MessageId : int
 	DeviceCssetunorderedaccessviewsHazard = 2097354,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARUNORDEREDACCESSVIEW_DENORMFLUSH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARUNORDEREDACCESSVIEW_DENORMFLUSH</unmanaged>
-	ClearunorderedaccessviewDenormflush = 2097355,
+	ClearUnorderedAccessViewDenormflush = 2097355,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_CSSETUNORDEREDACCESSS_VIEWS_EMPTY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_CSSETUNORDEREDACCESSS_VIEWS_EMPTY</unmanaged>
 	DeviceCssetunorderedaccesssViewsEmpty = 2097356,
@@ -4628,10 +4628,10 @@ public enum MessageId : int
 	OmsetdepthstencilUnbinddeletingobject = 2097368,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_DEPTH_READONLY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_DEPTH_READONLY</unmanaged>
-	CleardepthstencilviewDepthReadonly = 2097369,
+	ClearDepthStencilViewDepthReadonly = 2097369,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_STENCIL_READONLY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_STENCIL_READONLY</unmanaged>
-	CleardepthstencilviewStencilReadonly = 2097370,
+	ClearDepthStencilViewStencilReadonly = 2097370,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CHECKFEATURESUPPORT_FORMAT_DEPRECATED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CHECKFEATURESUPPORT_FORMAT_DEPRECATED</unmanaged>
 	CheckfeaturesupportFormatDeprecated = 2097371,
@@ -5843,7 +5843,7 @@ public enum MessageId : int
 	CopysubresourceregionEmptysourcebox = 3146078,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_OM_RENDER_TARGET_DOES_NOT_SUPPORT_LOGIC_OPS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_OM_RENDER_TARGET_DOES_NOT_SUPPORT_LOGIC_OPS</unmanaged>
-	DeviceDrawOmRenderTargetDoesNotSupportLogicOps = 3146079,
+	DeviceDrawOMRenderTargetDoesNotSupportLogicOps = 3146079,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_DEPTHSTENCILVIEW_NOT_SET"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_DEPTHSTENCILVIEW_NOT_SET</unmanaged>
 	DeviceDrawDepthStencilViewNotSet = 3146080,
@@ -5978,7 +5978,7 @@ public enum MessageId : int
 	CopytilemappingsInvalidParameter = 3146125,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYTILES_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYTILES_INVALID_PARAMETER</unmanaged>
-	CopytilesInvalidParameter = 3146126,
+	CopyTilesInvalidParameter = 3146126,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_UPDATETILES_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_UPDATETILES_INVALID_PARAMETER</unmanaged>
 	UpdatetilesInvalidParameter = 3146127,
@@ -6038,19 +6038,19 @@ public enum MessageId : int
 	TiledResourceTier1BufferTextureMismatch = 3146145,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_CRYPTOSESSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_CRYPTOSESSION</unmanaged>
-	CreateCryptosession = 3146146,
+	CreateCryptoSession = 3146146,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_AUTHENTICATEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_AUTHENTICATEDCHANNEL</unmanaged>
 	CreateAuthenticatedchannel = 3146147,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_LIVE_CRYPTOSESSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_LIVE_CRYPTOSESSION</unmanaged>
-	LiveCryptosession = 3146148,
+	LiveCryptoSession = 3146148,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_LIVE_AUTHENTICATEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_LIVE_AUTHENTICATEDCHANNEL</unmanaged>
 	LiveAuthenticatedchannel = 3146149,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DESTROY_CRYPTOSESSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DESTROY_CRYPTOSESSION</unmanaged>
-	DestroyCryptosession = 3146150,
+	DestroyCryptoSession = 3146150,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DESTROY_AUTHENTICATEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DESTROY_AUTHENTICATEDCHANNEL</unmanaged>
 	DestroyAuthenticatedchannel = 3146151,
