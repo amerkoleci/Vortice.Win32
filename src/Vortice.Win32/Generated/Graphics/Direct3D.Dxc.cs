@@ -7,8 +7,10 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -1986,9 +1988,9 @@ public unsafe partial struct IDxcValidator
 	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcValidator::Validate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Validate(IDxcBlob* pShader, uint Flags, IDxcOperationResult** ppResult)
+	public HResult Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDxcValidator*, IDxcBlob*, uint, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcValidator*)Unsafe.AsPointer(ref this), pShader, Flags, ppResult);
+		return ((delegate* unmanaged[Stdcall]<IDxcValidator*, IDxcBlob*, DxcValidatorFlags, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcValidator*)Unsafe.AsPointer(ref this), pShader, Flags, ppResult);
 	}
 
 }
@@ -2057,17 +2059,17 @@ public unsafe partial struct IDxcValidator2
 	/// <inheritdoc cref="IDxcValidator.Validate" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Validate(IDxcBlob* pShader, uint Flags, IDxcOperationResult** ppResult)
+	public HResult Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDxcValidator2*, IDxcBlob*, uint, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcValidator2*)Unsafe.AsPointer(ref this), pShader, Flags, ppResult);
+		return ((delegate* unmanaged[Stdcall]<IDxcValidator2*, IDxcBlob*, DxcValidatorFlags, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcValidator2*)Unsafe.AsPointer(ref this), pShader, Flags, ppResult);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcValidator2::ValidateWithDebug"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult ValidateWithDebug(IDxcBlob* pShader, uint Flags, DxcBuffer* pOptDebugBitcode, IDxcOperationResult** ppResult)
+	public HResult ValidateWithDebug(IDxcBlob* pShader, DxcValidatorFlags Flags, DxcBuffer* pOptDebugBitcode, IDxcOperationResult** ppResult)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDxcValidator2*, IDxcBlob*, uint, DxcBuffer*, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcValidator2*)Unsafe.AsPointer(ref this), pShader, Flags, pOptDebugBitcode, ppResult);
+		return ((delegate* unmanaged[Stdcall]<IDxcValidator2*, IDxcBlob*, DxcValidatorFlags, DxcBuffer*, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcValidator2*)Unsafe.AsPointer(ref this), pShader, Flags, pOptDebugBitcode, ppResult);
 	}
 
 }
@@ -2611,9 +2613,9 @@ public unsafe partial struct IDxcVersionInfo
 	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo::GetFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetFlags(uint* pFlags)
+	public HResult GetFlags(DxcVersionInfoFlags* pFlags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo*, uint*, int>)(lpVtbl[4]))((IDxcVersionInfo*)Unsafe.AsPointer(ref this), pFlags);
+		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo*)Unsafe.AsPointer(ref this), pFlags);
 	}
 
 }
@@ -2690,9 +2692,9 @@ public unsafe partial struct IDxcVersionInfo2
 	/// <inheritdoc cref="IDxcVersionInfo.GetFlags" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetFlags(uint* pFlags)
+	public HResult GetFlags(DxcVersionInfoFlags* pFlags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, uint*, int>)(lpVtbl[4]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pFlags);
+		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pFlags);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2::GetCommitInfo"]/*' />
@@ -3041,5 +3043,6 @@ public static unsafe partial class Apis
 
 	[DllImport("dxcompiler", ExactSpelling = true)]
 	public static extern HResult DxcCreateInstance2(Com.IMalloc* pMalloc, Guid* rclsid, Guid* riid, void** ppv);
+
 }
 #endregion Functions

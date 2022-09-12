@@ -155,7 +155,7 @@ public static unsafe class Program
 
                 MessageId* hide = stackalloc MessageId[1]
                 {
-                    MessageId.SetprivatedataChangingparams,
+                    MessageId.SetPrivateDataChangingParams,
                 };
 
                 InfoQueueFilter filter = new();
