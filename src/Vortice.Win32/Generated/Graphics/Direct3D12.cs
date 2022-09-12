@@ -6698,12 +6698,6 @@ public enum ShaderVersionType : int
 
 #endregion Enums
 
-#region Generated Enums
-#endregion Generated Enums
-
-#region Unions
-#endregion Unions
-
 #region Structs
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC"]/*' />
 /// <unmanaged>D3D12_COMMAND_QUEUE_DESC</unmanaged>

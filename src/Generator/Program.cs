@@ -11,11 +11,15 @@ public static class Program
 {
     private static readonly string[] jsons = new[]
     {
+        //"System.Com.json",
+
+        "Graphics.json",
         "Graphics.Dxgi.Common.json",
         "Graphics.Dxgi.json",
         "Graphics.Direct3D.json",
         "Graphics.Direct3D11.json",
         "Graphics.Direct3D12.json",
+        //"Graphics.Imaging.json",
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -55,11 +59,17 @@ public static class Program
 
         { "Foundation.LUID", "Luid" },
         { "Foundation.LARGE_INTEGER", "LargeInterger" },
+        { "Foundation.ULARGE_INTEGER", "ULargeInterger" },
 
         { "System.Com.IUnknown", "IUnknown" },
+        { "System.Com.ISequentialStream", "Com.ISequentialStream" },
+        { "System.Com.IStream", "Com.IStream" },
 
         { "Graphics.Gdi.HMONITOR", "IntPtr" },
         { "Graphics.Gdi.HDC", "IntPtr" },
+        { "Graphics.Gdi.HBITMAP", "IntPtr" },
+        { "Graphics.Gdi.HPALETTE", "IntPtr" },
+        { "UI.WindowsAndMessaging.HICON", "IntPtr" },
 
         { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
         { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
@@ -330,6 +340,9 @@ public static class Program
 
         // D3D12
         { "D3D12_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
+
+        // D2D1
+        { "D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE", "AffineTransform2DInterpolationMode" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -443,14 +456,25 @@ public static class Program
 
             fileName += splits[i];
         }
-        string ns = fileName;
+
+        string ns = string.Empty;
+        if (string.IsNullOrWhiteSpace(fileName) == true)
+        {
+            fileName = splits[0];
+            ns = folderRoot;
+        }
+        else
+        {
+            ns = $"{folderRoot}.{fileName}";
+        }
+
         fileName += ".cs";
 
         using var writer = new CodeWriter(
             Path.Combine(outputFolder, fileName),
-            $"{folderRoot}.{ns}",
+            ns,
             docFile,
-            $"Win32.{folderRoot}.{ns}");
+            $"Win32.{ns}");
 
         GenerateConstants(writer, api);
         GenerateTypes(writer, api);
@@ -509,7 +533,7 @@ public static class Program
 
     private static void GenerateTypes(CodeWriter writer, ApiData api)
     {
-        writer.WriteLine($"#region Enums");
+        bool regionWritten = false;
         foreach (ApiType enumType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "enum"))
         {
             if (enumType.Name.StartsWith("D3DX11"))
@@ -517,19 +541,28 @@ public static class Program
                 continue;
             }
 
+            if (!regionWritten)
+            {
+                writer.WriteLine($"#region Enums");
+                regionWritten = true;
+            }
+
             GenerateEnum(writer, enumType, false);
 
             s_visitedEnums.Add($"{writer.Api}.{enumType.Name}");
         }
 
-        writer.WriteLine($"#endregion Enums");
-        writer.WriteLine();
+        if (regionWritten)
+        {
+            writer.WriteLine("#endregion Enums");
+            writer.WriteLine();
+        }
 
         // Generated enums -> from constants
-        writer.WriteLine($"#region Generated Enums");
-        var createdEnums = new Dictionary<string, ApiType>();
+        regionWritten = false;
+        Dictionary<string, ApiType> createdEnums = new();
 
-        foreach (var constant in api.Constants)
+        foreach (ApiDataConstant constant in api.Constants)
         {
             if (ShouldSkipConstant(constant))
                 continue;
@@ -572,14 +605,24 @@ public static class Program
 
         foreach (ApiType enumType in createdEnums.Values)
         {
+            if (!regionWritten)
+            {
+                writer.WriteLine($"#region Generated Enums");
+                regionWritten = true;
+            }
+
             GenerateEnum(writer, enumType, true);
         }
 
-        writer.WriteLine($"#endregion Generated Enums");
-        writer.WriteLine();
+        if (regionWritten)
+        {
+            writer.WriteLine($"#endregion Generated Enums");
+            writer.WriteLine();
+        }
 
         // Unions
-        writer.WriteLine($"#region Unions");
+        regionWritten = false;
+
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
         {
             if (structType.Name.StartsWith("D3DX11") ||
@@ -593,15 +636,25 @@ public static class Program
                 continue;
             }
 
+            if (!regionWritten)
+            {
+                writer.WriteLine($"#region Unions");
+                regionWritten = true;
+            }
+
             GenerateStruct(writer, structType);
 
             s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
         }
-        writer.WriteLine($"#endregion Unions");
-        writer.WriteLine();
+
+        if (regionWritten)
+        {
+            writer.WriteLine($"#endregion Unions");
+            writer.WriteLine();
+        }
 
         // Structs
-        writer.WriteLine($"#region Structs");
+        regionWritten = false;
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
             if (structType.Name.StartsWith("D3DX11") ||
@@ -615,15 +668,24 @@ public static class Program
                 continue;
             }
 
+            if (!regionWritten)
+            {
+                writer.WriteLine($"#region Structs");
+                regionWritten = true;
+            }
+
             GenerateStruct(writer, structType);
 
             s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
         }
-        writer.WriteLine($"#endregion Structs");
-        writer.WriteLine();
+        if (regionWritten)
+        {
+            writer.WriteLine("#endregion Structs");
+            writer.WriteLine();
+        }
 
         // Com types
-        writer.WriteLine($"#region COM Types");
+        regionWritten = false;
         foreach (ApiType comType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "com"))
         {
             if (comType.Name.StartsWith("ID3DX11"))
@@ -631,10 +693,19 @@ public static class Program
                 continue;
             }
 
+            if (!regionWritten)
+            {
+                writer.WriteLine("#region COM Types");
+                regionWritten = true;
+            }
+
             // Generate methods
             List<KeyValuePair<ApiFunction, string>> methodsToGenerate = new();
             ApiType iterateType = comType;
-            while (iterateType.Interface != null && iterateType.Interface.Name != "IUnknown")
+            while (iterateType.Interface != null
+                && iterateType.Interface.Name != "IUnknown"
+                && iterateType.Interface.Name != "IStream"
+                && iterateType.Interface.Name != "IPersistStream")
             {
                 iterateType = api.Types.First(item => item.Name == iterateType.Interface.Name);
 
@@ -642,7 +713,6 @@ public static class Program
                 {
                     methodsToGenerate.Add(new(method, iterateType.Name));
                 }
-
             }
 
             foreach (ApiFunction method in comType.Methods)
@@ -653,8 +723,11 @@ public static class Program
             GenerateComType(api, writer, comType, methodsToGenerate);
         }
 
-        writer.WriteLine($"#endregion Com Types");
-        writer.WriteLine();
+        if (regionWritten)
+        {
+            writer.WriteLine("#endregion Com Types");
+            writer.WriteLine();
+        }
     }
 
     private static void GenerateFunctions(CodeWriter writer, ApiData api)
@@ -971,7 +1044,8 @@ public static class Program
                             writer.WriteLine("[FieldOffset(0)]");
                         }
 
-                        writer.WriteLine($"public unsafe fixed {fieldTypeName} {fieldValueName}[{field.Type.Shape.Size}];");
+                        int arraySize = field.Type.Shape != null ? field.Type.Shape.Size : 1;
+                        writer.WriteLine($"public unsafe fixed {fieldTypeName} {fieldValueName}[{arraySize}];");
                     }
                     else
                     {

@@ -3,10 +3,16 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0;</TargetFrameworks>
     <Description>Windows API low level bindings.</Description>
-    <VersionPrefix>1.1.0</VersionPrefix>
+    <VersionPrefix>1.2.0</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="System\**" />
+    <EmbeddedResource Remove="System\**" />
+    <None Remove="System\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\LICENSE" PackagePath="" Pack="true" />

@@ -6963,9 +6963,6 @@ public enum TraceRegisterType : int
 
 #endregion Enums
 
-#region Generated Enums
-#endregion Generated Enums
-
 #region Unions
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_PROTECTION_FLAGS</unmanaged>

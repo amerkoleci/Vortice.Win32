@@ -570,9 +570,6 @@ public enum CpuAccess : uint
 
 #endregion Generated Enums
 
-#region Unions
-#endregion Unions
-
 #region Structs
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL"]/*' />
 /// <unmanaged>DXGI_RATIONAL</unmanaged>
@@ -1744,7 +1741,4 @@ public partial struct JpegQuantizationTable
 }
 
 #endregion Structs
-
-#region COM Types
-#endregion Com Types
 

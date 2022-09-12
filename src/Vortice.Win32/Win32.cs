@@ -4,35 +4,14 @@
 
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Win32;
 
-public static partial class Apis
+public static unsafe partial class Apis
 {
-    public static ref readonly Guid IID_IUnknown
-    {
-        get
-        {
-            ReadOnlySpan<byte> data = new byte[] {
-                0x00, 0x00, 0x00, 0x00,
-                0x00, 0x00,
-                0x00, 0x00,
-                0xC0,
-                0x00,
-                0x00,
-                0x00,
-                0x00,
-                0x00,
-                0x00,
-                0x46
-            };
-
-            Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
-            return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
-        }
-    }
-
     /// <summary>Retrieves the GUID of of a specified type.</summary>
     /// <param name="value">A value of type <typeparamref name="T"/>.</param>
     /// <typeparam name="T">The type to retrieve the GUID for.</typeparam>
@@ -107,4 +86,7 @@ public static partial class Apis
             return p;
         }
     }
+
+    [DllImport("ole32", ExactSpelling = true)]
+    public static extern HResult CoCreateInstance([NativeTypeName("const IID &")] Guid* rclsid, [NativeTypeName("LPUNKNOWN")] IUnknown* pUnkOuter, [NativeTypeName("DWORD")] uint dwClsContext, [NativeTypeName("const IID &")] Guid* riid, [NativeTypeName("LPVOID *")] void** ppv);
 }
