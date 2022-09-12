@@ -24,10 +24,102 @@ public static partial class Apis
 	public const uint DXGI_SHARED_RESOURCE_READ = 2147483648;
 	public const uint DXGI_SHARED_RESOURCE_WRITE = 1;
 	public const uint DXGI_DEBUG_BINARY_VERSION = 1;
-	public static readonly Guid DXGI_DEBUG_ALL = new Guid(0xe48ae283, 0xda80, 0x490b, 0x87, 0xe6, 0x43, 0xe9, 0xa9, 0xcf, 0xda, 0x08);
-	public static readonly Guid DXGI_DEBUG_DX = new Guid(0x35cdd7fc, 0x13b2, 0x421d, 0xa5, 0xd7, 0x7e, 0x44, 0x51, 0x28, 0x7d, 0x64);
-	public static readonly Guid DXGI_DEBUG_DXGI = new Guid(0x25cddaa4, 0xb1c6, 0x47e1, 0xac, 0x3e, 0x98, 0x87, 0x5b, 0x5a, 0x2e, 0x2a);
-	public static readonly Guid DXGI_DEBUG_APP = new Guid(0x06cd6e01, 0x4219, 0x4ebd, 0x87, 0x09, 0x27, 0xed, 0x23, 0x36, 0x0c, 0x62);
+	public static ref readonly Guid DXGI_DEBUG_ALL
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x83, 0xE2, 0x8A, 0xE4,
+				0x80, 0xDA,
+				0x0B, 0x49,
+				0x87,
+				0xE6,
+				0x43,
+				0xE9,
+				0xA9,
+				0xCF,
+				0xDA,
+				0x08
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid DXGI_DEBUG_DX
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xFC, 0xD7, 0xCD, 0x35,
+				0xB2, 0x13,
+				0x1D, 0x42,
+				0xA5,
+				0xD7,
+				0x7E,
+				0x44,
+				0x51,
+				0x28,
+				0x7D,
+				0x64
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid DXGI_DEBUG_DXGI
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA4, 0xDA, 0xCD, 0x25,
+				0xC6, 0xB1,
+				0xE1, 0x47,
+				0xAC,
+				0x3E,
+				0x98,
+				0x87,
+				0x5B,
+				0x5A,
+				0x2E,
+				0x2A
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid DXGI_DEBUG_APP
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x01, 0x6E, 0xCD, 0x06,
+				0x19, 0x42,
+				0xBD, 0x4E,
+				0x87,
+				0x09,
+				0x27,
+				0xED,
+				0x23,
+				0x36,
+				0x0C,
+				0x62
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 	public const uint DXGI_INFO_QUEUE_MESSAGE_ID_STRING_FROM_APPLICATION = 0;
 	public const uint DXGI_INFO_QUEUE_DEFAULT_MESSAGE_COUNT_LIMIT = 1024;
 	public const uint DXGI_CREATE_FACTORY_DEBUG = 1;
@@ -4781,9 +4873,9 @@ public unsafe partial struct IDXGIResource1
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char** lpName, IntPtr* pHandle)
+	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 
 }
@@ -10819,17 +10911,17 @@ public unsafe partial struct IDXGIInfoQueue
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult AddMessage(Guid Producer, InfoQueueMessageCategory Category, InfoQueueMessageSeverity Severity, int ID, byte** pDescription)
+	public HResult AddMessage(Guid Producer, InfoQueueMessageCategory Category, InfoQueueMessageSeverity Severity, int ID, sbyte* pDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, InfoQueueMessageSeverity, int, byte**, int>)(lpVtbl[30]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, Severity, ID, pDescription);
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, InfoQueueMessageCategory, InfoQueueMessageSeverity, int, sbyte*, int>)(lpVtbl[30]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer, Category, Severity, ID, pDescription);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult AddApplicationMessage(InfoQueueMessageSeverity Severity, byte** pDescription)
+	public HResult AddApplicationMessage(InfoQueueMessageSeverity Severity, sbyte* pDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, InfoQueueMessageSeverity, byte**, int>)(lpVtbl[31]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, InfoQueueMessageSeverity, sbyte*, int>)(lpVtbl[31]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue::SetBreakOnCategory"]/*' />

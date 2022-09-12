@@ -64,16 +64,154 @@ public static partial class Apis
 	public const uint D3D_SHADER_FEATURE_SAMPLER_DESCRIPTOR_HEAP_INDEXING = 67108864;
 	public const uint D3D_SHADER_FEATURE_WAVE_MMA = 134217728;
 	public const uint D3D_SHADER_FEATURE_ATOMIC_INT64_ON_DESCRIPTOR_HEAP_RESOURCE = 268435456;
-	public static readonly Guid WKPDID_D3DDebugObjectName = new Guid(0x429b8c22, 0x9188, 0x4b0c, 0x87, 0x42, 0xac, 0xb0, 0xbf, 0x85, 0xc2, 0x00);
-	public static readonly Guid WKPDID_D3DDebugObjectNameW = new Guid(0x4cca5fd8, 0x921f, 0x42c8, 0x85, 0x66, 0x70, 0xca, 0xf2, 0xa9, 0xb7, 0x41);
-	public static readonly Guid WKPDID_CommentStringW = new Guid(0xd0149dc0, 0x90e8, 0x4ec8, 0x81, 0x44, 0xe9, 0x00, 0xad, 0x26, 0x6b, 0xb2);
-	public static readonly Guid WKPDID_D3D12UniqueObjectId = new Guid(0x1b39de15, 0xec04, 0x4bae, 0xba, 0x4d, 0x8c, 0xef, 0x79, 0xfc, 0x04, 0xc1);
+	public static ref readonly Guid WKPDID_D3DDebugObjectName
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x22, 0x8C, 0x9B, 0x42,
+				0x88, 0x91,
+				0x0C, 0x4B,
+				0x87,
+				0x42,
+				0xAC,
+				0xB0,
+				0xBF,
+				0x85,
+				0xC2,
+				0x00
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid WKPDID_D3DDebugObjectNameW
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xD8, 0x5F, 0xCA, 0x4C,
+				0x1F, 0x92,
+				0xC8, 0x42,
+				0x85,
+				0x66,
+				0x70,
+				0xCA,
+				0xF2,
+				0xA9,
+				0xB7,
+				0x41
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid WKPDID_CommentStringW
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xC0, 0x9D, 0x14, 0xD0,
+				0xE8, 0x90,
+				0xC8, 0x4E,
+				0x81,
+				0x44,
+				0xE9,
+				0x00,
+				0xAD,
+				0x26,
+				0x6B,
+				0xB2
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid WKPDID_D3D12UniqueObjectId
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x15, 0xDE, 0x39, 0x1B,
+				0x04, 0xEC,
+				0xAE, 0x4B,
+				0xBA,
+				0x4D,
+				0x8C,
+				0xEF,
+				0x79,
+				0xFC,
+				0x04,
+				0xC1
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 	public const uint D3D_COMPONENT_MASK_X = 1;
 	public const uint D3D_COMPONENT_MASK_Y = 2;
 	public const uint D3D_COMPONENT_MASK_Z = 4;
 	public const uint D3D_COMPONENT_MASK_W = 8;
-	public static readonly Guid D3D_TEXTURE_LAYOUT_ROW_MAJOR = new Guid(0xb5dc234f, 0x72bb, 0x4bec, 0x97, 0x05, 0x8c, 0xf2, 0x58, 0xdf, 0x6b, 0x6c);
-	public static readonly Guid D3D_TEXTURE_LAYOUT_64KB_STANDARD_SWIZZLE = new Guid(0x4c0f29e3, 0x3f5f, 0x4d35, 0x84, 0xc9, 0xbc, 0x09, 0x83, 0xb6, 0x2c, 0x28);
+	public static ref readonly Guid D3D_TEXTURE_LAYOUT_ROW_MAJOR
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x4F, 0x23, 0xDC, 0xB5,
+				0xBB, 0x72,
+				0xEC, 0x4B,
+				0x97,
+				0x05,
+				0x8C,
+				0xF2,
+				0x58,
+				0xDF,
+				0x6B,
+				0x6C
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D_TEXTURE_LAYOUT_64KB_STANDARD_SWIZZLE
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xE3, 0x29, 0x0F, 0x4C,
+				0x5F, 0x3F,
+				0x35, 0x4D,
+				0x84,
+				0xC9,
+				0xBC,
+				0x09,
+				0x83,
+				0xB6,
+				0x2C,
+				0x28
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 }
 
 #region Enums
@@ -1073,10 +1211,10 @@ public enum ParameterFlags : int
 public partial struct ShaderMacro
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Definition"]/*' />
-	public unsafe byte* Definition;
+	public unsafe sbyte* Definition;
 }
 
 #endregion Structs
@@ -1249,9 +1387,9 @@ public unsafe partial struct ID3DInclude
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude::Open"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult Open(IncludeType IncludeType, byte** pFileName, void* pParentData, void** ppData, uint* pBytes)
+	public HResult Open(IncludeType IncludeType, sbyte* pFileName, void* pParentData, void** ppData, uint* pBytes)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, IncludeType, byte**, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
+		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, IncludeType, sbyte*, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude::Close"]/*' />

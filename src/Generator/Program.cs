@@ -19,6 +19,7 @@ public static class Program
         "Graphics.Direct3D.json",
         "Graphics.Direct3D11.json",
         "Graphics.Direct3D12.json",
+        "Graphics.Direct3D.Dxc.json",
         //"Graphics.Imaging.json",
     };
 
@@ -53,8 +54,8 @@ public static class Program
         { "Foundation.LPARAM", "IntPtr" },
         { "Foundation.LRESULT", "IntPtr" },
         { "Foundation.WPARAM", "UIntPtr" },
-        { "Foundation.PSTR", "byte*" },
-        { "Foundation.PWSTR", "char*" },
+        { "Foundation.PSTR", "sbyte*" },
+        { "Foundation.PWSTR", "ushort*" },
         { "Foundation.CHAR", "byte" },
 
         { "Foundation.LUID", "Luid" },
@@ -64,6 +65,7 @@ public static class Program
         { "System.Com.IUnknown", "IUnknown" },
         { "System.Com.ISequentialStream", "Com.ISequentialStream" },
         { "System.Com.IStream", "Com.IStream" },
+        { "System.Com.IMalloc", "Com.IMalloc" },
 
         { "Graphics.Gdi.HMONITOR", "IntPtr" },
         { "Graphics.Gdi.HDC", "IntPtr" },
@@ -81,7 +83,6 @@ public static class Program
         { "Foundation.POINTL", "System.Drawing.Point" },
         { "Foundation.SIZE", "System.Drawing.Size" },
     };
-
 
     private static readonly Dictionary<string, string> s_partRenames = new()
     {
@@ -210,6 +211,10 @@ public static class Program
         "ExecuteExtensionCommand",
         "ResolveEncoderOutputMetadata",
         "ResolveSubresourceRegion",
+        "InPlaceEdit",
+        "RootSignatureOnly",
+        "ModuleOnly",
+        "ValidMask",
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
@@ -276,6 +281,9 @@ public static class Program
         { "D3D12_DEBUG_DEVICE_PARAMETER_TYPE", "D3D12_DEBUG_DEVICE_PARAMETER" },
         { "D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE", "D3D12_DEBUG_COMMAND_LIST_PARAMETER" },
         { "D3D12_SHADER_VERSION_TYPE", "D3D12_SHVER" },
+
+        // Dxc
+        { "DXC_OUT_KIND", "DXC_OUT" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -310,6 +318,9 @@ public static class Program
         {"DXGI_PRESENT", true },
         {"DXGI_MWA", true },
         {"DXGI_ENUM_MODES", true },
+        {"DXC_HASHFLAG", true },
+        {"DxcValidatorFlags", true },
+        {"DxcVersionInfoFlags", true },
     };
 
     private static readonly HashSet<string> s_ignoredStartParts = new(StringComparer.OrdinalIgnoreCase)
@@ -343,6 +354,11 @@ public static class Program
 
         // D2D1
         { "D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE", "AffineTransform2DInterpolationMode" },
+
+        // Dxc
+        { "DXC_HASHFLAG", "DxcHashFlags" },
+        { "DxcValidatorFlags", "DxcValidatorFlags" },
+        { "DxcVersionInfoFlags", "DxcVersionInfoFlags" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -382,6 +398,9 @@ public static class Program
 
         // D3D12
         { "D3D12_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D12_COLOR_WRITE_ENABLE" },
+
+        // Dxc
+        { "DxcShaderHash::Flags", "DXC_HASHFLAG" },
     };
 
     private static readonly Dictionary<string, string> s_mapFunctionParameters = new()
@@ -506,7 +525,8 @@ public static class Program
                 string typeName = GetTypeName(constant.Type);
                 if (typeName == "Guid")
                 {
-                    writer.WriteLine($"public static readonly Guid {constant.Name} = {FormatGuid(constant.Value.ToString())};");
+                    WriteGuid(writer, constant.Value.ToString(), constant.Name);
+                    writer.WriteLine();
                 }
                 else if (typeName == "HResult")
                 {
@@ -772,12 +792,12 @@ public static class Program
         foreach (ApiParameter parameter in function.Params)
         {
             bool asPointer = false;
-            string parameterType = default;
+            string parameterType = string.Empty;
             if (parameter.Type.Kind == "ApiRef")
             {
                 if (parameter.Type.TargetKind == "FunctionPointer")
                 {
-                    var functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
+                    ApiType functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
                     parameterType = "delegate* unmanaged[Stdcall]<void*, void>";
                 }
                 else
@@ -967,8 +987,15 @@ public static class Program
         }
         else
         {
-            csTypeName = GetDataTypeName(structType.Name, out structPrefix);
-            AddCsMapping(writer.Api, structType.Name, csTypeName);
+            if (structType.Name.StartsWith("Dxc"))
+            {
+                csTypeName = structType.Name;
+            }
+            else
+            {
+                csTypeName = GetDataTypeName(structType.Name, out structPrefix);
+                AddCsMapping(writer.Api, structType.Name, csTypeName);
+            }
 
             writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}\"]/*' />");
 
@@ -1219,51 +1246,7 @@ public static class Program
             if (comType.Guid != null)
             {
                 // Generate IID
-                using (writer.PushBlock($"public static ref readonly Guid IID_{csTypeName}"))
-                {
-                    writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
-                    using (writer.PushBlock("get"))
-                    {
-                        var guid = Guid.Parse(comType.Guid).ToString("N");
-                        var _1 = "0x" + guid.Substring(6, 2).ToUpperInvariant();
-                        var _2 = "0x" + guid.Substring(4, 2).ToUpperInvariant();
-                        var _3 = "0x" + guid.Substring(2, 2).ToUpperInvariant();
-                        var _4 = "0x" + guid.Substring(0, 2).ToUpperInvariant();
-
-                        var _5 = "0x" + guid.Substring(10, 2).ToUpperInvariant();
-                        var _6 = "0x" + guid.Substring(8, 2).ToUpperInvariant();
-
-                        var _7 = "0x" + guid.Substring(14, 2).ToUpperInvariant();
-                        var _8 = "0x" + guid.Substring(12, 2).ToUpperInvariant();
-
-                        var d = "0x" + guid.Substring(16, 2).ToUpperInvariant();
-                        var e = "0x" + guid.Substring(18, 2).ToUpperInvariant();
-                        var f = "0x" + guid.Substring(20, 2).ToUpperInvariant();
-                        var g = "0x" + guid.Substring(22, 2).ToUpperInvariant();
-                        var h = "0x" + guid.Substring(24, 2).ToUpperInvariant();
-                        var i = "0x" + guid.Substring(26, 2).ToUpperInvariant();
-                        var j = "0x" + guid.Substring(28, 2).ToUpperInvariant();
-                        var k = "0x" + guid.Substring(30, 2).ToUpperInvariant();
-
-                        writer.WriteLine("ReadOnlySpan<byte> data = new byte[] {");
-                        writer.WriteLine($"{'\t'}{_1}, {_2}, {_3}, {_4},");
-                        writer.WriteLine($"{'\t'}{_5}, {_6},");
-                        writer.WriteLine($"{'\t'}{_7}, {_8},");
-                        writer.WriteLine($"{'\t'}{d},");
-                        writer.WriteLine($"{'\t'}{e},");
-                        writer.WriteLine($"{'\t'}{f},");
-                        writer.WriteLine($"{'\t'}{g},");
-                        writer.WriteLine($"{'\t'}{h},");
-                        writer.WriteLine($"{'\t'}{i},");
-                        writer.WriteLine($"{'\t'}{j},");
-                        writer.WriteLine($"{'\t'}{k}");
-                        writer.WriteLine("};");
-                        writer.WriteLine();
-
-                        writer.WriteLine("Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());");
-                        writer.WriteLine("return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));");
-                    }
-                }
+                WriteGuid(writer, comType.Guid, $"IID_{csTypeName}");
                 writer.WriteLine();
 
                 writer.WriteLine($"public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
@@ -1338,12 +1321,18 @@ public static class Program
                 foreach (ApiParameter parameter in method.Params)
                 {
                     bool asPointer = false;
-                    string parameterType = default;
+                    string parameterType = string.Empty;
+
+
+                    if (method.Name == "Compile" && parameter.Name == "pArguments")
+                    {
+                    }
+
                     if (parameter.Type.Kind == "ApiRef")
                     {
                         if (parameter.Type.TargetKind == "FunctionPointer")
                         {
-                            var functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
+                            ApiType functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
                             parameterType = "delegate* unmanaged[Stdcall]<void*, void>";
                         }
                         else
@@ -1373,11 +1362,6 @@ public static class Program
 
                     parameterType = NormalizeTypeName(writer.Api, parameterType);
                     string parameterName = parameter.Name;
-
-                    if (method.Name == "RSSetScissorRects" && parameterName == "pRects")
-                    {
-
-                    }
 
                     bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
                     if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
@@ -1776,23 +1760,53 @@ public static class Program
         return prettyName;
     }
 
-    private static string FormatGuid(string value)
+    private static void WriteGuid(CodeWriter writer, string guidValue, string guidName)
     {
-        var guid = Guid.Parse(value).ToString("N");
+        using (writer.PushBlock($"public static ref readonly Guid {guidName}"))
+        {
+            writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+            using (writer.PushBlock("get"))
+            {
+                var guid = Guid.Parse(guidValue).ToString("N");
+                var _1 = "0x" + guid.Substring(6, 2).ToUpperInvariant();
+                var _2 = "0x" + guid.Substring(4, 2).ToUpperInvariant();
+                var _3 = "0x" + guid.Substring(2, 2).ToUpperInvariant();
+                var _4 = "0x" + guid.Substring(0, 2).ToUpperInvariant();
 
-        var a = "0x" + guid.Substring(0, 8);
-        var b = "0x" + guid.Substring(8, 4);
-        var c = "0x" + guid.Substring(12, 4);
-        var d = "0x" + guid.Substring(16, 2);
-        var e = "0x" + guid.Substring(18, 2);
-        var f = "0x" + guid.Substring(20, 2);
-        var g = "0x" + guid.Substring(22, 2);
-        var h = "0x" + guid.Substring(24, 2);
-        var i = "0x" + guid.Substring(26, 2);
-        var j = "0x" + guid.Substring(28, 2);
-        var k = "0x" + guid.Substring(30, 2);
+                var _5 = "0x" + guid.Substring(10, 2).ToUpperInvariant();
+                var _6 = "0x" + guid.Substring(8, 2).ToUpperInvariant();
 
-        return $"new Guid({a}, {b}, {c}, {d}, {e}, {f}, {g}, {h}, {i}, {j}, {k})";
+                var _7 = "0x" + guid.Substring(14, 2).ToUpperInvariant();
+                var _8 = "0x" + guid.Substring(12, 2).ToUpperInvariant();
+
+                var d = "0x" + guid.Substring(16, 2).ToUpperInvariant();
+                var e = "0x" + guid.Substring(18, 2).ToUpperInvariant();
+                var f = "0x" + guid.Substring(20, 2).ToUpperInvariant();
+                var g = "0x" + guid.Substring(22, 2).ToUpperInvariant();
+                var h = "0x" + guid.Substring(24, 2).ToUpperInvariant();
+                var i = "0x" + guid.Substring(26, 2).ToUpperInvariant();
+                var j = "0x" + guid.Substring(28, 2).ToUpperInvariant();
+                var k = "0x" + guid.Substring(30, 2).ToUpperInvariant();
+
+                writer.WriteLine("ReadOnlySpan<byte> data = new byte[] {");
+                writer.WriteLine($"{'\t'}{_1}, {_2}, {_3}, {_4},");
+                writer.WriteLine($"{'\t'}{_5}, {_6},");
+                writer.WriteLine($"{'\t'}{_7}, {_8},");
+                writer.WriteLine($"{'\t'}{d},");
+                writer.WriteLine($"{'\t'}{e},");
+                writer.WriteLine($"{'\t'}{f},");
+                writer.WriteLine($"{'\t'}{g},");
+                writer.WriteLine($"{'\t'}{h},");
+                writer.WriteLine($"{'\t'}{i},");
+                writer.WriteLine($"{'\t'}{j},");
+                writer.WriteLine($"{'\t'}{k}");
+                writer.WriteLine("};");
+                writer.WriteLine();
+
+                writer.WriteLine("Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());");
+                writer.WriteLine("return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));");
+            }
+        }
     }
 
     private static string GetApiName(ApiDataType dataType)
@@ -1848,12 +1862,21 @@ public static class Program
 
     private static bool IsPrimitive(string typeName)
     {
+        if (typeName.EndsWith("*"))
+        {
+            typeName = typeName.Substring(0, typeName.Length - 1);
+        }
+
         switch (typeName)
         {
             case "void":
             case "bool":
+            case "byte":
+            case "sbyte":
             case "int":
             case "uint":
+            case "short":
+            case "ushort":
             case "Bool32":
                 return true;
 
@@ -1875,6 +1898,10 @@ public static class Program
             return IsPrimitive(apiRefType);
         }
         else if (dataType.Kind == "PointerTo")
+        {
+            return IsPrimitive(dataType.Child);
+        }
+        else if (dataType.Kind == "LPArray")
         {
             return IsPrimitive(dataType.Child);
         }

@@ -452,15 +452,176 @@ public static partial class Apis
 	public const uint D3D12_MIP_FILTER_SHIFT = 0;
 	public const uint D3D12_ANISOTROPIC_FILTERING_BIT = 64;
 	public const uint LUID_DEFINED = 1;
-	public static readonly Guid D3D12_PROTECTED_RESOURCES_SESSION_HARDWARE_PROTECTED = new Guid(0x62b0084e, 0xc70e, 0x4daa, 0xa1, 0x09, 0x30, 0xff, 0x8d, 0x5a, 0x04, 0x82);
-	public static readonly Guid CLSID_D3D12Debug = new Guid(0xf2352aeb, 0xdd84, 0x49fe, 0xb9, 0x7b, 0xa9, 0xdc, 0xfd, 0xcc, 0x1b, 0x4f);
-	public static readonly Guid CLSID_D3D12Tools = new Guid(0xe38216b1, 0x3c8c, 0x4833, 0xaa, 0x09, 0x0a, 0x06, 0xb6, 0x5d, 0x96, 0xc8);
-	public static readonly Guid CLSID_D3D12DeviceRemovedExtendedData = new Guid(0x4a75bbc4, 0x9ff4, 0x4ad8, 0x9f, 0x18, 0xab, 0xae, 0x84, 0xdc, 0x5f, 0xf2);
-	public static readonly Guid CLSID_D3D12SDKConfiguration = new Guid(0x7cda6aca, 0xa03e, 0x49c8, 0x94, 0x58, 0x03, 0x34, 0xd2, 0x0e, 0x07, 0xce);
+	public static ref readonly Guid D3D12_PROTECTED_RESOURCES_SESSION_HARDWARE_PROTECTED
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x4E, 0x08, 0xB0, 0x62,
+				0x0E, 0xC7,
+				0xAA, 0x4D,
+				0xA1,
+				0x09,
+				0x30,
+				0xFF,
+				0x8D,
+				0x5A,
+				0x04,
+				0x82
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid CLSID_D3D12Debug
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xEB, 0x2A, 0x35, 0xF2,
+				0x84, 0xDD,
+				0xFE, 0x49,
+				0xB9,
+				0x7B,
+				0xA9,
+				0xDC,
+				0xFD,
+				0xCC,
+				0x1B,
+				0x4F
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid CLSID_D3D12Tools
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xB1, 0x16, 0x82, 0xE3,
+				0x8C, 0x3C,
+				0x33, 0x48,
+				0xAA,
+				0x09,
+				0x0A,
+				0x06,
+				0xB6,
+				0x5D,
+				0x96,
+				0xC8
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid CLSID_D3D12DeviceRemovedExtendedData
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xC4, 0xBB, 0x75, 0x4A,
+				0xF4, 0x9F,
+				0xD8, 0x4A,
+				0x9F,
+				0x18,
+				0xAB,
+				0xAE,
+				0x84,
+				0xDC,
+				0x5F,
+				0xF2
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid CLSID_D3D12SDKConfiguration
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xCA, 0x6A, 0xDA, 0x7C,
+				0x3E, 0xA0,
+				0xC8, 0x49,
+				0x94,
+				0x58,
+				0x03,
+				0x34,
+				0xD2,
+				0x0E,
+				0x07,
+				0xCE
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 	public const uint D3D12_SHADING_RATE_X_AXIS_SHIFT = 2;
 	public const uint D3D12_SHADING_RATE_VALID_MASK = 3;
-	public static readonly Guid WKPDID_D3DAutoDebugObjectNameW = new Guid(0xd4902e36, 0x757a, 0x4942, 0x95, 0x94, 0xb6, 0x76, 0x9a, 0xfa, 0x43, 0xcd);
-	public static readonly Guid DXGI_DEBUG_D3D12 = new Guid(0xcf59a98c, 0xa950, 0x4326, 0x91, 0xef, 0x9b, 0xba, 0xa1, 0x7b, 0xfd, 0x95);
+	public static ref readonly Guid WKPDID_D3DAutoDebugObjectNameW
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x36, 0x2E, 0x90, 0xD4,
+				0x7A, 0x75,
+				0x42, 0x49,
+				0x95,
+				0x94,
+				0xB6,
+				0x76,
+				0x9A,
+				0xFA,
+				0x43,
+				0xCD
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid DXGI_DEBUG_D3D12
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x8C, 0xA9, 0x59, 0xCF,
+				0x50, 0xA9,
+				0x26, 0x43,
+				0x91,
+				0xEF,
+				0x9B,
+				0xBA,
+				0xA1,
+				0x7B,
+				0xFD,
+				0x95
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 	public const uint D3D12_INFO_QUEUE_DEFAULT_MESSAGE_COUNT_LIMIT = 1024;
 	public const uint D3D_SHADER_REQUIRES_STENCIL_REF = 512;
 	public const uint D3D_SHADER_REQUIRES_INNER_COVERAGE = 1024;
@@ -482,9 +643,78 @@ public static partial class Apis
 	public const uint D3D_SHADER_REQUIRES_SAMPLER_DESCRIPTOR_HEAP_INDEXING = 67108864;
 	public const uint D3D_SHADER_REQUIRES_WAVE_MMA = 134217728;
 	public const uint D3D_SHADER_REQUIRES_ATOMIC_INT64_ON_DESCRIPTOR_HEAP_RESOURCE = 268435456;
-	public static readonly Guid D3D12ExperimentalShaderModels = new Guid(0x76f5573e, 0xf13a, 0x40f5, 0xb2, 0x97, 0x81, 0xce, 0x9e, 0x18, 0x93, 0x3f);
-	public static readonly Guid D3D12TiledResourceTier4 = new Guid(0xc9c4725f, 0xa81a, 0x4f56, 0x8c, 0x5b, 0xc5, 0x10, 0x39, 0xd6, 0x94, 0xfb);
-	public static readonly Guid D3D12MetaCommand = new Guid(0xc734c97e, 0x8077, 0x48c8, 0x9f, 0xdc, 0xd9, 0xd1, 0xdd, 0x31, 0xdd, 0x77);
+	public static ref readonly Guid D3D12ExperimentalShaderModels
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x3E, 0x57, 0xF5, 0x76,
+				0x3A, 0xF1,
+				0xF5, 0x40,
+				0xB2,
+				0x97,
+				0x81,
+				0xCE,
+				0x9E,
+				0x18,
+				0x93,
+				0x3F
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D12TiledResourceTier4
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x5F, 0x72, 0xC4, 0xC9,
+				0x1A, 0xA8,
+				0x56, 0x4F,
+				0x8C,
+				0x5B,
+				0xC5,
+				0x10,
+				0x39,
+				0xD6,
+				0x94,
+				0xFB
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D12MetaCommand
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x7E, 0xC9, 0x34, 0xC7,
+				0x77, 0x80,
+				0xC8, 0x48,
+				0x9F,
+				0xDC,
+				0xD9,
+				0xD1,
+				0xDD,
+				0x31,
+				0xDD,
+				0x77
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 }
 
 #region Enums
@@ -6721,7 +6951,7 @@ public partial struct CommandQueueDescription
 public partial struct InputElementDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::SemanticName"]/*' />
-	public unsafe byte* SemanticName;
+	public unsafe sbyte* SemanticName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -6750,7 +6980,7 @@ public partial struct SODeclarationEntry
 	public uint Stream;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::SemanticName"]/*' />
-	public unsafe byte* SemanticName;
+	public unsafe sbyte* SemanticName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -10146,7 +10376,7 @@ public partial struct ProtectedResourceSessionDescription
 public partial struct MetaCommandParameterDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Name"]/*' />
-	public unsafe char* Name;
+	public unsafe ushort* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Type"]/*' />
 	public MetaCommandParameterType Type;
@@ -10169,7 +10399,7 @@ public partial struct MetaCommandDescription
 	public Guid Id;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::Name"]/*' />
-	public unsafe char* Name;
+	public unsafe ushort* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::InitializationDirtyState"]/*' />
 	public GraphicsStates InitializationDirtyState;
@@ -10226,10 +10456,10 @@ public partial struct NodeMask
 public partial struct ExportDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Name"]/*' />
-	public unsafe char* Name;
+	public unsafe ushort* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::ExportToRename"]/*' />
-	public unsafe char* ExportToRename;
+	public unsafe ushort* ExportToRename;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Flags"]/*' />
 	public ExportFlags Flags;
@@ -10274,7 +10504,7 @@ public partial struct SubObjectToExportsAssociation
 	public uint NumExports;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pExports"]/*' />
-	public unsafe char** pExports;
+	public unsafe ushort** pExports;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION"]/*' />
@@ -10282,13 +10512,13 @@ public partial struct SubObjectToExportsAssociation
 public partial struct DxilSubObjectToExportsAssociation
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION::SubobjectToAssociate"]/*' />
-	public unsafe char* SubobjectToAssociate;
+	public unsafe ushort* SubobjectToAssociate;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION::NumExports"]/*' />
 	public uint NumExports;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pExports"]/*' />
-	public unsafe char** pExports;
+	public unsafe ushort** pExports;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC"]/*' />
@@ -10296,19 +10526,19 @@ public partial struct DxilSubObjectToExportsAssociation
 public partial struct HitGroupDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::HitGroupExport"]/*' />
-	public unsafe char* HitGroupExport;
+	public unsafe ushort* HitGroupExport;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::Type"]/*' />
 	public HitGroupType Type;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::AnyHitShaderImport"]/*' />
-	public unsafe char* AnyHitShaderImport;
+	public unsafe ushort* AnyHitShaderImport;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::ClosestHitShaderImport"]/*' />
-	public unsafe char* ClosestHitShaderImport;
+	public unsafe ushort* ClosestHitShaderImport;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::IntersectionShaderImport"]/*' />
-	public unsafe char* IntersectionShaderImport;
+	public unsafe ushort* IntersectionShaderImport;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG"]/*' />
@@ -10726,13 +10956,13 @@ public partial struct AutoBreadcrumbNode
 	public unsafe byte* pCommandListDebugNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandListDebugNameW"]/*' />
-	public unsafe char* pCommandListDebugNameW;
+	public unsafe ushort* pCommandListDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandQueueDebugNameA"]/*' />
 	public unsafe byte* pCommandQueueDebugNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandQueueDebugNameW"]/*' />
-	public unsafe char* pCommandQueueDebugNameW;
+	public unsafe ushort* pCommandQueueDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandList"]/*' />
 	public ID3D12GraphicsCommandList pCommandList;
@@ -10761,7 +10991,7 @@ public partial struct DredBreadcrumbContext
 	public uint BreadcrumbIndex;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT::pContextString"]/*' />
-	public unsafe char* pContextString;
+	public unsafe ushort* pContextString;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1"]/*' />
@@ -10772,13 +11002,13 @@ public partial struct AutoBreadcrumbNode1
 	public unsafe byte* pCommandListDebugNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandListDebugNameW"]/*' />
-	public unsafe char* pCommandListDebugNameW;
+	public unsafe ushort* pCommandListDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueueDebugNameA"]/*' />
 	public unsafe byte* pCommandQueueDebugNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueueDebugNameW"]/*' />
-	public unsafe char* pCommandQueueDebugNameW;
+	public unsafe ushort* pCommandQueueDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandList"]/*' />
 	public ID3D12GraphicsCommandList pCommandList;
@@ -10824,7 +11054,7 @@ public partial struct DredAllocationNode
 	public unsafe byte* ObjectNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE::ObjectNameW"]/*' />
-	public unsafe char* ObjectNameW;
+	public unsafe ushort* ObjectNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE::AllocationType"]/*' />
 	public DredAllocationType AllocationType;
@@ -10841,7 +11071,7 @@ public partial struct DredAllocationNode1
 	public unsafe byte* ObjectNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE1::ObjectNameW"]/*' />
-	public unsafe char* ObjectNameW;
+	public unsafe ushort* ObjectNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE1::AllocationType"]/*' />
 	public DredAllocationType AllocationType;
@@ -11425,7 +11655,7 @@ public partial struct DispatchMeshArguments
 public partial struct SignatureParameterDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SemanticName"]/*' />
-	public unsafe byte* SemanticName;
+	public unsafe sbyte* SemanticName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -11457,7 +11687,7 @@ public partial struct SignatureParameterDescription
 public partial struct ShaderBufferDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Type"]/*' />
 	public Graphics.Direct3D.CBufferType Type;
@@ -11477,7 +11707,7 @@ public partial struct ShaderBufferDescription
 public partial struct ShaderVariableDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VARIABLE_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VARIABLE_DESC::StartOffset"]/*' />
 	public uint StartOffset;
@@ -11530,7 +11760,7 @@ public partial struct ShaderTypeDescription
 	public uint Offset;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_TYPE_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_DESC"]/*' />
@@ -11541,7 +11771,7 @@ public partial struct ShaderDescription
 	public uint Version;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_DESC::Creator"]/*' />
-	public unsafe byte* Creator;
+	public unsafe sbyte* Creator;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_DESC::Flags"]/*' />
 	public uint Flags;
@@ -11657,7 +11887,7 @@ public partial struct ShaderDescription
 public partial struct ShaderInputBindDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Type"]/*' />
 	public Graphics.Direct3D.ShaderInputType Type;
@@ -11692,7 +11922,7 @@ public partial struct ShaderInputBindDescription
 public partial struct LibraryDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIBRARY_DESC::Creator"]/*' />
-	public unsafe byte* Creator;
+	public unsafe sbyte* Creator;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIBRARY_DESC::Flags"]/*' />
 	public uint Flags;
@@ -11709,7 +11939,7 @@ public partial struct FunctionDescription
 	public uint Version;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::Creator"]/*' />
-	public unsafe byte* Creator;
+	public unsafe sbyte* Creator;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::Flags"]/*' />
 	public uint Flags;
@@ -11790,7 +12020,7 @@ public partial struct FunctionDescription
 	public ulong RequiredFeatureFlags;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::FunctionParameterCount"]/*' />
 	public int FunctionParameterCount;
@@ -11810,10 +12040,10 @@ public partial struct FunctionDescription
 public partial struct ParameterDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PARAMETER_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PARAMETER_DESC::SemanticName"]/*' />
-	public unsafe byte* SemanticName;
+	public unsafe sbyte* SemanticName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PARAMETER_DESC::Type"]/*' />
 	public Graphics.Direct3D.ShaderVariableType Type;
@@ -11937,9 +12167,9 @@ public unsafe partial struct ID3D12Object
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Object::SetName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Object*, char**, int>)(lpVtbl[6]))((ID3D12Object*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Object*, ushort*, int>)(lpVtbl[6]))((ID3D12Object*)Unsafe.AsPointer(ref this), Name);
 	}
 
 }
@@ -12032,9 +12262,9 @@ public unsafe partial struct ID3D12DeviceChild
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceChild*, char**, int>)(lpVtbl[6]))((ID3D12DeviceChild*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceChild*, ushort*, int>)(lpVtbl[6]))((ID3D12DeviceChild*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceChild::GetDevice"]/*' />
@@ -12143,9 +12373,9 @@ public unsafe partial struct ID3D12RootSignature
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12RootSignature*, char**, int>)(lpVtbl[7]))((ID3D12RootSignature*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12RootSignature*, ushort*, int>)(lpVtbl[7]))((ID3D12RootSignature*)Unsafe.AsPointer(ref this), Name);
 	}
 
 }
@@ -12396,9 +12626,9 @@ public unsafe partial struct ID3D12Pageable
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Pageable*, char**, int>)(lpVtbl[7]))((ID3D12Pageable*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Pageable*, ushort*, int>)(lpVtbl[7]))((ID3D12Pageable*)Unsafe.AsPointer(ref this), Name);
 	}
 
 }
@@ -12499,9 +12729,9 @@ public unsafe partial struct ID3D12Heap
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Heap*, char**, int>)(lpVtbl[7]))((ID3D12Heap*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Heap*, ushort*, int>)(lpVtbl[7]))((ID3D12Heap*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap::GetDesc"]/*' />
@@ -12610,9 +12840,9 @@ public unsafe partial struct ID3D12Resource
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, char**, int>)(lpVtbl[7]))((ID3D12Resource*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, ushort*, int>)(lpVtbl[7]))((ID3D12Resource*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::Map"]/*' />
@@ -12769,9 +12999,9 @@ public unsafe partial struct ID3D12CommandAllocator
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12CommandAllocator*, char**, int>)(lpVtbl[7]))((ID3D12CommandAllocator*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12CommandAllocator*, ushort*, int>)(lpVtbl[7]))((ID3D12CommandAllocator*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandAllocator::Reset"]/*' />
@@ -12880,9 +13110,9 @@ public unsafe partial struct ID3D12Fence
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Fence*, char**, int>)(lpVtbl[7]))((ID3D12Fence*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Fence*, ushort*, int>)(lpVtbl[7]))((ID3D12Fence*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence::GetCompletedValue"]/*' />
@@ -13031,9 +13261,9 @@ public unsafe partial struct ID3D12Fence1
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Fence1*, char**, int>)(lpVtbl[10]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Fence1*, ushort*, int>)(lpVtbl[10]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence1::GetCreationFlags"]/*' />
@@ -13142,9 +13372,9 @@ public unsafe partial struct ID3D12PipelineState
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineState*, char**, int>)(lpVtbl[7]))((ID3D12PipelineState*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineState*, ushort*, int>)(lpVtbl[7]))((ID3D12PipelineState*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineState::GetCachedBlob"]/*' />
@@ -13253,9 +13483,9 @@ public unsafe partial struct ID3D12DescriptorHeap
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, char**, int>)(lpVtbl[7]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, ushort*, int>)(lpVtbl[7]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetDesc"]/*' />
@@ -13380,9 +13610,9 @@ public unsafe partial struct ID3D12QueryHeap
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12QueryHeap*, char**, int>)(lpVtbl[7]))((ID3D12QueryHeap*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12QueryHeap*, ushort*, int>)(lpVtbl[7]))((ID3D12QueryHeap*)Unsafe.AsPointer(ref this), Name);
 	}
 
 }
@@ -13483,9 +13713,9 @@ public unsafe partial struct ID3D12CommandSignature
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12CommandSignature*, char**, int>)(lpVtbl[7]))((ID3D12CommandSignature*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12CommandSignature*, ushort*, int>)(lpVtbl[7]))((ID3D12CommandSignature*)Unsafe.AsPointer(ref this), Name);
 	}
 
 }
@@ -13586,9 +13816,9 @@ public unsafe partial struct ID3D12CommandList
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12CommandList*, char**, int>)(lpVtbl[7]))((ID3D12CommandList*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12CommandList*, ushort*, int>)(lpVtbl[7]))((ID3D12CommandList*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandList::GetType"]/*' />
@@ -13705,9 +13935,9 @@ public unsafe partial struct ID3D12GraphicsCommandList
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, char**, int>)(lpVtbl[8]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, ushort*, int>)(lpVtbl[8]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::Close"]/*' />
@@ -14632,9 +14862,9 @@ public unsafe partial struct ID3D12GraphicsCommandList1
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(59)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, char**, int>)(lpVtbl[59]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ushort*, int>)(lpVtbl[59]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::AtomicCopyBufferUINT"]/*' />
@@ -15247,9 +15477,9 @@ public unsafe partial struct ID3D12GraphicsCommandList2
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, char**, int>)(lpVtbl[65]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, ushort*, int>)(lpVtbl[65]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList2::WriteBufferImmediate"]/*' />
@@ -15358,9 +15588,9 @@ public unsafe partial struct ID3D12CommandQueue
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, char**, int>)(lpVtbl[7]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, ushort*, int>)(lpVtbl[7]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::UpdateTileMappings"]/*' />
@@ -15541,9 +15771,9 @@ public unsafe partial struct ID3D12Device
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, char**, int>)(lpVtbl[6]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, ushort*, int>)(lpVtbl[6]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetNodeCount"]/*' />
@@ -15741,9 +15971,9 @@ public unsafe partial struct ID3D12Device
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[31]))((ID3D12Device*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[31]))((ID3D12Device*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::OpenSharedHandle"]/*' />
@@ -15757,9 +15987,9 @@ public unsafe partial struct ID3D12Device
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::OpenSharedHandleByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, char**, uint, IntPtr*, int>)(lpVtbl[33]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, ushort*, uint, IntPtr*, int>)(lpVtbl[33]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::MakeResident"]/*' />
@@ -15940,33 +16170,33 @@ public unsafe partial struct ID3D12PipelineLibrary
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, char**, int>)(lpVtbl[7]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, ushort*, int>)(lpVtbl[7]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::StorePipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult StorePipeline(char** pName, ID3D12PipelineState* pPipeline)
+	public HResult StorePipeline(ushort* pName, ID3D12PipelineState* pPipeline)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, char**, ID3D12PipelineState*, int>)(lpVtbl[8]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pPipeline);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, ushort*, ID3D12PipelineState*, int>)(lpVtbl[8]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pPipeline);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadGraphicsPipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult LoadGraphicsPipeline(char** pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadGraphicsPipeline(ushort* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, char**, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, ushort*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadComputePipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult LoadComputePipeline(char** pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadComputePipeline(ushort* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, char**, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, ushort*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::GetSerializedSize"]/*' />
@@ -16051,25 +16281,25 @@ public unsafe partial struct ID3D12PipelineLibrary1
 	/// <inheritdoc cref="ID3D12PipelineLibrary.StorePipeline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult StorePipeline(char** pName, ID3D12PipelineState* pPipeline)
+	public HResult StorePipeline(ushort* pName, ID3D12PipelineState* pPipeline)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, char**, ID3D12PipelineState*, int>)(lpVtbl[3]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pPipeline);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, ID3D12PipelineState*, int>)(lpVtbl[3]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pPipeline);
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.LoadGraphicsPipeline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult LoadGraphicsPipeline(char** pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadGraphicsPipeline(ushort* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, char**, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.LoadComputePipeline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult LoadComputePipeline(char** pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadComputePipeline(ushort* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, char**, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[5]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[5]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.GetSerializedSize" />
@@ -16123,17 +16353,17 @@ public unsafe partial struct ID3D12PipelineLibrary1
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, char**, int>)(lpVtbl[12]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, int>)(lpVtbl[12]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary1::LoadPipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult LoadPipeline(char** pName, PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadPipeline(ushort* pName, PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, char**, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[13]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[13]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 }
@@ -16394,9 +16624,9 @@ public unsafe partial struct ID3D12Device1
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[27]))((ID3D12Device1*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[27]))((ID3D12Device1*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -16410,9 +16640,9 @@ public unsafe partial struct ID3D12Device1
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, char**, uint, IntPtr*, int>)(lpVtbl[29]))((ID3D12Device1*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, ushort*, uint, IntPtr*, int>)(lpVtbl[29]))((ID3D12Device1*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -16522,9 +16752,9 @@ public unsafe partial struct ID3D12Device1
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, char**, int>)(lpVtbl[43]))((ID3D12Device1*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, ushort*, int>)(lpVtbl[43]))((ID3D12Device1*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device1::CreatePipelineLibrary"]/*' />
@@ -16833,9 +17063,9 @@ public unsafe partial struct ID3D12Device2
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[30]))((ID3D12Device2*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[30]))((ID3D12Device2*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -16849,9 +17079,9 @@ public unsafe partial struct ID3D12Device2
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, char**, uint, IntPtr*, int>)(lpVtbl[32]))((ID3D12Device2*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, ushort*, uint, IntPtr*, int>)(lpVtbl[32]))((ID3D12Device2*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -16961,9 +17191,9 @@ public unsafe partial struct ID3D12Device2
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, char**, int>)(lpVtbl[46]))((ID3D12Device2*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, ushort*, int>)(lpVtbl[46]))((ID3D12Device2*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device2::CreatePipelineState"]/*' />
@@ -17264,9 +17494,9 @@ public unsafe partial struct ID3D12Device3
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[31]))((ID3D12Device3*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[31]))((ID3D12Device3*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -17280,9 +17510,9 @@ public unsafe partial struct ID3D12Device3
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, char**, uint, IntPtr*, int>)(lpVtbl[33]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ushort*, uint, IntPtr*, int>)(lpVtbl[33]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -17392,9 +17622,9 @@ public unsafe partial struct ID3D12Device3
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, char**, int>)(lpVtbl[47]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ushort*, int>)(lpVtbl[47]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device3::OpenExistingHeapFromAddress"]/*' />
@@ -17519,9 +17749,9 @@ public unsafe partial struct ID3D12ProtectedSession
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedSession*, char**, int>)(lpVtbl[7]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedSession*, ushort*, int>)(lpVtbl[7]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession::GetStatusFence"]/*' />
@@ -17654,9 +17884,9 @@ public unsafe partial struct ID3D12ProtectedResourceSession
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession*, char**, int>)(lpVtbl[9]))((ID3D12ProtectedResourceSession*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession*, ushort*, int>)(lpVtbl[9]))((ID3D12ProtectedResourceSession*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedResourceSession::GetDesc"]/*' />
@@ -17981,9 +18211,9 @@ public unsafe partial struct ID3D12Device4
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[34]))((ID3D12Device4*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[34]))((ID3D12Device4*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -17997,9 +18227,9 @@ public unsafe partial struct ID3D12Device4
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, char**, uint, IntPtr*, int>)(lpVtbl[36]))((ID3D12Device4*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ushort*, uint, IntPtr*, int>)(lpVtbl[36]))((ID3D12Device4*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -18109,9 +18339,9 @@ public unsafe partial struct ID3D12Device4
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, char**, int>)(lpVtbl[50]))((ID3D12Device4*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ushort*, int>)(lpVtbl[50]))((ID3D12Device4*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateCommandList1"]/*' />
@@ -18426,9 +18656,9 @@ public unsafe partial struct ID3D12LifetimeTracker
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12LifetimeTracker*, char**, int>)(lpVtbl[7]))((ID3D12LifetimeTracker*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12LifetimeTracker*, ushort*, int>)(lpVtbl[7]))((ID3D12LifetimeTracker*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeTracker::DestroyOwnedObject"]/*' />
@@ -18537,9 +18767,9 @@ public unsafe partial struct ID3D12StateObject
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, char**, int>)(lpVtbl[7]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, ushort*, int>)(lpVtbl[7]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), Name);
 	}
 
 }
@@ -18608,17 +18838,17 @@ public unsafe partial struct ID3D12StateObjectProperties
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderIdentifier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void* GetShaderIdentifier(char** pExportName)
+	public void* GetShaderIdentifier(ushort* pExportName)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, char**, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
+		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ushort*, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public ulong GetShaderStackSize(char** pExportName)
+	public ulong GetShaderStackSize(ushort* pExportName)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, char**, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
+		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ushort*, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetPipelineStackSize"]/*' />
@@ -18999,9 +19229,9 @@ public unsafe partial struct ID3D12Device5
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[40]))((ID3D12Device5*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[40]))((ID3D12Device5*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -19015,9 +19245,9 @@ public unsafe partial struct ID3D12Device5
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, char**, uint, IntPtr*, int>)(lpVtbl[42]))((ID3D12Device5*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ushort*, uint, IntPtr*, int>)(lpVtbl[42]))((ID3D12Device5*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -19127,9 +19357,9 @@ public unsafe partial struct ID3D12Device5
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, char**, int>)(lpVtbl[56]))((ID3D12Device5*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ushort*, int>)(lpVtbl[56]))((ID3D12Device5*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CreateLifetimeTracker"]/*' />
@@ -20089,9 +20319,9 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[48]))((ID3D12Device6*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[48]))((ID3D12Device6*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -20105,9 +20335,9 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, char**, uint, IntPtr*, int>)(lpVtbl[50]))((ID3D12Device6*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, ushort*, uint, IntPtr*, int>)(lpVtbl[50]))((ID3D12Device6*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -20217,9 +20447,9 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, char**, int>)(lpVtbl[64]))((ID3D12Device6*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, ushort*, int>)(lpVtbl[64]))((ID3D12Device6*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device6::SetBackgroundProcessingMode"]/*' />
@@ -20352,9 +20582,9 @@ public unsafe partial struct ID3D12ProtectedResourceSession1
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession1*, char**, int>)(lpVtbl[10]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession1*, ushort*, int>)(lpVtbl[10]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedResourceSession1::GetDesc1"]/*' />
@@ -20799,9 +21029,9 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[49]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[49]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -20815,9 +21045,9 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, char**, uint, IntPtr*, int>)(lpVtbl[51]))((ID3D12Device7*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ushort*, uint, IntPtr*, int>)(lpVtbl[51]))((ID3D12Device7*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -20927,9 +21157,9 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, char**, int>)(lpVtbl[65]))((ID3D12Device7*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ushort*, int>)(lpVtbl[65]))((ID3D12Device7*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device7::AddToStateObject"]/*' />
@@ -21398,9 +21628,9 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[51]))((ID3D12Device8*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[51]))((ID3D12Device8*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -21414,9 +21644,9 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, char**, uint, IntPtr*, int>)(lpVtbl[53]))((ID3D12Device8*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ushort*, uint, IntPtr*, int>)(lpVtbl[53]))((ID3D12Device8*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -21526,9 +21756,9 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, char**, int>)(lpVtbl[67]))((ID3D12Device8*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ushort*, int>)(lpVtbl[67]))((ID3D12Device8*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8::GetResourceAllocationInfo2"]/*' />
@@ -21725,9 +21955,9 @@ public unsafe partial struct ID3D12Resource1
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Resource1*, char**, int>)(lpVtbl[14]))((ID3D12Resource1*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Resource1*, ushort*, int>)(lpVtbl[14]))((ID3D12Resource1*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource1::GetProtectedResourceSession"]/*' />
@@ -21900,9 +22130,9 @@ public unsafe partial struct ID3D12Resource2
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Resource2*, char**, int>)(lpVtbl[15]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Resource2*, ushort*, int>)(lpVtbl[15]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource2::GetDesc1"]/*' />
@@ -22019,9 +22249,9 @@ public unsafe partial struct ID3D12Heap1
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Heap1*, char**, int>)(lpVtbl[8]))((ID3D12Heap1*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Heap1*, ushort*, int>)(lpVtbl[8]))((ID3D12Heap1*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap1::GetProtectedResourceSession"]/*' />
@@ -22602,9 +22832,9 @@ public unsafe partial struct ID3D12GraphicsCommandList3
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, char**, int>)(lpVtbl[66]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, ushort*, int>)(lpVtbl[66]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList3::SetProtectedResourceSession"]/*' />
@@ -22713,9 +22943,9 @@ public unsafe partial struct ID3D12MetaCommand
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12MetaCommand*, char**, int>)(lpVtbl[7]))((ID3D12MetaCommand*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12MetaCommand*, ushort*, int>)(lpVtbl[7]))((ID3D12MetaCommand*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12MetaCommand::GetRequiredParameterResourceSize"]/*' />
@@ -23304,9 +23534,9 @@ public unsafe partial struct ID3D12GraphicsCommandList4
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, char**, int>)(lpVtbl[67]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ushort*, int>)(lpVtbl[67]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::BeginRenderPass"]/*' />
@@ -23479,9 +23709,9 @@ public unsafe partial struct ID3D12ShaderCacheSession
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, char**, int>)(lpVtbl[7]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, ushort*, int>)(lpVtbl[7]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::FindValue"]/*' />
@@ -24006,9 +24236,9 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char** Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[56]))((ID3D12Device9*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[56]))((ID3D12Device9*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -24022,9 +24252,9 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
-	public HResult OpenSharedHandleByName(char** Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, char**, uint, IntPtr*, int>)(lpVtbl[58]))((ID3D12Device9*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ushort*, uint, IntPtr*, int>)(lpVtbl[58]))((ID3D12Device9*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -24134,9 +24364,9 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, char**, int>)(lpVtbl[72]))((ID3D12Device9*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ushort*, int>)(lpVtbl[72]))((ID3D12Device9*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device9::CreateShaderCacheSession"]/*' />
@@ -25766,17 +25996,17 @@ public unsafe partial struct ID3D12InfoQueue
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte** pDescription)
+	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, sbyte* pDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageCategory, MessageSeverity, MessageId, byte**, int>)(lpVtbl[28]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
+		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageCategory, MessageSeverity, MessageId, sbyte*, int>)(lpVtbl[28]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult AddApplicationMessage(MessageSeverity Severity, byte** pDescription)
+	public HResult AddApplicationMessage(MessageSeverity Severity, sbyte* pDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageSeverity, byte**, int>)(lpVtbl[29]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageSeverity, sbyte*, int>)(lpVtbl[29]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnCategory"]/*' />
@@ -26109,17 +26339,17 @@ public unsafe partial struct ID3D12InfoQueue1
 	/// <inheritdoc cref="ID3D12InfoQueue.AddMessage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte** pDescription)
+	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, sbyte* pDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, MessageCategory, MessageSeverity, MessageId, byte**, int>)(lpVtbl[28]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
+		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, MessageCategory, MessageSeverity, MessageId, sbyte*, int>)(lpVtbl[28]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
 
 	/// <inheritdoc cref="ID3D12InfoQueue.AddApplicationMessage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult AddApplicationMessage(MessageSeverity Severity, byte** pDescription)
+	public HResult AddApplicationMessage(MessageSeverity Severity, sbyte* pDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, MessageSeverity, byte**, int>)(lpVtbl[29]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), Severity, pDescription);
+		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, MessageSeverity, sbyte*, int>)(lpVtbl[29]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <inheritdoc cref="ID3D12InfoQueue.SetBreakOnCategory" />
@@ -26268,9 +26498,9 @@ public unsafe partial struct ID3D12SDKConfiguration
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration::SetSDKVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetSDKVersion(uint SDKVersion, byte** SDKPath)
+	public HResult SetSDKVersion(uint SDKVersion, sbyte* SDKPath)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration*, uint, byte**, int>)(lpVtbl[3]))((ID3D12SDKConfiguration*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
+		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration*, uint, sbyte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
 	}
 
 }
@@ -26923,9 +27153,9 @@ public unsafe partial struct ID3D12GraphicsCommandList5
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, char**, int>)(lpVtbl[76]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ushort*, int>)(lpVtbl[76]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5::RSSetShadingRate"]/*' />
@@ -27610,9 +27840,9 @@ public unsafe partial struct ID3D12GraphicsCommandList6
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
-	public HResult SetName(char** Name)
+	public HResult SetName(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, char**, int>)(lpVtbl[78]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, ushort*, int>)(lpVtbl[78]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList6::DispatchMesh"]/*' />
@@ -27677,17 +27907,17 @@ public unsafe partial struct ID3D12ShaderReflectionType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetMemberTypeByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionType GetMemberTypeByName(byte** Name)
+	public Graphics.Direct3D12.ID3D12ShaderReflectionType GetMemberTypeByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, byte**, Graphics.Direct3D12.ID3D12ShaderReflectionType>)(lpVtbl[2]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionType>)(lpVtbl[2]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetMemberTypeName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public byte* GetMemberTypeName(uint Index)
+	public sbyte* GetMemberTypeName(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, uint, byte*>)(lpVtbl[3]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, uint, sbyte*>)(lpVtbl[3]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::IsEqual"]/*' />
@@ -27867,9 +28097,9 @@ public unsafe partial struct ID3D12ShaderReflectionConstantBuffer
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionConstantBuffer::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(byte** Name)
+	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionConstantBuffer*, byte**, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[2]))((ID3D12ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionConstantBuffer*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[2]))((ID3D12ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
 	}
 
 }
@@ -27954,9 +28184,9 @@ public unsafe partial struct ID3D12ShaderReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(byte** Name)
+	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, byte**, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[5]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[5]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetResourceBindingDesc"]/*' />
@@ -27994,17 +28224,17 @@ public unsafe partial struct ID3D12ShaderReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(byte** Name)
+	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, byte**, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[10]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[10]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetResourceBindingDescByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetResourceBindingDescByName(byte** Name, ShaderInputBindDescription* pDesc)
+	public HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, byte**, ShaderInputBindDescription*, int>)(lpVtbl[11]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[11]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetMovInstructionCount"]/*' />
@@ -28220,9 +28450,9 @@ public unsafe partial struct ID3D12FunctionReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(byte** Name)
+	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, byte**, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDesc"]/*' />
@@ -28236,17 +28466,17 @@ public unsafe partial struct ID3D12FunctionReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(byte** Name)
+	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, byte**, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[4]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[4]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDescByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetResourceBindingDescByName(byte** Name, ShaderInputBindDescription* pDesc)
+	public HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, byte**, ShaderInputBindDescription*, int>)(lpVtbl[5]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
+		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[5]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetFunctionParameter"]/*' />

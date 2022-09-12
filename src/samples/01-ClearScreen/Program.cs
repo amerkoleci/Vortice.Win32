@@ -12,6 +12,8 @@ using MessageId = Win32.Graphics.Direct3D11.MessageId;
 using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
 using Win32.Graphics.Dxgi.Common;
 using System.Numerics;
+using Win32.Graphics.Direct3D.Dxc;
+using static Win32.Graphics.Direct3D.Dxc.Apis;
 
 namespace ClearScreen;
 
@@ -37,8 +39,16 @@ public static unsafe class Program
     }
 #endif
 
+    private static void TestDxc()
+    {
+        using ComPtr<IDxcCompiler3> compiler = default;
+        DxcCreateInstance(CLSID_DxcCompiler, __uuidof<IDxcCompiler3>(), compiler.GetVoidAddressOf());
+    }
+
     public static void Main()
     {
+        TestDxc();
+
         using ComPtr<IDXGIFactory2> factory = default;
         uint factoryFlags = 0;
 

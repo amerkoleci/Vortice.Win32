@@ -402,68 +402,1494 @@ public static partial class Apis
 	public const uint D3D11_MIP_FILTER_SHIFT = 0;
 	public const uint D3D11_COMPARISON_FILTERING_BIT = 128;
 	public const uint D3D11_ANISOTROPIC_FILTERING_BIT = 64;
-	public static readonly Guid D3D11_DECODER_PROFILE_MPEG2_MOCOMP = new Guid(0xe6a9f44b, 0x61b0, 0x4563, 0x9e, 0xa4, 0x63, 0xd2, 0xa3, 0xc6, 0xfe, 0x66);
-	public static readonly Guid D3D11_DECODER_PROFILE_MPEG2_IDCT = new Guid(0xbf22ad00, 0x03ea, 0x4690, 0x80, 0x77, 0x47, 0x33, 0x46, 0x20, 0x9b, 0x7e);
-	public static readonly Guid D3D11_DECODER_PROFILE_MPEG2_VLD = new Guid(0xee27417f, 0x5e28, 0x4e65, 0xbe, 0xea, 0x1d, 0x26, 0xb5, 0x08, 0xad, 0xc9);
-	public static readonly Guid D3D11_DECODER_PROFILE_MPEG1_VLD = new Guid(0x6f3ec719, 0x3735, 0x42cc, 0x80, 0x63, 0x65, 0xcc, 0x3c, 0xb3, 0x66, 0x16);
-	public static readonly Guid D3D11_DECODER_PROFILE_MPEG2and1_VLD = new Guid(0x86695f12, 0x340e, 0x4f04, 0x9f, 0xd3, 0x92, 0x53, 0xdd, 0x32, 0x74, 0x60);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_MOCOMP_NOFGT = new Guid(0x1b81be64, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_MOCOMP_FGT = new Guid(0x1b81be65, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_IDCT_NOFGT = new Guid(0x1b81be66, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_IDCT_FGT = new Guid(0x1b81be67, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_VLD_NOFGT = new Guid(0x1b81be68, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_VLD_FGT = new Guid(0x1b81be69, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_VLD_WITHFMOASO_NOFGT = new Guid(0xd5f04ff9, 0x3418, 0x45d8, 0x95, 0x61, 0x32, 0xa7, 0x6a, 0xae, 0x2d, 0xdd);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_VLD_STEREO_PROGRESSIVE_NOFGT = new Guid(0xd79be8da, 0x0cf1, 0x4c81, 0xb8, 0x2a, 0x69, 0xa4, 0xe2, 0x36, 0xf4, 0x3d);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_VLD_STEREO_NOFGT = new Guid(0xf9aaccbb, 0xc2b6, 0x4cfc, 0x87, 0x79, 0x57, 0x07, 0xb1, 0x76, 0x05, 0x52);
-	public static readonly Guid D3D11_DECODER_PROFILE_H264_VLD_MULTIVIEW_NOFGT = new Guid(0x705b9d82, 0x76cf, 0x49d6, 0xb7, 0xe6, 0xac, 0x88, 0x72, 0xdb, 0x01, 0x3c);
-	public static readonly Guid D3D11_DECODER_PROFILE_WMV8_POSTPROC = new Guid(0x1b81be80, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_WMV8_MOCOMP = new Guid(0x1b81be81, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_WMV9_POSTPROC = new Guid(0x1b81be90, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_WMV9_MOCOMP = new Guid(0x1b81be91, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_WMV9_IDCT = new Guid(0x1b81be94, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_VC1_POSTPROC = new Guid(0x1b81bea0, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_VC1_MOCOMP = new Guid(0x1b81bea1, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_VC1_IDCT = new Guid(0x1b81bea2, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_VC1_VLD = new Guid(0x1b81bea3, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_VC1_D2010 = new Guid(0x1b81bea4, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-	public static readonly Guid D3D11_DECODER_PROFILE_MPEG4PT2_VLD_SIMPLE = new Guid(0xefd64d74, 0xc9e8, 0x41d7, 0xa5, 0xe9, 0xe9, 0xb0, 0xe3, 0x9f, 0xa3, 0x19);
-	public static readonly Guid D3D11_DECODER_PROFILE_MPEG4PT2_VLD_ADVSIMPLE_NOGMC = new Guid(0xed418a9f, 0x010d, 0x4eda, 0x9a, 0xe3, 0x9a, 0x65, 0x35, 0x8d, 0x8d, 0x2e);
-	public static readonly Guid D3D11_DECODER_PROFILE_MPEG4PT2_VLD_ADVSIMPLE_GMC = new Guid(0xab998b5b, 0x4258, 0x44a9, 0x9f, 0xeb, 0x94, 0xe5, 0x97, 0xa6, 0xba, 0xae);
-	public static readonly Guid D3D11_DECODER_PROFILE_HEVC_VLD_MAIN = new Guid(0x5b11d51b, 0x2f4c, 0x4452, 0xbc, 0xc3, 0x09, 0xf2, 0xa1, 0x16, 0x0c, 0xc0);
-	public static readonly Guid D3D11_DECODER_PROFILE_HEVC_VLD_MAIN10 = new Guid(0x107af0e0, 0xef1a, 0x4d19, 0xab, 0xa8, 0x67, 0xa1, 0x63, 0x07, 0x3d, 0x13);
-	public static readonly Guid D3D11_DECODER_PROFILE_VP9_VLD_PROFILE0 = new Guid(0x463707f8, 0xa1d0, 0x4585, 0x87, 0x6d, 0x83, 0xaa, 0x6d, 0x60, 0xb8, 0x9e);
-	public static readonly Guid D3D11_DECODER_PROFILE_VP9_VLD_10BIT_PROFILE2 = new Guid(0xa4c749ef, 0x6ecf, 0x48aa, 0x84, 0x48, 0x50, 0xa7, 0xa1, 0x16, 0x5f, 0xf7);
-	public static readonly Guid D3D11_DECODER_PROFILE_VP8_VLD = new Guid(0x90b899ea, 0x3a62, 0x4705, 0x88, 0xb3, 0x8d, 0xf0, 0x4b, 0x27, 0x44, 0xe7);
-	public static readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_PROFILE0 = new Guid(0xb8be4ccb, 0xcf53, 0x46ba, 0x8d, 0x59, 0xd6, 0xb8, 0xa6, 0xda, 0x5d, 0x2a);
-	public static readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_PROFILE1 = new Guid(0x6936ff0f, 0x45b1, 0x4163, 0x9c, 0xc1, 0x64, 0x6e, 0xf6, 0x94, 0x61, 0x08);
-	public static readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_PROFILE2 = new Guid(0x0c5f2aa1, 0xe541, 0x4089, 0xbb, 0x7b, 0x98, 0x11, 0x0a, 0x19, 0xd7, 0xc8);
-	public static readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_12BIT_PROFILE2 = new Guid(0x17127009, 0xa00f, 0x4ce1, 0x99, 0x4e, 0xbf, 0x40, 0x81, 0xf6, 0xf3, 0xf0);
-	public static readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_12BIT_PROFILE2_420 = new Guid(0x2d80bed6, 0x9cac, 0x4835, 0x9e, 0x91, 0x32, 0x7b, 0xbc, 0x4f, 0x9e, 0xe8);
-	public static readonly Guid D3D11_CRYPTO_TYPE_AES128_CTR = new Guid(0x9b6bd711, 0x4f74, 0x41c9, 0x9e, 0x7b, 0x0b, 0xe2, 0xd7, 0xd9, 0x3b, 0x4f);
-	public static readonly Guid D3D11_DECODER_ENCRYPTION_HW_CENC = new Guid(0x89d6ac4f, 0x09f2, 0x4229, 0xb2, 0xcd, 0x37, 0x74, 0x0a, 0x6d, 0xfd, 0x81);
-	public static readonly Guid D3D11_DECODER_BITSTREAM_ENCRYPTION_TYPE_CENC = new Guid(0xb0405235, 0xc13d, 0x44f2, 0x9a, 0xe5, 0xdd, 0x48, 0xe0, 0x8e, 0x5b, 0x67);
-	public static readonly Guid D3D11_DECODER_BITSTREAM_ENCRYPTION_TYPE_CBCS = new Guid(0x422d9319, 0x9d21, 0x4bb7, 0x93, 0x71, 0xfa, 0xf5, 0xa8, 0x2c, 0x3e, 0x04);
-	public static readonly Guid D3D11_KEY_EXCHANGE_HW_PROTECTION = new Guid(0xb1170d8a, 0x628d, 0x4da3, 0xad, 0x3b, 0x82, 0xdd, 0xb0, 0x8b, 0x49, 0x70);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_PROTECTION = new Guid(0xa84eb584, 0xc495, 0x48aa, 0xb9, 0x4d, 0x8b, 0xd2, 0xd6, 0xfb, 0xce, 0x05);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE = new Guid(0xbc1b18a5, 0xb1fb, 0x42ab, 0xbd, 0x94, 0xb5, 0x82, 0x8b, 0x4b, 0xf7, 0xbe);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE = new Guid(0xec1c539d, 0x8cff, 0x4e2a, 0xbc, 0xc4, 0xf5, 0x69, 0x2f, 0x99, 0xf4, 0x80);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION = new Guid(0x2634499e, 0xd018, 0x4d74, 0xac, 0x17, 0x7f, 0x72, 0x40, 0x59, 0x52, 0x8d);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCESS_COUNT = new Guid(0x0db207b3, 0x9450, 0x46a6, 0x82, 0xde, 0x1b, 0x96, 0xd4, 0x4f, 0x9c, 0xf2);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCESS = new Guid(0x649bbadb, 0xf0f4, 0x4639, 0xa1, 0x5b, 0x24, 0x39, 0x3f, 0xc3, 0xab, 0xac);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_UNRESTRICTED_PROTECTED_SHARED_RESOURCE_COUNT = new Guid(0x012f0bd6, 0xe662, 0x4474, 0xbe, 0xfd, 0xaa, 0x53, 0xe5, 0x14, 0x3c, 0x6d);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT = new Guid(0x2c042b5e, 0x8c07, 0x46d5, 0xaa, 0xbe, 0x8f, 0x75, 0xcb, 0xad, 0x4c, 0x31);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_OUTPUT_ID = new Guid(0x839ddca3, 0x9b4e, 0x41e4, 0xb0, 0x53, 0x89, 0x2b, 0xd2, 0xa1, 0x1e, 0xe7);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_ACCESSIBILITY_ATTRIBUTES = new Guid(0x6214d9d2, 0x432c, 0x4abb, 0x9f, 0xce, 0x21, 0x6e, 0xea, 0x26, 0x9e, 0x3b);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_ENCRYPTION_WHEN_ACCESSIBLE_GUID_COUNT = new Guid(0xb30f7066, 0x203c, 0x4b07, 0x93, 0xfc, 0xce, 0xaa, 0xfd, 0x61, 0x24, 0x1e);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_ENCRYPTION_WHEN_ACCESSIBLE_GUID = new Guid(0xf83a5958, 0xe986, 0x4bda, 0xbe, 0xb0, 0x41, 0x1f, 0x6a, 0x7a, 0x01, 0xb7);
-	public static readonly Guid D3D11_AUTHENTICATED_QUERY_CURRENT_ENCRYPTION_WHEN_ACCESSIBLE = new Guid(0xec1791c7, 0xdad3, 0x4f15, 0x9e, 0xc3, 0xfa, 0xa9, 0x3d, 0x60, 0xd4, 0xf0);
-	public static readonly Guid D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE = new Guid(0x06114bdb, 0x3523, 0x470a, 0x8d, 0xca, 0xfb, 0xc2, 0x84, 0x51, 0x54, 0xf0);
-	public static readonly Guid D3D11_AUTHENTICATED_CONFIGURE_PROTECTION = new Guid(0x50455658, 0x3f47, 0x4362, 0xbf, 0x99, 0xbf, 0xdf, 0xcd, 0xe9, 0xed, 0x29);
-	public static readonly Guid D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION = new Guid(0x6346cc54, 0x2cfc, 0x4ad4, 0x82, 0x24, 0xd1, 0x58, 0x37, 0xde, 0x77, 0x00);
-	public static readonly Guid D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE = new Guid(0x0772d047, 0x1b40, 0x48e8, 0x9c, 0xa6, 0xb5, 0xf5, 0x10, 0xde, 0x9f, 0x01);
-	public static readonly Guid D3D11_AUTHENTICATED_CONFIGURE_ENCRYPTION_WHEN_ACCESSIBLE = new Guid(0x41fff286, 0x6ae0, 0x4d43, 0x9d, 0x55, 0xa4, 0x6e, 0x9e, 0xfd, 0x15, 0x8a);
-	public static readonly Guid D3D11_KEY_EXCHANGE_RSAES_OAEP = new Guid(0xc1949895, 0xd72a, 0x4a1d, 0x8e, 0x5d, 0xed, 0x85, 0x7d, 0x17, 0x15, 0x20);
+	public static ref readonly Guid D3D11_DECODER_PROFILE_MPEG2_MOCOMP
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x4B, 0xF4, 0xA9, 0xE6,
+				0xB0, 0x61,
+				0x63, 0x45,
+				0x9E,
+				0xA4,
+				0x63,
+				0xD2,
+				0xA3,
+				0xC6,
+				0xFE,
+				0x66
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_MPEG2_IDCT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x00, 0xAD, 0x22, 0xBF,
+				0xEA, 0x03,
+				0x90, 0x46,
+				0x80,
+				0x77,
+				0x47,
+				0x33,
+				0x46,
+				0x20,
+				0x9B,
+				0x7E
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_MPEG2_VLD
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x7F, 0x41, 0x27, 0xEE,
+				0x28, 0x5E,
+				0x65, 0x4E,
+				0xBE,
+				0xEA,
+				0x1D,
+				0x26,
+				0xB5,
+				0x08,
+				0xAD,
+				0xC9
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_MPEG1_VLD
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x19, 0xC7, 0x3E, 0x6F,
+				0x35, 0x37,
+				0xCC, 0x42,
+				0x80,
+				0x63,
+				0x65,
+				0xCC,
+				0x3C,
+				0xB3,
+				0x66,
+				0x16
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_MPEG2and1_VLD
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x12, 0x5F, 0x69, 0x86,
+				0x0E, 0x34,
+				0x04, 0x4F,
+				0x9F,
+				0xD3,
+				0x92,
+				0x53,
+				0xDD,
+				0x32,
+				0x74,
+				0x60
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_MOCOMP_NOFGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x64, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_MOCOMP_FGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x65, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_IDCT_NOFGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x66, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_IDCT_FGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x67, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_VLD_NOFGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x68, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_VLD_FGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x69, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_VLD_WITHFMOASO_NOFGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xF9, 0x4F, 0xF0, 0xD5,
+				0x18, 0x34,
+				0xD8, 0x45,
+				0x95,
+				0x61,
+				0x32,
+				0xA7,
+				0x6A,
+				0xAE,
+				0x2D,
+				0xDD
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_VLD_STEREO_PROGRESSIVE_NOFGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xDA, 0xE8, 0x9B, 0xD7,
+				0xF1, 0x0C,
+				0x81, 0x4C,
+				0xB8,
+				0x2A,
+				0x69,
+				0xA4,
+				0xE2,
+				0x36,
+				0xF4,
+				0x3D
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_VLD_STEREO_NOFGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xBB, 0xCC, 0xAA, 0xF9,
+				0xB6, 0xC2,
+				0xFC, 0x4C,
+				0x87,
+				0x79,
+				0x57,
+				0x07,
+				0xB1,
+				0x76,
+				0x05,
+				0x52
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_H264_VLD_MULTIVIEW_NOFGT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x82, 0x9D, 0x5B, 0x70,
+				0xCF, 0x76,
+				0xD6, 0x49,
+				0xB7,
+				0xE6,
+				0xAC,
+				0x88,
+				0x72,
+				0xDB,
+				0x01,
+				0x3C
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_WMV8_POSTPROC
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x80, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_WMV8_MOCOMP
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x81, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_WMV9_POSTPROC
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x90, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_WMV9_MOCOMP
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x91, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_WMV9_IDCT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x94, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_VC1_POSTPROC
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA0, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_VC1_MOCOMP
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA1, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_VC1_IDCT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA2, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_VC1_VLD
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA3, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_VC1_D2010
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA4, 0xBE, 0x81, 0x1B,
+				0xC7, 0xA0,
+				0xD3, 0x11,
+				0xB9,
+				0x84,
+				0x00,
+				0xC0,
+				0x4F,
+				0x2E,
+				0x73,
+				0xC5
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_MPEG4PT2_VLD_SIMPLE
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x74, 0x4D, 0xD6, 0xEF,
+				0xE8, 0xC9,
+				0xD7, 0x41,
+				0xA5,
+				0xE9,
+				0xE9,
+				0xB0,
+				0xE3,
+				0x9F,
+				0xA3,
+				0x19
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_MPEG4PT2_VLD_ADVSIMPLE_NOGMC
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x9F, 0x8A, 0x41, 0xED,
+				0x0D, 0x01,
+				0xDA, 0x4E,
+				0x9A,
+				0xE3,
+				0x9A,
+				0x65,
+				0x35,
+				0x8D,
+				0x8D,
+				0x2E
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_MPEG4PT2_VLD_ADVSIMPLE_GMC
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x5B, 0x8B, 0x99, 0xAB,
+				0x58, 0x42,
+				0xA9, 0x44,
+				0x9F,
+				0xEB,
+				0x94,
+				0xE5,
+				0x97,
+				0xA6,
+				0xBA,
+				0xAE
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_HEVC_VLD_MAIN
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x1B, 0xD5, 0x11, 0x5B,
+				0x4C, 0x2F,
+				0x52, 0x44,
+				0xBC,
+				0xC3,
+				0x09,
+				0xF2,
+				0xA1,
+				0x16,
+				0x0C,
+				0xC0
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_HEVC_VLD_MAIN10
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xE0, 0xF0, 0x7A, 0x10,
+				0x1A, 0xEF,
+				0x19, 0x4D,
+				0xAB,
+				0xA8,
+				0x67,
+				0xA1,
+				0x63,
+				0x07,
+				0x3D,
+				0x13
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_VP9_VLD_PROFILE0
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xF8, 0x07, 0x37, 0x46,
+				0xD0, 0xA1,
+				0x85, 0x45,
+				0x87,
+				0x6D,
+				0x83,
+				0xAA,
+				0x6D,
+				0x60,
+				0xB8,
+				0x9E
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_VP9_VLD_10BIT_PROFILE2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xEF, 0x49, 0xC7, 0xA4,
+				0xCF, 0x6E,
+				0xAA, 0x48,
+				0x84,
+				0x48,
+				0x50,
+				0xA7,
+				0xA1,
+				0x16,
+				0x5F,
+				0xF7
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_VP8_VLD
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xEA, 0x99, 0xB8, 0x90,
+				0x62, 0x3A,
+				0x05, 0x47,
+				0x88,
+				0xB3,
+				0x8D,
+				0xF0,
+				0x4B,
+				0x27,
+				0x44,
+				0xE7
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_PROFILE0
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xCB, 0x4C, 0xBE, 0xB8,
+				0x53, 0xCF,
+				0xBA, 0x46,
+				0x8D,
+				0x59,
+				0xD6,
+				0xB8,
+				0xA6,
+				0xDA,
+				0x5D,
+				0x2A
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_PROFILE1
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x0F, 0xFF, 0x36, 0x69,
+				0xB1, 0x45,
+				0x63, 0x41,
+				0x9C,
+				0xC1,
+				0x64,
+				0x6E,
+				0xF6,
+				0x94,
+				0x61,
+				0x08
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_PROFILE2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA1, 0x2A, 0x5F, 0x0C,
+				0x41, 0xE5,
+				0x89, 0x40,
+				0xBB,
+				0x7B,
+				0x98,
+				0x11,
+				0x0A,
+				0x19,
+				0xD7,
+				0xC8
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_12BIT_PROFILE2
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x09, 0x70, 0x12, 0x17,
+				0x0F, 0xA0,
+				0xE1, 0x4C,
+				0x99,
+				0x4E,
+				0xBF,
+				0x40,
+				0x81,
+				0xF6,
+				0xF3,
+				0xF0
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_PROFILE_AV1_VLD_12BIT_PROFILE2_420
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xD6, 0xBE, 0x80, 0x2D,
+				0xAC, 0x9C,
+				0x35, 0x48,
+				0x9E,
+				0x91,
+				0x32,
+				0x7B,
+				0xBC,
+				0x4F,
+				0x9E,
+				0xE8
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_CRYPTO_TYPE_AES128_CTR
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x11, 0xD7, 0x6B, 0x9B,
+				0x74, 0x4F,
+				0xC9, 0x41,
+				0x9E,
+				0x7B,
+				0x0B,
+				0xE2,
+				0xD7,
+				0xD9,
+				0x3B,
+				0x4F
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_ENCRYPTION_HW_CENC
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x4F, 0xAC, 0xD6, 0x89,
+				0xF2, 0x09,
+				0x29, 0x42,
+				0xB2,
+				0xCD,
+				0x37,
+				0x74,
+				0x0A,
+				0x6D,
+				0xFD,
+				0x81
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_BITSTREAM_ENCRYPTION_TYPE_CENC
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x35, 0x52, 0x40, 0xB0,
+				0x3D, 0xC1,
+				0xF2, 0x44,
+				0x9A,
+				0xE5,
+				0xDD,
+				0x48,
+				0xE0,
+				0x8E,
+				0x5B,
+				0x67
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_DECODER_BITSTREAM_ENCRYPTION_TYPE_CBCS
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x19, 0x93, 0x2D, 0x42,
+				0x21, 0x9D,
+				0xB7, 0x4B,
+				0x93,
+				0x71,
+				0xFA,
+				0xF5,
+				0xA8,
+				0x2C,
+				0x3E,
+				0x04
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_KEY_EXCHANGE_HW_PROTECTION
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x8A, 0x0D, 0x17, 0xB1,
+				0x8D, 0x62,
+				0xA3, 0x4D,
+				0xAD,
+				0x3B,
+				0x82,
+				0xDD,
+				0xB0,
+				0x8B,
+				0x49,
+				0x70
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_PROTECTION
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x84, 0xB5, 0x4E, 0xA8,
+				0x95, 0xC4,
+				0xAA, 0x48,
+				0xB9,
+				0x4D,
+				0x8B,
+				0xD2,
+				0xD6,
+				0xFB,
+				0xCE,
+				0x05
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA5, 0x18, 0x1B, 0xBC,
+				0xFB, 0xB1,
+				0xAB, 0x42,
+				0xBD,
+				0x94,
+				0xB5,
+				0x82,
+				0x8B,
+				0x4B,
+				0xF7,
+				0xBE
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x9D, 0x53, 0x1C, 0xEC,
+				0xFF, 0x8C,
+				0x2A, 0x4E,
+				0xBC,
+				0xC4,
+				0xF5,
+				0x69,
+				0x2F,
+				0x99,
+				0xF4,
+				0x80
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x9E, 0x49, 0x34, 0x26,
+				0x18, 0xD0,
+				0x74, 0x4D,
+				0xAC,
+				0x17,
+				0x7F,
+				0x72,
+				0x40,
+				0x59,
+				0x52,
+				0x8D
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCESS_COUNT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xB3, 0x07, 0xB2, 0x0D,
+				0x50, 0x94,
+				0xA6, 0x46,
+				0x82,
+				0xDE,
+				0x1B,
+				0x96,
+				0xD4,
+				0x4F,
+				0x9C,
+				0xF2
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCESS
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xDB, 0xBA, 0x9B, 0x64,
+				0xF4, 0xF0,
+				0x39, 0x46,
+				0xA1,
+				0x5B,
+				0x24,
+				0x39,
+				0x3F,
+				0xC3,
+				0xAB,
+				0xAC
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_UNRESTRICTED_PROTECTED_SHARED_RESOURCE_COUNT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xD6, 0x0B, 0x2F, 0x01,
+				0x62, 0xE6,
+				0x74, 0x44,
+				0xBE,
+				0xFD,
+				0xAA,
+				0x53,
+				0xE5,
+				0x14,
+				0x3C,
+				0x6D
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x5E, 0x2B, 0x04, 0x2C,
+				0x07, 0x8C,
+				0xD5, 0x46,
+				0xAA,
+				0xBE,
+				0x8F,
+				0x75,
+				0xCB,
+				0xAD,
+				0x4C,
+				0x31
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_OUTPUT_ID
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xA3, 0xDC, 0x9D, 0x83,
+				0x4E, 0x9B,
+				0xE4, 0x41,
+				0xB0,
+				0x53,
+				0x89,
+				0x2B,
+				0xD2,
+				0xA1,
+				0x1E,
+				0xE7
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_ACCESSIBILITY_ATTRIBUTES
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xD2, 0xD9, 0x14, 0x62,
+				0x2C, 0x43,
+				0xBB, 0x4A,
+				0x9F,
+				0xCE,
+				0x21,
+				0x6E,
+				0xEA,
+				0x26,
+				0x9E,
+				0x3B
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_ENCRYPTION_WHEN_ACCESSIBLE_GUID_COUNT
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x66, 0x70, 0x0F, 0xB3,
+				0x3C, 0x20,
+				0x07, 0x4B,
+				0x93,
+				0xFC,
+				0xCE,
+				0xAA,
+				0xFD,
+				0x61,
+				0x24,
+				0x1E
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_ENCRYPTION_WHEN_ACCESSIBLE_GUID
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x58, 0x59, 0x3A, 0xF8,
+				0x86, 0xE9,
+				0xDA, 0x4B,
+				0xBE,
+				0xB0,
+				0x41,
+				0x1F,
+				0x6A,
+				0x7A,
+				0x01,
+				0xB7
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_QUERY_CURRENT_ENCRYPTION_WHEN_ACCESSIBLE
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xC7, 0x91, 0x17, 0xEC,
+				0xD3, 0xDA,
+				0x15, 0x4F,
+				0x9E,
+				0xC3,
+				0xFA,
+				0xA9,
+				0x3D,
+				0x60,
+				0xD4,
+				0xF0
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xDB, 0x4B, 0x11, 0x06,
+				0x23, 0x35,
+				0x0A, 0x47,
+				0x8D,
+				0xCA,
+				0xFB,
+				0xC2,
+				0x84,
+				0x51,
+				0x54,
+				0xF0
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_CONFIGURE_PROTECTION
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x58, 0x56, 0x45, 0x50,
+				0x47, 0x3F,
+				0x62, 0x43,
+				0xBF,
+				0x99,
+				0xBF,
+				0xDF,
+				0xCD,
+				0xE9,
+				0xED,
+				0x29
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x54, 0xCC, 0x46, 0x63,
+				0xFC, 0x2C,
+				0xD4, 0x4A,
+				0x82,
+				0x24,
+				0xD1,
+				0x58,
+				0x37,
+				0xDE,
+				0x77,
+				0x00
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x47, 0xD0, 0x72, 0x07,
+				0x40, 0x1B,
+				0xE8, 0x48,
+				0x9C,
+				0xA6,
+				0xB5,
+				0xF5,
+				0x10,
+				0xDE,
+				0x9F,
+				0x01
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_AUTHENTICATED_CONFIGURE_ENCRYPTION_WHEN_ACCESSIBLE
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x86, 0xF2, 0xFF, 0x41,
+				0xE0, 0x6A,
+				0x43, 0x4D,
+				0x9D,
+				0x55,
+				0xA4,
+				0x6E,
+				0x9E,
+				0xFD,
+				0x15,
+				0x8A
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
+	public static ref readonly Guid D3D11_KEY_EXCHANGE_RSAES_OAEP
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x95, 0x98, 0x94, 0xC1,
+				0x2A, 0xD7,
+				0x1D, 0x4A,
+				0x8E,
+				0x5D,
+				0xED,
+				0x85,
+				0x7D,
+				0x17,
+				0x15,
+				0x20
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 	public const uint D3D11_SDK_VERSION = 7;
 	public const uint D3D11_PACKED_TILE = 4294967295;
 	public const uint D3D11_SDK_LAYERS_VERSION = 1;
@@ -474,7 +1900,30 @@ public static partial class Apis
 	public const uint D3D11_DEBUG_FEATURE_NEVER_DISCARD_OFFERED_RESOURCE = 16;
 	public const uint D3D11_DEBUG_FEATURE_AVOID_BEHAVIOR_CHANGING_DEBUG_AIDS = 64;
 	public const uint D3D11_DEBUG_FEATURE_DISABLE_TILED_RESOURCE_MAPPING_TRACKING_AND_VALIDATION = 128;
-	public static readonly Guid DXGI_DEBUG_D3D11 = new Guid(0x4b99317b, 0xac39, 0x4aa6, 0xbb, 0x0b, 0xba, 0xa0, 0x47, 0x84, 0x79, 0x8f);
+	public static ref readonly Guid DXGI_DEBUG_D3D11
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0x7B, 0x31, 0x99, 0x4B,
+				0x39, 0xAC,
+				0xA6, 0x4A,
+				0xBB,
+				0x0B,
+				0xBA,
+				0xA0,
+				0x47,
+				0x84,
+				0x79,
+				0x8F
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 	public const uint D3D11_INFO_QUEUE_DEFAULT_MESSAGE_COUNT_LIMIT = 1024;
 	public const int D3D_RETURN_PARAMETER_INDEX = -1;
 	public const uint D3D_SHADER_REQUIRES_DOUBLES = 1;
@@ -6993,7 +8442,7 @@ public partial struct AuthenticatedProtectionFlags
 public partial struct InputElementDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INPUT_ELEMENT_DESC::SemanticName"]/*' />
-	public unsafe byte* SemanticName;
+	public unsafe sbyte* SemanticName;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INPUT_ELEMENT_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -7022,7 +8471,7 @@ public partial struct SODeclarationEntry
 	public uint Stream;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SO_DECLARATION_ENTRY::SemanticName"]/*' />
-	public unsafe byte* SemanticName;
+	public unsafe sbyte* SemanticName;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SO_DECLARATION_ENTRY::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -11178,7 +12627,7 @@ public partial struct FeatureDataD3D11Options4
 public partial struct SignatureParameterDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SIGNATURE_PARAMETER_DESC::SemanticName"]/*' />
-	public unsafe byte* SemanticName;
+	public unsafe sbyte* SemanticName;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SIGNATURE_PARAMETER_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -11210,7 +12659,7 @@ public partial struct SignatureParameterDescription
 public partial struct ShaderBufferDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_BUFFER_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_BUFFER_DESC::Type"]/*' />
 	public Graphics.Direct3D.CBufferType Type;
@@ -11230,7 +12679,7 @@ public partial struct ShaderBufferDescription
 public partial struct ShaderVariableDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::StartOffset"]/*' />
 	public uint StartOffset;
@@ -11283,7 +12732,7 @@ public partial struct ShaderTypeDescription
 	public uint Offset;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC"]/*' />
@@ -11294,7 +12743,7 @@ public partial struct ShaderDescription
 	public uint Version;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Creator"]/*' />
-	public unsafe byte* Creator;
+	public unsafe sbyte* Creator;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Flags"]/*' />
 	public uint Flags;
@@ -11410,7 +12859,7 @@ public partial struct ShaderDescription
 public partial struct ShaderInputBindDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_INPUT_BIND_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_INPUT_BIND_DESC::Type"]/*' />
 	public Graphics.Direct3D.ShaderInputType Type;
@@ -11439,7 +12888,7 @@ public partial struct ShaderInputBindDescription
 public partial struct LibraryDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::Creator"]/*' />
-	public unsafe byte* Creator;
+	public unsafe sbyte* Creator;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::Flags"]/*' />
 	public uint Flags;
@@ -11456,7 +12905,7 @@ public partial struct FunctionDescription
 	public uint Version;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Creator"]/*' />
-	public unsafe byte* Creator;
+	public unsafe sbyte* Creator;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Flags"]/*' />
 	public uint Flags;
@@ -11537,7 +12986,7 @@ public partial struct FunctionDescription
 	public ulong RequiredFeatureFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::FunctionParameterCount"]/*' />
 	public int FunctionParameterCount;
@@ -11557,10 +13006,10 @@ public partial struct FunctionDescription
 public partial struct ParameterDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PARAMETER_DESC::Name"]/*' />
-	public unsafe byte* Name;
+	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PARAMETER_DESC::SemanticName"]/*' />
-	public unsafe byte* SemanticName;
+	public unsafe sbyte* SemanticName;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PARAMETER_DESC::Type"]/*' />
 	public Graphics.Direct3D.ShaderVariableType Type;
@@ -14956,17 +16405,17 @@ public unsafe partial struct ID3D11ClassLinkage
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage::GetClassInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetClassInstance(byte** pClassInstanceName, uint InstanceIndex, ID3D11ClassInstance** ppInstance)
+	public HResult GetClassInstance(sbyte* pClassInstanceName, uint InstanceIndex, ID3D11ClassInstance** ppInstance)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, byte**, uint, ID3D11ClassInstance**, int>)(lpVtbl[7]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassInstanceName, InstanceIndex, ppInstance);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, sbyte*, uint, ID3D11ClassInstance**, int>)(lpVtbl[7]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassInstanceName, InstanceIndex, ppInstance);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage::CreateClassInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateClassInstance(byte** pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance)
+	public HResult CreateClassInstance(sbyte* pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, byte**, uint, uint, uint, uint, ID3D11ClassInstance**, int>)(lpVtbl[8]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassTypeName, ConstantBufferOffset, ConstantVectorOffset, TextureOffset, SamplerOffset, ppInstance);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, sbyte*, uint, uint, uint, uint, ID3D11ClassInstance**, int>)(lpVtbl[8]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassTypeName, ConstantBufferOffset, ConstantVectorOffset, TextureOffset, SamplerOffset, ppInstance);
 	}
 
 }
@@ -18825,17 +20274,17 @@ public unsafe partial struct ID3D11InfoQueue
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte** pDescription)
+	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, sbyte* pDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageCategory, MessageSeverity, MessageId, byte**, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
+		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageCategory, MessageSeverity, MessageId, sbyte*, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult AddApplicationMessage(MessageSeverity Severity, byte** pDescription)
+	public HResult AddApplicationMessage(MessageSeverity Severity, sbyte* pDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageSeverity, byte**, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageSeverity, sbyte*, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetBreakOnCategory"]/*' />
@@ -21817,9 +23266,9 @@ public unsafe partial struct ID3D11Device1
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::OpenSharedResourceByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult OpenSharedResourceByName(char** lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
+	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, char**, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device1*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device1*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
 }
@@ -21888,9 +23337,9 @@ public unsafe partial struct ID3DUserDefinedAnnotation
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::BeginEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public int BeginEvent(char** Name)
+	public int BeginEvent(ushort* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, char**, int>)(lpVtbl[3]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, ushort*, int>)(lpVtbl[3]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::EndEvent"]/*' />
@@ -21904,9 +23353,9 @@ public unsafe partial struct ID3DUserDefinedAnnotation
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::SetMarker"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void SetMarker(char** Name)
+	public void SetMarker(ushort* Name)
 	{
-		((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, char**, void>)(lpVtbl[5]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
+		((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, ushort*, void>)(lpVtbl[5]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::GetStatus"]/*' />
@@ -23087,17 +24536,17 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::SetMarkerInt"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(141)]
-	public void SetMarkerInt(char** pLabel, int Data)
+	public void SetMarkerInt(ushort* pLabel, int Data)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, char**, int, void>)(lpVtbl[141]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ushort*, int, void>)(lpVtbl[141]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::BeginEventInt"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(142)]
-	public void BeginEventInt(char** pLabel, int Data)
+	public void BeginEventInt(ushort* pLabel, int Data)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, char**, int, void>)(lpVtbl[142]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ushort*, int, void>)(lpVtbl[142]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::EndEvent"]/*' />
@@ -23222,9 +24671,9 @@ public unsafe partial struct ID3D11Device2
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResourceByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult OpenSharedResourceByName(char** lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
+	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, char**, uint, Guid*, void**, int>)(lpVtbl[9]))((ID3D11Device2*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, ushort*, uint, Guid*, void**, int>)(lpVtbl[9]))((ID3D11Device2*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateBuffer" />
@@ -24566,17 +26015,17 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext2.SetMarkerInt" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public void SetMarkerInt(char** pLabel, int Data)
+	public void SetMarkerInt(ushort* pLabel, int Data)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, char**, int, void>)(lpVtbl[10]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ushort*, int, void>)(lpVtbl[10]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.BeginEventInt" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void BeginEventInt(char** pLabel, int Data)
+	public void BeginEventInt(ushort* pLabel, int Data)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, char**, int, void>)(lpVtbl[11]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ushort*, int, void>)(lpVtbl[11]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.EndEvent" />
@@ -25757,9 +27206,9 @@ public unsafe partial struct ID3D11Fence
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char** lpName, IntPtr* pHandle)
+	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, IntPtr* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, Security.SECURITY_ATTRIBUTES*, uint, char**, IntPtr*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::GetCompletedValue"]/*' />
@@ -25924,17 +27373,17 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext2.SetMarkerInt" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public void SetMarkerInt(char** pLabel, int Data)
+	public void SetMarkerInt(ushort* pLabel, int Data)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, char**, int, void>)(lpVtbl[13]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ushort*, int, void>)(lpVtbl[13]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.BeginEventInt" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public void BeginEventInt(char** pLabel, int Data)
+	public void BeginEventInt(ushort* pLabel, int Data)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, char**, int, void>)(lpVtbl[14]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ushort*, int, void>)(lpVtbl[14]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.EndEvent" />
@@ -27155,9 +28604,9 @@ public unsafe partial struct ID3D11Device3
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResourceByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult OpenSharedResourceByName(char** lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
+	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device3*, char**, uint, Guid*, void**, int>)(lpVtbl[13]))((ID3D11Device3*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device3*, ushort*, uint, Guid*, void**, int>)(lpVtbl[13]))((ID3D11Device3*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateBuffer" />
@@ -27802,9 +29251,9 @@ public unsafe partial struct ID3D11Device4
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResourceByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult OpenSharedResourceByName(char** lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
+	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device4*, char**, uint, Guid*, void**, int>)(lpVtbl[24]))((ID3D11Device4*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device4*, ushort*, uint, Guid*, void**, int>)(lpVtbl[24]))((ID3D11Device4*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateBuffer" />
@@ -28393,9 +29842,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResourceByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult OpenSharedResourceByName(char** lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
+	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, char**, uint, Guid*, void**, int>)(lpVtbl[26]))((ID3D11Device5*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, ushort*, uint, Guid*, void**, int>)(lpVtbl[26]))((ID3D11Device5*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateBuffer" />
@@ -30552,17 +32001,17 @@ public unsafe partial struct ID3D11ShaderReflectionType
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionType GetMemberTypeByName(byte** Name)
+	public Graphics.Direct3D11.ID3D11ShaderReflectionType GetMemberTypeByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, byte**, Graphics.Direct3D11.ID3D11ShaderReflectionType>)(lpVtbl[2]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionType>)(lpVtbl[2]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public byte* GetMemberTypeName(uint Index)
+	public sbyte* GetMemberTypeName(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, byte*>)(lpVtbl[3]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, sbyte*>)(lpVtbl[3]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::IsEqual"]/*' />
@@ -30742,9 +32191,9 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(byte** Name)
+	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, byte**, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[2]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[2]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
 	}
 
 }
@@ -30829,9 +32278,9 @@ public unsafe partial struct ID3D11ShaderReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(byte** Name)
+	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, byte**, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[5]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[5]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetResourceBindingDesc"]/*' />
@@ -30869,17 +32318,17 @@ public unsafe partial struct ID3D11ShaderReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(byte** Name)
+	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, byte**, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[10]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[10]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetResourceBindingDescByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetResourceBindingDescByName(byte** Name, ShaderInputBindDescription* pDesc)
+	public HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, byte**, ShaderInputBindDescription*, int>)(lpVtbl[11]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[11]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetMovInstructionCount"]/*' />
@@ -31095,9 +32544,9 @@ public unsafe partial struct ID3D11FunctionReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(byte** Name)
+	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, byte**, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDesc"]/*' />
@@ -31111,17 +32560,17 @@ public unsafe partial struct ID3D11FunctionReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(byte** Name)
+	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, byte**, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[4]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[4]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDescByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetResourceBindingDescByName(byte** Name, ShaderInputBindDescription* pDesc)
+	public HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, byte**, ShaderInputBindDescription*, int>)(lpVtbl[5]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[5]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetFunctionParameter"]/*' />
@@ -31249,9 +32698,9 @@ public unsafe partial struct ID3D11ModuleInstance
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult BindConstantBufferByName(byte** pName, uint uDstSlot, uint cbDstOffset)
+	public HResult BindConstantBufferByName(sbyte* pName, uint uDstSlot, uint cbDstOffset)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, byte**, uint, uint, int>)(lpVtbl[4]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, cbDstOffset);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, sbyte*, uint, uint, int>)(lpVtbl[4]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, cbDstOffset);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindResource"]/*' />
@@ -31265,9 +32714,9 @@ public unsafe partial struct ID3D11ModuleInstance
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindResourceByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult BindResourceByName(byte** pName, uint uDstSlot, uint uCount)
+	public HResult BindResourceByName(sbyte* pName, uint uDstSlot, uint uCount)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, byte**, uint, uint, int>)(lpVtbl[6]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, sbyte*, uint, uint, int>)(lpVtbl[6]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindSampler"]/*' />
@@ -31281,9 +32730,9 @@ public unsafe partial struct ID3D11ModuleInstance
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindSamplerByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult BindSamplerByName(byte** pName, uint uDstSlot, uint uCount)
+	public HResult BindSamplerByName(sbyte* pName, uint uDstSlot, uint uCount)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, byte**, uint, uint, int>)(lpVtbl[8]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, sbyte*, uint, uint, int>)(lpVtbl[8]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindUnorderedAccessView"]/*' />
@@ -31297,9 +32746,9 @@ public unsafe partial struct ID3D11ModuleInstance
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindUnorderedAccessViewByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult BindUnorderedAccessViewByName(byte** pName, uint uDstSlot, uint uCount)
+	public HResult BindUnorderedAccessViewByName(sbyte* pName, uint uDstSlot, uint uCount)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, byte**, uint, uint, int>)(lpVtbl[10]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, sbyte*, uint, uint, int>)(lpVtbl[10]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pName, uDstSlot, uCount);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindResourceAsUnorderedAccessView"]/*' />
@@ -31313,9 +32762,9 @@ public unsafe partial struct ID3D11ModuleInstance
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance::BindResourceAsUnorderedAccessViewByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult BindResourceAsUnorderedAccessViewByName(byte** pSrvName, uint uDstUavSlot, uint uCount)
+	public HResult BindResourceAsUnorderedAccessViewByName(sbyte* pSrvName, uint uDstUavSlot, uint uCount)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, byte**, uint, uint, int>)(lpVtbl[12]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pSrvName, uDstUavSlot, uCount);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, sbyte*, uint, uint, int>)(lpVtbl[12]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pSrvName, uDstUavSlot, uCount);
 	}
 
 }
@@ -31384,9 +32833,9 @@ public unsafe partial struct ID3D11Module
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Module::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateInstance(byte** pNamespace, ID3D11ModuleInstance** ppModuleInstance)
+	public HResult CreateInstance(sbyte* pNamespace, ID3D11ModuleInstance** ppModuleInstance)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Module*, byte**, ID3D11ModuleInstance**, int>)(lpVtbl[3]))((ID3D11Module*)Unsafe.AsPointer(ref this), pNamespace, ppModuleInstance);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Module*, sbyte*, ID3D11ModuleInstance**, int>)(lpVtbl[3]))((ID3D11Module*)Unsafe.AsPointer(ref this), pNamespace, ppModuleInstance);
 	}
 
 }
@@ -31455,9 +32904,9 @@ public unsafe partial struct ID3D11Linker
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::Link"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Link(ID3D11ModuleInstance* pEntry, byte** pEntryName, byte** pTargetName, uint uFlags, Graphics.Direct3D.ID3DBlob** ppShaderBlob, Graphics.Direct3D.ID3DBlob* ppErrorBuffer)
+	public HResult Link(ID3D11ModuleInstance* pEntry, sbyte* pEntryName, sbyte* pTargetName, uint uFlags, Graphics.Direct3D.ID3DBlob** ppShaderBlob, Graphics.Direct3D.ID3DBlob* ppErrorBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, ID3D11ModuleInstance*, byte**, byte**, uint, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob*, int>)(lpVtbl[3]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pEntry, pEntryName, pTargetName, uFlags, ppShaderBlob, ppErrorBuffer);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, ID3D11ModuleInstance*, sbyte*, sbyte*, uint, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob*, int>)(lpVtbl[3]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pEntry, pEntryName, pTargetName, uFlags, ppShaderBlob, ppErrorBuffer);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::UseLibrary"]/*' />
@@ -31629,9 +33078,9 @@ public unsafe partial struct ID3D11FunctionLinkingGraph
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::CallFunction"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CallFunction(byte** pModuleInstanceNamespace, ID3D11Module* pModuleWithFunctionPrototype, byte** pFunctionName, ID3D11LinkingNode** ppCallNode)
+	public HResult CallFunction(sbyte* pModuleInstanceNamespace, ID3D11Module* pModuleWithFunctionPrototype, sbyte* pFunctionName, ID3D11LinkingNode** ppCallNode)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, byte**, ID3D11Module*, byte**, ID3D11LinkingNode**, int>)(lpVtbl[6]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pModuleInstanceNamespace, pModuleWithFunctionPrototype, pFunctionName, ppCallNode);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, sbyte*, ID3D11Module*, sbyte*, ID3D11LinkingNode**, int>)(lpVtbl[6]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pModuleInstanceNamespace, pModuleWithFunctionPrototype, pFunctionName, ppCallNode);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::PassValue"]/*' />
@@ -31645,9 +33094,9 @@ public unsafe partial struct ID3D11FunctionLinkingGraph
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::PassValueWithSwizzle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult PassValueWithSwizzle(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, byte** pSrcSwizzle, ID3D11LinkingNode* pDstNode, int DstParameterIndex, byte** pDstSwizzle)
+	public HResult PassValueWithSwizzle(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, sbyte* pSrcSwizzle, ID3D11LinkingNode* pDstNode, int DstParameterIndex, sbyte* pDstSwizzle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, ID3D11LinkingNode*, int, byte**, ID3D11LinkingNode*, int, byte**, int>)(lpVtbl[8]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pSrcNode, SrcParameterIndex, pSrcSwizzle, pDstNode, DstParameterIndex, pDstSwizzle);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, ID3D11LinkingNode*, int, sbyte*, ID3D11LinkingNode*, int, sbyte*, int>)(lpVtbl[8]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), pSrcNode, SrcParameterIndex, pSrcSwizzle, pDstNode, DstParameterIndex, pDstSwizzle);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::GetLastError"]/*' />
