@@ -20,7 +20,9 @@ public static class Program
         "Graphics.Direct3D11.json",
         "Graphics.Direct3D12.json",
         "Graphics.Direct3D.Dxc.json",
+        "Graphics.Direct2D.Common.json",
         //"Graphics.Imaging.json",
+        //"Graphics.DirectWrite.json",
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -75,6 +77,15 @@ public static class Program
 
         { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
         { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
+        { "Graphics.Direct2D.Common.D2D_MATRIX_3X2_F", "Matrix3x2" },
+        { "Graphics.Direct2D.Common.D2D_MATRIX_4X3_F", "Matrix4x3" },
+        { "Graphics.Direct2D.Common.D2D_MATRIX_4X4_F", "Matrix4x4" },
+        { "Graphics.Direct2D.Common.D2D_MATRIX_5X4_F", "Matrix5x4" },
+        { "Graphics.Direct2D.Common.D2D_POINT_2F", "System.Drawing.PointF" },
+        { "Graphics.Direct2D.Common.D2D_VECTOR_2F", "Vector2" },
+        { "Graphics.Direct2D.Common.D2D_VECTOR_3F", "Vector3" },
+        { "Graphics.Direct2D.Common.D2D_VECTOR_4F", "Vector4" },
+        { "Graphics.Direct2D.Common.D2D_SIZE_F", "System.Drawing.SizeF" },
 
         // TODO: Understand those ->
         { "Foundation.RECT", "RawRect" },
@@ -488,6 +499,14 @@ public static class Program
         "SourceNot2D",
         "DestinationNot2D",
         "CreateFence",
+        "SynchronizedChannel",
+        "DecoderBeginFrame",
+        "VideoProcessorGetStreamMirror",
+        "BackbufferNotSupported",
+        "DimensionsTooLarge",
+        "InvalidMipLevel",
+        "ColorMatrix",
+        "StencilOp",
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
@@ -516,6 +535,9 @@ public static class Program
         "D3D",
         "D3D11",
         "D3D12",
+        "D2D",
+        "D2D1",
+        "DWRITE",
     };
 
 
@@ -610,6 +632,9 @@ public static class Program
         "D3D10",
         "D3D11",
         "D3D12",
+        "D2D",
+        "D2D1",
+        "DWRITE",
     };
 
     private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
@@ -734,6 +759,7 @@ public static class Program
         }
 
         // Generate docs
+        //DocGenerator.Generate(new[] { "DWRITE" }, Path.Combine(outputPath, "DirectWrite.xml"));
         //DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
         //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(outputPath, "Dxgi.xml"));
         //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(outputPath, "Direct3D11.xml"));
@@ -965,7 +991,8 @@ public static class Program
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
             if (structType.Name.StartsWith("D3DX11") ||
-                structType.Name.StartsWith("CD3D11"))
+                structType.Name.StartsWith("CD3D11") ||
+                structType.Name == "D2D_COLOR_F")
             {
                 continue;
             }
@@ -1298,6 +1325,11 @@ public static class Program
             writer.WriteLine("[StructLayout(LayoutKind.Explicit)]");
         }
 
+        if (structType.Name == "D2D_MATRIX_3X2_F")
+        {
+
+        }
+
         using (writer.PushBlock($"public partial struct {csTypeName}"))
         {
             int fieldIndex = 0;
@@ -1409,6 +1441,9 @@ public static class Program
                     {
                         writer.WriteLine("[FieldOffset(0)]");
                     }
+
+                    fieldValueName = CleanupName(fieldValueName);
+
                     writer.WriteLine($"public {unsafePrefix}{fieldTypeName} {fieldValueName};");
                 }
 
@@ -1661,6 +1696,8 @@ public static class Program
                         }
                     }
 
+                    parameterName = CleanupName(parameterName);
+
                     argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
                     //if (isOptional == true)
                     //{
@@ -1759,6 +1796,16 @@ public static class Program
         }
 
         return typeName.Replace(api + ".", "");
+    }
+
+    private static string CleanupName(string name)
+    {
+        if (name == "string")
+        {
+            return "@string";
+        }
+
+        return name;
     }
 
     private static string GetDataTypeName(string typeName, out string prefix)

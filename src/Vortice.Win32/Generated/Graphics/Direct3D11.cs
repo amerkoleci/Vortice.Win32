@@ -6407,10 +6407,10 @@ public enum MessageId : int
 	ReleasedecoderbufferNotlocked = 3145783,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_NULLPARAM</unmanaged>
-	DecoderbeginframeNullParam = 3145784,
+	DecoderBeginFrameNullParam = 3145784,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_HAZARD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_HAZARD</unmanaged>
-	DecoderbeginframeHazard = 3145785,
+	DecoderBeginFrameHazard = 3145785,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERENDFRAME_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERENDFRAME_NULLPARAM</unmanaged>
 	DecoderendframeNullParam = 3145786,
@@ -7370,7 +7370,7 @@ public enum MessageId : int
 	Videoprocessorgetstreamcolorspace1NullParam = 3146104,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMMIRROR_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMMIRROR_NULLPARAM</unmanaged>
-	VideoprocessorgetstreammirrorNullParam = 3146105,
+	VideoProcessorGetStreamMirrorNullParam = 3146105,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_RECOMMENDVIDEODECODERDOWNSAMPLING_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_RECOMMENDVIDEODECODERDOWNSAMPLING_NULLPARAM</unmanaged>
 	RecommendvideodecoderdownsamplingNullParam = 3146106,
@@ -7553,7 +7553,7 @@ public enum MessageId : int
 	JpegDecodeNotSupported = 3146169,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_DIMENSIONSTOOLARGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_DIMENSIONSTOOLARGE</unmanaged>
-	JpegDecodeDimensionstoolarge = 3146170,
+	JpegDecodeDimensionsTooLarge = 3146170,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDCOMPONENTS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDCOMPONENTS</unmanaged>
 	JpegDecodeInvalidComponents = 3146171,
@@ -7574,7 +7574,7 @@ public enum MessageId : int
 	JpegDecodeInvalidSubresource = 3146176,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDMIPLEVEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDMIPLEVEL</unmanaged>
-	JpegDecodeInvalidmiplevel = 3146177,
+	JpegDecodeInvalidMipLevel = 3146177,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_EMPTYDESTBOX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_EMPTYDESTBOX</unmanaged>
 	JpegDecodeEmptydestbox = 3146178,
@@ -7649,7 +7649,7 @@ public enum MessageId : int
 	JpegDecodeUnsupporteddsttextureusage = 3146201,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_BACKBUFFERNOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_BACKBUFFERNOTSUPPORTED</unmanaged>
-	JpegDecodeBackbuffernotsupported = 3146202,
+	JpegDecodeBackbufferNotSupported = 3146202,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPRTEDCOPYFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPRTEDCOPYFLAGS</unmanaged>
 	JpegDecodeUnsupprtedcopyflags = 3146203,
@@ -7685,10 +7685,10 @@ public enum MessageId : int
 	JpegEncodeInvalidSubresource = 3146213,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_INVALIDMIPLEVEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_INVALIDMIPLEVEL</unmanaged>
-	JpegEncodeInvalidmiplevel = 3146214,
+	JpegEncodeInvalidMipLevel = 3146214,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_DIMENSIONSTOOLARGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_DIMENSIONSTOOLARGE</unmanaged>
-	JpegEncodeDimensionstoolarge = 3146215,
+	JpegEncodeDimensionsTooLarge = 3146215,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_HAZARD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_HAZARD</unmanaged>
 	JpegEncodeHazard = 3146216,
@@ -7703,7 +7703,7 @@ public enum MessageId : int
 	JpegEncodeUnsupportedsrctextureusage = 3146219,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_BACKBUFFERNOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_BACKBUFFERNOTSUPPORTED</unmanaged>
-	JpegEncodeBackbuffernotsupported = 3146220,
+	JpegEncodeBackbufferNotSupported = 3146220,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_UNSUPPORTEDCONTEXTTTYPEFORQUERY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_UNSUPPORTEDCONTEXTTTYPEFORQUERY</unmanaged>
 	CreateQueryOrPredicateUnsupportedcontextttypeforquery = 3146221,
@@ -7787,7 +7787,7 @@ public enum MessageId : int
 	Videoprocessorgetstreamcolorspace1InvalidStream = 3146247,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMMIRROR_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMMIRROR_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreammirrorInvalidStream = 3146248,
+	VideoProcessorGetStreamMirrorInvalidStream = 3146248,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_FENCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_FENCE</unmanaged>
 	CreateFence = 3146249,
@@ -7799,13 +7799,13 @@ public enum MessageId : int
 	DestroyFence = 3146251,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_SYNCHRONIZEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_SYNCHRONIZEDCHANNEL</unmanaged>
-	CreateSynchronizedchannel = 3146252,
+	CreateSynchronizedChannel = 3146252,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_LIVE_SYNCHRONIZEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_LIVE_SYNCHRONIZEDCHANNEL</unmanaged>
-	LiveSynchronizedchannel = 3146253,
+	LiveSynchronizedChannel = 3146253,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DESTROY_SYNCHRONIZEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DESTROY_SYNCHRONIZEDCHANNEL</unmanaged>
-	DestroySynchronizedchannel = 3146254,
+	DestroySynchronizedChannel = 3146254,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEFENCE_INVALIDFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEFENCE_INVALIDFLAGS</unmanaged>
 	CreateFenceInvalidFlags = 3146255,
@@ -7817,22 +7817,22 @@ public enum MessageId : int
 	NegotiatecryptosessionkeyexchangemtNotSupported = 3146259,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT_COUNT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT_COUNT</unmanaged>
-	DecoderbeginframeInvalidHistogramComponentCount = 3146260,
+	DecoderBeginFrameInvalidHistogramComponentCount = 3146260,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT</unmanaged>
-	DecoderbeginframeInvalidHistogramComponent = 3146261,
+	DecoderBeginFrameInvalidHistogramComponent = 3146261,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_SIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_SIZE</unmanaged>
-	DecoderbeginframeInvalidHistogramBufferSize = 3146262,
+	DecoderBeginFrameInvalidHistogramBufferSize = 3146262,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_USAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_USAGE</unmanaged>
-	DecoderbeginframeInvalidHistogramBufferUsage = 3146263,
+	DecoderBeginFrameInvalidHistogramBufferUsage = 3146263,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_MISC_FLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_MISC_FLAGS</unmanaged>
-	DecoderbeginframeInvalidHistogramBufferMiscFlags = 3146264,
+	DecoderBeginFrameInvalidHistogramBufferMiscFlags = 3146264,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_OFFSET"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_OFFSET</unmanaged>
-	DecoderbeginframeInvalidHistogramBufferOffset = 3146265,
+	DecoderBeginFrameInvalidHistogramBufferOffset = 3146265,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_TRACKEDWORKLOAD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_TRACKEDWORKLOAD</unmanaged>
 	CreateTrackedworkload = 3146266,
@@ -8571,7 +8571,7 @@ public partial struct Box
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCILOP_DESC"]/*' />
 /// <unmanaged>D3D11_DEPTH_STENCILOP_DESC</unmanaged>
-public partial struct DepthStencilopDescription
+public partial struct DepthStencilOpDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCILOP_DESC::StencilFailOp"]/*' />
 	public StencilOp StencilFailOp;
@@ -8609,10 +8609,10 @@ public partial struct DepthStencilDescription
 	public byte StencilWriteMask;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::FrontFace"]/*' />
-	public DepthStencilopDescription FrontFace;
+	public DepthStencilOpDescription FrontFace;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::BackFace"]/*' />
-	public DepthStencilopDescription BackFace;
+	public DepthStencilOpDescription BackFace;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC"]/*' />

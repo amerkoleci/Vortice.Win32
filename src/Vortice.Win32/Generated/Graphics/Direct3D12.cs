@@ -7043,7 +7043,7 @@ public partial struct Box
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCILOP_DESC</unmanaged>
-public partial struct DepthStencilopDescription
+public partial struct DepthStencilOpDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilFailOp"]/*' />
 	public StencilOp StencilFailOp;
@@ -7081,10 +7081,10 @@ public partial struct DepthStencilDescription
 	public byte StencilWriteMask;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::FrontFace"]/*' />
-	public DepthStencilopDescription FrontFace;
+	public DepthStencilOpDescription FrontFace;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::BackFace"]/*' />
-	public DepthStencilopDescription BackFace;
+	public DepthStencilOpDescription BackFace;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC1"]/*' />
@@ -7110,10 +7110,10 @@ public partial struct DepthStencilDescription1
 	public byte StencilWriteMask;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC1::FrontFace"]/*' />
-	public DepthStencilopDescription FrontFace;
+	public DepthStencilOpDescription FrontFace;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC1::BackFace"]/*' />
-	public DepthStencilopDescription BackFace;
+	public DepthStencilOpDescription BackFace;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC1::DepthBoundsTestEnable"]/*' />
 	public Bool32 DepthBoundsTestEnable;
