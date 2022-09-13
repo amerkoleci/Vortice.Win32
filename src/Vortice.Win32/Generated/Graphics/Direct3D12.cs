@@ -4231,10 +4231,10 @@ public enum MessageId : int
 	CreateShaderResourceViewInvalidFormat = 28,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDVIDEOPLANESLICE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDVIDEOPLANESLICE</unmanaged>
-	CreateShaderResourceViewInvalidvideoplaneslice = 29,
+	CreateShaderResourceViewInvalidVideoPlaneSlice = 29,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDPLANESLICE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDPLANESLICE</unmanaged>
-	CreateShaderResourceViewInvalidplaneslice = 30,
+	CreateShaderResourceViewInvalidPlaneSlice = 30,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDDIMENSIONS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDDIMENSIONS</unmanaged>
 	CreateShaderResourceViewInvalidDimensions = 31,
@@ -4255,10 +4255,10 @@ public enum MessageId : int
 	CreateRenderTargetViewInvalidFormat = 38,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDVIDEOPLANESLICE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDVIDEOPLANESLICE</unmanaged>
-	CreateRenderTargetViewInvalidvideoplaneslice = 39,
+	CreateRenderTargetViewInvalidVideoPlaneSlice = 39,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDPLANESLICE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDPLANESLICE</unmanaged>
-	CreateRenderTargetViewInvalidplaneslice = 40,
+	CreateRenderTargetViewInvalidPlaneSlice = 40,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDDIMENSIONS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDDIMENSIONS</unmanaged>
 	CreateRenderTargetViewInvalidDimensions = 41,
@@ -4300,28 +4300,28 @@ public enum MessageId : int
 	CreateInputLayoutInvalidInputSlotClass = 57,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_STEPRATESLOTCLASSMISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_STEPRATESLOTCLASSMISMATCH</unmanaged>
-	CreateInputLayoutSteprateslotclassmismatch = 58,
+	CreateInputLayoutStepRateSlotClassMismatch = 58,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_INVALIDSLOTCLASSCHANGE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_INVALIDSLOTCLASSCHANGE</unmanaged>
-	CreateInputLayoutInvalidslotclasschange = 59,
+	CreateInputLayoutInvalidSlotClassChange = 59,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_INVALIDSTEPRATECHANGE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_INVALIDSTEPRATECHANGE</unmanaged>
-	CreateInputLayoutInvalidstepratechange = 60,
+	CreateInputLayoutInvalidStepRateChange = 60,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_INVALIDALIGNMENT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_INVALIDALIGNMENT</unmanaged>
-	CreateInputLayoutInvalidalignment = 61,
+	CreateInputLayoutInvalidAlignment = 61,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_DUPLICATESEMANTIC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_DUPLICATESEMANTIC</unmanaged>
-	CreateInputLayoutDuplicatesemantic = 62,
+	CreateInputLayoutDuplicateSemantic = 62,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_UNPARSEABLEINPUTSIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_UNPARSEABLEINPUTSIGNATURE</unmanaged>
-	CreateInputLayoutUnparseableinputsignature = 63,
+	CreateInputLayoutUnparseableInputSignature = 63,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_NULLSEMANTIC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_NULLSEMANTIC</unmanaged>
-	CreateInputLayoutNullsemantic = 64,
+	CreateInputLayoutNullSemantic = 64,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_MISSINGELEMENT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEINPUTLAYOUT_MISSINGELEMENT</unmanaged>
-	CreateInputLayoutMissingelement = 65,
+	CreateInputLayoutMissingElement = 65,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEVERTEXSHADER_OUTOFMEMORY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEVERTEXSHADER_OUTOFMEMORY</unmanaged>
 	CreateVertexShaderOutOfMemory = 66,
@@ -4354,10 +4354,10 @@ public enum MessageId : int
 	CreateGeometryShaderWithStreamOutputInvalidNumEntries = 75,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_OUTPUTSTREAMSTRIDEUNUSED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_OUTPUTSTREAMSTRIDEUNUSED</unmanaged>
-	CreateGeometryShaderWithStreamOutputOutputstreamstrideunused = 76,
+	CreateGeometryShaderWithStreamOutputOutputStreamStrideUnused = 76,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_OUTPUTSLOT0EXPECTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_OUTPUTSLOT0EXPECTED</unmanaged>
-	CreateGeometryShaderWithStreamOutputOutputslot0expected = 79,
+	CreateGeometryShaderWithStreamOutputOutputSlot0Expected = 79,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_INVALIDOUTPUTSLOT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_INVALIDOUTPUTSLOT</unmanaged>
 	CreateGeometryShaderWithStreamOutputInvalidOutputSlot = 80,
@@ -4630,10 +4630,10 @@ public enum MessageId : int
 	CreateUnorderedAccessViewInvalidFormat = 342,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDVIDEOPLANESLICE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDVIDEOPLANESLICE</unmanaged>
-	CreateUnorderedAccessViewInvalidvideoplaneslice = 343,
+	CreateUnorderedAccessViewInvalidVideoPlaneSlice = 343,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDPLANESLICE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDPLANESLICE</unmanaged>
-	CreateUnorderedAccessViewInvalidplaneslice = 344,
+	CreateUnorderedAccessViewInvalidPlaneSlice = 344,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDDIMENSIONS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDDIMENSIONS</unmanaged>
 	CreateUnorderedAccessViewInvalidDimensions = 345,
@@ -4696,7 +4696,7 @@ public enum MessageId : int
 	DeviceClearViewInvalidsourcerect = 447,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DEVICE_CLEARVIEW_EMPTYRECT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DEVICE_CLEARVIEW_EMPTYRECT</unmanaged>
-	DeviceClearViewEmptyrect = 448,
+	DeviceClearViewEmptyRect = 448,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_UPDATETILEMAPPINGS_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_UPDATETILEMAPPINGS_INVALID_PARAMETER</unmanaged>
 	UpdateTileMappingsInvalidParameter = 493,
@@ -4705,10 +4705,10 @@ public enum MessageId : int
 	CopyTileMappingsInvalidParameter = 494,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEDEVICE_INVALIDARGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEDEVICE_INVALIDARGS</unmanaged>
-	CreatedeviceInvalidargs = 506,
+	CreateDeviceInvalidArgs = 506,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEDEVICE_WARNING"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEDEVICE_WARNING</unmanaged>
-	CreatedeviceWarning = 507,
+	CreateDeviceWarning = 507,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOURCE_BARRIER_INVALID_TYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOURCE_BARRIER_INVALID_TYPE</unmanaged>
 	ResourceBarrierInvalidType = 519,
@@ -4804,25 +4804,25 @@ public enum MessageId : int
 	SetDescriptorHeapInvalid = 554,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_COMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_COMMANDQUEUE</unmanaged>
-	CreateCommandqueue = 557,
+	CreateCommandQueue = 557,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_COMMANDALLOCATOR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_COMMANDALLOCATOR</unmanaged>
-	CreateCommandallocator = 558,
+	CreateCommandAllocator = 558,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_PIPELINESTATE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_PIPELINESTATE</unmanaged>
-	CreatePipelinestate = 559,
+	CreatePipelineState = 559,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_COMMANDLIST12"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_COMMANDLIST12</unmanaged>
-	CreateCommandlist12 = 560,
+	CreateCommandList12 = 560,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_RESOURCE</unmanaged>
 	CreateResource = 562,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_DESCRIPTORHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_DESCRIPTORHEAP</unmanaged>
-	CreateDescriptorheap = 563,
+	CreateDescriptorHeap = 563,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_ROOTSIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_ROOTSIGNATURE</unmanaged>
-	CreateRootsignature = 564,
+	CreateRootSignature = 564,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_LIBRARY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_LIBRARY</unmanaged>
 	CreateLibrary = 565,
@@ -4831,34 +4831,34 @@ public enum MessageId : int
 	CreateHeap = 566,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_MONITOREDFENCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_MONITOREDFENCE</unmanaged>
-	CreateMonitoredfence = 567,
+	CreateMonitoredFence = 567,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_QUERYHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_QUERYHEAP</unmanaged>
-	CreateQueryheap = 568,
+	CreateQueryHeap = 568,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_COMMANDSIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_COMMANDSIGNATURE</unmanaged>
-	CreateCommandsignature = 569,
+	CreateCommandSignature = 569,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_COMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_COMMANDQUEUE</unmanaged>
-	LiveCommandqueue = 570,
+	LiveCommandQueue = 570,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_COMMANDALLOCATOR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_COMMANDALLOCATOR</unmanaged>
-	LiveCommandallocator = 571,
+	LiveCommandAllocator = 571,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_PIPELINESTATE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_PIPELINESTATE</unmanaged>
-	LivePipelinestate = 572,
+	LivePipelineState = 572,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_COMMANDLIST12"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_COMMANDLIST12</unmanaged>
-	LiveCommandlist12 = 573,
+	LiveCommandList12 = 573,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_RESOURCE</unmanaged>
 	LiveResource = 575,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_DESCRIPTORHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_DESCRIPTORHEAP</unmanaged>
-	LiveDescriptorheap = 576,
+	LiveDescriptorHeap = 576,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_ROOTSIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_ROOTSIGNATURE</unmanaged>
-	LiveRootsignature = 577,
+	LiveRootSignature = 577,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_LIBRARY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_LIBRARY</unmanaged>
 	LiveLibrary = 578,
@@ -4867,34 +4867,34 @@ public enum MessageId : int
 	LiveHeap = 579,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_MONITOREDFENCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_MONITOREDFENCE</unmanaged>
-	LiveMonitoredfence = 580,
+	LiveMonitoredFence = 580,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_QUERYHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_QUERYHEAP</unmanaged>
-	LiveQueryheap = 581,
+	LiveQueryHeap = 581,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_COMMANDSIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_COMMANDSIGNATURE</unmanaged>
-	LiveCommandsignature = 582,
+	LiveCommandSignature = 582,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_COMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_COMMANDQUEUE</unmanaged>
-	DestroyCommandqueue = 583,
+	DestroyCommandQueue = 583,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_COMMANDALLOCATOR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_COMMANDALLOCATOR</unmanaged>
-	DestroyCommandallocator = 584,
+	DestroyCommandAllocator = 584,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_PIPELINESTATE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_PIPELINESTATE</unmanaged>
-	DestroyPipelinestate = 585,
+	DestroyPipelineState = 585,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_COMMANDLIST12"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_COMMANDLIST12</unmanaged>
-	DestroyCommandlist12 = 586,
+	DestroyCommandList12 = 586,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_RESOURCE</unmanaged>
 	DestroyResource = 588,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_DESCRIPTORHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_DESCRIPTORHEAP</unmanaged>
-	DestroyDescriptorheap = 589,
+	DestroyDescriptorHeap = 589,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_ROOTSIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_ROOTSIGNATURE</unmanaged>
-	DestroyRootsignature = 590,
+	DestroyRootSignature = 590,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_LIBRARY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_LIBRARY</unmanaged>
 	DestroyLibrary = 591,
@@ -4903,13 +4903,13 @@ public enum MessageId : int
 	DestroyHeap = 592,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_MONITOREDFENCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_MONITOREDFENCE</unmanaged>
-	DestroyMonitoredfence = 593,
+	DestroyMonitoredFence = 593,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_QUERYHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_QUERYHEAP</unmanaged>
-	DestroyQueryheap = 594,
+	DestroyQueryHeap = 594,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_COMMANDSIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_COMMANDSIGNATURE</unmanaged>
-	DestroyCommandsignature = 595,
+	DestroyCommandSignature = 595,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDDIMENSIONS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDDIMENSIONS</unmanaged>
 	CreateResourceInvalidDimensions = 597,
@@ -4954,73 +4954,73 @@ public enum MessageId : int
 	DepthStencilSampleDescMismatchPipelineState = 616,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHADER_INVALIDBYTECODE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHADER_INVALIDBYTECODE</unmanaged>
-	CreateshaderInvalidbytecode = 622,
+	CreateShaderInvalidBytecode = 622,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_NULLDESC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_NULLDESC</unmanaged>
-	CreateheapNullDesc = 623,
+	CreateHeapNullDesc = 623,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_INVALIDSIZE</unmanaged>
-	CreateheapInvalidSize = 624,
+	CreateHeapInvalidSize = 624,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_UNRECOGNIZEDHEAPTYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_UNRECOGNIZEDHEAPTYPE</unmanaged>
-	CreateheapUnrecognizedheaptype = 625,
+	CreateHeapUnrecognizedHeapType = 625,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_UNRECOGNIZEDCPUPAGEPROPERTIES"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_UNRECOGNIZEDCPUPAGEPROPERTIES</unmanaged>
-	CreateheapUnrecognizedcpupageproperties = 626,
+	CreateHeapUnrecognizedCPUPageProperties = 626,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_UNRECOGNIZEDMEMORYPOOL"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_UNRECOGNIZEDMEMORYPOOL</unmanaged>
-	CreateheapUnrecognizedmemorypool = 627,
+	CreateHeapUnrecognizedMemoryPool = 627,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_INVALIDPROPERTIES"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_INVALIDPROPERTIES</unmanaged>
-	CreateheapInvalidproperties = 628,
+	CreateHeapInvalidProperties = 628,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_INVALIDALIGNMENT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_INVALIDALIGNMENT</unmanaged>
-	CreateheapInvalidalignment = 629,
+	CreateHeapInvalidAlignment = 629,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_UNRECOGNIZEDMISCFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_UNRECOGNIZEDMISCFLAGS</unmanaged>
-	CreateheapUnrecognizedMiscFlags = 630,
+	CreateHeapUnrecognizedMiscFlags = 630,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_INVALIDMISCFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_INVALIDMISCFLAGS</unmanaged>
-	CreateheapInvalidMiscFlags = 631,
+	CreateHeapInvalidMiscFlags = 631,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_INVALIDARG_RETURN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_INVALIDARG_RETURN</unmanaged>
-	CreateheapInvalidArgReturn = 632,
+	CreateHeapInvalidArgReturn = 632,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_OUTOFMEMORY_RETURN</unmanaged>
-	CreateheapOutOfMemoryReturn = 633,
+	CreateHeapOutOfMemoryReturn = 633,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_NULLHEAPPROPERTIES"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_NULLHEAPPROPERTIES</unmanaged>
-	CreateresourceandheapNullheapproperties = 634,
+	CreateResourceAndHeapNullHeapProperties = 634,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_UNRECOGNIZEDHEAPTYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_UNRECOGNIZEDHEAPTYPE</unmanaged>
-	CreateresourceandheapUnrecognizedheaptype = 635,
+	CreateResourceAndHeapUnrecognizedHeapType = 635,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_UNRECOGNIZEDCPUPAGEPROPERTIES"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_UNRECOGNIZEDCPUPAGEPROPERTIES</unmanaged>
-	CreateresourceandheapUnrecognizedcpupageproperties = 636,
+	CreateResourceAndHeapUnrecognizedCPUPageProperties = 636,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_UNRECOGNIZEDMEMORYPOOL"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_UNRECOGNIZEDMEMORYPOOL</unmanaged>
-	CreateresourceandheapUnrecognizedmemorypool = 637,
+	CreateResourceAndHeapUnrecognizedMemoryPool = 637,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALIDHEAPPROPERTIES"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALIDHEAPPROPERTIES</unmanaged>
-	CreateresourceandheapInvalidheapproperties = 638,
+	CreateResourceAndHeapInvalidHeapProperties = 638,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_UNRECOGNIZEDHEAPMISCFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_UNRECOGNIZEDHEAPMISCFLAGS</unmanaged>
-	CreateresourceandheapUnrecognizedheapmiscflags = 639,
+	CreateResourceAndHeapUnrecognizedHeapMiscFlags = 639,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALIDHEAPMISCFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALIDHEAPMISCFLAGS</unmanaged>
-	CreateresourceandheapInvalidheapmiscflags = 640,
+	CreateResourceAndHeapInvalidHeapMiscFlags = 640,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALIDARG_RETURN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALIDARG_RETURN</unmanaged>
-	CreateresourceandheapInvalidArgReturn = 641,
+	CreateResourceAndHeapInvalidArgReturn = 641,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_OUTOFMEMORY_RETURN</unmanaged>
-	CreateresourceandheapOutOfMemoryReturn = 642,
+	CreateResourceAndHeapOutOfMemoryReturn = 642,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETCUSTOMHEAPPROPERTIES_UNRECOGNIZEDHEAPTYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETCUSTOMHEAPPROPERTIES_UNRECOGNIZEDHEAPTYPE</unmanaged>
-	GetcustomheappropertiesUnrecognizedheaptype = 643,
+	GetCustomHeapPropertiesUnrecognizedHeapType = 643,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETCUSTOMHEAPPROPERTIES_INVALIDHEAPTYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETCUSTOMHEAPPROPERTIES_INVALIDHEAPTYPE</unmanaged>
-	GetcustomheappropertiesInvalidheaptype = 644,
+	GetCustomHeapPropertiesInvalidHeapType = 644,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_DESCRIPTOR_HEAP_INVALID_DESC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_DESCRIPTOR_HEAP_INVALID_DESC</unmanaged>
 	CreateDescriptorHeapInvalidDesc = 645,
@@ -5038,7 +5038,7 @@ public enum MessageId : int
 	CreateConstantBufferViewInvalidDesc = 650,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_UNORDEREDACCESS_VIEW_INVALID_COUNTER_USAGE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_UNORDEREDACCESS_VIEW_INVALID_COUNTER_USAGE</unmanaged>
-	CreateUnorderedaccessViewInvalidCounterUsage = 652,
+	CreateUnorderedAccessViewInvalidCounterUsage = 652,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPY_DESCRIPTORS_INVALID_RANGES"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPY_DESCRIPTORS_INVALID_RANGES</unmanaged>
 	CopyDescriptorsInvalidRanges = 653,
@@ -5047,115 +5047,115 @@ public enum MessageId : int
 	CopyDescriptorsWriteOnlyDescriptor = 654,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_RTV_FORMAT_NOT_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_RTV_FORMAT_NOT_UNKNOWN</unmanaged>
-	CreategraphicspipelinestateRtvFormatNotUnknown = 655,
+	CreateGraphicsPipelineStateRtvFormatNotUnknown = 655,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_RENDER_TARGET_COUNT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_RENDER_TARGET_COUNT</unmanaged>
-	CreategraphicspipelinestateInvalidRenderTargetCount = 656,
+	CreateGraphicsPipelineStateInvalidRenderTargetCount = 656,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_VERTEX_SHADER_NOT_SET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_VERTEX_SHADER_NOT_SET</unmanaged>
-	CreategraphicspipelinestateVertexShaderNotSet = 657,
+	CreateGraphicsPipelineStateVertexShaderNotSet = 657,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INPUTLAYOUT_NOT_SET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INPUTLAYOUT_NOT_SET</unmanaged>
-	CreategraphicspipelinestateInputLayoutNotSet = 658,
+	CreateGraphicsPipelineStateInputLayoutNotSet = 658,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_HS_DS_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_HS_DS_SIGNATURE_MISMATCH</unmanaged>
-	CreategraphicspipelinestateShaderLinkageHSDSSignatureMismatch = 659,
+	CreateGraphicsPipelineStateShaderLinkageHSDSSignatureMismatch = 659,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_REGISTERINDEX"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_REGISTERINDEX</unmanaged>
-	CreategraphicspipelinestateShaderLinkageRegisterIndex = 660,
+	CreateGraphicsPipelineStateShaderLinkageRegisterIndex = 660,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_COMPONENTTYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_COMPONENTTYPE</unmanaged>
-	CreategraphicspipelinestateShaderLinkageComponentType = 661,
+	CreateGraphicsPipelineStateShaderLinkageComponentType = 661,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_REGISTERMASK"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_REGISTERMASK</unmanaged>
-	CreategraphicspipelinestateShaderLinkageRegisterMask = 662,
+	CreateGraphicsPipelineStateShaderLinkageRegisterMask = 662,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_SYSTEMVALUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_SYSTEMVALUE</unmanaged>
-	CreategraphicspipelinestateShaderLinkageSystemValue = 663,
+	CreateGraphicsPipelineStateShaderLinkageSystemValue = 663,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_NEVERWRITTEN_ALWAYSREADS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_NEVERWRITTEN_ALWAYSREADS</unmanaged>
-	CreategraphicspipelinestateShaderLinkageNeverWrittenAlwaysReads = 664,
+	CreateGraphicsPipelineStateShaderLinkageNeverWrittenAlwaysReads = 664,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_MINPRECISION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_MINPRECISION</unmanaged>
-	CreategraphicspipelinestateShaderLinkageMinprecision = 665,
+	CreateGraphicsPipelineStateShaderLinkageMinPrecision = 665,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_SEMANTICNAME_NOT_FOUND"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_LINKAGE_SEMANTICNAME_NOT_FOUND</unmanaged>
-	CreategraphicspipelinestateShaderLinkageSemanticNameNotFound = 666,
+	CreateGraphicsPipelineStateShaderLinkageSemanticNameNotFound = 666,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HS_XOR_DS_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HS_XOR_DS_MISMATCH</unmanaged>
-	CreategraphicspipelinestateHSXorDSMismatch = 667,
+	CreateGraphicsPipelineStateHSXorDSMismatch = 667,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HULL_SHADER_INPUT_TOPOLOGY_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HULL_SHADER_INPUT_TOPOLOGY_MISMATCH</unmanaged>
-	CreategraphicspipelinestateHullShaderInputTopologyMismatch = 668,
+	CreateGraphicsPipelineStateHullShaderInputTopologyMismatch = 668,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HS_DS_CONTROL_POINT_COUNT_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HS_DS_CONTROL_POINT_COUNT_MISMATCH</unmanaged>
-	CreategraphicspipelinestateHSDSControlPointCountMismatch = 669,
+	CreateGraphicsPipelineStateHSDSControlPointCountMismatch = 669,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HS_DS_TESSELLATOR_DOMAIN_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HS_DS_TESSELLATOR_DOMAIN_MISMATCH</unmanaged>
-	CreategraphicspipelinestateHSDSTessellatorDomainMismatch = 670,
+	CreateGraphicsPipelineStateHSDSTessellatorDomainMismatch = 670,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_USE_OF_CENTER_MULTISAMPLE_PATTERN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_USE_OF_CENTER_MULTISAMPLE_PATTERN</unmanaged>
-	CreategraphicspipelinestateInvalidUseOfCenterMultisamplePattern = 671,
+	CreateGraphicsPipelineStateInvalidUseOfCenterMultisamplePattern = 671,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_USE_OF_FORCED_SAMPLE_COUNT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_USE_OF_FORCED_SAMPLE_COUNT</unmanaged>
-	CreategraphicspipelinestateInvalidUseOfForcedSampleCount = 672,
+	CreateGraphicsPipelineStateInvalidUseOfForcedSampleCount = 672,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_PRIMITIVETOPOLOGY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_PRIMITIVETOPOLOGY</unmanaged>
-	CreategraphicspipelinestateInvalidPrimitivetopology = 673,
+	CreateGraphicsPipelineStateInvalidPrimitivetopology = 673,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_SYSTEMVALUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_SYSTEMVALUE</unmanaged>
-	CreategraphicspipelinestateInvalidSystemValue = 674,
+	CreateGraphicsPipelineStateInvalidSystemValue = 674,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_OM_DUAL_SOURCE_BLENDING_CAN_ONLY_HAVE_RENDER_TARGET_0"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_OM_DUAL_SOURCE_BLENDING_CAN_ONLY_HAVE_RENDER_TARGET_0</unmanaged>
-	CreategraphicspipelinestateOMDualSourceBlendingCanOnlyHaveRenderTarget0 = 675,
+	CreateGraphicsPipelineStateOMDualSourceBlendingCanOnlyHaveRenderTarget0 = 675,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_OM_RENDER_TARGET_DOES_NOT_SUPPORT_BLENDING"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_OM_RENDER_TARGET_DOES_NOT_SUPPORT_BLENDING</unmanaged>
-	CreategraphicspipelinestateOMRenderTargetDoesNotSupportBlending = 676,
+	CreateGraphicsPipelineStateOMRenderTargetDoesNotSupportBlending = 676,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_PS_OUTPUT_TYPE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_PS_OUTPUT_TYPE_MISMATCH</unmanaged>
-	CreategraphicspipelinestatePSOutputTypeMismatch = 677,
+	CreateGraphicsPipelineStatePSOutputTypeMismatch = 677,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_OM_RENDER_TARGET_DOES_NOT_SUPPORT_LOGIC_OPS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_OM_RENDER_TARGET_DOES_NOT_SUPPORT_LOGIC_OPS</unmanaged>
-	CreategraphicspipelinestateOMRenderTargetDoesNotSupportLogicOps = 678,
+	CreateGraphicsPipelineStateOMRenderTargetDoesNotSupportLogicOps = 678,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_RENDERTARGETVIEW_NOT_SET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_RENDERTARGETVIEW_NOT_SET</unmanaged>
-	CreategraphicspipelinestateRenderTargetViewNotSet = 679,
+	CreateGraphicsPipelineStateRenderTargetViewNotSet = 679,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_DEPTHSTENCILVIEW_NOT_SET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_DEPTHSTENCILVIEW_NOT_SET</unmanaged>
-	CreategraphicspipelinestateDepthStencilViewNotSet = 680,
+	CreateGraphicsPipelineStateDepthStencilViewNotSet = 680,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_GS_INPUT_PRIMITIVE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_GS_INPUT_PRIMITIVE_MISMATCH</unmanaged>
-	CreategraphicspipelinestateGSInputPrimitiveMismatch = 681,
+	CreateGraphicsPipelineStateGSInputPrimitiveMismatch = 681,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_POSITION_NOT_PRESENT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_POSITION_NOT_PRESENT</unmanaged>
-	CreategraphicspipelinestatePositionNotPresent = 682,
+	CreateGraphicsPipelineStatePositionNotPresent = 682,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MISSING_ROOT_SIGNATURE_FLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MISSING_ROOT_SIGNATURE_FLAGS</unmanaged>
-	CreategraphicspipelinestateMissingRootSignatureFlags = 683,
+	CreateGraphicsPipelineStateMissingRootSignatureFlags = 683,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_INDEX_BUFFER_PROPERTIES"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_INDEX_BUFFER_PROPERTIES</unmanaged>
-	CreategraphicspipelinestateInvalidIndexBufferProperties = 684,
+	CreateGraphicsPipelineStateInvalidIndexBufferProperties = 684,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_SAMPLE_DESC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INVALID_SAMPLE_DESC</unmanaged>
-	CreategraphicspipelinestateInvalidSampleDesc = 685,
+	CreateGraphicsPipelineStateInvalidSampleDesc = 685,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HS_ROOT_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_HS_ROOT_SIGNATURE_MISMATCH</unmanaged>
-	CreategraphicspipelinestateHSRootSignatureMismatch = 686,
+	CreateGraphicsPipelineStateHSRootSignatureMismatch = 686,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_DS_ROOT_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_DS_ROOT_SIGNATURE_MISMATCH</unmanaged>
-	CreategraphicspipelinestateDSRootSignatureMismatch = 687,
+	CreateGraphicsPipelineStateDSRootSignatureMismatch = 687,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_VS_ROOT_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_VS_ROOT_SIGNATURE_MISMATCH</unmanaged>
-	CreategraphicspipelinestateVSRootSignatureMismatch = 688,
+	CreateGraphicsPipelineStateVSRootSignatureMismatch = 688,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_GS_ROOT_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_GS_ROOT_SIGNATURE_MISMATCH</unmanaged>
-	CreategraphicspipelinestateGSRootSignatureMismatch = 689,
+	CreateGraphicsPipelineStateGSRootSignatureMismatch = 689,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_PS_ROOT_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_PS_ROOT_SIGNATURE_MISMATCH</unmanaged>
-	CreategraphicspipelinestatePSRootSignatureMismatch = 690,
+	CreateGraphicsPipelineStatePSRootSignatureMismatch = 690,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MISSING_ROOT_SIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MISSING_ROOT_SIGNATURE</unmanaged>
-	CreategraphicspipelinestateMissingRootSignature = 691,
+	CreateGraphicsPipelineStateMissingRootSignature = 691,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTE_BUNDLE_OPEN_BUNDLE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTE_BUNDLE_OPEN_BUNDLE</unmanaged>
 	ExecuteBundleOpenBundle = 692,
@@ -5182,19 +5182,19 @@ public enum MessageId : int
 	CreateRootSignatureNotSupportedOnDevice = 699,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_NULLRESOURCEPROPERTIES"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_NULLRESOURCEPROPERTIES</unmanaged>
-	CreateresourceandheapNullresourceproperties = 700,
+	CreateResourceAndHeapNullresourceproperties = 700,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_NULLHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_NULLHEAP</unmanaged>
-	CreateresourceandheapNullheap = 701,
+	CreateResourceAndHeapNullheap = 701,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETRESOURCEALLOCATIONINFO_INVALIDRDESCS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETRESOURCEALLOCATIONINFO_INVALIDRDESCS</unmanaged>
-	GetresourceallocationinfoInvalidrdescs = 702,
+	GetResourceAllocationInfoInvalidrdescs = 702,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_MAKERESIDENT_NULLOBJECTARRAY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_MAKERESIDENT_NULLOBJECTARRAY</unmanaged>
-	MakeresidentNullobjectarray = 703,
+	MakeResidentNullObjectArray = 703,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EVICT_NULLOBJECTARRAY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EVICT_NULLOBJECTARRAY</unmanaged>
-	EvictNullobjectarray = 705,
+	EvictNullObjectArray = 705,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SET_DESCRIPTOR_TABLE_INVALID"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SET_DESCRIPTOR_TABLE_INVALID</unmanaged>
 	SetDescriptorTableInvalid = 708,
@@ -5227,16 +5227,16 @@ public enum MessageId : int
 	CreateResourceUnrecognizedlayout = 719,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDDIMENSIONALITY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDDIMENSIONALITY</unmanaged>
-	CreateResourceInvaliddimensionality = 720,
+	CreateResourceInvalidDimensionality = 720,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDALIGNMENT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDALIGNMENT</unmanaged>
-	CreateResourceInvalidalignment = 721,
+	CreateResourceInvalidAlignment = 721,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDMIPLEVELS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDMIPLEVELS</unmanaged>
 	CreateResourceInvalidMipLevels = 722,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDSAMPLEDESC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDSAMPLEDESC</unmanaged>
-	CreateResourceInvalidsampledesc = 723,
+	CreateResourceInvalidSampleDesc = 723,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDLAYOUT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDLAYOUT</unmanaged>
 	CreateResourceInvalidlayout = 724,
@@ -5278,16 +5278,16 @@ public enum MessageId : int
 	CreateResourceInvalidFormat = 738,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETCOPYABLEFOOTPRINTS_INVALIDSUBRESOURCERANGE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETCOPYABLEFOOTPRINTS_INVALIDSUBRESOURCERANGE</unmanaged>
-	GetcopyablefootprintsInvalidsubresourcerange = 739,
+	GetCopyableFootprintsInvalidSubresourceRange = 739,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETCOPYABLEFOOTPRINTS_INVALIDBASEOFFSET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETCOPYABLEFOOTPRINTS_INVALIDBASEOFFSET</unmanaged>
-	GetcopyablefootprintsInvalidbaseoffset = 740,
+	GetCopyableFootprintsInvalidBaseOffset = 740,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETCOPYABLELAYOUT_INVALIDSUBRESOURCERANGE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETCOPYABLELAYOUT_INVALIDSUBRESOURCERANGE</unmanaged>
-	GetcopyablelayoutInvalidsubresourcerange = 739,
+	GetCopyableLayoutInvalidSubresourceRange = 739,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETCOPYABLELAYOUT_INVALIDBASEOFFSET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETCOPYABLELAYOUT_INVALIDBASEOFFSET</unmanaged>
-	GetcopyablelayoutInvalidbaseoffset = 740,
+	GetCopyableLayoutInvalidBaseOffset = 740,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOURCE_BARRIER_INVALID_HEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOURCE_BARRIER_INVALID_HEAP</unmanaged>
 	ResourceBarrierInvalidHeap = 741,
@@ -5296,37 +5296,37 @@ public enum MessageId : int
 	CreateSamplerInvalid = 742,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATECOMMANDSIGNATURE_INVALID"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATECOMMANDSIGNATURE_INVALID</unmanaged>
-	CreatecommandsignatureInvalid = 743,
+	CreateCommandSignatureInvalid = 743,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTE_INDIRECT_INVALID_PARAMETERS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTE_INDIRECT_INVALID_PARAMETERS</unmanaged>
 	ExecuteIndirectInvalidParameters = 744,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETGPUVIRTUALADDRESS_INVALID_RESOURCE_DIMENSION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETGPUVIRTUALADDRESS_INVALID_RESOURCE_DIMENSION</unmanaged>
-	GetgpuvirtualaddressInvalidResourceDimension = 745,
+	GetGPUVirtualAddressInvalidResourceDimension = 745,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDCLEARVALUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDCLEARVALUE</unmanaged>
-	CreateResourceInvalidclearvalue = 815,
+	CreateResourceInvalidClearValue = 815,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_UNRECOGNIZEDCLEARVALUEFORMAT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_UNRECOGNIZEDCLEARVALUEFORMAT</unmanaged>
-	CreateResourceUnrecognizedclearvalueformat = 816,
+	CreateResourceUnrecognizedClearValueFormat = 816,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDCLEARVALUEFORMAT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDCLEARVALUEFORMAT</unmanaged>
-	CreateResourceInvalidclearvalueformat = 817,
+	CreateResourceInvalidClearValueFormat = 817,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_CLEARVALUEDENORMFLUSH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_CLEARVALUEDENORMFLUSH</unmanaged>
-	CreateResourceClearvaluedenormflush = 818,
+	CreateResourceClearValueDenormFlush = 818,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CLEARRENDERTARGETVIEW_MISMATCHINGCLEARVALUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CLEARRENDERTARGETVIEW_MISMATCHINGCLEARVALUE</unmanaged>
-	ClearRenderTargetViewMismatchingclearvalue = 820,
+	ClearRenderTargetViewMismatchingClearValue = 820,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_MISMATCHINGCLEARVALUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_MISMATCHINGCLEARVALUE</unmanaged>
-	ClearDepthStencilViewMismatchingclearvalue = 821,
+	ClearDepthStencilViewMismatchingClearValue = 821,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_MAP_INVALIDHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_MAP_INVALIDHEAP</unmanaged>
-	MapInvalidheap = 822,
+	MapInvalidHeap = 822,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_UNMAP_INVALIDHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_UNMAP_INVALIDHEAP</unmanaged>
-	UnmapInvalidheap = 823,
+	UnmapInvalidHeap = 823,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_MAP_INVALIDRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_MAP_INVALIDRESOURCE</unmanaged>
 	MapInvalidResource = 824,
@@ -5341,10 +5341,10 @@ public enum MessageId : int
 	UnmapInvalidSubresource = 827,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_MAP_INVALIDRANGE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_MAP_INVALIDRANGE</unmanaged>
-	MapInvalidrange = 828,
+	MapInvalidRange = 828,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_UNMAP_INVALIDRANGE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_UNMAP_INVALIDRANGE</unmanaged>
-	UnmapInvalidrange = 829,
+	UnmapInvalidRange = 829,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_MAP_INVALIDDATAPOINTER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_MAP_INVALIDDATAPOINTER</unmanaged>
 	MapInvaliddatapointer = 832,
@@ -5356,61 +5356,61 @@ public enum MessageId : int
 	MapOutOfMemoryReturn = 834,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_BUNDLENOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_BUNDLENOTSUPPORTED</unmanaged>
-	ExecutecommandlistsBundlenotsupported = 835,
+	ExecuteCommandListsBundleNotSupported = 835,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_COMMANDLISTMISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_COMMANDLISTMISMATCH</unmanaged>
-	ExecutecommandlistsCommandlistmismatch = 836,
+	ExecuteCommandListsCommandListMismatch = 836,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_OPENCOMMANDLIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_OPENCOMMANDLIST</unmanaged>
-	ExecutecommandlistsOpencommandlist = 837,
+	ExecuteCommandListsOpenCommandList = 837,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_FAILEDCOMMANDLIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_FAILEDCOMMANDLIST</unmanaged>
-	ExecutecommandlistsFailedcommandlist = 838,
+	ExecuteCommandListsFailedCommandList = 838,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYBUFFERREGION_NULLDST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYBUFFERREGION_NULLDST</unmanaged>
-	CopyBufferRegionNulldst = 839,
+	CopyBufferRegionNullDst = 839,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYBUFFERREGION_INVALIDDSTRESOURCEDIMENSION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYBUFFERREGION_INVALIDDSTRESOURCEDIMENSION</unmanaged>
-	CopyBufferRegionInvaliddstresourcedimension = 840,
+	CopyBufferRegionInvalidDstResourceDimension = 840,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYBUFFERREGION_DSTRANGEOUTOFBOUNDS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYBUFFERREGION_DSTRANGEOUTOFBOUNDS</unmanaged>
-	CopyBufferRegionDstrangeoutofbounds = 841,
+	CopyBufferRegionDstRangeOutOfBounds = 841,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYBUFFERREGION_NULLSRC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYBUFFERREGION_NULLSRC</unmanaged>
-	CopyBufferRegionNullsrc = 842,
+	CopyBufferRegionNullSrc = 842,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYBUFFERREGION_INVALIDSRCRESOURCEDIMENSION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYBUFFERREGION_INVALIDSRCRESOURCEDIMENSION</unmanaged>
-	CopyBufferRegionInvalidsrcresourcedimension = 843,
+	CopyBufferRegionInvalidSrcResourceDimension = 843,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYBUFFERREGION_SRCRANGEOUTOFBOUNDS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYBUFFERREGION_SRCRANGEOUTOFBOUNDS</unmanaged>
-	CopyBufferRegionSrcrangeoutofbounds = 844,
+	CopyBufferRegionSrcRangeOutOfBounds = 844,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYBUFFERREGION_INVALIDCOPYFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYBUFFERREGION_INVALIDCOPYFLAGS</unmanaged>
-	CopyBufferRegionInvalidcopyflags = 845,
+	CopyBufferRegionInvalidCopyFlags = 845,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_NULLDST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_NULLDST</unmanaged>
-	CopyTextureRegionNulldst = 846,
+	CopyTextureRegionNullDst = 846,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_UNRECOGNIZEDDSTTYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_UNRECOGNIZEDDSTTYPE</unmanaged>
-	CopyTextureRegionUnrecognizeddsttype = 847,
+	CopyTextureRegionUnrecognizedDstType = 847,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTRESOURCEDIMENSION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTRESOURCEDIMENSION</unmanaged>
-	CopyTextureRegionInvaliddstresourcedimension = 848,
+	CopyTextureRegionInvalidDstResourceDimension = 848,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTRESOURCE</unmanaged>
-	CopyTextureRegionInvaliddstresource = 849,
+	CopyTextureRegionInvalidDstResource = 849,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTSUBRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTSUBRESOURCE</unmanaged>
-	CopyTextureRegionInvaliddstsubresource = 850,
+	CopyTextureRegionInvalidDstSubresource = 850,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTOFFSET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTOFFSET</unmanaged>
-	CopyTextureRegionInvaliddstoffset = 851,
+	CopyTextureRegionInvalidDstOffset = 851,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_UNRECOGNIZEDDSTFORMAT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_UNRECOGNIZEDDSTFORMAT</unmanaged>
 	CopyTextureRegionUnrecognizeddstformat = 852,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTFORMAT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTFORMAT</unmanaged>
-	CopyTextureRegionInvaliddstformat = 853,
+	CopyTextureRegionInvalidDstFormat = 853,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTDIMENSIONS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDDSTDIMENSIONS</unmanaged>
 	CopyTextureRegionInvaliddstdimensions = 854,
@@ -5428,13 +5428,13 @@ public enum MessageId : int
 	CopyTextureRegionDstregionoutofbounds = 858,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_NULLSRC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_NULLSRC</unmanaged>
-	CopyTextureRegionNullsrc = 859,
+	CopyTextureRegionNullSrc = 859,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_UNRECOGNIZEDSRCTYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_UNRECOGNIZEDSRCTYPE</unmanaged>
 	CopyTextureRegionUnrecognizedsrctype = 860,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDSRCRESOURCEDIMENSION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDSRCRESOURCEDIMENSION</unmanaged>
-	CopyTextureRegionInvalidsrcresourcedimension = 861,
+	CopyTextureRegionInvalidSrcResourceDimension = 861,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDSRCRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDSRCRESOURCE</unmanaged>
 	CopyTextureRegionInvalidsrcresource = 862,
@@ -5473,13 +5473,13 @@ public enum MessageId : int
 	CopyTextureRegionInvalidsrcbox = 873,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_FORMATMISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_FORMATMISMATCH</unmanaged>
-	CopyTextureRegionFormatmismatch = 874,
+	CopyTextureRegionFormatMismatch = 874,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_EMPTYBOX"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_EMPTYBOX</unmanaged>
-	CopyTextureRegionEmptybox = 875,
+	CopyTextureRegionEmptyBox = 875,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDCOPYFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_INVALIDCOPYFLAGS</unmanaged>
-	CopyTextureRegionInvalidcopyflags = 876,
+	CopyTextureRegionInvalidCopyFlags = 876,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_INVALID_SUBRESOURCE_INDEX"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_INVALID_SUBRESOURCE_INDEX</unmanaged>
 	ResolveSubresourceInvalidSubresourceIndex = 877,
@@ -5494,58 +5494,58 @@ public enum MessageId : int
 	ResolveSubresourceInvalidSampleCount = 880,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATECOMPUTEPIPELINESTATE_INVALID_SHADER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATECOMPUTEPIPELINESTATE_INVALID_SHADER</unmanaged>
-	CreatecomputepipelinestateInvalidShader = 881,
+	CreateComputePipelineStateInvalidShader = 881,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATECOMPUTEPIPELINESTATE_CS_ROOT_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATECOMPUTEPIPELINESTATE_CS_ROOT_SIGNATURE_MISMATCH</unmanaged>
-	CreatecomputepipelinestateCSRootSignatureMismatch = 882,
+	CreateComputePipelineStateCSRootSignatureMismatch = 882,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATECOMPUTEPIPELINESTATE_MISSING_ROOT_SIGNATURE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATECOMPUTEPIPELINESTATE_MISSING_ROOT_SIGNATURE</unmanaged>
-	CreatecomputepipelinestateMissingRootSignature = 883,
+	CreateComputePipelineStateMissingRootSignature = 883,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_INVALIDCACHEDBLOB"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_INVALIDCACHEDBLOB</unmanaged>
-	CreatepipelinestateInvalidcachedblob = 884,
+	CreatePipelineStateInvalidCachedBlob = 884,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CACHEDBLOBADAPTERMISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CACHEDBLOBADAPTERMISMATCH</unmanaged>
-	CreatepipelinestateCachedblobadaptermismatch = 885,
+	CreatePipelineStateCachedblobadaptermismatch = 885,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CACHEDBLOBDRIVERVERSIONMISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CACHEDBLOBDRIVERVERSIONMISMATCH</unmanaged>
-	CreatepipelinestateCachedblobdriverversionmismatch = 886,
+	CreatePipelineStateCachedBlobDriverVersionMismatch = 886,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CACHEDBLOBDESCMISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CACHEDBLOBDESCMISMATCH</unmanaged>
-	CreatepipelinestateCachedblobdescmismatch = 887,
+	CreatePipelineStateCachedBlobDescMismatch = 887,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CACHEDBLOBIGNORED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CACHEDBLOBIGNORED</unmanaged>
-	CreatepipelinestateCachedblobignored = 888,
+	CreatePipelineStateCachedBlobIgnored = 888,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_INVALIDHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_INVALIDHEAP</unmanaged>
-	WritetosubresourceInvalidheap = 889,
+	WriteToSubresourceInvalidHeap = 889,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_INVALIDRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_INVALIDRESOURCE</unmanaged>
-	WritetosubresourceInvalidResource = 890,
+	WriteToSubresourceInvalidResource = 890,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_INVALIDBOX"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_INVALIDBOX</unmanaged>
-	WritetosubresourceInvalidbox = 891,
+	WriteToSubresourceInvalidBox = 891,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_INVALIDSUBRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_INVALIDSUBRESOURCE</unmanaged>
-	WritetosubresourceInvalidSubresource = 892,
+	WriteToSubresourceInvalidSubresource = 892,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_EMPTYBOX"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_WRITETOSUBRESOURCE_EMPTYBOX</unmanaged>
-	WritetosubresourceEmptybox = 893,
+	WriteToSubresourceEmptyBox = 893,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_READFROMSUBRESOURCE_INVALIDHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_READFROMSUBRESOURCE_INVALIDHEAP</unmanaged>
-	ReadfromsubresourceInvalidheap = 894,
+	ReadFromSubresourceInvalidHeap = 894,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_READFROMSUBRESOURCE_INVALIDRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_READFROMSUBRESOURCE_INVALIDRESOURCE</unmanaged>
-	ReadfromsubresourceInvalidResource = 895,
+	ReadFromSubresourceInvalidResource = 895,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_READFROMSUBRESOURCE_INVALIDBOX"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_READFROMSUBRESOURCE_INVALIDBOX</unmanaged>
-	ReadfromsubresourceInvalidbox = 896,
+	ReadFromSubresourceInvalidBox = 896,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_READFROMSUBRESOURCE_INVALIDSUBRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_READFROMSUBRESOURCE_INVALIDSUBRESOURCE</unmanaged>
-	ReadfromsubresourceInvalidSubresource = 897,
+	ReadFromSubresourceInvalidSubresource = 897,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_READFROMSUBRESOURCE_EMPTYBOX"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_READFROMSUBRESOURCE_EMPTYBOX</unmanaged>
-	ReadfromsubresourceEmptybox = 898,
+	ReadFromSubresourceEmptyBox = 898,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_TOO_MANY_NODES_SPECIFIED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_TOO_MANY_NODES_SPECIFIED</unmanaged>
 	TooManyNodesSpecified = 899,
@@ -5572,10 +5572,10 @@ public enum MessageId : int
 	CommandQueueTooManySwapchainReferences = 906,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_WRONGSWAPCHAINBUFFERREFERENCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_WRONGSWAPCHAINBUFFERREFERENCE</unmanaged>
-	ExecutecommandlistsWrongswapchainbufferreference = 907,
+	ExecuteCommandListsWrongSwapchainBufferReference = 907,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COMMAND_LIST_SETRENDERTARGETS_INVALIDNUMRENDERTARGETS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COMMAND_LIST_SETRENDERTARGETS_INVALIDNUMRENDERTARGETS</unmanaged>
-	CommandListSetrendertargetsInvalidnumrendertargets = 908,
+	CommandListSetRenderTargetsInvalidNumRenderTargets = 908,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_QUEUE_INVALID_TYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_QUEUE_INVALID_TYPE</unmanaged>
 	CreateQueueInvalidType = 909,
@@ -5584,10 +5584,10 @@ public enum MessageId : int
 	CreateQueueInvalidFlags = 910,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHAREDRESOURCE_INVALIDFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHAREDRESOURCE_INVALIDFLAGS</unmanaged>
-	CreatesharedresourceInvalidFlags = 911,
+	CreateSharedResourceInvalidFlags = 911,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHAREDRESOURCE_INVALIDFORMAT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHAREDRESOURCE_INVALIDFORMAT</unmanaged>
-	CreatesharedresourceInvalidFormat = 912,
+	CreateSharedResourceInvalidFormat = 912,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHAREDHEAP_INVALIDFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHAREDHEAP_INVALIDFLAGS</unmanaged>
 	CreatesharedheapInvalidFlags = 913,
@@ -5617,7 +5617,7 @@ public enum MessageId : int
 	ObjectDeletedWhileStillInUse = 921,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_INVALID_FLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_INVALID_FLAGS</unmanaged>
-	CreatepipelinestateInvalidFlags = 922,
+	CreatePipelineStateInvalidFlags = 922,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_HEAP_ADDRESS_RANGE_HAS_NO_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_HEAP_ADDRESS_RANGE_HAS_NO_RESOURCE</unmanaged>
 	HeapAddressRangeHasNoResource = 923,
@@ -5626,13 +5626,13 @@ public enum MessageId : int
 	CommandListDrawRenderTargetDeleted = 924,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_ALL_RENDER_TARGETS_HAVE_UNKNOWN_FORMAT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_ALL_RENDER_TARGETS_HAVE_UNKNOWN_FORMAT</unmanaged>
-	CreategraphicspipelinestateAllRenderTargetsHaveUnknownFormat = 925,
+	CreateGraphicsPipelineStateAllRenderTargetsHaveUnknownFormat = 925,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_HEAP_ADDRESS_RANGE_INTERSECTS_MULTIPLE_BUFFERS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_HEAP_ADDRESS_RANGE_INTERSECTS_MULTIPLE_BUFFERS</unmanaged>
 	HeapAddressRangeIntersectsMultipleBuffers = 926,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_GPU_WRITTEN_READBACK_RESOURCE_MAPPED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTECOMMANDLISTS_GPU_WRITTEN_READBACK_RESOURCE_MAPPED</unmanaged>
-	ExecutecommandlistsGpuWrittenReadbackResourceMapped = 927,
+	ExecuteCommandListsGpuWrittenReadbackResourceMapped = 927,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_UNMAP_RANGE_NOT_EMPTY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_UNMAP_RANGE_NOT_EMPTY</unmanaged>
 	UnmapRangeNotEmpty = 929,
@@ -5677,25 +5677,25 @@ public enum MessageId : int
 	GpuBasedValidationIncompatibleResourceState = 942,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYRESOURCE_NULLDST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYRESOURCE_NULLDST</unmanaged>
-	CopyResourceNulldst = 943,
+	CopyResourceNullDst = 943,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYRESOURCE_INVALIDDSTRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYRESOURCE_INVALIDDSTRESOURCE</unmanaged>
-	CopyResourceInvaliddstresource = 944,
+	CopyResourceInvalidDstResource = 944,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYRESOURCE_NULLSRC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYRESOURCE_NULLSRC</unmanaged>
-	CopyResourceNullsrc = 945,
+	CopyResourceNullSrc = 945,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYRESOURCE_INVALIDSRCRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYRESOURCE_INVALIDSRCRESOURCE</unmanaged>
 	CopyResourceInvalidsrcresource = 946,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_NULLDST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_NULLDST</unmanaged>
-	ResolveSubresourceNulldst = 947,
+	ResolveSubresourceNullDst = 947,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_INVALIDDSTRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_INVALIDDSTRESOURCE</unmanaged>
-	ResolveSubresourceInvaliddstresource = 948,
+	ResolveSubresourceInvalidDstResource = 948,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_NULLSRC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_NULLSRC</unmanaged>
-	ResolveSubresourceNullsrc = 949,
+	ResolveSubresourceNullSrc = 949,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_INVALIDSRCRESOURCE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOLVESUBRESOURCE_INVALIDSRCRESOURCE</unmanaged>
 	ResolveSubresourceInvalidsrcresource = 950,
@@ -5770,7 +5770,7 @@ public enum MessageId : int
 	PipelinelibrarySerializeNotenoughmemory = 973,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_PS_OUTPUT_RT_OUTPUT_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_PS_OUTPUT_RT_OUTPUT_MISMATCH</unmanaged>
-	CreategraphicspipelinestatePSOutputRtOutputMismatch = 974,
+	CreateGraphicsPipelineStatePSOutputRtOutputMismatch = 974,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SETEVENTONMULTIPLEFENCECOMPLETION_INVALIDFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SETEVENTONMULTIPLEFENCECOMPLETION_INVALIDFLAGS</unmanaged>
 	SeteventonmultiplefencecompletionInvalidFlags = 975,
@@ -5887,25 +5887,25 @@ public enum MessageId : int
 	EndEvent = 1015,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEDEVICE_DEBUG_LAYER_STARTUP_OPTIONS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEDEVICE_DEBUG_LAYER_STARTUP_OPTIONS</unmanaged>
-	CreatedeviceDebugLayerStartupOptions = 1016,
+	CreateDeviceDebugLayerStartupOptions = 1016,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEDEPTHSTENCILSTATE_DEPTHBOUNDSTEST_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEDEPTHSTENCILSTATE_DEPTHBOUNDSTEST_UNSUPPORTED</unmanaged>
 	CreateDepthStencilStateDepthboundstestUnsupported = 1017,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_DUPLICATE_SUBOBJECT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_DUPLICATE_SUBOBJECT</unmanaged>
-	CreatepipelinestateDuplicateSubObject = 1018,
+	CreatePipelineStateDuplicateSubObject = 1018,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_UNKNOWN_SUBOBJECT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_UNKNOWN_SUBOBJECT</unmanaged>
-	CreatepipelinestateUnknownSubObject = 1019,
+	CreatePipelineStateUnknownSubObject = 1019,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_ZERO_SIZE_STREAM"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_ZERO_SIZE_STREAM</unmanaged>
-	CreatepipelinestateZeroSizeStream = 1020,
+	CreatePipelineStateZeroSizeStream = 1020,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_INVALID_STREAM"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_INVALID_STREAM</unmanaged>
-	CreatepipelinestateInvalidStream = 1021,
+	CreatePipelineStateInvalidStream = 1021,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CANNOT_DEDUCE_TYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_CANNOT_DEDUCE_TYPE</unmanaged>
-	CreatepipelinestateCannotDeduceType = 1022,
+	CreatePipelineStateCannotDeduceType = 1022,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COMMAND_LIST_STATIC_DESCRIPTOR_RESOURCE_DIMENSION_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COMMAND_LIST_STATIC_DESCRIPTOR_RESOURCE_DIMENSION_MISMATCH</unmanaged>
 	CommandListStaticDescriptorResourceDimensionMismatch = 1023,
@@ -5968,7 +5968,7 @@ public enum MessageId : int
 	DescriptorHandleWithInvalidResource = 1042,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SETDEPTHBOUNDS_INVALIDARGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SETDEPTHBOUNDS_INVALIDARGS</unmanaged>
-	SetdepthboundsInvalidargs = 1043,
+	SetdepthboundsInvalidArgs = 1043,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GPU_BASED_VALIDATION_RESOURCE_STATE_IMPRECISE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GPU_BASED_VALIDATION_RESOURCE_STATE_IMPRECISE</unmanaged>
 	GpuBasedValidationResourceStateImprecise = 1044,
@@ -5977,7 +5977,7 @@ public enum MessageId : int
 	CommandListPipelineStateNotSet = 1045,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_MODEL_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_SHADER_MODEL_MISMATCH</unmanaged>
-	CreategraphicspipelinestateShaderModelMismatch = 1046,
+	CreateGraphicsPipelineStateShaderModelMismatch = 1046,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_OBJECT_ACCESSED_WHILE_STILL_IN_USE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_OBJECT_ACCESSED_WHILE_STILL_IN_USE</unmanaged>
 	ObjectAccessedWhileStillInUse = 1047,
@@ -5986,7 +5986,7 @@ public enum MessageId : int
 	ProgrammableMsaaUnsupported = 1048,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SETSAMPLEPOSITIONS_INVALIDARGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SETSAMPLEPOSITIONS_INVALIDARGS</unmanaged>
-	SetsamplepositionsInvalidargs = 1049,
+	SetsamplepositionsInvalidArgs = 1049,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOLVESUBRESOURCEREGION_INVALID_RECT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOLVESUBRESOURCEREGION_INVALID_RECT</unmanaged>
 	ResolveSubresourceRegionInvalidRect = 1050,
@@ -6121,13 +6121,13 @@ public enum MessageId : int
 	WriteBufferImmediateNotSupported = 1093,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SETVIEWINSTANCEMASK_INVALIDARGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SETVIEWINSTANCEMASK_INVALIDARGS</unmanaged>
-	SetviewinstancemaskInvalidargs = 1094,
+	SetviewinstancemaskInvalidArgs = 1094,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_VIEW_INSTANCING_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_VIEW_INSTANCING_UNSUPPORTED</unmanaged>
 	ViewInstancingUnsupported = 1095,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_VIEW_INSTANCING_INVALIDARGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_VIEW_INSTANCING_INVALIDARGS</unmanaged>
-	ViewInstancingInvalidargs = 1096,
+	ViewInstancingInvalidArgs = 1096,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COPYTEXTUREREGION_MISMATCH_DECODE_REFERENCE_ONLY_FLAG"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COPYTEXTUREREGION_MISMATCH_DECODE_REFERENCE_ONLY_FLAG</unmanaged>
 	CopyTextureRegionMismatchDecodeReferenceOnlyFlag = 1097,
@@ -6148,13 +6148,13 @@ public enum MessageId : int
 	CreateVideoDecoderUnsupported = 1102,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_METADATA_ERROR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_METADATA_ERROR</unmanaged>
-	CreategraphicspipelinestateMetadataError = 1103,
+	CreateGraphicsPipelineStateMetadataError = 1103,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_VIEW_INSTANCING_VERTEX_SIZE_EXCEEDED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_VIEW_INSTANCING_VERTEX_SIZE_EXCEEDED</unmanaged>
-	CreategraphicspipelinestateViewInstancingVertexSizeExceeded = 1104,
+	CreateGraphicsPipelineStateViewInstancingVertexSizeExceeded = 1104,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_RUNTIME_INTERNAL_ERROR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_RUNTIME_INTERNAL_ERROR</unmanaged>
-	CreategraphicspipelinestateRuntimeInternalError = 1105,
+	CreateGraphicsPipelineStateRuntimeInternalError = 1105,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_NO_VIDEO_API_SUPPORT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_NO_VIDEO_API_SUPPORT</unmanaged>
 	NoVideoApiSupport = 1106,
@@ -6466,10 +6466,10 @@ public enum MessageId : int
 	RenderPassMismatchingSuspendResume = 1208,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_PASS_NO_PRIOR_SUSPEND_WITHIN_EXECUTECOMMANDLISTS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_PASS_NO_PRIOR_SUSPEND_WITHIN_EXECUTECOMMANDLISTS</unmanaged>
-	RenderPassNoPriorSuspendWithinExecutecommandlists = 1209,
+	RenderPassNoPriorSuspendWithinExecuteCommandLists = 1209,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_PASS_NO_SUBSEQUENT_RESUME_WITHIN_EXECUTECOMMANDLISTS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_PASS_NO_SUBSEQUENT_RESUME_WITHIN_EXECUTECOMMANDLISTS</unmanaged>
-	RenderPassNoSubsequentResumeWithinExecutecommandlists = 1210,
+	RenderPassNoSubsequentResumeWithinExecuteCommandLists = 1210,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_TRACKED_WORKLOAD_COMMAND_QUEUE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_TRACKED_WORKLOAD_COMMAND_QUEUE_MISMATCH</unmanaged>
 	TrackedWorkloadCommandQueueMismatch = 1211,
@@ -6505,7 +6505,7 @@ public enum MessageId : int
 	ResolveMotionVectorHeapInvalidArgument = 1221,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETGPUVIRTUALADDRESS_INVALID_HEAP_TYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETGPUVIRTUALADDRESS_INVALID_HEAP_TYPE</unmanaged>
-	GetgpuvirtualaddressInvalidHeapType = 1222,
+	GetGPUVirtualAddressInvalidHeapType = 1222,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SET_BACKGROUND_PROCESSING_MODE_INVALID_ARGUMENT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SET_BACKGROUND_PROCESSING_MODE_INVALID_ARGUMENT</unmanaged>
 	SetBackgroundProcessingModeInvalidArgument = 1223,
@@ -6571,10 +6571,10 @@ public enum MessageId : int
 	NonRetailShaderModelWontValidate = 1243,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_AS_ROOT_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_AS_ROOT_SIGNATURE_MISMATCH</unmanaged>
-	CreategraphicspipelinestateAsRootSignatureMismatch = 1244,
+	CreateGraphicsPipelineStateAsRootSignatureMismatch = 1244,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MS_ROOT_SIGNATURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MS_ROOT_SIGNATURE_MISMATCH</unmanaged>
-	CreategraphicspipelinestateMSRootSignatureMismatch = 1245,
+	CreateGraphicsPipelineStateMSRootSignatureMismatch = 1245,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_ADD_TO_STATE_OBJECT_ERROR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_ADD_TO_STATE_OBJECT_ERROR</unmanaged>
 	AddToStateObjectError = 1246,
@@ -6583,22 +6583,22 @@ public enum MessageId : int
 	CreateProtectedResourceSessionInvalidArgument = 1247,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MS_PSO_DESC_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MS_PSO_DESC_MISMATCH</unmanaged>
-	CreategraphicspipelinestateMSPsoDescMismatch = 1248,
+	CreateGraphicsPipelineStateMSPsoDescMismatch = 1248,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINESTATE_MS_INCOMPLETE_TYPE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINESTATE_MS_INCOMPLETE_TYPE</unmanaged>
-	CreatepipelinestateMSIncompleteType = 1249,
+	CreatePipelineStateMSIncompleteType = 1249,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_AS_NOT_MS_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_AS_NOT_MS_MISMATCH</unmanaged>
-	CreategraphicspipelinestateAsNotMSMismatch = 1250,
+	CreateGraphicsPipelineStateAsNotMSMismatch = 1250,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MS_NOT_PS_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_MS_NOT_PS_MISMATCH</unmanaged>
-	CreategraphicspipelinestateMSNotPSMismatch = 1251,
+	CreateGraphicsPipelineStateMSNotPSMismatch = 1251,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_NONZERO_SAMPLER_FEEDBACK_MIP_REGION_WITH_INCOMPATIBLE_FORMAT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_NONZERO_SAMPLER_FEEDBACK_MIP_REGION_WITH_INCOMPATIBLE_FORMAT</unmanaged>
 	NonzeroSamplerFeedbackMipRegionWithIncompatibleFormat = 1252,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INPUTLAYOUT_SHADER_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_INPUTLAYOUT_SHADER_MISMATCH</unmanaged>
-	CreategraphicspipelinestateInputLayoutShaderMismatch = 1253,
+	CreateGraphicsPipelineStateInputLayoutShaderMismatch = 1253,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EMPTY_DISPATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_EMPTY_DISPATCH</unmanaged>
 	EmptyDispatch = 1254,
@@ -6688,7 +6688,7 @@ public enum MessageId : int
 	DestroyShadercachesession = 1282,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHADERCACHESESSION_INVALIDARGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHADERCACHESESSION_INVALIDARGS</unmanaged>
-	CreateshadercachesessionInvalidargs = 1283,
+	CreateshadercachesessionInvalidArgs = 1283,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATESHADERCACHESESSION_DISABLED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATESHADERCACHESESSION_DISABLED</unmanaged>
 	CreateshadercachesessionDisabled = 1284,
@@ -6778,7 +6778,7 @@ public enum MessageId : int
 	CreateVideoEncoderHeapUnsupportedParameters = 1312,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATECOMMANDLIST_NULL_COMMANDALLOCATOR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATECOMMANDLIST_NULL_COMMANDALLOCATOR</unmanaged>
-	CreatecommandlistNullCommandallocator = 1313,
+	CreatecommandlistNullCommandAllocator = 1313,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CLEAR_UNORDERED_ACCESS_VIEW_INVALID_DESCRIPTOR_HANDLE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CLEAR_UNORDERED_ACCESS_VIEW_INVALID_DESCRIPTOR_HANDLE</unmanaged>
 	ClearUnorderedAccessViewInvalidDescriptorHandle = 1314,
@@ -6805,7 +6805,7 @@ public enum MessageId : int
 	CommandListStaticDescriptorSamplerModeMismatch = 1321,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GETCOPYABLEFOOTPRINTS_UNSUPPORTED_BUFFER_WIDTH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_GETCOPYABLEFOOTPRINTS_UNSUPPORTED_BUFFER_WIDTH</unmanaged>
-	GetcopyablefootprintsUnsupportedBufferWidth = 1322,
+	GetCopyableFootprintsUnsupportedBufferWidth = 1322,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEMESHSHADER_TOPOLOGY_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEMESHSHADER_TOPOLOGY_MISMATCH</unmanaged>
 	CreatemeshshaderTopologyMismatch = 1323,
