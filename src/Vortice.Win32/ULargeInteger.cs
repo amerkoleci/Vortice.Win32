@@ -12,7 +12,7 @@ namespace Win32;
 
 [StructLayout(LayoutKind.Explicit)]
 [NativeTypeName("ULARGE_INTEGER")]
-public partial struct ULargeInterger
+public partial struct ULargeInteger
 {
     [FieldOffset(0)]
     [NativeTypeName("_ULARGE_INTEGER::(anonymous struct at C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um/winnt.h:895:5)")]

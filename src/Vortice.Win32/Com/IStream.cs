@@ -82,23 +82,23 @@ public unsafe partial struct IStream
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public HResult Seek(LargeInterger dlibMove, uint dwOrigin, LargeInterger* plibNewPosition)
+    public HResult Seek(LargeInteger dlibMove, uint dwOrigin, LargeInteger* plibNewPosition)
     {
-        return ((delegate* unmanaged[Stdcall]<IStream*, LargeInterger, uint, LargeInterger*, int>)(lpVtbl[5]))((IStream*)Unsafe.AsPointer(ref this), dlibMove, dwOrigin, plibNewPosition);
+        return ((delegate* unmanaged[Stdcall]<IStream*, LargeInteger, uint, LargeInteger*, int>)(lpVtbl[5]))((IStream*)Unsafe.AsPointer(ref this), dlibMove, dwOrigin, plibNewPosition);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    public HResult SetSize(LargeInterger libNewSize)
+    public HResult SetSize(LargeInteger libNewSize)
     {
-        return ((delegate* unmanaged[Stdcall]<IStream*, LargeInterger, int>)(lpVtbl[6]))((IStream*)Unsafe.AsPointer(ref this), libNewSize);
+        return ((delegate* unmanaged[Stdcall]<IStream*, LargeInteger, int>)(lpVtbl[6]))((IStream*)Unsafe.AsPointer(ref this), libNewSize);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(7)]
-    public HResult CopyTo(IStream* pstm, ULargeInterger cb, ULargeInterger* pcbRead, ULargeInterger* pcbWritten)
+    public HResult CopyTo(IStream* pstm, ULargeInteger cb, ULargeInteger* pcbRead, ULargeInteger* pcbWritten)
     {
-        return ((delegate* unmanaged[Stdcall]<IStream*, IStream*, ULargeInterger, ULargeInterger*, ULargeInterger*, int>)(lpVtbl[7]))((IStream*)Unsafe.AsPointer(ref this), pstm, cb, pcbRead, pcbWritten);
+        return ((delegate* unmanaged[Stdcall]<IStream*, IStream*, ULargeInteger, ULargeInteger*, ULargeInteger*, int>)(lpVtbl[7]))((IStream*)Unsafe.AsPointer(ref this), pstm, cb, pcbRead, pcbWritten);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -117,22 +117,22 @@ public unsafe partial struct IStream
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(10)]
-    public HResult LockRegion(ULargeInterger libOffset, ULargeInterger cb, [NativeTypeName("DWORD")] uint dwLockType)
+    public HResult LockRegion(ULargeInteger libOffset, ULargeInteger cb, uint dwLockType)
     {
-        return ((delegate* unmanaged[Stdcall]<IStream*, ULargeInterger, ULargeInterger, uint, int>)(lpVtbl[10]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
+        return ((delegate* unmanaged[Stdcall]<IStream*, ULargeInteger, ULargeInteger, uint, int>)(lpVtbl[10]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(11)]
-    public HResult UnlockRegion(ULargeInterger libOffset, ULargeInterger cb, [NativeTypeName("DWORD")] uint dwLockType)
+    public HResult UnlockRegion(ULargeInteger libOffset, ULargeInteger cb, uint dwLockType)
     {
-        return ((delegate* unmanaged[Stdcall]<IStream*, ULargeInterger, ULargeInterger, uint, int>)(lpVtbl[11]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
+        return ((delegate* unmanaged[Stdcall]<IStream*, ULargeInteger, ULargeInteger, uint, int>)(lpVtbl[11]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
     }
 
     ///// <include file='IStream.xml' path='doc/member[@name="IStream.Stat"]/*' />
     //[MethodImpl(MethodImplOptions.AggressiveInlining)]
     //[VtblIndex(12)]
-    //public HRESULT Stat(STATSTG* pstatstg, [NativeTypeName("DWORD")] uint grfStatFlag)
+    //public HRESULT Stat(STATSTG* pstatstg, uint grfStatFlag)
     //{
     //    return ((delegate* unmanaged[Stdcall]<IStream*, STATSTG*, uint, int>)(lpVtbl[12]))((IStream*)Unsafe.AsPointer(ref this), pstatstg, grfStatFlag);
     //}

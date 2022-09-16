@@ -12,7 +12,7 @@ namespace Win32;
 
 [StructLayout(LayoutKind.Explicit)]
 [NativeTypeName("LARGE_INTEGER")]
-public partial struct LargeInterger
+public partial struct LargeInteger
 {
     [FieldOffset(0)]
     public _Anonymous_e__Struct Anonymous;

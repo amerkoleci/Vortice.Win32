@@ -1774,10 +1774,10 @@ public partial struct FrameStatistics
 	public uint SyncRefreshCount;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncQPCTime"]/*' />
-	public LargeInterger SyncQPCTime;
+	public LargeInteger SyncQPCTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncGPUTime"]/*' />
-	public LargeInterger SyncGPUTime;
+	public LargeInteger SyncGPUTime;
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT"]/*' />
@@ -2004,10 +2004,10 @@ public partial struct OutduplPointerShapeInfo
 public partial struct OutduplFrameInfo
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastPresentTime"]/*' />
-	public LargeInterger LastPresentTime;
+	public LargeInteger LastPresentTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastMouseUpdateTime"]/*' />
-	public LargeInterger LastMouseUpdateTime;
+	public LargeInteger LastMouseUpdateTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::AccumulatedFrames"]/*' />
 	public uint AccumulatedFrames;
@@ -2212,10 +2212,10 @@ public partial struct FrameStatisticsMedia
 	public uint SyncRefreshCount;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncQPCTime"]/*' />
-	public LargeInterger SyncQPCTime;
+	public LargeInteger SyncQPCTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncGPUTime"]/*' />
-	public LargeInterger SyncGPUTime;
+	public LargeInteger SyncGPUTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::CompositionMode"]/*' />
 	public FramePresentationMode CompositionMode;
@@ -3254,9 +3254,9 @@ public unsafe partial struct IDXGIAdapter
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter::CheckInterfaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInteger* pUMDVersion)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, LargeInterger*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, LargeInteger*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
 	}
 }
 
@@ -4130,9 +4130,9 @@ public unsafe partial struct IDXGIAdapter1
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInteger* pUMDVersion)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, Guid*, LargeInterger*, int>)(lpVtbl[5]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, Guid*, LargeInteger*, int>)(lpVtbl[5]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -5268,9 +5268,9 @@ public unsafe partial struct IDXGISwapChain1
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::GetRestrictToOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
+	public HResult GetRestrictToOutput(IDXGIOutput** ppRestrictToOutput)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, IDXGIOutput*, int>)(lpVtbl[24]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, IDXGIOutput**, int>)(lpVtbl[24]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::SetBackgroundColor"]/*' />
@@ -5632,9 +5632,9 @@ public unsafe partial struct IDXGIAdapter2
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInteger* pUMDVersion)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, LargeInterger*, int>)(lpVtbl[6]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, LargeInteger*, int>)(lpVtbl[6]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -6194,9 +6194,9 @@ public unsafe partial struct IDXGISwapChain2
 	/// <inheritdoc cref="IDXGISwapChain1.GetRestrictToOutput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
+	public HResult GetRestrictToOutput(IDXGIOutput** ppRestrictToOutput)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, IDXGIOutput*, int>)(lpVtbl[9]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, IDXGIOutput**, int>)(lpVtbl[9]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.SetBackgroundColor" />
@@ -7588,9 +7588,9 @@ public unsafe partial struct IDXGISwapChain3
 	/// <inheritdoc cref="IDXGISwapChain1.GetRestrictToOutput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
+	public HResult GetRestrictToOutput(IDXGIOutput** ppRestrictToOutput)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IDXGIOutput*, int>)(lpVtbl[16]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[16]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.SetBackgroundColor" />
@@ -8272,9 +8272,9 @@ public unsafe partial struct IDXGIFactory4
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory4::EnumAdapterByLuid"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
+	public HResult EnumAdapterByLuid(Luid AdapterLuid, Guid* riid, void** ppvAdapter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Luid*, Guid*, void**, int>)(lpVtbl[26]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Luid, Guid*, void**, int>)(lpVtbl[26]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory4::EnumWarpAdapter"]/*' />
@@ -8382,9 +8382,9 @@ public unsafe partial struct IDXGIAdapter3
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInteger* pUMDVersion)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, LargeInterger*, int>)(lpVtbl[7]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, LargeInteger*, int>)(lpVtbl[7]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -8922,9 +8922,9 @@ public unsafe partial struct IDXGISwapChain4
 	/// <inheritdoc cref="IDXGISwapChain1.GetRestrictToOutput" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult GetRestrictToOutput(IDXGIOutput* ppRestrictToOutput)
+	public HResult GetRestrictToOutput(IDXGIOutput** ppRestrictToOutput)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, IDXGIOutput*, int>)(lpVtbl[20]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, IDXGIOutput**, int>)(lpVtbl[20]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.SetBackgroundColor" />
@@ -9350,9 +9350,9 @@ public unsafe partial struct IDXGIFactory5
 	/// <inheritdoc cref="IDXGIFactory4.EnumAdapterByLuid" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
+	public HResult EnumAdapterByLuid(Luid AdapterLuid, Guid* riid, void** ppvAdapter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Luid*, Guid*, void**, int>)(lpVtbl[3]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Luid, Guid*, void**, int>)(lpVtbl[3]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
 	}
 
 	/// <inheritdoc cref="IDXGIFactory4.EnumWarpAdapter" />
@@ -9700,9 +9700,9 @@ public unsafe partial struct IDXGIAdapter4
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInterger* pUMDVersion)
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInteger* pUMDVersion)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, Guid*, LargeInterger*, int>)(lpVtbl[13]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, Guid*, LargeInteger*, int>)(lpVtbl[13]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -10088,9 +10088,9 @@ public unsafe partial struct IDXGIFactory6
 	/// <inheritdoc cref="IDXGIFactory4.EnumAdapterByLuid" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
+	public HResult EnumAdapterByLuid(Luid AdapterLuid, Guid* riid, void** ppvAdapter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Luid*, Guid*, void**, int>)(lpVtbl[4]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Luid, Guid*, void**, int>)(lpVtbl[4]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
 	}
 
 	/// <inheritdoc cref="IDXGIFactory4.EnumWarpAdapter" />
@@ -10374,9 +10374,9 @@ public unsafe partial struct IDXGIFactory7
 	/// <inheritdoc cref="IDXGIFactory4.EnumAdapterByLuid" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult EnumAdapterByLuid(Luid* AdapterLuid, Guid* riid, void** ppvAdapter)
+	public HResult EnumAdapterByLuid(Luid AdapterLuid, Guid* riid, void** ppvAdapter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Luid*, Guid*, void**, int>)(lpVtbl[5]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Luid, Guid*, void**, int>)(lpVtbl[5]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
 	}
 
 	/// <inheritdoc cref="IDXGIFactory4.EnumWarpAdapter" />

@@ -54,7 +54,7 @@ public struct Luid : IEquatable<Luid>
 
     public long ToInt64()
     {
-        LargeInterger val = new();
+        LargeInteger val = new();
         val.Anonymous.LowPart = LowPart;
         val.Anonymous.HighPart = HighPart;
         return val.QuadPart;
@@ -62,7 +62,7 @@ public struct Luid : IEquatable<Luid>
 
     public static Luid FromInt64(long Int64)
     {
-        LargeInterger val = new();
+        LargeInteger val = new();
         val.QuadPart = Int64;
 
         Luid luid = new();

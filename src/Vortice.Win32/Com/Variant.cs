@@ -356,8 +356,8 @@ public unsafe partial struct Variant
         [FieldOffset(0)] public uint uintValue;
         [FieldOffset(0)] public long longValue;
         [FieldOffset(0)] public ulong ulongValue;
-        [FieldOffset(0)] public LargeInterger largeIntergerValue;
-        [FieldOffset(0)] public ULargeInterger ulargeIntergerValue;
+        [FieldOffset(0)] public LargeInteger largeIntergerValue;
+        [FieldOffset(0)] public ULargeInteger ulargeIntergerValue;
         [FieldOffset(0)] public float floatValue;
         [FieldOffset(0)] public double doubleValue;
         [FieldOffset(0)] public short boolValue;
