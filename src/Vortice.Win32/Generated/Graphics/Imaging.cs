@@ -6467,13 +6467,13 @@ public enum WICBitmapEncoderCacheOption : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderCacheInMemory"]/*' />
 	/// <unmanaged>WICBitmapEncoderCacheInMemory</unmanaged>
-	WICBitmapEncoderCacheInMemory = 0,
+	CacheInMemory = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderCacheTempFile"]/*' />
 	/// <unmanaged>WICBitmapEncoderCacheTempFile</unmanaged>
-	WICBitmapEncoderCacheTempFile = 1,
+	CacheTempFile = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderNoCache"]/*' />
 	/// <unmanaged>WICBitmapEncoderNoCache</unmanaged>
-	WICBitmapEncoderNoCache = 2,
+	NoCache = 2,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType"]/*' />
@@ -6482,25 +6482,25 @@ public enum WICComponentType : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICDecoder"]/*' />
 	/// <unmanaged>WICDecoder</unmanaged>
-	WICDecoder = 1,
+	Decoder = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICEncoder"]/*' />
 	/// <unmanaged>WICEncoder</unmanaged>
-	WICEncoder = 2,
+	Encoder = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICPixelFormatConverter"]/*' />
 	/// <unmanaged>WICPixelFormatConverter</unmanaged>
-	WICPixelFormatConverter = 4,
+	PixelFormatConverter = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICMetadataReader"]/*' />
 	/// <unmanaged>WICMetadataReader</unmanaged>
-	WICMetadataReader = 8,
+	MetadataReader = 8,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICMetadataWriter"]/*' />
 	/// <unmanaged>WICMetadataWriter</unmanaged>
-	WICMetadataWriter = 16,
+	MetadataWriter = 16,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICPixelFormat"]/*' />
 	/// <unmanaged>WICPixelFormat</unmanaged>
-	WICPixelFormat = 32,
+	PixelFormat = 32,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICAllComponents"]/*' />
 	/// <unmanaged>WICAllComponents</unmanaged>
-	WICAllComponents = 63,
+	AllComponents = 63,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICComponentEnumerateOptions"]/*' />
@@ -6509,19 +6509,19 @@ public enum WICComponentEnumerateOptions : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentEnumerateOptions::WICComponentEnumerateDefault"]/*' />
 	/// <unmanaged>WICComponentEnumerateDefault</unmanaged>
-	WICComponentEnumerateDefault = 0,
+	Default = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentEnumerateOptions::WICComponentEnumerateRefresh"]/*' />
 	/// <unmanaged>WICComponentEnumerateRefresh</unmanaged>
-	WICComponentEnumerateRefresh = 1,
+	Refresh = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentEnumerateOptions::WICComponentEnumerateDisabled"]/*' />
 	/// <unmanaged>WICComponentEnumerateDisabled</unmanaged>
-	WICComponentEnumerateDisabled = -2147483648,
+	Disabled = -2147483648,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentEnumerateOptions::WICComponentEnumerateUnsigned"]/*' />
 	/// <unmanaged>WICComponentEnumerateUnsigned</unmanaged>
-	WICComponentEnumerateUnsigned = 1073741824,
+	Unsigned = 1073741824,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentEnumerateOptions::WICComponentEnumerateBuiltInOnly"]/*' />
 	/// <unmanaged>WICComponentEnumerateBuiltInOnly</unmanaged>
-	WICComponentEnumerateBuiltInOnly = 536870912,
+	BuiltInOnly = 536870912,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapInterpolationMode"]/*' />
@@ -6530,19 +6530,19 @@ public enum WICBitmapInterpolationMode : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapInterpolationMode::WICBitmapInterpolationModeNearestNeighbor"]/*' />
 	/// <unmanaged>WICBitmapInterpolationModeNearestNeighbor</unmanaged>
-	WICBitmapInterpolationModeNearestNeighbor = 0,
+	ModeNearestNeighbor = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapInterpolationMode::WICBitmapInterpolationModeLinear"]/*' />
 	/// <unmanaged>WICBitmapInterpolationModeLinear</unmanaged>
-	WICBitmapInterpolationModeLinear = 1,
+	ModeLinear = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapInterpolationMode::WICBitmapInterpolationModeCubic"]/*' />
 	/// <unmanaged>WICBitmapInterpolationModeCubic</unmanaged>
-	WICBitmapInterpolationModeCubic = 2,
+	ModeCubic = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapInterpolationMode::WICBitmapInterpolationModeFant"]/*' />
 	/// <unmanaged>WICBitmapInterpolationModeFant</unmanaged>
-	WICBitmapInterpolationModeFant = 3,
+	ModeFant = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapInterpolationMode::WICBitmapInterpolationModeHighQualityCubic"]/*' />
 	/// <unmanaged>WICBitmapInterpolationModeHighQualityCubic</unmanaged>
-	WICBitmapInterpolationModeHighQualityCubic = 4,
+	ModeHighQualityCubic = 4,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType"]/*' />
@@ -6551,46 +6551,46 @@ public enum WICBitmapPaletteType : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeCustom"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeCustom</unmanaged>
-	WICBitmapPaletteTypeCustom = 0,
+	Custom = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeMedianCut"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeMedianCut</unmanaged>
-	WICBitmapPaletteTypeMedianCut = 1,
+	MedianCut = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedBW"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedBW</unmanaged>
-	WICBitmapPaletteTypeFixedBW = 2,
+	FixedBW = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedHalftone8"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedHalftone8</unmanaged>
-	WICBitmapPaletteTypeFixedHalftone8 = 3,
+	FixedHalftone8 = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedHalftone27"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedHalftone27</unmanaged>
-	WICBitmapPaletteTypeFixedHalftone27 = 4,
+	FixedHalftone27 = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedHalftone64"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedHalftone64</unmanaged>
-	WICBitmapPaletteTypeFixedHalftone64 = 5,
+	FixedHalftone64 = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedHalftone125"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedHalftone125</unmanaged>
-	WICBitmapPaletteTypeFixedHalftone125 = 6,
+	FixedHalftone125 = 6,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedHalftone216"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedHalftone216</unmanaged>
-	WICBitmapPaletteTypeFixedHalftone216 = 7,
+	FixedHalftone216 = 7,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedWebPalette"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedWebPalette</unmanaged>
-	WICBitmapPaletteTypeFixedWebPalette = 7,
+	FixedWebPalette = 7,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedHalftone252"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedHalftone252</unmanaged>
-	WICBitmapPaletteTypeFixedHalftone252 = 8,
+	FixedHalftone252 = 8,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedHalftone256"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedHalftone256</unmanaged>
-	WICBitmapPaletteTypeFixedHalftone256 = 9,
+	FixedHalftone256 = 9,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedGray4"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedGray4</unmanaged>
-	WICBitmapPaletteTypeFixedGray4 = 10,
+	FixedGray4 = 10,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedGray16"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedGray16</unmanaged>
-	WICBitmapPaletteTypeFixedGray16 = 11,
+	FixedGray16 = 11,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeFixedGray256"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeFixedGray256</unmanaged>
-	WICBitmapPaletteTypeFixedGray256 = 12,
+	FixedGray256 = 12,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType"]/*' />
@@ -6599,34 +6599,34 @@ public enum WICBitmapDitherType : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeNone"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeNone</unmanaged>
-	WICBitmapDitherTypeNone = 0,
+	None = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeSolid"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeSolid</unmanaged>
-	WICBitmapDitherTypeSolid = 0,
+	Solid = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeOrdered4x4"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeOrdered4x4</unmanaged>
-	WICBitmapDitherTypeOrdered4x4 = 1,
+	Ordered4x4 = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeOrdered8x8"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeOrdered8x8</unmanaged>
-	WICBitmapDitherTypeOrdered8x8 = 2,
+	Ordered8x8 = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeOrdered16x16"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeOrdered16x16</unmanaged>
-	WICBitmapDitherTypeOrdered16x16 = 3,
+	Ordered16x16 = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeSpiral4x4"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeSpiral4x4</unmanaged>
-	WICBitmapDitherTypeSpiral4x4 = 4,
+	Spiral4x4 = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeSpiral8x8"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeSpiral8x8</unmanaged>
-	WICBitmapDitherTypeSpiral8x8 = 5,
+	Spiral8x8 = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeDualSpiral4x4"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeDualSpiral4x4</unmanaged>
-	WICBitmapDitherTypeDualSpiral4x4 = 6,
+	DualSpiral4x4 = 6,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeDualSpiral8x8"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeDualSpiral8x8</unmanaged>
-	WICBitmapDitherTypeDualSpiral8x8 = 7,
+	DualSpiral8x8 = 7,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeErrorDiffusion"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeErrorDiffusion</unmanaged>
-	WICBitmapDitherTypeErrorDiffusion = 8,
+	ErrorDiffusion = 8,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption"]/*' />
@@ -6635,13 +6635,13 @@ public enum WICBitmapAlphaChannelOption : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapUseAlpha"]/*' />
 	/// <unmanaged>WICBitmapUseAlpha</unmanaged>
-	WICBitmapUseAlpha = 0,
+	UseAlpha = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapUsePremultipliedAlpha"]/*' />
 	/// <unmanaged>WICBitmapUsePremultipliedAlpha</unmanaged>
-	WICBitmapUsePremultipliedAlpha = 1,
+	UsePremultipliedAlpha = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapIgnoreAlpha"]/*' />
 	/// <unmanaged>WICBitmapIgnoreAlpha</unmanaged>
-	WICBitmapIgnoreAlpha = 2,
+	IgnoreAlpha = 2,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions"]/*' />
@@ -6650,22 +6650,22 @@ public enum WICBitmapTransformOptions : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate0"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate0</unmanaged>
-	WICBitmapTransformRotate0 = 0,
+	Rotate0 = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate90"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate90</unmanaged>
-	WICBitmapTransformRotate90 = 1,
+	Rotate90 = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate180"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate180</unmanaged>
-	WICBitmapTransformRotate180 = 2,
+	Rotate180 = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate270"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate270</unmanaged>
-	WICBitmapTransformRotate270 = 3,
+	Rotate270 = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformFlipHorizontal"]/*' />
 	/// <unmanaged>WICBitmapTransformFlipHorizontal</unmanaged>
-	WICBitmapTransformFlipHorizontal = 8,
+	FlipHorizontal = 8,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformFlipVertical"]/*' />
 	/// <unmanaged>WICBitmapTransformFlipVertical</unmanaged>
-	WICBitmapTransformFlipVertical = 16,
+	FlipVertical = 16,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapLockFlags"]/*' />
@@ -6676,10 +6676,10 @@ public enum WICBitmapLockFlags : int
 	None = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapLockFlags::WICBitmapLockRead"]/*' />
 	/// <unmanaged>WICBitmapLockRead</unmanaged>
-	WICBitmapLockRead = 1,
+	Read = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapLockFlags::WICBitmapLockWrite"]/*' />
 	/// <unmanaged>WICBitmapLockWrite</unmanaged>
-	WICBitmapLockWrite = 2,
+	Write = 2,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities"]/*' />
@@ -6688,19 +6688,19 @@ public enum WICBitmapDecoderCapabilities : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilitySameEncoder"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilitySameEncoder</unmanaged>
-	WICBitmapDecoderCapabilitySameEncoder = 1,
+	SameEncoder = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeAllImages"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilityCanDecodeAllImages</unmanaged>
-	WICBitmapDecoderCapabilityCanDecodeAllImages = 2,
+	CanDecodeAllImages = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeSomeImages"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilityCanDecodeSomeImages</unmanaged>
-	WICBitmapDecoderCapabilityCanDecodeSomeImages = 4,
+	CanDecodeSomeImages = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanEnumerateMetadata"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilityCanEnumerateMetadata</unmanaged>
-	WICBitmapDecoderCapabilityCanEnumerateMetadata = 8,
+	CanEnumerateMetadata = 8,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeThumbnail"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilityCanDecodeThumbnail</unmanaged>
-	WICBitmapDecoderCapabilityCanDecodeThumbnail = 16,
+	CanDecodeThumbnail = 16,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation"]/*' />
@@ -6709,13 +6709,13 @@ public enum WICProgressOperation : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationCopyPixels"]/*' />
 	/// <unmanaged>WICProgressOperationCopyPixels</unmanaged>
-	WICProgressOperationCopyPixels = 1,
+	CopyPixels = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationWritePixels"]/*' />
 	/// <unmanaged>WICProgressOperationWritePixels</unmanaged>
-	WICProgressOperationWritePixels = 2,
+	WritePixels = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationAll"]/*' />
 	/// <unmanaged>WICProgressOperationAll</unmanaged>
-	WICProgressOperationAll = 65535,
+	All = 65535,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification"]/*' />
@@ -6724,16 +6724,16 @@ public enum WICProgressNotification : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationBegin"]/*' />
 	/// <unmanaged>WICProgressNotificationBegin</unmanaged>
-	WICProgressNotificationBegin = 65536,
+	Begin = 65536,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationEnd"]/*' />
 	/// <unmanaged>WICProgressNotificationEnd</unmanaged>
-	WICProgressNotificationEnd = 131072,
+	End = 131072,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationFrequent"]/*' />
 	/// <unmanaged>WICProgressNotificationFrequent</unmanaged>
-	WICProgressNotificationFrequent = 262144,
+	Frequent = 262144,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationAll"]/*' />
 	/// <unmanaged>WICProgressNotificationAll</unmanaged>
-	WICProgressNotificationAll = -65536,
+	All = -65536,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning"]/*' />
@@ -6742,16 +6742,16 @@ public enum WICComponentSigning : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentSigned"]/*' />
 	/// <unmanaged>WICComponentSigned</unmanaged>
-	WICComponentSigned = 1,
+	Signed = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentUnsigned"]/*' />
 	/// <unmanaged>WICComponentUnsigned</unmanaged>
-	WICComponentUnsigned = 2,
+	Unsigned = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentSafe"]/*' />
 	/// <unmanaged>WICComponentSafe</unmanaged>
-	WICComponentSafe = 4,
+	Safe = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentDisabled"]/*' />
 	/// <unmanaged>WICComponentDisabled</unmanaged>
-	WICComponentDisabled = -2147483648,
+	Disabled = -2147483648,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties"]/*' />
@@ -7126,22 +7126,22 @@ public enum WICPixelFormatNumericRepresentation : uint
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation::WICPixelFormatNumericRepresentationUnspecified"]/*' />
 	/// <unmanaged>WICPixelFormatNumericRepresentationUnspecified</unmanaged>
-	WICPixelFormatNumericRepresentationUnspecified = 0,
+	Unspecified = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation::WICPixelFormatNumericRepresentationIndexed"]/*' />
 	/// <unmanaged>WICPixelFormatNumericRepresentationIndexed</unmanaged>
-	WICPixelFormatNumericRepresentationIndexed = 1,
+	Indexed = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation::WICPixelFormatNumericRepresentationUnsignedInteger"]/*' />
 	/// <unmanaged>WICPixelFormatNumericRepresentationUnsignedInteger</unmanaged>
-	WICPixelFormatNumericRepresentationUnsignedInteger = 2,
+	UnsignedInteger = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation::WICPixelFormatNumericRepresentationSignedInteger"]/*' />
 	/// <unmanaged>WICPixelFormatNumericRepresentationSignedInteger</unmanaged>
-	WICPixelFormatNumericRepresentationSignedInteger = 3,
+	SignedInteger = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation::WICPixelFormatNumericRepresentationFixed"]/*' />
 	/// <unmanaged>WICPixelFormatNumericRepresentationFixed</unmanaged>
-	WICPixelFormatNumericRepresentationFixed = 4,
+	Fixed = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation::WICPixelFormatNumericRepresentationFloat"]/*' />
 	/// <unmanaged>WICPixelFormatNumericRepresentationFloat</unmanaged>
-	WICPixelFormatNumericRepresentationFloat = 5,
+	Float = 5,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPlanarOptions"]/*' />
@@ -7150,10 +7150,10 @@ public enum WICPlanarOptions : int
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPlanarOptions::WICPlanarOptionsDefault"]/*' />
 	/// <unmanaged>WICPlanarOptionsDefault</unmanaged>
-	WICPlanarOptionsDefault = 0,
+	Default = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPlanarOptions::WICPlanarOptionsPreserveSubsampling"]/*' />
 	/// <unmanaged>WICPlanarOptionsPreserveSubsampling</unmanaged>
-	WICPlanarOptionsPreserveSubsampling = 1,
+	PreserveSubsampling = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions"]/*' />
@@ -7462,29 +7462,12 @@ public enum WICPersistOptions : int
 #endregion Enums
 
 #region Structs
-/// <include file='../Imaging.xml' path='doc/member[@name="WICRect"]/*' />
-/// <unmanaged>WICRect</unmanaged>
-public partial struct Wicrect
-{
-	/// <include file='../Imaging.xml' path='doc/member[@name="WICRect::X"]/*' />
-	public int X;
-
-	/// <include file='../Imaging.xml' path='doc/member[@name="WICRect::Y"]/*' />
-	public int Y;
-
-	/// <include file='../Imaging.xml' path='doc/member[@name="WICRect::Width"]/*' />
-	public int Width;
-
-	/// <include file='../Imaging.xml' path='doc/member[@name="WICRect::Height"]/*' />
-	public int Height;
-}
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern"]/*' />
 /// <unmanaged>WICBitmapPattern</unmanaged>
-public partial struct Wicbitmappattern
+public partial struct WICBitmapPattern
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::Position"]/*' />
-	public ULargeInterger Position;
+	public ULargeInteger Position;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::Length"]/*' />
 	public uint Length;
@@ -7496,21 +7479,21 @@ public partial struct Wicbitmappattern
 	public unsafe byte* Mask;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::EndOfStream"]/*' />
-	public Bool32 EndOfStream;
+	public Bool32 Endofstream;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters"]/*' />
 /// <unmanaged>WICImageParameters</unmanaged>
-public partial struct Wicimageparameters
+public partial struct WICImageParameters
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelFormat"]/*' />
-	public Graphics.Direct2D.Common.PixelFormat PixelFormat;
+	public Graphics.Direct2D.Common.PixelFormat Pixelformat;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::DpiX"]/*' />
-	public float DpiX;
+	public float Dpix;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::DpiY"]/*' />
-	public float DpiY;
+	public float Dpiy;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::Top"]/*' />
 	public float Top;
@@ -7519,15 +7502,15 @@ public partial struct Wicimageparameters
 	public float Left;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelWidth"]/*' />
-	public uint PixelWidth;
+	public uint Pixelwidth;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelHeight"]/*' />
-	public uint PixelHeight;
+	public uint Pixelheight;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlaneDescription"]/*' />
 /// <unmanaged>WICBitmapPlaneDescription</unmanaged>
-public partial struct Wicbitmapplanedescription
+public partial struct WICBitmapPlaneDescription
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlaneDescription::Format"]/*' />
 	public Guid Format;
@@ -7541,24 +7524,24 @@ public partial struct Wicbitmapplanedescription
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane"]/*' />
 /// <unmanaged>WICBitmapPlane</unmanaged>
-public partial struct Wicbitmapplane
+public partial struct WICBitmapPlane
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::Format"]/*' />
 	public Guid Format;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::pbBuffer"]/*' />
-	public unsafe byte* pbBuffer;
+	public unsafe byte* Pbbuffer;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::cbStride"]/*' />
-	public uint cbStride;
+	public uint Cbstride;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::cbBufferSize"]/*' />
-	public uint cbBufferSize;
+	public uint Cbbuffersize;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader"]/*' />
 /// <unmanaged>WICJpegFrameHeader</unmanaged>
-public partial struct Wicjpegframeheader
+public partial struct WICJpegFrameHeader
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::Width"]/*' />
 	public uint Width;
@@ -7567,115 +7550,115 @@ public partial struct Wicjpegframeheader
 	public uint Height;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::TransferMatrix"]/*' />
-	public WICJpegTransferMatrix TransferMatrix;
+	public WICJpegTransferMatrix Transfermatrix;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::ScanType"]/*' />
-	public WICJpegScanType ScanType;
+	public WICJpegScanType Scantype;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::cComponents"]/*' />
-	public uint cComponents;
+	public uint Ccomponents;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::ComponentIdentifiers"]/*' />
-	public uint ComponentIdentifiers;
+	public uint Componentidentifiers;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::SampleFactors"]/*' />
-	public uint SampleFactors;
+	public uint Samplefactors;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::QuantizationTableIndices"]/*' />
-	public uint QuantizationTableIndices;
+	public uint Quantizationtableindices;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader"]/*' />
 /// <unmanaged>WICJpegScanHeader</unmanaged>
-public partial struct Wicjpegscanheader
+public partial struct WICJpegScanHeader
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::cComponents"]/*' />
-	public uint cComponents;
+	public uint Ccomponents;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::RestartInterval"]/*' />
-	public uint RestartInterval;
+	public uint Restartinterval;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::ComponentSelectors"]/*' />
-	public uint ComponentSelectors;
+	public uint Componentselectors;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::HuffmanTableIndices"]/*' />
-	public uint HuffmanTableIndices;
+	public uint Huffmantableindices;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::StartSpectralSelection"]/*' />
-	public byte StartSpectralSelection;
+	public byte Startspectralselection;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::EndSpectralSelection"]/*' />
-	public byte EndSpectralSelection;
+	public byte Endspectralselection;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::SuccessiveApproximationHigh"]/*' />
-	public byte SuccessiveApproximationHigh;
+	public byte Successiveapproximationhigh;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::SuccessiveApproximationLow"]/*' />
-	public byte SuccessiveApproximationLow;
+	public byte Successiveapproximationlow;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo"]/*' />
 /// <unmanaged>WICRawCapabilitiesInfo</unmanaged>
-public partial struct Wicrawcapabilitiesinfo
+public partial struct WICRawCapabilitiesInfo
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::cbSize"]/*' />
-	public uint cbSize;
+	public uint Cbsize;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::CodecMajorVersion"]/*' />
-	public uint CodecMajorVersion;
+	public uint Codecmajorversion;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::CodecMinorVersion"]/*' />
-	public uint CodecMinorVersion;
+	public uint Codecminorversion;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ExposureCompensationSupport"]/*' />
-	public WICRawCapabilities ExposureCompensationSupport;
+	public WICRawCapabilities Exposurecompensationsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ContrastSupport"]/*' />
-	public WICRawCapabilities ContrastSupport;
+	public WICRawCapabilities Contrastsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RGBWhitePointSupport"]/*' />
-	public WICRawCapabilities RGBWhitePointSupport;
+	public WICRawCapabilities Rgbwhitepointsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NamedWhitePointSupport"]/*' />
-	public WICRawCapabilities NamedWhitePointSupport;
+	public WICRawCapabilities Namedwhitepointsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NamedWhitePointSupportMask"]/*' />
-	public uint NamedWhitePointSupportMask;
+	public uint Namedwhitepointsupportmask;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::KelvinWhitePointSupport"]/*' />
-	public WICRawCapabilities KelvinWhitePointSupport;
+	public WICRawCapabilities Kelvinwhitepointsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::GammaSupport"]/*' />
-	public WICRawCapabilities GammaSupport;
+	public WICRawCapabilities Gammasupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::TintSupport"]/*' />
-	public WICRawCapabilities TintSupport;
+	public WICRawCapabilities Tintsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::SaturationSupport"]/*' />
-	public WICRawCapabilities SaturationSupport;
+	public WICRawCapabilities Saturationsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::SharpnessSupport"]/*' />
-	public WICRawCapabilities SharpnessSupport;
+	public WICRawCapabilities Sharpnesssupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NoiseReductionSupport"]/*' />
-	public WICRawCapabilities NoiseReductionSupport;
+	public WICRawCapabilities Noisereductionsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::DestinationColorProfileSupport"]/*' />
-	public WICRawCapabilities DestinationColorProfileSupport;
+	public WICRawCapabilities Destinationcolorprofilesupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ToneCurveSupport"]/*' />
-	public WICRawCapabilities ToneCurveSupport;
+	public WICRawCapabilities Tonecurvesupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RotationSupport"]/*' />
-	public WICRawRotationCapabilities RotationSupport;
+	public WICRawRotationCapabilities Rotationsupport;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RenderModeSupport"]/*' />
-	public WICRawCapabilities RenderModeSupport;
+	public WICRawCapabilities Rendermodesupport;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint"]/*' />
 /// <unmanaged>WICRawToneCurvePoint</unmanaged>
-public partial struct Wicrawtonecurvepoint
+public partial struct WICRawToneCurvePoint
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint::Input"]/*' />
 	public double Input;
@@ -7686,20 +7669,20 @@ public partial struct Wicrawtonecurvepoint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve"]/*' />
 /// <unmanaged>WICRawToneCurve</unmanaged>
-public partial struct Wicrawtonecurve
+public partial struct WICRawToneCurve
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve::cPoints"]/*' />
-	public uint cPoints;
+	public uint Cpoints;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve::aPoints"]/*' />
-	public aPoints__FixedBuffer aPoints;
+	public Apoints__FixedBuffer Apoints;
 
-	public unsafe struct aPoints__FixedBuffer
+	public unsafe struct Apoints__FixedBuffer
 	{
-		public Wicrawtonecurvepoint e0;
+		public WICRawToneCurvePoint e0;
 
 		[UnscopedRef]
-		public ref Wicrawtonecurvepoint this[int index]
+		public ref WICRawToneCurvePoint this[int index]
 		{
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			get
@@ -7710,7 +7693,7 @@ public partial struct Wicrawtonecurve
 
 		[UnscopedRef]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public Span<Wicrawtonecurvepoint> AsSpan()
+		public Span<WICRawToneCurvePoint> AsSpan()
 		{
 			return MemoryMarshal.CreateSpan(ref e0, 1);
 		}
@@ -7719,7 +7702,7 @@ public partial struct Wicrawtonecurve
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters"]/*' />
 /// <unmanaged>WICDdsParameters</unmanaged>
-public partial struct Wicddsparameters
+public partial struct WICDdsParameters
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::Width"]/*' />
 	public uint Width;
@@ -7731,44 +7714,44 @@ public partial struct Wicddsparameters
 	public uint Depth;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::MipLevels"]/*' />
-	public uint MipLevels;
+	public uint Miplevels;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::ArraySize"]/*' />
-	public uint ArraySize;
+	public uint Arraysize;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::DxgiFormat"]/*' />
-	public Graphics.Dxgi.Common.Format DxgiFormat;
+	public Graphics.Dxgi.Common.Format Dxgiformat;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::Dimension"]/*' />
 	public WICDdsDimension Dimension;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::AlphaMode"]/*' />
-	public WICDdsAlphaMode AlphaMode;
+	public WICDdsAlphaMode Alphamode;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo"]/*' />
 /// <unmanaged>WICDdsFormatInfo</unmanaged>
-public partial struct Wicddsformatinfo
+public partial struct WICDdsFormatInfo
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::DxgiFormat"]/*' />
-	public Graphics.Dxgi.Common.Format DxgiFormat;
+	public Graphics.Dxgi.Common.Format Dxgiformat;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BytesPerBlock"]/*' />
-	public uint BytesPerBlock;
+	public uint Bytesperblock;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BlockWidth"]/*' />
-	public uint BlockWidth;
+	public uint Blockwidth;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BlockHeight"]/*' />
-	public uint BlockHeight;
+	public uint Blockheight;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern"]/*' />
 /// <unmanaged>WICMetadataPattern</unmanaged>
-public partial struct Wicmetadatapattern
+public partial struct WICMetadataPattern
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern::Position"]/*' />
-	public ULargeInterger Position;
+	public ULargeInteger Position;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern::Length"]/*' />
 	public uint Length;
@@ -7780,15 +7763,15 @@ public partial struct Wicmetadatapattern
 	public unsafe byte* Mask;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern::DataOffset"]/*' />
-	public ULargeInterger DataOffset;
+	public ULargeInteger Dataoffset;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader"]/*' />
 /// <unmanaged>WICMetadataHeader</unmanaged>
-public partial struct Wicmetadataheader
+public partial struct WICMetadataHeader
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader::Position"]/*' />
-	public ULargeInterger Position;
+	public ULargeInteger Position;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader::Length"]/*' />
 	public uint Length;
@@ -7797,7 +7780,7 @@ public partial struct Wicmetadataheader
 	public unsafe byte* Header;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader::DataOffset"]/*' />
-	public ULargeInterger DataOffset;
+	public ULargeInteger Dataoffset;
 }
 
 #endregion Structs
@@ -8041,9 +8024,9 @@ public unsafe partial struct IWICBitmapSource
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::CopyPixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapSource*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapSource*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 }
 
@@ -8143,9 +8126,9 @@ public unsafe partial struct IWICFormatConverter
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICFormatConverter*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICFormatConverter*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICFormatConverter::Initialize"]/*' />
@@ -8261,9 +8244,9 @@ public unsafe partial struct IWICPlanarFormatConverter
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::Initialize"]/*' />
@@ -8379,9 +8362,9 @@ public unsafe partial struct IWICBitmapScaler
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapScaler*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapScaler*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapScaler*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapScaler*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapScaler::Initialize"]/*' />
@@ -8489,17 +8472,17 @@ public unsafe partial struct IWICBitmapClipper
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapClipper*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapClipper*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapClipper*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapClipper*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapClipper::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Initialize(IWICBitmapSource* pISource, Wicrect* prc)
+	public HResult Initialize(IWICBitmapSource* pISource, System.Drawing.Rectangle* prc)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapClipper*, IWICBitmapSource*, Wicrect*, int>)(lpVtbl[8]))((IWICBitmapClipper*)Unsafe.AsPointer(ref this), pISource, prc);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapClipper*, IWICBitmapSource*, System.Drawing.Rectangle*, int>)(lpVtbl[8]))((IWICBitmapClipper*)Unsafe.AsPointer(ref this), pISource, prc);
 	}
 }
 
@@ -8599,9 +8582,9 @@ public unsafe partial struct IWICBitmapFlipRotator
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapFlipRotator*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapFlipRotator*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapFlipRotator*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapFlipRotator*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFlipRotator::Initialize"]/*' />
@@ -8803,17 +8786,17 @@ public unsafe partial struct IWICBitmap
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmap*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmap*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmap::Lock"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Lock(Wicrect* prcLock, uint flags, IWICBitmapLock* ppILock)
+	public HResult Lock(System.Drawing.Rectangle* prcLock, WICBitmapLockFlags flags, IWICBitmapLock** ppILock)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, Wicrect*, uint, IWICBitmapLock*, int>)(lpVtbl[8]))((IWICBitmap*)Unsafe.AsPointer(ref this), prcLock, flags, ppILock);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, System.Drawing.Rectangle*, WICBitmapLockFlags, IWICBitmapLock**, int>)(lpVtbl[8]))((IWICBitmap*)Unsafe.AsPointer(ref this), prcLock, flags, ppILock);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmap::SetPalette"]/*' />
@@ -9039,9 +9022,9 @@ public unsafe partial struct IWICColorTransform
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICColorTransform*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICColorTransform*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorTransform::Initialize"]/*' />
@@ -9125,9 +9108,9 @@ public unsafe partial struct IWICFastMetadataEncoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder::GetMetadataQueryWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter* ppIMetadataQueryWriter)
+	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICFastMetadataEncoder*, IWICMetadataQueryWriter*, int>)(lpVtbl[4]))((IWICFastMetadataEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICFastMetadataEncoder*, IWICMetadataQueryWriter**, int>)(lpVtbl[4]))((IWICFastMetadataEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
 	}
 }
 
@@ -9193,9 +9176,9 @@ public unsafe partial struct IWICStream
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStreamRegion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ULargeInterger* ulOffset, ULargeInterger* ulMaxSize)
+	public HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ULargeInteger ulOffset, ULargeInteger ulMaxSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, ULargeInterger*, ULargeInterger*, int>)(lpVtbl[3]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
+		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, ULargeInteger, ULargeInteger, int>)(lpVtbl[3]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
 	}
 }
 
@@ -9287,9 +9270,9 @@ public unsafe partial struct IWICEnumMetadataItem
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Clone"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult Clone(IWICEnumMetadataItem* ppIEnumMetadataItem)
+	public HResult Clone(IWICEnumMetadataItem** ppIEnumMetadataItem)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICEnumMetadataItem*, IWICEnumMetadataItem*, int>)(lpVtbl[6]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), ppIEnumMetadataItem);
+		return ((delegate* unmanaged[Stdcall]<IWICEnumMetadataItem*, IWICEnumMetadataItem**, int>)(lpVtbl[6]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), ppIEnumMetadataItem);
 	}
 }
 
@@ -9373,17 +9356,17 @@ public unsafe partial struct IWICMetadataQueryReader
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetMetadataByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMetadataByName(ushort* wzName, Com.Variant* pvarValue)
+	public HResult GetMetadataByName(ushort* wzName, Com.Variant** pvarValue)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryReader*, ushort*, Com.Variant*, int>)(lpVtbl[5]))((IWICMetadataQueryReader*)Unsafe.AsPointer(ref this), wzName, pvarValue);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryReader*, ushort*, Com.Variant**, int>)(lpVtbl[5]))((IWICMetadataQueryReader*)Unsafe.AsPointer(ref this), wzName, pvarValue);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetEnumerator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetEnumerator(Com.IEnumString* ppIEnumString)
+	public HResult GetEnumerator(Com.IEnumString** ppIEnumString)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryReader*, Com.IEnumString*, int>)(lpVtbl[6]))((IWICMetadataQueryReader*)Unsafe.AsPointer(ref this), ppIEnumString);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryReader*, Com.IEnumString**, int>)(lpVtbl[6]))((IWICMetadataQueryReader*)Unsafe.AsPointer(ref this), ppIEnumString);
 	}
 }
 
@@ -9467,17 +9450,17 @@ public unsafe partial struct IWICMetadataQueryWriter
 	/// <inheritdoc cref="IWICMetadataQueryReader.GetMetadataByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMetadataByName(ushort* wzName, Com.Variant* pvarValue)
+	public HResult GetMetadataByName(ushort* wzName, Com.Variant** pvarValue)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryWriter*, ushort*, Com.Variant*, int>)(lpVtbl[5]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName, pvarValue);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryWriter*, ushort*, Com.Variant**, int>)(lpVtbl[5]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName, pvarValue);
 	}
 
 	/// <inheritdoc cref="IWICMetadataQueryReader.GetEnumerator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetEnumerator(Com.IEnumString* ppIEnumString)
+	public HResult GetEnumerator(Com.IEnumString** ppIEnumString)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryWriter*, Com.IEnumString*, int>)(lpVtbl[6]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), ppIEnumString);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryWriter*, Com.IEnumString**, int>)(lpVtbl[6]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), ppIEnumString);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter::SetMetadataByName"]/*' />
@@ -9577,9 +9560,9 @@ public unsafe partial struct IWICBitmapEncoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetEncoderInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetEncoderInfo(IWICBitmapEncoderInfo* ppIEncoderInfo)
+	public HResult GetEncoderInfo(IWICBitmapEncoderInfo** ppIEncoderInfo)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapEncoderInfo*, int>)(lpVtbl[5]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIEncoderInfo);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapEncoderInfo**, int>)(lpVtbl[5]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIEncoderInfo);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetColorContexts"]/*' />
@@ -9617,9 +9600,9 @@ public unsafe partial struct IWICBitmapEncoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::CreateNewFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateNewFrame(IWICBitmapFrameEncode* ppIFrameEncode, Com.IPropertyBag2* ppIEncoderOptions)
+	public HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapFrameEncode*, Com.IPropertyBag2*, int>)(lpVtbl[10]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, ppIEncoderOptions);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapFrameEncode**, Com.IPropertyBag2**, int>)(lpVtbl[10]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, ppIEncoderOptions);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Commit"]/*' />
@@ -9633,9 +9616,9 @@ public unsafe partial struct IWICBitmapEncoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetMetadataQueryWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter* ppIMetadataQueryWriter)
+	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICMetadataQueryWriter*, int>)(lpVtbl[12]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICMetadataQueryWriter**, int>)(lpVtbl[12]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
 	}
 }
 
@@ -9767,9 +9750,9 @@ public unsafe partial struct IWICBitmapFrameEncode
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameEncode::WriteSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult WriteSource(IWICBitmapSource* pIBitmapSource, Wicrect* prc)
+	public HResult WriteSource(IWICBitmapSource* pIBitmapSource, System.Drawing.Rectangle* prc)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameEncode*, IWICBitmapSource*, Wicrect*, int>)(lpVtbl[11]))((IWICBitmapFrameEncode*)Unsafe.AsPointer(ref this), pIBitmapSource, prc);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameEncode*, IWICBitmapSource*, System.Drawing.Rectangle*, int>)(lpVtbl[11]))((IWICBitmapFrameEncode*)Unsafe.AsPointer(ref this), pIBitmapSource, prc);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameEncode::Commit"]/*' />
@@ -9783,9 +9766,9 @@ public unsafe partial struct IWICBitmapFrameEncode
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameEncode::GetMetadataQueryWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter* ppIMetadataQueryWriter)
+	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameEncode*, IWICMetadataQueryWriter*, int>)(lpVtbl[13]))((IWICBitmapFrameEncode*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameEncode*, IWICMetadataQueryWriter**, int>)(lpVtbl[13]))((IWICBitmapFrameEncode*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
 	}
 }
 
@@ -9853,17 +9836,17 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode::WritePixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult WritePixels(uint lineCount, Wicbitmapplane* pPlanes, uint cPlanes)
+	public HResult WritePixels(uint lineCount, WICBitmapPlane* pPlanes, uint cPlanes)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapFrameEncode*, uint, Wicbitmapplane*, uint, int>)(lpVtbl[3]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), lineCount, pPlanes, cPlanes);
+		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapFrameEncode*, uint, WICBitmapPlane*, uint, int>)(lpVtbl[3]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), lineCount, pPlanes, cPlanes);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode::WriteSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, Wicrect* prcSource)
+	public HResult WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, System.Drawing.Rectangle* prcSource)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapFrameEncode*, IWICBitmapSource**, uint, Wicrect*, int>)(lpVtbl[4]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, prcSource);
+		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapFrameEncode*, IWICBitmapSource**, uint, System.Drawing.Rectangle*, int>)(lpVtbl[4]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, prcSource);
 	}
 }
 
@@ -9955,9 +9938,9 @@ public unsafe partial struct IWICBitmapDecoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetDecoderInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetDecoderInfo(IWICBitmapDecoderInfo* ppIDecoderInfo)
+	public HResult GetDecoderInfo(IWICBitmapDecoderInfo** ppIDecoderInfo)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapDecoderInfo*, int>)(lpVtbl[6]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIDecoderInfo);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapDecoderInfo**, int>)(lpVtbl[6]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIDecoderInfo);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::CopyPalette"]/*' />
@@ -9971,17 +9954,17 @@ public unsafe partial struct IWICBitmapDecoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetMetadataQueryReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetMetadataQueryReader(IWICMetadataQueryReader* ppIMetadataQueryReader)
+	public HResult GetMetadataQueryReader(IWICMetadataQueryReader** ppIMetadataQueryReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICMetadataQueryReader*, int>)(lpVtbl[8]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICMetadataQueryReader**, int>)(lpVtbl[8]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetPreview"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetPreview(IWICBitmapSource* ppIBitmapSource)
+	public HResult GetPreview(IWICBitmapSource** ppIBitmapSource)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapSource*, int>)(lpVtbl[9]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIBitmapSource);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapSource**, int>)(lpVtbl[9]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIBitmapSource);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetColorContexts"]/*' />
@@ -9995,9 +9978,9 @@ public unsafe partial struct IWICBitmapDecoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetThumbnail(IWICBitmapSource* ppIThumbnail)
+	public HResult GetThumbnail(IWICBitmapSource** ppIThumbnail)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapSource*, int>)(lpVtbl[11]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIThumbnail);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapSource**, int>)(lpVtbl[11]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIThumbnail);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetFrameCount"]/*' />
@@ -10011,9 +9994,9 @@ public unsafe partial struct IWICBitmapDecoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetFrame(uint index, IWICBitmapFrameDecode* ppIBitmapFrame)
+	public HResult GetFrame(uint index, IWICBitmapFrameDecode** ppIBitmapFrame)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, uint, IWICBitmapFrameDecode*, int>)(lpVtbl[13]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), index, ppIBitmapFrame);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, uint, IWICBitmapFrameDecode**, int>)(lpVtbl[13]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), index, ppIBitmapFrame);
 	}
 }
 
@@ -10081,9 +10064,9 @@ public unsafe partial struct IWICBitmapSourceTransform
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::CopyPixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CopyPixels(Wicrect* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapSourceTransform*, Wicrect*, uint, uint, Guid*, WICBitmapTransformOptions, uint, uint, byte*, int>)(lpVtbl[3]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), prc, uiWidth, uiHeight, pguidDstFormat, dstTransform, nStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapSourceTransform*, System.Drawing.Rectangle*, uint, uint, Guid*, WICBitmapTransformOptions, uint, uint, byte*, int>)(lpVtbl[3]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), prc, uiWidth, uiHeight, pguidDstFormat, dstTransform, nStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::GetClosestSize"]/*' />
@@ -10175,17 +10158,17 @@ public unsafe partial struct IWICPlanarBitmapSourceTransform
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapSourceTransform::DoesSupportTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult DoesSupportTransform(uint* puiWidth, uint* puiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, Guid* pguidDstFormats, Wicbitmapplanedescription* pPlaneDescriptions, uint cPlanes, Bool32* pfIsSupported)
+	public HResult DoesSupportTransform(uint* puiWidth, uint* puiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, Guid* pguidDstFormats, WICBitmapPlaneDescription* pPlaneDescriptions, uint cPlanes, Bool32* pfIsSupported)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapSourceTransform*, uint*, uint*, WICBitmapTransformOptions, WICPlanarOptions, Guid*, Wicbitmapplanedescription*, uint, Bool32*, int>)(lpVtbl[3]))((IWICPlanarBitmapSourceTransform*)Unsafe.AsPointer(ref this), puiWidth, puiHeight, dstTransform, dstPlanarOptions, pguidDstFormats, pPlaneDescriptions, cPlanes, pfIsSupported);
+		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapSourceTransform*, uint*, uint*, WICBitmapTransformOptions, WICPlanarOptions, Guid*, WICBitmapPlaneDescription*, uint, Bool32*, int>)(lpVtbl[3]))((IWICPlanarBitmapSourceTransform*)Unsafe.AsPointer(ref this), puiWidth, puiHeight, dstTransform, dstPlanarOptions, pguidDstFormats, pPlaneDescriptions, cPlanes, pfIsSupported);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapSourceTransform::CopyPixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CopyPixels(Wicrect* prcSource, uint uiWidth, uint uiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, Wicbitmapplane* pDstPlanes, uint cPlanes)
+	public HResult CopyPixels(System.Drawing.Rectangle* prcSource, uint uiWidth, uint uiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, WICBitmapPlane* pDstPlanes, uint cPlanes)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapSourceTransform*, Wicrect*, uint, uint, WICBitmapTransformOptions, WICPlanarOptions, Wicbitmapplane*, uint, int>)(lpVtbl[4]))((IWICPlanarBitmapSourceTransform*)Unsafe.AsPointer(ref this), prcSource, uiWidth, uiHeight, dstTransform, dstPlanarOptions, pDstPlanes, cPlanes);
+		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapSourceTransform*, System.Drawing.Rectangle*, uint, uint, WICBitmapTransformOptions, WICPlanarOptions, WICBitmapPlane*, uint, int>)(lpVtbl[4]))((IWICPlanarBitmapSourceTransform*)Unsafe.AsPointer(ref this), prcSource, uiWidth, uiHeight, dstTransform, dstPlanarOptions, pDstPlanes, cPlanes);
 	}
 }
 
@@ -10285,17 +10268,17 @@ public unsafe partial struct IWICBitmapFrameDecode
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameDecode*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapFrameDecode*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameDecode*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapFrameDecode*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameDecode::GetMetadataQueryReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetMetadataQueryReader(IWICMetadataQueryReader* ppIMetadataQueryReader)
+	public HResult GetMetadataQueryReader(IWICMetadataQueryReader** ppIMetadataQueryReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameDecode*, IWICMetadataQueryReader*, int>)(lpVtbl[8]))((IWICBitmapFrameDecode*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameDecode*, IWICMetadataQueryReader**, int>)(lpVtbl[8]))((IWICBitmapFrameDecode*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameDecode::GetColorContexts"]/*' />
@@ -10309,9 +10292,9 @@ public unsafe partial struct IWICBitmapFrameDecode
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFrameDecode::GetThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetThumbnail(IWICBitmapSource* ppIThumbnail)
+	public HResult GetThumbnail(IWICBitmapSource** ppIThumbnail)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameDecode*, IWICBitmapSource*, int>)(lpVtbl[10]))((IWICBitmapFrameDecode*)Unsafe.AsPointer(ref this), ppIThumbnail);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameDecode*, IWICBitmapSource**, int>)(lpVtbl[10]))((IWICBitmapFrameDecode*)Unsafe.AsPointer(ref this), ppIThumbnail);
 	}
 }
 
@@ -10803,9 +10786,9 @@ public unsafe partial struct IWICFormatConverterInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICFormatConverterInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateInstance(IWICFormatConverter* ppIConverter)
+	public HResult CreateInstance(IWICFormatConverter** ppIConverter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICFormatConverterInfo*, IWICFormatConverter*, int>)(lpVtbl[12]))((IWICFormatConverterInfo*)Unsafe.AsPointer(ref this), ppIConverter);
+		return ((delegate* unmanaged[Stdcall]<IWICFormatConverterInfo*, IWICFormatConverter**, int>)(lpVtbl[12]))((IWICFormatConverterInfo*)Unsafe.AsPointer(ref this), ppIConverter);
 	}
 }
 
@@ -11255,9 +11238,9 @@ public unsafe partial struct IWICBitmapEncoderInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult CreateInstance(IWICBitmapEncoder* ppIBitmapEncoder)
+	public HResult CreateInstance(IWICBitmapEncoder** ppIBitmapEncoder)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoderInfo*, IWICBitmapEncoder*, int>)(lpVtbl[23]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapEncoder);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoderInfo*, IWICBitmapEncoder**, int>)(lpVtbl[23]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapEncoder);
 	}
 }
 
@@ -11485,9 +11468,9 @@ public unsafe partial struct IWICBitmapDecoderInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::GetPatterns"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult GetPatterns(uint cbSizePatterns, Wicbitmappattern* pPatterns, uint* pcPatterns, uint* pcbPatternsActual)
+	public HResult GetPatterns(uint cbSizePatterns, WICBitmapPattern* pPatterns, uint* pcPatterns, uint* pcbPatternsActual)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, Wicbitmappattern*, uint*, uint*, int>)(lpVtbl[23]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cbSizePatterns, pPatterns, pcPatterns, pcbPatternsActual);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, WICBitmapPattern*, uint*, uint*, int>)(lpVtbl[23]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cbSizePatterns, pPatterns, pcPatterns, pcbPatternsActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::MatchesPattern"]/*' />
@@ -11501,9 +11484,9 @@ public unsafe partial struct IWICBitmapDecoderInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult CreateInstance(IWICBitmapDecoder* ppIBitmapDecoder)
+	public HResult CreateInstance(IWICBitmapDecoder** ppIBitmapDecoder)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, IWICBitmapDecoder*, int>)(lpVtbl[25]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapDecoder);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, IWICBitmapDecoder**, int>)(lpVtbl[25]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapDecoder);
 	}
 }
 
@@ -11643,9 +11626,9 @@ public unsafe partial struct IWICPixelFormatInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult GetColorContext(IWICColorContext* ppIColorContext)
+	public HResult GetColorContext(IWICColorContext** ppIColorContext)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, IWICColorContext*, int>)(lpVtbl[12]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), ppIColorContext);
+		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, IWICColorContext**, int>)(lpVtbl[12]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), ppIColorContext);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetBitsPerPixel"]/*' />
@@ -11745,9 +11728,9 @@ public unsafe partial struct IWICPixelFormatInfo2
 	/// <inheritdoc cref="IWICPixelFormatInfo.GetColorContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetColorContext(IWICColorContext* ppIColorContext)
+	public HResult GetColorContext(IWICColorContext** ppIColorContext)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo2*, IWICColorContext*, int>)(lpVtbl[4]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), ppIColorContext);
+		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo2*, IWICColorContext**, int>)(lpVtbl[4]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), ppIColorContext);
 	}
 
 	/// <inheritdoc cref="IWICPixelFormatInfo.GetBitsPerPixel" />
@@ -11943,9 +11926,9 @@ public unsafe partial struct IWICImagingFactory
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateComponentInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateComponentInfo(Guid* clsidComponent, IWICComponentInfo* ppIInfo)
+	public HResult CreateComponentInfo(Guid* clsidComponent, IWICComponentInfo** ppIInfo)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, Guid*, IWICComponentInfo*, int>)(lpVtbl[6]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), clsidComponent, ppIInfo);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, Guid*, IWICComponentInfo**, int>)(lpVtbl[6]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), clsidComponent, ppIInfo);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateDecoder"]/*' />
@@ -11967,153 +11950,153 @@ public unsafe partial struct IWICImagingFactory
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreatePalette"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreatePalette(IWICPalette* ppIPalette)
+	public HResult CreatePalette(IWICPalette** ppIPalette)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICPalette*, int>)(lpVtbl[9]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIPalette);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICPalette**, int>)(lpVtbl[9]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIPalette);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateFormatConverter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateFormatConverter(IWICFormatConverter* ppIFormatConverter)
+	public HResult CreateFormatConverter(IWICFormatConverter** ppIFormatConverter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICFormatConverter*, int>)(lpVtbl[10]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIFormatConverter);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICFormatConverter**, int>)(lpVtbl[10]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIFormatConverter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmapScaler"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateBitmapScaler(IWICBitmapScaler* ppIBitmapScaler)
+	public HResult CreateBitmapScaler(IWICBitmapScaler** ppIBitmapScaler)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapScaler*, int>)(lpVtbl[11]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIBitmapScaler);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapScaler**, int>)(lpVtbl[11]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIBitmapScaler);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmapClipper"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateBitmapClipper(IWICBitmapClipper* ppIBitmapClipper)
+	public HResult CreateBitmapClipper(IWICBitmapClipper** ppIBitmapClipper)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapClipper*, int>)(lpVtbl[12]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIBitmapClipper);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapClipper**, int>)(lpVtbl[12]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIBitmapClipper);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmapFlipRotator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateBitmapFlipRotator(IWICBitmapFlipRotator* ppIBitmapFlipRotator)
+	public HResult CreateBitmapFlipRotator(IWICBitmapFlipRotator** ppIBitmapFlipRotator)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapFlipRotator*, int>)(lpVtbl[13]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIBitmapFlipRotator);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapFlipRotator**, int>)(lpVtbl[13]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIBitmapFlipRotator);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateStream(IWICStream* ppIWICStream)
+	public HResult CreateStream(IWICStream** ppIWICStream)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICStream*, int>)(lpVtbl[14]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIWICStream);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICStream**, int>)(lpVtbl[14]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIWICStream);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateColorContext(IWICColorContext* ppIWICColorContext)
+	public HResult CreateColorContext(IWICColorContext** ppIWICColorContext)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICColorContext*, int>)(lpVtbl[15]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIWICColorContext);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICColorContext**, int>)(lpVtbl[15]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIWICColorContext);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateColorTransformer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult CreateColorTransformer(IWICColorTransform* ppIWICColorTransform)
+	public HResult CreateColorTransformer(IWICColorTransform** ppIWICColorTransform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICColorTransform*, int>)(lpVtbl[16]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIWICColorTransform);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICColorTransform**, int>)(lpVtbl[16]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), ppIWICColorTransform);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult CreateBitmap(uint uiWidth, uint uiHeight, Guid* pixelFormat, WICBitmapCreateCacheOption option, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmap(uint uiWidth, uint uiHeight, Guid* pixelFormat, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap*, int>)(lpVtbl[17]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, option, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[17]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, option, ppIBitmap);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmapFromSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult CreateBitmapFromSource(IWICBitmapSource* pIBitmapSource, WICBitmapCreateCacheOption option, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromSource(IWICBitmapSource* pIBitmapSource, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap*, int>)(lpVtbl[18]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, option, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[18]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, option, ppIBitmap);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmapFromSourceRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult CreateBitmapFromSourceRect(IWICBitmapSource* pIBitmapSource, uint x, uint y, uint width, uint height, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromSourceRect(IWICBitmapSource* pIBitmapSource, uint x, uint y, uint width, uint height, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap*, int>)(lpVtbl[19]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, x, y, width, height, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap**, int>)(lpVtbl[19]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, x, y, width, height, ppIBitmap);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmapFromMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateBitmapFromMemory(uint uiWidth, uint uiHeight, Guid* pixelFormat, uint cbStride, uint cbBufferSize, byte* pbBuffer, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromMemory(uint uiWidth, uint uiHeight, Guid* pixelFormat, uint cbStride, uint cbBufferSize, byte* pbBuffer, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap*, int>)(lpVtbl[20]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, cbStride, cbBufferSize, pbBuffer, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap**, int>)(lpVtbl[20]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, cbStride, cbBufferSize, pbBuffer, ppIBitmap);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmapFromHBITMAP"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult CreateBitmapFromHBITMAP(IntPtr hBitmap, IntPtr hPalette, WICBitmapAlphaChannelOption options, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromHBITMAP(IntPtr hBitmap, IntPtr hPalette, WICBitmapAlphaChannelOption options, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap*, int>)(lpVtbl[21]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), hBitmap, hPalette, options, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap**, int>)(lpVtbl[21]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), hBitmap, hPalette, options, ppIBitmap);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateBitmapFromHICON"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CreateBitmapFromHICON(IntPtr hIcon, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromHICON(IntPtr hIcon, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IntPtr, IWICBitmap*, int>)(lpVtbl[22]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), hIcon, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IntPtr, IWICBitmap**, int>)(lpVtbl[22]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), hIcon, ppIBitmap);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateComponentEnumerator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult CreateComponentEnumerator(uint componentTypes, uint options, Com.IEnumUnknown* ppIEnumUnknown)
+	public HResult CreateComponentEnumerator(uint componentTypes, uint options, Com.IEnumUnknown** ppIEnumUnknown)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, uint, uint, Com.IEnumUnknown*, int>)(lpVtbl[23]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), componentTypes, options, ppIEnumUnknown);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, uint, uint, Com.IEnumUnknown**, int>)(lpVtbl[23]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), componentTypes, options, ppIEnumUnknown);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateFastMetadataEncoderFromDecoder"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CreateFastMetadataEncoderFromDecoder(IWICBitmapDecoder* pIDecoder, IWICFastMetadataEncoder* ppIFastEncoder)
+	public HResult CreateFastMetadataEncoderFromDecoder(IWICBitmapDecoder* pIDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapDecoder*, IWICFastMetadataEncoder*, int>)(lpVtbl[24]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIDecoder, ppIFastEncoder);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapDecoder*, IWICFastMetadataEncoder**, int>)(lpVtbl[24]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIDecoder, ppIFastEncoder);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateFastMetadataEncoderFromFrameDecode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult CreateFastMetadataEncoderFromFrameDecode(IWICBitmapFrameDecode* pIFrameDecoder, IWICFastMetadataEncoder* ppIFastEncoder)
+	public HResult CreateFastMetadataEncoderFromFrameDecode(IWICBitmapFrameDecode* pIFrameDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder*, int>)(lpVtbl[25]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIFrameDecoder, ppIFastEncoder);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder**, int>)(lpVtbl[25]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIFrameDecoder, ppIFastEncoder);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateQueryWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult CreateQueryWriter(Guid* guidMetadataFormat, Guid* pguidVendor, IWICMetadataQueryWriter* ppIQueryWriter)
+	public HResult CreateQueryWriter(Guid* guidMetadataFormat, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, Guid*, Guid*, IWICMetadataQueryWriter*, int>)(lpVtbl[26]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, ppIQueryWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, Guid*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[26]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, ppIQueryWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateQueryWriterFromReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter* ppIQueryWriter)
+	public HResult CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter*, int>)(lpVtbl[27]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[27]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
 	}
 }
 
@@ -12251,9 +12234,9 @@ public unsafe partial struct IWICDevelopRaw
 	/// <inheritdoc cref="IWICBitmapFrameDecode.GetMetadataQueryReader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetMetadataQueryReader(IWICMetadataQueryReader* ppIMetadataQueryReader)
+	public HResult GetMetadataQueryReader(IWICMetadataQueryReader** ppIMetadataQueryReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICMetadataQueryReader*, int>)(lpVtbl[3]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
+		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICMetadataQueryReader**, int>)(lpVtbl[3]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
 	}
 
 	/// <inheritdoc cref="IWICBitmapFrameDecode.GetColorContexts" />
@@ -12267,9 +12250,9 @@ public unsafe partial struct IWICDevelopRaw
 	/// <inheritdoc cref="IWICBitmapFrameDecode.GetThumbnail" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetThumbnail(IWICBitmapSource* ppIThumbnail)
+	public HResult GetThumbnail(IWICBitmapSource** ppIThumbnail)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICBitmapSource*, int>)(lpVtbl[5]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppIThumbnail);
+		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICBitmapSource**, int>)(lpVtbl[5]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppIThumbnail);
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
@@ -12307,17 +12290,17 @@ public unsafe partial struct IWICDevelopRaw
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CopyPixels(Wicrect* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[10]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[10]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::QueryRawCapabilitiesInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult QueryRawCapabilitiesInfo(Wicrawcapabilitiesinfo* pInfo)
+	public HResult QueryRawCapabilitiesInfo(WICRawCapabilitiesInfo* pInfo)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, Wicrawcapabilitiesinfo*, int>)(lpVtbl[11]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pInfo);
+		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, WICRawCapabilitiesInfo*, int>)(lpVtbl[11]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pInfo);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::LoadParameterSet"]/*' />
@@ -12331,9 +12314,9 @@ public unsafe partial struct IWICDevelopRaw
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetCurrentParameterSet"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetCurrentParameterSet(Com.IPropertyBag2* ppCurrentParameterSet)
+	public HResult GetCurrentParameterSet(Com.IPropertyBag2** ppCurrentParameterSet)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, Com.IPropertyBag2*, int>)(lpVtbl[13]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppCurrentParameterSet);
+		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, Com.IPropertyBag2**, int>)(lpVtbl[13]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppCurrentParameterSet);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetExposureCompensation"]/*' />
@@ -12515,17 +12498,17 @@ public unsafe partial struct IWICDevelopRaw
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetToneCurve"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public HResult SetToneCurve(uint cbToneCurveSize, Wicrawtonecurve* pToneCurve)
+	public HResult SetToneCurve(uint cbToneCurveSize, WICRawToneCurve* pToneCurve)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, Wicrawtonecurve*, int>)(lpVtbl[36]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cbToneCurveSize, pToneCurve);
+		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, WICRawToneCurve*, int>)(lpVtbl[36]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cbToneCurveSize, pToneCurve);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetToneCurve"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public HResult GetToneCurve(uint cbToneCurveBufferSize, Wicrawtonecurve* pToneCurve, uint* pcbActualToneCurveBufferSize)
+	public HResult GetToneCurve(uint cbToneCurveBufferSize, WICRawToneCurve* pToneCurve, uint* pcbActualToneCurveBufferSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, Wicrawtonecurve*, uint*, int>)(lpVtbl[37]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cbToneCurveBufferSize, pToneCurve, pcbActualToneCurveBufferSize);
+		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, WICRawToneCurve*, uint*, int>)(lpVtbl[37]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cbToneCurveBufferSize, pToneCurve, pcbActualToneCurveBufferSize);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetRotation"]/*' />
@@ -12633,9 +12616,9 @@ public unsafe partial struct IWICDdsDecoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsDecoder::GetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetParameters(Wicddsparameters* pParameters)
+	public HResult GetParameters(WICDdsParameters* pParameters)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDdsDecoder*, Wicddsparameters*, int>)(lpVtbl[3]))((IWICDdsDecoder*)Unsafe.AsPointer(ref this), pParameters);
+		return ((delegate* unmanaged[Stdcall]<IWICDdsDecoder*, WICDdsParameters*, int>)(lpVtbl[3]))((IWICDdsDecoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsDecoder::GetFrame"]/*' />
@@ -12711,25 +12694,25 @@ public unsafe partial struct IWICDdsEncoder
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::SetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetParameters(Wicddsparameters* pParameters)
+	public HResult SetParameters(WICDdsParameters* pParameters)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, Wicddsparameters*, int>)(lpVtbl[3]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
+		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[3]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::GetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetParameters(Wicddsparameters* pParameters)
+	public HResult GetParameters(WICDdsParameters* pParameters)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, Wicddsparameters*, int>)(lpVtbl[4]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
+		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[4]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::CreateNewFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateNewFrame(IWICBitmapFrameEncode* ppIFrameEncode, uint* pArrayIndex, uint* pMipLevel, uint* pSliceIndex)
+	public HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, uint* pArrayIndex, uint* pMipLevel, uint* pSliceIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, IWICBitmapFrameEncode*, uint*, uint*, uint*, int>)(lpVtbl[5]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, pArrayIndex, pMipLevel, pSliceIndex);
+		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, IWICBitmapFrameEncode**, uint*, uint*, uint*, int>)(lpVtbl[5]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, pArrayIndex, pMipLevel, pSliceIndex);
 	}
 }
 
@@ -12805,17 +12788,17 @@ public unsafe partial struct IWICDdsFrameDecode
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetFormatInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetFormatInfo(Wicddsformatinfo* pFormatInfo)
+	public HResult GetFormatInfo(WICDdsFormatInfo* pFormatInfo)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, Wicddsformatinfo*, int>)(lpVtbl[4]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pFormatInfo);
+		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, WICDdsFormatInfo*, int>)(lpVtbl[4]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pFormatInfo);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::CopyBlocks"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CopyBlocks(Wicrect* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer)
+	public HResult CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, Wicrect*, uint, uint, byte*, int>)(lpVtbl[5]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), prcBoundsInBlocks, cbStride, cbBufferSize, pbBuffer);
+		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[5]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), prcBoundsInBlocks, cbStride, cbBufferSize, pbBuffer);
 	}
 }
 
@@ -12931,17 +12914,17 @@ public unsafe partial struct IWICJpegFrameDecode
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetFrameHeader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetFrameHeader(Wicjpegframeheader* pFrameHeader)
+	public HResult GetFrameHeader(WICJpegFrameHeader* pFrameHeader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, Wicjpegframeheader*, int>)(lpVtbl[9]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pFrameHeader);
+		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, WICJpegFrameHeader*, int>)(lpVtbl[9]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pFrameHeader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetScanHeader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetScanHeader(uint scanIndex, Wicjpegscanheader* pScanHeader)
+	public HResult GetScanHeader(uint scanIndex, WICJpegScanHeader* pScanHeader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, Wicjpegscanheader*, int>)(lpVtbl[10]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, pScanHeader);
+		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, WICJpegScanHeader*, int>)(lpVtbl[10]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, pScanHeader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::CopyScan"]/*' />
@@ -13135,17 +13118,17 @@ public unsafe partial struct IWICMetadataBlockReader
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockReader::GetReaderByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetReaderByIndex(uint nIndex, IWICMetadataReader* ppIMetadataReader)
+	public HResult GetReaderByIndex(uint nIndex, IWICMetadataReader** ppIMetadataReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, uint, IWICMetadataReader*, int>)(lpVtbl[5]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, uint, IWICMetadataReader**, int>)(lpVtbl[5]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockReader::GetEnumerator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetEnumerator(Com.IEnumUnknown* ppIEnumMetadata)
+	public HResult GetEnumerator(Com.IEnumUnknown** ppIEnumMetadata)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, Com.IEnumUnknown*, int>)(lpVtbl[6]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
 }
 
@@ -13229,17 +13212,17 @@ public unsafe partial struct IWICMetadataBlockWriter
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetReaderByIndex" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetReaderByIndex(uint nIndex, IWICMetadataReader* ppIMetadataReader)
+	public HResult GetReaderByIndex(uint nIndex, IWICMetadataReader** ppIMetadataReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataReader*, int>)(lpVtbl[5]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataReader**, int>)(lpVtbl[5]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
 	}
 
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetEnumerator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetEnumerator(Com.IEnumUnknown* ppIEnumMetadata)
+	public HResult GetEnumerator(Com.IEnumUnknown** ppIEnumMetadata)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, Com.IEnumUnknown*, int>)(lpVtbl[6]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::InitializeFromBlockReader"]/*' />
@@ -13253,9 +13236,9 @@ public unsafe partial struct IWICMetadataBlockWriter
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::GetWriterByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetWriterByIndex(uint nIndex, IWICMetadataWriter* ppIMetadataWriter)
+	public HResult GetWriterByIndex(uint nIndex, IWICMetadataWriter** ppIMetadataWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataWriter*, int>)(lpVtbl[8]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataWriter**, int>)(lpVtbl[8]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::AddWriter"]/*' />
@@ -13355,9 +13338,9 @@ public unsafe partial struct IWICMetadataReader
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetMetadataHandlerInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetMetadataHandlerInfo(IWICMetadataHandlerInfo* ppIHandler)
+	public HResult GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, IWICMetadataHandlerInfo*, int>)(lpVtbl[4]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), ppIHandler);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, IWICMetadataHandlerInfo**, int>)(lpVtbl[4]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), ppIHandler);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetCount"]/*' />
@@ -13371,25 +13354,25 @@ public unsafe partial struct IWICMetadataReader
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetValueByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetValueByIndex(uint nIndex, Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
+	public HResult GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, uint, Com.Variant*, Com.Variant*, Com.Variant*, int>)(lpVtbl[6]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), nIndex, pvarSchema, pvarId, pvarValue);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, uint, Com.Variant**, Com.Variant**, Com.Variant**, int>)(lpVtbl[6]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), nIndex, pvarSchema, pvarId, pvarValue);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
+	public HResult GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, Com.Variant*, Com.Variant*, Com.Variant*, int>)(lpVtbl[7]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), pvarSchema, pvarId, pvarValue);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, Com.Variant*, Com.Variant*, Com.Variant**, int>)(lpVtbl[7]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), pvarSchema, pvarId, pvarValue);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReader::GetEnumerator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetEnumerator(IWICEnumMetadataItem* ppIEnumMetadata)
+	public HResult GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, IWICEnumMetadataItem*, int>)(lpVtbl[8]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, IWICEnumMetadataItem**, int>)(lpVtbl[8]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
 }
 
@@ -13465,9 +13448,9 @@ public unsafe partial struct IWICMetadataWriter
 	/// <inheritdoc cref="IWICMetadataReader.GetMetadataHandlerInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetMetadataHandlerInfo(IWICMetadataHandlerInfo* ppIHandler)
+	public HResult GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, IWICMetadataHandlerInfo*, int>)(lpVtbl[4]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), ppIHandler);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, IWICMetadataHandlerInfo**, int>)(lpVtbl[4]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), ppIHandler);
 	}
 
 	/// <inheritdoc cref="IWICMetadataReader.GetCount" />
@@ -13481,25 +13464,25 @@ public unsafe partial struct IWICMetadataWriter
 	/// <inheritdoc cref="IWICMetadataReader.GetValueByIndex" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetValueByIndex(uint nIndex, Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
+	public HResult GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, uint, Com.Variant*, Com.Variant*, Com.Variant*, int>)(lpVtbl[6]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), nIndex, pvarSchema, pvarId, pvarValue);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, uint, Com.Variant**, Com.Variant**, Com.Variant**, int>)(lpVtbl[6]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), nIndex, pvarSchema, pvarId, pvarValue);
 	}
 
 	/// <inheritdoc cref="IWICMetadataReader.GetValue" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
+	public HResult GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, Com.Variant*, Com.Variant*, Com.Variant*, int>)(lpVtbl[7]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pvarSchema, pvarId, pvarValue);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, Com.Variant*, Com.Variant*, Com.Variant**, int>)(lpVtbl[7]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pvarSchema, pvarId, pvarValue);
 	}
 
 	/// <inheritdoc cref="IWICMetadataReader.GetEnumerator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetEnumerator(IWICEnumMetadataItem* ppIEnumMetadata)
+	public HResult GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, IWICEnumMetadataItem*, int>)(lpVtbl[8]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, IWICEnumMetadataItem**, int>)(lpVtbl[8]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::SetValue"]/*' />
@@ -13599,9 +13582,9 @@ public unsafe partial struct IWICStreamProvider
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::GetStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetStream(Com.IStream* ppIStream)
+	public HResult GetStream(Com.IStream** ppIStream)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, Com.IStream*, int>)(lpVtbl[3]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), ppIStream);
+		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, Com.IStream**, int>)(lpVtbl[3]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), ppIStream);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::GetPersistOptions"]/*' />
@@ -14047,9 +14030,9 @@ public unsafe partial struct IWICMetadataReaderInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::GetPatterns"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetPatterns(Guid* guidContainerFormat, uint cbSize, Wicmetadatapattern* pPattern, uint* pcCount, uint* pcbActual)
+	public HResult GetPatterns(Guid* guidContainerFormat, uint cbSize, WICMetadataPattern* pPattern, uint* pcCount, uint* pcbActual)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, uint, Wicmetadatapattern*, uint*, uint*, int>)(lpVtbl[18]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pPattern, pcCount, pcbActual);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, uint, WICMetadataPattern*, uint*, uint*, int>)(lpVtbl[18]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pPattern, pcCount, pcbActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::MatchesPattern"]/*' />
@@ -14063,9 +14046,9 @@ public unsafe partial struct IWICMetadataReaderInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateInstance(IWICMetadataReader* ppIReader)
+	public HResult CreateInstance(IWICMetadataReader** ppIReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, IWICMetadataReader*, int>)(lpVtbl[20]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), ppIReader);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, IWICMetadataReader**, int>)(lpVtbl[20]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), ppIReader);
 	}
 }
 
@@ -14253,17 +14236,17 @@ public unsafe partial struct IWICMetadataWriterInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriterInfo::GetHeader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetHeader(Guid* guidContainerFormat, uint cbSize, Wicmetadataheader* pHeader, uint* pcbActual)
+	public HResult GetHeader(Guid* guidContainerFormat, uint cbSize, WICMetadataHeader* pHeader, uint* pcbActual)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriterInfo*, Guid*, uint, Wicmetadataheader*, uint*, int>)(lpVtbl[18]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pHeader, pcbActual);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriterInfo*, Guid*, uint, WICMetadataHeader*, uint*, int>)(lpVtbl[18]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pHeader, pcbActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriterInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult CreateInstance(IWICMetadataWriter* ppIWriter)
+	public HResult CreateInstance(IWICMetadataWriter** ppIWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriterInfo*, IWICMetadataWriter*, int>)(lpVtbl[19]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), ppIWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriterInfo*, IWICMetadataWriter**, int>)(lpVtbl[19]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), ppIWriter);
 	}
 }
 
@@ -14355,9 +14338,9 @@ public unsafe partial struct IWICComponentFactory
 	/// <inheritdoc cref="IWICImagingFactory.CreateComponentInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateComponentInfo(Guid* clsidComponent, IWICComponentInfo* ppIInfo)
+	public HResult CreateComponentInfo(Guid* clsidComponent, IWICComponentInfo** ppIInfo)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, IWICComponentInfo*, int>)(lpVtbl[6]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), clsidComponent, ppIInfo);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, IWICComponentInfo**, int>)(lpVtbl[6]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), clsidComponent, ppIInfo);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoder" />
@@ -14379,209 +14362,209 @@ public unsafe partial struct IWICComponentFactory
 	/// <inheritdoc cref="IWICImagingFactory.CreatePalette" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreatePalette(IWICPalette* ppIPalette)
+	public HResult CreatePalette(IWICPalette** ppIPalette)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICPalette*, int>)(lpVtbl[9]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIPalette);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICPalette**, int>)(lpVtbl[9]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIPalette);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateFormatConverter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateFormatConverter(IWICFormatConverter* ppIFormatConverter)
+	public HResult CreateFormatConverter(IWICFormatConverter** ppIFormatConverter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICFormatConverter*, int>)(lpVtbl[10]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIFormatConverter);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICFormatConverter**, int>)(lpVtbl[10]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIFormatConverter);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapScaler" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateBitmapScaler(IWICBitmapScaler* ppIBitmapScaler)
+	public HResult CreateBitmapScaler(IWICBitmapScaler** ppIBitmapScaler)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapScaler*, int>)(lpVtbl[11]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapScaler);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapScaler**, int>)(lpVtbl[11]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapScaler);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapClipper" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateBitmapClipper(IWICBitmapClipper* ppIBitmapClipper)
+	public HResult CreateBitmapClipper(IWICBitmapClipper** ppIBitmapClipper)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapClipper*, int>)(lpVtbl[12]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapClipper);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapClipper**, int>)(lpVtbl[12]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapClipper);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFlipRotator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateBitmapFlipRotator(IWICBitmapFlipRotator* ppIBitmapFlipRotator)
+	public HResult CreateBitmapFlipRotator(IWICBitmapFlipRotator** ppIBitmapFlipRotator)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapFlipRotator*, int>)(lpVtbl[13]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapFlipRotator);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapFlipRotator**, int>)(lpVtbl[13]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapFlipRotator);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateStream" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult CreateStream(IWICStream* ppIWICStream)
+	public HResult CreateStream(IWICStream** ppIWICStream)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICStream*, int>)(lpVtbl[14]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICStream);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICStream**, int>)(lpVtbl[14]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICStream);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateColorContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateColorContext(IWICColorContext* ppIWICColorContext)
+	public HResult CreateColorContext(IWICColorContext** ppIWICColorContext)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICColorContext*, int>)(lpVtbl[15]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorContext);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICColorContext**, int>)(lpVtbl[15]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorContext);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateColorTransformer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult CreateColorTransformer(IWICColorTransform* ppIWICColorTransform)
+	public HResult CreateColorTransformer(IWICColorTransform** ppIWICColorTransform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICColorTransform*, int>)(lpVtbl[16]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorTransform);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICColorTransform**, int>)(lpVtbl[16]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorTransform);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult CreateBitmap(uint uiWidth, uint uiHeight, Guid* pixelFormat, WICBitmapCreateCacheOption option, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmap(uint uiWidth, uint uiHeight, Guid* pixelFormat, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap*, int>)(lpVtbl[17]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, option, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[17]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, option, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromSource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult CreateBitmapFromSource(IWICBitmapSource* pIBitmapSource, WICBitmapCreateCacheOption option, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromSource(IWICBitmapSource* pIBitmapSource, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap*, int>)(lpVtbl[18]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, option, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[18]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, option, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromSourceRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult CreateBitmapFromSourceRect(IWICBitmapSource* pIBitmapSource, uint x, uint y, uint width, uint height, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromSourceRect(IWICBitmapSource* pIBitmapSource, uint x, uint y, uint width, uint height, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap*, int>)(lpVtbl[19]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, x, y, width, height, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap**, int>)(lpVtbl[19]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, x, y, width, height, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromMemory" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateBitmapFromMemory(uint uiWidth, uint uiHeight, Guid* pixelFormat, uint cbStride, uint cbBufferSize, byte* pbBuffer, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromMemory(uint uiWidth, uint uiHeight, Guid* pixelFormat, uint cbStride, uint cbBufferSize, byte* pbBuffer, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap*, int>)(lpVtbl[20]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, cbStride, cbBufferSize, pbBuffer, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap**, int>)(lpVtbl[20]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, cbStride, cbBufferSize, pbBuffer, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromHBITMAP" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult CreateBitmapFromHBITMAP(IntPtr hBitmap, IntPtr hPalette, WICBitmapAlphaChannelOption options, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromHBITMAP(IntPtr hBitmap, IntPtr hPalette, WICBitmapAlphaChannelOption options, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap*, int>)(lpVtbl[21]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hBitmap, hPalette, options, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap**, int>)(lpVtbl[21]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hBitmap, hPalette, options, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromHICON" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CreateBitmapFromHICON(IntPtr hIcon, IWICBitmap* ppIBitmap)
+	public HResult CreateBitmapFromHICON(IntPtr hIcon, IWICBitmap** ppIBitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IntPtr, IWICBitmap*, int>)(lpVtbl[22]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hIcon, ppIBitmap);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IntPtr, IWICBitmap**, int>)(lpVtbl[22]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hIcon, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateComponentEnumerator" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult CreateComponentEnumerator(uint componentTypes, uint options, Com.IEnumUnknown* ppIEnumUnknown)
+	public HResult CreateComponentEnumerator(uint componentTypes, uint options, Com.IEnumUnknown** ppIEnumUnknown)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Com.IEnumUnknown*, int>)(lpVtbl[23]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), componentTypes, options, ppIEnumUnknown);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Com.IEnumUnknown**, int>)(lpVtbl[23]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), componentTypes, options, ppIEnumUnknown);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateFastMetadataEncoderFromDecoder" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CreateFastMetadataEncoderFromDecoder(IWICBitmapDecoder* pIDecoder, IWICFastMetadataEncoder* ppIFastEncoder)
+	public HResult CreateFastMetadataEncoderFromDecoder(IWICBitmapDecoder* pIDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapDecoder*, IWICFastMetadataEncoder*, int>)(lpVtbl[24]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIDecoder, ppIFastEncoder);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapDecoder*, IWICFastMetadataEncoder**, int>)(lpVtbl[24]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIDecoder, ppIFastEncoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateFastMetadataEncoderFromFrameDecode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult CreateFastMetadataEncoderFromFrameDecode(IWICBitmapFrameDecode* pIFrameDecoder, IWICFastMetadataEncoder* ppIFastEncoder)
+	public HResult CreateFastMetadataEncoderFromFrameDecode(IWICBitmapFrameDecode* pIFrameDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder*, int>)(lpVtbl[25]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIFrameDecoder, ppIFastEncoder);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder**, int>)(lpVtbl[25]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIFrameDecoder, ppIFastEncoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateQueryWriter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult CreateQueryWriter(Guid* guidMetadataFormat, Guid* pguidVendor, IWICMetadataQueryWriter* ppIQueryWriter)
+	public HResult CreateQueryWriter(Guid* guidMetadataFormat, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, IWICMetadataQueryWriter*, int>)(lpVtbl[26]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, ppIQueryWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[26]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, ppIQueryWriter);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateQueryWriterFromReader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter* ppIQueryWriter)
+	public HResult CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter*, int>)(lpVtbl[27]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[27]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult CreateMetadataReader(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader* ppIReader)
+	public HResult CreateMetadataReader(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader** ppIReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader*, int>)(lpVtbl[28]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwOptions, pIStream, ppIReader);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[28]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwOptions, pIStream, ppIReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataReaderFromContainer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult CreateMetadataReaderFromContainer(Guid* guidContainerFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader* ppIReader)
+	public HResult CreateMetadataReaderFromContainer(Guid* guidContainerFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader** ppIReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader*, int>)(lpVtbl[29]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, dwOptions, pIStream, ppIReader);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[29]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, dwOptions, pIStream, ppIReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult CreateMetadataWriter(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwMetadataOptions, IWICMetadataWriter* ppIWriter)
+	public HResult CreateMetadataWriter(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwMetadataOptions, IWICMetadataWriter** ppIWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, IWICMetadataWriter*, int>)(lpVtbl[30]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwMetadataOptions, ppIWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, IWICMetadataWriter**, int>)(lpVtbl[30]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwMetadataOptions, ppIWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataWriterFromReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateMetadataWriterFromReader(IWICMetadataReader* pIReader, Guid* pguidVendor, IWICMetadataWriter* ppIWriter)
+	public HResult CreateMetadataWriterFromReader(IWICMetadataReader* pIReader, Guid* pguidVendor, IWICMetadataWriter** ppIWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataReader*, Guid*, IWICMetadataWriter*, int>)(lpVtbl[31]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIReader, pguidVendor, ppIWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataReader*, Guid*, IWICMetadataWriter**, int>)(lpVtbl[31]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIReader, pguidVendor, ppIWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateQueryReaderFromBlockReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult CreateQueryReaderFromBlockReader(IWICMetadataBlockReader* pIBlockReader, IWICMetadataQueryReader* ppIQueryReader)
+	public HResult CreateQueryReaderFromBlockReader(IWICMetadataBlockReader* pIBlockReader, IWICMetadataQueryReader** ppIQueryReader)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataBlockReader*, IWICMetadataQueryReader*, int>)(lpVtbl[32]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockReader, ppIQueryReader);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataBlockReader*, IWICMetadataQueryReader**, int>)(lpVtbl[32]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockReader, ppIQueryReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateQueryWriterFromBlockWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult CreateQueryWriterFromBlockWriter(IWICMetadataBlockWriter* pIBlockWriter, IWICMetadataQueryWriter* ppIQueryWriter)
+	public HResult CreateQueryWriterFromBlockWriter(IWICMetadataBlockWriter* pIBlockWriter, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataBlockWriter*, IWICMetadataQueryWriter*, int>)(lpVtbl[33]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockWriter, ppIQueryWriter);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataBlockWriter*, IWICMetadataQueryWriter**, int>)(lpVtbl[33]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockWriter, ppIQueryWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateEncoderPropertyBag"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult CreateEncoderPropertyBag(Com.PropertyBagMetadata** ppropOptions, uint cCount, Com.IPropertyBag2* ppIPropertyBag)
+	public HResult CreateEncoderPropertyBag(Com.PropertyBagMetadata** ppropOptions, uint cCount, Com.IPropertyBag2** ppIPropertyBag)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Com.PropertyBagMetadata**, uint, Com.IPropertyBag2*, int>)(lpVtbl[34]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppropOptions, cCount, ppIPropertyBag);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Com.PropertyBagMetadata**, uint, Com.IPropertyBag2**, int>)(lpVtbl[34]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppropOptions, cCount, ppIPropertyBag);
 	}
 }
 
@@ -14615,7 +14598,7 @@ public static unsafe partial class Apis
 	public static extern HResult WICSerializeMetadataContent(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, uint dwPersistOptions, Com.IStream* pIStream);
 
 	[DllImport("WindowsCodecs", ExactSpelling = true)]
-	public static extern HResult WICGetMetadataContentSize(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, ULargeInterger* pcbSize);
+	public static extern HResult WICGetMetadataContentSize(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, ULargeInteger* pcbSize);
 
 }
 #endregion Functions

@@ -2145,9 +2145,9 @@ public unsafe partial struct IDxcContainerBuilder
 	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::SerializeContainer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SerializeContainer(IDxcOperationResult* ppResult)
+	public HResult SerializeContainer(IDxcOperationResult** ppResult)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDxcContainerBuilder*, IDxcOperationResult*, int>)(lpVtbl[6]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), ppResult);
+		return ((delegate* unmanaged[Stdcall]<IDxcContainerBuilder*, IDxcOperationResult**, int>)(lpVtbl[6]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), ppResult);
 	}
 }
 

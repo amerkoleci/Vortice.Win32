@@ -1,23 +1,21 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using System.Numerics;
 using Win32;
 using Win32.Graphics.Direct3D;
+using Win32.Graphics.Direct3D.Dxc;
 using Win32.Graphics.Direct3D11;
 using Win32.Graphics.Dxgi;
+using Win32.Graphics.Dxgi.Common;
+using Win32.Graphics.Imaging;
 using static Win32.Apis;
+using static Win32.Graphics.Direct3D.Dxc.Apis;
 using static Win32.Graphics.Direct3D11.Apis;
 using static Win32.Graphics.Dxgi.Apis;
-using MessageId = Win32.Graphics.Direct3D11.MessageId;
-using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
-using Win32.Graphics.Dxgi.Common;
-using System.Numerics;
-using Win32.Graphics.Direct3D.Dxc;
-using static Win32.Graphics.Direct3D.Dxc.Apis;
-using System.Runtime.CompilerServices;
-using System.Security.Claims;
-using Win32.Graphics.Imaging;
 using static Win32.Graphics.Imaging.Apis;
+using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
+using MessageId = Win32.Graphics.Direct3D11.MessageId;
 
 namespace ClearScreen;
 
@@ -64,6 +62,14 @@ public static unsafe class Program
 
         // Get the first frame of the loaded image (if more are present, they will be ignored)
         decoder.Get()->GetFrame(0, wicBitmapFrameDecode.GetAddressOf()).ThrowIfFailed();
+
+        uint width;
+        uint height;
+        Guid pixelFormat;
+
+        wicBitmapFrameDecode.Get()->GetSize(&width, &height).ThrowIfFailed();
+        wicBitmapFrameDecode.Get()->GetPixelFormat(&pixelFormat).ThrowIfFailed();
+        //wicBitmapFrameDecode.Get()->CopyPixels(rowPitch, pixels);
     }
 
     public static void Main()

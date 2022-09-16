@@ -13464,9 +13464,9 @@ public unsafe partial struct ID3D11DeviceChild
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::GetDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceChild*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceChild*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::GetPrivateData"]/*' />
@@ -13558,9 +13558,9 @@ public unsafe partial struct ID3D11DepthStencilState
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilState*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11DepthStencilState*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilState*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11DepthStencilState*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -13660,9 +13660,9 @@ public unsafe partial struct ID3D11BlendState
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11BlendState*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11BlendState*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11BlendState*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11BlendState*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -13762,9 +13762,9 @@ public unsafe partial struct ID3D11RasterizerState
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11RasterizerState*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11RasterizerState*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -13864,9 +13864,9 @@ public unsafe partial struct ID3D11Resource
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Resource*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11Resource*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Resource*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11Resource*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14006,9 +14006,9 @@ public unsafe partial struct ID3D11Buffer
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Buffer*, ID3D11Device*, void>)(lpVtbl[6]))((ID3D11Buffer*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Buffer*, ID3D11Device**, void>)(lpVtbl[6]))((ID3D11Buffer*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14132,9 +14132,9 @@ public unsafe partial struct ID3D11Texture1D
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Texture1D*, ID3D11Device*, void>)(lpVtbl[6]))((ID3D11Texture1D*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Texture1D*, ID3D11Device**, void>)(lpVtbl[6]))((ID3D11Texture1D*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14258,9 +14258,9 @@ public unsafe partial struct ID3D11Texture2D
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Texture2D*, ID3D11Device*, void>)(lpVtbl[6]))((ID3D11Texture2D*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Texture2D*, ID3D11Device**, void>)(lpVtbl[6]))((ID3D11Texture2D*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14384,9 +14384,9 @@ public unsafe partial struct ID3D11Texture3D
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Texture3D*, ID3D11Device*, void>)(lpVtbl[6]))((ID3D11Texture3D*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Texture3D*, ID3D11Device**, void>)(lpVtbl[6]))((ID3D11Texture3D*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14486,9 +14486,9 @@ public unsafe partial struct ID3D11View
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11View*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11View*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11View*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11View*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14518,9 +14518,9 @@ public unsafe partial struct ID3D11View
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11View::GetResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11View*, ID3D11Resource*, void>)(lpVtbl[7]))((ID3D11View*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11View*, ID3D11Resource**, void>)(lpVtbl[7]))((ID3D11View*)Unsafe.AsPointer(ref this), ppResource);
 	}
 }
 
@@ -14588,17 +14588,17 @@ public unsafe partial struct ID3D11ShaderResourceView
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView*, ID3D11Resource*, void>)(lpVtbl[3]))((ID3D11ShaderResourceView*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView*, ID3D11Resource**, void>)(lpVtbl[3]))((ID3D11ShaderResourceView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11ShaderResourceView*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11ShaderResourceView*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14698,17 +14698,17 @@ public unsafe partial struct ID3D11RenderTargetView
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView*, ID3D11Resource*, void>)(lpVtbl[3]))((ID3D11RenderTargetView*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView*, ID3D11Resource**, void>)(lpVtbl[3]))((ID3D11RenderTargetView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11RenderTargetView*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11RenderTargetView*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14808,17 +14808,17 @@ public unsafe partial struct ID3D11DepthStencilView
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilView*, ID3D11Resource*, void>)(lpVtbl[3]))((ID3D11DepthStencilView*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilView*, ID3D11Resource**, void>)(lpVtbl[3]))((ID3D11DepthStencilView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilView*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11DepthStencilView*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilView*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11DepthStencilView*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -14918,17 +14918,17 @@ public unsafe partial struct ID3D11UnorderedAccessView
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView*, ID3D11Resource*, void>)(lpVtbl[3]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView*, ID3D11Resource**, void>)(lpVtbl[3]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15028,9 +15028,9 @@ public unsafe partial struct ID3D11VertexShader
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VertexShader*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11VertexShader*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VertexShader*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VertexShader*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15122,9 +15122,9 @@ public unsafe partial struct ID3D11HullShader
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11HullShader*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11HullShader*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11HullShader*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11HullShader*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15216,9 +15216,9 @@ public unsafe partial struct ID3D11DomainShader
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DomainShader*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11DomainShader*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DomainShader*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11DomainShader*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15310,9 +15310,9 @@ public unsafe partial struct ID3D11GeometryShader
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11GeometryShader*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11GeometryShader*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11GeometryShader*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11GeometryShader*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15404,9 +15404,9 @@ public unsafe partial struct ID3D11PixelShader
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11PixelShader*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11PixelShader*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11PixelShader*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11PixelShader*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15498,9 +15498,9 @@ public unsafe partial struct ID3D11ComputeShader
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11ComputeShader*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11ComputeShader*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11ComputeShader*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11ComputeShader*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15592,9 +15592,9 @@ public unsafe partial struct ID3D11InputLayout
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11InputLayout*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11InputLayout*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11InputLayout*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11InputLayout*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15686,9 +15686,9 @@ public unsafe partial struct ID3D11SamplerState
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11SamplerState*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11SamplerState*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11SamplerState*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11SamplerState*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15788,9 +15788,9 @@ public unsafe partial struct ID3D11Asynchronous
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Asynchronous*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11Asynchronous*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Asynchronous*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11Asynchronous*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -15898,9 +15898,9 @@ public unsafe partial struct ID3D11Query
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Query*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11Query*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Query*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11Query*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -16016,9 +16016,9 @@ public unsafe partial struct ID3D11Predicate
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Predicate*, ID3D11Device*, void>)(lpVtbl[5]))((ID3D11Predicate*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Predicate*, ID3D11Device**, void>)(lpVtbl[5]))((ID3D11Predicate*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -16118,9 +16118,9 @@ public unsafe partial struct ID3D11Counter
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Counter*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11Counter*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Counter*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11Counter*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -16220,9 +16220,9 @@ public unsafe partial struct ID3D11ClassInstance
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -16252,9 +16252,9 @@ public unsafe partial struct ID3D11ClassInstance
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetClassLinkage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetClassLinkage(ID3D11ClassLinkage* ppLinkage)
+	public void GetClassLinkage(ID3D11ClassLinkage** ppLinkage)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, ID3D11ClassLinkage*, void>)(lpVtbl[7]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), ppLinkage);
+		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, ID3D11ClassLinkage**, void>)(lpVtbl[7]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), ppLinkage);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetDesc"]/*' />
@@ -16346,9 +16346,9 @@ public unsafe partial struct ID3D11ClassLinkage
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -16456,9 +16456,9 @@ public unsafe partial struct ID3D11CommandList
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11CommandList*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11CommandList*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11CommandList*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11CommandList*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -16558,9 +16558,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -17126,9 +17126,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::PSGetShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(74)]
-	public void PSGetShader(ID3D11PixelShader* ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void PSGetShader(ID3D11PixelShader** ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11PixelShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[74]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11PixelShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[74]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::PSGetSamplers"]/*' />
@@ -17142,9 +17142,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::VSGetShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
-	public void VSGetShader(ID3D11VertexShader* ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void VSGetShader(ID3D11VertexShader** ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11VertexShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[76]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11VertexShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[76]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::PSGetConstantBuffers"]/*' />
@@ -17158,9 +17158,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::IAGetInputLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
-	public void IAGetInputLayout(ID3D11InputLayout* ppInputLayout)
+	public void IAGetInputLayout(ID3D11InputLayout** ppInputLayout)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11InputLayout*, void>)(lpVtbl[78]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppInputLayout);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11InputLayout**, void>)(lpVtbl[78]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppInputLayout);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::IAGetVertexBuffers"]/*' />
@@ -17174,9 +17174,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::IAGetIndexBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
-	public void IAGetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
+	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11Buffer*, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[80]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11Buffer**, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[80]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::GSGetConstantBuffers"]/*' />
@@ -17190,9 +17190,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::GSGetShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
-	public void GSGetShader(ID3D11GeometryShader* ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void GSGetShader(ID3D11GeometryShader** ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[82]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11GeometryShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[82]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::IAGetPrimitiveTopology"]/*' />
@@ -17222,9 +17222,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::GetPredication"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(86)]
-	public void GetPredication(ID3D11Predicate* ppPredicate, Bool32* pPredicateValue)
+	public void GetPredication(ID3D11Predicate** ppPredicate, Bool32* pPredicateValue)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11Predicate*, Bool32*, void>)(lpVtbl[86]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11Predicate**, Bool32*, void>)(lpVtbl[86]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::GSGetShaderResources"]/*' />
@@ -17246,33 +17246,33 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::OMGetRenderTargets"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(89)]
-	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView)
+	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, void>)(lpVtbl[89]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, void>)(lpVtbl[89]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::OMGetRenderTargetsAndUnorderedAccessViews"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(90)]
-	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
+	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[90]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[90]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::OMGetBlendState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(91)]
-	public void OMGetBlendState(ID3D11BlendState* ppBlendState, float* BlendFactor, uint* pSampleMask)
+	public void OMGetBlendState(ID3D11BlendState** ppBlendState, float* BlendFactor, uint* pSampleMask)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11BlendState*, float*, uint*, void>)(lpVtbl[91]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11BlendState**, float*, uint*, void>)(lpVtbl[91]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::OMGetDepthStencilState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(92)]
-	public void OMGetDepthStencilState(ID3D11DepthStencilState* ppDepthStencilState, uint* pStencilRef)
+	public void OMGetDepthStencilState(ID3D11DepthStencilState** ppDepthStencilState, uint* pStencilRef)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11DepthStencilState*, uint*, void>)(lpVtbl[92]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11DepthStencilState**, uint*, void>)(lpVtbl[92]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::SOGetTargets"]/*' />
@@ -17286,9 +17286,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::RSGetState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(94)]
-	public void RSGetState(ID3D11RasterizerState* ppRasterizerState)
+	public void RSGetState(ID3D11RasterizerState** ppRasterizerState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11RasterizerState*, void>)(lpVtbl[94]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppRasterizerState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11RasterizerState**, void>)(lpVtbl[94]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppRasterizerState);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::RSGetViewports"]/*' />
@@ -17318,9 +17318,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::HSGetShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(98)]
-	public void HSGetShader(ID3D11HullShader* ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void HSGetShader(ID3D11HullShader** ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11HullShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[98]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11HullShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[98]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::HSGetSamplers"]/*' />
@@ -17350,9 +17350,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::DSGetShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(102)]
-	public void DSGetShader(ID3D11DomainShader* ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void DSGetShader(ID3D11DomainShader** ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11DomainShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[102]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11DomainShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[102]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::DSGetSamplers"]/*' />
@@ -17390,9 +17390,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::CSGetShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(107)]
-	public void CSGetShader(ID3D11ComputeShader* ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void CSGetShader(ID3D11ComputeShader** ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[107]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11ComputeShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[107]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::CSGetSamplers"]/*' />
@@ -17516,9 +17516,9 @@ public unsafe partial struct ID3D11VideoDecoder
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -17626,9 +17626,9 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -17768,9 +17768,9 @@ public unsafe partial struct ID3D11VideoProcessor
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessor*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessor*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -17878,9 +17878,9 @@ public unsafe partial struct ID3D11AuthenticatedChannel
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -17996,9 +17996,9 @@ public unsafe partial struct ID3D11CryptoSession
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -18130,17 +18130,17 @@ public unsafe partial struct ID3D11VideoDecoderOutputView
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoDecoderOutputView*, ID3D11Resource*, void>)(lpVtbl[3]))((ID3D11VideoDecoderOutputView*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoDecoderOutputView*, ID3D11Resource**, void>)(lpVtbl[3]))((ID3D11VideoDecoderOutputView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoDecoderOutputView*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11VideoDecoderOutputView*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoDecoderOutputView*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11VideoDecoderOutputView*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -18240,17 +18240,17 @@ public unsafe partial struct ID3D11VideoProcessorInputView
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorInputView*, ID3D11Resource*, void>)(lpVtbl[3]))((ID3D11VideoProcessorInputView*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorInputView*, ID3D11Resource**, void>)(lpVtbl[3]))((ID3D11VideoProcessorInputView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorInputView*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11VideoProcessorInputView*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorInputView*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11VideoProcessorInputView*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -18350,17 +18350,17 @@ public unsafe partial struct ID3D11VideoProcessorOutputView
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorOutputView*, ID3D11Resource*, void>)(lpVtbl[3]))((ID3D11VideoProcessorOutputView*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorOutputView*, ID3D11Resource**, void>)(lpVtbl[3]))((ID3D11VideoProcessorOutputView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorOutputView*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11VideoProcessorOutputView*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorOutputView*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11VideoProcessorOutputView*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -18460,9 +18460,9 @@ public unsafe partial struct ID3D11VideoContext
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -18628,9 +18628,9 @@ public unsafe partial struct ID3D11VideoContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorGetOutputConstriction"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
+	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size** pSize)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[24]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size**, void>)(lpVtbl[24]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorGetOutputStereoMode"]/*' />
@@ -19512,9 +19512,9 @@ public unsafe partial struct ID3D11Device
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetImmediateContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public void GetImmediateContext(ID3D11DeviceContext* ppImmediateContext)
+	public void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device*, ID3D11DeviceContext*, void>)(lpVtbl[40]))((ID3D11Device*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device*, ID3D11DeviceContext**, void>)(lpVtbl[40]))((ID3D11Device*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::SetExceptionMode"]/*' />
@@ -19638,9 +19638,9 @@ public unsafe partial struct ID3D11Debug
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::GetSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetSwapChain(Graphics.Dxgi.IDXGISwapChain* ppSwapChain)
+	public HResult GetSwapChain(Graphics.Dxgi.IDXGISwapChain** ppSwapChain)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, Graphics.Dxgi.IDXGISwapChain*, int>)(lpVtbl[8]))((ID3D11Debug*)Unsafe.AsPointer(ref this), ppSwapChain);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, Graphics.Dxgi.IDXGISwapChain**, int>)(lpVtbl[8]))((ID3D11Debug*)Unsafe.AsPointer(ref this), ppSwapChain);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ValidateContext"]/*' />
@@ -20378,9 +20378,9 @@ public unsafe partial struct ID3D11BlendState1
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11BlendState1*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11BlendState1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11BlendState1*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11BlendState1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -20488,9 +20488,9 @@ public unsafe partial struct ID3D11RasterizerState1
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState1*, ID3D11Device*, void>)(lpVtbl[4]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState1*, ID3D11Device**, void>)(lpVtbl[4]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -20590,9 +20590,9 @@ public unsafe partial struct ID3DDeviceContextState
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, ID3D11Device*, void>)(lpVtbl[3]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, ID3D11Device**, void>)(lpVtbl[3]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -21220,9 +21220,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
-	public void PSGetShader(ID3D11PixelShader* ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void PSGetShader(ID3D11PixelShader** ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11PixelShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[70]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11PixelShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[70]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetSamplers" />
@@ -21236,9 +21236,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public void VSGetShader(ID3D11VertexShader* ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void VSGetShader(ID3D11VertexShader** ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11VertexShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[72]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11VertexShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[72]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetConstantBuffers" />
@@ -21252,9 +21252,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetInputLayout" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(74)]
-	public void IAGetInputLayout(ID3D11InputLayout* ppInputLayout)
+	public void IAGetInputLayout(ID3D11InputLayout** ppInputLayout)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11InputLayout*, void>)(lpVtbl[74]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppInputLayout);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11InputLayout**, void>)(lpVtbl[74]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppInputLayout);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetVertexBuffers" />
@@ -21268,9 +21268,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetIndexBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
-	public void IAGetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
+	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11Buffer*, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[76]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11Buffer**, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[76]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetConstantBuffers" />
@@ -21284,9 +21284,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
-	public void GSGetShader(ID3D11GeometryShader* ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void GSGetShader(ID3D11GeometryShader** ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[78]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11GeometryShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[78]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetPrimitiveTopology" />
@@ -21316,9 +21316,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.GetPredication" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
-	public void GetPredication(ID3D11Predicate* ppPredicate, Bool32* pPredicateValue)
+	public void GetPredication(ID3D11Predicate** ppPredicate, Bool32* pPredicateValue)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11Predicate*, Bool32*, void>)(lpVtbl[82]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11Predicate**, Bool32*, void>)(lpVtbl[82]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShaderResources" />
@@ -21340,33 +21340,33 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargets" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(85)]
-	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView)
+	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, void>)(lpVtbl[85]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, void>)(lpVtbl[85]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargetsAndUnorderedAccessViews" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(86)]
-	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
+	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[86]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[86]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetBlendState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(87)]
-	public void OMGetBlendState(ID3D11BlendState* ppBlendState, float* BlendFactor, uint* pSampleMask)
+	public void OMGetBlendState(ID3D11BlendState** ppBlendState, float* BlendFactor, uint* pSampleMask)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11BlendState*, float*, uint*, void>)(lpVtbl[87]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11BlendState**, float*, uint*, void>)(lpVtbl[87]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetDepthStencilState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(88)]
-	public void OMGetDepthStencilState(ID3D11DepthStencilState* ppDepthStencilState, uint* pStencilRef)
+	public void OMGetDepthStencilState(ID3D11DepthStencilState** ppDepthStencilState, uint* pStencilRef)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11DepthStencilState*, uint*, void>)(lpVtbl[88]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11DepthStencilState**, uint*, void>)(lpVtbl[88]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.SOGetTargets" />
@@ -21380,9 +21380,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(90)]
-	public void RSGetState(ID3D11RasterizerState* ppRasterizerState)
+	public void RSGetState(ID3D11RasterizerState** ppRasterizerState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11RasterizerState*, void>)(lpVtbl[90]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppRasterizerState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11RasterizerState**, void>)(lpVtbl[90]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppRasterizerState);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetViewports" />
@@ -21412,9 +21412,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(94)]
-	public void HSGetShader(ID3D11HullShader* ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void HSGetShader(ID3D11HullShader** ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11HullShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[94]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11HullShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[94]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetSamplers" />
@@ -21444,9 +21444,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(98)]
-	public void DSGetShader(ID3D11DomainShader* ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void DSGetShader(ID3D11DomainShader** ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11DomainShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[98]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11DomainShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[98]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetSamplers" />
@@ -21484,9 +21484,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(103)]
-	public void CSGetShader(ID3D11ComputeShader* ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void CSGetShader(ID3D11ComputeShader** ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[103]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11ComputeShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[103]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetSamplers" />
@@ -21548,9 +21548,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(111)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11Device*, void>)(lpVtbl[111]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11Device**, void>)(lpVtbl[111]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -21708,9 +21708,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1::SwapDeviceContextState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(131)]
-	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState* ppPreviousState)
+	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState** ppPreviousState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3DDeviceContextState*, ID3DDeviceContextState*, void>)(lpVtbl[131]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3DDeviceContextState*, ID3DDeviceContextState**, void>)(lpVtbl[131]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1::ClearView"]/*' />
@@ -21930,9 +21930,9 @@ public unsafe partial struct ID3D11VideoContext1
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
+	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size** pSize)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[20]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size**, void>)(lpVtbl[20]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputStereoMode" />
@@ -22258,9 +22258,9 @@ public unsafe partial struct ID3D11VideoContext1
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11Device*, void>)(lpVtbl[61]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11Device**, void>)(lpVtbl[61]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -22742,9 +22742,9 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, ID3D11Device*, void>)(lpVtbl[9]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, ID3D11Device**, void>)(lpVtbl[9]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -23140,9 +23140,9 @@ public unsafe partial struct ID3D11Device1
 	/// <inheritdoc cref="ID3D11Device.GetImmediateContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public void GetImmediateContext(ID3D11DeviceContext* ppImmediateContext)
+	public void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device1*, ID3D11DeviceContext*, void>)(lpVtbl[40]))((ID3D11Device1*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device1*, ID3D11DeviceContext**, void>)(lpVtbl[40]))((ID3D11Device1*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.SetExceptionMode" />
@@ -23164,9 +23164,9 @@ public unsafe partial struct ID3D11Device1
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::GetImmediateContext1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public void GetImmediateContext1(ID3D11DeviceContext1* ppImmediateContext)
+	public void GetImmediateContext1(ID3D11DeviceContext1** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device1*, ID3D11DeviceContext1*, void>)(lpVtbl[43]))((ID3D11Device1*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device1*, ID3D11DeviceContext1**, void>)(lpVtbl[43]))((ID3D11Device1*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateDeferredContext1"]/*' />
@@ -23196,9 +23196,9 @@ public unsafe partial struct ID3D11Device1
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateDeviceContextState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState* ppContextState)
+	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState*, int>)(lpVtbl[47]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[47]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::OpenSharedResource1"]/*' />
@@ -23504,9 +23504,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext1.SwapDeviceContextState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState* ppPreviousState)
+	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState** ppPreviousState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3DDeviceContextState*, ID3DDeviceContextState*, void>)(lpVtbl[19]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3DDeviceContextState*, ID3DDeviceContextState**, void>)(lpVtbl[19]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.ClearView" />
@@ -24064,9 +24064,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(89)]
-	public void PSGetShader(ID3D11PixelShader* ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void PSGetShader(ID3D11PixelShader** ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11PixelShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[89]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11PixelShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[89]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetSamplers" />
@@ -24080,9 +24080,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(91)]
-	public void VSGetShader(ID3D11VertexShader* ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void VSGetShader(ID3D11VertexShader** ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11VertexShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[91]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11VertexShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[91]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetConstantBuffers" />
@@ -24096,9 +24096,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetInputLayout" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(93)]
-	public void IAGetInputLayout(ID3D11InputLayout* ppInputLayout)
+	public void IAGetInputLayout(ID3D11InputLayout** ppInputLayout)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11InputLayout*, void>)(lpVtbl[93]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppInputLayout);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11InputLayout**, void>)(lpVtbl[93]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppInputLayout);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetVertexBuffers" />
@@ -24112,9 +24112,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetIndexBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(95)]
-	public void IAGetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
+	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Buffer*, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[95]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Buffer**, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[95]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetConstantBuffers" />
@@ -24128,9 +24128,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(97)]
-	public void GSGetShader(ID3D11GeometryShader* ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void GSGetShader(ID3D11GeometryShader** ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[97]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11GeometryShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[97]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetPrimitiveTopology" />
@@ -24160,9 +24160,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.GetPredication" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(101)]
-	public void GetPredication(ID3D11Predicate* ppPredicate, Bool32* pPredicateValue)
+	public void GetPredication(ID3D11Predicate** ppPredicate, Bool32* pPredicateValue)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Predicate*, Bool32*, void>)(lpVtbl[101]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Predicate**, Bool32*, void>)(lpVtbl[101]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShaderResources" />
@@ -24184,33 +24184,33 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargets" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(104)]
-	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView)
+	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, void>)(lpVtbl[104]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, void>)(lpVtbl[104]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargetsAndUnorderedAccessViews" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(105)]
-	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
+	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[105]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[105]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetBlendState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(106)]
-	public void OMGetBlendState(ID3D11BlendState* ppBlendState, float* BlendFactor, uint* pSampleMask)
+	public void OMGetBlendState(ID3D11BlendState** ppBlendState, float* BlendFactor, uint* pSampleMask)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11BlendState*, float*, uint*, void>)(lpVtbl[106]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11BlendState**, float*, uint*, void>)(lpVtbl[106]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetDepthStencilState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(107)]
-	public void OMGetDepthStencilState(ID3D11DepthStencilState* ppDepthStencilState, uint* pStencilRef)
+	public void OMGetDepthStencilState(ID3D11DepthStencilState** ppDepthStencilState, uint* pStencilRef)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11DepthStencilState*, uint*, void>)(lpVtbl[107]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11DepthStencilState**, uint*, void>)(lpVtbl[107]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.SOGetTargets" />
@@ -24224,9 +24224,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(109)]
-	public void RSGetState(ID3D11RasterizerState* ppRasterizerState)
+	public void RSGetState(ID3D11RasterizerState** ppRasterizerState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11RasterizerState*, void>)(lpVtbl[109]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppRasterizerState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11RasterizerState**, void>)(lpVtbl[109]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppRasterizerState);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetViewports" />
@@ -24256,9 +24256,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(113)]
-	public void HSGetShader(ID3D11HullShader* ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void HSGetShader(ID3D11HullShader** ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11HullShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[113]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11HullShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[113]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetSamplers" />
@@ -24288,9 +24288,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(117)]
-	public void DSGetShader(ID3D11DomainShader* ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void DSGetShader(ID3D11DomainShader** ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11DomainShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[117]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11DomainShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[117]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetSamplers" />
@@ -24328,9 +24328,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(122)]
-	public void CSGetShader(ID3D11ComputeShader* ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void CSGetShader(ID3D11ComputeShader** ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[122]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11ComputeShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[122]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetSamplers" />
@@ -24392,9 +24392,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(130)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Device*, void>)(lpVtbl[130]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Device**, void>)(lpVtbl[130]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -24566,9 +24566,9 @@ public unsafe partial struct ID3D11Device2
 	/// <inheritdoc cref="ID3D11Device1.GetImmediateContext1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetImmediateContext1(ID3D11DeviceContext1* ppImmediateContext)
+	public void GetImmediateContext1(ID3D11DeviceContext1** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext1*, void>)(lpVtbl[3]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext1**, void>)(lpVtbl[3]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.CreateDeferredContext1" />
@@ -24598,9 +24598,9 @@ public unsafe partial struct ID3D11Device2
 	/// <inheritdoc cref="ID3D11Device1.CreateDeviceContextState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState* ppContextState)
+	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState*, int>)(lpVtbl[7]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[7]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResource1" />
@@ -24918,9 +24918,9 @@ public unsafe partial struct ID3D11Device2
 	/// <inheritdoc cref="ID3D11Device.GetImmediateContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public void GetImmediateContext(ID3D11DeviceContext* ppImmediateContext)
+	public void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext*, void>)(lpVtbl[47]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext**, void>)(lpVtbl[47]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.SetExceptionMode" />
@@ -24942,9 +24942,9 @@ public unsafe partial struct ID3D11Device2
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::GetImmediateContext2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public void GetImmediateContext2(ID3D11DeviceContext2* ppImmediateContext)
+	public void GetImmediateContext2(ID3D11DeviceContext2** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext2*, void>)(lpVtbl[50]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext2**, void>)(lpVtbl[50]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::CreateDeferredContext2"]/*' />
@@ -25068,9 +25068,9 @@ public unsafe partial struct ID3D11Texture2D1
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, ID3D11Device*, void>)(lpVtbl[7]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, ID3D11Device**, void>)(lpVtbl[7]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -25202,9 +25202,9 @@ public unsafe partial struct ID3D11Texture3D1
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Texture3D1*, ID3D11Device*, void>)(lpVtbl[7]))((ID3D11Texture3D1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Texture3D1*, ID3D11Device**, void>)(lpVtbl[7]))((ID3D11Texture3D1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -25320,9 +25320,9 @@ public unsafe partial struct ID3D11RasterizerState2
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState2*, ID3D11Device*, void>)(lpVtbl[5]))((ID3D11RasterizerState2*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState2*, ID3D11Device**, void>)(lpVtbl[5]))((ID3D11RasterizerState2*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -25430,17 +25430,17 @@ public unsafe partial struct ID3D11ShaderResourceView1
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView1*, ID3D11Resource*, void>)(lpVtbl[4]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView1*, ID3D11Resource**, void>)(lpVtbl[4]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView1*, ID3D11Device*, void>)(lpVtbl[5]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView1*, ID3D11Device**, void>)(lpVtbl[5]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -25548,17 +25548,17 @@ public unsafe partial struct ID3D11RenderTargetView1
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView1*, ID3D11Resource*, void>)(lpVtbl[4]))((ID3D11RenderTargetView1*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView1*, ID3D11Resource**, void>)(lpVtbl[4]))((ID3D11RenderTargetView1*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView1*, ID3D11Device*, void>)(lpVtbl[5]))((ID3D11RenderTargetView1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView1*, ID3D11Device**, void>)(lpVtbl[5]))((ID3D11RenderTargetView1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -25666,17 +25666,17 @@ public unsafe partial struct ID3D11UnorderedAccessView1
 	/// <inheritdoc cref="ID3D11View.GetResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void GetResource(ID3D11Resource* ppResource)
+	public void GetResource(ID3D11Resource** ppResource)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView1*, ID3D11Resource*, void>)(lpVtbl[4]))((ID3D11UnorderedAccessView1*)Unsafe.AsPointer(ref this), ppResource);
+		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView1*, ID3D11Resource**, void>)(lpVtbl[4]))((ID3D11UnorderedAccessView1*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView1*, ID3D11Device*, void>)(lpVtbl[5]))((ID3D11UnorderedAccessView1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView1*, ID3D11Device**, void>)(lpVtbl[5]))((ID3D11UnorderedAccessView1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -25792,9 +25792,9 @@ public unsafe partial struct ID3D11Query1
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Query1*, ID3D11Device*, void>)(lpVtbl[5]))((ID3D11Query1*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Query1*, ID3D11Device**, void>)(lpVtbl[5]))((ID3D11Query1*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -26102,9 +26102,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext1.SwapDeviceContextState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState* ppPreviousState)
+	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState** ppPreviousState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3DDeviceContextState*, ID3DDeviceContextState*, void>)(lpVtbl[29]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3DDeviceContextState*, ID3DDeviceContextState**, void>)(lpVtbl[29]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.ClearView" />
@@ -26662,9 +26662,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(99)]
-	public void PSGetShader(ID3D11PixelShader* ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void PSGetShader(ID3D11PixelShader** ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11PixelShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[99]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11PixelShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[99]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetSamplers" />
@@ -26678,9 +26678,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(101)]
-	public void VSGetShader(ID3D11VertexShader* ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void VSGetShader(ID3D11VertexShader** ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11VertexShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[101]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11VertexShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[101]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetConstantBuffers" />
@@ -26694,9 +26694,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetInputLayout" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(103)]
-	public void IAGetInputLayout(ID3D11InputLayout* ppInputLayout)
+	public void IAGetInputLayout(ID3D11InputLayout** ppInputLayout)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11InputLayout*, void>)(lpVtbl[103]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppInputLayout);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11InputLayout**, void>)(lpVtbl[103]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppInputLayout);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetVertexBuffers" />
@@ -26710,9 +26710,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetIndexBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(105)]
-	public void IAGetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
+	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer*, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[105]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer**, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[105]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetConstantBuffers" />
@@ -26726,9 +26726,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(107)]
-	public void GSGetShader(ID3D11GeometryShader* ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void GSGetShader(ID3D11GeometryShader** ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[107]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11GeometryShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[107]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetPrimitiveTopology" />
@@ -26758,9 +26758,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.GetPredication" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(111)]
-	public void GetPredication(ID3D11Predicate* ppPredicate, Bool32* pPredicateValue)
+	public void GetPredication(ID3D11Predicate** ppPredicate, Bool32* pPredicateValue)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Predicate*, Bool32*, void>)(lpVtbl[111]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Predicate**, Bool32*, void>)(lpVtbl[111]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShaderResources" />
@@ -26782,33 +26782,33 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargets" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(114)]
-	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView)
+	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, void>)(lpVtbl[114]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, void>)(lpVtbl[114]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargetsAndUnorderedAccessViews" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(115)]
-	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
+	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[115]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[115]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetBlendState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(116)]
-	public void OMGetBlendState(ID3D11BlendState* ppBlendState, float* BlendFactor, uint* pSampleMask)
+	public void OMGetBlendState(ID3D11BlendState** ppBlendState, float* BlendFactor, uint* pSampleMask)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11BlendState*, float*, uint*, void>)(lpVtbl[116]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11BlendState**, float*, uint*, void>)(lpVtbl[116]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetDepthStencilState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(117)]
-	public void OMGetDepthStencilState(ID3D11DepthStencilState* ppDepthStencilState, uint* pStencilRef)
+	public void OMGetDepthStencilState(ID3D11DepthStencilState** ppDepthStencilState, uint* pStencilRef)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DepthStencilState*, uint*, void>)(lpVtbl[117]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DepthStencilState**, uint*, void>)(lpVtbl[117]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.SOGetTargets" />
@@ -26822,9 +26822,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(119)]
-	public void RSGetState(ID3D11RasterizerState* ppRasterizerState)
+	public void RSGetState(ID3D11RasterizerState** ppRasterizerState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11RasterizerState*, void>)(lpVtbl[119]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppRasterizerState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11RasterizerState**, void>)(lpVtbl[119]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppRasterizerState);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetViewports" />
@@ -26854,9 +26854,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(123)]
-	public void HSGetShader(ID3D11HullShader* ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void HSGetShader(ID3D11HullShader** ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11HullShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[123]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11HullShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[123]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetSamplers" />
@@ -26886,9 +26886,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(127)]
-	public void DSGetShader(ID3D11DomainShader* ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void DSGetShader(ID3D11DomainShader** ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DomainShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[127]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DomainShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[127]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetSamplers" />
@@ -26926,9 +26926,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(132)]
-	public void CSGetShader(ID3D11ComputeShader* ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void CSGetShader(ID3D11ComputeShader** ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[132]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11ComputeShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[132]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetSamplers" />
@@ -26990,9 +26990,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(140)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Device*, void>)(lpVtbl[140]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Device**, void>)(lpVtbl[140]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -27108,9 +27108,9 @@ public unsafe partial struct ID3D11Fence
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Fence*, ID3D11Device*, void>)(lpVtbl[3]))((ID3D11Fence*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11Fence*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11Fence*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -27458,9 +27458,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext1.SwapDeviceContextState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState* ppPreviousState)
+	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState** ppPreviousState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3DDeviceContextState*, ID3DDeviceContextState*, void>)(lpVtbl[32]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3DDeviceContextState*, ID3DDeviceContextState**, void>)(lpVtbl[32]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.ClearView" />
@@ -28018,9 +28018,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(102)]
-	public void PSGetShader(ID3D11PixelShader* ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void PSGetShader(ID3D11PixelShader** ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11PixelShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[102]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11PixelShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[102]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetSamplers" />
@@ -28034,9 +28034,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(104)]
-	public void VSGetShader(ID3D11VertexShader* ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void VSGetShader(ID3D11VertexShader** ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11VertexShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[104]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11VertexShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[104]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetConstantBuffers" />
@@ -28050,9 +28050,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetInputLayout" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(106)]
-	public void IAGetInputLayout(ID3D11InputLayout* ppInputLayout)
+	public void IAGetInputLayout(ID3D11InputLayout** ppInputLayout)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11InputLayout*, void>)(lpVtbl[106]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppInputLayout);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11InputLayout**, void>)(lpVtbl[106]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppInputLayout);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetVertexBuffers" />
@@ -28066,9 +28066,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetIndexBuffer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(108)]
-	public void IAGetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
+	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Buffer*, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[108]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Buffer**, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[108]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetConstantBuffers" />
@@ -28082,9 +28082,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(110)]
-	public void GSGetShader(ID3D11GeometryShader* ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void GSGetShader(ID3D11GeometryShader** ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[110]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11GeometryShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[110]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetPrimitiveTopology" />
@@ -28114,9 +28114,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.GetPredication" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(114)]
-	public void GetPredication(ID3D11Predicate* ppPredicate, Bool32* pPredicateValue)
+	public void GetPredication(ID3D11Predicate** ppPredicate, Bool32* pPredicateValue)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Predicate*, Bool32*, void>)(lpVtbl[114]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Predicate**, Bool32*, void>)(lpVtbl[114]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShaderResources" />
@@ -28138,33 +28138,33 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargets" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(117)]
-	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView)
+	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, void>)(lpVtbl[117]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, void>)(lpVtbl[117]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargetsAndUnorderedAccessViews" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(118)]
-	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
+	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[118]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[118]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetBlendState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(119)]
-	public void OMGetBlendState(ID3D11BlendState* ppBlendState, float* BlendFactor, uint* pSampleMask)
+	public void OMGetBlendState(ID3D11BlendState** ppBlendState, float* BlendFactor, uint* pSampleMask)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11BlendState*, float*, uint*, void>)(lpVtbl[119]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11BlendState**, float*, uint*, void>)(lpVtbl[119]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetDepthStencilState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(120)]
-	public void OMGetDepthStencilState(ID3D11DepthStencilState* ppDepthStencilState, uint* pStencilRef)
+	public void OMGetDepthStencilState(ID3D11DepthStencilState** ppDepthStencilState, uint* pStencilRef)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11DepthStencilState*, uint*, void>)(lpVtbl[120]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11DepthStencilState**, uint*, void>)(lpVtbl[120]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.SOGetTargets" />
@@ -28178,9 +28178,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(122)]
-	public void RSGetState(ID3D11RasterizerState* ppRasterizerState)
+	public void RSGetState(ID3D11RasterizerState** ppRasterizerState)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11RasterizerState*, void>)(lpVtbl[122]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppRasterizerState);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11RasterizerState**, void>)(lpVtbl[122]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppRasterizerState);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetViewports" />
@@ -28210,9 +28210,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(126)]
-	public void HSGetShader(ID3D11HullShader* ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void HSGetShader(ID3D11HullShader** ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11HullShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[126]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11HullShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[126]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetSamplers" />
@@ -28242,9 +28242,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(130)]
-	public void DSGetShader(ID3D11DomainShader* ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void DSGetShader(ID3D11DomainShader** ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11DomainShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[130]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11DomainShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[130]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetSamplers" />
@@ -28282,9 +28282,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(135)]
-	public void CSGetShader(ID3D11ComputeShader* ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
+	public void CSGetShader(ID3D11ComputeShader** ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint*, void>)(lpVtbl[135]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11ComputeShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[135]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetSamplers" />
@@ -28346,9 +28346,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(143)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Device*, void>)(lpVtbl[143]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Device**, void>)(lpVtbl[143]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -28456,9 +28456,9 @@ public unsafe partial struct ID3D11Device3
 	/// <inheritdoc cref="ID3D11Device2.GetImmediateContext2" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void GetImmediateContext2(ID3D11DeviceContext2* ppImmediateContext)
+	public void GetImmediateContext2(ID3D11DeviceContext2** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device3*, ID3D11DeviceContext2*, void>)(lpVtbl[3]))((ID3D11Device3*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device3*, ID3D11DeviceContext2**, void>)(lpVtbl[3]))((ID3D11Device3*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device2.CreateDeferredContext2" />
@@ -28488,9 +28488,9 @@ public unsafe partial struct ID3D11Device3
 	/// <inheritdoc cref="ID3D11Device1.GetImmediateContext1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetImmediateContext1(ID3D11DeviceContext1* ppImmediateContext)
+	public void GetImmediateContext1(ID3D11DeviceContext1** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device3*, ID3D11DeviceContext1*, void>)(lpVtbl[7]))((ID3D11Device3*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device3*, ID3D11DeviceContext1**, void>)(lpVtbl[7]))((ID3D11Device3*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.CreateDeferredContext1" />
@@ -28520,9 +28520,9 @@ public unsafe partial struct ID3D11Device3
 	/// <inheritdoc cref="ID3D11Device1.CreateDeviceContextState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState* ppContextState)
+	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device3*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState*, int>)(lpVtbl[11]))((ID3D11Device3*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device3*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[11]))((ID3D11Device3*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResource1" />
@@ -28840,9 +28840,9 @@ public unsafe partial struct ID3D11Device3
 	/// <inheritdoc cref="ID3D11Device.GetImmediateContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public void GetImmediateContext(ID3D11DeviceContext* ppImmediateContext)
+	public void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device3*, ID3D11DeviceContext*, void>)(lpVtbl[51]))((ID3D11Device3*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device3*, ID3D11DeviceContext**, void>)(lpVtbl[51]))((ID3D11Device3*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.SetExceptionMode" />
@@ -28920,9 +28920,9 @@ public unsafe partial struct ID3D11Device3
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device3::GetImmediateContext3"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public void GetImmediateContext3(ID3D11DeviceContext3* ppImmediateContext)
+	public void GetImmediateContext3(ID3D11DeviceContext3** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device3*, ID3D11DeviceContext3*, void>)(lpVtbl[61]))((ID3D11Device3*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device3*, ID3D11DeviceContext3**, void>)(lpVtbl[61]))((ID3D11Device3*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device3::CreateDeferredContext3"]/*' />
@@ -29070,9 +29070,9 @@ public unsafe partial struct ID3D11Device4
 	/// <inheritdoc cref="ID3D11Device3.GetImmediateContext3" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public void GetImmediateContext3(ID3D11DeviceContext3* ppImmediateContext)
+	public void GetImmediateContext3(ID3D11DeviceContext3** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device4*, ID3D11DeviceContext3*, void>)(lpVtbl[10]))((ID3D11Device4*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device4*, ID3D11DeviceContext3**, void>)(lpVtbl[10]))((ID3D11Device4*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device3.CreateDeferredContext3" />
@@ -29102,9 +29102,9 @@ public unsafe partial struct ID3D11Device4
 	/// <inheritdoc cref="ID3D11Device2.GetImmediateContext2" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public void GetImmediateContext2(ID3D11DeviceContext2* ppImmediateContext)
+	public void GetImmediateContext2(ID3D11DeviceContext2** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device4*, ID3D11DeviceContext2*, void>)(lpVtbl[14]))((ID3D11Device4*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device4*, ID3D11DeviceContext2**, void>)(lpVtbl[14]))((ID3D11Device4*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device2.CreateDeferredContext2" />
@@ -29134,9 +29134,9 @@ public unsafe partial struct ID3D11Device4
 	/// <inheritdoc cref="ID3D11Device1.GetImmediateContext1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public void GetImmediateContext1(ID3D11DeviceContext1* ppImmediateContext)
+	public void GetImmediateContext1(ID3D11DeviceContext1** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device4*, ID3D11DeviceContext1*, void>)(lpVtbl[18]))((ID3D11Device4*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device4*, ID3D11DeviceContext1**, void>)(lpVtbl[18]))((ID3D11Device4*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.CreateDeferredContext1" />
@@ -29166,9 +29166,9 @@ public unsafe partial struct ID3D11Device4
 	/// <inheritdoc cref="ID3D11Device1.CreateDeviceContextState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState* ppContextState)
+	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device4*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState*, int>)(lpVtbl[22]))((ID3D11Device4*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device4*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[22]))((ID3D11Device4*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResource1" />
@@ -29486,9 +29486,9 @@ public unsafe partial struct ID3D11Device4
 	/// <inheritdoc cref="ID3D11Device.GetImmediateContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
-	public void GetImmediateContext(ID3D11DeviceContext* ppImmediateContext)
+	public void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device4*, ID3D11DeviceContext*, void>)(lpVtbl[62]))((ID3D11Device4*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device4*, ID3D11DeviceContext**, void>)(lpVtbl[62]))((ID3D11Device4*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.SetExceptionMode" />
@@ -29660,9 +29660,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device3.GetImmediateContext3" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public void GetImmediateContext3(ID3D11DeviceContext3* ppImmediateContext)
+	public void GetImmediateContext3(ID3D11DeviceContext3** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device5*, ID3D11DeviceContext3*, void>)(lpVtbl[12]))((ID3D11Device5*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device5*, ID3D11DeviceContext3**, void>)(lpVtbl[12]))((ID3D11Device5*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device3.CreateDeferredContext3" />
@@ -29692,9 +29692,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device2.GetImmediateContext2" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public void GetImmediateContext2(ID3D11DeviceContext2* ppImmediateContext)
+	public void GetImmediateContext2(ID3D11DeviceContext2** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device5*, ID3D11DeviceContext2*, void>)(lpVtbl[16]))((ID3D11Device5*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device5*, ID3D11DeviceContext2**, void>)(lpVtbl[16]))((ID3D11Device5*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device2.CreateDeferredContext2" />
@@ -29724,9 +29724,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device1.GetImmediateContext1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void GetImmediateContext1(ID3D11DeviceContext1* ppImmediateContext)
+	public void GetImmediateContext1(ID3D11DeviceContext1** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device5*, ID3D11DeviceContext1*, void>)(lpVtbl[20]))((ID3D11Device5*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device5*, ID3D11DeviceContext1**, void>)(lpVtbl[20]))((ID3D11Device5*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.CreateDeferredContext1" />
@@ -29756,9 +29756,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device1.CreateDeviceContextState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState* ppContextState)
+	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState*, int>)(lpVtbl[24]))((ID3D11Device5*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[24]))((ID3D11Device5*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResource1" />
@@ -30076,9 +30076,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device.GetImmediateContext" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public void GetImmediateContext(ID3D11DeviceContext* ppImmediateContext)
+	public void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11Device5*, ID3D11DeviceContext*, void>)(lpVtbl[64]))((ID3D11Device5*)Unsafe.AsPointer(ref this), ppImmediateContext);
+		((delegate* unmanaged[Stdcall]<ID3D11Device5*, ID3D11DeviceContext**, void>)(lpVtbl[64]))((ID3D11Device5*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.SetExceptionMode" />
@@ -30520,9 +30520,9 @@ public unsafe partial struct ID3D11VideoContext2
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
+	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size** pSize)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[34]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size**, void>)(lpVtbl[34]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputStereoMode" />
@@ -30848,9 +30848,9 @@ public unsafe partial struct ID3D11VideoContext2
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(75)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11Device*, void>)(lpVtbl[75]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11Device**, void>)(lpVtbl[75]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -31500,9 +31500,9 @@ public unsafe partial struct ID3D11VideoContext3
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
+	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size** pSize)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[38]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size**, void>)(lpVtbl[38]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputStereoMode" />
@@ -31828,9 +31828,9 @@ public unsafe partial struct ID3D11VideoContext3
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(79)]
-	public void GetDevice(ID3D11Device* ppDevice)
+	public void GetDevice(ID3D11Device** ppDevice)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11Device*, void>)(lpVtbl[79]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), ppDevice);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11Device**, void>)(lpVtbl[79]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -32820,9 +32820,9 @@ public unsafe partial struct ID3D11Linker
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::Link"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Link(ID3D11ModuleInstance* pEntry, sbyte* pEntryName, sbyte* pTargetName, uint uFlags, Graphics.Direct3D.ID3DBlob** ppShaderBlob, Graphics.Direct3D.ID3DBlob* ppErrorBuffer)
+	public HResult Link(ID3D11ModuleInstance* pEntry, sbyte* pEntryName, sbyte* pTargetName, uint uFlags, Graphics.Direct3D.ID3DBlob** ppShaderBlob, Graphics.Direct3D.ID3DBlob** ppErrorBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, ID3D11ModuleInstance*, sbyte*, sbyte*, uint, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob*, int>)(lpVtbl[3]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pEntry, pEntryName, pTargetName, uFlags, ppShaderBlob, ppErrorBuffer);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, ID3D11ModuleInstance*, sbyte*, sbyte*, uint, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[3]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pEntry, pEntryName, pTargetName, uFlags, ppShaderBlob, ppErrorBuffer);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::UseLibrary"]/*' />
@@ -32969,9 +32969,9 @@ public unsafe partial struct ID3D11FunctionLinkingGraph
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::CreateModuleInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateModuleInstance(ID3D11ModuleInstance** ppModuleInstance, Graphics.Direct3D.ID3DBlob* ppErrorBuffer)
+	public HResult CreateModuleInstance(ID3D11ModuleInstance** ppModuleInstance, Graphics.Direct3D.ID3DBlob** ppErrorBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, ID3D11ModuleInstance**, Graphics.Direct3D.ID3DBlob*, int>)(lpVtbl[3]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), ppModuleInstance, ppErrorBuffer);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, ID3D11ModuleInstance**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[3]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), ppModuleInstance, ppErrorBuffer);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::SetInputSignature"]/*' />
@@ -33017,9 +33017,9 @@ public unsafe partial struct ID3D11FunctionLinkingGraph
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::GetLastError"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetLastError(Graphics.Direct3D.ID3DBlob* ppErrorBuffer)
+	public HResult GetLastError(Graphics.Direct3D.ID3DBlob** ppErrorBuffer)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, Graphics.Direct3D.ID3DBlob*, int>)(lpVtbl[9]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), ppErrorBuffer);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[9]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), ppErrorBuffer);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionLinkingGraph::GenerateHlsl"]/*' />
