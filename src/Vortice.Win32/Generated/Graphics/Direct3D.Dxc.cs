@@ -511,7 +511,6 @@ public unsafe partial struct IDxcBlob
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcBlob*, nuint>)(lpVtbl[4]))((IDxcBlob*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcBlobEncoding"]/*' />
@@ -598,7 +597,6 @@ public unsafe partial struct IDxcBlobEncoding
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobEncoding*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobEncoding*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcBlobUtf16"]/*' />
@@ -701,7 +699,6 @@ public unsafe partial struct IDxcBlobUtf16
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, nuint>)(lpVtbl[7]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcBlobUtf8"]/*' />
@@ -804,7 +801,6 @@ public unsafe partial struct IDxcBlobUtf8
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf8*, nuint>)(lpVtbl[7]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcIncludeHandler"]/*' />
@@ -875,7 +871,6 @@ public unsafe partial struct IDxcIncludeHandler
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcIncludeHandler*, ushort*, IDxcBlob**, int>)(lpVtbl[3]))((IDxcIncludeHandler*)Unsafe.AsPointer(ref this), pFilename, ppIncludeSource);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs"]/*' />
@@ -978,7 +973,6 @@ public unsafe partial struct IDxcCompilerArgs
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompilerArgs*, DxcDefine*, uint, int>)(lpVtbl[7]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pDefines, defineCount);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary"]/*' />
@@ -1121,7 +1115,6 @@ public unsafe partial struct IDxcLibrary
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[12]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, pBlobEncoding);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOperationResult"]/*' />
@@ -1208,7 +1201,6 @@ public unsafe partial struct IDxcOperationResult
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcOperationResult*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), ppErrors);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompiler"]/*' />
@@ -1295,7 +1287,6 @@ public unsafe partial struct IDxcCompiler
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcCompiler*)Unsafe.AsPointer(ref this), pSource, ppDisassembly);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompiler2"]/*' />
@@ -1390,7 +1381,6 @@ public unsafe partial struct IDxcCompiler2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler2*, IDxcBlob*, ushort*, ushort*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, ushort**, IDxcBlob**, int>)(lpVtbl[6]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), pSource, pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, pIncludeHandler, ppResult, ppDebugBlobName, ppDebugBlob);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLinker"]/*' />
@@ -1469,7 +1459,6 @@ public unsafe partial struct IDxcLinker
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcLinker*, ushort*, ushort*, ushort**, uint, ushort**, uint, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcLinker*)Unsafe.AsPointer(ref this), pEntryName, pTargetProfile, pLibNames, libCount, pArguments, argCount, ppResult);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils"]/*' />
@@ -1636,7 +1625,6 @@ public unsafe partial struct IDxcUtils
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, IDxcBlob*, IDxcBlob**, IDxcBlob**, int>)(lpVtbl[15]))((IDxcUtils*)Unsafe.AsPointer(ref this), pPDBBlob, ppHash, ppContainer);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult"]/*' />
@@ -1763,7 +1751,6 @@ public unsafe partial struct IDxcResult
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcResult*, Graphics.Direct3D.Dxc.DxcOutKind>)(lpVtbl[10]))((IDxcResult*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcExtraOutputs"]/*' />
@@ -1842,7 +1829,6 @@ public unsafe partial struct IDxcExtraOutputs
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcExtraOutputs*, uint, Guid*, void**, IDxcBlobUtf16**, IDxcBlobUtf16**, int>)(lpVtbl[4]))((IDxcExtraOutputs*)Unsafe.AsPointer(ref this), uIndex, iid, ppvObject, ppOutputType, ppOutputName);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompiler3"]/*' />
@@ -1921,7 +1907,6 @@ public unsafe partial struct IDxcCompiler3
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler3*, DxcBuffer*, Guid*, void**, int>)(lpVtbl[4]))((IDxcCompiler3*)Unsafe.AsPointer(ref this), pObject, riid, ppResult);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcValidator"]/*' />
@@ -1992,7 +1977,6 @@ public unsafe partial struct IDxcValidator
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcValidator*, IDxcBlob*, DxcValidatorFlags, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcValidator*)Unsafe.AsPointer(ref this), pShader, Flags, ppResult);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcValidator2"]/*' />
@@ -2071,7 +2055,6 @@ public unsafe partial struct IDxcValidator2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcValidator2*, IDxcBlob*, DxcValidatorFlags, DxcBuffer*, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcValidator2*)Unsafe.AsPointer(ref this), pShader, Flags, pOptDebugBitcode, ppResult);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder"]/*' />
@@ -2166,7 +2149,6 @@ public unsafe partial struct IDxcContainerBuilder
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerBuilder*, IDxcOperationResult*, int>)(lpVtbl[6]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), ppResult);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcAssembler"]/*' />
@@ -2237,7 +2219,6 @@ public unsafe partial struct IDxcAssembler
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcAssembler*, IDxcBlob*, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcAssembler*)Unsafe.AsPointer(ref this), pShader, ppResult);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcContainerReflection"]/*' />
@@ -2348,7 +2329,6 @@ public unsafe partial struct IDxcContainerReflection
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerReflection*, uint, Guid*, void**, int>)(lpVtbl[8]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), idx, iid, ppvObject);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass"]/*' />
@@ -2451,7 +2431,6 @@ public unsafe partial struct IDxcOptimizerPass
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizerPass*, uint, ushort**, int>)(lpVtbl[7]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizer"]/*' />
@@ -2538,7 +2517,6 @@ public unsafe partial struct IDxcOptimizer
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizer*, IDxcBlob*, ushort**, uint, IDxcBlob**, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), pBlob, ppOptions, optionCount, pOutputModule, ppOutputText);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo"]/*' />
@@ -2617,7 +2595,6 @@ public unsafe partial struct IDxcVersionInfo
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo*)Unsafe.AsPointer(ref this), pFlags);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2"]/*' />
@@ -2704,7 +2681,6 @@ public unsafe partial struct IDxcVersionInfo2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, uint*, sbyte**, int>)(lpVtbl[5]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pCommitCount, pCommitHash);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo3"]/*' />
@@ -2775,7 +2751,6 @@ public unsafe partial struct IDxcVersionInfo3
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo3*, sbyte**, int>)(lpVtbl[3]))((IDxcVersionInfo3*)Unsafe.AsPointer(ref this), pVersionString);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils"]/*' />
@@ -3030,7 +3005,6 @@ public unsafe partial struct IDxcPdbUtils
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, ushort*, int>)(lpVtbl[26]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pRootSignature);
 	}
-
 }
 
 #endregion Com Types

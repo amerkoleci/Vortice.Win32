@@ -1296,7 +1296,6 @@ public unsafe partial struct ID3DBlob
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, nuint>)(lpVtbl[4]))((ID3DBlob*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier"]/*' />
@@ -1375,7 +1374,6 @@ public unsafe partial struct ID3DDestructionNotifier
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, uint, int>)(lpVtbl[4]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackID);
 	}
-
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude"]/*' />
@@ -1399,7 +1397,6 @@ public unsafe partial struct ID3DInclude
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
 	}
-
 }
 
 #endregion Com Types

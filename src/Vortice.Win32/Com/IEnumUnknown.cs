@@ -6,17 +6,17 @@ using System.Runtime.CompilerServices;
 
 namespace Win32.Com;
 
-[Guid("00000002-0000-0000-C000-000000000046")]
-[NativeTypeName("struct IMalloc : IUnknown")]
+[Guid("00000100-0000-0000-C000-000000000046")]
+[NativeTypeName("struct IEnumUnknown : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IMalloc
+public unsafe partial struct IEnumUnknown
 {
-    public static ref readonly Guid IID_IMalloc
+    public static ref readonly Guid IID_IEnumUnknown
     {
         get
         {
             ReadOnlySpan<byte> data = new byte[] {
-                0x02, 0x00, 0x00, 0x00,
+                0x00, 0x01, 0x00, 0x00,
                 0x00, 0x00,
                 0x00, 0x00,
                 0xC0,
@@ -34,7 +34,8 @@ public unsafe partial struct IMalloc
         }
     }
 
-    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IMalloc));
+
+    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IEnumUnknown));
 
     public void** lpVtbl;
 
@@ -66,44 +67,29 @@ public unsafe partial struct IMalloc
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public void* Alloc([NativeTypeName("SIZE_T")] nuint cb)
+    public HResult Next([NativeTypeName("ULONG")] uint celt, IUnknown** rgelt, [NativeTypeName("ULONG *")] uint* pceltFetched)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, nuint, void*>)(lpVtbl[3]))((IMalloc*)Unsafe.AsPointer(ref this), cb);
+        return ((delegate* unmanaged[Stdcall]<IEnumUnknown*, uint, IUnknown**, uint*, int>)(lpVtbl[3]))((IEnumUnknown*)Unsafe.AsPointer(ref this), celt, rgelt, pceltFetched);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public void* Realloc(void* pv, [NativeTypeName("SIZE_T")] nuint cb)
+    public HResult Skip([NativeTypeName("ULONG")] uint celt)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, nuint, void*>)(lpVtbl[4]))((IMalloc*)Unsafe.AsPointer(ref this), pv, cb);
+        return ((delegate* unmanaged[Stdcall]<IEnumUnknown*, uint, int>)(lpVtbl[4]))((IEnumUnknown*)Unsafe.AsPointer(ref this), celt);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public void Free(void* pv)
+    public HResult Reset()
     {
-        ((delegate* unmanaged[Stdcall]<IMalloc*, void*, void>)(lpVtbl[5]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
+        return ((delegate* unmanaged[Stdcall]<IEnumUnknown*, int>)(lpVtbl[5]))((IEnumUnknown*)Unsafe.AsPointer(ref this));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    [return: NativeTypeName("SIZE_T")]
-    public nuint GetSize(void* pv)
+    public HResult Clone(IEnumUnknown** ppenum)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, nuint>)(lpVtbl[6]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [VtblIndex(7)]
-    public int DidAlloc(void* pv)
-    {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, int>)(lpVtbl[7]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [VtblIndex(8)]
-    public void HeapMinimize()
-    {
-        ((delegate* unmanaged[Stdcall]<IMalloc*, void>)(lpVtbl[8]))((IMalloc*)Unsafe.AsPointer(ref this));
+        return ((delegate* unmanaged[Stdcall]<IEnumUnknown*, IEnumUnknown**, int>)(lpVtbl[6]))((IEnumUnknown*)Unsafe.AsPointer(ref this), ppenum);
     }
 }

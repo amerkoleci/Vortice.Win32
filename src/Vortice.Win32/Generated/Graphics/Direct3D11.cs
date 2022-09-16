@@ -13492,7 +13492,6 @@ public unsafe partial struct ID3D11DeviceChild
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceChild*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DepthStencilState"]/*' />
@@ -13595,7 +13594,6 @@ public unsafe partial struct ID3D11DepthStencilState
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilState*, DepthStencilDescription*, void>)(lpVtbl[7]))((ID3D11DepthStencilState*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11BlendState"]/*' />
@@ -13698,7 +13696,6 @@ public unsafe partial struct ID3D11BlendState
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11BlendState*, BlendDescription*, void>)(lpVtbl[7]))((ID3D11BlendState*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState"]/*' />
@@ -13801,7 +13798,6 @@ public unsafe partial struct ID3D11RasterizerState
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState*, RasterizerDescription*, void>)(lpVtbl[7]))((ID3D11RasterizerState*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Resource"]/*' />
@@ -13920,7 +13916,6 @@ public unsafe partial struct ID3D11Resource
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Resource*, uint>)(lpVtbl[9]))((ID3D11Resource*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Buffer"]/*' />
@@ -14047,7 +14042,6 @@ public unsafe partial struct ID3D11Buffer
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Buffer*, BufferDescription*, void>)(lpVtbl[10]))((ID3D11Buffer*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture1D"]/*' />
@@ -14174,7 +14168,6 @@ public unsafe partial struct ID3D11Texture1D
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Texture1D*, Texture1DDescription*, void>)(lpVtbl[10]))((ID3D11Texture1D*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D"]/*' />
@@ -14301,7 +14294,6 @@ public unsafe partial struct ID3D11Texture2D
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D*, Texture2DDescription*, void>)(lpVtbl[10]))((ID3D11Texture2D*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture3D"]/*' />
@@ -14428,7 +14420,6 @@ public unsafe partial struct ID3D11Texture3D
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Texture3D*, Texture3DDescription*, void>)(lpVtbl[10]))((ID3D11Texture3D*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11View"]/*' />
@@ -14531,7 +14522,6 @@ public unsafe partial struct ID3D11View
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11View*, ID3D11Resource*, void>)(lpVtbl[7]))((ID3D11View*)Unsafe.AsPointer(ref this), ppResource);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderResourceView"]/*' />
@@ -14642,7 +14632,6 @@ public unsafe partial struct ID3D11ShaderResourceView
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView*, ShaderResourceViewDescription*, void>)(lpVtbl[8]))((ID3D11ShaderResourceView*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RenderTargetView"]/*' />
@@ -14753,7 +14742,6 @@ public unsafe partial struct ID3D11RenderTargetView
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView*, RenderTargetViewDescription*, void>)(lpVtbl[8]))((ID3D11RenderTargetView*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DepthStencilView"]/*' />
@@ -14864,7 +14852,6 @@ public unsafe partial struct ID3D11DepthStencilView
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilView*, DepthStencilViewDescription*, void>)(lpVtbl[8]))((ID3D11DepthStencilView*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11UnorderedAccessView"]/*' />
@@ -14975,7 +14962,6 @@ public unsafe partial struct ID3D11UnorderedAccessView
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView*, UnorderedAccessViewDescription*, void>)(lpVtbl[8]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VertexShader"]/*' />
@@ -15070,7 +15056,6 @@ public unsafe partial struct ID3D11VertexShader
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VertexShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VertexShader*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11HullShader"]/*' />
@@ -15165,7 +15150,6 @@ public unsafe partial struct ID3D11HullShader
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11HullShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11HullShader*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DomainShader"]/*' />
@@ -15260,7 +15244,6 @@ public unsafe partial struct ID3D11DomainShader
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11DomainShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11DomainShader*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11GeometryShader"]/*' />
@@ -15355,7 +15338,6 @@ public unsafe partial struct ID3D11GeometryShader
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11GeometryShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11GeometryShader*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11PixelShader"]/*' />
@@ -15450,7 +15432,6 @@ public unsafe partial struct ID3D11PixelShader
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11PixelShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11PixelShader*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ComputeShader"]/*' />
@@ -15545,7 +15526,6 @@ public unsafe partial struct ID3D11ComputeShader
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ComputeShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11ComputeShader*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InputLayout"]/*' />
@@ -15640,7 +15620,6 @@ public unsafe partial struct ID3D11InputLayout
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11InputLayout*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11InputLayout*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SamplerState"]/*' />
@@ -15743,7 +15722,6 @@ public unsafe partial struct ID3D11SamplerState
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11SamplerState*, SamplerDescription*, void>)(lpVtbl[7]))((ID3D11SamplerState*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Asynchronous"]/*' />
@@ -15846,7 +15824,6 @@ public unsafe partial struct ID3D11Asynchronous
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Asynchronous*, uint>)(lpVtbl[7]))((ID3D11Asynchronous*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Query"]/*' />
@@ -15957,7 +15934,6 @@ public unsafe partial struct ID3D11Query
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Query*, QueryDescription*, void>)(lpVtbl[8]))((ID3D11Query*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Predicate"]/*' />
@@ -16068,7 +16044,6 @@ public unsafe partial struct ID3D11Predicate
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Predicate*, Guid*, IUnknown*, int>)(lpVtbl[8]))((ID3D11Predicate*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Counter"]/*' />
@@ -16179,7 +16154,6 @@ public unsafe partial struct ID3D11Counter
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Counter*, CounterDescription*, void>)(lpVtbl[8]))((ID3D11Counter*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance"]/*' />
@@ -16306,7 +16280,6 @@ public unsafe partial struct ID3D11ClassInstance
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, byte*, nuint*, void>)(lpVtbl[10]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), pTypeName, pBufferLength);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage"]/*' />
@@ -16417,7 +16390,6 @@ public unsafe partial struct ID3D11ClassLinkage
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, sbyte*, uint, uint, uint, uint, ID3D11ClassInstance**, int>)(lpVtbl[8]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassTypeName, ConstantBufferOffset, ConstantVectorOffset, TextureOffset, SamplerOffset, ppInstance);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CommandList"]/*' />
@@ -16520,7 +16492,6 @@ public unsafe partial struct ID3D11CommandList
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11CommandList*, uint>)(lpVtbl[7]))((ID3D11CommandList*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext"]/*' />
@@ -17479,7 +17450,6 @@ public unsafe partial struct ID3D11DeviceContext
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, Bool32, ID3D11CommandList**, int>)(lpVtbl[114]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), RestoreDeferredContextState, ppCommandList);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoder"]/*' />
@@ -17590,7 +17560,6 @@ public unsafe partial struct ID3D11VideoDecoder
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, IntPtr*, int>)(lpVtbl[8]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), pDriverHandle);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator"]/*' />
@@ -17733,7 +17702,6 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, VideoProcessorFilter, VideoProcessorFilterRange*, int>)(lpVtbl[12]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), Filter, pRange);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor"]/*' />
@@ -17844,7 +17812,6 @@ public unsafe partial struct ID3D11VideoProcessor
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessor*, VideoProcessorRateConversionCaps*, void>)(lpVtbl[8]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), pCaps);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel"]/*' />
@@ -17963,7 +17930,6 @@ public unsafe partial struct ID3D11AuthenticatedChannel
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, IntPtr*, void>)(lpVtbl[9]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pChannelHandle);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession"]/*' />
@@ -18098,7 +18064,6 @@ public unsafe partial struct ID3D11CryptoSession
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, IntPtr*, void>)(lpVtbl[11]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCryptoSessionHandle);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoderOutputView"]/*' />
@@ -18209,7 +18174,6 @@ public unsafe partial struct ID3D11VideoDecoderOutputView
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoDecoderOutputView*, VideoDecoderOutputViewDescription*, void>)(lpVtbl[8]))((ID3D11VideoDecoderOutputView*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorInputView"]/*' />
@@ -18320,7 +18284,6 @@ public unsafe partial struct ID3D11VideoProcessorInputView
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorInputView*, VideoProcessorInputViewDescription*, void>)(lpVtbl[8]))((ID3D11VideoProcessorInputView*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorOutputView"]/*' />
@@ -18431,7 +18394,6 @@ public unsafe partial struct ID3D11VideoProcessorOutputView
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorOutputView*, VideoProcessorOutputViewDescription*, void>)(lpVtbl[8]))((ID3D11VideoProcessorOutputView*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext"]/*' />
@@ -18990,7 +18952,6 @@ public unsafe partial struct ID3D11VideoContext
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, Bool32*, VideoProcessorRotation*, void>)(lpVtbl[64]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnable, pRotation);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice"]/*' />
@@ -19189,7 +19150,6 @@ public unsafe partial struct ID3D11VideoDevice
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, IUnknown*, int>)(lpVtbl[19]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device"]/*' />
@@ -19572,7 +19532,6 @@ public unsafe partial struct ID3D11Device
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, uint>)(lpVtbl[42]))((ID3D11Device*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug"]/*' />
@@ -19707,7 +19666,6 @@ public unsafe partial struct ID3D11Debug
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, ID3D11DeviceContext*, int>)(lpVtbl[11]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pContext);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SwitchToRef"]/*' />
@@ -19786,7 +19744,6 @@ public unsafe partial struct ID3D11SwitchToRef
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11SwitchToRef*, Bool32>)(lpVtbl[4]))((ID3D11SwitchToRef*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice"]/*' />
@@ -19865,7 +19822,6 @@ public unsafe partial struct ID3D11TracingDevice
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11TracingDevice*, IUnknown*, uint, int>)(lpVtbl[4]))((ID3D11TracingDevice*)Unsafe.AsPointer(ref this), pShader, Options);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RefTrackingOptions"]/*' />
@@ -19936,7 +19892,6 @@ public unsafe partial struct ID3D11RefTrackingOptions
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11RefTrackingOptions*, uint, int>)(lpVtbl[3]))((ID3D11RefTrackingOptions*)Unsafe.AsPointer(ref this), uOptions);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RefDefaultTrackingOptions"]/*' />
@@ -20007,7 +19962,6 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11RefDefaultTrackingOptions*, uint, uint, int>)(lpVtbl[3]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this), ResourceTypeFlags, Options);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue"]/*' />
@@ -20350,7 +20304,6 @@ public unsafe partial struct ID3D11InfoQueue
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, Bool32>)(lpVtbl[37]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11BlendState1"]/*' />
@@ -20461,7 +20414,6 @@ public unsafe partial struct ID3D11BlendState1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11BlendState1*, BlendDescription1*, void>)(lpVtbl[8]))((ID3D11BlendState1*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState1"]/*' />
@@ -20572,7 +20524,6 @@ public unsafe partial struct ID3D11RasterizerState1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState1*, RasterizerDescription1*, void>)(lpVtbl[8]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DDeviceContextState"]/*' />
@@ -20667,7 +20618,6 @@ public unsafe partial struct ID3DDeviceContextState
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1"]/*' />
@@ -21778,7 +21728,6 @@ public unsafe partial struct ID3D11DeviceContext1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11View*, RawRect*, uint, void>)(lpVtbl[133]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResourceView, pRects, NumRects);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext1"]/*' />
@@ -22449,7 +22398,6 @@ public unsafe partial struct ID3D11VideoContext1
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, uint, Graphics.Dxgi.Common.Format, uint, VideoProcessorStreamBehaviorHint*, uint*, int>)(lpVtbl[78]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, OutputWidth, OutputHeight, OutputFormat, StreamCount, pStreams, pBehaviorHints);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1"]/*' />
@@ -22680,7 +22628,6 @@ public unsafe partial struct ID3D11VideoDevice1
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice1*, VideoDecoderDescription*, Graphics.Dxgi.Common.ColorSpaceType, VideoDecoderConfig*, Graphics.Dxgi.Common.Rational*, VideoSampleDescription*, int>)(lpVtbl[23]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pRecommendedOutputDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1"]/*' />
@@ -22831,7 +22778,6 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), InputFormat, InputColorSpace, OutputFormat, OutputColorSpace, pSupported);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1"]/*' />
@@ -23270,7 +23216,6 @@ public unsafe partial struct ID3D11Device1
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device1*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation"]/*' />
@@ -23365,7 +23310,6 @@ public unsafe partial struct ID3DUserDefinedAnnotation
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, Bool32>)(lpVtbl[6]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2"]/*' />
@@ -24556,7 +24500,6 @@ public unsafe partial struct ID3D11DeviceContext2
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, void>)(lpVtbl[143]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2"]/*' />
@@ -25027,7 +24970,6 @@ public unsafe partial struct ID3D11Device2
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint, uint*, int>)(lpVtbl[53]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, Flags, pNumQualityLevels);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D1"]/*' />
@@ -25162,7 +25104,6 @@ public unsafe partial struct ID3D11Texture2D1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Texture2DDescription1*, void>)(lpVtbl[11]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture3D1"]/*' />
@@ -25297,7 +25238,6 @@ public unsafe partial struct ID3D11Texture3D1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Texture3D1*, Texture3DDescription1*, void>)(lpVtbl[11]))((ID3D11Texture3D1*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState2"]/*' />
@@ -25416,7 +25356,6 @@ public unsafe partial struct ID3D11RasterizerState2
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState2*, RasterizerDescription2*, void>)(lpVtbl[9]))((ID3D11RasterizerState2*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderResourceView1"]/*' />
@@ -25535,7 +25474,6 @@ public unsafe partial struct ID3D11ShaderResourceView1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView1*, ShaderResourceViewDescription1*, void>)(lpVtbl[9]))((ID3D11ShaderResourceView1*)Unsafe.AsPointer(ref this), pDesc1);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RenderTargetView1"]/*' />
@@ -25654,7 +25592,6 @@ public unsafe partial struct ID3D11RenderTargetView1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView1*, RenderTargetViewDescription1*, void>)(lpVtbl[9]))((ID3D11RenderTargetView1*)Unsafe.AsPointer(ref this), pDesc1);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11UnorderedAccessView1"]/*' />
@@ -25773,7 +25710,6 @@ public unsafe partial struct ID3D11UnorderedAccessView1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView1*, UnorderedAccessViewDescription1*, void>)(lpVtbl[9]))((ID3D11UnorderedAccessView1*)Unsafe.AsPointer(ref this), pDesc1);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Query1"]/*' />
@@ -25892,7 +25828,6 @@ public unsafe partial struct ID3D11Query1
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Query1*, QueryDescription1*, void>)(lpVtbl[9]))((ID3D11Query1*)Unsafe.AsPointer(ref this), pDesc1);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3"]/*' />
@@ -27107,7 +27042,6 @@ public unsafe partial struct ID3D11DeviceContext3
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Bool32*, void>)(lpVtbl[146]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pHwProtectionEnable);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence"]/*' />
@@ -27226,7 +27160,6 @@ public unsafe partial struct ID3D11Fence
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, ulong, IntPtr, int>)(lpVtbl[9]))((ID3D11Fence*)Unsafe.AsPointer(ref this), Value, hEvent);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext4"]/*' />
@@ -28457,7 +28390,6 @@ public unsafe partial struct ID3D11DeviceContext4
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Fence*, ulong, int>)(lpVtbl[148]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pFence, Value);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device3"]/*' />
@@ -29016,7 +28948,6 @@ public unsafe partial struct ID3D11Device3
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Device3*, void*, uint, uint, ID3D11Resource*, uint, Box*, void>)(lpVtbl[64]))((ID3D11Device3*)Unsafe.AsPointer(ref this), pDstData, DstRowPitch, DstDepthPitch, pSrcResource, SrcSubresource, pSrcBox);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device4"]/*' />
@@ -29591,7 +29522,6 @@ public unsafe partial struct ID3D11Device4
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Device4*, uint, void>)(lpVtbl[66]))((ID3D11Device4*)Unsafe.AsPointer(ref this), dwCookie);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device5"]/*' />
@@ -30182,7 +30112,6 @@ public unsafe partial struct ID3D11Device5
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, ulong, FenceFlags, Guid*, void**, int>)(lpVtbl[68]))((ID3D11Device5*)Unsafe.AsPointer(ref this), InitialValue, Flags, ReturnedInterface, ppFence);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread"]/*' />
@@ -30277,7 +30206,6 @@ public unsafe partial struct ID3D11Multithread
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, Bool32>)(lpVtbl[6]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2"]/*' />
@@ -30980,7 +30908,6 @@ public unsafe partial struct ID3D11VideoContext2
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HdrMetadataType*, uint, void*, void>)(lpVtbl[82]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pType, Size, pMetaData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2"]/*' />
@@ -31227,7 +31154,6 @@ public unsafe partial struct ID3D11VideoDevice2
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice2*, ID3D11CryptoSession*, CryptoSessionKeyExchangeFlags, uint, void*, int>)(lpVtbl[25]))((ID3D11VideoDevice2*)Unsafe.AsPointer(ref this), pCryptoSession, flags, DataSize, pData);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3"]/*' />
@@ -31946,7 +31872,6 @@ public unsafe partial struct ID3D11VideoContext3
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription2*, int>)(lpVtbl[84]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType"]/*' />
@@ -32069,7 +31994,6 @@ public unsafe partial struct ID3D11ShaderReflectionType
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[10]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pBase);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionVariable"]/*' />
@@ -32136,7 +32060,6 @@ public unsafe partial struct ID3D11ShaderReflectionVariable
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, uint, uint>)(lpVtbl[3]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this), uArrayIndex);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer"]/*' />
@@ -32195,7 +32118,6 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[2]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection"]/*' />
@@ -32410,7 +32332,6 @@ public unsafe partial struct ID3D11ShaderReflection
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, ulong>)(lpVtbl[21]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LibraryReflection"]/*' />
@@ -32489,7 +32410,6 @@ public unsafe partial struct ID3D11LibraryReflection
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11LibraryReflection*, int, Graphics.Direct3D11.ID3D11FunctionReflection>)(lpVtbl[4]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection"]/*' />
@@ -32580,7 +32500,6 @@ public unsafe partial struct ID3D11FunctionReflection
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, int, Graphics.Direct3D11.ID3D11FunctionParameterReflection>)(lpVtbl[6]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ParameterIndex);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection"]/*' />
@@ -32623,7 +32542,6 @@ public unsafe partial struct ID3D11FunctionParameterReflection
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionParameterReflection*, ParameterDescription*, int>)(lpVtbl[0]))((ID3D11FunctionParameterReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ModuleInstance"]/*' />
@@ -32766,7 +32684,6 @@ public unsafe partial struct ID3D11ModuleInstance
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, sbyte*, uint, uint, int>)(lpVtbl[12]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pSrvName, uDstUavSlot, uCount);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Module"]/*' />
@@ -32837,7 +32754,6 @@ public unsafe partial struct ID3D11Module
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Module*, sbyte*, ID3D11ModuleInstance**, int>)(lpVtbl[3]))((ID3D11Module*)Unsafe.AsPointer(ref this), pNamespace, ppModuleInstance);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker"]/*' />
@@ -32924,7 +32840,6 @@ public unsafe partial struct ID3D11Linker
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, uint, uint, int>)(lpVtbl[5]))((ID3D11Linker*)Unsafe.AsPointer(ref this), uCBufferSlot, uCBufferEntry);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LinkingNode"]/*' />
@@ -33114,7 +33029,6 @@ public unsafe partial struct ID3D11FunctionLinkingGraph
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, uint, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[10]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), uFlags, ppBuffer);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace"]/*' />
@@ -33241,7 +33155,6 @@ public unsafe partial struct ID3D11ShaderTrace
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, uint, TraceRegister*, TraceValue*, int>)(lpVtbl[10]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, readRegisterIndex, pRegister, pValue);
 	}
-
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory"]/*' />
@@ -33312,7 +33225,6 @@ public unsafe partial struct ID3D11ShaderTraceFactory
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTraceFactory*, IUnknown*, ShaderTraceDescription*, ID3D11ShaderTrace**, int>)(lpVtbl[3]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), pShader, pTraceDesc, ppShaderTrace);
 	}
-
 }
 
 #endregion Com Types

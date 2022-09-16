@@ -73,7 +73,7 @@ public readonly struct Matrix4x3 : IEquatable<Matrix4x3>, IFormattable
     public readonly float M43;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="Matrix3x3"/> struct.
+    /// Initializes a new instance of the <see cref="Matrix4x3"/> struct.
     /// </summary>
     /// <param name="value">The value that will be assigned to all components.</param>
     public Matrix4x3(float value)

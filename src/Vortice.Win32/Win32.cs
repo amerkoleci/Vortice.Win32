@@ -3,10 +3,7 @@
 
 
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.ComTypes;
 
 namespace Win32;
 
@@ -87,6 +84,13 @@ public static unsafe partial class Apis
         }
     }
 
+    public const int CLSCTX_INPROC_SERVER = 0x1;
+    public const int CLSCTX_INPROC_HANDLER = 0x2;
+    public const int CLSCTX_LOCAL_SERVER = 0x4;
+    public const int CLSCTX_INPROC_SERVER16 = 0x8;
+    public const int CLSCTX_REMOTE_SERVER = 0x10;
+    public const int CLSCTX_INPROC_HANDLER16 = 0x20;
+
     [DllImport("ole32", ExactSpelling = true)]
-    public static extern HResult CoCreateInstance([NativeTypeName("const IID &")] Guid* rclsid, [NativeTypeName("LPUNKNOWN")] IUnknown* pUnkOuter, [NativeTypeName("DWORD")] uint dwClsContext, [NativeTypeName("const IID &")] Guid* riid, [NativeTypeName("LPVOID *")] void** ppv);
+    public static extern HResult CoCreateInstance(Guid* rclsid, IUnknown* pUnkOuter, uint dwClsContext, Guid* riid, void** ppv);
 }

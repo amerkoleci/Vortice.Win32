@@ -16,7 +16,7 @@ public unsafe partial struct UnorderedAccessViewDescription
     /// <param name="mipSlice">The index of the mipmap level to use mip slice or FirstElement for BUFFER.</param>
     /// <param name="firstArraySlice">The index of the first texture to use in an array of textures or NumElements for BUFFER or FirstWSlice for TEXTURE3D.</param>
     /// <param name="arraySize">Number of textures in the array or WSize for TEXTURE3D.</param>
-    /// <param name="flags"><see cref="BufferUnorderedAccessViewFlags"/> options flags for the resource.</param>
+    /// <param name="flags"><see cref="BufferUavFlags"/> options flags for the resource.</param>
     public UnorderedAccessViewDescription(
         UavDimension viewDimension,
         Format format = Format.Unknown,
@@ -67,7 +67,7 @@ public unsafe partial struct UnorderedAccessViewDescription
     /// <param name="format"></param>
     /// <param name="firstElement"></param>
     /// <param name="numElements"></param>
-    /// <param name="flags"><see cref="BufferUnorderedAccessViewFlags"/> options flags for the resource.</param>
+    /// <param name="flags"><see cref="BufferUavFlags"/> options flags for the resource.</param>
     public UnorderedAccessViewDescription(
         ID3D11Buffer* buffer,
         Format format,

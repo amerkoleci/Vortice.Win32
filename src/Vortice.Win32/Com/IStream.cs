@@ -115,21 +115,19 @@ public unsafe partial struct IStream
         return ((delegate* unmanaged[Stdcall]<IStream*, int>)(lpVtbl[9]))((IStream*)Unsafe.AsPointer(ref this));
     }
 
-    ///// <include file='IStream.xml' path='doc/member[@name="IStream.LockRegion"]/*' />
-    //[MethodImpl(MethodImplOptions.AggressiveInlining)]
-    //[VtblIndex(10)]
-    //public HRESULT LockRegion(ULARGE_INTEGER libOffset, ULARGE_INTEGER cb, [NativeTypeName("DWORD")] uint dwLockType)
-    //{
-    //    return ((delegate* unmanaged[Stdcall]<IStream*, ULARGE_INTEGER, ULARGE_INTEGER, uint, int>)(lpVtbl[10]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
-    //}
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    [VtblIndex(10)]
+    public HResult LockRegion(ULargeInterger libOffset, ULargeInterger cb, [NativeTypeName("DWORD")] uint dwLockType)
+    {
+        return ((delegate* unmanaged[Stdcall]<IStream*, ULargeInterger, ULargeInterger, uint, int>)(lpVtbl[10]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
+    }
 
-    ///// <include file='IStream.xml' path='doc/member[@name="IStream.UnlockRegion"]/*' />
-    //[MethodImpl(MethodImplOptions.AggressiveInlining)]
-    //[VtblIndex(11)]
-    //public HRESULT UnlockRegion(ULARGE_INTEGER libOffset, ULARGE_INTEGER cb, [NativeTypeName("DWORD")] uint dwLockType)
-    //{
-    //    return ((delegate* unmanaged[Stdcall]<IStream*, ULARGE_INTEGER, ULARGE_INTEGER, uint, int>)(lpVtbl[11]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
-    //}
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    [VtblIndex(11)]
+    public HResult UnlockRegion(ULargeInterger libOffset, ULargeInterger cb, [NativeTypeName("DWORD")] uint dwLockType)
+    {
+        return ((delegate* unmanaged[Stdcall]<IStream*, ULargeInterger, ULargeInterger, uint, int>)(lpVtbl[11]))((IStream*)Unsafe.AsPointer(ref this), libOffset, cb, dwLockType);
+    }
 
     ///// <include file='IStream.xml' path='doc/member[@name="IStream.Stat"]/*' />
     //[MethodImpl(MethodImplOptions.AggressiveInlining)]

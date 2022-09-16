@@ -6,35 +6,34 @@ using System.Runtime.CompilerServices;
 
 namespace Win32.Com;
 
-[Guid("00000002-0000-0000-C000-000000000046")]
-[NativeTypeName("struct IMalloc : IUnknown")]
+[Guid("22F55882-280B-11D0-A8A9-00A0C90C2004")]
+[NativeTypeName("struct IPropertyBag2 : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IMalloc
+public unsafe partial struct IPropertyBag2
 {
-    public static ref readonly Guid IID_IMalloc
+    public static ref readonly Guid IID_IPropertyBag2
     {
         get
         {
             ReadOnlySpan<byte> data = new byte[] {
-                0x02, 0x00, 0x00, 0x00,
-                0x00, 0x00,
-                0x00, 0x00,
-                0xC0,
+                0x82, 0x58, 0xF5, 0x22,
+                0x0B, 0x28,
+                0xD0, 0x11,
+                0xA8,
+                0xA9,
                 0x00,
-                0x00,
-                0x00,
-                0x00,
-                0x00,
-                0x00,
-                0x46
+                0xA0,
+                0xC9,
+                0x0C,
+                0x20,
+                0x04
             };
 
             Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
             return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
         }
     }
-
-    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IMalloc));
+    public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IPropertyBag2));
 
     public void** lpVtbl;
 
@@ -66,44 +65,36 @@ public unsafe partial struct IMalloc
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(3)]
-    public void* Alloc([NativeTypeName("SIZE_T")] nuint cb)
+    public HResult Read(uint cProperties, PropertyBagMetadata* pPropBag, IErrorLog* pErrLog, Variant* pvarValue, HResult* phrError)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, nuint, void*>)(lpVtbl[3]))((IMalloc*)Unsafe.AsPointer(ref this), cb);
+        return ((delegate* unmanaged[Stdcall]<IPropertyBag2*, uint, PropertyBagMetadata*, IErrorLog*, Variant*, HResult*, int>)(lpVtbl[3]))((IPropertyBag2*)Unsafe.AsPointer(ref this), cProperties, pPropBag, pErrLog, pvarValue, phrError);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public void* Realloc(void* pv, [NativeTypeName("SIZE_T")] nuint cb)
+    public HResult Write([NativeTypeName("ULONG")] uint cProperties, PropertyBagMetadata* pPropBag, Variant* pvarValue)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, nuint, void*>)(lpVtbl[4]))((IMalloc*)Unsafe.AsPointer(ref this), pv, cb);
+        return ((delegate* unmanaged[Stdcall]<IPropertyBag2*, uint, PropertyBagMetadata*, Variant*, int>)(lpVtbl[4]))((IPropertyBag2*)Unsafe.AsPointer(ref this), cProperties, pPropBag, pvarValue);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public void Free(void* pv)
+    public HResult CountProperties(uint* pcProperties)
     {
-        ((delegate* unmanaged[Stdcall]<IMalloc*, void*, void>)(lpVtbl[5]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
+        return ((delegate* unmanaged[Stdcall]<IPropertyBag2*, uint*, int>)(lpVtbl[5]))((IPropertyBag2*)Unsafe.AsPointer(ref this), pcProperties);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    [return: NativeTypeName("SIZE_T")]
-    public nuint GetSize(void* pv)
+    public HResult GetPropertyInfo(uint iProperty, uint cProperties, PropertyBagMetadata* pPropBag, uint* pcProperties)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, nuint>)(lpVtbl[6]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
+        return ((delegate* unmanaged[Stdcall]<IPropertyBag2*, uint, uint, PropertyBagMetadata*, uint*, int>)(lpVtbl[6]))((IPropertyBag2*)Unsafe.AsPointer(ref this), iProperty, cProperties, pPropBag, pcProperties);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(7)]
-    public int DidAlloc(void* pv)
+    public HResult LoadObject(ushort* pstrName, uint dwHint, IUnknown* pUnkObject, IErrorLog* pErrLog)
     {
-        return ((delegate* unmanaged[Stdcall]<IMalloc*, void*, int>)(lpVtbl[7]))((IMalloc*)Unsafe.AsPointer(ref this), pv);
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [VtblIndex(8)]
-    public void HeapMinimize()
-    {
-        ((delegate* unmanaged[Stdcall]<IMalloc*, void>)(lpVtbl[8]))((IMalloc*)Unsafe.AsPointer(ref this));
+        return ((delegate* unmanaged[Stdcall]<IPropertyBag2*, ushort*, uint, IUnknown*, IErrorLog*, int>)(lpVtbl[7]))((IPropertyBag2*)Unsafe.AsPointer(ref this), pstrName, dwHint, pUnkObject, pErrLog);
     }
 }

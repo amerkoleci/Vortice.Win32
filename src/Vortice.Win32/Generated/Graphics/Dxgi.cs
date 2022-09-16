@@ -2518,7 +2518,6 @@ public unsafe partial struct IDXGIObject
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIObject*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDeviceSubObject"]/*' />
@@ -2621,7 +2620,6 @@ public unsafe partial struct IDXGIDeviceSubObject
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource"]/*' />
@@ -2756,7 +2754,6 @@ public unsafe partial struct IDXGIResource
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, uint*, int>)(lpVtbl[11]))((IDXGIResource*)Unsafe.AsPointer(ref this), pEvictionPriority);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex"]/*' />
@@ -2875,7 +2872,6 @@ public unsafe partial struct IDXGIKeyedMutex
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, ulong, int>)(lpVtbl[9]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface"]/*' />
@@ -3002,7 +2998,6 @@ public unsafe partial struct IDXGISurface
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, int>)(lpVtbl[10]))((IDXGISurface*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface1"]/*' />
@@ -3145,7 +3140,6 @@ public unsafe partial struct IDXGISurface1
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, RawRect*, int>)(lpVtbl[12]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDirtyRect);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter"]/*' />
@@ -3264,7 +3258,6 @@ public unsafe partial struct IDXGIAdapter
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, LargeInterger*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput"]/*' />
@@ -3455,7 +3448,6 @@ public unsafe partial struct IDXGIOutput
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pStats);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain"]/*' />
@@ -3638,7 +3630,6 @@ public unsafe partial struct IDXGISwapChain
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint*, int>)(lpVtbl[17]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pLastPresentCount);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory"]/*' />
@@ -3773,7 +3764,6 @@ public unsafe partial struct IDXGIFactory
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Module, ppAdapter);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice"]/*' />
@@ -3908,7 +3898,6 @@ public unsafe partial struct IDXGIDevice
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, int*, int>)(lpVtbl[11]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pPriority);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory1"]/*' />
@@ -4059,7 +4048,6 @@ public unsafe partial struct IDXGIFactory1
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, Bool32>)(lpVtbl[13]))((IDXGIFactory1*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter1"]/*' />
@@ -4186,7 +4174,6 @@ public unsafe partial struct IDXGIAdapter1
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1"]/*' />
@@ -4337,7 +4324,6 @@ public unsafe partial struct IDXGIDevice1
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, uint*, int>)(lpVtbl[13]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pMaxLatency);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDisplayControl"]/*' />
@@ -4416,7 +4402,6 @@ public unsafe partial struct IDXGIDisplayControl
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIDisplayControl*, Bool32, void>)(lpVtbl[4]))((IDXGIDisplayControl*)Unsafe.AsPointer(ref this), enabled);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication"]/*' />
@@ -4575,7 +4560,6 @@ public unsafe partial struct IDXGIOutputDuplication
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, int>)(lpVtbl[14]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface2"]/*' />
@@ -4726,7 +4710,6 @@ public unsafe partial struct IDXGISurface2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, void**, uint*, int>)(lpVtbl[13]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppParentResource, pSubresourceIndex);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1"]/*' />
@@ -4877,7 +4860,6 @@ public unsafe partial struct IDXGIResource1
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2"]/*' />
@@ -5052,7 +5034,6 @@ public unsafe partial struct IDXGIDevice2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, IntPtr, int>)(lpVtbl[16]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), hEvent);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1"]/*' />
@@ -5323,7 +5304,6 @@ public unsafe partial struct IDXGISwapChain1
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pRotation);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory2"]/*' />
@@ -5562,7 +5542,6 @@ public unsafe partial struct IDXGIFactory2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[24]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter2"]/*' />
@@ -5697,7 +5676,6 @@ public unsafe partial struct IDXGIAdapter2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1"]/*' />
@@ -5920,7 +5898,6 @@ public unsafe partial struct IDXGIOutput1
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice3"]/*' />
@@ -6103,7 +6080,6 @@ public unsafe partial struct IDXGIDevice3
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIDevice3*, void>)(lpVtbl[17]))((IDXGIDevice3*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2"]/*' />
@@ -6430,7 +6406,6 @@ public unsafe partial struct IDXGISwapChain2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Matrix3x2F*, int>)(lpVtbl[35]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMatrix);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput2"]/*' />
@@ -6661,7 +6636,6 @@ public unsafe partial struct IDXGIOutput2
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Bool32>)(lpVtbl[23]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory3"]/*' />
@@ -6908,7 +6882,6 @@ public unsafe partial struct IDXGIFactory3
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, uint>)(lpVtbl[25]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain"]/*' />
@@ -7043,7 +7016,6 @@ public unsafe partial struct IDXGIDecodeSwapChain
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, Graphics.Dxgi.MultiplaneOverlayYcbcrFlags>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactoryMedia"]/*' />
@@ -7122,7 +7094,6 @@ public unsafe partial struct IDXGIFactoryMedia
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactoryMedia*, IUnknown*, IntPtr, DecodeSwapChainDescription*, IDXGIResource*, IDXGIOutput*, IDXGIDecodeSwapChain**, int>)(lpVtbl[4]))((IDXGIFactoryMedia*)Unsafe.AsPointer(ref this), pDevice, hSurface, pDesc, pYuvDecodeBuffers, pRestrictToOutput, ppSwapChain);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
@@ -7209,7 +7180,6 @@ public unsafe partial struct IDXGISwapChainMedia
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint, uint*, uint*, int>)(lpVtbl[5]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), DesiredPresentDuration, pClosestSmallerPresentDuration, pClosestLargerPresentDuration);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
@@ -7448,7 +7418,6 @@ public unsafe partial struct IDXGIOutput3
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3"]/*' />
@@ -7807,7 +7776,6 @@ public unsafe partial struct IDXGISwapChain3
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, uint*, IUnknown**, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput4"]/*' />
@@ -8054,7 +8022,6 @@ public unsafe partial struct IDXGIOutput4
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[25]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory4"]/*' />
@@ -8317,7 +8284,6 @@ public unsafe partial struct IDXGIFactory4
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3"]/*' />
@@ -8500,7 +8466,6 @@ public unsafe partial struct IDXGIAdapter3
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, void>)(lpVtbl[17]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput5"]/*' />
@@ -8755,7 +8720,6 @@ public unsafe partial struct IDXGIOutput5
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain4"]/*' />
@@ -9122,7 +9086,6 @@ public unsafe partial struct IDXGISwapChain4
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, HdrMetadataType, uint, void*, int>)(lpVtbl[40]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Type, Size, pMetaData);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice4"]/*' />
@@ -9321,7 +9284,6 @@ public unsafe partial struct IDXGIDevice4
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, uint, IDXGIResource**, ReclaimResourceResults*, int>)(lpVtbl[19]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, pResults);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory5"]/*' />
@@ -9592,7 +9554,6 @@ public unsafe partial struct IDXGIFactory5
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Feature, void*, uint, int>)(lpVtbl[28]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter4"]/*' />
@@ -9783,7 +9744,6 @@ public unsafe partial struct IDXGIAdapter4
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, AdapterDescription3*, int>)(lpVtbl[18]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput6"]/*' />
@@ -10054,7 +10014,6 @@ public unsafe partial struct IDXGIOutput6
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, uint*, int>)(lpVtbl[28]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pFlags);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory6"]/*' />
@@ -10333,7 +10292,6 @@ public unsafe partial struct IDXGIFactory6
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, uint, GpuPreference, Guid*, void**, int>)(lpVtbl[29]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Adapter, GpuPreference, riid, ppvAdapter);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory7"]/*' />
@@ -10628,7 +10586,6 @@ public unsafe partial struct IDXGIFactory7
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, int>)(lpVtbl[31]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIInfoQueue"]/*' />
@@ -10987,7 +10944,6 @@ public unsafe partial struct IDXGIInfoQueue
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, Bool32>)(lpVtbl[39]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug"]/*' />
@@ -11058,7 +11014,6 @@ public unsafe partial struct IDXGIDebug
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDebug*, Guid, DebugRloFlags, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1"]/*' />
@@ -11153,7 +11108,6 @@ public unsafe partial struct IDXGIDebug1
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDebug1*, Bool32>)(lpVtbl[6]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis"]/*' />
@@ -11232,7 +11186,6 @@ public unsafe partial struct IDXGraphicsAnalysis
 	{
 		((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, void>)(lpVtbl[4]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 #endregion Com Types

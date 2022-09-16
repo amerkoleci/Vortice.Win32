@@ -14,6 +14,10 @@ using Win32.Graphics.Dxgi.Common;
 using System.Numerics;
 using Win32.Graphics.Direct3D.Dxc;
 using static Win32.Graphics.Direct3D.Dxc.Apis;
+using System.Runtime.CompilerServices;
+using System.Security.Claims;
+using Win32.Graphics.Imaging;
+using static Win32.Graphics.Imaging.Apis;
 
 namespace ClearScreen;
 
@@ -45,9 +49,27 @@ public static unsafe class Program
         DxcCreateInstance(CLSID_DxcCompiler, __uuidof<IDxcCompiler3>(), compiler.GetVoidAddressOf());
     }
 
+    private static void TestWic()
+    {
+        string assetsPath = Path.Combine(AppContext.BaseDirectory, "Assets", "Textures");
+        string textureFile = Path.Combine(assetsPath, "10points.png");
+
+        using ComPtr<IWICImagingFactory> wicImagingFactory = default;
+
+        CreateWICImagingFactory(wicImagingFactory.GetAddressOf()).ThrowIfFailed();
+
+        using ComPtr<IWICBitmapDecoder> decoder = wicImagingFactory.Get()->CreateDecoderFromFilename(textureFile);
+
+        using ComPtr<IWICBitmapFrameDecode> wicBitmapFrameDecode = default;
+
+        // Get the first frame of the loaded image (if more are present, they will be ignored)
+        decoder.Get()->GetFrame(0, wicBitmapFrameDecode.GetAddressOf()).ThrowIfFailed();
+    }
+
     public static void Main()
     {
         TestDxc();
+        TestWic();
 
         using ComPtr<IDXGIFactory2> factory = default;
         uint factoryFlags = 0;

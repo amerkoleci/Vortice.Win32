@@ -478,7 +478,6 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
 	}
-
 }
 
 #endregion Com Types
