@@ -393,7 +393,7 @@ public partial struct DxcShaderHash
 	public DxcHashFlags Flags;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcShaderHash::HashDigest"]/*' />
-	public unsafe fixed byte Hashdigest[16];
+	public unsafe fixed byte HashDigest[16];
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer"]/*' />
@@ -426,10 +426,10 @@ public partial struct DxcDefine
 public partial struct DxcArgPair
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcArgPair::pName"]/*' />
-	public unsafe ushort* Pname;
+	public unsafe ushort* pName;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcArgPair::pValue"]/*' />
-	public unsafe ushort* Pvalue;
+	public unsafe ushort* pValue;
 }
 
 #endregion Structs

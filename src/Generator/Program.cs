@@ -1503,17 +1503,11 @@ public static class Program
             foreach (ApiStructField field in structType.Fields)
             {
                 if (field.Name.EndsWith("_FORCE_DWORD"))
+                {
                     continue;
+                }
 
-                string fieldValueName;
-                if (nestedType)
-                {
-                    fieldValueName = field.Name;
-                }
-                else
-                {
-                    fieldValueName = GetPrettyFieldName(field.Name, structPrefix, false);
-                }
+                string fieldValueName = field.Name;
 
                 if (structType.Name == "D3D11_OMAC")
                 {
