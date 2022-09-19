@@ -3,6 +3,7 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Reflection.Metadata;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -24,6 +25,9 @@ public static class Program
         "Graphics.Direct2D.Common.json",
         "Graphics.Imaging.json",
         //"Graphics.DirectWrite.json",
+        //"Graphics.Direct2D.json",
+
+        //"Graphics.Imaging.D2D.json",
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -64,6 +68,7 @@ public static class Program
         { "Foundation.LUID", "Luid" },
         { "Foundation.LARGE_INTEGER", "LargeInteger" },
         { "Foundation.ULARGE_INTEGER", "ULargeInteger" },
+        { "Foundation.FILETIME", "ulong" },
 
         { "System.Com.IUnknown", "IUnknown" },
         { "System.Com.ISequentialStream", "Com.ISequentialStream" },
@@ -84,9 +89,9 @@ public static class Program
         { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
         { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_3X2_F", "Matrix3x2" },
-        { "Graphics.Direct2D.Common.D2D_MATRIX_4X3_F", "Matrix4x3" },
+        { "Graphics.Direct2D.Common.D2D_MATRIX_4X3_F", "Win32.Graphics.Direct2D.Common.Matrix4x3" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_4X4_F", "Matrix4x4" },
-        { "Graphics.Direct2D.Common.D2D_MATRIX_5X4_F", "Matrix5x4" },
+        { "Graphics.Direct2D.Common.D2D_MATRIX_5X4_F", "Win32.Graphics.Direct2D.Common.Matrix5x4" },
         { "Graphics.Direct2D.Common.D2D_POINT_2F", "System.Drawing.PointF" },
         { "Graphics.Direct2D.Common.D2D_VECTOR_2F", "Vector2" },
         { "Graphics.Direct2D.Common.D2D_VECTOR_3F", "Vector3" },
@@ -857,6 +862,7 @@ public static class Program
 
     private static readonly HashSet<string> s_visitedEnums = new();
     private static readonly HashSet<string> s_visitedStructs = new();
+    private static readonly Dictionary<string, List<KeyValuePair<ApiFunction, string>>> s_visitedComTypes = new();
 
     private static bool s_generateUnmanagedDocs = true;
 
@@ -1179,11 +1185,26 @@ public static class Program
                 && iterateType.Interface.Name != "IStream"
                 && iterateType.Interface.Name != "IPersistStream")
             {
-                iterateType = api.Types.First(item => item.Name == iterateType.Interface.Name);
+                string fullTypeName = $"{iterateType.Interface.Api}.{iterateType.Interface.Name}";
+                iterateType = api.Types.FirstOrDefault(item => item.Name == iterateType.Interface.Name);
 
-                foreach (ApiFunction method in iterateType.Methods)
+                if (iterateType != null)
                 {
-                    methodsToGenerate.Add(new(method, iterateType.Name));
+                    foreach (ApiFunction method in iterateType.Methods)
+                    {
+                        methodsToGenerate.Add(new(method, iterateType.Name));
+                    }
+                }
+                else
+                {
+                    var knownMethods = s_visitedComTypes.First(item => item.Key == fullTypeName).Value;
+
+                    foreach (var knownMethod in knownMethods)
+                    {
+                        methodsToGenerate.Add(knownMethod);
+                    }
+
+                    break;
                 }
             }
 
@@ -1864,7 +1885,14 @@ public static class Program
                     else if (parameterType.EndsWith("**") == false &&
                         parameter.Attrs.Any(item => item is string str && (str == "RetVal" || str == "Out")))
                     {
-                        if (parameter.Type.Child.Kind != "ApiRef")
+                        if (parameter.Type.Child == null)
+                        {
+                            //if (!IsPrimitive(parameter.Type))
+                            //{
+                            //    parameterType += "*";
+                            //}
+                        }
+                        else if (parameter.Type.Child.Kind != "ApiRef")
                         {
                             if (!IsPrimitive(parameter.Type))
                             {
@@ -1960,6 +1988,7 @@ public static class Program
         }
 
         writer.WriteLine();
+        s_visitedComTypes.Add($"{writer.Api}.{comType.Name}", methodsToGenerate);
     }
 
     private static bool ShouldSkipConstant(ApiDataConstant constant)
