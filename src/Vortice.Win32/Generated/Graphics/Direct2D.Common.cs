@@ -290,17 +290,6 @@ public partial struct PixelFormat
 	public AlphaMode alphaMode;
 }
 
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_POINT_2U"]/*' />
-/// <unmanaged>D2D_POINT_2U</unmanaged>
-public partial struct Point2u
-{
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_POINT_2U::x"]/*' />
-	public uint x;
-
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_POINT_2U::y"]/*' />
-	public uint y;
-}
-
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F"]/*' />
 /// <unmanaged>D2D_RECT_F</unmanaged>
 public partial struct RectF
@@ -333,17 +322,6 @@ public partial struct RectU
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U::bottom"]/*' />
 	public uint bottom;
-}
-
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_SIZE_U"]/*' />
-/// <unmanaged>D2D_SIZE_U</unmanaged>
-public partial struct SizeU
-{
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_SIZE_U::width"]/*' />
-	public uint width;
-
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_SIZE_U::height"]/*' />
-	public uint height;
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT"]/*' />

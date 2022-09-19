@@ -1,11 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.ComponentModel.DataAnnotations;
-using System.Data.Common;
 using System.Globalization;
-using System.Reflection;
-using System.Reflection.Metadata;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -15,8 +11,6 @@ public static class Program
 {
     private static readonly string[] jsons = new[]
     {
-        //"System.Com.json",
-
         "Graphics.json",
         "Graphics.Dxgi.Common.json",
         "Graphics.Dxgi.json",
@@ -101,9 +95,12 @@ public static class Program
         { "Graphics.Direct2D.Common.D2D_VECTOR_3F", "Vector3" },
         { "Graphics.Direct2D.Common.D2D_VECTOR_4F", "Vector4" },
         { "Graphics.Direct2D.Common.D2D_SIZE_F", "System.Drawing.SizeF" },
+        { "Graphics.Direct2D.Common.D2D_POINT_2U", "System.Drawing.Point" },
+        { "Graphics.Direct2D.Common.D2D_SIZE_U", "System.Drawing.Size" },
 
         { "Graphics.Imaging.WICRect", "System.Drawing.Rectangle" },
 
+        { "Graphics.DirectWrite.DWRITE_COLOR_F", "Win32.Graphics.Direct2D.Common.ColorF" },
         { "Graphics.Direct2D.Matrix4x3F", "Win32.Graphics.Direct2D.Common.Matrix4x3" },
         { "Graphics.Direct2D.Matrix4x4F", "Matrix4x4" },
         { "Graphics.Direct2D.Matrix5x4F", "Win32.Graphics.Direct2D.Common.Matrix5x4" },
@@ -1888,13 +1885,20 @@ public static class Program
                 StringBuilder argumentsNameBuilder = new();
                 int parameterIndex = 0;
 
+                bool allOptional = false;
+
+                if (method.Name == "EndDraw")
+                {
+                    allOptional =
+                        method.Params.All(item => item.Attrs.Any(attr => attr is string str && str == "Optional"));
+                }
+
                 foreach (ApiParameter parameter in method.Params)
                 {
                     bool asPointer = false;
                     string parameterType = string.Empty;
 
-
-                    if (method.Name == "CreateSurface" && parameter.Name == "ppSurface")
+                    if (method.Name == "CreateBitmap" && comType.Name == "ID2D1RenderTarget")
                     {
                     }
 
@@ -1975,10 +1979,10 @@ public static class Program
                     parameterName = CleanupName(parameterName);
 
                     argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
-                    //if (isOptional == true)
-                    //{
-                    //argumentBuilder.Append(" = default");
-                    //}
+                    if (allOptional == true && isOptional == true)
+                    {
+                        argumentBuilder.Append(" = null");
+                    }
 
                     argumentsTypesBuilder.Append(parameterType);
                     argumentsNameBuilder.Append(parameterName);
@@ -2370,6 +2374,10 @@ public static class Program
             {
                 return "Level_" + prettyName;
             }
+            else if (enumPrefix.Contains("_GAMMA"))
+            {
+                return "Gamma_" + prettyName[0] + "_" + prettyName[1];
+            }
 
             return "_" + prettyName;
         }
@@ -2513,6 +2521,10 @@ public static class Program
             case "ULargeInteger":
             case "Luid":
             case "HResult":
+                return true;
+
+            case "System.Drawing.Size":
+            case "System.Drawing.SizeF":
                 return true;
         }
 

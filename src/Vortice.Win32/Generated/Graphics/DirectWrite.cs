@@ -2363,23 +2363,6 @@ public partial struct Panose
 #endregion Unions
 
 #region Structs
-/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_F"]/*' />
-/// <unmanaged>DWRITE_COLOR_F</unmanaged>
-public partial struct ColorF
-{
-	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_F::r"]/*' />
-	public float r;
-
-	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_F::g"]/*' />
-	public float g;
-
-	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_F::b"]/*' />
-	public float b;
-
-	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_F::a"]/*' />
-	public float a;
-}
-
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS"]/*' />
 /// <unmanaged>DWRITE_FONT_METRICS</unmanaged>
 public partial struct FontMetrics
@@ -2933,7 +2916,7 @@ public partial struct ColorGlyphRun
 	public float baselineOriginY;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::runColor"]/*' />
-	public ColorF runColor;
+	public Win32.Graphics.Direct2D.Common.ColorF runColor;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::paletteIndex"]/*' />
 	public ushort paletteIndex;
@@ -3018,7 +3001,7 @@ public partial struct GlyphImageData
 	public uint pixelsPerEm;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::pixelSize"]/*' />
-	public Graphics.Direct2D.Common.SizeU pixelSize;
+	public System.Drawing.Size pixelSize;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::horizontalLeftOrigin"]/*' />
 	public System.Drawing.Point horizontalLeftOrigin;
@@ -6107,9 +6090,9 @@ public unsafe partial struct IDWriteBitmapRenderTarget
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSize(System.Drawing.Size** size)
+	public HResult GetSize(System.Drawing.Size* size)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget*, System.Drawing.Size**, int>)(lpVtbl[9]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), size);
+		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget*, System.Drawing.Size*, int>)(lpVtbl[9]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), size);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::Resize"]/*' />
@@ -8475,9 +8458,9 @@ public unsafe partial struct IDWriteBitmapRenderTarget1
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.GetSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSize(System.Drawing.Size** size)
+	public HResult GetSize(System.Drawing.Size* size)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, System.Drawing.Size**, int>)(lpVtbl[9]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), size);
+		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, System.Drawing.Size*, int>)(lpVtbl[9]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), size);
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.Resize" />
@@ -10523,9 +10506,9 @@ public unsafe partial struct IDWriteFontFace2
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetPaletteEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, ColorF* paletteEntries)
+	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Win32.Graphics.Direct2D.Common.ColorF** paletteEntries)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, uint, uint, uint, ColorF*, int>)(lpVtbl[33]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, uint, uint, uint, Win32.Graphics.Direct2D.Common.ColorF**, int>)(lpVtbl[33]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetRecommendedRenderingMode"]/*' />
@@ -12585,9 +12568,9 @@ public unsafe partial struct IDWriteFontFace3
 	/// <inheritdoc cref="IDWriteFontFace2.GetPaletteEntries" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, ColorF* paletteEntries)
+	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Win32.Graphics.Direct2D.Common.ColorF** paletteEntries)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, uint, uint, uint, ColorF*, int>)(lpVtbl[6]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, uint, uint, uint, Win32.Graphics.Direct2D.Common.ColorF**, int>)(lpVtbl[6]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace2.GetRecommendedRenderingMode" />
@@ -14681,9 +14664,9 @@ public unsafe partial struct IDWriteFontFace4
 	/// <inheritdoc cref="IDWriteFontFace2.GetPaletteEntries" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, ColorF* paletteEntries)
+	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Win32.Graphics.Direct2D.Common.ColorF** paletteEntries)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, uint, uint, uint, ColorF*, int>)(lpVtbl[20]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, uint, uint, uint, Win32.Graphics.Direct2D.Common.ColorF**, int>)(lpVtbl[20]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace2.GetRecommendedRenderingMode" />
@@ -16943,9 +16926,9 @@ public unsafe partial struct IDWriteFontFace5
 	/// <inheritdoc cref="IDWriteFontFace2.GetPaletteEntries" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, ColorF* paletteEntries)
+	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Win32.Graphics.Direct2D.Common.ColorF** paletteEntries)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, uint, uint, uint, ColorF*, int>)(lpVtbl[24]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, uint, uint, uint, Win32.Graphics.Direct2D.Common.ColorF**, int>)(lpVtbl[24]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace2.GetRecommendedRenderingMode" />
@@ -21001,9 +20984,9 @@ public unsafe partial struct IDWriteFontFace6
 	/// <inheritdoc cref="IDWriteFontFace2.GetPaletteEntries" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, ColorF* paletteEntries)
+	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Win32.Graphics.Direct2D.Common.ColorF** paletteEntries)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, uint, uint, uint, ColorF*, int>)(lpVtbl[29]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, uint, uint, uint, Win32.Graphics.Direct2D.Common.ColorF**, int>)(lpVtbl[29]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace2.GetRecommendedRenderingMode" />

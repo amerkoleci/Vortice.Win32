@@ -3,13 +3,9 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <summary>
-/// A <see langword="class"/> with extensions for the <see cref="ID3D11Device"/> type.
-/// </summary>
-public static unsafe class ID3D11DeviceExtensions
+public unsafe partial struct ID3D11Device
 {
-    public static ComPtr<ID3D11Buffer> CreateBuffer<T>(
-        this ref ID3D11Device device,
+    public ComPtr<ID3D11Buffer> CreateBuffer<T>(
         in T data,
         BufferDescription description) where T : unmanaged
     {
@@ -24,12 +20,12 @@ public static unsafe class ID3D11DeviceExtensions
             };
 
             using ComPtr<ID3D11Buffer> buffer = default;
-            device.CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
+            CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
             return buffer.Move();
         }
     }
 
-    public static ComPtr<ID3D11Buffer> CreateBuffer<T>(this ref ID3D11Device device, ReadOnlySpan<T> data, BufferDescription description) where T : unmanaged
+    public ComPtr<ID3D11Buffer> CreateBuffer<T>(ReadOnlySpan<T> data, BufferDescription description) where T : unmanaged
     {
         if (description.ByteWidth == 0)
             description.ByteWidth = (uint)(sizeof(T) * data.Length);
@@ -42,7 +38,7 @@ public static unsafe class ID3D11DeviceExtensions
             };
 
             using ComPtr<ID3D11Buffer> buffer = default;
-            device.CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
+            CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
             return buffer.Move();
         }
     }
@@ -60,8 +56,7 @@ public static unsafe class ID3D11DeviceExtensions
     /// <param name="miscFlags">Miscellaneous resource options.</param>
     /// <param name="structureByteStride">The size (in bytes) of the structure element for structured buffers.</param>
     /// <returns>An initialized buffer</returns>
-    public static ComPtr<ID3D11Buffer> CreateBuffer<T>(
-        this ref ID3D11Device device,
+    public ComPtr<ID3D11Buffer> CreateBuffer<T>(
         ReadOnlySpan<T> data,
         BindFlags bindFlags,
         Usage usage = Usage.Default,
@@ -88,7 +83,7 @@ public static unsafe class ID3D11DeviceExtensions
             };
 
             using ComPtr<ID3D11Buffer> buffer = default;
-            device.CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
+            CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
             return buffer.Move();
         }
     }

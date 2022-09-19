@@ -82,6 +82,9 @@ public static unsafe class Program
 
     private static void TestD2D1AndDWrite()
     {
+        using ComPtr<ID2D1Effect> effect = default;
+        //effect.Get()->SetInput();
+
         using ComPtr<ID2D1Factory2> d2d1Factory2 = default;
 
         D2D1CreateFactory(FactoryType.MultiThreaded,

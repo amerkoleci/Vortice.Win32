@@ -43,7 +43,7 @@ public readonly partial struct Bool32 : IComparable, IComparable<Bool32>, IEquat
 
     public static explicit operator short(Bool32 value) => (short)(value.Value);
 
-    public static implicit operator Bool32(int value) => new Bool32(value);
+    public static implicit operator Bool32(int value) => new(value);
 
     public static implicit operator int(Bool32 value) => value.Value;
 

@@ -18573,9 +18573,9 @@ public unsafe partial struct ID3D11VideoContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorSetOutputConstriction"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size* Size)
+	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size Size)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size*, void>)(lpVtbl[17]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size, void>)(lpVtbl[17]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorSetOutputStereoMode"]/*' />
@@ -18629,9 +18629,9 @@ public unsafe partial struct ID3D11VideoContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorGetOutputConstriction"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size** pSize)
+	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size**, void>)(lpVtbl[24]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[24]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext::VideoProcessorGetOutputStereoMode"]/*' />
@@ -21875,9 +21875,9 @@ public unsafe partial struct ID3D11VideoContext1
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size* Size)
+	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size Size)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size*, void>)(lpVtbl[13]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size, void>)(lpVtbl[13]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputStereoMode" />
@@ -21931,9 +21931,9 @@ public unsafe partial struct ID3D11VideoContext1
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size** pSize)
+	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size**, void>)(lpVtbl[20]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[20]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputStereoMode" />
@@ -30465,9 +30465,9 @@ public unsafe partial struct ID3D11VideoContext2
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size* Size)
+	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size Size)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size*, void>)(lpVtbl[27]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size, void>)(lpVtbl[27]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputStereoMode" />
@@ -30521,9 +30521,9 @@ public unsafe partial struct ID3D11VideoContext2
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size** pSize)
+	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size**, void>)(lpVtbl[34]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[34]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputStereoMode" />
@@ -31445,9 +31445,9 @@ public unsafe partial struct ID3D11VideoContext3
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size* Size)
+	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size Size)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size*, void>)(lpVtbl[31]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size, void>)(lpVtbl[31]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputStereoMode" />
@@ -31501,9 +31501,9 @@ public unsafe partial struct ID3D11VideoContext3
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputConstriction" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size** pSize)
+	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size**, void>)(lpVtbl[38]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[38]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputStereoMode" />

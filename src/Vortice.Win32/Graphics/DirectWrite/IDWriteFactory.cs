@@ -6,13 +6,9 @@ using Win32.Graphics.Imaging;
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <summary>
-/// A <see langword="class"/> with extensions for the <see cref="IDWriteFactory"/> type.
-/// </summary>
-public static unsafe class IDWriteFactoryExtensions
+public unsafe partial struct IDWriteFactory
 {
-    public static ComPtr<IDWriteTextFormat> CreateTextFormat(
-        this ref IDWriteFactory factory,
+    public ComPtr<IDWriteTextFormat> CreateTextFormat(
         ReadOnlySpan<char> fontFamilyName,
         float fontSize,
         FontWeight fontWeight = FontWeight.Normal,
@@ -23,7 +19,7 @@ public static unsafe class IDWriteFactoryExtensions
 
         fixed (char* fontFamilyNamePtr = fontFamilyName)
         {
-            factory.CreateTextFormat(
+            CreateTextFormat(
                 (ushort*)fontFamilyNamePtr,
                 null,
                 fontWeight,
@@ -37,8 +33,7 @@ public static unsafe class IDWriteFactoryExtensions
         }
     }
 
-    public static ComPtr<IDWriteTextFormat> CreateTextFormat(
-        this ref IDWriteFactory factory,
+    public ComPtr<IDWriteTextFormat> CreateTextFormat(
         ReadOnlySpan<char> fontFamilyName,
         float fontSize,
         ReadOnlySpan<char> localeName,
@@ -52,7 +47,7 @@ public static unsafe class IDWriteFactoryExtensions
         {
             fixed (char* localeNamePtr = localeName)
             {
-                factory.CreateTextFormat(
+                CreateTextFormat(
                     (ushort*)fontFamilyNamePtr,
                     null,
                     fontWeight,
@@ -67,8 +62,7 @@ public static unsafe class IDWriteFactoryExtensions
         }
     }
 
-    public static ComPtr<IDWriteTextFormat> CreateTextFormat(
-        this ref IDWriteFactory factory,
+    public ComPtr<IDWriteTextFormat> CreateTextFormat(
         ReadOnlySpan<char> fontFamilyName,
         IDWriteFontCollection* fontCollection,
         float fontSize,
@@ -83,7 +77,7 @@ public static unsafe class IDWriteFactoryExtensions
         {
             fixed (char* localeNamePtr = localeName)
             {
-                factory.CreateTextFormat(
+                CreateTextFormat(
                     (ushort*)fontFamilyNamePtr,
                     fontCollection,
                     fontWeight,

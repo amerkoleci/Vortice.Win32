@@ -3,22 +3,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <summary>
-/// A <see langword="class"/> with extensions for the <see cref="IWICImagingFactory"/> type.
-/// </summary>
-public static unsafe class IWICImagingFactoryExtensions
+public unsafe partial struct IWICImagingFactory
 {
-    public static ComPtr<IWICBitmapDecoder> CreateDecoderFromFilename(
-        this ref IWICImagingFactory factory,
+    public ComPtr<IWICBitmapDecoder> CreateDecoderFromFilename(
         string filename,
         FileAccess desiredAccess = FileAccess.Read,
         WICDecodeOptions metadataOptions = WICDecodeOptions.CacheOnDemand)
     {
-        return CreateDecoderFromFilename(ref factory, filename.AsSpan(), desiredAccess, metadataOptions);
+        return CreateDecoderFromFilename(filename.AsSpan(), desiredAccess, metadataOptions);
     }
 
-    public static ComPtr<IWICBitmapDecoder> CreateDecoderFromFilename(
-        this ref IWICImagingFactory factory,
+    public ComPtr<IWICBitmapDecoder> CreateDecoderFromFilename(
         ReadOnlySpan<char> filename,
         FileAccess desiredAccess = FileAccess.Read,
         WICDecodeOptions metadataOptions = WICDecodeOptions.CacheOnDemand)
@@ -29,7 +24,7 @@ public static unsafe class IWICImagingFactoryExtensions
 
         fixed (char* filenamePtr = filename)
         {
-            factory.CreateDecoderFromFilename(
+            CreateDecoderFromFilename(
                 (ushort*)filenamePtr,
                 null,
                 nativeAccess,

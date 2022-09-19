@@ -1624,10 +1624,10 @@ public enum Gamma : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA::D2D1_GAMMA_2_2"]/*' />
 	/// <unmanaged>D2D1_GAMMA_2_2</unmanaged>
-	_22 = 0,
+	Gamma_2_2 = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA::D2D1_GAMMA_1_0"]/*' />
 	/// <unmanaged>D2D1_GAMMA_1_0</unmanaged>
-	_10 = 1,
+	Gamma_1_0 = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT"]/*' />
@@ -4875,7 +4875,7 @@ public partial struct HwndRenderTargetProperties
 	public IntPtr hwnd;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::pixelSize"]/*' />
-	public Common.SizeU pixelSize;
+	public System.Drawing.Size pixelSize;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::presentOptions"]/*' />
 	public PresentOptions presentOptions;
@@ -4948,7 +4948,7 @@ public partial struct RenderingControls
 	public BufferPrecision bufferPrecision;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS::tileSize"]/*' />
-	public Common.SizeU tileSize;
+	public System.Drawing.Size tileSize;
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION"]/*' />
@@ -5704,9 +5704,9 @@ public unsafe partial struct ID2D1Bitmap
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Size>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelFormat"]/*' />
@@ -5728,17 +5728,17 @@ public unsafe partial struct ID2D1Bitmap
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CopyFromBitmap(Common.Point2u* destPoint, ID2D1Bitmap* bitmap, Common.RectU* srcRect)
+	public HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Common.RectU* srcRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Common.Point2u*, ID2D1Bitmap*, Common.RectU*, int>)(lpVtbl[8]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1Bitmap*, Common.RectU*, int>)(lpVtbl[8]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CopyFromRenderTarget(Common.Point2u* destPoint, ID2D1RenderTarget* renderTarget, Common.RectU* srcRect)
+	public HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Common.RectU* srcRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Common.Point2u*, ID2D1RenderTarget*, Common.RectU*, int>)(lpVtbl[9]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1RenderTarget*, Common.RectU*, int>)(lpVtbl[9]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromMemory"]/*' />
@@ -8550,9 +8550,9 @@ public unsafe partial struct ID2D1RenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::CreateBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[4]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[4]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::CreateBitmapFromWicBitmap"]/*' />
@@ -8614,9 +8614,9 @@ public unsafe partial struct ID2D1RenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::CreateCompatibleRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[12]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[12]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::CreateLayer"]/*' />
@@ -8910,7 +8910,7 @@ public unsafe partial struct ID2D1RenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::EndDraw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, ulong*, ulong*, int>)(lpVtbl[49]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -8950,9 +8950,9 @@ public unsafe partial struct ID2D1RenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::GetPixelSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[54]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, System.Drawing.Size>)(lpVtbl[54]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::GetMaximumBitmapSize"]/*' />
@@ -9036,9 +9036,9 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[3]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[3]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -9100,9 +9100,9 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[11]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[11]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -9396,7 +9396,7 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, ulong*, ulong*, int>)(lpVtbl[48]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -9436,9 +9436,9 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[53]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, System.Drawing.Size>)(lpVtbl[53]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -9538,9 +9538,9 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[3]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[3]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -9602,9 +9602,9 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[11]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[11]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -9898,7 +9898,7 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, ulong*, ulong*, int>)(lpVtbl[48]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -9938,9 +9938,9 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[53]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, System.Drawing.Size>)(lpVtbl[53]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -9978,9 +9978,9 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::Resize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
-	public HResult Resize(Common.SizeU* pixelSize)
+	public HResult Resize(System.Drawing.Size* pixelSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, Common.SizeU*, int>)(lpVtbl[58]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), pixelSize);
+		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, System.Drawing.Size*, int>)(lpVtbl[58]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), pixelSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::GetHwnd"]/*' />
@@ -10134,9 +10134,9 @@ public unsafe partial struct ID2D1DCRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[3]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[3]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -10198,9 +10198,9 @@ public unsafe partial struct ID2D1DCRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[11]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[11]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -10494,7 +10494,7 @@ public unsafe partial struct ID2D1DCRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, ulong*, ulong*, int>)(lpVtbl[48]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -10534,9 +10534,9 @@ public unsafe partial struct ID2D1DCRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[53]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, System.Drawing.Size>)(lpVtbl[53]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -11314,9 +11314,9 @@ public unsafe partial struct ID2D1PrintControl
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::AddPage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF* pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2)
+	public HResult AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, ID2D1CommandList*, System.Drawing.SizeF*, Com.IStream*, ulong*, ulong*, int>)(lpVtbl[3]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), commandList, pageSize, pagePrintTicketStream, tag1, tag2);
+		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, ID2D1CommandList*, System.Drawing.SizeF, Com.IStream*, ulong*, ulong*, int>)(lpVtbl[3]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), commandList, pageSize, pagePrintTicketStream, tag1, tag2);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::Close"]/*' />
@@ -12468,9 +12468,9 @@ public unsafe partial struct ID2D1Bitmap1
 	/// <inheritdoc cref="ID2D1Bitmap.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[4]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, System.Drawing.Size>)(lpVtbl[4]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Bitmap.GetPixelFormat" />
@@ -12492,17 +12492,17 @@ public unsafe partial struct ID2D1Bitmap1
 	/// <inheritdoc cref="ID2D1Bitmap.CopyFromBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CopyFromBitmap(Common.Point2u* destPoint, ID2D1Bitmap* bitmap, Common.RectU* srcRect)
+	public HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Common.RectU* srcRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, Common.Point2u*, ID2D1Bitmap*, Common.RectU*, int>)(lpVtbl[7]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, System.Drawing.Point*, ID2D1Bitmap*, Common.RectU*, int>)(lpVtbl[7]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
 	}
 
 	/// <inheritdoc cref="ID2D1Bitmap.CopyFromRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CopyFromRenderTarget(Common.Point2u* destPoint, ID2D1RenderTarget* renderTarget, Common.RectU* srcRect)
+	public HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Common.RectU* srcRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, Common.Point2u*, ID2D1RenderTarget*, Common.RectU*, int>)(lpVtbl[8]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, System.Drawing.Point*, ID2D1RenderTarget*, Common.RectU*, int>)(lpVtbl[8]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
 	}
 
 	/// <inheritdoc cref="ID2D1Bitmap.CopyFromMemory" />
@@ -12980,9 +12980,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[3]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[3]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -13044,9 +13044,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[11]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[11]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -13340,7 +13340,7 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ulong*, ulong*, int>)(lpVtbl[48]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -13380,9 +13380,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[53]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.Size>)(lpVtbl[53]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -13412,9 +13412,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
-	public HResult CreateBitmap(Common.SizeU* size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Common.SizeU*, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[57]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[57]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapFromWicBitmap"]/*' />
@@ -15310,9 +15310,9 @@ public unsafe partial struct ID2D1SourceTransform
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform::Draw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Draw(ID2D1Bitmap1* target, RawRect* drawRect, Common.Point2u* targetOrigin)
+	public HResult Draw(ID2D1Bitmap1* target, RawRect* drawRect, System.Drawing.Point* targetOrigin)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SourceTransform*, ID2D1Bitmap1*, RawRect*, Common.Point2u*, int>)(lpVtbl[8]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), target, drawRect, targetOrigin);
+		return ((delegate* unmanaged[Stdcall]<ID2D1SourceTransform*, ID2D1Bitmap1*, RawRect*, System.Drawing.Point*, int>)(lpVtbl[8]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), target, drawRect, targetOrigin);
 	}
 }
 
@@ -16244,9 +16244,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateBitmap(Common.SizeU* size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Common.SizeU*, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[3]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[3]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapFromWicBitmap" />
@@ -16524,9 +16524,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[38]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[38]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -16588,9 +16588,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[46]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[46]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -16884,7 +16884,7 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, ulong*, ulong*, int>)(lpVtbl[83]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -16924,9 +16924,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(88)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[88]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.Size>)(lpVtbl[88]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -18656,9 +18656,9 @@ public unsafe partial struct ID2D1SvgDocument
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::SetViewportSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetViewportSize(System.Drawing.SizeF* viewportSize)
+	public HResult SetViewportSize(System.Drawing.SizeF viewportSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, System.Drawing.SizeF*, int>)(lpVtbl[4]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), viewportSize);
+		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, System.Drawing.SizeF, int>)(lpVtbl[4]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), viewportSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::GetViewportSize"]/*' />
@@ -19520,9 +19520,9 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateBitmap(Common.SizeU* size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Common.SizeU*, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[6]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[6]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapFromWicBitmap" />
@@ -19800,9 +19800,9 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[41]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[41]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -19864,9 +19864,9 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[49]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[49]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -20160,7 +20160,7 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(86)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, ulong*, ulong*, int>)(lpVtbl[86]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -20200,9 +20200,9 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(91)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[91]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, System.Drawing.Size>)(lpVtbl[91]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -21498,9 +21498,9 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult CreateBitmap(Common.SizeU* size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Common.SizeU*, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[17]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[17]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapFromWicBitmap" />
@@ -21778,9 +21778,9 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[52]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[52]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -21842,9 +21842,9 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[60]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[60]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -22138,7 +22138,7 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(97)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ulong*, ulong*, int>)(lpVtbl[97]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -22178,9 +22178,9 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(102)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[102]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.Size>)(lpVtbl[102]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -23264,9 +23264,9 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult CreateBitmap(Common.SizeU* size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Common.SizeU*, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[19]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[19]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapFromWicBitmap" />
@@ -23544,9 +23544,9 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[54]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[54]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -23608,9 +23608,9 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[62]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[62]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -23904,7 +23904,7 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(99)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, ulong*, ulong*, int>)(lpVtbl[99]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -23944,9 +23944,9 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(104)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[104]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.Size>)(lpVtbl[104]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -25174,9 +25174,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult CreateBitmap(Common.SizeU* size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Common.SizeU*, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[26]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[26]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapFromWicBitmap" />
@@ -25454,9 +25454,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[61]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[61]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -25518,9 +25518,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(69)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[69]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[69]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -25814,7 +25814,7 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(106)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, ulong*, ulong*, int>)(lpVtbl[106]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -25854,9 +25854,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(111)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[111]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, System.Drawing.Size>)(lpVtbl[111]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -25886,9 +25886,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::CreateSvgDocument"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(115)]
-	public HResult CreateSvgDocument(Com.IStream* inputXmlStream, System.Drawing.SizeF* viewportSize, ID2D1SvgDocument** svgDocument)
+	public HResult CreateSvgDocument(Com.IStream* inputXmlStream, System.Drawing.SizeF viewportSize, ID2D1SvgDocument** svgDocument)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Com.IStream*, System.Drawing.SizeF*, ID2D1SvgDocument**, int>)(lpVtbl[115]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), inputXmlStream, viewportSize, svgDocument);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Com.IStream*, System.Drawing.SizeF, ID2D1SvgDocument**, int>)(lpVtbl[115]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), inputXmlStream, viewportSize, svgDocument);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::DrawSvgDocument"]/*' />
@@ -26782,9 +26782,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1DeviceContext5.CreateSvgDocument" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateSvgDocument(Com.IStream* inputXmlStream, System.Drawing.SizeF* viewportSize, ID2D1SvgDocument** svgDocument)
+	public HResult CreateSvgDocument(Com.IStream* inputXmlStream, System.Drawing.SizeF viewportSize, ID2D1SvgDocument** svgDocument)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Com.IStream*, System.Drawing.SizeF*, ID2D1SvgDocument**, int>)(lpVtbl[3]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), inputXmlStream, viewportSize, svgDocument);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Com.IStream*, System.Drawing.SizeF, ID2D1SvgDocument**, int>)(lpVtbl[3]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), inputXmlStream, viewportSize, svgDocument);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext5.DrawSvgDocument" />
@@ -26998,9 +26998,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult CreateBitmap(Common.SizeU* size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Common.SizeU*, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[30]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[30]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapFromWicBitmap" />
@@ -27278,9 +27278,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
-	public HResult CreateBitmap(Common.SizeU* size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
+	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Common.SizeU*, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[65]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[65]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -27342,9 +27342,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(73)]
-	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, Common.SizeU* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
+	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.SizeF*, Common.SizeU*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[73]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[73]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -27638,7 +27638,7 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(110)]
-	public HResult EndDraw(ulong* tag1, ulong* tag2)
+	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, ulong*, ulong*, int>)(lpVtbl[110]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
@@ -27678,9 +27678,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(115)]
-	public Graphics.Direct2D.Common.SizeU GetPixelSize()
+	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.Direct2D.Common.SizeU>)(lpVtbl[115]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.Size>)(lpVtbl[115]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
