@@ -15,14 +15,8 @@ public static unsafe class UnsafeUtilities
         where TFrom : unmanaged
         where TTo : unmanaged
     {
-        //Assert(AssertionsEnabled && (SizeOf<TFrom>() == SizeOf<TTo>()));
         return CreateReadOnlySpan(in AsReadOnly<TFrom, TTo>(in span.GetReference()), span.Length);
     }
-
-    /// <inheritdoc cref="Unsafe.AsPointer{T}(ref T)" />
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static T* AsPointer<T>(ref T source)
-        where T : unmanaged => (T*)Unsafe.AsPointer(ref source);
 
     /// <inheritdoc cref="Unsafe.As{TFrom, TTo}(ref TFrom)" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -45,14 +39,6 @@ public static unsafe class UnsafeUtilities
     /// <param name="span">The span from which the pointer is retrieved.</param>
     /// <returns>A pointer to the item at index zero of <paramref name="span" />.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static T* GetPointer<T>(this Span<T> span)
-        where T : unmanaged => AsPointer(ref MemoryMarshal.GetReference(span));
-
-    /// <summary>Returns a pointer to the element of the span at index zero.</summary>
-    /// <typeparam name="T">The type of items in <paramref name="span" />.</typeparam>
-    /// <param name="span">The span from which the pointer is retrieved.</param>
-    /// <returns>A pointer to the item at index zero of <paramref name="span" />.</returns>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static T* GetPointer<T>(this ReadOnlySpan<T> span)
-        where T : unmanaged => AsPointer(ref Unsafe.AsRef(in span.GetReference()));
+        where T : unmanaged => (T*)Unsafe.AsPointer(ref Unsafe.AsRef(in span.GetReference()));
 }

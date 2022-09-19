@@ -8,12 +8,12 @@ namespace Win32.Graphics.Direct2D.Common;
 public partial struct PixelFormat
 {
     /// <summary>
-    /// An unkown <see cref="PixelFormat"/> with <see cref="Format"/> to <see cref="Format.Unknown"/> and <see cref="DCommon.AlphaMode"/> to <see cref="AlphaMode.Unknown"/>.
+    /// An unkown <see cref="PixelFormat"/> with <see cref="Format"/> to <see cref="Format.Unknown"/> and <see cref="AlphaMode"/> to <see cref="AlphaMode.Unknown"/>.
     /// </summary>
     public static readonly PixelFormat Unknown = new(Format.Unknown, AlphaMode.Unknown);
 
     /// <summary>
-    /// A Premultiplied <see cref="PixelFormat"/> with <see cref="Format"/> to <see cref="Format.Unknown"/> and <see cref="DCommon.AlphaMode"/> to <see cref="AlphaMode.Premultiplied"/>.
+    /// A Premultiplied <see cref="PixelFormat"/> with <see cref="Format"/> to <see cref="Format.Unknown"/> and <see cref="AlphaMode"/> to <see cref="AlphaMode.Premultiplied"/>.
     /// </summary>
     public static readonly PixelFormat Premultiplied = new(Format.Unknown, AlphaMode.Premultiplied);
 

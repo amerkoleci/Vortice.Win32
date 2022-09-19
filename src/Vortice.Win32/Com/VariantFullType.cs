@@ -31,7 +31,7 @@ public readonly struct VariantFullType : IEquatable<VariantFullType>
     }
 
     public bool Equals(VariantFullType other) => vt == other.vt;
-    public override bool Equals(object obj) => obj is VariantFullType other && Equals(other);
+    public override bool Equals(object? obj) => obj is VariantFullType other && Equals(other);
     public override int GetHashCode() => vt.GetHashCode();
     public static bool operator ==(VariantFullType left, VariantFullType right) => left.Equals(right);
     public static bool operator !=(VariantFullType left, VariantFullType right) => !left.Equals(right);

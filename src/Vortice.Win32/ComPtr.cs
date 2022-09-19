@@ -232,7 +232,9 @@ public unsafe struct ComPtr<T> : IDisposable
         return ptr_;
     }
 
-    /// <summary>Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer. This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.
+    /// <summary>
+    /// Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer.
+    /// This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.
     /// </summary>
     /// <returns>The raw pointer to the current <see cref="ComPtr{T}"/> instance.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -250,6 +252,17 @@ public unsafe struct ComPtr<T> : IDisposable
     public unsafe void** GetVoidAddressOf()
     {
         return (void**)Unsafe.AsPointer(ref Unsafe.AsRef(in this));
+    }
+
+    /// <summary>
+    /// Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <see cref="IUnknown"/> double pointer.
+    /// This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.
+    /// </summary>
+    /// <returns>The raw pointer to the current <see cref="ComPtr{T}"/> instance.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public readonly IUnknown** GetIUnknownAddressOf()
+    {
+        return (IUnknown**)Unsafe.AsPointer(ref Unsafe.AsRef(in this));
     }
 
     /// <summary>Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer.</summary>

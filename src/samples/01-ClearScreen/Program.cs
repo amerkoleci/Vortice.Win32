@@ -14,8 +14,10 @@ using static Win32.Graphics.Direct3D.Dxc.Apis;
 using static Win32.Graphics.Direct3D11.Apis;
 using static Win32.Graphics.Dxgi.Apis;
 using static Win32.Graphics.Imaging.Apis;
+using static Win32.Graphics.DirectWrite.Apis;
 using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
 using MessageId = Win32.Graphics.Direct3D11.MessageId;
+using Win32.Graphics.DirectWrite;
 
 namespace ClearScreen;
 
@@ -72,10 +74,28 @@ public static unsafe class Program
         //wicBitmapFrameDecode.Get()->CopyPixels(rowPitch, pixels);
     }
 
+    private static void TestD2D1AndDWrite()
+    {
+        using ComPtr<IDWriteFactory> dwriteFactory = default;
+        DWriteCreateFactory(FactoryType.Shared, __uuidof<IDWriteFactory>(), dwriteFactory.GetIUnknownAddressOf()).ThrowIfFailed();
+
+        using ComPtr<IDWriteTextFormat> textFormat =
+            dwriteFactory.Get()->CreateTextFormat(
+                "Gabriola".AsSpan(),        // Font family name.
+                72.0f,
+                fontWeight: FontWeight.Regular,
+                localeName: "en-us".AsSpan()
+                );
+
+        textFormat.Get()->SetTextAlignment(TextAlignment.Center).ThrowIfFailed();
+        textFormat.Get()->SetParagraphAlignment(ParagraphAlignment.Center).ThrowIfFailed();
+    }
+
     public static void Main()
     {
         TestDxc();
         TestWic();
+        TestD2D1AndDWrite();
 
         using ComPtr<IDXGIFactory2> factory = default;
         uint factoryFlags = 0;

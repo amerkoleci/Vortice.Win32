@@ -24,7 +24,7 @@ public static class Program
         "Graphics.Direct3D.Dxc.json",
         "Graphics.Direct2D.Common.json",
         "Graphics.Imaging.json",
-        //"Graphics.DirectWrite.json",
+        "Graphics.DirectWrite.json",
         //"Graphics.Direct2D.json",
 
         //"Graphics.Imaging.D2D.json",
@@ -85,6 +85,9 @@ public static class Program
         { "Graphics.Gdi.HBITMAP", "IntPtr" },
         { "Graphics.Gdi.HPALETTE", "IntPtr" },
         { "UI.WindowsAndMessaging.HICON", "IntPtr" },
+        { "Globalization.FONTSIGNATURE", "Win32.Graphics.Gdi.FontSignature" },
+        { "Graphics.Gdi.LOGFONTA", "Win32.Graphics.Gdi.LogFontA" },
+        { "Graphics.Gdi.LOGFONTW", "Win32.Graphics.Gdi.LogFontW" },
 
         { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
         { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
@@ -893,7 +896,7 @@ public static class Program
         }
 
         // Generate docs
-        //DocGenerator.Generate(new[] { "WIC" }, Path.Combine(outputPath, "Imaging.xml"));
+        //DocGenerator.Generate(new[] { "D2D1" }, Path.Combine(outputPath, "Direct2D.xml"));
         //DocGenerator.Generate(new[] { "DWRITE" }, Path.Combine(outputPath, "DirectWrite.xml"));
         //DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
         //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(outputPath, "Dxgi.xml"));
