@@ -57,46 +57,6 @@ public class ApiParameter
     public List<object> Attrs { get; set; } = new();
 }
 
-public class ApiFunction
-{
-    public string Name { get; set; }
-    public bool SetLastError { get; set; }
-    public string DllImport { get; set; }
-    public ApiDataType ReturnType { get; set; }
-    public List<object> ReturnAttrs { get; set; }
-
-    public IList<ApiParameter> Params { get; set; } = new List<ApiParameter>();
-    public List<object> Attrs { get; set; }
-
-    private string _toString = default;
-
-    public override string ToString()
-    {
-        if (string.IsNullOrEmpty(_toString))
-        {
-            StringBuilder builder = new();
-            builder.Append(ReturnType.Name).Append(' ');
-            builder.Append(Name).Append('(');
-            int parameterIndex = 0;
-            foreach (var parameter in Params)
-            {
-                // TODO: Handle PointerTo, Array etc
-                builder.Append(parameter.Type.Name).Append(' ').Append(parameter.Name);
-                if (parameterIndex < Params.Count - 1)
-                {
-                    builder.Append(", ");
-                }
-                parameterIndex++;
-            }
-
-            builder.Append(')');
-            _toString = builder.ToString();
-        }
-
-        return _toString;
-    }
-}
-
 public class ApiType
 {
     public string Name { get; set; }
@@ -118,18 +78,19 @@ public class ApiType
     // Com
     public string Guid { get; set; }
     public ApiDataType Interface { get; set; }
-    public IList<ApiFunction> Methods { get; set; } = new List<ApiFunction>();
+    public IList<ApiType> Methods { get; set; } = new List<ApiType>();
 
     // Function
     public bool SetLastError { get; set; }
     public ApiDataType ReturnType { get; set; }
     public List<object> ReturnAttrs { get; set; }
     public IList<ApiParameter> Params { get; set; } = new List<ApiParameter>();
+    public string DllImport { get; set; }
 }
 
 public sealed class ApiData
 {
     public ApiDataConstant[] Constants { get; set; }
     public ApiType[] Types { get; set; }
-    public ApiFunction[] Functions { get; set; }
+    public ApiType[] Functions { get; set; }
 }

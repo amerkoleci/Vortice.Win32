@@ -2562,7 +2562,7 @@ public partial struct ShapingGlyphProperties
 public partial struct GlyphRun
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN::fontFace"]/*' />
-	public IDWriteFontFace fontFace;
+	public unsafe IDWriteFontFace* fontFace;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN::fontEmSize"]/*' />
 	public float fontEmSize;

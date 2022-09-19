@@ -2,7 +2,9 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.ComponentModel.DataAnnotations;
+using System.Data.Common;
 using System.Globalization;
+using System.Reflection;
 using System.Reflection.Metadata;
 using System.Text;
 using Newtonsoft.Json;
@@ -25,9 +27,8 @@ public static class Program
         "Graphics.Direct2D.Common.json",
         "Graphics.Imaging.json",
         "Graphics.DirectWrite.json",
-        //"Graphics.Direct2D.json",
-
-        //"Graphics.Imaging.D2D.json",
+        "Graphics.Direct2D.json",
+        "Graphics.Imaging.D2D.json",
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -102,6 +103,10 @@ public static class Program
         { "Graphics.Direct2D.Common.D2D_SIZE_F", "System.Drawing.SizeF" },
 
         { "Graphics.Imaging.WICRect", "System.Drawing.Rectangle" },
+
+        { "Graphics.Direct2D.Matrix4x3F", "Win32.Graphics.Direct2D.Common.Matrix4x3" },
+        { "Graphics.Direct2D.Matrix4x4F", "Matrix4x4" },
+        { "Graphics.Direct2D.Matrix5x4F", "Win32.Graphics.Direct2D.Common.Matrix5x4" },
 
         // TODO: Understand those ->
         { "Foundation.RECT", "RawRect" },
@@ -865,7 +870,7 @@ public static class Program
 
     private static readonly HashSet<string> s_visitedEnums = new();
     private static readonly HashSet<string> s_visitedStructs = new();
-    private static readonly Dictionary<string, List<KeyValuePair<ApiFunction, string>>> s_visitedComTypes = new();
+    private static readonly Dictionary<string, List<KeyValuePair<ApiType, string>>> s_visitedComTypes = new();
 
     private static bool s_generateUnmanagedDocs = true;
 
@@ -1113,7 +1118,7 @@ public static class Program
                 regionWritten = true;
             }
 
-            GenerateStruct(writer, structType);
+            GenerateStruct(api, writer, structType);
 
             s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
         }
@@ -1146,7 +1151,7 @@ public static class Program
                 regionWritten = true;
             }
 
-            GenerateStruct(writer, structType);
+            GenerateStruct(api, writer, structType);
 
             s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
         }
@@ -1181,7 +1186,7 @@ public static class Program
             }
 
             // Generate methods
-            List<KeyValuePair<ApiFunction, string>> methodsToGenerate = new();
+            List<KeyValuePair<ApiType, string>> methodsToGenerate = new();
             ApiType iterateType = comType;
             while (iterateType.Interface != null
                 && iterateType.Interface.Name != "IUnknown"
@@ -1193,8 +1198,12 @@ public static class Program
 
                 if (iterateType != null)
                 {
-                    foreach (ApiFunction method in iterateType.Methods)
+                    foreach (ApiType method in iterateType.Methods)
                     {
+                        // Until we add Storage.Xps.Printing.IPrintDocumentPackageTarget
+                        if (method.Name == "CreatePrintControl")
+                            continue;
+
                         methodsToGenerate.Add(new(method, iterateType.Name));
                     }
                 }
@@ -1211,8 +1220,12 @@ public static class Program
                 }
             }
 
-            foreach (ApiFunction method in comType.Methods)
+            foreach (ApiType method in comType.Methods)
             {
+                // Until we add Storage.Xps.Printing.IPrintDocumentPackageTarget
+                if (method.Name == "CreatePrintControl")
+                    continue;
+
                 methodsToGenerate.Add(new(method, comType.Name));
             }
 
@@ -1234,7 +1247,7 @@ public static class Program
         writer.WriteLine($"#region Functions");
         using (writer.PushBlock($"public static unsafe partial class Apis"))
         {
-            foreach (ApiFunction function in api.Functions)
+            foreach (ApiType function in api.Functions)
             {
                 if (function.Name.StartsWith("D3DX11") ||
                     function.Name == "D3DDisassemble11Trace")
@@ -1242,7 +1255,7 @@ public static class Program
                     continue;
                 }
 
-                WriteFunction(writer, api, function);
+                WriteFunction(writer, api, function, string.Empty, false);
                 writer.WriteLine();
             }
         }
@@ -1250,7 +1263,12 @@ public static class Program
         writer.WriteLine($"#endregion Functions");
     }
 
-    private static void WriteFunction(CodeWriter writer, ApiData api, ApiFunction function)
+    private static void WriteFunction(
+        CodeWriter writer,
+        ApiData api,
+        ApiType function,
+        string functionName,
+        bool asCallback)
     {
         string returnType = GetTypeName(function.ReturnType);
         string functionSuffix = string.Empty;
@@ -1303,7 +1321,13 @@ public static class Program
                 }
             }
 
-            argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
+            argumentBuilder.Append(parameterType);
+
+            if (asCallback == false)
+            {
+                argumentBuilder.Append(' ').Append(parameterName);
+            }
+
             if (isOptional == true)
             {
                 //argumentBuilder.Append(" = default");
@@ -1323,7 +1347,21 @@ public static class Program
         }
 
         string argumentsString = argumentBuilder.ToString();
-        writer.Write($"public {functionSuffix}{returnType} {function.Name}({argumentsString})");
+        if (string.IsNullOrEmpty(functionName))
+        {
+            functionName = function.Name;
+        }
+
+        writer.Write("public ");
+        if (asCallback)
+        {
+            writer.Write($"unsafe delegate* unmanaged[Stdcall]<{argumentsString}, {returnType}> {functionName}");
+        }
+        else
+        {
+            writer.Write($"{functionSuffix}{returnType} {functionName}({argumentsString})");
+        }
+
         writer.WriteLine(";");
     }
 
@@ -1480,7 +1518,7 @@ public static class Program
         return enumValueName;
     }
 
-    private static void GenerateStruct(CodeWriter writer, ApiType structType, bool nestedType = false)
+    private static void GenerateStruct(ApiData api, CodeWriter writer, ApiType structType, bool nestedType = false)
     {
         string csTypeName;
         string structPrefix = string.Empty;
@@ -1516,11 +1554,6 @@ public static class Program
             writer.WriteLine("[StructLayout(LayoutKind.Explicit)]");
         }
 
-        if (structType.Name == "D2D_MATRIX_3X2_F")
-        {
-
-        }
-
         using (writer.PushBlock($"public partial struct {csTypeName}"))
         {
             int fieldIndex = 0;
@@ -1542,7 +1575,24 @@ public static class Program
                     fieldValueName = "Mask";
                 }
 
-                string fieldTypeName = GetTypeName(field.Type);
+                if (structType.Name == "D2D1_LAYER_PARAMETERS")
+                {
+                }
+
+                bool asPointer = false;
+                if (field.Type.Kind == "ApiRef")
+                {
+                    string apiName = GetApiName(field.Type);
+                    string fullTypeName = $"{apiName}.{field.Type.Name}";
+
+                    if (s_visitedComTypes.ContainsKey(fullTypeName) ||
+                        api.Types.Any(item => item.Name == field.Type.Name && item.Kind.ToLowerInvariant() == "com"))
+                    {
+                        asPointer = true;
+                    }
+                }
+
+                string fieldTypeName = GetTypeName(field.Type, asPointer);
 
                 writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}::{field.Name}\"]/*' />");
 
@@ -1616,20 +1666,28 @@ public static class Program
                 else
                 {
                     string unsafePrefix = string.Empty;
-                    fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
-                    if (fieldTypeName.EndsWith("*"))
+
+                    if (field.Type.TargetKind == "FunctionPointer")
                     {
-                        unsafePrefix += "unsafe ";
+                        ApiType functionType = api.Types.First(item => item.Name == field.Type.Name && item.Kind == "FunctionPointer");
+                        WriteFunction(writer, api, functionType, field.Name, true);
                     }
-
-                    if (isUnion)
+                    else
                     {
-                        writer.WriteLine("[FieldOffset(0)]");
+                        fieldTypeName = NormalizeTypeName(writer.Api, fieldTypeName);
+                        if (fieldTypeName.EndsWith("*"))
+                        {
+                            unsafePrefix += "unsafe ";
+                        }
+
+                        if (isUnion)
+                        {
+                            writer.WriteLine("[FieldOffset(0)]");
+                        }
+
+                        fieldValueName = CleanupName(fieldValueName);
+                        writer.WriteLine($"public {unsafePrefix}{fieldTypeName} {fieldValueName};");
                     }
-
-                    fieldValueName = CleanupName(fieldValueName);
-
-                    writer.WriteLine($"public {unsafePrefix}{fieldTypeName} {fieldValueName};");
                 }
 
                 if (fieldIndex < structType.Fields.Length - 1)
@@ -1713,7 +1771,7 @@ public static class Program
 
                 foreach (ApiType nestedTypeToGenerate in structType.NestedTypes)
                 {
-                    GenerateStruct(writer, nestedTypeToGenerate, true);
+                    GenerateStruct(api, writer, nestedTypeToGenerate, true);
                 }
             }
         }
@@ -1725,7 +1783,7 @@ public static class Program
         ApiData api,
         CodeWriter writer,
         ApiType comType,
-        List<KeyValuePair<ApiFunction, string>> methodsToGenerate)
+        List<KeyValuePair<ApiType, string>> methodsToGenerate)
     {
         string csTypeName = comType.Name;
 
@@ -1812,14 +1870,14 @@ public static class Program
             }
 
             bool needNewLine = false;
-            foreach (KeyValuePair<ApiFunction, string> methodPair in methodsToGenerate)
+            foreach (KeyValuePair<ApiType, string> methodPair in methodsToGenerate)
             {
                 if (needNewLine)
                 {
                     writer.WriteLine();
                 }
 
-                ApiFunction method = methodPair.Key;
+                ApiType method = methodPair.Key;
                 string docName = methodPair.Value;
 
                 // TODO: Handle inherit
@@ -2308,6 +2366,10 @@ public static class Program
             {
                 return "Rate" + prettyName;
             }
+            else if (enumPrefix.Contains("_LEVEL"))
+            {
+                return "Level_" + prettyName;
+            }
 
             return "_" + prettyName;
         }
@@ -2386,7 +2448,8 @@ public static class Program
         if (dataType.Kind == "ApiRef")
         {
             string apiName = GetApiName(dataType);
-            string typeName = GetTypeName($"{apiName}.{dataType.Name}");
+            string fullTypeName = $"{apiName}.{dataType.Name}";
+            string typeName = GetTypeName(fullTypeName);
             return asPointer ? typeName + "*" : typeName;
         }
         else if (dataType.Kind == "Array")

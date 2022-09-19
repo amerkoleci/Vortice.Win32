@@ -7294,7 +7294,7 @@ public partial struct CachedPipelineState
 public partial struct GraphicsPipelineStateDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GRAPHICS_PIPELINE_STATE_DESC::pRootSignature"]/*' />
-	public ID3D12RootSignature pRootSignature;
+	public unsafe ID3D12RootSignature* pRootSignature;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GRAPHICS_PIPELINE_STATE_DESC::VS"]/*' />
 	public ShaderBytecode VS;
@@ -7391,7 +7391,7 @@ public partial struct GraphicsPipelineStateDescription
 public partial struct ComputePipelineStateDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::pRootSignature"]/*' />
-	public ID3D12RootSignature pRootSignature;
+	public unsafe ID3D12RootSignature* pRootSignature;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::CS"]/*' />
 	public ShaderBytecode CS;
@@ -8221,7 +8221,7 @@ public partial struct PackedMipInfo
 public partial struct ResourceTransitionBarrier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::pResource"]/*' />
-	public ID3D12Resource pResource;
+	public unsafe ID3D12Resource* pResource;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::Subresource"]/*' />
 	public uint Subresource;
@@ -8238,10 +8238,10 @@ public partial struct ResourceTransitionBarrier
 public partial struct ResourceAliasingBarrier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALIASING_BARRIER::pResourceBefore"]/*' />
-	public ID3D12Resource pResourceBefore;
+	public unsafe ID3D12Resource* pResourceBefore;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALIASING_BARRIER::pResourceAfter"]/*' />
-	public ID3D12Resource pResourceAfter;
+	public unsafe ID3D12Resource* pResourceAfter;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_UAV_BARRIER"]/*' />
@@ -8249,7 +8249,7 @@ public partial struct ResourceAliasingBarrier
 public partial struct ResourceUavBarrier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_UAV_BARRIER::pResource"]/*' />
-	public ID3D12Resource pResource;
+	public unsafe ID3D12Resource* pResource;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER"]/*' />
@@ -8361,7 +8361,7 @@ public partial struct PlacedSubresourceFootprint
 public partial struct TextureCopyLocation
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION::pResource"]/*' />
-	public ID3D12Resource pResource;
+	public unsafe ID3D12Resource* pResource;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION::Type"]/*' />
 	public TextureCopyType Type;
@@ -10433,7 +10433,7 @@ public partial struct StateObjectConfig
 public partial struct GlobalRootSignature
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GLOBAL_ROOT_SIGNATURE::pGlobalRootSignature"]/*' />
-	public ID3D12RootSignature pGlobalRootSignature;
+	public unsafe ID3D12RootSignature* pGlobalRootSignature;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOCAL_ROOT_SIGNATURE"]/*' />
@@ -10441,7 +10441,7 @@ public partial struct GlobalRootSignature
 public partial struct LocalRootSignature
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOCAL_ROOT_SIGNATURE::pLocalRootSignature"]/*' />
-	public ID3D12RootSignature pLocalRootSignature;
+	public unsafe ID3D12RootSignature* pLocalRootSignature;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_MASK"]/*' />
@@ -10485,7 +10485,7 @@ public partial struct DxilLibraryDescription
 public partial struct ExistingCollectionDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::pExistingCollection"]/*' />
-	public ID3D12StateObject pExistingCollection;
+	public unsafe ID3D12StateObject* pExistingCollection;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::NumExports"]/*' />
 	public uint NumExports;
@@ -10966,10 +10966,10 @@ public partial struct AutoBreadcrumbNode
 	public unsafe ushort* pCommandQueueDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandList"]/*' />
-	public ID3D12GraphicsCommandList pCommandList;
+	public unsafe ID3D12GraphicsCommandList* pCommandList;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandQueue"]/*' />
-	public ID3D12CommandQueue pCommandQueue;
+	public unsafe ID3D12CommandQueue* pCommandQueue;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::BreadcrumbCount"]/*' />
 	public uint BreadcrumbCount;
@@ -11012,10 +11012,10 @@ public partial struct AutoBreadcrumbNode1
 	public unsafe ushort* pCommandQueueDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandList"]/*' />
-	public ID3D12GraphicsCommandList pCommandList;
+	public unsafe ID3D12GraphicsCommandList* pCommandList;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueue"]/*' />
-	public ID3D12CommandQueue pCommandQueue;
+	public unsafe ID3D12CommandQueue* pCommandQueue;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::BreadcrumbCount"]/*' />
 	public uint BreadcrumbCount;
@@ -11384,10 +11384,10 @@ public partial struct RenderPassEndingAccessResolveSubresourceParameters
 public partial struct RenderPassEndingAccessResolveParameters
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS::pSrcResource"]/*' />
-	public ID3D12Resource pSrcResource;
+	public unsafe ID3D12Resource* pSrcResource;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS::pDstResource"]/*' />
-	public ID3D12Resource pDstResource;
+	public unsafe ID3D12Resource* pDstResource;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS::SubresourceCount"]/*' />
 	public uint SubresourceCount;

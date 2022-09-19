@@ -15,9 +15,15 @@ using static Win32.Graphics.Direct3D11.Apis;
 using static Win32.Graphics.Dxgi.Apis;
 using static Win32.Graphics.Imaging.Apis;
 using static Win32.Graphics.DirectWrite.Apis;
+using static Win32.Graphics.Direct2D.Apis;
 using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
 using MessageId = Win32.Graphics.Direct3D11.MessageId;
+using Win32.Graphics.Direct2D;
 using Win32.Graphics.DirectWrite;
+using FactoryType = Win32.Graphics.Direct2D.FactoryType;
+using DWriteFactoryType = Win32.Graphics.DirectWrite.FactoryType;
+using FeatureLevel = Win32.Graphics.Direct3D.FeatureLevel;
+using Win32.Graphics.Imaging.D2D;
 
 namespace ClearScreen;
 
@@ -54,11 +60,11 @@ public static unsafe class Program
         string assetsPath = Path.Combine(AppContext.BaseDirectory, "Assets", "Textures");
         string textureFile = Path.Combine(assetsPath, "10points.png");
 
-        using ComPtr<IWICImagingFactory> wicImagingFactory = default;
-
+        using ComPtr<IWICImagingFactory2> wicImagingFactory = default;
         CreateWICImagingFactory(wicImagingFactory.GetAddressOf()).ThrowIfFailed();
 
-        using ComPtr<IWICBitmapDecoder> decoder = wicImagingFactory.Get()->CreateDecoderFromFilename(textureFile);
+        using ComPtr<IWICBitmapDecoder> decoder =
+            ((IWICImagingFactory*)wicImagingFactory.Get())->CreateDecoderFromFilename(textureFile);
 
         using ComPtr<IWICBitmapFrameDecode> wicBitmapFrameDecode = default;
 
@@ -76,8 +82,15 @@ public static unsafe class Program
 
     private static void TestD2D1AndDWrite()
     {
+        using ComPtr<ID2D1Factory2> d2d1Factory2 = default;
+
+        D2D1CreateFactory(FactoryType.MultiThreaded,
+            __uuidof<ID2D1Factory2>(),
+            default,
+            d2d1Factory2.GetVoidAddressOf()).ThrowIfFailed();
+
         using ComPtr<IDWriteFactory> dwriteFactory = default;
-        DWriteCreateFactory(FactoryType.Shared, __uuidof<IDWriteFactory>(), dwriteFactory.GetIUnknownAddressOf()).ThrowIfFailed();
+        DWriteCreateFactory(DWriteFactoryType.Shared, __uuidof<IDWriteFactory>(), dwriteFactory.GetIUnknownAddressOf()).ThrowIfFailed();
 
         using ComPtr<IDWriteTextFormat> textFormat =
             dwriteFactory.Get()->CreateTextFormat(

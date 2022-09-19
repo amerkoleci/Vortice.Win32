@@ -62,9 +62,14 @@ public sealed class CodeWriter : IDisposable
 
     public void Dispose()
     {
-        string content = _builder.ToString();
-        File.WriteAllText(_fileName, content);
+        if (string.IsNullOrEmpty(_fileName) == false)
+        {
+            string content = _builder.ToString();
+            File.WriteAllText(_fileName, content);
+        }
     }
+
+    public override string ToString() => _builder.ToString();
 
     public void Write(char chr)
     {

@@ -10864,7 +10864,7 @@ public partial struct VideoProcessorStream
 	public unsafe ID3D11VideoProcessorInputView* ppPastSurfaces;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::pInputSurface"]/*' />
-	public ID3D11VideoProcessorInputView pInputSurface;
+	public unsafe ID3D11VideoProcessorInputView* pInputSurface;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::ppFutureSurfaces"]/*' />
 	public unsafe ID3D11VideoProcessorInputView* ppFutureSurfaces;
@@ -10873,7 +10873,7 @@ public partial struct VideoProcessorStream
 	public unsafe ID3D11VideoProcessorInputView* ppPastSurfacesRight;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::pInputSurfaceRight"]/*' />
-	public ID3D11VideoProcessorInputView pInputSurfaceRight;
+	public unsafe ID3D11VideoProcessorInputView* pInputSurfaceRight;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM::ppFutureSurfacesRight"]/*' />
 	public unsafe ID3D11VideoProcessorInputView* ppFutureSurfacesRight;
@@ -11650,7 +11650,7 @@ public partial struct VideoDecoderBufferDescription1
 public partial struct VideoDecoderBeginFrameCryptoSession
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pCryptoSession"]/*' />
-	public ID3D11CryptoSession pCryptoSession;
+	public unsafe ID3D11CryptoSession* pCryptoSession;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::BlobSize"]/*' />
 	public uint BlobSize;
