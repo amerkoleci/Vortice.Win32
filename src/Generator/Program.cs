@@ -2,6 +2,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using Newtonsoft.Json;
@@ -868,7 +869,7 @@ public static class Program
 
     private static readonly HashSet<string> s_visitedEnums = new();
     private static readonly HashSet<string> s_visitedStructs = new();
-    private static readonly Dictionary<string, List<KeyValuePair<ApiType, string>>> s_visitedComTypes = new();
+    private static readonly Dictionary<string, Dictionary<string, List<ApiType>>> s_visitedComTypes = new();
 
     private static bool s_generateUnmanagedDocs = true;
 
@@ -942,6 +943,17 @@ public static class Program
         }
 
         fileName += ".cs";
+
+        if (docFile != "json")
+        {
+            string subdirectory = Path.Combine(outputFolder, docFile);
+            if (Directory.Exists(subdirectory) == false)
+                Directory.CreateDirectory(subdirectory);
+        }
+        else
+        {
+            docFile = string.Empty;
+        }
 
         using var writer = new CodeWriter(
             Path.Combine(outputFolder, fileName),
@@ -1176,8 +1188,16 @@ public static class Program
 
             // Generate methods
             // TODO: FIX broken VTable ID3D12Heap, ID2D1Factory2
-            List<KeyValuePair<ApiType, string>> methodsToGenerate = new();
+            if (comType.Name == "ID3D12Pageable")
+            {
+
+            }
+
+            Dictionary<string, List<ApiType>> methodsToGenerate = new();
+
+            // We must generate from lower to upper
             ApiType iterateType = comType;
+            List<ApiType> typesToGenerate = new();
             while (iterateType.Interface != null
                 && iterateType.Interface.Name != "IUnknown"
                 && iterateType.Interface.Name != "IStream"
@@ -1188,14 +1208,7 @@ public static class Program
 
                 if (iterateType != null)
                 {
-                    foreach (ApiType method in iterateType.Methods)
-                    {
-                        // Until we add Storage.Xps.Printing.IPrintDocumentPackageTarget
-                        if (method.Name == "CreatePrintControl")
-                            continue;
-
-                        methodsToGenerate.Add(new(method, iterateType.Name));
-                    }
+                    typesToGenerate.Add(iterateType);
                 }
                 else
                 {
@@ -1203,10 +1216,33 @@ public static class Program
 
                     foreach (var knownMethod in knownMethods)
                     {
-                        methodsToGenerate.Add(knownMethod);
+                        methodsToGenerate.Add(knownMethod.Key, knownMethod.Value);
                     }
 
                     break;
+                }
+            }
+
+            if (typesToGenerate.Count > 1)
+            {
+                typesToGenerate.Reverse();
+            }
+
+            foreach (ApiType type in typesToGenerate)
+            {
+                foreach (ApiType method in type.Methods)
+                {
+                    // Until we add Storage.Xps.Printing.IPrintDocumentPackageTarget
+                    if (method.Name == "CreatePrintControl")
+                        continue;
+
+                    if (methodsToGenerate.TryGetValue(type.Name, out List<ApiType>? functions) == false)
+                    {
+                        functions = new List<ApiType>();
+                        methodsToGenerate.Add(type.Name, functions);
+                    }
+
+                    functions.Add(method);
                 }
             }
 
@@ -1216,10 +1252,23 @@ public static class Program
                 if (method.Name == "CreatePrintControl")
                     continue;
 
-                methodsToGenerate.Add(new(method, comType.Name));
+                if (methodsToGenerate.TryGetValue(comType.Name, out List<ApiType>? functions) == false)
+                {
+                    functions = new List<ApiType>();
+                    methodsToGenerate.Add(comType.Name, functions);
+                }
+
+                functions.Add(method);
             }
 
-            GenerateComType(api, writer, comType, methodsToGenerate);
+            string subdirectory = Path.Combine(writer.Directory, writer.DocFileName);
+            string fileName = $"{comType.Name}.cs";
+            using var comTypeWriter = new CodeWriter(
+                Path.Combine(subdirectory, fileName),
+                writer.Api,
+                "../" + writer.DocFileName,
+                $"Win32.{writer.Api}");
+            GenerateComType(api, comTypeWriter, comType, methodsToGenerate);
         }
 
         if (regionWritten)
@@ -1773,7 +1822,7 @@ public static class Program
         ApiData api,
         CodeWriter writer,
         ApiType comType,
-        List<KeyValuePair<ApiType, string>> methodsToGenerate)
+        Dictionary<string, List<ApiType>> methodsToGenerate)
     {
         string csTypeName = comType.Name;
 
@@ -1860,227 +1909,229 @@ public static class Program
             }
 
             bool needNewLine = false;
-            foreach (KeyValuePair<ApiType, string> methodPair in methodsToGenerate)
+            foreach (KeyValuePair<string, List<ApiType>> methodPair in methodsToGenerate)
             {
-                if (needNewLine)
+                string docName = methodPair.Key;
+
+                foreach (ApiType method in methodPair.Value)
                 {
-                    writer.WriteLine();
-                }
-
-                ApiType method = methodPair.Key;
-                string docName = methodPair.Value;
-
-                // TODO: Handle inherit
-                string returnType = GetTypeName(method.ReturnType);
-
-                StringBuilder argumentBuilder = new();
-                StringBuilder argumentsTypesBuilder = new();
-                StringBuilder argumentsNameBuilder = new();
-                int parameterIndex = 0;
-
-                bool allOptional = false;
-
-                if (method.Name == "EndDraw")
-                {
-                    allOptional =
-                        method.Params.All(item => item.Attrs.Any(attr => attr is string str && str == "Optional"));
-                }
-
-                bool useReturnAsParameter = false;
-                if (returnType != "void" &&
-                    method.ReturnType.TargetKind != "Com" &&
-                    method.ReturnType.Kind == "ApiRef" &&
-                    !IsPrimitive(method.ReturnType) &&
-                    !IsEnum(method.ReturnType))
-                {
-                    useReturnAsParameter = true;
-                }
-
-                // Return type
-                returnType = NormalizeTypeName(writer.Api, returnType);
-
-                string returnMarshalType = returnType;
-                if (returnMarshalType.ToLower() == "hresult")
-                {
-                    returnMarshalType = "int";
-                }
-
-                if (useReturnAsParameter)
-                {
-                    argumentsTypesBuilder.Append(returnMarshalType);
-                    argumentsTypesBuilder.Append('*');
-
-                    if (method.Params.Count > 0)
+                    if (needNewLine)
                     {
-                        argumentsTypesBuilder.Append(", ");
+                        writer.WriteLine();
                     }
-                }
 
-                foreach (ApiParameter parameter in method.Params)
-                {
-                    bool asPointer = false;
-                    string parameterType = string.Empty;
+                    // TODO: Handle inherit
+                    string returnType = GetTypeName(method.ReturnType);
 
-                    if (parameter.Type.Kind == "ApiRef")
+                    StringBuilder argumentBuilder = new();
+                    StringBuilder argumentsTypesBuilder = new();
+                    StringBuilder argumentsNameBuilder = new();
+                    int parameterIndex = 0;
+
+                    bool allOptional = false;
+
+                    if (method.Name == "EndDraw")
                     {
-                        if (parameter.Type.TargetKind == "FunctionPointer")
+                        allOptional =
+                            method.Params.All(item => item.Attrs.Any(attr => attr is string str && str == "Optional"));
+                    }
+
+                    bool useReturnAsParameter = false;
+                    if (returnType != "void" &&
+                        method.ReturnType.TargetKind != "Com" &&
+                        method.ReturnType.Kind == "ApiRef" &&
+                        !IsPrimitive(method.ReturnType) &&
+                        !IsEnum(method.ReturnType))
+                    {
+                        useReturnAsParameter = true;
+                    }
+
+                    // Return type
+                    returnType = NormalizeTypeName(writer.Api, returnType);
+
+                    string returnMarshalType = returnType;
+                    if (returnMarshalType.ToLower() == "hresult")
+                    {
+                        returnMarshalType = "int";
+                    }
+
+                    if (useReturnAsParameter)
+                    {
+                        argumentsTypesBuilder.Append(returnMarshalType);
+                        argumentsTypesBuilder.Append('*');
+
+                        if (method.Params.Count > 0)
                         {
-                            ApiType functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
-                            parameterType = "delegate* unmanaged[Stdcall]<void*, void>";
+                            argumentsTypesBuilder.Append(", ");
                         }
-                        else
+                    }
+
+                    foreach (ApiParameter parameter in method.Params)
+                    {
+                        bool asPointer = false;
+                        string parameterType = string.Empty;
+
+                        if (parameter.Type.Kind == "ApiRef")
                         {
-                            string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
-                            if (!IsPrimitive(parameter.Type) && !IsEnum(fullTypeName))
+                            if (parameter.Type.TargetKind == "FunctionPointer")
                             {
-                                asPointer = true;
+                                ApiType functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
+                                parameterType = "delegate* unmanaged[Stdcall]<void*, void>";
+                            }
+                            else
+                            {
+                                string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
+                                if (!IsPrimitive(parameter.Type) && !IsEnum(fullTypeName))
+                                {
+                                    asPointer = true;
+                                }
                             }
                         }
-                    }
 
-                    if (string.IsNullOrEmpty(parameterType))
-                    {
-                        string parameterNameLookup = $"{comType.Name}::{method.Name}::{parameter.Name}";
-                        if (s_mapFunctionParameters.TryGetValue(parameterNameLookup, out string? remapType))
+                        if (string.IsNullOrEmpty(parameterType))
                         {
-                            parameterType = GetTypeName($"{writer.Api}.{remapType}");
-                            if (parameter.Attrs.Any(item => item is string str && str == "Out"))
+                            string parameterNameLookup = $"{comType.Name}::{method.Name}::{parameter.Name}";
+                            if (s_mapFunctionParameters.TryGetValue(parameterNameLookup, out string? remapType))
                             {
-                                parameterType += "*";
+                                parameterType = GetTypeName($"{writer.Api}.{remapType}");
+                                if (parameter.Attrs.Any(item => item is string str && str == "Out"))
+                                {
+                                    parameterType += "*";
+                                }
+                            }
+                            else
+                            {
+                                parameterType = GetTypeName(parameter.Type, asPointer);
                             }
                         }
-                        else
-                        {
-                            parameterType = GetTypeName(parameter.Type, asPointer);
-                        }
-                    }
 
-                    parameterType = NormalizeTypeName(writer.Api, parameterType);
-                    string parameterName = parameter.Name;
+                        parameterType = NormalizeTypeName(writer.Api, parameterType);
+                        string parameterName = parameter.Name;
 
-                    bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
-                    if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
-                    {
-                        if (!IsPrimitive(parameter.Type))
-                        {
-                            parameterType += "*";
-                        }
-                    }
-                    else if (parameterType.EndsWith("**") == false &&
-                        parameter.Attrs.Any(item => item is string str && (str == "RetVal" || str == "Out")))
-                    {
-                        if (parameter.Type.Child == null)
-                        {
-                            //if (!IsPrimitive(parameter.Type))
-                            //{
-                            //    parameterType += "*";
-                            //}
-                        }
-                        else if (parameter.Type.Child.Kind != "ApiRef")
+                        bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
+                        if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
                         {
                             if (!IsPrimitive(parameter.Type))
                             {
                                 parameterType += "*";
                             }
                         }
-                        else
+                        else if (parameterType.EndsWith("**") == false &&
+                            parameter.Attrs.Any(item => item is string str && (str == "RetVal" || str == "Out")))
                         {
-                            string apiName = GetApiName(parameter.Type.Child);
-                            string fullTypeName = $"{apiName}.{parameter.Type.Child.Name}";
-
-                            if (!IsPrimitive(parameter.Type) && !IsStruct(fullTypeName) && !IsEnum(fullTypeName))
+                            if (parameter.Type.Child == null)
                             {
-                                parameterType += "*";
+                                //if (!IsPrimitive(parameter.Type))
+                                //{
+                                //    parameterType += "*";
+                                //}
+                            }
+                            else if (parameter.Type.Child.Kind != "ApiRef")
+                            {
+                                if (!IsPrimitive(parameter.Type))
+                                {
+                                    parameterType += "*";
+                                }
+                            }
+                            else
+                            {
+                                string apiName = GetApiName(parameter.Type.Child);
+                                string fullTypeName = $"{apiName}.{parameter.Type.Child.Name}";
+
+                                if (!IsPrimitive(parameter.Type) && !IsStruct(fullTypeName) && !IsEnum(fullTypeName))
+                                {
+                                    parameterType += "*";
+                                }
                             }
                         }
+
+                        parameterName = CleanupName(parameterName);
+                        parameterType = NormalizeTypeName(writer.Api, parameterType);
+
+                        argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
+                        if (allOptional == true && isOptional == true)
+                        {
+                            argumentBuilder.Append(" = null");
+                        }
+
+                        argumentsTypesBuilder.Append(parameterType);
+                        argumentsNameBuilder.Append(parameterName);
+
+                        if (parameterIndex < method.Params.Count - 1)
+                        {
+                            argumentBuilder.Append(", ");
+                            argumentsTypesBuilder.Append(", ");
+                            argumentsNameBuilder.Append(", ");
+                        }
+
+                        parameterIndex++;
                     }
 
-                    parameterName = CleanupName(parameterName);
-                    parameterType = NormalizeTypeName(writer.Api, parameterType);
-
-                    argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
-                    if (allOptional == true && isOptional == true)
+                    if (method.Params.Count > 0 || useReturnAsParameter)
                     {
-                        argumentBuilder.Append(" = null");
-                    }
-
-                    argumentsTypesBuilder.Append(parameterType);
-                    argumentsNameBuilder.Append(parameterName);
-
-                    if (parameterIndex < method.Params.Count - 1)
-                    {
-                        argumentBuilder.Append(", ");
                         argumentsTypesBuilder.Append(", ");
-                        argumentsNameBuilder.Append(", ");
                     }
 
-                    parameterIndex++;
-                }
-
-                if (method.Params.Count > 0 || useReturnAsParameter)
-                {
-                    argumentsTypesBuilder.Append(", ");
-                }
-
-                argumentsTypesBuilder.Append(returnMarshalType);
-                if (useReturnAsParameter)
-                {
-                    argumentsTypesBuilder.Append('*');
-                }
-
-                string argumentsString = argumentBuilder.ToString();
-                string argumentTypesString = argumentsTypesBuilder.ToString();
-                string argumentNamesString = argumentsNameBuilder.ToString();
-                if (method.Params.Count > 0)
-                {
-                    argumentNamesString = ", " + argumentNamesString;
-                }
-
-                if (comType.Name == docName)
-                {
-                    writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}::{method.Name}\"]/*' />");
-                }
-                else
-                {
-                    writer.WriteLine($"/// <inheritdoc cref=\"{docName}.{method.Name}\" />");
-                }
-
-                writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
-                writer.WriteLine($"[VtblIndex({vtblIndex})]");
-
-                string methodSuffix = string.Empty;
-                if (method.Name == "GetType")
-                {
-                    if (string.IsNullOrEmpty(argumentsString))
+                    argumentsTypesBuilder.Append(returnMarshalType);
+                    if (useReturnAsParameter)
                     {
-                        methodSuffix = "new ";
+                        argumentsTypesBuilder.Append('*');
                     }
-                }
 
-                using (writer.PushBlock($"public {methodSuffix}{returnType} {method.Name}({argumentsString})"))
-                {
-                    if (returnType != "void")
+                    string argumentsString = argumentBuilder.ToString();
+                    string argumentTypesString = argumentsTypesBuilder.ToString();
+                    string argumentNamesString = argumentsNameBuilder.ToString();
+                    if (method.Params.Count > 0)
                     {
-                        if (useReturnAsParameter)
+                        argumentNamesString = ", " + argumentNamesString;
+                    }
+
+                    if (comType.Name == docName)
+                    {
+                        writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}::{method.Name}\"]/*' />");
+                    }
+                    else
+                    {
+                        writer.WriteLine($"/// <inheritdoc cref=\"{docName}.{method.Name}\" />");
+                    }
+
+                    writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
+                    writer.WriteLine($"[VtblIndex({vtblIndex})]");
+
+                    string methodSuffix = string.Empty;
+                    if (method.Name == "GetType")
+                    {
+                        if (string.IsNullOrEmpty(argumentsString))
                         {
-                            writer.WriteLine($"{returnType} result;");
-                            writer.Write("return ");
-                            writer.WriteLine($"*((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
-                        }
-                        else
-                        {
-                            writer.Write("return ");
+                            methodSuffix = "new ";
                         }
                     }
 
-                    if (!useReturnAsParameter)
+                    using (writer.PushBlock($"public {methodSuffix}{returnType} {method.Name}({argumentsString})"))
                     {
-                        writer.WriteLine($"((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
-                    }
-                }
+                        if (returnType != "void")
+                        {
+                            if (useReturnAsParameter)
+                            {
+                                writer.WriteLine($"{returnType} result;");
+                                writer.Write("return ");
+                                writer.WriteLine($"*((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
+                            }
+                            else
+                            {
+                                writer.Write("return ");
+                            }
+                        }
 
-                needNewLine = true;
-                vtblIndex++;
+                        if (!useReturnAsParameter)
+                        {
+                            writer.WriteLine($"((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
+                        }
+                    }
+
+                    needNewLine = true;
+                    vtblIndex++;
+                }
             }
         }
 

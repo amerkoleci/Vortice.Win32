@@ -86,6 +86,11 @@ public class ApiType
     public List<object> ReturnAttrs { get; set; }
     public IList<ApiParameter> Params { get; set; } = new List<ApiParameter>();
     public string DllImport { get; set; }
+
+    public override string ToString()
+    {
+        return $"{Kind}: {Name}";
+    }
 }
 
 public sealed class ApiData

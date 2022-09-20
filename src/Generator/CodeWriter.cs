@@ -7,19 +7,22 @@ namespace Generator;
 
 public sealed class CodeWriter : IDisposable
 {
-    private readonly string _fileName;
     private bool _shouldIndent = true;
     private readonly string[] _indentStrings;
     private string _indentString = "";
     private readonly StringBuilder _builder = new();
 
     public int IndentLevel { get; private set; }
+
+    public string FileName { get; }
     public string Api { get; }
     public string DocFileName { get; }
 
+    public string Directory => Path.GetDirectoryName(FileName)!;
+
     public CodeWriter(string fileName, string api, string docFileName, string ns, params string[] usingNamespaces)
     {
-        _fileName = fileName;
+        FileName = fileName;
         Api = api;
         DocFileName = docFileName;
 
@@ -62,10 +65,10 @@ public sealed class CodeWriter : IDisposable
 
     public void Dispose()
     {
-        if (string.IsNullOrEmpty(_fileName) == false)
+        if (string.IsNullOrEmpty(FileName) == false)
         {
             string content = _builder.ToString();
-            File.WriteAllText(_fileName, content);
+            File.WriteAllText(FileName, content);
         }
     }
 
