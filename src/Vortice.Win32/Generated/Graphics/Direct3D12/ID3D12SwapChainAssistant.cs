@@ -80,7 +80,8 @@ public unsafe partial struct ID3D12SwapChainAssistant
 	[VtblIndex(3)]
 	public Luid GetLUID()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12SwapChainAssistant*, Luid>)(lpVtbl[3]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this));
+		Luid result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12SwapChainAssistant*, Luid*, Luid*>)(lpVtbl[3]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::GetSwapChainObject"]/*' />

@@ -481,7 +481,8 @@ public unsafe partial struct ID2D1DeviceContext1
 	[VtblIndex(53)]
 	public System.Drawing.SizeF GetSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.SizeF>)(lpVtbl[53]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
+		System.Drawing.SizeF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[53]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
@@ -489,7 +490,8 @@ public unsafe partial struct ID2D1DeviceContext1
 	[VtblIndex(54)]
 	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.Size>)(lpVtbl[54]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
+		System.Drawing.Size result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[54]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />

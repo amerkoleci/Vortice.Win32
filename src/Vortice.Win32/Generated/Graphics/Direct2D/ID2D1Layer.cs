@@ -88,7 +88,8 @@ public unsafe partial struct ID2D1Layer
 	[VtblIndex(4)]
 	public System.Drawing.SizeF GetSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Layer*, System.Drawing.SizeF>)(lpVtbl[4]))((ID2D1Layer*)Unsafe.AsPointer(ref this));
+		System.Drawing.SizeF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1Layer*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Layer*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 

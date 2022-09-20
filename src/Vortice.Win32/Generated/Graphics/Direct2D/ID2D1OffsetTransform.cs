@@ -96,7 +96,8 @@ public unsafe partial struct ID2D1OffsetTransform
 	[VtblIndex(5)]
 	public System.Drawing.Point GetOffset()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this));
+		System.Drawing.Point result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point*, System.Drawing.Point*>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 

@@ -96,7 +96,8 @@ public unsafe partial struct ID2D1SvgDocument
 	[VtblIndex(5)]
 	public System.Drawing.SizeF GetViewportSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, System.Drawing.SizeF>)(lpVtbl[5]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this));
+		System.Drawing.SizeF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[5]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::SetRoot"]/*' />

@@ -402,7 +402,8 @@ public unsafe partial struct ID3D12Device
 	[VtblIndex(43)]
 	public Luid GetAdapterLuid()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, Luid>)(lpVtbl[43]))((ID3D12Device*)Unsafe.AsPointer(ref this));
+		Luid result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device*, Luid*, Luid*>)(lpVtbl[43]))((ID3D12Device*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 

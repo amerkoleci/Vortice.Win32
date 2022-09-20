@@ -1985,8 +1985,9 @@ public static class Program
                     if (returnType != "void" &&
                         method.ReturnType.TargetKind != "Com" &&
                         method.ReturnType.Kind == "ApiRef" &&
-                        !IsPrimitive(method.ReturnType) &&
-                        !IsEnum(method.ReturnType))
+                        !IsEnum(method.ReturnType) &&
+                        IsStructAsReturnMarshal(method.ReturnType)
+                        )
                     {
                         useReturnAsParameter = true;
                     }
@@ -2698,6 +2699,59 @@ public static class Program
         string typeName = GetTypeName(dataType.Name);
         return IsPrimitive(typeName);
     }
+
+    private static bool IsStructAsReturnMarshal(ApiDataType dataType)
+    {
+        if (dataType.Kind != "ApiRef")
+        {
+            throw new InvalidOperationException();
+        }
+
+        string apiRefType = GetTypeName($"{dataType.Api}.{dataType.Name}");
+        if (apiRefType.EndsWith("*"))
+        {
+            apiRefType = apiRefType.Substring(0, apiRefType.Length - 1);
+        }
+
+        switch (apiRefType)
+        {
+            case "void":
+            case "bool":
+            case "byte":
+            case "sbyte":
+            case "int":
+            case "uint":
+            case "short":
+            case "ushort":
+            case "long":
+            case "ulong":
+            case "float":
+            case "double":
+                return false;
+
+            case "nint":
+            case "nuint":
+            case "IntPtr":
+            case "UIntPtr":
+            case "Guid":
+                return false;
+
+            case "Bool32":
+            case "HResult":
+                return false;
+
+            case "LargeInteger":
+            case "ULargeInteger":
+                return true;
+
+            case "Luid":
+                return true;
+
+            default:
+                return true;
+        }
+    }
+
 
     private static bool IsEnum(ApiDataType dataType)
     {

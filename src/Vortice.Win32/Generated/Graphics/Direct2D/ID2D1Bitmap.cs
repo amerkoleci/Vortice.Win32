@@ -88,7 +88,8 @@ public unsafe partial struct ID2D1Bitmap
 	[VtblIndex(4)]
 	public System.Drawing.SizeF GetSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.SizeF>)(lpVtbl[4]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
+		System.Drawing.SizeF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelSize"]/*' />
@@ -96,7 +97,8 @@ public unsafe partial struct ID2D1Bitmap
 	[VtblIndex(5)]
 	public System.Drawing.Size GetPixelSize()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Size>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
+		System.Drawing.Size result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelFormat"]/*' />
