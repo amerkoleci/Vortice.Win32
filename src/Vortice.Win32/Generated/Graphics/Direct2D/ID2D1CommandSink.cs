@@ -163,17 +163,17 @@ public unsafe partial struct ID2D1CommandSink
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult DrawGlyphRun(System.Drawing.PointF* baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public HResult DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, System.Drawing.PointF*, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, int>)(lpVtbl[13]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, int>)(lpVtbl[13]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawLine"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult DrawLine(System.Drawing.PointF* point0, System.Drawing.PointF* point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public HResult DrawLine(System.Drawing.PointF point0, System.Drawing.PointF point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, System.Drawing.PointF*, System.Drawing.PointF*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[14]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, System.Drawing.PointF, System.Drawing.PointF, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[14]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawGeometry"]/*' />

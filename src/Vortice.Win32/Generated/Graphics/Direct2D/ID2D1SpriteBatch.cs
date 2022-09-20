@@ -107,9 +107,9 @@ public unsafe partial struct ID2D1SpriteBatch
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetSprites(uint startIndex, uint spriteCount, Common.RectF* destinationRectangles, Common.RectU* sourceRectangles, Common.ColorF* colors, Matrix3x2** transforms)
+	public HResult GetSprites(uint startIndex, uint spriteCount, Common.RectF* destinationRectangles, Common.RectU* sourceRectangles, Common.ColorF* colors, Matrix3x2* transforms)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint, uint, Common.RectF*, Common.RectU*, Common.ColorF*, Matrix3x2**, int>)(lpVtbl[6]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms);
+		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint, uint, Common.RectF*, Common.RectU*, Common.ColorF*, Matrix3x2*, int>)(lpVtbl[6]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSpriteCount"]/*' />

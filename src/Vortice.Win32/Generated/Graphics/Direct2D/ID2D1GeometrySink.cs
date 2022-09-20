@@ -73,17 +73,17 @@ public unsafe partial struct ID2D1GeometrySink
 	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.BeginFigure" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public void BeginFigure(System.Drawing.PointF* startPoint, Common.FigureBegin figureBegin)
+	public void BeginFigure(System.Drawing.PointF startPoint, Common.FigureBegin figureBegin)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF*, Common.FigureBegin, void>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF, Common.FigureBegin, void>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
 	}
 
 	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.AddLines" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void AddLines(System.Drawing.PointF** points, uint pointsCount)
+	public void AddLines(System.Drawing.PointF* points, uint pointsCount)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF**, uint, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF*, uint, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
 	}
 
 	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.AddBeziers" />
@@ -113,9 +113,9 @@ public unsafe partial struct ID2D1GeometrySink
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddLine"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void AddLine(System.Drawing.PointF* point)
+	public void AddLine(System.Drawing.PointF point)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF*, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), point);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), point);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddBezier"]/*' />

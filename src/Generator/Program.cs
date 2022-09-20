@@ -2606,8 +2606,23 @@ public static class Program
             case "HResult":
                 return true;
 
+            case "System.Drawing.Point":
+            case "System.Drawing.PointF":
             case "System.Drawing.Size":
             case "System.Drawing.SizeF":
+            case "System.Drawing.Rectangle":
+            case "System.Drawing.RectangleF":
+                return true;
+
+            case "Vector2":
+            case "Vector3":
+            case "Vector4":
+            case "Matrix3x2":
+            case "Matrix4x4":
+                return true;
+
+            case "Win32.Graphics.Direct2D.Common.Matrix4x3":
+            case "Win32.Graphics.Direct2D.Common.Matrix5x4":
                 return true;
         }
 

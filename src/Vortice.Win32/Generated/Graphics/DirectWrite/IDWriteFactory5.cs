@@ -379,25 +379,25 @@ public unsafe partial struct IDWriteFactory5
 	/// <inheritdoc cref="IDWriteFactory4.TranslateColorGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public HResult TranslateColorGlyphRun(System.Drawing.PointF* baselineOrigin, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, GlyphImageFormats desiredGlyphImageFormats, MeasuringMode measuringMode, Matrix* worldAndDpiTransform, uint colorPaletteIndex, IDWriteColorGlyphRunEnumerator1** colorLayers)
+	public HResult TranslateColorGlyphRun(System.Drawing.PointF baselineOrigin, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, GlyphImageFormats desiredGlyphImageFormats, MeasuringMode measuringMode, Matrix* worldAndDpiTransform, uint colorPaletteIndex, IDWriteColorGlyphRunEnumerator1** colorLayers)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, System.Drawing.PointF*, GlyphRun*, GlyphRunDescription*, GlyphImageFormats, MeasuringMode, Matrix*, uint, IDWriteColorGlyphRunEnumerator1**, int>)(lpVtbl[40]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, desiredGlyphImageFormats, measuringMode, worldAndDpiTransform, colorPaletteIndex, colorLayers);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, System.Drawing.PointF, GlyphRun*, GlyphRunDescription*, GlyphImageFormats, MeasuringMode, Matrix*, uint, IDWriteColorGlyphRunEnumerator1**, int>)(lpVtbl[40]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, desiredGlyphImageFormats, measuringMode, worldAndDpiTransform, colorPaletteIndex, colorLayers);
 	}
 
 	/// <inheritdoc cref="IDWriteFactory4.ComputeGlyphOrigins" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public HResult ComputeGlyphOrigins(GlyphRun* glyphRun, System.Drawing.PointF* baselineOrigin, System.Drawing.PointF** glyphOrigins)
+	public HResult ComputeGlyphOrigins(GlyphRun* glyphRun, System.Drawing.PointF baselineOrigin, System.Drawing.PointF* glyphOrigins)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, GlyphRun*, System.Drawing.PointF*, System.Drawing.PointF**, int>)(lpVtbl[41]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), glyphRun, baselineOrigin, glyphOrigins);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, GlyphRun*, System.Drawing.PointF, System.Drawing.PointF*, int>)(lpVtbl[41]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), glyphRun, baselineOrigin, glyphOrigins);
 	}
 
 	/// <inheritdoc cref="IDWriteFactory4.ComputeGlyphOrigins" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
-	public HResult ComputeGlyphOrigins(GlyphRun* glyphRun, MeasuringMode measuringMode, System.Drawing.PointF* baselineOrigin, Matrix* worldAndDpiTransform, System.Drawing.PointF** glyphOrigins)
+	public HResult ComputeGlyphOrigins(GlyphRun* glyphRun, MeasuringMode measuringMode, System.Drawing.PointF baselineOrigin, Matrix* worldAndDpiTransform, System.Drawing.PointF* glyphOrigins)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, GlyphRun*, MeasuringMode, System.Drawing.PointF*, Matrix*, System.Drawing.PointF**, int>)(lpVtbl[42]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), glyphRun, measuringMode, baselineOrigin, worldAndDpiTransform, glyphOrigins);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, GlyphRun*, MeasuringMode, System.Drawing.PointF, Matrix*, System.Drawing.PointF*, int>)(lpVtbl[42]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), glyphRun, measuringMode, baselineOrigin, worldAndDpiTransform, glyphOrigins);
 	}
 
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::CreateFontSetBuilder"]/*' />

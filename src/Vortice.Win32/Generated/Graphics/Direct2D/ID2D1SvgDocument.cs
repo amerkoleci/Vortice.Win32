@@ -163,9 +163,9 @@ public unsafe partial struct ID2D1SvgDocument
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePointCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreatePointCollection(System.Drawing.PointF** points, uint pointsCount, ID2D1SvgPointCollection** pointCollection)
+	public HResult CreatePointCollection(System.Drawing.PointF* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, System.Drawing.PointF**, uint, ID2D1SvgPointCollection**, int>)(lpVtbl[13]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), points, pointsCount, pointCollection);
+		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, System.Drawing.PointF*, uint, ID2D1SvgPointCollection**, int>)(lpVtbl[13]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), points, pointsCount, pointCollection);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePathData"]/*' />

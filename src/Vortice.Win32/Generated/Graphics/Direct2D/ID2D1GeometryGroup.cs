@@ -107,17 +107,17 @@ public unsafe partial struct ID2D1GeometryGroup
 	/// <inheritdoc cref="ID2D1Geometry.StrokeContainsPoint" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult StrokeContainsPoint(System.Drawing.PointF* point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
+	public HResult StrokeContainsPoint(System.Drawing.PointF point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, System.Drawing.PointF*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[6]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), point, strokeWidth, strokeStyle, worldTransform, flatteningTolerance, contains);
+		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, System.Drawing.PointF, float, ID2D1StrokeStyle*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[6]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), point, strokeWidth, strokeStyle, worldTransform, flatteningTolerance, contains);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.FillContainsPoint" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult FillContainsPoint(System.Drawing.PointF* point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
+	public HResult FillContainsPoint(System.Drawing.PointF point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, System.Drawing.PointF*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[7]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), point, worldTransform, flatteningTolerance, contains);
+		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, System.Drawing.PointF, Matrix3x2*, float, Bool32*, int>)(lpVtbl[7]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), point, worldTransform, flatteningTolerance, contains);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.CompareWithGeometry" />
@@ -179,9 +179,9 @@ public unsafe partial struct ID2D1GeometryGroup
 	/// <inheritdoc cref="ID2D1Geometry.ComputePointAtLength" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, System.Drawing.PointF** point, System.Drawing.PointF** unitTangentVector)
+	public HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, System.Drawing.PointF* point, System.Drawing.PointF* unitTangentVector)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, float, Matrix3x2*, float, System.Drawing.PointF**, System.Drawing.PointF**, int>)(lpVtbl[15]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), length, worldTransform, flatteningTolerance, point, unitTangentVector);
+		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, float, Matrix3x2*, float, System.Drawing.PointF*, System.Drawing.PointF*, int>)(lpVtbl[15]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), length, worldTransform, flatteningTolerance, point, unitTangentVector);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Widen" />

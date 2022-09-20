@@ -24,6 +24,8 @@ using FactoryType = Win32.Graphics.Direct2D.FactoryType;
 using DWriteFactoryType = Win32.Graphics.DirectWrite.FactoryType;
 using FeatureLevel = Win32.Graphics.Direct3D.FeatureLevel;
 using Win32.Graphics.Imaging.D2D;
+using System.Runtime.CompilerServices;
+using System.Drawing;
 
 namespace ClearScreen;
 

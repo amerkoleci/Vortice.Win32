@@ -5493,10 +5493,10 @@ public static unsafe partial class Apis
 	public static extern HResult D2D1CreateFactory(FactoryType factoryType, Guid* riid, FactoryOptions* pFactoryOptions, void** ppIFactory);
 
 	[DllImport("d2d1", ExactSpelling = true)]
-	public static extern void D2D1MakeRotateMatrix(float angle, System.Drawing.PointF* center, Matrix3x2* matrix);
+	public static extern void D2D1MakeRotateMatrix(float angle, System.Drawing.PointF center, Matrix3x2* matrix);
 
 	[DllImport("d2d1", ExactSpelling = true)]
-	public static extern void D2D1MakeSkewMatrix(float angleX, float angleY, System.Drawing.PointF* center, Matrix3x2* matrix);
+	public static extern void D2D1MakeSkewMatrix(float angleX, float angleY, System.Drawing.PointF center, Matrix3x2* matrix);
 
 	[DllImport("d2d1", ExactSpelling = true)]
 	public static extern Bool32 D2D1IsMatrixInvertible(Matrix3x2* matrix);

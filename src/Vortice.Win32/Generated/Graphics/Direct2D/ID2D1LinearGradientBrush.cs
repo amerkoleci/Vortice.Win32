@@ -115,25 +115,25 @@ public unsafe partial struct ID2D1LinearGradientBrush
 	/// <inheritdoc cref="ID2D1Brush.GetTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetTransform(Matrix3x2** transform)
+	public void GetTransform(Matrix3x2* transform)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, Matrix3x2**, void>)(lpVtbl[7]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), transform);
+		((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::SetStartPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void SetStartPoint(System.Drawing.PointF* startPoint)
+	public void SetStartPoint(System.Drawing.PointF startPoint)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF*, void>)(lpVtbl[8]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), startPoint);
+		((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF, void>)(lpVtbl[8]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), startPoint);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::SetEndPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void SetEndPoint(System.Drawing.PointF* endPoint)
+	public void SetEndPoint(System.Drawing.PointF endPoint)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF*, void>)(lpVtbl[9]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), endPoint);
+		((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF, void>)(lpVtbl[9]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), endPoint);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::GetStartPoint"]/*' />
@@ -141,8 +141,7 @@ public unsafe partial struct ID2D1LinearGradientBrush
 	[VtblIndex(10)]
 	public System.Drawing.PointF GetStartPoint()
 	{
-		System.Drawing.PointF result;
-		return *((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF*, System.Drawing.PointF*>)(lpVtbl[10]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF>)(lpVtbl[10]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::GetEndPoint"]/*' />
@@ -150,8 +149,7 @@ public unsafe partial struct ID2D1LinearGradientBrush
 	[VtblIndex(11)]
 	public System.Drawing.PointF GetEndPoint()
 	{
-		System.Drawing.PointF result;
-		return *((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF*, System.Drawing.PointF*>)(lpVtbl[11]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF>)(lpVtbl[11]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::GetGradientStopCollection"]/*' />

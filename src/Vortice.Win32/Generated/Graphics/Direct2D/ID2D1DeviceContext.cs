@@ -179,9 +179,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawLine" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public void DrawLine(System.Drawing.PointF* point0, System.Drawing.PointF* point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public void DrawLine(System.Drawing.PointF point0, System.Drawing.PointF point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF*, System.Drawing.PointF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[15]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF, System.Drawing.PointF, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[15]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRectangle" />
@@ -283,17 +283,17 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawTextLayout" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public void DrawTextLayout(System.Drawing.PointF* origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options)
+	public void DrawTextLayout(System.Drawing.PointF origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF*, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, DrawTextOptions, void>)(lpVtbl[28]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, DrawTextOptions, void>)(lpVtbl[28]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public void DrawGlyphRun(System.Drawing.PointF* baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF*, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[29]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[29]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTransform" />
@@ -307,9 +307,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public void GetTransform(Matrix3x2** transform)
+	public void GetTransform(Matrix3x2* transform)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Matrix3x2**, void>)(lpVtbl[31]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), transform);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Matrix3x2*, void>)(lpVtbl[31]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetAntialiasMode" />
@@ -636,9 +636,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetGlyphRunWorldBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public HResult GetGlyphRunWorldBounds(System.Drawing.PointF* baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Common.RectF* bounds)
+	public HResult GetGlyphRunWorldBounds(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Common.RectF* bounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF*, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Common.RectF*, int>)(lpVtbl[72]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Common.RectF*, int>)(lpVtbl[72]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetDevice"]/*' />
@@ -716,9 +716,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
-	public void DrawGlyphRun(System.Drawing.PointF* baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF*, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[82]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[82]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawImage"]/*' />

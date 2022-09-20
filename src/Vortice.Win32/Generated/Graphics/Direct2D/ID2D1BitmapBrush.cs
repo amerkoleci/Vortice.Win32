@@ -115,9 +115,9 @@ public unsafe partial struct ID2D1BitmapBrush
 	/// <inheritdoc cref="ID2D1Brush.GetTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public void GetTransform(Matrix3x2** transform)
+	public void GetTransform(Matrix3x2* transform)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, Matrix3x2**, void>)(lpVtbl[7]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this), transform);
+		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush::SetExtendModeX"]/*' />

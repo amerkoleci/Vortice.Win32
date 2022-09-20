@@ -131,9 +131,9 @@ public unsafe partial struct ID2D1EffectContext
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateOffsetTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CreateOffsetTransform(System.Drawing.Point* offset, ID2D1OffsetTransform** transform)
+	public HResult CreateOffsetTransform(System.Drawing.Point offset, ID2D1OffsetTransform** transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext*, System.Drawing.Point*, ID2D1OffsetTransform**, int>)(lpVtbl[9]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), offset, transform);
+		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext*, System.Drawing.Point, ID2D1OffsetTransform**, int>)(lpVtbl[9]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), offset, transform);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateBoundsAdjustmentTransform"]/*' />

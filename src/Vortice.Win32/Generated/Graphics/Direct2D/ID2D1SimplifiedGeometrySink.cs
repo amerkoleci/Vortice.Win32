@@ -99,17 +99,17 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::BeginFigure"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void BeginFigure(System.Drawing.PointF* startPoint, FigureBegin figureBegin)
+	public void BeginFigure(System.Drawing.PointF startPoint, FigureBegin figureBegin)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, System.Drawing.PointF*, FigureBegin, void>)(lpVtbl[5]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
+		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, System.Drawing.PointF, FigureBegin, void>)(lpVtbl[5]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::AddLines"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void AddLines(System.Drawing.PointF** points, uint pointsCount)
+	public void AddLines(System.Drawing.PointF* points, uint pointsCount)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, System.Drawing.PointF**, uint, void>)(lpVtbl[6]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
+		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, System.Drawing.PointF*, uint, void>)(lpVtbl[6]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::AddBeziers"]/*' />

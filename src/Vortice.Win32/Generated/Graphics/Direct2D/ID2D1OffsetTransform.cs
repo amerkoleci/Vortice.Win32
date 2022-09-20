@@ -91,9 +91,9 @@ public unsafe partial struct ID2D1OffsetTransform
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::SetOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void SetOffset(System.Drawing.Point* offset)
+	public void SetOffset(System.Drawing.Point offset)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point*, void>)(lpVtbl[4]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), offset);
+		((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point, void>)(lpVtbl[4]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), offset);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::GetOffset"]/*' />
@@ -101,8 +101,7 @@ public unsafe partial struct ID2D1OffsetTransform
 	[VtblIndex(5)]
 	public System.Drawing.Point GetOffset()
 	{
-		System.Drawing.Point result;
-		return *((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point*, System.Drawing.Point*>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), &result);
+		return ((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this));
 	}
 }
 

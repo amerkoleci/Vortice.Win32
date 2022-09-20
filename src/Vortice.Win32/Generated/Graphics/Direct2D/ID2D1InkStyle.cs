@@ -99,9 +99,9 @@ public unsafe partial struct ID2D1InkStyle
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetNibTransform(Matrix3x2** transform)
+	public void GetNibTransform(Matrix3x2* transform)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, Matrix3x2**, void>)(lpVtbl[5]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), transform);
+		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::SetNibShape"]/*' />
