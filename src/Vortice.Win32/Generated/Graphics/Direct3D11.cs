@@ -17431,9 +17431,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(112)]
-	public new Graphics.Direct3D11.DeviceContextType GetType()
+	public new DeviceContextType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, Graphics.Direct3D11.DeviceContextType>)(lpVtbl[112]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, DeviceContextType>)(lpVtbl[112]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::GetContextFlags"]/*' />
@@ -21525,9 +21525,9 @@ public unsafe partial struct ID3D11DeviceContext1
 	/// <inheritdoc cref="ID3D11DeviceContext.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(108)]
-	public new Graphics.Direct3D11.DeviceContextType GetType()
+	public new DeviceContextType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, Graphics.Direct3D11.DeviceContextType>)(lpVtbl[108]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, DeviceContextType>)(lpVtbl[108]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetContextFlags" />
@@ -24369,9 +24369,9 @@ public unsafe partial struct ID3D11DeviceContext2
 	/// <inheritdoc cref="ID3D11DeviceContext.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(127)]
-	public new Graphics.Direct3D11.DeviceContextType GetType()
+	public new DeviceContextType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, Graphics.Direct3D11.DeviceContextType>)(lpVtbl[127]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, DeviceContextType>)(lpVtbl[127]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetContextFlags" />
@@ -26967,9 +26967,9 @@ public unsafe partial struct ID3D11DeviceContext3
 	/// <inheritdoc cref="ID3D11DeviceContext.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(137)]
-	public new Graphics.Direct3D11.DeviceContextType GetType()
+	public new DeviceContextType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Graphics.Direct3D11.DeviceContextType>)(lpVtbl[137]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, DeviceContextType>)(lpVtbl[137]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetContextFlags" />
@@ -28323,9 +28323,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(140)]
-	public new Graphics.Direct3D11.DeviceContextType GetType()
+	public new DeviceContextType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, Graphics.Direct3D11.DeviceContextType>)(lpVtbl[140]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, DeviceContextType>)(lpVtbl[140]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetContextFlags" />
@@ -31919,17 +31919,17 @@ public unsafe partial struct ID3D11ShaderReflectionType
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionType GetMemberTypeByIndex(uint Index)
+	public ID3D11ShaderReflectionType GetMemberTypeByIndex(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, Graphics.Direct3D11.ID3D11ShaderReflectionType>)(lpVtbl[1]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, ID3D11ShaderReflectionType>)(lpVtbl[1]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionType GetMemberTypeByName(sbyte* Name)
+	public ID3D11ShaderReflectionType GetMemberTypeByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionType>)(lpVtbl[2]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, sbyte*, ID3D11ShaderReflectionType>)(lpVtbl[2]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeName"]/*' />
@@ -31951,17 +31951,17 @@ public unsafe partial struct ID3D11ShaderReflectionType
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetSubType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionType GetSubType()
+	public ID3D11ShaderReflectionType GetSubType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, Graphics.Direct3D11.ID3D11ShaderReflectionType>)(lpVtbl[5]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType>)(lpVtbl[5]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetBaseClass"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionType GetBaseClass()
+	public ID3D11ShaderReflectionType GetBaseClass()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, Graphics.Direct3D11.ID3D11ShaderReflectionType>)(lpVtbl[6]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType>)(lpVtbl[6]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetNumInterfaces"]/*' />
@@ -31975,9 +31975,9 @@ public unsafe partial struct ID3D11ShaderReflectionType
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetInterfaceByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionType GetInterfaceByIndex(uint uIndex)
+	public ID3D11ShaderReflectionType GetInterfaceByIndex(uint uIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, Graphics.Direct3D11.ID3D11ShaderReflectionType>)(lpVtbl[8]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), uIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, ID3D11ShaderReflectionType>)(lpVtbl[8]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), uIndex);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::IsOfType"]/*' />
@@ -32041,17 +32041,17 @@ public unsafe partial struct ID3D11ShaderReflectionVariable
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionVariable::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public new Graphics.Direct3D11.ID3D11ShaderReflectionType GetType()
+	public new ID3D11ShaderReflectionType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, Graphics.Direct3D11.ID3D11ShaderReflectionType>)(lpVtbl[1]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, ID3D11ShaderReflectionType>)(lpVtbl[1]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionVariable::GetBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetBuffer()
+	public ID3D11ShaderReflectionConstantBuffer GetBuffer()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionVariable::GetInterfaceSlot"]/*' />
@@ -32107,17 +32107,17 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByIndex(uint Index)
+	public ID3D11ShaderReflectionVariable GetVariableByIndex(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, uint, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[1]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, uint, ID3D11ShaderReflectionVariable>)(lpVtbl[1]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
+	public ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[2]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, sbyte*, ID3D11ShaderReflectionVariable>)(lpVtbl[2]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
 	}
 }
 
@@ -32193,17 +32193,17 @@ public unsafe partial struct ID3D11ShaderReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetConstantBufferByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint Index)
+	public ID3D11ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, uint, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[4]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, uint, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[4]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
+	public ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[5]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, sbyte*, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[5]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetResourceBindingDesc"]/*' />
@@ -32241,9 +32241,9 @@ public unsafe partial struct ID3D11ShaderReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
+	public ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[10]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflection*, sbyte*, ID3D11ShaderReflectionVariable>)(lpVtbl[10]))((ID3D11ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflection::GetResourceBindingDescByName"]/*' />
@@ -32407,9 +32407,9 @@ public unsafe partial struct ID3D11LibraryReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LibraryReflection::GetFunctionByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D11.ID3D11FunctionReflection GetFunctionByIndex(int FunctionIndex)
+	public ID3D11FunctionReflection GetFunctionByIndex(int FunctionIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11LibraryReflection*, int, Graphics.Direct3D11.ID3D11FunctionReflection>)(lpVtbl[4]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D11LibraryReflection*, int, ID3D11FunctionReflection>)(lpVtbl[4]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
 	}
 }
 
@@ -32457,17 +32457,17 @@ public unsafe partial struct ID3D11FunctionReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint BufferIndex)
+	public ID3D11ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint BufferIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, uint, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[1]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), BufferIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, uint, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[1]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), BufferIndex);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
+	public ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDesc"]/*' />
@@ -32481,9 +32481,9 @@ public unsafe partial struct ID3D11FunctionReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D11.ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
+	public ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, Graphics.Direct3D11.ID3D11ShaderReflectionVariable>)(lpVtbl[4]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ID3D11ShaderReflectionVariable>)(lpVtbl[4]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDescByName"]/*' />
@@ -32497,9 +32497,9 @@ public unsafe partial struct ID3D11FunctionReflection
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetFunctionParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct3D11.ID3D11FunctionParameterReflection GetFunctionParameter(int ParameterIndex)
+	public ID3D11FunctionParameterReflection GetFunctionParameter(int ParameterIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, int, Graphics.Direct3D11.ID3D11FunctionParameterReflection>)(lpVtbl[6]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ParameterIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, int, ID3D11FunctionParameterReflection>)(lpVtbl[6]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ParameterIndex);
 	}
 }
 

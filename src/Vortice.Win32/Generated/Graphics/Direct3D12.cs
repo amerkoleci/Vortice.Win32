@@ -12442,9 +12442,9 @@ public unsafe partial struct ID3D12RootSignatureDeserializer
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12RootSignatureDeserializer::GetRootSignatureDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.Direct3D12.RootSignatureDescription* GetRootSignatureDesc()
+	public RootSignatureDescription* GetRootSignatureDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12RootSignatureDeserializer*, Graphics.Direct3D12.RootSignatureDescription*>)(lpVtbl[3]))((ID3D12RootSignatureDeserializer*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12RootSignatureDeserializer*, RootSignatureDescription*>)(lpVtbl[3]))((ID3D12RootSignatureDeserializer*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -12520,9 +12520,9 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetUnconvertedRootSignatureDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D12.VersionedRootSignatureDescription* GetUnconvertedRootSignatureDesc()
+	public VersionedRootSignatureDescription* GetUnconvertedRootSignatureDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12VersionedRootSignatureDeserializer*, Graphics.Direct3D12.VersionedRootSignatureDescription*>)(lpVtbl[4]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12VersionedRootSignatureDeserializer*, VersionedRootSignatureDescription*>)(lpVtbl[4]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -12732,9 +12732,10 @@ public unsafe partial struct ID3D12Heap
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct3D12.HeapDescription GetDesc()
+	public HeapDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Heap*, Graphics.Direct3D12.HeapDescription>)(lpVtbl[8]))((ID3D12Heap*)Unsafe.AsPointer(ref this));
+		HeapDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Heap*, HeapDescription*, HeapDescription*>)(lpVtbl[8]))((ID3D12Heap*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -12858,9 +12859,10 @@ public unsafe partial struct ID3D12Resource
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D12.ResourceDescription GetDesc()
+	public ResourceDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, Graphics.Direct3D12.ResourceDescription>)(lpVtbl[10]))((ID3D12Resource*)Unsafe.AsPointer(ref this));
+		ResourceDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Resource*, ResourceDescription*, ResourceDescription*>)(lpVtbl[10]))((ID3D12Resource*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetGPUVirtualAddress"]/*' />
@@ -13260,9 +13262,9 @@ public unsafe partial struct ID3D12Fence1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence1::GetCreationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.Direct3D12.FenceFlags GetCreationFlags()
+	public FenceFlags GetCreationFlags()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Fence1*, Graphics.Direct3D12.FenceFlags>)(lpVtbl[11]))((ID3D12Fence1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12Fence1*, FenceFlags>)(lpVtbl[11]))((ID3D12Fence1*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -13480,25 +13482,28 @@ public unsafe partial struct ID3D12DescriptorHeap
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct3D12.DescriptorHeapDescription GetDesc()
+	public DescriptorHeapDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Graphics.Direct3D12.DescriptorHeapDescription>)(lpVtbl[8]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
+		DescriptorHeapDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, DescriptorHeapDescription*, DescriptorHeapDescription*>)(lpVtbl[8]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetCPUDescriptorHandleForHeapStart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.Direct3D12.CpuDescriptorHandle GetCPUDescriptorHandleForHeapStart()
+	public CpuDescriptorHandle GetCPUDescriptorHandleForHeapStart()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Graphics.Direct3D12.CpuDescriptorHandle>)(lpVtbl[9]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
+		CpuDescriptorHandle result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, CpuDescriptorHandle*, CpuDescriptorHandle*>)(lpVtbl[9]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetGPUDescriptorHandleForHeapStart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D12.GpuDescriptorHandle GetGPUDescriptorHandleForHeapStart()
+	public GpuDescriptorHandle GetGPUDescriptorHandleForHeapStart()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Graphics.Direct3D12.GpuDescriptorHandle>)(lpVtbl[10]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
+		GpuDescriptorHandle result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, GpuDescriptorHandle*, GpuDescriptorHandle*>)(lpVtbl[10]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -13810,9 +13815,9 @@ public unsafe partial struct ID3D12CommandList
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandList::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public new Graphics.Direct3D12.CommandListType GetType()
+	public new CommandListType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12CommandList*, Graphics.Direct3D12.CommandListType>)(lpVtbl[8]))((ID3D12CommandList*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12CommandList*, CommandListType>)(lpVtbl[8]))((ID3D12CommandList*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -13880,9 +13885,9 @@ public unsafe partial struct ID3D12GraphicsCommandList
 	/// <inheritdoc cref="ID3D12CommandList.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public new Graphics.Direct3D12.CommandListType GetType()
+	public new CommandListType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, Graphics.Direct3D12.CommandListType>)(lpVtbl[3]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, CommandListType>)(lpVtbl[3]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -14806,9 +14811,9 @@ public unsafe partial struct ID3D12GraphicsCommandList1
 	/// <inheritdoc cref="ID3D12CommandList.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
-	public new Graphics.Direct3D12.CommandListType GetType()
+	public new CommandListType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, Graphics.Direct3D12.CommandListType>)(lpVtbl[54]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, CommandListType>)(lpVtbl[54]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -15420,9 +15425,9 @@ public unsafe partial struct ID3D12GraphicsCommandList2
 	/// <inheritdoc cref="ID3D12CommandList.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
-	public new Graphics.Direct3D12.CommandListType GetType()
+	public new CommandListType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, Graphics.Direct3D12.CommandListType>)(lpVtbl[60]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, CommandListType>)(lpVtbl[60]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -15658,9 +15663,10 @@ public unsafe partial struct ID3D12CommandQueue
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public Graphics.Direct3D12.CommandQueueDescription GetDesc()
+	public CommandQueueDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, Graphics.Direct3D12.CommandQueueDescription>)(lpVtbl[18]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this));
+		CommandQueueDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, CommandQueueDescription*, CommandQueueDescription*>)(lpVtbl[18]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -15904,17 +15910,19 @@ public unsafe partial struct ID3D12Device
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetResourceAllocationInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[25]))((ID3D12Device*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[25]))((ID3D12Device*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::GetCustomHeapProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[26]))((ID3D12Device*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[26]))((ID3D12Device*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateCommittedResource"]/*' />
@@ -16554,17 +16562,19 @@ public unsafe partial struct ID3D12Device1
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[21]))((ID3D12Device1*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device1*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[21]))((ID3D12Device1*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[22]))((ID3D12Device1*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device1*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[22]))((ID3D12Device1*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -16992,17 +17002,19 @@ public unsafe partial struct ID3D12Device2
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[24]))((ID3D12Device2*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device2*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[24]))((ID3D12Device2*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[25]))((ID3D12Device2*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device2*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[25]))((ID3D12Device2*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -17422,17 +17434,19 @@ public unsafe partial struct ID3D12Device3
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[25]))((ID3D12Device3*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device3*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[25]))((ID3D12Device3*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[26]))((ID3D12Device3*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device3*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[26]))((ID3D12Device3*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -17740,9 +17754,9 @@ public unsafe partial struct ID3D12ProtectedSession
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession::GetSessionStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.Direct3D12.ProtectedSessionStatus GetSessionStatus()
+	public ProtectedSessionStatus GetSessionStatus()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedSession*, Graphics.Direct3D12.ProtectedSessionStatus>)(lpVtbl[9]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedSession*, ProtectedSessionStatus>)(lpVtbl[9]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -17818,9 +17832,9 @@ public unsafe partial struct ID3D12ProtectedResourceSession
 	/// <inheritdoc cref="ID3D12ProtectedSession.GetSessionStatus" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D12.ProtectedSessionStatus GetSessionStatus()
+	public ProtectedSessionStatus GetSessionStatus()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession*, Graphics.Direct3D12.ProtectedSessionStatus>)(lpVtbl[4]))((ID3D12ProtectedResourceSession*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession*, ProtectedSessionStatus>)(lpVtbl[4]))((ID3D12ProtectedResourceSession*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -17866,9 +17880,10 @@ public unsafe partial struct ID3D12ProtectedResourceSession
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedResourceSession::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D12.ProtectedResourceSessionDescription GetDesc()
+	public ProtectedResourceSessionDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession*, Graphics.Direct3D12.ProtectedResourceSessionDescription>)(lpVtbl[10]))((ID3D12ProtectedResourceSession*)Unsafe.AsPointer(ref this));
+		ProtectedResourceSessionDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession*, ProtectedResourceSessionDescription*, ProtectedResourceSessionDescription*>)(lpVtbl[10]))((ID3D12ProtectedResourceSession*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -18136,17 +18151,19 @@ public unsafe partial struct ID3D12Device4
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[28]))((ID3D12Device4*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device4*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[28]))((ID3D12Device4*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[29]))((ID3D12Device4*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device4*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[29]))((ID3D12Device4*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -18360,9 +18377,10 @@ public unsafe partial struct ID3D12Device4
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4::GetResourceAllocationInfo1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
+	public ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[56]))((ID3D12Device4*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device4*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[56]))((ID3D12Device4*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 }
 
@@ -18940,9 +18958,10 @@ public unsafe partial struct ID3D12Device5
 	/// <inheritdoc cref="ID3D12Device4.GetResourceAllocationInfo1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
+	public ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[8]))((ID3D12Device5*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device5*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[8]))((ID3D12Device5*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
 	/// <inheritdoc cref="ID3D12Device3.OpenExistingHeapFromAddress" />
@@ -19148,17 +19167,19 @@ public unsafe partial struct ID3D12Device5
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[34]))((ID3D12Device5*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device5*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[34]))((ID3D12Device5*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[35]))((ID3D12Device5*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device5*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[35]))((ID3D12Device5*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -19388,9 +19409,9 @@ public unsafe partial struct ID3D12Device5
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CheckDriverMatchingIdentifier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public Graphics.Direct3D12.DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
+	public DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, Graphics.Direct3D12.DriverMatchingIdentifierStatus>)(lpVtbl[64]))((ID3D12Device5*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, DriverMatchingIdentifierStatus>)(lpVtbl[64]))((ID3D12Device5*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
 	}
 }
 
@@ -19850,9 +19871,9 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData2
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2::GetDeviceState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct3D12.DredDeviceState GetDeviceState()
+	public DredDeviceState GetDeviceState()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData2*, Graphics.Direct3D12.DredDeviceState>)(lpVtbl[8]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData2*, DredDeviceState>)(lpVtbl[8]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -19976,9 +19997,9 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Device5.CheckDriverMatchingIdentifier" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D12.DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
+	public DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, Graphics.Direct3D12.DriverMatchingIdentifierStatus>)(lpVtbl[10]))((ID3D12Device6*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, DriverMatchingIdentifierStatus>)(lpVtbl[10]))((ID3D12Device6*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
 	}
 
 	/// <inheritdoc cref="ID3D12Device4.CreateCommandList1" />
@@ -20024,9 +20045,10 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Device4.GetResourceAllocationInfo1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
+	public ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[16]))((ID3D12Device6*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device6*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[16]))((ID3D12Device6*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
 	/// <inheritdoc cref="ID3D12Device3.OpenExistingHeapFromAddress" />
@@ -20232,17 +20254,19 @@ public unsafe partial struct ID3D12Device6
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[42]))((ID3D12Device6*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device6*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[42]))((ID3D12Device6*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[43]))((ID3D12Device6*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device6*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[43]))((ID3D12Device6*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -20486,9 +20510,10 @@ public unsafe partial struct ID3D12ProtectedResourceSession1
 	/// <inheritdoc cref="ID3D12ProtectedResourceSession.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.Direct3D12.ProtectedResourceSessionDescription GetDesc()
+	public ProtectedResourceSessionDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession1*, Graphics.Direct3D12.ProtectedResourceSessionDescription>)(lpVtbl[3]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this));
+		ProtectedResourceSessionDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession1*, ProtectedResourceSessionDescription*, ProtectedResourceSessionDescription*>)(lpVtbl[3]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID3D12ProtectedSession.GetStatusFence" />
@@ -20502,9 +20527,9 @@ public unsafe partial struct ID3D12ProtectedResourceSession1
 	/// <inheritdoc cref="ID3D12ProtectedSession.GetSessionStatus" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D12.ProtectedSessionStatus GetSessionStatus()
+	public ProtectedSessionStatus GetSessionStatus()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession1*, Graphics.Direct3D12.ProtectedSessionStatus>)(lpVtbl[5]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession1*, ProtectedSessionStatus>)(lpVtbl[5]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -20550,9 +20575,10 @@ public unsafe partial struct ID3D12ProtectedResourceSession1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedResourceSession1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.Direct3D12.ProtectedResourceSessionDescription1 GetDesc1()
+	public ProtectedResourceSessionDescription1 GetDesc1()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession1*, Graphics.Direct3D12.ProtectedResourceSessionDescription1>)(lpVtbl[11]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this));
+		ProtectedResourceSessionDescription1 result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12ProtectedResourceSession1*, ProtectedResourceSessionDescription1*, ProtectedResourceSessionDescription1*>)(lpVtbl[11]))((ID3D12ProtectedResourceSession1*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -20684,9 +20710,9 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Device5.CheckDriverMatchingIdentifier" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.Direct3D12.DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
+	public DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, Graphics.Direct3D12.DriverMatchingIdentifierStatus>)(lpVtbl[11]))((ID3D12Device7*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, DriverMatchingIdentifierStatus>)(lpVtbl[11]))((ID3D12Device7*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
 	}
 
 	/// <inheritdoc cref="ID3D12Device4.CreateCommandList1" />
@@ -20732,9 +20758,10 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Device4.GetResourceAllocationInfo1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
+	public ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[17]))((ID3D12Device7*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device7*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[17]))((ID3D12Device7*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
 	/// <inheritdoc cref="ID3D12Device3.OpenExistingHeapFromAddress" />
@@ -20940,17 +20967,19 @@ public unsafe partial struct ID3D12Device7
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[43]))((ID3D12Device7*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device7*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[43]))((ID3D12Device7*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[44]))((ID3D12Device7*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device7*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[44]))((ID3D12Device7*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -21282,9 +21311,9 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Device5.CheckDriverMatchingIdentifier" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Graphics.Direct3D12.DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
+	public DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, Graphics.Direct3D12.DriverMatchingIdentifierStatus>)(lpVtbl[13]))((ID3D12Device8*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, DriverMatchingIdentifierStatus>)(lpVtbl[13]))((ID3D12Device8*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
 	}
 
 	/// <inheritdoc cref="ID3D12Device4.CreateCommandList1" />
@@ -21330,9 +21359,10 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Device4.GetResourceAllocationInfo1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
+	public ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[19]))((ID3D12Device8*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device8*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[19]))((ID3D12Device8*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
 	/// <inheritdoc cref="ID3D12Device3.OpenExistingHeapFromAddress" />
@@ -21538,17 +21568,19 @@ public unsafe partial struct ID3D12Device8
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[45]))((ID3D12Device8*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device8*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[45]))((ID3D12Device8*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[46]))((ID3D12Device8*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device8*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[46]))((ID3D12Device8*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -21722,9 +21754,10 @@ public unsafe partial struct ID3D12Device8
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8::GetResourceAllocationInfo2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo2(uint visibleMask, uint numResourceDescs, ResourceDescription1* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
+	public ResourceAllocationInfo GetResourceAllocationInfo2(uint visibleMask, uint numResourceDescs, ResourceDescription1* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, uint, uint, ResourceDescription1*, ResourceAllocationInfo1*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[68]))((ID3D12Device8*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device8*, ResourceAllocationInfo*, uint, uint, ResourceDescription1*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[68]))((ID3D12Device8*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8::CreateCommittedResource2"]/*' />
@@ -21840,9 +21873,10 @@ public unsafe partial struct ID3D12Resource1
 	/// <inheritdoc cref="ID3D12Resource.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D12.ResourceDescription GetDesc()
+	public ResourceDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Resource1*, Graphics.Direct3D12.ResourceDescription>)(lpVtbl[5]))((ID3D12Resource1*)Unsafe.AsPointer(ref this));
+		ResourceDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Resource1*, ResourceDescription*, ResourceDescription*>)(lpVtbl[5]))((ID3D12Resource1*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID3D12Resource.GetGPUVirtualAddress" />
@@ -22014,9 +22048,10 @@ public unsafe partial struct ID3D12Resource2
 	/// <inheritdoc cref="ID3D12Resource.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct3D12.ResourceDescription GetDesc()
+	public ResourceDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Resource2*, Graphics.Direct3D12.ResourceDescription>)(lpVtbl[6]))((ID3D12Resource2*)Unsafe.AsPointer(ref this));
+		ResourceDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Resource2*, ResourceDescription*, ResourceDescription*>)(lpVtbl[6]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID3D12Resource.GetGPUVirtualAddress" />
@@ -22094,9 +22129,10 @@ public unsafe partial struct ID3D12Resource2
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource2::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public Graphics.Direct3D12.ResourceDescription1 GetDesc1()
+	public ResourceDescription1 GetDesc1()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Resource2*, Graphics.Direct3D12.ResourceDescription1>)(lpVtbl[16]))((ID3D12Resource2*)Unsafe.AsPointer(ref this));
+		ResourceDescription1 result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Resource2*, ResourceDescription1*, ResourceDescription1*>)(lpVtbl[16]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -22164,9 +22200,10 @@ public unsafe partial struct ID3D12Heap1
 	/// <inheritdoc cref="ID3D12Heap.GetDesc" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.Direct3D12.HeapDescription GetDesc()
+	public HeapDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Heap1*, Graphics.Direct3D12.HeapDescription>)(lpVtbl[3]))((ID3D12Heap1*)Unsafe.AsPointer(ref this));
+		HeapDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Heap1*, HeapDescription*, HeapDescription*>)(lpVtbl[3]))((ID3D12Heap1*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -22746,9 +22783,9 @@ public unsafe partial struct ID3D12GraphicsCommandList3
 	/// <inheritdoc cref="ID3D12CommandList.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public new Graphics.Direct3D12.CommandListType GetType()
+	public new CommandListType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, Graphics.Direct3D12.CommandListType>)(lpVtbl[61]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, CommandListType>)(lpVtbl[61]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -23446,9 +23483,9 @@ public unsafe partial struct ID3D12GraphicsCommandList4
 	/// <inheritdoc cref="ID3D12CommandList.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
-	public new Graphics.Direct3D12.CommandListType GetType()
+	public new CommandListType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, Graphics.Direct3D12.CommandListType>)(lpVtbl[62]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, CommandListType>)(lpVtbl[62]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -23692,9 +23729,10 @@ public unsafe partial struct ID3D12ShaderCacheSession
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.Direct3D12.ShaderCacheSessionDescription GetDesc()
+	public ShaderCacheSessionDescription GetDesc()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, Graphics.Direct3D12.ShaderCacheSessionDescription>)(lpVtbl[11]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this));
+		ShaderCacheSessionDescription result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, ShaderCacheSessionDescription*, ShaderCacheSessionDescription*>)(lpVtbl[11]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -23762,9 +23800,10 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device8.GetResourceAllocationInfo2" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo2(uint visibleMask, uint numResourceDescs, ResourceDescription1* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
+	public ResourceAllocationInfo GetResourceAllocationInfo2(uint visibleMask, uint numResourceDescs, ResourceDescription1* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, uint, ResourceDescription1*, ResourceAllocationInfo1*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[3]))((ID3D12Device9*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device9*, ResourceAllocationInfo*, uint, uint, ResourceDescription1*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[3]))((ID3D12Device9*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
 	/// <inheritdoc cref="ID3D12Device8.CreateCommittedResource2" />
@@ -23882,9 +23921,9 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device5.CheckDriverMatchingIdentifier" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public Graphics.Direct3D12.DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
+	public DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, Graphics.Direct3D12.DriverMatchingIdentifierStatus>)(lpVtbl[18]))((ID3D12Device9*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, DriverMatchingIdentifierStatus>)(lpVtbl[18]))((ID3D12Device9*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
 	}
 
 	/// <inheritdoc cref="ID3D12Device4.CreateCommandList1" />
@@ -23930,9 +23969,10 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device4.GetResourceAllocationInfo1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
+	public ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[24]))((ID3D12Device9*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device9*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[24]))((ID3D12Device9*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
 	/// <inheritdoc cref="ID3D12Device3.OpenExistingHeapFromAddress" />
@@ -24138,17 +24178,19 @@ public unsafe partial struct ID3D12Device9
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public Graphics.Direct3D12.ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
+	public ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, uint, ResourceDescription*, Graphics.Direct3D12.ResourceAllocationInfo>)(lpVtbl[50]))((ID3D12Device9*)Unsafe.AsPointer(ref this), visibleMask, numResourceDescs, pResourceDescs);
+		ResourceAllocationInfo result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device9*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo*>)(lpVtbl[50]))((ID3D12Device9*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetCustomHeapProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public Graphics.Direct3D12.HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
+	public HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, uint, HeapType, Graphics.Direct3D12.HeapProperties>)(lpVtbl[51]))((ID3D12Device9*)Unsafe.AsPointer(ref this), nodeMask, heapType);
+		HeapProperties result;
+		return *((delegate* unmanaged[Stdcall]<ID3D12Device9*, HeapProperties*, uint, HeapType, HeapProperties*>)(lpVtbl[51]))((ID3D12Device9*)Unsafe.AsPointer(ref this), &result, nodeMask, heapType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateCommittedResource" />
@@ -25112,9 +25154,9 @@ public unsafe partial struct ID3D12DebugDevice
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::GetFeatureMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D12.DebugFeature GetFeatureMask()
+	public DebugFeature GetFeatureMask()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice*, Graphics.Direct3D12.DebugFeature>)(lpVtbl[4]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice*, DebugFeature>)(lpVtbl[4]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::ReportLiveDeviceObjects"]/*' />
@@ -25198,9 +25240,9 @@ public unsafe partial struct ID3D12DebugDevice2
 	/// <inheritdoc cref="ID3D12DebugDevice.GetFeatureMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D12.DebugFeature GetFeatureMask()
+	public DebugFeature GetFeatureMask()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice2*, Graphics.Direct3D12.DebugFeature>)(lpVtbl[4]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice2*, DebugFeature>)(lpVtbl[4]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DebugDevice.ReportLiveDeviceObjects" />
@@ -25464,9 +25506,9 @@ public unsafe partial struct ID3D12DebugCommandList
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList::GetFeatureMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D12.DebugFeature GetFeatureMask()
+	public DebugFeature GetFeatureMask()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList*, Graphics.Direct3D12.DebugFeature>)(lpVtbl[5]))((ID3D12DebugCommandList*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList*, DebugFeature>)(lpVtbl[5]))((ID3D12DebugCommandList*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -25550,9 +25592,9 @@ public unsafe partial struct ID3D12DebugCommandList2
 	/// <inheritdoc cref="ID3D12DebugCommandList.GetFeatureMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D12.DebugFeature GetFeatureMask()
+	public DebugFeature GetFeatureMask()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, Graphics.Direct3D12.DebugFeature>)(lpVtbl[5]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, DebugFeature>)(lpVtbl[5]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList2::SetDebugParameter"]/*' />
@@ -27044,9 +27086,9 @@ public unsafe partial struct ID3D12GraphicsCommandList5
 	/// <inheritdoc cref="ID3D12CommandList.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(71)]
-	public new Graphics.Direct3D12.CommandListType GetType()
+	public new CommandListType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, Graphics.Direct3D12.CommandListType>)(lpVtbl[71]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, CommandListType>)(lpVtbl[71]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -27730,9 +27772,9 @@ public unsafe partial struct ID3D12GraphicsCommandList6
 	/// <inheritdoc cref="ID3D12CommandList.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(73)]
-	public new Graphics.Direct3D12.CommandListType GetType()
+	public new CommandListType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, Graphics.Direct3D12.CommandListType>)(lpVtbl[73]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, CommandListType>)(lpVtbl[73]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -27828,17 +27870,17 @@ public unsafe partial struct ID3D12ShaderReflectionType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetMemberTypeByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionType GetMemberTypeByIndex(uint Index)
+	public ID3D12ShaderReflectionType GetMemberTypeByIndex(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, uint, Graphics.Direct3D12.ID3D12ShaderReflectionType>)(lpVtbl[1]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, uint, ID3D12ShaderReflectionType>)(lpVtbl[1]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetMemberTypeByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionType GetMemberTypeByName(sbyte* Name)
+	public ID3D12ShaderReflectionType GetMemberTypeByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionType>)(lpVtbl[2]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, sbyte*, ID3D12ShaderReflectionType>)(lpVtbl[2]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetMemberTypeName"]/*' />
@@ -27860,17 +27902,17 @@ public unsafe partial struct ID3D12ShaderReflectionType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetSubType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionType GetSubType()
+	public ID3D12ShaderReflectionType GetSubType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, Graphics.Direct3D12.ID3D12ShaderReflectionType>)(lpVtbl[5]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, ID3D12ShaderReflectionType>)(lpVtbl[5]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetBaseClass"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionType GetBaseClass()
+	public ID3D12ShaderReflectionType GetBaseClass()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, Graphics.Direct3D12.ID3D12ShaderReflectionType>)(lpVtbl[6]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, ID3D12ShaderReflectionType>)(lpVtbl[6]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetNumInterfaces"]/*' />
@@ -27884,9 +27926,9 @@ public unsafe partial struct ID3D12ShaderReflectionType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetInterfaceByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionType GetInterfaceByIndex(uint uIndex)
+	public ID3D12ShaderReflectionType GetInterfaceByIndex(uint uIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, uint, Graphics.Direct3D12.ID3D12ShaderReflectionType>)(lpVtbl[8]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), uIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, uint, ID3D12ShaderReflectionType>)(lpVtbl[8]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), uIndex);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::IsOfType"]/*' />
@@ -27950,17 +27992,17 @@ public unsafe partial struct ID3D12ShaderReflectionVariable
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionVariable::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public new Graphics.Direct3D12.ID3D12ShaderReflectionType GetType()
+	public new ID3D12ShaderReflectionType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionVariable*, Graphics.Direct3D12.ID3D12ShaderReflectionType>)(lpVtbl[1]))((ID3D12ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionVariable*, ID3D12ShaderReflectionType>)(lpVtbl[1]))((ID3D12ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionVariable::GetBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetBuffer()
+	public ID3D12ShaderReflectionConstantBuffer GetBuffer()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionVariable*, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D12ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionVariable*, ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D12ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionVariable::GetInterfaceSlot"]/*' />
@@ -28016,17 +28058,17 @@ public unsafe partial struct ID3D12ShaderReflectionConstantBuffer
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionConstantBuffer::GetVariableByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByIndex(uint Index)
+	public ID3D12ShaderReflectionVariable GetVariableByIndex(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionConstantBuffer*, uint, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[1]))((ID3D12ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionConstantBuffer*, uint, ID3D12ShaderReflectionVariable>)(lpVtbl[1]))((ID3D12ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionConstantBuffer::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
+	public ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionConstantBuffer*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[2]))((ID3D12ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionConstantBuffer*, sbyte*, ID3D12ShaderReflectionVariable>)(lpVtbl[2]))((ID3D12ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
 	}
 }
 
@@ -28102,17 +28144,17 @@ public unsafe partial struct ID3D12ShaderReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetConstantBufferByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint Index)
+	public ID3D12ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, uint, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[4]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, uint, ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[4]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
+	public ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[5]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, sbyte*, ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[5]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetResourceBindingDesc"]/*' />
@@ -28150,9 +28192,9 @@ public unsafe partial struct ID3D12ShaderReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
+	public ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[10]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, sbyte*, ID3D12ShaderReflectionVariable>)(lpVtbl[10]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetResourceBindingDescByName"]/*' />
@@ -28316,9 +28358,9 @@ public unsafe partial struct ID3D12LibraryReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LibraryReflection::GetFunctionByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D12.ID3D12FunctionReflection GetFunctionByIndex(int FunctionIndex)
+	public ID3D12FunctionReflection GetFunctionByIndex(int FunctionIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12LibraryReflection*, int, Graphics.Direct3D12.ID3D12FunctionReflection>)(lpVtbl[4]))((ID3D12LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D12LibraryReflection*, int, ID3D12FunctionReflection>)(lpVtbl[4]))((ID3D12LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
 	}
 }
 
@@ -28366,17 +28408,17 @@ public unsafe partial struct ID3D12FunctionReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetConstantBufferByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint BufferIndex)
+	public ID3D12ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint BufferIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, uint, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[1]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), BufferIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, uint, ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[1]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), BufferIndex);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
+	public ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDesc"]/*' />
@@ -28390,9 +28432,9 @@ public unsafe partial struct ID3D12FunctionReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct3D12.ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
+	public ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, Graphics.Direct3D12.ID3D12ShaderReflectionVariable>)(lpVtbl[4]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, ID3D12ShaderReflectionVariable>)(lpVtbl[4]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDescByName"]/*' />
@@ -28406,9 +28448,9 @@ public unsafe partial struct ID3D12FunctionReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetFunctionParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct3D12.ID3D12FunctionParameterReflection GetFunctionParameter(int ParameterIndex)
+	public ID3D12FunctionParameterReflection GetFunctionParameter(int ParameterIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, int, Graphics.Direct3D12.ID3D12FunctionParameterReflection>)(lpVtbl[6]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), ParameterIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, int, ID3D12FunctionParameterReflection>)(lpVtbl[6]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), ParameterIndex);
 	}
 }
 

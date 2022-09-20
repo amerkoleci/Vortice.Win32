@@ -3487,17 +3487,17 @@ public unsafe partial struct IDWriteRenderingParams
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetPixelGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.PixelGeometry GetPixelGeometry()
+	public PixelGeometry GetPixelGeometry()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, Graphics.DirectWrite.PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetRenderingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.DirectWrite.RenderingMode GetRenderingMode()
+	public RenderingMode GetRenderingMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, Graphics.DirectWrite.RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -3565,9 +3565,9 @@ public unsafe partial struct IDWriteFontFace
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public new Graphics.DirectWrite.FontFaceType GetType()
+	public new FontFaceType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, Graphics.DirectWrite.FontFaceType>)(lpVtbl[3]))((IDWriteFontFace*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, FontFaceType>)(lpVtbl[3]))((IDWriteFontFace*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace::GetFiles"]/*' />
@@ -3589,9 +3589,9 @@ public unsafe partial struct IDWriteFontFace
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace::GetSimulations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[6]))((IDWriteFontFace*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, FontSimulations>)(lpVtbl[6]))((IDWriteFontFace*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace::IsSymbolFont"]/*' />
@@ -4303,25 +4303,25 @@ public unsafe partial struct IDWriteFont
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.DirectWrite.FontWeight GetWeight()
+	public FontWeight GetWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, Graphics.DirectWrite.FontWeight>)(lpVtbl[4]))((IDWriteFont*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, FontWeight>)(lpVtbl[4]))((IDWriteFont*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.DirectWrite.FontStretch GetStretch()
+	public FontStretch GetStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, Graphics.DirectWrite.FontStretch>)(lpVtbl[5]))((IDWriteFont*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, FontStretch>)(lpVtbl[5]))((IDWriteFont*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.FontStyle GetStyle()
+	public FontStyle GetStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, Graphics.DirectWrite.FontStyle>)(lpVtbl[6]))((IDWriteFont*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, FontStyle>)(lpVtbl[6]))((IDWriteFont*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::IsSymbolFont"]/*' />
@@ -4351,9 +4351,9 @@ public unsafe partial struct IDWriteFont
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetSimulations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[10]))((IDWriteFont*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, FontSimulations>)(lpVtbl[10]))((IDWriteFont*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont::GetMetrics"]/*' />
@@ -4509,41 +4509,41 @@ public unsafe partial struct IDWriteTextFormat
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetTextAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[11]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, TextAlignment>)(lpVtbl[11]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetParagraphAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetWordWrapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[13]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, WordWrapping>)(lpVtbl[13]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetReadingDirection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[14]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, ReadingDirection>)(lpVtbl[14]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFlowDirection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[15]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, FlowDirection>)(lpVtbl[15]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetIncrementalTabStop"]/*' />
@@ -4597,25 +4597,25 @@ public unsafe partial struct IDWriteTextFormat
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFontWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, Graphics.DirectWrite.FontWeight>)(lpVtbl[22]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, FontWeight>)(lpVtbl[22]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFontStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, Graphics.DirectWrite.FontStyle>)(lpVtbl[23]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, FontStyle>)(lpVtbl[23]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFontStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, Graphics.DirectWrite.FontStretch>)(lpVtbl[24]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, FontStretch>)(lpVtbl[24]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFontSize"]/*' />
@@ -4872,9 +4872,9 @@ public unsafe partial struct IDWriteTextAnalysisSource
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetParagraphReadingDirection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.DirectWrite.ReadingDirection GetParagraphReadingDirection()
+	public ReadingDirection GetParagraphReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetLocaleName"]/*' />
@@ -5532,41 +5532,41 @@ public unsafe partial struct IDWriteTextLayout
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[11]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, TextAlignment>)(lpVtbl[11]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[13]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, WordWrapping>)(lpVtbl[13]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[14]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ReadingDirection>)(lpVtbl[14]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[15]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FlowDirection>)(lpVtbl[15]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -5620,25 +5620,25 @@ public unsafe partial struct IDWriteTextLayout
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Graphics.DirectWrite.FontWeight>)(lpVtbl[22]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontWeight>)(lpVtbl[22]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Graphics.DirectWrite.FontStyle>)(lpVtbl[23]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontStyle>)(lpVtbl[23]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Graphics.DirectWrite.FontStretch>)(lpVtbl[24]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontStretch>)(lpVtbl[24]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -6832,9 +6832,9 @@ public unsafe partial struct IDWriteFontFace1
 	/// <inheritdoc cref="IDWriteFontFace.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public new Graphics.DirectWrite.FontFaceType GetType()
+	public new FontFaceType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace1*, Graphics.DirectWrite.FontFaceType>)(lpVtbl[3]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace1*, FontFaceType>)(lpVtbl[3]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetFiles" />
@@ -6856,9 +6856,9 @@ public unsafe partial struct IDWriteFontFace1
 	/// <inheritdoc cref="IDWriteFontFace.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace1*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[6]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace1*, FontSimulations>)(lpVtbl[6]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.IsSymbolFont" />
@@ -7118,25 +7118,25 @@ public unsafe partial struct IDWriteFont1
 	/// <inheritdoc cref="IDWriteFont.GetWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.DirectWrite.FontWeight GetWeight()
+	public FontWeight GetWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Graphics.DirectWrite.FontWeight>)(lpVtbl[4]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontWeight>)(lpVtbl[4]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.DirectWrite.FontStretch GetStretch()
+	public FontStretch GetStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Graphics.DirectWrite.FontStretch>)(lpVtbl[5]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontStretch>)(lpVtbl[5]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.FontStyle GetStyle()
+	public FontStyle GetStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Graphics.DirectWrite.FontStyle>)(lpVtbl[6]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontStyle>)(lpVtbl[6]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.IsSymbolFont" />
@@ -7166,9 +7166,9 @@ public unsafe partial struct IDWriteFont1
 	/// <inheritdoc cref="IDWriteFont.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[10]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontSimulations>)(lpVtbl[10]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetMetrics" />
@@ -7316,17 +7316,17 @@ public unsafe partial struct IDWriteRenderingParams1
 	/// <inheritdoc cref="IDWriteRenderingParams.GetPixelGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.PixelGeometry GetPixelGeometry()
+	public PixelGeometry GetPixelGeometry()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams1*, Graphics.DirectWrite.PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams1*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetRenderingMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.DirectWrite.RenderingMode GetRenderingMode()
+	public RenderingMode GetRenderingMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams1*, Graphics.DirectWrite.RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams1*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1::GetGrayscaleEnhancedContrast"]/*' />
@@ -7608,9 +7608,9 @@ public unsafe partial struct IDWriteTextAnalysisSource1
 	/// <inheritdoc cref="IDWriteTextAnalysisSource.GetParagraphReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.DirectWrite.ReadingDirection GetParagraphReadingDirection()
+	public ReadingDirection GetParagraphReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource1*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource1*, ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalysisSource.GetLocaleName" />
@@ -8180,41 +8180,41 @@ public unsafe partial struct IDWriteTextLayout1
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[50]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, TextAlignment>)(lpVtbl[50]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[51]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, ParagraphAlignment>)(lpVtbl[51]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[52]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, WordWrapping>)(lpVtbl[52]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[53]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, ReadingDirection>)(lpVtbl[53]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[54]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, FlowDirection>)(lpVtbl[54]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -8268,25 +8268,25 @@ public unsafe partial struct IDWriteTextLayout1
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Graphics.DirectWrite.FontWeight>)(lpVtbl[61]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, FontWeight>)(lpVtbl[61]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Graphics.DirectWrite.FontStyle>)(lpVtbl[62]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, FontStyle>)(lpVtbl[62]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(63)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Graphics.DirectWrite.FontStretch>)(lpVtbl[63]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, FontStretch>)(lpVtbl[63]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -8474,9 +8474,9 @@ public unsafe partial struct IDWriteBitmapRenderTarget1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1::GetTextAntialiasMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.DirectWrite.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, Graphics.DirectWrite.TextAntialiasMode>)(lpVtbl[11]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, TextAntialiasMode>)(lpVtbl[11]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1::SetTextAntialiasMode"]/*' />
@@ -8766,41 +8766,41 @@ public unsafe partial struct IDWriteTextFormat1
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[11]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, TextAlignment>)(lpVtbl[11]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[13]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, WordWrapping>)(lpVtbl[13]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[14]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, ReadingDirection>)(lpVtbl[14]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[15]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, FlowDirection>)(lpVtbl[15]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -8854,25 +8854,25 @@ public unsafe partial struct IDWriteTextFormat1
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.FontWeight>)(lpVtbl[22]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, FontWeight>)(lpVtbl[22]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.FontStyle>)(lpVtbl[23]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, FontStyle>)(lpVtbl[23]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.FontStretch>)(lpVtbl[24]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, FontStretch>)(lpVtbl[24]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -8910,9 +8910,9 @@ public unsafe partial struct IDWriteTextFormat1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public Graphics.DirectWrite.VerticalGlyphOrientation GetVerticalGlyphOrientation()
+	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.VerticalGlyphOrientation>)(lpVtbl[29]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, VerticalGlyphOrientation>)(lpVtbl[29]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetLastLineWrapping"]/*' />
@@ -8942,9 +8942,9 @@ public unsafe partial struct IDWriteTextFormat1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetOpticalAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public Graphics.DirectWrite.OpticalAlignment GetOpticalAlignment()
+	public OpticalAlignment GetOpticalAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Graphics.DirectWrite.OpticalAlignment>)(lpVtbl[33]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, OpticalAlignment>)(lpVtbl[33]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetFontFallback"]/*' />
@@ -9436,41 +9436,41 @@ public unsafe partial struct IDWriteTextLayout2
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[54]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, TextAlignment>)(lpVtbl[54]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(55)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[55]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, ParagraphAlignment>)(lpVtbl[55]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[56]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, WordWrapping>)(lpVtbl[56]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[57]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, ReadingDirection>)(lpVtbl[57]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[58]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, FlowDirection>)(lpVtbl[58]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -9524,25 +9524,25 @@ public unsafe partial struct IDWriteTextLayout2
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.FontWeight>)(lpVtbl[65]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, FontWeight>)(lpVtbl[65]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.FontStyle>)(lpVtbl[66]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, FontStyle>)(lpVtbl[66]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.FontStretch>)(lpVtbl[67]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, FontStretch>)(lpVtbl[67]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -9588,9 +9588,9 @@ public unsafe partial struct IDWriteTextLayout2
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(73)]
-	public Graphics.DirectWrite.VerticalGlyphOrientation GetVerticalGlyphOrientation()
+	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.VerticalGlyphOrientation>)(lpVtbl[73]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, VerticalGlyphOrientation>)(lpVtbl[73]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetLastLineWrapping"]/*' />
@@ -9620,9 +9620,9 @@ public unsafe partial struct IDWriteTextLayout2
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetOpticalAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(77)]
-	public Graphics.DirectWrite.OpticalAlignment GetOpticalAlignment()
+	public OpticalAlignment GetOpticalAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Graphics.DirectWrite.OpticalAlignment>)(lpVtbl[77]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, OpticalAlignment>)(lpVtbl[77]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetFontFallback"]/*' />
@@ -10116,25 +10116,25 @@ public unsafe partial struct IDWriteFont2
 	/// <inheritdoc cref="IDWriteFont.GetWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.DirectWrite.FontWeight GetWeight()
+	public FontWeight GetWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, Graphics.DirectWrite.FontWeight>)(lpVtbl[8]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, FontWeight>)(lpVtbl[8]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.FontStretch GetStretch()
+	public FontStretch GetStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, Graphics.DirectWrite.FontStretch>)(lpVtbl[9]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, FontStretch>)(lpVtbl[9]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.DirectWrite.FontStyle GetStyle()
+	public FontStyle GetStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, Graphics.DirectWrite.FontStyle>)(lpVtbl[10]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, FontStyle>)(lpVtbl[10]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.IsSymbolFont" />
@@ -10164,9 +10164,9 @@ public unsafe partial struct IDWriteFont2
 	/// <inheritdoc cref="IDWriteFont.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[14]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, FontSimulations>)(lpVtbl[14]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetMetrics" />
@@ -10362,9 +10362,9 @@ public unsafe partial struct IDWriteFontFace2
 	/// <inheritdoc cref="IDWriteFontFace.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public new Graphics.DirectWrite.FontFaceType GetType()
+	public new FontFaceType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, Graphics.DirectWrite.FontFaceType>)(lpVtbl[15]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, FontFaceType>)(lpVtbl[15]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetFiles" />
@@ -10386,9 +10386,9 @@ public unsafe partial struct IDWriteFontFace2
 	/// <inheritdoc cref="IDWriteFontFace.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[18]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, FontSimulations>)(lpVtbl[18]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.IsSymbolFont" />
@@ -10694,25 +10694,25 @@ public unsafe partial struct IDWriteRenderingParams2
 	/// <inheritdoc cref="IDWriteRenderingParams.GetPixelGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.DirectWrite.PixelGeometry GetPixelGeometry()
+	public PixelGeometry GetPixelGeometry()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, Graphics.DirectWrite.PixelGeometry>)(lpVtbl[7]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, PixelGeometry>)(lpVtbl[7]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetRenderingMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.DirectWrite.RenderingMode GetRenderingMode()
+	public RenderingMode GetRenderingMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, Graphics.DirectWrite.RenderingMode>)(lpVtbl[8]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, RenderingMode>)(lpVtbl[8]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams2::GetGridFitMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.GridFitMode GetGridFitMode()
+	public GridFitMode GetGridFitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, Graphics.DirectWrite.GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -11066,9 +11066,9 @@ public unsafe partial struct IDWriteRenderingParams3
 	/// <inheritdoc cref="IDWriteRenderingParams2.GetGridFitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.DirectWrite.GridFitMode GetGridFitMode()
+	public GridFitMode GetGridFitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, Graphics.DirectWrite.GridFitMode>)(lpVtbl[3]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, GridFitMode>)(lpVtbl[3]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams1.GetGrayscaleEnhancedContrast" />
@@ -11106,25 +11106,25 @@ public unsafe partial struct IDWriteRenderingParams3
 	/// <inheritdoc cref="IDWriteRenderingParams.GetPixelGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.DirectWrite.PixelGeometry GetPixelGeometry()
+	public PixelGeometry GetPixelGeometry()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, Graphics.DirectWrite.PixelGeometry>)(lpVtbl[8]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, PixelGeometry>)(lpVtbl[8]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetRenderingMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.RenderingMode GetRenderingMode()
+	public RenderingMode GetRenderingMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, Graphics.DirectWrite.RenderingMode>)(lpVtbl[9]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, RenderingMode>)(lpVtbl[9]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams3::GetRenderingMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.DirectWrite.RenderingMode1 GetRenderingMode1()
+	public RenderingMode1 GetRenderingMode1()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, Graphics.DirectWrite.RenderingMode1>)(lpVtbl[10]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, RenderingMode1>)(lpVtbl[10]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -11944,9 +11944,9 @@ public unsafe partial struct IDWriteFontFamily1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily1::GetFontLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.Locality GetFontLocality(uint listIndex)
+	public Locality GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily1*, uint, Graphics.DirectWrite.Locality>)(lpVtbl[9]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily1*, uint, Locality>)(lpVtbl[9]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily1::GetFont"]/*' />
@@ -12054,9 +12054,9 @@ public unsafe partial struct IDWriteFontList1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFontLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.Locality GetFontLocality(uint listIndex)
+	public Locality GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontList1*, uint, Graphics.DirectWrite.Locality>)(lpVtbl[6]))((IDWriteFontList1*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontList1*, uint, Locality>)(lpVtbl[6]))((IDWriteFontList1*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFont"]/*' />
@@ -12172,9 +12172,9 @@ public unsafe partial struct IDWriteFontFaceReference
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetSimulations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFontFile"]/*' />
@@ -12212,9 +12212,9 @@ public unsafe partial struct IDWriteFontFaceReference
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Graphics.DirectWrite.Locality GetLocality()
+	public Locality GetLocality()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, Graphics.DirectWrite.Locality>)(lpVtbl[12]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, Locality>)(lpVtbl[12]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueFontDownloadRequest"]/*' />
@@ -12362,25 +12362,25 @@ public unsafe partial struct IDWriteFont3
 	/// <inheritdoc cref="IDWriteFont.GetWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.FontWeight GetWeight()
+	public FontWeight GetWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, Graphics.DirectWrite.FontWeight>)(lpVtbl[9]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, FontWeight>)(lpVtbl[9]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.DirectWrite.FontStretch GetStretch()
+	public FontStretch GetStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, Graphics.DirectWrite.FontStretch>)(lpVtbl[10]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, FontStretch>)(lpVtbl[10]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.DirectWrite.FontStyle GetStyle()
+	public FontStyle GetStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, Graphics.DirectWrite.FontStyle>)(lpVtbl[11]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, FontStyle>)(lpVtbl[11]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.IsSymbolFont" />
@@ -12410,9 +12410,9 @@ public unsafe partial struct IDWriteFont3
 	/// <inheritdoc cref="IDWriteFont.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[15]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, FontSimulations>)(lpVtbl[15]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetMetrics" />
@@ -12474,9 +12474,9 @@ public unsafe partial struct IDWriteFont3
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont3::GetLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public Graphics.DirectWrite.Locality GetLocality()
+	public Locality GetLocality()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, Graphics.DirectWrite.Locality>)(lpVtbl[23]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, Locality>)(lpVtbl[23]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -12680,9 +12680,9 @@ public unsafe partial struct IDWriteFontFace3
 	/// <inheritdoc cref="IDWriteFontFace.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public new Graphics.DirectWrite.FontFaceType GetType()
+	public new FontFaceType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, Graphics.DirectWrite.FontFaceType>)(lpVtbl[20]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, FontFaceType>)(lpVtbl[20]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetFiles" />
@@ -12704,9 +12704,9 @@ public unsafe partial struct IDWriteFontFace3
 	/// <inheritdoc cref="IDWriteFontFace.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[23]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, FontSimulations>)(lpVtbl[23]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.IsSymbolFont" />
@@ -12816,25 +12816,25 @@ public unsafe partial struct IDWriteFontFace3
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace3::GetWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public Graphics.DirectWrite.FontWeight GetWeight()
+	public FontWeight GetWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, Graphics.DirectWrite.FontWeight>)(lpVtbl[37]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, FontWeight>)(lpVtbl[37]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace3::GetStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public Graphics.DirectWrite.FontStretch GetStretch()
+	public FontStretch GetStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, Graphics.DirectWrite.FontStretch>)(lpVtbl[38]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, FontStretch>)(lpVtbl[38]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace3::GetStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
-	public Graphics.DirectWrite.FontStyle GetStyle()
+	public FontStyle GetStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, Graphics.DirectWrite.FontStyle>)(lpVtbl[39]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, FontStyle>)(lpVtbl[39]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace3::GetFamilyNames"]/*' />
@@ -13398,9 +13398,9 @@ public unsafe partial struct IDWriteTextFormat2
 	/// <inheritdoc cref="IDWriteTextFormat1.GetVerticalGlyphOrientation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.DirectWrite.VerticalGlyphOrientation GetVerticalGlyphOrientation()
+	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.VerticalGlyphOrientation>)(lpVtbl[4]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, VerticalGlyphOrientation>)(lpVtbl[4]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetLastLineWrapping" />
@@ -13430,9 +13430,9 @@ public unsafe partial struct IDWriteTextFormat2
 	/// <inheritdoc cref="IDWriteTextFormat1.GetOpticalAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.DirectWrite.OpticalAlignment GetOpticalAlignment()
+	public OpticalAlignment GetOpticalAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.OpticalAlignment>)(lpVtbl[8]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, OpticalAlignment>)(lpVtbl[8]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetFontFallback" />
@@ -13518,41 +13518,41 @@ public unsafe partial struct IDWriteTextFormat2
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[19]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, TextAlignment>)(lpVtbl[19]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[20]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, ParagraphAlignment>)(lpVtbl[20]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[21]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, WordWrapping>)(lpVtbl[21]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[22]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, ReadingDirection>)(lpVtbl[22]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[23]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, FlowDirection>)(lpVtbl[23]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -13606,25 +13606,25 @@ public unsafe partial struct IDWriteTextFormat2
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.FontWeight>)(lpVtbl[30]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, FontWeight>)(lpVtbl[30]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.FontStyle>)(lpVtbl[31]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, FontStyle>)(lpVtbl[31]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, Graphics.DirectWrite.FontStretch>)(lpVtbl[32]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, FontStretch>)(lpVtbl[32]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -13748,9 +13748,9 @@ public unsafe partial struct IDWriteTextLayout3
 	/// <inheritdoc cref="IDWriteTextLayout2.GetVerticalGlyphOrientation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.DirectWrite.VerticalGlyphOrientation GetVerticalGlyphOrientation()
+	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.VerticalGlyphOrientation>)(lpVtbl[5]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, VerticalGlyphOrientation>)(lpVtbl[5]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.SetLastLineWrapping" />
@@ -13780,9 +13780,9 @@ public unsafe partial struct IDWriteTextLayout3
 	/// <inheritdoc cref="IDWriteTextLayout2.GetOpticalAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.OpticalAlignment GetOpticalAlignment()
+	public OpticalAlignment GetOpticalAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.OpticalAlignment>)(lpVtbl[9]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, OpticalAlignment>)(lpVtbl[9]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.SetFontFallback" />
@@ -14212,41 +14212,41 @@ public unsafe partial struct IDWriteTextLayout3
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(63)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[63]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, TextAlignment>)(lpVtbl[63]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[64]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, ParagraphAlignment>)(lpVtbl[64]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[65]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, WordWrapping>)(lpVtbl[65]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[66]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, ReadingDirection>)(lpVtbl[66]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[67]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, FlowDirection>)(lpVtbl[67]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -14300,25 +14300,25 @@ public unsafe partial struct IDWriteTextLayout3
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(74)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.FontWeight>)(lpVtbl[74]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, FontWeight>)(lpVtbl[74]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(75)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.FontStyle>)(lpVtbl[75]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, FontStyle>)(lpVtbl[75]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, Graphics.DirectWrite.FontStretch>)(lpVtbl[76]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, FontStretch>)(lpVtbl[76]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -14544,25 +14544,25 @@ public unsafe partial struct IDWriteFontFace4
 	/// <inheritdoc cref="IDWriteFontFace3.GetWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.DirectWrite.FontWeight GetWeight()
+	public FontWeight GetWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, Graphics.DirectWrite.FontWeight>)(lpVtbl[5]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, FontWeight>)(lpVtbl[5]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.FontStretch GetStretch()
+	public FontStretch GetStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, Graphics.DirectWrite.FontStretch>)(lpVtbl[6]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, FontStretch>)(lpVtbl[6]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.DirectWrite.FontStyle GetStyle()
+	public FontStyle GetStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, Graphics.DirectWrite.FontStyle>)(lpVtbl[7]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, FontStyle>)(lpVtbl[7]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetFamilyNames" />
@@ -14776,9 +14776,9 @@ public unsafe partial struct IDWriteFontFace4
 	/// <inheritdoc cref="IDWriteFontFace.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public new Graphics.DirectWrite.FontFaceType GetType()
+	public new FontFaceType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, Graphics.DirectWrite.FontFaceType>)(lpVtbl[34]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, FontFaceType>)(lpVtbl[34]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetFiles" />
@@ -14800,9 +14800,9 @@ public unsafe partial struct IDWriteFontFace4
 	/// <inheritdoc cref="IDWriteFontFace.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[37]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, FontSimulations>)(lpVtbl[37]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.IsSymbolFont" />
@@ -14904,9 +14904,9 @@ public unsafe partial struct IDWriteFontFace4
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::GetGlyphImageFormats"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public Graphics.DirectWrite.GlyphImageFormats GetGlyphImageFormats()
+	public GlyphImageFormats GetGlyphImageFormats()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, Graphics.DirectWrite.GlyphImageFormats>)(lpVtbl[50]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, GlyphImageFormats>)(lpVtbl[50]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::GetGlyphImageData"]/*' />
@@ -15600,9 +15600,9 @@ public unsafe partial struct IDWriteRemoteFontFileStream
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.Locality GetLocality()
+	public Locality GetLocality()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileStream*, Graphics.DirectWrite.Locality>)(lpVtbl[9]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileStream*, Locality>)(lpVtbl[9]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::BeginDownload"]/*' />
@@ -16202,9 +16202,9 @@ public unsafe partial struct IDWriteFactory5
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::AnalyzeContainerType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public Graphics.DirectWrite.ContainerType AnalyzeContainerType(void* fileData, uint fileDataSize)
+	public ContainerType AnalyzeContainerType(void* fileData, uint fileDataSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, void*, uint, Graphics.DirectWrite.ContainerType>)(lpVtbl[46]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), fileData, fileDataSize);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, void*, uint, ContainerType>)(lpVtbl[46]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), fileData, fileDataSize);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::UnpackFontFile"]/*' />
@@ -16304,9 +16304,9 @@ public unsafe partial struct IDWriteFactory6
 	/// <inheritdoc cref="IDWriteFactory5.AnalyzeContainerType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.ContainerType AnalyzeContainerType(void* fileData, uint fileDataSize)
+	public ContainerType AnalyzeContainerType(void* fileData, uint fileDataSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFactory6*, void*, uint, Graphics.DirectWrite.ContainerType>)(lpVtbl[6]))((IDWriteFactory6*)Unsafe.AsPointer(ref this), fileData, fileDataSize);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFactory6*, void*, uint, ContainerType>)(lpVtbl[6]))((IDWriteFactory6*)Unsafe.AsPointer(ref this), fileData, fileDataSize);
 	}
 
 	/// <inheritdoc cref="IDWriteFactory5.UnpackFontFile" />
@@ -16766,9 +16766,9 @@ public unsafe partial struct IDWriteFontFace5
 	/// <inheritdoc cref="IDWriteFontFace4.GetGlyphImageFormats" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.DirectWrite.GlyphImageFormats GetGlyphImageFormats()
+	public GlyphImageFormats GetGlyphImageFormats()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, Graphics.DirectWrite.GlyphImageFormats>)(lpVtbl[4]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, GlyphImageFormats>)(lpVtbl[4]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace4.GetGlyphImageData" />
@@ -16806,25 +16806,25 @@ public unsafe partial struct IDWriteFontFace5
 	/// <inheritdoc cref="IDWriteFontFace3.GetWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.FontWeight GetWeight()
+	public FontWeight GetWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, Graphics.DirectWrite.FontWeight>)(lpVtbl[9]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, FontWeight>)(lpVtbl[9]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.DirectWrite.FontStretch GetStretch()
+	public FontStretch GetStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, Graphics.DirectWrite.FontStretch>)(lpVtbl[10]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, FontStretch>)(lpVtbl[10]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.DirectWrite.FontStyle GetStyle()
+	public FontStyle GetStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, Graphics.DirectWrite.FontStyle>)(lpVtbl[11]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, FontStyle>)(lpVtbl[11]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetFamilyNames" />
@@ -17038,9 +17038,9 @@ public unsafe partial struct IDWriteFontFace5
 	/// <inheritdoc cref="IDWriteFontFace.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public new Graphics.DirectWrite.FontFaceType GetType()
+	public new FontFaceType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, Graphics.DirectWrite.FontFaceType>)(lpVtbl[38]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, FontFaceType>)(lpVtbl[38]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetFiles" />
@@ -17062,9 +17062,9 @@ public unsafe partial struct IDWriteFontFace5
 	/// <inheritdoc cref="IDWriteFontFace.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[41]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, FontSimulations>)(lpVtbl[41]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.IsSymbolFont" />
@@ -17300,9 +17300,9 @@ public unsafe partial struct IDWriteFontResource
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::GetFontAxisAttributes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.DirectWrite.FontAxisAttributes GetFontAxisAttributes(uint axisIndex)
+	public FontAxisAttributes GetFontAxisAttributes(uint axisIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontResource*, uint, Graphics.DirectWrite.FontAxisAttributes>)(lpVtbl[8]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), axisIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontResource*, uint, FontAxisAttributes>)(lpVtbl[8]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), axisIndex);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontResource::GetAxisNames"]/*' />
@@ -17450,9 +17450,9 @@ public unsafe partial struct IDWriteFontFaceReference1
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetFontFile" />
@@ -17490,9 +17490,9 @@ public unsafe partial struct IDWriteFontFaceReference1
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetLocality" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Graphics.DirectWrite.Locality GetLocality()
+	public Locality GetLocality()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, Graphics.DirectWrite.Locality>)(lpVtbl[12]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, Locality>)(lpVtbl[12]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.EnqueueFontDownloadRequest" />
@@ -17910,9 +17910,9 @@ public unsafe partial struct IDWriteFontSet1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public Graphics.DirectWrite.Locality GetFontLocality(uint listIndex)
+	public Locality GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, uint, Graphics.DirectWrite.Locality>)(lpVtbl[25]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, uint, Locality>)(lpVtbl[25]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), listIndex);
 	}
 }
 
@@ -17980,9 +17980,9 @@ public unsafe partial struct IDWriteFontList2
 	/// <inheritdoc cref="IDWriteFontList1.GetFontLocality" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.DirectWrite.Locality GetFontLocality(uint listIndex)
+	public Locality GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontList2*, uint, Graphics.DirectWrite.Locality>)(lpVtbl[3]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontList2*, uint, Locality>)(lpVtbl[3]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <inheritdoc cref="IDWriteFontList1.GetFont" />
@@ -18098,9 +18098,9 @@ public unsafe partial struct IDWriteFontFamily2
 	/// <inheritdoc cref="IDWriteFontFamily1.GetFontLocality" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.DirectWrite.Locality GetFontLocality(uint listIndex)
+	public Locality GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily2*, uint, Graphics.DirectWrite.Locality>)(lpVtbl[3]))((IDWriteFontFamily2*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily2*, uint, Locality>)(lpVtbl[3]))((IDWriteFontFamily2*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFamily1.GetFont" />
@@ -18312,9 +18312,9 @@ public unsafe partial struct IDWriteFontCollection2
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontFamilyModel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.DirectWrite.FontFamilyModel GetFontFamilyModel()
+	public FontFamilyModel GetFontFamilyModel()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection2*, Graphics.DirectWrite.FontFamilyModel>)(lpVtbl[11]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection2*, FontFamilyModel>)(lpVtbl[11]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontSet"]/*' />
@@ -18438,9 +18438,9 @@ public unsafe partial struct IDWriteTextLayout4
 	/// <inheritdoc cref="IDWriteTextLayout2.GetVerticalGlyphOrientation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.VerticalGlyphOrientation GetVerticalGlyphOrientation()
+	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.VerticalGlyphOrientation>)(lpVtbl[9]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, VerticalGlyphOrientation>)(lpVtbl[9]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.SetLastLineWrapping" />
@@ -18470,9 +18470,9 @@ public unsafe partial struct IDWriteTextLayout4
 	/// <inheritdoc cref="IDWriteTextLayout2.GetOpticalAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Graphics.DirectWrite.OpticalAlignment GetOpticalAlignment()
+	public OpticalAlignment GetOpticalAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.OpticalAlignment>)(lpVtbl[13]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, OpticalAlignment>)(lpVtbl[13]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.SetFontFallback" />
@@ -18902,41 +18902,41 @@ public unsafe partial struct IDWriteTextLayout4
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[67]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, TextAlignment>)(lpVtbl[67]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[68]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ParagraphAlignment>)(lpVtbl[68]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(69)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[69]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, WordWrapping>)(lpVtbl[69]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[70]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ReadingDirection>)(lpVtbl[70]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(71)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[71]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FlowDirection>)(lpVtbl[71]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -18990,25 +18990,25 @@ public unsafe partial struct IDWriteTextLayout4
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.FontWeight>)(lpVtbl[78]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontWeight>)(lpVtbl[78]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(79)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.FontStyle>)(lpVtbl[79]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontStyle>)(lpVtbl[79]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.FontStretch>)(lpVtbl[80]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontStretch>)(lpVtbl[80]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -19062,9 +19062,9 @@ public unsafe partial struct IDWriteTextLayout4
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetAutomaticFontAxes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(87)]
-	public Graphics.DirectWrite.AutomaticFontAxes GetAutomaticFontAxes()
+	public AutomaticFontAxes GetAutomaticFontAxes()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Graphics.DirectWrite.AutomaticFontAxes>)(lpVtbl[87]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, AutomaticFontAxes>)(lpVtbl[87]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::SetAutomaticFontAxes"]/*' />
@@ -19164,9 +19164,9 @@ public unsafe partial struct IDWriteTextFormat3
 	/// <inheritdoc cref="IDWriteTextFormat1.GetVerticalGlyphOrientation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.DirectWrite.VerticalGlyphOrientation GetVerticalGlyphOrientation()
+	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.VerticalGlyphOrientation>)(lpVtbl[6]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, VerticalGlyphOrientation>)(lpVtbl[6]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetLastLineWrapping" />
@@ -19196,9 +19196,9 @@ public unsafe partial struct IDWriteTextFormat3
 	/// <inheritdoc cref="IDWriteTextFormat1.GetOpticalAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.DirectWrite.OpticalAlignment GetOpticalAlignment()
+	public OpticalAlignment GetOpticalAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.OpticalAlignment>)(lpVtbl[10]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, OpticalAlignment>)(lpVtbl[10]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetFontFallback" />
@@ -19284,41 +19284,41 @@ public unsafe partial struct IDWriteTextFormat3
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public Graphics.DirectWrite.TextAlignment GetTextAlignment()
+	public TextAlignment GetTextAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.TextAlignment>)(lpVtbl[21]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, TextAlignment>)(lpVtbl[21]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public Graphics.DirectWrite.ParagraphAlignment GetParagraphAlignment()
+	public ParagraphAlignment GetParagraphAlignment()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.ParagraphAlignment>)(lpVtbl[22]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, ParagraphAlignment>)(lpVtbl[22]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public Graphics.DirectWrite.WordWrapping GetWordWrapping()
+	public WordWrapping GetWordWrapping()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.WordWrapping>)(lpVtbl[23]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, WordWrapping>)(lpVtbl[23]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public Graphics.DirectWrite.ReadingDirection GetReadingDirection()
+	public ReadingDirection GetReadingDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.ReadingDirection>)(lpVtbl[24]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, ReadingDirection>)(lpVtbl[24]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public Graphics.DirectWrite.FlowDirection GetFlowDirection()
+	public FlowDirection GetFlowDirection()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.FlowDirection>)(lpVtbl[25]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, FlowDirection>)(lpVtbl[25]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -19372,25 +19372,25 @@ public unsafe partial struct IDWriteTextFormat3
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public Graphics.DirectWrite.FontWeight GetFontWeight()
+	public FontWeight GetFontWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.FontWeight>)(lpVtbl[32]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, FontWeight>)(lpVtbl[32]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public Graphics.DirectWrite.FontStyle GetFontStyle()
+	public FontStyle GetFontStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.FontStyle>)(lpVtbl[33]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, FontStyle>)(lpVtbl[33]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public Graphics.DirectWrite.FontStretch GetFontStretch()
+	public FontStretch GetFontStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.FontStretch>)(lpVtbl[34]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, FontStretch>)(lpVtbl[34]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -19444,9 +19444,9 @@ public unsafe partial struct IDWriteTextFormat3
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetAutomaticFontAxes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public Graphics.DirectWrite.AutomaticFontAxes GetAutomaticFontAxes()
+	public AutomaticFontAxes GetAutomaticFontAxes()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, Graphics.DirectWrite.AutomaticFontAxes>)(lpVtbl[41]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, AutomaticFontAxes>)(lpVtbl[41]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::SetAutomaticFontAxes"]/*' />
@@ -19696,9 +19696,9 @@ public unsafe partial struct IDWriteFontSet2
 	/// <inheritdoc cref="IDWriteFontSet1.GetFontLocality" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public Graphics.DirectWrite.Locality GetFontLocality(uint listIndex)
+	public Locality GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet2*, uint, Graphics.DirectWrite.Locality>)(lpVtbl[15]))((IDWriteFontSet2*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet2*, uint, Locality>)(lpVtbl[15]))((IDWriteFontSet2*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <inheritdoc cref="IDWriteFontSet.GetFontCount" />
@@ -19870,9 +19870,9 @@ public unsafe partial struct IDWriteFontCollection3
 	/// <inheritdoc cref="IDWriteFontCollection2.GetFontFamilyModel" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.DirectWrite.FontFamilyModel GetFontFamilyModel()
+	public FontFamilyModel GetFontFamilyModel()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection3*, Graphics.DirectWrite.FontFamilyModel>)(lpVtbl[5]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection3*, FontFamilyModel>)(lpVtbl[5]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontCollection2.GetFontSet" />
@@ -20084,9 +20084,9 @@ public unsafe partial struct IDWriteFactory7
 	/// <inheritdoc cref="IDWriteFactory5.AnalyzeContainerType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Graphics.DirectWrite.ContainerType AnalyzeContainerType(void* fileData, uint fileDataSize)
+	public ContainerType AnalyzeContainerType(void* fileData, uint fileDataSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFactory7*, void*, uint, Graphics.DirectWrite.ContainerType>)(lpVtbl[13]))((IDWriteFactory7*)Unsafe.AsPointer(ref this), fileData, fileDataSize);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFactory7*, void*, uint, ContainerType>)(lpVtbl[13]))((IDWriteFactory7*)Unsafe.AsPointer(ref this), fileData, fileDataSize);
 	}
 
 	/// <inheritdoc cref="IDWriteFactory5.UnpackFontFile" />
@@ -20602,9 +20602,9 @@ public unsafe partial struct IDWriteFontSet3
 	/// <inheritdoc cref="IDWriteFontSet1.GetFontLocality" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public Graphics.DirectWrite.Locality GetFontLocality(uint listIndex)
+	public Locality GetFontLocality(uint listIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet3*, uint, Graphics.DirectWrite.Locality>)(lpVtbl[16]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this), listIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet3*, uint, Locality>)(lpVtbl[16]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
 	/// <inheritdoc cref="IDWriteFontSet.GetFontCount" />
@@ -20690,9 +20690,9 @@ public unsafe partial struct IDWriteFontSet3
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public Graphics.DirectWrite.FontSourceType GetFontSourceType(uint fontIndex)
+	public FontSourceType GetFontSourceType(uint fontIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet3*, uint, Graphics.DirectWrite.FontSourceType>)(lpVtbl[27]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this), fontIndex);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet3*, uint, FontSourceType>)(lpVtbl[27]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this), fontIndex);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceNameLength"]/*' />
@@ -20824,9 +20824,9 @@ public unsafe partial struct IDWriteFontFace6
 	/// <inheritdoc cref="IDWriteFontFace4.GetGlyphImageFormats" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.DirectWrite.GlyphImageFormats GetGlyphImageFormats()
+	public GlyphImageFormats GetGlyphImageFormats()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, Graphics.DirectWrite.GlyphImageFormats>)(lpVtbl[9]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, GlyphImageFormats>)(lpVtbl[9]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace4.GetGlyphImageData" />
@@ -20864,25 +20864,25 @@ public unsafe partial struct IDWriteFontFace6
 	/// <inheritdoc cref="IDWriteFontFace3.GetWeight" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public Graphics.DirectWrite.FontWeight GetWeight()
+	public FontWeight GetWeight()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, Graphics.DirectWrite.FontWeight>)(lpVtbl[14]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, FontWeight>)(lpVtbl[14]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetStretch" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public Graphics.DirectWrite.FontStretch GetStretch()
+	public FontStretch GetStretch()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, Graphics.DirectWrite.FontStretch>)(lpVtbl[15]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, FontStretch>)(lpVtbl[15]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public Graphics.DirectWrite.FontStyle GetStyle()
+	public FontStyle GetStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, Graphics.DirectWrite.FontStyle>)(lpVtbl[16]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, FontStyle>)(lpVtbl[16]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.GetFamilyNames" />
@@ -21096,9 +21096,9 @@ public unsafe partial struct IDWriteFontFace6
 	/// <inheritdoc cref="IDWriteFontFace.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public new Graphics.DirectWrite.FontFaceType GetType()
+	public new FontFaceType GetType()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, Graphics.DirectWrite.FontFaceType>)(lpVtbl[43]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, FontFaceType>)(lpVtbl[43]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.GetFiles" />
@@ -21120,9 +21120,9 @@ public unsafe partial struct IDWriteFontFace6
 	/// <inheritdoc cref="IDWriteFontFace.GetSimulations" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public Graphics.DirectWrite.FontSimulations GetSimulations()
+	public FontSimulations GetSimulations()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, Graphics.DirectWrite.FontSimulations>)(lpVtbl[46]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, FontSimulations>)(lpVtbl[46]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace.IsSymbolFont" />

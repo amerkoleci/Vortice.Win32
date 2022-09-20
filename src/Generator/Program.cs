@@ -1,6 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using System;
 using System.Globalization;
 using System.Text;
 using Newtonsoft.Json;
@@ -1167,15 +1168,6 @@ public static class Program
                 continue;
             }
 
-            // PROPVARIANT
-            //if (comType.Name == "IWICEnumMetadataItem" ||
-            //    comType.Name == "IWICMetadataReader" ||
-            //    comType.Name == "IWICMetadataBlockReader" ||
-            //    comType.Name == "IWICMetadataBlockWriter")
-            //{
-            //    continue;
-            //}
-
             if (!regionWritten)
             {
                 writer.WriteLine("#region COM Types");
@@ -1183,6 +1175,7 @@ public static class Program
             }
 
             // Generate methods
+            // TODO: FIX broken VTable ID3D12Heap, ID2D1Factory2
             List<KeyValuePair<ApiType, string>> methodsToGenerate = new();
             ApiType iterateType = comType;
             while (iterateType.Interface != null
@@ -1893,14 +1886,40 @@ public static class Program
                         method.Params.All(item => item.Attrs.Any(attr => attr is string str && str == "Optional"));
                 }
 
+                bool useReturnAsParameter = false;
+                if (returnType != "void" &&
+                    method.ReturnType.TargetKind != "Com" &&
+                    method.ReturnType.Kind == "ApiRef" &&
+                    !IsPrimitive(method.ReturnType) &&
+                    !IsEnum(method.ReturnType))
+                {
+                    useReturnAsParameter = true;
+                }
+
+                // Return type
+                returnType = NormalizeTypeName(writer.Api, returnType);
+
+                string returnMarshalType = returnType;
+                if (returnMarshalType.ToLower() == "hresult")
+                {
+                    returnMarshalType = "int";
+                }
+
+                if (useReturnAsParameter)
+                {
+                    argumentsTypesBuilder.Append(returnMarshalType);
+                    argumentsTypesBuilder.Append('*');
+
+                    if (method.Params.Count > 0)
+                    {
+                        argumentsTypesBuilder.Append(", ");
+                    }
+                }
+
                 foreach (ApiParameter parameter in method.Params)
                 {
                     bool asPointer = false;
                     string parameterType = string.Empty;
-
-                    if (method.Name == "CreateBitmap" && comType.Name == "ID2D1RenderTarget")
-                    {
-                    }
 
                     if (parameter.Type.Kind == "ApiRef")
                     {
@@ -1977,6 +1996,7 @@ public static class Program
                     }
 
                     parameterName = CleanupName(parameterName);
+                    parameterType = NormalizeTypeName(writer.Api, parameterType);
 
                     argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
                     if (allOptional == true && isOptional == true)
@@ -1997,19 +2017,16 @@ public static class Program
                     parameterIndex++;
                 }
 
-                // Return type
-                string returnMarshalType = returnType;
-                if (returnMarshalType.ToLower() == "hresult")
-                {
-                    returnMarshalType = "int";
-                }
-
-                if (method.Params.Count > 0)
+                if (method.Params.Count > 0 || useReturnAsParameter)
                 {
                     argumentsTypesBuilder.Append(", ");
                 }
 
                 argumentsTypesBuilder.Append(returnMarshalType);
+                if (useReturnAsParameter)
+                {
+                    argumentsTypesBuilder.Append('*');
+                }
 
                 string argumentsString = argumentBuilder.ToString();
                 string argumentTypesString = argumentsTypesBuilder.ToString();
@@ -2043,8 +2060,23 @@ public static class Program
                 using (writer.PushBlock($"public {methodSuffix}{returnType} {method.Name}({argumentsString})"))
                 {
                     if (returnType != "void")
-                        writer.Write("return ");
-                    writer.WriteLine($"((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
+                    {
+                        if (useReturnAsParameter)
+                        {
+                            writer.WriteLine($"{returnType} result;");
+                            writer.Write("return ");
+                            writer.WriteLine($"*((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
+                        }
+                        else
+                        {
+                            writer.Write("return ");
+                        }
+                    }
+
+                    if (!useReturnAsParameter)
+                    {
+                        writer.WriteLine($"((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
+                    }
                 }
 
                 needNewLine = true;
@@ -2554,6 +2586,17 @@ public static class Program
 
         string typeName = GetTypeName(dataType.Name);
         return IsPrimitive(typeName);
+    }
+
+    private static bool IsEnum(ApiDataType dataType)
+    {
+        if (dataType.Kind == "ApiRef")
+        {
+            string apiRefType = $"{dataType.Api}.{dataType.Name}";
+            return IsEnum(apiRefType);
+        }
+
+        return false;
     }
 
     private static bool IsEnum(string typeName)

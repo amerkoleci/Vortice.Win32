@@ -7013,9 +7013,9 @@ public unsafe partial struct IDXGIDecodeSwapChain
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.Dxgi.MultiplaneOverlayYcbcrFlags GetColorSpace()
+	public MultiplaneOverlayYcbcrFlags GetColorSpace()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, Graphics.Dxgi.MultiplaneOverlayYcbcrFlags>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, MultiplaneOverlayYcbcrFlags>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
 	}
 }
 

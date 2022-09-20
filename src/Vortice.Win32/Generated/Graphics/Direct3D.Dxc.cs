@@ -1740,17 +1740,17 @@ public unsafe partial struct IDxcResult
 	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult::GetOutputByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.Direct3D.Dxc.DxcOutKind GetOutputByIndex(uint Index)
+	public DxcOutKind GetOutputByIndex(uint Index)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDxcResult*, uint, Graphics.Direct3D.Dxc.DxcOutKind>)(lpVtbl[9]))((IDxcResult*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[Stdcall]<IDxcResult*, uint, DxcOutKind>)(lpVtbl[9]))((IDxcResult*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult::PrimaryOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct3D.Dxc.DxcOutKind PrimaryOutput()
+	public DxcOutKind PrimaryOutput()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDxcResult*, Graphics.Direct3D.Dxc.DxcOutKind>)(lpVtbl[10]))((IDxcResult*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDxcResult*, DxcOutKind>)(lpVtbl[10]))((IDxcResult*)Unsafe.AsPointer(ref this));
 	}
 }
 

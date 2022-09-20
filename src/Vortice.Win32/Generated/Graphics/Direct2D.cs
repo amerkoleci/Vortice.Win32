@@ -5712,9 +5712,10 @@ public unsafe partial struct ID2D1Bitmap
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[6]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[6]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetDpi"]/*' />
@@ -5838,17 +5839,17 @@ public unsafe partial struct ID2D1GradientStopCollection
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection::GetColorInterpolationGamma"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct2D.Gamma GetColorInterpolationGamma()
+	public Gamma GetColorInterpolationGamma()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection*, Graphics.Direct2D.Gamma>)(lpVtbl[6]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection*, Gamma>)(lpVtbl[6]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection::GetExtendMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.Direct2D.ExtendMode GetExtendMode()
+	public ExtendMode GetExtendMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection*, Graphics.Direct2D.ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection*, ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -6090,25 +6091,25 @@ public unsafe partial struct ID2D1BitmapBrush
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush::GetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Graphics.Direct2D.ExtendMode GetExtendModeX()
+	public ExtendMode GetExtendModeX()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, Graphics.Direct2D.ExtendMode>)(lpVtbl[12]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, ExtendMode>)(lpVtbl[12]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush::GetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Graphics.Direct2D.ExtendMode GetExtendModeY()
+	public ExtendMode GetExtendModeY()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, Graphics.Direct2D.ExtendMode>)(lpVtbl[13]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, ExtendMode>)(lpVtbl[13]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush::GetInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public Graphics.Direct2D.BitmapInterpolationMode GetInterpolationMode()
+	public BitmapInterpolationMode GetInterpolationMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, Graphics.Direct2D.BitmapInterpolationMode>)(lpVtbl[14]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, BitmapInterpolationMode>)(lpVtbl[14]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush::GetBitmap"]/*' />
@@ -6232,9 +6233,10 @@ public unsafe partial struct ID2D1SolidColorBrush
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::GetColor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.Direct2D.Common.ColorF GetColor()
+	public Common.ColorF GetColor()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Graphics.Direct2D.Common.ColorF>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this));
+		Common.ColorF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Common.ColorF*, Common.ColorF*>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -6360,7 +6362,8 @@ public unsafe partial struct ID2D1LinearGradientBrush
 	[VtblIndex(10)]
 	public System.Drawing.PointF GetStartPoint()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF>)(lpVtbl[10]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this));
+		System.Drawing.PointF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF*, System.Drawing.PointF*>)(lpVtbl[10]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::GetEndPoint"]/*' />
@@ -6368,7 +6371,8 @@ public unsafe partial struct ID2D1LinearGradientBrush
 	[VtblIndex(11)]
 	public System.Drawing.PointF GetEndPoint()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF>)(lpVtbl[11]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this));
+		System.Drawing.PointF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, System.Drawing.PointF*, System.Drawing.PointF*>)(lpVtbl[11]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1LinearGradientBrush::GetGradientStopCollection"]/*' />
@@ -6518,7 +6522,8 @@ public unsafe partial struct ID2D1RadialGradientBrush
 	[VtblIndex(12)]
 	public System.Drawing.PointF GetCenter()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, System.Drawing.PointF>)(lpVtbl[12]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
+		System.Drawing.PointF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, System.Drawing.PointF*, System.Drawing.PointF*>)(lpVtbl[12]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetGradientOriginOffset"]/*' />
@@ -6526,7 +6531,8 @@ public unsafe partial struct ID2D1RadialGradientBrush
 	[VtblIndex(13)]
 	public System.Drawing.PointF GetGradientOriginOffset()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, System.Drawing.PointF>)(lpVtbl[13]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
+		System.Drawing.PointF result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, System.Drawing.PointF*, System.Drawing.PointF*>)(lpVtbl[13]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetRadiusX"]/*' />
@@ -6626,25 +6632,25 @@ public unsafe partial struct ID2D1StrokeStyle
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetStartCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct2D.CapStyle GetStartCap()
+	public CapStyle GetStartCap()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, Graphics.Direct2D.CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetEndCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct2D.CapStyle GetEndCap()
+	public CapStyle GetEndCap()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, Graphics.Direct2D.CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct2D.CapStyle GetDashCap()
+	public CapStyle GetDashCap()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, Graphics.Direct2D.CapStyle>)(lpVtbl[6]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[6]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetMiterLimit"]/*' />
@@ -6658,9 +6664,9 @@ public unsafe partial struct ID2D1StrokeStyle
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetLineJoin"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct2D.LineJoin GetLineJoin()
+	public LineJoin GetLineJoin()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, Graphics.Direct2D.LineJoin>)(lpVtbl[8]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, LineJoin>)(lpVtbl[8]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashOffset"]/*' />
@@ -6674,9 +6680,9 @@ public unsafe partial struct ID2D1StrokeStyle
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct2D.DashStyle GetDashStyle()
+	public DashStyle GetDashStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, Graphics.Direct2D.DashStyle>)(lpVtbl[10]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, DashStyle>)(lpVtbl[10]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashesCount"]/*' />
@@ -7592,9 +7598,9 @@ public unsafe partial struct ID2D1GeometryGroup
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetFillMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public Graphics.Direct2D.Common.FillMode GetFillMode()
+	public Common.FillMode GetFillMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, Graphics.Direct2D.Common.FillMode>)(lpVtbl[17]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, Common.FillMode>)(lpVtbl[17]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetSourceGeometryCount"]/*' />
@@ -8782,9 +8788,9 @@ public unsafe partial struct ID2D1RenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::GetAntialiasMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[33]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, AntialiasMode>)(lpVtbl[33]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::SetTextAntialiasMode"]/*' />
@@ -8798,9 +8804,9 @@ public unsafe partial struct ID2D1RenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::GetTextAntialiasMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[35]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, TextAntialiasMode>)(lpVtbl[35]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::SetTextRenderingParams"]/*' />
@@ -8918,9 +8924,10 @@ public unsafe partial struct ID2D1RenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::GetPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[50]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[50]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::SetDpi"]/*' />
@@ -9268,9 +9275,9 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[32]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, AntialiasMode>)(lpVtbl[32]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -9284,9 +9291,9 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[34]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, TextAntialiasMode>)(lpVtbl[34]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -9404,9 +9411,10 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[49]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[49]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -9770,9 +9778,9 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[32]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, AntialiasMode>)(lpVtbl[32]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -9786,9 +9794,9 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[34]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, TextAntialiasMode>)(lpVtbl[34]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -9906,9 +9914,10 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[49]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[49]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -9970,9 +9979,9 @@ public unsafe partial struct ID2D1HwndRenderTarget
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::CheckWindowState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
-	public Graphics.Direct2D.WindowState CheckWindowState()
+	public WindowState CheckWindowState()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, Graphics.Direct2D.WindowState>)(lpVtbl[57]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, WindowState>)(lpVtbl[57]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::Resize"]/*' />
@@ -10366,9 +10375,9 @@ public unsafe partial struct ID2D1DCRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[32]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, AntialiasMode>)(lpVtbl[32]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -10382,9 +10391,9 @@ public unsafe partial struct ID2D1DCRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[34]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, TextAntialiasMode>)(lpVtbl[34]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -10502,9 +10511,10 @@ public unsafe partial struct ID2D1DCRenderTarget
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[49]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[49]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -11480,25 +11490,25 @@ public unsafe partial struct ID2D1ImageBrush
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public Graphics.Direct2D.ExtendMode GetExtendModeX()
+	public ExtendMode GetExtendModeX()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Graphics.Direct2D.ExtendMode>)(lpVtbl[14]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[14]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public Graphics.Direct2D.ExtendMode GetExtendModeY()
+	public ExtendMode GetExtendModeY()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Graphics.Direct2D.ExtendMode>)(lpVtbl[15]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[15]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public Graphics.Direct2D.InterpolationMode GetInterpolationMode()
+	public InterpolationMode GetInterpolationMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Graphics.Direct2D.InterpolationMode>)(lpVtbl[16]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, InterpolationMode>)(lpVtbl[16]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetSourceRectangle"]/*' />
@@ -11606,25 +11616,25 @@ public unsafe partial struct ID2D1BitmapBrush1
 	/// <inheritdoc cref="ID2D1BitmapBrush.GetExtendModeX" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.Direct2D.ExtendMode GetExtendModeX()
+	public ExtendMode GetExtendModeX()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, Graphics.Direct2D.ExtendMode>)(lpVtbl[7]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ExtendMode>)(lpVtbl[7]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.GetExtendModeY" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct2D.ExtendMode GetExtendModeY()
+	public ExtendMode GetExtendModeY()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, Graphics.Direct2D.ExtendMode>)(lpVtbl[8]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ExtendMode>)(lpVtbl[8]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.GetInterpolationMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.Direct2D.BitmapInterpolationMode GetInterpolationMode()
+	public BitmapInterpolationMode GetInterpolationMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, Graphics.Direct2D.BitmapInterpolationMode>)(lpVtbl[9]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, BitmapInterpolationMode>)(lpVtbl[9]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.GetBitmap" />
@@ -11686,9 +11696,9 @@ public unsafe partial struct ID2D1BitmapBrush1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::GetInterpolationMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public Graphics.Direct2D.InterpolationMode GetInterpolationMode1()
+	public InterpolationMode GetInterpolationMode1()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, Graphics.Direct2D.InterpolationMode>)(lpVtbl[17]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, InterpolationMode>)(lpVtbl[17]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -11756,25 +11766,25 @@ public unsafe partial struct ID2D1StrokeStyle1
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetStartCap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.Direct2D.CapStyle GetStartCap()
+	public CapStyle GetStartCap()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, Graphics.Direct2D.CapStyle>)(lpVtbl[3]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[3]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetEndCap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct2D.CapStyle GetEndCap()
+	public CapStyle GetEndCap()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, Graphics.Direct2D.CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashCap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct2D.CapStyle GetDashCap()
+	public CapStyle GetDashCap()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, Graphics.Direct2D.CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetMiterLimit" />
@@ -11788,9 +11798,9 @@ public unsafe partial struct ID2D1StrokeStyle1
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetLineJoin" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.Direct2D.LineJoin GetLineJoin()
+	public LineJoin GetLineJoin()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, Graphics.Direct2D.LineJoin>)(lpVtbl[7]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, LineJoin>)(lpVtbl[7]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashOffset" />
@@ -11804,9 +11814,9 @@ public unsafe partial struct ID2D1StrokeStyle1
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashStyle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.Direct2D.DashStyle GetDashStyle()
+	public DashStyle GetDashStyle()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, Graphics.Direct2D.DashStyle>)(lpVtbl[9]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, DashStyle>)(lpVtbl[9]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashesCount" />
@@ -11836,9 +11846,9 @@ public unsafe partial struct ID2D1StrokeStyle1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle1::GetStrokeTransformType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public Graphics.Direct2D.StrokeTransformType GetStrokeTransformType()
+	public StrokeTransformType GetStrokeTransformType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, Graphics.Direct2D.StrokeTransformType>)(lpVtbl[13]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, StrokeTransformType>)(lpVtbl[13]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -12144,9 +12154,9 @@ public unsafe partial struct ID2D1Properties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct2D.PropertyType GetType(uint index)
+	public PropertyType GetType(uint index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, Graphics.Direct2D.PropertyType>)(lpVtbl[6]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyIndex"]/*' />
@@ -12294,9 +12304,9 @@ public unsafe partial struct ID2D1Effect
 	/// <inheritdoc cref="ID2D1Properties.GetType" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct2D.PropertyType GetType(uint index)
+	public PropertyType GetType(uint index)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, Graphics.Direct2D.PropertyType>)(lpVtbl[6]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyIndex" />
@@ -12476,9 +12486,10 @@ public unsafe partial struct ID2D1Bitmap1
 	/// <inheritdoc cref="ID2D1Bitmap.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[5]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[5]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1Bitmap.GetDpi" />
@@ -12532,9 +12543,9 @@ public unsafe partial struct ID2D1Bitmap1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Graphics.Direct2D.BitmapOptions GetOptions()
+	public BitmapOptions GetOptions()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, Graphics.Direct2D.BitmapOptions>)(lpVtbl[12]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, BitmapOptions>)(lpVtbl[12]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetSurface"]/*' />
@@ -12634,9 +12645,9 @@ public unsafe partial struct ID2D1ColorContext
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public Graphics.Direct2D.ColorSpace GetColorSpace()
+	public ColorSpace GetColorSpace()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext*, Graphics.Direct2D.ColorSpace>)(lpVtbl[4]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext*, ColorSpace>)(lpVtbl[4]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetProfileSize"]/*' />
@@ -12736,17 +12747,17 @@ public unsafe partial struct ID2D1GradientStopCollection1
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetColorInterpolationGamma" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct2D.Gamma GetColorInterpolationGamma()
+	public Gamma GetColorInterpolationGamma()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Graphics.Direct2D.Gamma>)(lpVtbl[5]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Gamma>)(lpVtbl[5]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetExtendMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct2D.ExtendMode GetExtendMode()
+	public ExtendMode GetExtendMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Graphics.Direct2D.ExtendMode>)(lpVtbl[6]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ExtendMode>)(lpVtbl[6]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -12768,33 +12779,33 @@ public unsafe partial struct ID2D1GradientStopCollection1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPreInterpolationSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.Direct2D.ColorSpace GetPreInterpolationSpace()
+	public ColorSpace GetPreInterpolationSpace()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Graphics.Direct2D.ColorSpace>)(lpVtbl[9]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[9]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPostInterpolationSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct2D.ColorSpace GetPostInterpolationSpace()
+	public ColorSpace GetPostInterpolationSpace()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Graphics.Direct2D.ColorSpace>)(lpVtbl[10]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[10]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetBufferPrecision"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.Direct2D.BufferPrecision GetBufferPrecision()
+	public BufferPrecision GetBufferPrecision()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Graphics.Direct2D.BufferPrecision>)(lpVtbl[11]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, BufferPrecision>)(lpVtbl[11]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetColorInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public Graphics.Direct2D.ColorInterpolationMode GetColorInterpolationMode()
+	public ColorInterpolationMode GetColorInterpolationMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Graphics.Direct2D.ColorInterpolationMode>)(lpVtbl[12]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorInterpolationMode>)(lpVtbl[12]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -13212,9 +13223,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[32]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, AntialiasMode>)(lpVtbl[32]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -13228,9 +13239,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[34]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, TextAntialiasMode>)(lpVtbl[34]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -13348,9 +13359,10 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[49]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[49]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -13588,9 +13600,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetPrimitiveBlend"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(79)]
-	public Graphics.Direct2D.PrimitiveBlend GetPrimitiveBlend()
+	public PrimitiveBlend GetPrimitiveBlend()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Direct2D.PrimitiveBlend>)(lpVtbl[79]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, PrimitiveBlend>)(lpVtbl[79]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetUnitMode"]/*' />
@@ -13604,9 +13616,9 @@ public unsafe partial struct ID2D1DeviceContext
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetUnitMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(81)]
-	public Graphics.Direct2D.UnitMode GetUnitMode()
+	public UnitMode GetUnitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Direct2D.UnitMode>)(lpVtbl[81]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, UnitMode>)(lpVtbl[81]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGlyphRun"]/*' />
@@ -15608,17 +15620,17 @@ public unsafe partial struct ID2D1BorderTransform
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::GetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct2D.ExtendMode GetExtendModeX()
+	public ExtendMode GetExtendModeX()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, Graphics.Direct2D.ExtendMode>)(lpVtbl[8]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, ExtendMode>)(lpVtbl[8]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::GetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Graphics.Direct2D.ExtendMode GetExtendModeY()
+	public ExtendMode GetExtendModeY()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, Graphics.Direct2D.ExtendMode>)(lpVtbl[9]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, ExtendMode>)(lpVtbl[9]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -15704,7 +15716,8 @@ public unsafe partial struct ID2D1OffsetTransform
 	[VtblIndex(5)]
 	public System.Drawing.Point GetOffset()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this));
+		System.Drawing.Point result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point*, System.Drawing.Point*>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 
@@ -16420,9 +16433,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1DeviceContext.GetPrimitiveBlend" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public Graphics.Direct2D.PrimitiveBlend GetPrimitiveBlend()
+	public PrimitiveBlend GetPrimitiveBlend()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Graphics.Direct2D.PrimitiveBlend>)(lpVtbl[25]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, PrimitiveBlend>)(lpVtbl[25]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetUnitMode" />
@@ -16436,9 +16449,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1DeviceContext.GetUnitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public Graphics.Direct2D.UnitMode GetUnitMode()
+	public UnitMode GetUnitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Graphics.Direct2D.UnitMode>)(lpVtbl[27]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, UnitMode>)(lpVtbl[27]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGlyphRun" />
@@ -16756,9 +16769,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[67]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, AntialiasMode>)(lpVtbl[67]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -16772,9 +16785,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(69)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[69]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, TextAntialiasMode>)(lpVtbl[69]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -16892,9 +16905,10 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(84)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[84]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[84]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -17082,9 +17096,9 @@ public unsafe partial struct ID2D1Device1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::GetRenderingPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public Graphics.Direct2D.RenderingPriority GetRenderingPriority()
+	public RenderingPriority GetRenderingPriority()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device1*, Graphics.Direct2D.RenderingPriority>)(lpVtbl[8]))((ID2D1Device1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Device1*, RenderingPriority>)(lpVtbl[8]))((ID2D1Device1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::SetRenderingPriority"]/*' />
@@ -17818,9 +17832,9 @@ public unsafe partial struct ID2D1SvgPaint
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint::GetPaintType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.Direct2D.SvgPaintType GetPaintType()
+	public SvgPaintType GetPaintType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPaint*, Graphics.Direct2D.SvgPaintType>)(lpVtbl[7]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPaint*, SvgPaintType>)(lpVtbl[7]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint::SetColor"]/*' />
@@ -18838,9 +18852,9 @@ public unsafe partial struct ID2D1InkStyle
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibShape"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.Direct2D.InkNibShape GetNibShape()
+	public InkNibShape GetNibShape()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, Graphics.Direct2D.InkNibShape>)(lpVtbl[7]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, InkNibShape>)(lpVtbl[7]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
 	}
 }
 
@@ -18924,9 +18938,10 @@ public unsafe partial struct ID2D1Ink
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetStartPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public Graphics.Direct2D.InkPoint GetStartPoint()
+	public InkPoint GetStartPoint()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, Graphics.Direct2D.InkPoint>)(lpVtbl[5]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
+		InkPoint result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkPoint*, InkPoint*>)(lpVtbl[5]))((ID2D1Ink*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::AddSegments"]/*' />
@@ -19696,9 +19711,9 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1DeviceContext.GetPrimitiveBlend" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public Graphics.Direct2D.PrimitiveBlend GetPrimitiveBlend()
+	public PrimitiveBlend GetPrimitiveBlend()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Graphics.Direct2D.PrimitiveBlend>)(lpVtbl[28]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, PrimitiveBlend>)(lpVtbl[28]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetUnitMode" />
@@ -19712,9 +19727,9 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1DeviceContext.GetUnitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public Graphics.Direct2D.UnitMode GetUnitMode()
+	public UnitMode GetUnitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Graphics.Direct2D.UnitMode>)(lpVtbl[30]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, UnitMode>)(lpVtbl[30]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGlyphRun" />
@@ -20032,9 +20047,9 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[70]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, AntialiasMode>)(lpVtbl[70]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -20048,9 +20063,9 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[72]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, TextAntialiasMode>)(lpVtbl[72]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -20168,9 +20183,10 @@ public unsafe partial struct ID2D1DeviceContext2
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(87)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[87]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[87]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -20382,9 +20398,9 @@ public unsafe partial struct ID2D1Device2
 	/// <inheritdoc cref="ID2D1Device1.GetRenderingPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.Direct2D.RenderingPriority GetRenderingPriority()
+	public RenderingPriority GetRenderingPriority()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, Graphics.Direct2D.RenderingPriority>)(lpVtbl[3]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, RenderingPriority>)(lpVtbl[3]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.SetRenderingPriority" />
@@ -21674,9 +21690,9 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1DeviceContext.GetPrimitiveBlend" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
-	public Graphics.Direct2D.PrimitiveBlend GetPrimitiveBlend()
+	public PrimitiveBlend GetPrimitiveBlend()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Direct2D.PrimitiveBlend>)(lpVtbl[39]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, PrimitiveBlend>)(lpVtbl[39]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetUnitMode" />
@@ -21690,9 +21706,9 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1DeviceContext.GetUnitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public Graphics.Direct2D.UnitMode GetUnitMode()
+	public UnitMode GetUnitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Direct2D.UnitMode>)(lpVtbl[41]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, UnitMode>)(lpVtbl[41]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGlyphRun" />
@@ -22010,9 +22026,9 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(81)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[81]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, AntialiasMode>)(lpVtbl[81]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -22026,9 +22042,9 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[83]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, TextAntialiasMode>)(lpVtbl[83]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -22146,9 +22162,10 @@ public unsafe partial struct ID2D1DeviceContext3
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(98)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[98]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[98]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -22312,9 +22329,9 @@ public unsafe partial struct ID2D1Device3
 	/// <inheritdoc cref="ID2D1Device1.GetRenderingPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public Graphics.Direct2D.RenderingPriority GetRenderingPriority()
+	public RenderingPriority GetRenderingPriority()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device3*, Graphics.Direct2D.RenderingPriority>)(lpVtbl[6]))((ID2D1Device3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Device3*, RenderingPriority>)(lpVtbl[6]))((ID2D1Device3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.SetRenderingPriority" />
@@ -23440,9 +23457,9 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1DeviceContext.GetPrimitiveBlend" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public Graphics.Direct2D.PrimitiveBlend GetPrimitiveBlend()
+	public PrimitiveBlend GetPrimitiveBlend()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Graphics.Direct2D.PrimitiveBlend>)(lpVtbl[41]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, PrimitiveBlend>)(lpVtbl[41]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetUnitMode" />
@@ -23456,9 +23473,9 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1DeviceContext.GetUnitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
-	public Graphics.Direct2D.UnitMode GetUnitMode()
+	public UnitMode GetUnitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Graphics.Direct2D.UnitMode>)(lpVtbl[43]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, UnitMode>)(lpVtbl[43]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGlyphRun" />
@@ -23776,9 +23793,9 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[83]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, AntialiasMode>)(lpVtbl[83]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -23792,9 +23809,9 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(85)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[85]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, TextAntialiasMode>)(lpVtbl[85]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -23912,9 +23929,10 @@ public unsafe partial struct ID2D1DeviceContext4
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(100)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[100]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[100]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -24126,9 +24144,9 @@ public unsafe partial struct ID2D1Device4
 	/// <inheritdoc cref="ID2D1Device1.GetRenderingPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.Direct2D.RenderingPriority GetRenderingPriority()
+	public RenderingPriority GetRenderingPriority()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device4*, Graphics.Direct2D.RenderingPriority>)(lpVtbl[7]))((ID2D1Device4*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Device4*, RenderingPriority>)(lpVtbl[7]))((ID2D1Device4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.SetRenderingPriority" />
@@ -24872,9 +24890,9 @@ public unsafe partial struct ID2D1ColorContext1
 	/// <inheritdoc cref="ID2D1ColorContext.GetColorSpace" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public Graphics.Direct2D.ColorSpace GetColorSpace()
+	public ColorSpace GetColorSpace()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext1*, Graphics.Direct2D.ColorSpace>)(lpVtbl[3]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext1*, ColorSpace>)(lpVtbl[3]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1ColorContext.GetProfileSize" />
@@ -24904,9 +24922,9 @@ public unsafe partial struct ID2D1ColorContext1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext1::GetColorContextType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public Graphics.Direct2D.ColorContextType GetColorContextType()
+	public ColorContextType GetColorContextType()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext1*, Graphics.Direct2D.ColorContextType>)(lpVtbl[7]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext1*, ColorContextType>)(lpVtbl[7]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext1::GetDXGIColorSpace"]/*' />
@@ -25350,9 +25368,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1DeviceContext.GetPrimitiveBlend" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public Graphics.Direct2D.PrimitiveBlend GetPrimitiveBlend()
+	public PrimitiveBlend GetPrimitiveBlend()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Graphics.Direct2D.PrimitiveBlend>)(lpVtbl[48]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, PrimitiveBlend>)(lpVtbl[48]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetUnitMode" />
@@ -25366,9 +25384,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1DeviceContext.GetUnitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public Graphics.Direct2D.UnitMode GetUnitMode()
+	public UnitMode GetUnitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Graphics.Direct2D.UnitMode>)(lpVtbl[50]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, UnitMode>)(lpVtbl[50]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGlyphRun" />
@@ -25686,9 +25704,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(90)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[90]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, AntialiasMode>)(lpVtbl[90]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -25702,9 +25720,9 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(92)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[92]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, TextAntialiasMode>)(lpVtbl[92]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -25822,9 +25840,10 @@ public unsafe partial struct ID2D1DeviceContext5
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(107)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[107]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[107]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -26036,9 +26055,9 @@ public unsafe partial struct ID2D1Device5
 	/// <inheritdoc cref="ID2D1Device1.GetRenderingPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public Graphics.Direct2D.RenderingPriority GetRenderingPriority()
+	public RenderingPriority GetRenderingPriority()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device5*, Graphics.Direct2D.RenderingPriority>)(lpVtbl[10]))((ID2D1Device5*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Device5*, RenderingPriority>)(lpVtbl[10]))((ID2D1Device5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.SetRenderingPriority" />
@@ -27174,9 +27193,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1DeviceContext.GetPrimitiveBlend" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
-	public Graphics.Direct2D.PrimitiveBlend GetPrimitiveBlend()
+	public PrimitiveBlend GetPrimitiveBlend()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.Direct2D.PrimitiveBlend>)(lpVtbl[52]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, PrimitiveBlend>)(lpVtbl[52]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetUnitMode" />
@@ -27190,9 +27209,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1DeviceContext.GetUnitMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
-	public Graphics.Direct2D.UnitMode GetUnitMode()
+	public UnitMode GetUnitMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.Direct2D.UnitMode>)(lpVtbl[54]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, UnitMode>)(lpVtbl[54]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGlyphRun" />
@@ -27510,9 +27529,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(94)]
-	public Graphics.Direct2D.AntialiasMode GetAntialiasMode()
+	public AntialiasMode GetAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.Direct2D.AntialiasMode>)(lpVtbl[94]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, AntialiasMode>)(lpVtbl[94]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -27526,9 +27545,9 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(96)]
-	public Graphics.Direct2D.TextAntialiasMode GetTextAntialiasMode()
+	public TextAntialiasMode GetTextAntialiasMode()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.Direct2D.TextAntialiasMode>)(lpVtbl[96]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, TextAntialiasMode>)(lpVtbl[96]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -27646,9 +27665,10 @@ public unsafe partial struct ID2D1DeviceContext6
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(111)]
-	public Graphics.Direct2D.Common.PixelFormat GetPixelFormat()
+	public Common.PixelFormat GetPixelFormat()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.Direct2D.Common.PixelFormat>)(lpVtbl[111]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this));
+		Common.PixelFormat result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[111]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -27844,9 +27864,9 @@ public unsafe partial struct ID2D1Device6
 	/// <inheritdoc cref="ID2D1Device1.GetRenderingPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public Graphics.Direct2D.RenderingPriority GetRenderingPriority()
+	public RenderingPriority GetRenderingPriority()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device6*, Graphics.Direct2D.RenderingPriority>)(lpVtbl[11]))((ID2D1Device6*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1Device6*, RenderingPriority>)(lpVtbl[11]))((ID2D1Device6*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.SetRenderingPriority" />
