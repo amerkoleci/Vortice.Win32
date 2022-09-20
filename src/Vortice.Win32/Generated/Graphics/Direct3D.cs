@@ -818,7 +818,7 @@ public enum ShaderVariableType : int
 	Int16 = 58,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_UINT16"]/*' />
 	/// <unmanaged>D3D_SVT_UINT16</unmanaged>
-	Uint16 = 59,
+	UInt16 = 59,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_FLOAT16"]/*' />
 	/// <unmanaged>D3D_SVT_FLOAT16</unmanaged>
 	Float16 = 60,
@@ -827,7 +827,7 @@ public enum ShaderVariableType : int
 	Int64 = 61,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_UINT64"]/*' />
 	/// <unmanaged>D3D_SVT_UINT64</unmanaged>
-	Uint64 = 62,
+	UInt64 = 62,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS"]/*' />
@@ -1059,7 +1059,7 @@ public enum RegisterComponentType : int
 	Unknown = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UINT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_UINT32</unmanaged>
-	Uint32 = 1,
+	UInt32 = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_SINT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_SINT32</unmanaged>
 	Sint32 = 2,

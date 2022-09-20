@@ -462,7 +462,7 @@ public enum OutduplFlags : int
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_TYPE</unmanaged>
-public enum HdrMetadataType : int
+public enum HDRMetadataType : int
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_NONE"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_NONE</unmanaged>
@@ -2244,7 +2244,7 @@ public partial struct QueryVideoMemoryInfo
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_HDR10</unmanaged>
-public partial struct HdrMetadataHdr10
+public partial struct HDRMetadataHdr10
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::RedPrimary"]/*' />
 	public unsafe fixed ushort RedPrimary[2];
@@ -2273,7 +2273,7 @@ public partial struct HdrMetadataHdr10
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_HDR10PLUS</unmanaged>
-public partial struct HdrMetadataHdr10plus
+public partial struct HDRMetadataHdr10plus
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS::Data"]/*' />
 	public unsafe fixed byte Data[72];

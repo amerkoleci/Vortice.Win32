@@ -2935,13 +2935,13 @@ public enum CounterType : int
 	Float32 = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT16"]/*' />
 	/// <unmanaged>D3D11_COUNTER_TYPE_UINT16</unmanaged>
-	Uint16 = 1,
+	UInt16 = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT32"]/*' />
 	/// <unmanaged>D3D11_COUNTER_TYPE_UINT32</unmanaged>
-	Uint32 = 2,
+	UInt32 = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT64"]/*' />
 	/// <unmanaged>D3D11_COUNTER_TYPE_UINT64</unmanaged>
-	Uint64 = 3,
+	UInt64 = 3,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS"]/*' />
@@ -5415,7 +5415,7 @@ public enum MessageId : int
 	DeviceRSSetScissorRectsNegativescissor = 1048632,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_SLOT_ZERO_MUST_BE_D3D10_INPUT_PER_VERTEX_DATA"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_SLOT_ZERO_MUST_BE_D3D10_INPUT_PER_VERTEX_DATA</unmanaged>
-	SlotZeroMustBeD3d10InputPerVertexData = 1048633,
+	SlotZeroMustBeD3D10InputPerVertexData = 1048633,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERESOURCE_NON_POW_2_MIPMAP"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERESOURCE_NON_POW_2_MIPMAP</unmanaged>
 	CreateResourceNonPow2Mipmap = 1048634,
@@ -10234,7 +10234,7 @@ public partial struct FeatureDataFormatSupport2
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS</unmanaged>
-public partial struct FeatureDataD3d10XHardwareOptions
+public partial struct FeatureDataD3D10XHardwareOptions
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
 	public Bool32 ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x;

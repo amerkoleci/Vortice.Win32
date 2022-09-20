@@ -203,6 +203,13 @@ public static class Program
 
     private static readonly HashSet<string> s_partRenamesSet = new(StringComparer.OrdinalIgnoreCase)
     {
+        "Int16",
+        "UInt16",
+        "Int32",
+        "UInt32",
+        "Int64",
+        "UInt64",
+        "IUnknown",
         "DispatchMesh",
         "EncodeFrame",
         "DrawInstanced",
@@ -623,6 +630,34 @@ public static class Program
         "NoCache",
         "CacheOnDemand",
         "CacheOnLoad",
+        "DpiCompensation",
+        "ArithmeticComposite",
+        "BitmapSource",
+        "ChromaKey",
+        "ColorManagement",
+        "ConvolveMatrix",
+        "DirectionalBlur",
+        "DiscreteTransfer",
+        "DisplacementMap",
+        "DistantDiffuse",
+        "DistantSpecular",
+        "EdgeDetection",
+        "GammaTransfer",
+        "GaussianBlur",
+        "HDRTonemap",
+        "HighlightSandShadows",
+        "HueRotation",
+        "HueToRgb",
+        "LinearTransfer",
+        "OpacityMetadata",
+        "PointDiffuse",
+        "PointSpecular",
+        "SpotDiffuse",
+        "SpotSpecular",
+        "RgbToHue",
+        "SubProperty",
+        "TableTransfer",
+        "WhiteLevelAdjustment",
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
@@ -649,11 +684,14 @@ public static class Program
         "3D",
         "MRT",
         "D3D",
+        "D3D10",
         "D3D11",
         "D3D12",
         "D2D",
         "D2D1",
         "DWRITE",
+        "HDR",
+        "DC",
     };
 
 
@@ -795,6 +833,11 @@ public static class Program
 
         // D2D1
         { "D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE", "AffineTransform2DInterpolationMode" },
+        { "D2D1_3DTRANSFORM_PROP", "Transform3DProperties" },
+        { "D2D1_3DTRANSFORM_INTERPOLATION_MODE", "Transform3DInterpolationMode" },
+        { "D2D1_3DPERSPECTIVETRANSFORM_PROP", "PerspectiveTransform3DProperties" },
+        { "D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE", "PerspectiveTransform3DInteroplationMode" },
+        { "D2D1_2DAFFINETRANSFORM_PROP", "AffineTransform2DProperties" },
 
         // Dxc
         { "DXC_HASHFLAG", "DxcHashFlags" },

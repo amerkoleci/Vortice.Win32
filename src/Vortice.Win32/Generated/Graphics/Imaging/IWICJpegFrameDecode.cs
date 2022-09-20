@@ -115,9 +115,9 @@ public unsafe partial struct IWICJpegFrameDecode
 	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetDcHuffmanTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegDcHuffmanTable* pDcHuffmanTable)
+	public HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegDCHuffmanTable* pDcHuffmanTable)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegDcHuffmanTable*, int>)(lpVtbl[7]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
+		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegDCHuffmanTable*, int>)(lpVtbl[7]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
 	}
 
 	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetQuantizationTable"]/*' />

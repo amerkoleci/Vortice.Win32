@@ -5,6 +5,8 @@ namespace Win32.Graphics.Direct2D;
 
 public unsafe partial struct ID2D1Effect
 {
+    public uint PropertyCount => GetPropertyCount();
+
     public HResult SetValueByName<T>(ReadOnlySpan<char> name, ReadOnlySpan<T> data)
         where T : unmanaged
     {
@@ -45,6 +47,18 @@ public unsafe partial struct ID2D1Effect
         fixed (char* namePtr = name)
         {
             return GetValueByName((ushort*)namePtr, PropertyType.Unknown, data, dataSize);
+        }
+    }
+
+    public HResult GetValueByName<T>(ReadOnlySpan<char> name, ReadOnlySpan<T> data)
+        where T : unmanaged
+    {
+        fixed (char* namePtr = name)
+        {
+            fixed (T* dataPtr = data)
+            {
+                return GetValueByName((ushort*)namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
+            }
         }
     }
 

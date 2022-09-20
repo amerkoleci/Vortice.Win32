@@ -1962,7 +1962,7 @@ public enum CompatibleRenderTargetOptions : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE"]/*' />
 /// <unmanaged>D2D1_DC_INITIALIZE_MODE</unmanaged>
-public enum DcInitializeMode : uint
+public enum DCInitializeMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE::D2D1_DC_INITIALIZE_MODE_COPY"]/*' />
 	/// <unmanaged>D2D1_DC_INITIALIZE_MODE_COPY</unmanaged>
@@ -2022,7 +2022,7 @@ public enum ChannelSelector : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION</unmanaged>
-public enum BitmapsourceOrientation : uint
+public enum BitmapSourceOrientation : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ORIENTATION::D2D1_BITMAPSOURCE_ORIENTATION_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ORIENTATION_DEFAULT</unmanaged>
@@ -2052,7 +2052,7 @@ public enum BitmapsourceOrientation : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP"]/*' />
 /// <unmanaged>D2D1_GAUSSIANBLUR_PROP</unmanaged>
-public enum GaussianblurProp : uint
+public enum GaussianBlurProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION</unmanaged>
@@ -2067,7 +2067,7 @@ public enum GaussianblurProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_OPTIMIZATION"]/*' />
 /// <unmanaged>D2D1_GAUSSIANBLUR_OPTIMIZATION</unmanaged>
-public enum GaussianblurOptimization : uint
+public enum GaussianBlurOptimization : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_OPTIMIZATION::D2D1_GAUSSIANBLUR_OPTIMIZATION_SPEED"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_OPTIMIZATION_SPEED</unmanaged>
@@ -2082,7 +2082,7 @@ public enum GaussianblurOptimization : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP"]/*' />
 /// <unmanaged>D2D1_DIRECTIONALBLUR_PROP</unmanaged>
-public enum DirectionalblurProp : uint
+public enum DirectionalBlurProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_STANDARD_DEVIATION"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_STANDARD_DEVIATION</unmanaged>
@@ -2100,7 +2100,7 @@ public enum DirectionalblurProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_OPTIMIZATION"]/*' />
 /// <unmanaged>D2D1_DIRECTIONALBLUR_OPTIMIZATION</unmanaged>
-public enum DirectionalblurOptimization : uint
+public enum DirectionalBlurOptimization : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_OPTIMIZATION::D2D1_DIRECTIONALBLUR_OPTIMIZATION_SPEED"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_OPTIMIZATION_SPEED</unmanaged>
@@ -2163,7 +2163,7 @@ public enum SaturationProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUEROTATION_PROP"]/*' />
 /// <unmanaged>D2D1_HUEROTATION_PROP</unmanaged>
-public enum HuerotationProp : uint
+public enum HueRotationProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUEROTATION_PROP::D2D1_HUEROTATION_PROP_ANGLE"]/*' />
 	/// <unmanaged>D2D1_HUEROTATION_PROP_ANGLE</unmanaged>
@@ -2187,7 +2187,7 @@ public enum ColorMatrixProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_PROP</unmanaged>
-public enum BitmapsourceProp : uint
+public enum BitmapSourceProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_WIC_BITMAP_SOURCE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_WIC_BITMAP_SOURCE</unmanaged>
@@ -2211,7 +2211,7 @@ public enum BitmapsourceProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_INTERPOLATION_MODE</unmanaged>
-public enum BitmapsourceInterpolationMode : uint
+public enum BitmapSourceInterpolationMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_INTERPOLATION_MODE::D2D1_BITMAPSOURCE_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2232,7 +2232,7 @@ public enum BitmapsourceInterpolationMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_ALPHA_MODE</unmanaged>
-public enum BitmapsourceAlphaMode : uint
+public enum BitmapSourceAlphaMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE::D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED</unmanaged>
@@ -2253,7 +2253,7 @@ public enum CompositeProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_PROP"]/*' />
 /// <unmanaged>D2D1_3DTRANSFORM_PROP</unmanaged>
-public enum _3dtransformProp : uint
+public enum Transform3DProperties : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_PROP::D2D1_3DTRANSFORM_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_PROP_INTERPOLATION_MODE</unmanaged>
@@ -2268,7 +2268,7 @@ public enum _3dtransformProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_3DTRANSFORM_INTERPOLATION_MODE</unmanaged>
-public enum _3dtransformInterpolationMode : uint
+public enum Transform3DInterpolationMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DTRANSFORM_INTERPOLATION_MODE::D2D1_3DTRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_3DTRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2289,7 +2289,7 @@ public enum _3dtransformInterpolationMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP"]/*' />
 /// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP</unmanaged>
-public enum _3dperspectivetransformProp : uint
+public enum PerspectiveTransform3DProperties : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_PROP::D2D1_3DPERSPECTIVETRANSFORM_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_PROP_INTERPOLATION_MODE</unmanaged>
@@ -2319,7 +2319,7 @@ public enum _3dperspectivetransformProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE</unmanaged>
-public enum _3dperspectivetransformInterpolationMode : uint
+public enum PerspectiveTransform3DInteroplationMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE::D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2340,7 +2340,7 @@ public enum _3dperspectivetransformInterpolationMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP"]/*' />
 /// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP</unmanaged>
-public enum _2daffinetransformProp : uint
+public enum AffineTransform2DProperties : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE</unmanaged>
@@ -2358,7 +2358,7 @@ public enum _2daffinetransformProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_PROP"]/*' />
 /// <unmanaged>D2D1_DPICOMPENSATION_PROP</unmanaged>
-public enum DpicompensationProp : uint
+public enum DpiCompensationProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_PROP::D2D1_DPICOMPENSATION_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_PROP_INTERPOLATION_MODE</unmanaged>
@@ -2373,7 +2373,7 @@ public enum DpicompensationProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE</unmanaged>
-public enum DpicompensationInterpolationMode : uint
+public enum DpiCompensationInterpolationMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DPICOMPENSATION_INTERPOLATION_MODE::D2D1_DPICOMPENSATION_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_DPICOMPENSATION_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2469,7 +2469,7 @@ public enum TurbulenceProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP"]/*' />
 /// <unmanaged>D2D1_DISPLACEMENTMAP_PROP</unmanaged>
-public enum DisplacementmapProp : uint
+public enum DisplacementMapProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_SCALE"]/*' />
 	/// <unmanaged>D2D1_DISPLACEMENTMAP_PROP_SCALE</unmanaged>
@@ -2484,7 +2484,7 @@ public enum DisplacementmapProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_PROP</unmanaged>
-public enum ColormanagementProp : uint
+public enum ColorManagementProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_PROP::D2D1_COLORMANAGEMENT_PROP_SOURCE_COLOR_CONTEXT"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_PROP_SOURCE_COLOR_CONTEXT</unmanaged>
@@ -2508,7 +2508,7 @@ public enum ColormanagementProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_ALPHA_MODE</unmanaged>
-public enum ColormanagementAlphaMode : uint
+public enum ColorManagementAlphaMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_ALPHA_MODE::D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED</unmanaged>
@@ -2520,7 +2520,7 @@ public enum ColormanagementAlphaMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_QUALITY"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_QUALITY</unmanaged>
-public enum ColormanagementQuality : uint
+public enum ColorManagementQuality : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_QUALITY::D2D1_COLORMANAGEMENT_QUALITY_PROOF"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_QUALITY_PROOF</unmanaged>
@@ -2535,7 +2535,7 @@ public enum ColormanagementQuality : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT</unmanaged>
-public enum ColormanagementRenderingIntent : uint
+public enum ColorManagementRenderingIntent : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL</unmanaged>
@@ -2568,7 +2568,7 @@ public enum HistogramProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP"]/*' />
 /// <unmanaged>D2D1_POINTSPECULAR_PROP</unmanaged>
-public enum PointspecularProp : uint
+public enum PointSpecularProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_PROP::D2D1_POINTSPECULAR_PROP_LIGHT_POSITION"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_PROP_LIGHT_POSITION</unmanaged>
@@ -2595,7 +2595,7 @@ public enum PointspecularProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE</unmanaged>
-public enum PointspecularScaleMode : uint
+public enum PointSpecularScaleMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTSPECULAR_SCALE_MODE::D2D1_POINTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_POINTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2619,7 +2619,7 @@ public enum PointspecularScaleMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP"]/*' />
 /// <unmanaged>D2D1_SPOTSPECULAR_PROP</unmanaged>
-public enum SpotspecularProp : uint
+public enum SpotSpecularProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_PROP::D2D1_SPOTSPECULAR_PROP_LIGHT_POSITION"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_PROP_LIGHT_POSITION</unmanaged>
@@ -2655,7 +2655,7 @@ public enum SpotspecularProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE</unmanaged>
-public enum SpotspecularScaleMode : uint
+public enum SpotSpecularScaleMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTSPECULAR_SCALE_MODE::D2D1_SPOTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_SPOTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2679,7 +2679,7 @@ public enum SpotspecularScaleMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP"]/*' />
 /// <unmanaged>D2D1_DISTANTSPECULAR_PROP</unmanaged>
-public enum DistantspecularProp : uint
+public enum DistantSpecularProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_PROP::D2D1_DISTANTSPECULAR_PROP_AZIMUTH"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_PROP_AZIMUTH</unmanaged>
@@ -2709,7 +2709,7 @@ public enum DistantspecularProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE</unmanaged>
-public enum DistantspecularScaleMode : uint
+public enum DistantSpecularScaleMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTSPECULAR_SCALE_MODE::D2D1_DISTANTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_DISTANTSPECULAR_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2733,7 +2733,7 @@ public enum DistantspecularScaleMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP"]/*' />
 /// <unmanaged>D2D1_POINTDIFFUSE_PROP</unmanaged>
-public enum PointdiffuseProp : uint
+public enum PointDiffuseProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_PROP::D2D1_POINTDIFFUSE_PROP_LIGHT_POSITION"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_PROP_LIGHT_POSITION</unmanaged>
@@ -2757,7 +2757,7 @@ public enum PointdiffuseProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE</unmanaged>
-public enum PointdiffuseScaleMode : uint
+public enum PointDiffuseScaleMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINTDIFFUSE_SCALE_MODE::D2D1_POINTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_POINTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2781,7 +2781,7 @@ public enum PointdiffuseScaleMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP"]/*' />
 /// <unmanaged>D2D1_SPOTDIFFUSE_PROP</unmanaged>
-public enum SpotdiffuseProp : uint
+public enum SpotDiffuseProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_PROP::D2D1_SPOTDIFFUSE_PROP_LIGHT_POSITION"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_PROP_LIGHT_POSITION</unmanaged>
@@ -2814,7 +2814,7 @@ public enum SpotdiffuseProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE</unmanaged>
-public enum SpotdiffuseScaleMode : uint
+public enum SpotDiffuseScaleMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SPOTDIFFUSE_SCALE_MODE::D2D1_SPOTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_SPOTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2838,7 +2838,7 @@ public enum SpotdiffuseScaleMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP"]/*' />
 /// <unmanaged>D2D1_DISTANTDIFFUSE_PROP</unmanaged>
-public enum DistantdiffuseProp : uint
+public enum DistantDiffuseProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_PROP::D2D1_DISTANTDIFFUSE_PROP_AZIMUTH"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_PROP_AZIMUTH</unmanaged>
@@ -2865,7 +2865,7 @@ public enum DistantdiffuseProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE</unmanaged>
-public enum DistantdiffuseScaleMode : uint
+public enum DistantDiffuseScaleMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISTANTDIFFUSE_SCALE_MODE::D2D1_DISTANTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_DISTANTDIFFUSE_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -2898,7 +2898,7 @@ public enum FloodProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_LINEARTRANSFER_PROP</unmanaged>
-public enum LineartransferProp : uint
+public enum LinearTransferProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_RED_Y_INTERCEPT</unmanaged>
@@ -2943,7 +2943,7 @@ public enum LineartransferProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_GAMMATRANSFER_PROP</unmanaged>
-public enum GammatransferProp : uint
+public enum GammaTransferProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMATRANSFER_PROP::D2D1_GAMMATRANSFER_PROP_RED_AMPLITUDE"]/*' />
 	/// <unmanaged>D2D1_GAMMATRANSFER_PROP_RED_AMPLITUDE</unmanaged>
@@ -3000,7 +3000,7 @@ public enum GammatransferProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_TABLETRANSFER_PROP</unmanaged>
-public enum TabletransferProp : uint
+public enum TableTransferProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TABLETRANSFER_PROP::D2D1_TABLETRANSFER_PROP_RED_TABLE"]/*' />
 	/// <unmanaged>D2D1_TABLETRANSFER_PROP_RED_TABLE</unmanaged>
@@ -3033,7 +3033,7 @@ public enum TabletransferProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_DISCRETETRANSFER_PROP</unmanaged>
-public enum DiscretetransferProp : uint
+public enum DiscreteTransferProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_RED_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_RED_TABLE</unmanaged>
@@ -3066,7 +3066,7 @@ public enum DiscretetransferProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP"]/*' />
 /// <unmanaged>D2D1_CONVOLVEMATRIX_PROP</unmanaged>
-public enum ConvolvematrixProp : uint
+public enum ConvolveMatrixProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_PROP::D2D1_CONVOLVEMATRIX_PROP_KERNEL_UNIT_LENGTH"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_PROP_KERNEL_UNIT_LENGTH</unmanaged>
@@ -3105,7 +3105,7 @@ public enum ConvolvematrixProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE</unmanaged>
-public enum ConvolvematrixScaleMode : uint
+public enum ConvolveMatrixScaleMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONVOLVEMATRIX_SCALE_MODE::D2D1_CONVOLVEMATRIX_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_CONVOLVEMATRIX_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -3141,7 +3141,7 @@ public enum BrightnessProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP"]/*' />
 /// <unmanaged>D2D1_ARITHMETICCOMPOSITE_PROP</unmanaged>
-public enum ArithmeticcompositeProp : uint
+public enum ArithmeticCompositeProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP::D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS"]/*' />
 	/// <unmanaged>D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS</unmanaged>
@@ -3240,7 +3240,7 @@ public enum AtlasProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITYMETADATA_PROP"]/*' />
 /// <unmanaged>D2D1_OPACITYMETADATA_PROP</unmanaged>
-public enum OpacitymetadataProp : uint
+public enum OpacityMetadataProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITYMETADATA_PROP::D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT"]/*' />
 	/// <unmanaged>D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT</unmanaged>
@@ -3262,7 +3262,7 @@ public enum PropertyType : uint
 	Bool = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_UINT32"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_UINT32</unmanaged>
-	Uint32 = 3,
+	UInt32 = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_INT32"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_INT32</unmanaged>
 	Int32 = 4,
@@ -3283,7 +3283,7 @@ public enum PropertyType : uint
 	Blob = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_IUNKNOWN"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_IUNKNOWN</unmanaged>
-	Iunknown = 10,
+	IUnknown = 10,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_ENUM"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_ENUM</unmanaged>
 	Enum = 11,
@@ -3348,7 +3348,7 @@ public enum Property : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY"]/*' />
 /// <unmanaged>D2D1_SUBPROPERTY</unmanaged>
-public enum Subproperty : uint
+public enum SubProperty : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_DISPLAYNAME"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_DISPLAYNAME</unmanaged>
@@ -3856,7 +3856,7 @@ public enum ContrastProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_PROP"]/*' />
 /// <unmanaged>D2D1_RGBTOHUE_PROP</unmanaged>
-public enum RgbtohueProp : uint
+public enum RgbToHueProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_PROP::D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE"]/*' />
 	/// <unmanaged>D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE</unmanaged>
@@ -3865,7 +3865,7 @@ public enum RgbtohueProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE"]/*' />
 /// <unmanaged>D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE</unmanaged>
-public enum RgbtohueOutputColorSpace : uint
+public enum RgbToHueOutputColorSpace : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE::D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_VALUE"]/*' />
 	/// <unmanaged>D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_VALUE</unmanaged>
@@ -3877,7 +3877,7 @@ public enum RgbtohueOutputColorSpace : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_PROP"]/*' />
 /// <unmanaged>D2D1_HUETORGB_PROP</unmanaged>
-public enum HuetorgbProp : uint
+public enum HueToRgbProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_PROP::D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE"]/*' />
 	/// <unmanaged>D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE</unmanaged>
@@ -3886,7 +3886,7 @@ public enum HuetorgbProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE"]/*' />
 /// <unmanaged>D2D1_HUETORGB_INPUT_COLOR_SPACE</unmanaged>
-public enum HuetorgbInputColorSpace : uint
+public enum HueToRgbInputColorSpace : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE::D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE"]/*' />
 	/// <unmanaged>D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE</unmanaged>
@@ -3898,7 +3898,7 @@ public enum HuetorgbInputColorSpace : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP"]/*' />
 /// <unmanaged>D2D1_CHROMAKEY_PROP</unmanaged>
-public enum ChromakeyProp : uint
+public enum ChromaKeyProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_COLOR</unmanaged>
@@ -4039,7 +4039,7 @@ public enum VignetteProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP"]/*' />
 /// <unmanaged>D2D1_EDGEDETECTION_PROP</unmanaged>
-public enum EdgedetectionProp : uint
+public enum EdgeDetectionProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_STRENGTH"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_STRENGTH</unmanaged>
@@ -4060,7 +4060,7 @@ public enum EdgedetectionProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_MODE"]/*' />
 /// <unmanaged>D2D1_EDGEDETECTION_MODE</unmanaged>
-public enum EdgedetectionMode : uint
+public enum EdgeDetectionMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_MODE::D2D1_EDGEDETECTION_MODE_SOBEL"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_MODE_SOBEL</unmanaged>
@@ -4072,7 +4072,7 @@ public enum EdgedetectionMode : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP"]/*' />
 /// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP</unmanaged>
-public enum HighlightsandshadowsProp : uint
+public enum HighlightSandShadowsProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_HIGHLIGHTS"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_HIGHLIGHTS</unmanaged>
@@ -4093,7 +4093,7 @@ public enum HighlightsandshadowsProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA"]/*' />
 /// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA</unmanaged>
-public enum HighlightsandshadowsInputGamma : uint
+public enum HighlightSandShadowsInputGamma : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA::D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR</unmanaged>
@@ -4147,7 +4147,7 @@ public enum TintProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP"]/*' />
 /// <unmanaged>D2D1_WHITELEVELADJUSTMENT_PROP</unmanaged>
-public enum WhiteleveladjustmentProp : uint
+public enum WhiteLevelAdjustmentProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP::D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL"]/*' />
 	/// <unmanaged>D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL</unmanaged>
@@ -4159,7 +4159,7 @@ public enum WhiteleveladjustmentProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_PROP"]/*' />
 /// <unmanaged>D2D1_HDRTONEMAP_PROP</unmanaged>
-public enum HdrtonemapProp : uint
+public enum HDRTonemapProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_PROP::D2D1_HDRTONEMAP_PROP_INPUT_MAX_LUMINANCE"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_PROP_INPUT_MAX_LUMINANCE</unmanaged>
@@ -4174,14 +4174,14 @@ public enum HdrtonemapProp : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE"]/*' />
 /// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE</unmanaged>
-public enum HdrtonemapDisplayMode : uint
+public enum HDRTonemapDisplayMode : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE::D2D1_HDRTONEMAP_DISPLAY_MODE_SDR"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE_SDR</unmanaged>
 	Sdr = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE::D2D1_HDRTONEMAP_DISPLAY_MODE_HDR"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE_HDR</unmanaged>
-	Hdr = 1,
+	HDR = 1,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY"]/*' />
@@ -5277,7 +5277,7 @@ public partial struct FeatureDataDoubles
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS"]/*' />
 /// <unmanaged>D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS</unmanaged>
-public partial struct FeatureDataD3d10XHardwareOptions
+public partial struct FeatureDataD3D10XHardwareOptions
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::computeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
 	public Bool32 computeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x;

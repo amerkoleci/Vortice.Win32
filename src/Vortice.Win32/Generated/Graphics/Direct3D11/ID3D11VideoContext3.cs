@@ -691,33 +691,33 @@ public unsafe partial struct ID3D11VideoContext3
 	/// <inheritdoc cref="ID3D11VideoContext2.VideoProcessorSetOutputHDRMetaData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(79)]
-	public void VideoProcessorSetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HdrMetadataType Type, uint Size, void* pHDRMetaData)
+	public void VideoProcessorSetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HDRMetadataType Type, uint Size, void* pHDRMetaData)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.HdrMetadataType, uint, void*, void>)(lpVtbl[79]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Type, Size, pHDRMetaData);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.HDRMetadataType, uint, void*, void>)(lpVtbl[79]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Type, Size, pHDRMetaData);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext2.VideoProcessorGetOutputHDRMetaData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
-	public void VideoProcessorGetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HdrMetadataType* pType, uint Size, void* pMetaData)
+	public void VideoProcessorGetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.HdrMetadataType*, uint, void*, void>)(lpVtbl[80]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pType, Size, pMetaData);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[80]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pType, Size, pMetaData);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext2.VideoProcessorSetStreamHDRMetaData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(81)]
-	public void VideoProcessorSetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HdrMetadataType Type, uint Size, void* pHDRMetaData)
+	public void VideoProcessorSetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType Type, uint Size, void* pHDRMetaData)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HdrMetadataType, uint, void*, void>)(lpVtbl[81]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Type, Size, pHDRMetaData);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType, uint, void*, void>)(lpVtbl[81]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Type, Size, pHDRMetaData);
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext2.VideoProcessorGetStreamHDRMetaData" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
-	public void VideoProcessorGetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HdrMetadataType* pType, uint Size, void* pMetaData)
+	public void VideoProcessorGetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HdrMetadataType*, uint, void*, void>)(lpVtbl[82]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pType, Size, pMetaData);
+		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[82]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pType, Size, pMetaData);
 	}
 
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3::DecoderBeginFrame1"]/*' />

@@ -1713,7 +1713,7 @@ public partial struct ModeDescription
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE"]/*' />
 /// <unmanaged>DXGI_JPEG_DC_HUFFMAN_TABLE</unmanaged>
-public partial struct JpegDcHuffmanTable
+public partial struct JpegDCHuffmanTable
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE::CodeCounts"]/*' />
 	public unsafe fixed byte CodeCounts[12];

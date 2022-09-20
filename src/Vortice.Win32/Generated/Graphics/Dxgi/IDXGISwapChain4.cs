@@ -379,9 +379,9 @@ public unsafe partial struct IDXGISwapChain4
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain4::SetHDRMetaData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public HResult SetHDRMetaData(HdrMetadataType Type, uint Size, void* pMetaData)
+	public HResult SetHDRMetaData(HDRMetadataType Type, uint Size, void* pMetaData)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, HdrMetadataType, uint, void*, int>)(lpVtbl[40]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Type, Size, pMetaData);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, HDRMetadataType, uint, void*, int>)(lpVtbl[40]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Type, Size, pMetaData);
 	}
 }
 

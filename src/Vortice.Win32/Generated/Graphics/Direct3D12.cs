@@ -3059,7 +3059,7 @@ public enum MetaCommandParameterType : int
 	Float = 0,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_UINT64"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE_UINT64</unmanaged>
-	Uint64 = 1,
+	UInt64 = 1,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_GPU_VIRTUAL_ADDRESS"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE_GPU_VIRTUAL_ADDRESS</unmanaged>
 	GpuVirtualAddress = 2,
@@ -8097,7 +8097,7 @@ public partial struct Range
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE_UINT64"]/*' />
 /// <unmanaged>D3D12_RANGE_UINT64</unmanaged>
-public partial struct RangeUint64
+public partial struct RangeUInt64
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE_UINT64::Begin"]/*' />
 	public ulong Begin;
@@ -8108,13 +8108,13 @@ public partial struct RangeUint64
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64"]/*' />
 /// <unmanaged>D3D12_SUBRESOURCE_RANGE_UINT64</unmanaged>
-public partial struct SubresourceRangeUint64
+public partial struct SubresourceRangeUInt64
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64::Subresource"]/*' />
 	public uint Subresource;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64::Range"]/*' />
-	public RangeUint64 Range;
+	public RangeUInt64 Range;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_INFO"]/*' />

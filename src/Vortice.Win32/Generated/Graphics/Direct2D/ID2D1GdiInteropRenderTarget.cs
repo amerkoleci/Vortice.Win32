@@ -83,9 +83,9 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::GetDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetDC(DcInitializeMode mode, IntPtr* hdc)
+	public HResult GetDC(DCInitializeMode mode, IntPtr* hdc)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, DcInitializeMode, IntPtr*, int>)(lpVtbl[3]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), mode, hdc);
+		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, DCInitializeMode, IntPtr*, int>)(lpVtbl[3]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), mode, hdc);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::ReleaseDC"]/*' />
