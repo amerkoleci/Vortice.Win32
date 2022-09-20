@@ -378,7 +378,7 @@ public enum Format : uint
 	B8G8R8X8Unorm = 88,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FORMAT::DXGI_FORMAT_R10G10B10_XR_BIAS_A2_UNORM"]/*' />
 	/// <unmanaged>DXGI_FORMAT_R10G10B10_XR_BIAS_A2_UNORM</unmanaged>
-	R10G10B10XRBIASA2Unorm = 89,
+	R10G10B10XRBiasA2Unorm = 89,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FORMAT::DXGI_FORMAT_B8G8R8A8_TYPELESS"]/*' />
 	/// <unmanaged>DXGI_FORMAT_B8G8R8A8_TYPELESS</unmanaged>
 	B8G8R8A8Typeless = 90,

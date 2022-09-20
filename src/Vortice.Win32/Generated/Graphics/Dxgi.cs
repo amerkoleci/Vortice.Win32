@@ -1698,7 +1698,7 @@ public enum EnumModesFlags : uint
 
 /// <unmanaged>DXGI_PRESENT</unmanaged>
 [Flags]
-public enum Present : uint
+public enum PresentFlags : uint
 {
 	None = 0,
 	/// <unmanaged>DXGI_PRESENT_TEST</unmanaged>

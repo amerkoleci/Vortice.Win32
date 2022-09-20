@@ -3399,19 +3399,19 @@ public enum BufferPrecision : uint
 	Unknown = 0,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_8BPC_UNORM"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_8BPC_UNORM</unmanaged>
-	_8bpcUnorm = 1,
+	Precision8BitUnorm = 1,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_8BPC_UNORM_SRGB"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_8BPC_UNORM_SRGB</unmanaged>
-	_8bpcUnormSrgb = 2,
+	Precision8BitUnormSrgb = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_16BPC_UNORM"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_16BPC_UNORM</unmanaged>
-	_16bpcUnorm = 3,
+	Precision16BitUnorm = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_16BPC_FLOAT"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_16BPC_FLOAT</unmanaged>
-	_16bpcFloat = 4,
+	Precision16BitFloat = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BUFFER_PRECISION::D2D1_BUFFER_PRECISION_32BPC_FLOAT"]/*' />
 	/// <unmanaged>D2D1_BUFFER_PRECISION_32BPC_FLOAT</unmanaged>
-	_32bpcFloat = 5,
+	Precision32BitFloat = 5,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS"]/*' />

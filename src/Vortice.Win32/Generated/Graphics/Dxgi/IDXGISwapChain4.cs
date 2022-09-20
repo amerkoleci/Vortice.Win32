@@ -118,9 +118,9 @@ public unsafe partial struct IDXGISwapChain4
 	/// <inheritdoc cref="IDXGISwapChain.Present" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Present(uint SyncInterval, uint Flags)
+	public HResult Present(uint SyncInterval, PresentFlags Flags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, uint, int>)(lpVtbl[8]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, PresentFlags, int>)(lpVtbl[8]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetBuffer" />

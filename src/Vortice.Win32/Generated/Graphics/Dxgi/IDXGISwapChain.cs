@@ -118,9 +118,9 @@ public unsafe partial struct IDXGISwapChain
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::Present"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult Present(uint SyncInterval, uint Flags)
+	public HResult Present(uint SyncInterval, PresentFlags Flags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, uint, int>)(lpVtbl[8]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, PresentFlags, int>)(lpVtbl[8]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
 	}
 
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetBuffer"]/*' />

@@ -60,6 +60,27 @@ public partial struct AuthenticatedProtectionFlags
 public static unsafe partial class Apis
 {
     public static HResult D3D11CreateDevice(
+        IDXGIAdapter* adapter,
+        DriverType driverType,
+        CreateDeviceFlags flags,
+        ID3D11Device** ppDevice,
+        FeatureLevel* pFeatureLevel,
+        ID3D11DeviceContext** ppImmediateContext)
+    {
+        return D3D11CreateDevice(
+            adapter,
+            driverType,
+            IntPtr.Zero,
+            flags,
+            null,
+            0u,
+            D3D11_SDK_VERSION,
+            ppDevice,
+            pFeatureLevel,
+            ppImmediateContext);
+    }
+
+    public static HResult D3D11CreateDevice(
         IDXGIAdapter* pAdapter,
         DriverType driverType,
         CreateDeviceFlags flags,

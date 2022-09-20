@@ -786,6 +786,13 @@ public static class Program
         { "NUM_D3D12_GPU_BASED_VALIDATION_SHADER_PATCH_MODES", "Count" },
         { "D3D12_MESSAGE_CALLBACK_IGNORE_FILTERS", "IgnoreFilters" },
         { "D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_AS", "AS" },
+
+        // D2D1
+        { "D2D1_BUFFER_PRECISION_8BPC_UNORM", "Precision8BitUnorm" },
+        { "D2D1_BUFFER_PRECISION_8BPC_UNORM_SRGB", "Precision8BitUnormSrgb" },
+        { "D2D1_BUFFER_PRECISION_16BPC_UNORM", "Precision16BitUnorm" },
+        { "D2D1_BUFFER_PRECISION_16BPC_FLOAT", "Precision16BitFloat" },
+        { "D2D1_BUFFER_PRECISION_32BPC_FLOAT", "Precision32BitFloat" },
     };
 
     private static readonly Dictionary<string, bool> s_generatedEnums = new()
@@ -818,17 +825,18 @@ public static class Program
         "PF" // D3D_PF_
     };
 
-
     private static readonly Dictionary<string, string> s_typesNameRemap = new()
     {
         // Generated
         { "DXGI_MAP", "MapFlags" },
         { "DXGI_ENUM_MODES", "EnumModesFlags" },
         { "DXGI_MWA", "WindowAssociationFlags" },
+        { "DXGI_PRESENT", "PresentFlags" },
 
         // D3D11
         { "D3D11_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
         { "D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG", "CreateDeviceContextStateFlags" },
+        { "D3D11_QUERY", "QueryType" },
 
         // D3D12
         { "D3D12_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
@@ -868,10 +876,19 @@ public static class Program
         { "D3D11_TEXTURE2D_DESC::BindFlags", "D3D11_BIND_FLAG" },
         { "D3D11_TEXTURE2D_DESC::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
         { "D3D11_TEXTURE2D_DESC::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+        { "D3D11_TEXTURE2D_DESC1::BindFlags", "D3D11_BIND_FLAG" },
+        { "D3D11_TEXTURE2D_DESC1::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_TEXTURE2D_DESC1::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
 
         { "D3D11_TEXTURE3D_DESC::BindFlags", "D3D11_BIND_FLAG" },
         { "D3D11_TEXTURE3D_DESC::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
         { "D3D11_TEXTURE3D_DESC::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+        { "D3D11_TEXTURE3D_DESC1::BindFlags", "D3D11_BIND_FLAG" },
+        { "D3D11_TEXTURE3D_DESC1::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_TEXTURE3D_DESC1::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+
+        { "D3D11_QUERY_DESC::MiscFlags", "D3D11_QUERY_MISC_FLAG" },
+        { "D3D11_QUERY_DESC1::MiscFlags", "D3D11_QUERY_MISC_FLAG" },
 
         { "D3D11_FEATURE_DATA_FORMAT_SUPPORT::OutFormatSupport", "D3D11_FORMAT_SUPPORT" },
         { "D3D11_FEATURE_DATA_FORMAT_SUPPORT2::OutFormatSupport2", "D3D11_FORMAT_SUPPORT2" },
@@ -894,6 +911,11 @@ public static class Program
         // DXGI
         { "IDXGIDevice::CreateSurface::Usage", "DXGI_USAGE" },
         { "IDXGIOutput::GetDisplayModeList::Flags", "DXGI_ENUM_MODES" },
+        { "IDXGISwapChain::Present::Flags", "DXGI_PRESENT" },
+        { "IDXGISwapChain1::Present::Flags", "DXGI_PRESENT" },
+        { "IDXGISwapChain2::Present::Flags", "DXGI_PRESENT" },
+        { "IDXGISwapChain3::Present::Flags", "DXGI_PRESENT" },
+        { "IDXGISwapChain4::Present::Flags", "DXGI_PRESENT" },
 
         // D3D11
         { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" },
@@ -2392,6 +2414,10 @@ public static class Program
                     else if (part.Equals("SRGB", StringComparison.OrdinalIgnoreCase))
                     {
                         sb.Append("Srgb");
+                    }
+                    else if (part.Equals("BIAS", StringComparison.OrdinalIgnoreCase))
+                    {
+                        sb.Append("Bias");
                     }
                     else if (part.Equals("SHAREDEXP", StringComparison.OrdinalIgnoreCase))
                     {

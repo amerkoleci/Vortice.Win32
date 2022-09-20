@@ -2849,7 +2849,7 @@ public enum AsyncGetDataFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY"]/*' />
 /// <unmanaged>D3D11_QUERY</unmanaged>
-public enum Query : int
+public enum QueryType : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY::D3D11_QUERY_EVENT"]/*' />
 	/// <unmanaged>D3D11_QUERY_EVENT</unmanaged>
@@ -10066,10 +10066,10 @@ public partial struct SamplerDescription
 public partial struct QueryDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC::Query"]/*' />
-	public Query Query;
+	public QueryType Query;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC::MiscFlags"]/*' />
-	public uint MiscFlags;
+	public QueryMiscFlags MiscFlags;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_TIMESTAMP_DISJOINT"]/*' />
@@ -11862,13 +11862,13 @@ public partial struct Texture2DDescription1
 	public Usage Usage;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::BindFlags"]/*' />
-	public uint BindFlags;
+	public BindFlags BindFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::CPUAccessFlags"]/*' />
-	public uint CPUAccessFlags;
+	public CpuAccessFlags CPUAccessFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::MiscFlags"]/*' />
-	public uint MiscFlags;
+	public ResourceMiscFlags MiscFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::TextureLayout"]/*' />
 	public TextureLayout TextureLayout;
@@ -11897,13 +11897,13 @@ public partial struct Texture3DDescription1
 	public Usage Usage;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE3D_DESC1::BindFlags"]/*' />
-	public uint BindFlags;
+	public BindFlags BindFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE3D_DESC1::CPUAccessFlags"]/*' />
-	public uint CPUAccessFlags;
+	public CpuAccessFlags CPUAccessFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE3D_DESC1::MiscFlags"]/*' />
-	public uint MiscFlags;
+	public ResourceMiscFlags MiscFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE3D_DESC1::TextureLayout"]/*' />
 	public TextureLayout TextureLayout;
@@ -12552,10 +12552,10 @@ public partial struct UnorderedAccessViewDescription1
 public partial struct QueryDescription1
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC1::Query"]/*' />
-	public Query Query;
+	public QueryType Query;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC1::MiscFlags"]/*' />
-	public uint MiscFlags;
+	public QueryMiscFlags MiscFlags;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC1::ContextType"]/*' />
 	public ContextType ContextType;
