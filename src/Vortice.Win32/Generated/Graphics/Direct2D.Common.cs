@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -262,23 +257,6 @@ public enum CompositeMode : uint
 #endregion Enums
 
 #region Structs
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_F"]/*' />
-/// <unmanaged>D2D1_COLOR_F</unmanaged>
-public partial struct ColorF
-{
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_F::r"]/*' />
-	public float r;
-
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_F::g"]/*' />
-	public float g;
-
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_F::b"]/*' />
-	public float b;
-
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_F::a"]/*' />
-	public float a;
-}
-
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT"]/*' />
 /// <unmanaged>D2D1_PIXEL_FORMAT</unmanaged>
 public partial struct PixelFormat

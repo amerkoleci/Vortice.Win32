@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -123,18 +118,18 @@ public unsafe partial struct ID2D1SolidColorBrush
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::SetColor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void SetColor(Common.ColorF* color)
+	public void SetColor(Color4* color)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Common.ColorF*, void>)(lpVtbl[8]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), color);
+		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Color4*, void>)(lpVtbl[8]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), color);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::GetColor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public Common.ColorF GetColor()
+	public Color4 GetColor()
 	{
-		Common.ColorF result;
-		return *((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Common.ColorF*, Common.ColorF*>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), &result);
+		Color4 result;
+		return *((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Color4*, Color4*>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 }
 

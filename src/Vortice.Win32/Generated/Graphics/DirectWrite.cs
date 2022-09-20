@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -2916,7 +2911,7 @@ public partial struct ColorGlyphRun
 	public float baselineOriginY;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::runColor"]/*' />
-	public Win32.Graphics.Direct2D.Common.ColorF runColor;
+	public Color4 runColor;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::paletteIndex"]/*' />
 	public ushort paletteIndex;

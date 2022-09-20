@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -4663,7 +4658,7 @@ public partial struct GradientStop
 	public float position;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::color"]/*' />
-	public Common.ColorF color;
+	public Color4 color;
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRUSH_PROPERTIES"]/*' />
@@ -5437,16 +5432,16 @@ public partial struct GradientMeshPatch
 	public System.Drawing.PointF point33;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::color00"]/*' />
-	public Common.ColorF color00;
+	public Color4 color00;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::color03"]/*' />
-	public Common.ColorF color03;
+	public Color4 color03;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::color30"]/*' />
-	public Common.ColorF color30;
+	public Color4 color30;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::color33"]/*' />
-	public Common.ColorF color33;
+	public Color4 color33;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::topEdgeMode"]/*' />
 	public PatchEdgeMode topEdgeMode;
@@ -5511,7 +5506,7 @@ public static unsafe partial class Apis
 	public static extern HResult D2D1CreateDeviceContext(Graphics.Dxgi.IDXGISurface* dxgiSurface, CreationProperties* creationProperties, ID2D1DeviceContext* d2dDeviceContext);
 
 	[DllImport("d2d1", ExactSpelling = true)]
-	public static extern Graphics.Direct2D.Common.ColorF D2D1ConvertColorSpace(ColorSpace sourceColorSpace, ColorSpace destinationColorSpace, Common.ColorF* color);
+	public static extern Color4 D2D1ConvertColorSpace(ColorSpace sourceColorSpace, ColorSpace destinationColorSpace, Color4* color);
 
 	[DllImport("d2d1", ExactSpelling = true)]
 	public static extern void D2D1SinCos(float angle, float* s, float* c);

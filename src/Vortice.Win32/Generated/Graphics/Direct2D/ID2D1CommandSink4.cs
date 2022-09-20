@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -155,9 +150,9 @@ public unsafe partial struct ID2D1CommandSink4
 	/// <inheritdoc cref="ID2D1CommandSink.Clear" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult Clear(Common.ColorF* color)
+	public HResult Clear(Color4* color)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink4*, Common.ColorF*, int>)(lpVtbl[12]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), color);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink4*, Color4*, int>)(lpVtbl[12]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), color);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawGlyphRun" />

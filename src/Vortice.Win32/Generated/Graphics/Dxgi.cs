@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -1744,23 +1739,6 @@ public enum WindowAssociationFlags : uint
 #endregion Generated Enums
 
 #region Structs
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA"]/*' />
-/// <unmanaged>DXGI_RGBA</unmanaged>
-public partial struct Rgba
-{
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA::r"]/*' />
-	public float r;
-
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA::g"]/*' />
-	public float g;
-
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA::b"]/*' />
-	public float b;
-
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGBA::a"]/*' />
-	public float a;
-}
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS"]/*' />
 /// <unmanaged>DXGI_FRAME_STATISTICS</unmanaged>
 public partial struct FrameStatistics

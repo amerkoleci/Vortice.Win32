@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -155,9 +150,9 @@ public unsafe partial struct ID2D1CommandSink
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::Clear"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult Clear(Common.ColorF* color)
+	public HResult Clear(Color4* color)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Common.ColorF*, int>)(lpVtbl[12]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), color);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Color4*, int>)(lpVtbl[12]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), color);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawGlyphRun"]/*' />

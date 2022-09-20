@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -147,9 +142,9 @@ public unsafe partial struct ID2D1SvgDocument
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePaint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreatePaint(SvgPaintType paintType, Common.ColorF* color, ushort* id, ID2D1SvgPaint** paint)
+	public HResult CreatePaint(SvgPaintType paintType, Color4* color, ushort* id, ID2D1SvgPaint** paint)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, SvgPaintType, Common.ColorF*, ushort*, ID2D1SvgPaint**, int>)(lpVtbl[11]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), paintType, color, id, paint);
+		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, SvgPaintType, Color4*, ushort*, ID2D1SvgPaint**, int>)(lpVtbl[11]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), paintType, color, id, paint);
 	}
 
 	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreateStrokeDashArray"]/*' />

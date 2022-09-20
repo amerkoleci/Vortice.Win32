@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0;</TargetFrameworks>
     <Description>Windows API low level bindings.</Description>
-    <VersionPrefix>1.5.3</VersionPrefix>
+    <VersionPrefix>1.5.4</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
@@ -11,7 +11,12 @@
   <ItemGroup>
     <None Include="..\..\LICENSE" PackagePath="" Pack="true" />
 
+    <Using Include="System.Numerics" />
+    <Using Include="System.Diagnostics" />
+    <Using Include="System.Runtime.CompilerServices" />
     <Using Include="System.Runtime.InteropServices" />
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+    <Using Include="Win32.Numerics" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">

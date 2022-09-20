@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -259,17 +254,17 @@ public unsafe partial struct IDXGISwapChain4
 	/// <inheritdoc cref="IDXGISwapChain1.SetBackgroundColor" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult SetBackgroundColor(Rgba* pColor)
+	public HResult SetBackgroundColor(Color4* pColor)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Rgba*, int>)(lpVtbl[25]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pColor);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Color4*, int>)(lpVtbl[25]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pColor);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetBackgroundColor" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult GetBackgroundColor(Rgba* pColor)
+	public HResult GetBackgroundColor(Color4** pColor)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Rgba*, int>)(lpVtbl[26]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pColor);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, Color4**, int>)(lpVtbl[26]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), pColor);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.SetRotation" />

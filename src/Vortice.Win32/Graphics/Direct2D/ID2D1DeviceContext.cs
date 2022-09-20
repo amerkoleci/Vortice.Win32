@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Runtime.CompilerServices;
 using Win32.Graphics.Direct2D.Common;
 using Win32.Graphics.Imaging;
+using Win32.Numerics;
 
 namespace Win32.Graphics.Direct2D;
 
@@ -30,7 +31,7 @@ public unsafe partial struct ID2D1DeviceContext
         return CreateBitmapBrush(bitmap, bitmapBrushProperties, null, bitmapBrush);
     }
 
-    public HResult CreateSolidColorBrush(ColorF* color, ID2D1SolidColorBrush** solidColorBrush)
+    public HResult CreateSolidColorBrush(Color4* color, ID2D1SolidColorBrush** solidColorBrush)
     {
         return CreateSolidColorBrush(color, null, solidColorBrush);
     }

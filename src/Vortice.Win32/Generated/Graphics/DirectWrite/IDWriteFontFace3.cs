@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -323,9 +318,9 @@ public unsafe partial struct IDWriteFontFace3
 	/// <inheritdoc cref="IDWriteFontFace2.GetPaletteEntries" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Win32.Graphics.Direct2D.Common.ColorF** paletteEntries)
+	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Color4** paletteEntries)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, uint, uint, uint, Win32.Graphics.Direct2D.Common.ColorF**, int>)(lpVtbl[33]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, uint, uint, uint, Color4**, int>)(lpVtbl[33]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace2.GetRecommendedRenderingMode" />

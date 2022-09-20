@@ -42,12 +42,6 @@ public sealed class CodeWriter : IDisposable
         _builder.AppendLine("// ------------------------------------------------------------------------------");
         _builder.AppendLine();
 
-        _builder.AppendLine($"using System;");
-        _builder.AppendLine($"using System.Numerics;");
-        _builder.AppendLine($"using System.Diagnostics;");
-        _builder.AppendLine($"using System.Runtime.CompilerServices;");
-        _builder.AppendLine($"using System.Diagnostics.CodeAnalysis;");
-
         foreach (string usingNamespace in usingNamespaces)
         {
             _builder.AppendLine($"using {usingNamespace};");

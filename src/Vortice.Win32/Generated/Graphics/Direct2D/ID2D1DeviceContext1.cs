@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-using System.Numerics;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.CodeAnalysis;
 
 #if !NET6_0_OR_GREATER
 using MemoryMarshal = Win32.MemoryMarshal;
@@ -123,9 +118,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateSolidColorBrush" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CreateSolidColorBrush(Common.ColorF* color, BrushProperties* brushProperties, ID2D1SolidColorBrush** solidColorBrush)
+	public HResult CreateSolidColorBrush(Color4* color, BrushProperties* brushProperties, ID2D1SolidColorBrush** solidColorBrush)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Common.ColorF*, BrushProperties*, ID2D1SolidColorBrush**, int>)(lpVtbl[8]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), color, brushProperties, solidColorBrush);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Color4*, BrushProperties*, ID2D1SolidColorBrush**, int>)(lpVtbl[8]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), color, brushProperties, solidColorBrush);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateGradientStopCollection" />
@@ -435,9 +430,9 @@ public unsafe partial struct ID2D1DeviceContext1
 	/// <inheritdoc cref="ID2D1RenderTarget.Clear" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public void Clear(Common.ColorF* clearColor)
+	public void Clear(Color4* clearColor)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Common.ColorF*, void>)(lpVtbl[47]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), clearColor);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, Color4*, void>)(lpVtbl[47]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), clearColor);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.BeginDraw" />

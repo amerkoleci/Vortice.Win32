@@ -89,9 +89,9 @@ public static class Program
         { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
         { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_3X2_F", "Matrix3x2" },
-        { "Graphics.Direct2D.Common.D2D_MATRIX_4X3_F", "Win32.Graphics.Direct2D.Common.Matrix4x3" },
+        { "Graphics.Direct2D.Common.D2D_MATRIX_4X3_F", "Matrix4x3" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_4X4_F", "Matrix4x4" },
-        { "Graphics.Direct2D.Common.D2D_MATRIX_5X4_F", "Win32.Graphics.Direct2D.Common.Matrix5x4" },
+        { "Graphics.Direct2D.Common.D2D_MATRIX_5X4_F", "Matrix5x4" },
         { "Graphics.Direct2D.Common.D2D_POINT_2F", "System.Drawing.PointF" },
         { "Graphics.Direct2D.Common.D2D_VECTOR_2F", "Vector2" },
         { "Graphics.Direct2D.Common.D2D_VECTOR_3F", "Vector3" },
@@ -102,10 +102,12 @@ public static class Program
 
         { "Graphics.Imaging.WICRect", "System.Drawing.Rectangle" },
 
-        { "Graphics.DirectWrite.DWRITE_COLOR_F", "Win32.Graphics.Direct2D.Common.ColorF" },
-        { "Graphics.Direct2D.Matrix4x3F", "Win32.Graphics.Direct2D.Common.Matrix4x3" },
+        { "Graphics.Dxgi.DXGI_RGBA", "Color4" },
+        { "Graphics.Direct2D.Common.D2D1_COLOR_F", "Color4" },
+        { "Graphics.DirectWrite.DWRITE_COLOR_F", "Color4" },
+        { "Graphics.Direct2D.Matrix4x3F", "Matrix4x3" },
         { "Graphics.Direct2D.Matrix4x4F", "Matrix4x4" },
-        { "Graphics.Direct2D.Matrix5x4F", "Win32.Graphics.Direct2D.Common.Matrix5x4" },
+        { "Graphics.Direct2D.Matrix5x4F", "Matrix5x4" },
 
         // TODO: Understand those ->
         { "Foundation.RECT", "RawRect" },
@@ -2664,8 +2666,8 @@ public static class Program
             case "Matrix4x4":
                 return true;
 
-            case "Win32.Graphics.Direct2D.Common.Matrix4x3":
-            case "Win32.Graphics.Direct2D.Common.Matrix5x4":
+            case "Matrix4x3":
+            case "Matrix5x4":
                 return true;
         }
 

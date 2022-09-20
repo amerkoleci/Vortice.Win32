@@ -4,7 +4,7 @@
 using System.Globalization;
 using System.Text;
 
-namespace Win32.Graphics.Direct2D.Common;
+namespace Win32.Numerics;
 
 /// <summary>
 /// Describes a 4-by-3 floating point matrix.
