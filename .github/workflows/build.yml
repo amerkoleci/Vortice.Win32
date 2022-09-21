@@ -25,10 +25,11 @@ jobs:
       with:
         submodules: recursive
 
-    - name: Setup .NET 6.0
+    - name: Install .NET 7.0.x
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 7.0.x
+        include-prerelease: true
 
     - name: Pack
       run: dotnet pack Vortice.Win32.sln --configuration Release --output build/packages
