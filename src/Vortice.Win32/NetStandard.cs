@@ -3,9 +3,59 @@
 
 #if !NET6_0_OR_GREATER
 
-using System.Runtime.CompilerServices;
-
 namespace Win32;
+
+internal static unsafe class Extensions
+{
+    /// <inheritdoc cref="IComparable{T}.CompareTo(T)"/>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static int CompareTo(this nint left, nint right)
+    {
+        if (sizeof(nint) == sizeof(int))
+        {
+            return ((int)left).CompareTo((int)right);
+        }
+
+        return ((long)left).CompareTo(right);
+    }
+
+    /// <inheritdoc cref="IComparable{T}.CompareTo(T)"/>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static int CompareTo(this nuint left, nuint right)
+    {
+        if (sizeof(nuint) == sizeof(uint))
+        {
+            return ((uint)left).CompareTo((uint)right);
+        }
+
+        return ((ulong)left).CompareTo(right);
+    }
+
+    // <inheritdoc cref="IFormattable.ToString(string?, IFormatProvider?)"/>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static string ToString(this nuint value, string? format)
+    {
+        if (sizeof(nuint) == sizeof(uint))
+        {
+            return ((uint)value).ToString(format);
+        }
+
+        return ((ulong)value).ToString(format);
+    }
+
+    /// <inheritdoc cref="IFormattable.ToString(string?, IFormatProvider?)"/>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static string ToString(this nuint value, string? format, IFormatProvider? formatProvider)
+    {
+        if (sizeof(nuint) == sizeof(uint))
+        {
+            return ((uint)value).ToString(format, formatProvider);
+        }
+
+        return ((ulong)value).ToString(format, formatProvider);
+    }
+}
+
 
 internal static class MemoryMarshal
 {

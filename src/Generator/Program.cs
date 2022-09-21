@@ -51,7 +51,7 @@ public static class Program
         { "Foundation.BOOL", "Bool32" },
         { "Foundation.BOOLEAN", "byte" },
         { "Foundation.BSTR", "char*" },
-        { "Foundation.HANDLE", "IntPtr" },
+        { "Foundation.HANDLE", "Handle" },
         { "Foundation.HINSTANCE", "IntPtr" },
         { "Foundation.HRESULT", "HResult" },
         { "Foundation.HWND", "IntPtr" },
@@ -88,7 +88,9 @@ public static class Program
 
         { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
         { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
+        { "Graphics.Dxgi.DXGI_MATRIX_3X2_F", "Matrix3x2" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_3X2_F", "Matrix3x2" },
+        { "Graphics.DirectWrite.DWRITE_MATRIX", "Matrix3x2" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_4X3_F", "Matrix4x3" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_4X4_F", "Matrix4x4" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_5X4_F", "Matrix5x4" },
@@ -109,6 +111,9 @@ public static class Program
         { "Graphics.Direct2D.Matrix4x4F", "Matrix4x4" },
         { "Graphics.Direct2D.Matrix5x4F", "Matrix5x4" },
 
+        { "Graphics.Direct3D11.D3D11_VIEWPORT", "Viewport" },
+        { "Graphics.Direct3D12.D3D12_VIEWPORT", "Viewport" },
+
         // TODO: Understand those ->
         { "Foundation.RECT", "RawRect" },
         { "Foundation.RECTL", "RawRect" },
@@ -119,14 +124,7 @@ public static class Program
 
     private static readonly Dictionary<string, string> s_partRenames = new()
     {
-        { "NONPREROTATED", "NonPrerotated" },
-        { "POINTLIST", "PointList" },
-        { "LINELIST", "LineList" },
-        { "LINESTRIP", "LineStrip" },
-        { "TRIANGLELIST", "TriangleList" },
-        { "TRIANGLESTRIP", "TriangleStrip" },
-        { "PATCHLIST", "PatchList" },
-
+        
         { "CBUFFER", "CBuffer" },
         { "TBUFFER", "TBuffer" },
         { "NOPERSPECTIVE", "NoPerspective" },
@@ -660,6 +658,14 @@ public static class Program
         "SubProperty",
         "TableTransfer",
         "WhiteLevelAdjustment",
+        "LookupTable3D",
+        "NonPrerotated",
+        "PointList",
+        "LineList",
+        "LineStrip",
+        "TriangleList",
+        "TriangleStrip",
+        "PatchList",
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
@@ -832,6 +838,7 @@ public static class Program
         { "DXGI_ENUM_MODES", "EnumModesFlags" },
         { "DXGI_MWA", "WindowAssociationFlags" },
         { "DXGI_PRESENT", "PresentFlags" },
+        { "DXGI_DEBUG_RLO_FLAGS", "ReportLiveObjectFlags" },
 
         // D3D11
         { "D3D11_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
@@ -863,6 +870,7 @@ public static class Program
         { "DXGI_SWAP_CHAIN_DESC::Flags", "DXGI_SWAP_CHAIN_FLAG" },
         { "DXGI_SWAP_CHAIN_DESC1::BufferUsage", "Usage" },
         { "DXGI_SWAP_CHAIN_DESC1::Flags", "DXGI_SWAP_CHAIN_FLAG" },
+        { "DXGI_DECODE_SWAP_CHAIN_DESC::Flags", "DXGI_SWAP_CHAIN_FLAG" },
 
         // D3D11
         { "D3D11_BUFFER_DESC::BindFlags", "D3D11_BIND_FLAG" },
@@ -2305,6 +2313,14 @@ public static class Program
                 {
                     sb.Append("Flags");
                 }
+                else if (part == "FLAG2")
+                {
+                    sb.Append("Flags2");
+                }
+                else if (part == "FLAG3")
+                {
+                    sb.Append("Flags3");
+                }
                 else
                 {
                     sb.Append(char.ToUpper(part[0]));
@@ -2676,6 +2692,7 @@ public static class Program
             case "ULargeInteger":
             case "Luid":
             case "HResult":
+            case "Handle":
                 return true;
 
             case "System.Drawing.Point":
@@ -2695,6 +2712,7 @@ public static class Program
 
             case "Matrix4x3":
             case "Matrix5x4":
+            case "Viewport":
                 return true;
         }
 
@@ -2764,6 +2782,7 @@ public static class Program
 
             case "Bool32":
             case "HResult":
+            case "Handle":
                 return false;
 
             case "LargeInteger":

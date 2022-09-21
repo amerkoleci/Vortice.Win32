@@ -304,25 +304,25 @@ public unsafe partial struct ID3D12Device3
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[31]))((ID3D12Device3*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[31]))((ID3D12Device3*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult OpenSharedHandle(IntPtr NTHandle, Guid* riid, void** ppvObj)
+	public HResult OpenSharedHandle(Handle NTHandle, Guid* riid, void** ppvObj)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, IntPtr, Guid*, void**, int>)(lpVtbl[32]))((ID3D12Device3*)Unsafe.AsPointer(ref this), NTHandle, riid, ppvObj);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, Handle, Guid*, void**, int>)(lpVtbl[32]))((ID3D12Device3*)Unsafe.AsPointer(ref this), NTHandle, riid, ppvObj);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, Handle* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ushort*, uint, IntPtr*, int>)(lpVtbl[33]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ushort*, uint, Handle*, int>)(lpVtbl[33]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
@@ -417,9 +417,9 @@ public unsafe partial struct ID3D12Device3
 	/// <inheritdoc cref="ID3D12Device1.SetEventOnMultipleFenceCompletion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, IntPtr hEvent)
+	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, Handle hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, IntPtr, int>)(lpVtbl[45]))((ID3D12Device3*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, Handle, int>)(lpVtbl[45]))((ID3D12Device3*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D12Device1.SetResidencyPriority" />
@@ -449,9 +449,9 @@ public unsafe partial struct ID3D12Device3
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12Device3::OpenExistingHeapFromFileMapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult OpenExistingHeapFromFileMapping(IntPtr hFileMapping, Guid* riid, void** ppvHeap)
+	public HResult OpenExistingHeapFromFileMapping(Handle hFileMapping, Guid* riid, void** ppvHeap)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, IntPtr, Guid*, void**, int>)(lpVtbl[49]))((ID3D12Device3*)Unsafe.AsPointer(ref this), hFileMapping, riid, ppvHeap);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, Handle, Guid*, void**, int>)(lpVtbl[49]))((ID3D12Device3*)Unsafe.AsPointer(ref this), hFileMapping, riid, ppvHeap);
 	}
 
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12Device3::EnqueueMakeResident"]/*' />

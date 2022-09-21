@@ -182,9 +182,9 @@ public unsafe partial struct IDXGIDevice2
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDevice2::EnqueueSetEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult EnqueueSetEvent(IntPtr hEvent)
+	public HResult EnqueueSetEvent(Handle hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, IntPtr, int>)(lpVtbl[16]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), hEvent);
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, Handle, int>)(lpVtbl[16]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), hEvent);
 	}
 }
 

@@ -246,73 +246,88 @@ public static unsafe partial class Apis
         return RequiredSize;
     }
 
-    //public static ulong UpdateSubresources(ID3D12GraphicsCommandList* pCmdList, ID3D12Resource* pDestinationResource, ID3D12Resource* pIntermediate, [NativeTypeName("UINT64")] ulong IntermediateOffset, uint FirstSubresource, uint NumSubresources, D3D12_SUBRESOURCE_DATA* pSrcData)
-    //{
-    //    ulong RequiredSize = 0;
-    //    ulong MemToAlloc = (ulong)(sizeof(D3D12_PLACED_SUBRESOURCE_FOOTPRINT) + sizeof(uint) + sizeof(ulong)) * NumSubresources;
+    public static ulong UpdateSubresources(
+        ID3D12GraphicsCommandList* pCmdList,
+        ID3D12Resource* pDestinationResource,
+        ID3D12Resource* pIntermediate,
+        ulong IntermediateOffset,
+        uint FirstSubresource,
+        uint NumSubresources,
+        SubresourceData* pSrcData)
+    {
+        ulong RequiredSize = 0;
+        ulong MemToAlloc = (ulong)(sizeof(PlacedSubresourceFootprint) + sizeof(uint) + sizeof(ulong)) * NumSubresources;
 
-    //    if (MemToAlloc > unchecked((nuint)(-1)))
-    //    {
-    //        return 0;
-    //    }
+        if (MemToAlloc > unchecked((nuint)(-1)))
+        {
+            return 0;
+        }
 
-    //    var pMem = HeapAlloc(GetProcessHeap(), 0, (nuint)MemToAlloc);
+        var pMem = HeapAlloc(GetProcessHeap(), 0, (nuint)MemToAlloc);
 
-    //    if (pMem == null)
-    //    {
-    //        return 0;
-    //    }
+        if (pMem == null)
+        {
+            return 0;
+        }
 
-    //    var pLayouts = (D3D12_PLACED_SUBRESOURCE_FOOTPRINT*)pMem;
-    //    ulong* pRowSizesInBytes = (ulong*)(pLayouts + NumSubresources);
-    //    uint* pNumRows = (uint*)(pRowSizesInBytes + NumSubresources);
+        var pLayouts = (PlacedSubresourceFootprint*)pMem;
+        ulong* pRowSizesInBytes = (ulong*)(pLayouts + NumSubresources);
+        uint* pNumRows = (uint*)(pRowSizesInBytes + NumSubresources);
 
-    //    var Desc = pDestinationResource->GetDesc();
+        var Desc = pDestinationResource->GetDesc();
 
-    //    ID3D12Device* pDevice = null;
-    //    _ = pDestinationResource->GetDevice(__uuidof<ID3D12Device>(), (void**)&pDevice);
+        ID3D12Device* pDevice = null;
+        _ = pDestinationResource->GetDevice(__uuidof<ID3D12Device>(), (void**)&pDevice);
 
-    //    pDevice->GetCopyableFootprints(&Desc, FirstSubresource, NumSubresources, IntermediateOffset, pLayouts, pNumRows, pRowSizesInBytes, &RequiredSize);
-    //    _ = pDevice->Release();
+        pDevice->GetCopyableFootprints(&Desc, FirstSubresource, NumSubresources, IntermediateOffset, pLayouts, pNumRows, pRowSizesInBytes, &RequiredSize);
+        _ = pDevice->Release();
 
-    //    ulong Result = UpdateSubresources(pCmdList, pDestinationResource, pIntermediate, FirstSubresource, NumSubresources, RequiredSize, pLayouts, pNumRows, pRowSizesInBytes, pSrcData);
-    //    _ = HeapFree(GetProcessHeap(), 0, pMem);
-    //    return Result;
-    //}
+        ulong Result = UpdateSubresources(pCmdList, pDestinationResource, pIntermediate, FirstSubresource, NumSubresources, RequiredSize, pLayouts, pNumRows, pRowSizesInBytes, pSrcData);
+        _ = HeapFree(GetProcessHeap(), 0, pMem);
+        return Result;
+    }
 
-    //public static ulong UpdateSubresources(ID3D12GraphicsCommandList* pCmdList, ID3D12Resource* pDestinationResource, ID3D12Resource* pIntermediate, [NativeTypeName("UINT64")] ulong IntermediateOffset, uint FirstSubresource, uint NumSubresources, [NativeTypeName("const void *")] void* pResourceData, [NativeTypeName("D3D12_SUBRESOURCE_INFO *")] D3D12_SUBRESOURCE_INFO* pSrcData)
-    //{
-    //    ulong RequiredSize = 0;
-    //    ulong MemToAlloc = (ulong)(sizeof(D3D12_PLACED_SUBRESOURCE_FOOTPRINT) + sizeof(uint) + sizeof(ulong)) * NumSubresources;
+    public static ulong UpdateSubresources(
+        ID3D12GraphicsCommandList* pCmdList,
+        ID3D12Resource* pDestinationResource,
+        ID3D12Resource* pIntermediate,
+        ulong IntermediateOffset,
+        uint FirstSubresource,
+        uint NumSubresources,
+        void* pResourceData,
+        SubresourceInfo* pSrcData)
+    {
+        ulong RequiredSize = 0;
+        ulong MemToAlloc = (ulong)(sizeof(PlacedSubresourceFootprint) + sizeof(uint) + sizeof(ulong)) * NumSubresources;
 
-    //    if (MemToAlloc > unchecked((nuint)(-1)))
-    //    {
-    //        return 0;
-    //    }
+        if (MemToAlloc > unchecked((nuint)(-1)))
+        {
+            return 0;
+        }
 
-    //    var pMem = HeapAlloc(GetProcessHeap(), 0, (nuint)MemToAlloc);
+        var pMem = HeapAlloc(GetProcessHeap(), 0, (nuint)MemToAlloc);
 
-    //    if (pMem == null)
-    //    {
-    //        return 0;
-    //    }
+        if (pMem == null)
+        {
+            return 0;
+        }
 
-    //    var pLayouts = (D3D12_PLACED_SUBRESOURCE_FOOTPRINT*)pMem;
-    //    ulong* pRowSizesInBytes = (ulong*)(pLayouts + NumSubresources);
-    //    uint* pNumRows = (uint*)(pRowSizesInBytes + NumSubresources);
+        var pLayouts = (PlacedSubresourceFootprint*)pMem;
+        ulong* pRowSizesInBytes = (ulong*)(pLayouts + NumSubresources);
+        uint* pNumRows = (uint*)(pRowSizesInBytes + NumSubresources);
 
-    //    var Desc = pDestinationResource->GetDesc();
+        var Desc = pDestinationResource->GetDesc();
 
-    //    ID3D12Device* pDevice = null;
-    //    _ = pDestinationResource->GetDevice(__uuidof<ID3D12Device>(), (void**)&pDevice);
+        ID3D12Device* pDevice = null;
+        _ = pDestinationResource->GetDevice(__uuidof<ID3D12Device>(), (void**)&pDevice);
 
-    //    pDevice->GetCopyableFootprints(&Desc, FirstSubresource, NumSubresources, IntermediateOffset, pLayouts, pNumRows, pRowSizesInBytes, &RequiredSize);
-    //    _ = pDevice->Release();
+        pDevice->GetCopyableFootprints(&Desc, FirstSubresource, NumSubresources, IntermediateOffset, pLayouts, pNumRows, pRowSizesInBytes, &RequiredSize);
+        _ = pDevice->Release();
 
-    //    ulong Result = UpdateSubresources(pCmdList, pDestinationResource, pIntermediate, FirstSubresource, NumSubresources, RequiredSize, pLayouts, pNumRows, pRowSizesInBytes, pResourceData, pSrcData);
-    //    _ = HeapFree(GetProcessHeap(), 0, pMem);
-    //    return Result;
-    //}
+        ulong Result = UpdateSubresources(pCmdList, pDestinationResource, pIntermediate, FirstSubresource, NumSubresources, RequiredSize, pLayouts, pNumRows, pRowSizesInBytes, pResourceData, pSrcData);
+        _ = HeapFree(GetProcessHeap(), 0, pMem);
+        return Result;
+    }
 
     public static ulong UpdateSubresources(
         uint MaxSubresources,

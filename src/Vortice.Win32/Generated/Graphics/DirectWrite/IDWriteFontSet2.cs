@@ -262,9 +262,9 @@ public unsafe partial struct IDWriteFontSet2
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet2::GetExpirationEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public IntPtr GetExpirationEvent()
+	public Handle GetExpirationEvent()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet2*, IntPtr>)(lpVtbl[26]))((IDWriteFontSet2*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet2*, Handle>)(lpVtbl[26]))((IDWriteFontSet2*)Unsafe.AsPointer(ref this));
 	}
 }
 

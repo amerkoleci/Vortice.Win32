@@ -110,17 +110,17 @@ public unsafe partial struct IDWriteBitmapRenderTarget
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::GetCurrentTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetCurrentTransform(Matrix* transform)
+	public HResult GetCurrentTransform(Matrix3x2* transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget*, Matrix*, int>)(lpVtbl[7]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), transform);
+		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget*, Matrix3x2*, int>)(lpVtbl[7]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::SetCurrentTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetCurrentTransform(Matrix* transform)
+	public HResult SetCurrentTransform(Matrix3x2* transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget*, Matrix*, int>)(lpVtbl[8]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), transform);
+		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget*, Matrix3x2*, int>)(lpVtbl[8]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget::GetSize"]/*' />

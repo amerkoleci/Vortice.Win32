@@ -118,9 +118,9 @@ public unsafe partial struct IDXGIResource1
 	/// <inheritdoc cref="IDXGIResource.GetSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetSharedHandle(IntPtr* pSharedHandle)
+	public HResult GetSharedHandle(Handle* pSharedHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, IntPtr*, int>)(lpVtbl[8]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pSharedHandle);
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Handle*, int>)(lpVtbl[8]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pSharedHandle);
 	}
 
 	/// <inheritdoc cref="IDXGIResource.GetUsage" />
@@ -158,9 +158,9 @@ public unsafe partial struct IDXGIResource1
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, IntPtr* pHandle)
+	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 }
 

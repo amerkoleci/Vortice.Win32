@@ -78,9 +78,9 @@ public unsafe partial struct IDXGIDebug
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ReportLiveObjects(Guid apiid, DebugRloFlags flags)
+	public HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDebug*, Guid, DebugRloFlags, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
+		return ((delegate* unmanaged[Stdcall]<IDXGIDebug*, Guid, ReportLiveObjectFlags, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
 	}
 }
 

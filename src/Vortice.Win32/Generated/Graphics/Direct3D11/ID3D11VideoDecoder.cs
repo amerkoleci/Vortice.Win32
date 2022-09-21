@@ -118,9 +118,9 @@ public unsafe partial struct ID3D11VideoDecoder
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoder::GetDriverHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetDriverHandle(IntPtr* pDriverHandle)
+	public HResult GetDriverHandle(Handle* pDriverHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, IntPtr*, int>)(lpVtbl[8]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), pDriverHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, Handle*, int>)(lpVtbl[8]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), pDriverHandle);
 	}
 }
 

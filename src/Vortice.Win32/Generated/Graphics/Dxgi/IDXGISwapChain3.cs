@@ -318,25 +318,25 @@ public unsafe partial struct IDXGISwapChain3
 	/// <inheritdoc cref="IDXGISwapChain2.GetFrameLatencyWaitableObject" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public IntPtr GetFrameLatencyWaitableObject()
+	public Handle GetFrameLatencyWaitableObject()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IntPtr>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Handle>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.SetMatrixTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult SetMatrixTransform(Matrix3x2F* pMatrix)
+	public HResult SetMatrixTransform(Matrix3x2* pMatrix)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2F*, int>)(lpVtbl[34]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[34]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.GetMatrixTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public HResult GetMatrixTransform(Matrix3x2F* pMatrix)
+	public HResult GetMatrixTransform(Matrix3x2* pMatrix)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2F*, int>)(lpVtbl[35]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[35]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
 	}
 
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::GetCurrentBackBufferIndex"]/*' />

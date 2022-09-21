@@ -118,9 +118,9 @@ public unsafe partial struct IDXGIResource
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetSharedHandle(IntPtr* pSharedHandle)
+	public HResult GetSharedHandle(Handle* pSharedHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, IntPtr*, int>)(lpVtbl[8]))((IDXGIResource*)Unsafe.AsPointer(ref this), pSharedHandle);
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Handle*, int>)(lpVtbl[8]))((IDXGIResource*)Unsafe.AsPointer(ref this), pSharedHandle);
 	}
 
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetUsage"]/*' />

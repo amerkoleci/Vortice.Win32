@@ -304,25 +304,25 @@ public unsafe partial struct ID3D12Device
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12Device::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, IntPtr* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[31]))((ID3D12Device*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[31]))((ID3D12Device*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12Device::OpenSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult OpenSharedHandle(IntPtr NTHandle, Guid* riid, void** ppvObj)
+	public HResult OpenSharedHandle(Handle NTHandle, Guid* riid, void** ppvObj)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, IntPtr, Guid*, void**, int>)(lpVtbl[32]))((ID3D12Device*)Unsafe.AsPointer(ref this), NTHandle, riid, ppvObj);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, Handle, Guid*, void**, int>)(lpVtbl[32]))((ID3D12Device*)Unsafe.AsPointer(ref this), NTHandle, riid, ppvObj);
 	}
 
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12Device::OpenSharedHandleByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult OpenSharedHandleByName(ushort* Name, uint Access, IntPtr* pNTHandle)
+	public HResult OpenSharedHandleByName(ushort* Name, uint Access, Handle* pNTHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, ushort*, uint, IntPtr*, int>)(lpVtbl[33]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device*, ushort*, uint, Handle*, int>)(lpVtbl[33]))((ID3D12Device*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12Device::MakeResident"]/*' />

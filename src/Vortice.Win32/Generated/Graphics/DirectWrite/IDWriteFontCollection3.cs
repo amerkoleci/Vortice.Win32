@@ -158,9 +158,9 @@ public unsafe partial struct IDWriteFontCollection3
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection3::GetExpirationEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public IntPtr GetExpirationEvent()
+	public Handle GetExpirationEvent()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection3*, IntPtr>)(lpVtbl[13]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection3*, Handle>)(lpVtbl[13]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this));
 	}
 }
 

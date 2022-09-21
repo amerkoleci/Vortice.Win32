@@ -8482,29 +8482,6 @@ public partial struct SODeclarationEntry
 	public byte OutputSlot;
 }
 
-/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIEWPORT"]/*' />
-/// <unmanaged>D3D11_VIEWPORT</unmanaged>
-public partial struct Viewport
-{
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIEWPORT::TopLeftX"]/*' />
-	public float TopLeftX;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIEWPORT::TopLeftY"]/*' />
-	public float TopLeftY;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIEWPORT::Width"]/*' />
-	public float Width;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIEWPORT::Height"]/*' />
-	public float Height;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIEWPORT::MinDepth"]/*' />
-	public float MinDepth;
-
-	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIEWPORT::MaxDepth"]/*' />
-	public float MaxDepth;
-}
-
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INSTANCED_INDIRECT_ARGS"]/*' />
 /// <unmanaged>D3D11_DRAW_INSTANCED_INDIRECT_ARGS</unmanaged>
 public partial struct DrawInstancedIndirectArgs
@@ -10890,7 +10867,7 @@ public partial struct AuthenticatedQueryInput
 	public Guid QueryType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_INPUT::hChannel"]/*' />
-	public IntPtr hChannel;
+	public Handle hChannel;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_INPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
@@ -10907,7 +10884,7 @@ public partial struct AuthenticatedQueryOutput
 	public Guid QueryType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::hChannel"]/*' />
-	public IntPtr hChannel;
+	public Handle hChannel;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
@@ -10946,7 +10923,7 @@ public partial struct AuthenticatedQueryDeviceHandleOutput
 	public AuthenticatedQueryOutput Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT::DeviceHandle"]/*' />
-	public IntPtr DeviceHandle;
+	public Handle DeviceHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_INPUT"]/*' />
@@ -10957,7 +10934,7 @@ public partial struct AuthenticatedQueryCryptoSessionInput
 	public AuthenticatedQueryInput Input;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_INPUT::DecoderHandle"]/*' />
-	public IntPtr DecoderHandle;
+	public Handle DecoderHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT"]/*' />
@@ -10968,13 +10945,13 @@ public partial struct AuthenticatedQueryCryptoSessionOutput
 	public AuthenticatedQueryOutput Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT::DecoderHandle"]/*' />
-	public IntPtr DecoderHandle;
+	public Handle DecoderHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT::CryptoSessionHandle"]/*' />
-	public IntPtr CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CRYPTO_SESSION_OUTPUT::DeviceHandle"]/*' />
-	public IntPtr DeviceHandle;
+	public Handle DeviceHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCESS_COUNT_OUTPUT"]/*' />
@@ -11013,7 +10990,7 @@ public partial struct AuthenticatedQueryRestrictedSharedResourceProcessOutput
 	public AuthenticatedProcessIdentifierType ProcessIdentifier;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_RESTRICTED_SHARED_RESOURCE_PROCESS_OUTPUT::ProcessHandle"]/*' />
-	public IntPtr ProcessHandle;
+	public Handle ProcessHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_UNRESTRICTED_PROTECTED_SHARED_RESOURCE_COUNT_OUTPUT"]/*' />
@@ -11035,10 +11012,10 @@ public partial struct AuthenticatedQueryOutputIdCountInput
 	public AuthenticatedQueryInput Input;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::DeviceHandle"]/*' />
-	public IntPtr DeviceHandle;
+	public Handle DeviceHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::CryptoSessionHandle"]/*' />
-	public IntPtr CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT"]/*' />
@@ -11049,10 +11026,10 @@ public partial struct AuthenticatedQueryOutputIdCountOutput
 	public AuthenticatedQueryOutput Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT::DeviceHandle"]/*' />
-	public IntPtr DeviceHandle;
+	public Handle DeviceHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT::CryptoSessionHandle"]/*' />
-	public IntPtr CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_OUTPUT::OutputIDCount"]/*' />
 	public uint OutputIDCount;
@@ -11066,10 +11043,10 @@ public partial struct AuthenticatedQueryOutputIdInput
 	public AuthenticatedQueryInput Input;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_INPUT::DeviceHandle"]/*' />
-	public IntPtr DeviceHandle;
+	public Handle DeviceHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_INPUT::CryptoSessionHandle"]/*' />
-	public IntPtr CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_INPUT::OutputIDIndex"]/*' />
 	public uint OutputIDIndex;
@@ -11083,10 +11060,10 @@ public partial struct AuthenticatedQueryOutputIdOutput
 	public AuthenticatedQueryOutput Output;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_OUTPUT::DeviceHandle"]/*' />
-	public IntPtr DeviceHandle;
+	public Handle DeviceHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_OUTPUT::CryptoSessionHandle"]/*' />
-	public IntPtr CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_OUTPUT::OutputIDIndex"]/*' />
 	public uint OutputIDIndex;
@@ -11170,7 +11147,7 @@ public partial struct AuthenticatedConfigureInput
 	public Guid ConfigureType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::hChannel"]/*' />
-	public IntPtr hChannel;
+	public Handle hChannel;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
@@ -11187,7 +11164,7 @@ public partial struct AuthenticatedConfigureOutput
 	public Guid ConfigureType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_OUTPUT::hChannel"]/*' />
-	public IntPtr hChannel;
+	public Handle hChannel;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_OUTPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
@@ -11229,13 +11206,13 @@ public partial struct AuthenticatedConfigureCryptoSessionInput
 	public AuthenticatedConfigureInput Parameters;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::DecoderHandle"]/*' />
-	public IntPtr DecoderHandle;
+	public Handle DecoderHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::CryptoSessionHandle"]/*' />
-	public IntPtr CryptoSessionHandle;
+	public Handle CryptoSessionHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::DeviceHandle"]/*' />
-	public IntPtr DeviceHandle;
+	public Handle DeviceHandle;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE_INPUT"]/*' />
@@ -11249,7 +11226,7 @@ public partial struct AuthenticatedConfigureSharedResourceInput
 	public AuthenticatedProcessIdentifierType ProcessType;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE_INPUT::ProcessHandle"]/*' />
-	public IntPtr ProcessHandle;
+	public Handle ProcessHandle;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_SHARED_RESOURCE_INPUT::AllowAccess"]/*' />
 	public Bool32 AllowAccess;

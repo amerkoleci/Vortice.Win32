@@ -86,9 +86,9 @@ public unsafe partial struct IDWriteTextRenderer1
 	/// <inheritdoc cref="IDWritePixelSnapping.GetCurrentTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCurrentTransform(void* clientDrawingContext, Matrix* transform)
+	public HResult GetCurrentTransform(void* clientDrawingContext, Matrix3x2* transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, Matrix*, int>)(lpVtbl[4]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, transform);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, Matrix3x2*, int>)(lpVtbl[4]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, transform);
 	}
 
 	/// <inheritdoc cref="IDWritePixelSnapping.GetPixelsPerDip" />

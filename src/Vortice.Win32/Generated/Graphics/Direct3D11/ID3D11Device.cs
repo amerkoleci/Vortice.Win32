@@ -278,9 +278,9 @@ public unsafe partial struct ID3D11Device
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11Device::OpenSharedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult OpenSharedResource(IntPtr hResource, Guid* ReturnedInterface, void** ppResource)
+	public HResult OpenSharedResource(Handle hResource, Guid* ReturnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, IntPtr, Guid*, void**, int>)(lpVtbl[28]))((ID3D11Device*)Unsafe.AsPointer(ref this), hResource, ReturnedInterface, ppResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Handle, Guid*, void**, int>)(lpVtbl[28]))((ID3D11Device*)Unsafe.AsPointer(ref this), hResource, ReturnedInterface, ppResource);
 	}
 
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckFormatSupport"]/*' />

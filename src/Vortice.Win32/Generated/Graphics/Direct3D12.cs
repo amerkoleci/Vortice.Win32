@@ -6991,29 +6991,6 @@ public partial struct SODeclarationEntry
 	public byte OutputSlot;
 }
 
-/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEWPORT"]/*' />
-/// <unmanaged>D3D12_VIEWPORT</unmanaged>
-public partial struct Viewport
-{
-	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEWPORT::TopLeftX"]/*' />
-	public float TopLeftX;
-
-	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEWPORT::TopLeftY"]/*' />
-	public float TopLeftY;
-
-	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEWPORT::Width"]/*' />
-	public float Width;
-
-	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEWPORT::Height"]/*' />
-	public float Height;
-
-	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEWPORT::MinDepth"]/*' />
-	public float MinDepth;
-
-	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEWPORT::MaxDepth"]/*' />
-	public float MaxDepth;
-}
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BOX"]/*' />
 /// <unmanaged>D3D12_BOX</unmanaged>
 public partial struct Box

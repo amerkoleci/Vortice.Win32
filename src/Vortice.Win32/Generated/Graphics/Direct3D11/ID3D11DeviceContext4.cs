@@ -1206,9 +1206,9 @@ public unsafe partial struct ID3D11DeviceContext4
 	/// <inheritdoc cref="ID3D11DeviceContext3.Flush1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(144)]
-	public void Flush1(ContextType ContextType, IntPtr hEvent)
+	public void Flush1(ContextType ContextType, Handle hEvent)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ContextType, IntPtr, void>)(lpVtbl[144]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ContextType, hEvent);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ContextType, Handle, void>)(lpVtbl[144]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), ContextType, hEvent);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext3.SetHardwareProtectionState" />

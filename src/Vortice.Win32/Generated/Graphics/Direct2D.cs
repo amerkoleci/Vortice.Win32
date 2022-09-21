@@ -4100,7 +4100,7 @@ public enum HighlightSandShadowsInputGamma : uint
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP"]/*' />
 /// <unmanaged>D2D1_LOOKUPTABLE3D_PROP</unmanaged>
-public enum Lookuptable3dProp : uint
+public enum LookupTable3DProp : uint
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP::D2D1_LOOKUPTABLE3D_PROP_LUT"]/*' />
 	/// <unmanaged>D2D1_LOOKUPTABLE3D_PROP_LUT</unmanaged>

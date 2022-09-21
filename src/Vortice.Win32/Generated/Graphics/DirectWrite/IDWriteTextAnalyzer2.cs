@@ -126,9 +126,9 @@ public unsafe partial struct IDWriteTextAnalyzer2
 	/// <inheritdoc cref="IDWriteTextAnalyzer.GetGdiCompatibleGlyphPlacements" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetGdiCompatibleGlyphPlacements(ushort* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets)
+	public HResult GetGdiCompatibleGlyphPlacements(ushort* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, ushort*, ushort*, ShapingTextProperties*, uint, ushort*, ShapingGlyphProperties*, uint, IDWriteFontFace*, float, float, Matrix*, Bool32, Bool32, Bool32, ScriptAnalysis*, ushort*, TypographicFeatures**, uint*, uint, float*, GlyphOffset*, int>)(lpVtbl[9]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, pixelsPerDip, transform, useGdiNatural, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, ushort*, ushort*, ShapingTextProperties*, uint, ushort*, ShapingGlyphProperties*, uint, IDWriteFontFace*, float, float, Matrix3x2*, Bool32, Bool32, Bool32, ScriptAnalysis*, ushort*, TypographicFeatures**, uint*, uint, float*, GlyphOffset*, int>)(lpVtbl[9]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, pixelsPerDip, transform, useGdiNatural, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.ApplyCharacterSpacing" />
@@ -158,9 +158,9 @@ public unsafe partial struct IDWriteTextAnalyzer2
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.GetGlyphOrientationTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetGlyphOrientationTransform(GlyphOrientationAngle glyphOrientationAngle, Bool32 isSideways, Matrix* transform)
+	public HResult GetGlyphOrientationTransform(GlyphOrientationAngle glyphOrientationAngle, Bool32 isSideways, Matrix3x2* transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, GlyphOrientationAngle, Bool32, Matrix*, int>)(lpVtbl[13]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), glyphOrientationAngle, isSideways, transform);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, GlyphOrientationAngle, Bool32, Matrix3x2*, int>)(lpVtbl[13]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), glyphOrientationAngle, isSideways, transform);
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.GetScriptProperties" />
@@ -206,9 +206,9 @@ public unsafe partial struct IDWriteTextAnalyzer2
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::GetGlyphOrientationTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetGlyphOrientationTransform(GlyphOrientationAngle glyphOrientationAngle, Bool32 isSideways, float originX, float originY, Matrix* transform)
+	public HResult GetGlyphOrientationTransform(GlyphOrientationAngle glyphOrientationAngle, Bool32 isSideways, float originX, float originY, Matrix3x2* transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, GlyphOrientationAngle, Bool32, float, float, Matrix*, int>)(lpVtbl[19]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), glyphOrientationAngle, isSideways, originX, originY, transform);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, GlyphOrientationAngle, Bool32, float, float, Matrix3x2*, int>)(lpVtbl[19]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), glyphOrientationAngle, isSideways, originX, originY, transform);
 	}
 
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::GetTypographicFeatures"]/*' />

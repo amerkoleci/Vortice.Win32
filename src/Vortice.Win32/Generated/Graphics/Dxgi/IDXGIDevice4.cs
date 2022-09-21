@@ -182,9 +182,9 @@ public unsafe partial struct IDXGIDevice4
 	/// <inheritdoc cref="IDXGIDevice2.EnqueueSetEvent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult EnqueueSetEvent(IntPtr hEvent)
+	public HResult EnqueueSetEvent(Handle hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, IntPtr, int>)(lpVtbl[16]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), hEvent);
+		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, Handle, int>)(lpVtbl[16]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), hEvent);
 	}
 
 	/// <inheritdoc cref="IDXGIDevice3.Trim" />

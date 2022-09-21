@@ -278,9 +278,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device.OpenSharedResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult OpenSharedResource(IntPtr hResource, Guid* ReturnedInterface, void** ppResource)
+	public HResult OpenSharedResource(Handle hResource, Guid* ReturnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, IntPtr, Guid*, void**, int>)(lpVtbl[28]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hResource, ReturnedInterface, ppResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, Handle, Guid*, void**, int>)(lpVtbl[28]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hResource, ReturnedInterface, ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CheckFormatSupport" />
@@ -438,9 +438,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResource1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public HResult OpenSharedResource1(IntPtr hResource, Guid* returnedInterface, void** ppResource)
+	public HResult OpenSharedResource1(Handle hResource, Guid* returnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, IntPtr, Guid*, void**, int>)(lpVtbl[48]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hResource, returnedInterface, ppResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, Handle, Guid*, void**, int>)(lpVtbl[48]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hResource, returnedInterface, ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResourceByName" />
@@ -574,9 +574,9 @@ public unsafe partial struct ID3D11Device5
 	/// <inheritdoc cref="ID3D11Device4.RegisterDeviceRemovedEvent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
-	public HResult RegisterDeviceRemovedEvent(IntPtr hEvent, uint* pdwCookie)
+	public HResult RegisterDeviceRemovedEvent(Handle hEvent, uint* pdwCookie)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, IntPtr, uint*, int>)(lpVtbl[65]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, Handle, uint*, int>)(lpVtbl[65]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
 	/// <inheritdoc cref="ID3D11Device4.UnregisterDeviceRemoved" />
@@ -590,9 +590,9 @@ public unsafe partial struct ID3D11Device5
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11Device5::OpenSharedFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
-	public HResult OpenSharedFence(IntPtr hFence, Guid* ReturnedInterface, void** ppFence)
+	public HResult OpenSharedFence(Handle hFence, Guid* ReturnedInterface, void** ppFence)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, IntPtr, Guid*, void**, int>)(lpVtbl[67]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hFence, ReturnedInterface, ppFence);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, Handle, Guid*, void**, int>)(lpVtbl[67]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hFence, ReturnedInterface, ppFence);
 	}
 
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11Device5::CreateFence"]/*' />

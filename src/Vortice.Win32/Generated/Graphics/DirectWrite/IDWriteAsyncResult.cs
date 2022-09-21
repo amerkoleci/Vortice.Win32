@@ -78,9 +78,9 @@ public unsafe partial struct IDWriteAsyncResult
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetWaitHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public IntPtr GetWaitHandle()
+	public Handle GetWaitHandle()
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteAsyncResult*, IntPtr>)(lpVtbl[3]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteAsyncResult*, Handle>)(lpVtbl[3]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetResult"]/*' />

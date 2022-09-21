@@ -508,7 +508,7 @@ public enum Feature : int
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG3</unmanaged>
 [Flags]
-public enum AdapterFlag3 : uint
+public enum AdapterFlags3 : uint
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_NONE</unmanaged>
@@ -568,7 +568,7 @@ public enum GpuPreference : int
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS"]/*' />
 /// <unmanaged>DXGI_DEBUG_RLO_FLAGS</unmanaged>
 [Flags]
-public enum DebugRloFlags : uint
+public enum ReportLiveObjectFlags : uint
 {
 	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_SUMMARY"]/*' />
@@ -1827,7 +1827,7 @@ public partial struct OutputDescription
 public partial struct SharedResource
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE::Handle"]/*' />
-	public IntPtr Handle;
+	public Handle Handle;
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC"]/*' />
@@ -2146,35 +2146,12 @@ public partial struct AdapterDescription2
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
 }
 
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F"]/*' />
-/// <unmanaged>DXGI_MATRIX_3X2_F</unmanaged>
-public partial struct Matrix3x2F
-{
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_11"]/*' />
-	public float _11;
-
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_12"]/*' />
-	public float _12;
-
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_21"]/*' />
-	public float _21;
-
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_22"]/*' />
-	public float _22;
-
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_31"]/*' />
-	public float _31;
-
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MATRIX_3X2_F::_32"]/*' />
-	public float _32;
-}
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC"]/*' />
 /// <unmanaged>DXGI_DECODE_SWAP_CHAIN_DESC</unmanaged>
 public partial struct DecodeSwapChainDescription
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC::Flags"]/*' />
-	public uint Flags;
+	public SwapChainFlags Flags;
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA"]/*' />
@@ -2289,7 +2266,7 @@ public partial struct AdapterDescription3
 	public Luid AdapterLuid;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Flags"]/*' />
-	public AdapterFlag3 Flags;
+	public AdapterFlags3 Flags;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::GraphicsPreemptionGranularity"]/*' />
 	public GraphicsPreemptionGranularity GraphicsPreemptionGranularity;

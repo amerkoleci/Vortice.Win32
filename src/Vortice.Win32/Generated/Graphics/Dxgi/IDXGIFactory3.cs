@@ -190,9 +190,9 @@ public unsafe partial struct IDXGIFactory3
 	/// <inheritdoc cref="IDXGIFactory2.GetSharedResourceAdapterLuid" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetSharedResourceAdapterLuid(IntPtr hResource, Luid* pLuid)
+	public HResult GetSharedResourceAdapterLuid(Handle hResource, Luid* pLuid)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr, Luid*, int>)(lpVtbl[17]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hResource, pLuid);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Handle, Luid*, int>)(lpVtbl[17]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hResource, pLuid);
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusWindow" />
@@ -206,9 +206,9 @@ public unsafe partial struct IDXGIFactory3
 	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusEvent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult RegisterStereoStatusEvent(IntPtr hEvent, uint* pdwCookie)
+	public HResult RegisterStereoStatusEvent(Handle hEvent, uint* pdwCookie)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr, uint*, int>)(lpVtbl[19]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Handle, uint*, int>)(lpVtbl[19]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.UnregisterStereoStatus" />
@@ -230,9 +230,9 @@ public unsafe partial struct IDXGIFactory3
 	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusEvent" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult RegisterOcclusionStatusEvent(IntPtr hEvent, uint* pdwCookie)
+	public HResult RegisterOcclusionStatusEvent(Handle hEvent, uint* pdwCookie)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IntPtr, uint*, int>)(lpVtbl[22]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, Handle, uint*, int>)(lpVtbl[22]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.UnregisterOcclusionStatus" />

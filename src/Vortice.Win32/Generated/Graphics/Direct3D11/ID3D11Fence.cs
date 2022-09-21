@@ -110,9 +110,9 @@ public unsafe partial struct ID3D11Fence
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, IntPtr* pHandle)
+	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, IntPtr*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::GetCompletedValue"]/*' />
@@ -126,9 +126,9 @@ public unsafe partial struct ID3D11Fence
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::SetEventOnCompletion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetEventOnCompletion(ulong Value, IntPtr hEvent)
+	public HResult SetEventOnCompletion(ulong Value, Handle hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, ulong, IntPtr, int>)(lpVtbl[9]))((ID3D11Fence*)Unsafe.AsPointer(ref this), Value, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, ulong, Handle, int>)(lpVtbl[9]))((ID3D11Fence*)Unsafe.AsPointer(ref this), Value, hEvent);
 	}
 }
 

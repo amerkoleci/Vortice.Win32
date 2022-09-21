@@ -7791,10 +7791,10 @@ public static unsafe partial class Apis
 	public static extern HResult WICConvertBitmapSource(Guid* dstFormat, IWICBitmapSource* pISrc, IWICBitmapSource* ppIDst);
 
 	[DllImport("WindowsCodecs", ExactSpelling = true)]
-	public static extern HResult WICCreateBitmapFromSection(uint width, uint height, Guid* pixelFormat, IntPtr hSection, uint stride, uint offset, IWICBitmap* ppIBitmap);
+	public static extern HResult WICCreateBitmapFromSection(uint width, uint height, Guid* pixelFormat, Handle hSection, uint stride, uint offset, IWICBitmap* ppIBitmap);
 
 	[DllImport("WindowsCodecs", ExactSpelling = true)]
-	public static extern HResult WICCreateBitmapFromSectionEx(uint width, uint height, Guid* pixelFormat, IntPtr hSection, uint stride, uint offset, WICSectionAccessLevel desiredAccessLevel, IWICBitmap* ppIBitmap);
+	public static extern HResult WICCreateBitmapFromSectionEx(uint width, uint height, Guid* pixelFormat, Handle hSection, uint stride, uint offset, WICSectionAccessLevel desiredAccessLevel, IWICBitmap* ppIBitmap);
 
 	[DllImport("WindowsCodecs", ExactSpelling = true)]
 	public static extern HResult WICMapGuidToShortName(Guid* guid, uint cchName, ushort* wzName, uint* pcchActual);

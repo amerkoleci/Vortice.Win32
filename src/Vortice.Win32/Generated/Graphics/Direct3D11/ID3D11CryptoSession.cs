@@ -142,9 +142,9 @@ public unsafe partial struct ID3D11CryptoSession
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCryptoSessionHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void GetCryptoSessionHandle(IntPtr* pCryptoSessionHandle)
+	public void GetCryptoSessionHandle(Handle* pCryptoSessionHandle)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, IntPtr*, void>)(lpVtbl[11]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCryptoSessionHandle);
+		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, Handle*, void>)(lpVtbl[11]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCryptoSessionHandle);
 	}
 }
 

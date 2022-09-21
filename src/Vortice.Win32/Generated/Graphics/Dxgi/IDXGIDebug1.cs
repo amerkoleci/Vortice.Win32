@@ -78,9 +78,9 @@ public unsafe partial struct IDXGIDebug1
 	/// <inheritdoc cref="IDXGIDebug.ReportLiveObjects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult ReportLiveObjects(Guid apiid, DebugRloFlags flags)
+	public HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDebug1*, Guid, DebugRloFlags, int>)(lpVtbl[3]))((IDXGIDebug1*)Unsafe.AsPointer(ref this), apiid, flags);
+		return ((delegate* unmanaged[Stdcall]<IDXGIDebug1*, Guid, ReportLiveObjectFlags, int>)(lpVtbl[3]))((IDXGIDebug1*)Unsafe.AsPointer(ref this), apiid, flags);
 	}
 
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDebug1::EnableLeakTrackingForThread"]/*' />

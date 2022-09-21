@@ -182,17 +182,17 @@ public unsafe partial struct IDWriteFontFace
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace::GetGdiCompatibleMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix* transform, FontMetrics* fontFaceMetrics)
+	public HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, FontMetrics* fontFaceMetrics)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, float, float, Matrix*, FontMetrics*, int>)(lpVtbl[16]))((IDWriteFontFace*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, fontFaceMetrics);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, float, float, Matrix3x2*, FontMetrics*, int>)(lpVtbl[16]))((IDWriteFontFace*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, fontFaceMetrics);
 	}
 
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace::GetGdiCompatibleGlyphMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetGdiCompatibleGlyphMetrics(float emSize, float pixelsPerDip, Matrix* transform, Bool32 useGdiNatural, ushort* glyphIndices, uint glyphCount, GlyphMetrics* glyphMetrics, Bool32 isSideways)
+	public HResult GetGdiCompatibleGlyphMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, ushort* glyphIndices, uint glyphCount, GlyphMetrics* glyphMetrics, Bool32 isSideways)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, float, float, Matrix*, Bool32, ushort*, uint, GlyphMetrics*, Bool32, int>)(lpVtbl[17]))((IDWriteFontFace*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, useGdiNatural, glyphIndices, glyphCount, glyphMetrics, isSideways);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, float, float, Matrix3x2*, Bool32, ushort*, uint, GlyphMetrics*, Bool32, int>)(lpVtbl[17]))((IDWriteFontFace*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, useGdiNatural, glyphIndices, glyphCount, glyphMetrics, isSideways);
 	}
 }
 

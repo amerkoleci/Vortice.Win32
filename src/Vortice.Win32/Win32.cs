@@ -93,4 +93,26 @@ public static unsafe partial class Apis
 
     [DllImport("ole32", ExactSpelling = true)]
     public static extern HResult CoCreateInstance(Guid* rclsid, IUnknown* pUnkOuter, uint dwClsContext, Guid* riid, void** ppv);
+
+    [DllImport("kernel32", ExactSpelling = true)]
+    public static extern Handle HeapCreate(uint flOptions, nuint dwInitialSize, nuint dwMaximumSize);
+
+    [DllImport("kernel32", ExactSpelling = true)]
+    public static extern Bool32 HeapDestroy(void* hHeap);
+
+    [DllImport("kernel32", ExactSpelling = true)]
+    public static extern void* HeapAlloc(Handle hHeap, uint dwFlags, nuint dwBytes);
+
+    [DllImport("kernel32", ExactSpelling = true)]
+    [return: NativeTypeName("LPVOID")]
+    public static extern void* HeapReAlloc(Handle hHeap, uint dwFlags, void* lpMem, nuint dwBytes);
+
+    [DllImport("kernel32", ExactSpelling = true)]
+    public static extern Bool32 HeapFree(Handle hHeap, uint dwFlags, void* lpMem);
+
+    [DllImport("kernel32", ExactSpelling = true)]
+    public static extern nuint HeapSize(Handle hHeap, uint dwFlags, void* lpMem);
+
+    [DllImport("kernel32", ExactSpelling = true)]
+    public static extern Handle GetProcessHeap();
 }

@@ -110,17 +110,17 @@ public unsafe partial struct IDWriteBitmapRenderTarget1
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.GetCurrentTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetCurrentTransform(Matrix* transform)
+	public HResult GetCurrentTransform(Matrix3x2* transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, Matrix*, int>)(lpVtbl[7]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), transform);
+		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, Matrix3x2*, int>)(lpVtbl[7]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.SetCurrentTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetCurrentTransform(Matrix* transform)
+	public HResult SetCurrentTransform(Matrix3x2* transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, Matrix*, int>)(lpVtbl[8]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), transform);
+		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, Matrix3x2*, int>)(lpVtbl[8]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <inheritdoc cref="IDWriteBitmapRenderTarget.GetSize" />

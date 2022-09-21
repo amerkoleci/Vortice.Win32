@@ -126,9 +126,9 @@ public unsafe partial struct ID3D12Fence
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12Fence::SetEventOnCompletion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult SetEventOnCompletion(ulong Value, IntPtr hEvent)
+	public HResult SetEventOnCompletion(ulong Value, Handle hEvent)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Fence*, ulong, IntPtr, int>)(lpVtbl[9]))((ID3D12Fence*)Unsafe.AsPointer(ref this), Value, hEvent);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Fence*, ulong, Handle, int>)(lpVtbl[9]))((ID3D12Fence*)Unsafe.AsPointer(ref this), Value, hEvent);
 	}
 
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12Fence::Signal"]/*' />

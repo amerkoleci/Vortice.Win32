@@ -150,9 +150,9 @@ public unsafe partial struct IDXGIAdapter3
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::RegisterHardwareContentProtectionTeardownStatusEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult RegisterHardwareContentProtectionTeardownStatusEvent(IntPtr hEvent, uint* pdwCookie)
+	public HResult RegisterHardwareContentProtectionTeardownStatusEvent(Handle hEvent, uint* pdwCookie)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, IntPtr, uint*, int>)(lpVtbl[12]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Handle, uint*, int>)(lpVtbl[12]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterHardwareContentProtectionTeardownStatus"]/*' />
@@ -182,9 +182,9 @@ public unsafe partial struct IDXGIAdapter3
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::RegisterVideoMemoryBudgetChangeNotificationEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult RegisterVideoMemoryBudgetChangeNotificationEvent(IntPtr hEvent, uint* pdwCookie)
+	public HResult RegisterVideoMemoryBudgetChangeNotificationEvent(Handle hEvent, uint* pdwCookie)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, IntPtr, uint*, int>)(lpVtbl[16]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Handle, uint*, int>)(lpVtbl[16]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterVideoMemoryBudgetChangeNotification"]/*' />

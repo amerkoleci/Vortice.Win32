@@ -86,9 +86,9 @@ public unsafe partial struct IDWritePixelSnapping
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping::GetCurrentTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetCurrentTransform(void* clientDrawingContext, Matrix* transform)
+	public HResult GetCurrentTransform(void* clientDrawingContext, Matrix3x2* transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWritePixelSnapping*, void*, Matrix*, int>)(lpVtbl[4]))((IDWritePixelSnapping*)Unsafe.AsPointer(ref this), clientDrawingContext, transform);
+		return ((delegate* unmanaged[Stdcall]<IDWritePixelSnapping*, void*, Matrix3x2*, int>)(lpVtbl[4]))((IDWritePixelSnapping*)Unsafe.AsPointer(ref this), clientDrawingContext, transform);
 	}
 
 	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping::GetPixelsPerDip"]/*' />

@@ -126,9 +126,9 @@ public unsafe partial struct ID3D11AuthenticatedChannel
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetChannelHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void GetChannelHandle(IntPtr* pChannelHandle)
+	public void GetChannelHandle(Handle* pChannelHandle)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, IntPtr*, void>)(lpVtbl[9]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pChannelHandle);
+		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Handle*, void>)(lpVtbl[9]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pChannelHandle);
 	}
 }
 
