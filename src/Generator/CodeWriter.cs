@@ -46,12 +46,6 @@ public sealed class CodeWriter : IDisposable
         {
             _builder.AppendLine($"using {usingNamespace};");
         }
-        _builder.AppendLine();
-
-        _builder.AppendLine("#if !NET6_0_OR_GREATER");
-        _builder.AppendLine("using MemoryMarshal = Win32.MemoryMarshal;");
-        _builder.AppendLine("#endif");
-        _builder.AppendLine();
 
         _builder.AppendLine($"namespace {ns};");
         _builder.AppendLine();

@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-
-#if !NET6_0_OR_GREATER
-using MemoryMarshal = Win32.MemoryMarshal;
-#endif
-
 namespace Win32.Graphics.Direct3D.Dxc;
 
 /// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcValidator2"]/*' />

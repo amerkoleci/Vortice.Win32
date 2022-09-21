@@ -1867,19 +1867,7 @@ public static class Program
                                     writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
                                     using (writer.PushBlock("get"))
                                     {
-                                        writer.WriteLineUndindented("#if NET7_0_OR_GREATER");
                                         writer.WriteLine($"return ref {parentMemberAccess.Name}.{fieldName};");
-                                        writer.WriteLineUndindented("#else");
-                                        if (fieldTypeName.EndsWith("*"))
-                                        {
-                                            writer.WriteLine($"return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref this, 1)).{parentMemberAccess.Name}.{fieldName};");
-                                        }
-                                        else
-                                        {
-                                            writer.WriteLine($"return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref {parentMemberAccess.Name}.{fieldName}, 1));");
-                                        }
-
-                                        writer.WriteLineUndindented("#endif");
                                     }
                                 }
                             }

@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <LangVersion>11.0</LangVersion>
+    <LangVersion>preview</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -9,6 +9,7 @@
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>CS1591;CS1701</NoWarn>
+    <UseSharedCompilation>true</UseSharedCompilation>
   </PropertyGroup>
 
   <PropertyGroup>

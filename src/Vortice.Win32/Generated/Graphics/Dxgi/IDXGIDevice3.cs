@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-
-#if !NET6_0_OR_GREATER
-using MemoryMarshal = Win32.MemoryMarshal;
-#endif
-
 namespace Win32.Graphics.Dxgi;
 
 /// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDevice3"]/*' />

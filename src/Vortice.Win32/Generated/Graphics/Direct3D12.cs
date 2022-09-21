@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-
-#if !NET6_0_OR_GREATER
-using MemoryMarshal = Win32.MemoryMarshal;
-#endif
-
 namespace Win32.Graphics.Direct3D12;
 
 public static partial class Apis
@@ -8034,11 +8029,7 @@ public partial struct ClearValue
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.DepthStencil;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.DepthStencil, 1));
-#endif
 		}
 	}
 
@@ -8243,11 +8234,7 @@ public partial struct ResourceBarrier
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Transition;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Transition, 1));
-#endif
 		}
 	}
 
@@ -8257,11 +8244,7 @@ public partial struct ResourceBarrier
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Aliasing;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Aliasing, 1));
-#endif
 		}
 	}
 
@@ -8271,11 +8254,7 @@ public partial struct ResourceBarrier
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.UAV;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.UAV, 1));
-#endif
 		}
 	}
 
@@ -8347,11 +8326,7 @@ public partial struct TextureCopyLocation
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.PlacedFootprint;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.PlacedFootprint, 1));
-#endif
 		}
 	}
 
@@ -8361,11 +8336,7 @@ public partial struct TextureCopyLocation
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.SubresourceIndex;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.SubresourceIndex, 1));
-#endif
 		}
 	}
 
@@ -8607,11 +8578,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Buffer;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
-#endif
 		}
 	}
 
@@ -8621,11 +8588,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture1D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
-#endif
 		}
 	}
 
@@ -8635,11 +8598,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture1DArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
-#endif
 		}
 	}
 
@@ -8649,11 +8608,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
-#endif
 		}
 	}
 
@@ -8663,11 +8618,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
-#endif
 		}
 	}
 
@@ -8677,11 +8628,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DMS;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMS, 1));
-#endif
 		}
 	}
 
@@ -8691,11 +8638,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DMSArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMSArray, 1));
-#endif
 		}
 	}
 
@@ -8705,11 +8648,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture3D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
-#endif
 		}
 	}
 
@@ -8719,11 +8658,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.TextureCube;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.TextureCube, 1));
-#endif
 		}
 	}
 
@@ -8733,11 +8668,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.TextureCubeArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.TextureCubeArray, 1));
-#endif
 		}
 	}
 
@@ -8747,11 +8678,7 @@ public partial struct ShaderResourceViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.RaytracingAccelerationStructure;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.RaytracingAccelerationStructure, 1));
-#endif
 		}
 	}
 
@@ -8954,11 +8881,7 @@ public partial struct UnorderedAccessViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Buffer;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
-#endif
 		}
 	}
 
@@ -8968,11 +8891,7 @@ public partial struct UnorderedAccessViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture1D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
-#endif
 		}
 	}
 
@@ -8982,11 +8901,7 @@ public partial struct UnorderedAccessViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture1DArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
-#endif
 		}
 	}
 
@@ -8996,11 +8911,7 @@ public partial struct UnorderedAccessViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
-#endif
 		}
 	}
 
@@ -9010,11 +8921,7 @@ public partial struct UnorderedAccessViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
-#endif
 		}
 	}
 
@@ -9024,11 +8931,7 @@ public partial struct UnorderedAccessViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture3D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
-#endif
 		}
 	}
 
@@ -9175,11 +9078,7 @@ public partial struct RenderTargetViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Buffer;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Buffer, 1));
-#endif
 		}
 	}
 
@@ -9189,11 +9088,7 @@ public partial struct RenderTargetViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture1D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
-#endif
 		}
 	}
 
@@ -9203,11 +9098,7 @@ public partial struct RenderTargetViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture1DArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
-#endif
 		}
 	}
 
@@ -9217,11 +9108,7 @@ public partial struct RenderTargetViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
-#endif
 		}
 	}
 
@@ -9231,11 +9118,7 @@ public partial struct RenderTargetViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
-#endif
 		}
 	}
 
@@ -9245,11 +9128,7 @@ public partial struct RenderTargetViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DMS;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMS, 1));
-#endif
 		}
 	}
 
@@ -9259,11 +9138,7 @@ public partial struct RenderTargetViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DMSArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMSArray, 1));
-#endif
 		}
 	}
 
@@ -9273,11 +9148,7 @@ public partial struct RenderTargetViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture3D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture3D, 1));
-#endif
 		}
 	}
 
@@ -9404,11 +9275,7 @@ public partial struct DepthStencilViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture1D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1D, 1));
-#endif
 		}
 	}
 
@@ -9418,11 +9285,7 @@ public partial struct DepthStencilViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture1DArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture1DArray, 1));
-#endif
 		}
 	}
 
@@ -9432,11 +9295,7 @@ public partial struct DepthStencilViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2D;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2D, 1));
-#endif
 		}
 	}
 
@@ -9446,11 +9305,7 @@ public partial struct DepthStencilViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DArray, 1));
-#endif
 		}
 	}
 
@@ -9460,11 +9315,7 @@ public partial struct DepthStencilViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DMS;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMS, 1));
-#endif
 		}
 	}
 
@@ -9474,11 +9325,7 @@ public partial struct DepthStencilViewDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Texture2DMSArray;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Texture2DMSArray, 1));
-#endif
 		}
 	}
 
@@ -9604,11 +9451,7 @@ public partial struct RootParameter
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.DescriptorTable;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.DescriptorTable, 1));
-#endif
 		}
 	}
 
@@ -9618,11 +9461,7 @@ public partial struct RootParameter
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Constants;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Constants, 1));
-#endif
 		}
 	}
 
@@ -9632,11 +9471,7 @@ public partial struct RootParameter
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Descriptor;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Descriptor, 1));
-#endif
 		}
 	}
 
@@ -9789,11 +9624,7 @@ public partial struct RootParameter1
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.DescriptorTable;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.DescriptorTable, 1));
-#endif
 		}
 	}
 
@@ -9803,11 +9634,7 @@ public partial struct RootParameter1
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Constants;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Constants, 1));
-#endif
 		}
 	}
 
@@ -9817,11 +9644,7 @@ public partial struct RootParameter1
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Descriptor;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Descriptor, 1));
-#endif
 		}
 	}
 
@@ -9879,11 +9702,7 @@ public partial struct VersionedRootSignatureDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Desc_1_0;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Desc_1_0, 1));
-#endif
 		}
 	}
 
@@ -9893,11 +9712,7 @@ public partial struct VersionedRootSignatureDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Desc_1_1;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Desc_1_1, 1));
-#endif
 		}
 	}
 
@@ -10167,11 +9982,7 @@ public partial struct IndirectArgumentDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.VertexBuffer;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.VertexBuffer, 1));
-#endif
 		}
 	}
 
@@ -10181,11 +9992,7 @@ public partial struct IndirectArgumentDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Constant;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Constant, 1));
-#endif
 		}
 	}
 
@@ -10195,11 +10002,7 @@ public partial struct IndirectArgumentDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.ConstantBufferView;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ConstantBufferView, 1));
-#endif
 		}
 	}
 
@@ -10209,11 +10012,7 @@ public partial struct IndirectArgumentDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.ShaderResourceView;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.ShaderResourceView, 1));
-#endif
 		}
 	}
 
@@ -10223,11 +10022,7 @@ public partial struct IndirectArgumentDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.UnorderedAccessView;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.UnorderedAccessView, 1));
-#endif
 		}
 	}
 
@@ -10775,11 +10570,7 @@ public partial struct RaytracingGeometryDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Triangles;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Triangles, 1));
-#endif
 		}
 	}
 
@@ -10789,11 +10580,7 @@ public partial struct RaytracingGeometryDescription
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.AABBs;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.AABBs, 1));
-#endif
 		}
 	}
 
@@ -10836,11 +10623,7 @@ public partial struct BuildRaytracingAccelerationStructureInputs
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.InstanceDescs;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.InstanceDescs, 1));
-#endif
 		}
 	}
 
@@ -10850,11 +10633,7 @@ public partial struct BuildRaytracingAccelerationStructureInputs
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.pGeometryDescs;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref this, 1)).Anonymous.pGeometryDescs;
-#endif
 		}
 	}
 
@@ -10864,11 +10643,7 @@ public partial struct BuildRaytracingAccelerationStructureInputs
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.ppGeometryDescs;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref this, 1)).Anonymous.ppGeometryDescs;
-#endif
 		}
 	}
 
@@ -11178,11 +10953,7 @@ public partial struct VersionedDeviceRemovedExtendedData
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Dred_1_0;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Dred_1_0, 1));
-#endif
 		}
 	}
 
@@ -11192,11 +10963,7 @@ public partial struct VersionedDeviceRemovedExtendedData
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Dred_1_1;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Dred_1_1, 1));
-#endif
 		}
 	}
 
@@ -11206,11 +10973,7 @@ public partial struct VersionedDeviceRemovedExtendedData
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Dred_1_2;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Dred_1_2, 1));
-#endif
 		}
 	}
 
@@ -11220,11 +10983,7 @@ public partial struct VersionedDeviceRemovedExtendedData
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Dred_1_3;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Dred_1_3, 1));
-#endif
 		}
 	}
 
@@ -11313,11 +11072,7 @@ public partial struct RenderPassBeginningAccess
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Clear;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Clear, 1));
-#endif
 		}
 	}
 
@@ -11393,11 +11148,7 @@ public partial struct RenderPassEndingAccess
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
-#if NET7_0_OR_GREATER
 			return ref Anonymous.Resolve;
-#else
-			return ref MemoryMarshal.GetReference(MemoryMarshal.CreateSpan(ref Anonymous.Resolve, 1));
-#endif
 		}
 	}
 

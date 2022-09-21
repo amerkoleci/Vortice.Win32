@@ -3,9 +3,11 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
     <Description>Windows API low level bindings.</Description>
-    <VersionPrefix>1.6.0</VersionPrefix>
+    <VersionPrefix>1.6.1</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnablePreviewFeatures>True</EnablePreviewFeatures>
+    <NoWarn>0419;$(NoWarn)</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

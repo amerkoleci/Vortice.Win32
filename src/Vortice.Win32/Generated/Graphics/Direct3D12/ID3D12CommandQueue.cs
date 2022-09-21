@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-
-#if !NET6_0_OR_GREATER
-using MemoryMarshal = Win32.MemoryMarshal;
-#endif
-
 namespace Win32.Graphics.Direct3D12;
 
 /// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue"]/*' />

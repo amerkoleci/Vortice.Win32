@@ -7,11 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-
-#if !NET6_0_OR_GREATER
-using MemoryMarshal = Win32.MemoryMarshal;
-#endif
-
 namespace Win32.Graphics.Direct2D;
 
 /// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement"]/*' />

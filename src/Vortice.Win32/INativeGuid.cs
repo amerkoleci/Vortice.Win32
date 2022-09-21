@@ -3,9 +3,9 @@
 
 namespace Win32;
 
-public unsafe interface INativeGuid
+public interface INativeGuid
 {
 #if NET6_0_OR_GREATER
-    protected internal static Guid* NativeGuid { get; }
+    protected unsafe internal static Guid* NativeGuid { get; }
 #endif
 }
