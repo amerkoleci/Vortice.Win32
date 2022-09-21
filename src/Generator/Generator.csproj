@@ -19,6 +19,4 @@
     </Content>
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties win32json_4api_4graphics_1direct3d12_1json__JsonSchema="https://docs.strmprivacy.io/jsonschema/BatchJob.json" /></VisualStudio></ProjectExtensions>
-
 </Project>
