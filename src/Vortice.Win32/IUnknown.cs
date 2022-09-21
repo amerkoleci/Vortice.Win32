@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 namespace Win32;
 
 [Guid("00000000-0000-0000-C000-000000000046")]
-public unsafe partial struct IUnknown
+public unsafe partial struct IUnknown : INativeGuid
 {
     public static ref readonly Guid IID_IUnknown
     {
@@ -32,7 +32,11 @@ public unsafe partial struct IUnknown
         }
     }
 
+#if NET6_0_OR_GREATER
+    internal static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IUnknown));
+#else
     public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IUnknown));
+#endif
 
     public void** lpVtbl;
 
