@@ -1,9 +1,9 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Graphics.Direct3D11.Apis;
+using static Win32.Graphics.Direct3D12.Apis;
 
-namespace Win32.Graphics.Direct3D11;
+namespace Win32.Graphics.Direct3D12;
 
 public unsafe partial struct BlendDescription
 {
@@ -30,46 +30,25 @@ public unsafe partial struct BlendDescription
     /// <summary>
     /// Initializes a new instance of the <see cref="BlendDescription"/> struct.
     /// </summary>
-    /// <param name="sourceBlend">The source blend.</param>
-    /// <param name="destinationBlend">The destination blend.</param>
-    public BlendDescription(Blend sourceBlend, Blend destinationBlend)
-        : this(sourceBlend, destinationBlend, sourceBlend, destinationBlend)
-    {
-    }
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="BlendDescription"/> struct.
-    /// </summary>
-    /// <param name="sourceBlend">The source blend.</param>
-    /// <param name="destinationBlend">The destination blend.</param>
-    /// <param name="srcBlendAlpha">The source alpha blend.</param>
-    /// <param name="destBlendAlpha">The destination alpha blend.</param>
-    public BlendDescription(Blend sourceBlend, Blend destinationBlend, Blend srcBlendAlpha, Blend destBlendAlpha)
+    /// <param name="srcBlend">The source blend.</param>
+    /// <param name="destBlend">The destination blend.</param>
+    public BlendDescription(Blend srcBlend, Blend destBlend)
         : this()
     {
         AlphaToCoverageEnable = false;
         IndependentBlendEnable = false;
 
-        for (int i = 0; i < D3D11_SIMULTANEOUS_RENDER_TARGET_COUNT; i++)
+        for (int i = 0; i < D3D12_SIMULTANEOUS_RENDER_TARGET_COUNT; i++)
         {
-            RenderTarget[i].SrcBlend = sourceBlend;
-            RenderTarget[i].DestBlend = destinationBlend;
+            RenderTarget[i].BlendEnable = srcBlend != Blend.One || destBlend != Blend.Zero;
+            RenderTarget[i].LogicOp = LogicOperation.Noop;
+            RenderTarget[i].SrcBlend = srcBlend;
+            RenderTarget[i].DestBlend = destBlend;
             RenderTarget[i].BlendOp = BlendOperation.Add;
-            RenderTarget[i].SrcBlendAlpha = srcBlendAlpha;
-            RenderTarget[i].DestBlendAlpha = destBlendAlpha;
+            RenderTarget[i].SrcBlendAlpha = srcBlend;
+            RenderTarget[i].DestBlendAlpha = destBlend;
             RenderTarget[i].BlendOpAlpha = BlendOperation.Add;
             RenderTarget[i].RenderTargetWriteMask = ColorWriteEnable.All;
-            RenderTarget[i].BlendEnable = IsBlendEnabled(ref RenderTarget[i]);
         }
-    }
-
-    private static bool IsBlendEnabled(ref RenderTargetBlendDescription renderTarget)
-    {
-        return renderTarget.BlendOp != BlendOperation.Add
-                || renderTarget.SrcBlend != Blend.One
-                || renderTarget.DestBlendAlpha != Blend.Zero
-                || renderTarget.BlendOp != BlendOperation.Add
-                || renderTarget.SrcBlend != Blend.One
-                || renderTarget.DestBlend != Blend.Zero;
     }
 }

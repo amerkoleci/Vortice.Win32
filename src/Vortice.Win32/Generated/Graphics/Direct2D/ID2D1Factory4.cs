@@ -230,17 +230,17 @@ public unsafe partial struct ID2D1Factory4
 	/// <inheritdoc cref="ID2D1Factory1.RegisterEffectFromStream" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<void*, void> effectFactory)
+	public HResult RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Factory4*, Guid*, Com.IStream*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<void*, void>, int>)(lpVtbl[22]))((ID2D1Factory4*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Factory4*, Guid*, Com.IStream*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[22]))((ID2D1Factory4*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory1.RegisterEffectFromString" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult RegisterEffectFromString(Guid* classId, ushort* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<void*, void> effectFactory)
+	public HResult RegisterEffectFromString(Guid* classId, ushort* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Factory4*, Guid*, ushort*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<void*, void>, int>)(lpVtbl[23]))((ID2D1Factory4*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Factory4*, Guid*, ushort*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[23]))((ID2D1Factory4*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory1.UnregisterEffect" />

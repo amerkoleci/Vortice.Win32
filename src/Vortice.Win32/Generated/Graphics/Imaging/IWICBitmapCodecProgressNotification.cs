@@ -78,9 +78,9 @@ public unsafe partial struct IWICBitmapCodecProgressNotification
 	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapCodecProgressNotification::RegisterProgressNotification"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, void> pfnProgressNotification, void* pvData, uint dwProgressFlags)
+	public HResult RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult> pfnProgressNotification, void* pvData, uint dwProgressFlags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapCodecProgressNotification*, delegate* unmanaged[Stdcall]<void*, void>, void*, uint, int>)(lpVtbl[3]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), pfnProgressNotification, pvData, dwProgressFlags);
+		return ((delegate* unmanaged[Stdcall]<IWICBitmapCodecProgressNotification*, delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult>, void*, uint, int>)(lpVtbl[3]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), pfnProgressNotification, pvData, dwProgressFlags);
 	}
 }
 

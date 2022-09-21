@@ -25,12 +25,12 @@ public unsafe partial struct DepthStencilDescription
     /// <summary>
     /// A built-in description with settings for using a reverse depth stencil buffer.
     /// </summary>
-    public static readonly DepthStencilDescription DepthReverseZ = new(true, DepthWriteMask.All, ComparisonFunc.GreaterEqual);
+    public static readonly DepthStencilDescription DepthReverseZ = new(true, DepthWriteMask.All, ComparisonFunction.GreaterEqual);
 
     /// <summary>
     /// A built-in description with settings for enabling a read-only reverse depth stencil buffer.
     /// </summary>
-    public static readonly DepthStencilDescription DepthReadReverseZ = new(true, DepthWriteMask.Zero, ComparisonFunc.GreaterEqual);
+    public static readonly DepthStencilDescription DepthReadReverseZ = new(true, DepthWriteMask.Zero, ComparisonFunction.GreaterEqual);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="DepthStencilDescription"/> struct.
@@ -38,7 +38,10 @@ public unsafe partial struct DepthStencilDescription
     /// <param name="depthEnable">Enable depth testing.</param>
     /// <param name="depthWriteMask">Identify a portion of the depth-stencil buffer that can be modified by depth data.</param>
     /// <param name="depthFunc">A function that compares depth data against existing depth data. </param>
-    public DepthStencilDescription(bool depthEnable, DepthWriteMask depthWriteMask, ComparisonFunc depthFunc = ComparisonFunc.LessEqual)
+    public DepthStencilDescription(
+        bool depthEnable,
+        DepthWriteMask depthWriteMask,
+        ComparisonFunction depthFunc = ComparisonFunction.LessEqual)
     {
         DepthEnable = depthEnable;
         DepthWriteMask = depthWriteMask;
@@ -46,8 +49,8 @@ public unsafe partial struct DepthStencilDescription
         StencilEnable = false;
         StencilReadMask = (byte)D3D11_DEFAULT_STENCIL_READ_MASK;
         StencilWriteMask = (byte)D3D11_DEFAULT_STENCIL_WRITE_MASK;
-        FrontFace = DepthStencilOpDescription.Default;
-        BackFace = DepthStencilOpDescription.Default;
+        FrontFace = DepthStencilOperationDescription.Default;
+        BackFace = DepthStencilOperationDescription.Default;
     }
 
     /// <summary>
@@ -70,18 +73,18 @@ public unsafe partial struct DepthStencilDescription
     public DepthStencilDescription(
         bool depthEnable,
         bool depthWriteEnable,
-        ComparisonFunc depthFunc,
+        ComparisonFunction depthFunc,
         bool stencilEnable,
         byte stencilReadMask,
         byte stencilWriteMask,
-        StencilOp frontStencilFailOp,
-        StencilOp frontStencilDepthFailOp,
-        StencilOp frontStencilPassOp,
-        ComparisonFunc frontStencilFunc,
-        StencilOp backStencilFailOp,
-        StencilOp backStencilDepthFailOp,
-        StencilOp backStencilPassOp,
-        ComparisonFunc backStencilFunc)
+        StencilOperation frontStencilFailOp,
+        StencilOperation frontStencilDepthFailOp,
+        StencilOperation frontStencilPassOp,
+        ComparisonFunction frontStencilFunc,
+        StencilOperation backStencilFailOp,
+        StencilOperation backStencilDepthFailOp,
+        StencilOperation backStencilPassOp,
+        ComparisonFunction backStencilFunc)
     {
         DepthEnable = depthEnable;
         DepthWriteMask = depthWriteEnable ? DepthWriteMask.All : DepthWriteMask.Zero;

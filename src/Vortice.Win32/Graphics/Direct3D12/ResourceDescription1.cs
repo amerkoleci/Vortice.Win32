@@ -6,23 +6,12 @@ using static Win32.Graphics.Direct3D12.Apis;
 
 namespace Win32.Graphics.Direct3D12;
 
-public unsafe partial struct ResourceDescription : IEquatable<ResourceDescription>
+public unsafe partial struct ResourceDescription1 : IEquatable<ResourceDescription1>
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="ResourceDescription"/> struct.
+    /// Initializes a new instance of the <see cref="ResourceDescription1"/> struct.
     /// </summary>
-    /// <param name="dimension"></param>
-    /// <param name="alignment"></param>
-    /// <param name="width"></param>
-    /// <param name="height"></param>
-    /// <param name="depthOrArraySize"></param>
-    /// <param name="mipLevels"></param>
-    /// <param name="format"></param>
-    /// <param name="sampleCount"></param>
-    /// <param name="sampleQuality"></param>
-    /// <param name="layout"></param>
-    /// <param name="flags"></param>
-    public ResourceDescription(
+    public ResourceDescription1(
         ResourceDimension dimension,
         ulong alignment,
         ulong width,
@@ -33,7 +22,10 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         uint sampleCount,
         uint sampleQuality,
         TextureLayout layout,
-        ResourceFlags flags)
+        ResourceFlags flags,
+        uint samplerFeedbackMipRegionWidth = 0,
+        uint samplerFeedbackMipRegionHeight = 0,
+        uint samplerFeedbackMipRegionDepth = 0)
     {
         Dimension = dimension;
         Alignment = alignment;
@@ -45,23 +37,36 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         SampleDesc = new(sampleCount, sampleQuality);
         Layout = layout;
         Flags = flags;
+        SamplerFeedbackMipRegion = new(
+            samplerFeedbackMipRegionWidth,
+            samplerFeedbackMipRegionHeight,
+            samplerFeedbackMipRegionDepth);
     }
 
-    public static ResourceDescription Buffer(in ResourceAllocationInfo resourceAllocInfo, ResourceFlags flags = ResourceFlags.None)
+    public static ResourceDescription1 Buffer(in ResourceAllocationInfo resourceAllocInfo, ResourceFlags flags = ResourceFlags.None)
     {
-        return new ResourceDescription(
+        return new ResourceDescription1(
             ResourceDimension.Buffer,
             resourceAllocInfo.Alignment,
             resourceAllocInfo.SizeInBytes,
-            1, 1, 1, Format.Unknown, 1, 0, TextureLayout.RowMajor, flags);
+            1, 1, 1, Format.Unknown, 1, 0, TextureLayout.RowMajor,
+            flags,
+            0, 0, 0);
     }
 
-    public static ResourceDescription Buffer(
+    public static ResourceDescription1 Buffer(
         ulong sizeInBytes,
         ResourceFlags flags = ResourceFlags.None,
         ulong alignment = 0)
     {
-        return new ResourceDescription(ResourceDimension.Buffer, alignment, sizeInBytes, 1, 1, 1, Format.Unknown, 1, 0, TextureLayout.RowMajor, flags);
+        return new ResourceDescription1(
+            ResourceDimension.Buffer,
+            alignment,
+            sizeInBytes,
+            1, 1, 1,
+            Format.Unknown, 1, 0, TextureLayout.RowMajor,
+            flags,
+            0, 0, 0);
     }
 
     public static ResourceDescription Tex1D(Format format,
@@ -75,7 +80,7 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         return new ResourceDescription(ResourceDimension.Texture1D, alignment, width, 1, arraySize, mipLevels, format, 1, 0, layout, flags);
     }
 
-    public static ResourceDescription Tex2D(Format format,
+    public static ResourceDescription1 Tex2D(Format format,
         ulong width,
         uint height,
         ushort arraySize = 1,
@@ -84,9 +89,12 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         uint sampleQuality = 0,
         ResourceFlags flags = ResourceFlags.None,
         TextureLayout layout = TextureLayout.Unknown,
-        ulong alignment = 0)
+        ulong alignment = 0,
+        uint samplerFeedbackMipRegionWidth = 0,
+        uint samplerFeedbackMipRegionHeight = 0,
+        uint samplerFeedbackMipRegionDepth = 0)
     {
-        return new ResourceDescription(ResourceDimension.Texture2D,
+        return new ResourceDescription1(ResourceDimension.Texture2D,
             alignment,
             width,
             height,
@@ -96,10 +104,13 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
             sampleCount,
             sampleQuality,
             layout,
-            flags);
+            flags,
+            samplerFeedbackMipRegionWidth,
+            samplerFeedbackMipRegionHeight,
+            samplerFeedbackMipRegionDepth);
     }
 
-    public static ResourceDescription Texture3D(Format format,
+    public static ResourceDescription1 Texture3D(Format format,
         ulong width,
         uint height,
         ushort depth,
@@ -108,7 +119,7 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         TextureLayout layout = TextureLayout.Unknown,
         ulong alignment = 0)
     {
-        return new ResourceDescription(
+        return new ResourceDescription1(
             ResourceDimension.Texture3D,
             alignment,
             width,
@@ -119,7 +130,8 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
             1,
             0,
             layout,
-            flags);
+            flags,
+            0, 0, 0);
     }
 
     public ushort Depth => ((Dimension == ResourceDimension.Texture3D) ? DepthOrArraySize : (ushort)(1));
@@ -141,7 +153,7 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
         return D3D12CalcSubresource(MipSlice, ArraySlice, PlaneSlice, MipLevels, ArraySize);
     }
 
-    public static bool operator ==(in ResourceDescription left, in ResourceDescription right)
+    public static bool operator ==(in ResourceDescription1 left, in ResourceDescription1 right)
     {
         return (left.Dimension == right.Dimension)
             && (left.Alignment == right.Alignment)
@@ -153,17 +165,18 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
             && (left.SampleDesc.Count == right.SampleDesc.Count)
             && (left.SampleDesc.Quality == right.SampleDesc.Quality)
             && (left.Layout == right.Layout)
-            && (left.Flags == right.Flags);
+            && (left.Flags == right.Flags)
+            && (left.SamplerFeedbackMipRegion == right.SamplerFeedbackMipRegion);
     }
 
-    public static bool operator !=(in ResourceDescription left, in ResourceDescription right)
+    public static bool operator !=(in ResourceDescription1 left, in ResourceDescription1 right)
     {
         return !(left == right);
     }
 
-    public override bool Equals(object? obj) => (obj is ResourceDescription other) && Equals(other);
+    public override bool Equals(object? obj) => (obj is ResourceDescription1 other) && Equals(other);
 
-    public bool Equals(ResourceDescription other) => this == other;
+    public bool Equals(ResourceDescription1 other) => this == other;
 
     public override int GetHashCode()
     {
@@ -179,6 +192,7 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
             hashCode.Add(SampleDesc);
             hashCode.Add(Layout);
             hashCode.Add(Flags);
+            hashCode.Add(SamplerFeedbackMipRegion);
         }
         return hashCode.ToHashCode();
     }

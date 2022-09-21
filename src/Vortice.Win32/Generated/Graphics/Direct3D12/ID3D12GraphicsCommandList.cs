@@ -494,9 +494,9 @@ public unsafe partial struct ID3D12GraphicsCommandList
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::SetPredication"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(55)]
-	public void SetPredication(ID3D12Resource* pBuffer, ulong AlignedBufferOffset, PredicationOp Operation)
+	public void SetPredication(ID3D12Resource* pBuffer, ulong AlignedBufferOffset, PredicationOperation Operation)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, ID3D12Resource*, ulong, PredicationOp, void>)(lpVtbl[55]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pBuffer, AlignedBufferOffset, Operation);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, ID3D12Resource*, ulong, PredicationOperation, void>)(lpVtbl[55]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pBuffer, AlignedBufferOffset, Operation);
 	}
 
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList::SetMarker"]/*' />

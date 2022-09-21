@@ -2289,7 +2289,7 @@ public enum ClearFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC"]/*' />
 /// <unmanaged>D3D11_COMPARISON_FUNC</unmanaged>
-public enum ComparisonFunc : int
+public enum ComparisonFunction : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_NEVER"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_NEVER</unmanaged>
@@ -2331,7 +2331,7 @@ public enum DepthWriteMask : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STENCIL_OP"]/*' />
 /// <unmanaged>D3D11_STENCIL_OP</unmanaged>
-public enum StencilOp : int
+public enum StencilOperation : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STENCIL_OP::D3D11_STENCIL_OP_KEEP"]/*' />
 	/// <unmanaged>D3D11_STENCIL_OP_KEEP</unmanaged>
@@ -2418,7 +2418,7 @@ public enum Blend : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP"]/*' />
 /// <unmanaged>D3D11_BLEND_OP</unmanaged>
-public enum BlendOp : int
+public enum BlendOperation : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_ADD"]/*' />
 	/// <unmanaged>D3D11_BLEND_OP_ADD</unmanaged>
@@ -7898,7 +7898,7 @@ public enum CopyFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LOGIC_OP"]/*' />
 /// <unmanaged>D3D11_LOGIC_OP</unmanaged>
-public enum LogicOp : int
+public enum LogicOperation : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LOGIC_OP::D3D11_LOGIC_OP_CLEAR"]/*' />
 	/// <unmanaged>D3D11_LOGIC_OP_CLEAR</unmanaged>
@@ -8544,19 +8544,19 @@ public partial struct Box
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCILOP_DESC"]/*' />
 /// <unmanaged>D3D11_DEPTH_STENCILOP_DESC</unmanaged>
-public partial struct DepthStencilOpDescription
+public partial struct DepthStencilOperationDescription
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCILOP_DESC::StencilFailOp"]/*' />
-	public StencilOp StencilFailOp;
+	public StencilOperation StencilFailOp;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCILOP_DESC::StencilDepthFailOp"]/*' />
-	public StencilOp StencilDepthFailOp;
+	public StencilOperation StencilDepthFailOp;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCILOP_DESC::StencilPassOp"]/*' />
-	public StencilOp StencilPassOp;
+	public StencilOperation StencilPassOp;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCILOP_DESC::StencilFunc"]/*' />
-	public ComparisonFunc StencilFunc;
+	public ComparisonFunction StencilFunc;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC"]/*' />
@@ -8570,7 +8570,7 @@ public partial struct DepthStencilDescription
 	public DepthWriteMask DepthWriteMask;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::DepthFunc"]/*' />
-	public ComparisonFunc DepthFunc;
+	public ComparisonFunction DepthFunc;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::StencilEnable"]/*' />
 	public Bool32 StencilEnable;
@@ -8582,10 +8582,10 @@ public partial struct DepthStencilDescription
 	public byte StencilWriteMask;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::FrontFace"]/*' />
-	public DepthStencilOpDescription FrontFace;
+	public DepthStencilOperationDescription FrontFace;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_STENCIL_DESC::BackFace"]/*' />
-	public DepthStencilOpDescription BackFace;
+	public DepthStencilOperationDescription BackFace;
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC"]/*' />
@@ -8602,7 +8602,7 @@ public partial struct RenderTargetBlendDescription
 	public Blend DestBlend;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC::BlendOp"]/*' />
-	public BlendOp BlendOp;
+	public BlendOperation BlendOp;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC::SrcBlendAlpha"]/*' />
 	public Blend SrcBlendAlpha;
@@ -8611,7 +8611,7 @@ public partial struct RenderTargetBlendDescription
 	public Blend DestBlendAlpha;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC::BlendOpAlpha"]/*' />
-	public BlendOp BlendOpAlpha;
+	public BlendOperation BlendOpAlpha;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask"]/*' />
 	public ColorWriteEnable RenderTargetWriteMask;
@@ -10026,7 +10026,7 @@ public partial struct SamplerDescription
 	public uint MaxAnisotropy;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SAMPLER_DESC::ComparisonFunc"]/*' />
-	public ComparisonFunc ComparisonFunc;
+	public ComparisonFunction ComparisonFunc;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SAMPLER_DESC::BorderColor"]/*' />
 	public unsafe fixed float BorderColor[4];
@@ -11481,7 +11481,7 @@ public partial struct RenderTargetBlendDescription1
 	public Blend DestBlend;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC1::BlendOp"]/*' />
-	public BlendOp BlendOp;
+	public BlendOperation BlendOp;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC1::SrcBlendAlpha"]/*' />
 	public Blend SrcBlendAlpha;
@@ -11490,10 +11490,10 @@ public partial struct RenderTargetBlendDescription1
 	public Blend DestBlendAlpha;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC1::BlendOpAlpha"]/*' />
-	public BlendOp BlendOpAlpha;
+	public BlendOperation BlendOpAlpha;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC1::LogicOp"]/*' />
-	public LogicOp LogicOp;
+	public LogicOperation LogicOp;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RENDER_TARGET_BLEND_DESC1::RenderTargetWriteMask"]/*' />
 	public ColorWriteEnable RenderTargetWriteMask;

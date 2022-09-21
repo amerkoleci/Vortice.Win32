@@ -5,6 +5,7 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using Win32.Graphics.Direct3D;
 using Win32.Graphics.Dxgi.Common;
 using static Win32.Apis;
 
@@ -380,5 +381,134 @@ public static unsafe partial class Apis
         _ = pDevice->Release();
 
         return UpdateSubresources(pCmdList, pDestinationResource, pIntermediate, FirstSubresource, NumSubresources, RequiredSize, Layouts, NumRows, RowSizesInBytes, pResourceData, pSrcData);
+    }
+
+    public static ID3D12CommandList** CommandListCast([NativeTypeName("ID3D12GraphicsCommandList * const *")] ID3D12GraphicsCommandList** pp)
+    {
+        return (ID3D12CommandList**)pp;
+    }
+
+    public static HResult D3D12SerializeVersionedRootSignature(
+        VersionedRootSignatureDescription* pRootSignatureDesc,
+        RootSignatureVersion MaxVersion,
+        ID3DBlob** ppBlob,
+        ID3DBlob** ppErrorBlob)
+    {
+        if (ppErrorBlob != null)
+        {
+            *ppErrorBlob = null;
+        }
+
+        switch (MaxVersion)
+        {
+            case RootSignatureVersion.V1_0:
+                switch (pRootSignatureDesc->Version)
+                {
+                    case RootSignatureVersion.V1_0:
+                        return D3D12SerializeRootSignature(&pRootSignatureDesc->Anonymous.Desc_1_0, RootSignatureVersion.V1_0, ppBlob, ppErrorBlob);
+
+                    case RootSignatureVersion.V1_1:
+                        {
+                            HResult hr = HResult.Ok;
+                            ref readonly RootSignatureDescription1 desc_1_1 = ref pRootSignatureDesc->Anonymous.Desc_1_1;
+
+                            nuint ParametersSize = (uint)sizeof(RootParameter) * desc_1_1.NumParameters;
+                            void* pParameters = ((ulong)ParametersSize > 0) ? HeapAlloc(GetProcessHeap(), 0, ParametersSize) : null;
+
+                            if ((ulong)ParametersSize > 0 && pParameters == null)
+                            {
+                                hr = HResult.OutOfMemory;
+                            }
+
+                            var pParameters_1_0 = (RootParameter*)pParameters;
+
+                            if (hr.Success)
+                            {
+                                for (uint n = 0; n < desc_1_1.NumParameters; n++)
+                                {
+                                    Debug.Assert((long)ParametersSize == (sizeof(RootParameter) * desc_1_1.NumParameters));
+
+                                    pParameters_1_0[n].ParameterType = desc_1_1.pParameters[n].ParameterType;
+                                    pParameters_1_0[n].ShaderVisibility = desc_1_1.pParameters[n].ShaderVisibility;
+
+                                    switch (desc_1_1.pParameters[n].ParameterType)
+                                    {
+                                        case RootParameterType.T32BitConstants:
+                                            pParameters_1_0[n].Anonymous.Constants.Num32BitValues = desc_1_1.pParameters[n].Anonymous.Constants.Num32BitValues;
+                                            pParameters_1_0[n].Anonymous.Constants.RegisterSpace = desc_1_1.pParameters[n].Anonymous.Constants.RegisterSpace;
+                                            pParameters_1_0[n].Anonymous.Constants.ShaderRegister = desc_1_1.pParameters[n].Anonymous.Constants.ShaderRegister;
+                                            break;
+
+                                        case RootParameterType.Cbv:
+                                        case RootParameterType.Srv:
+                                        case RootParameterType.Uav:
+                                            pParameters_1_0[n].Anonymous.Descriptor.RegisterSpace = desc_1_1.pParameters[n].Anonymous.Descriptor.RegisterSpace;
+                                            pParameters_1_0[n].Anonymous.Descriptor.ShaderRegister = desc_1_1.pParameters[n].Anonymous.Descriptor.ShaderRegister;
+                                            break;
+
+                                        case RootParameterType.DescriptorTable:
+                                            ref readonly RootDescriptorTable1 table_1_1 = ref desc_1_1.pParameters[n].Anonymous.DescriptorTable;
+
+                                            nuint DescriptorRangesSize = (uint)sizeof(DescriptorRange) * table_1_1.NumDescriptorRanges;
+                                            void* pDescriptorRanges = ((ulong)DescriptorRangesSize > 0 && hr.Success) ? HeapAlloc(GetProcessHeap(), 0, DescriptorRangesSize) : null;
+
+                                            if ((ulong)DescriptorRangesSize > 0 && pDescriptorRanges == null)
+                                            {
+                                                hr = HResult.OutOfMemory;
+                                            }
+
+                                            var pDescriptorRanges_1_0 = (DescriptorRange*)pDescriptorRanges;
+
+                                            if (hr.Success)
+                                            {
+                                                for (uint x = 0; x < table_1_1.NumDescriptorRanges; x++)
+                                                {
+                                                    Debug.Assert((long)DescriptorRangesSize == (sizeof(DescriptorRange) * table_1_1.NumDescriptorRanges));
+
+                                                    pDescriptorRanges_1_0[x].BaseShaderRegister = table_1_1.pDescriptorRanges[x].BaseShaderRegister;
+                                                    pDescriptorRanges_1_0[x].NumDescriptors = table_1_1.pDescriptorRanges[x].NumDescriptors;
+                                                    pDescriptorRanges_1_0[x].OffsetInDescriptorsFromTableStart = table_1_1.pDescriptorRanges[x].OffsetInDescriptorsFromTableStart;
+                                                    pDescriptorRanges_1_0[x].RangeType = table_1_1.pDescriptorRanges[x].RangeType;
+                                                    pDescriptorRanges_1_0[x].RegisterSpace = table_1_1.pDescriptorRanges[x].RegisterSpace;
+                                                }
+                                            }
+
+                                            ref RootDescriptorTable table_1_0 = ref pParameters_1_0[n].Anonymous.DescriptorTable;
+                                            table_1_0.NumDescriptorRanges = table_1_1.NumDescriptorRanges;
+                                            table_1_0.pDescriptorRanges = pDescriptorRanges_1_0;
+                                            break;
+                                    }
+                                }
+                            }
+
+                            if (hr.Success)
+                            {
+                                RootSignatureDescription desc_1_0 = new RootSignatureDescription(desc_1_1.NumParameters, pParameters_1_0, desc_1_1.NumStaticSamplers, desc_1_1.pStaticSamplers, desc_1_1.Flags);
+                                hr = D3D12SerializeRootSignature(&desc_1_0, RootSignatureVersion.V1_0 , ppBlob, ppErrorBlob);
+                            }
+
+                            if (pParameters != null)
+                            {
+                                for (uint n = 0; n < desc_1_1.NumParameters; n++)
+                                {
+                                    if (desc_1_1.pParameters[n].ParameterType == RootParameterType.DescriptorTable)
+                                    {
+                                        _ = HeapFree(GetProcessHeap(), 0, (void*)pParameters_1_0[n].Anonymous.DescriptorTable.pDescriptorRanges);
+                                    }
+                                }
+
+                                _ = HeapFree(GetProcessHeap(), 0, pParameters);
+                            }
+
+                            return hr;
+                        }
+                }
+                break;
+
+            case RootSignatureVersion.V1_1:
+                return D3D12SerializeVersionedRootSignature(pRootSignatureDesc, ppBlob, ppErrorBlob);
+        }
+
+        return HResult.InvalidArg;
     }
 }

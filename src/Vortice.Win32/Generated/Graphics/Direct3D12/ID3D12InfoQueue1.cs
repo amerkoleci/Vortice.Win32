@@ -358,9 +358,9 @@ public unsafe partial struct ID3D12InfoQueue1
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1::RegisterMessageCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public HResult RegisterMessageCallback(delegate* unmanaged[Stdcall]<void*, void> CallbackFunc, MessageCallbackFlags CallbackFilterFlags, void* pContext, uint* pCallbackCookie)
+	public HResult RegisterMessageCallback(delegate* unmanaged[Stdcall]<MessageCategory, MessageSeverity, MessageId, sbyte*, void*, void> CallbackFunc, MessageCallbackFlags CallbackFilterFlags, void* pContext, uint* pCallbackCookie)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, delegate* unmanaged[Stdcall]<void*, void>, MessageCallbackFlags, void*, uint*, int>)(lpVtbl[38]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), CallbackFunc, CallbackFilterFlags, pContext, pCallbackCookie);
+		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, delegate* unmanaged[Stdcall]<MessageCategory, MessageSeverity, MessageId, sbyte*, void*, void>, MessageCallbackFlags, void*, uint*, int>)(lpVtbl[38]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), CallbackFunc, CallbackFilterFlags, pContext, pCallbackCookie);
 	}
 
 	/// <include file='../../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1::UnregisterMessageCallback"]/*' />

@@ -25,7 +25,7 @@ public unsafe partial struct BlendDescription1
     /// <summary>
     /// A built-in description with settings for blending with non-premultipled alpha, that is blending source and destination data using alpha while assuming the color data contains no alpha information.
     /// </summary>
-    public static readonly BlendDescription NonPremultiplied = new(Blend.SrcAlpha, Blend.InvSrcAlpha);
+    public static readonly BlendDescription1 NonPremultiplied = new(Blend.SrcAlpha, Blend.InvSrcAlpha);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="BlendDescription1"/> struct.
@@ -54,11 +54,11 @@ public unsafe partial struct BlendDescription1
         {
             RenderTarget[i].SrcBlend = sourceBlend;
             RenderTarget[i].DestBlend = destinationBlend;
-            RenderTarget[i].BlendOp = BlendOp.Add;
+            RenderTarget[i].BlendOp = BlendOperation.Add;
             RenderTarget[i].SrcBlendAlpha = srcBlendAlpha;
             RenderTarget[i].DestBlendAlpha = destBlendAlpha;
-            RenderTarget[i].BlendOpAlpha = BlendOp.Add;
-            RenderTarget[i].LogicOp = LogicOp.Noop;
+            RenderTarget[i].BlendOpAlpha = BlendOperation.Add;
+            RenderTarget[i].LogicOp = LogicOperation.Noop;
             RenderTarget[i].RenderTargetWriteMask = ColorWriteEnable.All;
             RenderTarget[i].BlendEnable = IsBlendEnabled(ref RenderTarget[i]);
         }
@@ -66,10 +66,10 @@ public unsafe partial struct BlendDescription1
 
     private static bool IsBlendEnabled(ref RenderTargetBlendDescription1 renderTarget)
     {
-        return renderTarget.BlendOp != BlendOp.Add
+        return renderTarget.BlendOp != BlendOperation.Add
                 || renderTarget.SrcBlend != Blend.One
                 || renderTarget.DestBlendAlpha != Blend.Zero
-                || renderTarget.BlendOp != BlendOp.Add
+                || renderTarget.BlendOp != BlendOperation.Add
                 || renderTarget.SrcBlend != Blend.One
                 || renderTarget.DestBlend != Blend.Zero;
     }

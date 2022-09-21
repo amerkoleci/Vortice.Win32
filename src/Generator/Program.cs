@@ -4,6 +4,8 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Reflection.Metadata;
+using System.Reflection;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -124,7 +126,6 @@ public static class Program
 
     private static readonly Dictionary<string, string> s_partRenames = new()
     {
-        
         { "CBUFFER", "CBuffer" },
         { "TBUFFER", "TBuffer" },
         { "NOPERSPECTIVE", "NoPerspective" },
@@ -844,9 +845,21 @@ public static class Program
         { "D3D11_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
         { "D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG", "CreateDeviceContextStateFlags" },
         { "D3D11_QUERY", "QueryType" },
+        { "D3D11_COMPARISON_FUNC", "ComparisonFunction" },
+        { "D3D11_STENCIL_OP", "StencilOperation" },
+        { "D3D11_BLEND_OP", "BlendOperation" },
+        { "D3D11_LOGIC_OP", "LogicOperation" },
+        { "D3D11_DEPTH_STENCILOP_DESC", "DepthStencilOperationDescription" },
 
         // D3D12
         { "D3D12_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
+        { "D3D12_COMPARISON_FUNC", "ComparisonFunction" },
+        { "D3D12_STENCIL_OP", "StencilOperation" },
+        { "D3D12_BLEND_OP", "BlendOperation" },
+        { "D3D12_LOGIC_OP", "LogicOperation" },
+        { "D3D12_PREDICATION_OP", "PredicationOperation" },
+        { "D3D12_AUTO_BREADCRUMB_OP", "AutoBreadcrumbOperation" },
+        { "D3D12_DEPTH_STENCILOP_DESC", "DepthStencilOperationDescription" },
 
         // D2D1
         { "D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE", "AffineTransform2DInterpolationMode" },
@@ -1369,7 +1382,7 @@ public static class Program
                     continue;
                 }
 
-                WriteFunction(writer, api, function, string.Empty, false);
+                WriteFunction(writer, api, function, string.Empty, false, false, true);
                 writer.WriteLine();
             }
         }
@@ -1377,15 +1390,18 @@ public static class Program
         writer.WriteLine($"#endregion Functions");
     }
 
-    private static void WriteFunction(
+    private static string WriteFunction(
         CodeWriter writer,
         ApiData api,
         ApiType function,
         string functionName,
-        bool asCallback)
+        bool asCallback,
+        bool asParameter = false,
+        bool skipUnsafe = false)
     {
         string returnType = GetTypeName(function.ReturnType);
         string functionSuffix = string.Empty;
+        StringBuilder functionSignature = new();
 
         if (string.IsNullOrEmpty(function.DllImport) == false)
         {
@@ -1399,52 +1415,16 @@ public static class Program
         int parameterIndex = 0;
         foreach (ApiParameter parameter in function.Params)
         {
-            bool asPointer = false;
-            string parameterType = string.Empty;
-            if (parameter.Type.Kind == "ApiRef")
-            {
-                if (parameter.Type.TargetKind == "FunctionPointer")
-                {
-                    ApiType functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
-                    parameterType = "delegate* unmanaged[Stdcall]<void*, void>";
-                }
-                else
-                {
-                    string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
-                    if (!IsPrimitive(parameter.Type) && !IsEnum(fullTypeName))
-                    {
-                        asPointer = true;
-                    }
-                }
-            }
-
-            if (string.IsNullOrEmpty(parameterType))
-            {
-                parameterType = GetTypeName(parameter.Type, asPointer);
-            }
-
-            parameterType = NormalizeTypeName(writer.Api, parameterType);
-            string parameterName = parameter.Name;
-
-            bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
-            if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
-            {
-                if (!IsPrimitive(parameter.Type))
-                {
-                    parameterType += "*";
-                }
-            }
+            GetParameterSignature(api, writer, parameter,
+                string.Empty,
+                out string parameterType,
+                out string parameterName);
 
             argumentBuilder.Append(parameterType);
 
             if (asCallback == false)
             {
                 argumentBuilder.Append(' ').Append(parameterName);
-            }
-
-            if (isOptional == true)
-            {
-                //argumentBuilder.Append(" = default");
             }
 
             argumentsTypesBuilder.Append(parameterType);
@@ -1466,17 +1446,43 @@ public static class Program
             functionName = function.Name;
         }
 
-        writer.Write("public ");
+        if (!asParameter)
+        {
+            writer.Write("public ");
+            functionSignature.Append("public ");
+        }
+
+        string signature = string.Empty;
+        if (!skipUnsafe)
+        {
+            if (!asParameter || asCallback)
+            {
+                signature = "unsafe ";
+            }
+        }
+
         if (asCallback)
         {
-            writer.Write($"unsafe delegate* unmanaged[Stdcall]<{argumentsString}, {returnType}> {functionName}");
+            signature += $"delegate* unmanaged[Stdcall]<{argumentsString}, {returnType}>";
+
+            if (!asParameter)
+            {
+                signature += $" {functionName}";
+            }
         }
         else
         {
-            writer.Write($"{functionSuffix}{returnType} {functionName}({argumentsString})");
+            signature += $"{functionSuffix}{returnType} {functionName}({argumentsString})";
         }
 
-        writer.WriteLine(";");
+        functionSignature.Append(signature);
+        if (!asParameter)
+        {
+            writer.Write(signature);
+            writer.WriteLine(";");
+        }
+
+        return functionSignature.ToString();
     }
 
     private static void GenerateEnum(CodeWriter writer, ApiType enumType, bool autoGenerated)
@@ -1784,7 +1790,7 @@ public static class Program
                     if (field.Type.TargetKind == "FunctionPointer")
                     {
                         ApiType functionType = api.Types.First(item => item.Name == field.Type.Name && item.Kind == "FunctionPointer");
-                        WriteFunction(writer, api, functionType, field.Name, true);
+                        WriteFunction(writer, api, functionType, field.Name, true, false, false);
                     }
                     else
                     {
@@ -2003,14 +2009,6 @@ public static class Program
                     StringBuilder argumentsNameBuilder = new();
                     int parameterIndex = 0;
 
-                    bool allOptional = false;
-
-                    if (method.Name == "EndDraw")
-                    {
-                        allOptional =
-                            method.Params.All(item => item.Attrs.Any(attr => attr is string str && str == "Optional"));
-                    }
-
                     bool useReturnAsParameter = false;
                     if (returnType != "void" &&
                         method.ReturnType.TargetKind != "Com" &&
@@ -2044,88 +2042,17 @@ public static class Program
 
                     foreach (ApiParameter parameter in method.Params)
                     {
-                        bool asPointer = false;
-                        string parameterType = string.Empty;
+                        GetParameterSignature(api, writer, parameter,
+                            $"{comType.Name}::{method.Name}",
+                            out string parameterType,
+                            out string parameterName);
 
-                        if (parameter.Type.Kind == "ApiRef")
-                        {
-                            if (parameter.Type.TargetKind == "FunctionPointer")
-                            {
-                                ApiType functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
-                                parameterType = "delegate* unmanaged[Stdcall]<void*, void>";
-                            }
-                            else
-                            {
-                                string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
-                                if (!IsPrimitive(parameter.Type) && !IsEnum(fullTypeName))
-                                {
-                                    asPointer = true;
-                                }
-                            }
-                        }
+                        argumentBuilder
+                            .Append(parameterType)
+                            .Append(' ')
+                            .Append(parameterName);
 
-                        if (string.IsNullOrEmpty(parameterType))
-                        {
-                            string parameterNameLookup = $"{comType.Name}::{method.Name}::{parameter.Name}";
-                            if (s_mapFunctionParameters.TryGetValue(parameterNameLookup, out string? remapType))
-                            {
-                                parameterType = GetTypeName($"{writer.Api}.{remapType}");
-                                if (parameter.Attrs.Any(item => item is string str && str == "Out"))
-                                {
-                                    parameterType += "*";
-                                }
-                            }
-                            else
-                            {
-                                parameterType = GetTypeName(parameter.Type, asPointer);
-                            }
-                        }
-
-                        parameterType = NormalizeTypeName(writer.Api, parameterType);
-                        string parameterName = parameter.Name;
-
-                        bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
-                        if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
-                        {
-                            if (!IsPrimitive(parameter.Type))
-                            {
-                                parameterType += "*";
-                            }
-                        }
-                        else if (parameterType.EndsWith("**") == false &&
-                            parameter.Attrs.Any(item => item is string str && (str == "RetVal" || str == "Out")))
-                        {
-                            if (parameter.Type.Child == null)
-                            {
-                                //if (!IsPrimitive(parameter.Type))
-                                //{
-                                //    parameterType += "*";
-                                //}
-                            }
-                            else if (parameter.Type.Child.Kind != "ApiRef")
-                            {
-                                if (!IsPrimitive(parameter.Type))
-                                {
-                                    parameterType += "*";
-                                }
-                            }
-                            else
-                            {
-                                string apiName = GetApiName(parameter.Type.Child);
-                                string fullTypeName = $"{apiName}.{parameter.Type.Child.Name}";
-
-                                if (!IsPrimitive(parameter.Type) && !IsStruct(fullTypeName) && !IsEnum(fullTypeName))
-                                {
-                                    parameterType += "*";
-                                }
-                            }
-                        }
-
-                        parameterName = CleanupName(parameterName);
-                        parameterType = NormalizeTypeName(writer.Api, parameterType);
-
-                        argumentBuilder.Append(parameterType).Append(' ').Append(parameterName);
-                        if (allOptional == true && isOptional == true)
+                        if (method.Name == "EndDraw")
                         {
                             argumentBuilder.Append(" = null");
                         }
@@ -2213,6 +2140,102 @@ public static class Program
 
         writer.WriteLine();
         s_visitedComTypes.Add($"{writer.Api}.{comType.Name}", methodsToGenerate);
+    }
+
+    private static void GetParameterSignature(
+        ApiData api,
+        CodeWriter writer,
+        ApiParameter parameter,
+        string memberLookup,
+        out string parameterType,
+        out string parameterName)
+    {
+        bool asPointer = false;
+        parameterType = string.Empty;
+
+        if (parameter.Type.Kind == "ApiRef")
+        {
+            if (parameter.Type.TargetKind == "FunctionPointer")
+            {
+                ApiType functionType = api.Types.First(item => item.Name == parameter.Type.Name && item.Kind == "FunctionPointer");
+                parameterType = WriteFunction(writer, api, functionType, parameter.Name, true, true, true);
+            }
+            else
+            {
+                string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
+                if (!IsPrimitive(parameter.Type) && !IsEnum(fullTypeName))
+                {
+                    asPointer = true;
+                }
+            }
+        }
+
+        if (string.IsNullOrEmpty(parameterType))
+        {
+            if (string.IsNullOrEmpty(memberLookup) == false)
+            {
+                string parameterNameLookup = $"{memberLookup}::{parameter.Name}";
+                if (s_mapFunctionParameters.TryGetValue(parameterNameLookup, out string? remapType))
+                {
+                    parameterType = GetTypeName($"{writer.Api}.{remapType}");
+                    if (parameter.Attrs.Any(item => item is string str && str == "Out"))
+                    {
+                        parameterType += "*";
+                    }
+                }
+                else
+                {
+                    parameterType = GetTypeName(parameter.Type, asPointer);
+                }
+            }
+            else
+            {
+                parameterType = GetTypeName(parameter.Type, asPointer);
+            }
+        }
+
+        parameterType = NormalizeTypeName(writer.Api, parameterType);
+
+        bool isOptional = parameter.Attrs.Any(item => item is string str && str == "Optional");
+        if (parameter.Attrs.Any(item => item is string str && str == "ComOutPtr"))
+        {
+            if (!IsPrimitive(parameter.Type))
+            {
+                parameterType += "*";
+            }
+        }
+        else if (parameterType.EndsWith("**") == false &&
+            parameter.Attrs.Any(item => item is string str && (str == "RetVal" || str == "Out")))
+        {
+            if (parameter.Type.Child == null)
+            {
+                //if (!IsPrimitive(parameter.Type))
+                //{
+                //    parameterType += "*";
+                //}
+            }
+            else if (parameter.Type.Child.Kind != "ApiRef")
+            {
+                if (!IsPrimitive(parameter.Type))
+                {
+                    parameterType += "*";
+                }
+            }
+            else
+            {
+                string apiName = GetApiName(parameter.Type.Child);
+                string fullTypeName = $"{apiName}.{parameter.Type.Child.Name}";
+
+                if (!IsPrimitive(parameter.Type) && !IsStruct(fullTypeName) && !IsEnum(fullTypeName))
+                {
+                    parameterType += "*";
+                }
+            }
+        }
+
+        parameterType = NormalizeTypeName(writer.Api, parameterType);
+        parameterName = parameter.Name;
+        parameterName = CleanupName(parameterName);
     }
 
     private static bool ShouldSkipConstant(ApiDataConstant constant)

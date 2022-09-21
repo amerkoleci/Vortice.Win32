@@ -5500,10 +5500,10 @@ public static unsafe partial class Apis
 	public static extern Bool32 D2D1InvertMatrix(Matrix3x2* matrix);
 
 	[DllImport("d2d1", ExactSpelling = true)]
-	public static extern HResult D2D1CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, CreationProperties* creationProperties, ID2D1Device* d2dDevice);
+	public static extern HResult D2D1CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, CreationProperties* creationProperties, ID2D1Device** d2dDevice);
 
 	[DllImport("d2d1", ExactSpelling = true)]
-	public static extern HResult D2D1CreateDeviceContext(Graphics.Dxgi.IDXGISurface* dxgiSurface, CreationProperties* creationProperties, ID2D1DeviceContext* d2dDeviceContext);
+	public static extern HResult D2D1CreateDeviceContext(Graphics.Dxgi.IDXGISurface* dxgiSurface, CreationProperties* creationProperties, ID2D1DeviceContext** d2dDeviceContext);
 
 	[DllImport("d2d1", ExactSpelling = true)]
 	public static extern Color4 D2D1ConvertColorSpace(ColorSpace sourceColorSpace, ColorSpace destinationColorSpace, Color4* color);

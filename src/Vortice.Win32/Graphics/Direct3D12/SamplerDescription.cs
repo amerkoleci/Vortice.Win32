@@ -1,9 +1,9 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Graphics.Direct3D12.Apis;
+using static Win32.Graphics.Direct3D11.Apis;
 
-namespace Win32.Graphics.Direct3D12;
+namespace Win32.Graphics.Direct3D11;
 
 public unsafe partial struct SamplerDescription
 {
@@ -13,8 +13,8 @@ public unsafe partial struct SamplerDescription
     public static readonly SamplerDescription LinearWrap = new(Filter.MinMagMipLinear, TextureAddressMode.Wrap);
     public static readonly SamplerDescription LinearClamp = new(Filter.MinMagMipLinear, TextureAddressMode.Clamp);
 
-    public static readonly SamplerDescription AnisotropicWrap = new(Filter.Anisotropic, TextureAddressMode.Wrap, 0.0f, D3D12_MAX_MAXANISOTROPY);
-    public static readonly SamplerDescription AnisotropicClamp = new(Filter.Anisotropic, TextureAddressMode.Clamp, 0.0f, D3D12_MAX_MAXANISOTROPY);
+    public static readonly SamplerDescription AnisotropicWrap = new(Filter.Anisotropic, TextureAddressMode.Wrap, 0.0f, D3D11_MAX_MAXANISOTROPY);
+    public static readonly SamplerDescription AnisotropicClamp = new(Filter.Anisotropic, TextureAddressMode.Clamp, 0.0f, D3D11_MAX_MAXANISOTROPY);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SamplerDescription"/> struct.
