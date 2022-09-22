@@ -22,6 +22,7 @@ public static class Program
         "Graphics.Direct3D11.json",
         "Graphics.Direct3D12.json",
         "Graphics.Direct3D.Dxc.json",
+        "Graphics.Direct3D.Fxc.json",
         "Graphics.Direct2D.Common.json",
         "Graphics.Imaging.json",
         "Graphics.DirectWrite.json",
@@ -701,6 +702,7 @@ public static class Program
         "DWRITE",
         "HDR",
         "DC",
+        "XNA",
     };
 
 
@@ -768,6 +770,10 @@ public static class Program
         { "WICComponentSigning", "WICComponent" },
         { "WICPixelFormatNumericRepresentation", "WICPixelFormatNumericRepresentation" },
         { "WICPlanarOptions", "WICPlanarOptions" },
+
+        // FXC
+        { "D3DCOMPILER_STRIP_FLAGS", "D3DCOMPILER_STRIP" },
+        { "D3D_BLOB_PART", "D3D_BLOB" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -813,6 +819,14 @@ public static class Program
         {"DXC_HASHFLAG", true },
         {"DxcValidatorFlags", true },
         {"DxcVersionInfoFlags", true },
+
+        // FXC
+        {"D3DCOMPILE_EFFECT", true },
+        {"D3DCOMPILE", true },
+        {"D3DCOMPILE_FLAGS2", true },
+        {"D3DCOMPILE_SECDATA", true },
+        {"D3D_COMPRESS_SHADER", true },
+        {"D3D_DISASM", true },
     };
 
     private static readonly HashSet<string> s_ignoredStartParts = new(StringComparer.OrdinalIgnoreCase)
@@ -825,6 +839,7 @@ public static class Program
         "D2D",
         "D2D1",
         "DWRITE",
+        "D3DCOMPILER",
     };
 
     private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
@@ -873,6 +888,14 @@ public static class Program
         { "DXC_HASHFLAG", "DxcHashFlags" },
         { "DxcValidatorFlags", "DxcValidatorFlags" },
         { "DxcVersionInfoFlags", "DxcVersionInfoFlags" },
+
+        // FXC
+        {"D3DCOMPILE", "CompileFlags" },
+        {"D3DCOMPILE_FLAGS2", "CompileFlags2" },
+        {"D3DCOMPILE_EFFECT", "CompileEffectFlags" },
+        {"D3DCOMPILE_SECDATA", "CompileSecondaryFlags" },
+        {"D3D_COMPRESS_SHADER", "CompressShaderFlags" },
+        {"D3D_DISASM", "DisasmFlags" },
     };
 
     private static readonly Dictionary<string, string> s_structFieldTypeRemap = new()
@@ -953,6 +976,13 @@ public static class Program
         // WIC
         { "IWICImagingFactory::CreateDecoderFromFilename::dwDesiredAccess", "NativeFileAccess" },
         { "IWICBitmap::Lock::flags", "WICBitmapLockFlags" },
+
+        // FXC
+        { "D3DCompile::Flags1", "D3DCOMPILE" },
+        { "D3DCompile2::Flags1", "D3DCOMPILE" },
+        { "D3DCompileFromFile::Flags1", "D3DCOMPILE" },
+        { "D3DCompressShaders::uFlags", "D3D_COMPRESS_SHADER" },
+        { "D3DDisassemble::Flags", "D3D_DISASM" },
     };
 
     private static readonly HashSet<string> s_visitedEnums = new();
@@ -1108,6 +1138,7 @@ public static class Program
     private static void GenerateTypes(CodeWriter writer, ApiData api)
     {
         bool regionWritten = false;
+        bool needNewLine = false;
         foreach (ApiType enumType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "enum"))
         {
             if (enumType.Name.StartsWith("D3DX11"))
@@ -1121,7 +1152,13 @@ public static class Program
                 regionWritten = true;
             }
 
+            if (needNewLine)
+            {
+                writer.WriteLine();
+            }
+
             GenerateEnum(writer, enumType, false);
+            needNewLine = true;
 
             s_visitedEnums.Add($"{writer.Api}.{enumType.Name}");
         }
@@ -1134,6 +1171,7 @@ public static class Program
 
         // Generated enums -> from constants
         regionWritten = false;
+        needNewLine = false;
         Dictionary<string, ApiType> createdEnums = new();
 
         foreach (ApiDataConstant constant in api.Constants)
@@ -1185,7 +1223,13 @@ public static class Program
                 regionWritten = true;
             }
 
+            if (needNewLine)
+            {
+                writer.WriteLine();
+            }
+
             GenerateEnum(writer, enumType, true);
+            needNewLine = true;
         }
 
         if (regionWritten)
@@ -1196,6 +1240,7 @@ public static class Program
 
         // Unions
         regionWritten = false;
+        needNewLine = true;
 
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
         {
@@ -1216,7 +1261,13 @@ public static class Program
                 regionWritten = true;
             }
 
+            if (needNewLine)
+            {
+                writer.WriteLine();
+            }
+
             GenerateStruct(api, writer, structType);
+            needNewLine = true;
 
             s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
         }
@@ -1374,16 +1425,23 @@ public static class Program
         writer.WriteLine($"#region Functions");
         using (writer.PushBlock($"public static unsafe partial class Apis"))
         {
+            bool needNewLine = false;
             foreach (ApiType function in api.Functions)
             {
                 if (function.Name.StartsWith("D3DX11") ||
-                    function.Name == "D3DDisassemble11Trace")
+                    function.Name == "D3DDisassemble11Trace" ||
+                    function.Name == "D3DDisassemble10Effect")
                 {
                     continue;
                 }
 
+                if (needNewLine)
+                {
+                    writer.WriteLine();
+                }
+
                 WriteFunction(writer, api, function, string.Empty, false, false, true);
-                writer.WriteLine();
+                needNewLine = true;
             }
         }
 
@@ -1416,7 +1474,7 @@ public static class Program
         foreach (ApiParameter parameter in function.Params)
         {
             GetParameterSignature(api, writer, parameter,
-                string.Empty,
+                function.Name,
                 out string parameterType,
                 out string parameterName);
 
@@ -1546,11 +1604,6 @@ public static class Program
             baseTypeName = "byte";
         }
 
-        if (enumType.Name == "WICColorContextType")
-        {
-
-        }
-
         using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
         {
             if (isFlags &&
@@ -1585,6 +1638,15 @@ public static class Program
                     continue;
                 }
 
+                if (autoGenerated &&
+                    enumType.Name == "D3DCOMPILE" &&
+                    (enumItem.Name.StartsWith("D3DCOMPILE_EFFECT_") ||
+                    enumItem.Name.StartsWith("D3DCOMPILE_FLAGS2_") ||
+                    enumItem.Name.StartsWith("D3DCOMPILE_SECDATA_")))
+                {
+                    continue;
+                }
+
                 string enumValueName = GetEnumItemName(enumType, enumItem, enumPrefix, skipPrettify);
 
                 if (!autoGenerated)
@@ -1605,8 +1667,6 @@ public static class Program
                 writer.WriteLine($"{enumValueName} = {enumItem.Value},");
             }
         }
-
-        writer.WriteLine();
     }
 
     private static string GetEnumItemName(ApiType enumType, ApiEnumValue enumItem, string enumPrefix, bool skipPrettify)
@@ -1883,8 +1943,6 @@ public static class Program
                 }
             }
         }
-
-        writer.WriteLine();
     }
 
     private static void GenerateComType(

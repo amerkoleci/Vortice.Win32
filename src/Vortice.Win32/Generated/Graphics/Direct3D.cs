@@ -1193,7 +1193,6 @@ public enum ParameterFlags : int
 	/// <unmanaged>D3D_PF_OUT</unmanaged>
 	Out = 2,
 }
-
 #endregion Enums
 
 #region Structs
@@ -1207,7 +1206,6 @@ public partial struct ShaderMacro
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Definition"]/*' />
 	public unsafe sbyte* Definition;
 }
-
 #endregion Structs
 
 #region COM Types

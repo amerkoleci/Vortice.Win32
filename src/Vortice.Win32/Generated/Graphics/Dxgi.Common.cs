@@ -540,7 +540,6 @@ public enum AlphaMode : uint
 	/// <unmanaged>DXGI_ALPHA_MODE_IGNORE</unmanaged>
 	Ignore = 3,
 }
-
 #endregion Enums
 
 #region Generated Enums
@@ -558,7 +557,6 @@ public enum CpuAccess : uint
 	/// <unmanaged>DXGI_CPU_ACCESS_FIELD</unmanaged>
 	Field = 15,
 }
-
 #endregion Generated Enums
 
 #region Structs
@@ -572,7 +570,6 @@ public partial struct Rational
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL::Denominator"]/*' />
 	public uint Denominator;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC"]/*' />
 /// <unmanaged>DXGI_SAMPLE_DESC</unmanaged>
 public partial struct SampleDescription
@@ -583,7 +580,6 @@ public partial struct SampleDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC::Quality"]/*' />
 	public uint Quality;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGB"]/*' />
 /// <unmanaged>DXGI_RGB</unmanaged>
 public partial struct Rgb
@@ -597,7 +593,6 @@ public partial struct Rgb
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGB::Blue"]/*' />
 	public float Blue;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL"]/*' />
 /// <unmanaged>DXGI_GAMMA_CONTROL</unmanaged>
 public partial struct GammaControl
@@ -1657,7 +1652,6 @@ public partial struct GammaControl
 		}
 	}
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES"]/*' />
 /// <unmanaged>DXGI_GAMMA_CONTROL_CAPABILITIES</unmanaged>
 public partial struct GammaControlCapabilities
@@ -1677,7 +1671,6 @@ public partial struct GammaControlCapabilities
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ControlPointPositions"]/*' />
 	public unsafe fixed float ControlPointPositions[1025];
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC"]/*' />
 /// <unmanaged>DXGI_MODE_DESC</unmanaged>
 public partial struct ModeDescription
@@ -1700,7 +1693,6 @@ public partial struct ModeDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC::Scaling"]/*' />
 	public ModeScaling Scaling;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE"]/*' />
 /// <unmanaged>DXGI_JPEG_DC_HUFFMAN_TABLE</unmanaged>
 public partial struct JpegDCHuffmanTable
@@ -1711,7 +1703,6 @@ public partial struct JpegDCHuffmanTable
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_DC_HUFFMAN_TABLE::CodeValues"]/*' />
 	public unsafe fixed byte CodeValues[12];
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE"]/*' />
 /// <unmanaged>DXGI_JPEG_AC_HUFFMAN_TABLE</unmanaged>
 public partial struct JpegAcHuffmanTable
@@ -1722,7 +1713,6 @@ public partial struct JpegAcHuffmanTable
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeValues"]/*' />
 	public unsafe fixed byte CodeValues[162];
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE"]/*' />
 /// <unmanaged>DXGI_JPEG_QUANTIZATION_TABLE</unmanaged>
 public partial struct JpegQuantizationTable
@@ -1730,6 +1720,5 @@ public partial struct JpegQuantizationTable
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE::Elements"]/*' />
 	public unsafe fixed byte Elements[64];
 }
-
 #endregion Structs
 

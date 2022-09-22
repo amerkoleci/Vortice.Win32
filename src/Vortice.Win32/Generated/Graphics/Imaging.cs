@@ -7449,7 +7449,6 @@ public enum WICPersistOptions : int
 	/// <unmanaged>WICPersistOptionMask</unmanaged>
 	WICPersistOptionMask = 65535,
 }
-
 #endregion Enums
 
 #region Structs
@@ -7472,7 +7471,6 @@ public partial struct WICBitmapPattern
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::EndOfStream"]/*' />
 	public Bool32 EndOfStream;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters"]/*' />
 /// <unmanaged>WICImageParameters</unmanaged>
 public partial struct WICImageParameters
@@ -7498,7 +7496,6 @@ public partial struct WICImageParameters
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelHeight"]/*' />
 	public uint PixelHeight;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlaneDescription"]/*' />
 /// <unmanaged>WICBitmapPlaneDescription</unmanaged>
 public partial struct WICBitmapPlaneDescription
@@ -7512,7 +7509,6 @@ public partial struct WICBitmapPlaneDescription
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlaneDescription::Height"]/*' />
 	public uint Height;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane"]/*' />
 /// <unmanaged>WICBitmapPlane</unmanaged>
 public partial struct WICBitmapPlane
@@ -7529,7 +7525,6 @@ public partial struct WICBitmapPlane
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::cbBufferSize"]/*' />
 	public uint cbBufferSize;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader"]/*' />
 /// <unmanaged>WICJpegFrameHeader</unmanaged>
 public partial struct WICJpegFrameHeader
@@ -7558,7 +7553,6 @@ public partial struct WICJpegFrameHeader
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::QuantizationTableIndices"]/*' />
 	public uint QuantizationTableIndices;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader"]/*' />
 /// <unmanaged>WICJpegScanHeader</unmanaged>
 public partial struct WICJpegScanHeader
@@ -7587,7 +7581,6 @@ public partial struct WICJpegScanHeader
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::SuccessiveApproximationLow"]/*' />
 	public byte SuccessiveApproximationLow;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo"]/*' />
 /// <unmanaged>WICRawCapabilitiesInfo</unmanaged>
 public partial struct WICRawCapabilitiesInfo
@@ -7646,7 +7639,6 @@ public partial struct WICRawCapabilitiesInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RenderModeSupport"]/*' />
 	public WICRawCapabilities RenderModeSupport;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint"]/*' />
 /// <unmanaged>WICRawToneCurvePoint</unmanaged>
 public partial struct WICRawToneCurvePoint
@@ -7657,7 +7649,6 @@ public partial struct WICRawToneCurvePoint
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint::Output"]/*' />
 	public double Output;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve"]/*' />
 /// <unmanaged>WICRawToneCurve</unmanaged>
 public partial struct WICRawToneCurve
@@ -7690,7 +7681,6 @@ public partial struct WICRawToneCurve
 		}
 	}
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters"]/*' />
 /// <unmanaged>WICDdsParameters</unmanaged>
 public partial struct WICDdsParameters
@@ -7719,7 +7709,6 @@ public partial struct WICDdsParameters
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::AlphaMode"]/*' />
 	public WICDdsAlphaMode AlphaMode;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo"]/*' />
 /// <unmanaged>WICDdsFormatInfo</unmanaged>
 public partial struct WICDdsFormatInfo
@@ -7736,7 +7725,6 @@ public partial struct WICDdsFormatInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BlockHeight"]/*' />
 	public uint BlockHeight;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern"]/*' />
 /// <unmanaged>WICMetadataPattern</unmanaged>
 public partial struct WICMetadataPattern
@@ -7756,7 +7744,6 @@ public partial struct WICMetadataPattern
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern::DataOffset"]/*' />
 	public ULargeInteger DataOffset;
 }
-
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader"]/*' />
 /// <unmanaged>WICMetadataHeader</unmanaged>
 public partial struct WICMetadataHeader
@@ -7773,7 +7760,6 @@ public partial struct WICMetadataHeader
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader::DataOffset"]/*' />
 	public ULargeInteger DataOffset;
 }
-
 #endregion Structs
 
 #region COM Types
@@ -7808,6 +7794,5 @@ public static unsafe partial class Apis
 
 	[DllImport("WindowsCodecs", ExactSpelling = true)]
 	public static extern HResult WICGetMetadataContentSize(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, ULargeInteger* pcbSize);
-
 }
 #endregion Functions

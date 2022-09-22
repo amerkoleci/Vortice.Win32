@@ -6916,7 +6916,6 @@ public enum ShaderVersionType : int
 	/// <unmanaged>D3D12_SHVER_RESERVED0</unmanaged>
 	Reserved0 = 65520,
 }
-
 #endregion Enums
 
 #region Structs
@@ -6936,7 +6935,6 @@ public partial struct CommandQueueDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC"]/*' />
 /// <unmanaged>D3D12_INPUT_ELEMENT_DESC</unmanaged>
 public partial struct InputElementDescription
@@ -6962,7 +6960,6 @@ public partial struct InputElementDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::InstanceDataStepRate"]/*' />
 	public uint InstanceDataStepRate;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY"]/*' />
 /// <unmanaged>D3D12_SO_DECLARATION_ENTRY</unmanaged>
 public partial struct SODeclarationEntry
@@ -6985,7 +6982,6 @@ public partial struct SODeclarationEntry
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::OutputSlot"]/*' />
 	public byte OutputSlot;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BOX"]/*' />
 /// <unmanaged>D3D12_BOX</unmanaged>
 public partial struct Box
@@ -7008,7 +7004,6 @@ public partial struct Box
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BOX::back"]/*' />
 	public uint back;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCILOP_DESC</unmanaged>
 public partial struct DepthStencilOperationDescription
@@ -7025,7 +7020,6 @@ public partial struct DepthStencilOperationDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilFunc"]/*' />
 	public ComparisonFunction StencilFunc;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCIL_DESC</unmanaged>
 public partial struct DepthStencilDescription
@@ -7054,7 +7048,6 @@ public partial struct DepthStencilDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::BackFace"]/*' />
 	public DepthStencilOperationDescription BackFace;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC1"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCIL_DESC1</unmanaged>
 public partial struct DepthStencilDescription1
@@ -7086,7 +7079,6 @@ public partial struct DepthStencilDescription1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC1::DepthBoundsTestEnable"]/*' />
 	public Bool32 DepthBoundsTestEnable;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_BLEND_DESC"]/*' />
 /// <unmanaged>D3D12_RENDER_TARGET_BLEND_DESC</unmanaged>
 public partial struct RenderTargetBlendDescription
@@ -7121,7 +7113,6 @@ public partial struct RenderTargetBlendDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask"]/*' />
 	public ColorWriteEnable RenderTargetWriteMask;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC"]/*' />
 /// <unmanaged>D3D12_BLEND_DESC</unmanaged>
 public partial struct BlendDescription
@@ -7164,7 +7155,6 @@ public partial struct BlendDescription
 		}
 	}
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RASTERIZER_DESC"]/*' />
 /// <unmanaged>D3D12_RASTERIZER_DESC</unmanaged>
 public partial struct RasterizerDescription
@@ -7202,7 +7192,6 @@ public partial struct RasterizerDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RASTERIZER_DESC::ConservativeRaster"]/*' />
 	public ConservativeRasterizationMode ConservativeRaster;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BYTECODE"]/*' />
 /// <unmanaged>D3D12_SHADER_BYTECODE</unmanaged>
 public partial struct ShaderBytecode
@@ -7213,7 +7202,6 @@ public partial struct ShaderBytecode
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BYTECODE::BytecodeLength"]/*' />
 	public nuint BytecodeLength;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC"]/*' />
 /// <unmanaged>D3D12_STREAM_OUTPUT_DESC</unmanaged>
 public partial struct StreamOutputDescription
@@ -7233,7 +7221,6 @@ public partial struct StreamOutputDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::RasterizedStream"]/*' />
 	public uint RasterizedStream;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_LAYOUT_DESC"]/*' />
 /// <unmanaged>D3D12_INPUT_LAYOUT_DESC</unmanaged>
 public partial struct InputLayoutDescription
@@ -7244,7 +7231,6 @@ public partial struct InputLayoutDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_LAYOUT_DESC::NumElements"]/*' />
 	public uint NumElements;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CACHED_PIPELINE_STATE"]/*' />
 /// <unmanaged>D3D12_CACHED_PIPELINE_STATE</unmanaged>
 public partial struct CachedPipelineState
@@ -7255,7 +7241,6 @@ public partial struct CachedPipelineState
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CACHED_PIPELINE_STATE::CachedBlobSizeInBytes"]/*' />
 	public nuint CachedBlobSizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GRAPHICS_PIPELINE_STATE_DESC"]/*' />
 /// <unmanaged>D3D12_GRAPHICS_PIPELINE_STATE_DESC</unmanaged>
 public partial struct GraphicsPipelineStateDescription
@@ -7352,7 +7337,6 @@ public partial struct GraphicsPipelineStateDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GRAPHICS_PIPELINE_STATE_DESC::Flags"]/*' />
 	public PipelineStateFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC"]/*' />
 /// <unmanaged>D3D12_COMPUTE_PIPELINE_STATE_DESC</unmanaged>
 public partial struct ComputePipelineStateDescription
@@ -7372,7 +7356,6 @@ public partial struct ComputePipelineStateDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::Flags"]/*' />
 	public PipelineStateFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RT_FORMAT_ARRAY"]/*' />
 /// <unmanaged>D3D12_RT_FORMAT_ARRAY</unmanaged>
 public partial struct RtFormatArray
@@ -7412,7 +7395,6 @@ public partial struct RtFormatArray
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RT_FORMAT_ARRAY::NumRenderTargets"]/*' />
 	public uint NumRenderTargets;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_STREAM_DESC"]/*' />
 /// <unmanaged>D3D12_PIPELINE_STATE_STREAM_DESC</unmanaged>
 public partial struct PipelineStateStreamDescription
@@ -7423,7 +7405,6 @@ public partial struct PipelineStateStreamDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_STREAM_DESC::pPipelineStateSubobjectStream"]/*' />
 	public unsafe void* pPipelineStateSubobjectStream;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS</unmanaged>
 public partial struct FeatureDataD3D12Options
@@ -7473,7 +7454,6 @@ public partial struct FeatureDataD3D12Options
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ResourceHeapTier"]/*' />
 	public ResourceHeapTier ResourceHeapTier;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS1"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS1</unmanaged>
 public partial struct FeatureDataD3D12Options1
@@ -7496,7 +7476,6 @@ public partial struct FeatureDataD3D12Options1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS1::Int64ShaderOps"]/*' />
 	public Bool32 Int64ShaderOps;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS2"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS2</unmanaged>
 public partial struct FeatureDataD3D12Options2
@@ -7507,7 +7486,6 @@ public partial struct FeatureDataD3D12Options2
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS2::ProgrammableSamplePositionsTier"]/*' />
 	public ProgrammableSamplePositionsTier ProgrammableSamplePositionsTier;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ROOT_SIGNATURE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_ROOT_SIGNATURE</unmanaged>
 public partial struct FeatureDataRootSignature
@@ -7515,7 +7493,6 @@ public partial struct FeatureDataRootSignature
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ROOT_SIGNATURE::HighestVersion"]/*' />
 	public RootSignatureVersion HighestVersion;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_ARCHITECTURE</unmanaged>
 public partial struct FeatureDataArchitecture
@@ -7532,7 +7509,6 @@ public partial struct FeatureDataArchitecture
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::CacheCoherentUMA"]/*' />
 	public Bool32 CacheCoherentUMA;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE1"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_ARCHITECTURE1</unmanaged>
 public partial struct FeatureDataArchitecture1
@@ -7552,7 +7528,6 @@ public partial struct FeatureDataArchitecture1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE1::IsolatedMMU"]/*' />
 	public Bool32 IsolatedMMU;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_FEATURE_LEVELS</unmanaged>
 public partial struct FeatureDataFeatureLevels
@@ -7566,7 +7541,6 @@ public partial struct FeatureDataFeatureLevels
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS::MaxSupportedFeatureLevel"]/*' />
 	public Graphics.Direct3D.FeatureLevel MaxSupportedFeatureLevel;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_MODEL"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_SHADER_MODEL</unmanaged>
 public partial struct FeatureDataShaderModel
@@ -7574,7 +7548,6 @@ public partial struct FeatureDataShaderModel
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_MODEL::HighestShaderModel"]/*' />
 	public ShaderModel HighestShaderModel;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_FORMAT_SUPPORT</unmanaged>
 public partial struct FeatureDataFormatSupport
@@ -7588,7 +7561,6 @@ public partial struct FeatureDataFormatSupport
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT::Support2"]/*' />
 	public FormatSupport2 Support2;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS</unmanaged>
 public partial struct FeatureDataMultisampleQualityLevels
@@ -7605,7 +7577,6 @@ public partial struct FeatureDataMultisampleQualityLevels
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::NumQualityLevels"]/*' />
 	public uint NumQualityLevels;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_INFO"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_FORMAT_INFO</unmanaged>
 public partial struct FeatureDataFormatInfo
@@ -7616,7 +7587,6 @@ public partial struct FeatureDataFormatInfo
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_INFO::PlaneCount"]/*' />
 	public byte PlaneCount;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT</unmanaged>
 public partial struct FeatureDataGpuVirtualAddressSupport
@@ -7627,7 +7597,6 @@ public partial struct FeatureDataGpuVirtualAddressSupport
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT::MaxGPUVirtualAddressBitsPerProcess"]/*' />
 	public uint MaxGPUVirtualAddressBitsPerProcess;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_CACHE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_SHADER_CACHE</unmanaged>
 public partial struct FeatureDataShaderCache
@@ -7635,7 +7604,6 @@ public partial struct FeatureDataShaderCache
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_CACHE::SupportFlags"]/*' />
 	public ShaderCacheSupportFlags SupportFlags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY</unmanaged>
 public partial struct FeatureDataCommandQueuePriority
@@ -7649,7 +7617,6 @@ public partial struct FeatureDataCommandQueuePriority
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY::PriorityForTypeIsSupported"]/*' />
 	public Bool32 PriorityForTypeIsSupported;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS3"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS3</unmanaged>
 public partial struct FeatureDataD3D12Options3
@@ -7669,7 +7636,6 @@ public partial struct FeatureDataD3D12Options3
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS3::BarycentricsSupported"]/*' />
 	public Bool32 BarycentricsSupported;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_EXISTING_HEAPS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_EXISTING_HEAPS</unmanaged>
 public partial struct FeatureDataExistingHeaps
@@ -7677,7 +7643,6 @@ public partial struct FeatureDataExistingHeaps
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_EXISTING_HEAPS::Supported"]/*' />
 	public Bool32 Supported;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_DISPLAYABLE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_DISPLAYABLE</unmanaged>
 public partial struct FeatureDataDisplayable
@@ -7688,7 +7653,6 @@ public partial struct FeatureDataDisplayable
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_DISPLAYABLE::SharedResourceCompatibilityTier"]/*' />
 	public SharedResourceCompatibilityTier SharedResourceCompatibilityTier;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS4</unmanaged>
 public partial struct FeatureDataD3D12Options4
@@ -7702,7 +7666,6 @@ public partial struct FeatureDataD3D12Options4
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4::Native16BitShaderOpsSupported"]/*' />
 	public Bool32 Native16BitShaderOpsSupported;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SERIALIZATION"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_SERIALIZATION</unmanaged>
 public partial struct FeatureDataSerialization
@@ -7713,7 +7676,6 @@ public partial struct FeatureDataSerialization
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SERIALIZATION::HeapSerializationTier"]/*' />
 	public HeapSerializationTier HeapSerializationTier;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_CROSS_NODE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_CROSS_NODE</unmanaged>
 public partial struct FeatureDataCrossNode
@@ -7724,7 +7686,6 @@ public partial struct FeatureDataCrossNode
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_CROSS_NODE::AtomicShaderInstructions"]/*' />
 	public Bool32 AtomicShaderInstructions;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS5</unmanaged>
 public partial struct FeatureDataD3D12Options5
@@ -7738,7 +7699,6 @@ public partial struct FeatureDataD3D12Options5
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5::RaytracingTier"]/*' />
 	public RaytracingTier RaytracingTier;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS6"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS6</unmanaged>
 public partial struct FeatureDataD3D12Options6
@@ -7758,7 +7718,6 @@ public partial struct FeatureDataD3D12Options6
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS6::BackgroundProcessingSupported"]/*' />
 	public Bool32 BackgroundProcessingSupported;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS7</unmanaged>
 public partial struct FeatureDataD3D12Options7
@@ -7769,7 +7728,6 @@ public partial struct FeatureDataD3D12Options7
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7::SamplerFeedbackTier"]/*' />
 	public SamplerFeedbackTier SamplerFeedbackTier;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_QUERY_META_COMMAND</unmanaged>
 public partial struct FeatureDataQueryMetaCommand
@@ -7792,7 +7750,6 @@ public partial struct FeatureDataQueryMetaCommand
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::QueryOutputDataSizeInBytes"]/*' />
 	public nuint QueryOutputDataSizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS8"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS8</unmanaged>
 public partial struct FeatureDataD3D12Options8
@@ -7800,7 +7757,6 @@ public partial struct FeatureDataD3D12Options8
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS8::UnalignedBlockTexturesSupported"]/*' />
 	public Bool32 UnalignedBlockTexturesSupported;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS9</unmanaged>
 public partial struct FeatureDataD3D12Options9
@@ -7823,7 +7779,6 @@ public partial struct FeatureDataD3D12Options9
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::WaveMMATier"]/*' />
 	public WaveMmaTier WaveMMATier;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS10</unmanaged>
 public partial struct FeatureDataD3D12Options10
@@ -7834,7 +7789,6 @@ public partial struct FeatureDataD3D12Options10
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10::MeshShaderPerPrimitiveShadingRateSupported"]/*' />
 	public Bool32 MeshShaderPerPrimitiveShadingRateSupported;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS11"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS11</unmanaged>
 public partial struct FeatureDataD3D12Options11
@@ -7842,7 +7796,6 @@ public partial struct FeatureDataD3D12Options11
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS11::AtomicInt64OnDescriptorHeapResourceSupported"]/*' />
 	public Bool32 AtomicInt64OnDescriptorHeapResourceSupported;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALLOCATION_INFO"]/*' />
 /// <unmanaged>D3D12_RESOURCE_ALLOCATION_INFO</unmanaged>
 public partial struct ResourceAllocationInfo
@@ -7853,7 +7806,6 @@ public partial struct ResourceAllocationInfo
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALLOCATION_INFO::Alignment"]/*' />
 	public ulong Alignment;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALLOCATION_INFO1"]/*' />
 /// <unmanaged>D3D12_RESOURCE_ALLOCATION_INFO1</unmanaged>
 public partial struct ResourceAllocationInfo1
@@ -7867,7 +7819,6 @@ public partial struct ResourceAllocationInfo1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALLOCATION_INFO1::SizeInBytes"]/*' />
 	public ulong SizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES"]/*' />
 /// <unmanaged>D3D12_HEAP_PROPERTIES</unmanaged>
 public partial struct HeapProperties
@@ -7887,7 +7838,6 @@ public partial struct HeapProperties
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::VisibleNodeMask"]/*' />
 	public uint VisibleNodeMask;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_DESC"]/*' />
 /// <unmanaged>D3D12_HEAP_DESC</unmanaged>
 public partial struct HeapDescription
@@ -7904,7 +7854,6 @@ public partial struct HeapDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_DESC::Flags"]/*' />
 	public HeapFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION"]/*' />
 /// <unmanaged>D3D12_MIP_REGION</unmanaged>
 public partial struct MipRegion
@@ -7918,7 +7867,6 @@ public partial struct MipRegion
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION::Depth"]/*' />
 	public uint Depth;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_DESC"]/*' />
 /// <unmanaged>D3D12_RESOURCE_DESC</unmanaged>
 public partial struct ResourceDescription
@@ -7953,7 +7901,6 @@ public partial struct ResourceDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_DESC::Flags"]/*' />
 	public ResourceFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_DESC1"]/*' />
 /// <unmanaged>D3D12_RESOURCE_DESC1</unmanaged>
 public partial struct ResourceDescription1
@@ -7991,7 +7938,6 @@ public partial struct ResourceDescription1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_DESC1::SamplerFeedbackMipRegion"]/*' />
 	public MipRegion SamplerFeedbackMipRegion;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VALUE"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCIL_VALUE</unmanaged>
 public partial struct DepthStencilValue
@@ -8002,7 +7948,6 @@ public partial struct DepthStencilValue
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VALUE::Stencil"]/*' />
 	public byte Stencil;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_VALUE"]/*' />
 /// <unmanaged>D3D12_CLEAR_VALUE</unmanaged>
 public partial struct ClearValue
@@ -8044,9 +7989,7 @@ public partial struct ClearValue
 		[FieldOffset(0)]
 		public DepthStencilValue DepthStencil;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE"]/*' />
 /// <unmanaged>D3D12_RANGE</unmanaged>
 public partial struct Range
@@ -8057,7 +8000,6 @@ public partial struct Range
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE::End"]/*' />
 	public nuint End;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE_UINT64"]/*' />
 /// <unmanaged>D3D12_RANGE_UINT64</unmanaged>
 public partial struct RangeUInt64
@@ -8068,7 +8010,6 @@ public partial struct RangeUInt64
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE_UINT64::End"]/*' />
 	public ulong End;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64"]/*' />
 /// <unmanaged>D3D12_SUBRESOURCE_RANGE_UINT64</unmanaged>
 public partial struct SubresourceRangeUInt64
@@ -8079,7 +8020,6 @@ public partial struct SubresourceRangeUInt64
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64::Range"]/*' />
 	public RangeUInt64 Range;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_INFO"]/*' />
 /// <unmanaged>D3D12_SUBRESOURCE_INFO</unmanaged>
 public partial struct SubresourceInfo
@@ -8093,7 +8033,6 @@ public partial struct SubresourceInfo
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_INFO::DepthPitch"]/*' />
 	public uint DepthPitch;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILED_RESOURCE_COORDINATE"]/*' />
 /// <unmanaged>D3D12_TILED_RESOURCE_COORDINATE</unmanaged>
 public partial struct TiledResourceCoordinate
@@ -8110,7 +8049,6 @@ public partial struct TiledResourceCoordinate
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILED_RESOURCE_COORDINATE::Subresource"]/*' />
 	public uint Subresource;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE"]/*' />
 /// <unmanaged>D3D12_TILE_REGION_SIZE</unmanaged>
 public partial struct TileRegionSize
@@ -8130,7 +8068,6 @@ public partial struct TileRegionSize
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::Depth"]/*' />
 	public ushort Depth;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_TILING"]/*' />
 /// <unmanaged>D3D12_SUBRESOURCE_TILING</unmanaged>
 public partial struct SubresourceTiling
@@ -8147,7 +8084,6 @@ public partial struct SubresourceTiling
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_TILING::StartTileIndexInOverallResource"]/*' />
 	public uint StartTileIndexInOverallResource;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_SHAPE"]/*' />
 /// <unmanaged>D3D12_TILE_SHAPE</unmanaged>
 public partial struct TileShape
@@ -8161,7 +8097,6 @@ public partial struct TileShape
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_SHAPE::DepthInTexels"]/*' />
 	public uint DepthInTexels;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO"]/*' />
 /// <unmanaged>D3D12_PACKED_MIP_INFO</unmanaged>
 public partial struct PackedMipInfo
@@ -8178,7 +8113,6 @@ public partial struct PackedMipInfo
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::StartTileIndexInOverallResource"]/*' />
 	public uint StartTileIndexInOverallResource;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_TRANSITION_BARRIER</unmanaged>
 public partial struct ResourceTransitionBarrier
@@ -8195,7 +8129,6 @@ public partial struct ResourceTransitionBarrier
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::StateAfter"]/*' />
 	public ResourceStates StateAfter;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALIASING_BARRIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_ALIASING_BARRIER</unmanaged>
 public partial struct ResourceAliasingBarrier
@@ -8206,7 +8139,6 @@ public partial struct ResourceAliasingBarrier
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_ALIASING_BARRIER::pResourceAfter"]/*' />
 	public unsafe ID3D12Resource* pResourceAfter;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_UAV_BARRIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_UAV_BARRIER</unmanaged>
 public partial struct ResourceUavBarrier
@@ -8214,7 +8146,6 @@ public partial struct ResourceUavBarrier
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_UAV_BARRIER::pResource"]/*' />
 	public unsafe ID3D12Resource* pResource;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_BARRIER</unmanaged>
 public partial struct ResourceBarrier
@@ -8273,9 +8204,7 @@ public partial struct ResourceBarrier
 		[FieldOffset(0)]
 		public ResourceUavBarrier UAV;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_FOOTPRINT"]/*' />
 /// <unmanaged>D3D12_SUBRESOURCE_FOOTPRINT</unmanaged>
 public partial struct SubresourceFootprint
@@ -8295,7 +8224,6 @@ public partial struct SubresourceFootprint
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_FOOTPRINT::RowPitch"]/*' />
 	public uint RowPitch;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PLACED_SUBRESOURCE_FOOTPRINT"]/*' />
 /// <unmanaged>D3D12_PLACED_SUBRESOURCE_FOOTPRINT</unmanaged>
 public partial struct PlacedSubresourceFootprint
@@ -8306,7 +8234,6 @@ public partial struct PlacedSubresourceFootprint
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PLACED_SUBRESOURCE_FOOTPRINT::Footprint"]/*' />
 	public SubresourceFootprint Footprint;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION"]/*' />
 /// <unmanaged>D3D12_TEXTURE_COPY_LOCATION</unmanaged>
 public partial struct TextureCopyLocation
@@ -8351,9 +8278,7 @@ public partial struct TextureCopyLocation
 		[FieldOffset(0)]
 		public uint SubresourceIndex;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLE_POSITION"]/*' />
 /// <unmanaged>D3D12_SAMPLE_POSITION</unmanaged>
 public partial struct SamplePosition
@@ -8364,7 +8289,6 @@ public partial struct SamplePosition
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLE_POSITION::Y"]/*' />
 	public sbyte Y;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCE_LOCATION"]/*' />
 /// <unmanaged>D3D12_VIEW_INSTANCE_LOCATION</unmanaged>
 public partial struct ViewInstanceLocation
@@ -8375,7 +8299,6 @@ public partial struct ViewInstanceLocation
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCE_LOCATION::RenderTargetArrayIndex"]/*' />
 	public uint RenderTargetArrayIndex;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC"]/*' />
 /// <unmanaged>D3D12_VIEW_INSTANCING_DESC</unmanaged>
 public partial struct ViewInstancingDescription
@@ -8389,7 +8312,6 @@ public partial struct ViewInstancingDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC::Flags"]/*' />
 	public ViewInstancingFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV"]/*' />
 /// <unmanaged>D3D12_BUFFER_SRV</unmanaged>
 public partial struct BufferSrv
@@ -8406,7 +8328,6 @@ public partial struct BufferSrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::Flags"]/*' />
 	public BufferSrvFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_SRV"]/*' />
 /// <unmanaged>D3D12_TEX1D_SRV</unmanaged>
 public partial struct Texture1DSrv
@@ -8420,7 +8341,6 @@ public partial struct Texture1DSrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_SRV</unmanaged>
 public partial struct Texture1DArraySrv
@@ -8440,7 +8360,6 @@ public partial struct Texture1DArraySrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2D_SRV</unmanaged>
 public partial struct Texture2DSrv
@@ -8457,7 +8376,6 @@ public partial struct Texture2DSrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_SRV</unmanaged>
 public partial struct Texture2DArraySrv
@@ -8480,7 +8398,6 @@ public partial struct Texture2DArraySrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_SRV"]/*' />
 /// <unmanaged>D3D12_TEX3D_SRV</unmanaged>
 public partial struct Texture3DSrv
@@ -8494,7 +8411,6 @@ public partial struct Texture3DSrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV"]/*' />
 /// <unmanaged>D3D12_TEXCUBE_SRV</unmanaged>
 public partial struct TexureCubeSrv
@@ -8508,7 +8424,6 @@ public partial struct TexureCubeSrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEXCUBE_ARRAY_SRV</unmanaged>
 public partial struct TexureCubeArraySrv
@@ -8528,7 +8443,6 @@ public partial struct TexureCubeArraySrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_SRV</unmanaged>
 public partial struct Texture2DMsSrv
@@ -8536,7 +8450,6 @@ public partial struct Texture2DMsSrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_SRV::UnusedField_NothingToDefine"]/*' />
 	public uint UnusedField_NothingToDefine;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_ARRAY_SRV</unmanaged>
 public partial struct Texture2DMsArraySrv
@@ -8547,7 +8460,6 @@ public partial struct Texture2DMsArraySrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV::ArraySize"]/*' />
 	public uint ArraySize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV</unmanaged>
 public partial struct RaytracingAccelerationStructureSrv
@@ -8555,7 +8467,6 @@ public partial struct RaytracingAccelerationStructureSrv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV::Location"]/*' />
 	public ulong Location;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_RESOURCE_VIEW_DESC</unmanaged>
 public partial struct ShaderResourceViewDescription
@@ -8729,9 +8640,7 @@ public partial struct ShaderResourceViewDescription
 		[FieldOffset(0)]
 		public RaytracingAccelerationStructureSrv RaytracingAccelerationStructure;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSTANT_BUFFER_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_CONSTANT_BUFFER_VIEW_DESC</unmanaged>
 public partial struct ConstantBufferViewDescription
@@ -8742,7 +8651,6 @@ public partial struct ConstantBufferViewDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSTANT_BUFFER_VIEW_DESC::SizeInBytes"]/*' />
 	public uint SizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC"]/*' />
 /// <unmanaged>D3D12_SAMPLER_DESC</unmanaged>
 public partial struct SamplerDescription
@@ -8777,7 +8685,6 @@ public partial struct SamplerDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MaxLOD"]/*' />
 	public float MaxLOD;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV"]/*' />
 /// <unmanaged>D3D12_BUFFER_UAV</unmanaged>
 public partial struct BufferUav
@@ -8797,7 +8704,6 @@ public partial struct BufferUav
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::Flags"]/*' />
 	public BufferUavFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_UAV"]/*' />
 /// <unmanaged>D3D12_TEX1D_UAV</unmanaged>
 public partial struct Texture1DUav
@@ -8805,7 +8711,6 @@ public partial struct Texture1DUav
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_UAV::MipSlice"]/*' />
 	public uint MipSlice;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_UAV</unmanaged>
 public partial struct Texture1DArrayUav
@@ -8819,7 +8724,6 @@ public partial struct Texture1DArrayUav
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV::ArraySize"]/*' />
 	public uint ArraySize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV"]/*' />
 /// <unmanaged>D3D12_TEX2D_UAV</unmanaged>
 public partial struct Texture2DUav
@@ -8830,7 +8734,6 @@ public partial struct Texture2DUav
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_UAV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_UAV</unmanaged>
 public partial struct Texture2DArrayUav
@@ -8847,7 +8750,6 @@ public partial struct Texture2DArrayUav
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_UAV::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_UAV"]/*' />
 /// <unmanaged>D3D12_TEX3D_UAV</unmanaged>
 public partial struct Texture3DUav
@@ -8861,7 +8763,6 @@ public partial struct Texture3DUav
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_UAV::WSize"]/*' />
 	public uint WSize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UNORDERED_ACCESS_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_UNORDERED_ACCESS_VIEW_DESC</unmanaged>
 public partial struct UnorderedAccessViewDescription
@@ -8962,9 +8863,7 @@ public partial struct UnorderedAccessViewDescription
 		[FieldOffset(0)]
 		public Texture3DUav Texture3D;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_RTV"]/*' />
 /// <unmanaged>D3D12_BUFFER_RTV</unmanaged>
 public partial struct BufferRtv
@@ -8975,7 +8874,6 @@ public partial struct BufferRtv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_RTV::NumElements"]/*' />
 	public uint NumElements;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_RTV"]/*' />
 /// <unmanaged>D3D12_TEX1D_RTV</unmanaged>
 public partial struct Texture1DRtv
@@ -8983,7 +8881,6 @@ public partial struct Texture1DRtv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_RTV::MipSlice"]/*' />
 	public uint MipSlice;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_RTV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_RTV</unmanaged>
 public partial struct Texture1DArrayRtv
@@ -8997,7 +8894,6 @@ public partial struct Texture1DArrayRtv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_RTV::ArraySize"]/*' />
 	public uint ArraySize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2D_RTV</unmanaged>
 public partial struct Texture2DRtv
@@ -9008,7 +8904,6 @@ public partial struct Texture2DRtv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_RTV</unmanaged>
 public partial struct Texture2DMsRtv
@@ -9016,7 +8911,6 @@ public partial struct Texture2DMsRtv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_RTV::UnusedField_NothingToDefine"]/*' />
 	public uint UnusedField_NothingToDefine;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_RTV</unmanaged>
 public partial struct Texture2DArrayRtv
@@ -9033,7 +8927,6 @@ public partial struct Texture2DArrayRtv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_ARRAY_RTV</unmanaged>
 public partial struct Texture2DMsArrayRtv
@@ -9044,7 +8937,6 @@ public partial struct Texture2DMsArrayRtv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_RTV::ArraySize"]/*' />
 	public uint ArraySize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_RTV"]/*' />
 /// <unmanaged>D3D12_TEX3D_RTV</unmanaged>
 public partial struct Texture3DRtv
@@ -9058,7 +8950,6 @@ public partial struct Texture3DRtv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX3D_RTV::WSize"]/*' />
 	public uint WSize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_RENDER_TARGET_VIEW_DESC</unmanaged>
 public partial struct RenderTargetViewDescription
@@ -9187,9 +9078,7 @@ public partial struct RenderTargetViewDescription
 		[FieldOffset(0)]
 		public Texture3DRtv Texture3D;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_DSV"]/*' />
 /// <unmanaged>D3D12_TEX1D_DSV</unmanaged>
 public partial struct Texture1DDsv
@@ -9197,7 +9086,6 @@ public partial struct Texture1DDsv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_DSV::MipSlice"]/*' />
 	public uint MipSlice;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_DSV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_DSV</unmanaged>
 public partial struct Texture1DArrayDsv
@@ -9211,7 +9099,6 @@ public partial struct Texture1DArrayDsv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_DSV::ArraySize"]/*' />
 	public uint ArraySize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2D_DSV</unmanaged>
 public partial struct Texture2DDsv
@@ -9219,7 +9106,6 @@ public partial struct Texture2DDsv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_DSV::MipSlice"]/*' />
 	public uint MipSlice;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_DSV</unmanaged>
 public partial struct Texture2DArrayDsv
@@ -9233,7 +9119,6 @@ public partial struct Texture2DArrayDsv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_DSV::ArraySize"]/*' />
 	public uint ArraySize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_DSV</unmanaged>
 public partial struct Texture2DMsDsv
@@ -9241,7 +9126,6 @@ public partial struct Texture2DMsDsv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_DSV::UnusedField_NothingToDefine"]/*' />
 	public uint UnusedField_NothingToDefine;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_ARRAY_DSV</unmanaged>
 public partial struct Texture2DMsArrayDsv
@@ -9252,7 +9136,6 @@ public partial struct Texture2DMsArrayDsv
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_DSV::ArraySize"]/*' />
 	public uint ArraySize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCIL_VIEW_DESC</unmanaged>
 public partial struct DepthStencilViewDescription
@@ -9356,9 +9239,7 @@ public partial struct DepthStencilViewDescription
 		[FieldOffset(0)]
 		public Texture2DMsArrayDsv Texture2DMSArray;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_HEAP_DESC</unmanaged>
 public partial struct DescriptorHeapDescription
@@ -9375,7 +9256,6 @@ public partial struct DescriptorHeapDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_RANGE</unmanaged>
 public partial struct DescriptorRange
@@ -9395,7 +9275,6 @@ public partial struct DescriptorRange
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE::OffsetInDescriptorsFromTableStart"]/*' />
 	public uint OffsetInDescriptorsFromTableStart;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE"]/*' />
 /// <unmanaged>D3D12_ROOT_DESCRIPTOR_TABLE</unmanaged>
 public partial struct RootDescriptorTable
@@ -9406,7 +9285,6 @@ public partial struct RootDescriptorTable
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE::pDescriptorRanges"]/*' />
 	public unsafe DescriptorRange* pDescriptorRanges;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS"]/*' />
 /// <unmanaged>D3D12_ROOT_CONSTANTS</unmanaged>
 public partial struct RootConstants
@@ -9420,7 +9298,6 @@ public partial struct RootConstants
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS::Num32BitValues"]/*' />
 	public uint Num32BitValues;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR"]/*' />
 /// <unmanaged>D3D12_ROOT_DESCRIPTOR</unmanaged>
 public partial struct RootDescriptor
@@ -9431,7 +9308,6 @@ public partial struct RootDescriptor
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR::RegisterSpace"]/*' />
 	public uint RegisterSpace;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER"]/*' />
 /// <unmanaged>D3D12_ROOT_PARAMETER</unmanaged>
 public partial struct RootParameter
@@ -9490,9 +9366,7 @@ public partial struct RootParameter
 		[FieldOffset(0)]
 		public RootDescriptor Descriptor;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_SAMPLER_DESC"]/*' />
 /// <unmanaged>D3D12_STATIC_SAMPLER_DESC</unmanaged>
 public partial struct StaticSamplerDescription
@@ -9536,7 +9410,6 @@ public partial struct StaticSamplerDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_SAMPLER_DESC::ShaderVisibility"]/*' />
 	public ShaderVisibility ShaderVisibility;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC"]/*' />
 /// <unmanaged>D3D12_ROOT_SIGNATURE_DESC</unmanaged>
 public partial struct RootSignatureDescription
@@ -9556,7 +9429,6 @@ public partial struct RootSignatureDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC::Flags"]/*' />
 	public RootSignatureFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_RANGE1</unmanaged>
 public partial struct DescriptorRange1
@@ -9579,7 +9451,6 @@ public partial struct DescriptorRange1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::OffsetInDescriptorsFromTableStart"]/*' />
 	public uint OffsetInDescriptorsFromTableStart;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE1"]/*' />
 /// <unmanaged>D3D12_ROOT_DESCRIPTOR_TABLE1</unmanaged>
 public partial struct RootDescriptorTable1
@@ -9590,7 +9461,6 @@ public partial struct RootDescriptorTable1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE1::pDescriptorRanges"]/*' />
 	public unsafe DescriptorRange1* pDescriptorRanges;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR1"]/*' />
 /// <unmanaged>D3D12_ROOT_DESCRIPTOR1</unmanaged>
 public partial struct RootDescriptor1
@@ -9604,7 +9474,6 @@ public partial struct RootDescriptor1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR1::Flags"]/*' />
 	public RootDescriptorFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1"]/*' />
 /// <unmanaged>D3D12_ROOT_PARAMETER1</unmanaged>
 public partial struct RootParameter1
@@ -9663,9 +9532,7 @@ public partial struct RootParameter1
 		[FieldOffset(0)]
 		public RootDescriptor1 Descriptor;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1"]/*' />
 /// <unmanaged>D3D12_ROOT_SIGNATURE_DESC1</unmanaged>
 public partial struct RootSignatureDescription1
@@ -9685,7 +9552,6 @@ public partial struct RootSignatureDescription1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::Flags"]/*' />
 	public RootSignatureFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_ROOT_SIGNATURE_DESC"]/*' />
 /// <unmanaged>D3D12_VERSIONED_ROOT_SIGNATURE_DESC</unmanaged>
 public partial struct VersionedRootSignatureDescription
@@ -9727,9 +9593,7 @@ public partial struct VersionedRootSignatureDescription
 		[FieldOffset(0)]
 		public RootSignatureDescription1 Desc_1_1;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_DESCRIPTOR_HANDLE"]/*' />
 /// <unmanaged>D3D12_CPU_DESCRIPTOR_HANDLE</unmanaged>
 public partial struct CpuDescriptorHandle
@@ -9737,7 +9601,6 @@ public partial struct CpuDescriptorHandle
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_DESCRIPTOR_HANDLE::ptr"]/*' />
 	public nuint ptr;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_DESCRIPTOR_HANDLE"]/*' />
 /// <unmanaged>D3D12_GPU_DESCRIPTOR_HANDLE</unmanaged>
 public partial struct GpuDescriptorHandle
@@ -9745,7 +9608,6 @@ public partial struct GpuDescriptorHandle
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_DESCRIPTOR_HANDLE::ptr"]/*' />
 	public ulong ptr;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION"]/*' />
 /// <unmanaged>D3D12_DISCARD_REGION</unmanaged>
 public partial struct DiscardRegion
@@ -9762,7 +9624,6 @@ public partial struct DiscardRegion
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::NumSubresources"]/*' />
 	public uint NumSubresources;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC"]/*' />
 /// <unmanaged>D3D12_QUERY_HEAP_DESC</unmanaged>
 public partial struct QueryHeapDescription
@@ -9776,7 +9637,6 @@ public partial struct QueryHeapDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS"]/*' />
 /// <unmanaged>D3D12_QUERY_DATA_PIPELINE_STATISTICS</unmanaged>
 public partial struct QueryDataPipelineStatistics
@@ -9814,7 +9674,6 @@ public partial struct QueryDataPipelineStatistics
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::CSInvocations"]/*' />
 	public ulong CSInvocations;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS1"]/*' />
 /// <unmanaged>D3D12_QUERY_DATA_PIPELINE_STATISTICS1</unmanaged>
 public partial struct QueryDataPipelineStatistics1
@@ -9861,7 +9720,6 @@ public partial struct QueryDataPipelineStatistics1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS1::MSPrimitives"]/*' />
 	public ulong MSPrimitives;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_SO_STATISTICS"]/*' />
 /// <unmanaged>D3D12_QUERY_DATA_SO_STATISTICS</unmanaged>
 public partial struct QueryDataSOStatistics
@@ -9872,7 +9730,6 @@ public partial struct QueryDataSOStatistics
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_SO_STATISTICS::PrimitivesStorageNeeded"]/*' />
 	public ulong PrimitivesStorageNeeded;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_BUFFER_VIEW"]/*' />
 /// <unmanaged>D3D12_STREAM_OUTPUT_BUFFER_VIEW</unmanaged>
 public partial struct StreamOutputBufferView
@@ -9886,7 +9743,6 @@ public partial struct StreamOutputBufferView
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_BUFFER_VIEW::BufferFilledSizeLocation"]/*' />
 	public ulong BufferFilledSizeLocation;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS"]/*' />
 /// <unmanaged>D3D12_DRAW_ARGUMENTS</unmanaged>
 public partial struct DrawArguments
@@ -9903,7 +9759,6 @@ public partial struct DrawArguments
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::StartInstanceLocation"]/*' />
 	public uint StartInstanceLocation;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS"]/*' />
 /// <unmanaged>D3D12_DRAW_INDEXED_ARGUMENTS</unmanaged>
 public partial struct DrawIndexedArguments
@@ -9923,7 +9778,6 @@ public partial struct DrawIndexedArguments
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::StartInstanceLocation"]/*' />
 	public uint StartInstanceLocation;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_ARGUMENTS"]/*' />
 /// <unmanaged>D3D12_DISPATCH_ARGUMENTS</unmanaged>
 public partial struct DispatchArguments
@@ -9937,7 +9791,6 @@ public partial struct DispatchArguments
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_ARGUMENTS::ThreadGroupCountZ"]/*' />
 	public uint ThreadGroupCountZ;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERTEX_BUFFER_VIEW"]/*' />
 /// <unmanaged>D3D12_VERTEX_BUFFER_VIEW</unmanaged>
 public partial struct VertexBufferView
@@ -9951,7 +9804,6 @@ public partial struct VertexBufferView
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERTEX_BUFFER_VIEW::StrideInBytes"]/*' />
 	public uint StrideInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW"]/*' />
 /// <unmanaged>D3D12_INDEX_BUFFER_VIEW</unmanaged>
 public partial struct IndexBufferView
@@ -9965,7 +9817,6 @@ public partial struct IndexBufferView
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_DESC"]/*' />
 /// <unmanaged>D3D12_INDIRECT_ARGUMENT_DESC</unmanaged>
 public partial struct IndirectArgumentDescription
@@ -10054,7 +9905,6 @@ public partial struct IndirectArgumentDescription
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_ShaderResourceView_e__Struct::RootParameterIndex"]/*' />
 			public uint RootParameterIndex;
 		}
-
 		public partial struct _Constant_e__Struct
 		{
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::RootParameterIndex"]/*' />
@@ -10066,29 +9916,23 @@ public partial struct IndirectArgumentDescription
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::Num32BitValuesToSet"]/*' />
 			public uint Num32BitValuesToSet;
 		}
-
 		public partial struct _UnorderedAccessView_e__Struct
 		{
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_UnorderedAccessView_e__Struct::RootParameterIndex"]/*' />
 			public uint RootParameterIndex;
 		}
-
 		public partial struct _VertexBuffer_e__Struct
 		{
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_VertexBuffer_e__Struct::Slot"]/*' />
 			public uint Slot;
 		}
-
 		public partial struct _ConstantBufferView_e__Struct
 		{
 			/// <include file='../Direct3D12.xml' path='doc/member[@name="_ConstantBufferView_e__Struct::RootParameterIndex"]/*' />
 			public uint RootParameterIndex;
 		}
-
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC"]/*' />
 /// <unmanaged>D3D12_COMMAND_SIGNATURE_DESC</unmanaged>
 public partial struct CommandSignatureDescription
@@ -10105,7 +9949,6 @@ public partial struct CommandSignatureDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_PARAMETER"]/*' />
 /// <unmanaged>D3D12_WRITEBUFFERIMMEDIATE_PARAMETER</unmanaged>
 public partial struct WriteBufferImmediateParameter
@@ -10116,7 +9959,6 @@ public partial struct WriteBufferImmediateParameter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_PARAMETER::Value"]/*' />
 	public uint Value;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT</unmanaged>
 public partial struct FeatureDataProtectedResourceSessionSupport
@@ -10127,7 +9969,6 @@ public partial struct FeatureDataProtectedResourceSessionSupport
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT::Support"]/*' />
 	public ProtectedResourceSessionSupportFlags Support;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC"]/*' />
 /// <unmanaged>D3D12_PROTECTED_RESOURCE_SESSION_DESC</unmanaged>
 public partial struct ProtectedResourceSessionDescription
@@ -10138,7 +9979,6 @@ public partial struct ProtectedResourceSessionDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC::Flags"]/*' />
 	public ProtectedResourceSessionFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_PARAMETER_DESC</unmanaged>
 public partial struct MetaCommandParameterDescription
@@ -10158,7 +9998,6 @@ public partial struct MetaCommandParameterDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::StructureOffset"]/*' />
 	public uint StructureOffset;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_DESC</unmanaged>
 public partial struct MetaCommandDescription
@@ -10175,7 +10014,6 @@ public partial struct MetaCommandDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::ExecutionDirtyState"]/*' />
 	public GraphicsStates ExecutionDirtyState;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT"]/*' />
 /// <unmanaged>D3D12_STATE_SUBOBJECT</unmanaged>
 public partial struct StateSubObject
@@ -10186,7 +10024,6 @@ public partial struct StateSubObject
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT::pDesc"]/*' />
 	public unsafe void* pDesc;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_CONFIG"]/*' />
 /// <unmanaged>D3D12_STATE_OBJECT_CONFIG</unmanaged>
 public partial struct StateObjectConfig
@@ -10194,7 +10031,6 @@ public partial struct StateObjectConfig
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_CONFIG::Flags"]/*' />
 	public StateObjectFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GLOBAL_ROOT_SIGNATURE"]/*' />
 /// <unmanaged>D3D12_GLOBAL_ROOT_SIGNATURE</unmanaged>
 public partial struct GlobalRootSignature
@@ -10202,7 +10038,6 @@ public partial struct GlobalRootSignature
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GLOBAL_ROOT_SIGNATURE::pGlobalRootSignature"]/*' />
 	public unsafe ID3D12RootSignature* pGlobalRootSignature;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOCAL_ROOT_SIGNATURE"]/*' />
 /// <unmanaged>D3D12_LOCAL_ROOT_SIGNATURE</unmanaged>
 public partial struct LocalRootSignature
@@ -10210,7 +10045,6 @@ public partial struct LocalRootSignature
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOCAL_ROOT_SIGNATURE::pLocalRootSignature"]/*' />
 	public unsafe ID3D12RootSignature* pLocalRootSignature;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_MASK"]/*' />
 /// <unmanaged>D3D12_NODE_MASK</unmanaged>
 public partial struct NodeMask
@@ -10218,7 +10052,6 @@ public partial struct NodeMask
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_MASK::NodeMask"]/*' />
 	public uint Mask;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC"]/*' />
 /// <unmanaged>D3D12_EXPORT_DESC</unmanaged>
 public partial struct ExportDescription
@@ -10232,7 +10065,6 @@ public partial struct ExportDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Flags"]/*' />
 	public ExportFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC"]/*' />
 /// <unmanaged>D3D12_DXIL_LIBRARY_DESC</unmanaged>
 public partial struct DxilLibraryDescription
@@ -10246,7 +10078,6 @@ public partial struct DxilLibraryDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC::pExports"]/*' />
 	public unsafe ExportDescription* pExports;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC"]/*' />
 /// <unmanaged>D3D12_EXISTING_COLLECTION_DESC</unmanaged>
 public partial struct ExistingCollectionDescription
@@ -10260,7 +10091,6 @@ public partial struct ExistingCollectionDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::pExports"]/*' />
 	public unsafe ExportDescription* pExports;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION"]/*' />
 /// <unmanaged>D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION</unmanaged>
 public partial struct SubObjectToExportsAssociation
@@ -10274,7 +10104,6 @@ public partial struct SubObjectToExportsAssociation
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pExports"]/*' />
 	public unsafe ushort** pExports;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION"]/*' />
 /// <unmanaged>D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION</unmanaged>
 public partial struct DxilSubObjectToExportsAssociation
@@ -10288,7 +10117,6 @@ public partial struct DxilSubObjectToExportsAssociation
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pExports"]/*' />
 	public unsafe ushort** pExports;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC"]/*' />
 /// <unmanaged>D3D12_HIT_GROUP_DESC</unmanaged>
 public partial struct HitGroupDescription
@@ -10308,7 +10136,6 @@ public partial struct HitGroupDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::IntersectionShaderImport"]/*' />
 	public unsafe ushort* IntersectionShaderImport;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_SHADER_CONFIG</unmanaged>
 public partial struct RaytracingShaderConfig
@@ -10319,7 +10146,6 @@ public partial struct RaytracingShaderConfig
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG::MaxAttributeSizeInBytes"]/*' />
 	public uint MaxAttributeSizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_PIPELINE_CONFIG</unmanaged>
 public partial struct RaytracingPipelineConfig
@@ -10327,7 +10153,6 @@ public partial struct RaytracingPipelineConfig
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG::MaxTraceRecursionDepth"]/*' />
 	public uint MaxTraceRecursionDepth;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG1"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_PIPELINE_CONFIG1</unmanaged>
 public partial struct RaytracingPipelineConfig1
@@ -10338,7 +10163,6 @@ public partial struct RaytracingPipelineConfig1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG1::Flags"]/*' />
 	public RaytracingPipelineFlags Flags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC"]/*' />
 /// <unmanaged>D3D12_STATE_OBJECT_DESC</unmanaged>
 public partial struct StateObjectDescription
@@ -10352,7 +10176,6 @@ public partial struct StateObjectDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC::pSubobjects"]/*' />
 	public unsafe StateSubObject* pSubobjects;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_AND_STRIDE"]/*' />
 /// <unmanaged>D3D12_GPU_VIRTUAL_ADDRESS_AND_STRIDE</unmanaged>
 public partial struct GpuVirtualAddressAndStride
@@ -10363,7 +10186,6 @@ public partial struct GpuVirtualAddressAndStride
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_AND_STRIDE::StrideInBytes"]/*' />
 	public ulong StrideInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE"]/*' />
 /// <unmanaged>D3D12_GPU_VIRTUAL_ADDRESS_RANGE</unmanaged>
 public partial struct GpuVirtualAddressRange
@@ -10374,7 +10196,6 @@ public partial struct GpuVirtualAddressRange
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE::SizeInBytes"]/*' />
 	public ulong SizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE"]/*' />
 /// <unmanaged>D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE</unmanaged>
 public partial struct GpuVirtualAddressRangeAndStride
@@ -10388,7 +10209,6 @@ public partial struct GpuVirtualAddressRangeAndStride
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE::StrideInBytes"]/*' />
 	public ulong StrideInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC</unmanaged>
 public partial struct RaytracingGeometryTrianglesDescription
@@ -10414,7 +10234,6 @@ public partial struct RaytracingGeometryTrianglesDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::VertexBuffer"]/*' />
 	public GpuVirtualAddressAndStride VertexBuffer;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_AABB"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_AABB</unmanaged>
 public partial struct RaytracingAabb
@@ -10437,7 +10256,6 @@ public partial struct RaytracingAabb
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_AABB::MaxZ"]/*' />
 	public float MaxZ;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_AABBS_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_GEOMETRY_AABBS_DESC</unmanaged>
 public partial struct RaytracingGeometryAabbsDescription
@@ -10448,7 +10266,6 @@ public partial struct RaytracingGeometryAabbsDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_AABBS_DESC::AABBs"]/*' />
 	public GpuVirtualAddressAndStride AABBs;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC</unmanaged>
 public partial struct RaytracingAccelerationStructurePostbuildInfoDescription
@@ -10459,7 +10276,6 @@ public partial struct RaytracingAccelerationStructurePostbuildInfoDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC::InfoType"]/*' />
 	public RaytracingAccelerationStructurePostbuildInfoType InfoType;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_COMPACTED_SIZE_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_COMPACTED_SIZE_DESC</unmanaged>
 public partial struct RaytracingAccelerationStructurePostbuildInfoCompactedSizeDescription
@@ -10467,7 +10283,6 @@ public partial struct RaytracingAccelerationStructurePostbuildInfoCompactedSizeD
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_COMPACTED_SIZE_DESC::CompactedSizeInBytes"]/*' />
 	public ulong CompactedSizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_TOOLS_VISUALIZATION_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_TOOLS_VISUALIZATION_DESC</unmanaged>
 public partial struct RaytracingAccelerationStructurePostbuildInfoToolsVisualizationDescription
@@ -10475,7 +10290,6 @@ public partial struct RaytracingAccelerationStructurePostbuildInfoToolsVisualiza
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_TOOLS_VISUALIZATION_DESC::DecodedSizeInBytes"]/*' />
 	public ulong DecodedSizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER"]/*' />
 /// <unmanaged>D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER</unmanaged>
 public partial struct BuildRaytracingAccelerationStructureToolsVisualizationHeader
@@ -10486,7 +10300,6 @@ public partial struct BuildRaytracingAccelerationStructureToolsVisualizationHead
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER::NumDescs"]/*' />
 	public uint NumDescs;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC</unmanaged>
 public partial struct RaytracingAccelerationStructurePostbuildInfoSerializationDescription
@@ -10497,7 +10310,6 @@ public partial struct RaytracingAccelerationStructurePostbuildInfoSerializationD
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC::NumBottomLevelAccelerationStructurePointers"]/*' />
 	public ulong NumBottomLevelAccelerationStructurePointers;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER"]/*' />
 /// <unmanaged>D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER</unmanaged>
 public partial struct SerializedDataDriverMatchingIdentifier
@@ -10508,7 +10320,6 @@ public partial struct SerializedDataDriverMatchingIdentifier
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER::DriverOpaqueVersioningData"]/*' />
 	public unsafe fixed byte DriverOpaqueVersioningData[16];
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER"]/*' />
 /// <unmanaged>D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER</unmanaged>
 public partial struct SerializedRaytracingAccelerationStructureHeader
@@ -10525,7 +10336,6 @@ public partial struct SerializedRaytracingAccelerationStructureHeader
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::NumBottomLevelAccelerationStructurePointersAfterHeader"]/*' />
 	public ulong NumBottomLevelAccelerationStructurePointersAfterHeader;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_CURRENT_SIZE_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_CURRENT_SIZE_DESC</unmanaged>
 public partial struct RaytracingAccelerationStructurePostbuildInfoCurrentSizeDescription
@@ -10533,7 +10343,6 @@ public partial struct RaytracingAccelerationStructurePostbuildInfoCurrentSizeDes
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_CURRENT_SIZE_DESC::CurrentSizeInBytes"]/*' />
 	public ulong CurrentSizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_INSTANCE_DESC</unmanaged>
 public partial struct RaytracingInstanceDescription
@@ -10550,7 +10359,6 @@ public partial struct RaytracingInstanceDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::AccelerationStructure"]/*' />
 	public ulong AccelerationStructure;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_GEOMETRY_DESC</unmanaged>
 public partial struct RaytracingGeometryDescription
@@ -10595,9 +10403,7 @@ public partial struct RaytracingGeometryDescription
 		[FieldOffset(0)]
 		public RaytracingGeometryAabbsDescription AABBs;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS"]/*' />
 /// <unmanaged>D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS</unmanaged>
 public partial struct BuildRaytracingAccelerationStructureInputs
@@ -10662,9 +10468,7 @@ public partial struct BuildRaytracingAccelerationStructureInputs
 		[FieldOffset(0)]
 		public unsafe RaytracingGeometryDescription** ppGeometryDescs;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC"]/*' />
 /// <unmanaged>D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC</unmanaged>
 public partial struct BuildRaytracingAccelerationStructureDescription
@@ -10681,7 +10485,6 @@ public partial struct BuildRaytracingAccelerationStructureDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::ScratchAccelerationStructureData"]/*' />
 	public ulong ScratchAccelerationStructureData;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO</unmanaged>
 public partial struct RaytracingAccelerationStructurePrebuildInfo
@@ -10695,7 +10498,6 @@ public partial struct RaytracingAccelerationStructurePrebuildInfo
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO::UpdateScratchDataSizeInBytes"]/*' />
 	public ulong UpdateScratchDataSizeInBytes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE"]/*' />
 /// <unmanaged>D3D12_AUTO_BREADCRUMB_NODE</unmanaged>
 public partial struct AutoBreadcrumbNode
@@ -10730,7 +10532,6 @@ public partial struct AutoBreadcrumbNode
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pNext"]/*' />
 	public unsafe AutoBreadcrumbNode* pNext;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT"]/*' />
 /// <unmanaged>D3D12_DRED_BREADCRUMB_CONTEXT</unmanaged>
 public partial struct DredBreadcrumbContext
@@ -10741,7 +10542,6 @@ public partial struct DredBreadcrumbContext
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT::pContextString"]/*' />
 	public unsafe ushort* pContextString;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1"]/*' />
 /// <unmanaged>D3D12_AUTO_BREADCRUMB_NODE1</unmanaged>
 public partial struct AutoBreadcrumbNode1
@@ -10782,7 +10582,6 @@ public partial struct AutoBreadcrumbNode1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pBreadcrumbContexts"]/*' />
 	public unsafe DredBreadcrumbContext* pBreadcrumbContexts;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA"]/*' />
 /// <unmanaged>D3D12_DEVICE_REMOVED_EXTENDED_DATA</unmanaged>
 public partial struct DeviceRemovedExtendedData
@@ -10793,7 +10592,6 @@ public partial struct DeviceRemovedExtendedData
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA::pHeadAutoBreadcrumbNode"]/*' />
 	public unsafe AutoBreadcrumbNode* pHeadAutoBreadcrumbNode;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE"]/*' />
 /// <unmanaged>D3D12_DRED_ALLOCATION_NODE</unmanaged>
 public partial struct DredAllocationNode
@@ -10810,7 +10608,6 @@ public partial struct DredAllocationNode
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE::pNext"]/*' />
 	public unsafe DredAllocationNode* pNext;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE1"]/*' />
 /// <unmanaged>D3D12_DRED_ALLOCATION_NODE1</unmanaged>
 public partial struct DredAllocationNode1
@@ -10830,7 +10627,6 @@ public partial struct DredAllocationNode1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE1::pObject"]/*' />
 	public IUnknown pObject;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT"]/*' />
 /// <unmanaged>D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT</unmanaged>
 public partial struct DredAutoBreadcrumbsOutput
@@ -10838,7 +10634,6 @@ public partial struct DredAutoBreadcrumbsOutput
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT::pHeadAutoBreadcrumbNode"]/*' />
 	public unsafe AutoBreadcrumbNode* pHeadAutoBreadcrumbNode;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1"]/*' />
 /// <unmanaged>D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1</unmanaged>
 public partial struct DredAutoBreadcrumbsOutput1
@@ -10846,7 +10641,6 @@ public partial struct DredAutoBreadcrumbsOutput1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1::pHeadAutoBreadcrumbNode"]/*' />
 	public unsafe AutoBreadcrumbNode1* pHeadAutoBreadcrumbNode;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT"]/*' />
 /// <unmanaged>D3D12_DRED_PAGE_FAULT_OUTPUT</unmanaged>
 public partial struct DredPageFaultOutput
@@ -10860,7 +10654,6 @@ public partial struct DredPageFaultOutput
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT::pHeadRecentFreedAllocationNode"]/*' />
 	public unsafe DredAllocationNode* pHeadRecentFreedAllocationNode;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT1"]/*' />
 /// <unmanaged>D3D12_DRED_PAGE_FAULT_OUTPUT1</unmanaged>
 public partial struct DredPageFaultOutput1
@@ -10874,7 +10667,6 @@ public partial struct DredPageFaultOutput1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT1::pHeadRecentFreedAllocationNode"]/*' />
 	public unsafe DredAllocationNode1* pHeadRecentFreedAllocationNode;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT2"]/*' />
 /// <unmanaged>D3D12_DRED_PAGE_FAULT_OUTPUT2</unmanaged>
 public partial struct DredPageFaultOutput2
@@ -10891,7 +10683,6 @@ public partial struct DredPageFaultOutput2
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT2::PageFaultFlags"]/*' />
 	public DredPageFaultFlags PageFaultFlags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA1"]/*' />
 /// <unmanaged>D3D12_DEVICE_REMOVED_EXTENDED_DATA1</unmanaged>
 public partial struct DeviceRemovedExtendedData1
@@ -10905,7 +10696,6 @@ public partial struct DeviceRemovedExtendedData1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA1::PageFaultOutput"]/*' />
 	public DredPageFaultOutput PageFaultOutput;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA2"]/*' />
 /// <unmanaged>D3D12_DEVICE_REMOVED_EXTENDED_DATA2</unmanaged>
 public partial struct DeviceRemovedExtendedData2
@@ -10919,7 +10709,6 @@ public partial struct DeviceRemovedExtendedData2
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA2::PageFaultOutput"]/*' />
 	public DredPageFaultOutput1 PageFaultOutput;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3"]/*' />
 /// <unmanaged>D3D12_DEVICE_REMOVED_EXTENDED_DATA3</unmanaged>
 public partial struct DeviceRemovedExtendedData3
@@ -10936,7 +10725,6 @@ public partial struct DeviceRemovedExtendedData3
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::DeviceState"]/*' />
 	public DredDeviceState DeviceState;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA"]/*' />
 /// <unmanaged>D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA</unmanaged>
 public partial struct VersionedDeviceRemovedExtendedData
@@ -11006,9 +10794,7 @@ public partial struct VersionedDeviceRemovedExtendedData
 		[FieldOffset(0)]
 		public DeviceRemovedExtendedData3 Dred_1_3;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_TYPE_COUNT"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_TYPE_COUNT</unmanaged>
 public partial struct FeatureDataProtectedResourceSessionTypeCount
@@ -11019,7 +10805,6 @@ public partial struct FeatureDataProtectedResourceSessionTypeCount
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_TYPE_COUNT::Count"]/*' />
 	public uint Count;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_TYPES"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_TYPES</unmanaged>
 public partial struct FeatureDataProtectedResourceSessionTypes
@@ -11033,7 +10818,6 @@ public partial struct FeatureDataProtectedResourceSessionTypes
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_TYPES::pTypes"]/*' />
 	public unsafe Guid* pTypes;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1"]/*' />
 /// <unmanaged>D3D12_PROTECTED_RESOURCE_SESSION_DESC1</unmanaged>
 public partial struct ProtectedResourceSessionDescription1
@@ -11047,7 +10831,6 @@ public partial struct ProtectedResourceSessionDescription1
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1::ProtectionType"]/*' />
 	public Guid ProtectionType;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS</unmanaged>
 public partial struct RenderPassBeginningAccessClearParameters
@@ -11055,7 +10838,6 @@ public partial struct RenderPassBeginningAccessClearParameters
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS::ClearValue"]/*' />
 	public ClearValue ClearValue;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS</unmanaged>
 public partial struct RenderPassBeginningAccess
@@ -11083,9 +10865,7 @@ public partial struct RenderPassBeginningAccess
 		[FieldOffset(0)]
 		public RenderPassBeginningAccessClearParameters Clear;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS</unmanaged>
 public partial struct RenderPassEndingAccessResolveSubresourceParameters
@@ -11105,7 +10885,6 @@ public partial struct RenderPassEndingAccessResolveSubresourceParameters
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::SrcRect"]/*' />
 	public RawRect SrcRect;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS</unmanaged>
 public partial struct RenderPassEndingAccessResolveParameters
@@ -11131,7 +10910,6 @@ public partial struct RenderPassEndingAccessResolveParameters
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS::PreserveResolveSource"]/*' />
 	public Bool32 PreserveResolveSource;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS</unmanaged>
 public partial struct RenderPassEndingAccess
@@ -11159,9 +10937,7 @@ public partial struct RenderPassEndingAccess
 		[FieldOffset(0)]
 		public RenderPassEndingAccessResolveParameters Resolve;
 	}
-
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_RENDER_TARGET_DESC</unmanaged>
 public partial struct RenderPassRenderTargetDescription
@@ -11175,7 +10951,6 @@ public partial struct RenderPassRenderTargetDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC::EndingAccess"]/*' />
 	public RenderPassEndingAccess EndingAccess;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_DEPTH_STENCIL_DESC</unmanaged>
 public partial struct RenderPassDepthStencilDescription
@@ -11195,7 +10970,6 @@ public partial struct RenderPassDepthStencilDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::StencilEndingAccess"]/*' />
 	public RenderPassEndingAccess StencilEndingAccess;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC"]/*' />
 /// <unmanaged>D3D12_DISPATCH_RAYS_DESC</unmanaged>
 public partial struct DispatchRaysDescription
@@ -11221,7 +10995,6 @@ public partial struct DispatchRaysDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::Depth"]/*' />
 	public uint Depth;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_SESSION_DESC</unmanaged>
 public partial struct ShaderCacheSessionDescription
@@ -11247,7 +11020,6 @@ public partial struct ShaderCacheSessionDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Version"]/*' />
 	public ulong Version;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA"]/*' />
 /// <unmanaged>D3D12_SUBRESOURCE_DATA</unmanaged>
 public partial struct SubresourceData
@@ -11261,7 +11033,6 @@ public partial struct SubresourceData
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA::SlicePitch"]/*' />
 	public nint SlicePitch;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MEMCPY_DEST"]/*' />
 /// <unmanaged>D3D12_MEMCPY_DEST</unmanaged>
 public partial struct MemcpyDest
@@ -11275,7 +11046,6 @@ public partial struct MemcpyDest
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MEMCPY_DEST::SlicePitch"]/*' />
 	public nuint SlicePitch;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_GPU_BASED_VALIDATION_SETTINGS"]/*' />
 /// <unmanaged>D3D12_DEBUG_DEVICE_GPU_BASED_VALIDATION_SETTINGS</unmanaged>
 public partial struct DebugDeviceGpuBasedValidationSettings
@@ -11289,7 +11059,6 @@ public partial struct DebugDeviceGpuBasedValidationSettings
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_GPU_BASED_VALIDATION_SETTINGS::PipelineStateCreateFlags"]/*' />
 	public GpuBasedValidationPipelineStateCreateFlags PipelineStateCreateFlags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_GPU_SLOWDOWN_PERFORMANCE_FACTOR"]/*' />
 /// <unmanaged>D3D12_DEBUG_DEVICE_GPU_SLOWDOWN_PERFORMANCE_FACTOR</unmanaged>
 public partial struct DebugDeviceGpuSlowdownPerformanceFactor
@@ -11297,7 +11066,6 @@ public partial struct DebugDeviceGpuSlowdownPerformanceFactor
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_GPU_SLOWDOWN_PERFORMANCE_FACTOR::SlowdownFactor"]/*' />
 	public float SlowdownFactor;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS"]/*' />
 /// <unmanaged>D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS</unmanaged>
 public partial struct DebugCommandListGpuBasedValidationSettings
@@ -11305,7 +11073,6 @@ public partial struct DebugCommandListGpuBasedValidationSettings
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS::ShaderPatchMode"]/*' />
 	public GpuBasedValidationShaderPatchMode ShaderPatchMode;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE"]/*' />
 /// <unmanaged>D3D12_MESSAGE</unmanaged>
 public partial struct Message
@@ -11325,7 +11092,6 @@ public partial struct Message
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::DescriptionByteLength"]/*' />
 	public nuint DescriptionByteLength;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INFO_QUEUE_FILTER_DESC"]/*' />
 /// <unmanaged>D3D12_INFO_QUEUE_FILTER_DESC</unmanaged>
 public partial struct InfoQueueFilterDescription
@@ -11348,7 +11114,6 @@ public partial struct InfoQueueFilterDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
 	public unsafe MessageId* pIDList;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INFO_QUEUE_FILTER"]/*' />
 /// <unmanaged>D3D12_INFO_QUEUE_FILTER</unmanaged>
 public partial struct InfoQueueFilter
@@ -11359,7 +11124,6 @@ public partial struct InfoQueueFilter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INFO_QUEUE_FILTER::DenyList"]/*' />
 	public InfoQueueFilterDescription DenyList;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS"]/*' />
 /// <unmanaged>D3D12_DISPATCH_MESH_ARGUMENTS</unmanaged>
 public partial struct DispatchMeshArguments
@@ -11373,7 +11137,6 @@ public partial struct DispatchMeshArguments
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS::ThreadGroupCountZ"]/*' />
 	public uint ThreadGroupCountZ;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC"]/*' />
 /// <unmanaged>D3D12_SIGNATURE_PARAMETER_DESC</unmanaged>
 public partial struct SignatureParameterDescription
@@ -11405,7 +11168,6 @@ public partial struct SignatureParameterDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::MinPrecision"]/*' />
 	public Graphics.Direct3D.MinPrecision MinPrecision;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_BUFFER_DESC</unmanaged>
 public partial struct ShaderBufferDescription
@@ -11425,7 +11187,6 @@ public partial struct ShaderBufferDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::uFlags"]/*' />
 	public uint uFlags;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VARIABLE_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_VARIABLE_DESC</unmanaged>
 public partial struct ShaderVariableDescription
@@ -11457,7 +11218,6 @@ public partial struct ShaderVariableDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VARIABLE_DESC::SamplerSize"]/*' />
 	public uint SamplerSize;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_TYPE_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_TYPE_DESC</unmanaged>
 public partial struct ShaderTypeDescription
@@ -11486,7 +11246,6 @@ public partial struct ShaderTypeDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_TYPE_DESC::Name"]/*' />
 	public unsafe sbyte* Name;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_DESC</unmanaged>
 public partial struct ShaderDescription
@@ -11605,7 +11364,6 @@ public partial struct ShaderDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_DESC::cTextureStoreInstructions"]/*' />
 	public uint cTextureStoreInstructions;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_INPUT_BIND_DESC</unmanaged>
 public partial struct ShaderInputBindDescription
@@ -11640,7 +11398,6 @@ public partial struct ShaderInputBindDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::uID"]/*' />
 	public uint uID;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIBRARY_DESC"]/*' />
 /// <unmanaged>D3D12_LIBRARY_DESC</unmanaged>
 public partial struct LibraryDescription
@@ -11654,7 +11411,6 @@ public partial struct LibraryDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIBRARY_DESC::FunctionCount"]/*' />
 	public uint FunctionCount;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC"]/*' />
 /// <unmanaged>D3D12_FUNCTION_DESC</unmanaged>
 public partial struct FunctionDescription
@@ -11758,7 +11514,6 @@ public partial struct FunctionDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::Has10Level9PixelShader"]/*' />
 	public Bool32 Has10Level9PixelShader;
 }
-
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PARAMETER_DESC"]/*' />
 /// <unmanaged>D3D12_PARAMETER_DESC</unmanaged>
 public partial struct ParameterDescription
@@ -11799,7 +11554,6 @@ public partial struct ParameterDescription
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PARAMETER_DESC::FirstOutComponent"]/*' />
 	public uint FirstOutComponent;
 }
-
 #endregion Structs
 
 #region COM Types
@@ -11831,6 +11585,5 @@ public static unsafe partial class Apis
 
 	[DllImport("d3d12", ExactSpelling = true)]
 	public static extern HResult D3D12GetInterface(Guid* rclsid, Guid* riid, void** ppvDebug);
-
 }
 #endregion Functions

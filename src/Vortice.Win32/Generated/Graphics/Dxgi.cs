@@ -1638,7 +1638,6 @@ public enum MessageId : int
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired</unmanaged>
 	Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired = 1031,
 }
-
 #endregion Enums
 
 #region Generated Enums
@@ -1730,7 +1729,6 @@ public enum WindowAssociationFlags : uint
 	/// <unmanaged>DXGI_MWA_VALID</unmanaged>
 	Valid = 7,
 }
-
 #endregion Generated Enums
 
 #region Structs
@@ -1753,7 +1751,6 @@ public partial struct FrameStatistics
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncGPUTime"]/*' />
 	public LargeInteger SyncGPUTime;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT"]/*' />
 /// <unmanaged>DXGI_MAPPED_RECT</unmanaged>
 public partial struct MappedRect
@@ -1764,7 +1761,6 @@ public partial struct MappedRect
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT::pBits"]/*' />
 	public unsafe byte* pBits;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC</unmanaged>
 public partial struct AdapterDescription
@@ -1796,7 +1792,6 @@ public partial struct AdapterDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC"]/*' />
 /// <unmanaged>DXGI_OUTPUT_DESC</unmanaged>
 public partial struct OutputDescription
@@ -1816,7 +1811,6 @@ public partial struct OutputDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Monitor"]/*' />
 	public IntPtr Monitor;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE"]/*' />
 /// <unmanaged>DXGI_SHARED_RESOURCE</unmanaged>
 public partial struct SharedResource
@@ -1824,7 +1818,6 @@ public partial struct SharedResource
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE::Handle"]/*' />
 	public Handle Handle;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC"]/*' />
 /// <unmanaged>DXGI_SURFACE_DESC</unmanaged>
 public partial struct SurfaceDescription
@@ -1841,7 +1834,6 @@ public partial struct SurfaceDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_DESC</unmanaged>
 public partial struct SwapChainDescription
@@ -1870,7 +1862,6 @@ public partial struct SwapChainDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Flags"]/*' />
 	public SwapChainFlags Flags;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC1</unmanaged>
 public partial struct AdapterDescription1
@@ -1905,7 +1896,6 @@ public partial struct AdapterDescription1
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Flags"]/*' />
 	public AdapterFlags Flags;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE"]/*' />
 /// <unmanaged>DXGI_DISPLAY_COLOR_SPACE</unmanaged>
 public partial struct DisplayColorSpace
@@ -1916,7 +1906,6 @@ public partial struct DisplayColorSpace
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::WhitePoints"]/*' />
 	public unsafe fixed float WhitePoints[32];
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_MOVE_RECT</unmanaged>
 public partial struct OutduplMoveRect
@@ -1927,7 +1916,6 @@ public partial struct OutduplMoveRect
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::DestinationRect"]/*' />
 	public RawRect DestinationRect;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_DESC</unmanaged>
 public partial struct OutduplDescription
@@ -1941,7 +1929,6 @@ public partial struct OutduplDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::DesktopImageInSystemMemory"]/*' />
 	public Bool32 DesktopImageInSystemMemory;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_POINTER_POSITION</unmanaged>
 public partial struct OutduplPointerPosition
@@ -1952,7 +1939,6 @@ public partial struct OutduplPointerPosition
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Visible"]/*' />
 	public Bool32 Visible;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_INFO</unmanaged>
 public partial struct OutduplPointerShapeInfo
@@ -1972,7 +1958,6 @@ public partial struct OutduplPointerShapeInfo
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::HotSpot"]/*' />
 	public System.Drawing.Point HotSpot;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_FRAME_INFO</unmanaged>
 public partial struct OutduplFrameInfo
@@ -2001,7 +1986,6 @@ public partial struct OutduplFrameInfo
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerShapeBufferSize"]/*' />
 	public uint PointerShapeBufferSize;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1"]/*' />
 /// <unmanaged>DXGI_MODE_DESC1</unmanaged>
 public partial struct ModeDescription1
@@ -2027,7 +2011,6 @@ public partial struct ModeDescription1
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC1::Stereo"]/*' />
 	public Bool32 Stereo;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_DESC1</unmanaged>
 public partial struct SwapChainDescription1
@@ -2065,7 +2048,6 @@ public partial struct SwapChainDescription1
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Flags"]/*' />
 	public SwapChainFlags Flags;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_FULLSCREEN_DESC</unmanaged>
 public partial struct SwapChainFullscreenDescription
@@ -2082,7 +2064,6 @@ public partial struct SwapChainFullscreenDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Windowed"]/*' />
 	public Bool32 Windowed;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS"]/*' />
 /// <unmanaged>DXGI_PRESENT_PARAMETERS</unmanaged>
 public partial struct PresentParameters
@@ -2099,7 +2080,6 @@ public partial struct PresentParameters
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollOffset"]/*' />
 	public unsafe System.Drawing.Point* pScrollOffset;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC2</unmanaged>
 public partial struct AdapterDescription2
@@ -2140,7 +2120,6 @@ public partial struct AdapterDescription2
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::ComputePreemptionGranularity"]/*' />
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC"]/*' />
 /// <unmanaged>DXGI_DECODE_SWAP_CHAIN_DESC</unmanaged>
 public partial struct DecodeSwapChainDescription
@@ -2148,7 +2127,6 @@ public partial struct DecodeSwapChainDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC::Flags"]/*' />
 	public SwapChainFlags Flags;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA"]/*' />
 /// <unmanaged>DXGI_FRAME_STATISTICS_MEDIA</unmanaged>
 public partial struct FrameStatisticsMedia
@@ -2174,7 +2152,6 @@ public partial struct FrameStatisticsMedia
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::ApprovedPresentDuration"]/*' />
 	public uint ApprovedPresentDuration;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO"]/*' />
 /// <unmanaged>DXGI_QUERY_VIDEO_MEMORY_INFO</unmanaged>
 public partial struct QueryVideoMemoryInfo
@@ -2191,7 +2168,6 @@ public partial struct QueryVideoMemoryInfo
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentReservation"]/*' />
 	public ulong CurrentReservation;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_HDR10</unmanaged>
 public partial struct HDRMetadataHdr10
@@ -2220,7 +2196,6 @@ public partial struct HDRMetadataHdr10
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxFrameAverageLightLevel"]/*' />
 	public ushort MaxFrameAverageLightLevel;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_HDR10PLUS</unmanaged>
 public partial struct HDRMetadataHdr10plus
@@ -2228,7 +2203,6 @@ public partial struct HDRMetadataHdr10plus
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS::Data"]/*' />
 	public unsafe fixed byte Data[72];
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC3</unmanaged>
 public partial struct AdapterDescription3
@@ -2269,7 +2243,6 @@ public partial struct AdapterDescription3
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::ComputePreemptionGranularity"]/*' />
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1"]/*' />
 /// <unmanaged>DXGI_OUTPUT_DESC1</unmanaged>
 public partial struct OutputDescription1
@@ -2316,7 +2289,6 @@ public partial struct OutputDescription1
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxFullFrameLuminance"]/*' />
 	public float MaxFullFrameLuminance;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE</unmanaged>
 public partial struct InfoQueueMessage
@@ -2339,7 +2311,6 @@ public partial struct InfoQueueMessage
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::DescriptionByteLength"]/*' />
 	public nuint DescriptionByteLength;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_FILTER_DESC</unmanaged>
 public partial struct InfoQueueFilterDescription
@@ -2362,7 +2333,6 @@ public partial struct InfoQueueFilterDescription
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
 	public unsafe int* pIDList;
 }
-
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_FILTER</unmanaged>
 public partial struct InfoQueueFilter
@@ -2373,7 +2343,6 @@ public partial struct InfoQueueFilter
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::DenyList"]/*' />
 	public InfoQueueFilterDescription DenyList;
 }
-
 #endregion Structs
 
 #region COM Types
@@ -2396,6 +2365,5 @@ public static unsafe partial class Apis
 
 	[DllImport("dxgi", ExactSpelling = true)]
 	public static extern HResult DXGIDeclareAdapterRemovalSupport();
-
 }
 #endregion Functions

@@ -331,7 +331,6 @@ public enum DxcOutKind : int
 	/// <unmanaged>DXC_OUT_EXTRA_OUTPUTS</unmanaged>
 	ExtraOutputs = 10,
 }
-
 #endregion Enums
 
 #region Generated Enums
@@ -372,7 +371,6 @@ public enum DxcVersionInfoFlags : uint
 	/// <unmanaged>DxcVersionInfoFlags_Internal</unmanaged>
 	Internal = 2,
 }
-
 #endregion Generated Enums
 
 #region Structs
@@ -386,7 +384,6 @@ public partial struct DxcShaderHash
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcShaderHash::HashDigest"]/*' />
 	public unsafe fixed byte HashDigest[16];
 }
-
 /// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer"]/*' />
 /// <unmanaged>DxcBuffer</unmanaged>
 public partial struct DxcBuffer
@@ -400,7 +397,6 @@ public partial struct DxcBuffer
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer::Encoding"]/*' />
 	public uint Encoding;
 }
-
 /// <include file='../Direct3D.xml' path='doc/member[@name="DxcDefine"]/*' />
 /// <unmanaged>DxcDefine</unmanaged>
 public partial struct DxcDefine
@@ -411,7 +407,6 @@ public partial struct DxcDefine
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcDefine::Value"]/*' />
 	public unsafe ushort* Value;
 }
-
 /// <include file='../Direct3D.xml' path='doc/member[@name="DxcArgPair"]/*' />
 /// <unmanaged>DxcArgPair</unmanaged>
 public partial struct DxcArgPair
@@ -422,7 +417,6 @@ public partial struct DxcArgPair
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcArgPair::pValue"]/*' />
 	public unsafe ushort* pValue;
 }
-
 #endregion Structs
 
 #region COM Types
@@ -436,6 +430,5 @@ public static unsafe partial class Apis
 
 	[DllImport("dxcompiler", ExactSpelling = true)]
 	public static extern HResult DxcCreateInstance2(Com.IMalloc* pMalloc, Guid* rclsid, Guid* riid, void** ppv);
-
 }
 #endregion Functions

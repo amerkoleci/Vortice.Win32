@@ -248,7 +248,6 @@ public enum CompositeMode : uint
 	/// <unmanaged>D2D1_COMPOSITE_MODE_MASK_INVERT</unmanaged>
 	MaskInvert = 12,
 }
-
 #endregion Enums
 
 #region Structs
@@ -262,7 +261,6 @@ public partial struct PixelFormat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT::alphaMode"]/*' />
 	public AlphaMode alphaMode;
 }
-
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F"]/*' />
 /// <unmanaged>D2D_RECT_F</unmanaged>
 public partial struct RectF
@@ -279,7 +277,6 @@ public partial struct RectF
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F::bottom"]/*' />
 	public float bottom;
 }
-
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U"]/*' />
 /// <unmanaged>D2D_RECT_U</unmanaged>
 public partial struct RectU
@@ -296,7 +293,6 @@ public partial struct RectU
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U::bottom"]/*' />
 	public uint bottom;
 }
-
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT"]/*' />
 /// <unmanaged>D2D1_BEZIER_SEGMENT</unmanaged>
 public partial struct BezierSegment
@@ -310,7 +306,6 @@ public partial struct BezierSegment
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point3"]/*' />
 	public System.Drawing.PointF point3;
 }
-
 #endregion Structs
 
 #region COM Types

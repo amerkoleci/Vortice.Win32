@@ -34,19 +34,9 @@ public static unsafe class StringUtilities
         if (source is not null)
         {
             int maxLength = Encoding.UTF8.GetMaxByteCount(source.Length);
-#if NET6_0_OR_GREATER
-            var bytes = new byte[maxLength + 1];
-            var length = Encoding.UTF8.GetBytes(source, bytes);
+            byte[] bytes = new byte[maxLength + 1];
+            var length = Encoding.UTF8.GetBytes(source.AsSpan(), bytes);
             result = bytes.AsSpan(0, length);
-#else
-            byte* bytes = stackalloc byte[maxLength + 1];
-            fixed (char* namePtr = source)
-            {
-                Encoding.UTF8.GetBytes(namePtr, source.Length, bytes, maxLength);
-            }
-            bytes[maxLength] = 0;
-            result = new(bytes, source.Length);
-#endif
         }
         else
         {
@@ -167,10 +157,6 @@ public static unsafe class StringUtilities
         if (span.GetPointer() == null)
             return null;
 
-#if NET6_0_OR_GREATER
         return Encoding.UTF8.GetString(span.As<sbyte, byte>());
-#else
-        return Encoding.UTF8.GetString(span.As<sbyte, byte>().GetPointer(), span.Length);
-#endif
     }
 }

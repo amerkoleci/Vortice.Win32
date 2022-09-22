@@ -37,6 +37,5 @@ public enum AffineTransform2DInterpolationMode : uint
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC</unmanaged>
 	HighQualityCubic = 5,
 }
-
 #endregion Enums
 
