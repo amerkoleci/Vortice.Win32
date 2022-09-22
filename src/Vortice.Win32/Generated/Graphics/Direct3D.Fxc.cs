@@ -135,6 +135,8 @@ public enum CompileFlags : uint
 	OptimizationLevel0 = 16384,
 	/// <unmanaged>D3DCOMPILE_OPTIMIZATION_LEVEL1</unmanaged>
 	OptimizationLevel1 = 0,
+	/// <unmanaged>D3DCOMPILE_OPTIMIZATION_LEVEL2</unmanaged>
+	OptimizationLevel2 = 49152,
 	/// <unmanaged>D3DCOMPILE_OPTIMIZATION_LEVEL3</unmanaged>
 	OptimizationLevel3 = 32768,
 	/// <unmanaged>D3DCOMPILE_RESERVED16</unmanaged>
