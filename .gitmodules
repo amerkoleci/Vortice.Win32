@@ -1,3 +1,0 @@
-[submodule "src/Generator/win32json"]
-	path = src/Generator/win32json
-	url = https://github.com/marlersoft/win32json.git
