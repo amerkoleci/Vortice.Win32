@@ -39,6 +39,11 @@ public unsafe partial struct ID3D11DeviceContext
         OMSetBlendState(blendState, null, D3D11_DEFAULT_SAMPLE_MASK);
     }
 
+    public void IASetVertexBuffer(int slot, ID3D11Buffer* buffer, uint stride, uint offset = 0)
+    {
+        IASetVertexBuffers((uint)slot, 1, buffer == null ? null : &buffer, &stride, &offset);
+    }
+
     public void VSSetShader(ID3D11VertexShader* shader)
     {
         VSSetShader(shader, null, 0);
@@ -97,6 +102,67 @@ public unsafe partial struct ID3D11DeviceContext
     public void CSSetConstantBuffer(uint slot, ID3D11Buffer* constantBuffer)
     {
         CSSetConstantBuffers(slot, 1, constantBuffer != null ? &constantBuffer : null);
+    }
+
+    public void UnsetRenderTargets()
+    {
+        OMSetRenderTargets(0, null, null);
+    }
+
+    public void OMSetRenderTargets(ID3D11RenderTargetView* renderTargetView, ID3D11DepthStencilView* depthStencilView = null)
+    {
+        OMSetRenderTargets(1,
+            renderTargetView == null ? null : &renderTargetView,
+            depthStencilView);
+    }
+
+    public void ClearRenderTargetView(ID3D11RenderTargetView* renderTargetView, Color4 color)
+    {
+        ClearRenderTargetView(renderTargetView, (float*)&color);
+    }
+
+    public void ClearUnorderedAccessViewFloat(ID3D11UnorderedAccessView* unorderedAccessView, Color4 color)
+    {
+        ClearUnorderedAccessViewFloat(unorderedAccessView, (float*)&color);
+    }
+
+    public HResult Map(ID3D11Texture2D* resource,
+        uint mipSlice, uint arraySlice,
+        MapMode mode, MapFlags flags,
+        MappedSubresource* pMappedResource, out uint subresource, out uint mipSize)
+    {
+        subresource = resource->CalculateSubResourceIndex(mipSlice, arraySlice, out mipSize);
+        return Map((ID3D11Resource*)resource, subresource, mode, flags, pMappedResource);
+    }
+
+    public Span<T> Map<T>(ID3D11Texture2D* resource,
+        uint mipSlice, uint arraySlice,
+        MapMode mode = MapMode.Read, MapFlags flags = MapFlags.None) where T : unmanaged
+    {
+        uint subresource = resource->CalculateSubResourceIndex(mipSlice, arraySlice, out uint mipSize);
+        MappedSubresource mappedSubresource;
+        Map((ID3D11Resource*)resource, subresource, mode, flags, &mappedSubresource).ThrowIfFailed();
+
+        Span<byte> source = new(mappedSubresource.pData, (int)(mipSize * mappedSubresource.RowPitch));
+        return global::System.Runtime.InteropServices.MemoryMarshal.Cast<byte, T>(source);
+    }
+
+    public void Unmap(ID3D11Texture1D* resource, uint mipSlice, uint arraySlice)
+    {
+        uint subresource = resource->CalculateSubResourceIndex(mipSlice, arraySlice, out _);
+        Unmap((ID3D11Resource*)resource, subresource);
+    }
+
+    public void Unmap(ID3D11Texture2D* resource, uint mipSlice, uint arraySlice)
+    {
+        uint subresource = resource->CalculateSubResourceIndex(mipSlice, arraySlice, out _);
+        Unmap((ID3D11Resource*)resource, subresource);
+    }
+
+    public void Unmap(ID3D11Texture3D* resource, uint mipSlice, uint arraySlice)
+    {
+        uint subresource = resource->CalculateSubResourceIndex(mipSlice, arraySlice, out _);
+        Unmap((ID3D11Resource*)resource, subresource);
     }
 
     public ComPtr<ID3D11CommandList> FinishCommandList(bool RestoreDeferredContextState = false)

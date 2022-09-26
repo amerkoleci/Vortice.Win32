@@ -153,9 +153,9 @@ public unsafe partial struct IDXGISwapChain
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::ResizeBuffers"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, uint SwapChainFlags)
+	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, SwapChainFlags SwapChainFlags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, uint, uint, Common.Format, uint, int>)(lpVtbl[13]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
+		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, uint, uint, Common.Format, SwapChainFlags, int>)(lpVtbl[13]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
 	}
 
 	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::ResizeTarget"]/*' />

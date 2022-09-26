@@ -857,6 +857,7 @@ public static class Program
         { "DXGI_DEBUG_RLO_FLAGS", "ReportLiveObjectFlags" },
 
         // D3D11
+        { "D3D11_MAP", "MapMode" },
         { "D3D11_RLDO_FLAGS", "ReportLiveDeviceObjectFlags" },
         { "D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG", "CreateDeviceContextStateFlags" },
         { "D3D11_QUERY", "QueryType" },
@@ -960,6 +961,12 @@ public static class Program
         { "IDXGISwapChain2::Present::Flags", "DXGI_PRESENT" },
         { "IDXGISwapChain3::Present::Flags", "DXGI_PRESENT" },
         { "IDXGISwapChain4::Present::Flags", "DXGI_PRESENT" },
+
+        { "IDXGISwapChain::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
+        { "IDXGISwapChain1::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
+        { "IDXGISwapChain2::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
+        { "IDXGISwapChain3::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
+        { "IDXGISwapChain4::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
 
         // D3D11
         { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" },

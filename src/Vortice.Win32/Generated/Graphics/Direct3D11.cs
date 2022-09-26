@@ -2684,7 +2684,7 @@ public enum ResourceMiscFlags : uint
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP"]/*' />
 /// <unmanaged>D3D11_MAP</unmanaged>
-public enum Map : int
+public enum MapMode : int
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_READ"]/*' />
 	/// <unmanaged>D3D11_MAP_READ</unmanaged>

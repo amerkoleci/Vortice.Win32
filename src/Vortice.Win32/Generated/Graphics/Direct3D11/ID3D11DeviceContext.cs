@@ -161,9 +161,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Map(ID3D11Resource* pResource, uint Subresource, Map MapType, MapFlags MapFlags, MappedSubresource* pMappedResource)
+	public HResult Map(ID3D11Resource* pResource, uint Subresource, MapMode MapType, MapFlags MapFlags, MappedSubresource* pMappedResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11Resource*, uint, Map, MapFlags, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11Resource*, uint, MapMode, MapFlags, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
 	}
 
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::Unmap"]/*' />

@@ -5,7 +5,7 @@ namespace Win32.Graphics.Direct3D11;
 
 public unsafe partial struct ID3D11Device
 {
-    public ComPtr<ID3D11Buffer> CreateBuffe(BufferDescription* description, SubresourceData* initialData = default)
+    public ComPtr<ID3D11Buffer> CreateBuffer(BufferDescription* description, SubresourceData* initialData = default)
     {
         using ComPtr<ID3D11Buffer> buffer = default;
         CreateBuffer(description, initialData, buffer.GetAddressOf()).ThrowIfFailed();
@@ -244,5 +244,12 @@ public unsafe partial struct ID3D11Device
         CreateTexture3D(&description, initialData, texture.GetAddressOf()).ThrowIfFailed();
 
         return texture.Move();
+    }
+
+    public ComPtr<ID3D11DeviceContext> CreateDeferredContext()
+    {
+        using ComPtr<ID3D11DeviceContext> deferredContext = default;
+        CreateDeferredContext(0u, deferredContext.GetAddressOf()).ThrowIfFailed();
+        return deferredContext.Move();
     }
 }

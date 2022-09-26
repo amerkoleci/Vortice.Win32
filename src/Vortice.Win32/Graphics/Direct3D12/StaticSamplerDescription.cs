@@ -38,9 +38,10 @@ public unsafe partial struct StaticSamplerDescription
     /// Initializes a new instance of the <see cref="StaticSamplerDescription"/> struct.
     /// </summary>
     /// <param name="samplerDescription">Sampler description</param>
-    /// <param name="shaderVisibility">The shader visibility.</param>
-    /// <param name="shaderRegister">The shader register.</param>
-    /// <param name="registerSpace">The register space.</param>
+    /// <param name="shaderVisibility">The shader visibility</param>
+    /// <param name="shaderRegister">The shader register</param>
+    /// <param name="registerSpace">The register space</param>
+    /// <param name="borderColor">The <see cref="StaticBorderColor"/> value</param>
     public StaticSamplerDescription(
         in SamplerDescription samplerDescription,
         ShaderVisibility shaderVisibility,
