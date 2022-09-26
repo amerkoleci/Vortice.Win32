@@ -12,7 +12,9 @@ namespace Win32.Graphics.Direct3D.Fxc;
 public static partial class Apis
 {
 	public const uint D3D_COMPILER_VERSION = 47;
+
 	public const uint D3D_GET_INST_OFFSETS_INCLUDE_NON_EXECUTABLE = 1;
+
 }
 
 #region Enums
@@ -228,6 +230,7 @@ public enum CompressShaderFlags : uint
 #endregion Generated Enums
 
 #region Structs
+
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA"]/*' />
 /// <unmanaged>D3D_SHADER_DATA</unmanaged>
 public partial struct ShaderData
@@ -243,76 +246,76 @@ public partial struct ShaderData
 #region Functions
 public static unsafe partial class Apis
 {
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DReadFileToBlob(ushort* pFileName, Graphics.Direct3D.ID3DBlob** ppContents);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DWriteBlobToFile(Graphics.Direct3D.ID3DBlob* pBlob, ushort* pFileName, Bool32 bOverwrite);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DCompile(void* pSrcData, nuint SrcDataSize, sbyte* pSourceName, Graphics.Direct3D.ShaderMacro* pDefines, Graphics.Direct3D.ID3DInclude* pInclude, sbyte* pEntrypoint, sbyte* pTarget, CompileFlags Flags1, uint Flags2, Graphics.Direct3D.ID3DBlob** ppCode, Graphics.Direct3D.ID3DBlob** ppErrorMsgs);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DCompile2(void* pSrcData, nuint SrcDataSize, sbyte* pSourceName, Graphics.Direct3D.ShaderMacro* pDefines, Graphics.Direct3D.ID3DInclude* pInclude, sbyte* pEntrypoint, sbyte* pTarget, CompileFlags Flags1, uint Flags2, uint SecondaryDataFlags, void* pSecondaryData, nuint SecondaryDataSize, Graphics.Direct3D.ID3DBlob** ppCode, Graphics.Direct3D.ID3DBlob** ppErrorMsgs);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DCompileFromFile(ushort* pFileName, Graphics.Direct3D.ShaderMacro* pDefines, Graphics.Direct3D.ID3DInclude* pInclude, sbyte* pEntrypoint, sbyte* pTarget, CompileFlags Flags1, uint Flags2, Graphics.Direct3D.ID3DBlob** ppCode, Graphics.Direct3D.ID3DBlob** ppErrorMsgs);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DPreprocess(void* pSrcData, nuint SrcDataSize, sbyte* pSourceName, Graphics.Direct3D.ShaderMacro* pDefines, Graphics.Direct3D.ID3DInclude* pInclude, Graphics.Direct3D.ID3DBlob** ppCodeText, Graphics.Direct3D.ID3DBlob** ppErrorMsgs);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DGetDebugInfo(void* pSrcData, nuint SrcDataSize, Graphics.Direct3D.ID3DBlob** ppDebugInfo);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DReflect(void* pSrcData, nuint SrcDataSize, Guid* pInterface, void** ppReflector);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DReflectLibrary(void* pSrcData, nuint SrcDataSize, Guid* riid, void** ppReflector);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DDisassemble(void* pSrcData, nuint SrcDataSize, DisasmFlags Flags, sbyte* szComments, Graphics.Direct3D.ID3DBlob** ppDisassembly);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DDisassembleRegion(void* pSrcData, nuint SrcDataSize, uint Flags, sbyte* szComments, nuint StartByteOffset, nuint NumInsts, nuint* pFinishByteOffset, Graphics.Direct3D.ID3DBlob** ppDisassembly);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DCreateLinker(Graphics.Direct3D11.ID3D11Linker** ppLinker);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DLoadModule(void* pSrcData, nuint cbSrcDataSize, Graphics.Direct3D11.ID3D11Module** ppModule);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DCreateFunctionLinkingGraph(uint uFlags, Graphics.Direct3D11.ID3D11FunctionLinkingGraph** ppFunctionLinkingGraph);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DGetTraceInstructionOffsets(void* pSrcData, nuint SrcDataSize, uint Flags, nuint StartInstIndex, nuint NumInsts, nuint* pOffsets, nuint* pTotalInsts);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DGetInputSignatureBlob(void* pSrcData, nuint SrcDataSize, Graphics.Direct3D.ID3DBlob** ppSignatureBlob);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DGetOutputSignatureBlob(void* pSrcData, nuint SrcDataSize, Graphics.Direct3D.ID3DBlob** ppSignatureBlob);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DGetInputAndOutputSignatureBlob(void* pSrcData, nuint SrcDataSize, Graphics.Direct3D.ID3DBlob** ppSignatureBlob);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DStripShader(void* pShaderBytecode, nuint BytecodeLength, uint uStripFlags, Graphics.Direct3D.ID3DBlob** ppStrippedBlob);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DGetBlobPart(void* pSrcData, nuint SrcDataSize, BlobPart Part, uint Flags, Graphics.Direct3D.ID3DBlob** ppPart);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DSetBlobPart(void* pSrcData, nuint SrcDataSize, BlobPart Part, uint Flags, void* pPart, nuint PartSize, Graphics.Direct3D.ID3DBlob** ppNewShader);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DCreateBlob(nuint Size, Graphics.Direct3D.ID3DBlob** ppBlob);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DCompressShaders(uint uNumShaders, ShaderData* pShaderData, CompressShaderFlags uFlags, Graphics.Direct3D.ID3DBlob** ppCompressedData);
 
-	[DllImport("D3DCOMPILER_47", ExactSpelling = true)]
+	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DDecompressShaders(void* pSrcData, nuint SrcDataSize, uint uNumShaders, uint uStartIndex, uint* pIndices, uint uFlags, Graphics.Direct3D.ID3DBlob** ppShaders, uint* pTotalShaders);
 }
 #endregion Functions

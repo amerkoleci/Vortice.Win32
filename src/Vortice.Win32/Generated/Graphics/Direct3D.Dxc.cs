@@ -11,6 +11,48 @@ namespace Win32.Graphics.Direct3D.Dxc;
 
 public static partial class Apis
 {
+	public const string DXC_ARG_DEBUG = "-Zi";
+
+	public const string DXC_ARG_SKIP_VALIDATION = "-Vd";
+
+	public const string DXC_ARG_SKIP_OPTIMIZATIONS = "-Od";
+
+	public const string DXC_ARG_PACK_MATRIX_ROW_MAJOR = "-Zpr";
+
+	public const string DXC_ARG_PACK_MATRIX_COLUMN_MAJOR = "-Zpc";
+
+	public const string DXC_ARG_AVOID_FLOW_CONTROL = "-Gfa";
+
+	public const string DXC_ARG_PREFER_FLOW_CONTROL = "-Gfp";
+
+	public const string DXC_ARG_ENABLE_STRICTNESS = "-Ges";
+
+	public const string DXC_ARG_ENABLE_BACKWARDS_COMPATIBILITY = "-Gec";
+
+	public const string DXC_ARG_IEEE_STRICTNESS = "-Gis";
+
+	public const string DXC_ARG_OPTIMIZATION_LEVEL0 = "-O0";
+
+	public const string DXC_ARG_OPTIMIZATION_LEVEL1 = "-O1";
+
+	public const string DXC_ARG_OPTIMIZATION_LEVEL2 = "-O2";
+
+	public const string DXC_ARG_OPTIMIZATION_LEVEL3 = "-O3";
+
+	public const string DXC_ARG_WARNINGS_ARE_ERRORS = "-WX";
+
+	public const string DXC_ARG_RESOURCES_MAY_ALIAS = "-res_may_alias";
+
+	public const string DXC_ARG_ALL_RESOURCES_BOUND = "-all_resources_bound";
+
+	public const string DXC_ARG_DEBUG_NAME_FOR_SOURCE = "-Zss";
+
+	public const string DXC_ARG_DEBUG_NAME_FOR_BINARY = "-Zsb";
+
+	public const string DXC_EXTRA_OUTPUT_NAME_STDOUT = "*stdout*";
+
+	public const string DXC_EXTRA_OUTPUT_NAME_STDERR = "*stderr*";
+
 	public static ref readonly Guid CLSID_DxcCompiler
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -374,6 +416,7 @@ public enum DxcVersionInfoFlags : uint
 #endregion Generated Enums
 
 #region Structs
+
 /// <include file='../Direct3D.xml' path='doc/member[@name="DxcShaderHash"]/*' />
 /// <unmanaged>DxcShaderHash</unmanaged>
 public partial struct DxcShaderHash
@@ -384,6 +427,7 @@ public partial struct DxcShaderHash
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcShaderHash::HashDigest"]/*' />
 	public unsafe fixed byte HashDigest[16];
 }
+
 /// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer"]/*' />
 /// <unmanaged>DxcBuffer</unmanaged>
 public partial struct DxcBuffer
@@ -397,6 +441,7 @@ public partial struct DxcBuffer
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer::Encoding"]/*' />
 	public uint Encoding;
 }
+
 /// <include file='../Direct3D.xml' path='doc/member[@name="DxcDefine"]/*' />
 /// <unmanaged>DxcDefine</unmanaged>
 public partial struct DxcDefine
@@ -407,6 +452,7 @@ public partial struct DxcDefine
 	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcDefine::Value"]/*' />
 	public unsafe ushort* Value;
 }
+
 /// <include file='../Direct3D.xml' path='doc/member[@name="DxcArgPair"]/*' />
 /// <unmanaged>DxcArgPair</unmanaged>
 public partial struct DxcArgPair
@@ -425,10 +471,10 @@ public partial struct DxcArgPair
 #region Functions
 public static unsafe partial class Apis
 {
-	[DllImport("dxcompiler", ExactSpelling = true)]
+	[DllImport("dxcompiler.dll", ExactSpelling = true)]
 	public static extern HResult DxcCreateInstance(Guid* rclsid, Guid* riid, void** ppv);
 
-	[DllImport("dxcompiler", ExactSpelling = true)]
+	[DllImport("dxcompiler.dll", ExactSpelling = true)]
 	public static extern HResult DxcCreateInstance2(Com.IMalloc* pMalloc, Guid* rclsid, Guid* riid, void** ppv);
 }
 #endregion Functions

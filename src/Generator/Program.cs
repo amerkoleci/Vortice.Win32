@@ -1,11 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Reflection.Metadata;
-using System.Reflection;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -15,7 +11,6 @@ public static class Program
 {
     private static readonly string[] jsons = new[]
     {
-        "Graphics.json",
         "Graphics.Dxgi.Common.json",
         "Graphics.Dxgi.json",
         "Graphics.Direct3D.json",
@@ -68,6 +63,7 @@ public static class Program
         { "Foundation.PSTR", "sbyte*" },
         { "Foundation.PWSTR", "ushort*" },
         { "Foundation.CHAR", "byte" },
+        { "Foundation.COLORREF", "uint" },
 
         { "Foundation.LUID", "Luid" },
         { "Foundation.LARGE_INTEGER", "LargeInteger" },
@@ -1114,7 +1110,6 @@ public static class Program
                 if (typeName == "Guid")
                 {
                     WriteGuid(writer, constant.Value!.ToString(), constant.Name);
-                    writer.WriteLine();
                 }
                 else if (typeName == "HResult")
                 {
@@ -1130,10 +1125,18 @@ public static class Program
                     double dblValue = Convert.ToDouble(constant.Value);
                     writer.WriteLine($"public const double {constant.Name} = {dblValue.ToString(CultureInfo.InvariantCulture)};");
                 }
+                else if (typeName == "String")
+                {
+                    string strValue = constant.Value.ToString();
+                    strValue = strValue.Replace(@"\", @"\\");
+                    writer.WriteLine($"public const string {constant.Name} = \"{strValue}\";");
+                }
                 else
                 {
                     writer.WriteLine($"public const {typeName} {constant.Name} = {constant.Value};");
                 }
+
+                writer.WriteLine();
             }
         }
         writer.WriteLine();
@@ -1196,8 +1199,9 @@ public static class Program
                             Kind = "Enum",
                             Flags = enumToGenerate.Value,
                             Scoped = false,
-                            IntegerBase = constant.Type.Name
+                            IntegerBase = enumToGenerate.Key == "D3DCOMPILE" ? "UInt32" : constant.Type.Name
                         };
+
                         createdEnums.Add(enumToGenerate.Key, apiType);
                         createdEnumType = apiType;
                     }
@@ -1284,6 +1288,8 @@ public static class Program
 
         // Structs
         regionWritten = false;
+        needNewLine = true;
+
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
             if (structType.Name.StartsWith("D3DX11") ||
@@ -1304,7 +1310,13 @@ public static class Program
                 regionWritten = true;
             }
 
+            if (needNewLine)
+            {
+                writer.WriteLine();
+            }
+
             GenerateStruct(api, writer, structType);
+            needNewLine = true;
 
             s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
         }
@@ -1646,7 +1658,8 @@ public static class Program
                     enumType.Name == "D3DCOMPILE" &&
                     (enumItem.Name.StartsWith("D3DCOMPILE_EFFECT_") ||
                     enumItem.Name.StartsWith("D3DCOMPILE_FLAGS2_") ||
-                    enumItem.Name.StartsWith("D3DCOMPILE_SECDATA_")))
+                    enumItem.Name.StartsWith("D3DCOMPILE_SECDATA_") ||
+                    enumItem.Name.StartsWith("D3DCOMPILER_DLL_")))
                 {
                     continue;
                 }
@@ -1778,7 +1791,8 @@ public static class Program
                     string apiName = GetApiName(field.Type);
                     string fullTypeName = $"{apiName}.{field.Type.Name}";
 
-                    if (s_visitedComTypes.ContainsKey(fullTypeName) ||
+                    if (IsKnownComType(fullTypeName) ||
+                        s_visitedComTypes.ContainsKey(fullTypeName) ||
                         api.Types.Any(item => item.Name == field.Type.Name && item.Kind.ToLowerInvariant() == "com"))
                     {
                         asPointer = true;
@@ -1788,11 +1802,6 @@ public static class Program
                 string fieldTypeName = GetTypeName(field.Type, asPointer);
 
                 writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}::{field.Name}\"]/*' />");
-
-                if (s_generateUnmanagedDocs)
-                {
-                    //writer.WriteLine($"/// <unmanaged>{field.Name}</unmanaged>");
-                }
 
                 string remapFieldLookUp = $"{structType.Name}::{field.Name}";
                 if (s_structFieldTypeRemap.TryGetValue(remapFieldLookUp, out string? remapType))
@@ -2905,6 +2914,19 @@ public static class Program
 
             default:
                 return s_visitedStructs.Contains(typeName);
+        }
+
+    }
+
+    private static bool IsKnownComType(string typeName)
+    {
+        switch (typeName)
+        {
+            case "System.Com.IUnknown":
+                return true;
+
+            default:
+                return false;
         }
 
     }

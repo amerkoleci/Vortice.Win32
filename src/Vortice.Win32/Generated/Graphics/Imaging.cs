@@ -12,7 +12,9 @@ namespace Win32.Graphics.Imaging;
 public static partial class Apis
 {
 	public const uint WINCODEC_SDK_VERSION1 = 566;
+
 	public const uint WINCODEC_SDK_VERSION2 = 567;
+
 	public static ref readonly Guid CLSID_WICImagingFactory
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -86,6 +88,7 @@ public static partial class Apis
 	}
 
 	public const uint WINCODEC_SDK_VERSION = 567;
+
 	public static ref readonly Guid GUID_VendorMicrosoft
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1263,16 +1266,27 @@ public static partial class Apis
 	}
 
 	public const uint WIC_JPEG_MAX_COMPONENT_COUNT = 4;
+
 	public const uint WIC_JPEG_MAX_TABLE_INDEX = 3;
+
 	public const uint WIC_JPEG_SAMPLE_FACTORS_ONE = 17;
+
 	public const uint WIC_JPEG_SAMPLE_FACTORS_THREE_420 = 1118498;
+
 	public const uint WIC_JPEG_SAMPLE_FACTORS_THREE_422 = 1118497;
+
 	public const uint WIC_JPEG_SAMPLE_FACTORS_THREE_440 = 1118482;
+
 	public const uint WIC_JPEG_SAMPLE_FACTORS_THREE_444 = 1118481;
+
 	public const uint WIC_JPEG_QUANTIZATION_BASELINE_ONE = 0;
+
 	public const uint WIC_JPEG_QUANTIZATION_BASELINE_THREE = 65792;
+
 	public const uint WIC_JPEG_HUFFMAN_BASELINE_ONE = 0;
+
 	public const uint WIC_JPEG_HUFFMAN_BASELINE_THREE = 1118464;
+
 	public static ref readonly Guid GUID_WICPixelFormatDontCare
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -3434,27 +3448,49 @@ public static partial class Apis
 	}
 
 	public const uint FACILITY_WINCODEC_ERR = 2200;
+
 	public const uint WINCODEC_ERR_BASE = 8192;
+
 	public const int WINCODEC_ERR_GENERIC_ERROR = -2147467259;
+
 	public const int WINCODEC_ERR_INVALIDPARAMETER = -2147024809;
+
 	public const int WINCODEC_ERR_OUTOFMEMORY = -2147024882;
+
 	public const int WINCODEC_ERR_NOTIMPLEMENTED = -2147467263;
+
 	public const int WINCODEC_ERR_ABORTED = -2147467260;
+
 	public const int WINCODEC_ERR_ACCESSDENIED = -2147024891;
+
 	public const uint WICRawChangeNotification_ExposureCompensation = 1;
+
 	public const uint WICRawChangeNotification_NamedWhitePoint = 2;
+
 	public const uint WICRawChangeNotification_KelvinWhitePoint = 4;
+
 	public const uint WICRawChangeNotification_RGBWhitePoint = 8;
+
 	public const uint WICRawChangeNotification_Contrast = 16;
+
 	public const uint WICRawChangeNotification_Gamma = 32;
+
 	public const uint WICRawChangeNotification_Sharpness = 64;
+
 	public const uint WICRawChangeNotification_Saturation = 128;
+
 	public const uint WICRawChangeNotification_Tint = 256;
+
 	public const uint WICRawChangeNotification_NoiseReduction = 512;
+
 	public const uint WICRawChangeNotification_DestinationColorContext = 1024;
+
 	public const uint WICRawChangeNotification_ToneCurve = 2048;
+
 	public const uint WICRawChangeNotification_Rotation = 4096;
+
 	public const uint WICRawChangeNotification_RenderMode = 8192;
+
 	public static ref readonly Guid GUID_MetadataFormatUnknown
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -7452,6 +7488,7 @@ public enum WICPersistOptions : int
 #endregion Enums
 
 #region Structs
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern"]/*' />
 /// <unmanaged>WICBitmapPattern</unmanaged>
 public partial struct WICBitmapPattern
@@ -7471,6 +7508,7 @@ public partial struct WICBitmapPattern
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::EndOfStream"]/*' />
 	public Bool32 EndOfStream;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters"]/*' />
 /// <unmanaged>WICImageParameters</unmanaged>
 public partial struct WICImageParameters
@@ -7496,6 +7534,7 @@ public partial struct WICImageParameters
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelHeight"]/*' />
 	public uint PixelHeight;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlaneDescription"]/*' />
 /// <unmanaged>WICBitmapPlaneDescription</unmanaged>
 public partial struct WICBitmapPlaneDescription
@@ -7509,6 +7548,7 @@ public partial struct WICBitmapPlaneDescription
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlaneDescription::Height"]/*' />
 	public uint Height;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane"]/*' />
 /// <unmanaged>WICBitmapPlane</unmanaged>
 public partial struct WICBitmapPlane
@@ -7525,6 +7565,7 @@ public partial struct WICBitmapPlane
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::cbBufferSize"]/*' />
 	public uint cbBufferSize;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader"]/*' />
 /// <unmanaged>WICJpegFrameHeader</unmanaged>
 public partial struct WICJpegFrameHeader
@@ -7553,6 +7594,7 @@ public partial struct WICJpegFrameHeader
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::QuantizationTableIndices"]/*' />
 	public uint QuantizationTableIndices;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader"]/*' />
 /// <unmanaged>WICJpegScanHeader</unmanaged>
 public partial struct WICJpegScanHeader
@@ -7581,6 +7623,7 @@ public partial struct WICJpegScanHeader
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::SuccessiveApproximationLow"]/*' />
 	public byte SuccessiveApproximationLow;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo"]/*' />
 /// <unmanaged>WICRawCapabilitiesInfo</unmanaged>
 public partial struct WICRawCapabilitiesInfo
@@ -7639,6 +7682,7 @@ public partial struct WICRawCapabilitiesInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RenderModeSupport"]/*' />
 	public WICRawCapabilities RenderModeSupport;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint"]/*' />
 /// <unmanaged>WICRawToneCurvePoint</unmanaged>
 public partial struct WICRawToneCurvePoint
@@ -7649,6 +7693,7 @@ public partial struct WICRawToneCurvePoint
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint::Output"]/*' />
 	public double Output;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve"]/*' />
 /// <unmanaged>WICRawToneCurve</unmanaged>
 public partial struct WICRawToneCurve
@@ -7681,6 +7726,7 @@ public partial struct WICRawToneCurve
 		}
 	}
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters"]/*' />
 /// <unmanaged>WICDdsParameters</unmanaged>
 public partial struct WICDdsParameters
@@ -7709,6 +7755,7 @@ public partial struct WICDdsParameters
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::AlphaMode"]/*' />
 	public WICDdsAlphaMode AlphaMode;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo"]/*' />
 /// <unmanaged>WICDdsFormatInfo</unmanaged>
 public partial struct WICDdsFormatInfo
@@ -7725,6 +7772,7 @@ public partial struct WICDdsFormatInfo
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BlockHeight"]/*' />
 	public uint BlockHeight;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern"]/*' />
 /// <unmanaged>WICMetadataPattern</unmanaged>
 public partial struct WICMetadataPattern
@@ -7744,6 +7792,7 @@ public partial struct WICMetadataPattern
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern::DataOffset"]/*' />
 	public ULargeInteger DataOffset;
 }
+
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader"]/*' />
 /// <unmanaged>WICMetadataHeader</unmanaged>
 public partial struct WICMetadataHeader
@@ -7768,31 +7817,31 @@ public partial struct WICMetadataHeader
 #region Functions
 public static unsafe partial class Apis
 {
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICConvertBitmapSource(Guid* dstFormat, IWICBitmapSource* pISrc, IWICBitmapSource** ppIDst);
 
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICCreateBitmapFromSection(uint width, uint height, Guid* pixelFormat, Handle hSection, uint stride, uint offset, IWICBitmap** ppIBitmap);
 
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICCreateBitmapFromSectionEx(uint width, uint height, Guid* pixelFormat, Handle hSection, uint stride, uint offset, WICSectionAccessLevel desiredAccessLevel, IWICBitmap** ppIBitmap);
 
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICMapGuidToShortName(Guid* guid, uint cchName, ushort* wzName, uint* pcchActual);
 
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICMapShortNameToGuid(ushort* wzName, Guid* pguid);
 
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICMapSchemaToName(Guid* guidMetadataFormat, ushort* pwzSchema, uint cchName, ushort* wzName, uint* pcchActual);
 
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICMatchMetadataContent(Guid* guidContainerFormat, Guid* pguidVendor, Com.IStream* pIStream, Guid* pguidMetadataFormat);
 
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICSerializeMetadataContent(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, uint dwPersistOptions, Com.IStream* pIStream);
 
-	[DllImport("WindowsCodecs", ExactSpelling = true)]
+	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
 	public static extern HResult WICGetMetadataContentSize(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, ULargeInteger* pcbSize);
 }
 #endregion Functions

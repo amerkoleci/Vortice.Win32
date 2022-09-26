@@ -192,6 +192,30 @@ public enum ColorMatrixAlphaMode : uint
 	Straight = 2,
 }
 
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE"]/*' />
+/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE</unmanaged>
+public enum AffineTransform2DInterpolationMode : uint
+{
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE::D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
+	/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
+	NearestNeighbor = 0,
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE::D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_LINEAR"]/*' />
+	/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_LINEAR</unmanaged>
+	Linear = 1,
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE::D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_CUBIC"]/*' />
+	/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_CUBIC</unmanaged>
+	Cubic = 2,
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE::D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR"]/*' />
+	/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
+	MultiSampleLinear = 3,
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE::D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_ANISOTROPIC"]/*' />
+	/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_ANISOTROPIC</unmanaged>
+	Anisotropic = 4,
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE::D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC"]/*' />
+	/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC</unmanaged>
+	HighQualityCubic = 5,
+}
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE"]/*' />
 /// <unmanaged>D2D1_TURBULENCE_NOISE</unmanaged>
 public enum TurbulenceNoise : uint
@@ -251,6 +275,7 @@ public enum CompositeMode : uint
 #endregion Enums
 
 #region Structs
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT"]/*' />
 /// <unmanaged>D2D1_PIXEL_FORMAT</unmanaged>
 public partial struct PixelFormat
@@ -261,6 +286,7 @@ public partial struct PixelFormat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT::alphaMode"]/*' />
 	public AlphaMode alphaMode;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F"]/*' />
 /// <unmanaged>D2D_RECT_F</unmanaged>
 public partial struct RectF
@@ -277,6 +303,7 @@ public partial struct RectF
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F::bottom"]/*' />
 	public float bottom;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U"]/*' />
 /// <unmanaged>D2D_RECT_U</unmanaged>
 public partial struct RectU
@@ -293,6 +320,7 @@ public partial struct RectU
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U::bottom"]/*' />
 	public uint bottom;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT"]/*' />
 /// <unmanaged>D2D1_BEZIER_SEGMENT</unmanaged>
 public partial struct BezierSegment

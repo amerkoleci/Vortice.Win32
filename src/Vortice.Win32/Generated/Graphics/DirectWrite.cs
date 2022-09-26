@@ -12,12 +12,19 @@ namespace Win32.Graphics.DirectWrite;
 public static partial class Apis
 {
 	public const uint DWRITE_ALPHA_MAX = 255;
+
 	public const uint FACILITY_DWRITE = 2200;
+
 	public const uint DWRITE_ERR_BASE = 20480;
+
 	public static readonly HResult DWRITE_E_REMOTEFONT = -2003283955;
+
 	public static readonly HResult DWRITE_E_DOWNLOADCANCELLED = -2003283954;
+
 	public static readonly HResult DWRITE_E_DOWNLOADFAILED = -2003283953;
+
 	public static readonly HResult DWRITE_E_TOOMANYDOWNLOADS = -2003283952;
+
 }
 
 #region Enums
@@ -2348,6 +2355,7 @@ public partial struct Panose
 #endregion Unions
 
 #region Structs
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS"]/*' />
 /// <unmanaged>DWRITE_FONT_METRICS</unmanaged>
 public partial struct FontMetrics
@@ -2382,6 +2390,7 @@ public partial struct FontMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::strikethroughThickness"]/*' />
 	public ushort strikethroughThickness;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_METRICS"]/*' />
 /// <unmanaged>DWRITE_GLYPH_METRICS</unmanaged>
 public partial struct GlyphMetrics
@@ -2407,6 +2416,7 @@ public partial struct GlyphMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_METRICS::verticalOriginY"]/*' />
 	public int verticalOriginY;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_OFFSET"]/*' />
 /// <unmanaged>DWRITE_GLYPH_OFFSET</unmanaged>
 public partial struct GlyphOffset
@@ -2417,6 +2427,7 @@ public partial struct GlyphOffset
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_OFFSET::ascenderOffset"]/*' />
 	public float ascenderOffset;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_RANGE"]/*' />
 /// <unmanaged>DWRITE_TEXT_RANGE</unmanaged>
 public partial struct TextRange
@@ -2427,6 +2438,7 @@ public partial struct TextRange
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_RANGE::length"]/*' />
 	public uint length;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE"]/*' />
 /// <unmanaged>DWRITE_FONT_FEATURE</unmanaged>
 public partial struct FontFeature
@@ -2437,6 +2449,7 @@ public partial struct FontFeature
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE::parameter"]/*' />
 	public uint parameter;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TYPOGRAPHIC_FEATURES"]/*' />
 /// <unmanaged>DWRITE_TYPOGRAPHIC_FEATURES</unmanaged>
 public partial struct TypographicFeatures
@@ -2447,6 +2460,7 @@ public partial struct TypographicFeatures
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TYPOGRAPHIC_FEATURES::featureCount"]/*' />
 	public uint featureCount;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING"]/*' />
 /// <unmanaged>DWRITE_TRIMMING</unmanaged>
 public partial struct Trimming
@@ -2460,6 +2474,7 @@ public partial struct Trimming
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING::delimiterCount"]/*' />
 	public uint delimiterCount;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_ANALYSIS"]/*' />
 /// <unmanaged>DWRITE_SCRIPT_ANALYSIS</unmanaged>
 public partial struct ScriptAnalysis
@@ -2470,6 +2485,7 @@ public partial struct ScriptAnalysis
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_ANALYSIS::shapes"]/*' />
 	public ScriptShapes shapes;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_BREAKPOINT"]/*' />
 /// <unmanaged>DWRITE_LINE_BREAKPOINT</unmanaged>
 public partial struct LineBreakpoint
@@ -2477,6 +2493,7 @@ public partial struct LineBreakpoint
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_BREAKPOINT::_bitfield"]/*' />
 	public byte _bitfield;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SHAPING_TEXT_PROPERTIES"]/*' />
 /// <unmanaged>DWRITE_SHAPING_TEXT_PROPERTIES</unmanaged>
 public partial struct ShapingTextProperties
@@ -2484,6 +2501,7 @@ public partial struct ShapingTextProperties
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SHAPING_TEXT_PROPERTIES::_bitfield"]/*' />
 	public ushort _bitfield;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SHAPING_GLYPH_PROPERTIES"]/*' />
 /// <unmanaged>DWRITE_SHAPING_GLYPH_PROPERTIES</unmanaged>
 public partial struct ShapingGlyphProperties
@@ -2491,6 +2509,7 @@ public partial struct ShapingGlyphProperties
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SHAPING_GLYPH_PROPERTIES::_bitfield"]/*' />
 	public ushort _bitfield;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN"]/*' />
 /// <unmanaged>DWRITE_GLYPH_RUN</unmanaged>
 public partial struct GlyphRun
@@ -2519,6 +2538,7 @@ public partial struct GlyphRun
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN::bidiLevel"]/*' />
 	public uint bidiLevel;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION"]/*' />
 /// <unmanaged>DWRITE_GLYPH_RUN_DESCRIPTION</unmanaged>
 public partial struct GlyphRunDescription
@@ -2538,6 +2558,7 @@ public partial struct GlyphRunDescription
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::textPosition"]/*' />
 	public uint textPosition;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE"]/*' />
 /// <unmanaged>DWRITE_UNDERLINE</unmanaged>
 public partial struct Underline
@@ -2566,6 +2587,7 @@ public partial struct Underline
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::measuringMode"]/*' />
 	public MeasuringMode measuringMode;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH"]/*' />
 /// <unmanaged>DWRITE_STRIKETHROUGH</unmanaged>
 public partial struct Strikethrough
@@ -2591,6 +2613,7 @@ public partial struct Strikethrough
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::measuringMode"]/*' />
 	public MeasuringMode measuringMode;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS"]/*' />
 /// <unmanaged>DWRITE_LINE_METRICS</unmanaged>
 public partial struct LineMetrics
@@ -2613,6 +2636,7 @@ public partial struct LineMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::isTrimmed"]/*' />
 	public Bool32 isTrimmed;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS"]/*' />
 /// <unmanaged>DWRITE_CLUSTER_METRICS</unmanaged>
 public partial struct ClusterMetrics
@@ -2626,6 +2650,7 @@ public partial struct ClusterMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS::_bitfield"]/*' />
 	public ushort _bitfield;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS"]/*' />
 /// <unmanaged>DWRITE_TEXT_METRICS</unmanaged>
 public partial struct TextMetrics
@@ -2657,6 +2682,7 @@ public partial struct TextMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::lineCount"]/*' />
 	public uint lineCount;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS"]/*' />
 /// <unmanaged>DWRITE_INLINE_OBJECT_METRICS</unmanaged>
 public partial struct InlineObjectMetrics
@@ -2673,6 +2699,7 @@ public partial struct InlineObjectMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::supportsSideways"]/*' />
 	public Bool32 supportsSideways;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS"]/*' />
 /// <unmanaged>DWRITE_OVERHANG_METRICS</unmanaged>
 public partial struct OverhangMetrics
@@ -2689,6 +2716,7 @@ public partial struct OverhangMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::bottom"]/*' />
 	public float bottom;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS"]/*' />
 /// <unmanaged>DWRITE_HIT_TEST_METRICS</unmanaged>
 public partial struct HitTestMetrics
@@ -2720,12 +2748,13 @@ public partial struct HitTestMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::isTrimmed"]/*' />
 	public Bool32 isTrimmed;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1"]/*' />
 /// <unmanaged>DWRITE_FONT_METRICS1</unmanaged>
 public partial struct FontMetrics1
 {
-	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::__AnonymousBase_DWrite_1_L627_C38"]/*' />
-	public FontMetrics __AnonymousBase_DWrite_1_L627_C38;
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::Base"]/*' />
+	public FontMetrics Base;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxLeft"]/*' />
 	public short glyphBoxLeft;
@@ -2766,6 +2795,7 @@ public partial struct FontMetrics1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::hasTypographicMetrics"]/*' />
 	public Bool32 hasTypographicMetrics;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS"]/*' />
 /// <unmanaged>DWRITE_CARET_METRICS</unmanaged>
 public partial struct CaretMetrics
@@ -2779,6 +2809,7 @@ public partial struct CaretMetrics
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS::offset"]/*' />
 	public short offset;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNICODE_RANGE"]/*' />
 /// <unmanaged>DWRITE_UNICODE_RANGE</unmanaged>
 public partial struct UnicodeRange
@@ -2789,6 +2820,7 @@ public partial struct UnicodeRange
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNICODE_RANGE::last"]/*' />
 	public uint last;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES"]/*' />
 /// <unmanaged>DWRITE_SCRIPT_PROPERTIES</unmanaged>
 public partial struct ScriptProperties
@@ -2808,6 +2840,7 @@ public partial struct ScriptProperties
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::_bitfield"]/*' />
 	public uint _bitfield;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY"]/*' />
 /// <unmanaged>DWRITE_JUSTIFICATION_OPPORTUNITY</unmanaged>
 public partial struct JustificationOpportunity
@@ -2824,6 +2857,7 @@ public partial struct JustificationOpportunity
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::_bitfield"]/*' />
 	public uint _bitfield;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS1"]/*' />
 /// <unmanaged>DWRITE_TEXT_METRICS1</unmanaged>
 public partial struct TextMetrics1
@@ -2834,6 +2868,7 @@ public partial struct TextMetrics1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS1::heightIncludingTrailingWhitespace"]/*' />
 	public float heightIncludingTrailingWhitespace;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN"]/*' />
 /// <unmanaged>DWRITE_COLOR_GLYPH_RUN</unmanaged>
 public partial struct ColorGlyphRun
@@ -2856,6 +2891,7 @@ public partial struct ColorGlyphRun
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::paletteIndex"]/*' />
 	public ushort paletteIndex;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY"]/*' />
 /// <unmanaged>DWRITE_FONT_PROPERTY</unmanaged>
 public partial struct FontProperty
@@ -2869,6 +2905,7 @@ public partial struct FontProperty
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY::localeName"]/*' />
 	public unsafe ushort* localeName;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1"]/*' />
 /// <unmanaged>DWRITE_LINE_METRICS1</unmanaged>
 public partial struct LineMetrics1
@@ -2882,6 +2919,7 @@ public partial struct LineMetrics1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1::leadingAfter"]/*' />
 	public float leadingAfter;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING"]/*' />
 /// <unmanaged>DWRITE_LINE_SPACING</unmanaged>
 public partial struct LineSpacing
@@ -2901,6 +2939,7 @@ public partial struct LineSpacing
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::fontLineGapUsage"]/*' />
 	public FontLineGapUsage fontLineGapUsage;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1"]/*' />
 /// <unmanaged>DWRITE_COLOR_GLYPH_RUN1</unmanaged>
 public partial struct ColorGlyphRun1
@@ -2914,6 +2953,7 @@ public partial struct ColorGlyphRun1
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1::measuringMode"]/*' />
 	public MeasuringMode measuringMode;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA"]/*' />
 /// <unmanaged>DWRITE_GLYPH_IMAGE_DATA</unmanaged>
 public partial struct GlyphImageData
@@ -2945,6 +2985,7 @@ public partial struct GlyphImageData
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::verticalBottomOrigin"]/*' />
 	public System.Drawing.Point verticalBottomOrigin;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT"]/*' />
 /// <unmanaged>DWRITE_FILE_FRAGMENT</unmanaged>
 public partial struct FileFragment
@@ -2955,6 +2996,7 @@ public partial struct FileFragment
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT::fragmentSize"]/*' />
 	public ulong fragmentSize;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_VALUE"]/*' />
 /// <unmanaged>DWRITE_FONT_AXIS_VALUE</unmanaged>
 public partial struct FontAxisValue
@@ -2965,6 +3007,7 @@ public partial struct FontAxisValue
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_VALUE::value"]/*' />
 	public float value;
 }
+
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE"]/*' />
 /// <unmanaged>DWRITE_FONT_AXIS_RANGE</unmanaged>
 public partial struct FontAxisRange
@@ -2986,7 +3029,7 @@ public partial struct FontAxisRange
 #region Functions
 public static unsafe partial class Apis
 {
-	[DllImport("DWrite", ExactSpelling = true)]
+	[DllImport("DWrite.dll", ExactSpelling = true)]
 	public static extern HResult DWriteCreateFactory(FactoryType factoryType, Guid* iid, IUnknown** factory);
 }
 #endregion Functions

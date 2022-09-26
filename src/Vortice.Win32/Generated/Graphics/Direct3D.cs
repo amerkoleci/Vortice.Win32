@@ -12,49 +12,93 @@ namespace Win32.Graphics.Direct3D;
 public static partial class Apis
 {
 	public const uint D3D_FL9_1_REQ_TEXTURE1D_U_DIMENSION = 2048;
+
 	public const uint D3D_FL9_3_REQ_TEXTURE1D_U_DIMENSION = 4096;
+
 	public const uint D3D_FL9_1_REQ_TEXTURE2D_U_OR_V_DIMENSION = 2048;
+
 	public const uint D3D_FL9_3_REQ_TEXTURE2D_U_OR_V_DIMENSION = 4096;
+
 	public const uint D3D_FL9_1_REQ_TEXTURECUBE_DIMENSION = 512;
+
 	public const uint D3D_FL9_3_REQ_TEXTURECUBE_DIMENSION = 4096;
+
 	public const uint D3D_FL9_1_REQ_TEXTURE3D_U_V_OR_W_DIMENSION = 256;
+
 	public const uint D3D_FL9_1_DEFAULT_MAX_ANISOTROPY = 2;
+
 	public const uint D3D_FL9_1_IA_PRIMITIVE_MAX_COUNT = 65535;
+
 	public const uint D3D_FL9_2_IA_PRIMITIVE_MAX_COUNT = 1048575;
+
 	public const uint D3D_FL9_1_SIMULTANEOUS_RENDER_TARGET_COUNT = 1;
+
 	public const uint D3D_FL9_3_SIMULTANEOUS_RENDER_TARGET_COUNT = 4;
+
 	public const uint D3D_FL9_1_MAX_TEXTURE_REPEAT = 128;
+
 	public const uint D3D_FL9_2_MAX_TEXTURE_REPEAT = 2048;
+
 	public const uint D3D_FL9_3_MAX_TEXTURE_REPEAT = 8192;
+
 	public const uint D3D_SHADER_FEATURE_DOUBLES = 1;
+
 	public const uint D3D_SHADER_FEATURE_COMPUTE_SHADERS_PLUS_RAW_AND_STRUCTURED_BUFFERS_VIA_SHADER_4_X = 2;
+
 	public const uint D3D_SHADER_FEATURE_UAVS_AT_EVERY_STAGE = 4;
+
 	public const uint D3D_SHADER_FEATURE_64_UAVS = 8;
+
 	public const uint D3D_SHADER_FEATURE_MINIMUM_PRECISION = 16;
+
 	public const uint D3D_SHADER_FEATURE_11_1_DOUBLE_EXTENSIONS = 32;
+
 	public const uint D3D_SHADER_FEATURE_11_1_SHADER_EXTENSIONS = 64;
+
 	public const uint D3D_SHADER_FEATURE_LEVEL_9_COMPARISON_FILTERING = 128;
+
 	public const uint D3D_SHADER_FEATURE_TILED_RESOURCES = 256;
+
 	public const uint D3D_SHADER_FEATURE_STENCIL_REF = 512;
+
 	public const uint D3D_SHADER_FEATURE_INNER_COVERAGE = 1024;
+
 	public const uint D3D_SHADER_FEATURE_TYPED_UAV_LOAD_ADDITIONAL_FORMATS = 2048;
+
 	public const uint D3D_SHADER_FEATURE_ROVS = 4096;
+
 	public const uint D3D_SHADER_FEATURE_VIEWPORT_AND_RT_ARRAY_INDEX_FROM_ANY_SHADER_FEEDING_RASTERIZER = 8192;
+
 	public const uint D3D_SHADER_FEATURE_WAVE_OPS = 16384;
+
 	public const uint D3D_SHADER_FEATURE_INT64_OPS = 32768;
+
 	public const uint D3D_SHADER_FEATURE_VIEW_ID = 65536;
+
 	public const uint D3D_SHADER_FEATURE_BARYCENTRICS = 131072;
+
 	public const uint D3D_SHADER_FEATURE_NATIVE_16BIT_OPS = 262144;
+
 	public const uint D3D_SHADER_FEATURE_SHADING_RATE = 524288;
+
 	public const uint D3D_SHADER_FEATURE_RAYTRACING_TIER_1_1 = 1048576;
+
 	public const uint D3D_SHADER_FEATURE_SAMPLER_FEEDBACK = 2097152;
+
 	public const uint D3D_SHADER_FEATURE_ATOMIC_INT64_ON_TYPED_RESOURCE = 4194304;
+
 	public const uint D3D_SHADER_FEATURE_ATOMIC_INT64_ON_GROUP_SHARED = 8388608;
+
 	public const uint D3D_SHADER_FEATURE_DERIVATIVES_IN_MESH_AND_AMPLIFICATION_SHADERS = 16777216;
+
 	public const uint D3D_SHADER_FEATURE_RESOURCE_DESCRIPTOR_HEAP_INDEXING = 33554432;
+
 	public const uint D3D_SHADER_FEATURE_SAMPLER_DESCRIPTOR_HEAP_INDEXING = 67108864;
+
 	public const uint D3D_SHADER_FEATURE_WAVE_MMA = 134217728;
+
 	public const uint D3D_SHADER_FEATURE_ATOMIC_INT64_ON_DESCRIPTOR_HEAP_RESOURCE = 268435456;
+
 	public static ref readonly Guid WKPDID_D3DDebugObjectName
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -152,9 +196,13 @@ public static partial class Apis
 	}
 
 	public const uint D3D_COMPONENT_MASK_X = 1;
+
 	public const uint D3D_COMPONENT_MASK_Y = 2;
+
 	public const uint D3D_COMPONENT_MASK_Z = 4;
+
 	public const uint D3D_COMPONENT_MASK_W = 8;
+
 	public static ref readonly Guid D3D_TEXTURE_LAYOUT_ROW_MAJOR
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1196,6 +1244,7 @@ public enum ParameterFlags : int
 #endregion Enums
 
 #region Structs
+
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO"]/*' />
 /// <unmanaged>D3D_SHADER_MACRO</unmanaged>
 public partial struct ShaderMacro

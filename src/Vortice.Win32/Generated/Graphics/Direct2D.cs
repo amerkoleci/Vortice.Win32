@@ -12,6 +12,7 @@ namespace Win32.Graphics.Direct2D;
 public static partial class Apis
 {
 	public const float D2D1_DEFAULT_FLATTENING_TOLERANCE = 0.25f;
+
 	public static ref readonly Guid CLSID_D2D12DAffineTransform
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1525,6 +1526,7 @@ public static partial class Apis
 	}
 
 	public const float D2D1_SCENE_REFERRED_SDR_WHITE_LEVEL = 80f;
+
 	public static ref readonly Guid CLSID_D2D1WhiteLevelAdjustment
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1574,7 +1576,9 @@ public static partial class Apis
 	}
 
 	public const uint D2D1_APPEND_ALIGNED_ELEMENT = 4294967295;
+
 	public const uint FACILITY_D2D = 2201;
+
 }
 
 #region Enums
@@ -4630,6 +4634,7 @@ public enum ColorContextType : uint
 #endregion Enums
 
 #region Structs
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_BITMAP_PROPERTIES</unmanaged>
 public partial struct BitmapProperties
@@ -4643,6 +4648,7 @@ public partial struct BitmapProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES::dpiY"]/*' />
 	public float dpiY;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP"]/*' />
 /// <unmanaged>D2D1_GRADIENT_STOP</unmanaged>
 public partial struct GradientStop
@@ -4653,6 +4659,7 @@ public partial struct GradientStop
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::color"]/*' />
 	public Color4 color;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRUSH_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_BRUSH_PROPERTIES</unmanaged>
 public partial struct BrushProperties
@@ -4663,6 +4670,7 @@ public partial struct BrushProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRUSH_PROPERTIES::transform"]/*' />
 	public Matrix3x2 transform;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_BITMAP_BRUSH_PROPERTIES</unmanaged>
 public partial struct BitmapBrushProperties
@@ -4676,6 +4684,7 @@ public partial struct BitmapBrushProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES::interpolationMode"]/*' />
 	public BitmapInterpolationMode interpolationMode;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES</unmanaged>
 public partial struct LinearGradientBrushProperties
@@ -4686,6 +4695,7 @@ public partial struct LinearGradientBrushProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES::endPoint"]/*' />
 	public System.Drawing.PointF endPoint;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES</unmanaged>
 public partial struct RadialGradientBrushProperties
@@ -4702,6 +4712,7 @@ public partial struct RadialGradientBrushProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::radiusY"]/*' />
 	public float radiusY;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE"]/*' />
 /// <unmanaged>D2D1_TRIANGLE</unmanaged>
 public partial struct Triangle
@@ -4715,6 +4726,7 @@ public partial struct Triangle
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point3"]/*' />
 	public System.Drawing.PointF point3;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT"]/*' />
 /// <unmanaged>D2D1_ARC_SEGMENT</unmanaged>
 public partial struct ArcSegment
@@ -4734,6 +4746,7 @@ public partial struct ArcSegment
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::arcSize"]/*' />
 	public ArcSize arcSize;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT"]/*' />
 /// <unmanaged>D2D1_QUADRATIC_BEZIER_SEGMENT</unmanaged>
 public partial struct QuadraticBezierSegment
@@ -4744,6 +4757,7 @@ public partial struct QuadraticBezierSegment
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT::point2"]/*' />
 	public System.Drawing.PointF point2;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ELLIPSE"]/*' />
 /// <unmanaged>D2D1_ELLIPSE</unmanaged>
 public partial struct Ellipse
@@ -4757,6 +4771,7 @@ public partial struct Ellipse
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ELLIPSE::radiusY"]/*' />
 	public float radiusY;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT"]/*' />
 /// <unmanaged>D2D1_ROUNDED_RECT</unmanaged>
 public partial struct RoundedRect
@@ -4770,6 +4785,7 @@ public partial struct RoundedRect
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::radiusY"]/*' />
 	public float radiusY;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_STROKE_STYLE_PROPERTIES</unmanaged>
 public partial struct StrokeStyleProperties
@@ -4795,6 +4811,7 @@ public partial struct StrokeStyleProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::dashOffset"]/*' />
 	public float dashOffset;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS"]/*' />
 /// <unmanaged>D2D1_LAYER_PARAMETERS</unmanaged>
 public partial struct LayerParameters
@@ -4820,6 +4837,7 @@ public partial struct LayerParameters
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::layerOptions"]/*' />
 	public LayerOptions layerOptions;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_RENDER_TARGET_PROPERTIES</unmanaged>
 public partial struct RenderTargetProperties
@@ -4842,6 +4860,7 @@ public partial struct RenderTargetProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::minLevel"]/*' />
 	public FeatureLevel minLevel;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_HWND_RENDER_TARGET_PROPERTIES</unmanaged>
 public partial struct HwndRenderTargetProperties
@@ -4855,6 +4874,7 @@ public partial struct HwndRenderTargetProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::presentOptions"]/*' />
 	public PresentOptions presentOptions;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_DRAWING_STATE_DESCRIPTION</unmanaged>
 public partial struct DrawingStateDescription
@@ -4874,6 +4894,7 @@ public partial struct DrawingStateDescription
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::transform"]/*' />
 	public Matrix3x2 transform;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_OPTIONS"]/*' />
 /// <unmanaged>D2D1_FACTORY_OPTIONS</unmanaged>
 public partial struct FactoryOptions
@@ -4881,6 +4902,7 @@ public partial struct FactoryOptions
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_OPTIONS::debugLevel"]/*' />
 	public DebugLevel debugLevel;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1"]/*' />
 /// <unmanaged>D2D1_BITMAP_PROPERTIES1</unmanaged>
 public partial struct BitmapProperties1
@@ -4900,6 +4922,7 @@ public partial struct BitmapProperties1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::colorContext"]/*' />
 	public unsafe ID2D1ColorContext* colorContext;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAPPED_RECT"]/*' />
 /// <unmanaged>D2D1_MAPPED_RECT</unmanaged>
 public partial struct MappedRect
@@ -4910,6 +4933,7 @@ public partial struct MappedRect
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAPPED_RECT::bits"]/*' />
 	public unsafe byte* bits;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS"]/*' />
 /// <unmanaged>D2D1_RENDERING_CONTROLS</unmanaged>
 public partial struct RenderingControls
@@ -4920,6 +4944,7 @@ public partial struct RenderingControls
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS::tileSize"]/*' />
 	public System.Drawing.Size tileSize;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_EFFECT_INPUT_DESCRIPTION</unmanaged>
 public partial struct EffectInputDescription
@@ -4933,6 +4958,7 @@ public partial struct EffectInputDescription
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION::inputRectangle"]/*' />
 	public Common.RectF inputRectangle;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_POINT_DESCRIPTION</unmanaged>
 public partial struct PointDescription
@@ -4952,6 +4978,7 @@ public partial struct PointDescription
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::lengthToEndSegment"]/*' />
 	public float lengthToEndSegment;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_BRUSH_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_IMAGE_BRUSH_PROPERTIES</unmanaged>
 public partial struct ImageBrushProperties
@@ -4968,6 +4995,7 @@ public partial struct ImageBrushProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_BRUSH_PROPERTIES::interpolationMode"]/*' />
 	public InterpolationMode interpolationMode;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1"]/*' />
 /// <unmanaged>D2D1_BITMAP_BRUSH_PROPERTIES1</unmanaged>
 public partial struct BitmapBrushProperties1
@@ -4981,6 +5009,7 @@ public partial struct BitmapBrushProperties1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1::interpolationMode"]/*' />
 	public InterpolationMode interpolationMode;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES1"]/*' />
 /// <unmanaged>D2D1_STROKE_STYLE_PROPERTIES1</unmanaged>
 public partial struct StrokeStyleProperties1
@@ -5009,6 +5038,7 @@ public partial struct StrokeStyleProperties1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES1::transformType"]/*' />
 	public StrokeTransformType transformType;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1"]/*' />
 /// <unmanaged>D2D1_LAYER_PARAMETERS1</unmanaged>
 public partial struct LayerParameters1
@@ -5034,6 +5064,7 @@ public partial struct LayerParameters1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::layerOptions"]/*' />
 	public LayerOptions1 layerOptions;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1"]/*' />
 /// <unmanaged>D2D1_DRAWING_STATE_DESCRIPTION1</unmanaged>
 public partial struct DrawingStateDescription1
@@ -5059,6 +5090,7 @@ public partial struct DrawingStateDescription1
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::unitMode"]/*' />
 	public UnitMode unitMode;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_PRINT_CONTROL_PROPERTIES</unmanaged>
 public partial struct PrintControlProperties
@@ -5072,6 +5104,7 @@ public partial struct PrintControlProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES::colorSpace"]/*' />
 	public ColorSpace colorSpace;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CREATION_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_CREATION_PROPERTIES</unmanaged>
 public partial struct CreationProperties
@@ -5085,6 +5118,7 @@ public partial struct CreationProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CREATION_PROPERTIES::options"]/*' />
 	public DeviceContextOptions options;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING"]/*' />
 /// <unmanaged>D2D1_PROPERTY_BINDING</unmanaged>
 public partial struct PropertyBinding
@@ -5098,6 +5132,7 @@ public partial struct PropertyBinding
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::getFunction"]/*' />
 	public unsafe delegate* unmanaged[Stdcall]<IUnknown*, byte*, uint, uint*, HResult> getFunction;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_RESOURCE_TEXTURE_PROPERTIES</unmanaged>
 public partial struct ResourceTextureProperties
@@ -5120,6 +5155,7 @@ public partial struct ResourceTextureProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::extendModes"]/*' />
 	public unsafe ExtendMode* extendModes;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC"]/*' />
 /// <unmanaged>D2D1_INPUT_ELEMENT_DESC</unmanaged>
 public partial struct InputElementDescription
@@ -5139,6 +5175,7 @@ public partial struct InputElementDescription
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::alignedByteOffset"]/*' />
 	public uint alignedByteOffset;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_VERTEX_BUFFER_PROPERTIES</unmanaged>
 public partial struct VertexBufferProperties
@@ -5155,6 +5192,7 @@ public partial struct VertexBufferProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::byteWidth"]/*' />
 	public uint byteWidth;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES</unmanaged>
 public partial struct CustomVertexBufferProperties
@@ -5174,6 +5212,7 @@ public partial struct CustomVertexBufferProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::stride"]/*' />
 	public uint stride;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_RANGE"]/*' />
 /// <unmanaged>D2D1_VERTEX_RANGE</unmanaged>
 public partial struct VertexRange
@@ -5184,6 +5223,7 @@ public partial struct VertexRange
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_RANGE::vertexCount"]/*' />
 	public uint vertexCount;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_BLEND_DESCRIPTION</unmanaged>
 public partial struct BlendDescription
@@ -5209,6 +5249,7 @@ public partial struct BlendDescription
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::blendFactor"]/*' />
 	public unsafe fixed float blendFactor[4];
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_INPUT_DESCRIPTION</unmanaged>
 public partial struct InputDescription
@@ -5219,6 +5260,7 @@ public partial struct InputDescription
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION::levelOfDetailCount"]/*' />
 	public uint levelOfDetailCount;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_DOUBLES"]/*' />
 /// <unmanaged>D2D1_FEATURE_DATA_DOUBLES</unmanaged>
 public partial struct FeatureDataDoubles
@@ -5226,6 +5268,7 @@ public partial struct FeatureDataDoubles
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_DOUBLES::doublePrecisionFloatShaderOps"]/*' />
 	public Bool32 doublePrecisionFloatShaderOps;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS"]/*' />
 /// <unmanaged>D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS</unmanaged>
 public partial struct FeatureDataD3D10XHardwareOptions
@@ -5233,6 +5276,7 @@ public partial struct FeatureDataD3D10XHardwareOptions
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::computeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
 	public Bool32 computeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH"]/*' />
 /// <unmanaged>D2D1_SVG_LENGTH</unmanaged>
 public partial struct SvgLength
@@ -5243,6 +5287,7 @@ public partial struct SvgLength
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH::units"]/*' />
 	public SvgLengthUnits units;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO"]/*' />
 /// <unmanaged>D2D1_SVG_PRESERVE_ASPECT_RATIO</unmanaged>
 public partial struct SvgPreserveAspectRatio
@@ -5256,6 +5301,7 @@ public partial struct SvgPreserveAspectRatio
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO::meetOrSlice"]/*' />
 	public SvgAspectScaling meetOrSlice;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX"]/*' />
 /// <unmanaged>D2D1_SVG_VIEWBOX</unmanaged>
 public partial struct SvgViewbox
@@ -5272,6 +5318,7 @@ public partial struct SvgViewbox
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::height"]/*' />
 	public float height;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES</unmanaged>
 public partial struct TransformedImageSourceProperties
@@ -5291,6 +5338,7 @@ public partial struct TransformedImageSourceProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES::options"]/*' />
 	public TransformedImageSourceOptions options;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT"]/*' />
 /// <unmanaged>D2D1_INK_POINT</unmanaged>
 public partial struct InkPoint
@@ -5304,6 +5352,7 @@ public partial struct InkPoint
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT::radius"]/*' />
 	public float radius;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_BEZIER_SEGMENT"]/*' />
 /// <unmanaged>D2D1_INK_BEZIER_SEGMENT</unmanaged>
 public partial struct InkBezierSegment
@@ -5317,6 +5366,7 @@ public partial struct InkBezierSegment
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_BEZIER_SEGMENT::point3"]/*' />
 	public InkPoint point3;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_STYLE_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_INK_STYLE_PROPERTIES</unmanaged>
 public partial struct InkStyleProperties
@@ -5327,6 +5377,7 @@ public partial struct InkStyleProperties
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_STYLE_PROPERTIES::nibTransform"]/*' />
 	public Matrix3x2 nibTransform;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH"]/*' />
 /// <unmanaged>D2D1_GRADIENT_MESH_PATCH</unmanaged>
 public partial struct GradientMeshPatch
@@ -5403,6 +5454,7 @@ public partial struct GradientMeshPatch
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::rightEdgeMode"]/*' />
 	public PatchEdgeMode rightEdgeMode;
 }
+
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE"]/*' />
 /// <unmanaged>D2D1_SIMPLE_COLOR_PROFILE</unmanaged>
 public partial struct SimpleColorProfile
@@ -5430,43 +5482,43 @@ public partial struct SimpleColorProfile
 #region Functions
 public static unsafe partial class Apis
 {
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern HResult D2D1CreateFactory(FactoryType factoryType, Guid* riid, FactoryOptions* pFactoryOptions, void** ppIFactory);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern void D2D1MakeRotateMatrix(float angle, System.Drawing.PointF center, Matrix3x2* matrix);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern void D2D1MakeSkewMatrix(float angleX, float angleY, System.Drawing.PointF center, Matrix3x2* matrix);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern Bool32 D2D1IsMatrixInvertible(Matrix3x2* matrix);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern Bool32 D2D1InvertMatrix(Matrix3x2* matrix);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern HResult D2D1CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, CreationProperties* creationProperties, ID2D1Device** d2dDevice);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern HResult D2D1CreateDeviceContext(Graphics.Dxgi.IDXGISurface* dxgiSurface, CreationProperties* creationProperties, ID2D1DeviceContext** d2dDeviceContext);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern Color4 D2D1ConvertColorSpace(ColorSpace sourceColorSpace, ColorSpace destinationColorSpace, Color4* color);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern void D2D1SinCos(float angle, float* s, float* c);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern float D2D1Tan(float angle);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern float D2D1Vec3Length(float x, float y, float z);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern float D2D1ComputeMaximumScaleFactor(Matrix3x2* matrix);
 
-	[DllImport("d2d1", ExactSpelling = true)]
+	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern void D2D1GetGradientMeshInteriorPointsFromCoonsPatch(System.Drawing.PointF* pPoint0, System.Drawing.PointF* pPoint1, System.Drawing.PointF* pPoint2, System.Drawing.PointF* pPoint3, System.Drawing.PointF* pPoint4, System.Drawing.PointF* pPoint5, System.Drawing.PointF* pPoint6, System.Drawing.PointF* pPoint7, System.Drawing.PointF* pPoint8, System.Drawing.PointF* pPoint9, System.Drawing.PointF* pPoint10, System.Drawing.PointF* pPoint11, System.Drawing.PointF* pTensorPoint11, System.Drawing.PointF* pTensorPoint12, System.Drawing.PointF* pTensorPoint21, System.Drawing.PointF* pTensorPoint22);
 }
 #endregion Functions
