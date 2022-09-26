@@ -963,6 +963,11 @@ public static class Program
 
         // D3D11
         { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" },
+        { "ID3D11DeviceContext::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
+        { "ID3D11DeviceContext1::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
+        { "ID3D11DeviceContext2::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
+        { "ID3D11DeviceContext3::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
+        { "ID3D11DeviceContext4::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
 
         // D3D12
 

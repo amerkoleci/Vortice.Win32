@@ -253,6 +253,7 @@ public static unsafe class Program
         Texture2DDescription texture2DDesc = new(Format.D32Float, 256, 256, 1, 1, BindFlags.DepthStencil);
         tempDevice.Get()->CreateTexture2D(&texture2DDesc, null, depthStencilTexture.GetAddressOf()).ThrowIfFailed();
         depthStencilTexture.Get()->GetDesc(&texture2DDesc);
+        ((ID3D11DeviceChild*)depthStencilTexture.Get())->DebugName = "CIAO";
 
         tempDevice.Get()->CreateDepthStencilView((ID3D11Resource*)depthStencilTexture.Get(), null, depthStencilTextureView.GetAddressOf()).ThrowIfFailed();
     }

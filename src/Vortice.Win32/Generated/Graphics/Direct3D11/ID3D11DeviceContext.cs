@@ -473,9 +473,9 @@ public unsafe partial struct ID3D11DeviceContext
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::ClearDepthStencilView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, uint ClearFlags, float Depth, byte Stencil)
+	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11DepthStencilView*, uint, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, ID3D11DepthStencilView*, ClearFlags, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
 	}
 
 	/// <include file='../../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::GenerateMips"]/*' />
