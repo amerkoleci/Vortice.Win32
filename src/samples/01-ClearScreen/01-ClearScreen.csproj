@@ -8,7 +8,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\Vortice.Win32\Vortice.Win32.csproj" />
+    <ProjectReference Include="..\..\Vortice.Win32.Direct3D11\Vortice.Win32.Direct3D11.csproj" />
   </ItemGroup>
 
   <ItemGroup>

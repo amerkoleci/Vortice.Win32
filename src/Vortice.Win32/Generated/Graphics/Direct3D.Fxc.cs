@@ -280,15 +280,6 @@ public static unsafe partial class Apis
 	public static extern HResult D3DDisassembleRegion(void* pSrcData, nuint SrcDataSize, uint Flags, sbyte* szComments, nuint StartByteOffset, nuint NumInsts, nuint* pFinishByteOffset, Graphics.Direct3D.ID3DBlob** ppDisassembly);
 
 	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
-	public static extern HResult D3DCreateLinker(Graphics.Direct3D11.ID3D11Linker** ppLinker);
-
-	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
-	public static extern HResult D3DLoadModule(void* pSrcData, nuint cbSrcDataSize, Graphics.Direct3D11.ID3D11Module** ppModule);
-
-	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
-	public static extern HResult D3DCreateFunctionLinkingGraph(uint uFlags, Graphics.Direct3D11.ID3D11FunctionLinkingGraph** ppFunctionLinkingGraph);
-
-	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DGetTraceInstructionOffsets(void* pSrcData, nuint SrcDataSize, uint Flags, nuint StartInstIndex, nuint NumInsts, nuint* pOffsets, nuint* pTotalInsts);
 
 	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]

@@ -3,8 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
     <Description>Windows API low level bindings.</Description>
-    <VersionPrefix>1.6.6</VersionPrefix>
-    <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
+    
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <EnablePreviewFeatures>True</EnablePreviewFeatures>
     <NoWarn>0419;$(NoWarn)</NoWarn>
@@ -32,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>Vortice.Win32.Direct3D11</_Parameter1>
+    </AssemblyAttribute>
+    
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
       <_Parameter1>Vortice.Win32.Direct3D12</_Parameter1>
     </AssemblyAttribute>

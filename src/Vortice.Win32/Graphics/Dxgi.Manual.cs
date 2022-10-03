@@ -1,7 +1,6 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using Win32.Graphics.Direct3D11;
 using static Win32.Graphics.Dxgi.Apis;
 using static Win32.StringUtilities;
 
