@@ -30,7 +30,7 @@ public unsafe partial struct IUnknown : INativeGuid
     }
 
 #if NET6_0_OR_GREATER
-    internal static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IUnknown));
+    static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IUnknown));
 #else
     public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IUnknown));
 #endif

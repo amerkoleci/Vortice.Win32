@@ -2,15 +2,13 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
-    <Description>Direct3D11 API low level bindings.</Description>
+    <Description>Direct3D11 bindings.</Description>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>0419;$(NoWarn)</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\LICENSE" PackagePath="" Pack="true" />
-
     <Using Include="System.Numerics" />
     <Using Include="System.Diagnostics" />
     <Using Include="System.Runtime.CompilerServices" />
