@@ -1,6 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using System.Dynamic;
 using System.Globalization;
 using System.Text;
 using Newtonsoft.Json;
@@ -1092,7 +1093,7 @@ public static class Program
                 outputPath = wicPath;
                 useSubFolders = false;
             }
-            else if (jsonFile.EndsWith("Direct2D.json"))
+            else if (jsonFile == "Graphics.Direct2D.json")
             {
                 outputPath = d2dPath;
                 useSubFolders = false;
@@ -1221,8 +1222,35 @@ public static class Program
 
     private static void GenerateConstants(string folder, string apiName, string docFileName, ApiData api)
     {
+        bool generateFile = false;
+
+        foreach (var constant in api.Constants)
+        {
+            if (ShouldSkipConstant(constant))
+                continue;
+
+            bool skipValue = false;
+            foreach (var enumToGenerate in s_generatedEnums)
+            {
+                if (constant.Name.StartsWith(enumToGenerate.Key))
+                {
+                    skipValue = true;
+                    break;
+                }
+            }
+
+            if (skipValue)
+                continue;
+
+            generateFile = true;
+            break;
+        }
+
+        if (!generateFile)
+            return;
+
         using CodeWriter writer = new(
-            Path.Combine(folder, $"Apis.cs"),
+            Path.Combine(folder, $"{apiName}.Apis.cs"),
             apiName,
             docFileName,
             $"Win32.{apiName}");
@@ -1511,7 +1539,7 @@ public static class Program
             return;
 
         using CodeWriter writer = new(
-            Path.Combine(folder, "Apis.Functions.cs"),
+            Path.Combine(folder, $"{apiName}.Apis.Functions.cs"),
             apiName,
             docFileName,
             $"Win32.{apiName}");
