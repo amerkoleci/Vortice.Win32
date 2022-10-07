@@ -1160,6 +1160,5 @@ public static partial class Apis
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
 		}
 	}
-
 }
 

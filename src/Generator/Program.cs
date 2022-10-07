@@ -945,6 +945,10 @@ public static class Program
         { "D3D11_BUFFER_UAV::Flags", "D3D11_BUFFER_UAV_FLAG" },
         { "D3D11_BUFFEREX_SRV::Flags", "D3D11_BUFFEREX_SRV_FLAG" },
 
+        { "D3D11_RESOURCE_FLAGS::BindFlags", "D3D11_BIND_FLAG" },
+        { "D3D11_RESOURCE_FLAGS::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_RESOURCE_FLAGS::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+
         // D3D12
         { "D3D12_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D12_COLOR_WRITE_ENABLE" },
 
@@ -996,6 +1000,8 @@ public static class Program
         { "D3DCompileFromFile::Flags1", "D3DCOMPILE" },
         { "D3DCompressShaders::uFlags", "D3D_COMPRESS_SHADER" },
         { "D3DDisassemble::Flags", "D3D_DISASM" },
+
+        { "D3D11On12CreateDevice::Flags", "D3D11_CREATE_DEVICE_FLAG" },
     };
 
     private static readonly HashSet<string> s_visitedEnums = new();
@@ -1051,17 +1057,18 @@ public static class Program
         }
 
         string docFile = splits[1];
-        string fileName = string.Empty;
+        string subFolderName = string.Empty;
         for (int i = 1; i < splits.Length - 1; i++)
         {
-            if (string.IsNullOrEmpty(fileName) == false)
+            if (string.IsNullOrEmpty(subFolderName) == false)
             {
-                fileName += ".";
+                subFolderName += ".";
             }
 
-            fileName += splits[i];
+            subFolderName += splits[i];
         }
 
+        string fileName = subFolderName;
         string ns = string.Empty;
         if (string.IsNullOrWhiteSpace(fileName) == true)
         {
@@ -1073,13 +1080,10 @@ public static class Program
             ns = $"{folderRoot}.{fileName}";
         }
 
-        fileName += ".cs";
-
         if (docFile != "json")
         {
             string subdirectory = Path.Combine(outputFolder, docFile);
-            if (Directory.Exists(subdirectory) == false)
-                Directory.CreateDirectory(subdirectory);
+           
         }
         else
         {
@@ -1092,7 +1096,10 @@ public static class Program
         }
 
         string apiName = ns;
-        string apiFolder = Path.Combine(outputFolder, docFile);
+        string apiFolder = Path.Combine(outputFolder, subFolderName);
+
+        if (Directory.Exists(apiFolder) == false)
+            Directory.CreateDirectory(apiFolder);
 
         GenerateConstants(apiFolder, apiName, docFile, api);
         GenerateTypes(apiFolder, apiName, docFile, api);
@@ -1102,11 +1109,12 @@ public static class Program
     private static void GenerateConstants(string folder, string apiName, string docFileName, ApiData api)
     {
         using CodeWriter writer = new(
-            Path.Combine(folder, "Apis.cs"),
+            Path.Combine(folder, $"Apis.cs"),
             apiName,
             docFileName,
             $"Win32.{apiName}");
 
+        bool needNewLine = false;
         using (writer.PushBlock($"public static partial class Apis"))
         {
             foreach (var constant in api.Constants)
@@ -1126,6 +1134,11 @@ public static class Program
 
                 if (skipValue)
                     continue;
+
+                if (needNewLine)
+                {
+                    writer.WriteLine();
+                }
 
                 string typeName = GetTypeName(constant.Type);
                 if (typeName == "Guid")
@@ -1157,7 +1170,7 @@ public static class Program
                     writer.WriteLine($"public const {typeName} {constant.Name} = {constant.Value};");
                 }
 
-                writer.WriteLine();
+                needNewLine = true;
             }
         }
         writer.WriteLine();

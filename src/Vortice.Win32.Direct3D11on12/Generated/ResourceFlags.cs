@@ -14,13 +14,13 @@ namespace Win32.Graphics.Direct3D11on12;
 public partial struct ResourceFlags
 {
 	/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::BindFlags"]/*' />
-	public uint BindFlags;
+	public D3D11_BIND_FLAG BindFlags;
 
 	/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::MiscFlags"]/*' />
-	public uint MiscFlags;
+	public D3D11_RESOURCE_MISC_FLAG MiscFlags;
 
 	/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::CPUAccessFlags"]/*' />
-	public uint CPUAccessFlags;
+	public D3D11_CPU_ACCESS_FLAG CPUAccessFlags;
 
 	/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::StructureByteStride"]/*' />
 	public uint StructureByteStride;

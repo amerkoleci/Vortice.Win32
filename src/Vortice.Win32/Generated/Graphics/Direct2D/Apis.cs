@@ -1578,6 +1578,5 @@ public static partial class Apis
 	public const uint D2D1_APPEND_ALIGNED_ELEMENT = 4294967295;
 
 	public const uint FACILITY_D2D = 2201;
-
 }
 

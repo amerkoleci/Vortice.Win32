@@ -2396,6 +2396,5 @@ public static partial class Apis
 	public const string D3DCSX_DLL_A = "d3dcsx_47.dll";
 
 	public const string D3DCSX_DLL = "d3dcsx_47.dll";
-
 }
 

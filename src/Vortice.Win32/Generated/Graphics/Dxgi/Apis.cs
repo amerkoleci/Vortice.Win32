@@ -184,6 +184,5 @@ public static partial class Apis
 	public static readonly HResult DXGI_ERROR_CACHE_HASH_COLLISION = -2005270475;
 
 	public static readonly HResult DXGI_ERROR_ALREADY_EXISTS = -2005270474;
-
 }
 

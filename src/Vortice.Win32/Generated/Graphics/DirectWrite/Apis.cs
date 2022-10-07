@@ -24,6 +24,5 @@ public static partial class Apis
 	public static readonly HResult DWRITE_E_DOWNLOADFAILED = -2003283953;
 
 	public static readonly HResult DWRITE_E_TOOMANYDOWNLOADS = -2003283952;
-
 }
 

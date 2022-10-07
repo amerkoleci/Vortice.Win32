@@ -1,9 +1,7 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace Win32;
 
@@ -17,7 +15,11 @@ public static unsafe partial class Apis
     public static unsafe UuidOfType __uuidof<T>(T value) // for type inference similar to C++'s __uuidof
         where T : unmanaged, INativeGuid
     {
+#if NET6_0_OR_GREATER
+        return new UuidOfType(T.NativeGuid);
+#else
         return new UuidOfType(UUID<T>.RIID);
+#endif
     }
 
     /// <summary>Retrieves the GUID of of a specified type.</summary>
@@ -28,7 +30,11 @@ public static unsafe partial class Apis
     public static unsafe UuidOfType __uuidof<T>(T* value) // for type inference similar to C++'s __uuidof
         where T : unmanaged, INativeGuid
     {
+#if NET6_0_OR_GREATER
+        return new UuidOfType(T.NativeGuid);
+#else
         return new UuidOfType(UUID<T>.RIID);
+#endif
     }
 
     /// <summary>Retrieves the GUID of of a specified type.</summary>
@@ -38,7 +44,11 @@ public static unsafe partial class Apis
     public static unsafe UuidOfType __uuidof<T>()
         where T : unmanaged, INativeGuid
     {
+#if NET6_0_OR_GREATER
+        return new UuidOfType(T.NativeGuid);
+#else
         return new UuidOfType(UUID<T>.RIID);
+#endif
     }
 
     /// <summary>A proxy type that wraps a pointer to GUID data. Values of this type can be implicitly converted to and assigned to <see cref="Guid"/>* or <see cref="Guid"/> parameters.</summary>
@@ -61,6 +71,7 @@ public static unsafe partial class Apis
         public static implicit operator Guid*(UuidOfType guid) => guid._value;
     }
 
+#if !NET6_0_OR_GREATER
     /// <summary>A helper type to provide static GUID buffers for specific types.</summary>
     /// <typeparam name="T">The type to allocate a GUID buffer for.</typeparam>
     private static unsafe class UUID<T>
@@ -74,15 +85,12 @@ public static unsafe partial class Apis
         /// <returns>A pointer to memory holding the <see cref="Guid"/> value for the current type.</returns>
         private static Guid* CreateRIID()
         {
-#if NET6_0_OR_GREATER
-            var p = (Guid*)RuntimeHelpers.AllocateTypeAssociatedMemory(typeof(T), sizeof(Guid));
-#else
             var p = (Guid*)Marshal.AllocHGlobal(sizeof(Guid));
-#endif
             *p = typeof(T).GUID;
             return p;
         }
     }
+#endif
 
     public const int CLSCTX_INPROC_SERVER = 0x1;
     public const int CLSCTX_INPROC_HANDLER = 0x2;
