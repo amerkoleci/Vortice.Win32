@@ -11,42 +11,55 @@ namespace Win32.Graphics.Direct2D;
 
 public static unsafe partial class Apis
 {
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateFactory"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern HResult D2D1CreateFactory(FactoryType factoryType, Guid* riid, FactoryOptions* pFactoryOptions, void** ppIFactory);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1MakeRotateMatrix"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern void D2D1MakeRotateMatrix(float angle, System.Drawing.PointF center, Matrix3x2* matrix);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1MakeSkewMatrix"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern void D2D1MakeSkewMatrix(float angleX, float angleY, System.Drawing.PointF center, Matrix3x2* matrix);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1IsMatrixInvertible"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern Bool32 D2D1IsMatrixInvertible(Matrix3x2* matrix);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1InvertMatrix"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern Bool32 D2D1InvertMatrix(Matrix3x2* matrix);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateDevice"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern HResult D2D1CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, CreationProperties* creationProperties, ID2D1Device** d2dDevice);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1CreateDeviceContext"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern HResult D2D1CreateDeviceContext(Graphics.Dxgi.IDXGISurface* dxgiSurface, CreationProperties* creationProperties, ID2D1DeviceContext** d2dDeviceContext);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1ConvertColorSpace"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern Color4 D2D1ConvertColorSpace(ColorSpace sourceColorSpace, ColorSpace destinationColorSpace, Color4* color);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1SinCos"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern void D2D1SinCos(float angle, float* s, float* c);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1Tan"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern float D2D1Tan(float angle);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1Vec3Length"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern float D2D1Vec3Length(float x, float y, float z);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1ComputeMaximumScaleFactor"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern float D2D1ComputeMaximumScaleFactor(Matrix3x2* matrix);
 
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1GetGradientMeshInteriorPointsFromCoonsPatch"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
 	public static extern void D2D1GetGradientMeshInteriorPointsFromCoonsPatch(System.Drawing.PointF* pPoint0, System.Drawing.PointF* pPoint1, System.Drawing.PointF* pPoint2, System.Drawing.PointF* pPoint3, System.Drawing.PointF* pPoint4, System.Drawing.PointF* pPoint5, System.Drawing.PointF* pPoint6, System.Drawing.PointF* pPoint7, System.Drawing.PointF* pPoint8, System.Drawing.PointF* pPoint9, System.Drawing.PointF* pPoint10, System.Drawing.PointF* pPoint11, System.Drawing.PointF* pTensorPoint11, System.Drawing.PointF* pTensorPoint12, System.Drawing.PointF* pTensorPoint21, System.Drawing.PointF* pTensorPoint22);
 }

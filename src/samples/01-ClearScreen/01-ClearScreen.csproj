@@ -9,6 +9,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\..\Vortice.Win32.Direct3D11\Vortice.Win32.Direct3D11.csproj" />
+    <ProjectReference Include="..\..\Vortice.Win32.Dxc\Vortice.Win32.Dxc.csproj" />
   </ItemGroup>
 
   <ItemGroup>

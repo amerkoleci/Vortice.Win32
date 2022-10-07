@@ -945,9 +945,9 @@ public static class Program
         { "D3D11_BUFFER_UAV::Flags", "D3D11_BUFFER_UAV_FLAG" },
         { "D3D11_BUFFEREX_SRV::Flags", "D3D11_BUFFEREX_SRV_FLAG" },
 
-        { "D3D11_RESOURCE_FLAGS::BindFlags", "D3D11_BIND_FLAG" },
-        { "D3D11_RESOURCE_FLAGS::CPUAccessFlags", "D3D11_CPU_ACCESS_FLAG" },
-        { "D3D11_RESOURCE_FLAGS::MiscFlags", "D3D11_RESOURCE_MISC_FLAG" },
+        { "D3D11_RESOURCE_FLAGS::BindFlags", "Graphics.Direct3D11.D3D11_BIND_FLAG" },
+        { "D3D11_RESOURCE_FLAGS::CPUAccessFlags", "Graphics.Direct3D11.D3D11_CPU_ACCESS_FLAG" },
+        { "D3D11_RESOURCE_FLAGS::MiscFlags", "Graphics.Direct3D11.D3D11_RESOURCE_MISC_FLAG" },
 
         // D3D12
         { "D3D12_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D12_COLOR_WRITE_ENABLE" },
@@ -1001,7 +1001,7 @@ public static class Program
         { "D3DCompressShaders::uFlags", "D3D_COMPRESS_SHADER" },
         { "D3DDisassemble::Flags", "D3D_DISASM" },
 
-        { "D3D11On12CreateDevice::Flags", "D3D11_CREATE_DEVICE_FLAG" },
+        { "D3D11On12CreateDevice::Flags", "Graphics.Direct3D11.D3D11_CREATE_DEVICE_FLAG" },
     };
 
     private static readonly HashSet<string> s_visitedEnums = new();
@@ -1041,6 +1041,7 @@ public static class Program
         string d3d11Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11");
         string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D12");
         string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11on12");
+        string dxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Dxc");
 
         // Generate docs
         //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
@@ -1075,8 +1076,14 @@ public static class Program
                 outputPath = d3d11on12Path;
                 useSubFolders = false;
             }
+            else if (jsonFile.EndsWith("Direct3D.Dxc.json"))
+            {
+                outputPath = dxcPath;
+                useSubFolders = false;
+            }
 
             outputPath = Path.Combine(outputPath, "Generated");
+
             if (!Directory.Exists(outputPath))
             {
                 Directory.CreateDirectory(outputPath);
@@ -1084,7 +1091,6 @@ public static class Program
 
             Generate(api!, outputPath, jsonFile, useSubFolders);
         }
-
 
         return 0;
     }
@@ -1119,12 +1125,7 @@ public static class Program
             ns = $"{folderRoot}.{fileName}";
         }
 
-        if (docFile != "json")
-        {
-            string subdirectory = Path.Combine(outputFolder, docFile);
-
-        }
-        else
+        if (docFile == "json" || jsonFile == "Graphics.Direct3D.Dxc.json")
         {
             docFile = string.Empty;
         }
@@ -1145,12 +1146,17 @@ public static class Program
             apiFolder = outputPath;
         }
 
-        if (Directory.Exists(apiFolder) == false)
+        if (Directory.Exists(apiFolder))
         {
-            Directory.CreateDirectory(apiFolder);
+            Directory.Delete(apiFolder, true);
         }
 
-        docFile = $"../{docFile}";
+        Directory.CreateDirectory(apiFolder);
+
+        if (string.IsNullOrWhiteSpace(docFile) == false)
+        {
+            docFile = $"../{docFile}";
+        }
 
         GenerateConstants(apiFolder, apiName, docFile, api);
         GenerateTypes(apiFolder, apiName, docFile, api);
@@ -1461,7 +1467,10 @@ public static class Program
             {
                 if (function.Name.StartsWith("D3DX11") ||
                     function.Name == "D3DDisassemble11Trace" ||
-                    function.Name == "D3DDisassemble10Effect")
+                    function.Name == "D3DDisassemble10Effect" ||
+                    function.Name == "D3DCreateLinker" ||
+                    function.Name == "D3DLoadModule" ||
+                    function.Name == "D3DCreateFunctionLinkingGraph")
                 {
                     continue;
                 }
@@ -1489,6 +1498,16 @@ public static class Program
         string returnType = GetTypeName(function.ReturnType);
         string functionSuffix = string.Empty;
         StringBuilder functionSignature = new();
+
+        if (string.IsNullOrEmpty(functionName))
+        {
+            functionName = function.Name;
+        }
+
+        if (string.IsNullOrEmpty(writer.DocFileName) == false && !asParameter && !asCallback)
+        {
+            writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{functionName}\"]/*' />");
+        }
 
         if (string.IsNullOrEmpty(function.DllImport) == false)
         {
@@ -1528,10 +1547,7 @@ public static class Program
         }
 
         string argumentsString = argumentBuilder.ToString();
-        if (string.IsNullOrEmpty(functionName))
-        {
-            functionName = function.Name;
-        }
+
 
         if (!asParameter)
         {
@@ -1602,13 +1618,15 @@ public static class Program
             docFileName,
             $"Win32.{apiName}");
 
-        if (!autoGenerated)
+        if (!autoGenerated && string.IsNullOrEmpty(writer.DocFileName) == false)
         {
             writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{enumType.Name}\"]/*' />");
         }
 
         if (s_generateUnmanagedDocs)
+        {
             writer.WriteLine($"/// <unmanaged>{enumType.Name}</unmanaged>");
+        }
 
         bool isFlags = false;
         if (enumType.Flags ||
@@ -1685,7 +1703,7 @@ public static class Program
 
                 string enumValueName = GetEnumItemName(enumType, enumItem, enumPrefix, skipPrettify);
 
-                if (!autoGenerated)
+                if (!autoGenerated && string.IsNullOrEmpty(writer.DocFileName) == false)
                 {
                     writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{enumType.Name}::{enumItem.Name}\"]/*' />");
                 }
@@ -1768,7 +1786,10 @@ public static class Program
 
         if (!nestedType)
         {
-            writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}\"]/*' />");
+            if (string.IsNullOrEmpty(writer.DocFileName) == false)
+            {
+                writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}\"]/*' />");
+            }
 
             if (s_generateUnmanagedDocs)
             {
@@ -1822,13 +1843,22 @@ public static class Program
                 }
 
                 string fieldTypeName = GetTypeName(field.Type, asPointer);
-
-                writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}::{field.Name}\"]/*' />");
+                if (string.IsNullOrEmpty(writer.DocFileName) == false)
+                {
+                    writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}::{field.Name}\"]/*' />");
+                }
 
                 string remapFieldLookUp = $"{structType.Name}::{field.Name}";
                 if (s_structFieldTypeRemap.TryGetValue(remapFieldLookUp, out string? remapType))
                 {
-                    fieldTypeName = GetTypeName($"{writer.Api}.{remapType}");
+                    if (remapType.Contains('.'))
+                    {
+                        fieldTypeName = GetTypeName($"{remapType}");
+                    }
+                    else
+                    {
+                        fieldTypeName = GetTypeName($"{writer.Api}.{remapType}");
+                    }
                 }
 
                 if (fieldTypeName == "Array")
@@ -1998,7 +2028,10 @@ public static class Program
             docFileName,
             $"Win32.{apiName}");
 
-        writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}\"]/*' />");
+        if (string.IsNullOrEmpty(writer.DocFileName) == false)
+        {
+            writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}\"]/*' />");
+        }
 
         if (s_generateUnmanagedDocs)
         {
@@ -2197,10 +2230,18 @@ public static class Program
 
                     if (comType.Name == docName)
                     {
-                        writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}::{method.Name}\"]/*' />");
+                        if (string.IsNullOrEmpty(writer.DocFileName) == false)
+                        {
+                            writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}::{method.Name}\"]/*' />");
+                        }
                     }
                     else
                     {
+                        if (docName == "ID2D1SimplifiedGeometrySink")
+                        {
+                            docName = "Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink";
+                        }
+
                         writer.WriteLine($"/// <inheritdoc cref=\"{docName}.{method.Name}\" />");
                     }
 
@@ -2283,7 +2324,15 @@ public static class Program
                 string parameterNameLookup = $"{memberLookup}::{parameter.Name}";
                 if (s_mapFunctionParameters.TryGetValue(parameterNameLookup, out string? remapType))
                 {
-                    parameterType = GetTypeName($"{writer.Api}.{remapType}");
+                    if (remapType.Contains('.'))
+                    {
+                        parameterType = GetTypeName($"{remapType}");
+                    }
+                    else
+                    {
+                        parameterType = GetTypeName($"{writer.Api}.{remapType}");
+                    }
+
                     if (parameter.Attrs.Any(item => item is string str && str == "Out"))
                     {
                         parameterType += "*";

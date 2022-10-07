@@ -7,11 +7,12 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectWrite;
+namespace Win32.Graphics.Direct3D.Dxc;
 
-public static unsafe partial class Apis
+/// <unmanaged>DxcDefine</unmanaged>
+public partial struct DxcDefine
 {
-	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWriteCreateFactory"]/*' />
-	[DllImport("DWrite.dll", ExactSpelling = true)]
-	public static extern HResult DWriteCreateFactory(FactoryType factoryType, Guid* iid, IUnknown** factory);
+	public unsafe ushort* Name;
+
+	public unsafe ushort* Value;
 }

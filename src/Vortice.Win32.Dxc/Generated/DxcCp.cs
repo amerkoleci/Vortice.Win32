@@ -7,11 +7,15 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace Win32.Graphics.DirectWrite;
+namespace Win32.Graphics.Direct3D.Dxc;
 
-public static unsafe partial class Apis
+/// <unmanaged>DXC_CP</unmanaged>
+public enum DxcCp : uint
 {
-	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWriteCreateFactory"]/*' />
-	[DllImport("DWrite.dll", ExactSpelling = true)]
-	public static extern HResult DWriteCreateFactory(FactoryType factoryType, Guid* iid, IUnknown** factory);
+	/// <unmanaged>DXC_CP_ACP</unmanaged>
+	Acp = 0,
+	/// <unmanaged>DXC_CP_UTF16</unmanaged>
+	Utf16 = 1200,
+	/// <unmanaged>DXC_CP_UTF8</unmanaged>
+	Utf8 = 65001,
 }

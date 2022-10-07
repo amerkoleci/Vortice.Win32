@@ -11,18 +11,23 @@ namespace Win32.Graphics.Dxgi;
 
 public static unsafe partial class Apis
 {
+	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory"]/*' />
 	[DllImport("dxgi.dll", ExactSpelling = true)]
 	public static extern HResult CreateDXGIFactory(Guid* riid, void** ppFactory);
 
+	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory1"]/*' />
 	[DllImport("dxgi.dll", ExactSpelling = true)]
 	public static extern HResult CreateDXGIFactory1(Guid* riid, void** ppFactory);
 
+	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory2"]/*' />
 	[DllImport("dxgi.dll", ExactSpelling = true)]
 	public static extern HResult CreateDXGIFactory2(uint Flags, Guid* riid, void** ppFactory);
 
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIGetDebugInterface1"]/*' />
 	[DllImport("dxgi.dll", ExactSpelling = true)]
 	public static extern HResult DXGIGetDebugInterface1(uint Flags, Guid* riid, void** pDebug);
 
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIDeclareAdapterRemovalSupport"]/*' />
 	[DllImport("dxgi.dll", ExactSpelling = true)]
 	public static extern HResult DXGIDeclareAdapterRemovalSupport();
 }

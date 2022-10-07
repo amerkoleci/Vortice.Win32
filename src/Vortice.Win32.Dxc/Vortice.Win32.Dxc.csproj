@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+    <Description>DXC bindings.</Description>
+    
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>0419;$(NoWarn)</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="System.Numerics" />
+    <Using Include="System.Diagnostics" />
+    <Using Include="System.Runtime.CompilerServices" />
+    <Using Include="System.Runtime.InteropServices" />
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+    <Using Include="Win32.Numerics" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vortice.Win32\Vortice.Win32.csproj" />
+  </ItemGroup>
+
+</Project>

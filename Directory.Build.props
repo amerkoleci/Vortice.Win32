@@ -7,7 +7,7 @@
     <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
     <EnablePreviewFeatures>true</EnablePreviewFeatures>
 
-    <VersionPrefix>1.7.2</VersionPrefix>
+    <VersionPrefix>1.7.3</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>

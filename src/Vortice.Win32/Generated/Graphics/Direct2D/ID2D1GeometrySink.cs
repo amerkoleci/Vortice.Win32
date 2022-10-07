@@ -48,7 +48,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 
 	public void** lpVtbl;
 
-	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.SetFillMode" />
+	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetFillMode" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public void SetFillMode(Common.FillMode fillMode)
@@ -56,7 +56,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.FillMode, void>)(lpVtbl[0]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), fillMode);
 	}
 
-	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.SetSegmentFlags" />
+	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetSegmentFlags" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
 	public void SetSegmentFlags(Common.PathSegment vertexFlags)
@@ -64,7 +64,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.PathSegment, void>)(lpVtbl[1]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
 	}
 
-	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.BeginFigure" />
+	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.BeginFigure" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
 	public void BeginFigure(System.Drawing.PointF startPoint, Common.FigureBegin figureBegin)
@@ -72,7 +72,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF, Common.FigureBegin, void>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
 	}
 
-	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.AddLines" />
+	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddLines" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void AddLines(System.Drawing.PointF* points, uint pointsCount)
@@ -80,7 +80,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF*, uint, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
 	}
 
-	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.AddBeziers" />
+	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddBeziers" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void AddBeziers(Common.BezierSegment* beziers, uint beziersCount)
@@ -88,7 +88,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.BezierSegment*, uint, void>)(lpVtbl[4]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
 	}
 
-	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.EndFigure" />
+	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.EndFigure" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void EndFigure(Common.FigureEnd figureEnd)
@@ -96,7 +96,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.FigureEnd, void>)(lpVtbl[5]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
 	}
 
-	/// <inheritdoc cref="ID2D1SimplifiedGeometrySink.Close" />
+	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.Close" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult Close()
