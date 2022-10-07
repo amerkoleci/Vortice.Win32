@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging.D2D;
 
-/// <include file='../Imaging.xml' path='doc/member[@name="IWICImageEncoder"]/*' />
+/// <include file='../../Vortice.Win32/Generated/Graphics/Imaging.xml' path='doc/member[@name="IWICImageEncoder"]/*' />
 /// <unmanaged>IWICImageEncoder</unmanaged>
 [Guid("04c75bf8-3ce1-473b-acc5-3cc4f5e94999")]
 [NativeTypeName("struct IWICImageEncoder : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICImageEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrame"]/*' />
+	/// <include file='../../Vortice.Win32/Generated/Graphics/Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult WriteFrame(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters)
@@ -82,7 +82,7 @@ public unsafe partial struct IWICImageEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapFrameEncode*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[3]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pFrameEncode, pImageParameters);
 	}
 
-	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrameThumbnail"]/*' />
+	/// <include file='../../Vortice.Win32/Generated/Graphics/Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrameThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult WriteFrameThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters)
@@ -90,7 +90,7 @@ public unsafe partial struct IWICImageEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapFrameEncode*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[4]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pFrameEncode, pImageParameters);
 	}
 
-	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteThumbnail"]/*' />
+	/// <include file='../../Vortice.Win32/Generated/Graphics/Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult WriteThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapEncoder* pEncoder, Graphics.Imaging.WICImageParameters* pImageParameters)

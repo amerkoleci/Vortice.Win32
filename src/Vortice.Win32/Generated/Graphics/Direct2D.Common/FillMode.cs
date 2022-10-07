@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILL_MODE"]/*' />
+/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FILL_MODE"]/*' />
 /// <unmanaged>D2D1_FILL_MODE</unmanaged>
 public enum FillMode : uint
 {
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILL_MODE::D2D1_FILL_MODE_ALTERNATE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FILL_MODE::D2D1_FILL_MODE_ALTERNATE"]/*' />
 	/// <unmanaged>D2D1_FILL_MODE_ALTERNATE</unmanaged>
 	Alternate = 0,
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FILL_MODE::D2D1_FILL_MODE_WINDING"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FILL_MODE::D2D1_FILL_MODE_WINDING"]/*' />
 	/// <unmanaged>D2D1_FILL_MODE_WINDING</unmanaged>
 	Winding = 1,
 }

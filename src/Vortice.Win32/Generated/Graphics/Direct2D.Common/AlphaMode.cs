@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE"]/*' />
+/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_ALPHA_MODE</unmanaged>
 public enum AlphaMode : uint
 {
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_UNKNOWN"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_UNKNOWN"]/*' />
 	/// <unmanaged>D2D1_ALPHA_MODE_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_PREMULTIPLIED"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_PREMULTIPLIED"]/*' />
 	/// <unmanaged>D2D1_ALPHA_MODE_PREMULTIPLIED</unmanaged>
 	Premultiplied = 1,
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_STRAIGHT"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_STRAIGHT"]/*' />
 	/// <unmanaged>D2D1_ALPHA_MODE_STRAIGHT</unmanaged>
 	Straight = 2,
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_IGNORE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_IGNORE"]/*' />
 	/// <unmanaged>D2D1_ALPHA_MODE_IGNORE</unmanaged>
 	Ignore = 3,
 }

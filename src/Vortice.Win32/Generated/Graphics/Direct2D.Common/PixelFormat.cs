@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT"]/*' />
+/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT"]/*' />
 /// <unmanaged>D2D1_PIXEL_FORMAT</unmanaged>
 public partial struct PixelFormat
 {
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT::format"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT::format"]/*' />
 	public Graphics.Dxgi.Common.Format format;
 
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT::alphaMode"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_FORMAT::alphaMode"]/*' />
 	public AlphaMode alphaMode;
 }

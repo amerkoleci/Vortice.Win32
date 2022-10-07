@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE"]/*' />
+/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE"]/*' />
 /// <unmanaged>D2D1_TURBULENCE_NOISE</unmanaged>
 public enum TurbulenceNoise : uint
 {
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE::D2D1_TURBULENCE_NOISE_FRACTAL_SUM"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE::D2D1_TURBULENCE_NOISE_FRACTAL_SUM"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_NOISE_FRACTAL_SUM</unmanaged>
 	FractalSum = 0,
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE::D2D1_TURBULENCE_NOISE_TURBULENCE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE::D2D1_TURBULENCE_NOISE_TURBULENCE"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_NOISE_TURBULENCE</unmanaged>
 	Turbulence = 1,
 }

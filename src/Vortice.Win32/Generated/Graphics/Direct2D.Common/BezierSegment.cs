@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT"]/*' />
+/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT"]/*' />
 /// <unmanaged>D2D1_BEZIER_SEGMENT</unmanaged>
 public partial struct BezierSegment
 {
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point1"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point1"]/*' />
 	public System.Drawing.PointF point1;
 
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point2"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point2"]/*' />
 	public System.Drawing.PointF point2;
 
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point3"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point3"]/*' />
 	public System.Drawing.PointF point3;
 }

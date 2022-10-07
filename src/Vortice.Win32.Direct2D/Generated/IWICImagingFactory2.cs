@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging.D2D;
 
-/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory2"]/*' />
+/// <include file='../../Vortice.Win32/Generated/Graphics/Imaging.xml' path='doc/member[@name="IWICImagingFactory2"]/*' />
 /// <unmanaged>IWICImagingFactory2</unmanaged>
 [Guid("7b816b45-1996-4476-b132-de9e247c8af0")]
 [NativeTypeName("struct IWICImagingFactory2 : IWICImagingFactory")]
@@ -248,7 +248,7 @@ public unsafe partial struct IWICImagingFactory2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory2*, Graphics.Imaging.IWICMetadataQueryReader*, Guid*, Graphics.Imaging.IWICMetadataQueryWriter**, int>)(lpVtbl[24]))((IWICImagingFactory2*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
 	}
 
-	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory2::CreateImageEncoder"]/*' />
+	/// <include file='../../Vortice.Win32/Generated/Graphics/Imaging.xml' path='doc/member[@name="IWICImagingFactory2::CreateImageEncoder"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CreateImageEncoder(Graphics.Direct2D.ID2D1Device* pD2DDevice, IWICImageEncoder** ppWICImageEncoder)

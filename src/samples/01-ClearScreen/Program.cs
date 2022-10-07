@@ -3,29 +3,27 @@
 
 using System.Numerics;
 using Win32;
+using Win32.Graphics.Direct2D;
 using Win32.Graphics.Direct3D;
 using Win32.Graphics.Direct3D.Dxc;
 using Win32.Graphics.Direct3D11;
+using Win32.Graphics.DirectWrite;
 using Win32.Graphics.Dxgi;
 using Win32.Graphics.Dxgi.Common;
 using Win32.Graphics.Imaging;
+using Win32.Graphics.Imaging.D2D;
 using static Win32.Apis;
+using static Win32.Graphics.Direct2D.Apis;
 using static Win32.Graphics.Direct3D.Dxc.Apis;
 using static Win32.Graphics.Direct3D11.Apis;
-using static Win32.Graphics.Dxgi.Apis;
-using static Win32.Graphics.Imaging.Apis;
 using static Win32.Graphics.DirectWrite.Apis;
-using static Win32.Graphics.Direct2D.Apis;
+using static Win32.Graphics.Dxgi.Apis;
+using static Win32.Graphics.Imaging.D2D.Apis;
+using DWriteFactoryType = Win32.Graphics.DirectWrite.FactoryType;
+using FactoryType = Win32.Graphics.Direct2D.FactoryType;
+using FeatureLevel = Win32.Graphics.Direct3D.FeatureLevel;
 using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
 using MessageId = Win32.Graphics.Direct3D11.MessageId;
-using Win32.Graphics.Direct2D;
-using Win32.Graphics.DirectWrite;
-using FactoryType = Win32.Graphics.Direct2D.FactoryType;
-using DWriteFactoryType = Win32.Graphics.DirectWrite.FactoryType;
-using FeatureLevel = Win32.Graphics.Direct3D.FeatureLevel;
-using Win32.Graphics.Imaging.D2D;
-using System.Runtime.CompilerServices;
-using System.Drawing;
 
 namespace ClearScreen;
 

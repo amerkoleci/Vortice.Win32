@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U"]/*' />
+/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D_RECT_U"]/*' />
 /// <unmanaged>D2D_RECT_U</unmanaged>
 public partial struct RectU
 {
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U::left"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D_RECT_U::left"]/*' />
 	public uint left;
 
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U::top"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D_RECT_U::top"]/*' />
 	public uint top;
 
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U::right"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D_RECT_U::right"]/*' />
 	public uint right;
 
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_U::bottom"]/*' />
+	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D_RECT_U::bottom"]/*' />
 	public uint bottom;
 }

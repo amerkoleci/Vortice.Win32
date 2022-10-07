@@ -1041,6 +1041,7 @@ public static class Program
         string d3d11Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11");
         string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D12");
         string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11on12");
+        string d2dPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct2D");
         string dxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Dxc");
 
         // Generate docs
@@ -1061,6 +1062,8 @@ public static class Program
 
             string outputPath = repoRoot;
             bool useSubFolders = true;
+            bool cleanFolder = true;
+
             if (jsonFile.EndsWith("Direct3D11.json"))
             {
                 outputPath = d3d11Path;
@@ -1076,6 +1079,17 @@ public static class Program
                 outputPath = d3d11on12Path;
                 useSubFolders = false;
             }
+            else if (jsonFile.EndsWith("Direct2D.json"))
+            {
+                outputPath = d2dPath;
+                useSubFolders = false;
+            }
+            else if (jsonFile == "Graphics.Imaging.D2D.json")
+            {
+                outputPath = d2dPath;
+                useSubFolders = false;
+                cleanFolder = false;
+            }
             else if (jsonFile.EndsWith("Direct3D.Dxc.json"))
             {
                 outputPath = dxcPath;
@@ -1089,13 +1103,13 @@ public static class Program
                 Directory.CreateDirectory(outputPath);
             }
 
-            Generate(api!, outputPath, jsonFile, useSubFolders);
+            Generate(api!, outputPath, jsonFile, useSubFolders, cleanFolder);
         }
 
         return 0;
     }
 
-    private static void Generate(ApiData api, string outputPath, string jsonFile, bool useSubFolders)
+    private static void Generate(ApiData api, string outputPath, string jsonFile, bool useSubFolders, bool cleanFolder)
     {
         string[] splits = jsonFile.Split(".", StringSplitOptions.RemoveEmptyEntries);
         string folderRoot = splits[0];
@@ -1130,6 +1144,19 @@ public static class Program
             docFile = string.Empty;
         }
 
+        if (jsonFile == "Graphics.Direct2D.Common.json")
+        {
+            docFile = $"../../../Vortice.Win32.Direct2D/Direct2D";
+        }
+        else if (jsonFile == "Graphics.Imaging.D2D.json")
+        {
+            docFile = $"../Vortice.Win32/Generated/Graphics/Imaging";
+        }
+        else if (jsonFile == "Graphics.Direct3D11on12.json")
+        {
+            docFile = $"../Vortice.Win32.Direct3D11/Direct3D11";
+        }
+
         string apiName = ns;
         string apiFolder;
         if (useSubFolders)
@@ -1146,12 +1173,18 @@ public static class Program
             apiFolder = outputPath;
         }
 
-        if (Directory.Exists(apiFolder))
+        if (cleanFolder)
         {
-            Directory.Delete(apiFolder, true);
+            if (Directory.Exists(apiFolder))
+            {
+                Directory.Delete(apiFolder, true);
+            }
         }
 
-        Directory.CreateDirectory(apiFolder);
+        if (!Directory.Exists(apiFolder))
+        {
+            Directory.CreateDirectory(apiFolder);
+        }
 
         if (string.IsNullOrWhiteSpace(docFile) == false)
         {
