@@ -11,9 +11,9 @@ namespace Win32.Com;
 public unsafe partial struct Variant
 {
     private VariantFullType vt;
-    private ushort reserved1;
-    private ushort reserved2;
-    private ushort reserved3;
+    private readonly ushort reserved1;
+    private readonly ushort reserved2;
+    private readonly ushort reserved3;
     private VariantValue variantValue;
 
     /// <summary>

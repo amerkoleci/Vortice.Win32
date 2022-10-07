@@ -8244,7 +8244,7 @@ The filter value indicates the amount by which the left and right views are adju
     <summary>
       <para>Gets the minimum feature level.</para>
       <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//d3d11shader/nf-d3d11shader-id3d11shaderreflection-getminfeaturelevel" /></para>
-      <param name="unnamedParam1">A pointer to one of the enumerated values in <a href="https://docs.microsoft.com/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_feature_level">D3D_FEATURE_LEVEL</a>, which represents the minimum feature level.</param>
+      <param name="pLevel">A pointer to one of the enumerated values in <a href="https://docs.microsoft.com/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_feature_level">D3D_FEATURE_LEVEL</a>, which represents the minimum feature level.</param>
     </summary>
   </member>
   <member name="ID3D11ShaderTrace::TraceReady">
@@ -9898,7 +9898,7 @@ An empty box results in a no-op. A box is empty if the top value is greater than
   </member>
   <member name="ID3D11ShaderTrace::GetInitialRegisterContents">
     <summary>
-      <para>Retrieves the initial contents of the specified input register.</para>
+      <para name="pRegister">Retrieves the initial contents of the specified input register.</para>
       <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//d3d11shadertracing/nf-d3d11shadertracing-id3d11shadertrace-getinitialregistercontents" /></para>
       <param name="pValue">A pointer to a  <a href="https://docs.microsoft.com/windows/desktop/api/d3d11shadertracing/ns-d3d11shadertracing-d3d11_trace_value">D3D11_TRACE_VALUE</a> structure. <b>GetInitialRegisterContents</b> fills the members of this structure with information about the initial contents.</param>
     </summary>

@@ -1042,6 +1042,7 @@ public static class Program
         string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D12");
         string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11on12");
         string d2dPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct2D");
+        string dwritePath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.DirectWrite");
         string dxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Dxc");
 
         // Generate docs
@@ -1089,6 +1090,11 @@ public static class Program
                 outputPath = d2dPath;
                 useSubFolders = false;
                 cleanFolder = false;
+            }
+            else if (jsonFile == "Graphics.DirectWrite.json")
+            {
+                outputPath = dwritePath;
+                useSubFolders = false;
             }
             else if (jsonFile.EndsWith("Direct3D.Dxc.json"))
             {

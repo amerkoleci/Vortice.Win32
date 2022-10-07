@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
-    <Description>Direct2D1 bindings.</Description>
+    <Description>DirectWrite bindings.</Description>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>0419;$(NoWarn)</NoWarn>
@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Vortice.Win32.DirectWrite\Vortice.Win32.DirectWrite.csproj" />
+    <ProjectReference Include="..\Vortice.Win32\Vortice.Win32.csproj" />
   </ItemGroup>
 
 </Project>
