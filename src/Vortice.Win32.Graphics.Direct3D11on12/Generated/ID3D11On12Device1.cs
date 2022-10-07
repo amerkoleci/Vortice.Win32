@@ -9,30 +9,30 @@
 
 namespace Win32.Graphics.Direct3D11on12;
 
-/// <include file='../../Vortice.Win32.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device"]/*' />
-/// <unmanaged>ID3D11On12Device</unmanaged>
-[Guid("85611e73-70a9-490e-9614-a9e302777904")]
-[NativeTypeName("struct ID3D11On12Device : IUnknown")]
-[NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11On12Device : INativeGuid
+/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device1"]/*' />
+/// <unmanaged>ID3D11On12Device1</unmanaged>
+[Guid("bdb64df4-ea2f-4c70-b861-aaab1258bb5d")]
+[NativeTypeName("struct ID3D11On12Device1 : ID3D11On12Device")]
+[NativeInheritance("ID3D11On12Device")]
+public unsafe partial struct ID3D11On12Device1 : INativeGuid
 {
-	public static ref readonly Guid IID_ID3D11On12Device
+	public static ref readonly Guid IID_ID3D11On12Device1
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		get
 		{
 			ReadOnlySpan<byte> data = new byte[] {
-				0x73, 0x1E, 0x61, 0x85,
-				0xA9, 0x70,
-				0x0E, 0x49,
-				0x96,
-				0x14,
-				0xA9,
-				0xE3,
-				0x02,
-				0x77,
-				0x79,
-				0x04
+				0xF4, 0x4D, 0xB6, 0xBD,
+				0x2F, 0xEA,
+				0x70, 0x4C,
+				0xB8,
+				0x61,
+				0xAA,
+				0xAB,
+				0x12,
+				0x58,
+				0xBB,
+				0x5D
 			};
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
@@ -41,9 +41,9 @@ public unsafe partial struct ID3D11On12Device : INativeGuid
 	}
 
 #if NET6_0_OR_GREATER
-	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11On12Device));
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11On12Device1));
 #else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11On12Device));
+	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11On12Device1));
 #endif
 
 	public void** lpVtbl;
@@ -74,28 +74,36 @@ public unsafe partial struct ID3D11On12Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Vortice.Win32.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::CreateWrappedResource"]/*' />
+	/// <inheritdoc cref="ID3D11On12Device.CreateWrappedResource" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateWrappedResource(IUnknown* pResource12, ResourceFlags* pFlags11, Graphics.Direct3D12.ResourceStates InState, Graphics.Direct3D12.ResourceStates OutState, Guid* riid, void** ppResource11)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device*, IUnknown*, ResourceFlags*, Graphics.Direct3D12.ResourceStates, Graphics.Direct3D12.ResourceStates, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
+		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device1*, IUnknown*, ResourceFlags*, Graphics.Direct3D12.ResourceStates, Graphics.Direct3D12.ResourceStates, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device1*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
 	}
 
-	/// <include file='../../Vortice.Win32.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::ReleaseWrappedResources"]/*' />
+	/// <inheritdoc cref="ID3D11On12Device.ReleaseWrappedResources" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void ReleaseWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11On12Device*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[4]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), ppResources, NumResources);
+		((delegate* unmanaged[Stdcall]<ID3D11On12Device1*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[4]))((ID3D11On12Device1*)Unsafe.AsPointer(ref this), ppResources, NumResources);
 	}
 
-	/// <include file='../../Vortice.Win32.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::AcquireWrappedResources"]/*' />
+	/// <inheritdoc cref="ID3D11On12Device.AcquireWrappedResources" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void AcquireWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11On12Device*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[5]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), ppResources, NumResources);
+		((delegate* unmanaged[Stdcall]<ID3D11On12Device1*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[5]))((ID3D11On12Device1*)Unsafe.AsPointer(ref this), ppResources, NumResources);
+	}
+
+	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device1::GetD3D12Device"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(6)]
+	public HResult GetD3D12Device(Guid* riid, void** ppvDevice)
+	{
+		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device1*, Guid*, void**, int>)(lpVtbl[6]))((ID3D11On12Device1*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 }
 

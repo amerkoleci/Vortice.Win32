@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_BEGIN"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_BEGIN"]/*' />
 /// <unmanaged>D2D1_FIGURE_BEGIN</unmanaged>
 public enum FigureBegin : uint
 {
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_BEGIN::D2D1_FIGURE_BEGIN_FILLED"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_BEGIN::D2D1_FIGURE_BEGIN_FILLED"]/*' />
 	/// <unmanaged>D2D1_FIGURE_BEGIN_FILLED</unmanaged>
 	Filled = 0,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_BEGIN::D2D1_FIGURE_BEGIN_HOLLOW"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_BEGIN::D2D1_FIGURE_BEGIN_HOLLOW"]/*' />
 	/// <unmanaged>D2D1_FIGURE_BEGIN_HOLLOW</unmanaged>
 	Hollow = 1,
 }

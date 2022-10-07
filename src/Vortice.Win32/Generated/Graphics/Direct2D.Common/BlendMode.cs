@@ -9,86 +9,86 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE"]/*' />
 /// <unmanaged>D2D1_BLEND_MODE</unmanaged>
 public enum BlendMode : uint
 {
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_MULTIPLY"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_MULTIPLY"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_MULTIPLY</unmanaged>
 	Multiply = 0,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_SCREEN"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_SCREEN"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_SCREEN</unmanaged>
 	Screen = 1,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DARKEN"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DARKEN"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_DARKEN</unmanaged>
 	Darken = 2,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LIGHTEN"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LIGHTEN"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_LIGHTEN</unmanaged>
 	Lighten = 3,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DISSOLVE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DISSOLVE"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_DISSOLVE</unmanaged>
 	Dissolve = 4,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_COLOR_BURN"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_COLOR_BURN"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_COLOR_BURN</unmanaged>
 	ColorBurn = 5,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LINEAR_BURN"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LINEAR_BURN"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_LINEAR_BURN</unmanaged>
 	LinearBurn = 6,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DARKER_COLOR"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DARKER_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_DARKER_COLOR</unmanaged>
 	DarkerColor = 7,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LIGHTER_COLOR"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LIGHTER_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_LIGHTER_COLOR</unmanaged>
 	LighterColor = 8,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_COLOR_DODGE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_COLOR_DODGE"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_COLOR_DODGE</unmanaged>
 	ColorDodge = 9,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LINEAR_DODGE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LINEAR_DODGE"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_LINEAR_DODGE</unmanaged>
 	LinearDodge = 10,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_OVERLAY"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_OVERLAY"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_OVERLAY</unmanaged>
 	Overlay = 11,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_SOFT_LIGHT"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_SOFT_LIGHT"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_SOFT_LIGHT</unmanaged>
 	SoftLight = 12,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_HARD_LIGHT"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_HARD_LIGHT"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_HARD_LIGHT</unmanaged>
 	HardLight = 13,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_VIVID_LIGHT"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_VIVID_LIGHT"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_VIVID_LIGHT</unmanaged>
 	VividLight = 14,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LINEAR_LIGHT"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LINEAR_LIGHT"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_LINEAR_LIGHT</unmanaged>
 	LinearLight = 15,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_PIN_LIGHT"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_PIN_LIGHT"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_PIN_LIGHT</unmanaged>
 	PinLight = 16,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_HARD_MIX"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_HARD_MIX"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_HARD_MIX</unmanaged>
 	HardMix = 17,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DIFFERENCE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DIFFERENCE"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_DIFFERENCE</unmanaged>
 	Difference = 18,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_EXCLUSION"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_EXCLUSION"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_EXCLUSION</unmanaged>
 	Exclusion = 19,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_HUE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_HUE"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_HUE</unmanaged>
 	Hue = 20,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_SATURATION"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_SATURATION"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_SATURATION</unmanaged>
 	Saturation = 21,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_COLOR"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_COLOR</unmanaged>
 	Color = 22,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LUMINOSITY"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_LUMINOSITY"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_LUMINOSITY</unmanaged>
 	Luminosity = 23,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_SUBTRACT"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_SUBTRACT"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_SUBTRACT</unmanaged>
 	Subtract = 24,
-	/// <include file='../../../../Vortice.Win32.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DIVISION"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_DIVISION"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_DIVISION</unmanaged>
 	Division = 25,
 }

@@ -1038,12 +1038,13 @@ public static class Program
     public static int Main(string[] args)
     {
         string repoRoot = FindRepoRoot();
-        string d3d11Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11");
-        string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D12");
-        string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11on12");
-        string d2dPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct2D");
-        string dwritePath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.DirectWrite");
-        string dxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Dxc");
+        string d3d11Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D11");
+        string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D12");
+        string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D11on12");
+        string dwritePath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.DirectWrite");
+        string wicPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Imaging");
+        string d2dPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct2D");
+        string dxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D.Dxc");
 
         // Generate docs
         //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
@@ -1080,6 +1081,11 @@ public static class Program
                 outputPath = d3d11on12Path;
                 useSubFolders = false;
             }
+            else if (jsonFile == "Graphics.Imaging.json")
+            {
+                outputPath = wicPath;
+                useSubFolders = false;
+            }
             else if (jsonFile.EndsWith("Direct2D.json"))
             {
                 outputPath = d2dPath;
@@ -1096,6 +1102,7 @@ public static class Program
                 outputPath = dwritePath;
                 useSubFolders = false;
             }
+
             else if (jsonFile.EndsWith("Direct3D.Dxc.json"))
             {
                 outputPath = dxcPath;
@@ -1152,7 +1159,7 @@ public static class Program
 
         if (jsonFile == "Graphics.Direct2D.Common.json")
         {
-            docFile = $"../../../Vortice.Win32.Direct2D/Direct2D";
+            docFile = $"../../../Vortice.Win32.Graphics.Direct2D/Direct2D";
         }
         else if (jsonFile == "Graphics.Imaging.D2D.json")
         {
@@ -1160,7 +1167,7 @@ public static class Program
         }
         else if (jsonFile == "Graphics.Direct3D11on12.json")
         {
-            docFile = $"../Vortice.Win32.Direct3D11/Direct3D11";
+            docFile = $"../Vortice.Win32.Graphics.Direct3D11/Direct3D11";
         }
 
         string apiName = ns;

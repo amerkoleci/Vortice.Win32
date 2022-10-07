@@ -1,9 +1,6 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Runtime.InteropServices.ComTypes;
-using Win32.Graphics.Imaging;
-
 namespace Win32.Graphics.DirectWrite;
 
 public unsafe partial struct IDWriteFactory

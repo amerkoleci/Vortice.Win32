@@ -22,17 +22,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{065268A8
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Direct3D12", "src\Vortice.Win32.Direct3D12\Vortice.Win32.Direct3D12.csproj", "{020F2D80-B3D0-4AB2-AC4D-25F51028E502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Direct3D12", "src\Vortice.Win32.Graphics.Direct3D12\Vortice.Win32.Graphics.Direct3D12.csproj", "{020F2D80-B3D0-4AB2-AC4D-25F51028E502}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Direct3D11", "src\Vortice.Win32.Direct3D11\Vortice.Win32.Direct3D11.csproj", "{32CE7567-8C9E-43AD-9543-1F0A8CA1CA76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Direct3D11", "src\Vortice.Win32.Graphics.Direct3D11\Vortice.Win32.Graphics.Direct3D11.csproj", "{32CE7567-8C9E-43AD-9543-1F0A8CA1CA76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Direct3D11on12", "src\Vortice.Win32.Direct3D11on12\Vortice.Win32.Direct3D11on12.csproj", "{978D804A-9F52-4ED4-95D9-BBED341E48A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Direct3D11on12", "src\Vortice.Win32.Graphics.Direct3D11on12\Vortice.Win32.Graphics.Direct3D11on12.csproj", "{978D804A-9F52-4ED4-95D9-BBED341E48A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Dxc", "src\Vortice.Win32.Dxc\Vortice.Win32.Dxc.csproj", "{DF5C7A6F-8E17-41EC-A7F1-9FE03ACD75F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Imaging", "src\Vortice.Win32.Graphics.Imaging\Vortice.Win32.Graphics.Imaging.csproj", "{08019242-4899-448C-AA40-9F72F3BBE9AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Direct2D", "src\Vortice.Win32.Direct2D\Vortice.Win32.Direct2D.csproj", "{942D599C-CDAC-479A-825E-1B7B84DE1328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.DirectWrite", "src\Vortice.Win32.Graphics.DirectWrite\Vortice.Win32.Graphics.DirectWrite.csproj", "{CB383B94-16DF-4937-9CAD-15DE1DC77B3A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.DirectWrite", "src\Vortice.Win32.DirectWrite\Vortice.Win32.DirectWrite.csproj", "{CB383B94-16DF-4937-9CAD-15DE1DC77B3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Direct2D", "src\Vortice.Win32.Graphics.Direct2D\Vortice.Win32.Graphics.Direct2D.csproj", "{942D599C-CDAC-479A-825E-1B7B84DE1328}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Direct3D.Dxc", "src\Vortice.Win32.Graphics.Direct3D.Dxc\Vortice.Win32.Graphics.Direct3D.Dxc.csproj", "{DF5C7A6F-8E17-41EC-A7F1-9FE03ACD75F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,14 +70,18 @@ Global
 		{DF5C7A6F-8E17-41EC-A7F1-9FE03ACD75F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF5C7A6F-8E17-41EC-A7F1-9FE03ACD75F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF5C7A6F-8E17-41EC-A7F1-9FE03ACD75F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{942D599C-CDAC-479A-825E-1B7B84DE1328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{942D599C-CDAC-479A-825E-1B7B84DE1328}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{942D599C-CDAC-479A-825E-1B7B84DE1328}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{942D599C-CDAC-479A-825E-1B7B84DE1328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08019242-4899-448C-AA40-9F72F3BBE9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08019242-4899-448C-AA40-9F72F3BBE9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08019242-4899-448C-AA40-9F72F3BBE9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08019242-4899-448C-AA40-9F72F3BBE9AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB383B94-16DF-4937-9CAD-15DE1DC77B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB383B94-16DF-4937-9CAD-15DE1DC77B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB383B94-16DF-4937-9CAD-15DE1DC77B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB383B94-16DF-4937-9CAD-15DE1DC77B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942D599C-CDAC-479A-825E-1B7B84DE1328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942D599C-CDAC-479A-825E-1B7B84DE1328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942D599C-CDAC-479A-825E-1B7B84DE1328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942D599C-CDAC-479A-825E-1B7B84DE1328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

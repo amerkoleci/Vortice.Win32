@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
-    <Description>Direct3D11on12 bindings.</Description>
+    <Description>DXC bindings.</Description>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>0419;$(NoWarn)</NoWarn>
@@ -18,8 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Vortice.Win32.Direct3D11\Vortice.Win32.Direct3D11.csproj" />
-    <ProjectReference Include="..\Vortice.Win32.Direct3D12\Vortice.Win32.Direct3D12.csproj" />
+    <ProjectReference Include="..\Vortice.Win32\Vortice.Win32.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9898,7 +9898,7 @@ An empty box results in a no-op. A box is empty if the top value is greater than
   </member>
   <member name="ID3D11ShaderTrace::GetInitialRegisterContents">
     <summary>
-      <para name="pRegister">Retrieves the initial contents of the specified input register.</para>
+      <param name="pRegister">Retrieves the initial contents of the specified input register.</param>
       <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//d3d11shadertracing/nf-d3d11shadertracing-id3d11shadertrace-getinitialregistercontents" /></para>
       <param name="pValue">A pointer to a  <a href="https://docs.microsoft.com/windows/desktop/api/d3d11shadertracing/ns-d3d11shadertracing-d3d11_trace_value">D3D11_TRACE_VALUE</a> structure. <b>GetInitialRegisterContents</b> fills the members of this structure with information about the initial contents.</param>
     </summary>

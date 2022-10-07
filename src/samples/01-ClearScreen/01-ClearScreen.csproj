@@ -9,11 +9,11 @@
   
   <ItemGroup>
     <ProjectReference Include="..\..\Vortice.Win32.Direct2D\Vortice.Win32.Direct2D.csproj" />
-    <ProjectReference Include="..\..\Vortice.Win32.Direct3D11on12\Vortice.Win32.Direct3D11on12.csproj" />
-    <ProjectReference Include="..\..\Vortice.Win32.Direct3D11\Vortice.Win32.Direct3D11.csproj" />
-    <ProjectReference Include="..\..\Vortice.Win32.Direct3D12\Vortice.Win32.Direct3D12.csproj" />
-    <ProjectReference Include="..\..\Vortice.Win32.DirectWrite\Vortice.Win32.DirectWrite.csproj" />
     <ProjectReference Include="..\..\Vortice.Win32.Dxc\Vortice.Win32.Dxc.csproj" />
+    <ProjectReference Include="..\..\Vortice.Win32.DirectWrite\Vortice.Win32.DirectWrite.csproj" />
+    <ProjectReference Include="..\..\Vortice.Win32.Graphics.Direct3D11\Vortice.Win32.Graphics.Direct3D11.csproj" />
+    <ProjectReference Include="..\..\Vortice.Win32.Graphics.Direct3D12\Vortice.Win32.Graphics.Direct3D12.csproj" />
+    <ProjectReference Include="..\..\Vortice.Win32.Graphics.Direct3D11on12\Vortice.Win32.Graphics.Direct3D11on12.csproj" />
   </ItemGroup>
 
   <ItemGroup>
