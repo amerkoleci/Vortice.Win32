@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE"]/*' />
 /// <unmanaged>DXGI_JPEG_AC_HUFFMAN_TABLE</unmanaged>
 public partial struct JpegAcHuffmanTable
 {
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeCounts"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeCounts"]/*' />
 	public unsafe fixed byte CodeCounts[16];
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeValues"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_JPEG_AC_HUFFMAN_TABLE::CodeValues"]/*' />
 	public unsafe fixed byte CodeValues[162];
 }

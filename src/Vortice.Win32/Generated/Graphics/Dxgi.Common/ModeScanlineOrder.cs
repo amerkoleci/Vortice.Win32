@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER"]/*' />
 /// <unmanaged>DXGI_MODE_SCANLINE_ORDER</unmanaged>
 public enum ModeScanlineOrder : int
 {
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED</unmanaged>
 	Unspecified = 0,
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_PROGRESSIVE"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_PROGRESSIVE"]/*' />
 	/// <unmanaged>DXGI_MODE_SCANLINE_ORDER_PROGRESSIVE</unmanaged>
 	Progressive = 1,
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_UPPER_FIELD_FIRST"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_UPPER_FIELD_FIRST"]/*' />
 	/// <unmanaged>DXGI_MODE_SCANLINE_ORDER_UPPER_FIELD_FIRST</unmanaged>
 	UpperFieldFirst = 2,
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_LOWER_FIELD_FIRST"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_LOWER_FIELD_FIRST"]/*' />
 	/// <unmanaged>DXGI_MODE_SCANLINE_ORDER_LOWER_FIELD_FIRST</unmanaged>
 	LowerFieldFirst = 3,
 }

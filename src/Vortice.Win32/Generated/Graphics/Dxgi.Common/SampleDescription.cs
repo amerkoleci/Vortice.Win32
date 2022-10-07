@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC"]/*' />
 /// <unmanaged>DXGI_SAMPLE_DESC</unmanaged>
 public partial struct SampleDescription
 {
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC::Count"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC::Count"]/*' />
 	public uint Count;
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC::Quality"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_SAMPLE_DESC::Quality"]/*' />
 	public uint Quality;
 }

@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGB"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_RGB"]/*' />
 /// <unmanaged>DXGI_RGB</unmanaged>
 public partial struct Rgb
 {
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGB::Red"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_RGB::Red"]/*' />
 	public float Red;
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGB::Green"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_RGB::Green"]/*' />
 	public float Green;
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RGB::Blue"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_RGB::Blue"]/*' />
 	public float Blue;
 }

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Vortice.Win32.Graphics.Dxgi\Vortice.Win32.Graphics.Dxgi.csproj" />
     <ProjectReference Include="..\Vortice.Win32.Graphics.Imaging\Vortice.Win32.Graphics.Imaging.csproj" />
     <ProjectReference Include="..\Vortice.Win32.Graphics.DirectWrite\Vortice.Win32.Graphics.DirectWrite.csproj" />
   </ItemGroup>

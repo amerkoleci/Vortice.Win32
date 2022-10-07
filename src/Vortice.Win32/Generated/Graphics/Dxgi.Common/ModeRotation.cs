@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION"]/*' />
 /// <unmanaged>DXGI_MODE_ROTATION</unmanaged>
 public enum ModeRotation : int
 {
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_UNSPECIFIED"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_MODE_ROTATION_UNSPECIFIED</unmanaged>
 	Unspecified = 0,
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_IDENTITY"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_IDENTITY"]/*' />
 	/// <unmanaged>DXGI_MODE_ROTATION_IDENTITY</unmanaged>
 	Identity = 1,
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_ROTATE90"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_ROTATE90"]/*' />
 	/// <unmanaged>DXGI_MODE_ROTATION_ROTATE90</unmanaged>
 	Rotate90 = 2,
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_ROTATE180"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_ROTATE180"]/*' />
 	/// <unmanaged>DXGI_MODE_ROTATION_ROTATE180</unmanaged>
 	Rotate180 = 3,
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_ROTATE270"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_ROTATE270"]/*' />
 	/// <unmanaged>DXGI_MODE_ROTATION_ROTATE270</unmanaged>
 	Rotate270 = 4,
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL"]/*' />
 /// <unmanaged>DXGI_RATIONAL</unmanaged>
 public partial struct Rational
 {
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL::Numerator"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL::Numerator"]/*' />
 	public uint Numerator;
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL::Denominator"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_RATIONAL::Denominator"]/*' />
 	public uint Denominator;
 }

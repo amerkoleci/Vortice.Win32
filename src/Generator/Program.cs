@@ -1038,6 +1038,7 @@ public static class Program
     public static int Main(string[] args)
     {
         string repoRoot = FindRepoRoot();
+        string dxgiPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Dxgi");
         string d3d11Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D11");
         string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D12");
         string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D11on12");
@@ -1066,7 +1067,12 @@ public static class Program
             bool useSubFolders = true;
             bool cleanFolder = true;
 
-            if (jsonFile.EndsWith("Direct3D11.json"))
+            if (jsonFile == "Graphics.Dxgi.json")
+            {
+                outputPath = dxgiPath;
+                useSubFolders = false;
+            }
+            else if (jsonFile.EndsWith("Direct3D11.json"))
             {
                 outputPath = d3d11Path;
                 useSubFolders = false;
@@ -1157,7 +1163,11 @@ public static class Program
             docFile = string.Empty;
         }
 
-        if (jsonFile == "Graphics.Direct2D.Common.json")
+        if (jsonFile == "Graphics.Dxgi.Common.json")
+        {
+            docFile = $"../../../Vortice.Win32.Graphics.Dxgi/Dxgi";
+        }
+        else if (jsonFile == "Graphics.Direct2D.Common.json")
         {
             docFile = $"../../../Vortice.Win32.Graphics.Direct2D/Direct2D";
         }

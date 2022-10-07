@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES"]/*' />
+/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES"]/*' />
 /// <unmanaged>DXGI_GAMMA_CONTROL_CAPABILITIES</unmanaged>
 public partial struct GammaControlCapabilities
 {
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ScaleAndOffsetSupported"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ScaleAndOffsetSupported"]/*' />
 	public Bool32 ScaleAndOffsetSupported;
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::MaxConvertedValue"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::MaxConvertedValue"]/*' />
 	public float MaxConvertedValue;
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::MinConvertedValue"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::MinConvertedValue"]/*' />
 	public float MinConvertedValue;
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::NumGammaControlPoints"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::NumGammaControlPoints"]/*' />
 	public uint NumGammaControlPoints;
 
-	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ControlPointPositions"]/*' />
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL_CAPABILITIES::ControlPointPositions"]/*' />
 	public unsafe fixed float ControlPointPositions[1025];
 }
