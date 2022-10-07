@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform"]/*' />
 /// <unmanaged>ID2D1SourceTransform</unmanaged>
 [Guid("db1800dd-0c34-4cf9-be90-31cc0a5653e1")]
 [NativeTypeName("struct ID2D1SourceTransform : ID2D1Transform")]
 [NativeInheritance("ID2D1Transform")]
-public unsafe partial struct ID2D1SourceTransform
+public unsafe partial struct ID2D1SourceTransform : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SourceTransform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1SourceTransform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SourceTransform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SourceTransform));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1SourceTransform
 		return ((delegate* unmanaged[Stdcall]<ID2D1SourceTransform*, uint, RawRect*, RawRect*, int>)(lpVtbl[6]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform::SetRenderInfo"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform::SetRenderInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetRenderInfo(ID2D1RenderInfo* renderInfo)
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1SourceTransform
 		return ((delegate* unmanaged[Stdcall]<ID2D1SourceTransform*, ID2D1RenderInfo*, int>)(lpVtbl[7]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), renderInfo);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform::Draw"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SourceTransform::Draw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Draw(ID2D1Bitmap1* target, RawRect* drawRect, System.Drawing.Point targetOrigin)

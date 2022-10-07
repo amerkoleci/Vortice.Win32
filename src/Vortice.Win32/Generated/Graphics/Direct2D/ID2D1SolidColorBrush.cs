@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush"]/*' />
 /// <unmanaged>ID2D1SolidColorBrush</unmanaged>
 [Guid("2cd906a9-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1SolidColorBrush : ID2D1Brush")]
 [NativeInheritance("ID2D1Brush")]
-public unsafe partial struct ID2D1SolidColorBrush
+public unsafe partial struct ID2D1SolidColorBrush : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SolidColorBrush
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1SolidColorBrush
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SolidColorBrush));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SolidColorBrush));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1SolidColorBrush
 		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::SetColor"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::SetColor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void SetColor(Color4* color)
@@ -118,7 +122,7 @@ public unsafe partial struct ID2D1SolidColorBrush
 		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Color4*, void>)(lpVtbl[8]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), color);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::GetColor"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::GetColor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public Color4 GetColor()

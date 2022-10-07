@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory"]/*' />
 /// <unmanaged>IDXGIFactory</unmanaged>
 [Guid("7b7166ec-21c7-44ae-b21a-c9ae321ae369")]
 [NativeTypeName("struct IDXGIFactory : IDXGIObject")]
 [NativeInheritance("IDXGIObject")]
-public unsafe partial struct IDXGIFactory
+public unsafe partial struct IDXGIFactory : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactory
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct IDXGIFactory
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIFactory*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory::EnumAdapters"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory::EnumAdapters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
@@ -110,7 +114,7 @@ public unsafe partial struct IDXGIFactory
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, uint, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory::MakeWindowAssociation"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory::MakeWindowAssociation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult MakeWindowAssociation(IntPtr WindowHandle, uint Flags)
@@ -118,7 +122,7 @@ public unsafe partial struct IDXGIFactory
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr, uint, int>)(lpVtbl[8]))((IDXGIFactory*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory::GetWindowAssociation"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory::GetWindowAssociation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
@@ -126,7 +130,7 @@ public unsafe partial struct IDXGIFactory
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr*, int>)(lpVtbl[9]))((IDXGIFactory*)Unsafe.AsPointer(ref this), pWindowHandle);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory::CreateSwapChain"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory::CreateSwapChain"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
@@ -134,7 +138,7 @@ public unsafe partial struct IDXGIFactory
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory::CreateSoftwareAdapter"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory::CreateSoftwareAdapter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult CreateSoftwareAdapter(IntPtr Module, IDXGIAdapter** ppAdapter)

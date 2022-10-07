@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("cc86fabe-da55-401d-85e7-e3c9de2877e9")]
 [NativeTypeName("struct ID3D11BlendState1 : ID3D11BlendState")]
 [NativeInheritance("ID3D11BlendState")]
-public unsafe partial struct ID3D11BlendState1
+public unsafe partial struct ID3D11BlendState1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11BlendState1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11BlendState1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11BlendState1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11BlendState1));
+#endif
 
 	public void** lpVtbl;
 

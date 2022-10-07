@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface1"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface1"]/*' />
 /// <unmanaged>IDXGISurface1</unmanaged>
 [Guid("4ae63092-6327-4c1b-80ae-bfe12ea32b86")]
 [NativeTypeName("struct IDXGISurface1 : IDXGISurface")]
 [NativeInheritance("IDXGISurface")]
-public unsafe partial struct IDXGISurface1
+public unsafe partial struct IDXGISurface1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISurface1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGISurface1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface1));
+#endif
 
 	public void** lpVtbl;
 
@@ -134,7 +138,7 @@ public unsafe partial struct IDXGISurface1
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, int>)(lpVtbl[10]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface1::GetDC"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface1::GetDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetDC(Bool32 Discard, IntPtr* phdc)
@@ -142,7 +146,7 @@ public unsafe partial struct IDXGISurface1
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Bool32, IntPtr*, int>)(lpVtbl[11]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Discard, phdc);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface1::ReleaseDC"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface1::ReleaseDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult ReleaseDC(RawRect* pDirtyRect)

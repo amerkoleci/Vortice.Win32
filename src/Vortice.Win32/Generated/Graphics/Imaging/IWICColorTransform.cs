@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorTransform"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICColorTransform"]/*' />
 /// <unmanaged>IWICColorTransform</unmanaged>
 [Guid("b66f034f-d0e2-40ab-b436-6de39e321a94")]
 [NativeTypeName("struct IWICColorTransform : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICColorTransform
+public unsafe partial struct IWICColorTransform : INativeGuid
 {
 	public static ref readonly Guid IID_IWICColorTransform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICColorTransform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICColorTransform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICColorTransform));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct IWICColorTransform
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICColorTransform*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorTransform::Initialize"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICColorTransform::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Initialize(IWICBitmapSource* pIBitmapSource, IWICColorContext* pIContextSource, IWICColorContext* pIContextDest, Guid* pixelFmtDest)

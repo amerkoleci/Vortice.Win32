@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6"]/*' />
 /// <unmanaged>ID2D1DeviceContext6</unmanaged>
 [Guid("985f7e37-4ed0-4a19-98a3-15b0edfde306")]
 [NativeTypeName("struct ID2D1DeviceContext6 : ID2D1DeviceContext5")]
 [NativeInheritance("ID2D1DeviceContext5")]
-public unsafe partial struct ID2D1DeviceContext6
+public unsafe partial struct ID2D1DeviceContext6 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext6
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1DeviceContext6
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DeviceContext6));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DeviceContext6));
+#endif
 
 	public void** lpVtbl;
 
@@ -1001,7 +1005,7 @@ public unsafe partial struct ID2D1DeviceContext6
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, SimpleColorProfile*, ID2D1ColorContext1**, int>)(lpVtbl[118]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), simpleProfile, colorContext);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6::BlendImage"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6::BlendImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(119)]
 	public void BlendImage(ID2D1Image* image, Common.BlendMode blendMode, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode)

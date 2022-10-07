@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BoundsAdjustmentTransform"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BoundsAdjustmentTransform"]/*' />
 /// <unmanaged>ID2D1BoundsAdjustmentTransform</unmanaged>
 [Guid("90f732e2-5092-4606-a819-8651970baccd")]
 [NativeTypeName("struct ID2D1BoundsAdjustmentTransform : ID2D1TransformNode")]
 [NativeInheritance("ID2D1TransformNode")]
-public unsafe partial struct ID2D1BoundsAdjustmentTransform
+public unsafe partial struct ID2D1BoundsAdjustmentTransform : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1BoundsAdjustmentTransform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1BoundsAdjustmentTransform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1BoundsAdjustmentTransform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1BoundsAdjustmentTransform));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1BoundsAdjustmentTransform
 		return ((delegate* unmanaged[Stdcall]<ID2D1BoundsAdjustmentTransform*, uint>)(lpVtbl[3]))((ID2D1BoundsAdjustmentTransform*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BoundsAdjustmentTransform::SetOutputBounds"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BoundsAdjustmentTransform::SetOutputBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetOutputBounds(RawRect* outputBounds)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1BoundsAdjustmentTransform
 		((delegate* unmanaged[Stdcall]<ID2D1BoundsAdjustmentTransform*, RawRect*, void>)(lpVtbl[4]))((ID2D1BoundsAdjustmentTransform*)Unsafe.AsPointer(ref this), outputBounds);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BoundsAdjustmentTransform::GetOutputBounds"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BoundsAdjustmentTransform::GetOutputBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void GetOutputBounds(RawRect* outputBounds)

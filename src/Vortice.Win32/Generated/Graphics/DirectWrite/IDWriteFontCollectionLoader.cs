@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader"]/*' />
 /// <unmanaged>IDWriteFontCollectionLoader</unmanaged>
 [Guid("cca920e4-52f0-492b-bfa8-29c72ee0a468")]
 [NativeTypeName("struct IDWriteFontCollectionLoader : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontCollectionLoader
+public unsafe partial struct IDWriteFontCollectionLoader : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontCollectionLoader
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontCollectionLoader
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontCollectionLoader));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontCollectionLoader));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteFontCollectionLoader
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader::CreateEnumeratorFromKey"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader::CreateEnumeratorFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateEnumeratorFromKey(IDWriteFactory* factory, void* collectionKey, uint collectionKeySize, IDWriteFontFileEnumerator** fontFileEnumerator)

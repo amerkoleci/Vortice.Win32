@@ -12,7 +12,7 @@ namespace Win32.Graphics.Direct3D12;
 /// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionParameterReflection"]/*' />
 /// <unmanaged>ID3D12FunctionParameterReflection</unmanaged>
 [Guid("ec25f42d-7006-4f2b-b33e-02cc3375733f")]
-public unsafe partial struct ID3D12FunctionParameterReflection
+public unsafe partial struct ID3D12FunctionParameterReflection : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12FunctionParameterReflection
 	{
@@ -38,7 +38,11 @@ public unsafe partial struct ID3D12FunctionParameterReflection
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12FunctionParameterReflection));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12FunctionParameterReflection));
+#endif
 
 	public void** lpVtbl;
 

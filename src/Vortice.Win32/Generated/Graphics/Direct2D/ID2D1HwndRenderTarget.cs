@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget"]/*' />
 /// <unmanaged>ID2D1HwndRenderTarget</unmanaged>
 [Guid("2cd90698-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1HwndRenderTarget : ID2D1RenderTarget")]
 [NativeInheritance("ID2D1RenderTarget")]
-public unsafe partial struct ID2D1HwndRenderTarget
+public unsafe partial struct ID2D1HwndRenderTarget : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1HwndRenderTarget
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1HwndRenderTarget
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1HwndRenderTarget));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1HwndRenderTarget));
+#endif
 
 	public void** lpVtbl;
 
@@ -505,7 +509,7 @@ public unsafe partial struct ID2D1HwndRenderTarget
 		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, RenderTargetProperties*, Bool32>)(lpVtbl[56]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), renderTargetProperties);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::CheckWindowState"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::CheckWindowState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
 	public WindowState CheckWindowState()
@@ -513,7 +517,7 @@ public unsafe partial struct ID2D1HwndRenderTarget
 		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, WindowState>)(lpVtbl[57]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::Resize"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::Resize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
 	public HResult Resize(System.Drawing.Size* pixelSize)
@@ -521,7 +525,7 @@ public unsafe partial struct ID2D1HwndRenderTarget
 		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, System.Drawing.Size*, int>)(lpVtbl[58]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this), pixelSize);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::GetHwnd"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1HwndRenderTarget::GetHwnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(59)]
 	public IntPtr GetHwnd()

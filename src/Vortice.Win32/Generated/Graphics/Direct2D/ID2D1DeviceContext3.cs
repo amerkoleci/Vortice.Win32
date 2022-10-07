@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext3"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext3"]/*' />
 /// <unmanaged>ID2D1DeviceContext3</unmanaged>
 [Guid("235a7496-8351-414c-bcd4-6672ab2d8e00")]
 [NativeTypeName("struct ID2D1DeviceContext3 : ID2D1DeviceContext2")]
 [NativeInheritance("ID2D1DeviceContext2")]
-public unsafe partial struct ID2D1DeviceContext3
+public unsafe partial struct ID2D1DeviceContext3 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1DeviceContext3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DeviceContext3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DeviceContext3));
+#endif
 
 	public void** lpVtbl;
 
@@ -897,7 +901,7 @@ public unsafe partial struct ID2D1DeviceContext3
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1ImageSource*, TransformedImageSourceProperties*, ID2D1TransformedImageSource**, int>)(lpVtbl[105]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), imageSource, properties, transformedImageSource);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext3::CreateSpriteBatch"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext3::CreateSpriteBatch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(106)]
 	public HResult CreateSpriteBatch(ID2D1SpriteBatch** spriteBatch)
@@ -905,7 +909,7 @@ public unsafe partial struct ID2D1DeviceContext3
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1SpriteBatch**, int>)(lpVtbl[106]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), spriteBatch);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext3::DrawSpriteBatch"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext3::DrawSpriteBatch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(107)]
 	public void DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, BitmapInterpolationMode interpolationMode, SpriteOptions spriteOptions)

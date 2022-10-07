@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis"]/*' />
 /// <unmanaged>IDXGraphicsAnalysis</unmanaged>
 [Guid("9f251514-9d4d-4902-9d60-18988ab7d4b5")]
 [NativeTypeName("struct IDXGraphicsAnalysis : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGraphicsAnalysis
+public unsafe partial struct IDXGraphicsAnalysis : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGraphicsAnalysis
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGraphicsAnalysis
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGraphicsAnalysis));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGraphicsAnalysis));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDXGraphicsAnalysis
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis::BeginCapture"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis::BeginCapture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void BeginCapture()
@@ -78,7 +82,7 @@ public unsafe partial struct IDXGraphicsAnalysis
 		((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, void>)(lpVtbl[3]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis::EndCapture"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGraphicsAnalysis::EndCapture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void EndCapture()

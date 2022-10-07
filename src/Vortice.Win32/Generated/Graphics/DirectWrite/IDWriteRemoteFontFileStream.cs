@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream"]/*' />
 /// <unmanaged>IDWriteRemoteFontFileStream</unmanaged>
 [Guid("4db3757a-2c72-4ed9-b2b6-1ababe1aff9c")]
 [NativeTypeName("struct IDWriteRemoteFontFileStream : IDWriteFontFileStream")]
 [NativeInheritance("IDWriteFontFileStream")]
-public unsafe partial struct IDWriteRemoteFontFileStream
+public unsafe partial struct IDWriteRemoteFontFileStream : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteRemoteFontFileStream
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteRemoteFontFileStream
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteRemoteFontFileStream));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteRemoteFontFileStream));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream
 		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileStream*, ulong*, int>)(lpVtbl[6]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), lastWriteTime);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetLocalFileSize"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetLocalFileSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetLocalFileSize(ulong* localFileSize)
@@ -110,7 +114,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream
 		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileStream*, ulong*, int>)(lpVtbl[7]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), localFileSize);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetFileFragmentLocality"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetFileFragmentLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetFileFragmentLocality(ulong fileOffset, ulong fragmentSize, Bool32* isLocal, ulong* partialSize)
@@ -118,7 +122,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream
 		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileStream*, ulong, ulong, Bool32*, ulong*, int>)(lpVtbl[8]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), fileOffset, fragmentSize, isLocal, partialSize);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetLocality"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::GetLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public Locality GetLocality()
@@ -126,7 +130,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream
 		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileStream*, Locality>)(lpVtbl[9]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::BeginDownload"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileStream::BeginDownload"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult BeginDownload(Guid* downloadOperationID, FileFragment* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult)

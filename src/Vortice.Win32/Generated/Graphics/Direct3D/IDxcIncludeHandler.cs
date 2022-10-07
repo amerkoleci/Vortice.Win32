@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcIncludeHandler"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcIncludeHandler"]/*' />
 /// <unmanaged>IDxcIncludeHandler</unmanaged>
 [Guid("7f61fc7d-950d-467f-b3e3-3c02fb49187c")]
 [NativeTypeName("struct IDxcIncludeHandler : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcIncludeHandler
+public unsafe partial struct IDxcIncludeHandler : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcIncludeHandler
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcIncludeHandler
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcIncludeHandler));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcIncludeHandler));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDxcIncludeHandler
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcIncludeHandler::LoadSource"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcIncludeHandler::LoadSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult LoadSource(ushort* pFilename, IDxcBlob** ppIncludeSource)

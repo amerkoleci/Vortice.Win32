@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4"]/*' />
 /// <unmanaged>IDWriteTextLayout4</unmanaged>
 [Guid("05a9bf42-223f-4441-b5fb-8263685f55e9")]
 [NativeTypeName("struct IDWriteTextLayout4 : IDWriteTextLayout3")]
 [NativeInheritance("IDWriteTextLayout3")]
-public unsafe partial struct IDWriteTextLayout4
+public unsafe partial struct IDWriteTextLayout4 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextLayout4
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTextLayout4
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout4));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout4));
+#endif
 
 	public void** lpVtbl;
 
@@ -718,7 +722,7 @@ public unsafe partial struct IDWriteTextLayout4
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, LineMetrics1*, uint, uint*, int>)(lpVtbl[83]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::SetFontAxisValues"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::SetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(84)]
 	public HResult SetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount, TextRange* textRange)
@@ -726,7 +730,7 @@ public unsafe partial struct IDWriteTextLayout4
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontAxisValue*, uint, TextRange*, int>)(lpVtbl[84]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetFontAxisValueCount"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetFontAxisValueCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(85)]
 	public uint GetFontAxisValueCount(uint currentPosition)
@@ -734,7 +738,7 @@ public unsafe partial struct IDWriteTextLayout4
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, uint>)(lpVtbl[85]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetFontAxisValues"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(86)]
 	public HResult GetFontAxisValues(uint currentPosition, FontAxisValue* fontAxisValues, uint fontAxisValueCount, TextRange* textRange)
@@ -742,7 +746,7 @@ public unsafe partial struct IDWriteTextLayout4
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, FontAxisValue*, uint, TextRange*, int>)(lpVtbl[86]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontAxisValues, fontAxisValueCount, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetAutomaticFontAxes"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetAutomaticFontAxes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(87)]
 	public AutomaticFontAxes GetAutomaticFontAxes()
@@ -750,7 +754,7 @@ public unsafe partial struct IDWriteTextLayout4
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, AutomaticFontAxes>)(lpVtbl[87]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::SetAutomaticFontAxes"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::SetAutomaticFontAxes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(88)]
 	public HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink1"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink1"]/*' />
 /// <unmanaged>IDWriteTextAnalysisSink1</unmanaged>
 [Guid("b0d941a0-85e7-4d8b-9fd3-5ced9934482a")]
 [NativeTypeName("struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink")]
 [NativeInheritance("IDWriteTextAnalysisSink")]
-public unsafe partial struct IDWriteTextAnalysisSink1
+public unsafe partial struct IDWriteTextAnalysisSink1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextAnalysisSink1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextAnalysisSink1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextAnalysisSink1));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct IDWriteTextAnalysisSink1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint, uint, IDWriteNumberSubstitution*, int>)(lpVtbl[6]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink1::SetGlyphOrientation"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink1::SetGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetGlyphOrientation(uint textPosition, uint textLength, GlyphOrientationAngle glyphOrientationAngle, byte adjustedBidiLevel, Bool32 isSideways, Bool32 isRightToLeft)

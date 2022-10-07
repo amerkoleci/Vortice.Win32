@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic"]/*' />
 /// <unmanaged>ID2D1ImageSourceFromWic</unmanaged>
 [Guid("77395441-1c8f-4555-8683-f50dab0fe792")]
 [NativeTypeName("struct ID2D1ImageSourceFromWic : ID2D1ImageSource")]
 [NativeInheritance("ID2D1ImageSource")]
-public unsafe partial struct ID2D1ImageSourceFromWic
+public unsafe partial struct ID2D1ImageSourceFromWic : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ImageSourceFromWic
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ImageSourceFromWic));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ImageSourceFromWic));
+#endif
 
 	public void** lpVtbl;
 
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Bool32*, int>)(lpVtbl[5]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), resourcesDiscarded);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::EnsureCached"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::EnsureCached"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult EnsureCached(Common.RectU* rectangleToFill)
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Common.RectU*, int>)(lpVtbl[6]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToFill);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::TrimCache"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::TrimCache"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult TrimCache(Common.RectU* rectangleToPreserve)
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Common.RectU*, int>)(lpVtbl[7]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToPreserve);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::GetSource"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::GetSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetSource(Graphics.Imaging.IWICBitmapSource** wicBitmapSource)

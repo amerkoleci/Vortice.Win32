@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform"]/*' />
 /// <unmanaged>ID2D1OffsetTransform</unmanaged>
 [Guid("3fe6adea-7643-4f53-bd14-a0ce63f24042")]
 [NativeTypeName("struct ID2D1OffsetTransform : ID2D1TransformNode")]
 [NativeInheritance("ID2D1TransformNode")]
-public unsafe partial struct ID2D1OffsetTransform
+public unsafe partial struct ID2D1OffsetTransform : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1OffsetTransform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1OffsetTransform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1OffsetTransform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1OffsetTransform));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1OffsetTransform
 		return ((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, uint>)(lpVtbl[3]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::SetOffset"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::SetOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetOffset(System.Drawing.Point offset)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1OffsetTransform
 		((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point, void>)(lpVtbl[4]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), offset);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::GetOffset"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::GetOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public System.Drawing.Point GetOffset()

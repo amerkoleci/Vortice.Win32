@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5"]/*' />
 /// <unmanaged>ID2D1DeviceContext5</unmanaged>
 [Guid("7836d248-68cc-4df6-b9e8-de991bf62eb7")]
 [NativeTypeName("struct ID2D1DeviceContext5 : ID2D1DeviceContext4")]
 [NativeInheritance("ID2D1DeviceContext4")]
-public unsafe partial struct ID2D1DeviceContext5
+public unsafe partial struct ID2D1DeviceContext5 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext5
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1DeviceContext5
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DeviceContext5));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DeviceContext5));
+#endif
 
 	public void** lpVtbl;
 
@@ -969,7 +973,7 @@ public unsafe partial struct ID2D1DeviceContext5
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteFontFace*, float, ushort, Bool32, Matrix3x2*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, Matrix3x2*, ID2D1CommandList**, int>)(lpVtbl[114]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), glyphOrigin, fontFace, fontEmSize, glyphIndex, isSideways, worldTransform, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, glyphTransform, glyphImage);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::CreateSvgDocument"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::CreateSvgDocument"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(115)]
 	public HResult CreateSvgDocument(Com.IStream* inputXmlStream, System.Drawing.SizeF viewportSize, ID2D1SvgDocument** svgDocument)
@@ -977,7 +981,7 @@ public unsafe partial struct ID2D1DeviceContext5
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Com.IStream*, System.Drawing.SizeF, ID2D1SvgDocument**, int>)(lpVtbl[115]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), inputXmlStream, viewportSize, svgDocument);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::DrawSvgDocument"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::DrawSvgDocument"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(116)]
 	public void DrawSvgDocument(ID2D1SvgDocument* svgDocument)
@@ -985,7 +989,7 @@ public unsafe partial struct ID2D1DeviceContext5
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, ID2D1SvgDocument*, void>)(lpVtbl[116]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), svgDocument);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::CreateColorContextFromDxgiColorSpace"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::CreateColorContextFromDxgiColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(117)]
 	public HResult CreateColorContextFromDxgiColorSpace(Graphics.Dxgi.Common.ColorSpaceType colorSpace, ID2D1ColorContext1** colorContext)
@@ -993,7 +997,7 @@ public unsafe partial struct ID2D1DeviceContext5
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, Graphics.Dxgi.Common.ColorSpaceType, ID2D1ColorContext1**, int>)(lpVtbl[117]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), colorSpace, colorContext);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::CreateColorContextFromSimpleColorProfile"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext5::CreateColorContextFromSimpleColorProfile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(118)]
 	public HResult CreateColorContextFromSimpleColorProfile(SimpleColorProfile* simpleProfile, ID2D1ColorContext1** colorContext)

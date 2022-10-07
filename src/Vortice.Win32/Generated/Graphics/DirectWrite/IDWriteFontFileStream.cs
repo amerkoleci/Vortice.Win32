@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream"]/*' />
 /// <unmanaged>IDWriteFontFileStream</unmanaged>
 [Guid("6d4865fe-0ab8-4d91-8f62-5dd6be34a3e0")]
 [NativeTypeName("struct IDWriteFontFileStream : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFileStream
+public unsafe partial struct IDWriteFontFileStream : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFileStream
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontFileStream
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFileStream));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFileStream));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteFontFileStream
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::ReadFileFragment"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::ReadFileFragment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult ReadFileFragment(void** fragmentStart, ulong fileOffset, ulong fragmentSize, void** fragmentContext)
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteFontFileStream
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileStream*, void**, ulong, ulong, void**, int>)(lpVtbl[3]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), fragmentStart, fileOffset, fragmentSize, fragmentContext);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::ReleaseFileFragment"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::ReleaseFileFragment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void ReleaseFileFragment(void* fragmentContext)
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteFontFileStream
 		((delegate* unmanaged[Stdcall]<IDWriteFontFileStream*, void*, void>)(lpVtbl[4]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), fragmentContext);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::GetFileSize"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::GetFileSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetFileSize(ulong* fileSize)
@@ -94,7 +98,7 @@ public unsafe partial struct IDWriteFontFileStream
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileStream*, ulong*, int>)(lpVtbl[5]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), fileSize);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::GetLastWriteTime"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileStream::GetLastWriteTime"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetLastWriteTime(ulong* lastWriteTime)

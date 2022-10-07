@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDebug"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDebug"]/*' />
 /// <unmanaged>IDXGIDebug</unmanaged>
 [Guid("119e7452-de9e-40fe-8806-88f90c12b441")]
 [NativeTypeName("struct IDXGIDebug : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIDebug
+public unsafe partial struct IDXGIDebug : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDebug
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIDebug
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDebug));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDebug));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDXGIDebug
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags)

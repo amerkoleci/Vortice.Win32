@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource"]/*' />
 /// <unmanaged>IDXGIResource</unmanaged>
 [Guid("035f3ab4-482e-4e50-b41f-8a7f8bd8960b")]
 [NativeTypeName("struct IDXGIResource : IDXGIDeviceSubObject")]
 [NativeInheritance("IDXGIDeviceSubObject")]
-public unsafe partial struct IDXGIResource
+public unsafe partial struct IDXGIResource : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIResource
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIResource
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIResource));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIResource));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct IDXGIResource
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIResource*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetSharedHandle"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource::GetSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetSharedHandle(Handle* pSharedHandle)
@@ -118,7 +122,7 @@ public unsafe partial struct IDXGIResource
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Handle*, int>)(lpVtbl[8]))((IDXGIResource*)Unsafe.AsPointer(ref this), pSharedHandle);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetUsage"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource::GetUsage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetUsage(uint* pUsage)
@@ -126,7 +130,7 @@ public unsafe partial struct IDXGIResource
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, uint*, int>)(lpVtbl[9]))((IDXGIResource*)Unsafe.AsPointer(ref this), pUsage);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource::SetEvictionPriority"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource::SetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
@@ -134,7 +138,7 @@ public unsafe partial struct IDXGIResource
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetEvictionPriority"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource::GetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetEvictionPriority(uint* pEvictionPriority)

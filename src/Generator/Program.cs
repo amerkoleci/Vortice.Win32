@@ -1086,19 +1086,27 @@ public static class Program
             docFile = string.Empty;
         }
 
-        using var writer = new CodeWriter(
-            Path.Combine(outputFolder, fileName),
-            ns,
-            docFile,
-            $"Win32.{ns}");
+        if (docFile.Equals("dxgi", StringComparison.OrdinalIgnoreCase))
+        {
+            docFile = "DXGI";
+        }
 
-        GenerateConstants(writer, api);
-        GenerateTypes(writer, api);
-        GenerateFunctions(writer, api);
+        string apiName = ns;
+        string apiFolder = Path.Combine(outputFolder, docFile);
+
+        GenerateConstants(apiFolder, apiName, docFile, api);
+        GenerateTypes(apiFolder, apiName, docFile, api);
+        GenerateFunctions(apiFolder, apiName, docFile, api);
     }
 
-    private static void GenerateConstants(CodeWriter writer, ApiData api)
+    private static void GenerateConstants(string folder, string apiName, string docFileName, ApiData api)
     {
+        using CodeWriter writer = new(
+            Path.Combine(folder, "Apis.cs"),
+            apiName,
+            docFileName,
+            $"Win32.{apiName}");
+
         using (writer.PushBlock($"public static partial class Apis"))
         {
             foreach (var constant in api.Constants)
@@ -1155,10 +1163,8 @@ public static class Program
         writer.WriteLine();
     }
 
-    private static void GenerateTypes(CodeWriter writer, ApiData api)
+    private static void GenerateTypes(string folder, string apiName, string docFileName, ApiData api)
     {
-        bool regionWritten = false;
-        bool needNewLine = false;
         foreach (ApiType enumType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "enum"))
         {
             if (enumType.Name.StartsWith("D3DX11"))
@@ -1166,32 +1172,12 @@ public static class Program
                 continue;
             }
 
-            if (!regionWritten)
-            {
-                writer.WriteLine($"#region Enums");
-                regionWritten = true;
-            }
-
-            if (needNewLine)
-            {
-                writer.WriteLine();
-            }
-
-            GenerateEnum(writer, enumType, false);
-            needNewLine = true;
-
-            s_visitedEnums.Add($"{writer.Api}.{enumType.Name}");
-        }
-
-        if (regionWritten)
-        {
-            writer.WriteLine("#endregion Enums");
-            writer.WriteLine();
+            GenerateEnum(folder, apiName, docFileName, enumType, false);
+            s_visitedEnums.Add($"{apiName}.{enumType.Name}");
         }
 
         // Generated enums -> from constants
-        regionWritten = false;
-        needNewLine = false;
+
         Dictionary<string, ApiType> createdEnums = new();
 
         foreach (ApiDataConstant constant in api.Constants)
@@ -1238,30 +1224,10 @@ public static class Program
 
         foreach (ApiType enumType in createdEnums.Values)
         {
-            if (!regionWritten)
-            {
-                writer.WriteLine($"#region Generated Enums");
-                regionWritten = true;
-            }
-
-            if (needNewLine)
-            {
-                writer.WriteLine();
-            }
-
-            GenerateEnum(writer, enumType, true);
-            needNewLine = true;
-        }
-
-        if (regionWritten)
-        {
-            writer.WriteLine($"#endregion Generated Enums");
-            writer.WriteLine();
+            GenerateEnum(folder, apiName, docFileName, enumType, true);
         }
 
         // Unions
-        regionWritten = false;
-        needNewLine = true;
 
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
         {
@@ -1271,38 +1237,22 @@ public static class Program
                 continue;
             }
 
-            if (s_csNameMappings.ContainsKey($"{writer.Api}.{structType.Name}"))
+            if (s_csNameMappings.ContainsKey($"{apiName}.{structType.Name}"))
             {
                 continue;
             }
 
-            if (!regionWritten)
-            {
-                writer.WriteLine($"#region Unions");
-                regionWritten = true;
-            }
-
-            if (needNewLine)
-            {
-                writer.WriteLine();
-            }
-
-            GenerateStruct(api, writer, structType);
-            needNewLine = true;
-
-            s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
-        }
-
-        if (regionWritten)
-        {
-            writer.WriteLine($"#endregion Unions");
-            writer.WriteLine();
+            string structCsTypeName = GetCsStructTypeName(structType, apiName);
+            using var writer = new CodeWriter(
+                Path.Combine(folder, $"{structCsTypeName}.cs"),
+                apiName,
+                docFileName,
+                $"Win32.{apiName}");
+            GenerateStruct(writer, api, structType);
+            s_visitedStructs.Add($"{apiName}.{structType.Name}");
         }
 
         // Structs
-        regionWritten = false;
-        needNewLine = true;
-
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
             if (structType.Name.StartsWith("D3DX11") ||
@@ -1312,46 +1262,27 @@ public static class Program
                 continue;
             }
 
-            if (s_csNameMappings.ContainsKey($"{writer.Api}.{structType.Name}"))
+            if (s_csNameMappings.ContainsKey($"{apiName}.{structType.Name}"))
             {
                 continue;
             }
 
-            if (!regionWritten)
-            {
-                writer.WriteLine($"#region Structs");
-                regionWritten = true;
-            }
-
-            if (needNewLine)
-            {
-                writer.WriteLine();
-            }
-
-            GenerateStruct(api, writer, structType);
-            needNewLine = true;
-
-            s_visitedStructs.Add($"{writer.Api}.{structType.Name}");
-        }
-        if (regionWritten)
-        {
-            writer.WriteLine("#endregion Structs");
-            writer.WriteLine();
+            string structCsTypeName = GetCsStructTypeName(structType, apiName);
+            using var writer = new CodeWriter(
+                Path.Combine(folder, $"{structCsTypeName}.cs"),
+                apiName,
+                docFileName,
+                $"Win32.{apiName}");
+            GenerateStruct(writer, api,  structType);
+            s_visitedStructs.Add($"{apiName}.{structType.Name}");
         }
 
         // Com types
-        regionWritten = false;
         foreach (ApiType comType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "com"))
         {
             if (comType.Name.StartsWith("ID3DX11"))
             {
                 continue;
-            }
-
-            if (!regionWritten)
-            {
-                writer.WriteLine("#region COM Types");
-                regionWritten = true;
             }
 
             // Generate methods
@@ -1429,29 +1360,36 @@ public static class Program
                 functions.Add(method);
             }
 
-            string subdirectory = Path.Combine(writer.Directory, writer.DocFileName);
-            string fileName = $"{comType.Name}.cs";
-            using var comTypeWriter = new CodeWriter(
-                Path.Combine(subdirectory, fileName),
-                writer.Api,
-                "../" + writer.DocFileName,
-                $"Win32.{writer.Api}");
-            GenerateComType(api, comTypeWriter, comType, methodsToGenerate);
-        }
-
-        if (regionWritten)
-        {
-            writer.WriteLine("#endregion Com Types");
-            writer.WriteLine();
+            GenerateComType(folder, apiName, docFileName, api, comType, methodsToGenerate);
         }
     }
 
-    private static void GenerateFunctions(CodeWriter writer, ApiData api)
+    private static string GetCsStructTypeName(ApiType structType, string apiName)
+    {
+        if (structType.Name.StartsWith("Dxc") ||
+            structType.Name.StartsWith("WIC"))
+        {
+            return structType.Name;
+        }
+        else
+        {
+            string csTypeName = GetDataTypeName(structType.Name, out _);
+            AddCsMapping(apiName, structType.Name, csTypeName);
+            return csTypeName;
+        }
+    }
+
+    private static void GenerateFunctions(string folder, string apiName, string docFileName, ApiData api)
     {
         if (api.Functions.Length == 0)
             return;
 
-        writer.WriteLine($"#region Functions");
+        using CodeWriter writer = new(
+            Path.Combine(folder, "Apis.Functions.cs"),
+            apiName,
+            docFileName,
+            $"Win32.{apiName}");
+
         using (writer.PushBlock($"public static unsafe partial class Apis"))
         {
             bool needNewLine = false;
@@ -1473,8 +1411,6 @@ public static class Program
                 needNewLine = true;
             }
         }
-
-        writer.WriteLine($"#endregion Functions");
     }
 
     private static string WriteFunction(
@@ -1572,7 +1508,7 @@ public static class Program
         return functionSignature.ToString();
     }
 
-    private static void GenerateEnum(CodeWriter writer, ApiType enumType, bool autoGenerated)
+    private static void GenerateEnum(string folder, string apiName, string docFileName, ApiType enumType, bool autoGenerated)
     {
         string csTypeName;
         string enumPrefix = string.Empty;
@@ -1591,10 +1527,16 @@ public static class Program
         else
         {
             csTypeName = GetDataTypeName(enumType.Name, out enumPrefix);
-            AddCsMapping(writer.Api, enumType.Name, csTypeName);
+            AddCsMapping(apiName, enumType.Name, csTypeName);
         }
 
         string baseTypeName = GetTypeName(enumType.IntegerBase);
+
+        using var writer = new CodeWriter(
+            Path.Combine(folder, $"{csTypeName}.cs"),
+            apiName,
+            docFileName,
+            $"Win32.{apiName}");
 
         if (!autoGenerated)
         {
@@ -1681,7 +1623,7 @@ public static class Program
 
                 if (!autoGenerated)
                 {
-                    writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{enumType.Name}::{enumItem.Name}\"]/*' />");
+                    writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{enumType.Name}::{enumItem.Name}\"]/*' />");
                 }
 
                 if (s_generateUnmanagedDocs)
@@ -1737,7 +1679,7 @@ public static class Program
         return enumValueName;
     }
 
-    private static void GenerateStruct(ApiData api, CodeWriter writer, ApiType structType, bool nestedType = false)
+    private static void GenerateStruct(CodeWriter writer, ApiData api, ApiType structType, bool nestedType = false)
     {
         string csTypeName;
         string structPrefix = string.Empty;
@@ -1758,8 +1700,11 @@ public static class Program
                 csTypeName = GetDataTypeName(structType.Name, out structPrefix);
                 AddCsMapping(writer.Api, structType.Name, csTypeName);
             }
+        }
 
-            writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}\"]/*' />");
+        if (!nestedType)
+        {
+            writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}\"]/*' />");
 
             if (s_generateUnmanagedDocs)
             {
@@ -1801,8 +1746,8 @@ public static class Program
                 bool asPointer = false;
                 if (field.Type.Kind == "ApiRef")
                 {
-                    string apiName = GetApiName(field.Type);
-                    string fullTypeName = $"{apiName}.{field.Type.Name}";
+                    string lookupApiName = GetApiName(field.Type);
+                    string fullTypeName = $"{lookupApiName}.{field.Type.Name}";
 
                     if (IsKnownComType(fullTypeName) ||
                         s_visitedComTypes.ContainsKey(fullTypeName) ||
@@ -1814,7 +1759,7 @@ public static class Program
 
                 string fieldTypeName = GetTypeName(field.Type, asPointer);
 
-                writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}::{field.Name}\"]/*' />");
+                writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}::{field.Name}\"]/*' />");
 
                 string remapFieldLookUp = $"{structType.Name}::{field.Name}";
                 if (s_structFieldTypeRemap.TryGetValue(remapFieldLookUp, out string? remapType))
@@ -1946,11 +1891,6 @@ public static class Program
                             }
                             else
                             {
-                                if (fieldName == "pGeometryDescs")
-                                {
-
-                                }
-
                                 string unsafePrefix = string.Empty;
                                 if (fieldTypeName.EndsWith("*"))
                                 {
@@ -1974,21 +1914,27 @@ public static class Program
 
                 foreach (ApiType nestedTypeToGenerate in structType.NestedTypes)
                 {
-                    GenerateStruct(api, writer, nestedTypeToGenerate, true);
+                    GenerateStruct(writer, api, nestedTypeToGenerate, true);
                 }
             }
         }
     }
 
     private static void GenerateComType(
+        string folder, string apiName, string docFileName,
         ApiData api,
-        CodeWriter writer,
         ApiType comType,
         Dictionary<string, List<ApiType>> methodsToGenerate)
     {
         string csTypeName = comType.Name;
 
-        writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}\"]/*' />");
+        using var writer = new CodeWriter(
+            Path.Combine(folder, $"{csTypeName}.cs"),
+            apiName,
+            docFileName,
+            $"Win32.{apiName}");
+
+        writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}\"]/*' />");
 
         if (s_generateUnmanagedDocs)
         {
@@ -2006,7 +1952,13 @@ public static class Program
             writer.WriteLine($"[NativeInheritance(\"{comType.Interface.Name}\")]");
         }
 
-        using (writer.PushBlock($"public unsafe partial struct {csTypeName}"))
+        string baseType = string.Empty;
+        if (comType.Guid != null)
+        {
+            baseType += " : INativeGuid";
+        }
+
+        using (writer.PushBlock($"public unsafe partial struct {csTypeName}{baseType}"))
         {
             if (comType.Guid != null)
             {
@@ -2014,7 +1966,11 @@ public static class Program
                 WriteGuid(writer, comType.Guid, $"IID_{csTypeName}");
                 writer.WriteLine();
 
+                writer.WriteLineUndindented("#if NET6_0_OR_GREATER");
+                writer.WriteLine($"static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
+                writer.WriteLineUndindented("#else");
                 writer.WriteLine($"public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
+                writer.WriteLineUndindented("#endif");
                 writer.WriteLine();
             }
 
@@ -2177,7 +2133,7 @@ public static class Program
 
                     if (comType.Name == docName)
                     {
-                        writer.WriteLine($"/// <include file='../{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}::{method.Name}\"]/*' />");
+                        writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{comType.Name}::{method.Name}\"]/*' />");
                     }
                     else
                     {

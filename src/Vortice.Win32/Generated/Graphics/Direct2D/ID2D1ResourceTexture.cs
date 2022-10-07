@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture"]/*' />
 /// <unmanaged>ID2D1ResourceTexture</unmanaged>
 [Guid("688d15c3-02b0-438d-b13a-d1b44c32c39a")]
 [NativeTypeName("struct ID2D1ResourceTexture : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1ResourceTexture
+public unsafe partial struct ID2D1ResourceTexture : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ResourceTexture
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1ResourceTexture
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ResourceTexture));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ResourceTexture));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct ID2D1ResourceTexture
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture::Update"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture::Update"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Update(uint* minimumExtents, uint* maximimumExtents, uint* strides, uint dimensions, byte* data, uint dataCount)

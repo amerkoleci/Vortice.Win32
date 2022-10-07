@@ -15,7 +15,7 @@ public static unsafe partial class Apis
     /// <returns>A <see cref="UuidOfType"/> value wrapping a pointer to the GUID data for the input type. This value can be either converted to a <see cref="Guid"/> pointer, or implicitly assigned to a <see cref="Guid"/> value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static unsafe UuidOfType __uuidof<T>(T value) // for type inference similar to C++'s __uuidof
-        where T : unmanaged
+        where T : unmanaged, INativeGuid
     {
         return new UuidOfType(UUID<T>.RIID);
     }
@@ -26,7 +26,7 @@ public static unsafe partial class Apis
     /// <returns>A <see cref="UuidOfType"/> value wrapping a pointer to the GUID data for the input type. This value can be either converted to a <see cref="Guid"/> pointer, or implicitly assigned to a <see cref="Guid"/> value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static unsafe UuidOfType __uuidof<T>(T* value) // for type inference similar to C++'s __uuidof
-        where T : unmanaged
+        where T : unmanaged, INativeGuid
     {
         return new UuidOfType(UUID<T>.RIID);
     }
@@ -36,7 +36,7 @@ public static unsafe partial class Apis
     /// <returns>A <see cref="UuidOfType"/> value wrapping a pointer to the GUID data for the input type. This value can be either converted to a <see cref="Guid"/> pointer, or implicitly assigned to a <see cref="Guid"/> value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static unsafe UuidOfType __uuidof<T>()
-        where T : unmanaged
+        where T : unmanaged, INativeGuid
     {
         return new UuidOfType(UUID<T>.RIID);
     }
@@ -45,20 +45,20 @@ public static unsafe partial class Apis
     [EditorBrowsable(EditorBrowsableState.Never)]
     public readonly unsafe ref struct UuidOfType
     {
-        private readonly Guid* riid;
+        private readonly Guid* _value;
 
-        internal UuidOfType(Guid* riid)
+        internal UuidOfType(Guid* value)
         {
-            this.riid = riid;
+            _value = value;
         }
 
         /// <summary>Reads a <see cref="Guid"/> value from the GUID buffer for a given <see cref="UuidOfType"/> instance.</summary>
         /// <param name="guid">The input <see cref="UuidOfType"/> instance to read data for.</param>
-        public static implicit operator Guid(UuidOfType guid) => *guid.riid;
+        public static implicit operator Guid(UuidOfType guid) => *guid._value;
 
         /// <summary>Returns the <see cref="Guid"/>* pointer to the GUID buffer for a given <see cref="UuidOfType"/> instance.</summary>
         /// <param name="guid">The input <see cref="UuidOfType"/> instance to read data for.</param>
-        public static implicit operator Guid*(UuidOfType guid) => guid.riid;
+        public static implicit operator Guid*(UuidOfType guid) => guid._value;
     }
 
     /// <summary>A helper type to provide static GUID buffers for specific types.</summary>

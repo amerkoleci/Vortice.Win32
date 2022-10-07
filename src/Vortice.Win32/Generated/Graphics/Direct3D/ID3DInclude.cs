@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DInclude"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="ID3DInclude"]/*' />
 /// <unmanaged>ID3DInclude</unmanaged>
 public unsafe partial struct ID3DInclude
 {
 	public void** lpVtbl;
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DInclude::Open"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="ID3DInclude::Open"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public HResult Open(IncludeType IncludeType, sbyte* pFileName, void* pParentData, void** ppData, uint* pBytes)
@@ -23,7 +23,7 @@ public unsafe partial struct ID3DInclude
 		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, IncludeType, sbyte*, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DInclude::Close"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="ID3DInclude::Close"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
 	public HResult Close(void* pData)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock"]/*' />
 /// <unmanaged>ID2D1DrawingStateBlock</unmanaged>
 [Guid("28506e39-ebf6-46a1-bb47-fd85565ab957")]
 [NativeTypeName("struct ID2D1DrawingStateBlock : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1DrawingStateBlock
+public unsafe partial struct ID2D1DrawingStateBlock : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DrawingStateBlock
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1DrawingStateBlock
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DrawingStateBlock));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DrawingStateBlock));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1DrawingStateBlock
 		((delegate* unmanaged[Stdcall]<ID2D1DrawingStateBlock*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::GetDescription"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::GetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void GetDescription(DrawingStateDescription* stateDescription)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1DrawingStateBlock
 		((delegate* unmanaged[Stdcall]<ID2D1DrawingStateBlock*, DrawingStateDescription*, void>)(lpVtbl[4]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), stateDescription);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::SetDescription"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::SetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void SetDescription(DrawingStateDescription* stateDescription)
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1DrawingStateBlock
 		((delegate* unmanaged[Stdcall]<ID2D1DrawingStateBlock*, DrawingStateDescription*, void>)(lpVtbl[5]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), stateDescription);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::SetTextRenderingParams"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::SetTextRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams)
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1DrawingStateBlock
 		((delegate* unmanaged[Stdcall]<ID2D1DrawingStateBlock*, Graphics.DirectWrite.IDWriteRenderingParams*, void>)(lpVtbl[6]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::GetTextRenderingParams"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawingStateBlock::GetTextRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams)

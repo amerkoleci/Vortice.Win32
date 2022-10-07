@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("1217d7a6-5039-418c-b042-9cbe256afd6e")]
 [NativeTypeName("struct ID3D11RasterizerState1 : ID3D11RasterizerState")]
 [NativeInheritance("ID3D11RasterizerState")]
-public unsafe partial struct ID3D11RasterizerState1
+public unsafe partial struct ID3D11RasterizerState1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11RasterizerState1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11RasterizerState1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11RasterizerState1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11RasterizerState1));
+#endif
 
 	public void** lpVtbl;
 

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Layer"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Layer"]/*' />
 /// <unmanaged>ID2D1Layer</unmanaged>
 [Guid("2cd9069b-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Layer : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Layer
+public unsafe partial struct ID2D1Layer : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Layer
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Layer
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Layer));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Layer));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1Layer
 		((delegate* unmanaged[Stdcall]<ID2D1Layer*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Layer*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Layer::GetSize"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Layer::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public System.Drawing.SizeF GetSize()

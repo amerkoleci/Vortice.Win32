@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection"]/*' />
 /// <unmanaged>IDWriteFontCollection</unmanaged>
 [Guid("a84cee02-3eea-4eee-a827-87c1a02a0fcc")]
 [NativeTypeName("struct IDWriteFontCollection : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontCollection
+public unsafe partial struct IDWriteFontCollection : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontCollection
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontCollection
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontCollection));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontCollection));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteFontCollection
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection::GetFontFamilyCount"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection::GetFontFamilyCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public uint GetFontFamilyCount()
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteFontCollection
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection*, uint>)(lpVtbl[3]))((IDWriteFontCollection*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection::GetFontFamily"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection::GetFontFamily"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetFontFamily(uint index, IDWriteFontFamily** fontFamily)
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteFontCollection
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection*, uint, IDWriteFontFamily**, int>)(lpVtbl[4]))((IDWriteFontCollection*)Unsafe.AsPointer(ref this), index, fontFamily);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection::FindFamilyName"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection::FindFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult FindFamilyName(ushort* familyName, uint* index, Bool32* exists)
@@ -94,7 +98,7 @@ public unsafe partial struct IDWriteFontCollection
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection*, ushort*, uint*, Bool32*, int>)(lpVtbl[5]))((IDWriteFontCollection*)Unsafe.AsPointer(ref this), familyName, index, exists);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection::GetFontFromFontFace"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection::GetFontFromFontFace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetFontFromFontFace(IDWriteFontFace* fontFace, IDWriteFont** font)

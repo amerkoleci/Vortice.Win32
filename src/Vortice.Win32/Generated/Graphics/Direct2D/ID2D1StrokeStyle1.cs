@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle1"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle1"]/*' />
 /// <unmanaged>ID2D1StrokeStyle1</unmanaged>
 [Guid("10a72a66-e91c-43f4-993f-ddf4b82b0b4a")]
 [NativeTypeName("struct ID2D1StrokeStyle1 : ID2D1StrokeStyle")]
 [NativeInheritance("ID2D1StrokeStyle")]
-public unsafe partial struct ID2D1StrokeStyle1
+public unsafe partial struct ID2D1StrokeStyle1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1StrokeStyle1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1StrokeStyle1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1StrokeStyle1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1StrokeStyle1));
+#endif
 
 	public void** lpVtbl;
 
@@ -150,7 +154,7 @@ public unsafe partial struct ID2D1StrokeStyle1
 		((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, float*, uint, void>)(lpVtbl[12]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this), dashes, dashesCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle1::GetStrokeTransformType"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle1::GetStrokeTransformType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public StrokeTransformType GetStrokeTransformType()

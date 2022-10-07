@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcCompiler"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler"]/*' />
 /// <unmanaged>IDxcCompiler</unmanaged>
 [Guid("8c210bf3-011f-4422-8d70-6f9acb8db617")]
 [NativeTypeName("struct IDxcCompiler : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcCompiler
+public unsafe partial struct IDxcCompiler : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcCompiler
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcCompiler
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcCompiler));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcCompiler));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDxcCompiler
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcCompiler::Compile"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler::Compile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Compile(IDxcBlob* pSource, ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult)
@@ -78,7 +82,7 @@ public unsafe partial struct IDxcCompiler
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler*, IDxcBlob*, ushort*, ushort*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcCompiler*)Unsafe.AsPointer(ref this), pSource, pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, pIncludeHandler, ppResult);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcCompiler::Preprocess"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler::Preprocess"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Preprocess(IDxcBlob* pSource, ushort* pSourceName, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult)
@@ -86,7 +90,7 @@ public unsafe partial struct IDxcCompiler
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler*, IDxcBlob*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcCompiler*)Unsafe.AsPointer(ref this), pSource, pSourceName, pArguments, argCount, pDefines, defineCount, pIncludeHandler, ppResult);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcCompiler::Disassemble"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler::Disassemble"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult Disassemble(IDxcBlob* pSource, IDxcBlobEncoding** ppDisassembly)

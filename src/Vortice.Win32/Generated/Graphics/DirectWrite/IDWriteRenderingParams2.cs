@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams2"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams2"]/*' />
 /// <unmanaged>IDWriteRenderingParams2</unmanaged>
 [Guid("f9d711c3-9777-40ae-87e8-3e5af9bf0948")]
 [NativeTypeName("struct IDWriteRenderingParams2 : IDWriteRenderingParams1")]
 [NativeInheritance("IDWriteRenderingParams1")]
-public unsafe partial struct IDWriteRenderingParams2
+public unsafe partial struct IDWriteRenderingParams2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteRenderingParams2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteRenderingParams2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteRenderingParams2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteRenderingParams2));
+#endif
 
 	public void** lpVtbl;
 
@@ -118,7 +122,7 @@ public unsafe partial struct IDWriteRenderingParams2
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, float>)(lpVtbl[8]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams2::GetGridFitMode"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams2::GetGridFitMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public GridFitMode GetGridFitMode()

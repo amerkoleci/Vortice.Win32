@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter"]/*' />
 /// <unmanaged>IWICMetadataBlockWriter</unmanaged>
 [Guid("08fb9676-b444-41e8-8dbe-6a53a542bff1")]
 [NativeTypeName("struct IWICMetadataBlockWriter : IWICMetadataBlockReader")]
 [NativeInheritance("IWICMetadataBlockReader")]
-public unsafe partial struct IWICMetadataBlockWriter
+public unsafe partial struct IWICMetadataBlockWriter : INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataBlockWriter
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICMetadataBlockWriter
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataBlockWriter));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataBlockWriter));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct IWICMetadataBlockWriter
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::InitializeFromBlockReader"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::InitializeFromBlockReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult InitializeFromBlockReader(IWICMetadataBlockReader* pIMDBlockReader)
@@ -110,7 +114,7 @@ public unsafe partial struct IWICMetadataBlockWriter
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, IWICMetadataBlockReader*, int>)(lpVtbl[7]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pIMDBlockReader);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::GetWriterByIndex"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::GetWriterByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetWriterByIndex(uint nIndex, IWICMetadataWriter** ppIMetadataWriter)
@@ -118,7 +122,7 @@ public unsafe partial struct IWICMetadataBlockWriter
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataWriter**, int>)(lpVtbl[8]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataWriter);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::AddWriter"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::AddWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult AddWriter(IWICMetadataWriter* pIMetadataWriter)
@@ -126,7 +130,7 @@ public unsafe partial struct IWICMetadataBlockWriter
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, IWICMetadataWriter*, int>)(lpVtbl[9]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pIMetadataWriter);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::SetWriterByIndex"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::SetWriterByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetWriterByIndex(uint nIndex, IWICMetadataWriter* pIMetadataWriter)
@@ -134,7 +138,7 @@ public unsafe partial struct IWICMetadataBlockWriter
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataWriter*, int>)(lpVtbl[10]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, pIMetadataWriter);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::RemoveWriterByIndex"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::RemoveWriterByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult RemoveWriterByIndex(uint nIndex)

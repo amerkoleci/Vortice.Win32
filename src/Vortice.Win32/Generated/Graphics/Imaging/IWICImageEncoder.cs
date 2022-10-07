@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging.D2D;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICImageEncoder"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICImageEncoder"]/*' />
 /// <unmanaged>IWICImageEncoder</unmanaged>
 [Guid("04c75bf8-3ce1-473b-acc5-3cc4f5e94999")]
 [NativeTypeName("struct IWICImageEncoder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICImageEncoder
+public unsafe partial struct IWICImageEncoder : INativeGuid
 {
 	public static ref readonly Guid IID_IWICImageEncoder
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICImageEncoder
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICImageEncoder));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICImageEncoder));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICImageEncoder
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrame"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult WriteFrame(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICImageEncoder
 		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapFrameEncode*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[3]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pFrameEncode, pImageParameters);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrameThumbnail"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrameThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult WriteFrameThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters)
@@ -86,7 +90,7 @@ public unsafe partial struct IWICImageEncoder
 		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapFrameEncode*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[4]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pFrameEncode, pImageParameters);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteThumbnail"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult WriteThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapEncoder* pEncoder, Graphics.Imaging.WICImageParameters* pImageParameters)

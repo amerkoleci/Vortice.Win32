@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink4"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink4"]/*' />
 /// <unmanaged>ID2D1CommandSink4</unmanaged>
 [Guid("c78a6519-40d6-4218-b2de-beeeb744bb3e")]
 [NativeTypeName("struct ID2D1CommandSink4 : ID2D1CommandSink3")]
 [NativeInheritance("ID2D1CommandSink3")]
-public unsafe partial struct ID2D1CommandSink4
+public unsafe partial struct ID2D1CommandSink4 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1CommandSink4
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1CommandSink4
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1CommandSink4));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1CommandSink4));
+#endif
 
 	public void** lpVtbl;
 
@@ -310,7 +314,7 @@ public unsafe partial struct ID2D1CommandSink4
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink4*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, int>)(lpVtbl[32]))((ID2D1CommandSink4*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink4::SetPrimitiveBlend2"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink4::SetPrimitiveBlend2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public HResult SetPrimitiveBlend2(PrimitiveBlend primitiveBlend)

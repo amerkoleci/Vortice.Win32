@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource1"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource1"]/*' />
 /// <unmanaged>IDXGIResource1</unmanaged>
 [Guid("30961379-4609-4a41-998e-54fe567ee0c1")]
 [NativeTypeName("struct IDXGIResource1 : IDXGIResource")]
 [NativeInheritance("IDXGIResource")]
-public unsafe partial struct IDXGIResource1
+public unsafe partial struct IDXGIResource1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIResource1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIResource1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIResource1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIResource1));
+#endif
 
 	public void** lpVtbl;
 
@@ -142,7 +146,7 @@ public unsafe partial struct IDXGIResource1
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint*, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface)
@@ -150,7 +154,7 @@ public unsafe partial struct IDXGIResource1
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint, IDXGISurface2**, int>)(lpVtbl[12]))((IDXGIResource1*)Unsafe.AsPointer(ref this), index, ppSurface);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle)

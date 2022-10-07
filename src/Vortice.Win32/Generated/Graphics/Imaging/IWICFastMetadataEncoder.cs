@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder"]/*' />
 /// <unmanaged>IWICFastMetadataEncoder</unmanaged>
 [Guid("b84e2c09-78c9-4ac4-8bd3-524ae1663a2f")]
 [NativeTypeName("struct IWICFastMetadataEncoder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICFastMetadataEncoder
+public unsafe partial struct IWICFastMetadataEncoder : INativeGuid
 {
 	public static ref readonly Guid IID_IWICFastMetadataEncoder
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICFastMetadataEncoder
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICFastMetadataEncoder));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICFastMetadataEncoder));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICFastMetadataEncoder
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder::Commit"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder::Commit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Commit()
@@ -78,7 +82,7 @@ public unsafe partial struct IWICFastMetadataEncoder
 		return ((delegate* unmanaged[Stdcall]<IWICFastMetadataEncoder*, int>)(lpVtbl[3]))((IWICFastMetadataEncoder*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder::GetMetadataQueryWriter"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICFastMetadataEncoder::GetMetadataQueryWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)

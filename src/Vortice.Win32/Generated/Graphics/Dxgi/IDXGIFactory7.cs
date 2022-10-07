@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory7"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory7"]/*' />
 /// <unmanaged>IDXGIFactory7</unmanaged>
 [Guid("a4966eed-76db-44da-84c1-ee9a7afb20a8")]
 [NativeTypeName("struct IDXGIFactory7 : IDXGIFactory6")]
 [NativeInheritance("IDXGIFactory6")]
-public unsafe partial struct IDXGIFactory7
+public unsafe partial struct IDXGIFactory7 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory7
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactory7
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory7));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory7));
+#endif
 
 	public void** lpVtbl;
 
@@ -286,7 +290,7 @@ public unsafe partial struct IDXGIFactory7
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, GpuPreference, Guid*, void**, int>)(lpVtbl[29]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Adapter, GpuPreference, riid, ppvAdapter);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory7::RegisterAdaptersChangedEvent"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory7::RegisterAdaptersChangedEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult RegisterAdaptersChangedEvent(Handle hEvent, uint* pdwCookie)
@@ -294,7 +298,7 @@ public unsafe partial struct IDXGIFactory7
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Handle, uint*, int>)(lpVtbl[30]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory7::UnregisterAdaptersChangedEvent"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory7::UnregisterAdaptersChangedEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult UnregisterAdaptersChangedEvent(uint dwCookie)

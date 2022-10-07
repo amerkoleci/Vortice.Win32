@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont3"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont3"]/*' />
 /// <unmanaged>IDWriteFont3</unmanaged>
 [Guid("29748ed6-8c9c-4a6a-be0b-d912e8538944")]
 [NativeTypeName("struct IDWriteFont3 : IDWriteFont2")]
 [NativeInheritance("IDWriteFont2")]
-public unsafe partial struct IDWriteFont3
+public unsafe partial struct IDWriteFont3 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFont3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFont3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFont3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFont3));
+#endif
 
 	public void** lpVtbl;
 
@@ -198,7 +202,7 @@ public unsafe partial struct IDWriteFont3
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, Bool32>)(lpVtbl[18]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont3::CreateFontFace"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont3::CreateFontFace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult CreateFontFace(IDWriteFontFace3** fontFace)
@@ -206,7 +210,7 @@ public unsafe partial struct IDWriteFont3
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, IDWriteFontFace3**, int>)(lpVtbl[19]))((IDWriteFont3*)Unsafe.AsPointer(ref this), fontFace);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont3::Equals"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont3::Equals"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public Bool32 Equals(IDWriteFont* font)
@@ -214,7 +218,7 @@ public unsafe partial struct IDWriteFont3
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, IDWriteFont*, Bool32>)(lpVtbl[20]))((IDWriteFont3*)Unsafe.AsPointer(ref this), font);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont3::GetFontFaceReference"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont3::GetFontFaceReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult GetFontFaceReference(IDWriteFontFaceReference** fontFaceReference)
@@ -222,7 +226,7 @@ public unsafe partial struct IDWriteFont3
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, IDWriteFontFaceReference**, int>)(lpVtbl[21]))((IDWriteFont3*)Unsafe.AsPointer(ref this), fontFaceReference);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont3::HasCharacter"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont3::HasCharacter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public Bool32 HasCharacter(uint unicodeValue)
@@ -230,7 +234,7 @@ public unsafe partial struct IDWriteFont3
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, uint, Bool32>)(lpVtbl[22]))((IDWriteFont3*)Unsafe.AsPointer(ref this), unicodeValue);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont3::GetLocality"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont3::GetLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public Locality GetLocality()

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex"]/*' />
 /// <unmanaged>IDXGIKeyedMutex</unmanaged>
 [Guid("9d8e1289-d7b3-465f-8126-250e349af85d")]
 [NativeTypeName("struct IDXGIKeyedMutex : IDXGIDeviceSubObject")]
 [NativeInheritance("IDXGIDeviceSubObject")]
-public unsafe partial struct IDXGIKeyedMutex
+public unsafe partial struct IDXGIKeyedMutex : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIKeyedMutex
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIKeyedMutex
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIKeyedMutex));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIKeyedMutex));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct IDXGIKeyedMutex
 		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex::AcquireSync"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex::AcquireSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult AcquireSync(ulong Key, uint dwMilliseconds)
@@ -118,7 +122,7 @@ public unsafe partial struct IDXGIKeyedMutex
 		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, ulong, uint, int>)(lpVtbl[8]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key, dwMilliseconds);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex::ReleaseSync"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex::ReleaseSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult ReleaseSync(ulong Key)

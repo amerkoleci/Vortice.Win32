@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory"]/*' />
 /// <unmanaged>IDWriteFactory</unmanaged>
 [Guid("b859ee5a-d838-4b5b-a2e8-1adc7d93db48")]
 [NativeTypeName("struct IDWriteFactory : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFactory
+public unsafe partial struct IDWriteFactory : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFactory
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFactory));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFactory));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::GetSystemFontCollection"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::GetSystemFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetSystemFontCollection(IDWriteFontCollection** fontCollection, Bool32 checkForUpdates)
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontCollection**, Bool32, int>)(lpVtbl[3]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollection, checkForUpdates);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomFontCollection"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateCustomFontCollection(IDWriteFontCollectionLoader* collectionLoader, void* collectionKey, uint collectionKeySize, IDWriteFontCollection** fontCollection)
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontCollectionLoader*, void*, uint, IDWriteFontCollection**, int>)(lpVtbl[4]))((IDWriteFactory*)Unsafe.AsPointer(ref this), collectionLoader, collectionKey, collectionKeySize, fontCollection);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::RegisterFontCollectionLoader"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::RegisterFontCollectionLoader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult RegisterFontCollectionLoader(IDWriteFontCollectionLoader* fontCollectionLoader)
@@ -94,7 +98,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontCollectionLoader*, int>)(lpVtbl[5]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollectionLoader);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::UnregisterFontCollectionLoader"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::UnregisterFontCollectionLoader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult UnregisterFontCollectionLoader(IDWriteFontCollectionLoader* fontCollectionLoader)
@@ -102,7 +106,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontCollectionLoader*, int>)(lpVtbl[6]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollectionLoader);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateFontFileReference"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateFontFileReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult CreateFontFileReference(ushort* filePath, ulong* lastWriteTime, IDWriteFontFile** fontFile)
@@ -110,7 +114,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, ushort*, ulong*, IDWriteFontFile**, int>)(lpVtbl[7]))((IDWriteFactory*)Unsafe.AsPointer(ref this), filePath, lastWriteTime, fontFile);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomFontFileReference"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomFontFileReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CreateCustomFontFileReference(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileLoader* fontFileLoader, IDWriteFontFile** fontFile)
@@ -118,7 +122,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, void*, uint, IDWriteFontFileLoader*, IDWriteFontFile**, int>)(lpVtbl[8]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileLoader, fontFile);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateFontFace"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateFontFace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CreateFontFace(FontFaceType fontFaceType, uint numberOfFiles, IDWriteFontFile** fontFiles, uint faceIndex, FontSimulations fontFaceSimulationFlags, IDWriteFontFace** fontFace)
@@ -126,7 +130,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, FontFaceType, uint, IDWriteFontFile**, uint, FontSimulations, IDWriteFontFace**, int>)(lpVtbl[9]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFaceType, numberOfFiles, fontFiles, faceIndex, fontFaceSimulationFlags, fontFace);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateRenderingParams"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult CreateRenderingParams(IDWriteRenderingParams** renderingParams)
@@ -134,7 +138,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteRenderingParams**, int>)(lpVtbl[10]))((IDWriteFactory*)Unsafe.AsPointer(ref this), renderingParams);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateMonitorRenderingParams"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateMonitorRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult CreateMonitorRenderingParams(IntPtr monitor, IDWriteRenderingParams** renderingParams)
@@ -142,7 +146,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IntPtr, IDWriteRenderingParams**, int>)(lpVtbl[11]))((IDWriteFactory*)Unsafe.AsPointer(ref this), monitor, renderingParams);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomRenderingParams"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode renderingMode, IDWriteRenderingParams** renderingParams)
@@ -150,7 +154,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, float, float, float, PixelGeometry, RenderingMode, IDWriteRenderingParams**, int>)(lpVtbl[12]))((IDWriteFactory*)Unsafe.AsPointer(ref this), gamma, enhancedContrast, clearTypeLevel, pixelGeometry, renderingMode, renderingParams);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::RegisterFontFileLoader"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::RegisterFontFileLoader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult RegisterFontFileLoader(IDWriteFontFileLoader* fontFileLoader)
@@ -158,7 +162,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontFileLoader*, int>)(lpVtbl[13]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileLoader);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::UnregisterFontFileLoader"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::UnregisterFontFileLoader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult UnregisterFontFileLoader(IDWriteFontFileLoader* fontFileLoader)
@@ -166,7 +170,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontFileLoader*, int>)(lpVtbl[14]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileLoader);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextFormat"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult CreateTextFormat(ushort* fontFamilyName, IDWriteFontCollection* fontCollection, FontWeight fontWeight, FontStyle fontStyle, FontStretch fontStretch, float fontSize, ushort* localeName, IDWriteTextFormat** textFormat)
@@ -174,7 +178,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, ushort*, IDWriteFontCollection*, FontWeight, FontStyle, FontStretch, float, ushort*, IDWriteTextFormat**, int>)(lpVtbl[15]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFamilyName, fontCollection, fontWeight, fontStyle, fontStretch, fontSize, localeName, textFormat);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTypography"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTypography"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult CreateTypography(IDWriteTypography** typography)
@@ -182,7 +186,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteTypography**, int>)(lpVtbl[16]))((IDWriteFactory*)Unsafe.AsPointer(ref this), typography);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::GetGdiInterop"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::GetGdiInterop"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetGdiInterop(IDWriteGdiInterop** gdiInterop)
@@ -190,7 +194,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteGdiInterop**, int>)(lpVtbl[17]))((IDWriteFactory*)Unsafe.AsPointer(ref this), gdiInterop);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextLayout"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult CreateTextLayout(ushort* @string, uint stringLength, IDWriteTextFormat* textFormat, float maxWidth, float maxHeight, IDWriteTextLayout** textLayout)
@@ -198,7 +202,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, ushort*, uint, IDWriteTextFormat*, float, float, IDWriteTextLayout**, int>)(lpVtbl[18]))((IDWriteFactory*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, maxWidth, maxHeight, textLayout);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateGdiCompatibleTextLayout"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateGdiCompatibleTextLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult CreateGdiCompatibleTextLayout(ushort* @string, uint stringLength, IDWriteTextFormat* textFormat, float layoutWidth, float layoutHeight, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, IDWriteTextLayout** textLayout)
@@ -206,7 +210,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, ushort*, uint, IDWriteTextFormat*, float, float, float, Matrix3x2*, Bool32, IDWriteTextLayout**, int>)(lpVtbl[19]))((IDWriteFactory*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutWidth, layoutHeight, pixelsPerDip, transform, useGdiNatural, textLayout);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateEllipsisTrimmingSign"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateEllipsisTrimmingSign"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult CreateEllipsisTrimmingSign(IDWriteTextFormat* textFormat, IDWriteInlineObject** trimmingSign)
@@ -214,7 +218,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteTextFormat*, IDWriteInlineObject**, int>)(lpVtbl[20]))((IDWriteFactory*)Unsafe.AsPointer(ref this), textFormat, trimmingSign);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextAnalyzer"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextAnalyzer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult CreateTextAnalyzer(IDWriteTextAnalyzer** textAnalyzer)
@@ -222,7 +226,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteTextAnalyzer**, int>)(lpVtbl[21]))((IDWriteFactory*)Unsafe.AsPointer(ref this), textAnalyzer);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateNumberSubstitution"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateNumberSubstitution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult CreateNumberSubstitution(NumberSubstitutionMethod substitutionMethod, ushort* localeName, Bool32 ignoreUserOverride, IDWriteNumberSubstitution** numberSubstitution)
@@ -230,7 +234,7 @@ public unsafe partial struct IDWriteFactory
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, NumberSubstitutionMethod, ushort*, Bool32, IDWriteNumberSubstitution**, int>)(lpVtbl[22]))((IDWriteFactory*)Unsafe.AsPointer(ref this), substitutionMethod, localeName, ignoreUserOverride, numberSubstitution);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateGlyphRunAnalysis"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateGlyphRunAnalysis"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult CreateGlyphRunAnalysis(GlyphRun* glyphRun, float pixelsPerDip, Matrix3x2* transform, RenderingMode renderingMode, MeasuringMode measuringMode, float baselineOriginX, float baselineOriginY, IDWriteGlyphRunAnalysis** glyphRunAnalysis)

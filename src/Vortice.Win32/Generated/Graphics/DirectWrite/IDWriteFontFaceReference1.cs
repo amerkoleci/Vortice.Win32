@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1"]/*' />
 /// <unmanaged>IDWriteFontFaceReference1</unmanaged>
 [Guid("c081fe77-2fd1-41ac-a5a3-34983c4ba61a")]
 [NativeTypeName("struct IDWriteFontFaceReference1 : IDWriteFontFaceReference")]
 [NativeInheritance("IDWriteFontFaceReference")]
-public unsafe partial struct IDWriteFontFaceReference1
+public unsafe partial struct IDWriteFontFaceReference1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFaceReference1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontFaceReference1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFaceReference1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFaceReference1));
+#endif
 
 	public void** lpVtbl;
 
@@ -182,7 +186,7 @@ public unsafe partial struct IDWriteFontFaceReference1
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, ulong, ulong, int>)(lpVtbl[16]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fileOffset, fragmentSize);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::CreateFontFace"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::CreateFontFace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult CreateFontFace(IDWriteFontFace5** fontFace)
@@ -190,7 +194,7 @@ public unsafe partial struct IDWriteFontFaceReference1
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, IDWriteFontFace5**, int>)(lpVtbl[17]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFace);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::GetFontAxisValueCount"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::GetFontAxisValueCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public uint GetFontAxisValueCount()
@@ -198,7 +202,7 @@ public unsafe partial struct IDWriteFontFaceReference1
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, uint>)(lpVtbl[18]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::GetFontAxisValues"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::GetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount)

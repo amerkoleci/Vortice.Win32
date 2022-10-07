@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D11on12;
 
-/// <include file='../../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device1"]/*' />
+/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device1"]/*' />
 /// <unmanaged>ID3D11On12Device1</unmanaged>
 [Guid("bdb64df4-ea2f-4c70-b861-aaab1258bb5d")]
 [NativeTypeName("struct ID3D11On12Device1 : ID3D11On12Device")]
 [NativeInheritance("ID3D11On12Device")]
-public unsafe partial struct ID3D11On12Device1
+public unsafe partial struct ID3D11On12Device1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11On12Device1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11On12Device1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11On12Device1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11On12Device1));
+#endif
 
 	public void** lpVtbl;
 
@@ -94,7 +98,7 @@ public unsafe partial struct ID3D11On12Device1
 		((delegate* unmanaged[Stdcall]<ID3D11On12Device1*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[5]))((ID3D11On12Device1*)Unsafe.AsPointer(ref this), ppResources, NumResources);
 	}
 
-	/// <include file='../../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device1::GetD3D12Device"]/*' />
+	/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device1::GetD3D12Device"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetD3D12Device(Guid* riid, void** ppvDevice)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2"]/*' />
 /// <unmanaged>IDXGIFactory2</unmanaged>
 [Guid("50c83a1c-e072-4c48-87b0-3630fa36a6d0")]
 [NativeTypeName("struct IDXGIFactory2 : IDXGIFactory1")]
 [NativeInheritance("IDXGIFactory1")]
-public unsafe partial struct IDXGIFactory2
+public unsafe partial struct IDXGIFactory2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactory2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory2));
+#endif
 
 	public void** lpVtbl;
 
@@ -158,7 +162,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Bool32>)(lpVtbl[13]))((IDXGIFactory2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::IsWindowedStereoEnabled"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::IsWindowedStereoEnabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public Bool32 IsWindowedStereoEnabled()
@@ -166,7 +170,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Bool32>)(lpVtbl[14]))((IDXGIFactory2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForHwnd"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForHwnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
@@ -174,7 +178,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, IntPtr, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[15]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForCoreWindow"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForCoreWindow"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
@@ -182,7 +186,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[16]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::GetSharedResourceAdapterLuid"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::GetSharedResourceAdapterLuid"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetSharedResourceAdapterLuid(Handle hResource, Luid* pLuid)
@@ -190,7 +194,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Handle, Luid*, int>)(lpVtbl[17]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hResource, pLuid);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusWindow"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusWindow"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult RegisterStereoStatusWindow(IntPtr WindowHandle, uint wMsg, uint* pdwCookie)
@@ -198,7 +202,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr, uint, uint*, int>)(lpVtbl[18]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusEvent"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterStereoStatusEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult RegisterStereoStatusEvent(Handle hEvent, uint* pdwCookie)
@@ -206,7 +210,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Handle, uint*, int>)(lpVtbl[19]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::UnregisterStereoStatus"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::UnregisterStereoStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public void UnregisterStereoStatus(uint dwCookie)
@@ -214,7 +218,7 @@ public unsafe partial struct IDXGIFactory2
 		((delegate* unmanaged[Stdcall]<IDXGIFactory2*, uint, void>)(lpVtbl[20]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), dwCookie);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusWindow"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusWindow"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult RegisterOcclusionStatusWindow(IntPtr WindowHandle, uint wMsg, uint* pdwCookie)
@@ -222,7 +226,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IntPtr, uint, uint*, int>)(lpVtbl[21]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusEvent"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::RegisterOcclusionStatusEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult RegisterOcclusionStatusEvent(Handle hEvent, uint* pdwCookie)
@@ -230,7 +234,7 @@ public unsafe partial struct IDXGIFactory2
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, Handle, uint*, int>)(lpVtbl[22]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::UnregisterOcclusionStatus"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::UnregisterOcclusionStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public void UnregisterOcclusionStatus(uint dwCookie)
@@ -238,7 +242,7 @@ public unsafe partial struct IDXGIFactory2
 		((delegate* unmanaged[Stdcall]<IDXGIFactory2*, uint, void>)(lpVtbl[23]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), dwCookie);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForComposition"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory2::CreateSwapChainForComposition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)

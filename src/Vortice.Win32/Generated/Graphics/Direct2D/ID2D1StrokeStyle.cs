@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle"]/*' />
 /// <unmanaged>ID2D1StrokeStyle</unmanaged>
 [Guid("2cd9069d-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1StrokeStyle : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1StrokeStyle
+public unsafe partial struct ID2D1StrokeStyle : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1StrokeStyle
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1StrokeStyle
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1StrokeStyle));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1StrokeStyle));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetStartCap"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetStartCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public CapStyle GetStartCap()
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetEndCap"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetEndCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public CapStyle GetEndCap()
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashCap"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashCap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public CapStyle GetDashCap()
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, CapStyle>)(lpVtbl[6]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetMiterLimit"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetMiterLimit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public float GetMiterLimit()
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, float>)(lpVtbl[7]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetLineJoin"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetLineJoin"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public LineJoin GetLineJoin()
@@ -118,7 +122,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, LineJoin>)(lpVtbl[8]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashOffset"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public float GetDashOffset()
@@ -126,7 +130,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, float>)(lpVtbl[9]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashStyle"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public DashStyle GetDashStyle()
@@ -134,7 +138,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, DashStyle>)(lpVtbl[10]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashesCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashesCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public uint GetDashesCount()
@@ -142,7 +146,7 @@ public unsafe partial struct ID2D1StrokeStyle
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, uint>)(lpVtbl[11]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashes"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle::GetDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public void GetDashes(float* dashes, uint dashesCount)

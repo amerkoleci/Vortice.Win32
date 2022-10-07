@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Device3"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device3"]/*' />
 /// <unmanaged>ID2D1Device3</unmanaged>
 [Guid("852f2087-802c-4037-ab60-ff2e7ee6fc01")]
 [NativeTypeName("struct ID2D1Device3 : ID2D1Device2")]
 [NativeInheritance("ID2D1Device2")]
-public unsafe partial struct ID2D1Device3
+public unsafe partial struct ID2D1Device3 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Device3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Device3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Device3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Device3));
+#endif
 
 	public void** lpVtbl;
 
@@ -158,7 +162,7 @@ public unsafe partial struct ID2D1Device3
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device3*, Graphics.Dxgi.IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device3*)Unsafe.AsPointer(ref this), dxgiDevice);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Device3::CreateDeviceContext"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device3::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext3** deviceContext3)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIAdapter4"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter4"]/*' />
 /// <unmanaged>IDXGIAdapter4</unmanaged>
 [Guid("3c8d99d1-4fbf-4181-a82c-af66bf7bd24e")]
 [NativeTypeName("struct IDXGIAdapter4 : IDXGIAdapter3")]
 [NativeInheritance("IDXGIAdapter3")]
-public unsafe partial struct IDXGIAdapter4
+public unsafe partial struct IDXGIAdapter4 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIAdapter4
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIAdapter4
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIAdapter4));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIAdapter4));
+#endif
 
 	public void** lpVtbl;
 
@@ -190,7 +194,7 @@ public unsafe partial struct IDXGIAdapter4
 		((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, uint, void>)(lpVtbl[17]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), dwCookie);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIAdapter4::GetDesc3"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter4::GetDesc3"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult GetDesc3(AdapterDescription3* pDesc)

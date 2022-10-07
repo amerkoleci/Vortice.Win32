@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain3"]/*' />
 /// <unmanaged>IDXGISwapChain3</unmanaged>
 [Guid("94d99bdb-f1f8-4ab0-b236-7da0170edab1")]
 [NativeTypeName("struct IDXGISwapChain3 : IDXGISwapChain2")]
 [NativeInheritance("IDXGISwapChain2")]
-public unsafe partial struct IDXGISwapChain3
+public unsafe partial struct IDXGISwapChain3 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISwapChain3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGISwapChain3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain3));
+#endif
 
 	public void** lpVtbl;
 
@@ -334,7 +338,7 @@ public unsafe partial struct IDXGISwapChain3
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[35]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::GetCurrentBackBufferIndex"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain3::GetCurrentBackBufferIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
 	public uint GetCurrentBackBufferIndex()
@@ -342,7 +346,7 @@ public unsafe partial struct IDXGISwapChain3
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint>)(lpVtbl[36]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::CheckColorSpaceSupport"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain3::CheckColorSpaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
 	public HResult CheckColorSpaceSupport(Common.ColorSpaceType ColorSpace, uint* pColorSpaceSupport)
@@ -350,7 +354,7 @@ public unsafe partial struct IDXGISwapChain3
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ColorSpaceType, uint*, int>)(lpVtbl[37]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::SetColorSpace1"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain3::SetColorSpace1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
 	public HResult SetColorSpace1(Common.ColorSpaceType ColorSpace)
@@ -358,7 +362,7 @@ public unsafe partial struct IDXGISwapChain3
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ColorSpaceType, int>)(lpVtbl[38]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::ResizeBuffers1"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain3::ResizeBuffers1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
 	public HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.Format Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown** ppPresentQueue)

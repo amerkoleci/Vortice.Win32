@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo"]/*' />
 /// <unmanaged>ID2D1DrawInfo</unmanaged>
 [Guid("693ce632-7f2f-45de-93fe-18d88b37aa21")]
 [NativeTypeName("struct ID2D1DrawInfo : ID2D1RenderInfo")]
 [NativeInheritance("ID2D1RenderInfo")]
-public unsafe partial struct ID2D1DrawInfo
+public unsafe partial struct ID2D1DrawInfo : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DrawInfo
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1DrawInfo
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DrawInfo));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1DrawInfo));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1DrawInfo
 		((delegate* unmanaged[Stdcall]<ID2D1DrawInfo*, uint, void>)(lpVtbl[6]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), instructionCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetPixelShaderConstantBuffer"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetPixelShaderConstantBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetPixelShaderConstantBuffer(byte* buffer, uint bufferCount)
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1DrawInfo
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawInfo*, byte*, uint, int>)(lpVtbl[7]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetResourceTexture"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetResourceTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture)
@@ -118,7 +122,7 @@ public unsafe partial struct ID2D1DrawInfo
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawInfo*, uint, ID2D1ResourceTexture*, int>)(lpVtbl[8]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), textureIndex, resourceTexture);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetVertexShaderConstantBuffer"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetVertexShaderConstantBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetVertexShaderConstantBuffer(byte* buffer, uint bufferCount)
@@ -126,7 +130,7 @@ public unsafe partial struct ID2D1DrawInfo
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawInfo*, byte*, uint, int>)(lpVtbl[9]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetPixelShader"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetPixelShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetPixelShader(Guid* shaderId, PixelOptions pixelOptions)
@@ -134,7 +138,7 @@ public unsafe partial struct ID2D1DrawInfo
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawInfo*, Guid*, PixelOptions, int>)(lpVtbl[10]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), shaderId, pixelOptions);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetVertexProcessing"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawInfo::SetVertexProcessing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult SetVertexProcessing(ID2D1VertexBuffer* vertexBuffer, VertexOptions vertexOptions, BlendDescription* blendDescription, VertexRange* vertexRange, Guid* vertexShader)

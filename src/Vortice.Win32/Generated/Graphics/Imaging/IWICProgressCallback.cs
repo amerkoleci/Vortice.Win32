@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICProgressCallback"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressCallback"]/*' />
 /// <unmanaged>IWICProgressCallback</unmanaged>
 [Guid("4776f9cd-9517-45fa-bf24-e89c5ec5c60c")]
 [NativeTypeName("struct IWICProgressCallback : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICProgressCallback
+public unsafe partial struct IWICProgressCallback : INativeGuid
 {
 	public static ref readonly Guid IID_IWICProgressCallback
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICProgressCallback
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICProgressCallback));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICProgressCallback));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICProgressCallback
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICProgressCallback::Notify"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressCallback::Notify"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Notify(uint uFrameNum, WICProgressOperation operation, double dblProgress)

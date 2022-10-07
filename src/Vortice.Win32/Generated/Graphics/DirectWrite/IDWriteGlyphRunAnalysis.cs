@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis"]/*' />
 /// <unmanaged>IDWriteGlyphRunAnalysis</unmanaged>
 [Guid("7d97dbf7-e085-42d4-81e3-6a883bded118")]
 [NativeTypeName("struct IDWriteGlyphRunAnalysis : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteGlyphRunAnalysis
+public unsafe partial struct IDWriteGlyphRunAnalysis : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteGlyphRunAnalysis
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteGlyphRunAnalysis
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteGlyphRunAnalysis));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteGlyphRunAnalysis));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteGlyphRunAnalysis
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaTextureBounds"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaTextureBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetAlphaTextureBounds(TextureType textureType, RawRect* textureBounds)
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteGlyphRunAnalysis
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, TextureType, RawRect*, int>)(lpVtbl[3]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::CreateAlphaTexture"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::CreateAlphaTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateAlphaTexture(TextureType textureType, RawRect* textureBounds, byte* alphaValues, uint bufferSize)
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteGlyphRunAnalysis
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, TextureType, RawRect*, byte*, uint, int>)(lpVtbl[4]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds, alphaValues, bufferSize);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaBlendParams"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaBlendParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel)

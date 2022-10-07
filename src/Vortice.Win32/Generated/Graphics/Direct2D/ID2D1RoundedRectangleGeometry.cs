@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1RoundedRectangleGeometry"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RoundedRectangleGeometry"]/*' />
 /// <unmanaged>ID2D1RoundedRectangleGeometry</unmanaged>
 [Guid("2cd906a3-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1RoundedRectangleGeometry : ID2D1Geometry")]
 [NativeInheritance("ID2D1Geometry")]
-public unsafe partial struct ID2D1RoundedRectangleGeometry
+public unsafe partial struct ID2D1RoundedRectangleGeometry : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1RoundedRectangleGeometry
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1RoundedRectangleGeometry));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1RoundedRectangleGeometry));
+#endif
 
 	public void** lpVtbl;
 
@@ -182,7 +186,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry
 		return ((delegate* unmanaged[Stdcall]<ID2D1RoundedRectangleGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1RoundedRectangleGeometry::GetRoundedRect"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RoundedRectangleGeometry::GetRoundedRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void GetRoundedRect(RoundedRect* roundedRect)

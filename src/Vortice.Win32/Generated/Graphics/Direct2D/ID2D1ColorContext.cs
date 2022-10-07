@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ColorContext"]/*' />
 /// <unmanaged>ID2D1ColorContext</unmanaged>
 [Guid("1c4820bb-5771-4518-a581-2fe4dd0ec657")]
 [NativeTypeName("struct ID2D1ColorContext : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1ColorContext
+public unsafe partial struct ID2D1ColorContext : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ColorContext
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1ColorContext
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ColorContext));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ColorContext));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1ColorContext
 		((delegate* unmanaged[Stdcall]<ID2D1ColorContext*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetColorSpace"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public ColorSpace GetColorSpace()
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1ColorContext
 		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext*, ColorSpace>)(lpVtbl[4]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetProfileSize"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetProfileSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public uint GetProfileSize()
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1ColorContext
 		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext*, uint>)(lpVtbl[5]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetProfile"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ColorContext::GetProfile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetProfile(byte* profile, uint profileSize)

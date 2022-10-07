@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDdsDecoder"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsDecoder"]/*' />
 /// <unmanaged>IWICDdsDecoder</unmanaged>
 [Guid("409cd537-8532-40cb-9774-e2feb2df4e9c")]
 [NativeTypeName("struct IWICDdsDecoder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICDdsDecoder
+public unsafe partial struct IWICDdsDecoder : INativeGuid
 {
 	public static ref readonly Guid IID_IWICDdsDecoder
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICDdsDecoder
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDdsDecoder));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDdsDecoder));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICDdsDecoder
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDdsDecoder::GetParameters"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsDecoder::GetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetParameters(WICDdsParameters* pParameters)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICDdsDecoder
 		return ((delegate* unmanaged[Stdcall]<IWICDdsDecoder*, WICDdsParameters*, int>)(lpVtbl[3]))((IWICDdsDecoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDdsDecoder::GetFrame"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsDecoder::GetFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetFrame(uint arrayIndex, uint mipLevel, uint sliceIndex, IWICBitmapFrameDecode** ppIBitmapFrame)

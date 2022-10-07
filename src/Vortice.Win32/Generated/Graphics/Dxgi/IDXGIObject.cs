@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIObject"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIObject"]/*' />
 /// <unmanaged>IDXGIObject</unmanaged>
 [Guid("aec22fb8-76f3-4639-9be0-28eb43a67a2e")]
 [NativeTypeName("struct IDXGIObject : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIObject
+public unsafe partial struct IDXGIObject : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIObject
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIObject
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIObject));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIObject));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDXGIObject
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIObject::SetPrivateData"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIObject::SetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
@@ -78,7 +82,7 @@ public unsafe partial struct IDXGIObject
 		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIObject::SetPrivateDataInterface"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIObject::SetPrivateDataInterface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
@@ -86,7 +90,7 @@ public unsafe partial struct IDXGIObject
 		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIObject::GetPrivateData"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIObject::GetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
@@ -94,7 +98,7 @@ public unsafe partial struct IDXGIObject
 		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIObject*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIObject::GetParent"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIObject::GetParent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetParent(Guid* riid, void** ppParent)

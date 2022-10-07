@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcAssembler"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcAssembler"]/*' />
 /// <unmanaged>IDxcAssembler</unmanaged>
 [Guid("091f7a26-1c1f-4948-904b-e6e3a8a771d5")]
 [NativeTypeName("struct IDxcAssembler : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcAssembler
+public unsafe partial struct IDxcAssembler : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcAssembler
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcAssembler
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcAssembler));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcAssembler));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDxcAssembler
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcAssembler::AssembleToContainer"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcAssembler::AssembleToContainer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult AssembleToContainer(IDxcBlob* pShader, IDxcOperationResult** ppResult)

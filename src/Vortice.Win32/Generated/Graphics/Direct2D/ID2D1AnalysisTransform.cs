@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1AnalysisTransform"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1AnalysisTransform"]/*' />
 /// <unmanaged>ID2D1AnalysisTransform</unmanaged>
 [Guid("0359dc30-95e6-4568-9055-27720d130e93")]
 [NativeTypeName("struct ID2D1AnalysisTransform : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1AnalysisTransform
+public unsafe partial struct ID2D1AnalysisTransform : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1AnalysisTransform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1AnalysisTransform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1AnalysisTransform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1AnalysisTransform));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct ID2D1AnalysisTransform
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1AnalysisTransform::ProcessAnalysisResults"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1AnalysisTransform::ProcessAnalysisResults"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult ProcessAnalysisResults(byte* analysisData, uint analysisDataCount)

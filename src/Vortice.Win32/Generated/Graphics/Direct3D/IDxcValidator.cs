@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcValidator"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcValidator"]/*' />
 /// <unmanaged>IDxcValidator</unmanaged>
 [Guid("a6e82bd2-1fd7-4826-9811-2857e797f49a")]
 [NativeTypeName("struct IDxcValidator : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcValidator
+public unsafe partial struct IDxcValidator : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcValidator
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcValidator
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcValidator));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcValidator));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDxcValidator
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcValidator::Validate"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcValidator::Validate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult)

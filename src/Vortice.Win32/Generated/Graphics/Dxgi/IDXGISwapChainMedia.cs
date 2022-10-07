@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
 /// <unmanaged>IDXGISwapChainMedia</unmanaged>
 [Guid("dd95b90b-f05f-4f6a-bd65-25bfb264bd84")]
 [NativeTypeName("struct IDXGISwapChainMedia : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGISwapChainMedia
+public unsafe partial struct IDXGISwapChainMedia : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISwapChainMedia
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGISwapChainMedia
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChainMedia));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChainMedia));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDXGISwapChainMedia
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetFrameStatisticsMedia(FrameStatisticsMedia* pStats)
@@ -78,7 +82,7 @@ public unsafe partial struct IDXGISwapChainMedia
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, FrameStatisticsMedia*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetPresentDuration(uint Duration)
@@ -86,7 +90,7 @@ public unsafe partial struct IDXGISwapChainMedia
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint, int>)(lpVtbl[4]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), Duration);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration)

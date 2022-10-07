@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo"]/*' />
 /// <unmanaged>IWICMetadataHandlerInfo</unmanaged>
 [Guid("aba958bf-c672-44d1-8d61-ce6df2e682c2")]
 [NativeTypeName("struct IWICMetadataHandlerInfo : IWICComponentInfo")]
 [NativeInheritance("IWICComponentInfo")]
-public unsafe partial struct IWICMetadataHandlerInfo
+public unsafe partial struct IWICMetadataHandlerInfo : INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataHandlerInfo
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICMetadataHandlerInfo
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataHandlerInfo));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataHandlerInfo));
+#endif
 
 	public void** lpVtbl;
 
@@ -134,7 +138,7 @@ public unsafe partial struct IWICMetadataHandlerInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::GetMetadataFormat"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::GetMetadataFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetMetadataFormat(Guid* pguidMetadataFormat)
@@ -142,7 +146,7 @@ public unsafe partial struct IWICMetadataHandlerInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, Guid*, int>)(lpVtbl[11]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), pguidMetadataFormat);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::GetContainerFormats"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::GetContainerFormats"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetContainerFormats(uint cContainerFormats, Guid* pguidContainerFormats, uint* pcchActual)
@@ -150,7 +154,7 @@ public unsafe partial struct IWICMetadataHandlerInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, uint, Guid*, uint*, int>)(lpVtbl[12]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), cContainerFormats, pguidContainerFormats, pcchActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::GetDeviceManufacturer"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::GetDeviceManufacturer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, ushort* wzDeviceManufacturer, uint* pcchActual)
@@ -158,7 +162,7 @@ public unsafe partial struct IWICMetadataHandlerInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, uint, ushort*, uint*, int>)(lpVtbl[13]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::GetDeviceModels"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::GetDeviceModels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult GetDeviceModels(uint cchDeviceModels, ushort* wzDeviceModels, uint* pcchActual)
@@ -166,7 +170,7 @@ public unsafe partial struct IWICMetadataHandlerInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, uint, ushort*, uint*, int>)(lpVtbl[14]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::DoesRequireFullStream"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::DoesRequireFullStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult DoesRequireFullStream(Bool32* pfRequiresFullStream)
@@ -174,7 +178,7 @@ public unsafe partial struct IWICMetadataHandlerInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, Bool32*, int>)(lpVtbl[15]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), pfRequiresFullStream);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::DoesSupportPadding"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::DoesSupportPadding"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult DoesSupportPadding(Bool32* pfSupportsPadding)
@@ -182,7 +186,7 @@ public unsafe partial struct IWICMetadataHandlerInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, Bool32*, int>)(lpVtbl[16]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), pfSupportsPadding);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::DoesRequireFixedSize"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataHandlerInfo::DoesRequireFixedSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult DoesRequireFixedSize(Bool32* pfFixedSize)

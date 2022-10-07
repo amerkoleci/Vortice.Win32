@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface2"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface2"]/*' />
 /// <unmanaged>IDXGISurface2</unmanaged>
 [Guid("aba496dd-b617-4cb8-a866-bc44d7eb1fa2")]
 [NativeTypeName("struct IDXGISurface2 : IDXGISurface1")]
 [NativeInheritance("IDXGISurface1")]
-public unsafe partial struct IDXGISurface2
+public unsafe partial struct IDXGISurface2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISurface2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGISurface2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface2));
+#endif
 
 	public void** lpVtbl;
 
@@ -150,7 +154,7 @@ public unsafe partial struct IDXGISurface2
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, RawRect*, int>)(lpVtbl[12]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pDirtyRect);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface2::GetResource"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface2::GetResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetResource(Guid* riid, void** ppParentResource, uint* pSubresourceIndex)

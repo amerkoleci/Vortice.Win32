@@ -52,7 +52,7 @@ public unsafe struct ComPtr<T> : IDisposable
     /// <returns>The result of <see cref="IUnknown.QueryInterface"/> for the target type <typeparamref name="U"/>.</returns>
     /// <remarks>This method will automatically release the target COM object pointed to by <paramref name="p"/>, if any.</remarks>
     public readonly HResult As<U>(ComPtr<U>* p)
-        where U : unmanaged
+        where U : unmanaged, INativeGuid
     {
         return ((IUnknown*)ptr_)->QueryInterface(__uuidof<U>(), (void**)p->ReleaseAndGetAddressOf());
     }
@@ -63,7 +63,7 @@ public unsafe struct ComPtr<T> : IDisposable
     /// <returns>The result of <see cref="IUnknown.QueryInterface"/> for the target type <typeparamref name="U"/>.</returns>
     /// <remarks>This method will automatically release the target COM object pointed to by <paramref name="other"/>, if any.</remarks>
     public readonly HResult As<U>(ref ComPtr<U> other)
-        where U : unmanaged
+        where U : unmanaged, INativeGuid
     {
         U* ptr;
         HResult result = ((IUnknown*)ptr_)->QueryInterface(__uuidof<U>(), (void**)&ptr);
@@ -153,7 +153,7 @@ public unsafe struct ComPtr<T> : IDisposable
     /// <param name="ptr">The target raw pointer to copy the address of the current COM object to.</param>
     /// <returns>The result of <see cref="IUnknown.QueryInterface"/> for the target type <typeparamref name="U"/>.</returns>
     public readonly HResult CopyTo<U>(U** ptr)
-        where U : unmanaged
+        where U : unmanaged, INativeGuid
     {
         return ((IUnknown*)ptr_)->QueryInterface(__uuidof<U>(), (void**)ptr);
     }
@@ -162,7 +162,7 @@ public unsafe struct ComPtr<T> : IDisposable
     /// <param name="p">The target raw pointer to copy the address of the current COM object to.</param>
     /// <returns>The result of <see cref="IUnknown.QueryInterface"/> for the target type <typeparamref name="U"/>.</returns>
     public readonly HResult CopyTo<U>(ComPtr<U>* p)
-        where U : unmanaged
+        where U : unmanaged, INativeGuid
     {
         return ((IUnknown*)ptr_)->QueryInterface(__uuidof<U>(), (void**)p->ReleaseAndGetAddressOf());
     }
@@ -171,7 +171,7 @@ public unsafe struct ComPtr<T> : IDisposable
     /// <param name="other">The target reference to copy the address of the current COM object to.</param>
     /// <returns>The result of <see cref="IUnknown.QueryInterface"/> for the target type <typeparamref name="U"/>.</returns>
     public readonly HResult CopyTo<U>(ref ComPtr<U> other)
-        where U : unmanaged
+        where U : unmanaged, INativeGuid
     {
         U* ptr;
         HResult result = ((IUnknown*)ptr_)->QueryInterface(__uuidof<U>(), (void**)&ptr);

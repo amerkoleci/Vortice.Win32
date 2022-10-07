@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("b4e3c01d-e79e-4637-91b2-510e9f4c9b8f")]
 [NativeTypeName("struct ID3D11DeviceContext3 : ID3D11DeviceContext2")]
 [NativeInheritance("ID3D11DeviceContext2")]
-public unsafe partial struct ID3D11DeviceContext3
+public unsafe partial struct ID3D11DeviceContext3 : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11DeviceContext3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11DeviceContext3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11DeviceContext3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11DeviceContext3));
+#endif
 
 	public void** lpVtbl;
 

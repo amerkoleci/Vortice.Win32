@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Image"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Image"]/*' />
 /// <unmanaged>ID2D1Image</unmanaged>
 [Guid("65019f75-8da2-497c-b32c-dfa34e48ede6")]
 [NativeTypeName("struct ID2D1Image : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Image
+public unsafe partial struct ID2D1Image : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Image
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Image
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Image));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Image));
+#endif
 
 	public void** lpVtbl;
 

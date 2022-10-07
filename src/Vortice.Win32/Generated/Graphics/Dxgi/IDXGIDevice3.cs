@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDevice3"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice3"]/*' />
 /// <unmanaged>IDXGIDevice3</unmanaged>
 [Guid("6007896c-3244-4afd-bf18-a6d3beda5023")]
 [NativeTypeName("struct IDXGIDevice3 : IDXGIDevice2")]
 [NativeInheritance("IDXGIDevice2")]
-public unsafe partial struct IDXGIDevice3
+public unsafe partial struct IDXGIDevice3 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDevice3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIDevice3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice3));
+#endif
 
 	public void** lpVtbl;
 
@@ -182,7 +186,7 @@ public unsafe partial struct IDXGIDevice3
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice3*, Handle, int>)(lpVtbl[16]))((IDXGIDevice3*)Unsafe.AsPointer(ref this), hEvent);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDevice3::Trim"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice3::Trim"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void Trim()

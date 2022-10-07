@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D11on12;
 
-/// <include file='../../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device2"]/*' />
+/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device2"]/*' />
 /// <unmanaged>ID3D11On12Device2</unmanaged>
 [Guid("dc90f331-4740-43fa-866e-67f12cb58223")]
 [NativeTypeName("struct ID3D11On12Device2 : ID3D11On12Device1")]
 [NativeInheritance("ID3D11On12Device1")]
-public unsafe partial struct ID3D11On12Device2
+public unsafe partial struct ID3D11On12Device2 : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11On12Device2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11On12Device2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11On12Device2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11On12Device2));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct ID3D11On12Device2
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device2*, Guid*, void**, int>)(lpVtbl[6]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='../../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device2::UnwrapUnderlyingResource"]/*' />
+	/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device2::UnwrapUnderlyingResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult UnwrapUnderlyingResource(Graphics.Direct3D11.ID3D11Resource* pResource11, Graphics.Direct3D12.ID3D12CommandQueue* pCommandQueue, Guid* riid, void** ppvResource12)
@@ -110,7 +114,7 @@ public unsafe partial struct ID3D11On12Device2
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device2*, Graphics.Direct3D11.ID3D11Resource*, Graphics.Direct3D12.ID3D12CommandQueue*, Guid*, void**, int>)(lpVtbl[7]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), pResource11, pCommandQueue, riid, ppvResource12);
 	}
 
-	/// <include file='../../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device2::ReturnUnderlyingResource"]/*' />
+	/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device2::ReturnUnderlyingResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult ReturnUnderlyingResource(Graphics.Direct3D11.ID3D11Resource* pResource11, uint NumSync, ulong* pSignalValues, Graphics.Direct3D12.ID3D12Fence** ppFences)

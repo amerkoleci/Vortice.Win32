@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer"]/*' />
 /// <unmanaged>IDWriteTextRenderer</unmanaged>
 [Guid("ef8a8135-5cc6-45fe-8825-c5a0724eb819")]
 [NativeTypeName("struct IDWriteTextRenderer : IDWritePixelSnapping")]
 [NativeInheritance("IDWritePixelSnapping")]
-public unsafe partial struct IDWriteTextRenderer
+public unsafe partial struct IDWriteTextRenderer : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextRenderer
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTextRenderer
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextRenderer));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextRenderer));
+#endif
 
 	public void** lpVtbl;
 
@@ -94,7 +98,7 @@ public unsafe partial struct IDWriteTextRenderer
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer*, void*, float*, int>)(lpVtbl[5]))((IDWriteTextRenderer*)Unsafe.AsPointer(ref this), clientDrawingContext, pixelsPerDip);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer::DrawGlyphRun"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer::DrawGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult DrawGlyphRun(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, IUnknown* clientDrawingEffect)
@@ -102,7 +106,7 @@ public unsafe partial struct IDWriteTextRenderer
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer*, void*, float, float, MeasuringMode, GlyphRun*, GlyphRunDescription*, IUnknown*, int>)(lpVtbl[6]))((IDWriteTextRenderer*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, measuringMode, glyphRun, glyphRunDescription, clientDrawingEffect);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer::DrawUnderline"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer::DrawUnderline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult DrawUnderline(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, Underline* underline, IUnknown* clientDrawingEffect)
@@ -110,7 +114,7 @@ public unsafe partial struct IDWriteTextRenderer
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer*, void*, float, float, Underline*, IUnknown*, int>)(lpVtbl[7]))((IDWriteTextRenderer*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, underline, clientDrawingEffect);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer::DrawStrikethrough"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer::DrawStrikethrough"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult DrawStrikethrough(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, Strikethrough* strikethrough, IUnknown* clientDrawingEffect)
@@ -118,7 +122,7 @@ public unsafe partial struct IDWriteTextRenderer
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer*, void*, float, float, Strikethrough*, IUnknown*, int>)(lpVtbl[8]))((IDWriteTextRenderer*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, strikethrough, clientDrawingEffect);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer::DrawInlineObject"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer::DrawInlineObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult DrawInlineObject(void* clientDrawingContext, float originX, float originY, IDWriteInlineObject* inlineObject, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)

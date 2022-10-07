@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("80eabf42-2568-4e5e-bd82-c37f86961dc3")]
 [NativeTypeName("struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary")]
 [NativeInheritance("ID3D12PipelineLibrary")]
-public unsafe partial struct ID3D12PipelineLibrary1
+public unsafe partial struct ID3D12PipelineLibrary1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12PipelineLibrary1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D12PipelineLibrary1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12PipelineLibrary1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12PipelineLibrary1));
+#endif
 
 	public void** lpVtbl;
 

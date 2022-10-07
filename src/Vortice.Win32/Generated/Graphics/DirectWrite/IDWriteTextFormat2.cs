@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat2"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat2"]/*' />
 /// <unmanaged>IDWriteTextFormat2</unmanaged>
 [Guid("f67e0edd-9e3d-4ecc-8c32-4183253dfe70")]
 [NativeTypeName("struct IDWriteTextFormat2 : IDWriteTextFormat1")]
 [NativeInheritance("IDWriteTextFormat1")]
-public unsafe partial struct IDWriteTextFormat2
+public unsafe partial struct IDWriteTextFormat2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextFormat2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTextFormat2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextFormat2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextFormat2));
+#endif
 
 	public void** lpVtbl;
 
@@ -334,7 +338,7 @@ public unsafe partial struct IDWriteTextFormat2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, IDWriteFontFallback**, int>)(lpVtbl[35]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this), fontFallback);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat2::SetLineSpacing"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat2::SetLineSpacing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
 	public HResult SetLineSpacing(LineSpacing* lineSpacingOptions)
@@ -342,7 +346,7 @@ public unsafe partial struct IDWriteTextFormat2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, LineSpacing*, int>)(lpVtbl[36]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat2::GetLineSpacing"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat2::GetLineSpacing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
 	public HResult GetLineSpacing(LineSpacing* lineSpacingOptions)

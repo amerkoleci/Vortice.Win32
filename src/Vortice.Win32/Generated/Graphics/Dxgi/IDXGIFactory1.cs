@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory1"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory1"]/*' />
 /// <unmanaged>IDXGIFactory1</unmanaged>
 [Guid("770aae78-f26f-4dba-a829-253c83d1b387")]
 [NativeTypeName("struct IDXGIFactory1 : IDXGIFactory")]
 [NativeInheritance("IDXGIFactory")]
-public unsafe partial struct IDXGIFactory1
+public unsafe partial struct IDXGIFactory1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactory1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory1));
+#endif
 
 	public void** lpVtbl;
 
@@ -142,7 +146,7 @@ public unsafe partial struct IDXGIFactory1
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, IntPtr, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Module, ppAdapter);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory1::EnumAdapters1"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory1::EnumAdapters1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
@@ -150,7 +154,7 @@ public unsafe partial struct IDXGIFactory1
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, uint, IDXGIAdapter1**, int>)(lpVtbl[12]))((IDXGIFactory1*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory1::IsCurrent"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory1::IsCurrent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public Bool32 IsCurrent()

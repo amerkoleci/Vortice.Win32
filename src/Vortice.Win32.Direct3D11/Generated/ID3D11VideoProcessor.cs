@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("1d7b0652-185f-41c6-85ce-0c5be3d4ae6c")]
 [NativeTypeName("struct ID3D11VideoProcessor : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11VideoProcessor
+public unsafe partial struct ID3D11VideoProcessor : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoProcessor
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11VideoProcessor
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11VideoProcessor));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11VideoProcessor));
+#endif
 
 	public void** lpVtbl;
 

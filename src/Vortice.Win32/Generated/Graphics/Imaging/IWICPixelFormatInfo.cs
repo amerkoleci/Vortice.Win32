@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo"]/*' />
 /// <unmanaged>IWICPixelFormatInfo</unmanaged>
 [Guid("e8eda601-3d48-431a-ab44-69059be88bbe")]
 [NativeTypeName("struct IWICPixelFormatInfo : IWICComponentInfo")]
 [NativeInheritance("IWICComponentInfo")]
-public unsafe partial struct IWICPixelFormatInfo
+public unsafe partial struct IWICPixelFormatInfo : INativeGuid
 {
 	public static ref readonly Guid IID_IWICPixelFormatInfo
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICPixelFormatInfo
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPixelFormatInfo));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPixelFormatInfo));
+#endif
 
 	public void** lpVtbl;
 
@@ -134,7 +138,7 @@ public unsafe partial struct IWICPixelFormatInfo
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetFormatGUID"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetFormatGUID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetFormatGUID(Guid* pFormat)
@@ -142,7 +146,7 @@ public unsafe partial struct IWICPixelFormatInfo
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[11]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pFormat);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetColorContext"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetColorContext(IWICColorContext** ppIColorContext)
@@ -150,7 +154,7 @@ public unsafe partial struct IWICPixelFormatInfo
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, IWICColorContext**, int>)(lpVtbl[12]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), ppIColorContext);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetBitsPerPixel"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetBitsPerPixel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetBitsPerPixel(uint* puiBitsPerPixel)
@@ -158,7 +162,7 @@ public unsafe partial struct IWICPixelFormatInfo
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[13]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), puiBitsPerPixel);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetChannelCount"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetChannelCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult GetChannelCount(uint* puiChannelCount)
@@ -166,7 +170,7 @@ public unsafe partial struct IWICPixelFormatInfo
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[14]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), puiChannelCount);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetChannelMask"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetChannelMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult GetChannelMask(uint uiChannelIndex, uint cbMaskBuffer, byte* pbMaskBuffer, uint* pcbActual)

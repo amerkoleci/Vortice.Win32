@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFormatConverter"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICFormatConverter"]/*' />
 /// <unmanaged>IWICFormatConverter</unmanaged>
 [Guid("00000301-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICFormatConverter : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICFormatConverter
+public unsafe partial struct IWICFormatConverter : INativeGuid
 {
 	public static ref readonly Guid IID_IWICFormatConverter
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICFormatConverter
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICFormatConverter));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICFormatConverter));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct IWICFormatConverter
 		return ((delegate* unmanaged[Stdcall]<IWICFormatConverter*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFormatConverter::Initialize"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICFormatConverter::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Initialize(IWICBitmapSource* pISource, Guid* dstFormat, WICBitmapDitherType dither, IWICPalette* pIPalette, double alphaThresholdPercent, WICBitmapPaletteType paletteTranslate)
@@ -118,7 +122,7 @@ public unsafe partial struct IWICFormatConverter
 		return ((delegate* unmanaged[Stdcall]<IWICFormatConverter*, IWICBitmapSource*, Guid*, WICBitmapDitherType, IWICPalette*, double, WICBitmapPaletteType, int>)(lpVtbl[8]))((IWICFormatConverter*)Unsafe.AsPointer(ref this), pISource, dstFormat, dither, pIPalette, alphaThresholdPercent, paletteTranslate);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFormatConverter::CanConvert"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICFormatConverter::CanConvert"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CanConvert(Guid* srcPixelFormat, Guid* dstPixelFormat, Bool32* pfCanConvert)

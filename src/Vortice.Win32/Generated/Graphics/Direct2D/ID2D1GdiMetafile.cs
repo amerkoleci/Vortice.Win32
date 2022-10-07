@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile"]/*' />
 /// <unmanaged>ID2D1GdiMetafile</unmanaged>
 [Guid("2f543dc3-cfc1-4211-864f-cfd91c6f3395")]
 [NativeTypeName("struct ID2D1GdiMetafile : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1GdiMetafile
+public unsafe partial struct ID2D1GdiMetafile : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GdiMetafile
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1GdiMetafile
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GdiMetafile));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GdiMetafile));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1GdiMetafile
 		((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GdiMetafile*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile::Stream"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile::Stream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Stream(ID2D1GdiMetafileSink* sink)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1GdiMetafile
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile*, ID2D1GdiMetafileSink*, int>)(lpVtbl[4]))((ID2D1GdiMetafile*)Unsafe.AsPointer(ref this), sink);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile::GetBounds"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile::GetBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetBounds(Common.RectF* bounds)

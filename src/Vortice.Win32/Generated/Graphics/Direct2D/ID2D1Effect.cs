@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Effect"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Effect"]/*' />
 /// <unmanaged>ID2D1Effect</unmanaged>
 [Guid("28211a43-7d89-476f-8181-2d6159b220ad")]
 [NativeTypeName("struct ID2D1Effect : ID2D1Properties")]
 [NativeInheritance("ID2D1Properties")]
-public unsafe partial struct ID2D1Effect
+public unsafe partial struct ID2D1Effect : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Effect
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Effect
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Effect));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Effect));
+#endif
 
 	public void** lpVtbl;
 
@@ -158,7 +162,7 @@ public unsafe partial struct ID2D1Effect
 		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, subProperties);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Effect::SetInput"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Effect::SetInput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public void SetInput(uint index, ID2D1Image* input, Bool32 invalidate)
@@ -166,7 +170,7 @@ public unsafe partial struct ID2D1Effect
 		((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, ID2D1Image*, Bool32, void>)(lpVtbl[14]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, input, invalidate);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Effect::SetInputCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Effect::SetInputCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult SetInputCount(uint inputCount)
@@ -174,7 +178,7 @@ public unsafe partial struct ID2D1Effect
 		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, int>)(lpVtbl[15]))((ID2D1Effect*)Unsafe.AsPointer(ref this), inputCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetInput"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetInput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public void GetInput(uint index, ID2D1Image** input)
@@ -182,7 +186,7 @@ public unsafe partial struct ID2D1Effect
 		((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, ID2D1Image**, void>)(lpVtbl[16]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, input);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetInputCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetInputCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public uint GetInputCount()
@@ -190,7 +194,7 @@ public unsafe partial struct ID2D1Effect
 		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint>)(lpVtbl[17]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetOutput"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public void GetOutput(ID2D1Image** outputImage)

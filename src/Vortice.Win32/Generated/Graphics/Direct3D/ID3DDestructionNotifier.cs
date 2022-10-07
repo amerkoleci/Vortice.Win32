@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier"]/*' />
 /// <unmanaged>ID3DDestructionNotifier</unmanaged>
 [Guid("a06eb39a-50da-425b-8c31-4eecd6c270f3")]
 [NativeTypeName("struct ID3DDestructionNotifier : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DDestructionNotifier
+public unsafe partial struct ID3DDestructionNotifier : INativeGuid
 {
 	public static ref readonly Guid IID_ID3DDestructionNotifier
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3DDestructionNotifier
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DDestructionNotifier));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DDestructionNotifier));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct ID3DDestructionNotifier
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::RegisterDestructionCallback"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::RegisterDestructionCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID)
@@ -78,7 +82,7 @@ public unsafe partial struct ID3DDestructionNotifier
 		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, delegate* unmanaged[Stdcall]<void*, void>, void*, uint*, int>)(lpVtbl[3]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackFn, pData, pCallbackID);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::UnregisterDestructionCallback"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="ID3DDestructionNotifier::UnregisterDestructionCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult UnregisterDestructionCallback(uint callbackID)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap"]/*' />
 /// <unmanaged>ID2D1Bitmap</unmanaged>
 [Guid("a2296057-ea42-4099-983b-539fb6505426")]
 [NativeTypeName("struct ID2D1Bitmap : ID2D1Image")]
 [NativeInheritance("ID2D1Image")]
-public unsafe partial struct ID2D1Bitmap
+public unsafe partial struct ID2D1Bitmap : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Bitmap
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Bitmap
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Bitmap));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Bitmap));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1Bitmap
 		((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetSize"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public System.Drawing.SizeF GetSize()
@@ -87,7 +91,7 @@ public unsafe partial struct ID2D1Bitmap
 		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelSize"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public System.Drawing.Size GetPixelSize()
@@ -96,7 +100,7 @@ public unsafe partial struct ID2D1Bitmap
 		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelFormat"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public Common.PixelFormat GetPixelFormat()
@@ -105,7 +109,7 @@ public unsafe partial struct ID2D1Bitmap
 		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[6]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetDpi"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetDpi"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetDpi(float* dpiX, float* dpiY)
@@ -113,7 +117,7 @@ public unsafe partial struct ID2D1Bitmap
 		((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, float*, float*, void>)(lpVtbl[7]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), dpiX, dpiY);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromBitmap"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Common.RectU* srcRect)
@@ -121,7 +125,7 @@ public unsafe partial struct ID2D1Bitmap
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1Bitmap*, Common.RectU*, int>)(lpVtbl[8]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromRenderTarget"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Common.RectU* srcRect)
@@ -129,7 +133,7 @@ public unsafe partial struct ID2D1Bitmap
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1RenderTarget*, Common.RectU*, int>)(lpVtbl[9]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromMemory"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult CopyFromMemory(Common.RectU* dstRect, void* srcData, uint pitch)

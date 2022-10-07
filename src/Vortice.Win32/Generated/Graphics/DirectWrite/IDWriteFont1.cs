@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont1"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont1"]/*' />
 /// <unmanaged>IDWriteFont1</unmanaged>
 [Guid("acd16696-8c14-4f5d-877e-fe3fc1d32738")]
 [NativeTypeName("struct IDWriteFont1 : IDWriteFont")]
 [NativeInheritance("IDWriteFont")]
-public unsafe partial struct IDWriteFont1
+public unsafe partial struct IDWriteFont1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFont1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFont1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFont1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFont1));
+#endif
 
 	public void** lpVtbl;
 
@@ -158,7 +162,7 @@ public unsafe partial struct IDWriteFont1
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, IDWriteFontFace**, int>)(lpVtbl[13]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontFace);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetMetrics"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public void GetMetrics(FontMetrics1* fontMetrics)
@@ -166,7 +170,7 @@ public unsafe partial struct IDWriteFont1
 		((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontMetrics1*, void>)(lpVtbl[14]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontMetrics);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetPanose"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetPanose"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public void GetPanose(Panose* panose)
@@ -174,7 +178,7 @@ public unsafe partial struct IDWriteFont1
 		((delegate* unmanaged[Stdcall]<IDWriteFont1*, Panose*, void>)(lpVtbl[15]))((IDWriteFont1*)Unsafe.AsPointer(ref this), panose);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetUnicodeRanges"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetUnicodeRanges"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult GetUnicodeRanges(uint maxRangeCount, UnicodeRange* unicodeRanges, uint* actualRangeCount)
@@ -182,7 +186,7 @@ public unsafe partial struct IDWriteFont1
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, uint, UnicodeRange*, uint*, int>)(lpVtbl[16]))((IDWriteFont1*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFont1::IsMonospacedFont"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont1::IsMonospacedFont"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public Bool32 IsMonospacedFont()

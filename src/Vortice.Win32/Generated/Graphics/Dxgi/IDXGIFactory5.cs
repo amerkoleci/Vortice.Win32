@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory5"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory5"]/*' />
 /// <unmanaged>IDXGIFactory5</unmanaged>
 [Guid("7632e1f5-ee65-4dca-87fd-84cd75f8838d")]
 [NativeTypeName("struct IDXGIFactory5 : IDXGIFactory4")]
 [NativeInheritance("IDXGIFactory4")]
-public unsafe partial struct IDXGIFactory5
+public unsafe partial struct IDXGIFactory5 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory5
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactory5
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory5));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory5));
+#endif
 
 	public void** lpVtbl;
 
@@ -270,7 +274,7 @@ public unsafe partial struct IDXGIFactory5
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory5::CheckFeatureSupport"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory5::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)

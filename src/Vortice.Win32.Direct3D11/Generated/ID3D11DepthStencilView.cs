@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("9fdac92a-1876-48c3-afad-25b94f84a9b6")]
 [NativeTypeName("struct ID3D11DepthStencilView : ID3D11View")]
 [NativeInheritance("ID3D11View")]
-public unsafe partial struct ID3D11DepthStencilView
+public unsafe partial struct ID3D11DepthStencilView : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11DepthStencilView
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11DepthStencilView
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11DepthStencilView));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11DepthStencilView));
+#endif
 
 	public void** lpVtbl;
 

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface"]/*' />
 /// <unmanaged>IDXGISurface</unmanaged>
 [Guid("cafcb56c-6ac3-4889-bf47-9e23bbd260ec")]
 [NativeTypeName("struct IDXGISurface : IDXGIDeviceSubObject")]
 [NativeInheritance("IDXGIDeviceSubObject")]
-public unsafe partial struct IDXGISurface
+public unsafe partial struct IDXGISurface : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISurface
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGISurface
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISurface));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct IDXGISurface
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISurface*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface::GetDesc"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetDesc(SurfaceDescription* pDesc)
@@ -118,7 +122,7 @@ public unsafe partial struct IDXGISurface
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, SurfaceDescription*, int>)(lpVtbl[8]))((IDXGISurface*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface::Map"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult Map(MappedRect* pLockedRect, uint MapFlags)
@@ -126,7 +130,7 @@ public unsafe partial struct IDXGISurface
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, MappedRect*, uint, int>)(lpVtbl[9]))((IDXGISurface*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGISurface::Unmap"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface::Unmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult Unmap()

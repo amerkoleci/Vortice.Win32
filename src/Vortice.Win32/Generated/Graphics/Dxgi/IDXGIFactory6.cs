@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory6"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory6"]/*' />
 /// <unmanaged>IDXGIFactory6</unmanaged>
 [Guid("c1b6694f-ff09-44a9-b03c-77900a0a1d17")]
 [NativeTypeName("struct IDXGIFactory6 : IDXGIFactory5")]
 [NativeInheritance("IDXGIFactory5")]
-public unsafe partial struct IDXGIFactory6
+public unsafe partial struct IDXGIFactory6 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory6
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactory6
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory6));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory6));
+#endif
 
 	public void** lpVtbl;
 
@@ -278,7 +282,7 @@ public unsafe partial struct IDXGIFactory6
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Feature, void*, uint, int>)(lpVtbl[28]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory6::EnumAdapterByGpuPreference"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory6::EnumAdapterByGpuPreference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult EnumAdapterByGpuPreference(uint Adapter, GpuPreference GpuPreference, Guid* riid, void** ppvAdapter)

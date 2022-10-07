@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("48570b85-d1ee-4fcd-a250-eb350722b037")]
 [NativeTypeName("struct ID3D11Buffer : ID3D11Resource")]
 [NativeInheritance("ID3D11Resource")]
-public unsafe partial struct ID3D11Buffer
+public unsafe partial struct ID3D11Buffer : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Buffer
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11Buffer
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11Buffer));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11Buffer));
+#endif
 
 	public void** lpVtbl;
 

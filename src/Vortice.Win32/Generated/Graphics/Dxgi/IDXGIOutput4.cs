@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIOutput4"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput4"]/*' />
 /// <unmanaged>IDXGIOutput4</unmanaged>
 [Guid("dc7dca35-2196-414d-9f53-617884032a60")]
 [NativeTypeName("struct IDXGIOutput4 : IDXGIOutput3")]
 [NativeInheritance("IDXGIOutput3")]
-public unsafe partial struct IDXGIOutput4
+public unsafe partial struct IDXGIOutput4 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput4
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIOutput4
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput4));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput4));
+#endif
 
 	public void** lpVtbl;
 
@@ -246,7 +250,7 @@ public unsafe partial struct IDXGIOutput4
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIOutput4::CheckOverlayColorSpaceSupport"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput4::CheckOverlayColorSpaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags)

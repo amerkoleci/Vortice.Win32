@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcContainerReflection"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerReflection"]/*' />
 /// <unmanaged>IDxcContainerReflection</unmanaged>
 [Guid("d2c21b26-8350-4bdc-976a-331ce6f4c54c")]
 [NativeTypeName("struct IDxcContainerReflection : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcContainerReflection
+public unsafe partial struct IDxcContainerReflection : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcContainerReflection
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcContainerReflection
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcContainerReflection));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcContainerReflection));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDxcContainerReflection
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::Load"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::Load"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Load(IDxcBlob* pContainer)
@@ -78,7 +82,7 @@ public unsafe partial struct IDxcContainerReflection
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerReflection*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), pContainer);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::GetPartCount"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::GetPartCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetPartCount(uint* pResult)
@@ -86,7 +90,7 @@ public unsafe partial struct IDxcContainerReflection
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerReflection*, uint*, int>)(lpVtbl[4]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), pResult);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::GetPartKind"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::GetPartKind"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetPartKind(uint idx, uint* pResult)
@@ -94,7 +98,7 @@ public unsafe partial struct IDxcContainerReflection
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerReflection*, uint, uint*, int>)(lpVtbl[5]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), idx, pResult);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::GetPartContent"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::GetPartContent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetPartContent(uint idx, IDxcBlob** ppResult)
@@ -102,7 +106,7 @@ public unsafe partial struct IDxcContainerReflection
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerReflection*, uint, IDxcBlob**, int>)(lpVtbl[6]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), idx, ppResult);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::FindFirstPartKind"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::FindFirstPartKind"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult FindFirstPartKind(uint kind, uint* pResult)
@@ -110,7 +114,7 @@ public unsafe partial struct IDxcContainerReflection
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerReflection*, uint, uint*, int>)(lpVtbl[7]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), kind, pResult);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::GetPartReflection"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerReflection::GetPartReflection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetPartReflection(uint idx, Guid* iid, void** ppvObject)

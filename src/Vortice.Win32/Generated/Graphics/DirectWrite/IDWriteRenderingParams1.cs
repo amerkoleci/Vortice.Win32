@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1"]/*' />
 /// <unmanaged>IDWriteRenderingParams1</unmanaged>
 [Guid("94413cf4-a6fc-4248-8b50-6674348fcad3")]
 [NativeTypeName("struct IDWriteRenderingParams1 : IDWriteRenderingParams")]
 [NativeInheritance("IDWriteRenderingParams")]
-public unsafe partial struct IDWriteRenderingParams1
+public unsafe partial struct IDWriteRenderingParams1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteRenderingParams1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteRenderingParams1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteRenderingParams1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteRenderingParams1));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct IDWriteRenderingParams1
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams1*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1::GetGrayscaleEnhancedContrast"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1::GetGrayscaleEnhancedContrast"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public float GetGrayscaleEnhancedContrast()

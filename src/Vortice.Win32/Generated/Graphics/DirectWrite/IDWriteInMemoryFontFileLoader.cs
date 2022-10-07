@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteInMemoryFontFileLoader"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteInMemoryFontFileLoader"]/*' />
 /// <unmanaged>IDWriteInMemoryFontFileLoader</unmanaged>
 [Guid("dc102f47-a12d-4b1c-822d-9e117e33043f")]
 [NativeTypeName("struct IDWriteInMemoryFontFileLoader : IDWriteFontFileLoader")]
 [NativeInheritance("IDWriteFontFileLoader")]
-public unsafe partial struct IDWriteInMemoryFontFileLoader
+public unsafe partial struct IDWriteInMemoryFontFileLoader : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteInMemoryFontFileLoader
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteInMemoryFontFileLoader));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteInMemoryFontFileLoader));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader
 		return ((delegate* unmanaged[Stdcall]<IDWriteInMemoryFontFileLoader*, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[3]))((IDWriteInMemoryFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteInMemoryFontFileLoader::CreateInMemoryFontFileReference"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteInMemoryFontFileLoader::CreateInMemoryFontFileReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateInMemoryFontFileReference(IDWriteFactory* factory, void* fontData, uint fontDataSize, IUnknown* ownerObject, IDWriteFontFile** fontFile)
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader
 		return ((delegate* unmanaged[Stdcall]<IDWriteInMemoryFontFileLoader*, IDWriteFactory*, void*, uint, IUnknown*, IDWriteFontFile**, int>)(lpVtbl[4]))((IDWriteInMemoryFontFileLoader*)Unsafe.AsPointer(ref this), factory, fontData, fontDataSize, ownerObject, fontFile);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteInMemoryFontFileLoader::GetFileCount"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteInMemoryFontFileLoader::GetFileCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public uint GetFileCount()

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch"]/*' />
 /// <unmanaged>ID2D1SpriteBatch</unmanaged>
 [Guid("4dc583bf-3a10-438a-8722-e9765224f1f1")]
 [NativeTypeName("struct ID2D1SpriteBatch : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1SpriteBatch
+public unsafe partial struct ID2D1SpriteBatch : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SpriteBatch
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1SpriteBatch
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SpriteBatch));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SpriteBatch));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1SpriteBatch
 		((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::AddSprites"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::AddSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult AddSprites(uint spriteCount, Common.RectF* destinationRectangles, Common.RectU* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1SpriteBatch
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint, Common.RectF*, Common.RectU*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[4]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::SetSprites"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::SetSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult SetSprites(uint startIndex, uint spriteCount, Common.RectF* destinationRectangles, Common.RectU* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1SpriteBatch
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint, uint, Common.RectF*, Common.RectU*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[5]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSprites"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSprites"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetSprites(uint startIndex, uint spriteCount, Common.RectF* destinationRectangles, Common.RectU* sourceRectangles, Color4** colors, Matrix3x2* transforms)
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1SpriteBatch
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint, uint, Common.RectF*, Common.RectU*, Color4**, Matrix3x2*, int>)(lpVtbl[6]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSpriteCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSpriteCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public uint GetSpriteCount()
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1SpriteBatch
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint>)(lpVtbl[7]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::Clear"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::Clear"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void Clear()

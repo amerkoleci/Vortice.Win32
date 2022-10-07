@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2"]/*' />
 /// <unmanaged>IDWriteTextLayout2</unmanaged>
 [Guid("1093c18f-8d5e-43f0-b064-0917311b525e")]
 [NativeTypeName("struct IDWriteTextLayout2 : IDWriteTextLayout1")]
 [NativeInheritance("IDWriteTextLayout1")]
-public unsafe partial struct IDWriteTextLayout2
+public unsafe partial struct IDWriteTextLayout2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextLayout2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTextLayout2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout2));
+#endif
 
 	public void** lpVtbl;
 
@@ -614,7 +618,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, uint, float*, float*, float*, TextRange*, int>)(lpVtbl[70]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this), currentPosition, leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetMetrics"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(71)]
 	public HResult GetMetrics(TextMetrics1* textMetrics)
@@ -622,7 +626,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, TextMetrics1*, int>)(lpVtbl[71]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this), textMetrics);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetVerticalGlyphOrientation"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
 	public HResult SetVerticalGlyphOrientation(VerticalGlyphOrientation glyphOrientation)
@@ -630,7 +634,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, VerticalGlyphOrientation, int>)(lpVtbl[72]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this), glyphOrientation);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetVerticalGlyphOrientation"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(73)]
 	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
@@ -638,7 +642,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, VerticalGlyphOrientation>)(lpVtbl[73]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetLastLineWrapping"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetLastLineWrapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(74)]
 	public HResult SetLastLineWrapping(Bool32 isLastLineWrappingEnabled)
@@ -646,7 +650,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Bool32, int>)(lpVtbl[74]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this), isLastLineWrappingEnabled);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetLastLineWrapping"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetLastLineWrapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(75)]
 	public Bool32 GetLastLineWrapping()
@@ -654,7 +658,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, Bool32>)(lpVtbl[75]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetOpticalAlignment"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetOpticalAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
 	public HResult SetOpticalAlignment(OpticalAlignment opticalAlignment)
@@ -662,7 +666,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, OpticalAlignment, int>)(lpVtbl[76]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this), opticalAlignment);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetOpticalAlignment"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetOpticalAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(77)]
 	public OpticalAlignment GetOpticalAlignment()
@@ -670,7 +674,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, OpticalAlignment>)(lpVtbl[77]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetFontFallback"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::SetFontFallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
 	public HResult SetFontFallback(IDWriteFontFallback* fontFallback)
@@ -678,7 +682,7 @@ public unsafe partial struct IDWriteTextLayout2
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout2*, IDWriteFontFallback*, int>)(lpVtbl[78]))((IDWriteTextLayout2*)Unsafe.AsPointer(ref this), fontFallback);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetFontFallback"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout2::GetFontFallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(79)]
 	public HResult GetFontFallback(IDWriteFontFallback** fontFallback)

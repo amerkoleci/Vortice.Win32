@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDisplayControl"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDisplayControl"]/*' />
 /// <unmanaged>IDXGIDisplayControl</unmanaged>
 [Guid("ea9dbf1a-c88e-4486-854a-98aa0138f30c")]
 [NativeTypeName("struct IDXGIDisplayControl : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIDisplayControl
+public unsafe partial struct IDXGIDisplayControl : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDisplayControl
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIDisplayControl
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDisplayControl));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDisplayControl));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDXGIDisplayControl
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDisplayControl::IsStereoEnabled"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDisplayControl::IsStereoEnabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public Bool32 IsStereoEnabled()
@@ -78,7 +82,7 @@ public unsafe partial struct IDXGIDisplayControl
 		return ((delegate* unmanaged[Stdcall]<IDXGIDisplayControl*, Bool32>)(lpVtbl[3]))((IDXGIDisplayControl*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDisplayControl::SetStereoEnabled"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDisplayControl::SetStereoEnabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetStereoEnabled(Bool32 enabled)

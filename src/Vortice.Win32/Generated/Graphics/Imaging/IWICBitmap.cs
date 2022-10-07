@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmap"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmap"]/*' />
 /// <unmanaged>IWICBitmap</unmanaged>
 [Guid("00000121-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmap : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICBitmap
+public unsafe partial struct IWICBitmap : INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmap
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICBitmap
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmap));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmap));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct IWICBitmap
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmap*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmap::Lock"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmap::Lock"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Lock(System.Drawing.Rectangle* prcLock, WICBitmapLockFlags flags, IWICBitmapLock** ppILock)
@@ -118,7 +122,7 @@ public unsafe partial struct IWICBitmap
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, System.Drawing.Rectangle*, WICBitmapLockFlags, IWICBitmapLock**, int>)(lpVtbl[8]))((IWICBitmap*)Unsafe.AsPointer(ref this), prcLock, flags, ppILock);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmap::SetPalette"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmap::SetPalette"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetPalette(IWICPalette* pIPalette)
@@ -126,7 +130,7 @@ public unsafe partial struct IWICBitmap
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, IWICPalette*, int>)(lpVtbl[9]))((IWICBitmap*)Unsafe.AsPointer(ref this), pIPalette);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmap::SetResolution"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmap::SetResolution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetResolution(double dpiX, double dpiY)

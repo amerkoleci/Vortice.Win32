@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink"]/*' />
 /// <unmanaged>ID2D1TessellationSink</unmanaged>
 [Guid("2cd906c1-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1TessellationSink : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1TessellationSink
+public unsafe partial struct ID2D1TessellationSink : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1TessellationSink
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1TessellationSink
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1TessellationSink));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1TessellationSink));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct ID2D1TessellationSink
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink::AddTriangles"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink::AddTriangles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void AddTriangles(Triangle* triangles, uint trianglesCount)
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1TessellationSink
 		((delegate* unmanaged[Stdcall]<ID2D1TessellationSink*, Triangle*, uint, void>)(lpVtbl[3]))((ID2D1TessellationSink*)Unsafe.AsPointer(ref this), triangles, trianglesCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink::Close"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TessellationSink::Close"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Close()

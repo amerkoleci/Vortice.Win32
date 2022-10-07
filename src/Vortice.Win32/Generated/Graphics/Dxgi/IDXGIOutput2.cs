@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIOutput2"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput2"]/*' />
 /// <unmanaged>IDXGIOutput2</unmanaged>
 [Guid("595e39d1-2724-4663-99b1-da969de28364")]
 [NativeTypeName("struct IDXGIOutput2 : IDXGIOutput1")]
 [NativeInheritance("IDXGIOutput1")]
-public unsafe partial struct IDXGIOutput2
+public unsafe partial struct IDXGIOutput2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIOutput2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput2));
+#endif
 
 	public void** lpVtbl;
 
@@ -230,7 +234,7 @@ public unsafe partial struct IDXGIOutput2
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIOutput2::SupportsOverlays"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput2::SupportsOverlays"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public Bool32 SupportsOverlays()

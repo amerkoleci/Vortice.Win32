@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform"]/*' />
 /// <unmanaged>IWICBitmapSourceTransform</unmanaged>
 [Guid("3b16811b-6a43-4ec9-b713-3d5a0c13b940")]
 [NativeTypeName("struct IWICBitmapSourceTransform : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICBitmapSourceTransform
+public unsafe partial struct IWICBitmapSourceTransform : INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapSourceTransform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICBitmapSourceTransform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapSourceTransform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapSourceTransform));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICBitmapSourceTransform
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::CopyPixels"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::CopyPixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICBitmapSourceTransform
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSourceTransform*, System.Drawing.Rectangle*, uint, uint, Guid*, WICBitmapTransformOptions, uint, uint, byte*, int>)(lpVtbl[3]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), prc, uiWidth, uiHeight, pguidDstFormat, dstTransform, nStride, cbBufferSize, pbBuffer);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::GetClosestSize"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::GetClosestSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetClosestSize(uint* puiWidth, uint* puiHeight)
@@ -86,7 +90,7 @@ public unsafe partial struct IWICBitmapSourceTransform
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSourceTransform*, uint*, uint*, int>)(lpVtbl[4]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::GetClosestPixelFormat"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::GetClosestPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetClosestPixelFormat(Guid* pguidDstFormat)
@@ -94,7 +98,7 @@ public unsafe partial struct IWICBitmapSourceTransform
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSourceTransform*, Guid*, int>)(lpVtbl[5]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), pguidDstFormat);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::DoesSupportTransform"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSourceTransform::DoesSupportTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported)

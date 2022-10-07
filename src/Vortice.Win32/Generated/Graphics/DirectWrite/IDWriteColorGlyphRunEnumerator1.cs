@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator1"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator1"]/*' />
 /// <unmanaged>IDWriteColorGlyphRunEnumerator1</unmanaged>
 [Guid("7c5f86da-c7a1-4f05-b8e1-55a179fe5a35")]
 [NativeTypeName("struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyphRunEnumerator")]
 [NativeInheritance("IDWriteColorGlyphRunEnumerator")]
-public unsafe partial struct IDWriteColorGlyphRunEnumerator1
+public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteColorGlyphRunEnumerator1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteColorGlyphRunEnumerator1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteColorGlyphRunEnumerator1));
+#endif
 
 	public void** lpVtbl;
 
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1
 		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator1::GetCurrentRun"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator1::GetCurrentRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetCurrentRun(ColorGlyphRun1** colorGlyphRun)

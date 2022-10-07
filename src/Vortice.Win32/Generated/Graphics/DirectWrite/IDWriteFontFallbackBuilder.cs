@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder"]/*' />
 /// <unmanaged>IDWriteFontFallbackBuilder</unmanaged>
 [Guid("fd882d06-8aba-4fb8-b849-8be8b73e14de")]
 [NativeTypeName("struct IDWriteFontFallbackBuilder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFallbackBuilder
+public unsafe partial struct IDWriteFontFallbackBuilder : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFallbackBuilder
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontFallbackBuilder
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFallbackBuilder));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFallbackBuilder));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::AddMapping"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::AddMapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult AddMapping(UnicodeRange* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, ushort* localeName, ushort* baseFamilyName, float scale)
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFallbackBuilder*, UnicodeRange*, uint, ushort**, uint, IDWriteFontCollection*, ushort*, ushort*, float, int>)(lpVtbl[3]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), ranges, rangesCount, targetFamilyNames, targetFamilyNamesCount, fontCollection, localeName, baseFamilyName, scale);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::AddMappings"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::AddMappings"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult AddMappings(IDWriteFontFallback* fontFallback)
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFallbackBuilder*, IDWriteFontFallback*, int>)(lpVtbl[4]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), fontFallback);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::CreateFontFallback"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFallbackBuilder::CreateFontFallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult CreateFontFallback(IDWriteFontFallback** fontFallback)

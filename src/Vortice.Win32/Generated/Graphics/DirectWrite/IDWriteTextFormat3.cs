@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3"]/*' />
 /// <unmanaged>IDWriteTextFormat3</unmanaged>
 [Guid("6d3b5641-e550-430d-a85b-b7bf48a93427")]
 [NativeTypeName("struct IDWriteTextFormat3 : IDWriteTextFormat2")]
 [NativeInheritance("IDWriteTextFormat2")]
-public unsafe partial struct IDWriteTextFormat3
+public unsafe partial struct IDWriteTextFormat3 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextFormat3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTextFormat3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextFormat3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextFormat3));
+#endif
 
 	public void** lpVtbl;
 
@@ -350,7 +354,7 @@ public unsafe partial struct IDWriteTextFormat3
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, LineSpacing*, int>)(lpVtbl[37]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::SetFontAxisValues"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::SetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
 	public HResult SetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount)
@@ -358,7 +362,7 @@ public unsafe partial struct IDWriteTextFormat3
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, FontAxisValue*, uint, int>)(lpVtbl[38]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetFontAxisValueCount"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetFontAxisValueCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
 	public uint GetFontAxisValueCount()
@@ -366,7 +370,7 @@ public unsafe partial struct IDWriteTextFormat3
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, uint>)(lpVtbl[39]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetFontAxisValues"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
 	public HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount)
@@ -374,7 +378,7 @@ public unsafe partial struct IDWriteTextFormat3
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, FontAxisValue*, uint, int>)(lpVtbl[40]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetAutomaticFontAxes"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::GetAutomaticFontAxes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
 	public AutomaticFontAxes GetAutomaticFontAxes()
@@ -382,7 +386,7 @@ public unsafe partial struct IDWriteTextFormat3
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, AutomaticFontAxes>)(lpVtbl[41]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::SetAutomaticFontAxes"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat3::SetAutomaticFontAxes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
 	public HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes)

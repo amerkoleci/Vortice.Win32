@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode"]/*' />
 /// <unmanaged>IWICDdsFrameDecode</unmanaged>
 [Guid("3d4c0c61-18a4-41e4-bd80-481a4fc9f464")]
 [NativeTypeName("struct IWICDdsFrameDecode : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICDdsFrameDecode
+public unsafe partial struct IWICDdsFrameDecode : INativeGuid
 {
 	public static ref readonly Guid IID_IWICDdsFrameDecode
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICDdsFrameDecode
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDdsFrameDecode));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDdsFrameDecode));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICDdsFrameDecode
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetSizeInBlocks"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetSizeInBlocks"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetSizeInBlocks(uint* pWidthInBlocks, uint* pHeightInBlocks)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICDdsFrameDecode
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, uint*, uint*, int>)(lpVtbl[3]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pWidthInBlocks, pHeightInBlocks);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetFormatInfo"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetFormatInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetFormatInfo(WICDdsFormatInfo* pFormatInfo)
@@ -86,7 +90,7 @@ public unsafe partial struct IWICDdsFrameDecode
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, WICDdsFormatInfo*, int>)(lpVtbl[4]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pFormatInfo);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::CopyBlocks"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::CopyBlocks"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer)

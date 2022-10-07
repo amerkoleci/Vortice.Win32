@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFormatConverterInfo"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICFormatConverterInfo"]/*' />
 /// <unmanaged>IWICFormatConverterInfo</unmanaged>
 [Guid("9f34fb65-13f4-4f15-bc57-3726b5e53d9f")]
 [NativeTypeName("struct IWICFormatConverterInfo : IWICComponentInfo")]
 [NativeInheritance("IWICComponentInfo")]
-public unsafe partial struct IWICFormatConverterInfo
+public unsafe partial struct IWICFormatConverterInfo : INativeGuid
 {
 	public static ref readonly Guid IID_IWICFormatConverterInfo
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICFormatConverterInfo
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICFormatConverterInfo));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICFormatConverterInfo));
+#endif
 
 	public void** lpVtbl;
 
@@ -134,7 +138,7 @@ public unsafe partial struct IWICFormatConverterInfo
 		return ((delegate* unmanaged[Stdcall]<IWICFormatConverterInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICFormatConverterInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFormatConverterInfo::GetPixelFormats"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICFormatConverterInfo::GetPixelFormats"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetPixelFormats(uint cFormats, Guid* pPixelFormatGUIDs, uint* pcActual)
@@ -142,7 +146,7 @@ public unsafe partial struct IWICFormatConverterInfo
 		return ((delegate* unmanaged[Stdcall]<IWICFormatConverterInfo*, uint, Guid*, uint*, int>)(lpVtbl[11]))((IWICFormatConverterInfo*)Unsafe.AsPointer(ref this), cFormats, pPixelFormatGUIDs, pcActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICFormatConverterInfo::CreateInstance"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICFormatConverterInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult CreateInstance(IWICFormatConverter** ppIConverter)

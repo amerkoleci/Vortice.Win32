@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileLoader"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileLoader"]/*' />
 /// <unmanaged>IDWriteFontFileLoader</unmanaged>
 [Guid("727cad4e-d6af-4c9e-8a08-d695b11caa49")]
 [NativeTypeName("struct IDWriteFontFileLoader : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFileLoader
+public unsafe partial struct IDWriteFontFileLoader : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFileLoader
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontFileLoader
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFileLoader));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFileLoader));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteFontFileLoader
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileLoader::CreateStreamFromKey"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileLoader::CreateStreamFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream)

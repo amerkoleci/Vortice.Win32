@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Resource"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Resource"]/*' />
 /// <unmanaged>ID2D1Resource</unmanaged>
 [Guid("2cd90691-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Resource : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1Resource
+public unsafe partial struct ID2D1Resource : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Resource
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Resource
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Resource));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Resource));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct ID2D1Resource
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Resource::GetFactory"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Resource::GetFactory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("3fd03d36-4eb1-424a-a582-494ecb8ba813")]
 [NativeTypeName("struct ID3D12LifetimeTracker : ID3D12DeviceChild")]
 [NativeInheritance("ID3D12DeviceChild")]
-public unsafe partial struct ID3D12LifetimeTracker
+public unsafe partial struct ID3D12LifetimeTracker : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12LifetimeTracker
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D12LifetimeTracker
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12LifetimeTracker));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12LifetimeTracker));
+#endif
 
 	public void** lpVtbl;
 

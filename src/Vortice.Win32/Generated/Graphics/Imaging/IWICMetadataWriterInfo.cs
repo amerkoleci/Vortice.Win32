@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataWriterInfo"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataWriterInfo"]/*' />
 /// <unmanaged>IWICMetadataWriterInfo</unmanaged>
 [Guid("b22e3fba-3925-4323-b5c1-9ebfc430f236")]
 [NativeTypeName("struct IWICMetadataWriterInfo : IWICMetadataHandlerInfo")]
 [NativeInheritance("IWICMetadataHandlerInfo")]
-public unsafe partial struct IWICMetadataWriterInfo
+public unsafe partial struct IWICMetadataWriterInfo : INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataWriterInfo
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICMetadataWriterInfo
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataWriterInfo));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataWriterInfo));
+#endif
 
 	public void** lpVtbl;
 
@@ -190,7 +194,7 @@ public unsafe partial struct IWICMetadataWriterInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriterInfo*, Bool32*, int>)(lpVtbl[17]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), pfFixedSize);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataWriterInfo::GetHeader"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataWriterInfo::GetHeader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult GetHeader(Guid* guidContainerFormat, uint cbSize, WICMetadataHeader* pHeader, uint* pcbActual)
@@ -198,7 +202,7 @@ public unsafe partial struct IWICMetadataWriterInfo
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriterInfo*, Guid*, uint, WICMetadataHeader*, uint*, int>)(lpVtbl[18]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pHeader, pcbActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataWriterInfo::CreateInstance"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataWriterInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult CreateInstance(IWICMetadataWriter** ppIWriter)

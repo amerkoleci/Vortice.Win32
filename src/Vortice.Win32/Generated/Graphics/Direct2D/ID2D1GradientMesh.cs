@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh"]/*' />
 /// <unmanaged>ID2D1GradientMesh</unmanaged>
 [Guid("f292e401-c050-4cde-83d7-04962d3b23c2")]
 [NativeTypeName("struct ID2D1GradientMesh : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1GradientMesh
+public unsafe partial struct ID2D1GradientMesh : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GradientMesh
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1GradientMesh
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GradientMesh));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GradientMesh));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1GradientMesh
 		((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh::GetPatchCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh::GetPatchCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public uint GetPatchCount()
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1GradientMesh
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, uint>)(lpVtbl[4]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh::GetPatches"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh::GetPatches"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetPatches(uint startIndex, GradientMeshPatch* patches, uint patchesCount)

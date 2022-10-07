@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1"]/*' />
 /// <unmanaged>ID2D1BitmapBrush1</unmanaged>
 [Guid("41343a53-e41a-49a2-91cd-21793bbb62e5")]
 [NativeTypeName("struct ID2D1BitmapBrush1 : ID2D1BitmapBrush")]
 [NativeInheritance("ID2D1BitmapBrush")]
-public unsafe partial struct ID2D1BitmapBrush1
+public unsafe partial struct ID2D1BitmapBrush1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1BitmapBrush1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1BitmapBrush1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1BitmapBrush1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1BitmapBrush1));
+#endif
 
 	public void** lpVtbl;
 
@@ -174,7 +178,7 @@ public unsafe partial struct ID2D1BitmapBrush1
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ID2D1Bitmap**, void>)(lpVtbl[15]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), bitmap);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::SetInterpolationMode1"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::SetInterpolationMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public void SetInterpolationMode1(InterpolationMode interpolationMode)
@@ -182,7 +186,7 @@ public unsafe partial struct ID2D1BitmapBrush1
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, InterpolationMode, void>)(lpVtbl[16]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::GetInterpolationMode1"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::GetInterpolationMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public InterpolationMode GetInterpolationMode1()

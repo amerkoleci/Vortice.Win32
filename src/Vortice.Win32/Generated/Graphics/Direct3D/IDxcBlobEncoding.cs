@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcBlobEncoding"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcBlobEncoding"]/*' />
 /// <unmanaged>IDxcBlobEncoding</unmanaged>
 [Guid("7241d424-2646-4191-97c0-98e96e42fc68")]
 [NativeTypeName("struct IDxcBlobEncoding : IDxcBlob")]
 [NativeInheritance("IDxcBlob")]
-public unsafe partial struct IDxcBlobEncoding
+public unsafe partial struct IDxcBlobEncoding : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcBlobEncoding
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcBlobEncoding
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcBlobEncoding));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcBlobEncoding));
+#endif
 
 	public void** lpVtbl;
 
@@ -86,7 +90,7 @@ public unsafe partial struct IDxcBlobEncoding
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobEncoding*, nuint>)(lpVtbl[4]))((IDxcBlobEncoding*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcBlobEncoding::GetEncoding"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcBlobEncoding::GetEncoding"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetEncoding(Bool32* pKnown, DxcCp* pCodePage)

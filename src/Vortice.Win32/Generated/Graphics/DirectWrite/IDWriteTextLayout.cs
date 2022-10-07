@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout"]/*' />
 /// <unmanaged>IDWriteTextLayout</unmanaged>
 [Guid("53737037-6d14-410b-9bfe-0b182bb70961")]
 [NativeTypeName("struct IDWriteTextLayout : IDWriteTextFormat")]
 [NativeInheritance("IDWriteTextFormat")]
-public unsafe partial struct IDWriteTextLayout
+public unsafe partial struct IDWriteTextLayout : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextLayout
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTextLayout
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout));
+#endif
 
 	public void** lpVtbl;
 
@@ -270,7 +274,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, nameSize);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetMaxWidth"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetMaxWidth"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult SetMaxWidth(float maxWidth)
@@ -278,7 +282,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float, int>)(lpVtbl[28]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), maxWidth);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetMaxHeight"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetMaxHeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult SetMaxHeight(float maxHeight)
@@ -286,7 +290,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float, int>)(lpVtbl[29]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), maxHeight);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontCollection"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult SetFontCollection(IDWriteFontCollection* fontCollection, TextRange* textRange)
@@ -294,7 +298,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteFontCollection*, TextRange*, int>)(lpVtbl[30]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontCollection, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontFamilyName"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult SetFontFamilyName(ushort* fontFamilyName, TextRange* textRange)
@@ -302,7 +306,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ushort*, TextRange*, int>)(lpVtbl[31]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontWeight"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult SetFontWeight(FontWeight fontWeight, TextRange* textRange)
@@ -310,7 +314,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontWeight, TextRange*, int>)(lpVtbl[32]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontWeight, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontStyle"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public HResult SetFontStyle(FontStyle fontStyle, TextRange* textRange)
@@ -318,7 +322,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontStyle, TextRange*, int>)(lpVtbl[33]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStyle, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontStretch"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult SetFontStretch(FontStretch fontStretch, TextRange* textRange)
@@ -326,7 +330,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontStretch, TextRange*, int>)(lpVtbl[34]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStretch, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontSize"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
 	public HResult SetFontSize(float fontSize, TextRange* textRange)
@@ -334,7 +338,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float, TextRange*, int>)(lpVtbl[35]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontSize, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetUnderline"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetUnderline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
 	public HResult SetUnderline(Bool32 hasUnderline, TextRange* textRange)
@@ -342,7 +346,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Bool32, TextRange*, int>)(lpVtbl[36]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasUnderline, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetStrikethrough"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetStrikethrough"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
 	public HResult SetStrikethrough(Bool32 hasStrikethrough, TextRange* textRange)
@@ -350,7 +354,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Bool32, TextRange*, int>)(lpVtbl[37]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasStrikethrough, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetDrawingEffect"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetDrawingEffect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
 	public HResult SetDrawingEffect(IUnknown* drawingEffect, TextRange* textRange)
@@ -358,7 +362,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IUnknown*, TextRange*, int>)(lpVtbl[38]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), drawingEffect, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetInlineObject"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetInlineObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
 	public HResult SetInlineObject(IDWriteInlineObject* inlineObject, TextRange* textRange)
@@ -366,7 +370,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteInlineObject*, TextRange*, int>)(lpVtbl[39]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), inlineObject, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetTypography"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetTypography"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
 	public HResult SetTypography(IDWriteTypography* typography, TextRange* textRange)
@@ -374,7 +378,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteTypography*, TextRange*, int>)(lpVtbl[40]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), typography, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetLocaleName"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
 	public HResult SetLocaleName(ushort* localeName, TextRange* textRange)
@@ -382,7 +386,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ushort*, TextRange*, int>)(lpVtbl[41]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMaxWidth"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMaxWidth"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
 	public float GetMaxWidth()
@@ -390,7 +394,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float>)(lpVtbl[42]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMaxHeight"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMaxHeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
 	public float GetMaxHeight()
@@ -398,7 +402,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float>)(lpVtbl[43]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontCollection"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
 	public HResult GetFontCollection(uint currentPosition, IDWriteFontCollection** fontCollection, TextRange* textRange)
@@ -406,7 +410,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, IDWriteFontCollection**, TextRange*, int>)(lpVtbl[44]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontCollection, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontFamilyNameLength"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontFamilyNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
 	public HResult GetFontFamilyNameLength(uint currentPosition, uint* nameLength, TextRange* textRange)
@@ -414,7 +418,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, uint*, TextRange*, int>)(lpVtbl[45]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontFamilyName"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
 	public HResult GetFontFamilyName(uint currentPosition, ushort* fontFamilyName, uint nameSize, TextRange* textRange)
@@ -422,7 +426,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, ushort*, uint, TextRange*, int>)(lpVtbl[46]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontFamilyName, nameSize, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontWeight"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
 	public HResult GetFontWeight(uint currentPosition, FontWeight* fontWeight, TextRange* textRange)
@@ -430,7 +434,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, FontWeight*, TextRange*, int>)(lpVtbl[47]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontWeight, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontStyle"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
 	public HResult GetFontStyle(uint currentPosition, FontStyle* fontStyle, TextRange* textRange)
@@ -438,7 +442,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, FontStyle*, TextRange*, int>)(lpVtbl[48]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontStyle, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontStretch"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
 	public HResult GetFontStretch(uint currentPosition, FontStretch* fontStretch, TextRange* textRange)
@@ -446,7 +450,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, FontStretch*, TextRange*, int>)(lpVtbl[49]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontStretch, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontSize"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
 	public HResult GetFontSize(uint currentPosition, float* fontSize, TextRange* textRange)
@@ -454,7 +458,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, float*, TextRange*, int>)(lpVtbl[50]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontSize, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetUnderline"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetUnderline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
 	public HResult GetUnderline(uint currentPosition, Bool32* hasUnderline, TextRange* textRange)
@@ -462,7 +466,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, Bool32*, TextRange*, int>)(lpVtbl[51]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, hasUnderline, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetStrikethrough"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetStrikethrough"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
 	public HResult GetStrikethrough(uint currentPosition, Bool32* hasStrikethrough, TextRange* textRange)
@@ -470,7 +474,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, Bool32*, TextRange*, int>)(lpVtbl[52]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, hasStrikethrough, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetDrawingEffect"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetDrawingEffect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
 	public HResult GetDrawingEffect(uint currentPosition, IUnknown** drawingEffect, TextRange* textRange)
@@ -478,7 +482,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, IUnknown**, TextRange*, int>)(lpVtbl[53]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, drawingEffect, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetInlineObject"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetInlineObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
 	public HResult GetInlineObject(uint currentPosition, IDWriteInlineObject** inlineObject, TextRange* textRange)
@@ -486,7 +490,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, IDWriteInlineObject**, TextRange*, int>)(lpVtbl[54]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, inlineObject, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetTypography"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetTypography"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(55)]
 	public HResult GetTypography(uint currentPosition, IDWriteTypography** typography, TextRange* textRange)
@@ -494,7 +498,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, IDWriteTypography**, TextRange*, int>)(lpVtbl[55]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, typography, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLocaleNameLength"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLocaleNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
 	public HResult GetLocaleNameLength(uint currentPosition, uint* nameLength, TextRange* textRange)
@@ -502,7 +506,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, uint*, TextRange*, int>)(lpVtbl[56]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLocaleName"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
 	public HResult GetLocaleName(uint currentPosition, ushort* localeName, uint nameSize, TextRange* textRange)
@@ -510,7 +514,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, ushort*, uint, TextRange*, int>)(lpVtbl[57]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, localeName, nameSize, textRange);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::Draw"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::Draw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
 	public HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY)
@@ -518,7 +522,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, void*, IDWriteTextRenderer*, float, float, int>)(lpVtbl[58]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), clientDrawingContext, renderer, originX, originY);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLineMetrics"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLineMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(59)]
 	public HResult GetLineMetrics(LineMetrics* lineMetrics, uint maxLineCount, uint* actualLineCount)
@@ -526,7 +530,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, LineMetrics*, uint, uint*, int>)(lpVtbl[59]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMetrics"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
 	public HResult GetMetrics(TextMetrics* textMetrics)
@@ -534,7 +538,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, TextMetrics*, int>)(lpVtbl[60]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textMetrics);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetOverhangMetrics"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetOverhangMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
 	public HResult GetOverhangMetrics(OverhangMetrics* overhangs)
@@ -542,7 +546,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, OverhangMetrics*, int>)(lpVtbl[61]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), overhangs);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetClusterMetrics"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetClusterMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
 	public HResult GetClusterMetrics(ClusterMetrics* clusterMetrics, uint maxClusterCount, uint* actualClusterCount)
@@ -550,7 +554,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ClusterMetrics*, uint, uint*, int>)(lpVtbl[62]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), clusterMetrics, maxClusterCount, actualClusterCount);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::DetermineMinWidth"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::DetermineMinWidth"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(63)]
 	public HResult DetermineMinWidth(float* minWidth)
@@ -558,7 +562,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float*, int>)(lpVtbl[63]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), minWidth);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestPoint"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
 	public HResult HitTestPoint(float pointX, float pointY, Bool32* isTrailingHit, Bool32* isInside, HitTestMetrics* hitTestMetrics)
@@ -566,7 +570,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float, float, Bool32*, Bool32*, HitTestMetrics*, int>)(lpVtbl[64]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), pointX, pointY, isTrailingHit, isInside, hitTestMetrics);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestTextPosition"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestTextPosition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
 	public HResult HitTestTextPosition(uint textPosition, Bool32 isTrailingHit, float* pointX, float* pointY, HitTestMetrics* hitTestMetrics)
@@ -574,7 +578,7 @@ public unsafe partial struct IDWriteTextLayout
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, Bool32, float*, float*, HitTestMetrics*, int>)(lpVtbl[65]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textPosition, isTrailingHit, pointX, pointY, hitTestMetrics);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestTextRange"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::HitTestTextRange"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
 	public HResult HitTestTextRange(uint textPosition, uint textLength, float originX, float originY, HitTestMetrics* hitTestMetrics, uint maxHitTestMetricsCount, uint* actualHitTestMetricsCount)

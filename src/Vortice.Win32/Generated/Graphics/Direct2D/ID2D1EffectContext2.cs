@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext2"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectContext2"]/*' />
 /// <unmanaged>ID2D1EffectContext2</unmanaged>
 [Guid("577ad2a0-9fc7-4dda-8b18-dab810140052")]
 [NativeTypeName("struct ID2D1EffectContext2 : ID2D1EffectContext1")]
 [NativeInheritance("ID2D1EffectContext1")]
-public unsafe partial struct ID2D1EffectContext2
+public unsafe partial struct ID2D1EffectContext2 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1EffectContext2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1EffectContext2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1EffectContext2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1EffectContext2));
+#endif
 
 	public void** lpVtbl;
 
@@ -246,7 +250,7 @@ public unsafe partial struct ID2D1EffectContext2
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext2*, BufferPrecision, uint*, byte*, uint, uint*, ID2D1LookupTable3D**, int>)(lpVtbl[24]))((ID2D1EffectContext2*)Unsafe.AsPointer(ref this), precision, extents, data, dataCount, strides, lookupTable);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext2::CreateColorContextFromDxgiColorSpace"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectContext2::CreateColorContextFromDxgiColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CreateColorContextFromDxgiColorSpace(Graphics.Dxgi.Common.ColorSpaceType colorSpace, ID2D1ColorContext1** colorContext)
@@ -254,7 +258,7 @@ public unsafe partial struct ID2D1EffectContext2
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext2*, Graphics.Dxgi.Common.ColorSpaceType, ID2D1ColorContext1**, int>)(lpVtbl[25]))((ID2D1EffectContext2*)Unsafe.AsPointer(ref this), colorSpace, colorContext);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext2::CreateColorContextFromSimpleColorProfile"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectContext2::CreateColorContextFromSimpleColorProfile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult CreateColorContextFromSimpleColorProfile(SimpleColorProfile* simpleProfile, ID2D1ColorContext1** colorContext)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontList2"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontList2"]/*' />
 /// <unmanaged>IDWriteFontList2</unmanaged>
 [Guid("c0763a34-77af-445a-b735-08c37b0a5bf5")]
 [NativeTypeName("struct IDWriteFontList2 : IDWriteFontList1")]
 [NativeInheritance("IDWriteFontList1")]
-public unsafe partial struct IDWriteFontList2
+public unsafe partial struct IDWriteFontList2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontList2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontList2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontList2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontList2));
+#endif
 
 	public void** lpVtbl;
 
@@ -118,7 +122,7 @@ public unsafe partial struct IDWriteFontList2
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontList2*, uint, IDWriteFontFaceReference**, int>)(lpVtbl[8]))((IDWriteFontList2*)Unsafe.AsPointer(ref this), listIndex, fontFaceReference);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontList2::GetFontSet"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontList2::GetFontSet"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetFontSet(IDWriteFontSet1** fontSet)

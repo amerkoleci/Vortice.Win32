@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICStream"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICStream"]/*' />
 /// <unmanaged>IWICStream</unmanaged>
 [Guid("135ff860-22b7-4ddf-b0f6-218f4f299a43")]
 [NativeTypeName("struct IWICStream : IStream")]
 [NativeInheritance("IStream")]
-public unsafe partial struct IWICStream
+public unsafe partial struct IWICStream : INativeGuid
 {
 	public static ref readonly Guid IID_IWICStream
 	{
@@ -40,11 +40,15 @@ public unsafe partial struct IWICStream
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICStream));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICStream));
+#endif
 
 	public void** lpVtbl;
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStream"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public HResult InitializeFromIStream(Com.IStream* pIStream)
@@ -52,7 +56,7 @@ public unsafe partial struct IWICStream
 		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, int>)(lpVtbl[0]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromFilename"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
 	public HResult InitializeFromFilename(ushort* wzFileName, uint dwDesiredAccess)
@@ -60,7 +64,7 @@ public unsafe partial struct IWICStream
 		return ((delegate* unmanaged[Stdcall]<IWICStream*, ushort*, uint, int>)(lpVtbl[1]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromMemory"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
 	public HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
@@ -68,7 +72,7 @@ public unsafe partial struct IWICStream
 		return ((delegate* unmanaged[Stdcall]<IWICStream*, byte*, uint, int>)(lpVtbl[2]))((IWICStream*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStreamRegion"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStreamRegion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ULargeInteger ulOffset, ULargeInteger ulMaxSize)

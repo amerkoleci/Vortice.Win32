@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTypography"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTypography"]/*' />
 /// <unmanaged>IDWriteTypography</unmanaged>
 [Guid("55f1112b-1dc2-4b3c-9541-f46894ed85b6")]
 [NativeTypeName("struct IDWriteTypography : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteTypography
+public unsafe partial struct IDWriteTypography : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTypography
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTypography
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTypography));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTypography));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteTypography
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::AddFontFeature"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTypography::AddFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult AddFontFeature(FontFeature* fontFeature)
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteTypography
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, FontFeature*, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeatureCount"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeatureCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public uint GetFontFeatureCount()
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteTypography
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, uint>)(lpVtbl[4]))((IDWriteTypography*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeature"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetFontFeature(uint fontFeatureIndex, FontFeature* fontFeature)

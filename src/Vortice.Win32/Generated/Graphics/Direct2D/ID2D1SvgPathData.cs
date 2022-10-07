@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData"]/*' />
 /// <unmanaged>ID2D1SvgPathData</unmanaged>
 [Guid("c095e4f4-bb98-43d6-9745-4d1b84ec9888")]
 [NativeTypeName("struct ID2D1SvgPathData : ID2D1SvgAttribute")]
 [NativeInheritance("ID2D1SvgAttribute")]
-public unsafe partial struct ID2D1SvgPathData
+public unsafe partial struct ID2D1SvgPathData : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgPathData
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1SvgPathData
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SvgPathData));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SvgPathData));
+#endif
 
 	public void** lpVtbl;
 
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), attribute);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::RemoveSegmentDataAtEnd"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::RemoveSegmentDataAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult RemoveSegmentDataAtEnd(uint dataCount)
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, uint, int>)(lpVtbl[6]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), dataCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::UpdateSegmentData"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::UpdateSegmentData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult UpdateSegmentData(float* data, uint dataCount, uint startIndex)
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, float*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), data, dataCount, startIndex);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetSegmentData"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetSegmentData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetSegmentData(float* data, uint dataCount, uint startIndex)
@@ -118,7 +122,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, float*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), data, dataCount, startIndex);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetSegmentDataCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetSegmentDataCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public uint GetSegmentDataCount()
@@ -126,7 +130,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, uint>)(lpVtbl[9]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::RemoveCommandsAtEnd"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::RemoveCommandsAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult RemoveCommandsAtEnd(uint commandsCount)
@@ -134,7 +138,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, uint, int>)(lpVtbl[10]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), commandsCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::UpdateCommands"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::UpdateCommands"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult UpdateCommands(SvgPathCommand* commands, uint commandsCount, uint startIndex)
@@ -142,7 +146,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, SvgPathCommand*, uint, uint, int>)(lpVtbl[11]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), commands, commandsCount, startIndex);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetCommands"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetCommands"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetCommands(SvgPathCommand* commands, uint commandsCount, uint startIndex)
@@ -150,7 +154,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, SvgPathCommand*, uint, uint, int>)(lpVtbl[12]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), commands, commandsCount, startIndex);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetCommandsCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::GetCommandsCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public uint GetCommandsCount()
@@ -158,7 +162,7 @@ public unsafe partial struct ID2D1SvgPathData
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, uint>)(lpVtbl[13]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::CreatePathGeometry"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPathData::CreatePathGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult CreatePathGeometry(Common.FillMode fillMode, ID2D1PathGeometry1** pathGeometry)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry1"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry1"]/*' />
 /// <unmanaged>ID2D1PathGeometry1</unmanaged>
 [Guid("62baa2d2-ab54-41b7-b872-787e0106a421")]
 [NativeTypeName("struct ID2D1PathGeometry1 : ID2D1PathGeometry")]
 [NativeInheritance("ID2D1PathGeometry")]
-public unsafe partial struct ID2D1PathGeometry1
+public unsafe partial struct ID2D1PathGeometry1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1PathGeometry1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1PathGeometry1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1PathGeometry1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1PathGeometry1));
+#endif
 
 	public void** lpVtbl;
 
@@ -214,7 +218,7 @@ public unsafe partial struct ID2D1PathGeometry1
 		return ((delegate* unmanaged[Stdcall]<ID2D1PathGeometry1*, uint*, int>)(lpVtbl[20]))((ID2D1PathGeometry1*)Unsafe.AsPointer(ref this), count);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry1::ComputePointAndSegmentAtLength"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry1::ComputePointAndSegmentAtLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult ComputePointAndSegmentAtLength(float length, uint startSegment, Matrix3x2* worldTransform, float flatteningTolerance, PointDescription* pointDescription)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter"]/*' />
 /// <unmanaged>IWICMetadataQueryWriter</unmanaged>
 [Guid("a721791a-0def-4d06-bd91-2118bf1db10b")]
 [NativeTypeName("struct IWICMetadataQueryWriter : IWICMetadataQueryReader")]
 [NativeInheritance("IWICMetadataQueryReader")]
-public unsafe partial struct IWICMetadataQueryWriter
+public unsafe partial struct IWICMetadataQueryWriter : INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataQueryWriter
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICMetadataQueryWriter
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataQueryWriter));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataQueryWriter));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct IWICMetadataQueryWriter
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryWriter*, Com.IEnumString**, int>)(lpVtbl[6]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), ppIEnumString);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter::SetMetadataByName"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter::SetMetadataByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetMetadataByName(ushort* wzName, Com.Variant* pvarValue)
@@ -110,7 +114,7 @@ public unsafe partial struct IWICMetadataQueryWriter
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryWriter*, ushort*, Com.Variant*, int>)(lpVtbl[7]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName, pvarValue);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter::RemoveMetadataByName"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter::RemoveMetadataByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult RemoveMetadataByName(ushort* wzName)

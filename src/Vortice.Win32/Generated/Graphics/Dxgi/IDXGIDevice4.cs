@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDevice4"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice4"]/*' />
 /// <unmanaged>IDXGIDevice4</unmanaged>
 [Guid("95b4f95f-d8da-4ca4-9ee6-3b76d5968a10")]
 [NativeTypeName("struct IDXGIDevice4 : IDXGIDevice3")]
 [NativeInheritance("IDXGIDevice3")]
-public unsafe partial struct IDXGIDevice4
+public unsafe partial struct IDXGIDevice4 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDevice4
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIDevice4
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice4));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIDevice4));
+#endif
 
 	public void** lpVtbl;
 
@@ -190,7 +194,7 @@ public unsafe partial struct IDXGIDevice4
 		((delegate* unmanaged[Stdcall]<IDXGIDevice4*, void>)(lpVtbl[17]))((IDXGIDevice4*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDevice4::OfferResources1"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice4::OfferResources1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult OfferResources1(uint NumResources, IDXGIResource** ppResources, OfferResourcePriority Priority, uint Flags)
@@ -198,7 +202,7 @@ public unsafe partial struct IDXGIDevice4
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice4*, uint, IDXGIResource**, OfferResourcePriority, uint, int>)(lpVtbl[18]))((IDXGIDevice4*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority, Flags);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIDevice4::ReclaimResources1"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice4::ReclaimResources1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult ReclaimResources1(uint NumResources, IDXGIResource** ppResources, ReclaimResourceResults* pResults)

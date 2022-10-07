@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2"]/*' />
 /// <unmanaged>IDxcVersionInfo2</unmanaged>
 [Guid("fb6904c4-42f0-4b62-9c46-983af7da7c83")]
 [NativeTypeName("struct IDxcVersionInfo2 : IDxcVersionInfo")]
 [NativeInheritance("IDxcVersionInfo")]
-public unsafe partial struct IDxcVersionInfo2
+public unsafe partial struct IDxcVersionInfo2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcVersionInfo2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcVersionInfo2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcVersionInfo2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcVersionInfo2));
+#endif
 
 	public void** lpVtbl;
 
@@ -86,7 +90,7 @@ public unsafe partial struct IDxcVersionInfo2
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pFlags);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2::GetCommitInfo"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2::GetCommitInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetCommitInfo(uint* pCommitCount, sbyte** pCommitHash)

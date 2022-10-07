@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform"]/*' />
 /// <unmanaged>ID2D1ComputeTransform</unmanaged>
 [Guid("0d85573c-01e3-4f7d-bfd9-0d60608bf3c3")]
 [NativeTypeName("struct ID2D1ComputeTransform : ID2D1Transform")]
 [NativeInheritance("ID2D1Transform")]
-public unsafe partial struct ID2D1ComputeTransform
+public unsafe partial struct ID2D1ComputeTransform : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ComputeTransform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1ComputeTransform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ComputeTransform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ComputeTransform));
+#endif
 
 	public void** lpVtbl;
 
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1ComputeTransform
 		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, uint, RawRect*, RawRect*, int>)(lpVtbl[6]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::SetComputeInfo"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::SetComputeInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetComputeInfo(ID2D1ComputeInfo* computeInfo)
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1ComputeTransform
 		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, ID2D1ComputeInfo*, int>)(lpVtbl[7]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), computeInfo);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::CalculateThreadgroups"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::CalculateThreadgroups"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CalculateThreadgroups(RawRect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapLock"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapLock"]/*' />
 /// <unmanaged>IWICBitmapLock</unmanaged>
 [Guid("00000123-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmapLock : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICBitmapLock
+public unsafe partial struct IWICBitmapLock : INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapLock
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICBitmapLock
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapLock));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapLock));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICBitmapLock
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetSize"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetSize(uint* puiWidth, uint* puiHeight)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICBitmapLock
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetStride"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetStride"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetStride(uint* pcbStride)
@@ -86,7 +90,7 @@ public unsafe partial struct IWICBitmapLock
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, uint*, int>)(lpVtbl[4]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pcbStride);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetDataPointer"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetDataPointer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetDataPointer(uint* pcbBufferSize, byte** ppbData)
@@ -94,7 +98,7 @@ public unsafe partial struct IWICBitmapLock
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, uint*, byte**, int>)(lpVtbl[5]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pcbBufferSize, ppbData);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetPixelFormat"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetPixelFormat(Guid* pPixelFormat)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory3"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory3"]/*' />
 /// <unmanaged>IDXGIFactory3</unmanaged>
 [Guid("25483823-cd46-4c7d-86ca-47aa95b837bd")]
 [NativeTypeName("struct IDXGIFactory3 : IDXGIFactory2")]
 [NativeInheritance("IDXGIFactory2")]
-public unsafe partial struct IDXGIFactory3
+public unsafe partial struct IDXGIFactory3 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactory3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory3));
+#endif
 
 	public void** lpVtbl;
 
@@ -246,7 +250,7 @@ public unsafe partial struct IDXGIFactory3
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[24]))((IDXGIFactory3*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory3::GetCreationFlags"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory3::GetCreationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public uint GetCreationFlags()

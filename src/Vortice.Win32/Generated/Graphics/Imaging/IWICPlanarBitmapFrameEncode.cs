@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode"]/*' />
 /// <unmanaged>IWICPlanarBitmapFrameEncode</unmanaged>
 [Guid("f928b7b8-2221-40c1-b72e-7e82f1974d1a")]
 [NativeTypeName("struct IWICPlanarBitmapFrameEncode : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICPlanarBitmapFrameEncode
+public unsafe partial struct IWICPlanarBitmapFrameEncode : INativeGuid
 {
 	public static ref readonly Guid IID_IWICPlanarBitmapFrameEncode
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPlanarBitmapFrameEncode));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPlanarBitmapFrameEncode));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode::WritePixels"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode::WritePixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult WritePixels(uint lineCount, WICBitmapPlane* pPlanes, uint cPlanes)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapFrameEncode*, uint, WICBitmapPlane*, uint, int>)(lpVtbl[3]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), lineCount, pPlanes, cPlanes);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode::WriteSource"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarBitmapFrameEncode::WriteSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, System.Drawing.Rectangle* prcSource)

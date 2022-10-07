@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcOperationResult"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOperationResult"]/*' />
 /// <unmanaged>IDxcOperationResult</unmanaged>
 [Guid("cedb484a-d4e9-445a-b991-ca21ca157dc2")]
 [NativeTypeName("struct IDxcOperationResult : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcOperationResult
+public unsafe partial struct IDxcOperationResult : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcOperationResult
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcOperationResult
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcOperationResult));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcOperationResult));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDxcOperationResult
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcOperationResult::GetStatus"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOperationResult::GetStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetStatus(HResult* pStatus)
@@ -78,7 +82,7 @@ public unsafe partial struct IDxcOperationResult
 		return ((delegate* unmanaged[Stdcall]<IDxcOperationResult*, HResult*, int>)(lpVtbl[3]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), pStatus);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcOperationResult::GetResult"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOperationResult::GetResult"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetResult(IDxcBlob** ppResult)
@@ -86,7 +90,7 @@ public unsafe partial struct IDxcOperationResult
 		return ((delegate* unmanaged[Stdcall]<IDxcOperationResult*, IDxcBlob**, int>)(lpVtbl[4]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcOperationResult::GetErrorBuffer"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOperationResult::GetErrorBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetErrorBuffer(IDxcBlobEncoding** ppErrors)

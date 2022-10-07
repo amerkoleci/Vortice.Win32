@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorContext"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICColorContext"]/*' />
 /// <unmanaged>IWICColorContext</unmanaged>
 [Guid("3c613a02-34b2-44ea-9a7c-45aea9c6fd6d")]
 [NativeTypeName("struct IWICColorContext : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICColorContext
+public unsafe partial struct IWICColorContext : INativeGuid
 {
 	public static ref readonly Guid IID_IWICColorContext
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICColorContext
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICColorContext));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICColorContext));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICColorContext
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromFilename"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult InitializeFromFilename(ushort* wzFilename)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICColorContext
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, ushort*, int>)(lpVtbl[3]))((IWICColorContext*)Unsafe.AsPointer(ref this), wzFilename);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromMemory"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
@@ -86,7 +90,7 @@ public unsafe partial struct IWICColorContext
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, byte*, uint, int>)(lpVtbl[4]))((IWICColorContext*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromExifColorSpace"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromExifColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult InitializeFromExifColorSpace(uint value)
@@ -94,7 +98,7 @@ public unsafe partial struct IWICColorContext
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint, int>)(lpVtbl[5]))((IWICColorContext*)Unsafe.AsPointer(ref this), value);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorContext::GetType"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICColorContext::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetType(WICColorContextType* pType)
@@ -102,7 +106,7 @@ public unsafe partial struct IWICColorContext
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, WICColorContextType*, int>)(lpVtbl[6]))((IWICColorContext*)Unsafe.AsPointer(ref this), pType);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorContext::GetProfileBytes"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICColorContext::GetProfileBytes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetProfileBytes(uint cbBuffer, byte* pbBuffer, uint* pcbActual)
@@ -110,7 +114,7 @@ public unsafe partial struct IWICColorContext
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint, byte*, uint*, int>)(lpVtbl[7]))((IWICColorContext*)Unsafe.AsPointer(ref this), cbBuffer, pbBuffer, pcbActual);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICColorContext::GetExifColorSpace"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICColorContext::GetExifColorSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetExifColorSpace(uint* pValue)

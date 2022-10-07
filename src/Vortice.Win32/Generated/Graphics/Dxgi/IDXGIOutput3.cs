@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
 /// <unmanaged>IDXGIOutput3</unmanaged>
 [Guid("8a6bb301-7e7e-41f4-a8e0-5b32f7f99b18")]
 [NativeTypeName("struct IDXGIOutput3 : IDXGIOutput2")]
 [NativeInheritance("IDXGIOutput2")]
-public unsafe partial struct IDXGIOutput3
+public unsafe partial struct IDXGIOutput3 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIOutput3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput3));
+#endif
 
 	public void** lpVtbl;
 
@@ -238,7 +242,7 @@ public unsafe partial struct IDXGIOutput3
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Bool32>)(lpVtbl[23]))((IDXGIOutput3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIOutput3::CheckOverlaySupport"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput3::CheckOverlaySupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)

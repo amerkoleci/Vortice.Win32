@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging.D2D;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICImagingFactory2"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICImagingFactory2"]/*' />
 /// <unmanaged>IWICImagingFactory2</unmanaged>
 [Guid("7b816b45-1996-4476-b132-de9e247c8af0")]
 [NativeTypeName("struct IWICImagingFactory2 : IWICImagingFactory")]
 [NativeInheritance("IWICImagingFactory")]
-public unsafe partial struct IWICImagingFactory2
+public unsafe partial struct IWICImagingFactory2 : INativeGuid
 {
 	public static ref readonly Guid IID_IWICImagingFactory2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICImagingFactory2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICImagingFactory2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICImagingFactory2));
+#endif
 
 	public void** lpVtbl;
 
@@ -244,7 +248,7 @@ public unsafe partial struct IWICImagingFactory2
 		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory2*, Graphics.Imaging.IWICMetadataQueryReader*, Guid*, Graphics.Imaging.IWICMetadataQueryWriter**, int>)(lpVtbl[24]))((IWICImagingFactory2*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICImagingFactory2::CreateImageEncoder"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICImagingFactory2::CreateImageEncoder"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CreateImageEncoder(Graphics.Direct2D.ID2D1Device* pD2DDevice, IWICImageEncoder** ppWICImageEncoder)

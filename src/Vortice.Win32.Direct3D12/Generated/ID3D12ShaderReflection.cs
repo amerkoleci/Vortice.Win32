@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("5a58797d-a72c-478d-8ba2-efc6b0efe88e")]
 [NativeTypeName("struct ID3D12ShaderReflection : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12ShaderReflection
+public unsafe partial struct ID3D12ShaderReflection : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12ShaderReflection
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D12ShaderReflection
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ShaderReflection));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ShaderReflection));
+#endif
 
 	public void** lpVtbl;
 

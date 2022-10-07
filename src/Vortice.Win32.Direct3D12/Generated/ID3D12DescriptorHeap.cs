@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("8efb471d-616c-4f49-90f7-127bb763fa51")]
 [NativeTypeName("struct ID3D12DescriptorHeap : ID3D12Pageable")]
 [NativeInheritance("ID3D12Pageable")]
-public unsafe partial struct ID3D12DescriptorHeap
+public unsafe partial struct ID3D12DescriptorHeap : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12DescriptorHeap
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D12DescriptorHeap
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DescriptorHeap));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DescriptorHeap));
+#endif
 
 	public void** lpVtbl;
 

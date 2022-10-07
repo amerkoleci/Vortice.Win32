@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult"]/*' />
 /// <unmanaged>IDWriteAsyncResult</unmanaged>
 [Guid("ce25f8fd-863b-4d13-9651-c1f88dc73fe2")]
 [NativeTypeName("struct IDWriteAsyncResult : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteAsyncResult
+public unsafe partial struct IDWriteAsyncResult : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteAsyncResult
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteAsyncResult
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteAsyncResult));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteAsyncResult));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteAsyncResult
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetWaitHandle"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetWaitHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public Handle GetWaitHandle()
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteAsyncResult
 		return ((delegate* unmanaged[Stdcall]<IDWriteAsyncResult*, Handle>)(lpVtbl[3]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetResult"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteAsyncResult::GetResult"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetResult()

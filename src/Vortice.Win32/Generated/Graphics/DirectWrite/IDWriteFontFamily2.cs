@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily2"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily2"]/*' />
 /// <unmanaged>IDWriteFontFamily2</unmanaged>
 [Guid("3ed49e77-a398-4261-b9cf-c126c2131ef3")]
 [NativeTypeName("struct IDWriteFontFamily2 : IDWriteFontFamily1")]
 [NativeInheritance("IDWriteFontFamily1")]
-public unsafe partial struct IDWriteFontFamily2
+public unsafe partial struct IDWriteFontFamily2 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFamily2
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontFamily2
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFamily2));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFamily2));
+#endif
 
 	public void** lpVtbl;
 
@@ -142,7 +146,7 @@ public unsafe partial struct IDWriteFontFamily2
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily2*, uint, IDWriteFontFaceReference**, int>)(lpVtbl[11]))((IDWriteFontFamily2*)Unsafe.AsPointer(ref this), listIndex, fontFaceReference);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily2::GetMatchingFonts"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily2::GetMatchingFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetMatchingFonts(FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** matchingFonts)
@@ -150,7 +154,7 @@ public unsafe partial struct IDWriteFontFamily2
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily2*, FontAxisValue*, uint, IDWriteFontList2**, int>)(lpVtbl[12]))((IDWriteFontFamily2*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount, matchingFonts);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily2::GetFontSet"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily2::GetFontSet"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetFontSet(IDWriteFontSet1** fontSet)

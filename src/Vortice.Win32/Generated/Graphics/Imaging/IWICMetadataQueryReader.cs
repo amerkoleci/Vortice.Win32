@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader"]/*' />
 /// <unmanaged>IWICMetadataQueryReader</unmanaged>
 [Guid("30989668-e1c9-4597-b395-458eedb808df")]
 [NativeTypeName("struct IWICMetadataQueryReader : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICMetadataQueryReader
+public unsafe partial struct IWICMetadataQueryReader : INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataQueryReader
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICMetadataQueryReader
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataQueryReader));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICMetadataQueryReader));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICMetadataQueryReader
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetContainerFormat"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetContainerFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetContainerFormat(Guid* pguidContainerFormat)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICMetadataQueryReader
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryReader*, Guid*, int>)(lpVtbl[3]))((IWICMetadataQueryReader*)Unsafe.AsPointer(ref this), pguidContainerFormat);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetLocation"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetLocation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetLocation(uint cchMaxLength, ushort* wzNamespace, uint* pcchActualLength)
@@ -86,7 +90,7 @@ public unsafe partial struct IWICMetadataQueryReader
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryReader*, uint, ushort*, uint*, int>)(lpVtbl[4]))((IWICMetadataQueryReader*)Unsafe.AsPointer(ref this), cchMaxLength, wzNamespace, pcchActualLength);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetMetadataByName"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetMetadataByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetMetadataByName(ushort* wzName, Com.Variant** pvarValue)
@@ -94,7 +98,7 @@ public unsafe partial struct IWICMetadataQueryReader
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryReader*, ushort*, Com.Variant**, int>)(lpVtbl[5]))((IWICMetadataQueryReader*)Unsafe.AsPointer(ref this), wzName, pvarValue);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetEnumerator"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataQueryReader::GetEnumerator"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetEnumerator(Com.IEnumString** ppIEnumString)

@@ -12,7 +12,7 @@ namespace Win32.Graphics.Direct3D12;
 /// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType"]/*' />
 /// <unmanaged>ID3D12ShaderReflectionType</unmanaged>
 [Guid("e913c351-783d-48ca-a1d1-4f306284ad56")]
-public unsafe partial struct ID3D12ShaderReflectionType
+public unsafe partial struct ID3D12ShaderReflectionType : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12ShaderReflectionType
 	{
@@ -38,7 +38,11 @@ public unsafe partial struct ID3D12ShaderReflectionType
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ShaderReflectionType));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ShaderReflectionType));
+#endif
 
 	public void** lpVtbl;
 

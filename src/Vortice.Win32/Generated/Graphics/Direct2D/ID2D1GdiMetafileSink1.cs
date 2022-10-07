@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink1"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink1"]/*' />
 /// <unmanaged>ID2D1GdiMetafileSink1</unmanaged>
 [Guid("fd0ecb6b-91e6-411e-8655-395e760f91b4")]
 [NativeTypeName("struct ID2D1GdiMetafileSink1 : ID2D1GdiMetafileSink")]
 [NativeInheritance("ID2D1GdiMetafileSink")]
-public unsafe partial struct ID2D1GdiMetafileSink1
+public unsafe partial struct ID2D1GdiMetafileSink1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GdiMetafileSink1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1GdiMetafileSink1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GdiMetafileSink1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GdiMetafileSink1));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1GdiMetafileSink1
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafileSink1*, uint, void*, uint, int>)(lpVtbl[3]))((ID2D1GdiMetafileSink1*)Unsafe.AsPointer(ref this), recordType, recordData, recordDataSize);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink1::ProcessRecord"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink1::ProcessRecord"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize, uint flags)

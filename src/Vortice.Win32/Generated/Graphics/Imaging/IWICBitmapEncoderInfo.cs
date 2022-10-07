@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo"]/*' />
 /// <unmanaged>IWICBitmapEncoderInfo</unmanaged>
 [Guid("94c9b4ee-a09f-4f92-8a1e-4a9bce7e76fb")]
 [NativeTypeName("struct IWICBitmapEncoderInfo : IWICBitmapCodecInfo")]
 [NativeInheritance("IWICBitmapCodecInfo")]
-public unsafe partial struct IWICBitmapEncoderInfo
+public unsafe partial struct IWICBitmapEncoderInfo : INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapEncoderInfo
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICBitmapEncoderInfo
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapEncoderInfo));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapEncoderInfo));
+#endif
 
 	public void** lpVtbl;
 
@@ -230,7 +234,7 @@ public unsafe partial struct IWICBitmapEncoderInfo
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoderInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo::CreateInstance"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult CreateInstance(IWICBitmapEncoder** ppIBitmapEncoder)

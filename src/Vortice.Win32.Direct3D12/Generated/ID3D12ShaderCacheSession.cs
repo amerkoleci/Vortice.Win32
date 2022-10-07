@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("28e2495d-0f64-4ae4-a6ec-129255dc49a8")]
 [NativeTypeName("struct ID3D12ShaderCacheSession : ID3D12DeviceChild")]
 [NativeInheritance("ID3D12DeviceChild")]
-public unsafe partial struct ID3D12ShaderCacheSession
+public unsafe partial struct ID3D12ShaderCacheSession : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12ShaderCacheSession
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D12ShaderCacheSession
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ShaderCacheSession));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12ShaderCacheSession));
+#endif
 
 	public void** lpVtbl;
 

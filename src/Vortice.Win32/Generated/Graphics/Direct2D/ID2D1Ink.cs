@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink"]/*' />
 /// <unmanaged>ID2D1Ink</unmanaged>
 [Guid("b499923b-7029-478f-a8b3-432c7c5f5312")]
 [NativeTypeName("struct ID2D1Ink : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Ink
+public unsafe partial struct ID2D1Ink : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Ink
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Ink
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Ink));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Ink));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1Ink
 		((delegate* unmanaged[Stdcall]<ID2D1Ink*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Ink*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetStartPoint"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetStartPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetStartPoint(InkPoint* startPoint)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1Ink
 		((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkPoint*, void>)(lpVtbl[4]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startPoint);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetStartPoint"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetStartPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public InkPoint GetStartPoint()
@@ -95,7 +99,7 @@ public unsafe partial struct ID2D1Ink
 		return *((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkPoint*, InkPoint*>)(lpVtbl[5]))((ID2D1Ink*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::AddSegments"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::AddSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult AddSegments(InkBezierSegment* segments, uint segmentsCount)
@@ -103,7 +107,7 @@ public unsafe partial struct ID2D1Ink
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkBezierSegment*, uint, int>)(lpVtbl[6]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segments, segmentsCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::RemoveSegmentsAtEnd"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::RemoveSegmentsAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult RemoveSegmentsAtEnd(uint segmentsCount)
@@ -111,7 +115,7 @@ public unsafe partial struct ID2D1Ink
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint, int>)(lpVtbl[7]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segmentsCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegments"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult SetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount)
@@ -119,7 +123,7 @@ public unsafe partial struct ID2D1Ink
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[8]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegmentAtEnd"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegmentAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetSegmentAtEnd(InkBezierSegment* segment)
@@ -127,7 +131,7 @@ public unsafe partial struct ID2D1Ink
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkBezierSegment*, int>)(lpVtbl[9]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segment);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegmentCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegmentCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public uint GetSegmentCount()
@@ -135,7 +139,7 @@ public unsafe partial struct ID2D1Ink
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint>)(lpVtbl[10]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegments"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount)
@@ -143,7 +147,7 @@ public unsafe partial struct ID2D1Ink
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[11]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::StreamAsGeometry"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::StreamAsGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
@@ -151,7 +155,7 @@ public unsafe partial struct ID2D1Ink
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetBounds"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Common.RectF* bounds)

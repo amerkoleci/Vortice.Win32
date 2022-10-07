@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4"]/*' />
 /// <unmanaged>IDWriteFontFace4</unmanaged>
 [Guid("27f2a904-4eb8-441d-9678-0563f53e3e2f")]
 [NativeTypeName("struct IDWriteFontFace4 : IDWriteFontFace3")]
 [NativeInheritance("IDWriteFontFace3")]
-public unsafe partial struct IDWriteFontFace4
+public unsafe partial struct IDWriteFontFace4 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFace4
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontFace4
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFace4));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFace4));
+#endif
 
 	public void** lpVtbl;
 
@@ -438,7 +442,7 @@ public unsafe partial struct IDWriteFontFace4
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, ushort*, uint, Bool32, Bool32*, int>)(lpVtbl[48]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this), glyphIndices, glyphCount, enqueueIfNotLocal, isLocal);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::GetGlyphImageFormats"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::GetGlyphImageFormats"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
 	public HResult GetGlyphImageFormats(ushort glyphId, uint pixelsPerEmFirst, uint pixelsPerEmLast, GlyphImageFormats* glyphImageFormats)
@@ -446,7 +450,7 @@ public unsafe partial struct IDWriteFontFace4
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, ushort, uint, uint, GlyphImageFormats*, int>)(lpVtbl[49]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this), glyphId, pixelsPerEmFirst, pixelsPerEmLast, glyphImageFormats);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::GetGlyphImageFormats"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::GetGlyphImageFormats"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
 	public GlyphImageFormats GetGlyphImageFormats()
@@ -454,7 +458,7 @@ public unsafe partial struct IDWriteFontFace4
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, GlyphImageFormats>)(lpVtbl[50]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::GetGlyphImageData"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::GetGlyphImageData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
 	public HResult GetGlyphImageData(ushort glyphId, uint pixelsPerEm, GlyphImageFormats glyphImageFormat, GlyphImageData* glyphData, void** glyphDataContext)
@@ -462,7 +466,7 @@ public unsafe partial struct IDWriteFontFace4
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, ushort, uint, GlyphImageFormats, GlyphImageData*, void**, int>)(lpVtbl[51]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this), glyphId, pixelsPerEm, glyphImageFormat, glyphData, glyphDataContext);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::ReleaseGlyphImageData"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace4::ReleaseGlyphImageData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
 	public void ReleaseGlyphImageData(void* glyphDataContext)

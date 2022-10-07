@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory5"]/*' />
 /// <unmanaged>IDWriteFactory5</unmanaged>
 [Guid("958db99a-be2a-4f09-af7d-65189803d1d3")]
 [NativeTypeName("struct IDWriteFactory5 : IDWriteFactory4")]
 [NativeInheritance("IDWriteFactory4")]
-public unsafe partial struct IDWriteFactory5
+public unsafe partial struct IDWriteFactory5 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory5
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFactory5
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFactory5));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFactory5));
+#endif
 
 	public void** lpVtbl;
 
@@ -390,7 +394,7 @@ public unsafe partial struct IDWriteFactory5
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, GlyphRun*, MeasuringMode, System.Drawing.PointF, Matrix3x2*, System.Drawing.PointF*, int>)(lpVtbl[42]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), glyphRun, measuringMode, baselineOrigin, worldAndDpiTransform, glyphOrigins);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::CreateFontSetBuilder"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::CreateFontSetBuilder"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
 	public HResult CreateFontSetBuilder(IDWriteFontSetBuilder1** fontSetBuilder)
@@ -398,7 +402,7 @@ public unsafe partial struct IDWriteFactory5
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, IDWriteFontSetBuilder1**, int>)(lpVtbl[43]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), fontSetBuilder);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::CreateInMemoryFontFileLoader"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::CreateInMemoryFontFileLoader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
 	public HResult CreateInMemoryFontFileLoader(IDWriteInMemoryFontFileLoader** newLoader)
@@ -406,7 +410,7 @@ public unsafe partial struct IDWriteFactory5
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, IDWriteInMemoryFontFileLoader**, int>)(lpVtbl[44]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), newLoader);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::CreateHttpFontFileLoader"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::CreateHttpFontFileLoader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
 	public HResult CreateHttpFontFileLoader(ushort* referrerUrl, ushort* extraHeaders, IDWriteRemoteFontFileLoader** newLoader)
@@ -414,7 +418,7 @@ public unsafe partial struct IDWriteFactory5
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, ushort*, ushort*, IDWriteRemoteFontFileLoader**, int>)(lpVtbl[45]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), referrerUrl, extraHeaders, newLoader);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::AnalyzeContainerType"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::AnalyzeContainerType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
 	public ContainerType AnalyzeContainerType(void* fileData, uint fileDataSize)
@@ -422,7 +426,7 @@ public unsafe partial struct IDWriteFactory5
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, void*, uint, ContainerType>)(lpVtbl[46]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), fileData, fileDataSize);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::UnpackFontFile"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory5::UnpackFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
 	public HResult UnpackFontFile(ContainerType containerType, void* fileData, uint fileDataSize, IDWriteFontFileStream** unpackedFontStream)

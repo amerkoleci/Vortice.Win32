@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("9b7e4e00-342c-4106-a19f-4f2704f689f0")]
 [NativeTypeName("struct ID3D11Multithread : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11Multithread
+public unsafe partial struct ID3D11Multithread : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Multithread
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D11Multithread
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11Multithread));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11Multithread));
+#endif
 
 	public void** lpVtbl;
 

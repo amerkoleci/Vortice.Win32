@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcCompiler3"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler3"]/*' />
 /// <unmanaged>IDxcCompiler3</unmanaged>
 [Guid("228b4687-5a6a-4730-900c-9702b2203f54")]
 [NativeTypeName("struct IDxcCompiler3 : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcCompiler3
+public unsafe partial struct IDxcCompiler3 : INativeGuid
 {
 	public static ref readonly Guid IID_IDxcCompiler3
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDxcCompiler3
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcCompiler3));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDxcCompiler3));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDxcCompiler3
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcCompiler3::Compile"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler3::Compile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Compile(DxcBuffer* pSource, ushort** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult)
@@ -78,7 +82,7 @@ public unsafe partial struct IDxcCompiler3
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler3*, DxcBuffer*, ushort**, uint, IDxcIncludeHandler*, Guid*, void**, int>)(lpVtbl[3]))((IDxcCompiler3*)Unsafe.AsPointer(ref this), pSource, pArguments, argCount, pIncludeHandler, riid, ppResult);
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="IDxcCompiler3::Disassemble"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler3::Disassemble"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Disassemble(DxcBuffer* pObject, Guid* riid, void** ppResult)

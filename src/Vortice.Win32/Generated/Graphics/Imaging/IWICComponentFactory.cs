@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICComponentFactory"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentFactory"]/*' />
 /// <unmanaged>IWICComponentFactory</unmanaged>
 [Guid("412d0c3a-9650-44fa-af5b-dd2a06c8e8fb")]
 [NativeTypeName("struct IWICComponentFactory : IWICImagingFactory")]
 [NativeInheritance("IWICImagingFactory")]
-public unsafe partial struct IWICComponentFactory
+public unsafe partial struct IWICComponentFactory : INativeGuid
 {
 	public static ref readonly Guid IID_IWICComponentFactory
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICComponentFactory
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICComponentFactory));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICComponentFactory));
+#endif
 
 	public void** lpVtbl;
 
@@ -270,7 +274,7 @@ public unsafe partial struct IWICComponentFactory
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[27]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataReader"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult CreateMetadataReader(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader** ppIReader)
@@ -278,7 +282,7 @@ public unsafe partial struct IWICComponentFactory
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[28]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwOptions, pIStream, ppIReader);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataReaderFromContainer"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataReaderFromContainer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult CreateMetadataReaderFromContainer(Guid* guidContainerFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader** ppIReader)
@@ -286,7 +290,7 @@ public unsafe partial struct IWICComponentFactory
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[29]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, dwOptions, pIStream, ppIReader);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataWriter"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult CreateMetadataWriter(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwMetadataOptions, IWICMetadataWriter** ppIWriter)
@@ -294,7 +298,7 @@ public unsafe partial struct IWICComponentFactory
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, IWICMetadataWriter**, int>)(lpVtbl[30]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwMetadataOptions, ppIWriter);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataWriterFromReader"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataWriterFromReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult CreateMetadataWriterFromReader(IWICMetadataReader* pIReader, Guid* pguidVendor, IWICMetadataWriter** ppIWriter)
@@ -302,7 +306,7 @@ public unsafe partial struct IWICComponentFactory
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataReader*, Guid*, IWICMetadataWriter**, int>)(lpVtbl[31]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIReader, pguidVendor, ppIWriter);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateQueryReaderFromBlockReader"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateQueryReaderFromBlockReader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult CreateQueryReaderFromBlockReader(IWICMetadataBlockReader* pIBlockReader, IWICMetadataQueryReader** ppIQueryReader)
@@ -310,7 +314,7 @@ public unsafe partial struct IWICComponentFactory
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataBlockReader*, IWICMetadataQueryReader**, int>)(lpVtbl[32]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockReader, ppIQueryReader);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateQueryWriterFromBlockWriter"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateQueryWriterFromBlockWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public HResult CreateQueryWriterFromBlockWriter(IWICMetadataBlockWriter* pIBlockWriter, IWICMetadataQueryWriter** ppIQueryWriter)
@@ -318,7 +322,7 @@ public unsafe partial struct IWICComponentFactory
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataBlockWriter*, IWICMetadataQueryWriter**, int>)(lpVtbl[33]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockWriter, ppIQueryWriter);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateEncoderPropertyBag"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateEncoderPropertyBag"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult CreateEncoderPropertyBag(Com.PropertyBagMetadata** ppropOptions, uint cCount, Com.IPropertyBag2** ppIPropertyBag)

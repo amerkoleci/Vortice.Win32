@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup"]/*' />
 /// <unmanaged>ID2D1GeometryGroup</unmanaged>
 [Guid("2cd906a6-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1GeometryGroup : ID2D1Geometry")]
 [NativeInheritance("ID2D1Geometry")]
-public unsafe partial struct ID2D1GeometryGroup
+public unsafe partial struct ID2D1GeometryGroup : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GeometryGroup
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1GeometryGroup
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GeometryGroup));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GeometryGroup));
+#endif
 
 	public void** lpVtbl;
 
@@ -182,7 +186,7 @@ public unsafe partial struct ID2D1GeometryGroup
 		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetFillMode"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetFillMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public Common.FillMode GetFillMode()
@@ -190,7 +194,7 @@ public unsafe partial struct ID2D1GeometryGroup
 		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, Common.FillMode>)(lpVtbl[17]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetSourceGeometryCount"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetSourceGeometryCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public uint GetSourceGeometryCount()
@@ -198,7 +202,7 @@ public unsafe partial struct ID2D1GeometryGroup
 		return ((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, uint>)(lpVtbl[18]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetSourceGeometries"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometryGroup::GetSourceGeometries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public void GetSourceGeometries(ID2D1Geometry** geometries, uint geometriesCount)

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BitmapRenderTarget"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BitmapRenderTarget"]/*' />
 /// <unmanaged>ID2D1BitmapRenderTarget</unmanaged>
 [Guid("2cd90695-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1BitmapRenderTarget : ID2D1RenderTarget")]
 [NativeInheritance("ID2D1RenderTarget")]
-public unsafe partial struct ID2D1BitmapRenderTarget
+public unsafe partial struct ID2D1BitmapRenderTarget : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1BitmapRenderTarget
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1BitmapRenderTarget));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1BitmapRenderTarget));
+#endif
 
 	public void** lpVtbl;
 
@@ -505,7 +509,7 @@ public unsafe partial struct ID2D1BitmapRenderTarget
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, RenderTargetProperties*, Bool32>)(lpVtbl[56]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), renderTargetProperties);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1BitmapRenderTarget::GetBitmap"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BitmapRenderTarget::GetBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
 	public HResult GetBitmap(ID2D1Bitmap** bitmap)

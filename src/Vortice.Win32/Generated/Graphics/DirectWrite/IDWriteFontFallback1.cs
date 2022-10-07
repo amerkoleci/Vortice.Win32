@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback1"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback1"]/*' />
 /// <unmanaged>IDWriteFontFallback1</unmanaged>
 [Guid("2397599d-dd0d-4681-bd6a-f4f31eaade77")]
 [NativeTypeName("struct IDWriteFontFallback1 : IDWriteFontFallback")]
 [NativeInheritance("IDWriteFontFallback")]
-public unsafe partial struct IDWriteFontFallback1
+public unsafe partial struct IDWriteFontFallback1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFallback1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontFallback1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFallback1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFallback1));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteFontFallback1
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFallback1*, IDWriteTextAnalysisSource*, uint, uint, IDWriteFontCollection*, ushort*, FontWeight, FontStyle, FontStretch, uint*, IDWriteFont**, float*, int>)(lpVtbl[3]))((IDWriteFontFallback1*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, baseFontCollection, baseFamilyName, baseWeight, baseStyle, baseStretch, mappedLength, mappedFont, scale);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback1::MapCharacters"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback1::MapCharacters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, ushort* baseFamilyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, uint* mappedLength, float* scale, IDWriteFontFace5** mappedFontFace)

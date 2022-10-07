@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteNumberSubstitution"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteNumberSubstitution"]/*' />
 /// <unmanaged>IDWriteNumberSubstitution</unmanaged>
 [Guid("14885cc9-bab0-4f90-b6ed-5c366a2cd03d")]
 [NativeTypeName("struct IDWriteNumberSubstitution : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteNumberSubstitution
+public unsafe partial struct IDWriteNumberSubstitution : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteNumberSubstitution
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteNumberSubstitution
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteNumberSubstitution));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteNumberSubstitution));
+#endif
 
 	public void** lpVtbl;
 

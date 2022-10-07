@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1InkStyle"]/*' />
 /// <unmanaged>ID2D1InkStyle</unmanaged>
 [Guid("bae8b344-23fc-4071-8cb5-d05d6f073848")]
 [NativeTypeName("struct ID2D1InkStyle : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1InkStyle
+public unsafe partial struct ID2D1InkStyle : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1InkStyle
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1InkStyle
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1InkStyle));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1InkStyle));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1InkStyle
 		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::SetNibTransform"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::SetNibTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetNibTransform(Matrix3x2* transform)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1InkStyle
 		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, Matrix3x2*, void>)(lpVtbl[4]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), transform);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibTransform"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void GetNibTransform(Matrix3x2* transform)
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1InkStyle
 		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), transform);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::SetNibShape"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::SetNibShape"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void SetNibShape(InkNibShape nibShape)
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1InkStyle
 		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, InkNibShape, void>)(lpVtbl[6]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), nibShape);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibShape"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibShape"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public InkNibShape GetNibShape()

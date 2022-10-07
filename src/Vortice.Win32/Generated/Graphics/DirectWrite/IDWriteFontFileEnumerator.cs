@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileEnumerator"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileEnumerator"]/*' />
 /// <unmanaged>IDWriteFontFileEnumerator</unmanaged>
 [Guid("72755049-5ff7-435d-8348-4be97cfa6c7c")]
 [NativeTypeName("struct IDWriteFontFileEnumerator : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFileEnumerator
+public unsafe partial struct IDWriteFontFileEnumerator : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFileEnumerator
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontFileEnumerator
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFileEnumerator));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontFileEnumerator));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteFontFileEnumerator
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileEnumerator::MoveNext"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileEnumerator::MoveNext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult MoveNext(Bool32* hasCurrentFile)
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteFontFileEnumerator
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileEnumerator*, Bool32*, int>)(lpVtbl[3]))((IDWriteFontFileEnumerator*)Unsafe.AsPointer(ref this), hasCurrentFile);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileEnumerator::GetCurrentFontFile"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileEnumerator::GetCurrentFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetCurrentFontFile(IDWriteFontFile** fontFile)

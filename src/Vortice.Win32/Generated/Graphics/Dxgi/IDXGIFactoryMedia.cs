@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactoryMedia"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia"]/*' />
 /// <unmanaged>IDXGIFactoryMedia</unmanaged>
 [Guid("41e7d1f2-a591-4f7b-a2e5-fa9c843e1c12")]
 [NativeTypeName("struct IDXGIFactoryMedia : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIFactoryMedia
+public unsafe partial struct IDXGIFactoryMedia : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactoryMedia
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactoryMedia
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactoryMedia));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactoryMedia));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDXGIFactoryMedia
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateSwapChainForCompositionSurfaceHandle"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateSwapChainForCompositionSurfaceHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, Handle hSurface, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
@@ -78,7 +82,7 @@ public unsafe partial struct IDXGIFactoryMedia
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactoryMedia*, IUnknown*, Handle, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[3]))((IDXGIFactoryMedia*)Unsafe.AsPointer(ref this), pDevice, hSurface, pDesc, pRestrictToOutput, ppSwapChain);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateDecodeSwapChainForCompositionSurfaceHandle"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactoryMedia::CreateDecodeSwapChainForCompositionSurfaceHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateDecodeSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, Handle hSurface, DecodeSwapChainDescription* pDesc, IDXGIResource* pYuvDecodeBuffers, IDXGIOutput* pRestrictToOutput, IDXGIDecodeSwapChain** ppSwapChain)

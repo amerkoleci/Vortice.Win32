@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1"]/*' />
 /// <unmanaged>ID2D1GradientStopCollection1</unmanaged>
 [Guid("ae1572f4-5dd0-4777-998b-9279472ae63b")]
 [NativeTypeName("struct ID2D1GradientStopCollection1 : ID2D1GradientStopCollection")]
 [NativeInheritance("ID2D1GradientStopCollection")]
-public unsafe partial struct ID2D1GradientStopCollection1
+public unsafe partial struct ID2D1GradientStopCollection1 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GradientStopCollection1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1GradientStopCollection1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GradientStopCollection1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GradientStopCollection1));
+#endif
 
 	public void** lpVtbl;
 
@@ -110,7 +114,7 @@ public unsafe partial struct ID2D1GradientStopCollection1
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetGradientStops1"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetGradientStops1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetGradientStops1(GradientStop* gradientStops, uint gradientStopsCount)
@@ -118,7 +122,7 @@ public unsafe partial struct ID2D1GradientStopCollection1
 		((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, GradientStop*, uint, void>)(lpVtbl[8]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPreInterpolationSpace"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPreInterpolationSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public ColorSpace GetPreInterpolationSpace()
@@ -126,7 +130,7 @@ public unsafe partial struct ID2D1GradientStopCollection1
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[9]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPostInterpolationSpace"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPostInterpolationSpace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public ColorSpace GetPostInterpolationSpace()
@@ -134,7 +138,7 @@ public unsafe partial struct ID2D1GradientStopCollection1
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[10]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetBufferPrecision"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetBufferPrecision"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public BufferPrecision GetBufferPrecision()
@@ -142,7 +146,7 @@ public unsafe partial struct ID2D1GradientStopCollection1
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, BufferPrecision>)(lpVtbl[11]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetColorInterpolationMode"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetColorInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public ColorInterpolationMode GetColorInterpolationMode()

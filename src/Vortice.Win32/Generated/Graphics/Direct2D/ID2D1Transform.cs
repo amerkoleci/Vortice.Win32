@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Transform"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Transform"]/*' />
 /// <unmanaged>ID2D1Transform</unmanaged>
 [Guid("ef1a287d-342a-4f76-8fdb-da0d6ea9f92b")]
 [NativeTypeName("struct ID2D1Transform : ID2D1TransformNode")]
 [NativeInheritance("ID2D1TransformNode")]
-public unsafe partial struct ID2D1Transform
+public unsafe partial struct ID2D1Transform : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Transform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Transform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Transform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Transform));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1Transform
 		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, uint>)(lpVtbl[3]))((ID2D1Transform*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapOutputRectToInputRects"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapOutputRectToInputRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult MapOutputRectToInputRects(RawRect* outputRect, RawRect* inputRects, uint inputRectsCount)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1Transform
 		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, RawRect*, RawRect*, uint, int>)(lpVtbl[4]))((ID2D1Transform*)Unsafe.AsPointer(ref this), outputRect, inputRects, inputRectsCount);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapInputRectsToOutputRect"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapInputRectsToOutputRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult MapInputRectsToOutputRect(RawRect* inputRects, RawRect* inputOpaqueSubRects, uint inputRectCount, RawRect* outputRect, RawRect* outputOpaqueSubRect)
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1Transform
 		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, RawRect*, RawRect*, uint, RawRect*, RawRect*, int>)(lpVtbl[5]))((ID2D1Transform*)Unsafe.AsPointer(ref this), inputRects, inputOpaqueSubRects, inputRectCount, outputRect, outputOpaqueSubRect);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapInvalidRect"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapInvalidRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult MapInvalidRect(uint inputIndex, RawRect* invalidInputRect, RawRect* invalidOutputRect)

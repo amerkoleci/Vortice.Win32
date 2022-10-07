@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1"]/*' />
 /// <unmanaged>IDWriteTextFormat1</unmanaged>
 [Guid("5f174b49-0d8b-4cfb-8bca-f1cce9d06c67")]
 [NativeTypeName("struct IDWriteTextFormat1 : IDWriteTextFormat")]
 [NativeInheritance("IDWriteTextFormat")]
-public unsafe partial struct IDWriteTextFormat1
+public unsafe partial struct IDWriteTextFormat1 : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextFormat1
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteTextFormat1
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextFormat1));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextFormat1));
+#endif
 
 	public void** lpVtbl;
 
@@ -270,7 +274,7 @@ public unsafe partial struct IDWriteTextFormat1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this), localeName, nameSize);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetVerticalGlyphOrientation"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult SetVerticalGlyphOrientation(VerticalGlyphOrientation glyphOrientation)
@@ -278,7 +282,7 @@ public unsafe partial struct IDWriteTextFormat1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, VerticalGlyphOrientation, int>)(lpVtbl[28]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this), glyphOrientation);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetVerticalGlyphOrientation"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
@@ -286,7 +290,7 @@ public unsafe partial struct IDWriteTextFormat1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, VerticalGlyphOrientation>)(lpVtbl[29]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetLastLineWrapping"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetLastLineWrapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult SetLastLineWrapping(Bool32 isLastLineWrappingEnabled)
@@ -294,7 +298,7 @@ public unsafe partial struct IDWriteTextFormat1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Bool32, int>)(lpVtbl[30]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this), isLastLineWrappingEnabled);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetLastLineWrapping"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetLastLineWrapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public Bool32 GetLastLineWrapping()
@@ -302,7 +306,7 @@ public unsafe partial struct IDWriteTextFormat1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, Bool32>)(lpVtbl[31]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetOpticalAlignment"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetOpticalAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult SetOpticalAlignment(OpticalAlignment opticalAlignment)
@@ -310,7 +314,7 @@ public unsafe partial struct IDWriteTextFormat1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, OpticalAlignment, int>)(lpVtbl[32]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this), opticalAlignment);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetOpticalAlignment"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetOpticalAlignment"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public OpticalAlignment GetOpticalAlignment()
@@ -318,7 +322,7 @@ public unsafe partial struct IDWriteTextFormat1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, OpticalAlignment>)(lpVtbl[33]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetFontFallback"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::SetFontFallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult SetFontFallback(IDWriteFontFallback* fontFallback)
@@ -326,7 +330,7 @@ public unsafe partial struct IDWriteTextFormat1
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, IDWriteFontFallback*, int>)(lpVtbl[34]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this), fontFallback);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetFontFallback"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat1::GetFontFallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
 	public HResult GetFontFallback(IDWriteFontFallback** fontFallback)

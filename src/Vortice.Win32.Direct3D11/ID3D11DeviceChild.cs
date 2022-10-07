@@ -1,13 +1,36 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using static Win32.Graphics.Direct3D.Apis;
 using static Win32.StringUtilities;
 
 namespace Win32.Graphics.Direct3D11;
 
 public unsafe partial struct ID3D11DeviceChild
 {
+    public static ref readonly Guid WKPDID_D3DDebugObjectName
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get
+        {
+            ReadOnlySpan<byte> data = new byte[] {
+                0x22, 0x8C, 0x9B, 0x42,
+                0x88, 0x91,
+                0x0C, 0x4B,
+                0x87,
+                0x42,
+                0xAC,
+                0xB0,
+                0xBF,
+                0x85,
+                0xC2,
+                0x00
+            };
+
+            Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+            return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+        }
+    }
+
     public static Guid* D3DDebugObjectNameGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in WKPDID_D3DDebugObjectName));
 
     /// <summary>

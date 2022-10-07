@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink5"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink5"]/*' />
 /// <unmanaged>ID2D1CommandSink5</unmanaged>
 [Guid("7047dd26-b1e7-44a7-959a-8349e2144fa8")]
 [NativeTypeName("struct ID2D1CommandSink5 : ID2D1CommandSink4")]
 [NativeInheritance("ID2D1CommandSink4")]
-public unsafe partial struct ID2D1CommandSink5
+public unsafe partial struct ID2D1CommandSink5 : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1CommandSink5
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1CommandSink5
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1CommandSink5));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1CommandSink5));
+#endif
 
 	public void** lpVtbl;
 
@@ -318,7 +322,7 @@ public unsafe partial struct ID2D1CommandSink5
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink5*, PrimitiveBlend, int>)(lpVtbl[33]))((ID2D1CommandSink5*)Unsafe.AsPointer(ref this), primitiveBlend);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink5::BlendImage"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink5::BlendImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult BlendImage(ID2D1Image* image, Common.BlendMode blendMode, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode)

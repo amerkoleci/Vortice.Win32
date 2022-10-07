@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl"]/*' />
 /// <unmanaged>IWICProgressiveLevelControl</unmanaged>
 [Guid("daac296f-7aa5-4dbf-8d15-225c5976f891")]
 [NativeTypeName("struct IWICProgressiveLevelControl : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICProgressiveLevelControl
+public unsafe partial struct IWICProgressiveLevelControl : INativeGuid
 {
 	public static ref readonly Guid IID_IWICProgressiveLevelControl
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICProgressiveLevelControl
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICProgressiveLevelControl));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICProgressiveLevelControl));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICProgressiveLevelControl
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::GetLevelCount"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::GetLevelCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetLevelCount(uint* pcLevels)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICProgressiveLevelControl
 		return ((delegate* unmanaged[Stdcall]<IWICProgressiveLevelControl*, uint*, int>)(lpVtbl[3]))((IWICProgressiveLevelControl*)Unsafe.AsPointer(ref this), pcLevels);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::GetCurrentLevel"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::GetCurrentLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetCurrentLevel(uint* pnLevel)
@@ -86,7 +90,7 @@ public unsafe partial struct IWICProgressiveLevelControl
 		return ((delegate* unmanaged[Stdcall]<IWICProgressiveLevelControl*, uint*, int>)(lpVtbl[4]))((IWICProgressiveLevelControl*)Unsafe.AsPointer(ref this), pnLevel);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::SetCurrentLevel"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::SetCurrentLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult SetCurrentLevel(uint nLevel)

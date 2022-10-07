@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DBlob"]/*' />
+/// <include file='Direct3D.xml' path='doc/member[@name="ID3DBlob"]/*' />
 /// <unmanaged>ID3DBlob</unmanaged>
 [Guid("8ba5fb08-5195-40e2-ac58-0d989c3a0102")]
 [NativeTypeName("struct ID3DBlob : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DBlob
+public unsafe partial struct ID3DBlob : INativeGuid
 {
 	public static ref readonly Guid IID_ID3DBlob
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3DBlob
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DBlob));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DBlob));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct ID3DBlob
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DBlob::GetBufferPointer"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="ID3DBlob::GetBufferPointer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void* GetBufferPointer()
@@ -78,7 +82,7 @@ public unsafe partial struct ID3DBlob
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, void*>)(lpVtbl[3]))((ID3DBlob*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct3D.xml' path='doc/member[@name="ID3DBlob::GetBufferSize"]/*' />
+	/// <include file='Direct3D.xml' path='doc/member[@name="ID3DBlob::GetBufferSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public nuint GetBufferSize()

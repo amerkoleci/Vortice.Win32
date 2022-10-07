@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("f1df64b6-57fd-49cd-8807-c0eb88b45c8f")]
 [NativeTypeName("struct ID3D12SwapChainAssistant : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12SwapChainAssistant
+public unsafe partial struct ID3D12SwapChainAssistant : INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12SwapChainAssistant
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID3D12SwapChainAssistant
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12SwapChainAssistant));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12SwapChainAssistant));
+#endif
 
 	public void** lpVtbl;
 

@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapSourceTransform"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarBitmapSourceTransform"]/*' />
 /// <unmanaged>IWICPlanarBitmapSourceTransform</unmanaged>
 [Guid("3aff9cce-be95-4303-b927-e7d16ff4a613")]
 [NativeTypeName("struct IWICPlanarBitmapSourceTransform : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICPlanarBitmapSourceTransform
+public unsafe partial struct IWICPlanarBitmapSourceTransform : INativeGuid
 {
 	public static ref readonly Guid IID_IWICPlanarBitmapSourceTransform
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICPlanarBitmapSourceTransform
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPlanarBitmapSourceTransform));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPlanarBitmapSourceTransform));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICPlanarBitmapSourceTransform
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapSourceTransform::DoesSupportTransform"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarBitmapSourceTransform::DoesSupportTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult DoesSupportTransform(uint* puiWidth, uint* puiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, Guid* pguidDstFormats, WICBitmapPlaneDescription* pPlaneDescriptions, uint cPlanes, Bool32* pfIsSupported)
@@ -78,7 +82,7 @@ public unsafe partial struct IWICPlanarBitmapSourceTransform
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapSourceTransform*, uint*, uint*, WICBitmapTransformOptions, WICPlanarOptions, Guid*, WICBitmapPlaneDescription*, uint, Bool32*, int>)(lpVtbl[3]))((IWICPlanarBitmapSourceTransform*)Unsafe.AsPointer(ref this), puiWidth, puiHeight, dstTransform, dstPlanarOptions, pguidDstFormats, pPlaneDescriptions, cPlanes, pfIsSupported);
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICPlanarBitmapSourceTransform::CopyPixels"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarBitmapSourceTransform::CopyPixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CopyPixels(System.Drawing.Rectangle* prcSource, uint uiWidth, uint uiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, WICBitmapPlane* pDstPlanes, uint cPlanes)

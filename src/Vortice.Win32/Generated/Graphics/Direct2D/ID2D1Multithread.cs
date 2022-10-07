@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Multithread"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Multithread"]/*' />
 /// <unmanaged>ID2D1Multithread</unmanaged>
 [Guid("31e6e7bc-e0ff-4d46-8c64-a0a8c41c15d3")]
 [NativeTypeName("struct ID2D1Multithread : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1Multithread
+public unsafe partial struct ID2D1Multithread : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Multithread
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Multithread
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Multithread));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Multithread));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct ID2D1Multithread
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Multithread::GetMultithreadProtected"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Multithread::GetMultithreadProtected"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public Bool32 GetMultithreadProtected()
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1Multithread
 		return ((delegate* unmanaged[Stdcall]<ID2D1Multithread*, Bool32>)(lpVtbl[3]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Multithread::Enter"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Multithread::Enter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void Enter()
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1Multithread
 		((delegate* unmanaged[Stdcall]<ID2D1Multithread*, void>)(lpVtbl[4]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Multithread::Leave"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Multithread::Leave"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void Leave()

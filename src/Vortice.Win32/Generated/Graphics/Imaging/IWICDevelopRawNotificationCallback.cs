@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDevelopRawNotificationCallback"]/*' />
+/// <include file='Imaging.xml' path='doc/member[@name="IWICDevelopRawNotificationCallback"]/*' />
 /// <unmanaged>IWICDevelopRawNotificationCallback</unmanaged>
 [Guid("95c75a6e-3e8c-4ec2-85a8-aebcc551e59b")]
 [NativeTypeName("struct IWICDevelopRawNotificationCallback : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICDevelopRawNotificationCallback
+public unsafe partial struct IWICDevelopRawNotificationCallback : INativeGuid
 {
 	public static ref readonly Guid IID_IWICDevelopRawNotificationCallback
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IWICDevelopRawNotificationCallback
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDevelopRawNotificationCallback));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICDevelopRawNotificationCallback));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IWICDevelopRawNotificationCallback
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Imaging.xml' path='doc/member[@name="IWICDevelopRawNotificationCallback::Notify"]/*' />
+	/// <include file='Imaging.xml' path='doc/member[@name="IWICDevelopRawNotificationCallback::Notify"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Notify(uint NotificationMask)

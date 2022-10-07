@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Brush"]/*' />
+/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Brush"]/*' />
 /// <unmanaged>ID2D1Brush</unmanaged>
 [Guid("2cd906a8-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Brush : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Brush
+public unsafe partial struct ID2D1Brush : INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Brush
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct ID2D1Brush
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Brush));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Brush));
+#endif
 
 	public void** lpVtbl;
 
@@ -78,7 +82,7 @@ public unsafe partial struct ID2D1Brush
 		((delegate* unmanaged[Stdcall]<ID2D1Brush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Brush*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Brush::SetOpacity"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Brush::SetOpacity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetOpacity(float opacity)
@@ -86,7 +90,7 @@ public unsafe partial struct ID2D1Brush
 		((delegate* unmanaged[Stdcall]<ID2D1Brush*, float, void>)(lpVtbl[4]))((ID2D1Brush*)Unsafe.AsPointer(ref this), opacity);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Brush::SetTransform"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Brush::SetTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void SetTransform(Matrix3x2* transform)
@@ -94,7 +98,7 @@ public unsafe partial struct ID2D1Brush
 		((delegate* unmanaged[Stdcall]<ID2D1Brush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1Brush*)Unsafe.AsPointer(ref this), transform);
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Brush::GetOpacity"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Brush::GetOpacity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public float GetOpacity()
@@ -102,7 +106,7 @@ public unsafe partial struct ID2D1Brush
 		return ((delegate* unmanaged[Stdcall]<ID2D1Brush*, float>)(lpVtbl[6]))((ID2D1Brush*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Direct2D.xml' path='doc/member[@name="ID2D1Brush::GetTransform"]/*' />
+	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Brush::GetTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetTransform(Matrix3x2* transform)

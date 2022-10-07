@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory4"]/*' />
+/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory4"]/*' />
 /// <unmanaged>IDXGIFactory4</unmanaged>
 [Guid("1bc6ea02-ef36-464f-bf0c-21ca39e5168a")]
 [NativeTypeName("struct IDXGIFactory4 : IDXGIFactory3")]
 [NativeInheritance("IDXGIFactory3")]
-public unsafe partial struct IDXGIFactory4
+public unsafe partial struct IDXGIFactory4 : INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory4
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDXGIFactory4
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory4));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIFactory4));
+#endif
 
 	public void** lpVtbl;
 
@@ -254,7 +258,7 @@ public unsafe partial struct IDXGIFactory4
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, uint>)(lpVtbl[25]))((IDXGIFactory4*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory4::EnumAdapterByLuid"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory4::EnumAdapterByLuid"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult EnumAdapterByLuid(Luid AdapterLuid, Guid* riid, void** ppvAdapter)
@@ -262,7 +266,7 @@ public unsafe partial struct IDXGIFactory4
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Luid, Guid*, void**, int>)(lpVtbl[26]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
 	}
 
-	/// <include file='../../Dxgi.xml' path='doc/member[@name="IDXGIFactory4::EnumWarpAdapter"]/*' />
+	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory4::EnumWarpAdapter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter)

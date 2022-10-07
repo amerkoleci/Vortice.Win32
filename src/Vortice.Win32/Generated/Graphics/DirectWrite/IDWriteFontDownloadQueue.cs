@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue"]/*' />
+/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue"]/*' />
 /// <unmanaged>IDWriteFontDownloadQueue</unmanaged>
 [Guid("b71e6052-5aea-4fa3-832e-f60d431f7e91")]
 [NativeTypeName("struct IDWriteFontDownloadQueue : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontDownloadQueue
+public unsafe partial struct IDWriteFontDownloadQueue : INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontDownloadQueue
 	{
@@ -40,7 +40,11 @@ public unsafe partial struct IDWriteFontDownloadQueue
 		}
 	}
 
+#if NET6_0_OR_GREATER
+	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontDownloadQueue));
+#else
 	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFontDownloadQueue));
+#endif
 
 	public void** lpVtbl;
 
@@ -70,7 +74,7 @@ public unsafe partial struct IDWriteFontDownloadQueue
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::AddListener"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::AddListener"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult AddListener(IDWriteFontDownloadListener* listener, uint* token)
@@ -78,7 +82,7 @@ public unsafe partial struct IDWriteFontDownloadQueue
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontDownloadQueue*, IDWriteFontDownloadListener*, uint*, int>)(lpVtbl[3]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this), listener, token);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::RemoveListener"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::RemoveListener"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult RemoveListener(uint token)
@@ -86,7 +90,7 @@ public unsafe partial struct IDWriteFontDownloadQueue
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontDownloadQueue*, uint, int>)(lpVtbl[4]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this), token);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::IsEmpty"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::IsEmpty"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public Bool32 IsEmpty()
@@ -94,7 +98,7 @@ public unsafe partial struct IDWriteFontDownloadQueue
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontDownloadQueue*, Bool32>)(lpVtbl[5]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::BeginDownload"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::BeginDownload"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult BeginDownload(IUnknown* context)
@@ -102,7 +106,7 @@ public unsafe partial struct IDWriteFontDownloadQueue
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontDownloadQueue*, IUnknown*, int>)(lpVtbl[6]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this), context);
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::CancelDownload"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::CancelDownload"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult CancelDownload()
@@ -110,7 +114,7 @@ public unsafe partial struct IDWriteFontDownloadQueue
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontDownloadQueue*, int>)(lpVtbl[7]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='../../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::GetGenerationCount"]/*' />
+	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadQueue::GetGenerationCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public ulong GetGenerationCount()
