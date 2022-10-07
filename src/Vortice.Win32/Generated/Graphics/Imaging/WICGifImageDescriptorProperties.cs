@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties"]/*' />
 /// <unmanaged>WICGifImageDescriptorProperties</unmanaged>
 public enum WICGifImageDescriptorProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLeft"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLeft"]/*' />
 	/// <unmanaged>WICGifImageDescriptorLeft</unmanaged>
 	WICGifImageDescriptorLeft = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorTop"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorTop"]/*' />
 	/// <unmanaged>WICGifImageDescriptorTop</unmanaged>
 	WICGifImageDescriptorTop = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorWidth"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorWidth"]/*' />
 	/// <unmanaged>WICGifImageDescriptorWidth</unmanaged>
 	WICGifImageDescriptorWidth = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorHeight"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorHeight"]/*' />
 	/// <unmanaged>WICGifImageDescriptorHeight</unmanaged>
 	WICGifImageDescriptorHeight = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLocalColorTableFlag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLocalColorTableFlag"]/*' />
 	/// <unmanaged>WICGifImageDescriptorLocalColorTableFlag</unmanaged>
 	WICGifImageDescriptorLocalColorTableFlag = 5,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorInterlaceFlag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorInterlaceFlag"]/*' />
 	/// <unmanaged>WICGifImageDescriptorInterlaceFlag</unmanaged>
 	WICGifImageDescriptorInterlaceFlag = 6,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorSortFlag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorSortFlag"]/*' />
 	/// <unmanaged>WICGifImageDescriptorSortFlag</unmanaged>
 	WICGifImageDescriptorSortFlag = 7,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLocalColorTableSize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLocalColorTableSize"]/*' />
 	/// <unmanaged>WICGifImageDescriptorLocalColorTableSize</unmanaged>
 	WICGifImageDescriptorLocalColorTableSize = 8,
 }

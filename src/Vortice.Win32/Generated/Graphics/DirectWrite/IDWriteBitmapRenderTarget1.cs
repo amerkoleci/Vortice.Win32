@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1"]/*' />
 /// <unmanaged>IDWriteBitmapRenderTarget1</unmanaged>
 [Guid("791e8298-3ef3-4230-9880-c9bdecc42064")]
 [NativeTypeName("struct IDWriteBitmapRenderTarget1 : IDWriteBitmapRenderTarget")]
@@ -138,7 +138,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, uint, uint, int>)(lpVtbl[10]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), width, height);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1::GetTextAntialiasMode"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1::GetTextAntialiasMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public TextAntialiasMode GetTextAntialiasMode()
@@ -146,7 +146,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, TextAntialiasMode>)(lpVtbl[11]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1::SetTextAntialiasMode"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteBitmapRenderTarget1::SetTextAntialiasMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult SetTextAntialiasMode(TextAntialiasMode antialiasMode)

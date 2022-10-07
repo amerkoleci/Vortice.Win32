@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC"]/*' />
 /// <unmanaged>DXGI_SURFACE_DESC</unmanaged>
 public partial struct SurfaceDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Width"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Width"]/*' />
 	public uint Width;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Height"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Height"]/*' />
 	public uint Height;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Format"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::Format"]/*' />
 	public Common.Format Format;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SURFACE_DESC::SampleDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SURFACE_DESC::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
 }

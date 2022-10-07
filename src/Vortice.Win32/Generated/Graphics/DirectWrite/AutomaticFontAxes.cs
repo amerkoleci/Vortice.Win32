@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES"]/*' />
 /// <unmanaged>DWRITE_AUTOMATIC_FONT_AXES</unmanaged>
 [Flags]
 public enum AutomaticFontAxes : uint
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES::DWRITE_AUTOMATIC_FONT_AXES_NONE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES::DWRITE_AUTOMATIC_FONT_AXES_NONE"]/*' />
 	/// <unmanaged>DWRITE_AUTOMATIC_FONT_AXES_NONE</unmanaged>
 	None = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES::DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES::DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE"]/*' />
 	/// <unmanaged>DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE</unmanaged>
 	OpticalSize = 1,
 }

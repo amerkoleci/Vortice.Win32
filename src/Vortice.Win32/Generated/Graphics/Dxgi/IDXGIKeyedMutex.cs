@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex"]/*' />
 /// <unmanaged>IDXGIKeyedMutex</unmanaged>
 [Guid("9d8e1289-d7b3-465f-8126-250e349af85d")]
 [NativeTypeName("struct IDXGIKeyedMutex : IDXGIDeviceSubObject")]
@@ -114,7 +114,7 @@ public unsafe partial struct IDXGIKeyedMutex : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex::AcquireSync"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex::AcquireSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult AcquireSync(ulong Key, uint dwMilliseconds)
@@ -122,7 +122,7 @@ public unsafe partial struct IDXGIKeyedMutex : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, ulong, uint, int>)(lpVtbl[8]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key, dwMilliseconds);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIKeyedMutex::ReleaseSync"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIKeyedMutex::ReleaseSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult ReleaseSync(ulong Key)

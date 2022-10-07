@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS1"]/*' />
 /// <unmanaged>DWRITE_TEXT_METRICS1</unmanaged>
 public partial struct TextMetrics1
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS1::Base"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS1::Base"]/*' />
 	public TextMetrics Base;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS1::heightIncludingTrailingWhitespace"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS1::heightIncludingTrailingWhitespace"]/*' />
 	public float heightIncludingTrailingWhitespace;
 }

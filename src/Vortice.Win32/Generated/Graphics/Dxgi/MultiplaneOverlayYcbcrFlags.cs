@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS"]/*' />
 /// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS</unmanaged>
 [Flags]
 public enum MultiplaneOverlayYcbcrFlags : int
 {
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE</unmanaged>
 	YcbcrFlagNominalRange = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_BT709</unmanaged>
 	YcbcrFlagBt709 = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAGS::DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC"]/*' />
 	/// <unmanaged>DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_xvYCC</unmanaged>
 	YcbcrFlagXvycc = 4,
 }

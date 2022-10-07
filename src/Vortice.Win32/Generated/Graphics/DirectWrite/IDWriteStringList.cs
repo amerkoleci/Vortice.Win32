@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteStringList"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList"]/*' />
 /// <unmanaged>IDWriteStringList</unmanaged>
 [Guid("cfee3140-1157-47ca-8b85-31bfcf3f2d0e")]
 [NativeTypeName("struct IDWriteStringList : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteStringList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetCount"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public uint GetCount()
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteStringList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint>)(lpVtbl[3]))((IDWriteStringList*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleNameLength"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetLocaleNameLength(uint listIndex, uint* length)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteStringList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint, uint*, int>)(lpVtbl[4]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, length);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleName"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetLocaleName(uint listIndex, ushort* localeName, uint size)
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteStringList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint, ushort*, uint, int>)(lpVtbl[5]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, localeName, size);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetStringLength"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetStringLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetStringLength(uint listIndex, uint* length)
@@ -106,7 +106,7 @@ public unsafe partial struct IDWriteStringList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint, uint*, int>)(lpVtbl[6]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, length);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetString"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetString"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetString(uint listIndex, ushort* stringBuffer, uint stringBufferSize)

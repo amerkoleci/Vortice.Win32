@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP"]/*' />
 /// <unmanaged>D2D1_VIGNETTE_PROP</unmanaged>
 public enum VignetteProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_COLOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_VIGNETTE_PROP_COLOR</unmanaged>
 	Color = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_TRANSITION_SIZE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_TRANSITION_SIZE"]/*' />
 	/// <unmanaged>D2D1_VIGNETTE_PROP_TRANSITION_SIZE</unmanaged>
 	TransitionSize = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_STRENGTH"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VIGNETTE_PROP::D2D1_VIGNETTE_PROP_STRENGTH"]/*' />
 	/// <unmanaged>D2D1_VIGNETTE_PROP_STRENGTH</unmanaged>
 	Strength = 2,
 }

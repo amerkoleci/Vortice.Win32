@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPlane"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane"]/*' />
 /// <unmanaged>WICBitmapPlane</unmanaged>
 public partial struct WICBitmapPlane
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPlane::Format"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::Format"]/*' />
 	public Guid Format;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPlane::pbBuffer"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::pbBuffer"]/*' />
 	public unsafe byte* pbBuffer;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPlane::cbStride"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::cbStride"]/*' />
 	public uint cbStride;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPlane::cbBufferSize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPlane::cbBufferSize"]/*' />
 	public uint cbBufferSize;
 }

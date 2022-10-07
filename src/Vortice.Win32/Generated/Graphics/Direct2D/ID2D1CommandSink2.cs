@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink2"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink2"]/*' />
 /// <unmanaged>ID2D1CommandSink2</unmanaged>
 [Guid("3bab440e-417e-47df-a2e2-bc0be6a00916")]
 [NativeTypeName("struct ID2D1CommandSink2 : ID2D1CommandSink1")]
@@ -282,7 +282,7 @@ public unsafe partial struct ID2D1CommandSink2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink2*, PrimitiveBlend, int>)(lpVtbl[28]))((ID2D1CommandSink2*)Unsafe.AsPointer(ref this), primitiveBlend);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink2::DrawInk"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink2::DrawInk"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult DrawInk(ID2D1Ink* ink, ID2D1Brush* brush, ID2D1InkStyle* inkStyle)
@@ -290,7 +290,7 @@ public unsafe partial struct ID2D1CommandSink2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink2*, ID2D1Ink*, ID2D1Brush*, ID2D1InkStyle*, int>)(lpVtbl[29]))((ID2D1CommandSink2*)Unsafe.AsPointer(ref this), ink, brush, inkStyle);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink2::DrawGradientMesh"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink2::DrawGradientMesh"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult DrawGradientMesh(ID2D1GradientMesh* gradientMesh)
@@ -298,7 +298,7 @@ public unsafe partial struct ID2D1CommandSink2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink2*, ID2D1GradientMesh*, int>)(lpVtbl[30]))((ID2D1CommandSink2*)Unsafe.AsPointer(ref this), gradientMesh);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink2::DrawGdiMetafile"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink2::DrawGdiMetafile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle)

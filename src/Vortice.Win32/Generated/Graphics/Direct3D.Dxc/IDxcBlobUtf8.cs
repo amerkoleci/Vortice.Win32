@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcBlobUtf8"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcBlobUtf8"]/*' />
 /// <unmanaged>IDxcBlobUtf8</unmanaged>
 [Guid("3da636c9-ba71-4024-a301-30cbf125305b")]
 [NativeTypeName("struct IDxcBlobUtf8 : IDxcBlobEncoding")]
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcBlobUtf8 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf8*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcBlobUtf8::GetStringPointer"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcBlobUtf8::GetStringPointer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public sbyte* GetStringPointer()
@@ -106,7 +106,7 @@ public unsafe partial struct IDxcBlobUtf8 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf8*, sbyte*>)(lpVtbl[6]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcBlobUtf8::GetStringLength"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcBlobUtf8::GetStringLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public nuint GetStringLength()

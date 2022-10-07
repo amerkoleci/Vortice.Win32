@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP"]/*' />
 /// <unmanaged>D2D1_SVG_LINE_CAP</unmanaged>
 public enum SvgLineCap : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_BUTT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_BUTT"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_CAP_BUTT</unmanaged>
 	Butt = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_SQUARE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_SQUARE"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_CAP_SQUARE</unmanaged>
 	Square = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_ROUND"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LINE_CAP::D2D1_SVG_LINE_CAP_ROUND"]/*' />
 	/// <unmanaged>D2D1_SVG_LINE_CAP_ROUND</unmanaged>
 	Round = 2,
 }

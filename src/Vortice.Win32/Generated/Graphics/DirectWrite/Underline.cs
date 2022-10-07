@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE"]/*' />
 /// <unmanaged>DWRITE_UNDERLINE</unmanaged>
 public partial struct Underline
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::width"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::width"]/*' />
 	public float width;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::thickness"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::thickness"]/*' />
 	public float thickness;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::offset"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::offset"]/*' />
 	public float offset;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::runHeight"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::runHeight"]/*' />
 	public float runHeight;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::readingDirection"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::readingDirection"]/*' />
 	public ReadingDirection readingDirection;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::flowDirection"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::flowDirection"]/*' />
 	public FlowDirection flowDirection;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::localeName"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::localeName"]/*' />
 	public unsafe ushort* localeName;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::measuringMode"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::measuringMode"]/*' />
 	public MeasuringMode measuringMode;
 }

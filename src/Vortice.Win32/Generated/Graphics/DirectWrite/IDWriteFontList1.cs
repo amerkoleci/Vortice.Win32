@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontList1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1"]/*' />
 /// <unmanaged>IDWriteFontList1</unmanaged>
 [Guid("da20d8ef-812a-4c43-9802-62ec4abd7ade")]
 [NativeTypeName("struct IDWriteFontList1 : IDWriteFontList")]
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteFontList1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontList1*, uint, IDWriteFont**, int>)(lpVtbl[5]))((IDWriteFontList1*)Unsafe.AsPointer(ref this), index, font);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFontLocality"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFontLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public Locality GetFontLocality(uint listIndex)
@@ -106,7 +106,7 @@ public unsafe partial struct IDWriteFontList1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontList1*, uint, Locality>)(lpVtbl[6]))((IDWriteFontList1*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFont"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFont"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetFont(uint listIndex, IDWriteFont3** font)
@@ -114,7 +114,7 @@ public unsafe partial struct IDWriteFontList1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontList1*, uint, IDWriteFont3**, int>)(lpVtbl[7]))((IDWriteFontList1*)Unsafe.AsPointer(ref this), listIndex, font);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFontFaceReference"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontList1::GetFontFaceReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetFontFaceReference(uint listIndex, IDWriteFontFaceReference** fontFaceReference)

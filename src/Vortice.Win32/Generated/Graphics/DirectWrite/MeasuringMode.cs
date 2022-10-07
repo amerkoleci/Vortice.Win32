@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE"]/*' />
 /// <unmanaged>DWRITE_MEASURING_MODE</unmanaged>
 public enum MeasuringMode : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_NATURAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_MEASURING_MODE_NATURAL</unmanaged>
 	Natural = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_GDI_CLASSIC"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_GDI_CLASSIC"]/*' />
 	/// <unmanaged>DWRITE_MEASURING_MODE_GDI_CLASSIC</unmanaged>
 	GDIClassic = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_GDI_NATURAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_GDI_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_MEASURING_MODE_GDI_NATURAL</unmanaged>
 	GDINatural = 2,
 }

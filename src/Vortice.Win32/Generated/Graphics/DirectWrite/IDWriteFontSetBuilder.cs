@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder"]/*' />
 /// <unmanaged>IDWriteFontSetBuilder</unmanaged>
 [Guid("2f642afe-9c68-4f40-b8be-457401afcb3d")]
 [NativeTypeName("struct IDWriteFontSetBuilder : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteFontSetBuilder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder::AddFontFaceReference"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder::AddFontFaceReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference, FontProperty* properties, uint propertyCount)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteFontSetBuilder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSetBuilder*, IDWriteFontFaceReference*, FontProperty*, uint, int>)(lpVtbl[3]))((IDWriteFontSetBuilder*)Unsafe.AsPointer(ref this), fontFaceReference, properties, propertyCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder::AddFontFaceReference"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder::AddFontFaceReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult AddFontFaceReference(IDWriteFontFaceReference* fontFaceReference)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteFontSetBuilder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSetBuilder*, IDWriteFontFaceReference*, int>)(lpVtbl[4]))((IDWriteFontSetBuilder*)Unsafe.AsPointer(ref this), fontFaceReference);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder::AddFontSet"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder::AddFontSet"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult AddFontSet(IDWriteFontSet* fontSet)
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteFontSetBuilder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSetBuilder*, IDWriteFontSet*, int>)(lpVtbl[5]))((IDWriteFontSetBuilder*)Unsafe.AsPointer(ref this), fontSet);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder::CreateFontSet"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder::CreateFontSet"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult CreateFontSet(IDWriteFontSet** fontSet)

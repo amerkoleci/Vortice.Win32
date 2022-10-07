@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP"]/*' />
 /// <unmanaged>D2D1_SEPIA_PROP</unmanaged>
 public enum SepiaProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP::D2D1_SEPIA_PROP_INTENSITY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP::D2D1_SEPIA_PROP_INTENSITY"]/*' />
 	/// <unmanaged>D2D1_SEPIA_PROP_INTENSITY</unmanaged>
 	Intensity = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP::D2D1_SEPIA_PROP_ALPHA_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SEPIA_PROP::D2D1_SEPIA_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_SEPIA_PROP_ALPHA_MODE</unmanaged>
 	AlphaMode = 1,
 }

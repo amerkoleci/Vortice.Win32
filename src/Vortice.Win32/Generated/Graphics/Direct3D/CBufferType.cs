@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE"]/*' />
 /// <unmanaged>D3D_CBUFFER_TYPE</unmanaged>
 public enum CBufferType : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_CBUFFER"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_CT_CBUFFER</unmanaged>
 	CBuffer = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_TBUFFER"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_TBUFFER"]/*' />
 	/// <unmanaged>D3D_CT_TBUFFER</unmanaged>
 	TBuffer = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_INTERFACE_POINTERS"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_INTERFACE_POINTERS"]/*' />
 	/// <unmanaged>D3D_CT_INTERFACE_POINTERS</unmanaged>
 	InterfacePointers = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_RESOURCE_BIND_INFO"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_RESOURCE_BIND_INFO"]/*' />
 	/// <unmanaged>D3D_CT_RESOURCE_BIND_INFO</unmanaged>
 	ResourceBindInfo = 3,
 }

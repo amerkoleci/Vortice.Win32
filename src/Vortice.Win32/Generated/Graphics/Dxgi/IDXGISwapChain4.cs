@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain4"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain4"]/*' />
 /// <unmanaged>IDXGISwapChain4</unmanaged>
 [Guid("3d585d5a-bd4a-489e-b1f4-3dbcb6452ffb")]
 [NativeTypeName("struct IDXGISwapChain4 : IDXGISwapChain3")]
@@ -370,7 +370,7 @@ public unsafe partial struct IDXGISwapChain4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, uint, uint, uint, Common.Format, uint, uint*, IUnknown**, int>)(lpVtbl[39]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain4::SetHDRMetaData"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain4::SetHDRMetaData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
 	public HResult SetHDRMetaData(HDRMetadataType Type, uint Size, void* pMetaData)

@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH"]/*' />
 /// <unmanaged>DWRITE_STRIKETHROUGH</unmanaged>
 public partial struct Strikethrough
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::width"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::width"]/*' />
 	public float width;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::thickness"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::thickness"]/*' />
 	public float thickness;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::offset"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::offset"]/*' />
 	public float offset;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::readingDirection"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::readingDirection"]/*' />
 	public ReadingDirection readingDirection;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::flowDirection"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::flowDirection"]/*' />
 	public FlowDirection flowDirection;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::localeName"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::localeName"]/*' />
 	public unsafe ushort* localeName;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::measuringMode"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::measuringMode"]/*' />
 	public MeasuringMode measuringMode;
 }

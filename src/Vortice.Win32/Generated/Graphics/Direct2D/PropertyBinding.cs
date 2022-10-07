@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING"]/*' />
 /// <unmanaged>D2D1_PROPERTY_BINDING</unmanaged>
 public partial struct PropertyBinding
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::propertyName"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::propertyName"]/*' />
 	public unsafe ushort* propertyName;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::setFunction"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::setFunction"]/*' />
 	public unsafe delegate* unmanaged[Stdcall]<IUnknown*, byte*, uint, HResult> setFunction;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::getFunction"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::getFunction"]/*' />
 	public unsafe delegate* unmanaged[Stdcall]<IUnknown*, byte*, uint, uint*, HResult> getFunction;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcVersionInfo"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo"]/*' />
 /// <unmanaged>IDxcVersionInfo</unmanaged>
 [Guid("b04f5b50-2059-4f12-a8ff-a1e0cde1cc7e")]
 [NativeTypeName("struct IDxcVersionInfo : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcVersionInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcVersionInfo::GetVersion"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo::GetVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetVersion(uint* pMajor, uint* pMinor)
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcVersionInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo*, uint*, uint*, int>)(lpVtbl[3]))((IDxcVersionInfo*)Unsafe.AsPointer(ref this), pMajor, pMinor);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcVersionInfo::GetFlags"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo::GetFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetFlags(DxcVersionInfoFlags* pFlags)

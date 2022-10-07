@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPngBkgdProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPngBkgdProperties"]/*' />
 /// <unmanaged>WICPngBkgdProperties</unmanaged>
 public enum WICPngBkgdProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngBkgdProperties::WICPngBkgdBackgroundColor"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngBkgdProperties::WICPngBkgdBackgroundColor"]/*' />
 	/// <unmanaged>WICPngBkgdBackgroundColor</unmanaged>
 	WICPngBkgdBackgroundColor = 1,
 }

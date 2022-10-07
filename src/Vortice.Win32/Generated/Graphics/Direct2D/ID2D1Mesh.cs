@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Mesh"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Mesh"]/*' />
 /// <unmanaged>ID2D1Mesh</unmanaged>
 [Guid("2cd906c2-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Mesh : ID2D1Resource")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1Mesh : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1Mesh*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Mesh*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Mesh::Open"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Mesh::Open"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Open(ID2D1TessellationSink** tessellationSink)

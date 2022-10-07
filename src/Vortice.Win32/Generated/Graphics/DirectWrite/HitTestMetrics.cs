@@ -9,34 +9,34 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS"]/*' />
 /// <unmanaged>DWRITE_HIT_TEST_METRICS</unmanaged>
 public partial struct HitTestMetrics
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::textPosition"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::textPosition"]/*' />
 	public uint textPosition;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::length"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::length"]/*' />
 	public uint length;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::left"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::left"]/*' />
 	public float left;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::top"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::top"]/*' />
 	public float top;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::width"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::width"]/*' />
 	public float width;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::height"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::height"]/*' />
 	public float height;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::bidiLevel"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::bidiLevel"]/*' />
 	public uint bidiLevel;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::isText"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::isText"]/*' />
 	public Bool32 isText;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::isTrimmed"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_HIT_TEST_METRICS::isTrimmed"]/*' />
 	public Bool32 isTrimmed;
 }

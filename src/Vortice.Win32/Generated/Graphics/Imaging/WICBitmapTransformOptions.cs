@@ -9,26 +9,26 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions"]/*' />
 /// <unmanaged>WICBitmapTransformOptions</unmanaged>
 public enum WICBitmapTransformOptions : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate0"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate0"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate0</unmanaged>
 	Rotate0 = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate90"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate90"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate90</unmanaged>
 	Rotate90 = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate180"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate180"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate180</unmanaged>
 	Rotate180 = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate270"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate270"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate270</unmanaged>
 	Rotate270 = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformFlipHorizontal"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformFlipHorizontal"]/*' />
 	/// <unmanaged>WICBitmapTransformFlipHorizontal</unmanaged>
 	FlipHorizontal = 8,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformFlipVertical"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformFlipVertical"]/*' />
 	/// <unmanaged>WICBitmapTransformFlipVertical</unmanaged>
 	FlipVertical = 16,
 }

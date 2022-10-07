@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS"]/*' />
 /// <unmanaged>D3D_PARAMETER_FLAGS</unmanaged>
 [Flags]
 public enum ParameterFlags : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_NONE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_NONE"]/*' />
 	/// <unmanaged>D3D_PF_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_IN"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_IN"]/*' />
 	/// <unmanaged>D3D_PF_IN</unmanaged>
 	In = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_OUT"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_OUT"]/*' />
 	/// <unmanaged>D3D_PF_OUT</unmanaged>
 	Out = 2,
 }

@@ -9,65 +9,65 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND"]/*' />
 /// <unmanaged>D2D1_SVG_PATH_COMMAND</unmanaged>
 public enum SvgPathCommand : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CLOSE_PATH"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CLOSE_PATH"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CLOSE_PATH</unmanaged>
 	ClosePath = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_MOVE_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_MOVE_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_MOVE_ABSOLUTE</unmanaged>
 	MoveAbsolute = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_MOVE_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_MOVE_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_MOVE_RELATIVE</unmanaged>
 	MoveRelative = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_LINE_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_LINE_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_LINE_ABSOLUTE</unmanaged>
 	LineAbsolute = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_LINE_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_LINE_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_LINE_RELATIVE</unmanaged>
 	LineRelative = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CUBIC_ABSOLUTE</unmanaged>
 	CubicAbsolute = 5,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CUBIC_RELATIVE</unmanaged>
 	CubicRelative = 6,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_QUADRADIC_ABSOLUTE</unmanaged>
 	QuadradicAbsolute = 7,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_QUADRADIC_RELATIVE</unmanaged>
 	QuadradicRelative = 8,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_ARC_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_ARC_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_ARC_ABSOLUTE</unmanaged>
 	ArcAbsolute = 9,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_ARC_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_ARC_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_ARC_RELATIVE</unmanaged>
 	ArcRelative = 10,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_HORIZONTAL_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_HORIZONTAL_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_HORIZONTAL_ABSOLUTE</unmanaged>
 	HorizontalAbsolute = 11,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_HORIZONTAL_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_HORIZONTAL_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_HORIZONTAL_RELATIVE</unmanaged>
 	HorizontalRelative = 12,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_VERTICAL_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_VERTICAL_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_VERTICAL_ABSOLUTE</unmanaged>
 	VerticalAbsolute = 13,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_VERTICAL_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_VERTICAL_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_VERTICAL_RELATIVE</unmanaged>
 	VerticalRelative = 14,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_ABSOLUTE</unmanaged>
 	CubicSmoothAbsolute = 15,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_CUBIC_SMOOTH_RELATIVE</unmanaged>
 	CubicSmoothRelative = 16,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_ABSOLUTE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_ABSOLUTE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_ABSOLUTE</unmanaged>
 	QuadradicSmoothAbsolute = 17,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_RELATIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PATH_COMMAND::D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_RELATIVE"]/*' />
 	/// <unmanaged>D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_RELATIVE</unmanaged>
 	QuadradicSmoothRelative = 18,
 }

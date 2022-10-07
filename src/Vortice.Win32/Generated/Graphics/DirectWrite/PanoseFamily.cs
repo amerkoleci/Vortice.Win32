@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY"]/*' />
 /// <unmanaged>DWRITE_PANOSE_FAMILY</unmanaged>
 public enum PanoseFamily : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_TEXT_DISPLAY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_TEXT_DISPLAY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_TEXT_DISPLAY</unmanaged>
 	TextDisplay = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_SCRIPT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_SCRIPT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_SCRIPT</unmanaged>
 	Script = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_DECORATIVE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_DECORATIVE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_DECORATIVE</unmanaged>
 	Decorative = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_SYMBOL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_SYMBOL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_SYMBOL</unmanaged>
 	Symbol = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_PICTORIAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_PICTORIAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_PICTORIAL</unmanaged>
 	Pictorial = 5,
 }

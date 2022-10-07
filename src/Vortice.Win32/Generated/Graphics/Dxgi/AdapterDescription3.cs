@@ -9,43 +9,43 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC3</unmanaged>
 public partial struct AdapterDescription3
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Description"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Description"]/*' />
 	public unsafe fixed ushort Description[128];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::VendorId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::VendorId"]/*' />
 	public uint VendorId;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DeviceId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DeviceId"]/*' />
 	public uint DeviceId;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SubSysId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SubSysId"]/*' />
 	public uint SubSysId;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Revision"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Revision"]/*' />
 	public uint Revision;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedVideoMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SharedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::AdapterLuid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Flags"]/*' />
 	public AdapterFlags3 Flags;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::GraphicsPreemptionGranularity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::GraphicsPreemptionGranularity"]/*' />
 	public GraphicsPreemptionGranularity GraphicsPreemptionGranularity;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::ComputePreemptionGranularity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::ComputePreemptionGranularity"]/*' />
 	public ComputePreemptionGranularity ComputePreemptionGranularity;
 }

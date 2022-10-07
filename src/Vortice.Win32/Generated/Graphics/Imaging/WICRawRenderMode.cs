@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICRawRenderMode"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode"]/*' />
 /// <unmanaged>WICRawRenderMode</unmanaged>
 public enum WICRawRenderMode : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeDraft"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeDraft"]/*' />
 	/// <unmanaged>WICRawRenderModeDraft</unmanaged>
 	WICRawRenderModeDraft = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeNormal"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeNormal"]/*' />
 	/// <unmanaged>WICRawRenderModeNormal</unmanaged>
 	WICRawRenderModeNormal = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeBestQuality"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeBestQuality"]/*' />
 	/// <unmanaged>WICRawRenderModeBestQuality</unmanaged>
 	WICRawRenderModeBestQuality = 3,
 }

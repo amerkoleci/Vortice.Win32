@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties"]/*' />
 /// <unmanaged>WICPngChrmProperties</unmanaged>
 public enum WICPngChrmProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmWhitePointX"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmWhitePointX"]/*' />
 	/// <unmanaged>WICPngChrmWhitePointX</unmanaged>
 	WICPngChrmWhitePointX = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmWhitePointY"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmWhitePointY"]/*' />
 	/// <unmanaged>WICPngChrmWhitePointY</unmanaged>
 	WICPngChrmWhitePointY = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmRedX"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmRedX"]/*' />
 	/// <unmanaged>WICPngChrmRedX</unmanaged>
 	WICPngChrmRedX = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmRedY"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmRedY"]/*' />
 	/// <unmanaged>WICPngChrmRedY</unmanaged>
 	WICPngChrmRedY = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmGreenX"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmGreenX"]/*' />
 	/// <unmanaged>WICPngChrmGreenX</unmanaged>
 	WICPngChrmGreenX = 5,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmGreenY"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmGreenY"]/*' />
 	/// <unmanaged>WICPngChrmGreenY</unmanaged>
 	WICPngChrmGreenY = 6,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmBlueX"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmBlueX"]/*' />
 	/// <unmanaged>WICPngChrmBlueX</unmanaged>
 	WICPngChrmBlueX = 7,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmBlueY"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmBlueY"]/*' />
 	/// <unmanaged>WICPngChrmBlueY</unmanaged>
 	WICPngChrmBlueY = 8,
 }

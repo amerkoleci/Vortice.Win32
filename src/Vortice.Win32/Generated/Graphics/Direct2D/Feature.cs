@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE"]/*' />
 /// <unmanaged>D2D1_FEATURE</unmanaged>
 public enum Feature : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE::D2D1_FEATURE_DOUBLES"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE::D2D1_FEATURE_DOUBLES"]/*' />
 	/// <unmanaged>D2D1_FEATURE_DOUBLES</unmanaged>
 	Doubles = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE::D2D1_FEATURE_D3D10_X_HARDWARE_OPTIONS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE::D2D1_FEATURE_D3D10_X_HARDWARE_OPTIONS"]/*' />
 	/// <unmanaged>D2D1_FEATURE_D3D10_X_HARDWARE_OPTIONS</unmanaged>
 	XHardwareOptions = 1,
 }

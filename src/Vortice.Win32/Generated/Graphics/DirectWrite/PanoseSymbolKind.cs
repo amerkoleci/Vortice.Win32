@@ -9,47 +9,47 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND</unmanaged>
 public enum PanoseSymbolKind : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_MONTAGES"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_MONTAGES"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_MONTAGES</unmanaged>
 	Montages = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_PICTURES"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_PICTURES"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_PICTURES</unmanaged>
 	Pictures = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_SHAPES"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_SHAPES"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_SHAPES</unmanaged>
 	Shapes = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_SCIENTIFIC"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_SCIENTIFIC"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_SCIENTIFIC</unmanaged>
 	Scientific = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_MUSIC"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_MUSIC"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_MUSIC</unmanaged>
 	Music = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_EXPERT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_EXPERT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_EXPERT</unmanaged>
 	Expert = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_PATTERNS"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_PATTERNS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_PATTERNS</unmanaged>
 	Patterns = 8,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_BOARDERS"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_BOARDERS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_BOARDERS</unmanaged>
 	Boarders = 9,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_ICONS"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_ICONS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_ICONS</unmanaged>
 	Icons = 10,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_LOGOS"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_LOGOS"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_LOGOS</unmanaged>
 	Logos = 11,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_INDUSTRY_SPECIFIC"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_INDUSTRY_SPECIFIC"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_INDUSTRY_SPECIFIC</unmanaged>
 	IndustrySpecific = 12,
 }

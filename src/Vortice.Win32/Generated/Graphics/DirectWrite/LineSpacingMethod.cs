@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD"]/*' />
 /// <unmanaged>DWRITE_LINE_SPACING_METHOD</unmanaged>
 public enum LineSpacingMethod : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_DEFAULT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_LINE_SPACING_METHOD_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_UNIFORM"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_UNIFORM"]/*' />
 	/// <unmanaged>DWRITE_LINE_SPACING_METHOD_UNIFORM</unmanaged>
 	Uniform = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_PROPORTIONAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_PROPORTIONAL"]/*' />
 	/// <unmanaged>DWRITE_LINE_SPACING_METHOD_PROPORTIONAL</unmanaged>
 	Proportional = 2,
 }

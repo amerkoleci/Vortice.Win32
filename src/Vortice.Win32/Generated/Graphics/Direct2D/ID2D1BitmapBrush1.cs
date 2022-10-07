@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1"]/*' />
 /// <unmanaged>ID2D1BitmapBrush1</unmanaged>
 [Guid("41343a53-e41a-49a2-91cd-21793bbb62e5")]
 [NativeTypeName("struct ID2D1BitmapBrush1 : ID2D1BitmapBrush")]
@@ -178,7 +178,7 @@ public unsafe partial struct ID2D1BitmapBrush1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ID2D1Bitmap**, void>)(lpVtbl[15]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), bitmap);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::SetInterpolationMode1"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::SetInterpolationMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public void SetInterpolationMode1(InterpolationMode interpolationMode)
@@ -186,7 +186,7 @@ public unsafe partial struct ID2D1BitmapBrush1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, InterpolationMode, void>)(lpVtbl[16]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::GetInterpolationMode1"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::GetInterpolationMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public InterpolationMode GetInterpolationMode1()

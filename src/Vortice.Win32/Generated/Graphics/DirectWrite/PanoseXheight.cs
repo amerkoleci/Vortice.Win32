@@ -9,38 +9,38 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_XHEIGHT</unmanaged>
 public enum PanoseXheight : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_SMALL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_SMALL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_CONSTANT_SMALL</unmanaged>
 	ConstantSmall = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_STANDARD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_STANDARD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_CONSTANT_STANDARD</unmanaged>
 	ConstantStandard = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_LARGE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_LARGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_CONSTANT_LARGE</unmanaged>
 	ConstantLarge = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_SMALL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_SMALL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_DUCKING_SMALL</unmanaged>
 	DuckingSmall = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_STANDARD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_STANDARD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_DUCKING_STANDARD</unmanaged>
 	DuckingStandard = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_LARGE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_LARGE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_DUCKING_LARGE</unmanaged>
 	DuckingLarge = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_STD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_CONSTANT_STD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_CONSTANT_STD</unmanaged>
 	ConstantStd = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_STD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_DUCKING_STD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_DUCKING_STD</unmanaged>
 	DuckingStd = 6,
 }

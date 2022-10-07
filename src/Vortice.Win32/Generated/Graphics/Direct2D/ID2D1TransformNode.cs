@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformNode"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformNode"]/*' />
 /// <unmanaged>ID2D1TransformNode</unmanaged>
 [Guid("b2efe1e7-729f-4102-949f-505fa21bf666")]
 [NativeTypeName("struct ID2D1TransformNode : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1TransformNode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformNode::GetInputCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformNode::GetInputCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public uint GetInputCount()

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1"]/*' />
 /// <unmanaged>IDWriteFontSet1</unmanaged>
 [Guid("7e9fda85-6c92-4053-bc47-7ae3530db4d3")]
 [NativeTypeName("struct IDWriteFontSet1 : IDWriteFontSet")]
@@ -154,7 +154,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, FontProperty*, uint, IDWriteFontSet**, int>)(lpVtbl[12]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), properties, propertyCount, filteredSet);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetMatchingFonts"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetMatchingFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetMatchingFonts(FontProperty* fontProperty, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontSet1** matchingFonts)
@@ -162,7 +162,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, FontProperty*, FontAxisValue*, uint, IDWriteFontSet1**, int>)(lpVtbl[13]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), fontProperty, fontAxisValues, fontAxisValueCount, matchingFonts);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFirstFontResources"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFirstFontResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult GetFirstFontResources(IDWriteFontSet1** filteredFontSet)
@@ -170,7 +170,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, IDWriteFontSet1**, int>)(lpVtbl[14]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), filteredFontSet);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFonts"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult GetFilteredFonts(uint* indices, uint indexCount, IDWriteFontSet1** filteredFontSet)
@@ -178,7 +178,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, uint*, uint, IDWriteFontSet1**, int>)(lpVtbl[15]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), indices, indexCount, filteredFontSet);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFonts"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult GetFilteredFonts(FontAxisRange* fontAxisRanges, uint fontAxisRangeCount, Bool32 selectAnyRange, IDWriteFontSet1** filteredFontSet)
@@ -186,7 +186,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, FontAxisRange*, uint, Bool32, IDWriteFontSet1**, int>)(lpVtbl[16]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), fontAxisRanges, fontAxisRangeCount, selectAnyRange, filteredFontSet);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFonts"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetFilteredFonts(FontProperty* properties, uint propertyCount, Bool32 selectAnyProperty, IDWriteFontSet1** filteredFontSet)
@@ -194,7 +194,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, FontProperty*, uint, Bool32, IDWriteFontSet1**, int>)(lpVtbl[17]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), properties, propertyCount, selectAnyProperty, filteredFontSet);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFontIndices"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFontIndices"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult GetFilteredFontIndices(FontAxisRange* fontAxisRanges, uint fontAxisRangeCount, Bool32 selectAnyRange, uint* indices, uint maxIndexCount, uint* actualIndexCount)
@@ -202,7 +202,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, FontAxisRange*, uint, Bool32, uint*, uint, uint*, int>)(lpVtbl[18]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), fontAxisRanges, fontAxisRangeCount, selectAnyRange, indices, maxIndexCount, actualIndexCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFontIndices"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFilteredFontIndices"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult GetFilteredFontIndices(FontProperty* properties, uint propertyCount, Bool32 selectAnyProperty, uint* indices, uint maxIndexCount, uint* actualIndexCount)
@@ -210,7 +210,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, FontProperty*, uint, Bool32, uint*, uint, uint*, int>)(lpVtbl[19]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), properties, propertyCount, selectAnyProperty, indices, maxIndexCount, actualIndexCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontAxisRanges"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontAxisRanges"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult GetFontAxisRanges(uint listIndex, FontAxisRange* fontAxisRanges, uint maxFontAxisRangeCount, uint* actualFontAxisRangeCount)
@@ -218,7 +218,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, uint, FontAxisRange*, uint, uint*, int>)(lpVtbl[20]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), listIndex, fontAxisRanges, maxFontAxisRangeCount, actualFontAxisRangeCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontAxisRanges"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontAxisRanges"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult GetFontAxisRanges(FontAxisRange* fontAxisRanges, uint maxFontAxisRangeCount, uint* actualFontAxisRangeCount)
@@ -226,7 +226,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, FontAxisRange*, uint, uint*, int>)(lpVtbl[21]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), fontAxisRanges, maxFontAxisRangeCount, actualFontAxisRangeCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontFaceReference"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontFaceReference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult GetFontFaceReference(uint listIndex, IDWriteFontFaceReference1** fontFaceReference)
@@ -234,7 +234,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, uint, IDWriteFontFaceReference1**, int>)(lpVtbl[22]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), listIndex, fontFaceReference);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::CreateFontResource"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::CreateFontResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult CreateFontResource(uint listIndex, IDWriteFontResource** fontResource)
@@ -242,7 +242,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, uint, IDWriteFontResource**, int>)(lpVtbl[23]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), listIndex, fontResource);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::CreateFontFace"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::CreateFontFace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CreateFontFace(uint listIndex, IDWriteFontFace5** fontFace)
@@ -250,7 +250,7 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, uint, IDWriteFontFace5**, int>)(lpVtbl[24]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), listIndex, fontFace);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontLocality"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet1::GetFontLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public Locality GetFontLocality(uint listIndex)

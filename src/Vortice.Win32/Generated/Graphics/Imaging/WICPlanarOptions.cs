@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPlanarOptions"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPlanarOptions"]/*' />
 /// <unmanaged>WICPlanarOptions</unmanaged>
 public enum WICPlanarOptions : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPlanarOptions::WICPlanarOptionsDefault"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPlanarOptions::WICPlanarOptionsDefault"]/*' />
 	/// <unmanaged>WICPlanarOptionsDefault</unmanaged>
 	Default = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPlanarOptions::WICPlanarOptionsPreserveSubsampling"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPlanarOptions::WICPlanarOptionsPreserveSubsampling"]/*' />
 	/// <unmanaged>WICPlanarOptionsPreserveSubsampling</unmanaged>
 	PreserveSubsampling = 1,
 }

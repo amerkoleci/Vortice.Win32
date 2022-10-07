@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D.Fxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA"]/*' />
 /// <unmanaged>D3D_SHADER_DATA</unmanaged>
 public partial struct ShaderData
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA::pBytecode"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA::pBytecode"]/*' />
 	public unsafe void* pBytecode;
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA::BytecodeLength"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_DATA::BytecodeLength"]/*' />
 	public nuint BytecodeLength;
 }

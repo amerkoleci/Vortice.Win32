@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_BITMAP_INTERPOLATION_MODE</unmanaged>
 public enum BitmapInterpolationMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE::D2D1_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE::D2D1_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
 	NearestNeighbor = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE::D2D1_BITMAP_INTERPOLATION_MODE_LINEAR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_INTERPOLATION_MODE::D2D1_BITMAP_INTERPOLATION_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_BITMAP_INTERPOLATION_MODE_LINEAR</unmanaged>
 	Linear = 1,
 }

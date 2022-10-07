@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPngHistProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPngHistProperties"]/*' />
 /// <unmanaged>WICPngHistProperties</unmanaged>
 public enum WICPngHistProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngHistProperties::WICPngHistFrequencies"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngHistProperties::WICPngHistFrequencies"]/*' />
 	/// <unmanaged>WICPngHistFrequencies</unmanaged>
 	WICPngHistFrequencies = 1,
 }

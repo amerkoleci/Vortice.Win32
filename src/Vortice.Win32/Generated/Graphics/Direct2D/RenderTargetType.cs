@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE"]/*' />
 /// <unmanaged>D2D1_RENDER_TARGET_TYPE</unmanaged>
 public enum RenderTargetType : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_DEFAULT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_TYPE_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_SOFTWARE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_SOFTWARE"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_TYPE_SOFTWARE</unmanaged>
 	Software = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_HARDWARE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_TYPE::D2D1_RENDER_TARGET_TYPE_HARDWARE"]/*' />
 	/// <unmanaged>D2D1_RENDER_TARGET_TYPE_HARDWARE</unmanaged>
 	Hardware = 2,
 }

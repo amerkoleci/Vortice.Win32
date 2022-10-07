@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform"]/*' />
 /// <unmanaged>ID2D1OffsetTransform</unmanaged>
 [Guid("3fe6adea-7643-4f53-bd14-a0ce63f24042")]
 [NativeTypeName("struct ID2D1OffsetTransform : ID2D1TransformNode")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1OffsetTransform : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, uint>)(lpVtbl[3]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::SetOffset"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::SetOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetOffset(System.Drawing.Point offset)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1OffsetTransform : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point, void>)(lpVtbl[4]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), offset);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::GetOffset"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1OffsetTransform::GetOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public System.Drawing.Point GetOffset()

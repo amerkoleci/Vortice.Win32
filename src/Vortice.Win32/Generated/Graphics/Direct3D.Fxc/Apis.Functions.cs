@@ -43,7 +43,7 @@ public static unsafe partial class Apis
 
 	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DDisassembleRegion(void* pSrcData, nuint SrcDataSize, uint Flags, sbyte* szComments, nuint StartByteOffset, nuint NumInsts, nuint* pFinishByteOffset, Graphics.Direct3D.ID3DBlob** ppDisassembly);
-
+	
 	[DllImport("D3DCOMPILER_47.dll", ExactSpelling = true)]
 	public static extern HResult D3DGetTraceInstructionOffsets(void* pSrcData, nuint SrcDataSize, uint Flags, nuint StartInstIndex, nuint NumInsts, nuint* pOffsets, nuint* pTotalInsts);
 

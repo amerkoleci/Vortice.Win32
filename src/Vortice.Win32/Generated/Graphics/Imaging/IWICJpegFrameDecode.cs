@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode"]/*' />
 /// <unmanaged>IWICJpegFrameDecode</unmanaged>
 [Guid("8939f66e-c46a-4c21-a9d1-98b327ce1679")]
 [NativeTypeName("struct IWICJpegFrameDecode : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::DoesSupportIndexing"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::DoesSupportIndexing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult DoesSupportIndexing(Bool32* pfIndexingSupported)
@@ -82,7 +82,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, Bool32*, int>)(lpVtbl[3]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pfIndexingSupported);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::SetIndexing"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::SetIndexing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetIndexing(WICJpegIndexingOptions options, uint horizontalIntervalSize)
@@ -90,7 +90,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, WICJpegIndexingOptions, uint, int>)(lpVtbl[4]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), options, horizontalIntervalSize);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::ClearIndexing"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::ClearIndexing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult ClearIndexing()
@@ -98,7 +98,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, int>)(lpVtbl[5]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetAcHuffmanTable"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetAcHuffmanTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegAcHuffmanTable* pAcHuffmanTable)
@@ -106,7 +106,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegAcHuffmanTable*, int>)(lpVtbl[6]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetDcHuffmanTable"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetDcHuffmanTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegDCHuffmanTable* pDcHuffmanTable)
@@ -114,7 +114,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegDCHuffmanTable*, int>)(lpVtbl[7]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetQuantizationTable"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetQuantizationTable"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetQuantizationTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegQuantizationTable* pQuantizationTable)
@@ -122,7 +122,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegQuantizationTable*, int>)(lpVtbl[8]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetFrameHeader"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetFrameHeader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetFrameHeader(WICJpegFrameHeader* pFrameHeader)
@@ -130,7 +130,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, WICJpegFrameHeader*, int>)(lpVtbl[9]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pFrameHeader);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetScanHeader"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetScanHeader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetScanHeader(uint scanIndex, WICJpegScanHeader* pScanHeader)
@@ -138,7 +138,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, WICJpegScanHeader*, int>)(lpVtbl[10]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, pScanHeader);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::CopyScan"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::CopyScan"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult CopyScan(uint scanIndex, uint scanOffset, uint cbScanData, byte* pbScanData, uint* pcbScanDataActual)
@@ -146,7 +146,7 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, uint, byte*, uint*, int>)(lpVtbl[11]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, scanOffset, cbScanData, pbScanData, pcbScanDataActual);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::CopyMinimalStream"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::CopyMinimalStream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult CopyMinimalStream(uint streamOffset, uint cbStreamData, byte* pbStreamData, uint* pcbStreamDataActual)

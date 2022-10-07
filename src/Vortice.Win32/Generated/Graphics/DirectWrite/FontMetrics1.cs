@@ -9,49 +9,49 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1"]/*' />
 /// <unmanaged>DWRITE_FONT_METRICS1</unmanaged>
 public partial struct FontMetrics1
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::Base"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::Base"]/*' />
 	public FontMetrics Base;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxLeft"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxLeft"]/*' />
 	public short glyphBoxLeft;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxTop"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxTop"]/*' />
 	public short glyphBoxTop;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxRight"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxRight"]/*' />
 	public short glyphBoxRight;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxBottom"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::glyphBoxBottom"]/*' />
 	public short glyphBoxBottom;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::subscriptPositionX"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::subscriptPositionX"]/*' />
 	public short subscriptPositionX;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::subscriptPositionY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::subscriptPositionY"]/*' />
 	public short subscriptPositionY;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::subscriptSizeX"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::subscriptSizeX"]/*' />
 	public short subscriptSizeX;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::subscriptSizeY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::subscriptSizeY"]/*' />
 	public short subscriptSizeY;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::superscriptPositionX"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::superscriptPositionX"]/*' />
 	public short superscriptPositionX;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::superscriptPositionY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::superscriptPositionY"]/*' />
 	public short superscriptPositionY;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::superscriptSizeX"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::superscriptSizeX"]/*' />
 	public short superscriptSizeX;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::superscriptSizeY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::superscriptSizeY"]/*' />
 	public short superscriptSizeY;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::hasTypographicMetrics"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS1::hasTypographicMetrics"]/*' />
 	public Bool32 hasTypographicMetrics;
 }

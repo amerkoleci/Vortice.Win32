@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="DxcArgPair"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="DxcArgPair"]/*' />
 /// <unmanaged>DxcArgPair</unmanaged>
 public partial struct DxcArgPair
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="DxcArgPair::pName"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcArgPair::pName"]/*' />
 	public unsafe ushort* pName;
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="DxcArgPair::pValue"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcArgPair::pValue"]/*' />
 	public unsafe ushort* pValue;
 }

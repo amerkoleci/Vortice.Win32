@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader"]/*' />
 /// <unmanaged>WICJpegFrameHeader</unmanaged>
 public partial struct WICJpegFrameHeader
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::Width"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::Width"]/*' />
 	public uint Width;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::Height"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::Height"]/*' />
 	public uint Height;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::TransferMatrix"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::TransferMatrix"]/*' />
 	public WICJpegTransferMatrix TransferMatrix;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::ScanType"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::ScanType"]/*' />
 	public WICJpegScanType ScanType;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::cComponents"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::cComponents"]/*' />
 	public uint cComponents;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::ComponentIdentifiers"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::ComponentIdentifiers"]/*' />
 	public uint ComponentIdentifiers;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::SampleFactors"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::SampleFactors"]/*' />
 	public uint SampleFactors;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::QuantizationTableIndices"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegFrameHeader::QuantizationTableIndices"]/*' />
 	public uint QuantizationTableIndices;
 }

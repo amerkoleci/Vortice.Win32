@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP"]/*' />
 /// <unmanaged>D2D1_ARITHMETICCOMPOSITE_PROP</unmanaged>
 public enum ArithmeticCompositeProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP::D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP::D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS"]/*' />
 	/// <unmanaged>D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS</unmanaged>
 	Coefficients = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP::D2D1_ARITHMETICCOMPOSITE_PROP_CLAMP_OUTPUT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARITHMETICCOMPOSITE_PROP::D2D1_ARITHMETICCOMPOSITE_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_ARITHMETICCOMPOSITE_PROP_CLAMP_OUTPUT</unmanaged>
 	ClampOutput = 1,
 }

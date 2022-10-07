@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE"]/*' />
 /// <unmanaged>DXGI_JPEG_QUANTIZATION_TABLE</unmanaged>
 public partial struct JpegQuantizationTable
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE::Elements"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_JPEG_QUANTIZATION_TABLE::Elements"]/*' />
 	public unsafe fixed byte Elements[64];
 }

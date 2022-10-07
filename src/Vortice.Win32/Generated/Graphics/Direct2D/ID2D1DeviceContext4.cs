@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4"]/*' />
 /// <unmanaged>ID2D1DeviceContext4</unmanaged>
 [Guid("8c427831-3d90-4476-b647-c4fae349e4db")]
 [NativeTypeName("struct ID2D1DeviceContext4 : ID2D1DeviceContext3")]
@@ -917,7 +917,7 @@ public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, void>)(lpVtbl[107]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::CreateSvgGlyphStyle"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::CreateSvgGlyphStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(108)]
 	public HResult CreateSvgGlyphStyle(ID2D1SvgGlyphStyle** svgGlyphStyle)
@@ -925,7 +925,7 @@ public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, ID2D1SvgGlyphStyle**, int>)(lpVtbl[108]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), svgGlyphStyle);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::DrawText"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::DrawText"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(109)]
 	public void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Common.RectF* layoutRect, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
@@ -933,7 +933,7 @@ public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, ushort*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Common.RectF*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[109]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, options, measuringMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::DrawTextLayout"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::DrawTextLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(110)]
 	public void DrawTextLayout(System.Drawing.PointF origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, DrawTextOptions options)
@@ -941,7 +941,7 @@ public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, DrawTextOptions, void>)(lpVtbl[110]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, options);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::DrawColorBitmapGlyphRun"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::DrawColorBitmapGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(111)]
 	public void DrawColorBitmapGlyphRun(Graphics.DirectWrite.GlyphImageFormats glyphImageFormat, System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, ColorBitmapGlyphSnapOption bitmapSnapOption)
@@ -949,7 +949,7 @@ public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Graphics.DirectWrite.GlyphImageFormats, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, ColorBitmapGlyphSnapOption, void>)(lpVtbl[111]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), glyphImageFormat, baselineOrigin, glyphRun, measuringMode, bitmapSnapOption);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::DrawSvgGlyphRun"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::DrawSvgGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(112)]
 	public void DrawSvgGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Graphics.DirectWrite.MeasuringMode measuringMode)
@@ -957,7 +957,7 @@ public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[112]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, measuringMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::GetColorBitmapGlyphImage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::GetColorBitmapGlyphImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(113)]
 	public HResult GetColorBitmapGlyphImage(Graphics.DirectWrite.GlyphImageFormats glyphImageFormat, System.Drawing.PointF glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, float dpiX, float dpiY, Matrix3x2* glyphTransform, ID2D1Image** glyphImage)
@@ -965,7 +965,7 @@ public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, Graphics.DirectWrite.GlyphImageFormats, System.Drawing.PointF, Graphics.DirectWrite.IDWriteFontFace*, float, ushort, Bool32, Matrix3x2*, float, float, Matrix3x2*, ID2D1Image**, int>)(lpVtbl[113]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), glyphImageFormat, glyphOrigin, fontFace, fontEmSize, glyphIndex, isSideways, worldTransform, dpiX, dpiY, glyphTransform, glyphImage);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::GetSvgGlyphImage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext4::GetSvgGlyphImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(114)]
 	public HResult GetSvgGlyphImage(System.Drawing.PointF glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Matrix3x2* glyphTransform, ID2D1CommandList** glyphImage)

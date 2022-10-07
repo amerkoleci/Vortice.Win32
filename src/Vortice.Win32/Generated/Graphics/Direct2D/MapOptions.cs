@@ -9,21 +9,21 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS"]/*' />
 /// <unmanaged>D2D1_MAP_OPTIONS</unmanaged>
 [Flags]
 public enum MapOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_MAP_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_READ"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_READ"]/*' />
 	/// <unmanaged>D2D1_MAP_OPTIONS_READ</unmanaged>
 	Read = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_WRITE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_WRITE"]/*' />
 	/// <unmanaged>D2D1_MAP_OPTIONS_WRITE</unmanaged>
 	Write = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_DISCARD"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAP_OPTIONS::D2D1_MAP_OPTIONS_DISCARD"]/*' />
 	/// <unmanaged>D2D1_MAP_OPTIONS_DISCARD</unmanaged>
 	Discard = 4,
 }

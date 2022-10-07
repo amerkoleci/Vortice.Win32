@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE"]/*' />
 /// <unmanaged>DWRITE_CONTAINER_TYPE</unmanaged>
 public enum ContainerType : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_UNKNOWN"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_CONTAINER_TYPE_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_WOFF"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_WOFF"]/*' />
 	/// <unmanaged>DWRITE_CONTAINER_TYPE_WOFF</unmanaged>
 	Woff = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_WOFF2"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_WOFF2"]/*' />
 	/// <unmanaged>DWRITE_CONTAINER_TYPE_WOFF2</unmanaged>
 	Woff2 = 2,
 }

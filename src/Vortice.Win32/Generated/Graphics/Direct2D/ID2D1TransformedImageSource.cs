@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformedImageSource"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedImageSource"]/*' />
 /// <unmanaged>ID2D1TransformedImageSource</unmanaged>
 [Guid("7f1f79e5-2796-416c-8f55-700f911445e5")]
 [NativeTypeName("struct ID2D1TransformedImageSource : ID2D1Image")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1TransformedImageSource : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1TransformedImageSource*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1TransformedImageSource*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformedImageSource::GetSource"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedImageSource::GetSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void GetSource(ID2D1ImageSource** imageSource)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1TransformedImageSource : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1TransformedImageSource*, ID2D1ImageSource**, void>)(lpVtbl[4]))((ID2D1TransformedImageSource*)Unsafe.AsPointer(ref this), imageSource);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformedImageSource::GetProperties"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedImageSource::GetProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void GetProperties(TransformedImageSourceProperties* properties)

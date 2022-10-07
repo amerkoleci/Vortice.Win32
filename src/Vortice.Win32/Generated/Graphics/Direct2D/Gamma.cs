@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GAMMA"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA"]/*' />
 /// <unmanaged>D2D1_GAMMA</unmanaged>
 public enum Gamma : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GAMMA::D2D1_GAMMA_2_2"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA::D2D1_GAMMA_2_2"]/*' />
 	/// <unmanaged>D2D1_GAMMA_2_2</unmanaged>
 	Gamma_2_2 = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GAMMA::D2D1_GAMMA_1_0"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAMMA::D2D1_GAMMA_1_0"]/*' />
 	/// <unmanaged>D2D1_GAMMA_1_0</unmanaged>
 	Gamma_1_0 = 1,
 }

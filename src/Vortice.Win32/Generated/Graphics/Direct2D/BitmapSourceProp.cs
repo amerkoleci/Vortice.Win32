@@ -9,26 +9,26 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_PROP</unmanaged>
 public enum BitmapSourceProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_WIC_BITMAP_SOURCE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_WIC_BITMAP_SOURCE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_WIC_BITMAP_SOURCE</unmanaged>
 	WicBitmapSource = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_SCALE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_SCALE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_SCALE</unmanaged>
 	Scale = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_INTERPOLATION_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_INTERPOLATION_MODE</unmanaged>
 	InterpolationMode = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ENABLE_DPI_CORRECTION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ENABLE_DPI_CORRECTION"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_ENABLE_DPI_CORRECTION</unmanaged>
 	EnableDpiCorrection = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ALPHA_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_ALPHA_MODE</unmanaged>
 	AlphaMode = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ORIENTATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_PROP::D2D1_BITMAPSOURCE_PROP_ORIENTATION"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_PROP_ORIENTATION</unmanaged>
 	Orientation = 5,
 }

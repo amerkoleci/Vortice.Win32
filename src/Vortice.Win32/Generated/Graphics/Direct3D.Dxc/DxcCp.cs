@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="DXC_CP"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_CP"]/*' />
 /// <unmanaged>DXC_CP</unmanaged>
 public enum DxcCp : uint
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_CP::DXC_CP_ACP"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_CP::DXC_CP_ACP"]/*' />
 	/// <unmanaged>DXC_CP_ACP</unmanaged>
 	Acp = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_CP::DXC_CP_UTF16"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_CP::DXC_CP_UTF16"]/*' />
 	/// <unmanaged>DXC_CP_UTF16</unmanaged>
 	Utf16 = 1200,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_CP::DXC_CP_UTF8"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_CP::DXC_CP_UTF8"]/*' />
 	/// <unmanaged>DXC_CP_UTF8</unmanaged>
 	Utf8 = 65001,
 }

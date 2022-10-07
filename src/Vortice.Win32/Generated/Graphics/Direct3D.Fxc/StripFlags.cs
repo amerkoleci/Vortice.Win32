@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D.Fxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS"]/*' />
 /// <unmanaged>D3DCOMPILER_STRIP_FLAGS</unmanaged>
 [Flags]
 public enum StripFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_REFLECTION_DATA"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_REFLECTION_DATA"]/*' />
 	/// <unmanaged>D3DCOMPILER_STRIP_REFLECTION_DATA</unmanaged>
 	ReflectionData = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_DEBUG_INFO"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_DEBUG_INFO"]/*' />
 	/// <unmanaged>D3DCOMPILER_STRIP_DEBUG_INFO</unmanaged>
 	DebugInfo = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_TEST_BLOBS"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_TEST_BLOBS"]/*' />
 	/// <unmanaged>D3DCOMPILER_STRIP_TEST_BLOBS</unmanaged>
 	TestBlobs = 4,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_PRIVATE_DATA"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_PRIVATE_DATA"]/*' />
 	/// <unmanaged>D3DCOMPILER_STRIP_PRIVATE_DATA</unmanaged>
 	PrivateData = 8,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_ROOT_SIGNATURE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_ROOT_SIGNATURE"]/*' />
 	/// <unmanaged>D3DCOMPILER_STRIP_ROOT_SIGNATURE</unmanaged>
 	RootSignature = 16,
 }

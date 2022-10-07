@@ -9,65 +9,65 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE"]/*' />
 /// <unmanaged>D2D1_PROPERTY_TYPE</unmanaged>
 public enum PropertyType : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_UNKNOWN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_STRING"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_STRING"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_STRING</unmanaged>
 	String = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_BOOL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_BOOL"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_BOOL</unmanaged>
 	Bool = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_UINT32"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_UINT32"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_UINT32</unmanaged>
 	UInt32 = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_INT32"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_INT32"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_INT32</unmanaged>
 	Int32 = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_FLOAT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_FLOAT"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_FLOAT</unmanaged>
 	Float = 5,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR2"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR2"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_VECTOR2</unmanaged>
 	Vector2 = 6,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR3"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR3"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_VECTOR3</unmanaged>
 	Vector3 = 7,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR4"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_VECTOR4"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_VECTOR4</unmanaged>
 	Vector4 = 8,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_BLOB"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_BLOB"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_BLOB</unmanaged>
 	Blob = 9,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_IUNKNOWN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_IUNKNOWN"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_IUNKNOWN</unmanaged>
 	IUnknown = 10,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_ENUM"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_ENUM"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_ENUM</unmanaged>
 	Enum = 11,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_ARRAY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_ARRAY"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_ARRAY</unmanaged>
 	Array = 12,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_CLSID"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_CLSID"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_CLSID</unmanaged>
 	Clsid = 13,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_3X2"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_3X2"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_MATRIX_3X2</unmanaged>
 	Matrix3x2 = 14,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_4X3"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_4X3"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_MATRIX_4X3</unmanaged>
 	Matrix4x3 = 15,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_4X4"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_4X4"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_MATRIX_4X4</unmanaged>
 	Matrix4x4 = 16,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_5X4"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_MATRIX_5X4"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_MATRIX_5X4</unmanaged>
 	Matrix5x4 = 17,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_COLOR_CONTEXT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_TYPE::D2D1_PROPERTY_TYPE_COLOR_CONTEXT"]/*' />
 	/// <unmanaged>D2D1_PROPERTY_TYPE_COLOR_CONTEXT</unmanaged>
 	ColorContext = 18,
 }

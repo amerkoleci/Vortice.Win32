@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo"]/*' />
 /// <unmanaged>IWICMetadataReaderInfo</unmanaged>
 [Guid("eebf1f5b-07c1-4447-a3ab-22acaf78a804")]
 [NativeTypeName("struct IWICMetadataReaderInfo : IWICMetadataHandlerInfo")]
@@ -194,7 +194,7 @@ public unsafe partial struct IWICMetadataReaderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[17]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfFixedSize);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::GetPatterns"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::GetPatterns"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult GetPatterns(Guid* guidContainerFormat, uint cbSize, WICMetadataPattern* pPattern, uint* pcCount, uint* pcbActual)
@@ -202,7 +202,7 @@ public unsafe partial struct IWICMetadataReaderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, uint, WICMetadataPattern*, uint*, uint*, int>)(lpVtbl[18]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pPattern, pcCount, pcbActual);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::MatchesPattern"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::MatchesPattern"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult MatchesPattern(Guid* guidContainerFormat, Com.IStream* pIStream, Bool32* pfMatches)
@@ -210,7 +210,7 @@ public unsafe partial struct IWICMetadataReaderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, Com.IStream*, Bool32*, int>)(lpVtbl[19]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, pIStream, pfMatches);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::CreateInstance"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult CreateInstance(IWICMetadataReader** ppIReader)

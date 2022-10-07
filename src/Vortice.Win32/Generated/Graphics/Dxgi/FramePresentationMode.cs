@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE"]/*' />
 /// <unmanaged>DXGI_FRAME_PRESENTATION_MODE</unmanaged>
 public enum FramePresentationMode : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSED"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_COMPOSED</unmanaged>
 	Composed = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_OVERLAY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_OVERLAY"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_OVERLAY</unmanaged>
 	Overlay = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_NONE"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_NONE</unmanaged>
 	None = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_PRESENTATION_MODE::DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE"]/*' />
 	/// <unmanaged>DXGI_FRAME_PRESENTATION_MODE_COMPOSITION_FAILURE</unmanaged>
 	CompositionFailure = 3,
 }

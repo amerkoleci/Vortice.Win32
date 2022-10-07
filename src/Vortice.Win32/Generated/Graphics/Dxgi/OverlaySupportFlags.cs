@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG</unmanaged>
 [Flags]
 public enum OverlaySupportFlags : int
 {
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_DIRECT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_DIRECT"]/*' />
 	/// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG_DIRECT</unmanaged>
 	Direct = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_SCALING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OVERLAY_SUPPORT_FLAG::DXGI_OVERLAY_SUPPORT_FLAG_SCALING"]/*' />
 	/// <unmanaged>DXGI_OVERLAY_SUPPORT_FLAG_SCALING</unmanaged>
 	Scaling = 2,
 }

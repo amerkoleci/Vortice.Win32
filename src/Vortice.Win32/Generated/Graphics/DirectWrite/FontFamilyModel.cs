@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL"]/*' />
 /// <unmanaged>DWRITE_FONT_FAMILY_MODEL</unmanaged>
 public enum FontFamilyModel : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL::DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL::DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC"]/*' />
 	/// <unmanaged>DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC</unmanaged>
 	Typographic = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL::DWRITE_FONT_FAMILY_MODEL_WEIGHT_STRETCH_STYLE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL::DWRITE_FONT_FAMILY_MODEL_WEIGHT_STRETCH_STYLE"]/*' />
 	/// <unmanaged>DWRITE_FONT_FAMILY_MODEL_WEIGHT_STRETCH_STYLE</unmanaged>
 	WeightStretchStyle = 1,
 }

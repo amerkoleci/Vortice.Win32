@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_SOURCE_TYPE</unmanaged>
 public enum FontSourceType : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_UNKNOWN"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_PER_MACHINE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_PER_MACHINE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_PER_MACHINE</unmanaged>
 	PerMachine = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_PER_USER"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_PER_USER"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_PER_USER</unmanaged>
 	PerUser = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_APPX_PACKAGE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_APPX_PACKAGE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_APPX_PACKAGE</unmanaged>
 	AppxPackage = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER</unmanaged>
 	RemoteFontProvider = 4,
 }

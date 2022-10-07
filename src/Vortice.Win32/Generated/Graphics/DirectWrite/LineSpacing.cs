@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING"]/*' />
 /// <unmanaged>DWRITE_LINE_SPACING</unmanaged>
 public partial struct LineSpacing
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::method"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::method"]/*' />
 	public LineSpacingMethod method;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::height"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::height"]/*' />
 	public float height;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::baseline"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::baseline"]/*' />
 	public float baseline;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::leadingBefore"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::leadingBefore"]/*' />
 	public float leadingBefore;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::fontLineGapUsage"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING::fontLineGapUsage"]/*' />
 	public FontLineGapUsage fontLineGapUsage;
 }

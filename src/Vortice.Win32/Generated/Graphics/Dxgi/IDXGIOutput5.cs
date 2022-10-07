@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput5"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput5"]/*' />
 /// <unmanaged>IDXGIOutput5</unmanaged>
 [Guid("80a07424-ab52-42eb-833c-0c42fd282d98")]
 [NativeTypeName("struct IDXGIOutput5 : IDXGIOutput4")]
@@ -258,7 +258,7 @@ public unsafe partial struct IDXGIOutput5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[25]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput5::DuplicateOutput1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput5::DuplicateOutput1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult DuplicateOutput1(IUnknown* pDevice, uint Flags, uint SupportedFormatsCount, Common.Format* pSupportedFormats, IDXGIOutputDuplication** ppOutputDuplication)

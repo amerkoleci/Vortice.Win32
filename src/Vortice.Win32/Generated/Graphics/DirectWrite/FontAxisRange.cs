@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE"]/*' />
 /// <unmanaged>DWRITE_FONT_AXIS_RANGE</unmanaged>
 public partial struct FontAxisRange
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE::axisTag"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE::axisTag"]/*' />
 	public FontAxisTag axisTag;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE::minValue"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE::minValue"]/*' />
 	public float minValue;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE::maxValue"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE::maxValue"]/*' />
 	public float maxValue;
 }

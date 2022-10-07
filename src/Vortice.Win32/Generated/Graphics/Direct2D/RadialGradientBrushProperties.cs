@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES</unmanaged>
 public partial struct RadialGradientBrushProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::center"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::center"]/*' />
 	public System.Drawing.PointF center;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::gradientOriginOffset"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::gradientOriginOffset"]/*' />
 	public System.Drawing.PointF gradientOriginOffset;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::radiusX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::radiusX"]/*' />
 	public float radiusX;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::radiusY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::radiusY"]/*' />
 	public float radiusY;
 }

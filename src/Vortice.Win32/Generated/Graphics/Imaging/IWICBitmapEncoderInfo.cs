@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo"]/*' />
 /// <unmanaged>IWICBitmapEncoderInfo</unmanaged>
 [Guid("94c9b4ee-a09f-4f92-8a1e-4a9bce7e76fb")]
 [NativeTypeName("struct IWICBitmapEncoderInfo : IWICBitmapCodecInfo")]
@@ -234,7 +234,7 @@ public unsafe partial struct IWICBitmapEncoderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoderInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo::CreateInstance"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoderInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult CreateInstance(IWICBitmapEncoder** ppIBitmapEncoder)

@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING"]/*' />
 /// <unmanaged>DWRITE_WORD_WRAPPING</unmanaged>
 public enum WordWrapping : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_WRAP"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_WRAP"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_WRAP</unmanaged>
 	Wrap = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_NO_WRAP"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_NO_WRAP"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_NO_WRAP</unmanaged>
 	NoWrap = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_EMERGENCY_BREAK"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_EMERGENCY_BREAK"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_EMERGENCY_BREAK</unmanaged>
 	EmergencyBreak = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_WHOLE_WORD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_WHOLE_WORD"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_WHOLE_WORD</unmanaged>
 	WholeWord = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_CHARACTER"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_CHARACTER"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_CHARACTER</unmanaged>
 	Character = 4,
 }

@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE"]/*' />
 /// <unmanaged>D2D1_STROKE_TRANSFORM_TYPE</unmanaged>
 public enum StrokeTransformType : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_NORMAL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_NORMAL"]/*' />
 	/// <unmanaged>D2D1_STROKE_TRANSFORM_TYPE_NORMAL</unmanaged>
 	Normal = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_FIXED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_FIXED"]/*' />
 	/// <unmanaged>D2D1_STROKE_TRANSFORM_TYPE_FIXED</unmanaged>
 	Fixed = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_HAIRLINE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_TRANSFORM_TYPE::D2D1_STROKE_TRANSFORM_TYPE_HAIRLINE"]/*' />
 	/// <unmanaged>D2D1_STROKE_TRANSFORM_TYPE_HAIRLINE</unmanaged>
 	Hairline = 2,
 }

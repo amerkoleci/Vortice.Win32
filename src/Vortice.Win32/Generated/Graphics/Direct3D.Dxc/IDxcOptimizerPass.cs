@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass"]/*' />
 /// <unmanaged>IDxcOptimizerPass</unmanaged>
 [Guid("ae2cd79f-cc22-453f-9b6b-b124e7a5204c")]
 [NativeTypeName("struct IDxcOptimizerPass : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcOptimizerPass : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetOptionName"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetOptionName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetOptionName(ushort** ppResult)
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcOptimizerPass : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizerPass*, ushort**, int>)(lpVtbl[3]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetDescription"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetDescription(ushort** ppResult)
@@ -90,7 +90,7 @@ public unsafe partial struct IDxcOptimizerPass : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizerPass*, ushort**, int>)(lpVtbl[4]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetOptionArgCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetOptionArgCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetOptionArgCount(uint* pCount)
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcOptimizerPass : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizerPass*, uint*, int>)(lpVtbl[5]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), pCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetOptionArgName"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetOptionArgName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetOptionArgName(uint argIndex, ushort** ppResult)
@@ -106,7 +106,7 @@ public unsafe partial struct IDxcOptimizerPass : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizerPass*, uint, ushort**, int>)(lpVtbl[6]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetOptionArgDescription"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizerPass::GetOptionArgDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetOptionArgDescription(uint argIndex, ushort** ppResult)

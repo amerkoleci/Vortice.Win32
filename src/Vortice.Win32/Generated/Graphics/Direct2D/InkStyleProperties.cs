@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_STYLE_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_STYLE_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_INK_STYLE_PROPERTIES</unmanaged>
 public partial struct InkStyleProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_STYLE_PROPERTIES::nibShape"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_STYLE_PROPERTIES::nibShape"]/*' />
 	public InkNibShape nibShape;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_STYLE_PROPERTIES::nibTransform"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_STYLE_PROPERTIES::nibTransform"]/*' />
 	public Matrix3x2 nibTransform;
 }

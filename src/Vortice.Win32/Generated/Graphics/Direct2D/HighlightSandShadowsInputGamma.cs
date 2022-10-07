@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA"]/*' />
 /// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA</unmanaged>
 public enum HighlightSandShadowsInputGamma : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA::D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA::D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR</unmanaged>
 	Linear = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA::D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_SRGB"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA::D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_SRGB"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_SRGB</unmanaged>
 	Srgb = 1,
 }

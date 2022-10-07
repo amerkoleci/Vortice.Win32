@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1"]/*' />
 /// <unmanaged>ID2D1Device1</unmanaged>
 [Guid("d21768e1-23a4-4823-a14b-7c3eba85d658")]
 [NativeTypeName("struct ID2D1Device1 : ID2D1Device")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1Device1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1Device1*, uint, void>)(lpVtbl[7]))((ID2D1Device1*)Unsafe.AsPointer(ref this), millisecondsSinceUse);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device1::GetRenderingPriority"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::GetRenderingPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public RenderingPriority GetRenderingPriority()
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device1*, RenderingPriority>)(lpVtbl[8]))((ID2D1Device1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device1::SetRenderingPriority"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::SetRenderingPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public void SetRenderingPriority(RenderingPriority renderingPriority)
@@ -130,7 +130,7 @@ public unsafe partial struct ID2D1Device1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1Device1*, RenderingPriority, void>)(lpVtbl[9]))((ID2D1Device1*)Unsafe.AsPointer(ref this), renderingPriority);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device1::CreateDeviceContext"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device1::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext1** deviceContext1)

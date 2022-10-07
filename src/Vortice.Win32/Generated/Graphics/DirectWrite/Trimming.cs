@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING"]/*' />
 /// <unmanaged>DWRITE_TRIMMING</unmanaged>
 public partial struct Trimming
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING::granularity"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING::granularity"]/*' />
 	public TrimmingGranularity granularity;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING::delimiter"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING::delimiter"]/*' />
 	public uint delimiter;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING::delimiterCount"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING::delimiterCount"]/*' />
 	public uint delimiterCount;
 }

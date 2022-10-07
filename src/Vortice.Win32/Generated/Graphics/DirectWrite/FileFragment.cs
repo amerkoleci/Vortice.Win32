@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT"]/*' />
 /// <unmanaged>DWRITE_FILE_FRAGMENT</unmanaged>
 public partial struct FileFragment
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT::fileOffset"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT::fileOffset"]/*' />
 	public ulong fileOffset;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT::fragmentSize"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FILE_FRAGMENT::fragmentSize"]/*' />
 	public ulong fragmentSize;
 }

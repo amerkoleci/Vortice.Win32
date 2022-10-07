@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace6"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace6"]/*' />
 /// <unmanaged>IDWriteFontFace6</unmanaged>
 [Guid("c4b1fe1b-6e84-47d5-b54c-a597981b06ad")]
 [NativeTypeName("struct IDWriteFontFace6 : IDWriteFontFace5")]
@@ -514,7 +514,7 @@ public unsafe partial struct IDWriteFontFace6 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, IDWriteFontFace*, Bool32>)(lpVtbl[57]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this), fontFace);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace6::GetFamilyNames"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace6::GetFamilyNames"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
 	public HResult GetFamilyNames(FontFamilyModel fontFamilyModel, IDWriteLocalizedStrings** names)
@@ -522,7 +522,7 @@ public unsafe partial struct IDWriteFontFace6 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace6*, FontFamilyModel, IDWriteLocalizedStrings**, int>)(lpVtbl[58]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this), fontFamilyModel, names);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace6::GetFaceNames"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace6::GetFaceNames"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(59)]
 	public HResult GetFaceNames(FontFamilyModel fontFamilyModel, IDWriteLocalizedStrings** names)

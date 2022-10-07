@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS"]/*' />
 /// <unmanaged>D2D1_DEVICE_CONTEXT_OPTIONS</unmanaged>
 [Flags]
 public enum DeviceContextOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS::D2D1_DEVICE_CONTEXT_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS::D2D1_DEVICE_CONTEXT_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_DEVICE_CONTEXT_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS::D2D1_DEVICE_CONTEXT_OPTIONS_ENABLE_MULTITHREADED_OPTIMIZATIONS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEVICE_CONTEXT_OPTIONS::D2D1_DEVICE_CONTEXT_OPTIONS_ENABLE_MULTITHREADED_OPTIMIZATIONS"]/*' />
 	/// <unmanaged>D2D1_DEVICE_CONTEXT_OPTIONS_ENABLE_MULTITHREADED_OPTIMIZATIONS</unmanaged>
 	EnableMultithreadedOptimizations = 1,
 }

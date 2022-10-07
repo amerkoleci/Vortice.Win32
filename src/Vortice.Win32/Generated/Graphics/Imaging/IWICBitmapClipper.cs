@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapClipper"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapClipper"]/*' />
 /// <unmanaged>IWICBitmapClipper</unmanaged>
 [Guid("e4fbcf03-223d-4e81-9333-d635556dd1b5")]
 [NativeTypeName("struct IWICBitmapClipper : IWICBitmapSource")]
@@ -114,7 +114,7 @@ public unsafe partial struct IWICBitmapClipper : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapClipper*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapClipper*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapClipper::Initialize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapClipper::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Initialize(IWICBitmapSource* pISource, System.Drawing.Rectangle* prc)

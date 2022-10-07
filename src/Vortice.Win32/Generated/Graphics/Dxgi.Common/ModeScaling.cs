@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_SCALING"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCALING"]/*' />
 /// <unmanaged>DXGI_MODE_SCALING</unmanaged>
 public enum ModeScaling : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_SCALING::DXGI_MODE_SCALING_UNSPECIFIED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCALING::DXGI_MODE_SCALING_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_MODE_SCALING_UNSPECIFIED</unmanaged>
 	Unspecified = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_SCALING::DXGI_MODE_SCALING_CENTERED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCALING::DXGI_MODE_SCALING_CENTERED"]/*' />
 	/// <unmanaged>DXGI_MODE_SCALING_CENTERED</unmanaged>
 	Centered = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_SCALING::DXGI_MODE_SCALING_STRETCHED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCALING::DXGI_MODE_SCALING_STRETCHED"]/*' />
 	/// <unmanaged>DXGI_MODE_SCALING_STRETCHED</unmanaged>
 	Stretched = 2,
 }

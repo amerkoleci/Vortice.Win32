@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICSectionAccessLevel"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel"]/*' />
 /// <unmanaged>WICSectionAccessLevel</unmanaged>
 public enum WICSectionAccessLevel : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICSectionAccessLevel::WICSectionAccessLevelRead"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel::WICSectionAccessLevelRead"]/*' />
 	/// <unmanaged>WICSectionAccessLevelRead</unmanaged>
 	WICSectionAccessLevelRead = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICSectionAccessLevel::WICSectionAccessLevelReadWrite"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel::WICSectionAccessLevelReadWrite"]/*' />
 	/// <unmanaged>WICSectionAccessLevelReadWrite</unmanaged>
 	WICSectionAccessLevelReadWrite = 3,
 }

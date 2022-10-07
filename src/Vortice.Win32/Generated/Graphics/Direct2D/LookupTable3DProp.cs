@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP"]/*' />
 /// <unmanaged>D2D1_LOOKUPTABLE3D_PROP</unmanaged>
 public enum LookupTable3DProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP::D2D1_LOOKUPTABLE3D_PROP_LUT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP::D2D1_LOOKUPTABLE3D_PROP_LUT"]/*' />
 	/// <unmanaged>D2D1_LOOKUPTABLE3D_PROP_LUT</unmanaged>
 	Lut = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP::D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LOOKUPTABLE3D_PROP::D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE</unmanaged>
 	AlphaMode = 1,
 }

@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_TYPE</unmanaged>
 public enum HDRMetadataType : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_NONE"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_NONE</unmanaged>
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_HDR10</unmanaged>
 	Hdr10 = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10PLUS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_TYPE::DXGI_HDR_METADATA_TYPE_HDR10PLUS"]/*' />
 	/// <unmanaged>DXGI_HDR_METADATA_TYPE_HDR10PLUS</unmanaged>
 	Hdr10plus = 2,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapCodecProgressNotification"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecProgressNotification"]/*' />
 /// <unmanaged>IWICBitmapCodecProgressNotification</unmanaged>
 [Guid("64c1024e-c3cf-4462-8078-88c2b11c46d9")]
 [NativeTypeName("struct IWICBitmapCodecProgressNotification : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICBitmapCodecProgressNotification : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapCodecProgressNotification::RegisterProgressNotification"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecProgressNotification::RegisterProgressNotification"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult> pfnProgressNotification, void* pvData, uint dwProgressFlags)

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDebug1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1"]/*' />
 /// <unmanaged>IDXGIDebug1</unmanaged>
 [Guid("c5a05f0c-16f2-4adf-9f4d-a8c4d58ac550")]
 [NativeTypeName("struct IDXGIDebug1 : IDXGIDebug")]
@@ -82,7 +82,7 @@ public unsafe partial struct IDXGIDebug1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDebug1*, Guid, ReportLiveObjectFlags, int>)(lpVtbl[3]))((IDXGIDebug1*)Unsafe.AsPointer(ref this), apiid, flags);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDebug1::EnableLeakTrackingForThread"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1::EnableLeakTrackingForThread"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void EnableLeakTrackingForThread()
@@ -90,7 +90,7 @@ public unsafe partial struct IDXGIDebug1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<IDXGIDebug1*, void>)(lpVtbl[4]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDebug1::DisableLeakTrackingForThread"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1::DisableLeakTrackingForThread"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void DisableLeakTrackingForThread()
@@ -98,7 +98,7 @@ public unsafe partial struct IDXGIDebug1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<IDXGIDebug1*, void>)(lpVtbl[5]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDebug1::IsLeakTrackingEnabledForThread"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug1::IsLeakTrackingEnabledForThread"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public Bool32 IsLeakTrackingEnabledForThread()

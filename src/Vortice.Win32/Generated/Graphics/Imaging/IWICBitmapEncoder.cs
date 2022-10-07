@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder"]/*' />
 /// <unmanaged>IWICBitmapEncoder</unmanaged>
 [Guid("00000103-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmapEncoder : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Initialize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Initialize(Com.IStream* pIStream, WICBitmapEncoderCacheOption cacheOption)
@@ -82,7 +82,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, Com.IStream*, WICBitmapEncoderCacheOption, int>)(lpVtbl[3]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIStream, cacheOption);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetContainerFormat"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetContainerFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetContainerFormat(Guid* pguidContainerFormat)
@@ -90,7 +90,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, Guid*, int>)(lpVtbl[4]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pguidContainerFormat);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetEncoderInfo"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetEncoderInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetEncoderInfo(IWICBitmapEncoderInfo** ppIEncoderInfo)
@@ -98,7 +98,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapEncoderInfo**, int>)(lpVtbl[5]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIEncoderInfo);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetColorContexts"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetColorContexts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult SetColorContexts(uint cCount, IWICColorContext** ppIColorContext)
@@ -106,7 +106,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, uint, IWICColorContext**, int>)(lpVtbl[6]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), cCount, ppIColorContext);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetPalette"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetPalette"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetPalette(IWICPalette* pIPalette)
@@ -114,7 +114,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICPalette*, int>)(lpVtbl[7]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIPalette);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetThumbnail"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetThumbnail"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult SetThumbnail(IWICBitmapSource* pIThumbnail)
@@ -122,7 +122,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapSource*, int>)(lpVtbl[8]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIThumbnail);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetPreview"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetPreview"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetPreview(IWICBitmapSource* pIPreview)
@@ -130,7 +130,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapSource*, int>)(lpVtbl[9]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIPreview);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::CreateNewFrame"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::CreateNewFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions)
@@ -138,7 +138,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapFrameEncode**, Com.IPropertyBag2**, int>)(lpVtbl[10]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, ppIEncoderOptions);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Commit"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Commit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult Commit()
@@ -146,7 +146,7 @@ public unsafe partial struct IWICBitmapEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, int>)(lpVtbl[11]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetMetadataQueryWriter"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetMetadataQueryWriter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)

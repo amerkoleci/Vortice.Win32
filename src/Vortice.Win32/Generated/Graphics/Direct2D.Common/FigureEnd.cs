@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_END"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_END"]/*' />
 /// <unmanaged>D2D1_FIGURE_END</unmanaged>
 public enum FigureEnd : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_END::D2D1_FIGURE_END_OPEN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_END::D2D1_FIGURE_END_OPEN"]/*' />
 	/// <unmanaged>D2D1_FIGURE_END_OPEN</unmanaged>
 	Open = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_END::D2D1_FIGURE_END_CLOSED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_END::D2D1_FIGURE_END_CLOSED"]/*' />
 	/// <unmanaged>D2D1_FIGURE_END_CLOSED</unmanaged>
 	Closed = 1,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformedGeometry"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedGeometry"]/*' />
 /// <unmanaged>ID2D1TransformedGeometry</unmanaged>
 [Guid("2cd906bb-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1TransformedGeometry : ID2D1Geometry")]
@@ -186,7 +186,7 @@ public unsafe partial struct ID2D1TransformedGeometry : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformedGeometry::GetSourceGeometry"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedGeometry::GetSourceGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void GetSourceGeometry(ID2D1Geometry** sourceGeometry)
@@ -194,7 +194,7 @@ public unsafe partial struct ID2D1TransformedGeometry : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, ID2D1Geometry**, void>)(lpVtbl[17]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), sourceGeometry);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformedGeometry::GetTransform"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedGeometry::GetTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public void GetTransform(Matrix3x2* transform)

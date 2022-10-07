@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PrintControl"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl"]/*' />
 /// <unmanaged>ID2D1PrintControl</unmanaged>
 [Guid("2c1d867d-c290-41c8-ae7e-34a98702e9a5")]
 [NativeTypeName("struct ID2D1PrintControl : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1PrintControl : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::AddPage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::AddPage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2)
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1PrintControl : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, ID2D1CommandList*, System.Drawing.SizeF, Com.IStream*, ulong*, ulong*, int>)(lpVtbl[3]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), commandList, pageSize, pagePrintTicketStream, tag1, tag2);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::Close"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::Close"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Close()

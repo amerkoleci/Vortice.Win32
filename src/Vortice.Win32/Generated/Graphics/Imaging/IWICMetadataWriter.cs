@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataWriter"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter"]/*' />
 /// <unmanaged>IWICMetadataWriter</unmanaged>
 [Guid("f7836e16-3be0-470b-86bb-160d0aecd7de")]
 [NativeTypeName("struct IWICMetadataWriter : IWICMetadataReader")]
@@ -122,7 +122,7 @@ public unsafe partial struct IWICMetadataWriter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, IWICEnumMetadataItem**, int>)(lpVtbl[8]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataWriter::SetValue"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::SetValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
@@ -130,7 +130,7 @@ public unsafe partial struct IWICMetadataWriter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, Com.Variant*, Com.Variant*, Com.Variant*, int>)(lpVtbl[9]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pvarSchema, pvarId, pvarValue);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataWriter::SetValueByIndex"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::SetValueByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetValueByIndex(uint nIndex, Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant* pvarValue)
@@ -138,7 +138,7 @@ public unsafe partial struct IWICMetadataWriter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, uint, Com.Variant*, Com.Variant*, Com.Variant*, int>)(lpVtbl[10]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), nIndex, pvarSchema, pvarId, pvarValue);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataWriter::RemoveValue"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::RemoveValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult RemoveValue(Com.Variant* pvarSchema, Com.Variant* pvarId)
@@ -146,7 +146,7 @@ public unsafe partial struct IWICMetadataWriter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, Com.Variant*, Com.Variant*, int>)(lpVtbl[11]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), pvarSchema, pvarId);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICMetadataWriter::RemoveValueByIndex"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataWriter::RemoveValueByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult RemoveValueByIndex(uint nIndex)

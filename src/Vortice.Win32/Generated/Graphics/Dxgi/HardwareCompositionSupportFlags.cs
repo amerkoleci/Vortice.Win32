@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS</unmanaged>
 [Flags]
 public enum HardwareCompositionSupportFlags : uint
 {
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_FULLSCREEN</unmanaged>
 	Fullscreen = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_WINDOWED</unmanaged>
 	Windowed = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS::DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED"]/*' />
 	/// <unmanaged>DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG_CURSOR_STRETCHED</unmanaged>
 	CursorStretched = 4,
 }

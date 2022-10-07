@@ -9,47 +9,47 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_LINEARTRANSFER_PROP</unmanaged>
 public enum LinearTransferProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_Y_INTERCEPT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_RED_Y_INTERCEPT</unmanaged>
 	RedYIntercept = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_SLOPE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_SLOPE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_RED_SLOPE</unmanaged>
 	RedSlope = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_RED_DISABLE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_RED_DISABLE</unmanaged>
 	RedDisable = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_Y_INTERCEPT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_GREEN_Y_INTERCEPT</unmanaged>
 	GreenYIntercept = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_SLOPE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_SLOPE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_GREEN_SLOPE</unmanaged>
 	GreenSlope = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_GREEN_DISABLE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_GREEN_DISABLE</unmanaged>
 	GreenDisable = 5,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_Y_INTERCEPT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_BLUE_Y_INTERCEPT</unmanaged>
 	BlueYIntercept = 6,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_SLOPE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_SLOPE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_BLUE_SLOPE</unmanaged>
 	BlueSlope = 7,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_BLUE_DISABLE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_BLUE_DISABLE</unmanaged>
 	BlueDisable = 8,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_Y_INTERCEPT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_Y_INTERCEPT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_ALPHA_Y_INTERCEPT</unmanaged>
 	AlphaYIntercept = 9,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_SLOPE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_SLOPE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_ALPHA_SLOPE</unmanaged>
 	AlphaSlope = 10,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_ALPHA_DISABLE"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_ALPHA_DISABLE</unmanaged>
 	AlphaDisable = 11,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_CLAMP_OUTPUT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEARTRANSFER_PROP::D2D1_LINEARTRANSFER_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_LINEARTRANSFER_PROP_CLAMP_OUTPUT</unmanaged>
 	ClampOutput = 12,
 }

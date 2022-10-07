@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia"]/*' />
 /// <unmanaged>IDXGISwapChainMedia</unmanaged>
 [Guid("dd95b90b-f05f-4f6a-bd65-25bfb264bd84")]
 [NativeTypeName("struct IDXGISwapChainMedia : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDXGISwapChainMedia : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetFrameStatisticsMedia(FrameStatisticsMedia* pStats)
@@ -82,7 +82,7 @@ public unsafe partial struct IDXGISwapChainMedia : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, FrameStatisticsMedia*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetPresentDuration(uint Duration)
@@ -90,7 +90,7 @@ public unsafe partial struct IDXGISwapChainMedia : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint, int>)(lpVtbl[4]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), Duration);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration)

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_RANGE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_RANGE"]/*' />
 /// <unmanaged>D2D1_VERTEX_RANGE</unmanaged>
 public partial struct VertexRange
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_RANGE::startVertex"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_RANGE::startVertex"]/*' />
 	public uint startVertex;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_RANGE::vertexCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_RANGE::vertexCount"]/*' />
 	public uint vertexCount;
 }

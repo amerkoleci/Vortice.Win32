@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometryRealization"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometryRealization"]/*' />
 /// <unmanaged>ID2D1GeometryRealization</unmanaged>
 [Guid("a16907d7-bc02-4801-99e8-8cf7f485f774")]
 [NativeTypeName("struct ID2D1GeometryRealization : ID2D1Resource")]

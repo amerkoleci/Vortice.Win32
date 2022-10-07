@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject"]/*' />
 /// <unmanaged>IDWriteInlineObject</unmanaged>
 [Guid("8339fde3-106f-47ab-8373-1c6295eb10b3")]
 [NativeTypeName("struct IDWriteInlineObject : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteInlineObject : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::Draw"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::Draw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteInlineObject : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, void*, IDWriteTextRenderer*, float, float, Bool32, Bool32, IUnknown*, int>)(lpVtbl[3]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), clientDrawingContext, renderer, originX, originY, isSideways, isRightToLeft, clientDrawingEffect);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetMetrics"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetMetrics(InlineObjectMetrics* metrics)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteInlineObject : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, InlineObjectMetrics*, int>)(lpVtbl[4]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), metrics);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetOverhangMetrics"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetOverhangMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetOverhangMetrics(OverhangMetrics* overhangs)
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteInlineObject : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, OverhangMetrics*, int>)(lpVtbl[5]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), overhangs);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetBreakConditions"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetBreakConditions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetBreakConditions(BreakCondition* breakConditionBefore, BreakCondition* breakConditionAfter)

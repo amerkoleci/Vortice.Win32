@@ -9,35 +9,35 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties"]/*' />
 /// <unmanaged>WICGifLogicalScreenDescriptorProperties</unmanaged>
 public enum WICGifLogicalScreenDescriptorProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenSignature"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenSignature"]/*' />
 	/// <unmanaged>WICGifLogicalScreenSignature</unmanaged>
 	WICGifLogicalScreenSignature = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorWidth"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorWidth"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorWidth</unmanaged>
 	WICGifLogicalScreenDescriptorWidth = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorHeight"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorHeight"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorHeight</unmanaged>
 	WICGifLogicalScreenDescriptorHeight = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorGlobalColorTableFlag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorGlobalColorTableFlag"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorGlobalColorTableFlag</unmanaged>
 	WICGifLogicalScreenDescriptorGlobalColorTableFlag = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorColorResolution"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorColorResolution"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorColorResolution</unmanaged>
 	WICGifLogicalScreenDescriptorColorResolution = 5,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorSortFlag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorSortFlag"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorSortFlag</unmanaged>
 	WICGifLogicalScreenDescriptorSortFlag = 6,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorGlobalColorTableSize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorGlobalColorTableSize"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorGlobalColorTableSize</unmanaged>
 	WICGifLogicalScreenDescriptorGlobalColorTableSize = 7,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorBackgroundColorIndex"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorBackgroundColorIndex"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorBackgroundColorIndex</unmanaged>
 	WICGifLogicalScreenDescriptorBackgroundColorIndex = 8,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorPixelAspectRatio"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorPixelAspectRatio"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorPixelAspectRatio</unmanaged>
 	WICGifLogicalScreenDescriptorPixelAspectRatio = 9,
 }

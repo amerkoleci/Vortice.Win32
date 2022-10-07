@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY"]/*' />
 /// <unmanaged>DXGI_COMPUTE_PREEMPTION_GRANULARITY</unmanaged>
 public enum ComputePreemptionGranularity : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_DMA_BUFFER_BOUNDARY</unmanaged>
 	DmaBufferBoundary = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_DISPATCH_BOUNDARY</unmanaged>
 	DispatchBoundary = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_THREAD_GROUP_BOUNDARY</unmanaged>
 	ThreadGroupBoundary = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_THREAD_BOUNDARY</unmanaged>
 	ThreadBoundary = 3,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_COMPUTE_PREEMPTION_GRANULARITY::DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_COMPUTE_PREEMPTION_INSTRUCTION_BOUNDARY</unmanaged>
 	InstructionBoundary = 4,
 }

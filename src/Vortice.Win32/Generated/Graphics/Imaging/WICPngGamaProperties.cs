@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPngGamaProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPngGamaProperties"]/*' />
 /// <unmanaged>WICPngGamaProperties</unmanaged>
 public enum WICPngGamaProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngGamaProperties::WICPngGamaGamma"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngGamaProperties::WICPngGamaGamma"]/*' />
 	/// <unmanaged>WICPngGamaGamma</unmanaged>
 	WICPngGamaGamma = 1,
 }

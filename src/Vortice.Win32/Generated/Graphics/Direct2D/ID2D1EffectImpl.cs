@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl"]/*' />
 /// <unmanaged>ID2D1EffectImpl</unmanaged>
 [Guid("a248fd3f-3e6c-4e63-9f03-7f68ecc91db9")]
 [NativeTypeName("struct ID2D1EffectImpl : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1EffectImpl : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::Initialize"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Initialize(ID2D1EffectContext* effectContext, ID2D1TransformGraph* transformGraph)
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1EffectImpl : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, ID2D1EffectContext*, ID2D1TransformGraph*, int>)(lpVtbl[3]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), effectContext, transformGraph);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::PrepareForRender"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::PrepareForRender"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult PrepareForRender(ChangeType changeType)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1EffectImpl : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, ChangeType, int>)(lpVtbl[4]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), changeType);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::SetGraph"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::SetGraph"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult SetGraph(ID2D1TransformGraph* transformGraph)

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping"]/*' />
 /// <unmanaged>IDWritePixelSnapping</unmanaged>
 [Guid("eaf3a2da-ecf4-4d24-b644-b34f6842024b")]
 [NativeTypeName("struct IDWritePixelSnapping : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWritePixelSnapping : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping::IsPixelSnappingDisabled"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping::IsPixelSnappingDisabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult IsPixelSnappingDisabled(void* clientDrawingContext, Bool32* isDisabled)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWritePixelSnapping : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWritePixelSnapping*, void*, Bool32*, int>)(lpVtbl[3]))((IDWritePixelSnapping*)Unsafe.AsPointer(ref this), clientDrawingContext, isDisabled);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping::GetCurrentTransform"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping::GetCurrentTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetCurrentTransform(void* clientDrawingContext, Matrix3x2* transform)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWritePixelSnapping : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWritePixelSnapping*, void*, Matrix3x2*, int>)(lpVtbl[4]))((IDWritePixelSnapping*)Unsafe.AsPointer(ref this), clientDrawingContext, transform);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping::GetPixelsPerDip"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWritePixelSnapping::GetPixelsPerDip"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetPixelsPerDip(void* clientDrawingContext, float* pixelsPerDip)

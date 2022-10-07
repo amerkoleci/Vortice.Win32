@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS"]/*' />
 /// <unmanaged>D2D1_IMAGE_SOURCE_LOADING_OPTIONS</unmanaged>
 [Flags]
 public enum ImageSourceLoadingOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_LOADING_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_RELEASE_SOURCE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_RELEASE_SOURCE"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_LOADING_OPTIONS_RELEASE_SOURCE</unmanaged>
 	ReleaseSource = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_CACHE_ON_DEMAND"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_LOADING_OPTIONS::D2D1_IMAGE_SOURCE_LOADING_OPTIONS_CACHE_ON_DEMAND"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_LOADING_OPTIONS_CACHE_ON_DEMAND</unmanaged>
 	CacheOnDemand = 2,
 }

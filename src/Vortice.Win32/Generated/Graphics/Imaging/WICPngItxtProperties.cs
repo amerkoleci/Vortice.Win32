@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPngItxtProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties"]/*' />
 /// <unmanaged>WICPngItxtProperties</unmanaged>
 public enum WICPngItxtProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtKeyword"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtKeyword"]/*' />
 	/// <unmanaged>WICPngItxtKeyword</unmanaged>
 	WICPngItxtKeyword = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtCompressionFlag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtCompressionFlag"]/*' />
 	/// <unmanaged>WICPngItxtCompressionFlag</unmanaged>
 	WICPngItxtCompressionFlag = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtLanguageTag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtLanguageTag"]/*' />
 	/// <unmanaged>WICPngItxtLanguageTag</unmanaged>
 	WICPngItxtLanguageTag = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtTranslatedKeyword"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtTranslatedKeyword"]/*' />
 	/// <unmanaged>WICPngItxtTranslatedKeyword</unmanaged>
 	WICPngItxtTranslatedKeyword = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtText"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtText"]/*' />
 	/// <unmanaged>WICPngItxtText</unmanaged>
 	WICPngItxtText = 5,
 }

@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL"]/*' />
 /// <unmanaged>DXGI_GAMMA_CONTROL</unmanaged>
 public partial struct GammaControl
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::Scale"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::Scale"]/*' />
 	public Rgb Scale;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::Offset"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::Offset"]/*' />
 	public Rgb Offset;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::GammaCurve"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GAMMA_CONTROL::GammaCurve"]/*' />
 	public GammaCurve__FixedBuffer GammaCurve;
 
 	public unsafe struct GammaCurve__FixedBuffer

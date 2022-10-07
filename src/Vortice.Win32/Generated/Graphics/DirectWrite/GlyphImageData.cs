@@ -9,34 +9,34 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA"]/*' />
 /// <unmanaged>DWRITE_GLYPH_IMAGE_DATA</unmanaged>
 public partial struct GlyphImageData
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::imageData"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::imageData"]/*' />
 	public unsafe void* imageData;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::imageDataSize"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::imageDataSize"]/*' />
 	public uint imageDataSize;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::uniqueDataId"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::uniqueDataId"]/*' />
 	public uint uniqueDataId;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::pixelsPerEm"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::pixelsPerEm"]/*' />
 	public uint pixelsPerEm;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::pixelSize"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::pixelSize"]/*' />
 	public System.Drawing.Size pixelSize;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::horizontalLeftOrigin"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::horizontalLeftOrigin"]/*' />
 	public System.Drawing.Point horizontalLeftOrigin;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::horizontalRightOrigin"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::horizontalRightOrigin"]/*' />
 	public System.Drawing.Point horizontalRightOrigin;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::verticalTopOrigin"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::verticalTopOrigin"]/*' />
 	public System.Drawing.Point verticalTopOrigin;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::verticalBottomOrigin"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_DATA::verticalBottomOrigin"]/*' />
 	public System.Drawing.Point verticalBottomOrigin;
 }

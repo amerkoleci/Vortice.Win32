@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE"]/*' />
 /// <unmanaged>D3D_INCLUDE_TYPE</unmanaged>
 public enum IncludeType : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D_INCLUDE_LOCAL"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D_INCLUDE_LOCAL"]/*' />
 	/// <unmanaged>D3D_INCLUDE_LOCAL</unmanaged>
 	Local = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D_INCLUDE_SYSTEM"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D_INCLUDE_SYSTEM"]/*' />
 	/// <unmanaged>D3D_INCLUDE_SYSTEM</unmanaged>
 	System = 1,
 }

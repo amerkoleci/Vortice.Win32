@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES"]/*' />
 /// <unmanaged>DWRITE_SCRIPT_PROPERTIES</unmanaged>
 public partial struct ScriptProperties
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::isoScriptCode"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::isoScriptCode"]/*' />
 	public uint isoScriptCode;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::isoScriptNumber"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::isoScriptNumber"]/*' />
 	public uint isoScriptNumber;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::clusterLookahead"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::clusterLookahead"]/*' />
 	public uint clusterLookahead;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::justificationCharacter"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::justificationCharacter"]/*' />
 	public uint justificationCharacter;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::_bitfield"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_PROPERTIES::_bitfield"]/*' />
 	public uint _bitfield;
 }

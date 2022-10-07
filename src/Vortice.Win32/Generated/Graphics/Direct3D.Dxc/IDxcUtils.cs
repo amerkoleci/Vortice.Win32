@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils"]/*' />
 /// <unmanaged>IDxcUtils</unmanaged>
 [Guid("4605c4cb-2019-492a-ada4-65f20bb7d67f")]
 [NativeTypeName("struct IDxcUtils : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateBlobFromBlob"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateBlobFromBlob"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult)
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, IDxcBlob*, uint, uint, IDxcBlob**, int>)(lpVtbl[3]))((IDxcUtils*)Unsafe.AsPointer(ref this), pBlob, offset, length, ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateBlobFromPinned"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateBlobFromPinned"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateBlobFromPinned(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding)
@@ -90,7 +90,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, void*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[4]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, size, codePage, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::MoveToBlob"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::MoveToBlob"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult MoveToBlob(void* pData, Com.IMalloc* pIMalloc, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding)
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, void*, Com.IMalloc*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, pIMalloc, size, codePage, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateBlob"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateBlob"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult CreateBlob(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding)
@@ -106,7 +106,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, void*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[6]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, size, codePage, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::LoadFile"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::LoadFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult LoadFile(ushort* pFileName, DxcCp* pCodePage, IDxcBlobEncoding** pBlobEncoding)
@@ -114,7 +114,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, ushort*, DxcCp*, IDxcBlobEncoding**, int>)(lpVtbl[7]))((IDxcUtils*)Unsafe.AsPointer(ref this), pFileName, pCodePage, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateReadOnlyStreamFromBlob"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateReadOnlyStreamFromBlob"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CreateReadOnlyStreamFromBlob(IDxcBlob* pBlob, Com.IStream** ppStream)
@@ -122,7 +122,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, IDxcBlob*, Com.IStream**, int>)(lpVtbl[8]))((IDxcUtils*)Unsafe.AsPointer(ref this), pBlob, ppStream);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateDefaultIncludeHandler"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateDefaultIncludeHandler"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CreateDefaultIncludeHandler(IDxcIncludeHandler** ppResult)
@@ -130,7 +130,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, IDxcIncludeHandler**, int>)(lpVtbl[9]))((IDxcUtils*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::GetBlobAsUtf8"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::GetBlobAsUtf8"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobUtf8** pBlobEncoding)
@@ -138,7 +138,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, IDxcBlob*, IDxcBlobUtf8**, int>)(lpVtbl[10]))((IDxcUtils*)Unsafe.AsPointer(ref this), pBlob, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::GetBlobAsUtf16"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::GetBlobAsUtf16"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetBlobAsUtf16(IDxcBlob* pBlob, IDxcBlobUtf16** pBlobEncoding)
@@ -146,7 +146,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, IDxcBlob*, IDxcBlobUtf16**, int>)(lpVtbl[11]))((IDxcUtils*)Unsafe.AsPointer(ref this), pBlob, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::GetDxilContainerPart"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::GetDxilContainerPart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetDxilContainerPart(DxcBuffer* pShader, uint DxcPart, void** ppPartData, uint* pPartSizeInBytes)
@@ -154,7 +154,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, DxcBuffer*, uint, void**, uint*, int>)(lpVtbl[12]))((IDxcUtils*)Unsafe.AsPointer(ref this), pShader, DxcPart, ppPartData, pPartSizeInBytes);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateReflection"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::CreateReflection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult CreateReflection(DxcBuffer* pData, Guid* iid, void** ppvReflection)
@@ -162,7 +162,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, DxcBuffer*, Guid*, void**, int>)(lpVtbl[13]))((IDxcUtils*)Unsafe.AsPointer(ref this), pData, iid, ppvReflection);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::BuildArguments"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::BuildArguments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult BuildArguments(ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcCompilerArgs** ppArgs)
@@ -170,7 +170,7 @@ public unsafe partial struct IDxcUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, ushort*, ushort*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcCompilerArgs**, int>)(lpVtbl[14]))((IDxcUtils*)Unsafe.AsPointer(ref this), pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, ppArgs);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcUtils::GetPDBContents"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcUtils::GetPDBContents"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult GetPDBContents(IDxcBlob* pPDBBlob, IDxcBlob** ppHash, IDxcBlob** ppContainer)

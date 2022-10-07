@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP"]/*' />
 /// <unmanaged>D2D1_SHARPEN_PROP</unmanaged>
 public enum SharpenProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP::D2D1_SHARPEN_PROP_SHARPNESS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP::D2D1_SHARPEN_PROP_SHARPNESS"]/*' />
 	/// <unmanaged>D2D1_SHARPEN_PROP_SHARPNESS</unmanaged>
 	Sharpness = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP::D2D1_SHARPEN_PROP_THRESHOLD"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHARPEN_PROP::D2D1_SHARPEN_PROP_THRESHOLD"]/*' />
 	/// <unmanaged>D2D1_SHARPEN_PROP_THRESHOLD</unmanaged>
 	Threshold = 1,
 }

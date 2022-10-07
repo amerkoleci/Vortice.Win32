@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference"]/*' />
 /// <unmanaged>IDWriteFontFaceReference</unmanaged>
 [Guid("5e7fa7ca-dde3-424c-89f0-9fcd6fed58cd")]
 [NativeTypeName("struct IDWriteFontFaceReference : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::CreateFontFace"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::CreateFontFace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateFontFace(IDWriteFontFace3** fontFace)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, IDWriteFontFace3**, int>)(lpVtbl[3]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), fontFace);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::CreateFontFaceWithSimulations"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::CreateFontFaceWithSimulations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateFontFaceWithSimulations(FontSimulations fontFaceSimulationFlags, IDWriteFontFace3** fontFace)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, FontSimulations, IDWriteFontFace3**, int>)(lpVtbl[4]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), fontFaceSimulationFlags, fontFace);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::Equals"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::Equals"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public Bool32 Equals(IDWriteFontFaceReference* fontFaceReference)
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, IDWriteFontFaceReference*, Bool32>)(lpVtbl[5]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), fontFaceReference);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFontFaceIndex"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFontFaceIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public uint GetFontFaceIndex()
@@ -106,7 +106,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, uint>)(lpVtbl[6]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetSimulations"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetSimulations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public FontSimulations GetSimulations()
@@ -114,7 +114,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFontFile"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetFontFile(IDWriteFontFile** fontFile)
@@ -122,7 +122,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, IDWriteFontFile**, int>)(lpVtbl[8]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), fontFile);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetLocalFileSize"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetLocalFileSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public ulong GetLocalFileSize()
@@ -130,7 +130,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, ulong>)(lpVtbl[9]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFileSize"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFileSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public ulong GetFileSize()
@@ -138,7 +138,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, ulong>)(lpVtbl[10]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFileTime"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetFileTime"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetFileTime(ulong* lastWriteTime)
@@ -146,7 +146,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, ulong*, int>)(lpVtbl[11]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), lastWriteTime);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetLocality"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::GetLocality"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public Locality GetLocality()
@@ -154,7 +154,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, Locality>)(lpVtbl[12]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueFontDownloadRequest"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueFontDownloadRequest"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult EnqueueFontDownloadRequest()
@@ -162,7 +162,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, int>)(lpVtbl[13]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueCharacterDownloadRequest"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueCharacterDownloadRequest"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult EnqueueCharacterDownloadRequest(ushort* characters, uint characterCount)
@@ -170,7 +170,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, ushort*, uint, int>)(lpVtbl[14]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), characters, characterCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueGlyphDownloadRequest"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueGlyphDownloadRequest"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult EnqueueGlyphDownloadRequest(ushort* glyphIndices, uint glyphCount)
@@ -178,7 +178,7 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, ushort*, uint, int>)(lpVtbl[15]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), glyphIndices, glyphCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueFileFragmentDownloadRequest"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueFileFragmentDownloadRequest"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult EnqueueFileFragmentDownloadRequest(ulong fileOffset, ulong fragmentSize)

@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE"]/*' />
 /// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE</unmanaged>
 public enum StraightenScaleMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_NEAREST_NEIGHBOR</unmanaged>
 	NearestNeighbor = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_LINEAR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_LINEAR</unmanaged>
 	Linear = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_CUBIC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_CUBIC"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_CUBIC</unmanaged>
 	Cubic = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_MULTI_SAMPLE_LINEAR"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_MULTI_SAMPLE_LINEAR</unmanaged>
 	MultiSampleLinear = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_ANISOTROPIC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_SCALE_MODE::D2D1_STRAIGHTEN_SCALE_MODE_ANISOTROPIC"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_SCALE_MODE_ANISOTROPIC</unmanaged>
 	Anisotropic = 4,
 }

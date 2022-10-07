@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICHeifProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifProperties"]/*' />
 /// <unmanaged>WICHeifProperties</unmanaged>
 public enum WICHeifProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICHeifProperties::WICHeifOrientation"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifProperties::WICHeifOrientation"]/*' />
 	/// <unmanaged>WICHeifOrientation</unmanaged>
 	WICHeifOrientation = 1,
 }

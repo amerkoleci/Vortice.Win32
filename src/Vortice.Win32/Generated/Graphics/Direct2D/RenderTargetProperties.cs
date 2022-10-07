@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_RENDER_TARGET_PROPERTIES</unmanaged>
 public partial struct RenderTargetProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::type"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::type"]/*' />
 	public RenderTargetType type;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::pixelFormat"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::pixelFormat"]/*' />
 	public Common.PixelFormat pixelFormat;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::dpiX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::dpiX"]/*' />
 	public float dpiX;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::dpiY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::dpiY"]/*' />
 	public float dpiY;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::usage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::usage"]/*' />
 	public RenderTargetUsage usage;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::minLevel"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDER_TARGET_PROPERTIES::minLevel"]/*' />
 	public FeatureLevel minLevel;
 }

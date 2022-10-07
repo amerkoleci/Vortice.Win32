@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo"]/*' />
 /// <unmanaged>IWICBitmapDecoderInfo</unmanaged>
 [Guid("d8cd007f-d08f-4191-9bfc-236ea7f0e4b5")]
 [NativeTypeName("struct IWICBitmapDecoderInfo : IWICBitmapCodecInfo")]
@@ -234,7 +234,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::GetPatterns"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::GetPatterns"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult GetPatterns(uint cbSizePatterns, WICBitmapPattern* pPatterns, uint* pcPatterns, uint* pcbPatternsActual)
@@ -242,7 +242,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, WICBitmapPattern*, uint*, uint*, int>)(lpVtbl[23]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cbSizePatterns, pPatterns, pcPatterns, pcbPatternsActual);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::MatchesPattern"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::MatchesPattern"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult MatchesPattern(Com.IStream* pIStream, Bool32* pfMatches)
@@ -250,7 +250,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Com.IStream*, Bool32*, int>)(lpVtbl[24]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pIStream, pfMatches);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::CreateInstance"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CreateInstance(IWICBitmapDecoder** ppIBitmapDecoder)

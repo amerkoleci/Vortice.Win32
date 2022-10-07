@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_BLEND_DESCRIPTION</unmanaged>
 public partial struct BlendDescription
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::sourceBlend"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::sourceBlend"]/*' />
 	public Blend sourceBlend;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::destinationBlend"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::destinationBlend"]/*' />
 	public Blend destinationBlend;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::blendOperation"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::blendOperation"]/*' />
 	public BlendOperation blendOperation;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::sourceBlendAlpha"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::sourceBlendAlpha"]/*' />
 	public Blend sourceBlendAlpha;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::destinationBlendAlpha"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::destinationBlendAlpha"]/*' />
 	public Blend destinationBlendAlpha;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::blendOperationAlpha"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::blendOperationAlpha"]/*' />
 	public BlendOperation blendOperationAlpha;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::blendFactor"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_DESCRIPTION::blendFactor"]/*' />
 	public unsafe fixed float blendFactor[4];
 }

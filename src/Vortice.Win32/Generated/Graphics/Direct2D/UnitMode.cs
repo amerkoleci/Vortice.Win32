@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE"]/*' />
 /// <unmanaged>D2D1_UNIT_MODE</unmanaged>
 public enum UnitMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE::D2D1_UNIT_MODE_DIPS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE::D2D1_UNIT_MODE_DIPS"]/*' />
 	/// <unmanaged>D2D1_UNIT_MODE_DIPS</unmanaged>
 	Dips = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE::D2D1_UNIT_MODE_PIXELS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_UNIT_MODE::D2D1_UNIT_MODE_PIXELS"]/*' />
 	/// <unmanaged>D2D1_UNIT_MODE_PIXELS</unmanaged>
 	Pixels = 1,
 }

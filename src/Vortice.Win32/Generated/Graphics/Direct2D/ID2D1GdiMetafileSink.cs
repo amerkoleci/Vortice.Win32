@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink"]/*' />
 /// <unmanaged>ID2D1GdiMetafileSink</unmanaged>
 [Guid("82237326-8111-4f7c-bcf4-b5c1175564fe")]
 [NativeTypeName("struct ID2D1GdiMetafileSink : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1GdiMetafileSink : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink::ProcessRecord"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafileSink::ProcessRecord"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize)

@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE"]/*' />
 /// <unmanaged>D2D1_SIMPLE_COLOR_PROFILE</unmanaged>
 public partial struct SimpleColorProfile
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::redPrimary"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::redPrimary"]/*' />
 	public System.Drawing.PointF redPrimary;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::greenPrimary"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::greenPrimary"]/*' />
 	public System.Drawing.PointF greenPrimary;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::bluePrimary"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::bluePrimary"]/*' />
 	public System.Drawing.PointF bluePrimary;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::whitePointXZ"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::whitePointXZ"]/*' />
 	public System.Drawing.PointF whitePointXZ;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::gamma"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::gamma"]/*' />
 	public Gamma1 gamma;
 }

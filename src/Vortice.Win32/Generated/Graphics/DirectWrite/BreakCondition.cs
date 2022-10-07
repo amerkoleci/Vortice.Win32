@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION"]/*' />
 /// <unmanaged>DWRITE_BREAK_CONDITION</unmanaged>
 public enum BreakCondition : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_NEUTRAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_NEUTRAL"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_NEUTRAL</unmanaged>
 	Neutral = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_CAN_BREAK"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_CAN_BREAK"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_CAN_BREAK</unmanaged>
 	CanBreak = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_MAY_NOT_BREAK"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_MAY_NOT_BREAK"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_MAY_NOT_BREAK</unmanaged>
 	MayNotBreak = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_MUST_BREAK"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_MUST_BREAK"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_MUST_BREAK</unmanaged>
 	MustBreak = 3,
 }

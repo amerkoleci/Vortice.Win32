@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption"]/*' />
 /// <unmanaged>WICBitmapEncoderCacheOption</unmanaged>
 public enum WICBitmapEncoderCacheOption : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderCacheInMemory"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderCacheInMemory"]/*' />
 	/// <unmanaged>WICBitmapEncoderCacheInMemory</unmanaged>
 	CacheInMemory = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderCacheTempFile"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderCacheTempFile"]/*' />
 	/// <unmanaged>WICBitmapEncoderCacheTempFile</unmanaged>
 	CacheTempFile = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderNoCache"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderNoCache"]/*' />
 	/// <unmanaged>WICBitmapEncoderNoCache</unmanaged>
 	NoCache = 2,
 }

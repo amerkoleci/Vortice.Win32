@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder"]/*' />
 /// <unmanaged>IDxcContainerBuilder</unmanaged>
 [Guid("334b1f50-2292-4b35-99a1-25588d8c17fe")]
 [NativeTypeName("struct IDxcContainerBuilder : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcContainerBuilder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::Load"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::Load"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Load(IDxcBlob* pDxilContainerHeader)
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcContainerBuilder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerBuilder*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), pDxilContainerHeader);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::AddPart"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::AddPart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult AddPart(uint fourCC, IDxcBlob* pSource)
@@ -90,7 +90,7 @@ public unsafe partial struct IDxcContainerBuilder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerBuilder*, uint, IDxcBlob*, int>)(lpVtbl[4]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), fourCC, pSource);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::RemovePart"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::RemovePart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult RemovePart(uint fourCC)
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcContainerBuilder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerBuilder*, uint, int>)(lpVtbl[5]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), fourCC);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::SerializeContainer"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcContainerBuilder::SerializeContainer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult SerializeContainer(IDxcOperationResult** ppResult)

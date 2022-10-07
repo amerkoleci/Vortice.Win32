@@ -9,38 +9,38 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN"]/*' />
 /// <unmanaged>D2D1_SVG_ASPECT_ALIGN</unmanaged>
 public enum SvgAspectAlign : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_NONE"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MIN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MIN"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MIN</unmanaged>
 	XMinYMin = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MIN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MIN"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MIN</unmanaged>
 	XMidYMin = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MIN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MIN"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MIN</unmanaged>
 	XMaxYMin = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MID"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MID"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MID</unmanaged>
 	XMinYMid = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MID"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MID"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MID</unmanaged>
 	XMidYMid = 5,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MID"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MID"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MID</unmanaged>
 	XMaxYMid = 6,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MAX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MAX"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MIN_Y_MAX</unmanaged>
 	XMinYMax = 7,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MAX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MAX"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MAX</unmanaged>
 	XMidYMax = 8,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MAX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ASPECT_ALIGN::D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MAX"]/*' />
 	/// <unmanaged>D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MAX</unmanaged>
 	XMaxYMax = 9,
 }

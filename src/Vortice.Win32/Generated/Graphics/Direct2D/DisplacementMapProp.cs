@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP"]/*' />
 /// <unmanaged>D2D1_DISPLACEMENTMAP_PROP</unmanaged>
 public enum DisplacementMapProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_SCALE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_SCALE"]/*' />
 	/// <unmanaged>D2D1_DISPLACEMENTMAP_PROP_SCALE</unmanaged>
 	Scale = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_X_CHANNEL_SELECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_X_CHANNEL_SELECT"]/*' />
 	/// <unmanaged>D2D1_DISPLACEMENTMAP_PROP_X_CHANNEL_SELECT</unmanaged>
 	XChannelSelect = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_Y_CHANNEL_SELECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISPLACEMENTMAP_PROP::D2D1_DISPLACEMENTMAP_PROP_Y_CHANNEL_SELECT"]/*' />
 	/// <unmanaged>D2D1_DISPLACEMENTMAP_PROP_Y_CHANNEL_SELECT</unmanaged>
 	YChannelSelect = 2,
 }

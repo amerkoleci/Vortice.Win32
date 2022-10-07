@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource"]/*' />
 /// <unmanaged>IDWriteTextAnalysisSource</unmanaged>
 [Guid("688e1a58-5094-47c8-adc8-fbcea60ae92b")]
 [NativeTypeName("struct IDWriteTextAnalysisSource : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetTextAtPosition"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetTextAtPosition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint, ushort**, uint*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetTextBeforePosition"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetTextBeforePosition"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint, ushort**, uint*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetParagraphReadingDirection"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetParagraphReadingDirection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public ReadingDirection GetParagraphReadingDirection()
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetLocaleName"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetLocaleName(uint textPosition, uint* textLength, ushort** localeName)
@@ -106,7 +106,7 @@ public unsafe partial struct IDWriteTextAnalysisSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint, uint*, ushort**, int>)(lpVtbl[6]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textLength, localeName);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetNumberSubstitution"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetNumberSubstitution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution)

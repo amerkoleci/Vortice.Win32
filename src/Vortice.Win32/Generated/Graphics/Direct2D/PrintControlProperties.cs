@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_PRINT_CONTROL_PROPERTIES</unmanaged>
 public partial struct PrintControlProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES::fontSubset"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES::fontSubset"]/*' />
 	public PrintFontSubsetMode fontSubset;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES::rasterDPI"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES::rasterDPI"]/*' />
 	public float rasterDPI;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES::colorSpace"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_CONTROL_PROPERTIES::colorSpace"]/*' />
 	public ColorSpace colorSpace;
 }

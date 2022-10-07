@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform"]/*' />
 /// <unmanaged>ID2D1BlendTransform</unmanaged>
 [Guid("63ac0b32-ba44-450f-8806-7f4ca1ff2f1b")]
 [NativeTypeName("struct ID2D1BlendTransform : ID2D1ConcreteTransform")]
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1BlendTransform : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1BlendTransform*, Bool32, void>)(lpVtbl[5]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), isCached);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform::SetDescription"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform::SetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void SetDescription(BlendDescription* description)
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1BlendTransform : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1BlendTransform*, BlendDescription*, void>)(lpVtbl[6]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), description);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform::GetDescription"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BlendTransform::GetDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetDescription(BlendDescription* description)

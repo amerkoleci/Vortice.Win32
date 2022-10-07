@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader"]/*' />
 /// <unmanaged>WICJpegScanHeader</unmanaged>
 public partial struct WICJpegScanHeader
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader::cComponents"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::cComponents"]/*' />
 	public uint cComponents;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader::RestartInterval"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::RestartInterval"]/*' />
 	public uint RestartInterval;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader::ComponentSelectors"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::ComponentSelectors"]/*' />
 	public uint ComponentSelectors;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader::HuffmanTableIndices"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::HuffmanTableIndices"]/*' />
 	public uint HuffmanTableIndices;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader::StartSpectralSelection"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::StartSpectralSelection"]/*' />
 	public byte StartSpectralSelection;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader::EndSpectralSelection"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::EndSpectralSelection"]/*' />
 	public byte EndSpectralSelection;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader::SuccessiveApproximationHigh"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::SuccessiveApproximationHigh"]/*' />
 	public byte SuccessiveApproximationHigh;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanHeader::SuccessiveApproximationLow"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanHeader::SuccessiveApproximationLow"]/*' />
 	public byte SuccessiveApproximationLow;
 }

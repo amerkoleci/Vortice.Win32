@@ -9,50 +9,50 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE"]/*' />
 /// <unmanaged>D3D_SHADER_INPUT_TYPE</unmanaged>
 public enum ShaderInputType : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_CBUFFER"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_SIT_CBUFFER</unmanaged>
 	CBuffer = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_TBUFFER"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_TBUFFER"]/*' />
 	/// <unmanaged>D3D_SIT_TBUFFER</unmanaged>
 	TBuffer = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_TEXTURE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_TEXTURE"]/*' />
 	/// <unmanaged>D3D_SIT_TEXTURE</unmanaged>
 	Texture = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_SAMPLER"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_SAMPLER"]/*' />
 	/// <unmanaged>D3D_SIT_SAMPLER</unmanaged>
 	Sampler = 3,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWTYPED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWTYPED"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_RWTYPED</unmanaged>
 	UavRwTyped = 4,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_STRUCTURED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_STRUCTURED"]/*' />
 	/// <unmanaged>D3D_SIT_STRUCTURED</unmanaged>
 	Structured = 5,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWSTRUCTURED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWSTRUCTURED"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_RWSTRUCTURED</unmanaged>
 	UavRwStructured = 6,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_BYTEADDRESS"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_BYTEADDRESS"]/*' />
 	/// <unmanaged>D3D_SIT_BYTEADDRESS</unmanaged>
 	ByteAddress = 7,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWBYTEADDRESS"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWBYTEADDRESS"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_RWBYTEADDRESS</unmanaged>
 	UavRwByteAddress = 8,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_APPEND_STRUCTURED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_APPEND_STRUCTURED"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_APPEND_STRUCTURED</unmanaged>
 	UavAppendStructured = 9,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_CONSUME_STRUCTURED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_CONSUME_STRUCTURED"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_CONSUME_STRUCTURED</unmanaged>
 	UavConsumeStructured = 10,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWSTRUCTURED_WITH_COUNTER"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_RWSTRUCTURED_WITH_COUNTER"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_RWSTRUCTURED_WITH_COUNTER</unmanaged>
 	UavRwStructuredWithCounter = 11,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_RTACCELERATIONSTRUCTURE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_RTACCELERATIONSTRUCTURE"]/*' />
 	/// <unmanaged>D3D_SIT_RTACCELERATIONSTRUCTURE</unmanaged>
 	RtAccelerationStructure = 12,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_FEEDBACKTEXTURE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_UAV_FEEDBACKTEXTURE"]/*' />
 	/// <unmanaged>D3D_SIT_UAV_FEEDBACKTEXTURE</unmanaged>
 	UavFeedbackTexture = 13,
 }

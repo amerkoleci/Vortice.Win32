@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2"]/*' />
 /// <unmanaged>IDWriteFontFace2</unmanaged>
 [Guid("d8b768ff-64bc-4e66-982b-ec8e87f693f7")]
 [NativeTypeName("struct IDWriteFontFace2 : IDWriteFontFace1")]
@@ -290,7 +290,7 @@ public unsafe partial struct IDWriteFontFace2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, Bool32>)(lpVtbl[29]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::IsColorFont"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::IsColorFont"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public Bool32 IsColorFont()
@@ -298,7 +298,7 @@ public unsafe partial struct IDWriteFontFace2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, Bool32>)(lpVtbl[30]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetColorPaletteCount"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetColorPaletteCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public uint GetColorPaletteCount()
@@ -306,7 +306,7 @@ public unsafe partial struct IDWriteFontFace2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, uint>)(lpVtbl[31]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetPaletteEntryCount"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetPaletteEntryCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public uint GetPaletteEntryCount()
@@ -314,7 +314,7 @@ public unsafe partial struct IDWriteFontFace2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, uint>)(lpVtbl[32]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetPaletteEntries"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetPaletteEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Color4** paletteEntries)
@@ -322,7 +322,7 @@ public unsafe partial struct IDWriteFontFace2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, uint, uint, uint, Color4**, int>)(lpVtbl[33]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this), colorPaletteIndex, firstEntryIndex, entryCount, paletteEntries);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetRecommendedRenderingMode"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace2::GetRecommendedRenderingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, OutlineThreshold outlineThreshold, MeasuringMode measuringMode, IDWriteRenderingParams* renderingParams, RenderingMode* renderingMode, GridFitMode* gridFitMode)

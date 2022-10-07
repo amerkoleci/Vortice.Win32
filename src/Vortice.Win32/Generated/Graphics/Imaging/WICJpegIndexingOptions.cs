@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions"]/*' />
 /// <unmanaged>WICJpegIndexingOptions</unmanaged>
 public enum WICJpegIndexingOptions : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions::WICJpegIndexingOptionsGenerateOnDemand"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions::WICJpegIndexingOptionsGenerateOnDemand"]/*' />
 	/// <unmanaged>WICJpegIndexingOptionsGenerateOnDemand</unmanaged>
 	WICJpegIndexingOptionsGenerateOnDemand = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions::WICJpegIndexingOptionsGenerateOnLoad"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions::WICJpegIndexingOptionsGenerateOnLoad"]/*' />
 	/// <unmanaged>WICJpegIndexingOptionsGenerateOnLoad</unmanaged>
 	WICJpegIndexingOptionsGenerateOnLoad = 1,
 }

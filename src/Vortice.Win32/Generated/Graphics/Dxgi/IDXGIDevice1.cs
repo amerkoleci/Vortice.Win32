@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1"]/*' />
 /// <unmanaged>IDXGIDevice1</unmanaged>
 [Guid("77db970f-6276-48ba-ba28-070143b4392c")]
 [NativeTypeName("struct IDXGIDevice1 : IDXGIDevice")]
@@ -146,7 +146,7 @@ public unsafe partial struct IDXGIDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, int*, int>)(lpVtbl[11]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pPriority);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice1::SetMaximumFrameLatency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1::SetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult SetMaximumFrameLatency(uint MaxLatency)
@@ -154,7 +154,7 @@ public unsafe partial struct IDXGIDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, uint, int>)(lpVtbl[12]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), MaxLatency);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice1::GetMaximumFrameLatency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice1::GetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetMaximumFrameLatency(uint* pMaxLatency)

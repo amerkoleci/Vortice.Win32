@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY</unmanaged>
 public enum InfoQueueMessageSeverity : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_CORRUPTION</unmanaged>
 	Corruption = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_ERROR</unmanaged>
 	Error = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_WARNING</unmanaged>
 	Warning = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_INFO</unmanaged>
 	Info = 3,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_SEVERITY::DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_SEVERITY_MESSAGE</unmanaged>
 	Message = 4,
 }

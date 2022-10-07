@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_RANGE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_RANGE"]/*' />
 /// <unmanaged>DWRITE_TEXT_RANGE</unmanaged>
 public partial struct TextRange
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_RANGE::startPosition"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_RANGE::startPosition"]/*' />
 	public uint startPosition;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_RANGE::length"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_RANGE::length"]/*' />
 	public uint length;
 }

@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SPACING</unmanaged>
 public enum PanoseSpacing : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_PROPORTIONAL_SPACED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_PROPORTIONAL_SPACED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_PROPORTIONAL_SPACED</unmanaged>
 	ProportionalSpaced = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_MONOSPACED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_MONOSPACED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_MONOSPACED</unmanaged>
 	Monospaced = 3,
 }

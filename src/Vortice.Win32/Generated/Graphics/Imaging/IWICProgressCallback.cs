@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressCallback"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICProgressCallback"]/*' />
 /// <unmanaged>IWICProgressCallback</unmanaged>
 [Guid("4776f9cd-9517-45fa-bf24-e89c5ec5c60c")]
 [NativeTypeName("struct IWICProgressCallback : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICProgressCallback : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressCallback::Notify"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICProgressCallback::Notify"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Notify(uint uFrameNum, WICProgressOperation operation, double dblProgress)

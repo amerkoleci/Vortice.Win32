@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory1"]/*' />
 /// <unmanaged>IDWriteFactory1</unmanaged>
 [Guid("30572f99-dac6-41db-a16e-0486307e606a")]
 [NativeTypeName("struct IDWriteFactory1 : IDWriteFactory")]
@@ -242,7 +242,7 @@ public unsafe partial struct IDWriteFactory1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory1*, GlyphRun*, float, Matrix3x2*, RenderingMode, MeasuringMode, float, float, IDWriteGlyphRunAnalysis**, int>)(lpVtbl[23]))((IDWriteFactory1*)Unsafe.AsPointer(ref this), glyphRun, pixelsPerDip, transform, renderingMode, measuringMode, baselineOriginX, baselineOriginY, glyphRunAnalysis);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory1::GetEudcFontCollection"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory1::GetEudcFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult GetEudcFontCollection(IDWriteFontCollection** fontCollection, Bool32 checkForUpdates)
@@ -250,7 +250,7 @@ public unsafe partial struct IDWriteFactory1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory1*, IDWriteFontCollection**, Bool32, int>)(lpVtbl[24]))((IDWriteFactory1*)Unsafe.AsPointer(ref this), fontCollection, checkForUpdates);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory1::CreateCustomRenderingParams"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory1::CreateCustomRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float enhancedContrastGrayscale, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode renderingMode, IDWriteRenderingParams1** renderingParams)

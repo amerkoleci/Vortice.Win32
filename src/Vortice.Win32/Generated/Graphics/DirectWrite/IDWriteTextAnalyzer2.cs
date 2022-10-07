@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2"]/*' />
 /// <unmanaged>IDWriteTextAnalyzer2</unmanaged>
 [Guid("553a9ff3-5693-4df7-b52b-74806f7f2eb9")]
 [NativeTypeName("struct IDWriteTextAnalyzer2 : IDWriteTextAnalyzer1")]
@@ -202,7 +202,7 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, float, ScriptAnalysis*, uint, uint, uint, ushort*, ushort*, float*, float*, GlyphOffset*, ShapingGlyphProperties*, uint*, ushort*, ushort*, float*, GlyphOffset*, int>)(lpVtbl[18]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, fontEmSize, scriptAnalysis, textLength, glyphCount, maxGlyphCount, clusterMap, glyphIndices, glyphAdvances, justifiedGlyphAdvances, justifiedGlyphOffsets, glyphProperties, actualGlyphCount, modifiedClusterMap, modifiedGlyphIndices, modifiedGlyphAdvances, modifiedGlyphOffsets);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::GetGlyphOrientationTransform"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::GetGlyphOrientationTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult GetGlyphOrientationTransform(GlyphOrientationAngle glyphOrientationAngle, Bool32 isSideways, float originX, float originY, Matrix3x2* transform)
@@ -210,7 +210,7 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, GlyphOrientationAngle, Bool32, float, float, Matrix3x2*, int>)(lpVtbl[19]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), glyphOrientationAngle, isSideways, originX, originY, transform);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::GetTypographicFeatures"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::GetTypographicFeatures"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult GetTypographicFeatures(IDWriteFontFace* fontFace, ScriptAnalysis* scriptAnalysis, ushort* localeName, uint maxTagCount, uint* actualTagCount, FontFeatureTag* tags)
@@ -218,7 +218,7 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, ScriptAnalysis*, ushort*, uint, uint*, FontFeatureTag*, int>)(lpVtbl[20]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, scriptAnalysis, localeName, maxTagCount, actualTagCount, tags);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::CheckTypographicFeature"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::CheckTypographicFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult CheckTypographicFeature(IDWriteFontFace* fontFace, ScriptAnalysis* scriptAnalysis, ushort* localeName, FontFeatureTag featureTag, uint glyphCount, ushort* glyphIndices, byte* featureApplies)

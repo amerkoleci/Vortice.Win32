@@ -9,34 +9,34 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS"]/*' />
 /// <unmanaged>DWRITE_TEXT_METRICS</unmanaged>
 public partial struct TextMetrics
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::left"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::left"]/*' />
 	public float left;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::top"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::top"]/*' />
 	public float top;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::width"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::width"]/*' />
 	public float width;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::widthIncludingTrailingWhitespace"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::widthIncludingTrailingWhitespace"]/*' />
 	public float widthIncludingTrailingWhitespace;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::height"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::height"]/*' />
 	public float height;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::layoutWidth"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::layoutWidth"]/*' />
 	public float layoutWidth;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::layoutHeight"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::layoutHeight"]/*' />
 	public float layoutHeight;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::maxBidiReorderingDepth"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::maxBidiReorderingDepth"]/*' />
 	public uint maxBidiReorderingDepth;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::lineCount"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_METRICS::lineCount"]/*' />
 	public uint lineCount;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary"]/*' />
 /// <unmanaged>IDxcLibrary</unmanaged>
 [Guid("e5204dc7-d18c-4c3c-bdfb-851673980fe7")]
 [NativeTypeName("struct IDxcLibrary : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::SetMalloc"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::SetMalloc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetMalloc(Com.IMalloc* pMalloc)
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, Com.IMalloc*, int>)(lpVtbl[3]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pMalloc);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobFromBlob"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobFromBlob"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult)
@@ -90,7 +90,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, IDxcBlob*, uint, uint, IDxcBlob**, int>)(lpVtbl[4]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, offset, length, ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobFromFile"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobFromFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult CreateBlobFromFile(ushort* pFileName, DxcCp* codePage, IDxcBlobEncoding** pBlobEncoding)
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, ushort*, DxcCp*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pFileName, codePage, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobWithEncodingFromPinned"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobWithEncodingFromPinned"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult CreateBlobWithEncodingFromPinned(void* pText, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding)
@@ -106,7 +106,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, void*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[6]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pText, size, codePage, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobWithEncodingOnHeapCopy"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobWithEncodingOnHeapCopy"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult CreateBlobWithEncodingOnHeapCopy(void* pText, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding)
@@ -114,7 +114,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, void*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[7]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pText, size, codePage, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobWithEncodingOnMalloc"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateBlobWithEncodingOnMalloc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CreateBlobWithEncodingOnMalloc(void* pText, Com.IMalloc* pIMalloc, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding)
@@ -122,7 +122,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, void*, Com.IMalloc*, uint, DxcCp, IDxcBlobEncoding**, int>)(lpVtbl[8]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pText, pIMalloc, size, codePage, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateIncludeHandler"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateIncludeHandler"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CreateIncludeHandler(IDxcIncludeHandler** ppResult)
@@ -130,7 +130,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, IDxcIncludeHandler**, int>)(lpVtbl[9]))((IDxcLibrary*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateStreamFromBlobReadOnly"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::CreateStreamFromBlobReadOnly"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult CreateStreamFromBlobReadOnly(IDxcBlob* pBlob, Com.IStream** ppStream)
@@ -138,7 +138,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, IDxcBlob*, Com.IStream**, int>)(lpVtbl[10]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, ppStream);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::GetBlobAsUtf8"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::GetBlobAsUtf8"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)
@@ -146,7 +146,7 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[11]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, pBlobEncoding);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLibrary::GetBlobAsUtf16"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLibrary::GetBlobAsUtf16"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetBlobAsUtf16(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)

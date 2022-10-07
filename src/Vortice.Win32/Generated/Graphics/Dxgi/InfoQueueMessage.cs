@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE</unmanaged>
 public partial struct InfoQueueMessage
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Producer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Producer"]/*' />
 	public Guid Producer;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Category"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Category"]/*' />
 	public InfoQueueMessageCategory Category;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Severity"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::Severity"]/*' />
 	public InfoQueueMessageSeverity Severity;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::ID"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::ID"]/*' />
 	public int ID;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::pDescription"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::pDescription"]/*' />
 	public unsafe byte* pDescription;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::DescriptionByteLength"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE::DescriptionByteLength"]/*' />
 	public nuint DescriptionByteLength;
 }

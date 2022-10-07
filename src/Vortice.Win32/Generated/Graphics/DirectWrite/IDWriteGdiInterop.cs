@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop"]/*' />
 /// <unmanaged>IDWriteGdiInterop</unmanaged>
 [Guid("1edd9491-9853-4299-898f-6432983b6f3a")]
 [NativeTypeName("struct IDWriteGdiInterop : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteGdiInterop : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::CreateFontFromLOGFONT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::CreateFontFromLOGFONT"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateFontFromLOGFONT(Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFont** font)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteGdiInterop : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop*, Win32.Graphics.Gdi.LogFontW*, IDWriteFont**, int>)(lpVtbl[3]))((IDWriteGdiInterop*)Unsafe.AsPointer(ref this), logFont, font);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::ConvertFontToLOGFONT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::ConvertFontToLOGFONT"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult ConvertFontToLOGFONT(IDWriteFont* font, Win32.Graphics.Gdi.LogFontW** logFont, Bool32* isSystemFont)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteGdiInterop : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop*, IDWriteFont*, Win32.Graphics.Gdi.LogFontW**, Bool32*, int>)(lpVtbl[4]))((IDWriteGdiInterop*)Unsafe.AsPointer(ref this), font, logFont, isSystemFont);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::ConvertFontFaceToLOGFONT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::ConvertFontFaceToLOGFONT"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult ConvertFontFaceToLOGFONT(IDWriteFontFace* font, Win32.Graphics.Gdi.LogFontW** logFont)
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteGdiInterop : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop*, IDWriteFontFace*, Win32.Graphics.Gdi.LogFontW**, int>)(lpVtbl[5]))((IDWriteGdiInterop*)Unsafe.AsPointer(ref this), font, logFont);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::CreateFontFaceFromHdc"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::CreateFontFaceFromHdc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult CreateFontFaceFromHdc(IntPtr hdc, IDWriteFontFace** fontFace)
@@ -106,7 +106,7 @@ public unsafe partial struct IDWriteGdiInterop : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop*, IntPtr, IDWriteFontFace**, int>)(lpVtbl[6]))((IDWriteGdiInterop*)Unsafe.AsPointer(ref this), hdc, fontFace);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::CreateBitmapRenderTarget"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop::CreateBitmapRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult CreateBitmapRenderTarget(IntPtr hdc, uint width, uint height, IDWriteBitmapRenderTarget** renderTarget)

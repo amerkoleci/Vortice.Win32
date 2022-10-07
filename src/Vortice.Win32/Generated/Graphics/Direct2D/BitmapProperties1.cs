@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1"]/*' />
 /// <unmanaged>D2D1_BITMAP_PROPERTIES1</unmanaged>
 public partial struct BitmapProperties1
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::pixelFormat"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::pixelFormat"]/*' />
 	public Common.PixelFormat pixelFormat;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::dpiX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::dpiX"]/*' />
 	public float dpiX;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::dpiY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::dpiY"]/*' />
 	public float dpiY;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::bitmapOptions"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::bitmapOptions"]/*' />
 	public BitmapOptions bitmapOptions;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::colorContext"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_PROPERTIES1::colorContext"]/*' />
 	public unsafe ID2D1ColorContext* colorContext;
 }

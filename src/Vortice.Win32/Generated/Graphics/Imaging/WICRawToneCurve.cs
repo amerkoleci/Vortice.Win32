@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICRawToneCurve"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve"]/*' />
 /// <unmanaged>WICRawToneCurve</unmanaged>
 public partial struct WICRawToneCurve
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawToneCurve::cPoints"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve::cPoints"]/*' />
 	public uint cPoints;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawToneCurve::aPoints"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurve::aPoints"]/*' />
 	public aPoints__FixedBuffer aPoints;
 
 	public unsafe struct aPoints__FixedBuffer

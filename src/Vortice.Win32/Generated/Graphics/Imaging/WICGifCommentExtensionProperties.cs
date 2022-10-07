@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICGifCommentExtensionProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICGifCommentExtensionProperties"]/*' />
 /// <unmanaged>WICGifCommentExtensionProperties</unmanaged>
 public enum WICGifCommentExtensionProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifCommentExtensionProperties::WICGifCommentExtensionText"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifCommentExtensionProperties::WICGifCommentExtensionText"]/*' />
 	/// <unmanaged>WICGifCommentExtensionText</unmanaged>
 	WICGifCommentExtensionText = 1,
 }

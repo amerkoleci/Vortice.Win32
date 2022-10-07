@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageSource"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSource"]/*' />
 /// <unmanaged>ID2D1ImageSource</unmanaged>
 [Guid("c9b664e5-74a1-4378-9ac2-eefc37a3f4d8")]
 [NativeTypeName("struct ID2D1ImageSource : ID2D1Image")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1ImageSource : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ImageSource*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1ImageSource*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageSource::OfferResources"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSource::OfferResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult OfferResources()
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1ImageSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSource*, int>)(lpVtbl[4]))((ID2D1ImageSource*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageSource::TryReclaimResources"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSource::TryReclaimResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult TryReclaimResources(Bool32* resourcesDiscarded)

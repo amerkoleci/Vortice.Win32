@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE"]/*' />
 /// <unmanaged>D2D1_ANTIALIAS_MODE</unmanaged>
 public enum AntialiasMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE::D2D1_ANTIALIAS_MODE_PER_PRIMITIVE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE::D2D1_ANTIALIAS_MODE_PER_PRIMITIVE"]/*' />
 	/// <unmanaged>D2D1_ANTIALIAS_MODE_PER_PRIMITIVE</unmanaged>
 	PerPrimitive = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE::D2D1_ANTIALIAS_MODE_ALIASED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ANTIALIAS_MODE::D2D1_ANTIALIAS_MODE_ALIASED"]/*' />
 	/// <unmanaged>D2D1_ANTIALIAS_MODE_ALIASED</unmanaged>
 	Aliased = 1,
 }

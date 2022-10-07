@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP"]/*' />
 /// <unmanaged>D2D1_MORPHOLOGY_PROP</unmanaged>
 public enum MorphologyProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_MODE"]/*' />
 	/// <unmanaged>D2D1_MORPHOLOGY_PROP_MODE</unmanaged>
 	Mode = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_WIDTH"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_WIDTH"]/*' />
 	/// <unmanaged>D2D1_MORPHOLOGY_PROP_WIDTH</unmanaged>
 	Width = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_HEIGHT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MORPHOLOGY_PROP::D2D1_MORPHOLOGY_PROP_HEIGHT"]/*' />
 	/// <unmanaged>D2D1_MORPHOLOGY_PROP_HEIGHT</unmanaged>
 	Height = 2,
 }

@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION"]/*' />
 /// <unmanaged>D2D1_ORIENTATION</unmanaged>
 public enum Orientation : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_DEFAULT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_DEFAULT</unmanaged>
 	Default = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_FLIP_HORIZONTAL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_FLIP_HORIZONTAL</unmanaged>
 	FlipHorizontal = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE180"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE180"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE180</unmanaged>
 	RotateClockwise180 = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE180_FLIP_HORIZONTAL</unmanaged>
 	RotateClockwise180FlipHorizontal = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL</unmanaged>
 	RotateClockwise90FlipHorizontal = 5,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE270"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE270"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE270</unmanaged>
 	RotateClockwise270 = 6,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL</unmanaged>
 	RotateClockwise270FlipHorizontal = 7,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE90"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ORIENTATION::D2D1_ORIENTATION_ROTATE_CLOCKWISE90"]/*' />
 	/// <unmanaged>D2D1_ORIENTATION_ROTATE_CLOCKWISE90</unmanaged>
 	RotateClockwise90 = 8,
 }

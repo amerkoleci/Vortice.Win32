@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties"]/*' />
 /// <unmanaged>ID2D1Properties</unmanaged>
 [Guid("483473d7-cd46-4f9d-9d3a-3112aa80159d")]
 [NativeTypeName("struct ID2D1Properties : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public uint GetPropertyCount()
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint>)(lpVtbl[3]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyName"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetPropertyName(uint index, ushort* name, uint nameCount)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, name, nameCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyNameLength"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public uint GetPropertyNameLength(uint index)
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, uint>)(lpVtbl[5]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetType"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public PropertyType GetType(uint index)
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyIndex"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public uint GetPropertyIndex(ushort* name)
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, ushort*, uint>)(lpVtbl[7]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::SetValueByName"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::SetValueByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult SetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize)
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::SetValue"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::SetValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetValue(uint index, PropertyType type, byte* data, uint dataSize)
@@ -130,7 +130,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValueByName"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValueByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize)
@@ -138,7 +138,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValue"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetValue(uint index, PropertyType type, byte* data, uint dataSize)
@@ -146,7 +146,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValueSize"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValueSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public uint GetValueSize(uint index)
@@ -154,7 +154,7 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, uint>)(lpVtbl[12]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetSubProperties"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetSubProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetSubProperties(uint index, ID2D1Properties** subProperties)

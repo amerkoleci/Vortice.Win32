@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY"]/*' />
 /// <unmanaged>DWRITE_LOCALITY</unmanaged>
 public enum Locality : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_REMOTE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_REMOTE"]/*' />
 	/// <unmanaged>DWRITE_LOCALITY_REMOTE</unmanaged>
 	Remote = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_PARTIAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_PARTIAL"]/*' />
 	/// <unmanaged>DWRITE_LOCALITY_PARTIAL</unmanaged>
 	Partial = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_LOCAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_LOCAL"]/*' />
 	/// <unmanaged>DWRITE_LOCALITY_LOCAL</unmanaged>
 	Local = 2,
 }

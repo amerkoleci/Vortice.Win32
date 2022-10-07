@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TYPOGRAPHIC_FEATURES"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TYPOGRAPHIC_FEATURES"]/*' />
 /// <unmanaged>DWRITE_TYPOGRAPHIC_FEATURES</unmanaged>
 public partial struct TypographicFeatures
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TYPOGRAPHIC_FEATURES::features"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TYPOGRAPHIC_FEATURES::features"]/*' />
 	public unsafe FontFeature* features;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TYPOGRAPHIC_FEATURES::featureCount"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TYPOGRAPHIC_FEATURES::featureCount"]/*' />
 	public uint featureCount;
 }

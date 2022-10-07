@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_DOUBLES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_DOUBLES"]/*' />
 /// <unmanaged>D2D1_FEATURE_DATA_DOUBLES</unmanaged>
 public partial struct FeatureDataDoubles
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_DOUBLES::doublePrecisionFloatShaderOps"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_DOUBLES::doublePrecisionFloatShaderOps"]/*' />
 	public Bool32 doublePrecisionFloatShaderOps;
 }

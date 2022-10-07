@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush"]/*' />
 /// <unmanaged>ID2D1ImageBrush</unmanaged>
 [Guid("fe9e984d-3f95-407c-b5db-cb94d4e8f87c")]
 [NativeTypeName("struct ID2D1ImageBrush : ID2D1Brush")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetImage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void SetImage(ID2D1Image* image)
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ID2D1Image*, void>)(lpVtbl[8]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), image);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetExtendModeX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public void SetExtendModeX(ExtendMode extendModeX)
@@ -130,7 +130,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode, void>)(lpVtbl[9]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), extendModeX);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetExtendModeY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public void SetExtendModeY(ExtendMode extendModeY)
@@ -138,7 +138,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode, void>)(lpVtbl[10]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), extendModeY);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetInterpolationMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public void SetInterpolationMode(InterpolationMode interpolationMode)
@@ -146,7 +146,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, InterpolationMode, void>)(lpVtbl[11]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetSourceRectangle"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetSourceRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public void SetSourceRectangle(Common.RectF* sourceRectangle)
@@ -154,7 +154,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Common.RectF*, void>)(lpVtbl[12]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetImage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public void GetImage(ID2D1Image** image)
@@ -162,7 +162,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ID2D1Image**, void>)(lpVtbl[13]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), image);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetExtendModeX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public ExtendMode GetExtendModeX()
@@ -170,7 +170,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[14]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetExtendModeY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public ExtendMode GetExtendModeY()
@@ -178,7 +178,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[15]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetInterpolationMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetInterpolationMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public InterpolationMode GetInterpolationMode()
@@ -186,7 +186,7 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, InterpolationMode>)(lpVtbl[16]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetSourceRectangle"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetSourceRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void GetSourceRectangle(Common.RectF* sourceRectangle)

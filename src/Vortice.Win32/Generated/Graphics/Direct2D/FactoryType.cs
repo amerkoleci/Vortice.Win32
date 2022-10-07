@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE"]/*' />
 /// <unmanaged>D2D1_FACTORY_TYPE</unmanaged>
 public enum FactoryType : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE::D2D1_FACTORY_TYPE_SINGLE_THREADED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE::D2D1_FACTORY_TYPE_SINGLE_THREADED"]/*' />
 	/// <unmanaged>D2D1_FACTORY_TYPE_SINGLE_THREADED</unmanaged>
 	SingleThreaded = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE::D2D1_FACTORY_TYPE_MULTI_THREADED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_TYPE::D2D1_FACTORY_TYPE_MULTI_THREADED"]/*' />
 	/// <unmanaged>D2D1_FACTORY_TYPE_MULTI_THREADED</unmanaged>
 	MultiThreaded = 1,
 }

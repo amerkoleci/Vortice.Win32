@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1"]/*' />
 /// <unmanaged>D2D1_LAYER_OPTIONS1</unmanaged>
 [Flags]
 public enum LayerOptions1 : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_NONE"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS1_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_INITIALIZE_FROM_BACKGROUND"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_INITIALIZE_FROM_BACKGROUND"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS1_INITIALIZE_FROM_BACKGROUND</unmanaged>
 	InitializeFromBackground = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_IGNORE_ALPHA"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS1::D2D1_LAYER_OPTIONS1_IGNORE_ALPHA"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS1_IGNORE_ALPHA</unmanaged>
 	IgnoreAlpha = 2,
 }

@@ -9,41 +9,41 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND"]/*' />
 /// <unmanaged>DXC_OUT_KIND</unmanaged>
 public enum DxcOutKind : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_NONE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_NONE"]/*' />
 	/// <unmanaged>DXC_OUT_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_OBJECT"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_OBJECT"]/*' />
 	/// <unmanaged>DXC_OUT_OBJECT</unmanaged>
 	Object = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_ERRORS"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_ERRORS"]/*' />
 	/// <unmanaged>DXC_OUT_ERRORS</unmanaged>
 	Errors = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_PDB"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_PDB"]/*' />
 	/// <unmanaged>DXC_OUT_PDB</unmanaged>
 	Pdb = 3,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_SHADER_HASH"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_SHADER_HASH"]/*' />
 	/// <unmanaged>DXC_OUT_SHADER_HASH</unmanaged>
 	ShaderHash = 4,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_DISASSEMBLY"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_DISASSEMBLY"]/*' />
 	/// <unmanaged>DXC_OUT_DISASSEMBLY</unmanaged>
 	Disassembly = 5,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_HLSL"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_HLSL"]/*' />
 	/// <unmanaged>DXC_OUT_HLSL</unmanaged>
 	Hlsl = 6,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_TEXT"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_TEXT"]/*' />
 	/// <unmanaged>DXC_OUT_TEXT</unmanaged>
 	Text = 7,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_REFLECTION"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_REFLECTION"]/*' />
 	/// <unmanaged>DXC_OUT_REFLECTION</unmanaged>
 	Reflection = 8,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_ROOT_SIGNATURE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_ROOT_SIGNATURE"]/*' />
 	/// <unmanaged>DXC_OUT_ROOT_SIGNATURE</unmanaged>
 	RootSignature = 9,
-	/// <include file='Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_EXTRA_OUTPUTS"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DXC_OUT_KIND::DXC_OUT_EXTRA_OUTPUTS"]/*' />
 	/// <unmanaged>DXC_OUT_EXTRA_OUTPUTS</unmanaged>
 	ExtraOutputs = 10,
 }

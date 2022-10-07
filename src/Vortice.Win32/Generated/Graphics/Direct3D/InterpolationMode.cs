@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D3D_INTERPOLATION_MODE</unmanaged>
 public enum InterpolationMode : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_UNDEFINED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_UNDEFINED</unmanaged>
 	Undefined = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_CONSTANT"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_CONSTANT"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_CONSTANT</unmanaged>
 	Constant = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR</unmanaged>
 	Linear = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_CENTROID"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_CENTROID"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_CENTROID</unmanaged>
 	LinearCentroid = 3,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE</unmanaged>
 	LinearNoPerspective = 4,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_CENTROID"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_CENTROID"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_CENTROID</unmanaged>
 	LinearNoPerspectiveCentroid = 5,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_SAMPLE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_SAMPLE"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_SAMPLE</unmanaged>
 	LinearSample = 6,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_SAMPLE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_SAMPLE"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_LINEAR_NOPERSPECTIVE_SAMPLE</unmanaged>
 	LinearNoPerspectiveSample = 7,
 }

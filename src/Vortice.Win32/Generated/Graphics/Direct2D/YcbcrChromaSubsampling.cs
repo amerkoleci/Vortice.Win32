@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING"]/*' />
 /// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING</unmanaged>
 public enum YcbcrChromaSubsampling : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_AUTO"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_AUTO"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_AUTO</unmanaged>
 	Auto = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_420"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_420"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_420</unmanaged>
 	_420 = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_422"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_422"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_422</unmanaged>
 	_422 = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_444"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_444"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_444</unmanaged>
 	_444 = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_440"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_CHROMA_SUBSAMPLING::D2D1_YCBCR_CHROMA_SUBSAMPLING_440"]/*' />
 	/// <unmanaged>D2D1_YCBCR_CHROMA_SUBSAMPLING_440</unmanaged>
 	_440 = 4,
 }

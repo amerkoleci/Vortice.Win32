@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP"]/*' />
 /// <unmanaged>D2D1_CONTRAST_PROP</unmanaged>
 public enum ContrastProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP::D2D1_CONTRAST_PROP_CONTRAST"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP::D2D1_CONTRAST_PROP_CONTRAST"]/*' />
 	/// <unmanaged>D2D1_CONTRAST_PROP_CONTRAST</unmanaged>
 	Contrast = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP::D2D1_CONTRAST_PROP_CLAMP_INPUT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CONTRAST_PROP::D2D1_CONTRAST_PROP_CLAMP_INPUT"]/*' />
 	/// <unmanaged>D2D1_CONTRAST_PROP_CLAMP_INPUT</unmanaged>
 	ClampInput = 1,
 }

@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_DESC</unmanaged>
 public partial struct SwapChainDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferDesc"]/*' />
 	public Common.ModeDescription BufferDesc;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SampleDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferUsage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferUsage"]/*' />
 	public Usage BufferUsage;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::BufferCount"]/*' />
 	public uint BufferCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::OutputWindow"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::OutputWindow"]/*' />
 	public IntPtr OutputWindow;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Windowed"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Windowed"]/*' />
 	public Bool32 Windowed;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SwapEffect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::SwapEffect"]/*' />
 	public SwapEffect SwapEffect;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Flags"]/*' />
 	public SwapChainFlags Flags;
 }

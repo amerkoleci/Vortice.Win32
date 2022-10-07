@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapFlipRotator"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFlipRotator"]/*' />
 /// <unmanaged>IWICBitmapFlipRotator</unmanaged>
 [Guid("5009834f-2d6a-41ce-9e1b-17c5aff7a782")]
 [NativeTypeName("struct IWICBitmapFlipRotator : IWICBitmapSource")]
@@ -114,7 +114,7 @@ public unsafe partial struct IWICBitmapFlipRotator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapFlipRotator*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapFlipRotator*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapFlipRotator::Initialize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapFlipRotator::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Initialize(IWICBitmapSource* pISource, WICBitmapTransformOptions options)

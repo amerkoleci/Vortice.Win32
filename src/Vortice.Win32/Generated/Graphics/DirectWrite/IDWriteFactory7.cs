@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory7"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory7"]/*' />
 /// <unmanaged>IDWriteFactory7</unmanaged>
 [Guid("35d0e0b3-9076-4d2e-a016-a91b568a06b4")]
 [NativeTypeName("struct IDWriteFactory7 : IDWriteFactory6")]
@@ -490,7 +490,7 @@ public unsafe partial struct IDWriteFactory7 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory7*, ushort*, IDWriteFontCollection*, FontAxisValue*, uint, float, ushort*, IDWriteTextFormat3**, int>)(lpVtbl[54]))((IDWriteFactory7*)Unsafe.AsPointer(ref this), fontFamilyName, fontCollection, fontAxisValues, fontAxisValueCount, fontSize, localeName, textFormat);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory7::GetSystemFontSet"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory7::GetSystemFontSet"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(55)]
 	public HResult GetSystemFontSet(Bool32 includeDownloadableFonts, IDWriteFontSet2** fontSet)
@@ -498,7 +498,7 @@ public unsafe partial struct IDWriteFactory7 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory7*, Bool32, IDWriteFontSet2**, int>)(lpVtbl[55]))((IDWriteFactory7*)Unsafe.AsPointer(ref this), includeDownloadableFonts, fontSet);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory7::GetSystemFontCollection"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory7::GetSystemFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
 	public HResult GetSystemFontCollection(Bool32 includeDownloadableFonts, FontFamilyModel fontFamilyModel, IDWriteFontCollection3** fontCollection)

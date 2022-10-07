@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR"]/*' />
 /// <unmanaged>D2D1_CHANNEL_SELECTOR</unmanaged>
 public enum ChannelSelector : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_R"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_R"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_SELECTOR_R</unmanaged>
 	R = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_G"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_G"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_SELECTOR_G</unmanaged>
 	G = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_B"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_B"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_SELECTOR_B</unmanaged>
 	B = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_A"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_SELECTOR::D2D1_CHANNEL_SELECTOR_A"]/*' />
 	/// <unmanaged>D2D1_CHANNEL_SELECTOR_A</unmanaged>
 	A = 3,
 }

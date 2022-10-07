@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP"]/*' />
 /// <unmanaged>D2D1_ATLAS_PROP</unmanaged>
 public enum AtlasProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP::D2D1_ATLAS_PROP_INPUT_RECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP::D2D1_ATLAS_PROP_INPUT_RECT"]/*' />
 	/// <unmanaged>D2D1_ATLAS_PROP_INPUT_RECT</unmanaged>
 	InputRect = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP::D2D1_ATLAS_PROP_INPUT_PADDING_RECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ATLAS_PROP::D2D1_ATLAS_PROP_INPUT_PADDING_RECT"]/*' />
 	/// <unmanaged>D2D1_ATLAS_PROP_INPUT_PADDING_RECT</unmanaged>
 	InputPaddingRect = 1,
 }

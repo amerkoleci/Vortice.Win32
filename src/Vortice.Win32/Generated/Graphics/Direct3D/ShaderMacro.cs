@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO"]/*' />
 /// <unmanaged>D3D_SHADER_MACRO</unmanaged>
 public partial struct ShaderMacro
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Name"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Name"]/*' />
 	public unsafe sbyte* Name;
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Definition"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Definition"]/*' />
 	public unsafe sbyte* Definition;
 }

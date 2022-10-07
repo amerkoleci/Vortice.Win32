@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE"]/*' />
 /// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE</unmanaged>
 public enum TextAntialiasMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_DEFAULT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_CLEARTYPE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_CLEARTYPE"]/*' />
 	/// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE_CLEARTYPE</unmanaged>
 	Cleartype = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE"]/*' />
 	/// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE</unmanaged>
 	Grayscale = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_ALIASED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TEXT_ANTIALIAS_MODE::D2D1_TEXT_ANTIALIAS_MODE_ALIASED"]/*' />
 	/// <unmanaged>D2D1_TEXT_ANTIALIAS_MODE_ALIASED</unmanaged>
 	Aliased = 3,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface2"]/*' />
 /// <unmanaged>IDXGISurface2</unmanaged>
 [Guid("aba496dd-b617-4cb8-a866-bc44d7eb1fa2")]
 [NativeTypeName("struct IDXGISurface2 : IDXGISurface1")]
@@ -154,7 +154,7 @@ public unsafe partial struct IDXGISurface2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, RawRect*, int>)(lpVtbl[12]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pDirtyRect);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISurface2::GetResource"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface2::GetResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetResource(Guid* riid, void** ppParentResource, uint* pSubresourceIndex)

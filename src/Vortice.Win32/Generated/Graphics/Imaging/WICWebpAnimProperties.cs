@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICWebpAnimProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnimProperties"]/*' />
 /// <unmanaged>WICWebpAnimProperties</unmanaged>
 public enum WICWebpAnimProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICWebpAnimProperties::WICWebpAnimLoopCount"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnimProperties::WICWebpAnimLoopCount"]/*' />
 	/// <unmanaged>WICWebpAnimLoopCount</unmanaged>
 	WICWebpAnimLoopCount = 1,
 }

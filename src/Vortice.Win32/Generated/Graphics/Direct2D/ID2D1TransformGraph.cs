@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph"]/*' />
 /// <unmanaged>ID2D1TransformGraph</unmanaged>
 [Guid("13d29038-c3e6-4034-9081-13b53a417992")]
 [NativeTypeName("struct ID2D1TransformGraph : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::GetInputCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::GetInputCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public uint GetInputCount()
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint>)(lpVtbl[3]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetSingleTransformNode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetSingleTransformNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetSingleTransformNode(ID2D1TransformNode* node)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[4]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::AddNode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::AddNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult AddNode(ID2D1TransformNode* node)
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[5]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::RemoveNode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::RemoveNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult RemoveNode(ID2D1TransformNode* node)
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[6]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetOutputNode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetOutputNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetOutputNode(ID2D1TransformNode* node)
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[7]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::ConnectNode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::ConnectNode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult ConnectNode(ID2D1TransformNode* fromNode, ID2D1TransformNode* toNode, uint toNodeInputIndex)
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, ID2D1TransformNode*, uint, int>)(lpVtbl[8]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), fromNode, toNode, toNodeInputIndex);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::ConnectToEffectInput"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::ConnectToEffectInput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult ConnectToEffectInput(uint toEffectInputIndex, ID2D1TransformNode* node, uint toNodeInputIndex)
@@ -130,7 +130,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint, ID2D1TransformNode*, uint, int>)(lpVtbl[9]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), toEffectInputIndex, node, toNodeInputIndex);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::Clear"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::Clear"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public void Clear()
@@ -138,7 +138,7 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, void>)(lpVtbl[10]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetPassthroughGraph"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetPassthroughGraph"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult SetPassthroughGraph(uint effectInputIndex)

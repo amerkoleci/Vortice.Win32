@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSource"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource"]/*' />
 /// <unmanaged>IWICBitmapSource</unmanaged>
 [Guid("00000120-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmapSource : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICBitmapSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetSize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetSize(uint* puiWidth, uint* puiHeight)
@@ -82,7 +82,7 @@ public unsafe partial struct IWICBitmapSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSource*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetPixelFormat"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetPixelFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetPixelFormat(Guid* pPixelFormat)
@@ -90,7 +90,7 @@ public unsafe partial struct IWICBitmapSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSource*, Guid*, int>)(lpVtbl[4]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetResolution"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::GetResolution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetResolution(double* pDpiX, double* pDpiY)
@@ -98,7 +98,7 @@ public unsafe partial struct IWICBitmapSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSource*, double*, double*, int>)(lpVtbl[5]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSource::CopyPalette"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::CopyPalette"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult CopyPalette(IWICPalette* pIPalette)
@@ -106,7 +106,7 @@ public unsafe partial struct IWICBitmapSource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSource*, IWICPalette*, int>)(lpVtbl[6]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), pIPalette);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapSource::CopyPixels"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapSource::CopyPixels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)

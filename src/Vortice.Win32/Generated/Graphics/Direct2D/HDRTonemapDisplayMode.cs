@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE"]/*' />
 /// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE</unmanaged>
 public enum HDRTonemapDisplayMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE::D2D1_HDRTONEMAP_DISPLAY_MODE_SDR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE::D2D1_HDRTONEMAP_DISPLAY_MODE_SDR"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE_SDR</unmanaged>
 	Sdr = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE::D2D1_HDRTONEMAP_DISPLAY_MODE_HDR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HDRTONEMAP_DISPLAY_MODE::D2D1_HDRTONEMAP_DISPLAY_MODE_HDR"]/*' />
 	/// <unmanaged>D2D1_HDRTONEMAP_DISPLAY_MODE_HDR</unmanaged>
 	HDR = 1,
 }

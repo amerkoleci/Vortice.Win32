@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawTransform"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawTransform"]/*' />
 /// <unmanaged>ID2D1DrawTransform</unmanaged>
 [Guid("36bfdcb6-9739-435d-a30d-a653beff6a6f")]
 [NativeTypeName("struct ID2D1DrawTransform : ID2D1Transform")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1DrawTransform : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawTransform*, uint, RawRect*, RawRect*, int>)(lpVtbl[6]))((ID2D1DrawTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DrawTransform::SetDrawInfo"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DrawTransform::SetDrawInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetDrawInfo(ID2D1DrawInfo* drawInfo)

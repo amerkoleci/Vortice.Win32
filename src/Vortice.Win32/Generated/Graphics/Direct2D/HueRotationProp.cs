@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HUEROTATION_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUEROTATION_PROP"]/*' />
 /// <unmanaged>D2D1_HUEROTATION_PROP</unmanaged>
 public enum HueRotationProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HUEROTATION_PROP::D2D1_HUEROTATION_PROP_ANGLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUEROTATION_PROP::D2D1_HUEROTATION_PROP_ANGLE"]/*' />
 	/// <unmanaged>D2D1_HUEROTATION_PROP_ANGLE</unmanaged>
 	Angle = 0,
 }

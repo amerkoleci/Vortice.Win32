@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT"]/*' />
 /// <unmanaged>D2D1_OPACITY_MASK_CONTENT</unmanaged>
 public enum OpacityMaskContent : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_GRAPHICS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_GRAPHICS"]/*' />
 	/// <unmanaged>D2D1_OPACITY_MASK_CONTENT_GRAPHICS</unmanaged>
 	Graphics = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_TEXT_NATURAL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_TEXT_NATURAL"]/*' />
 	/// <unmanaged>D2D1_OPACITY_MASK_CONTENT_TEXT_NATURAL</unmanaged>
 	TextNatural = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_TEXT_GDI_COMPATIBLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITY_MASK_CONTENT::D2D1_OPACITY_MASK_CONTENT_TEXT_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>D2D1_OPACITY_MASK_CONTENT_TEXT_GDI_COMPATIBLE</unmanaged>
 	TextGDICompatible = 2,
 }

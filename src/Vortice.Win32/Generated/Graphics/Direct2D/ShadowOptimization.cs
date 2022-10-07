@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION"]/*' />
 /// <unmanaged>D2D1_SHADOW_OPTIMIZATION</unmanaged>
 public enum ShadowOptimization : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_SPEED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_SPEED"]/*' />
 	/// <unmanaged>D2D1_SHADOW_OPTIMIZATION_SPEED</unmanaged>
 	Speed = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_BALANCED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_BALANCED"]/*' />
 	/// <unmanaged>D2D1_SHADOW_OPTIMIZATION_BALANCED</unmanaged>
 	Balanced = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_QUALITY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_OPTIMIZATION::D2D1_SHADOW_OPTIMIZATION_QUALITY"]/*' />
 	/// <unmanaged>D2D1_SHADOW_OPTIMIZATION_QUALITY</unmanaged>
 	Quality = 2,
 }

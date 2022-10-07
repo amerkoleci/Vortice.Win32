@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_EFFECT_INPUT_DESCRIPTION</unmanaged>
 public partial struct EffectInputDescription
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION::effect"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION::effect"]/*' />
 	public unsafe ID2D1Effect* effect;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION::inputIndex"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION::inputIndex"]/*' />
 	public uint inputIndex;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION::inputRectangle"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EFFECT_INPUT_DESCRIPTION::inputRectangle"]/*' />
 	public Common.RectF inputRectangle;
 }

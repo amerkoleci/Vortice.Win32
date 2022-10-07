@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY"]/*' />
 /// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY</unmanaged>
 public enum OfferResourcePriority : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_LOW"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_LOW"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_LOW</unmanaged>
 	Low = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_NORMAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_NORMAL</unmanaged>
 	Normal = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_HIGH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_PRIORITY::DXGI_OFFER_RESOURCE_PRIORITY_HIGH"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_PRIORITY_HIGH</unmanaged>
 	High = 3,
 }

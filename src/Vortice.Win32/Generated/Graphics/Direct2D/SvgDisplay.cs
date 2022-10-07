@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY"]/*' />
 /// <unmanaged>D2D1_SVG_DISPLAY</unmanaged>
 public enum SvgDisplay : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY::D2D1_SVG_DISPLAY_INLINE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY::D2D1_SVG_DISPLAY_INLINE"]/*' />
 	/// <unmanaged>D2D1_SVG_DISPLAY_INLINE</unmanaged>
 	Inline = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY::D2D1_SVG_DISPLAY_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_DISPLAY::D2D1_SVG_DISPLAY_NONE"]/*' />
 	/// <unmanaged>D2D1_SVG_DISPLAY_NONE</unmanaged>
 	None = 1,
 }

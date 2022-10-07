@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_POINT_DESCRIPTION</unmanaged>
 public partial struct PointDescription
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::point"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::point"]/*' />
 	public System.Drawing.PointF point;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::unitTangentVector"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::unitTangentVector"]/*' />
 	public System.Drawing.PointF unitTangentVector;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::endSegment"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::endSegment"]/*' />
 	public uint endSegment;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::endFigure"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::endFigure"]/*' />
 	public uint endFigure;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::lengthToEndSegment"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::lengthToEndSegment"]/*' />
 	public float lengthToEndSegment;
 }

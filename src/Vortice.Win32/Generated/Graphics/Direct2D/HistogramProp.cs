@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP"]/*' />
 /// <unmanaged>D2D1_HISTOGRAM_PROP</unmanaged>
 public enum HistogramProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_NUM_BINS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_NUM_BINS"]/*' />
 	/// <unmanaged>D2D1_HISTOGRAM_PROP_NUM_BINS</unmanaged>
 	NumBins = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_CHANNEL_SELECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_CHANNEL_SELECT"]/*' />
 	/// <unmanaged>D2D1_HISTOGRAM_PROP_CHANNEL_SELECT</unmanaged>
 	ChannelSelect = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_HISTOGRAM_OUTPUT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HISTOGRAM_PROP::D2D1_HISTOGRAM_PROP_HISTOGRAM_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_HISTOGRAM_PROP_HISTOGRAM_OUTPUT</unmanaged>
 	HistogramOutput = 2,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry"]/*' />
 /// <unmanaged>ID2D1PathGeometry</unmanaged>
 [Guid("2cd906a5-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1PathGeometry : ID2D1Geometry")]
@@ -186,7 +186,7 @@ public unsafe partial struct ID2D1PathGeometry : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1PathGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1PathGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry::Open"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry::Open"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult Open(ID2D1GeometrySink** geometrySink)
@@ -194,7 +194,7 @@ public unsafe partial struct ID2D1PathGeometry : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1PathGeometry*, ID2D1GeometrySink**, int>)(lpVtbl[17]))((ID2D1PathGeometry*)Unsafe.AsPointer(ref this), geometrySink);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry::Stream"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry::Stream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult Stream(ID2D1GeometrySink* geometrySink)
@@ -202,7 +202,7 @@ public unsafe partial struct ID2D1PathGeometry : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1PathGeometry*, ID2D1GeometrySink*, int>)(lpVtbl[18]))((ID2D1PathGeometry*)Unsafe.AsPointer(ref this), geometrySink);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry::GetSegmentCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry::GetSegmentCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult GetSegmentCount(uint* count)
@@ -210,7 +210,7 @@ public unsafe partial struct ID2D1PathGeometry : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1PathGeometry*, uint*, int>)(lpVtbl[19]))((ID2D1PathGeometry*)Unsafe.AsPointer(ref this), count);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry::GetFigureCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PathGeometry::GetFigureCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult GetFigureCount(uint* count)

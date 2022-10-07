@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Resource"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Resource"]/*' />
 /// <unmanaged>ID2D1Resource</unmanaged>
 [Guid("2cd90691-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Resource : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1Resource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Resource::GetFactory"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Resource::GetFactory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)

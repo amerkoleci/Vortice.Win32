@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE"]/*' />
 /// <unmanaged>DWRITE_FACTORY_TYPE</unmanaged>
 public enum FactoryType : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE::DWRITE_FACTORY_TYPE_SHARED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE::DWRITE_FACTORY_TYPE_SHARED"]/*' />
 	/// <unmanaged>DWRITE_FACTORY_TYPE_SHARED</unmanaged>
 	Shared = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE::DWRITE_FACTORY_TYPE_ISOLATED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE::DWRITE_FACTORY_TYPE_ISOLATED"]/*' />
 	/// <unmanaged>DWRITE_FACTORY_TYPE_ISOLATED</unmanaged>
 	Isolated = 1,
 }

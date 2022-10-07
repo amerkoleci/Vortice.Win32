@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray"]/*' />
 /// <unmanaged>ID2D1SvgStrokeDashArray</unmanaged>
 [Guid("f1c0ca52-92a3-4f00-b4ce-f35691efd9d9")]
 [NativeTypeName("struct ID2D1SvgStrokeDashArray : ID2D1SvgAttribute")]
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), attribute);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::RemoveDashesAtEnd"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::RemoveDashesAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult RemoveDashesAtEnd(uint dashesCount)
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, uint, int>)(lpVtbl[6]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashesCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult UpdateDashes(SvgLength* dashes, uint dashesCount, uint startIndex)
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult UpdateDashes(float* dashes, uint dashesCount, uint startIndex)
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetDashes(SvgLength* dashes, uint dashesCount, uint startIndex)
@@ -130,7 +130,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[9]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetDashes(float* dashes, uint dashesCount, uint startIndex)
@@ -138,7 +138,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[10]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashesCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashesCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public uint GetDashesCount()

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3"]/*' />
 /// <unmanaged>IDXGIAdapter3</unmanaged>
 [Guid("645967a4-1392-4310-a798-8053ce3e93fd")]
 [NativeTypeName("struct IDXGIAdapter3 : IDXGIAdapter2")]
@@ -146,7 +146,7 @@ public unsafe partial struct IDXGIAdapter3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter3::RegisterHardwareContentProtectionTeardownStatusEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::RegisterHardwareContentProtectionTeardownStatusEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult RegisterHardwareContentProtectionTeardownStatusEvent(Handle hEvent, uint* pdwCookie)
@@ -154,7 +154,7 @@ public unsafe partial struct IDXGIAdapter3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Handle, uint*, int>)(lpVtbl[12]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterHardwareContentProtectionTeardownStatus"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterHardwareContentProtectionTeardownStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public void UnregisterHardwareContentProtectionTeardownStatus(uint dwCookie)
@@ -162,7 +162,7 @@ public unsafe partial struct IDXGIAdapter3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, void>)(lpVtbl[13]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter3::QueryVideoMemoryInfo"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::QueryVideoMemoryInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult QueryVideoMemoryInfo(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, QueryVideoMemoryInfo* pVideoMemoryInfo)
@@ -170,7 +170,7 @@ public unsafe partial struct IDXGIAdapter3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, MemorySegmentGroup, QueryVideoMemoryInfo*, int>)(lpVtbl[14]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter3::SetVideoMemoryReservation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::SetVideoMemoryReservation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult SetVideoMemoryReservation(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, ulong Reservation)
@@ -178,7 +178,7 @@ public unsafe partial struct IDXGIAdapter3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, MemorySegmentGroup, ulong, int>)(lpVtbl[15]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter3::RegisterVideoMemoryBudgetChangeNotificationEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::RegisterVideoMemoryBudgetChangeNotificationEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult RegisterVideoMemoryBudgetChangeNotificationEvent(Handle hEvent, uint* pdwCookie)
@@ -186,7 +186,7 @@ public unsafe partial struct IDXGIAdapter3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Handle, uint*, int>)(lpVtbl[16]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterVideoMemoryBudgetChangeNotification"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterVideoMemoryBudgetChangeNotification"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void UnregisterVideoMemoryBudgetChangeNotification(uint dwCookie)

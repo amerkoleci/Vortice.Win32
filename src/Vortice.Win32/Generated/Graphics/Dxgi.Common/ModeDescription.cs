@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Dxgi.Common;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC"]/*' />
 /// <unmanaged>DXGI_MODE_DESC</unmanaged>
 public partial struct ModeDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::Width"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC::Width"]/*' />
 	public uint Width;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::Height"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC::Height"]/*' />
 	public uint Height;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::RefreshRate"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC::RefreshRate"]/*' />
 	public Rational RefreshRate;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::Format"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC::Format"]/*' />
 	public Format Format;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::ScanlineOrdering"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC::ScanlineOrdering"]/*' />
 	public ModeScanlineOrder ScanlineOrdering;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MODE_DESC::Scaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MODE_DESC::Scaling"]/*' />
 	public ModeScaling Scaling;
 }

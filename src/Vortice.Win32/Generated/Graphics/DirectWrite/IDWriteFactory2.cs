@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory2"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory2"]/*' />
 /// <unmanaged>IDWriteFactory2</unmanaged>
 [Guid("0439fc60-ca44-4994-8dee-3a9af7b732ec")]
 [NativeTypeName("struct IDWriteFactory2 : IDWriteFactory1")]
@@ -258,7 +258,7 @@ public unsafe partial struct IDWriteFactory2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory2*, float, float, float, float, PixelGeometry, RenderingMode, IDWriteRenderingParams1**, int>)(lpVtbl[25]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), gamma, enhancedContrast, enhancedContrastGrayscale, clearTypeLevel, pixelGeometry, renderingMode, renderingParams);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::GetSystemFontFallback"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::GetSystemFontFallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult GetSystemFontFallback(IDWriteFontFallback** fontFallback)
@@ -266,7 +266,7 @@ public unsafe partial struct IDWriteFactory2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory2*, IDWriteFontFallback**, int>)(lpVtbl[26]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), fontFallback);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::CreateFontFallbackBuilder"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::CreateFontFallbackBuilder"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public HResult CreateFontFallbackBuilder(IDWriteFontFallbackBuilder** fontFallbackBuilder)
@@ -274,7 +274,7 @@ public unsafe partial struct IDWriteFactory2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory2*, IDWriteFontFallbackBuilder**, int>)(lpVtbl[27]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), fontFallbackBuilder);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::TranslateColorGlyphRun"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::TranslateColorGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult TranslateColorGlyphRun(float baselineOriginX, float baselineOriginY, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, MeasuringMode measuringMode, Matrix3x2* worldToDeviceTransform, uint colorPaletteIndex, IDWriteColorGlyphRunEnumerator** colorLayers)
@@ -282,7 +282,7 @@ public unsafe partial struct IDWriteFactory2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory2*, float, float, GlyphRun*, GlyphRunDescription*, MeasuringMode, Matrix3x2*, uint, IDWriteColorGlyphRunEnumerator**, int>)(lpVtbl[28]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), baselineOriginX, baselineOriginY, glyphRun, glyphRunDescription, measuringMode, worldToDeviceTransform, colorPaletteIndex, colorLayers);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::CreateCustomRenderingParams"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::CreateCustomRenderingParams"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float grayscaleEnhancedContrast, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode renderingMode, GridFitMode gridFitMode, IDWriteRenderingParams2** renderingParams)
@@ -290,7 +290,7 @@ public unsafe partial struct IDWriteFactory2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory2*, float, float, float, float, PixelGeometry, RenderingMode, GridFitMode, IDWriteRenderingParams2**, int>)(lpVtbl[29]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), gamma, enhancedContrast, grayscaleEnhancedContrast, clearTypeLevel, pixelGeometry, renderingMode, gridFitMode, renderingParams);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::CreateGlyphRunAnalysis"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory2::CreateGlyphRunAnalysis"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult CreateGlyphRunAnalysis(GlyphRun* glyphRun, Matrix3x2* transform, RenderingMode renderingMode, MeasuringMode measuringMode, GridFitMode gridFitMode, TextAntialiasMode antialiasMode, float baselineOriginX, float baselineOriginY, IDWriteGlyphRunAnalysis** glyphRunAnalysis)

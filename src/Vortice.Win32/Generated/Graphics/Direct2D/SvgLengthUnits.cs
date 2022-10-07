@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS"]/*' />
 /// <unmanaged>D2D1_SVG_LENGTH_UNITS</unmanaged>
 public enum SvgLengthUnits : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS::D2D1_SVG_LENGTH_UNITS_NUMBER"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS::D2D1_SVG_LENGTH_UNITS_NUMBER"]/*' />
 	/// <unmanaged>D2D1_SVG_LENGTH_UNITS_NUMBER</unmanaged>
 	Number = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS::D2D1_SVG_LENGTH_UNITS_PERCENTAGE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH_UNITS::D2D1_SVG_LENGTH_UNITS_PERCENTAGE"]/*' />
 	/// <unmanaged>D2D1_SVG_LENGTH_UNITS_PERCENTAGE</unmanaged>
 	Percentage = 1,
 }

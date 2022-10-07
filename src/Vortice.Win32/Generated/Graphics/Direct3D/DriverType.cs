@@ -9,26 +9,26 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE"]/*' />
 /// <unmanaged>D3D_DRIVER_TYPE</unmanaged>
 public enum DriverType : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_UNKNOWN"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>D3D_DRIVER_TYPE_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_HARDWARE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_HARDWARE"]/*' />
 	/// <unmanaged>D3D_DRIVER_TYPE_HARDWARE</unmanaged>
 	Hardware = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_REFERENCE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_REFERENCE"]/*' />
 	/// <unmanaged>D3D_DRIVER_TYPE_REFERENCE</unmanaged>
 	Reference = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_NULL"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_NULL"]/*' />
 	/// <unmanaged>D3D_DRIVER_TYPE_NULL</unmanaged>
 	Null = 3,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_SOFTWARE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_SOFTWARE"]/*' />
 	/// <unmanaged>D3D_DRIVER_TYPE_SOFTWARE</unmanaged>
 	Software = 4,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_WARP"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_WARP"]/*' />
 	/// <unmanaged>D3D_DRIVER_TYPE_WARP</unmanaged>
 	Warp = 5,
 }

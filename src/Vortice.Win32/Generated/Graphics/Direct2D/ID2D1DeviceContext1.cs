@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext1"]/*' />
 /// <unmanaged>ID2D1DeviceContext1</unmanaged>
 [Guid("d37f57e4-6908-459f-a199-e72f24f79987")]
 [NativeTypeName("struct ID2D1DeviceContext1 : ID2D1DeviceContext")]
@@ -789,7 +789,7 @@ public unsafe partial struct ID2D1DeviceContext1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, ID2D1Bitmap*, ID2D1Brush*, Common.RectF*, Common.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext1::CreateFilledGeometryRealization"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext1::CreateFilledGeometryRealization"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(92)]
 	public HResult CreateFilledGeometryRealization(ID2D1Geometry* geometry, float flatteningTolerance, ID2D1GeometryRealization** geometryRealization)
@@ -797,7 +797,7 @@ public unsafe partial struct ID2D1DeviceContext1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, ID2D1Geometry*, float, ID2D1GeometryRealization**, int>)(lpVtbl[92]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), geometry, flatteningTolerance, geometryRealization);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext1::CreateStrokedGeometryRealization"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext1::CreateStrokedGeometryRealization"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(93)]
 	public HResult CreateStrokedGeometryRealization(ID2D1Geometry* geometry, float flatteningTolerance, float strokeWidth, ID2D1StrokeStyle* strokeStyle, ID2D1GeometryRealization** geometryRealization)
@@ -805,7 +805,7 @@ public unsafe partial struct ID2D1DeviceContext1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, ID2D1Geometry*, float, float, ID2D1StrokeStyle*, ID2D1GeometryRealization**, int>)(lpVtbl[93]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), geometry, flatteningTolerance, strokeWidth, strokeStyle, geometryRealization);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext1::DrawGeometryRealization"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext1::DrawGeometryRealization"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(94)]
 	public void DrawGeometryRealization(ID2D1GeometryRealization* geometryRealization, ID2D1Brush* brush)

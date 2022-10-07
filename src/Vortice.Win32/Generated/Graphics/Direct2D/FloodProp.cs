@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FLOOD_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FLOOD_PROP"]/*' />
 /// <unmanaged>D2D1_FLOOD_PROP</unmanaged>
 public enum FloodProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FLOOD_PROP::D2D1_FLOOD_PROP_COLOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FLOOD_PROP::D2D1_FLOOD_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_FLOOD_PROP_COLOR</unmanaged>
 	Color = 0,
 }

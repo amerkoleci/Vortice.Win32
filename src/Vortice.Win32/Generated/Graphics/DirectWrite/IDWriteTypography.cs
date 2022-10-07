@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTypography"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography"]/*' />
 /// <unmanaged>IDWriteTypography</unmanaged>
 [Guid("55f1112b-1dc2-4b3c-9541-f46894ed85b6")]
 [NativeTypeName("struct IDWriteTypography : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteTypography : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTypography::AddFontFeature"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::AddFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult AddFontFeature(FontFeature* fontFeature)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteTypography : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, FontFeature*, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeatureCount"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeatureCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public uint GetFontFeatureCount()
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteTypography : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, uint>)(lpVtbl[4]))((IDWriteTypography*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeature"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetFontFeature(uint fontFeatureIndex, FontFeature* fontFeature)

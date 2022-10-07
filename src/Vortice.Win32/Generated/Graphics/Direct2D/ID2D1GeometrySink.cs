@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink"]/*' />
 /// <unmanaged>ID2D1GeometrySink</unmanaged>
 [Guid("2cd9069f-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1GeometrySink : ID2D1SimplifiedGeometrySink")]
@@ -104,7 +104,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, int>)(lpVtbl[6]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddLine"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddLine"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void AddLine(System.Drawing.PointF point)
@@ -112,7 +112,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), point);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddBezier"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddBezier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void AddBezier(Common.BezierSegment* bezier)
@@ -120,7 +120,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.BezierSegment*, void>)(lpVtbl[8]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddQuadraticBezier"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddQuadraticBezier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public void AddQuadraticBezier(QuadraticBezierSegment* bezier)
@@ -128,7 +128,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, QuadraticBezierSegment*, void>)(lpVtbl[9]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddQuadraticBeziers"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddQuadraticBeziers"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public void AddQuadraticBeziers(QuadraticBezierSegment* beziers, uint beziersCount)
@@ -136,7 +136,7 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, QuadraticBezierSegment*, uint, void>)(lpVtbl[10]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddArc"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddArc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public void AddArc(ArcSegment* arc)

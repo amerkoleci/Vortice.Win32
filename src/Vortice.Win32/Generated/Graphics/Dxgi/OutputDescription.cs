@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC"]/*' />
 /// <unmanaged>DXGI_OUTPUT_DESC</unmanaged>
 public partial struct OutputDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DeviceName"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DeviceName"]/*' />
 	public unsafe fixed ushort DeviceName[32];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DesktopCoordinates"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DesktopCoordinates"]/*' />
 	public RawRect DesktopCoordinates;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::AttachedToDesktop"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::AttachedToDesktop"]/*' />
 	public Bool32 AttachedToDesktop;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Rotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Monitor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::Monitor"]/*' />
 	public IntPtr Monitor;
 }

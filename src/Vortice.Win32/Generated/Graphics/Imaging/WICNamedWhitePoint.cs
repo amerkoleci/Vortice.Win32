@@ -9,41 +9,41 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint"]/*' />
 /// <unmanaged>WICNamedWhitePoint</unmanaged>
 public enum WICNamedWhitePoint : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointDefault"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointDefault"]/*' />
 	/// <unmanaged>WICWhitePointDefault</unmanaged>
 	WICWhitePointDefault = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointDaylight"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointDaylight"]/*' />
 	/// <unmanaged>WICWhitePointDaylight</unmanaged>
 	WICWhitePointDaylight = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointCloudy"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointCloudy"]/*' />
 	/// <unmanaged>WICWhitePointCloudy</unmanaged>
 	WICWhitePointCloudy = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointShade"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointShade"]/*' />
 	/// <unmanaged>WICWhitePointShade</unmanaged>
 	WICWhitePointShade = 8,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointTungsten"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointTungsten"]/*' />
 	/// <unmanaged>WICWhitePointTungsten</unmanaged>
 	WICWhitePointTungsten = 16,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointFluorescent"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointFluorescent"]/*' />
 	/// <unmanaged>WICWhitePointFluorescent</unmanaged>
 	WICWhitePointFluorescent = 32,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointFlash"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointFlash"]/*' />
 	/// <unmanaged>WICWhitePointFlash</unmanaged>
 	WICWhitePointFlash = 64,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointUnderwater"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointUnderwater"]/*' />
 	/// <unmanaged>WICWhitePointUnderwater</unmanaged>
 	WICWhitePointUnderwater = 128,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointCustom"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointCustom"]/*' />
 	/// <unmanaged>WICWhitePointCustom</unmanaged>
 	WICWhitePointCustom = 256,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointAutoWhiteBalance"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointAutoWhiteBalance"]/*' />
 	/// <unmanaged>WICWhitePointAutoWhiteBalance</unmanaged>
 	WICWhitePointAutoWhiteBalance = 512,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointAsShot"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointAsShot"]/*' />
 	/// <unmanaged>WICWhitePointAsShot</unmanaged>
 	WICWhitePointAsShot = 1,
 }

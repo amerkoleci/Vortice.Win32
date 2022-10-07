@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND"]/*' />
 /// <unmanaged>D2D1_PRIMITIVE_BLEND</unmanaged>
 public enum PrimitiveBlend : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_SOURCE_OVER"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_SOURCE_OVER"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_SOURCE_OVER</unmanaged>
 	SourceOver = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_COPY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_COPY"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_COPY</unmanaged>
 	Copy = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_MIN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_MIN"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_MIN</unmanaged>
 	Min = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_ADD"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_ADD"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_ADD</unmanaged>
 	Add = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_MAX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRIMITIVE_BLEND::D2D1_PRIMITIVE_BLEND_MAX"]/*' />
 	/// <unmanaged>D2D1_PRIMITIVE_BLEND_MAX</unmanaged>
 	Max = 4,
 }

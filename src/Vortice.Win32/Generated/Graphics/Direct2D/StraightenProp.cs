@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP"]/*' />
 /// <unmanaged>D2D1_STRAIGHTEN_PROP</unmanaged>
 public enum StraightenProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_ANGLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_ANGLE"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_PROP_ANGLE</unmanaged>
 	Angle = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_MAINTAIN_SIZE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_MAINTAIN_SIZE"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_PROP_MAINTAIN_SIZE</unmanaged>
 	MaintainSize = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_SCALE_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STRAIGHTEN_PROP::D2D1_STRAIGHTEN_PROP_SCALE_MODE"]/*' />
 	/// <unmanaged>D2D1_STRAIGHTEN_PROP_SCALE_MODE</unmanaged>
 	ScaleMode = 2,
 }

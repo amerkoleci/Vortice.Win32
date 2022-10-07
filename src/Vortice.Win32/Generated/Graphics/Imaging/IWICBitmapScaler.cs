@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapScaler"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapScaler"]/*' />
 /// <unmanaged>IWICBitmapScaler</unmanaged>
 [Guid("00000302-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmapScaler : IWICBitmapSource")]
@@ -114,7 +114,7 @@ public unsafe partial struct IWICBitmapScaler : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapScaler*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapScaler*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICBitmapScaler::Initialize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapScaler::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Initialize(IWICBitmapSource* pISource, uint uiWidth, uint uiHeight, WICBitmapInterpolationMode mode)

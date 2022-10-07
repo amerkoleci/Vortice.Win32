@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS"]/*' />
 /// <unmanaged>D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS</unmanaged>
 [Flags]
 public enum CompatibleRenderTargetOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS::D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS::D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS::D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_GDI_COMPATIBLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS::D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_GDI_COMPATIBLE</unmanaged>
 	GDICompatible = 1,
 }

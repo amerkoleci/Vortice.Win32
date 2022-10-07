@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput4"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput4"]/*' />
 /// <unmanaged>IDXGIOutput4</unmanaged>
 [Guid("dc7dca35-2196-414d-9f53-617884032a60")]
 [NativeTypeName("struct IDXGIOutput4 : IDXGIOutput3")]
@@ -250,7 +250,7 @@ public unsafe partial struct IDXGIOutput4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput4::CheckOverlayColorSpaceSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput4::CheckOverlayColorSpaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags)

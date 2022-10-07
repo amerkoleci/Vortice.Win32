@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter"]/*' />
 /// <unmanaged>IDXGIAdapter</unmanaged>
 [Guid("2411e7e1-12ac-4ccf-bd14-9798e8534dc0")]
 [NativeTypeName("struct IDXGIAdapter : IDXGIObject")]
@@ -106,7 +106,7 @@ public unsafe partial struct IDXGIAdapter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter::EnumOutputs"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter::EnumOutputs"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
@@ -114,7 +114,7 @@ public unsafe partial struct IDXGIAdapter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, uint, IDXGIOutput**, int>)(lpVtbl[7]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), Output, ppOutput);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter::GetDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetDesc(AdapterDescription* pDesc)
@@ -122,7 +122,7 @@ public unsafe partial struct IDXGIAdapter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter::CheckInterfaceSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter::CheckInterfaceSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInteger* pUMDVersion)

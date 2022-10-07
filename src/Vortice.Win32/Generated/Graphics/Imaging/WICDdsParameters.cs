@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters"]/*' />
 /// <unmanaged>WICDdsParameters</unmanaged>
 public partial struct WICDdsParameters
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters::Width"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::Width"]/*' />
 	public uint Width;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters::Height"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::Height"]/*' />
 	public uint Height;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters::Depth"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::Depth"]/*' />
 	public uint Depth;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters::MipLevels"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::MipLevels"]/*' />
 	public uint MipLevels;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters::ArraySize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::ArraySize"]/*' />
 	public uint ArraySize;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters::DxgiFormat"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::DxgiFormat"]/*' />
 	public Graphics.Dxgi.Common.Format DxgiFormat;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters::Dimension"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::Dimension"]/*' />
 	public WICDdsDimension Dimension;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsParameters::AlphaMode"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsParameters::AlphaMode"]/*' />
 	public WICDdsAlphaMode AlphaMode;
 }

@@ -9,38 +9,38 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND"]/*' />
 /// <unmanaged>DWRITE_PANOSE_TOOL_KIND</unmanaged>
 public enum PanoseToolKind : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_FLAT_NIB"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_FLAT_NIB"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_FLAT_NIB</unmanaged>
 	FlatNib = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_PRESSURE_POINT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_PRESSURE_POINT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_PRESSURE_POINT</unmanaged>
 	PressurePoint = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ENGRAVED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ENGRAVED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_ENGRAVED</unmanaged>
 	Engraved = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_BALL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_BALL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_BALL</unmanaged>
 	Ball = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_BRUSH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_BRUSH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_BRUSH</unmanaged>
 	Brush = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ROUGH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ROUGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_ROUGH</unmanaged>
 	Rough = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_FELT_PEN_BRUSH_TIP"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_FELT_PEN_BRUSH_TIP"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_FELT_PEN_BRUSH_TIP</unmanaged>
 	FeltPenBrushTip = 8,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_WILD_BRUSH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_WILD_BRUSH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_WILD_BRUSH</unmanaged>
 	WildBrush = 9,
 }

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE"]/*' />
 /// <unmanaged>DWRITE_TEXTURE_TYPE</unmanaged>
 public enum TextureType : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE::DWRITE_TEXTURE_ALIASED_1x1"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE::DWRITE_TEXTURE_ALIASED_1x1"]/*' />
 	/// <unmanaged>DWRITE_TEXTURE_ALIASED_1x1</unmanaged>
 	DWRITE_TEXTURE_ALIASED_1x1 = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE::DWRITE_TEXTURE_CLEARTYPE_3x1"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE::DWRITE_TEXTURE_CLEARTYPE_3x1"]/*' />
 	/// <unmanaged>DWRITE_TEXTURE_CLEARTYPE_3x1</unmanaged>
 	DWRITE_TEXTURE_CLEARTYPE_3x1 = 1,
 }

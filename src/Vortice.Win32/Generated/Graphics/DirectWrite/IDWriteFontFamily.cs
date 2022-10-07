@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily"]/*' />
 /// <unmanaged>IDWriteFontFamily</unmanaged>
 [Guid("da20d8ef-812a-4c43-9802-62ec4abd7add")]
 [NativeTypeName("struct IDWriteFontFamily : IDWriteFontList")]
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteFontFamily : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily*, uint, IDWriteFont**, int>)(lpVtbl[5]))((IDWriteFontFamily*)Unsafe.AsPointer(ref this), index, font);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily::GetFamilyNames"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily::GetFamilyNames"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetFamilyNames(IDWriteLocalizedStrings** names)
@@ -106,7 +106,7 @@ public unsafe partial struct IDWriteFontFamily : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily*, IDWriteLocalizedStrings**, int>)(lpVtbl[6]))((IDWriteFontFamily*)Unsafe.AsPointer(ref this), names);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily::GetFirstMatchingFont"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily::GetFirstMatchingFont"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetFirstMatchingFont(FontWeight weight, FontStretch stretch, FontStyle style, IDWriteFont** matchingFont)
@@ -114,7 +114,7 @@ public unsafe partial struct IDWriteFontFamily : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily*, FontWeight, FontStretch, FontStyle, IDWriteFont**, int>)(lpVtbl[7]))((IDWriteFontFamily*)Unsafe.AsPointer(ref this), weight, stretch, style, matchingFont);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily::GetMatchingFonts"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFamily::GetMatchingFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetMatchingFonts(FontWeight weight, FontStretch stretch, FontStyle style, IDWriteFontList** matchingFonts)

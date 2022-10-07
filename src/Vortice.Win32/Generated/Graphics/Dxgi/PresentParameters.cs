@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS"]/*' />
 /// <unmanaged>DXGI_PRESENT_PARAMETERS</unmanaged>
 public partial struct PresentParameters
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::DirtyRectsCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::DirtyRectsCount"]/*' />
 	public uint DirtyRectsCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pDirtyRects"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pDirtyRects"]/*' />
 	public unsafe RawRect* pDirtyRects;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollRect"]/*' />
 	public unsafe RawRect* pScrollRect;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollOffset"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollOffset"]/*' />
 	public unsafe System.Drawing.Point* pScrollOffset;
 }

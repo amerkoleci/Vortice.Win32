@@ -9,35 +9,35 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_FACE_TYPE</unmanaged>
 public enum FontFaceType : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_CFF"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_CFF"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_CFF</unmanaged>
 	Cff = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TRUETYPE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TRUETYPE"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_TRUETYPE</unmanaged>
 	Truetype = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_OPENTYPE_COLLECTION"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_OPENTYPE_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_OPENTYPE_COLLECTION</unmanaged>
 	OpentypeCollection = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TYPE1"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TYPE1"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_TYPE1</unmanaged>
 	Type1 = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_VECTOR"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_VECTOR"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_VECTOR</unmanaged>
 	Vector = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_BITMAP"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_BITMAP"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_BITMAP</unmanaged>
 	Bitmap = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_UNKNOWN"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_UNKNOWN</unmanaged>
 	Unknown = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_RAW_CFF"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_RAW_CFF"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_RAW_CFF</unmanaged>
 	RawCff = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TRUETYPE_COLLECTION"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_TRUETYPE_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_TRUETYPE_COLLECTION</unmanaged>
 	TruetypeCollection = 2,
 }

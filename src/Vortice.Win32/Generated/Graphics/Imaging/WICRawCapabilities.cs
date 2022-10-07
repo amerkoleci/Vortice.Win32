@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilities"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities"]/*' />
 /// <unmanaged>WICRawCapabilities</unmanaged>
 public enum WICRawCapabilities : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityNotSupported"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityNotSupported"]/*' />
 	/// <unmanaged>WICRawCapabilityNotSupported</unmanaged>
 	WICRawCapabilityNotSupported = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityGetSupported"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityGetSupported"]/*' />
 	/// <unmanaged>WICRawCapabilityGetSupported</unmanaged>
 	WICRawCapabilityGetSupported = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityFullySupported"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityFullySupported"]/*' />
 	/// <unmanaged>WICRawCapabilityFullySupported</unmanaged>
 	WICRawCapabilityFullySupported = 2,
 }

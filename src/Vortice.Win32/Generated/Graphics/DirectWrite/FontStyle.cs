@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE"]/*' />
 /// <unmanaged>DWRITE_FONT_STYLE</unmanaged>
 public enum FontStyle : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_NORMAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_FONT_STYLE_NORMAL</unmanaged>
 	Normal = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_OBLIQUE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_OBLIQUE"]/*' />
 	/// <unmanaged>DWRITE_FONT_STYLE_OBLIQUE</unmanaged>
 	Oblique = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_ITALIC"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_ITALIC"]/*' />
 	/// <unmanaged>DWRITE_FONT_STYLE_ITALIC</unmanaged>
 	Italic = 2,
 }

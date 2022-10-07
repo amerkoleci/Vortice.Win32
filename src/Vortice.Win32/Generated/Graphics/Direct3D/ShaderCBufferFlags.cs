@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_CBUFFER_FLAGS</unmanaged>
 [Flags]
 public enum ShaderCBufferFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS::D3D_CBF_USERPACKED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS::D3D_CBF_USERPACKED"]/*' />
 	/// <unmanaged>D3D_CBF_USERPACKED</unmanaged>
 	UserPacked = 1,
 }

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE"]/*' />
 /// <unmanaged>DWRITE_TEXT_ANTIALIAS_MODE</unmanaged>
 public enum TextAntialiasMode : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE::DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE::DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE</unmanaged>
 	Cleartype = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE::DWRITE_TEXT_ANTIALIAS_MODE_GRAYSCALE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE::DWRITE_TEXT_ANTIALIAS_MODE_GRAYSCALE"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ANTIALIAS_MODE_GRAYSCALE</unmanaged>
 	Grayscale = 1,
 }

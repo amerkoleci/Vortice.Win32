@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES"]/*' />
 /// <unmanaged>DWRITE_SCRIPT_SHAPES</unmanaged>
 [Flags]
 public enum ScriptShapes : uint
 {
 	None = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES::DWRITE_SCRIPT_SHAPES_DEFAULT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES::DWRITE_SCRIPT_SHAPES_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_SCRIPT_SHAPES_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES::DWRITE_SCRIPT_SHAPES_NO_VISUAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES::DWRITE_SCRIPT_SHAPES_NO_VISUAL"]/*' />
 	/// <unmanaged>DWRITE_SCRIPT_SHAPES_NO_VISUAL</unmanaged>
 	NoVisual = 1,
 }

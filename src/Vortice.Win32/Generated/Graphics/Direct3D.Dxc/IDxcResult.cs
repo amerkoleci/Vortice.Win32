@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcResult"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult"]/*' />
 /// <unmanaged>IDxcResult</unmanaged>
 [Guid("58346cda-dde7-4497-9461-6f87af5e0659")]
 [NativeTypeName("struct IDxcResult : IDxcOperationResult")]
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcResult : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcResult*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcResult*)Unsafe.AsPointer(ref this), ppErrors);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcResult::HasOutput"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult::HasOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public Bool32 HasOutput(DxcOutKind dxcOutKind)
@@ -106,7 +106,7 @@ public unsafe partial struct IDxcResult : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcResult*, DxcOutKind, Bool32>)(lpVtbl[6]))((IDxcResult*)Unsafe.AsPointer(ref this), dxcOutKind);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcResult::GetOutput"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult::GetOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetOutput(DxcOutKind dxcOutKind, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputName)
@@ -114,7 +114,7 @@ public unsafe partial struct IDxcResult : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcResult*, DxcOutKind, Guid*, void**, IDxcBlobUtf16**, int>)(lpVtbl[7]))((IDxcResult*)Unsafe.AsPointer(ref this), dxcOutKind, iid, ppvObject, ppOutputName);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcResult::GetNumOutputs"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult::GetNumOutputs"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public uint GetNumOutputs()
@@ -122,7 +122,7 @@ public unsafe partial struct IDxcResult : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcResult*, uint>)(lpVtbl[8]))((IDxcResult*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcResult::GetOutputByIndex"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult::GetOutputByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public DxcOutKind GetOutputByIndex(uint Index)
@@ -130,7 +130,7 @@ public unsafe partial struct IDxcResult : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcResult*, uint, DxcOutKind>)(lpVtbl[9]))((IDxcResult*)Unsafe.AsPointer(ref this), Index);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcResult::PrimaryOutput"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcResult::PrimaryOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public DxcOutKind PrimaryOutput()

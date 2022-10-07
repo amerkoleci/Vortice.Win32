@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device"]/*' />
 /// <unmanaged>ID2D1Device</unmanaged>
 [Guid("47dd575d-ac05-4cdd-8049-9b02cd16f44c")]
 [NativeTypeName("struct ID2D1Device : ID2D1Resource")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1Device : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1Device*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Device*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device::CreateDeviceContext"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext** deviceContext)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device*, DeviceContextOptions, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device*)Unsafe.AsPointer(ref this), options, deviceContext);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device::SetMaximumTextureMemory"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device::SetMaximumTextureMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void SetMaximumTextureMemory(ulong maximumInBytes)
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1Device : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1Device*, ulong, void>)(lpVtbl[5]))((ID2D1Device*)Unsafe.AsPointer(ref this), maximumInBytes);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device::GetMaximumTextureMemory"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device::GetMaximumTextureMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public ulong GetMaximumTextureMemory()
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device*, ulong>)(lpVtbl[6]))((ID2D1Device*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device::ClearResources"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device::ClearResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void ClearResources(uint millisecondsSinceUse)

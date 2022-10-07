@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE"]/*' />
 /// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE</unmanaged>
 public enum FontLineGapUsage : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_DEFAULT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_DISABLED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_DISABLED"]/*' />
 	/// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE_DISABLED</unmanaged>
 	Disabled = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_ENABLED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_ENABLED"]/*' />
 	/// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE_ENABLED</unmanaged>
 	Enabled = 2,
 }

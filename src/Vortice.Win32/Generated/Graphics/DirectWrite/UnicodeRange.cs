@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNICODE_RANGE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNICODE_RANGE"]/*' />
 /// <unmanaged>DWRITE_UNICODE_RANGE</unmanaged>
 public partial struct UnicodeRange
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNICODE_RANGE::first"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNICODE_RANGE::first"]/*' />
 	public uint first;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_UNICODE_RANGE::last"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNICODE_RANGE::last"]/*' />
 	public uint last;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6"]/*' />
 /// <unmanaged>ID2D1DeviceContext6</unmanaged>
 [Guid("985f7e37-4ed0-4a19-98a3-15b0edfde306")]
 [NativeTypeName("struct ID2D1DeviceContext6 : ID2D1DeviceContext5")]
@@ -1005,7 +1005,7 @@ public unsafe partial struct ID2D1DeviceContext6 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, SimpleColorProfile*, ID2D1ColorContext1**, int>)(lpVtbl[118]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), simpleProfile, colorContext);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6::BlendImage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6::BlendImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(119)]
 	public void BlendImage(ID2D1Image* image, Common.BlendMode blendMode, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode)

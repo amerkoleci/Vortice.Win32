@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL"]/*' />
 /// <unmanaged>DWRITE_PANOSE_FILL</unmanaged>
 public enum PanoseFill : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_STANDARD_SOLID_FILL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_STANDARD_SOLID_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_STANDARD_SOLID_FILL</unmanaged>
 	StandardSolidFill = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_NO_FILL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_NO_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_NO_FILL</unmanaged>
 	NoFill = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_PATTERNED_FILL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_PATTERNED_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_PATTERNED_FILL</unmanaged>
 	PatternedFill = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_COMPLEX_FILL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_COMPLEX_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_COMPLEX_FILL</unmanaged>
 	ComplexFill = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_SHAPED_FILL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_SHAPED_FILL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_SHAPED_FILL</unmanaged>
 	ShapedFill = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_DRAWN_DISTRESSED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_DRAWN_DISTRESSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_DRAWN_DISTRESSED</unmanaged>
 	DrawnDistressed = 7,
 }

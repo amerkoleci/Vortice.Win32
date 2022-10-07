@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource1"]/*' />
 /// <unmanaged>IDWriteTextAnalysisSource1</unmanaged>
 [Guid("639cfad8-0fb4-4b21-a58a-067920120009")]
 [NativeTypeName("struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSource")]
@@ -114,7 +114,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource1*, uint, uint*, IDWriteNumberSubstitution**, int>)(lpVtbl[7]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource1::GetVerticalGlyphOrientation"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource1::GetVerticalGlyphOrientation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, VerticalGlyphOrientation* glyphOrientation, byte* bidiLevel)

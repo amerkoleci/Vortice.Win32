@@ -9,38 +9,38 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_ASPECT</unmanaged>
 public enum PanoseAspect : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_SUPER_CONDENSED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_SUPER_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_SUPER_CONDENSED</unmanaged>
 	SuperCondensed = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_VERY_CONDENSED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_VERY_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_VERY_CONDENSED</unmanaged>
 	VeryCondensed = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_CONDENSED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_CONDENSED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_CONDENSED</unmanaged>
 	Condensed = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_NORMAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_NORMAL</unmanaged>
 	Normal = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_EXTENDED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_EXTENDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_EXTENDED</unmanaged>
 	Extended = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_VERY_EXTENDED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_VERY_EXTENDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_VERY_EXTENDED</unmanaged>
 	VeryExtended = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_SUPER_EXTENDED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_SUPER_EXTENDED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_SUPER_EXTENDED</unmanaged>
 	SuperExtended = 8,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_MONOSPACED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_MONOSPACED"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_MONOSPACED</unmanaged>
 	Monospaced = 9,
 }

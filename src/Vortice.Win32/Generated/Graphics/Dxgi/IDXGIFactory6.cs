@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory6"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory6"]/*' />
 /// <unmanaged>IDXGIFactory6</unmanaged>
 [Guid("c1b6694f-ff09-44a9-b03c-77900a0a1d17")]
 [NativeTypeName("struct IDXGIFactory6 : IDXGIFactory5")]
@@ -282,7 +282,7 @@ public unsafe partial struct IDXGIFactory6 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Feature, void*, uint, int>)(lpVtbl[28]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory6::EnumAdapterByGpuPreference"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory6::EnumAdapterByGpuPreference"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult EnumAdapterByGpuPreference(uint Adapter, GpuPreference GpuPreference, Guid* riid, void** ppvAdapter)

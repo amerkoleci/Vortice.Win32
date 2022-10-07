@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_PROP"]/*' />
 /// <unmanaged>D2D1_BLEND_PROP</unmanaged>
 public enum BlendProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_PROP::D2D1_BLEND_PROP_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_PROP::D2D1_BLEND_PROP_MODE"]/*' />
 	/// <unmanaged>D2D1_BLEND_PROP_MODE</unmanaged>
 	Mode = 0,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizer"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizer"]/*' />
 /// <unmanaged>IDxcOptimizer</unmanaged>
 [Guid("25740e2e-9cba-401b-9119-4fb42f39f270")]
 [NativeTypeName("struct IDxcOptimizer : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcOptimizer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizer::GetAvailablePassCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizer::GetAvailablePassCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetAvailablePassCount(uint* pCount)
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcOptimizer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizer*, uint*, int>)(lpVtbl[3]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), pCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizer::GetAvailablePass"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizer::GetAvailablePass"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetAvailablePass(uint index, IDxcOptimizerPass** ppResult)
@@ -90,7 +90,7 @@ public unsafe partial struct IDxcOptimizer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizer*, uint, IDxcOptimizerPass**, int>)(lpVtbl[4]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), index, ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcOptimizer::RunOptimizer"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcOptimizer::RunOptimizer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult RunOptimizer(IDxcBlob* pBlob, ushort** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText)

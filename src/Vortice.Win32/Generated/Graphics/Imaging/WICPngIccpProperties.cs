@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPngIccpProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPngIccpProperties"]/*' />
 /// <unmanaged>WICPngIccpProperties</unmanaged>
 public enum WICPngIccpProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngIccpProperties::WICPngIccpProfileName"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngIccpProperties::WICPngIccpProfileName"]/*' />
 	/// <unmanaged>WICPngIccpProfileName</unmanaged>
 	WICPngIccpProfileName = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngIccpProperties::WICPngIccpProfileData"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngIccpProperties::WICPngIccpProfileData"]/*' />
 	/// <unmanaged>WICPngIccpProfileData</unmanaged>
 	WICPngIccpProfileData = 2,
 }

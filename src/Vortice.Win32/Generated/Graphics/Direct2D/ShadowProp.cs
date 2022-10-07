@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP"]/*' />
 /// <unmanaged>D2D1_SHADOW_PROP</unmanaged>
 public enum ShadowProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_BLUR_STANDARD_DEVIATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_BLUR_STANDARD_DEVIATION"]/*' />
 	/// <unmanaged>D2D1_SHADOW_PROP_BLUR_STANDARD_DEVIATION</unmanaged>
 	BlurStandardDeviation = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_COLOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_SHADOW_PROP_COLOR</unmanaged>
 	Color = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_OPTIMIZATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SHADOW_PROP::D2D1_SHADOW_PROP_OPTIMIZATION"]/*' />
 	/// <unmanaged>D2D1_SHADOW_PROP_OPTIMIZATION</unmanaged>
 	Optimization = 2,
 }

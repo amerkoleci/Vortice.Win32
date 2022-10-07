@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_HDR10PLUS</unmanaged>
 public partial struct HDRMetadataHdr10plus
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS::Data"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10PLUS::Data"]/*' />
 	public unsafe fixed byte Data[72];
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadListener"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadListener"]/*' />
 /// <unmanaged>IDWriteFontDownloadListener</unmanaged>
 [Guid("b06fe5b9-43ec-4393-881b-dbe4dc72fda7")]
 [NativeTypeName("struct IDWriteFontDownloadListener : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteFontDownloadListener : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadListener::DownloadCompleted"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontDownloadListener::DownloadCompleted"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void DownloadCompleted(IDWriteFontDownloadQueue* downloadQueue, IUnknown* context, HResult downloadResult)

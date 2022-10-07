@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink3"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink3"]/*' />
 /// <unmanaged>ID2D1CommandSink3</unmanaged>
 [Guid("18079135-4cf3-4868-bc8e-06067e6d242d")]
 [NativeTypeName("struct ID2D1CommandSink3 : ID2D1CommandSink2")]
@@ -306,7 +306,7 @@ public unsafe partial struct ID2D1CommandSink3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink3*, ID2D1GdiMetafile*, Common.RectF*, Common.RectF*, int>)(lpVtbl[31]))((ID2D1CommandSink3*)Unsafe.AsPointer(ref this), gdiMetafile, destinationRectangle, sourceRectangle);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink3::DrawSpriteBatch"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink3::DrawSpriteBatch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, BitmapInterpolationMode interpolationMode, SpriteOptions spriteOptions)

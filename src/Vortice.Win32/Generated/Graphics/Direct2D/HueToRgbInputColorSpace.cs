@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE"]/*' />
 /// <unmanaged>D2D1_HUETORGB_INPUT_COLOR_SPACE</unmanaged>
 public enum HueToRgbInputColorSpace : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE::D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE::D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE"]/*' />
 	/// <unmanaged>D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE</unmanaged>
 	HueSaturationValue = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE::D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_INPUT_COLOR_SPACE::D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS"]/*' />
 	/// <unmanaged>D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS</unmanaged>
 	HueSaturationLightness = 1,
 }

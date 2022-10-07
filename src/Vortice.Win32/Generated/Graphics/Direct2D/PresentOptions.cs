@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS"]/*' />
 /// <unmanaged>D2D1_PRESENT_OPTIONS</unmanaged>
 [Flags]
 public enum PresentOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_PRESENT_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_RETAIN_CONTENTS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_RETAIN_CONTENTS"]/*' />
 	/// <unmanaged>D2D1_PRESENT_OPTIONS_RETAIN_CONTENTS</unmanaged>
 	RetainContents = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_IMMEDIATELY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRESENT_OPTIONS::D2D1_PRESENT_OPTIONS_IMMEDIATELY"]/*' />
 	/// <unmanaged>D2D1_PRESENT_OPTIONS_IMMEDIATELY</unmanaged>
 	Immediately = 2,
 }

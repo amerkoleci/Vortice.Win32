@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE"]/*' />
 /// <unmanaged>D2D1_WINDOW_STATE</unmanaged>
 [Flags]
 public enum WindowState : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE::D2D1_WINDOW_STATE_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE::D2D1_WINDOW_STATE_NONE"]/*' />
 	/// <unmanaged>D2D1_WINDOW_STATE_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE::D2D1_WINDOW_STATE_OCCLUDED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WINDOW_STATE::D2D1_WINDOW_STATE_OCCLUDED"]/*' />
 	/// <unmanaged>D2D1_WINDOW_STATE_OCCLUDED</unmanaged>
 	Occluded = 1,
 }

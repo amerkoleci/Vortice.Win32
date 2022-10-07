@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION"]/*' />
 /// <unmanaged>D2D1_GEOMETRY_SIMPLIFICATION_OPTION</unmanaged>
 public enum GeometrySimplificationOption : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION::D2D1_GEOMETRY_SIMPLIFICATION_OPTION_CUBICS_AND_LINES"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION::D2D1_GEOMETRY_SIMPLIFICATION_OPTION_CUBICS_AND_LINES"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_SIMPLIFICATION_OPTION_CUBICS_AND_LINES</unmanaged>
 	CubicsAndLines = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION::D2D1_GEOMETRY_SIMPLIFICATION_OPTION_LINES"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GEOMETRY_SIMPLIFICATION_OPTION::D2D1_GEOMETRY_SIMPLIFICATION_OPTION_LINES"]/*' />
 	/// <unmanaged>D2D1_GEOMETRY_SIMPLIFICATION_OPTION_LINES</unmanaged>
 	Lines = 1,
 }

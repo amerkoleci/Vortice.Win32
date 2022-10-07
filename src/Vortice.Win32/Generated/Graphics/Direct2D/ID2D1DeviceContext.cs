@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext"]/*' />
 /// <unmanaged>ID2D1DeviceContext</unmanaged>
 [Guid("e8f7fe7a-191c-466d-ad95-975678bda998")]
 [NativeTypeName("struct ID2D1DeviceContext : ID2D1RenderTarget")]
@@ -509,7 +509,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, RenderTargetProperties*, Bool32>)(lpVtbl[56]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), renderTargetProperties);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmap"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
 	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
@@ -517,7 +517,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[57]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapFromWicBitmap"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapFromWicBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
 	public HResult CreateBitmapFromWicBitmap(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
@@ -525,7 +525,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Imaging.IWICBitmapSource*, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[58]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateColorContext"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(59)]
 	public HResult CreateColorContext(ColorSpace space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext)
@@ -533,7 +533,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ColorSpace, byte*, uint, ID2D1ColorContext**, int>)(lpVtbl[59]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), space, profile, profileSize, colorContext);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateColorContextFromFilename"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateColorContextFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
 	public HResult CreateColorContextFromFilename(ushort* filename, ID2D1ColorContext** colorContext)
@@ -541,7 +541,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ushort*, ID2D1ColorContext**, int>)(lpVtbl[60]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), filename, colorContext);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateColorContextFromWicColorContext"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateColorContextFromWicColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
 	public HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext)
@@ -549,7 +549,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Imaging.IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[61]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapFromDxgiSurface"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapFromDxgiSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
 	public HResult CreateBitmapFromDxgiSurface(Graphics.Dxgi.IDXGISurface* surface, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
@@ -557,7 +557,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Dxgi.IDXGISurface*, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[62]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), surface, bitmapProperties, bitmap);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateEffect"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateEffect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(63)]
 	public HResult CreateEffect(Guid* effectId, ID2D1Effect** effect)
@@ -565,7 +565,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Guid*, ID2D1Effect**, int>)(lpVtbl[63]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), effectId, effect);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateGradientStopCollection"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateGradientStopCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
 	public HResult CreateGradientStopCollection(GradientStop* straightAlphaGradientStops, uint straightAlphaGradientStopsCount, ColorSpace preInterpolationSpace, ColorSpace postInterpolationSpace, BufferPrecision bufferPrecision, ExtendMode extendMode, ColorInterpolationMode colorInterpolationMode, ID2D1GradientStopCollection1** gradientStopCollection1)
@@ -573,7 +573,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, GradientStop*, uint, ColorSpace, ColorSpace, BufferPrecision, ExtendMode, ColorInterpolationMode, ID2D1GradientStopCollection1**, int>)(lpVtbl[64]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), straightAlphaGradientStops, straightAlphaGradientStopsCount, preInterpolationSpace, postInterpolationSpace, bufferPrecision, extendMode, colorInterpolationMode, gradientStopCollection1);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateImageBrush"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateImageBrush"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
 	public HResult CreateImageBrush(ID2D1Image* image, ImageBrushProperties* imageBrushProperties, BrushProperties* brushProperties, ID2D1ImageBrush** imageBrush)
@@ -581,7 +581,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, ImageBrushProperties*, BrushProperties*, ID2D1ImageBrush**, int>)(lpVtbl[65]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, imageBrushProperties, brushProperties, imageBrush);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapBrush"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateBitmapBrush"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
 	public HResult CreateBitmapBrush(ID2D1Bitmap* bitmap, BitmapBrushProperties1* bitmapBrushProperties, BrushProperties* brushProperties, ID2D1BitmapBrush1** bitmapBrush)
@@ -589,7 +589,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, BitmapBrushProperties1*, BrushProperties*, ID2D1BitmapBrush1**, int>)(lpVtbl[66]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), bitmap, bitmapBrushProperties, brushProperties, bitmapBrush);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateCommandList"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::CreateCommandList"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
 	public HResult CreateCommandList(ID2D1CommandList** commandList)
@@ -597,7 +597,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1CommandList**, int>)(lpVtbl[67]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), commandList);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::IsDxgiFormatSupported"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::IsDxgiFormatSupported"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
 	public Bool32 IsDxgiFormatSupported(Graphics.Dxgi.Common.Format format)
@@ -605,7 +605,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Graphics.Dxgi.Common.Format, Bool32>)(lpVtbl[68]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), format);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::IsBufferPrecisionSupported"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::IsBufferPrecisionSupported"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(69)]
 	public Bool32 IsBufferPrecisionSupported(BufferPrecision bufferPrecision)
@@ -613,7 +613,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, BufferPrecision, Bool32>)(lpVtbl[69]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), bufferPrecision);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetImageLocalBounds"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetImageLocalBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
 	public HResult GetImageLocalBounds(ID2D1Image* image, Common.RectF* localBounds)
@@ -621,7 +621,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, Common.RectF*, int>)(lpVtbl[70]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, localBounds);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetImageWorldBounds"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetImageWorldBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(71)]
 	public HResult GetImageWorldBounds(ID2D1Image* image, Common.RectF* worldBounds)
@@ -629,7 +629,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, Common.RectF*, int>)(lpVtbl[71]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, worldBounds);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetGlyphRunWorldBounds"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetGlyphRunWorldBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
 	public HResult GetGlyphRunWorldBounds(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Common.RectF* bounds)
@@ -637,7 +637,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Common.RectF*, int>)(lpVtbl[72]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetDevice"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(73)]
 	public void GetDevice(ID2D1Device** device)
@@ -645,7 +645,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Device**, void>)(lpVtbl[73]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), device);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetTarget"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(74)]
 	public void SetTarget(ID2D1Image* image)
@@ -653,7 +653,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, void>)(lpVtbl[74]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetTarget"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(75)]
 	public void GetTarget(ID2D1Image** image)
@@ -661,7 +661,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image**, void>)(lpVtbl[75]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetRenderingControls"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetRenderingControls"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
 	public void SetRenderingControls(RenderingControls* renderingControls)
@@ -669,7 +669,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, RenderingControls*, void>)(lpVtbl[76]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), renderingControls);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetRenderingControls"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetRenderingControls"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(77)]
 	public void GetRenderingControls(RenderingControls* renderingControls)
@@ -677,7 +677,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, RenderingControls*, void>)(lpVtbl[77]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), renderingControls);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetPrimitiveBlend"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetPrimitiveBlend"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
 	public void SetPrimitiveBlend(PrimitiveBlend primitiveBlend)
@@ -685,7 +685,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, PrimitiveBlend, void>)(lpVtbl[78]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), primitiveBlend);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetPrimitiveBlend"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetPrimitiveBlend"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(79)]
 	public PrimitiveBlend GetPrimitiveBlend()
@@ -693,7 +693,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, PrimitiveBlend>)(lpVtbl[79]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetUnitMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::SetUnitMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
 	public void SetUnitMode(UnitMode unitMode)
@@ -701,7 +701,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, UnitMode, void>)(lpVtbl[80]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), unitMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetUnitMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetUnitMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(81)]
 	public UnitMode GetUnitMode()
@@ -709,7 +709,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, UnitMode>)(lpVtbl[81]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGlyphRun"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
 	public void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
@@ -717,7 +717,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[82]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawImage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
 	public void DrawImage(ID2D1Image* image, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
@@ -725,7 +725,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, System.Drawing.PointF*, Common.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGdiMetafile"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGdiMetafile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(84)]
 	public void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, System.Drawing.PointF* targetOffset)
@@ -733,7 +733,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1GdiMetafile*, System.Drawing.PointF*, void>)(lpVtbl[84]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawBitmap"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(85)]
 	public void DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Common.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
@@ -741,7 +741,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, Common.RectF*, float, InterpolationMode, Common.RectF*, Matrix4x4*, void>)(lpVtbl[85]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::PushLayer"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::PushLayer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(86)]
 	public void PushLayer(LayerParameters1* layerParameters, ID2D1Layer* layer)
@@ -749,7 +749,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, LayerParameters1*, ID2D1Layer*, void>)(lpVtbl[86]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), layerParameters, layer);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::InvalidateEffectInputRectangle"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::InvalidateEffectInputRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(87)]
 	public HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Common.RectF* inputRectangle)
@@ -757,7 +757,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, uint, Common.RectF*, int>)(lpVtbl[87]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), effect, input, inputRectangle);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectInvalidRectangleCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectInvalidRectangleCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(88)]
 	public HResult GetEffectInvalidRectangleCount(ID2D1Effect* effect, uint* rectangleCount)
@@ -765,7 +765,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, uint*, int>)(lpVtbl[88]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), effect, rectangleCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectInvalidRectangles"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectInvalidRectangles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(89)]
 	public HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Common.RectF* rectangles, uint rectanglesCount)
@@ -773,7 +773,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, Common.RectF*, uint, int>)(lpVtbl[89]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), effect, rectangles, rectanglesCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectRequiredInputRectangles"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectRequiredInputRectangles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(90)]
 	public HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Common.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Common.RectF* requiredInputRects, uint inputCount)
@@ -781,7 +781,7 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, Common.RectF*, EffectInputDescription*, Common.RectF*, uint, int>)(lpVtbl[90]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), renderEffect, renderImageRectangle, inputDescriptions, requiredInputRects, inputCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::FillOpacityMask"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::FillOpacityMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(91)]
 	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle)

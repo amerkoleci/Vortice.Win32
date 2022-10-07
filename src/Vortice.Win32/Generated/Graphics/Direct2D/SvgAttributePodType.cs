@@ -9,50 +9,50 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE"]/*' />
 /// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE</unmanaged>
 public enum SvgAttributePodType : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_FLOAT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_FLOAT"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_FLOAT</unmanaged>
 	Float = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_COLOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_COLOR"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_COLOR</unmanaged>
 	Color = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_FILL_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_FILL_MODE"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_FILL_MODE</unmanaged>
 	FillMode = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_DISPLAY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_DISPLAY"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_DISPLAY</unmanaged>
 	Display = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_OVERFLOW"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_OVERFLOW"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_OVERFLOW</unmanaged>
 	Overflow = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_CAP"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_CAP"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_CAP</unmanaged>
 	LineCap = 5,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_JOIN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_JOIN"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_LINE_JOIN</unmanaged>
 	LineJoin = 6,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_VISIBILITY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_VISIBILITY"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_VISIBILITY</unmanaged>
 	Visibility = 7,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_MATRIX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_MATRIX"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_MATRIX</unmanaged>
 	Matrix = 8,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_UNIT_TYPE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_UNIT_TYPE"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_UNIT_TYPE</unmanaged>
 	UnitType = 9,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_EXTEND_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_EXTEND_MODE"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_EXTEND_MODE</unmanaged>
 	ExtendMode = 10,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_PRESERVE_ASPECT_RATIO"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_PRESERVE_ASPECT_RATIO"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_PRESERVE_ASPECT_RATIO</unmanaged>
 	PreserveAspectRatio = 11,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_VIEWBOX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_VIEWBOX"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_VIEWBOX</unmanaged>
 	Viewbox = 12,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_POD_TYPE::D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH</unmanaged>
 	Length = 13,
 }

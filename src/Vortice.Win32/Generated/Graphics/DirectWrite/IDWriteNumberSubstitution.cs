@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteNumberSubstitution"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteNumberSubstitution"]/*' />
 /// <unmanaged>IDWriteNumberSubstitution</unmanaged>
 [Guid("14885cc9-bab0-4f90-b6ed-5c366a2cd03d")]
 [NativeTypeName("struct IDWriteNumberSubstitution : IUnknown")]

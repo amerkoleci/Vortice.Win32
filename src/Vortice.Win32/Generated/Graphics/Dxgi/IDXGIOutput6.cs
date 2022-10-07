@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput6"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput6"]/*' />
 /// <unmanaged>IDXGIOutput6</unmanaged>
 [Guid("068346e8-aaec-4b84-add7-137f513f77a1")]
 [NativeTypeName("struct IDXGIOutput6 : IDXGIOutput5")]
@@ -266,7 +266,7 @@ public unsafe partial struct IDXGIOutput6 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput6::GetDesc1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput6::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public HResult GetDesc1(OutputDescription1* pDesc)
@@ -274,7 +274,7 @@ public unsafe partial struct IDXGIOutput6 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, OutputDescription1*, int>)(lpVtbl[27]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput6::CheckHardwareCompositionSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput6::CheckHardwareCompositionSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult CheckHardwareCompositionSupport(uint* pFlags)

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1"]/*' />
 /// <unmanaged>IDWriteTextLayout1</unmanaged>
 [Guid("9064d822-80a7-465c-a986-df65f78b8feb")]
 [NativeTypeName("struct IDWriteTextLayout1 : IDWriteTextLayout")]
@@ -586,7 +586,7 @@ public unsafe partial struct IDWriteTextLayout1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, uint, uint, float, float, HitTestMetrics*, uint, uint*, int>)(lpVtbl[66]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this), textPosition, textLength, originX, originY, hitTestMetrics, maxHitTestMetricsCount, actualHitTestMetricsCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1::SetPairKerning"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1::SetPairKerning"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
 	public HResult SetPairKerning(Bool32 isPairKerningEnabled, TextRange* textRange)
@@ -594,7 +594,7 @@ public unsafe partial struct IDWriteTextLayout1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, Bool32, TextRange*, int>)(lpVtbl[67]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this), isPairKerningEnabled, textRange);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1::GetPairKerning"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1::GetPairKerning"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
 	public HResult GetPairKerning(uint currentPosition, Bool32* isPairKerningEnabled, TextRange* textRange)
@@ -602,7 +602,7 @@ public unsafe partial struct IDWriteTextLayout1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, uint, Bool32*, TextRange*, int>)(lpVtbl[68]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this), currentPosition, isPairKerningEnabled, textRange);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1::SetCharacterSpacing"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1::SetCharacterSpacing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(69)]
 	public HResult SetCharacterSpacing(float leadingSpacing, float trailingSpacing, float minimumAdvanceWidth, TextRange* textRange)
@@ -610,7 +610,7 @@ public unsafe partial struct IDWriteTextLayout1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, float, float, float, TextRange*, int>)(lpVtbl[69]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this), leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1::GetCharacterSpacing"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout1::GetCharacterSpacing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
 	public HResult GetCharacterSpacing(uint currentPosition, float* leadingSpacing, float* trailingSpacing, float* minimumAdvanceWidth, TextRange* textRange)

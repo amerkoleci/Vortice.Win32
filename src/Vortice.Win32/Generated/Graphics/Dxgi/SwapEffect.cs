@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT"]/*' />
 /// <unmanaged>DXGI_SWAP_EFFECT</unmanaged>
 public enum SwapEffect : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_DISCARD"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_DISCARD"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_DISCARD</unmanaged>
 	Discard = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_SEQUENTIAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_SEQUENTIAL"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_SEQUENTIAL</unmanaged>
 	Sequential = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL</unmanaged>
 	FlipSequential = 3,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_DISCARD"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_EFFECT::DXGI_SWAP_EFFECT_FLIP_DISCARD"]/*' />
 	/// <unmanaged>DXGI_SWAP_EFFECT_FLIP_DISCARD</unmanaged>
 	FlipDiscard = 4,
 }

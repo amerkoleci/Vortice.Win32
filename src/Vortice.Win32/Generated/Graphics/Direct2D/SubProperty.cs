@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY"]/*' />
 /// <unmanaged>D2D1_SUBPROPERTY</unmanaged>
 public enum SubProperty : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_DISPLAYNAME"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_DISPLAYNAME"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_DISPLAYNAME</unmanaged>
 	Displayname = 2147483648,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_ISREADONLY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_ISREADONLY"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_ISREADONLY</unmanaged>
 	Isreadonly = 2147483649,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_MIN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_MIN"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_MIN</unmanaged>
 	Min = 2147483650,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_MAX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_MAX"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_MAX</unmanaged>
 	Max = 2147483651,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_DEFAULT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_DEFAULT</unmanaged>
 	Default = 2147483652,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_FIELDS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_FIELDS"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_FIELDS</unmanaged>
 	Fields = 2147483653,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_INDEX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SUBPROPERTY::D2D1_SUBPROPERTY_INDEX"]/*' />
 	/// <unmanaged>D2D1_SUBPROPERTY_INDEX</unmanaged>
 	Index = 2147483654,
 }

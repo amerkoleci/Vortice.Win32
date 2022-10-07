@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1"]/*' />
 /// <unmanaged>IDWriteRenderingParams1</unmanaged>
 [Guid("94413cf4-a6fc-4248-8b50-6674348fcad3")]
 [NativeTypeName("struct IDWriteRenderingParams1 : IDWriteRenderingParams")]
@@ -114,7 +114,7 @@ public unsafe partial struct IDWriteRenderingParams1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams1*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1::GetGrayscaleEnhancedContrast"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams1::GetGrayscaleEnhancedContrast"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public float GetGrayscaleEnhancedContrast()

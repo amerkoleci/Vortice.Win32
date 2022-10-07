@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE"]/*' />
 /// <unmanaged>D2D1_INK_NIB_SHAPE</unmanaged>
 public enum InkNibShape : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE::D2D1_INK_NIB_SHAPE_ROUND"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE::D2D1_INK_NIB_SHAPE_ROUND"]/*' />
 	/// <unmanaged>D2D1_INK_NIB_SHAPE_ROUND</unmanaged>
 	Round = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE::D2D1_INK_NIB_SHAPE_SQUARE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_NIB_SHAPE::D2D1_INK_NIB_SHAPE_SQUARE"]/*' />
 	/// <unmanaged>D2D1_INK_NIB_SHAPE_SQUARE</unmanaged>
 	Square = 1,
 }

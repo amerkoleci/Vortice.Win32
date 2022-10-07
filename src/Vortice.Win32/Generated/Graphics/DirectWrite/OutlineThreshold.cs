@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD"]/*' />
 /// <unmanaged>DWRITE_OUTLINE_THRESHOLD</unmanaged>
 public enum OutlineThreshold : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD::DWRITE_OUTLINE_THRESHOLD_ANTIALIASED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD::DWRITE_OUTLINE_THRESHOLD_ANTIALIASED"]/*' />
 	/// <unmanaged>DWRITE_OUTLINE_THRESHOLD_ANTIALIASED</unmanaged>
 	Antialiased = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD::DWRITE_OUTLINE_THRESHOLD_ALIASED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD::DWRITE_OUTLINE_THRESHOLD_ALIASED"]/*' />
 	/// <unmanaged>DWRITE_OUTLINE_THRESHOLD_ALIASED</unmanaged>
 	Aliased = 1,
 }

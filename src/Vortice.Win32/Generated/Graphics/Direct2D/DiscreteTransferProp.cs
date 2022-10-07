@@ -9,35 +9,35 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP"]/*' />
 /// <unmanaged>D2D1_DISCRETETRANSFER_PROP</unmanaged>
 public enum DiscreteTransferProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_RED_TABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_RED_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_RED_TABLE</unmanaged>
 	RedTable = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_RED_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_RED_DISABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_RED_DISABLE</unmanaged>
 	RedDisable = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_GREEN_TABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_GREEN_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_GREEN_TABLE</unmanaged>
 	GreenTable = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_GREEN_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_GREEN_DISABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_GREEN_DISABLE</unmanaged>
 	GreenDisable = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_BLUE_TABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_BLUE_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_BLUE_TABLE</unmanaged>
 	BlueTable = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_BLUE_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_BLUE_DISABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_BLUE_DISABLE</unmanaged>
 	BlueDisable = 5,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_ALPHA_TABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_ALPHA_TABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_ALPHA_TABLE</unmanaged>
 	AlphaTable = 6,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_ALPHA_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_ALPHA_DISABLE"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_ALPHA_DISABLE</unmanaged>
 	AlphaDisable = 7,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_CLAMP_OUTPUT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DISCRETETRANSFER_PROP::D2D1_DISCRETETRANSFER_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_DISCRETETRANSFER_PROP_CLAMP_OUTPUT</unmanaged>
 	ClampOutput = 8,
 }

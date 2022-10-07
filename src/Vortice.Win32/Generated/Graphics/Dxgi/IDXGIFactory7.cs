@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory7"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory7"]/*' />
 /// <unmanaged>IDXGIFactory7</unmanaged>
 [Guid("a4966eed-76db-44da-84c1-ee9a7afb20a8")]
 [NativeTypeName("struct IDXGIFactory7 : IDXGIFactory6")]
@@ -290,7 +290,7 @@ public unsafe partial struct IDXGIFactory7 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, GpuPreference, Guid*, void**, int>)(lpVtbl[29]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), Adapter, GpuPreference, riid, ppvAdapter);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory7::RegisterAdaptersChangedEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory7::RegisterAdaptersChangedEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult RegisterAdaptersChangedEvent(Handle hEvent, uint* pdwCookie)
@@ -298,7 +298,7 @@ public unsafe partial struct IDXGIFactory7 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, Handle, uint*, int>)(lpVtbl[30]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory7::UnregisterAdaptersChangedEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory7::UnregisterAdaptersChangedEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult UnregisterAdaptersChangedEvent(uint dwCookie)

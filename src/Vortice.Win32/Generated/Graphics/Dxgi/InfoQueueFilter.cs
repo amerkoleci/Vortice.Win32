@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_FILTER</unmanaged>
 public partial struct InfoQueueFilter
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::AllowList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::AllowList"]/*' />
 	public InfoQueueFilterDescription AllowList;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::DenyList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER::DenyList"]/*' />
 	public InfoQueueFilterDescription DenyList;
 }

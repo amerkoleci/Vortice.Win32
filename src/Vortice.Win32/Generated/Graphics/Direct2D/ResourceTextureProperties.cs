@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_RESOURCE_TEXTURE_PROPERTIES</unmanaged>
 public partial struct ResourceTextureProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::extents"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::extents"]/*' />
 	public unsafe uint* extents;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::dimensions"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::dimensions"]/*' />
 	public uint dimensions;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::bufferPrecision"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::bufferPrecision"]/*' />
 	public BufferPrecision bufferPrecision;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::channelDepth"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::channelDepth"]/*' />
 	public ChannelDepth channelDepth;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::filter"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::filter"]/*' />
 	public Filter filter;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::extendModes"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RESOURCE_TEXTURE_PROPERTIES::extendModes"]/*' />
 	public unsafe ExtendMode* extendModes;
 }

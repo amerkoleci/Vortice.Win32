@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE"]/*' />
 /// <unmanaged>DWRITE_GRID_FIT_MODE</unmanaged>
 public enum GridFitMode : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_DEFAULT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_GRID_FIT_MODE_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_DISABLED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_DISABLED"]/*' />
 	/// <unmanaged>DWRITE_GRID_FIT_MODE_DISABLED</unmanaged>
 	Disabled = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_ENABLED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_ENABLED"]/*' />
 	/// <unmanaged>DWRITE_GRID_FIT_MODE_ENABLED</unmanaged>
 	Enabled = 2,
 }

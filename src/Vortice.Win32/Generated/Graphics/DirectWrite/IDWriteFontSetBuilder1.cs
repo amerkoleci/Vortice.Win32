@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder1"]/*' />
 /// <unmanaged>IDWriteFontSetBuilder1</unmanaged>
 [Guid("3ff7715f-3cdc-4dc6-9b72-ec5621dccafd")]
 [NativeTypeName("struct IDWriteFontSetBuilder1 : IDWriteFontSetBuilder")]
@@ -106,7 +106,7 @@ public unsafe partial struct IDWriteFontSetBuilder1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSetBuilder1*, IDWriteFontSet**, int>)(lpVtbl[6]))((IDWriteFontSetBuilder1*)Unsafe.AsPointer(ref this), fontSet);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder1::AddFontFile"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder1::AddFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult AddFontFile(IDWriteFontFile* fontFile)

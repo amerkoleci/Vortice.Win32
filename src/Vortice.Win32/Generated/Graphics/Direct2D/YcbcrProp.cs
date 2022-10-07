@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP"]/*' />
 /// <unmanaged>D2D1_YCBCR_PROP</unmanaged>
 public enum YcbcrProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_CHROMA_SUBSAMPLING"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_CHROMA_SUBSAMPLING"]/*' />
 	/// <unmanaged>D2D1_YCBCR_PROP_CHROMA_SUBSAMPLING</unmanaged>
 	ChromaSubsampling = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_TRANSFORM_MATRIX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_TRANSFORM_MATRIX"]/*' />
 	/// <unmanaged>D2D1_YCBCR_PROP_TRANSFORM_MATRIX</unmanaged>
 	TransformMatrix = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_INTERPOLATION_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_YCBCR_PROP::D2D1_YCBCR_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_YCBCR_PROP_INTERPOLATION_MODE</unmanaged>
 	InterpolationMode = 2,
 }

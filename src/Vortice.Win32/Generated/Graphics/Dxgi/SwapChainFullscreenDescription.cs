@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_FULLSCREEN_DESC</unmanaged>
 public partial struct SwapChainFullscreenDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::RefreshRate"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::RefreshRate"]/*' />
 	public Common.Rational RefreshRate;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::ScanlineOrdering"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::ScanlineOrdering"]/*' />
 	public Common.ModeScanlineOrder ScanlineOrdering;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Scaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Scaling"]/*' />
 	public Common.ModeScaling Scaling;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Windowed"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_FULLSCREEN_DESC::Windowed"]/*' />
 	public Bool32 Windowed;
 }

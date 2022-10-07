@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_PROP"]/*' />
 /// <unmanaged>D2D1_RGBTOHUE_PROP</unmanaged>
 public enum RgbToHueProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_PROP::D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RGBTOHUE_PROP::D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE"]/*' />
 	/// <unmanaged>D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE</unmanaged>
 	OutputColorSpace = 0,
 }

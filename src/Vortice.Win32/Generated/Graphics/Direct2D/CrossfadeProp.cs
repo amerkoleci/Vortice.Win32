@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CROSSFADE_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROSSFADE_PROP"]/*' />
 /// <unmanaged>D2D1_CROSSFADE_PROP</unmanaged>
 public enum CrossfadeProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CROSSFADE_PROP::D2D1_CROSSFADE_PROP_WEIGHT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROSSFADE_PROP::D2D1_CROSSFADE_PROP_WEIGHT"]/*' />
 	/// <unmanaged>D2D1_CROSSFADE_PROP_WEIGHT</unmanaged>
 	Weight = 0,
 }

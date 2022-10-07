@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_BITMAPSOURCE_ALPHA_MODE</unmanaged>
 public enum BitmapSourceAlphaMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE::D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE::D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED</unmanaged>
 	Premultiplied = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE::D2D1_BITMAPSOURCE_ALPHA_MODE_STRAIGHT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAPSOURCE_ALPHA_MODE::D2D1_BITMAPSOURCE_ALPHA_MODE_STRAIGHT"]/*' />
 	/// <unmanaged>D2D1_BITMAPSOURCE_ALPHA_MODE_STRAIGHT</unmanaged>
 	Straight = 2,
 }

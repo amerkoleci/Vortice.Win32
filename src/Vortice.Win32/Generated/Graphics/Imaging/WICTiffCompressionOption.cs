@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption"]/*' />
 /// <unmanaged>WICTiffCompressionOption</unmanaged>
 public enum WICTiffCompressionOption : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionDontCare"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionDontCare"]/*' />
 	/// <unmanaged>WICTiffCompressionDontCare</unmanaged>
 	WICTiffCompressionDontCare = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionNone"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionNone"]/*' />
 	/// <unmanaged>WICTiffCompressionNone</unmanaged>
 	WICTiffCompressionNone = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionCCITT3"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionCCITT3"]/*' />
 	/// <unmanaged>WICTiffCompressionCCITT3</unmanaged>
 	WICTiffCompressionCCITT3 = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionCCITT4"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionCCITT4"]/*' />
 	/// <unmanaged>WICTiffCompressionCCITT4</unmanaged>
 	WICTiffCompressionCCITT4 = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionLZW"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionLZW"]/*' />
 	/// <unmanaged>WICTiffCompressionLZW</unmanaged>
 	WICTiffCompressionLZW = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionRLE"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionRLE"]/*' />
 	/// <unmanaged>WICTiffCompressionRLE</unmanaged>
 	WICTiffCompressionRLE = 5,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionZIP"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionZIP"]/*' />
 	/// <unmanaged>WICTiffCompressionZIP</unmanaged>
 	WICTiffCompressionZIP = 6,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionLZWHDifferencing"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionLZWHDifferencing"]/*' />
 	/// <unmanaged>WICTiffCompressionLZWHDifferencing</unmanaged>
 	WICTiffCompressionLZWHDifferencing = 7,
 }

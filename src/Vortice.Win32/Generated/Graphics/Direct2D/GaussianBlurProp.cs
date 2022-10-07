@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP"]/*' />
 /// <unmanaged>D2D1_GAUSSIANBLUR_PROP</unmanaged>
 public enum GaussianBlurProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION</unmanaged>
 	StandardDeviation = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION</unmanaged>
 	Optimization = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_BORDER_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GAUSSIANBLUR_PROP::D2D1_GAUSSIANBLUR_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_GAUSSIANBLUR_PROP_BORDER_MODE</unmanaged>
 	BorderMode = 2,
 }

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP"]/*' />
 /// <unmanaged>D2D1_TINT_PROP</unmanaged>
 public enum TintProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP::D2D1_TINT_PROP_COLOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP::D2D1_TINT_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_TINT_PROP_COLOR</unmanaged>
 	Color = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP::D2D1_TINT_PROP_CLAMP_OUTPUT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TINT_PROP::D2D1_TINT_PROP_CLAMP_OUTPUT"]/*' />
 	/// <unmanaged>D2D1_TINT_PROP_CLAMP_OUTPUT</unmanaged>
 	ClampOutput = 1,
 }

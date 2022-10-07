@@ -9,40 +9,40 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_DESC1</unmanaged>
 public partial struct SwapChainDescription1
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Width"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Width"]/*' />
 	public uint Width;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Height"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Height"]/*' />
 	public uint Height;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Format"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Format"]/*' />
 	public Common.Format Format;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Stereo"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Stereo"]/*' />
 	public Bool32 Stereo;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SampleDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SampleDesc"]/*' />
 	public Common.SampleDescription SampleDesc;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferUsage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferUsage"]/*' />
 	public Usage BufferUsage;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::BufferCount"]/*' />
 	public uint BufferCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Scaling"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Scaling"]/*' />
 	public Scaling Scaling;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SwapEffect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::SwapEffect"]/*' />
 	public SwapEffect SwapEffect;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::AlphaMode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::AlphaMode"]/*' />
 	public Common.AlphaMode AlphaMode;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC1::Flags"]/*' />
 	public SwapChainFlags Flags;
 }

@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_HWND_RENDER_TARGET_PROPERTIES</unmanaged>
 public partial struct HwndRenderTargetProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::hwnd"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::hwnd"]/*' />
 	public IntPtr hwnd;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::pixelSize"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::pixelSize"]/*' />
 	public System.Drawing.Size pixelSize;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::presentOptions"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::presentOptions"]/*' />
 	public PresentOptions presentOptions;
 }

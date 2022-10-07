@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPngFilterOption"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption"]/*' />
 /// <unmanaged>WICPngFilterOption</unmanaged>
 public enum WICPngFilterOption : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterUnspecified"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterUnspecified"]/*' />
 	/// <unmanaged>WICPngFilterUnspecified</unmanaged>
 	WICPngFilterUnspecified = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterNone"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterNone"]/*' />
 	/// <unmanaged>WICPngFilterNone</unmanaged>
 	WICPngFilterNone = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterSub"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterSub"]/*' />
 	/// <unmanaged>WICPngFilterSub</unmanaged>
 	WICPngFilterSub = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterUp"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterUp"]/*' />
 	/// <unmanaged>WICPngFilterUp</unmanaged>
 	WICPngFilterUp = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterAverage"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterAverage"]/*' />
 	/// <unmanaged>WICPngFilterAverage</unmanaged>
 	WICPngFilterAverage = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterPaeth"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterPaeth"]/*' />
 	/// <unmanaged>WICPngFilterPaeth</unmanaged>
 	WICPngFilterPaeth = 5,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterAdaptive"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterAdaptive"]/*' />
 	/// <unmanaged>WICPngFilterAdaptive</unmanaged>
 	WICPngFilterAdaptive = 6,
 }

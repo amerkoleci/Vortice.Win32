@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT"]/*' />
 /// <unmanaged>D2D1_INK_POINT</unmanaged>
 public partial struct InkPoint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT::x"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT::x"]/*' />
 	public float x;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT::y"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT::y"]/*' />
 	public float y;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT::radius"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INK_POINT::radius"]/*' />
 	public float radius;
 }

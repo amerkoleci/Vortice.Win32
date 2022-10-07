@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL"]/*' />
 /// <unmanaged>D2D1_DEBUG_LEVEL</unmanaged>
 public enum DebugLevel : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_NONE"]/*' />
 	/// <unmanaged>D2D1_DEBUG_LEVEL_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_ERROR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_ERROR"]/*' />
 	/// <unmanaged>D2D1_DEBUG_LEVEL_ERROR</unmanaged>
 	Error = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_WARNING"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_WARNING"]/*' />
 	/// <unmanaged>D2D1_DEBUG_LEVEL_WARNING</unmanaged>
 	Warning = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_INFORMATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DEBUG_LEVEL::D2D1_DEBUG_LEVEL_INFORMATION"]/*' />
 	/// <unmanaged>D2D1_DEBUG_LEVEL_INFORMATION</unmanaged>
 	Information = 3,
 }

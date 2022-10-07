@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT</unmanaged>
 public enum ParagraphAlignment : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_NEAR"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_NEAR"]/*' />
 	/// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT_NEAR</unmanaged>
 	Near = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_FAR"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_FAR"]/*' />
 	/// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT_FAR</unmanaged>
 	Far = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_CENTER"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_CENTER"]/*' />
 	/// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT_CENTER</unmanaged>
 	Center = 2,
 }

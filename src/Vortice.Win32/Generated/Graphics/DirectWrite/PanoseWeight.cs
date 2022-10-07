@@ -9,47 +9,47 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_WEIGHT</unmanaged>
 public enum PanoseWeight : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_VERY_LIGHT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_VERY_LIGHT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_VERY_LIGHT</unmanaged>
 	VeryLight = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_LIGHT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_LIGHT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_LIGHT</unmanaged>
 	Light = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_THIN"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_THIN"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_THIN</unmanaged>
 	Thin = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BOOK"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BOOK"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_BOOK</unmanaged>
 	Book = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_MEDIUM"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_MEDIUM</unmanaged>
 	Medium = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_DEMI"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_DEMI"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_DEMI</unmanaged>
 	Demi = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BOLD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BOLD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_BOLD</unmanaged>
 	Bold = 8,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_HEAVY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_HEAVY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_HEAVY</unmanaged>
 	Heavy = 9,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BLACK"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_BLACK"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_BLACK</unmanaged>
 	Black = 10,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_EXTRA_BLACK"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_EXTRA_BLACK"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_EXTRA_BLACK</unmanaged>
 	ExtraBlack = 11,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_NORD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_NORD"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_NORD</unmanaged>
 	Nord = 11,
 }

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY"]/*' />
 /// <unmanaged>D2D1_SVG_VISIBILITY</unmanaged>
 public enum SvgVisibility : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY::D2D1_SVG_VISIBILITY_VISIBLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY::D2D1_SVG_VISIBILITY_VISIBLE"]/*' />
 	/// <unmanaged>D2D1_SVG_VISIBILITY_VISIBLE</unmanaged>
 	Visible = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY::D2D1_SVG_VISIBILITY_HIDDEN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VISIBILITY::D2D1_SVG_VISIBILITY_HIDDEN"]/*' />
 	/// <unmanaged>D2D1_SVG_VISIBILITY_HIDDEN</unmanaged>
 	Hidden = 1,
 }

@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPngSrgbProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPngSrgbProperties"]/*' />
 /// <unmanaged>WICPngSrgbProperties</unmanaged>
 public enum WICPngSrgbProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPngSrgbProperties::WICPngSrgbRenderingIntent"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngSrgbProperties::WICPngSrgbRenderingIntent"]/*' />
 	/// <unmanaged>WICPngSrgbRenderingIntent</unmanaged>
 	WICPngSrgbRenderingIntent = 1,
 }

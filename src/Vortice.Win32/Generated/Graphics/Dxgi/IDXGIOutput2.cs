@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput2"]/*' />
 /// <unmanaged>IDXGIOutput2</unmanaged>
 [Guid("595e39d1-2724-4663-99b1-da969de28364")]
 [NativeTypeName("struct IDXGIOutput2 : IDXGIOutput1")]
@@ -234,7 +234,7 @@ public unsafe partial struct IDXGIOutput2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput2*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput2::SupportsOverlays"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput2::SupportsOverlays"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public Bool32 SupportsOverlays()

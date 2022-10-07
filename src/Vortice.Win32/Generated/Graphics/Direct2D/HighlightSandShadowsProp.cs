@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP"]/*' />
 /// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP</unmanaged>
 public enum HighlightSandShadowsProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_HIGHLIGHTS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_HIGHLIGHTS"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_HIGHLIGHTS</unmanaged>
 	Highlights = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_SHADOWS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_SHADOWS"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_SHADOWS</unmanaged>
 	Shadows = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_CLARITY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_CLARITY"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_CLARITY</unmanaged>
 	Clarity = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_INPUT_GAMMA"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_INPUT_GAMMA"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_INPUT_GAMMA</unmanaged>
 	InputGamma = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_MASK_BLUR_RADIUS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HIGHLIGHTSANDSHADOWS_PROP::D2D1_HIGHLIGHTSANDSHADOWS_PROP_MASK_BLUR_RADIUS"]/*' />
 	/// <unmanaged>D2D1_HIGHLIGHTSANDSHADOWS_PROP_MASK_BLUR_RADIUS</unmanaged>
 	MaskBlurRadius = 4,
 }

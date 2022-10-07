@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP"]/*' />
 /// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP</unmanaged>
 public enum AffineTransform2DProperties : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE</unmanaged>
 	InterpolationMode = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_BORDER_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_BORDER_MODE</unmanaged>
 	BorderMode = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_TRANSFORM_MATRIX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_TRANSFORM_MATRIX"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_TRANSFORM_MATRIX</unmanaged>
 	TransformMatrix = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_SHARPNESS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_PROP::D2D1_2DAFFINETRANSFORM_PROP_SHARPNESS"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_PROP_SHARPNESS</unmanaged>
 	Sharpness = 3,
 }

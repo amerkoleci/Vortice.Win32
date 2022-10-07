@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler2"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompiler2"]/*' />
 /// <unmanaged>IDxcCompiler2</unmanaged>
 [Guid("a005a9d9-b8bb-4594-b5c9-0e633bec4d37")]
 [NativeTypeName("struct IDxcCompiler2 : IDxcCompiler")]
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcCompiler2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler2*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), pSource, ppDisassembly);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompiler2::CompileWithDebug"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompiler2::CompileWithDebug"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult CompileWithDebug(IDxcBlob* pSource, ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult, ushort** ppDebugBlobName, IDxcBlob** ppDebugBlob)

@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS"]/*' />
 /// <unmanaged>DWRITE_OVERHANG_METRICS</unmanaged>
 public partial struct OverhangMetrics
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::left"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::left"]/*' />
 	public float left;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::top"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::top"]/*' />
 	public float top;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::right"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::right"]/*' />
 	public float right;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::bottom"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OVERHANG_METRICS::bottom"]/*' />
 	public float bottom;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLinker"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLinker"]/*' />
 /// <unmanaged>IDxcLinker</unmanaged>
 [Guid("f1b5be2a-62dd-4327-a1c2-42ac1e1e78e6")]
 [NativeTypeName("struct IDxcLinker : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcLinker : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLinker::RegisterLibrary"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLinker::RegisterLibrary"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult RegisterLibrary(ushort* pLibName, IDxcBlob* pLib)
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcLinker : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcLinker*, ushort*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcLinker*)Unsafe.AsPointer(ref this), pLibName, pLib);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcLinker::Link"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcLinker::Link"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Link(ushort* pEntryName, ushort* pTargetProfile, ushort** pLibNames, uint libCount, ushort** pArguments, uint argCount, IDxcOperationResult** ppResult)

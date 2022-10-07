@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT"]/*' />
 /// <unmanaged>D2D1_ARC_SEGMENT</unmanaged>
 public partial struct ArcSegment
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::point"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::point"]/*' />
 	public System.Drawing.PointF point;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::size"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::size"]/*' />
 	public System.Drawing.SizeF size;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::rotationAngle"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::rotationAngle"]/*' />
 	public float rotationAngle;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::sweepDirection"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::sweepDirection"]/*' />
 	public SweepDirection sweepDirection;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::arcSize"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::arcSize"]/*' />
 	public ArcSize arcSize;
 }

@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG"]/*' />
 /// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG</unmanaged>
 [Flags]
 public enum SwapChainColorSpaceSupportFlags : int
 {
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT</unmanaged>
 	Present = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG::DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT"]/*' />
 	/// <unmanaged>DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_OVERLAY_PRESENT</unmanaged>
 	OverlayPresent = 2,
 }

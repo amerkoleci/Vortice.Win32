@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo"]/*' />
 /// <unmanaged>ID2D1ComputeInfo</unmanaged>
 [Guid("5598b14b-9fd7-48b7-9bdb-8f0964eb38bc")]
 [NativeTypeName("struct ID2D1ComputeInfo : ID2D1RenderInfo")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1ComputeInfo : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, uint, void>)(lpVtbl[6]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), instructionCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetComputeShaderConstantBuffer"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetComputeShaderConstantBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult SetComputeShaderConstantBuffer(byte* buffer, uint bufferCount)
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1ComputeInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, byte*, uint, int>)(lpVtbl[7]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetComputeShader"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetComputeShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult SetComputeShader(Guid* shaderId)
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1ComputeInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, Guid*, int>)(lpVtbl[8]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), shaderId);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetResourceTexture"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetResourceTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture)

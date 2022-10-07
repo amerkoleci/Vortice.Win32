@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_POINTER_SHAPE_INFO</unmanaged>
 public partial struct OutduplPointerShapeInfo
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Type"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Type"]/*' />
 	public uint Type;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Width"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Width"]/*' />
 	public uint Width;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Height"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Height"]/*' />
 	public uint Height;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Pitch"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::Pitch"]/*' />
 	public uint Pitch;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::HotSpot"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_SHAPE_INFO::HotSpot"]/*' />
 	public System.Drawing.Point HotSpot;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RectangleGeometry"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RectangleGeometry"]/*' />
 /// <unmanaged>ID2D1RectangleGeometry</unmanaged>
 [Guid("2cd906a2-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1RectangleGeometry : ID2D1Geometry")]
@@ -186,7 +186,7 @@ public unsafe partial struct ID2D1RectangleGeometry : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1RectangleGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1RectangleGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RectangleGeometry::GetRect"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RectangleGeometry::GetRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void GetRect(Common.RectF* rect)

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsEncoder"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder"]/*' />
 /// <unmanaged>IWICDdsEncoder</unmanaged>
 [Guid("5cacdb4c-407e-41b3-b936-d0f010cd6732")]
 [NativeTypeName("struct IWICDdsEncoder : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICDdsEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsEncoder::SetParameters"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::SetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetParameters(WICDdsParameters* pParameters)
@@ -82,7 +82,7 @@ public unsafe partial struct IWICDdsEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[3]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsEncoder::GetParameters"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::GetParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetParameters(WICDdsParameters* pParameters)
@@ -90,7 +90,7 @@ public unsafe partial struct IWICDdsEncoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[4]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICDdsEncoder::CreateNewFrame"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::CreateNewFrame"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, uint* pArrayIndex, uint* pMipLevel, uint* pSliceIndex)

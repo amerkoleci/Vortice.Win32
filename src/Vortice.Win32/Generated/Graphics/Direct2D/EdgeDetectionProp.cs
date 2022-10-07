@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP"]/*' />
 /// <unmanaged>D2D1_EDGEDETECTION_PROP</unmanaged>
 public enum EdgeDetectionProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_STRENGTH"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_STRENGTH"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_STRENGTH</unmanaged>
 	Strength = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_BLUR_RADIUS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_BLUR_RADIUS"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_BLUR_RADIUS</unmanaged>
 	BlurRadius = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_MODE"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_MODE</unmanaged>
 	Mode = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_OVERLAY_EDGES"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_OVERLAY_EDGES"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_OVERLAY_EDGES</unmanaged>
 	OverlayEdges = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_ALPHA_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EDGEDETECTION_PROP::D2D1_EDGEDETECTION_PROP_ALPHA_MODE"]/*' />
 	/// <unmanaged>D2D1_EDGEDETECTION_PROP_ALPHA_MODE</unmanaged>
 	AlphaMode = 4,
 }

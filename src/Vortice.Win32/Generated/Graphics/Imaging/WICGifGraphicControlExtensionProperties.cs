@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties"]/*' />
 /// <unmanaged>WICGifGraphicControlExtensionProperties</unmanaged>
 public enum WICGifGraphicControlExtensionProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionDisposal"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionDisposal"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionDisposal</unmanaged>
 	WICGifGraphicControlExtensionDisposal = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionUserInputFlag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionUserInputFlag"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionUserInputFlag</unmanaged>
 	WICGifGraphicControlExtensionUserInputFlag = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionTransparencyFlag"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionTransparencyFlag"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionTransparencyFlag</unmanaged>
 	WICGifGraphicControlExtensionTransparencyFlag = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionDelay"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionDelay"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionDelay</unmanaged>
 	WICGifGraphicControlExtensionDelay = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionTransparentColorIndex"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionTransparentColorIndex"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionTransparentColorIndex</unmanaged>
 	WICGifGraphicControlExtensionTransparentColorIndex = 5,
 }

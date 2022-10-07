@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_DESC</unmanaged>
 public partial struct OutduplDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::ModeDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::ModeDesc"]/*' />
 	public Common.ModeDescription ModeDesc;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::Rotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::DesktopImageInSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC::DesktopImageInSystemMemory"]/*' />
 	public Bool32 DesktopImageInSystemMemory;
 }

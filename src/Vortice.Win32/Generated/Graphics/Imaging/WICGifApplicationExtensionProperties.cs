@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties"]/*' />
 /// <unmanaged>WICGifApplicationExtensionProperties</unmanaged>
 public enum WICGifApplicationExtensionProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties::WICGifApplicationExtensionApplication"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties::WICGifApplicationExtensionApplication"]/*' />
 	/// <unmanaged>WICGifApplicationExtensionApplication</unmanaged>
 	WICGifApplicationExtensionApplication = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties::WICGifApplicationExtensionData"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties::WICGifApplicationExtensionData"]/*' />
 	/// <unmanaged>WICGifApplicationExtensionData</unmanaged>
 	WICGifApplicationExtensionData = 2,
 }

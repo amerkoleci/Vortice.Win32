@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT"]/*' />
 /// <unmanaged>DXGI_MAPPED_RECT</unmanaged>
 public partial struct MappedRect
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT::Pitch"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT::Pitch"]/*' />
 	public int Pitch;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_MAPPED_RECT::pBits"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT::pBits"]/*' />
 	public unsafe byte* pBits;
 }

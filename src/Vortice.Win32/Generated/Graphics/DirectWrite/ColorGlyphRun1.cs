@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1"]/*' />
 /// <unmanaged>DWRITE_COLOR_GLYPH_RUN1</unmanaged>
 public partial struct ColorGlyphRun1
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1::Base"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1::Base"]/*' />
 	public ColorGlyphRun Base;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1::glyphImageFormat"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1::glyphImageFormat"]/*' />
 	public GlyphImageFormats glyphImageFormat;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1::measuringMode"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN1::measuringMode"]/*' />
 	public MeasuringMode measuringMode;
 }

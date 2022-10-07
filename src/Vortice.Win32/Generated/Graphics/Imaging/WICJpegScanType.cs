@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanType"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType"]/*' />
 /// <unmanaged>WICJpegScanType</unmanaged>
 public enum WICJpegScanType : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypeInterleaved"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypeInterleaved"]/*' />
 	/// <unmanaged>WICJpegScanTypeInterleaved</unmanaged>
 	WICJpegScanTypeInterleaved = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypePlanarComponents"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypePlanarComponents"]/*' />
 	/// <unmanaged>WICJpegScanTypePlanarComponents</unmanaged>
 	WICJpegScanTypePlanarComponents = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypeProgressive"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypeProgressive"]/*' />
 	/// <unmanaged>WICJpegScanTypeProgressive</unmanaged>
 	WICJpegScanTypeProgressive = 2,
 }

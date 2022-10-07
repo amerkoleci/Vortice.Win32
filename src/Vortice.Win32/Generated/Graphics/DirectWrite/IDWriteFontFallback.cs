@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback"]/*' />
 /// <unmanaged>IDWriteFontFallback</unmanaged>
 [Guid("efa008f9-f7a1-48bf-b05c-f224713cc0ff")]
 [NativeTypeName("struct IDWriteFontFallback : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteFontFallback : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback::MapCharacters"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback::MapCharacters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, ushort* baseFamilyName, FontWeight baseWeight, FontStyle baseStyle, FontStretch baseStretch, uint* mappedLength, IDWriteFont** mappedFont, float* scale)

@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_PROP"]/*' />
 /// <unmanaged>D2D1_HUETORGB_PROP</unmanaged>
 public enum HueToRgbProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_PROP::D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HUETORGB_PROP::D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE"]/*' />
 	/// <unmanaged>D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE</unmanaged>
 	InputColorSpace = 0,
 }

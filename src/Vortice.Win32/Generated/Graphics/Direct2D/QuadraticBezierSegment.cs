@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT"]/*' />
 /// <unmanaged>D2D1_QUADRATIC_BEZIER_SEGMENT</unmanaged>
 public partial struct QuadraticBezierSegment
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT::point1"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT::point1"]/*' />
 	public System.Drawing.PointF point1;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT::point2"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT::point2"]/*' />
 	public System.Drawing.PointF point2;
 }

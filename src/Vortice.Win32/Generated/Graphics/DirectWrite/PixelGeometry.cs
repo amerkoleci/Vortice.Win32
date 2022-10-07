@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY"]/*' />
 /// <unmanaged>DWRITE_PIXEL_GEOMETRY</unmanaged>
 public enum PixelGeometry : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_FLAT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_FLAT"]/*' />
 	/// <unmanaged>DWRITE_PIXEL_GEOMETRY_FLAT</unmanaged>
 	Flat = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_RGB"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_RGB"]/*' />
 	/// <unmanaged>DWRITE_PIXEL_GEOMETRY_RGB</unmanaged>
 	Rgb = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_BGR"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_BGR"]/*' />
 	/// <unmanaged>DWRITE_PIXEL_GEOMETRY_BGR</unmanaged>
 	Bgr = 2,
 }

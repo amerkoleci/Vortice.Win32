@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS"]/*' />
 /// <unmanaged>D2D1_RENDERING_CONTROLS</unmanaged>
 public partial struct RenderingControls
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS::bufferPrecision"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS::bufferPrecision"]/*' />
 	public BufferPrecision bufferPrecision;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS::tileSize"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_CONTROLS::tileSize"]/*' />
 	public System.Drawing.Size tileSize;
 }

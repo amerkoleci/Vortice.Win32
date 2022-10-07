@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS"]/*' />
 /// <unmanaged>DWRITE_CARET_METRICS</unmanaged>
 public partial struct CaretMetrics
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS::slopeRise"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS::slopeRise"]/*' />
 	public short slopeRise;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS::slopeRun"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS::slopeRun"]/*' />
 	public short slopeRun;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS::offset"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CARET_METRICS::offset"]/*' />
 	public short offset;
 }

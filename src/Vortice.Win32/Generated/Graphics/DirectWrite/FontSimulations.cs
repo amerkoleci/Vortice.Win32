@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS"]/*' />
 /// <unmanaged>DWRITE_FONT_SIMULATIONS</unmanaged>
 [Flags]
 public enum FontSimulations : uint
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_NONE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_NONE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SIMULATIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_BOLD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_BOLD"]/*' />
 	/// <unmanaged>DWRITE_FONT_SIMULATIONS_BOLD</unmanaged>
 	Bold = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_OBLIQUE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_OBLIQUE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SIMULATIONS_OBLIQUE</unmanaged>
 	Oblique = 2,
 }

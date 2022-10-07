@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE"]/*' />
 /// <unmanaged>D2D1_PRINT_FONT_SUBSET_MODE</unmanaged>
 public enum PrintFontSubsetMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_DEFAULT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_PRINT_FONT_SUBSET_MODE_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_EACHPAGE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_EACHPAGE"]/*' />
 	/// <unmanaged>D2D1_PRINT_FONT_SUBSET_MODE_EACHPAGE</unmanaged>
 	Eachpage = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PRINT_FONT_SUBSET_MODE::D2D1_PRINT_FONT_SUBSET_MODE_NONE"]/*' />
 	/// <unmanaged>D2D1_PRINT_FONT_SUBSET_MODE_NONE</unmanaged>
 	None = 2,
 }

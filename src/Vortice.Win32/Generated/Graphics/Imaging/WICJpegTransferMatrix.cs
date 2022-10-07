@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix"]/*' />
 /// <unmanaged>WICJpegTransferMatrix</unmanaged>
 public enum WICJpegTransferMatrix : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix::WICJpegTransferMatrixIdentity"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix::WICJpegTransferMatrixIdentity"]/*' />
 	/// <unmanaged>WICJpegTransferMatrixIdentity</unmanaged>
 	WICJpegTransferMatrixIdentity = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix::WICJpegTransferMatrixBT601"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix::WICJpegTransferMatrixBT601"]/*' />
 	/// <unmanaged>WICJpegTransferMatrixBT601</unmanaged>
 	WICJpegTransferMatrixBT601 = 1,
 }

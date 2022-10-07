@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE"]/*' />
 /// <unmanaged>DXGI_SHARED_RESOURCE</unmanaged>
 public partial struct SharedResource
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE::Handle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE::Handle"]/*' />
 	public Handle Handle;
 }

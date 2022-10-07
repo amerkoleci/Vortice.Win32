@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="DxcShaderHash"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="DxcShaderHash"]/*' />
 /// <unmanaged>DxcShaderHash</unmanaged>
 public partial struct DxcShaderHash
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="DxcShaderHash::Flags"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcShaderHash::Flags"]/*' />
 	public DxcHashFlags Flags;
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="DxcShaderHash::HashDigest"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcShaderHash::HashDigest"]/*' />
 	public unsafe fixed byte HashDigest[16];
 }

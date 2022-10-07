@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_MOVE_RECT</unmanaged>
 public partial struct OutduplMoveRect
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::SourcePoint"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::SourcePoint"]/*' />
 	public System.Drawing.Point SourcePoint;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::DestinationRect"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::DestinationRect"]/*' />
 	public RawRect DestinationRect;
 }

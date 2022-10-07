@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE"]/*' />
 /// <unmanaged>D2D1_TRIANGLE</unmanaged>
 public partial struct Triangle
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point1"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point1"]/*' />
 	public System.Drawing.PointF point1;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point2"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point2"]/*' />
 	public System.Drawing.PointF point2;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point3"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point3"]/*' />
 	public System.Drawing.PointF point3;
 }

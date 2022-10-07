@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP"]/*' />
 /// <unmanaged>D2D1_BRIGHTNESS_PROP</unmanaged>
 public enum BrightnessProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP::D2D1_BRIGHTNESS_PROP_WHITE_POINT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP::D2D1_BRIGHTNESS_PROP_WHITE_POINT"]/*' />
 	/// <unmanaged>D2D1_BRIGHTNESS_PROP_WHITE_POINT</unmanaged>
 	WhitePoint = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP::D2D1_BRIGHTNESS_PROP_BLACK_POINT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRIGHTNESS_PROP::D2D1_BRIGHTNESS_PROP_BLACK_POINT"]/*' />
 	/// <unmanaged>D2D1_BRIGHTNESS_PROP_BLACK_POINT</unmanaged>
 	BlackPoint = 1,
 }

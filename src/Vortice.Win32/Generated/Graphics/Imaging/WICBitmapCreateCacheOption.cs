@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption"]/*' />
 /// <unmanaged>WICBitmapCreateCacheOption</unmanaged>
 public enum WICBitmapCreateCacheOption : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption::WICBitmapNoCache"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption::WICBitmapNoCache"]/*' />
 	/// <unmanaged>WICBitmapNoCache</unmanaged>
 	NoCache = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption::WICBitmapCacheOnDemand"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption::WICBitmapCacheOnDemand"]/*' />
 	/// <unmanaged>WICBitmapCacheOnDemand</unmanaged>
 	CacheOnDemand = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption::WICBitmapCacheOnLoad"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption::WICBitmapCacheOnLoad"]/*' />
 	/// <unmanaged>WICBitmapCacheOnLoad</unmanaged>
 	CacheOnLoad = 2,
 }

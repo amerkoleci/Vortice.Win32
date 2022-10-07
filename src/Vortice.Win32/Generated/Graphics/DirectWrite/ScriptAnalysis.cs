@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_ANALYSIS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_ANALYSIS"]/*' />
 /// <unmanaged>DWRITE_SCRIPT_ANALYSIS</unmanaged>
 public partial struct ScriptAnalysis
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_ANALYSIS::script"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_ANALYSIS::script"]/*' />
 	public ushort script;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_ANALYSIS::shapes"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_ANALYSIS::shapes"]/*' />
 	public ScriptShapes shapes;
 }

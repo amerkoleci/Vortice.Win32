@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_OFFSET"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_OFFSET"]/*' />
 /// <unmanaged>DWRITE_GLYPH_OFFSET</unmanaged>
 public partial struct GlyphOffset
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_OFFSET::advanceOffset"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_OFFSET::advanceOffset"]/*' />
 	public float advanceOffset;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_OFFSET::ascenderOffset"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_OFFSET::ascenderOffset"]/*' />
 	public float ascenderOffset;
 }

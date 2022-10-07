@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties"]/*' />
 /// <unmanaged>WIC8BIMIptcProperties</unmanaged>
 public enum WIC8BIMIptcProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties::WIC8BIMIptcPString"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties::WIC8BIMIptcPString"]/*' />
 	/// <unmanaged>WIC8BIMIptcPString</unmanaged>
 	WIC8BIMIptcPString = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties::WIC8BIMIptcEmbeddedIPTC"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties::WIC8BIMIptcEmbeddedIPTC"]/*' />
 	/// <unmanaged>WIC8BIMIptcEmbeddedIPTC</unmanaged>
 	WIC8BIMIptcEmbeddedIPTC = 1,
 }

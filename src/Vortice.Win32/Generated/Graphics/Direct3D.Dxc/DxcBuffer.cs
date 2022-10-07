@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="DxcBuffer"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer"]/*' />
 /// <unmanaged>DxcBuffer</unmanaged>
 public partial struct DxcBuffer
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="DxcBuffer::Ptr"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer::Ptr"]/*' />
 	public unsafe void* Ptr;
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="DxcBuffer::Size"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer::Size"]/*' />
 	public nuint Size;
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="DxcBuffer::Encoding"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="DxcBuffer::Encoding"]/*' />
 	public uint Encoding;
 }

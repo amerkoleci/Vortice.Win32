@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPattern"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern"]/*' />
 /// <unmanaged>WICBitmapPattern</unmanaged>
 public partial struct WICBitmapPattern
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPattern::Position"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::Position"]/*' />
 	public ULargeInteger Position;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPattern::Length"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::Length"]/*' />
 	public uint Length;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPattern::Pattern"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::Pattern"]/*' />
 	public unsafe byte* Pattern;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPattern::Mask"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::Mask"]/*' />
 	public unsafe byte* Mask;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapPattern::EndOfStream"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::EndOfStream"]/*' />
 	public Bool32 EndOfStream;
 }

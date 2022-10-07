@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICDdsDimension"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension"]/*' />
 /// <unmanaged>WICDdsDimension</unmanaged>
 public enum WICDdsDimension : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture1D"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture1D"]/*' />
 	/// <unmanaged>WICDdsTexture1D</unmanaged>
 	WICDdsTexture1D = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture2D"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture2D"]/*' />
 	/// <unmanaged>WICDdsTexture2D</unmanaged>
 	WICDdsTexture2D = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture3D"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture3D"]/*' />
 	/// <unmanaged>WICDdsTexture3D</unmanaged>
 	WICDdsTexture3D = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTextureCube"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTextureCube"]/*' />
 	/// <unmanaged>WICDdsTextureCube</unmanaged>
 	WICDdsTextureCube = 3,
 }

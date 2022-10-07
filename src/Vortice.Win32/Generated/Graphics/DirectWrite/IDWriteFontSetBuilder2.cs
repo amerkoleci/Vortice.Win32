@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2"]/*' />
 /// <unmanaged>IDWriteFontSetBuilder2</unmanaged>
 [Guid("ee5ba612-b131-463c-8f4f-3189b9401e45")]
 [NativeTypeName("struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder1")]
@@ -114,7 +114,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSetBuilder2*, IDWriteFontFile*, int>)(lpVtbl[7]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFile);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFont"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFont"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, FontSimulations fontSimulations, FontAxisValue* fontAxisValues, uint fontAxisValueCount, FontAxisRange* fontAxisRanges, uint fontAxisRangeCount, FontProperty* properties, uint propertyCount)
@@ -122,7 +122,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSetBuilder2*, IDWriteFontFile*, uint, FontSimulations, FontAxisValue*, uint, FontAxisRange*, uint, FontProperty*, uint, int>)(lpVtbl[8]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), fontFile, fontFaceIndex, fontSimulations, fontAxisValues, fontAxisValueCount, fontAxisRanges, fontAxisRangeCount, properties, propertyCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFontFile"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult AddFontFile(ushort* filePath)

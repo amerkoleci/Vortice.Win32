@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform"]/*' />
 /// <unmanaged>ID2D1BorderTransform</unmanaged>
 [Guid("4998735c-3a19-473c-9781-656847e3a347")]
 [NativeTypeName("struct ID2D1BorderTransform : ID2D1ConcreteTransform")]
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1BorderTransform : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, Bool32, void>)(lpVtbl[5]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), isCached);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::SetExtendModeX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::SetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void SetExtendModeX(ExtendMode extendMode)
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1BorderTransform : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, ExtendMode, void>)(lpVtbl[6]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), extendMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::SetExtendModeY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::SetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void SetExtendModeY(ExtendMode extendMode)
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1BorderTransform : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, ExtendMode, void>)(lpVtbl[7]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this), extendMode);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::GetExtendModeX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::GetExtendModeX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public ExtendMode GetExtendModeX()
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1BorderTransform : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, ExtendMode>)(lpVtbl[8]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::GetExtendModeY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BorderTransform::GetExtendModeY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public ExtendMode GetExtendModeY()

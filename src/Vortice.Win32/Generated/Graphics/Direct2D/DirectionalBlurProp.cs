@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP"]/*' />
 /// <unmanaged>D2D1_DIRECTIONALBLUR_PROP</unmanaged>
 public enum DirectionalBlurProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_STANDARD_DEVIATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_STANDARD_DEVIATION"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_STANDARD_DEVIATION</unmanaged>
 	StandardDeviation = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_ANGLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_ANGLE"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_ANGLE</unmanaged>
 	Angle = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_OPTIMIZATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_OPTIMIZATION"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_OPTIMIZATION</unmanaged>
 	Optimization = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_BORDER_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DIRECTIONALBLUR_PROP::D2D1_DIRECTIONALBLUR_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_DIRECTIONALBLUR_PROP_BORDER_MODE</unmanaged>
 	BorderMode = 3,
 }

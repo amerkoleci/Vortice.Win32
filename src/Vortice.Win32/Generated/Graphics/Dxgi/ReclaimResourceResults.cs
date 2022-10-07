@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS"]/*' />
 /// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULTS</unmanaged>
 public enum ReclaimResourceResults : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_OK"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_OK"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_OK</unmanaged>
 	Ok = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_DISCARDED</unmanaged>
 	Discarded = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RECLAIM_RESOURCE_RESULTS::DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED"]/*' />
 	/// <unmanaged>DXGI_RECLAIM_RESOURCE_RESULT_NOT_COMMITTED</unmanaged>
 	NotCommitted = 2,
 }

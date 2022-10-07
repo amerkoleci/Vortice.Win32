@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICComponentSigning"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning"]/*' />
 /// <unmanaged>WICComponentSigning</unmanaged>
 public enum WICComponentSigning : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentSigned"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentSigned"]/*' />
 	/// <unmanaged>WICComponentSigned</unmanaged>
 	Signed = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentUnsigned"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentUnsigned"]/*' />
 	/// <unmanaged>WICComponentUnsigned</unmanaged>
 	Unsigned = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentSafe"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentSafe"]/*' />
 	/// <unmanaged>WICComponentSafe</unmanaged>
 	Safe = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentDisabled"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentDisabled"]/*' />
 	/// <unmanaged>WICComponentDisabled</unmanaged>
 	Disabled = -2147483648,
 }

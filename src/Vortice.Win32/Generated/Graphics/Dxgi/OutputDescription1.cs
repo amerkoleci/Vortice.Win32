@@ -9,49 +9,49 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1"]/*' />
 /// <unmanaged>DXGI_OUTPUT_DESC1</unmanaged>
 public partial struct OutputDescription1
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DeviceName"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DeviceName"]/*' />
 	public unsafe fixed ushort DeviceName[32];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DesktopCoordinates"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DesktopCoordinates"]/*' />
 	public RawRect DesktopCoordinates;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::AttachedToDesktop"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::AttachedToDesktop"]/*' />
 	public Bool32 AttachedToDesktop;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Rotation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Rotation"]/*' />
 	public Common.ModeRotation Rotation;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Monitor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::Monitor"]/*' />
 	public IntPtr Monitor;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BitsPerColor"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BitsPerColor"]/*' />
 	public uint BitsPerColor;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::ColorSpace"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::ColorSpace"]/*' />
 	public Common.ColorSpaceType ColorSpace;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::RedPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::RedPrimary"]/*' />
 	public unsafe fixed float RedPrimary[2];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::GreenPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::GreenPrimary"]/*' />
 	public unsafe fixed float GreenPrimary[2];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BluePrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::BluePrimary"]/*' />
 	public unsafe fixed float BluePrimary[2];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::WhitePoint"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::WhitePoint"]/*' />
 	public unsafe fixed float WhitePoint[2];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MinLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MinLuminance"]/*' />
 	public float MinLuminance;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxLuminance"]/*' />
 	public float MaxLuminance;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxFullFrameLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::MaxFullFrameLuminance"]/*' />
 	public float MaxFullFrameLuminance;
 }

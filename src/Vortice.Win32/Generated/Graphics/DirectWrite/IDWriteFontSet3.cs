@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3"]/*' />
 /// <unmanaged>IDWriteFontSet3</unmanaged>
 [Guid("7c073ef2-a7f4-4045-8c32-8ab8ae640f90")]
 [NativeTypeName("struct IDWriteFontSet3 : IDWriteFontSet2")]
@@ -266,7 +266,7 @@ public unsafe partial struct IDWriteFontSet3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet3*, Handle>)(lpVtbl[26]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceType"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public FontSourceType GetFontSourceType(uint fontIndex)
@@ -274,7 +274,7 @@ public unsafe partial struct IDWriteFontSet3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet3*, uint, FontSourceType>)(lpVtbl[27]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this), fontIndex);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceNameLength"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceNameLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public uint GetFontSourceNameLength(uint listIndex)
@@ -282,7 +282,7 @@ public unsafe partial struct IDWriteFontSet3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet3*, uint, uint>)(lpVtbl[28]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this), listIndex);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceName"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult GetFontSourceName(uint listIndex, ushort* stringBuffer, uint stringBufferSize)

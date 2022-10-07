@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA"]/*' />
 /// <unmanaged>DXGI_FRAME_STATISTICS_MEDIA</unmanaged>
 public partial struct FrameStatisticsMedia
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentCount"]/*' />
 	public uint PresentCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentRefreshCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::PresentRefreshCount"]/*' />
 	public uint PresentRefreshCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncRefreshCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncRefreshCount"]/*' />
 	public uint SyncRefreshCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncQPCTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncQPCTime"]/*' />
 	public LargeInteger SyncQPCTime;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncGPUTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncGPUTime"]/*' />
 	public LargeInteger SyncGPUTime;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::CompositionMode"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::CompositionMode"]/*' />
 	public FramePresentationMode CompositionMode;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::ApprovedPresentDuration"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::ApprovedPresentDuration"]/*' />
 	public uint ApprovedPresentDuration;
 }

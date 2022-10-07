@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION"]/*' />
 /// <unmanaged>DWRITE_VERTICAL_GLYPH_ORIENTATION</unmanaged>
 public enum VerticalGlyphOrientation : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION::DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION::DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION::DWRITE_VERTICAL_GLYPH_ORIENTATION_STACKED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION::DWRITE_VERTICAL_GLYPH_ORIENTATION_STACKED"]/*' />
 	/// <unmanaged>DWRITE_VERTICAL_GLYPH_ORIENTATION_STACKED</unmanaged>
 	Stacked = 1,
 }

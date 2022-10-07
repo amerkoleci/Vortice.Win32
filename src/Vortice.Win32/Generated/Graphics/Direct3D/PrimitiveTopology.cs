@@ -9,134 +9,134 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY"]/*' />
 /// <unmanaged>D3D_PRIMITIVE_TOPOLOGY</unmanaged>
 public enum PrimitiveTopology : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_UNDEFINED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_UNDEFINED</unmanaged>
 	Undefined = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_POINTLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_POINTLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_POINTLIST</unmanaged>
 	PointList = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINELIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINELIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINELIST</unmanaged>
 	LineList = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINESTRIP"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINESTRIP"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINESTRIP</unmanaged>
 	LineStrip = 3,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST</unmanaged>
 	TriangleList = 4,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP</unmanaged>
 	TriangleStrip = 5,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ</unmanaged>
 	LineListAdj = 10,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ</unmanaged>
 	LineStripAdj = 11,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ</unmanaged>
 	TriangleListAdj = 12,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ</unmanaged>
 	TriangleStripAdj = 13,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_1_CONTROL_POINT_PATCHLIST</unmanaged>
 	P1ControlPointPatchList = 33,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_2_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_2_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_2_CONTROL_POINT_PATCHLIST</unmanaged>
 	P2ControlPointPatchList = 34,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_3_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_3_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_3_CONTROL_POINT_PATCHLIST</unmanaged>
 	P3ControlPointPatchList = 35,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST</unmanaged>
 	P4ControlPointPatchList = 36,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_5_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_5_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_5_CONTROL_POINT_PATCHLIST</unmanaged>
 	P5ControlPointPatchList = 37,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_6_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_6_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_6_CONTROL_POINT_PATCHLIST</unmanaged>
 	P6ControlPointPatchList = 38,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_7_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_7_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_7_CONTROL_POINT_PATCHLIST</unmanaged>
 	P7ControlPointPatchList = 39,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_8_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_8_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_8_CONTROL_POINT_PATCHLIST</unmanaged>
 	P8ControlPointPatchList = 40,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_9_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_9_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_9_CONTROL_POINT_PATCHLIST</unmanaged>
 	P9ControlPointPatchList = 41,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_10_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_10_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_10_CONTROL_POINT_PATCHLIST</unmanaged>
 	P10ControlPointPatchList = 42,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_11_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_11_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_11_CONTROL_POINT_PATCHLIST</unmanaged>
 	P11ControlPointPatchList = 43,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_12_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_12_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_12_CONTROL_POINT_PATCHLIST</unmanaged>
 	P12ControlPointPatchList = 44,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_13_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_13_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_13_CONTROL_POINT_PATCHLIST</unmanaged>
 	P13ControlPointPatchList = 45,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_14_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_14_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_14_CONTROL_POINT_PATCHLIST</unmanaged>
 	P14ControlPointPatchList = 46,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_15_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_15_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_15_CONTROL_POINT_PATCHLIST</unmanaged>
 	P15ControlPointPatchList = 47,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_16_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_16_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_16_CONTROL_POINT_PATCHLIST</unmanaged>
 	P16ControlPointPatchList = 48,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_17_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_17_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_17_CONTROL_POINT_PATCHLIST</unmanaged>
 	P17ControlPointPatchList = 49,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_18_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_18_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_18_CONTROL_POINT_PATCHLIST</unmanaged>
 	P18ControlPointPatchList = 50,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_19_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_19_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_19_CONTROL_POINT_PATCHLIST</unmanaged>
 	P19ControlPointPatchList = 51,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_20_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_20_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_20_CONTROL_POINT_PATCHLIST</unmanaged>
 	P20ControlPointPatchList = 52,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_21_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_21_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_21_CONTROL_POINT_PATCHLIST</unmanaged>
 	P21ControlPointPatchList = 53,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_22_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_22_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_22_CONTROL_POINT_PATCHLIST</unmanaged>
 	P22ControlPointPatchList = 54,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_23_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_23_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_23_CONTROL_POINT_PATCHLIST</unmanaged>
 	P23ControlPointPatchList = 55,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_24_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_24_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_24_CONTROL_POINT_PATCHLIST</unmanaged>
 	P24ControlPointPatchList = 56,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_25_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_25_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_25_CONTROL_POINT_PATCHLIST</unmanaged>
 	P25ControlPointPatchList = 57,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_26_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_26_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_26_CONTROL_POINT_PATCHLIST</unmanaged>
 	P26ControlPointPatchList = 58,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_27_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_27_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_27_CONTROL_POINT_PATCHLIST</unmanaged>
 	P27ControlPointPatchList = 59,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_28_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_28_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_28_CONTROL_POINT_PATCHLIST</unmanaged>
 	P28ControlPointPatchList = 60,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_29_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_29_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_29_CONTROL_POINT_PATCHLIST</unmanaged>
 	P29ControlPointPatchList = 61,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_30_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_30_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_30_CONTROL_POINT_PATCHLIST</unmanaged>
 	P30ControlPointPatchList = 62,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_31_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_31_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_31_CONTROL_POINT_PATCHLIST</unmanaged>
 	P31ControlPointPatchList = 63,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_32_CONTROL_POINT_PATCHLIST"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_32_CONTROL_POINT_PATCHLIST"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_32_CONTROL_POINT_PATCHLIST</unmanaged>
 	P32ControlPointPatchList = 64,
 }

@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1"]/*' />
 /// <unmanaged>DWRITE_LINE_METRICS1</unmanaged>
 public partial struct LineMetrics1
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1::Base"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1::Base"]/*' />
 	public LineMetrics Base;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1::leadingBefore"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1::leadingBefore"]/*' />
 	public float leadingBefore;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1::leadingAfter"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1::leadingAfter"]/*' />
 	public float leadingAfter;
 }

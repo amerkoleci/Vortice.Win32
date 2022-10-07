@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDeviceSubObject"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDeviceSubObject"]/*' />
 /// <unmanaged>IDXGIDeviceSubObject</unmanaged>
 [Guid("3d3e0379-f9de-4d58-bb6c-18d62992f1a6")]
 [NativeTypeName("struct IDXGIDeviceSubObject : IDXGIObject")]
@@ -106,7 +106,7 @@ public unsafe partial struct IDXGIDeviceSubObject : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDeviceSubObject::GetDevice"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDeviceSubObject::GetDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetDevice(Guid* riid, void** ppDevice)

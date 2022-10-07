@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils"]/*' />
 /// <unmanaged>IDxcPdbUtils</unmanaged>
 [Guid("e6c9647e-9d6a-4c3b-b94c-524b5a6c343d")]
 [NativeTypeName("struct IDxcPdbUtils : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::Load"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::Load"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Load(IDxcBlob* pPdbOrDxil)
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pPdbOrDxil);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetSourceCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetSourceCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetSourceCount(uint* pCount)
@@ -90,7 +90,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint*, int>)(lpVtbl[4]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetSource"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetSource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetSource(uint uIndex, IDxcBlobEncoding** ppResult)
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetSourceName"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetSourceName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetSourceName(uint uIndex, char** pResult)
@@ -106,7 +106,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint, char**, int>)(lpVtbl[6]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetFlagCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetFlagCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetFlagCount(uint* pCount)
@@ -114,7 +114,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint*, int>)(lpVtbl[7]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetFlag"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetFlag"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetFlag(uint uIndex, char** pResult)
@@ -122,7 +122,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint, char**, int>)(lpVtbl[8]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetArgCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetArgCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetArgCount(uint* pCount)
@@ -130,7 +130,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint*, int>)(lpVtbl[9]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetArg"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetArg"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetArg(uint uIndex, char** pResult)
@@ -138,7 +138,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint, char**, int>)(lpVtbl[10]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetArgPairCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetArgPairCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetArgPairCount(uint* pCount)
@@ -146,7 +146,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint*, int>)(lpVtbl[11]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetArgPair"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetArgPair"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetArgPair(uint uIndex, char** pName, char** pValue)
@@ -154,7 +154,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint, char**, char**, int>)(lpVtbl[12]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pName, pValue);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetDefineCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetDefineCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetDefineCount(uint* pCount)
@@ -162,7 +162,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint*, int>)(lpVtbl[13]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetDefine"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetDefine"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult GetDefine(uint uIndex, char** pResult)
@@ -170,7 +170,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, uint, char**, int>)(lpVtbl[14]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), uIndex, pResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetTargetProfile"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetTargetProfile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult GetTargetProfile(char** pResult)
@@ -178,7 +178,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, char**, int>)(lpVtbl[15]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetEntryPoint"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetEntryPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult GetEntryPoint(char** pResult)
@@ -186,7 +186,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, char**, int>)(lpVtbl[16]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetMainFileName"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetMainFileName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetMainFileName(char** pResult)
@@ -194,7 +194,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, char**, int>)(lpVtbl[17]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetHash"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetHash"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult GetHash(IDxcBlob** ppResult)
@@ -202,7 +202,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, IDxcBlob**, int>)(lpVtbl[18]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetName"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult GetName(char** pResult)
@@ -210,7 +210,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, char**, int>)(lpVtbl[19]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::IsFullPDB"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::IsFullPDB"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public Bool32 IsFullPDB()
@@ -218,7 +218,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, Bool32>)(lpVtbl[20]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetFullPDB"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetFullPDB"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult GetFullPDB(IDxcBlob** ppFullPDB)
@@ -226,7 +226,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, IDxcBlob**, int>)(lpVtbl[21]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), ppFullPDB);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetVersionInfo"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::GetVersionInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult GetVersionInfo(IDxcVersionInfo** ppVersionInfo)
@@ -234,7 +234,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, IDxcVersionInfo**, int>)(lpVtbl[22]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), ppVersionInfo);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::SetCompiler"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::SetCompiler"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult SetCompiler(IDxcCompiler3* pCompiler)
@@ -242,7 +242,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, IDxcCompiler3*, int>)(lpVtbl[23]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pCompiler);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::CompileForFullPDB"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::CompileForFullPDB"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CompileForFullPDB(IDxcResult** ppResult)
@@ -250,7 +250,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, IDxcResult**, int>)(lpVtbl[24]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::OverrideArgs"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::OverrideArgs"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult OverrideArgs(DxcArgPair* pArgPairs, uint uNumArgPairs)
@@ -258,7 +258,7 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, DxcArgPair*, uint, int>)(lpVtbl[25]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pArgPairs, uNumArgPairs);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::OverrideRootSignature"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcPdbUtils::OverrideRootSignature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult OverrideRootSignature(ushort* pRootSignature)

@@ -9,61 +9,61 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo"]/*' />
 /// <unmanaged>WICRawCapabilitiesInfo</unmanaged>
 public partial struct WICRawCapabilitiesInfo
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::cbSize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::cbSize"]/*' />
 	public uint cbSize;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::CodecMajorVersion"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::CodecMajorVersion"]/*' />
 	public uint CodecMajorVersion;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::CodecMinorVersion"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::CodecMinorVersion"]/*' />
 	public uint CodecMinorVersion;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ExposureCompensationSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ExposureCompensationSupport"]/*' />
 	public WICRawCapabilities ExposureCompensationSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ContrastSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ContrastSupport"]/*' />
 	public WICRawCapabilities ContrastSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RGBWhitePointSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RGBWhitePointSupport"]/*' />
 	public WICRawCapabilities RGBWhitePointSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NamedWhitePointSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NamedWhitePointSupport"]/*' />
 	public WICRawCapabilities NamedWhitePointSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NamedWhitePointSupportMask"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NamedWhitePointSupportMask"]/*' />
 	public uint NamedWhitePointSupportMask;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::KelvinWhitePointSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::KelvinWhitePointSupport"]/*' />
 	public WICRawCapabilities KelvinWhitePointSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::GammaSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::GammaSupport"]/*' />
 	public WICRawCapabilities GammaSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::TintSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::TintSupport"]/*' />
 	public WICRawCapabilities TintSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::SaturationSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::SaturationSupport"]/*' />
 	public WICRawCapabilities SaturationSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::SharpnessSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::SharpnessSupport"]/*' />
 	public WICRawCapabilities SharpnessSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NoiseReductionSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::NoiseReductionSupport"]/*' />
 	public WICRawCapabilities NoiseReductionSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::DestinationColorProfileSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::DestinationColorProfileSupport"]/*' />
 	public WICRawCapabilities DestinationColorProfileSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ToneCurveSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::ToneCurveSupport"]/*' />
 	public WICRawCapabilities ToneCurveSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RotationSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RotationSupport"]/*' />
 	public WICRawRotationCapabilities RotationSupport;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RenderModeSupport"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilitiesInfo::RenderModeSupport"]/*' />
 	public WICRawCapabilities RenderModeSupport;
 }

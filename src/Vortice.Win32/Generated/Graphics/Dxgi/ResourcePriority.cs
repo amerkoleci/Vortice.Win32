@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY"]/*' />
 /// <unmanaged>DXGI_RESOURCE_PRIORITY</unmanaged>
 public enum ResourcePriority : uint
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MINIMUM"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MINIMUM"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_MINIMUM</unmanaged>
 	Minimum = 671088640,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_LOW"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_LOW"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_LOW</unmanaged>
 	Low = 1342177280,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_NORMAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_NORMAL</unmanaged>
 	Normal = 2013265920,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_HIGH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_HIGH"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_HIGH</unmanaged>
 	High = 2684354560,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MAXIMUM"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MAXIMUM"]/*' />
 	/// <unmanaged>DXGI_RESOURCE_PRIORITY_MAXIMUM</unmanaged>
 	Maximum = 3355443200,
 }

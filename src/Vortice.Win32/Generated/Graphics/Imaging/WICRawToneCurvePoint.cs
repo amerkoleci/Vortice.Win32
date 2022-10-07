@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint"]/*' />
 /// <unmanaged>WICRawToneCurvePoint</unmanaged>
 public partial struct WICRawToneCurvePoint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint::Input"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint::Input"]/*' />
 	public double Input;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint::Output"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawToneCurvePoint::Output"]/*' />
 	public double Output;
 }

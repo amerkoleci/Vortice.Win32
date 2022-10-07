@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICJpegCommentProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegCommentProperties"]/*' />
 /// <unmanaged>WICJpegCommentProperties</unmanaged>
 public enum WICJpegCommentProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegCommentProperties::WICJpegCommentText"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegCommentProperties::WICJpegCommentText"]/*' />
 	/// <unmanaged>WICJpegCommentText</unmanaged>
 	WICJpegCommentText = 1,
 }

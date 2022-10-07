@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_VERTEX_BUFFER_PROPERTIES</unmanaged>
 public partial struct VertexBufferProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::inputCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::inputCount"]/*' />
 	public uint inputCount;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::usage"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::usage"]/*' />
 	public VertexUsage usage;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::data"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::data"]/*' />
 	public unsafe byte* data;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::byteWidth"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_BUFFER_PROPERTIES::byteWidth"]/*' />
 	public uint byteWidth;
 }

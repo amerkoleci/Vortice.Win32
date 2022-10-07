@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Factory4"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory4"]/*' />
 /// <unmanaged>ID2D1Factory4</unmanaged>
 [Guid("bd4ec2d2-0662-4bee-ba8e-6f29f032e096")]
 [NativeTypeName("struct ID2D1Factory4 : ID2D1Factory3")]
@@ -282,7 +282,7 @@ public unsafe partial struct ID2D1Factory4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Factory4*, Graphics.Dxgi.IDXGIDevice*, ID2D1Device2**, int>)(lpVtbl[28]))((ID2D1Factory4*)Unsafe.AsPointer(ref this), dxgiDevice, d2dDevice2);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Factory4::CreateDevice"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory4::CreateDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, ID2D1Device3** d2dDevice3)

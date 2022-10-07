@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS"]/*' />
 /// <unmanaged>DXGI_FRAME_STATISTICS</unmanaged>
 public partial struct FrameStatistics
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentCount"]/*' />
 	public uint PresentCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentRefreshCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::PresentRefreshCount"]/*' />
 	public uint PresentRefreshCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncRefreshCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncRefreshCount"]/*' />
 	public uint SyncRefreshCount;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncQPCTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncQPCTime"]/*' />
 	public LargeInteger SyncQPCTime;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncGPUTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncGPUTime"]/*' />
 	public LargeInteger SyncGPUTime;
 }

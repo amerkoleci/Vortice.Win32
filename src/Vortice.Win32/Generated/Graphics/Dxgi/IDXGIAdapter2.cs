@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter2"]/*' />
 /// <unmanaged>IDXGIAdapter2</unmanaged>
 [Guid("0aa1ae0a-fa0e-4b84-8644-e05ff8e5acb5")]
 [NativeTypeName("struct IDXGIAdapter2 : IDXGIAdapter1")]
@@ -138,7 +138,7 @@ public unsafe partial struct IDXGIAdapter2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIAdapter2::GetDesc2"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter2::GetDesc2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetDesc2(AdapterDescription2* pDesc)

@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD"]/*' />
 /// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD</unmanaged>
 public enum NumberSubstitutionMethod : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE</unmanaged>
 	FromCulture = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_CONTEXTUAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_CONTEXTUAL"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_CONTEXTUAL</unmanaged>
 	Contextual = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_NONE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_NONE"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_NONE</unmanaged>
 	None = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_NATIONAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_NATIONAL"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_NATIONAL</unmanaged>
 	National = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_TRADITIONAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_TRADITIONAL"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_TRADITIONAL</unmanaged>
 	Traditional = 4,
 }

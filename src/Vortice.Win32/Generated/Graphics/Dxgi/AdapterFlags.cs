@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG</unmanaged>
 [Flags]
 public enum AdapterFlags : uint
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_REMOTE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_REMOTE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_REMOTE</unmanaged>
 	Remote = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_SOFTWARE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_SOFTWARE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_SOFTWARE</unmanaged>
 	Software = 2,
 }

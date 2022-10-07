@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX"]/*' />
 /// <unmanaged>D2D1_SVG_VIEWBOX</unmanaged>
 public partial struct SvgViewbox
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::x"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::x"]/*' />
 	public float x;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::y"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::y"]/*' />
 	public float y;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::width"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::width"]/*' />
 	public float width;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::height"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_VIEWBOX::height"]/*' />
 	public float height;
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_INPUT_DESCRIPTION</unmanaged>
 public partial struct InputDescription
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION::filter"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION::filter"]/*' />
 	public Filter filter;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION::levelOfDetailCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_DESCRIPTION::levelOfDetailCount"]/*' />
 	public uint levelOfDetailCount;
 }

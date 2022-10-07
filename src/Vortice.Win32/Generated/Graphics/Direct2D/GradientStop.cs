@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP"]/*' />
 /// <unmanaged>D2D1_GRADIENT_STOP</unmanaged>
 public partial struct GradientStop
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::position"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::position"]/*' />
 	public float position;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::color"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::color"]/*' />
 	public Color4 color;
 }

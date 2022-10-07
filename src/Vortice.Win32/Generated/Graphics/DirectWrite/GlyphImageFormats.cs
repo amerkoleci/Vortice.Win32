@@ -9,36 +9,36 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS"]/*' />
 /// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS</unmanaged>
 [Flags]
 public enum GlyphImageFormats : uint
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_NONE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_NONE"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_NONE</unmanaged>
 	None = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_TRUETYPE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_TRUETYPE"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_TRUETYPE</unmanaged>
 	Truetype = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_CFF"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_CFF"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_CFF</unmanaged>
 	Cff = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_COLR"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_COLR"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_COLR</unmanaged>
 	Colr = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_SVG"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_SVG"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_SVG</unmanaged>
 	Svg = 8,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_PNG"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_PNG"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_PNG</unmanaged>
 	Png = 16,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_JPEG"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_JPEG"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_JPEG</unmanaged>
 	Jpeg = 32,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_TIFF"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_TIFF"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_TIFF</unmanaged>
 	Tiff = 64,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8</unmanaged>
 	PremultipliedB8g8r8a8 = 128,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo2"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo2"]/*' />
 /// <unmanaged>IWICPixelFormatInfo2</unmanaged>
 [Guid("a9db33a2-af5f-43c7-b679-74f5984b5aa4")]
 [NativeTypeName("struct IWICPixelFormatInfo2 : IWICPixelFormatInfo")]
@@ -178,7 +178,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo2*, uint, uint, byte*, uint*, int>)(lpVtbl[15]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), uiChannelIndex, cbMaskBuffer, pbMaskBuffer, pcbActual);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo2::SupportsTransparency"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo2::SupportsTransparency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult SupportsTransparency(Bool32* pfSupportsTransparency)
@@ -186,7 +186,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo2*, Bool32*, int>)(lpVtbl[16]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pfSupportsTransparency);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo2::GetNumericRepresentation"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo2::GetNumericRepresentation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetNumericRepresentation(WICPixelFormatNumericRepresentation* pNumericRepresentation)

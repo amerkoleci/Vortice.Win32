@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3"]/*' />
 /// <unmanaged>IDWriteTextLayout3</unmanaged>
 [Guid("07ddcd52-020e-4de8-ac33-6c953d83f92d")]
 [NativeTypeName("struct IDWriteTextLayout3 : IDWriteTextLayout2")]
@@ -690,7 +690,7 @@ public unsafe partial struct IDWriteTextLayout3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, IDWriteFontFallback**, int>)(lpVtbl[79]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this), fontFallback);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3::InvalidateLayout"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3::InvalidateLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
 	public HResult InvalidateLayout()
@@ -698,7 +698,7 @@ public unsafe partial struct IDWriteTextLayout3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, int>)(lpVtbl[80]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3::SetLineSpacing"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3::SetLineSpacing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(81)]
 	public HResult SetLineSpacing(LineSpacing* lineSpacingOptions)
@@ -706,7 +706,7 @@ public unsafe partial struct IDWriteTextLayout3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, LineSpacing*, int>)(lpVtbl[81]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3::GetLineSpacing"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3::GetLineSpacing"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
 	public HResult GetLineSpacing(LineSpacing* lineSpacingOptions)
@@ -714,7 +714,7 @@ public unsafe partial struct IDWriteTextLayout3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, LineSpacing*, int>)(lpVtbl[82]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3::GetLineMetrics"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout3::GetLineMetrics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
 	public HResult GetLineMetrics(LineMetrics1* lineMetrics, uint maxLineCount, uint* actualLineCount)

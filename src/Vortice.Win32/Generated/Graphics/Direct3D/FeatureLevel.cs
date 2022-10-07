@@ -9,41 +9,41 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL"]/*' />
 /// <unmanaged>D3D_FEATURE_LEVEL</unmanaged>
 public enum FeatureLevel : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_1_0_CORE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_1_0_CORE"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_1_0_CORE</unmanaged>
 	Level_1_0_Core = 4096,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_1"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_1"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_9_1</unmanaged>
 	Level_9_1 = 37120,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_2"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_2"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_9_2</unmanaged>
 	Level_9_2 = 37376,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_3"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_9_3"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_9_3</unmanaged>
 	Level_9_3 = 37632,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_10_0"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_10_0"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_10_0</unmanaged>
 	Level_10_0 = 40960,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_10_1"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_10_1"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_10_1</unmanaged>
 	Level_10_1 = 41216,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_11_0"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_11_0"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_11_0</unmanaged>
 	Level_11_0 = 45056,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_11_1"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_11_1"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_11_1</unmanaged>
 	Level_11_1 = 45312,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_0"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_0"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_12_0</unmanaged>
 	Level_12_0 = 49152,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_1"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_1"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_12_1</unmanaged>
 	Level_12_1 = 49408,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_2"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_12_2"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_12_2</unmanaged>
 	Level_12_2 = 49664,
 }

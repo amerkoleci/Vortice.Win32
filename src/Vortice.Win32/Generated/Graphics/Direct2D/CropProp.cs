@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP"]/*' />
 /// <unmanaged>D2D1_CROP_PROP</unmanaged>
 public enum CropProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP::D2D1_CROP_PROP_RECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP::D2D1_CROP_PROP_RECT"]/*' />
 	/// <unmanaged>D2D1_CROP_PROP_RECT</unmanaged>
 	Rect = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP::D2D1_CROP_PROP_BORDER_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CROP_PROP::D2D1_CROP_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_CROP_PROP_BORDER_MODE</unmanaged>
 	BorderMode = 1,
 }

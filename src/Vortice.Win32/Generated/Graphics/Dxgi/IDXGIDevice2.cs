@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2"]/*' />
 /// <unmanaged>IDXGIDevice2</unmanaged>
 [Guid("05008617-fbfd-4051-a790-144884b4f6a9")]
 [NativeTypeName("struct IDXGIDevice2 : IDXGIDevice1")]
@@ -162,7 +162,7 @@ public unsafe partial struct IDXGIDevice2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, uint*, int>)(lpVtbl[13]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), pMaxLatency);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice2::OfferResources"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2::OfferResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult OfferResources(uint NumResources, IDXGIResource** ppResources, OfferResourcePriority Priority)
@@ -170,7 +170,7 @@ public unsafe partial struct IDXGIDevice2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, uint, IDXGIResource**, OfferResourcePriority, int>)(lpVtbl[14]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), NumResources, ppResources, Priority);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice2::ReclaimResources"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2::ReclaimResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult ReclaimResources(uint NumResources, IDXGIResource** ppResources, Bool32* pDiscarded)
@@ -178,7 +178,7 @@ public unsafe partial struct IDXGIDevice2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, uint, IDXGIResource**, Bool32*, int>)(lpVtbl[15]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), NumResources, ppResources, pDiscarded);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice2::EnqueueSetEvent"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice2::EnqueueSetEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult EnqueueSetEvent(Handle hEvent)

@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT"]/*' />
 /// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT</unmanaged>
 public enum ColorManagementRenderingIntent : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL</unmanaged>
 	Perceptual = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_RELATIVE_COLORIMETRIC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_RELATIVE_COLORIMETRIC"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_RELATIVE_COLORIMETRIC</unmanaged>
 	RelativeColorimetric = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_SATURATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_SATURATION"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_SATURATION</unmanaged>
 	Saturation = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_ABSOLUTE_COLORIMETRIC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLORMANAGEMENT_RENDERING_INTENT::D2D1_COLORMANAGEMENT_RENDERING_INTENT_ABSOLUTE_COLORIMETRIC"]/*' />
 	/// <unmanaged>D2D1_COLORMANAGEMENT_RENDERING_INTENT_ABSOLUTE_COLORIMETRIC</unmanaged>
 	AbsoluteColorimetric = 3,
 }

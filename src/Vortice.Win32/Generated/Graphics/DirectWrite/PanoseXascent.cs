@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_XASCENT</unmanaged>
 public enum PanoseXascent : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_VERY_LOW"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_VERY_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_VERY_LOW</unmanaged>
 	VeryLow = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_LOW"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_LOW</unmanaged>
 	Low = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_MEDIUM"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_MEDIUM</unmanaged>
 	Medium = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_HIGH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_HIGH</unmanaged>
 	High = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_VERY_HIGH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_VERY_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_VERY_HIGH</unmanaged>
 	VeryHigh = 6,
 }

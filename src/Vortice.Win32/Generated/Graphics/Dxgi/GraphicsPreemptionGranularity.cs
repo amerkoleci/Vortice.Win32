@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY"]/*' />
 /// <unmanaged>DXGI_GRAPHICS_PREEMPTION_GRANULARITY</unmanaged>
 public enum GraphicsPreemptionGranularity : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_DMA_BUFFER_BOUNDARY</unmanaged>
 	DmaBufferBoundary = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_PRIMITIVE_BOUNDARY</unmanaged>
 	PrimitiveBoundary = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_TRIANGLE_BOUNDARY</unmanaged>
 	TriangleBoundary = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_PIXEL_BOUNDARY</unmanaged>
 	PixelBoundary = 3,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GRAPHICS_PREEMPTION_GRANULARITY::DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY"]/*' />
 	/// <unmanaged>DXGI_GRAPHICS_PREEMPTION_INSTRUCTION_BOUNDARY</unmanaged>
 	InstructionBoundary = 4,
 }

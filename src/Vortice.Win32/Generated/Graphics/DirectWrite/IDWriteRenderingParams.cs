@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams"]/*' />
 /// <unmanaged>IDWriteRenderingParams</unmanaged>
 [Guid("2f0da53a-2add-47cd-82ee-d9ec34688e75")]
 [NativeTypeName("struct IDWriteRenderingParams : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteRenderingParams : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetGamma"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetGamma"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public float GetGamma()
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteRenderingParams : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, float>)(lpVtbl[3]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetEnhancedContrast"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetEnhancedContrast"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public float GetEnhancedContrast()
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteRenderingParams : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, float>)(lpVtbl[4]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetClearTypeLevel"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetClearTypeLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public float GetClearTypeLevel()
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteRenderingParams : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, float>)(lpVtbl[5]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetPixelGeometry"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetPixelGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public PixelGeometry GetPixelGeometry()
@@ -106,7 +106,7 @@ public unsafe partial struct IDWriteRenderingParams : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetRenderingMode"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams::GetRenderingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public RenderingMode GetRenderingMode()

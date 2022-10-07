@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont2"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont2"]/*' />
 /// <unmanaged>IDWriteFont2</unmanaged>
 [Guid("29748ed6-8c9c-4a6a-be0b-d912e8538944")]
 [NativeTypeName("struct IDWriteFont2 : IDWriteFont1")]
@@ -194,7 +194,7 @@ public unsafe partial struct IDWriteFont2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, Bool32>)(lpVtbl[17]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFont2::IsColorFont"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont2::IsColorFont"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public Bool32 IsColorFont()

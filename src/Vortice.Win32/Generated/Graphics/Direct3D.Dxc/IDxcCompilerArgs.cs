@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs"]/*' />
 /// <unmanaged>IDxcCompilerArgs</unmanaged>
 [Guid("73effe2a-70dc-45f8-9690-eff64c02429d")]
 [NativeTypeName("struct IDxcCompilerArgs : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcCompilerArgs : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::GetArguments"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::GetArguments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public ushort** GetArguments()
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcCompilerArgs : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcCompilerArgs*, ushort**>)(lpVtbl[3]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::GetCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::GetCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public uint GetCount()
@@ -90,7 +90,7 @@ public unsafe partial struct IDxcCompilerArgs : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcCompilerArgs*, uint>)(lpVtbl[4]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::AddArguments"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::AddArguments"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult AddArguments(ushort** pArguments, uint argCount)
@@ -98,7 +98,7 @@ public unsafe partial struct IDxcCompilerArgs : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcCompilerArgs*, ushort**, uint, int>)(lpVtbl[5]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pArguments, argCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::AddArgumentsUTF8"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::AddArgumentsUTF8"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult AddArgumentsUTF8(sbyte** pArguments, uint argCount)
@@ -106,7 +106,7 @@ public unsafe partial struct IDxcCompilerArgs : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcCompilerArgs*, sbyte**, uint, int>)(lpVtbl[6]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pArguments, argCount);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::AddDefines"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcCompilerArgs::AddDefines"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult AddDefines(DxcDefine* pDefines, uint defineCount)

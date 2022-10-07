@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities"]/*' />
 /// <unmanaged>WICBitmapDecoderCapabilities</unmanaged>
 public enum WICBitmapDecoderCapabilities : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilitySameEncoder"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilitySameEncoder"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilitySameEncoder</unmanaged>
 	SameEncoder = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeAllImages"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeAllImages"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilityCanDecodeAllImages</unmanaged>
 	CanDecodeAllImages = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeSomeImages"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeSomeImages"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilityCanDecodeSomeImages</unmanaged>
 	CanDecodeSomeImages = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanEnumerateMetadata"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanEnumerateMetadata"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilityCanEnumerateMetadata</unmanaged>
 	CanEnumerateMetadata = 8,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeThumbnail"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilityCanDecodeThumbnail"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilityCanDecodeThumbnail</unmanaged>
 	CanDecodeThumbnail = 16,
 }

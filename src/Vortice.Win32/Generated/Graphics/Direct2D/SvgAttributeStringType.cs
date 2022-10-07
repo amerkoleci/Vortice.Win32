@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE"]/*' />
 /// <unmanaged>D2D1_SVG_ATTRIBUTE_STRING_TYPE</unmanaged>
 public enum SvgAttributeStringType : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE::D2D1_SVG_ATTRIBUTE_STRING_TYPE_SVG"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE::D2D1_SVG_ATTRIBUTE_STRING_TYPE_SVG"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_STRING_TYPE_SVG</unmanaged>
 	Svg = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE::D2D1_SVG_ATTRIBUTE_STRING_TYPE_ID"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_ATTRIBUTE_STRING_TYPE::D2D1_SVG_ATTRIBUTE_STRING_TYPE_ID"]/*' />
 	/// <unmanaged>D2D1_SVG_ATTRIBUTE_STRING_TYPE_ID</unmanaged>
 	Id = 1,
 }

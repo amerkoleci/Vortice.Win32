@@ -9,41 +9,41 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY</unmanaged>
 public enum InfoQueueMessageCategory : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_MISCELLANEOUS</unmanaged>
 	Miscellaneous = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_INITIALIZATION</unmanaged>
 	Initialization = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_CLEANUP</unmanaged>
 	Cleanup = 3,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_COMPILATION</unmanaged>
 	Compilation = 4,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_CREATION</unmanaged>
 	StateCreation = 5,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_SETTING</unmanaged>
 	StateSetting = 6,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_STATE_GETTING</unmanaged>
 	StateGetting = 7,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_RESOURCE_MANIPULATION</unmanaged>
 	ResourceManipulation = 8,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_EXECUTION</unmanaged>
 	Execution = 9,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_MESSAGE_CATEGORY::DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER"]/*' />
 	/// <unmanaged>DXGI_INFO_QUEUE_MESSAGE_CATEGORY_SHADER</unmanaged>
 	Shader = 10,
 }

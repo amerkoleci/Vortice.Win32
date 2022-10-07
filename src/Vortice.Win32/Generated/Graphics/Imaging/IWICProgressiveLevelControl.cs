@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl"]/*' />
 /// <unmanaged>IWICProgressiveLevelControl</unmanaged>
 [Guid("daac296f-7aa5-4dbf-8d15-225c5976f891")]
 [NativeTypeName("struct IWICProgressiveLevelControl : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICProgressiveLevelControl : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::GetLevelCount"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::GetLevelCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetLevelCount(uint* pcLevels)
@@ -82,7 +82,7 @@ public unsafe partial struct IWICProgressiveLevelControl : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICProgressiveLevelControl*, uint*, int>)(lpVtbl[3]))((IWICProgressiveLevelControl*)Unsafe.AsPointer(ref this), pcLevels);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::GetCurrentLevel"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::GetCurrentLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetCurrentLevel(uint* pnLevel)
@@ -90,7 +90,7 @@ public unsafe partial struct IWICProgressiveLevelControl : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICProgressiveLevelControl*, uint*, int>)(lpVtbl[4]))((IWICProgressiveLevelControl*)Unsafe.AsPointer(ref this), pnLevel);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::SetCurrentLevel"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICProgressiveLevelControl::SetCurrentLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult SetCurrentLevel(uint nLevel)

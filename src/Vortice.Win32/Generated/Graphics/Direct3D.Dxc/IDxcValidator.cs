@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcValidator"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcValidator"]/*' />
 /// <unmanaged>IDxcValidator</unmanaged>
 [Guid("a6e82bd2-1fd7-4826-9811-2857e797f49a")]
 [NativeTypeName("struct IDxcValidator : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcValidator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcValidator::Validate"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcValidator::Validate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Validate(IDxcBlob* pShader, DxcValidatorFlags Flags, IDxcOperationResult** ppResult)

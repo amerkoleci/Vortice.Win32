@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICColorContextType"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICColorContextType"]/*' />
 /// <unmanaged>WICColorContextType</unmanaged>
 public enum WICColorContextType : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICColorContextType::WICColorContextUninitialized"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICColorContextType::WICColorContextUninitialized"]/*' />
 	/// <unmanaged>WICColorContextUninitialized</unmanaged>
 	Uninitialized = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICColorContextType::WICColorContextProfile"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICColorContextType::WICColorContextProfile"]/*' />
 	/// <unmanaged>WICColorContextProfile</unmanaged>
 	Profile = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICColorContextType::WICColorContextExifColorSpace"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICColorContextType::WICColorContextExifColorSpace"]/*' />
 	/// <unmanaged>WICColorContextExifColorSpace</unmanaged>
 	ExifColorSpace = 2,
 }

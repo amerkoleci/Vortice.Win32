@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink"]/*' />
 /// <unmanaged>IDWriteTextAnalysisSink</unmanaged>
 [Guid("5810cd44-0ca0-4701-b3fa-bec5182ae4f6")]
 [NativeTypeName("struct IDWriteTextAnalysisSink : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetScriptAnalysis"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetScriptAnalysis"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetScriptAnalysis(uint textPosition, uint textLength, ScriptAnalysis* scriptAnalysis)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink*, uint, uint, ScriptAnalysis*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), textPosition, textLength, scriptAnalysis);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetLineBreakpoints"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetLineBreakpoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetLineBreakpoints(uint textPosition, uint textLength, LineBreakpoint* lineBreakpoints)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink*, uint, uint, LineBreakpoint*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), textPosition, textLength, lineBreakpoints);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetBidiLevel"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetBidiLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel)
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteTextAnalysisSink : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink*, uint, uint, byte, byte, int>)(lpVtbl[5]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), textPosition, textLength, explicitLevel, resolvedLevel);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetNumberSubstitution"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink::SetNumberSubstitution"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution)

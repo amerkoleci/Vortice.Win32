@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICWebpAnmfProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnmfProperties"]/*' />
 /// <unmanaged>WICWebpAnmfProperties</unmanaged>
 public enum WICWebpAnmfProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICWebpAnmfProperties::WICWebpAnmfFrameDuration"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnmfProperties::WICWebpAnmfFrameDuration"]/*' />
 	/// <unmanaged>WICWebpAnmfFrameDuration</unmanaged>
 	WICWebpAnmfFrameDuration = 1,
 }

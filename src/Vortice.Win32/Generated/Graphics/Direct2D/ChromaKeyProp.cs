@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP"]/*' />
 /// <unmanaged>D2D1_CHROMAKEY_PROP</unmanaged>
 public enum ChromaKeyProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_COLOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_COLOR"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_COLOR</unmanaged>
 	Color = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_TOLERANCE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_TOLERANCE"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_TOLERANCE</unmanaged>
 	Tolerance = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_INVERT_ALPHA"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_INVERT_ALPHA"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_INVERT_ALPHA</unmanaged>
 	InvertAlpha = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_FEATHER"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHROMAKEY_PROP::D2D1_CHROMAKEY_PROP_FEATHER"]/*' />
 	/// <unmanaged>D2D1_CHROMAKEY_PROP_FEATHER</unmanaged>
 	Feather = 3,
 }

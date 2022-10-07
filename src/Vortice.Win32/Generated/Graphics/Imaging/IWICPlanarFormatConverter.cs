@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter"]/*' />
 /// <unmanaged>IWICPlanarFormatConverter</unmanaged>
 [Guid("bebee9cb-83b0-4dcc-8132-b0aaa55eac96")]
 [NativeTypeName("struct IWICPlanarFormatConverter : IWICBitmapSource")]
@@ -114,7 +114,7 @@ public unsafe partial struct IWICPlanarFormatConverter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::Initialize"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::Initialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Initialize(IWICBitmapSource** ppPlanes, uint cPlanes, Guid* dstFormat, WICBitmapDitherType dither, IWICPalette* pIPalette, double alphaThresholdPercent, WICBitmapPaletteType paletteTranslate)
@@ -122,7 +122,7 @@ public unsafe partial struct IWICPlanarFormatConverter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, IWICBitmapSource**, uint, Guid*, WICBitmapDitherType, IWICPalette*, double, WICBitmapPaletteType, int>)(lpVtbl[8]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, dstFormat, dither, pIPalette, alphaThresholdPercent, paletteTranslate);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::CanConvert"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::CanConvert"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CanConvert(Guid* pSrcPixelFormats, uint cSrcPlanes, Guid* dstPixelFormat, Bool32* pfCanConvert)

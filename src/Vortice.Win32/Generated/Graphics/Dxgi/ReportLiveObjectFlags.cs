@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS"]/*' />
 /// <unmanaged>DXGI_DEBUG_RLO_FLAGS</unmanaged>
 [Flags]
 public enum ReportLiveObjectFlags : uint
 {
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_SUMMARY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_SUMMARY"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_SUMMARY</unmanaged>
 	Summary = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_DETAIL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_DETAIL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_DETAIL</unmanaged>
 	Detail = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_IGNORE_INTERNAL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_IGNORE_INTERNAL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_IGNORE_INTERNAL</unmanaged>
 	IgnoreInternal = 4,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_ALL"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DEBUG_RLO_FLAGS::DXGI_DEBUG_RLO_ALL"]/*' />
 	/// <unmanaged>DXGI_DEBUG_RLO_ALL</unmanaged>
 	All = 7,
 }

@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG"]/*' />
 /// <unmanaged>DWRITE_FONT_AXIS_TAG</unmanaged>
 public enum FontAxisTag : uint
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_WEIGHT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_WEIGHT"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_WEIGHT</unmanaged>
 	Weight = 1952999287,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_WIDTH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_WIDTH</unmanaged>
 	Width = 1752458359,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_SLANT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_SLANT"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_SLANT</unmanaged>
 	Slant = 1953393779,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_OPTICAL_SIZE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_OPTICAL_SIZE"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_OPTICAL_SIZE</unmanaged>
 	OpticalSize = 2054385775,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_ITALIC"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_TAG::DWRITE_FONT_AXIS_TAG_ITALIC"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_TAG_ITALIC</unmanaged>
 	Italic = 1818326121,
 }

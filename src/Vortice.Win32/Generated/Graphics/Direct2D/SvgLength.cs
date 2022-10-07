@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH"]/*' />
 /// <unmanaged>D2D1_SVG_LENGTH</unmanaged>
 public partial struct SvgLength
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH::value"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH::value"]/*' />
 	public float value;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH::units"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_LENGTH::units"]/*' />
 	public SvgLengthUnits units;
 }

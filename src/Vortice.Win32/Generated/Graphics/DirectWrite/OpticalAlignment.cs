@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_OPTICAL_ALIGNMENT</unmanaged>
 public enum OpticalAlignment : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT::DWRITE_OPTICAL_ALIGNMENT_NONE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT::DWRITE_OPTICAL_ALIGNMENT_NONE"]/*' />
 	/// <unmanaged>DWRITE_OPTICAL_ALIGNMENT_NONE</unmanaged>
 	None = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT::DWRITE_OPTICAL_ALIGNMENT_NO_SIDE_BEARINGS"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT::DWRITE_OPTICAL_ALIGNMENT_NO_SIDE_BEARINGS"]/*' />
 	/// <unmanaged>DWRITE_OPTICAL_ALIGNMENT_NO_SIDE_BEARINGS</unmanaged>
 	NoSideBearings = 1,
 }

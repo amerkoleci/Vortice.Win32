@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICDdsFormatInfo"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo"]/*' />
 /// <unmanaged>WICDdsFormatInfo</unmanaged>
 public partial struct WICDdsFormatInfo
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::DxgiFormat"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::DxgiFormat"]/*' />
 	public Graphics.Dxgi.Common.Format DxgiFormat;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BytesPerBlock"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BytesPerBlock"]/*' />
 	public uint BytesPerBlock;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BlockWidth"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BlockWidth"]/*' />
 	public uint BlockWidth;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BlockHeight"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsFormatInfo::BlockHeight"]/*' />
 	public uint BlockHeight;
 }

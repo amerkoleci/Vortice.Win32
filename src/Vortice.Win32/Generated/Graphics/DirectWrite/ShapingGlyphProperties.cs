@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SHAPING_GLYPH_PROPERTIES"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SHAPING_GLYPH_PROPERTIES"]/*' />
 /// <unmanaged>DWRITE_SHAPING_GLYPH_PROPERTIES</unmanaged>
 public partial struct ShapingGlyphProperties
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_SHAPING_GLYPH_PROPERTIES::_bitfield"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SHAPING_GLYPH_PROPERTIES::_bitfield"]/*' />
 	public ushort _bitfield;
 }

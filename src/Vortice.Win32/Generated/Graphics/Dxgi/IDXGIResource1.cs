@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1"]/*' />
 /// <unmanaged>IDXGIResource1</unmanaged>
 [Guid("30961379-4609-4a41-998e-54fe567ee0c1")]
 [NativeTypeName("struct IDXGIResource1 : IDXGIResource")]
@@ -146,7 +146,7 @@ public unsafe partial struct IDXGIResource1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint*, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface)
@@ -154,7 +154,7 @@ public unsafe partial struct IDXGIResource1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint, IDXGISurface2**, int>)(lpVtbl[12]))((IDXGIResource1*)Unsafe.AsPointer(ref this), index, ppSurface);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle)

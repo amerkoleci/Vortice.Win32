@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_VALUE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_VALUE"]/*' />
 /// <unmanaged>DWRITE_FONT_AXIS_VALUE</unmanaged>
 public partial struct FontAxisValue
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_VALUE::axisTag"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_VALUE::axisTag"]/*' />
 	public FontAxisTag axisTag;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_VALUE::value"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_VALUE::value"]/*' />
 	public float value;
 }

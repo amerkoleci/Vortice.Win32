@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP"]/*' />
 /// <unmanaged>D2D1_SCALE_PROP</unmanaged>
 public enum ScaleProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_SCALE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_SCALE"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_SCALE</unmanaged>
 	Scale = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_CENTER_POINT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_CENTER_POINT"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_CENTER_POINT</unmanaged>
 	CenterPoint = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_INTERPOLATION_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_INTERPOLATION_MODE"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_INTERPOLATION_MODE</unmanaged>
 	InterpolationMode = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_BORDER_MODE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_BORDER_MODE"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_BORDER_MODE</unmanaged>
 	BorderMode = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_SHARPNESS"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SCALE_PROP::D2D1_SCALE_PROP_SHARPNESS"]/*' />
 	/// <unmanaged>D2D1_SCALE_PROP_SHARPNESS</unmanaged>
 	Sharpness = 4,
 }

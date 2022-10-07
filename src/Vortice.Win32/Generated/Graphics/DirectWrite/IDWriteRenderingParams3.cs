@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams3"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams3"]/*' />
 /// <unmanaged>IDWriteRenderingParams3</unmanaged>
 [Guid("b7924baa-391b-412a-8c5c-e44cc2d867dc")]
 [NativeTypeName("struct IDWriteRenderingParams3 : IDWriteRenderingParams2")]
@@ -130,7 +130,7 @@ public unsafe partial struct IDWriteRenderingParams3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams3::GetRenderingMode1"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams3::GetRenderingMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public RenderingMode1 GetRenderingMode1()

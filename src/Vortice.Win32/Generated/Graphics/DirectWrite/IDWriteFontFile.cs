@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFile"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile"]/*' />
 /// <unmanaged>IDWriteFontFile</unmanaged>
 [Guid("739d886a-cef5-47dc-8769-1a8b41bebbb0")]
 [NativeTypeName("struct IDWriteFontFile : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteFontFile : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::GetReferenceKey"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::GetReferenceKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetReferenceKey(void** fontFileReferenceKey, uint* fontFileReferenceKeySize)
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteFontFile : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFile*, void**, uint*, int>)(lpVtbl[3]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::GetLoader"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::GetLoader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetLoader(IDWriteFontFileLoader** fontFileLoader)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteFontFile : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFile*, IDWriteFontFileLoader**, int>)(lpVtbl[4]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), fontFileLoader);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::Analyze"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFile::Analyze"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult Analyze(Bool32* isSupportedFontType, FontFileType* fontFileType, FontFaceType* fontFaceType, uint* numberOfFaces)

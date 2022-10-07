@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION"]/*' />
 /// <unmanaged>DWRITE_FLOW_DIRECTION</unmanaged>
 public enum FlowDirection : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM</unmanaged>
 	TopToBottom = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_BOTTOM_TO_TOP"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_BOTTOM_TO_TOP"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_BOTTOM_TO_TOP</unmanaged>
 	BottomToTop = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_LEFT_TO_RIGHT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_LEFT_TO_RIGHT"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_LEFT_TO_RIGHT</unmanaged>
 	LeftToRight = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_RIGHT_TO_LEFT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_RIGHT_TO_LEFT"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_RIGHT_TO_LEFT</unmanaged>
 	RightToLeft = 3,
 }

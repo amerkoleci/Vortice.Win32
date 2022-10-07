@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileLoader"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileLoader"]/*' />
 /// <unmanaged>IDWriteFontFileLoader</unmanaged>
 [Guid("727cad4e-d6af-4c9e-8a08-d695b11caa49")]
 [NativeTypeName("struct IDWriteFontFileLoader : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteFontFileLoader : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFileLoader::CreateStreamFromKey"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFileLoader::CreateStreamFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream)

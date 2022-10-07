@@ -9,38 +9,38 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO</unmanaged>
 public enum PanoseSymbolAspectRatio : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_WIDTH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_WIDTH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_WIDTH</unmanaged>
 	NoWidth = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_EXCEPTIONALLY_WIDE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_EXCEPTIONALLY_WIDE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_EXCEPTIONALLY_WIDE</unmanaged>
 	ExceptionallyWide = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_SUPER_WIDE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_SUPER_WIDE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_SUPER_WIDE</unmanaged>
 	SuperWide = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_WIDE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_WIDE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_WIDE</unmanaged>
 	VeryWide = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_WIDE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_WIDE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_WIDE</unmanaged>
 	Wide = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NORMAL"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NORMAL</unmanaged>
 	Normal = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NARROW"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NARROW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NARROW</unmanaged>
 	Narrow = 8,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_NARROW"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_NARROW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_NARROW</unmanaged>
 	VeryNarrow = 9,
 }

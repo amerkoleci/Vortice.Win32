@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5"]/*' />
 /// <unmanaged>IDWriteFontFace5</unmanaged>
 [Guid("98eff3a5-b667-479a-b145-e2fa5b9fdc29")]
 [NativeTypeName("struct IDWriteFontFace5 : IDWriteFontFace4")]
@@ -474,7 +474,7 @@ public unsafe partial struct IDWriteFontFace5 : INativeGuid
 		((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, void*, void>)(lpVtbl[52]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this), glyphDataContext);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::GetFontAxisValueCount"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::GetFontAxisValueCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
 	public uint GetFontAxisValueCount()
@@ -482,7 +482,7 @@ public unsafe partial struct IDWriteFontFace5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, uint>)(lpVtbl[53]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::GetFontAxisValues"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::GetFontAxisValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
 	public HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount)
@@ -490,7 +490,7 @@ public unsafe partial struct IDWriteFontFace5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, FontAxisValue*, uint, int>)(lpVtbl[54]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::HasVariations"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::HasVariations"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(55)]
 	public Bool32 HasVariations()
@@ -498,7 +498,7 @@ public unsafe partial struct IDWriteFontFace5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, Bool32>)(lpVtbl[55]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::GetFontResource"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::GetFontResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
 	public HResult GetFontResource(IDWriteFontResource** fontResource)
@@ -506,7 +506,7 @@ public unsafe partial struct IDWriteFontFace5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, IDWriteFontResource**, int>)(lpVtbl[56]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this), fontResource);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::Equals"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace5::Equals"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
 	public Bool32 Equals(IDWriteFontFace* fontFace)

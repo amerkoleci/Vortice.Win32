@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FEATURE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FEATURE"]/*' />
 /// <unmanaged>DXGI_FEATURE</unmanaged>
 public enum Feature : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_FEATURE::DXGI_FEATURE_PRESENT_ALLOW_TEARING"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FEATURE::DXGI_FEATURE_PRESENT_ALLOW_TEARING"]/*' />
 	/// <unmanaged>DXGI_FEATURE_PRESENT_ALLOW_TEARING</unmanaged>
 	PresentAllowTearing = 0,
 }

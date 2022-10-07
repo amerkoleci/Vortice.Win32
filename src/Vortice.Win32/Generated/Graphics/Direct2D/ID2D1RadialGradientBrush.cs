@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush"]/*' />
 /// <unmanaged>ID2D1RadialGradientBrush</unmanaged>
 [Guid("2cd906ac-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1RadialGradientBrush : ID2D1Brush")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetCenter"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetCenter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void SetCenter(System.Drawing.PointF center)
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, System.Drawing.PointF, void>)(lpVtbl[8]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), center);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetGradientOriginOffset"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetGradientOriginOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public void SetGradientOriginOffset(System.Drawing.PointF gradientOriginOffset)
@@ -130,7 +130,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, System.Drawing.PointF, void>)(lpVtbl[9]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientOriginOffset);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetRadiusX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetRadiusX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public void SetRadiusX(float radiusX)
@@ -138,7 +138,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[10]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), radiusX);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetRadiusY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetRadiusY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public void SetRadiusY(float radiusY)
@@ -146,7 +146,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[11]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), radiusY);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetCenter"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetCenter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public System.Drawing.PointF GetCenter()
@@ -155,7 +155,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, System.Drawing.PointF*, System.Drawing.PointF*>)(lpVtbl[12]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetGradientOriginOffset"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetGradientOriginOffset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public System.Drawing.PointF GetGradientOriginOffset()
@@ -164,7 +164,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, System.Drawing.PointF*, System.Drawing.PointF*>)(lpVtbl[13]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetRadiusX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetRadiusX"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public float GetRadiusX()
@@ -172,7 +172,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float>)(lpVtbl[14]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetRadiusY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetRadiusY"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public float GetRadiusY()
@@ -180,7 +180,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float>)(lpVtbl[15]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetGradientStopCollection"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetGradientStopCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public void GetGradientStopCollection(ID2D1GradientStopCollection** gradientStopCollection)

@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1"]/*' />
 /// <unmanaged>D2D1_DRAWING_STATE_DESCRIPTION1</unmanaged>
 public partial struct DrawingStateDescription1
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::antialiasMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::antialiasMode"]/*' />
 	public AntialiasMode antialiasMode;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::textAntialiasMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::textAntialiasMode"]/*' />
 	public TextAntialiasMode textAntialiasMode;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::tag1"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::tag1"]/*' />
 	public ulong tag1;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::tag2"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::tag2"]/*' />
 	public ulong tag2;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::transform"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::transform"]/*' />
 	public Matrix3x2 transform;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::primitiveBlend"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::primitiveBlend"]/*' />
 	public PrimitiveBlend primitiveBlend;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::unitMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION1::unitMode"]/*' />
 	public UnitMode unitMode;
 }

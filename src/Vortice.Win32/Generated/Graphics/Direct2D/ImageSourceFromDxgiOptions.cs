@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS"]/*' />
 /// <unmanaged>D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS</unmanaged>
 [Flags]
 public enum ImageSourceFromDxgiOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS::D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS::D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS::D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_LOW_QUALITY_PRIMARY_CONVERSION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS::D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_LOW_QUALITY_PRIMARY_CONVERSION"]/*' />
 	/// <unmanaged>D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_LOW_QUALITY_PRIMARY_CONVERSION</unmanaged>
 	LowQualityPrimaryConversion = 1,
 }

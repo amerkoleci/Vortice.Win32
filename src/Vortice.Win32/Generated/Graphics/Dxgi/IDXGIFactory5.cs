@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory5"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory5"]/*' />
 /// <unmanaged>IDXGIFactory5</unmanaged>
 [Guid("7632e1f5-ee65-4dca-87fd-84cd75f8838d")]
 [NativeTypeName("struct IDXGIFactory5 : IDXGIFactory4")]
@@ -274,7 +274,7 @@ public unsafe partial struct IDXGIFactory5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIFactory5::CheckFeatureSupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory5::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)

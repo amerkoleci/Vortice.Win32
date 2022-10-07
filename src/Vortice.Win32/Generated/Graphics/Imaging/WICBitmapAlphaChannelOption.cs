@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption"]/*' />
 /// <unmanaged>WICBitmapAlphaChannelOption</unmanaged>
 public enum WICBitmapAlphaChannelOption : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapUseAlpha"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapUseAlpha"]/*' />
 	/// <unmanaged>WICBitmapUseAlpha</unmanaged>
 	UseAlpha = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapUsePremultipliedAlpha"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapUsePremultipliedAlpha"]/*' />
 	/// <unmanaged>WICBitmapUsePremultipliedAlpha</unmanaged>
 	UsePremultipliedAlpha = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapIgnoreAlpha"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapIgnoreAlpha"]/*' />
 	/// <unmanaged>WICBitmapIgnoreAlpha</unmanaged>
 	IgnoreAlpha = 2,
 }

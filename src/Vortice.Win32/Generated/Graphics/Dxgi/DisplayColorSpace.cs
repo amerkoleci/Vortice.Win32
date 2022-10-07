@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE"]/*' />
 /// <unmanaged>DXGI_DISPLAY_COLOR_SPACE</unmanaged>
 public partial struct DisplayColorSpace
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::PrimaryCoordinates"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::PrimaryCoordinates"]/*' />
 	public unsafe fixed float PrimaryCoordinates[16];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::WhitePoints"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DISPLAY_COLOR_SPACE::WhitePoints"]/*' />
 	public unsafe fixed float WhitePoints[32];
 }

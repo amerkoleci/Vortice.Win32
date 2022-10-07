@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION"]/*' />
 /// <unmanaged>DWRITE_GLYPH_RUN_DESCRIPTION</unmanaged>
 public partial struct GlyphRunDescription
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::localeName"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::localeName"]/*' />
 	public unsafe ushort* localeName;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::string"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::string"]/*' />
 	public unsafe ushort* @string;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::stringLength"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::stringLength"]/*' />
 	public uint stringLength;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::clusterMap"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::clusterMap"]/*' />
 	public unsafe ushort* clusterMap;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::textPosition"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::textPosition"]/*' />
 	public uint textPosition;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture"]/*' />
 /// <unmanaged>ID2D1ResourceTexture</unmanaged>
 [Guid("688d15c3-02b0-438d-b13a-d1b44c32c39a")]
 [NativeTypeName("struct ID2D1ResourceTexture : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1ResourceTexture : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture::Update"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ResourceTexture::Update"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Update(uint* minimumExtents, uint* maximimumExtents, uint* strides, uint dimensions, byte* data, uint dataCount)

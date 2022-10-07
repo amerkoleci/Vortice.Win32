@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION"]/*' />
 /// <unmanaged>D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION</unmanaged>
 public enum ColorBitmapGlyphSnapOption : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION::D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DEFAULT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION::D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION::D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DISABLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION::D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DISABLE"]/*' />
 	/// <unmanaged>D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DISABLE</unmanaged>
 	Disable = 1,
 }

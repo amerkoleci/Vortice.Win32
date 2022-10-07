@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT"]/*' />
 /// <unmanaged>D2D1_ROUNDED_RECT</unmanaged>
 public partial struct RoundedRect
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::rect"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::rect"]/*' />
 	public Common.RectF rect;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::radiusX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::radiusX"]/*' />
 	public float radiusX;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::radiusY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ROUNDED_RECT::radiusY"]/*' />
 	public float radiusY;
 }

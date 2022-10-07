@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BORDER_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_MODE"]/*' />
 /// <unmanaged>D2D1_BORDER_MODE</unmanaged>
 public enum BorderMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BORDER_MODE::D2D1_BORDER_MODE_SOFT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_MODE::D2D1_BORDER_MODE_SOFT"]/*' />
 	/// <unmanaged>D2D1_BORDER_MODE_SOFT</unmanaged>
 	Soft = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BORDER_MODE::D2D1_BORDER_MODE_HARD"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BORDER_MODE::D2D1_BORDER_MODE_HARD"]/*' />
 	/// <unmanaged>D2D1_BORDER_MODE_HARD</unmanaged>
 	Hard = 1,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Layer"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Layer"]/*' />
 /// <unmanaged>ID2D1Layer</unmanaged>
 [Guid("2cd9069b-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Layer : ID2D1Resource")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1Layer : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1Layer*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Layer*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Layer::GetSize"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Layer::GetSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public System.Drawing.SizeF GetSize()

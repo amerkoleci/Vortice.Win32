@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS"]/*' />
 /// <unmanaged>DWRITE_LINE_METRICS</unmanaged>
 public partial struct LineMetrics
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::length"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::length"]/*' />
 	public uint length;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::trailingWhitespaceLength"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::trailingWhitespaceLength"]/*' />
 	public uint trailingWhitespaceLength;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::newlineLength"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::newlineLength"]/*' />
 	public uint newlineLength;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::height"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::height"]/*' />
 	public float height;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::baseline"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::baseline"]/*' />
 	public float baseline;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::isTrimmed"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS::isTrimmed"]/*' />
 	public Bool32 isTrimmed;
 }

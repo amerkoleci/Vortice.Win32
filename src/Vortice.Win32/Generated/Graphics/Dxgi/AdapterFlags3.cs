@@ -9,30 +9,30 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG3</unmanaged>
 [Flags]
 public enum AdapterFlags3 : uint
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_NONE</unmanaged>
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_REMOTE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_REMOTE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_REMOTE</unmanaged>
 	Remote = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SOFTWARE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SOFTWARE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SOFTWARE</unmanaged>
 	Software = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_ACG_COMPATIBLE</unmanaged>
 	AcgCompatible = 4,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES</unmanaged>
 	SupportMonitoredFences = 8,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES</unmanaged>
 	SupportNonMonitoredFences = 16,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE</unmanaged>
 	KeyedMutexConformance = 32,
 }

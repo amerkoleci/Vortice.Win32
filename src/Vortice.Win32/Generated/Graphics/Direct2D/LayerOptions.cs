@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS"]/*' />
 /// <unmanaged>D2D1_LAYER_OPTIONS</unmanaged>
 [Flags]
 public enum LayerOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS::D2D1_LAYER_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS::D2D1_LAYER_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS::D2D1_LAYER_OPTIONS_INITIALIZE_FOR_CLEARTYPE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_OPTIONS::D2D1_LAYER_OPTIONS_INITIALIZE_FOR_CLEARTYPE"]/*' />
 	/// <unmanaged>D2D1_LAYER_OPTIONS_INITIALIZE_FOR_CLEARTYPE</unmanaged>
 	InitializeForCleartype = 1,
 }

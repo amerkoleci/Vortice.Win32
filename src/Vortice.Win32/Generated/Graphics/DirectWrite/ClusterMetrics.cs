@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS"]/*' />
 /// <unmanaged>DWRITE_CLUSTER_METRICS</unmanaged>
 public partial struct ClusterMetrics
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS::width"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS::width"]/*' />
 	public float width;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS::length"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS::length"]/*' />
 	public ushort length;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS::_bitfield"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CLUSTER_METRICS::_bitfield"]/*' />
 	public ushort _bitfield;
 }

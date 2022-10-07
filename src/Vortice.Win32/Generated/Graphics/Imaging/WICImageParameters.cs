@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICImageParameters"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters"]/*' />
 /// <unmanaged>WICImageParameters</unmanaged>
 public partial struct WICImageParameters
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICImageParameters::PixelFormat"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelFormat"]/*' />
 	public Graphics.Direct2D.Common.PixelFormat PixelFormat;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICImageParameters::DpiX"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::DpiX"]/*' />
 	public float DpiX;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICImageParameters::DpiY"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::DpiY"]/*' />
 	public float DpiY;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICImageParameters::Top"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::Top"]/*' />
 	public float Top;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICImageParameters::Left"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::Left"]/*' />
 	public float Left;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICImageParameters::PixelWidth"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelWidth"]/*' />
 	public uint PixelWidth;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="WICImageParameters::PixelHeight"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICImageParameters::PixelHeight"]/*' />
 	public uint PixelHeight;
 }

@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS"]/*' />
 /// <unmanaged>D2D1_PIXEL_OPTIONS</unmanaged>
 [Flags]
 public enum PixelOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS::D2D1_PIXEL_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS::D2D1_PIXEL_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_PIXEL_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS::D2D1_PIXEL_OPTIONS_TRIVIAL_SAMPLING"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PIXEL_OPTIONS::D2D1_PIXEL_OPTIONS_TRIVIAL_SAMPLING"]/*' />
 	/// <unmanaged>D2D1_PIXEL_OPTIONS_TRIVIAL_SAMPLING</unmanaged>
 	TrivialSampling = 1,
 }

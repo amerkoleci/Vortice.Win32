@@ -9,50 +9,50 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST"]/*' />
 /// <unmanaged>DWRITE_PANOSE_CONTRAST</unmanaged>
 public enum PanoseContrast : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_ANY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_ANY</unmanaged>
 	Any = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_NO_FIT"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_NO_FIT"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_NO_FIT</unmanaged>
 	NoFit = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_NONE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_NONE"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_NONE</unmanaged>
 	None = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_VERY_LOW"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_VERY_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_VERY_LOW</unmanaged>
 	VeryLow = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_LOW"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_LOW</unmanaged>
 	Low = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM_LOW"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_MEDIUM_LOW</unmanaged>
 	MediumLow = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_MEDIUM</unmanaged>
 	Medium = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM_HIGH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_MEDIUM_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_MEDIUM_HIGH</unmanaged>
 	MediumHigh = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HIGH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_HIGH</unmanaged>
 	High = 8,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_VERY_HIGH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_VERY_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_VERY_HIGH</unmanaged>
 	VeryHigh = 9,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_LOW"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_LOW"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_HORIZONTAL_LOW</unmanaged>
 	HorizontalLow = 10,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_MEDIUM"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_MEDIUM"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_HORIZONTAL_MEDIUM</unmanaged>
 	HorizontalMedium = 11,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_HIGH"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_HORIZONTAL_HIGH"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_HORIZONTAL_HIGH</unmanaged>
 	HorizontalHigh = 12,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_BROKEN"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_BROKEN"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_BROKEN</unmanaged>
 	Broken = 13,
 }

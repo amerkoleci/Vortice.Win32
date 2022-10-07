@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader"]/*' />
 /// <unmanaged>IDWriteFontCollectionLoader</unmanaged>
 [Guid("cca920e4-52f0-492b-bfa8-29c72ee0a468")]
 [NativeTypeName("struct IDWriteFontCollectionLoader : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDWriteFontCollectionLoader : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader::CreateEnumeratorFromKey"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollectionLoader::CreateEnumeratorFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateEnumeratorFromKey(IDWriteFactory* factory, void* collectionKey, uint collectionKeySize, IDWriteFontFileEnumerator** fontFileEnumerator)

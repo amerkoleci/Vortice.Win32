@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput3"]/*' />
 /// <unmanaged>IDXGIOutput3</unmanaged>
 [Guid("8a6bb301-7e7e-41f4-a8e0-5b32f7f99b18")]
 [NativeTypeName("struct IDXGIOutput3 : IDXGIOutput2")]
@@ -242,7 +242,7 @@ public unsafe partial struct IDXGIOutput3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Bool32>)(lpVtbl[23]))((IDXGIOutput3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput3::CheckOverlaySupport"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput3::CheckOverlaySupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)

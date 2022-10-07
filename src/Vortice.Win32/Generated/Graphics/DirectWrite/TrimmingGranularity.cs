@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY"]/*' />
 /// <unmanaged>DWRITE_TRIMMING_GRANULARITY</unmanaged>
 public enum TrimmingGranularity : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_NONE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_NONE"]/*' />
 	/// <unmanaged>DWRITE_TRIMMING_GRANULARITY_NONE</unmanaged>
 	None = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_CHARACTER"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_CHARACTER"]/*' />
 	/// <unmanaged>DWRITE_TRIMMING_GRANULARITY_CHARACTER</unmanaged>
 	Character = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_WORD"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_WORD"]/*' />
 	/// <unmanaged>DWRITE_TRIMMING_GRANULARITY_WORD</unmanaged>
 	Word = 2,
 }

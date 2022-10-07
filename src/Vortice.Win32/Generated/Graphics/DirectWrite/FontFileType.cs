@@ -9,35 +9,35 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_FILE_TYPE</unmanaged>
 public enum FontFileType : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_UNKNOWN"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_CFF"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_CFF"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_CFF</unmanaged>
 	Cff = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TRUETYPE"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TRUETYPE"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_TRUETYPE</unmanaged>
 	Truetype = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_OPENTYPE_COLLECTION"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_OPENTYPE_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_OPENTYPE_COLLECTION</unmanaged>
 	OpentypeCollection = 3,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TYPE1_PFM"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TYPE1_PFM"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_TYPE1_PFM</unmanaged>
 	Type1Pfm = 4,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TYPE1_PFB"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TYPE1_PFB"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_TYPE1_PFB</unmanaged>
 	Type1Pfb = 5,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_VECTOR"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_VECTOR"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_VECTOR</unmanaged>
 	Vector = 6,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_BITMAP"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_BITMAP"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_BITMAP</unmanaged>
 	Bitmap = 7,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TRUETYPE_COLLECTION"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_TRUETYPE_COLLECTION"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_TRUETYPE_COLLECTION</unmanaged>
 	TruetypeCollection = 3,
 }

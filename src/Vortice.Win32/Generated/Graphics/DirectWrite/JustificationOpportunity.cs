@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY"]/*' />
 /// <unmanaged>DWRITE_JUSTIFICATION_OPPORTUNITY</unmanaged>
 public partial struct JustificationOpportunity
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::expansionMinimum"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::expansionMinimum"]/*' />
 	public float expansionMinimum;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::expansionMaximum"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::expansionMaximum"]/*' />
 	public float expansionMaximum;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::compressionMaximum"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::compressionMaximum"]/*' />
 	public float compressionMaximum;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::_bitfield"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_JUSTIFICATION_OPPORTUNITY::_bitfield"]/*' />
 	public uint _bitfield;
 }

@@ -9,24 +9,24 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS"]/*' />
 /// <unmanaged>D2D1_BITMAP_OPTIONS</unmanaged>
 [Flags]
 public enum BitmapOptions : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_NONE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_NONE"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_TARGET"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_TARGET"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_TARGET</unmanaged>
 	Target = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_CANNOT_DRAW"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_CANNOT_DRAW"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_CANNOT_DRAW</unmanaged>
 	CannotDraw = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_CPU_READ"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_CPU_READ"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_CPU_READ</unmanaged>
 	CpuRead = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_GDI_COMPATIBLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_OPTIONS::D2D1_BITMAP_OPTIONS_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>D2D1_BITMAP_OPTIONS_GDI_COMPATIBLE</unmanaged>
 	GDICompatible = 8,
 }

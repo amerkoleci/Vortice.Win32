@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE"]/*' />
 /// <unmanaged>D2D1_CAP_STYLE</unmanaged>
 public enum CapStyle : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_FLAT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_FLAT"]/*' />
 	/// <unmanaged>D2D1_CAP_STYLE_FLAT</unmanaged>
 	Flat = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_SQUARE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_SQUARE"]/*' />
 	/// <unmanaged>D2D1_CAP_STYLE_SQUARE</unmanaged>
 	Square = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_ROUND"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_ROUND"]/*' />
 	/// <unmanaged>D2D1_CAP_STYLE_ROUND</unmanaged>
 	Round = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_TRIANGLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CAP_STYLE::D2D1_CAP_STYLE_TRIANGLE"]/*' />
 	/// <unmanaged>D2D1_CAP_STYLE_TRIANGLE</unmanaged>
 	Triangle = 3,
 }

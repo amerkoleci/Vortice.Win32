@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput1"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1"]/*' />
 /// <unmanaged>IDXGIOutput1</unmanaged>
 [Guid("00cddea8-939b-4b83-a340-a685226666cc")]
 [NativeTypeName("struct IDXGIOutput1 : IDXGIOutput")]
@@ -202,7 +202,7 @@ public unsafe partial struct IDXGIOutput1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pStats);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput1::GetDisplayModeList1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::GetDisplayModeList1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
@@ -210,7 +210,7 @@ public unsafe partial struct IDXGIOutput1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput1::FindClosestMatchingMode1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::FindClosestMatchingMode1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
@@ -218,7 +218,7 @@ public unsafe partial struct IDXGIOutput1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput1::GetDisplaySurfaceData1"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::GetDisplaySurfaceData1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
@@ -226,7 +226,7 @@ public unsafe partial struct IDXGIOutput1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, IDXGIResource*, int>)(lpVtbl[21]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDestination);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIOutput1::DuplicateOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::DuplicateOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)

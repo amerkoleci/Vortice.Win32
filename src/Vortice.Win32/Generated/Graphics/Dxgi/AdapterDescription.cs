@@ -9,34 +9,34 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC"]/*' />
 /// <unmanaged>DXGI_ADAPTER_DESC</unmanaged>
 public partial struct AdapterDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
 	public unsafe fixed ushort Description[128];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::VendorId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::VendorId"]/*' />
 	public uint VendorId;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DeviceId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DeviceId"]/*' />
 	public uint DeviceId;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SubSysId"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SubSysId"]/*' />
 	public uint SubSysId;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Revision"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Revision"]/*' />
 	public uint Revision;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedVideoMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedVideoMemory"]/*' />
 	public nuint DedicatedVideoMemory;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::DedicatedSystemMemory"]/*' />
 	public nuint DedicatedSystemMemory;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SharedSystemMemory"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::SharedSystemMemory"]/*' />
 	public nuint SharedSystemMemory;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::AdapterLuid"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::AdapterLuid"]/*' />
 	public Luid AdapterLuid;
 }

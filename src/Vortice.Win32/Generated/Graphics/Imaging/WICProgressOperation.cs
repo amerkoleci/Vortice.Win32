@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICProgressOperation"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation"]/*' />
 /// <unmanaged>WICProgressOperation</unmanaged>
 public enum WICProgressOperation : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationCopyPixels"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationCopyPixels"]/*' />
 	/// <unmanaged>WICProgressOperationCopyPixels</unmanaged>
 	CopyPixels = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationWritePixels"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationWritePixels"]/*' />
 	/// <unmanaged>WICProgressOperationWritePixels</unmanaged>
 	WritePixels = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationAll"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationAll"]/*' />
 	/// <unmanaged>WICProgressOperationAll</unmanaged>
 	All = 65535,
 }

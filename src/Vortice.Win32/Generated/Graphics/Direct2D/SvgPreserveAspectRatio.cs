@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO"]/*' />
 /// <unmanaged>D2D1_SVG_PRESERVE_ASPECT_RATIO</unmanaged>
 public partial struct SvgPreserveAspectRatio
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO::defer"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO::defer"]/*' />
 	public Bool32 defer;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO::align"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO::align"]/*' />
 	public SvgAspectAlign align;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO::meetOrSlice"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_PRESERVE_ASPECT_RATIO::meetOrSlice"]/*' />
 	public SvgAspectScaling meetOrSlice;
 }

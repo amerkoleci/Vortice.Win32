@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC"]/*' />
 /// <unmanaged>D2D1_INPUT_ELEMENT_DESC</unmanaged>
 public partial struct InputElementDescription
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::semanticName"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::semanticName"]/*' />
 	public unsafe sbyte* semanticName;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::semanticIndex"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::semanticIndex"]/*' />
 	public uint semanticIndex;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::format"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::format"]/*' />
 	public Graphics.Dxgi.Common.Format format;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::inputSlot"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::inputSlot"]/*' />
 	public uint inputSlot;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::alignedByteOffset"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::alignedByteOffset"]/*' />
 	public uint alignedByteOffset;
 }

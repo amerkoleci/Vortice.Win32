@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_TEXT_ALIGNMENT</unmanaged>
 public enum TextAlignment : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_LEADING"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_LEADING"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_LEADING</unmanaged>
 	Leading = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_TRAILING"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_TRAILING"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_TRAILING</unmanaged>
 	Trailing = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_CENTER"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_CENTER"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_CENTER</unmanaged>
 	Center = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_JUSTIFIED"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_JUSTIFIED"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_JUSTIFIED</unmanaged>
 	Justified = 3,
 }

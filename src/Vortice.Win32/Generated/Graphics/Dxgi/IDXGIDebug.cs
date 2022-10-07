@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDebug"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug"]/*' />
 /// <unmanaged>IDXGIDebug</unmanaged>
 [Guid("119e7452-de9e-40fe-8806-88f90c12b441")]
 [NativeTypeName("struct IDXGIDebug : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDXGIDebug : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDebug::ReportLiveObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags)

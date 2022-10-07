@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo"]/*' />
 /// <unmanaged>ID2D1RenderInfo</unmanaged>
 [Guid("519ae1bd-d19a-420d-b849-364f594776b7")]
 [NativeTypeName("struct ID2D1RenderInfo : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1RenderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetInputDescription"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetInputDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetInputDescription(uint inputIndex, InputDescription* inputDescription)
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1RenderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1RenderInfo*, uint, InputDescription*, int>)(lpVtbl[3]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetOutputBuffer"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetOutputBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1RenderInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1RenderInfo*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetCached"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetCached"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void SetCached(Bool32 isCached)
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1RenderInfo : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1RenderInfo*, Bool32, void>)(lpVtbl[5]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), isCached);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetInstructionCountHint"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetInstructionCountHint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void SetInstructionCountHint(uint instructionCount)

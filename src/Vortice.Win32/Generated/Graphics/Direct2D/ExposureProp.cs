@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EXPOSURE_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EXPOSURE_PROP"]/*' />
 /// <unmanaged>D2D1_EXPOSURE_PROP</unmanaged>
 public enum ExposureProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_EXPOSURE_PROP::D2D1_EXPOSURE_PROP_EXPOSURE_VALUE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_EXPOSURE_PROP::D2D1_EXPOSURE_PROP_EXPOSURE_VALUE"]/*' />
 	/// <unmanaged>D2D1_EXPOSURE_PROP_EXPOSURE_VALUE</unmanaged>
 	ExposureValue = 0,
 }

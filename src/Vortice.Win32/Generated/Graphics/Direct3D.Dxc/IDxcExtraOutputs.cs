@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcExtraOutputs"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcExtraOutputs"]/*' />
 /// <unmanaged>IDxcExtraOutputs</unmanaged>
 [Guid("319b37a2-a5c2-494a-a5de-4801b2faf989")]
 [NativeTypeName("struct IDxcExtraOutputs : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IDxcExtraOutputs : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcExtraOutputs::GetOutputCount"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcExtraOutputs::GetOutputCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public uint GetOutputCount()
@@ -82,7 +82,7 @@ public unsafe partial struct IDxcExtraOutputs : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcExtraOutputs*, uint>)(lpVtbl[3]))((IDxcExtraOutputs*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcExtraOutputs::GetOutput"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcExtraOutputs::GetOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetOutput(uint uIndex, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputType, IDxcBlobUtf16** ppOutputName)

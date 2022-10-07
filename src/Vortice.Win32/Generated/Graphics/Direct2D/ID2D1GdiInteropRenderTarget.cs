@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget"]/*' />
 /// <unmanaged>ID2D1GdiInteropRenderTarget</unmanaged>
 [Guid("e0db51c3-6f77-4bae-b3d5-e47509b35838")]
 [NativeTypeName("struct ID2D1GdiInteropRenderTarget : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::GetDC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::GetDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetDC(DCInitializeMode mode, IntPtr* hdc)
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, DCInitializeMode, IntPtr*, int>)(lpVtbl[3]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), mode, hdc);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::ReleaseDC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::ReleaseDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult ReleaseDC(RawRect* update)

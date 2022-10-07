@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE"]/*' />
 /// <unmanaged>D2D1_DC_INITIALIZE_MODE</unmanaged>
 public enum DCInitializeMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE::D2D1_DC_INITIALIZE_MODE_COPY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE::D2D1_DC_INITIALIZE_MODE_COPY"]/*' />
 	/// <unmanaged>D2D1_DC_INITIALIZE_MODE_COPY</unmanaged>
 	Copy = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE::D2D1_DC_INITIALIZE_MODE_CLEAR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DC_INITIALIZE_MODE::D2D1_DC_INITIALIZE_MODE_CLEAR"]/*' />
 	/// <unmanaged>D2D1_DC_INITIALIZE_MODE_CLEAR</unmanaged>
 	Clear = 1,
 }

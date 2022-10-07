@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_FRAME_INFO</unmanaged>
 public partial struct OutduplFrameInfo
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastPresentTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastPresentTime"]/*' />
 	public LargeInteger LastPresentTime;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastMouseUpdateTime"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastMouseUpdateTime"]/*' />
 	public LargeInteger LastMouseUpdateTime;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::AccumulatedFrames"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::AccumulatedFrames"]/*' />
 	public uint AccumulatedFrames;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::RectsCoalesced"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::RectsCoalesced"]/*' />
 	public Bool32 RectsCoalesced;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::ProtectedContentMaskedOut"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::ProtectedContentMaskedOut"]/*' />
 	public Bool32 ProtectedContentMaskedOut;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerPosition"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerPosition"]/*' />
 	public OutduplPointerPosition PointerPosition;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::TotalMetadataBufferSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::TotalMetadataBufferSize"]/*' />
 	public uint TotalMetadataBufferSize;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerShapeBufferSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::PointerShapeBufferSize"]/*' />
 	public uint PointerShapeBufferSize;
 }

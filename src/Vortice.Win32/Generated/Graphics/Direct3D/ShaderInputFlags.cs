@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_INPUT_FLAGS</unmanaged>
 [Flags]
 public enum ShaderInputFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_USERPACKED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_USERPACKED"]/*' />
 	/// <unmanaged>D3D_SIF_USERPACKED</unmanaged>
 	UserPacked = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_COMPARISON_SAMPLER"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_COMPARISON_SAMPLER"]/*' />
 	/// <unmanaged>D3D_SIF_COMPARISON_SAMPLER</unmanaged>
 	ComparisonSampler = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENT_0"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENT_0"]/*' />
 	/// <unmanaged>D3D_SIF_TEXTURE_COMPONENT_0</unmanaged>
 	TextureComponent0 = 4,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENT_1"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENT_1"]/*' />
 	/// <unmanaged>D3D_SIF_TEXTURE_COMPONENT_1</unmanaged>
 	TextureComponent1 = 8,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENTS"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_TEXTURE_COMPONENTS"]/*' />
 	/// <unmanaged>D3D_SIF_TEXTURE_COMPONENTS</unmanaged>
 	TextureComponents = 12,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_UNUSED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_UNUSED"]/*' />
 	/// <unmanaged>D3D_SIF_UNUSED</unmanaged>
 	Unused = 16,
 }

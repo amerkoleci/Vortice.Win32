@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_OPTIONS"]/*' />
 /// <unmanaged>D2D1_FACTORY_OPTIONS</unmanaged>
 public partial struct FactoryOptions
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_OPTIONS::debugLevel"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FACTORY_OPTIONS::debugLevel"]/*' />
 	public DebugLevel debugLevel;
 }

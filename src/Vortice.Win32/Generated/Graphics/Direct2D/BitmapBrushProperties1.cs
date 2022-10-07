@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1"]/*' />
 /// <unmanaged>D2D1_BITMAP_BRUSH_PROPERTIES1</unmanaged>
 public partial struct BitmapBrushProperties1
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1::extendModeX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1::extendModeX"]/*' />
 	public ExtendMode extendModeX;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1::extendModeY"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1::extendModeY"]/*' />
 	public ExtendMode extendModeY;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1::interpolationMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BITMAP_BRUSH_PROPERTIES1::interpolationMode"]/*' />
 	public InterpolationMode interpolationMode;
 }

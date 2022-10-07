@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION"]/*' />
 /// <unmanaged>D2D1_SWEEP_DIRECTION</unmanaged>
 public enum SweepDirection : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION::D2D1_SWEEP_DIRECTION_COUNTER_CLOCKWISE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION::D2D1_SWEEP_DIRECTION_COUNTER_CLOCKWISE"]/*' />
 	/// <unmanaged>D2D1_SWEEP_DIRECTION_COUNTER_CLOCKWISE</unmanaged>
 	CounterClockwise = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION::D2D1_SWEEP_DIRECTION_CLOCKWISE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SWEEP_DIRECTION::D2D1_SWEEP_DIRECTION_CLOCKWISE"]/*' />
 	/// <unmanaged>D2D1_SWEEP_DIRECTION_CLOCKWISE</unmanaged>
 	Clockwise = 1,
 }

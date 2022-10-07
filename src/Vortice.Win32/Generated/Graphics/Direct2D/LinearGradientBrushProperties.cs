@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES</unmanaged>
 public partial struct LinearGradientBrushProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES::startPoint"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES::startPoint"]/*' />
 	public System.Drawing.PointF startPoint;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES::endPoint"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES::endPoint"]/*' />
 	public System.Drawing.PointF endPoint;
 }

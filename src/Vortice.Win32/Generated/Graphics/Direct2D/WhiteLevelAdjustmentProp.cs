@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP"]/*' />
 /// <unmanaged>D2D1_WHITELEVELADJUSTMENT_PROP</unmanaged>
 public enum WhiteLevelAdjustmentProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP::D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP::D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL"]/*' />
 	/// <unmanaged>D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL</unmanaged>
 	InputWhiteLevel = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP::D2D1_WHITELEVELADJUSTMENT_PROP_OUTPUT_WHITE_LEVEL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_WHITELEVELADJUSTMENT_PROP::D2D1_WHITELEVELADJUSTMENT_PROP_OUTPUT_WHITE_LEVEL"]/*' />
 	/// <unmanaged>D2D1_WHITELEVELADJUSTMENT_PROP_OUTPUT_WHITE_LEVEL</unmanaged>
 	OutputWhiteLevel = 1,
 }

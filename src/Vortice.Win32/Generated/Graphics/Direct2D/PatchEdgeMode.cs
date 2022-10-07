@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE"]/*' />
 /// <unmanaged>D2D1_PATCH_EDGE_MODE</unmanaged>
 public enum PatchEdgeMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ALIASED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ALIASED"]/*' />
 	/// <unmanaged>D2D1_PATCH_EDGE_MODE_ALIASED</unmanaged>
 	Aliased = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ANTIALIASED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ANTIALIASED"]/*' />
 	/// <unmanaged>D2D1_PATCH_EDGE_MODE_ANTIALIASED</unmanaged>
 	Antialiased = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ALIASED_INFLATED"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PATCH_EDGE_MODE::D2D1_PATCH_EDGE_MODE_ALIASED_INFLATED"]/*' />
 	/// <unmanaged>D2D1_PATCH_EDGE_MODE_ALIASED_INFLATED</unmanaged>
 	AliasedInflated = 2,
 }

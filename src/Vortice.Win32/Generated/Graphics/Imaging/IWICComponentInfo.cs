@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo"]/*' />
 /// <unmanaged>IWICComponentInfo</unmanaged>
 [Guid("23bc3f0a-698b-4357-886b-f24d50671334")]
 [NativeTypeName("struct IWICComponentInfo : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetComponentType"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetComponentType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetComponentType(WICComponentType* pType)
@@ -82,7 +82,7 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pType);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetCLSID"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetCLSID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetCLSID(Guid* pclsid)
@@ -90,7 +90,7 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, Guid*, int>)(lpVtbl[4]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pclsid);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSigningStatus"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSigningStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetSigningStatus(uint* pStatus)
@@ -98,7 +98,7 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint*, int>)(lpVtbl[5]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pStatus);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetAuthor"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetAuthor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetAuthor(uint cchAuthor, ushort* wzAuthor, uint* pcchActual)
@@ -106,7 +106,7 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVendorGUID"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVendorGUID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetVendorGUID(Guid* pguidVendor)
@@ -114,7 +114,7 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, Guid*, int>)(lpVtbl[7]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pguidVendor);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVersion"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetVersion(uint cchVersion, ushort* wzVersion, uint* pcchActual)
@@ -122,7 +122,7 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSpecVersion"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSpecVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetSpecVersion(uint cchSpecVersion, ushort* wzSpecVersion, uint* pcchActual)
@@ -130,7 +130,7 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetFriendlyName"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetFriendlyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetFriendlyName(uint cchFriendlyName, ushort* wzFriendlyName, uint* pcchActual)

@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC"]/*' />
 /// <unmanaged>DXGI_INFO_QUEUE_FILTER_DESC</unmanaged>
 public partial struct InfoQueueFilterDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumCategories"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumCategories"]/*' />
 	public uint NumCategories;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pCategoryList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pCategoryList"]/*' />
 	public unsafe InfoQueueMessageCategory* pCategoryList;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumSeverities"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumSeverities"]/*' />
 	public uint NumSeverities;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pSeverityList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pSeverityList"]/*' />
 	public unsafe InfoQueueMessageSeverity* pSeverityList;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumIDs"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::NumIDs"]/*' />
 	public uint NumIDs;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
 	public unsafe int* pIDList;
 }

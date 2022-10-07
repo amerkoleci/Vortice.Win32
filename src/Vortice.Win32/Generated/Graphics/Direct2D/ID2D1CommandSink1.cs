@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink1"]/*' />
 /// <unmanaged>ID2D1CommandSink1</unmanaged>
 [Guid("9eb767fd-4269-4467-b8c2-eb30cb305743")]
 [NativeTypeName("struct ID2D1CommandSink1 : ID2D1CommandSink")]
@@ -274,7 +274,7 @@ public unsafe partial struct ID2D1CommandSink1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, int>)(lpVtbl[27]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandSink1::SetPrimitiveBlend1"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink1::SetPrimitiveBlend1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult SetPrimitiveBlend1(PrimitiveBlend primitiveBlend)

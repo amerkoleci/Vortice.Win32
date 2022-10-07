@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE"]/*' />
 /// <unmanaged>D2D1_COMBINE_MODE</unmanaged>
 public enum CombineMode : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_UNION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_UNION"]/*' />
 	/// <unmanaged>D2D1_COMBINE_MODE_UNION</unmanaged>
 	Union = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_INTERSECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_INTERSECT"]/*' />
 	/// <unmanaged>D2D1_COMBINE_MODE_INTERSECT</unmanaged>
 	Intersect = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_XOR"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_XOR"]/*' />
 	/// <unmanaged>D2D1_COMBINE_MODE_XOR</unmanaged>
 	Xor = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_EXCLUDE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COMBINE_MODE::D2D1_COMBINE_MODE_EXCLUDE"]/*' />
 	/// <unmanaged>D2D1_COMBINE_MODE_EXCLUDE</unmanaged>
 	Exclude = 3,
 }

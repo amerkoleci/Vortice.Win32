@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_OPACITYMETADATA_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITYMETADATA_PROP"]/*' />
 /// <unmanaged>D2D1_OPACITYMETADATA_PROP</unmanaged>
 public enum OpacityMetadataProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_OPACITYMETADATA_PROP::D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_OPACITYMETADATA_PROP::D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT"]/*' />
 	/// <unmanaged>D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT</unmanaged>
 	InputOpaqueRect = 0,
 }

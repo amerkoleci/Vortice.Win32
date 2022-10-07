@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE"]/*' />
 /// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE</unmanaged>
 public enum GlyphOrientationAngle : int
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES</unmanaged>
 	_0Degrees = 0,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_90_DEGREES"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_90_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_90_DEGREES</unmanaged>
 	_90Degrees = 1,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_180_DEGREES"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_180_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_180_DEGREES</unmanaged>
 	_180Degrees = 2,
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_270_DEGREES"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_270_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_270_DEGREES</unmanaged>
 	_270Degrees = 3,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory4"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory4"]/*' />
 /// <unmanaged>IDWriteFactory4</unmanaged>
 [Guid("4b0b5bd3-0797-4549-8ac5-fe915cc53856")]
 [NativeTypeName("struct IDWriteFactory4 : IDWriteFactory3")]
@@ -370,7 +370,7 @@ public unsafe partial struct IDWriteFactory4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory4*, IDWriteFontDownloadQueue**, int>)(lpVtbl[39]))((IDWriteFactory4*)Unsafe.AsPointer(ref this), fontDownloadQueue);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory4::TranslateColorGlyphRun"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory4::TranslateColorGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
 	public HResult TranslateColorGlyphRun(System.Drawing.PointF baselineOrigin, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, GlyphImageFormats desiredGlyphImageFormats, MeasuringMode measuringMode, Matrix3x2* worldAndDpiTransform, uint colorPaletteIndex, IDWriteColorGlyphRunEnumerator1** colorLayers)
@@ -378,7 +378,7 @@ public unsafe partial struct IDWriteFactory4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory4*, System.Drawing.PointF, GlyphRun*, GlyphRunDescription*, GlyphImageFormats, MeasuringMode, Matrix3x2*, uint, IDWriteColorGlyphRunEnumerator1**, int>)(lpVtbl[40]))((IDWriteFactory4*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, desiredGlyphImageFormats, measuringMode, worldAndDpiTransform, colorPaletteIndex, colorLayers);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory4::ComputeGlyphOrigins"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory4::ComputeGlyphOrigins"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
 	public HResult ComputeGlyphOrigins(GlyphRun* glyphRun, System.Drawing.PointF baselineOrigin, System.Drawing.PointF* glyphOrigins)
@@ -386,7 +386,7 @@ public unsafe partial struct IDWriteFactory4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory4*, GlyphRun*, System.Drawing.PointF, System.Drawing.PointF*, int>)(lpVtbl[41]))((IDWriteFactory4*)Unsafe.AsPointer(ref this), glyphRun, baselineOrigin, glyphOrigins);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFactory4::ComputeGlyphOrigins"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory4::ComputeGlyphOrigins"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
 	public HResult ComputeGlyphOrigins(GlyphRun* glyphRun, MeasuringMode measuringMode, System.Drawing.PointF baselineOrigin, Matrix3x2* worldAndDpiTransform, System.Drawing.PointF* glyphOrigins)

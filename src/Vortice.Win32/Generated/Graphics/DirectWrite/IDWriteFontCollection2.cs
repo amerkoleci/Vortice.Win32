@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2"]/*' />
 /// <unmanaged>IDWriteFontCollection2</unmanaged>
 [Guid("514039c6-4617-4064-bf8b-92ea83e506e0")]
 [NativeTypeName("struct IDWriteFontCollection2 : IDWriteFontCollection1")]
@@ -122,7 +122,7 @@ public unsafe partial struct IDWriteFontCollection2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection2*, uint, IDWriteFontFamily1**, int>)(lpVtbl[8]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this), index, fontFamily);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontFamily"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontFamily"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetFontFamily(uint index, IDWriteFontFamily2** fontFamily)
@@ -130,7 +130,7 @@ public unsafe partial struct IDWriteFontCollection2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection2*, uint, IDWriteFontFamily2**, int>)(lpVtbl[9]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this), index, fontFamily);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetMatchingFonts"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetMatchingFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetMatchingFonts(ushort* familyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList)
@@ -138,7 +138,7 @@ public unsafe partial struct IDWriteFontCollection2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection2*, ushort*, FontAxisValue*, uint, IDWriteFontList2**, int>)(lpVtbl[10]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this), familyName, fontAxisValues, fontAxisValueCount, fontList);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontFamilyModel"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontFamilyModel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public FontFamilyModel GetFontFamilyModel()
@@ -146,7 +146,7 @@ public unsafe partial struct IDWriteFontCollection2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection2*, FontFamilyModel>)(lpVtbl[11]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontSet"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontSet"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetFontSet(IDWriteFontSet1** fontSet)

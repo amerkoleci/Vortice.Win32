@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D.Dxc;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2"]/*' />
 /// <unmanaged>IDxcVersionInfo2</unmanaged>
 [Guid("fb6904c4-42f0-4b62-9c46-983af7da7c83")]
 [NativeTypeName("struct IDxcVersionInfo2 : IDxcVersionInfo")]
@@ -90,7 +90,7 @@ public unsafe partial struct IDxcVersionInfo2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pFlags);
 	}
 
-	/// <include file='Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2::GetCommitInfo"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="IDxcVersionInfo2::GetCommitInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetCommitInfo(uint* pCommitCount, sbyte** pCommitHash)

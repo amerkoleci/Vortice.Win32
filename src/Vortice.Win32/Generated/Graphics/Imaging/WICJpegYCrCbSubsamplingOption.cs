@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption"]/*' />
 /// <unmanaged>WICJpegYCrCbSubsamplingOption</unmanaged>
 public enum WICJpegYCrCbSubsamplingOption : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsamplingDefault"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsamplingDefault"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsamplingDefault</unmanaged>
 	WICJpegYCrCbSubsamplingDefault = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling420"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling420"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsampling420</unmanaged>
 	WICJpegYCrCbSubsampling420 = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling422"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling422"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsampling422</unmanaged>
 	WICJpegYCrCbSubsampling422 = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling444"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling444"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsampling444</unmanaged>
 	WICJpegYCrCbSubsampling444 = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling440"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling440"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsampling440</unmanaged>
 	WICJpegYCrCbSubsampling440 = 4,
 }

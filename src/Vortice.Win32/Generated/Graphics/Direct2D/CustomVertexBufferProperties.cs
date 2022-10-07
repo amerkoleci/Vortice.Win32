@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES</unmanaged>
 public partial struct CustomVertexBufferProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::shaderBufferWithInputSignature"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::shaderBufferWithInputSignature"]/*' />
 	public unsafe byte* shaderBufferWithInputSignature;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::shaderBufferSize"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::shaderBufferSize"]/*' />
 	public uint shaderBufferSize;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::inputElements"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::inputElements"]/*' />
 	public unsafe InputElementDescription* inputElements;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::elementCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::elementCount"]/*' />
 	public uint elementCount;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::stride"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CUSTOM_VERTEX_BUFFER_PROPERTIES::stride"]/*' />
 	public uint stride;
 }

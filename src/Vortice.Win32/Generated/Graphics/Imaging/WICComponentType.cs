@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICComponentType"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType"]/*' />
 /// <unmanaged>WICComponentType</unmanaged>
 public enum WICComponentType : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentType::WICDecoder"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICDecoder"]/*' />
 	/// <unmanaged>WICDecoder</unmanaged>
 	Decoder = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentType::WICEncoder"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICEncoder"]/*' />
 	/// <unmanaged>WICEncoder</unmanaged>
 	Encoder = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentType::WICPixelFormatConverter"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICPixelFormatConverter"]/*' />
 	/// <unmanaged>WICPixelFormatConverter</unmanaged>
 	PixelFormatConverter = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentType::WICMetadataReader"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICMetadataReader"]/*' />
 	/// <unmanaged>WICMetadataReader</unmanaged>
 	MetadataReader = 8,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentType::WICMetadataWriter"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICMetadataWriter"]/*' />
 	/// <unmanaged>WICMetadataWriter</unmanaged>
 	MetadataWriter = 16,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentType::WICPixelFormat"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICPixelFormat"]/*' />
 	/// <unmanaged>WICPixelFormat</unmanaged>
 	PixelFormat = 32,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICComponentType::WICAllComponents"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICAllComponents"]/*' />
 	/// <unmanaged>WICAllComponents</unmanaged>
 	AllComponents = 63,
 }

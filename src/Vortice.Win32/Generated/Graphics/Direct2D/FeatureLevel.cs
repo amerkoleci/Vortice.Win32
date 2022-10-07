@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL"]/*' />
 /// <unmanaged>D2D1_FEATURE_LEVEL</unmanaged>
 public enum FeatureLevel : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_DEFAULT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_DEFAULT"]/*' />
 	/// <unmanaged>D2D1_FEATURE_LEVEL_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_9"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_9"]/*' />
 	/// <unmanaged>D2D1_FEATURE_LEVEL_9</unmanaged>
 	Level_9 = 37120,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_10"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_LEVEL::D2D1_FEATURE_LEVEL_10"]/*' />
 	/// <unmanaged>D2D1_FEATURE_LEVEL_10</unmanaged>
 	Level_10 = 40960,
 }

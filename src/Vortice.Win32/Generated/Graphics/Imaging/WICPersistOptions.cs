@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICPersistOptions"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions"]/*' />
 /// <unmanaged>WICPersistOptions</unmanaged>
 public enum WICPersistOptions : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionDefault"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionDefault"]/*' />
 	/// <unmanaged>WICPersistOptionDefault</unmanaged>
 	WICPersistOptionDefault = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionLittleEndian"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionLittleEndian"]/*' />
 	/// <unmanaged>WICPersistOptionLittleEndian</unmanaged>
 	WICPersistOptionLittleEndian = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionBigEndian"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionBigEndian"]/*' />
 	/// <unmanaged>WICPersistOptionBigEndian</unmanaged>
 	WICPersistOptionBigEndian = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionStrictFormat"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionStrictFormat"]/*' />
 	/// <unmanaged>WICPersistOptionStrictFormat</unmanaged>
 	WICPersistOptionStrictFormat = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionNoCacheStream"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionNoCacheStream"]/*' />
 	/// <unmanaged>WICPersistOptionNoCacheStream</unmanaged>
 	WICPersistOptionNoCacheStream = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionPreferUTF8"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionPreferUTF8"]/*' />
 	/// <unmanaged>WICPersistOptionPreferUTF8</unmanaged>
 	WICPersistOptionPreferUTF8 = 8,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionMask"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionMask"]/*' />
 	/// <unmanaged>WICPersistOptionMask</unmanaged>
 	WICPersistOptionMask = 65535,
 }

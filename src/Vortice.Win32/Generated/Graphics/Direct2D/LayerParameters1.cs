@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1"]/*' />
 /// <unmanaged>D2D1_LAYER_PARAMETERS1</unmanaged>
 public partial struct LayerParameters1
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::contentBounds"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::contentBounds"]/*' />
 	public Common.RectF contentBounds;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::geometricMask"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::geometricMask"]/*' />
 	public unsafe ID2D1Geometry* geometricMask;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::maskAntialiasMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::maskAntialiasMode"]/*' />
 	public AntialiasMode maskAntialiasMode;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::maskTransform"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::maskTransform"]/*' />
 	public Matrix3x2 maskTransform;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::opacity"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::opacity"]/*' />
 	public float opacity;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::opacityBrush"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::opacityBrush"]/*' />
 	public unsafe ID2D1Brush* opacityBrush;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::layerOptions"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS1::layerOptions"]/*' />
 	public LayerOptions1 layerOptions;
 }

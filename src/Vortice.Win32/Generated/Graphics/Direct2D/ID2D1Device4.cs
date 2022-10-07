@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device4"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device4"]/*' />
 /// <unmanaged>ID2D1Device4</unmanaged>
 [Guid("d7bdb159-5683-4a46-bc9c-72dc720b858b")]
 [NativeTypeName("struct ID2D1Device4 : ID2D1Device3")]
@@ -170,7 +170,7 @@ public unsafe partial struct ID2D1Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device4*, DeviceContextOptions, ID2D1DeviceContext3**, int>)(lpVtbl[14]))((ID2D1Device4*)Unsafe.AsPointer(ref this), options, deviceContext3);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device4::CreateDeviceContext"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device4::CreateDeviceContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext4** deviceContext4)
@@ -178,7 +178,7 @@ public unsafe partial struct ID2D1Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device4*, DeviceContextOptions, ID2D1DeviceContext4**, int>)(lpVtbl[15]))((ID2D1Device4*)Unsafe.AsPointer(ref this), options, deviceContext4);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device4::SetMaximumColorGlyphCacheMemory"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device4::SetMaximumColorGlyphCacheMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public void SetMaximumColorGlyphCacheMemory(ulong maximumInBytes)
@@ -186,7 +186,7 @@ public unsafe partial struct ID2D1Device4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1Device4*, ulong, void>)(lpVtbl[16]))((ID2D1Device4*)Unsafe.AsPointer(ref this), maximumInBytes);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Device4::GetMaximumColorGlyphCacheMemory"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device4::GetMaximumColorGlyphCacheMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public ulong GetMaximumColorGlyphCacheMemory()

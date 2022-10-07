@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY"]/*' />
 /// <unmanaged>D2D1_RENDERING_PRIORITY</unmanaged>
 public enum RenderingPriority : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY::D2D1_RENDERING_PRIORITY_NORMAL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY::D2D1_RENDERING_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>D2D1_RENDERING_PRIORITY_NORMAL</unmanaged>
 	Normal = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY::D2D1_RENDERING_PRIORITY_LOW"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RENDERING_PRIORITY::D2D1_RENDERING_PRIORITY_LOW"]/*' />
 	/// <unmanaged>D2D1_RENDERING_PRIORITY_LOW</unmanaged>
 	Low = 1,
 }

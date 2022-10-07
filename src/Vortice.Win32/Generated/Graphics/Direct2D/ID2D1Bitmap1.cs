@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1"]/*' />
 /// <unmanaged>ID2D1Bitmap1</unmanaged>
 [Guid("a898a84c-3873-4588-b08b-ebbf978df041")]
 [NativeTypeName("struct ID2D1Bitmap1 : ID2D1Bitmap")]
@@ -141,7 +141,7 @@ public unsafe partial struct ID2D1Bitmap1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, Common.RectU*, void*, uint, int>)(lpVtbl[10]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), dstRect, srcData, pitch);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetColorContext"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetColorContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public void GetColorContext(ID2D1ColorContext** colorContext)
@@ -149,7 +149,7 @@ public unsafe partial struct ID2D1Bitmap1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, ID2D1ColorContext**, void>)(lpVtbl[11]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), colorContext);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetOptions"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public BitmapOptions GetOptions()
@@ -157,7 +157,7 @@ public unsafe partial struct ID2D1Bitmap1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, BitmapOptions>)(lpVtbl[12]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetSurface"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::GetSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetSurface(Graphics.Dxgi.IDXGISurface** dxgiSurface)
@@ -165,7 +165,7 @@ public unsafe partial struct ID2D1Bitmap1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, Graphics.Dxgi.IDXGISurface**, int>)(lpVtbl[13]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), dxgiSurface);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::Map"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult Map(MapOptions options, MappedRect* mappedRect)
@@ -173,7 +173,7 @@ public unsafe partial struct ID2D1Bitmap1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, MapOptions, MappedRect*, int>)(lpVtbl[14]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this), options, mappedRect);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::Unmap"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap1::Unmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult Unmap()

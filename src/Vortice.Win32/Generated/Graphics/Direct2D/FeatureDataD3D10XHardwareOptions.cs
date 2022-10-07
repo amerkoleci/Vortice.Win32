@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS"]/*' />
 /// <unmanaged>D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS</unmanaged>
 public partial struct FeatureDataD3D10XHardwareOptions
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::computeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::computeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
 	public Bool32 computeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x;
 }

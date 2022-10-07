@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MAPPED_RECT"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAPPED_RECT"]/*' />
 /// <unmanaged>D2D1_MAPPED_RECT</unmanaged>
 public partial struct MappedRect
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MAPPED_RECT::pitch"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAPPED_RECT::pitch"]/*' />
 	public uint pitch;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_MAPPED_RECT::bits"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_MAPPED_RECT::bits"]/*' />
 	public unsafe byte* bits;
 }

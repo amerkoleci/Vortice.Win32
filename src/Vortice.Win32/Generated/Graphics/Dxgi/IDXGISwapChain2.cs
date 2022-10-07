@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain2"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2"]/*' />
 /// <unmanaged>IDXGISwapChain2</unmanaged>
 [Guid("a8be2ac4-199f-4946-b331-79599fb98de7")]
 [NativeTypeName("struct IDXGISwapChain2 : IDXGISwapChain1")]
@@ -282,7 +282,7 @@ public unsafe partial struct IDXGISwapChain2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pRotation);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetSourceSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::SetSourceSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult SetSourceSize(uint Width, uint Height)
@@ -290,7 +290,7 @@ public unsafe partial struct IDXGISwapChain2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint, uint, int>)(lpVtbl[29]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), Width, Height);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetSourceSize"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::GetSourceSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult GetSourceSize(uint* pWidth, uint* pHeight)
@@ -298,7 +298,7 @@ public unsafe partial struct IDXGISwapChain2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint*, uint*, int>)(lpVtbl[30]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pWidth, pHeight);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetMaximumFrameLatency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::SetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult SetMaximumFrameLatency(uint MaxLatency)
@@ -306,7 +306,7 @@ public unsafe partial struct IDXGISwapChain2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint, int>)(lpVtbl[31]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), MaxLatency);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetMaximumFrameLatency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::GetMaximumFrameLatency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
@@ -314,7 +314,7 @@ public unsafe partial struct IDXGISwapChain2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, uint*, int>)(lpVtbl[32]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMaxLatency);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetFrameLatencyWaitableObject"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::GetFrameLatencyWaitableObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public Handle GetFrameLatencyWaitableObject()
@@ -322,7 +322,7 @@ public unsafe partial struct IDXGISwapChain2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Handle>)(lpVtbl[33]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain2::SetMatrixTransform"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::SetMatrixTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult SetMatrixTransform(Matrix3x2* pMatrix)
@@ -330,7 +330,7 @@ public unsafe partial struct IDXGISwapChain2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Matrix3x2*, int>)(lpVtbl[34]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMatrix);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain2::GetMatrixTransform"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain2::GetMatrixTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
 	public HResult GetMatrixTransform(Matrix3x2* pMatrix)

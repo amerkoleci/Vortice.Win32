@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS"]/*' />
 /// <unmanaged>DWRITE_INLINE_OBJECT_METRICS</unmanaged>
 public partial struct InlineObjectMetrics
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::width"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::width"]/*' />
 	public float width;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::height"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::height"]/*' />
 	public float height;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::baseline"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::baseline"]/*' />
 	public float baseline;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::supportsSideways"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INLINE_OBJECT_METRICS::supportsSideways"]/*' />
 	public Bool32 supportsSideways;
 }

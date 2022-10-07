@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE"]/*' />
 /// <unmanaged>D3D_REGISTER_COMPONENT_TYPE</unmanaged>
 public enum RegisterComponentType : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UNKNOWN"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UNKNOWN"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UINT32"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UINT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_UINT32</unmanaged>
 	UInt32 = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_SINT32"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_SINT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_SINT32</unmanaged>
 	Sint32 = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_FLOAT32"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_FLOAT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_FLOAT32</unmanaged>
 	Float32 = 3,
 }

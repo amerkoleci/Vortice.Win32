@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SATURATION_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SATURATION_PROP"]/*' />
 /// <unmanaged>D2D1_SATURATION_PROP</unmanaged>
 public enum SaturationProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SATURATION_PROP::D2D1_SATURATION_PROP_SATURATION"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SATURATION_PROP::D2D1_SATURATION_PROP_SATURATION"]/*' />
 	/// <unmanaged>D2D1_SATURATION_PROP_SATURATION</unmanaged>
 	Saturation = 0,
 }

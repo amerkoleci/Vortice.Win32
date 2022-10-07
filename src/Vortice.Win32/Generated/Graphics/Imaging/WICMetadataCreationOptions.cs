@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions"]/*' />
 /// <unmanaged>WICMetadataCreationOptions</unmanaged>
 public enum WICMetadataCreationOptions : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationDefault"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationDefault"]/*' />
 	/// <unmanaged>WICMetadataCreationDefault</unmanaged>
 	WICMetadataCreationDefault = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationAllowUnknown"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationAllowUnknown"]/*' />
 	/// <unmanaged>WICMetadataCreationAllowUnknown</unmanaged>
 	WICMetadataCreationAllowUnknown = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationFailUnknown"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationFailUnknown"]/*' />
 	/// <unmanaged>WICMetadataCreationFailUnknown</unmanaged>
 	WICMetadataCreationFailUnknown = 65536,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationMask"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationMask"]/*' />
 	/// <unmanaged>WICMetadataCreationMask</unmanaged>
 	WICMetadataCreationMask = -65536,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectContext1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext1"]/*' />
 /// <unmanaged>ID2D1EffectContext1</unmanaged>
 [Guid("84ab595a-fc81-4546-bacd-e8ef4d8abe7a")]
 [NativeTypeName("struct ID2D1EffectContext1 : ID2D1EffectContext")]
@@ -242,7 +242,7 @@ public unsafe partial struct ID2D1EffectContext1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext1*, BufferPrecision, Bool32>)(lpVtbl[23]))((ID2D1EffectContext1*)Unsafe.AsPointer(ref this), bufferPrecision);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EffectContext1::CreateLookupTable3D"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext1::CreateLookupTable3D"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CreateLookupTable3D(BufferPrecision precision, uint* extents, byte* data, uint dataCount, uint* strides, ID2D1LookupTable3D** lookupTable)

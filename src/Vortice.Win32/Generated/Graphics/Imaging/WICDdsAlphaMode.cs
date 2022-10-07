@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICDdsAlphaMode"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode"]/*' />
 /// <unmanaged>WICDdsAlphaMode</unmanaged>
 public enum WICDdsAlphaMode : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeUnknown"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeUnknown"]/*' />
 	/// <unmanaged>WICDdsAlphaModeUnknown</unmanaged>
 	WICDdsAlphaModeUnknown = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeStraight"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeStraight"]/*' />
 	/// <unmanaged>WICDdsAlphaModeStraight</unmanaged>
 	WICDdsAlphaModeStraight = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModePremultiplied"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModePremultiplied"]/*' />
 	/// <unmanaged>WICDdsAlphaModePremultiplied</unmanaged>
 	WICDdsAlphaModePremultiplied = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeOpaque"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeOpaque"]/*' />
 	/// <unmanaged>WICDdsAlphaModeOpaque</unmanaged>
 	WICDdsAlphaModeOpaque = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeCustom"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeCustom"]/*' />
 	/// <unmanaged>WICDdsAlphaModeCustom</unmanaged>
 	WICDdsAlphaModeCustom = 4,
 }

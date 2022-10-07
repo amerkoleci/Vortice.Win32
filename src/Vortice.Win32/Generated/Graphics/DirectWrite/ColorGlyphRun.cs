@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN"]/*' />
 /// <unmanaged>DWRITE_COLOR_GLYPH_RUN</unmanaged>
 public partial struct ColorGlyphRun
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::glyphRun"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::glyphRun"]/*' />
 	public GlyphRun glyphRun;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::glyphRunDescription"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::glyphRunDescription"]/*' />
 	public unsafe GlyphRunDescription* glyphRunDescription;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::baselineOriginX"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::baselineOriginX"]/*' />
 	public float baselineOriginX;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::baselineOriginY"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::baselineOriginY"]/*' />
 	public float baselineOriginY;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::runColor"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::runColor"]/*' />
 	public Color4 runColor;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::paletteIndex"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_GLYPH_RUN::paletteIndex"]/*' />
 	public ushort paletteIndex;
 }

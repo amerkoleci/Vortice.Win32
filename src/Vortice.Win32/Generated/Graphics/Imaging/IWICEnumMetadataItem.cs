@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem"]/*' />
 /// <unmanaged>IWICEnumMetadataItem</unmanaged>
 [Guid("dc2bb46d-3f07-481e-8625-220c4aedbb33")]
 [NativeTypeName("struct IWICEnumMetadataItem : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct IWICEnumMetadataItem : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Next"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Next"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Next(uint celt, Com.Variant** rgeltSchema, Com.Variant** rgeltId, Com.Variant** rgeltValue, uint* pceltFetched)
@@ -82,7 +82,7 @@ public unsafe partial struct IWICEnumMetadataItem : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICEnumMetadataItem*, uint, Com.Variant**, Com.Variant**, Com.Variant**, uint*, int>)(lpVtbl[3]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), celt, rgeltSchema, rgeltId, rgeltValue, pceltFetched);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Skip"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Skip"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Skip(uint celt)
@@ -90,7 +90,7 @@ public unsafe partial struct IWICEnumMetadataItem : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICEnumMetadataItem*, uint, int>)(lpVtbl[4]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), celt);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Reset"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Reset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult Reset()
@@ -98,7 +98,7 @@ public unsafe partial struct IWICEnumMetadataItem : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICEnumMetadataItem*, int>)(lpVtbl[5]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Clone"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICEnumMetadataItem::Clone"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult Clone(IWICEnumMetadataItem** ppIEnumMetadataItem)

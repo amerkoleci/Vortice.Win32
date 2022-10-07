@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_STROKE_STYLE_PROPERTIES</unmanaged>
 public partial struct StrokeStyleProperties
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::startCap"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::startCap"]/*' />
 	public CapStyle startCap;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::endCap"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::endCap"]/*' />
 	public CapStyle endCap;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::dashCap"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::dashCap"]/*' />
 	public CapStyle dashCap;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::lineJoin"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::lineJoin"]/*' />
 	public LineJoin lineJoin;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::miterLimit"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::miterLimit"]/*' />
 	public float miterLimit;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::dashStyle"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::dashStyle"]/*' />
 	public DashStyle dashStyle;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::dashOffset"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_STROKE_STYLE_PROPERTIES::dashOffset"]/*' />
 	public float dashOffset;
 }

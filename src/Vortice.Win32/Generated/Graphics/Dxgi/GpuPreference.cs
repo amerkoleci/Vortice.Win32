@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE"]/*' />
 /// <unmanaged>DXGI_GPU_PREFERENCE</unmanaged>
 public enum GpuPreference : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_UNSPECIFIED"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_UNSPECIFIED</unmanaged>
 	Unspecified = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_MINIMUM_POWER"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_MINIMUM_POWER"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_MINIMUM_POWER</unmanaged>
 	MinimumPower = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_GPU_PREFERENCE::DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE"]/*' />
 	/// <unmanaged>DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE</unmanaged>
 	HighPerformance = 2,
 }

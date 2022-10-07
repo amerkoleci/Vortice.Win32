@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D;
 
-/// <include file='Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE"]/*' />
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE"]/*' />
 /// <unmanaged>D3D_TESSELLATOR_OUTPUT_PRIMITIVE</unmanaged>
 public enum TessellatorOutputPrimitive : int
 {
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_UNDEFINED"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_UNDEFINED</unmanaged>
 	Undefined = 0,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_POINT"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_POINT"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_POINT</unmanaged>
 	Point = 1,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_LINE"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_LINE"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_LINE</unmanaged>
 	Line = 2,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_TRIANGLE_CW"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_TRIANGLE_CW"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_TRIANGLE_CW</unmanaged>
 	TriangleCw = 3,
-	/// <include file='Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_TRIANGLE_CCW"]/*' />
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_TRIANGLE_CCW"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_TRIANGLE_CCW</unmanaged>
 	TriangleCcw = 4,
 }

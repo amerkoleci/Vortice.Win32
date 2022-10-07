@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1"]/*' />
 /// <unmanaged>ID2D1GdiMetafile1</unmanaged>
 [Guid("2e69f9e8-dd3f-4bf9-95ba-c04f49d788df")]
 [NativeTypeName("struct ID2D1GdiMetafile1 : ID2D1GdiMetafile")]
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, Common.RectF*, int>)(lpVtbl[5]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1::GetDpi"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1::GetDpi"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetDpi(float* dpiX, float* dpiY)
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, float*, float*, int>)(lpVtbl[6]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), dpiX, dpiY);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1::GetSourceBounds"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1::GetSourceBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetSourceBounds(Common.RectF* bounds)

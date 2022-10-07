@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICHeifHdrProperties"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties"]/*' />
 /// <unmanaged>WICHeifHdrProperties</unmanaged>
 public enum WICHeifHdrProperties : uint
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumLuminanceLevel"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMaximumLuminanceLevel</unmanaged>
 	WICHeifHdrMaximumLuminanceLevel = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumFrameAverageLuminanceLevel"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumFrameAverageLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMaximumFrameAverageLuminanceLevel</unmanaged>
 	WICHeifHdrMaximumFrameAverageLuminanceLevel = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMinimumMasteringDisplayLuminanceLevel"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMinimumMasteringDisplayLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMinimumMasteringDisplayLuminanceLevel</unmanaged>
 	WICHeifHdrMinimumMasteringDisplayLuminanceLevel = 3,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumMasteringDisplayLuminanceLevel"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumMasteringDisplayLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMaximumMasteringDisplayLuminanceLevel</unmanaged>
 	WICHeifHdrMaximumMasteringDisplayLuminanceLevel = 4,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrCustomVideoPrimaries"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrCustomVideoPrimaries"]/*' />
 	/// <unmanaged>WICHeifHdrCustomVideoPrimaries</unmanaged>
 	WICHeifHdrCustomVideoPrimaries = 5,
 }

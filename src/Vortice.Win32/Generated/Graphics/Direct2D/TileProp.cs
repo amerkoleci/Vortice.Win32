@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TILE_PROP"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TILE_PROP"]/*' />
 /// <unmanaged>D2D1_TILE_PROP</unmanaged>
 public enum TileProp : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_TILE_PROP::D2D1_TILE_PROP_RECT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TILE_PROP::D2D1_TILE_PROP_RECT"]/*' />
 	/// <unmanaged>D2D1_TILE_PROP_RECT</unmanaged>
 	Rect = 0,
 }

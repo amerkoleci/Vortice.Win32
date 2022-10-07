@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain"]/*' />
 /// <unmanaged>IDXGISwapChain</unmanaged>
 [Guid("310d36a0-d2e7-4c0a-aa04-6a9d23b8886a")]
 [NativeTypeName("struct IDXGISwapChain : IDXGIDeviceSubObject")]
@@ -114,7 +114,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::Present"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::Present"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Present(uint SyncInterval, PresentFlags Flags)
@@ -122,7 +122,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, PresentFlags, int>)(lpVtbl[8]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetBuffer"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface)
@@ -130,7 +130,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, Guid*, void**, int>)(lpVtbl[9]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::SetFullscreenState"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::SetFullscreenState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetFullscreenState(Bool32 Fullscreen, IDXGIOutput* pTarget)
@@ -138,7 +138,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Bool32, IDXGIOutput*, int>)(lpVtbl[10]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetFullscreenState"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetFullscreenState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget)
@@ -146,7 +146,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Bool32*, IDXGIOutput**, int>)(lpVtbl[11]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetDesc"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetDesc(SwapChainDescription* pDesc)
@@ -154,7 +154,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, SwapChainDescription*, int>)(lpVtbl[12]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::ResizeBuffers"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::ResizeBuffers"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, SwapChainFlags SwapChainFlags)
@@ -162,7 +162,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint, uint, uint, Common.Format, SwapChainFlags, int>)(lpVtbl[13]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::ResizeTarget"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::ResizeTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
@@ -170,7 +170,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, Common.ModeDescription*, int>)(lpVtbl[14]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pNewTargetParameters);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetContainingOutput"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetContainingOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult GetContainingOutput(IDXGIOutput** ppOutput)
@@ -178,7 +178,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, IDXGIOutput**, int>)(lpVtbl[15]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), ppOutput);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetFrameStatistics"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetFrameStatistics"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult GetFrameStatistics(FrameStatistics* pStats)
@@ -186,7 +186,7 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, FrameStatistics*, int>)(lpVtbl[16]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pStats);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGISwapChain::GetLastPresentCount"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain::GetLastPresentCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetLastPresentCount(uint* pLastPresentCount)

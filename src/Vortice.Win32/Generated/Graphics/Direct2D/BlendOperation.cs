@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION"]/*' />
 /// <unmanaged>D2D1_BLEND_OPERATION</unmanaged>
 public enum BlendOperation : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_ADD"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_ADD"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_ADD</unmanaged>
 	Add = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_SUBTRACT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_SUBTRACT"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_SUBTRACT</unmanaged>
 	Subtract = 2,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_REV_SUBTRACT"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_REV_SUBTRACT"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_REV_SUBTRACT</unmanaged>
 	RevSubtract = 3,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_MIN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_MIN"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_MIN</unmanaged>
 	Min = 4,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_MAX"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_MAX"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_MAX</unmanaged>
 	Max = 5,
 }

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE"]/*' />
 /// <unmanaged>D2D1_VERTEX_USAGE</unmanaged>
 public enum VertexUsage : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE::D2D1_VERTEX_USAGE_STATIC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE::D2D1_VERTEX_USAGE_STATIC"]/*' />
 	/// <unmanaged>D2D1_VERTEX_USAGE_STATIC</unmanaged>
 	Static = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE::D2D1_VERTEX_USAGE_DYNAMIC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_VERTEX_USAGE::D2D1_VERTEX_USAGE_DYNAMIC"]/*' />
 	/// <unmanaged>D2D1_VERTEX_USAGE_DYNAMIC</unmanaged>
 	Dynamic = 1,
 }

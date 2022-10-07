@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC"]/*' />
 /// <unmanaged>DXGI_DECODE_SWAP_CHAIN_DESC</unmanaged>
 public partial struct DecodeSwapChainDescription
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC::Flags"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_DECODE_SWAP_CHAIN_DESC::Flags"]/*' />
 	public SwapChainFlags Flags;
 }

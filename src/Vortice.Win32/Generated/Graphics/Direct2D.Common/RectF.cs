@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct2D.Common;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D_RECT_F"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F"]/*' />
 /// <unmanaged>D2D_RECT_F</unmanaged>
 public partial struct RectF
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D_RECT_F::left"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F::left"]/*' />
 	public float left;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D_RECT_F::top"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F::top"]/*' />
 	public float top;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D_RECT_F::right"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F::right"]/*' />
 	public float right;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D_RECT_F::bottom"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D_RECT_F::bottom"]/*' />
 	public float bottom;
 }

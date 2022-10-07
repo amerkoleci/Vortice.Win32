@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE"]/*' />
 /// <unmanaged>D2D1_ARC_SIZE</unmanaged>
 public enum ArcSize : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE::D2D1_ARC_SIZE_SMALL"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE::D2D1_ARC_SIZE_SMALL"]/*' />
 	/// <unmanaged>D2D1_ARC_SIZE_SMALL</unmanaged>
 	Small = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE::D2D1_ARC_SIZE_LARGE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SIZE::D2D1_ARC_SIZE_LARGE"]/*' />
 	/// <unmanaged>D2D1_ARC_SIZE_LARGE</unmanaged>
 	Large = 1,
 }

@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS"]/*' />
 /// <unmanaged>D2D1_LAYER_PARAMETERS</unmanaged>
 public partial struct LayerParameters
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::contentBounds"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::contentBounds"]/*' />
 	public Common.RectF contentBounds;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::geometricMask"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::geometricMask"]/*' />
 	public unsafe ID2D1Geometry* geometricMask;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::maskAntialiasMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::maskAntialiasMode"]/*' />
 	public AntialiasMode maskAntialiasMode;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::maskTransform"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::maskTransform"]/*' />
 	public Matrix3x2 maskTransform;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::opacity"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::opacity"]/*' />
 	public float opacity;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::opacityBrush"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::opacityBrush"]/*' />
 	public unsafe ID2D1Brush* opacityBrush;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::layerOptions"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LAYER_PARAMETERS::layerOptions"]/*' />
 	public LayerOptions layerOptions;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice"]/*' />
 /// <unmanaged>IDXGIDevice</unmanaged>
 [Guid("54ec77fa-1377-44e6-8c32-88fd5f44c84c")]
 [NativeTypeName("struct IDXGIDevice : IDXGIObject")]
@@ -106,7 +106,7 @@ public unsafe partial struct IDXGIDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIDevice*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice::GetAdapter"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::GetAdapter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetAdapter(IDXGIAdapter** pAdapter)
@@ -114,7 +114,7 @@ public unsafe partial struct IDXGIDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pAdapter);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice::CreateSurface"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::CreateSurface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, Usage Usage, SharedResource* pSharedResource, IDXGISurface** ppSurface)
@@ -122,7 +122,7 @@ public unsafe partial struct IDXGIDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, SurfaceDescription*, uint, Usage, SharedResource*, IDXGISurface**, int>)(lpVtbl[8]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pDesc, NumSurfaces, Usage, pSharedResource, ppSurface);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice::QueryResourceResidency"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::QueryResourceResidency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult QueryResourceResidency(IUnknown** ppResources, Residency* pResidencyStatus, uint NumResources)
@@ -130,7 +130,7 @@ public unsafe partial struct IDXGIDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, IUnknown**, Residency*, uint, int>)(lpVtbl[9]))((IDXGIDevice*)Unsafe.AsPointer(ref this), ppResources, pResidencyStatus, NumResources);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice::SetGPUThreadPriority"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::SetGPUThreadPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult SetGPUThreadPriority(int Priority)
@@ -138,7 +138,7 @@ public unsafe partial struct IDXGIDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, int, int>)(lpVtbl[10]))((IDXGIDevice*)Unsafe.AsPointer(ref this), Priority);
 	}
 
-	/// <include file='DXGI.xml' path='doc/member[@name="IDXGIDevice::GetGPUThreadPriority"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDevice::GetGPUThreadPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetGPUThreadPriority(int* pPriority)

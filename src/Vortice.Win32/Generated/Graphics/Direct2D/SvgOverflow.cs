@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW"]/*' />
 /// <unmanaged>D2D1_SVG_OVERFLOW</unmanaged>
 public enum SvgOverflow : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW::D2D1_SVG_OVERFLOW_VISIBLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW::D2D1_SVG_OVERFLOW_VISIBLE"]/*' />
 	/// <unmanaged>D2D1_SVG_OVERFLOW_VISIBLE</unmanaged>
 	Visible = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW::D2D1_SVG_OVERFLOW_HIDDEN"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SVG_OVERFLOW::D2D1_SVG_OVERFLOW_HIDDEN"]/*' />
 	/// <unmanaged>D2D1_SVG_OVERFLOW_HIDDEN</unmanaged>
 	Hidden = 1,
 }

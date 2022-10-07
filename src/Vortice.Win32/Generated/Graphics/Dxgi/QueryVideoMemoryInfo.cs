@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO"]/*' />
 /// <unmanaged>DXGI_QUERY_VIDEO_MEMORY_INFO</unmanaged>
 public partial struct QueryVideoMemoryInfo
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::Budget"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::Budget"]/*' />
 	public ulong Budget;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentUsage"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentUsage"]/*' />
 	public ulong CurrentUsage;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::AvailableForReservation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::AvailableForReservation"]/*' />
 	public ulong AvailableForReservation;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentReservation"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_QUERY_VIDEO_MEMORY_INFO::CurrentReservation"]/*' />
 	public ulong CurrentReservation;
 }

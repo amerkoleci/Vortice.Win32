@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS"]/*' />
 /// <unmanaged>DXGI_OFFER_RESOURCE_FLAGS</unmanaged>
 [Flags]
 public enum OfferResourceFlags : int
 {
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS::DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OFFER_RESOURCE_FLAGS::DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT"]/*' />
 	/// <unmanaged>DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT</unmanaged>
 	AllowDecommit = 1,
 }

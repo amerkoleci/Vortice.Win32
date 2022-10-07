@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer"]/*' />
 /// <unmanaged>ID2D1VertexBuffer</unmanaged>
 [Guid("9b8b1336-00a5-4668-92b7-ced5d8bf9b7b")]
 [NativeTypeName("struct ID2D1VertexBuffer : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID2D1VertexBuffer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer::Map"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Map(byte** data, uint bufferSize)
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1VertexBuffer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1VertexBuffer*, byte**, uint, int>)(lpVtbl[3]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this), data, bufferSize);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer::Unmap"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer::Unmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Unmap()

@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESIDENCY"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY"]/*' />
 /// <unmanaged>DXGI_RESIDENCY</unmanaged>
 public enum Residency : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_FULLY_RESIDENT"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_FULLY_RESIDENT"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_FULLY_RESIDENT</unmanaged>
 	FullyResident = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_RESIDENT_IN_SHARED_MEMORY</unmanaged>
 	ResidentInSharedMemory = 2,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_EVICTED_TO_DISK"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY::DXGI_RESIDENCY_EVICTED_TO_DISK"]/*' />
 	/// <unmanaged>DXGI_RESIDENCY_EVICTED_TO_DISK</unmanaged>
 	EvictedToDisk = 3,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader"]/*' />
 /// <unmanaged>IDWriteLocalFontFileLoader</unmanaged>
 [Guid("b2d9f3ec-c9fe-4a11-a2ec-d86208f7c0a2")]
 [NativeTypeName("struct IDWriteLocalFontFileLoader : IDWriteFontFileLoader")]
@@ -82,7 +82,7 @@ public unsafe partial struct IDWriteLocalFontFileLoader : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[3]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetFilePathLengthFromKey"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetFilePathLengthFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetFilePathLengthFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, uint* filePathLength)
@@ -90,7 +90,7 @@ public unsafe partial struct IDWriteLocalFontFileLoader : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, uint*, int>)(lpVtbl[4]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, filePathLength);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetFilePathFromKey"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetFilePathFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetFilePathFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ushort* filePath, uint filePathSize)
@@ -98,7 +98,7 @@ public unsafe partial struct IDWriteLocalFontFileLoader : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, ushort*, uint, int>)(lpVtbl[5]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, filePath, filePathSize);
 	}
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetLastWriteTimeFromKey"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetLastWriteTimeFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult GetLastWriteTimeFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ulong* lastWriteTime)

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICDecodeOptions"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICDecodeOptions"]/*' />
 /// <unmanaged>WICDecodeOptions</unmanaged>
 public enum WICDecodeOptions : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDecodeOptions::WICDecodeMetadataCacheOnDemand"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDecodeOptions::WICDecodeMetadataCacheOnDemand"]/*' />
 	/// <unmanaged>WICDecodeMetadataCacheOnDemand</unmanaged>
 	CacheOnDemand = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICDecodeOptions::WICDecodeMetadataCacheOnLoad"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICDecodeOptions::WICDecodeMetadataCacheOnLoad"]/*' />
 	/// <unmanaged>WICDecodeMetadataCacheOnLoad</unmanaged>
 	CacheOnLoad = 1,
 }

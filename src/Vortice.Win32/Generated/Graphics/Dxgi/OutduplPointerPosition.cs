@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_POINTER_POSITION</unmanaged>
 public partial struct OutduplPointerPosition
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Position"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Position"]/*' />
 	public System.Drawing.Point Position;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Visible"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_POINTER_POSITION::Visible"]/*' />
 	public Bool32 Visible;
 }

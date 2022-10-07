@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities"]/*' />
 /// <unmanaged>WICRawRotationCapabilities</unmanaged>
 public enum WICRawRotationCapabilities : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityNotSupported"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityNotSupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityNotSupported</unmanaged>
 	WICRawRotationCapabilityNotSupported = 0,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityGetSupported"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityGetSupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityGetSupported</unmanaged>
 	WICRawRotationCapabilityGetSupported = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityNinetyDegreesSupported"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityNinetyDegreesSupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityNinetyDegreesSupported</unmanaged>
 	WICRawRotationCapabilityNinetyDegreesSupported = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityFullySupported"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityFullySupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityFullySupported</unmanaged>
 	WICRawRotationCapabilityFullySupported = 3,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection"]/*' />
 /// <unmanaged>ID2D1SvgPointCollection</unmanaged>
 [Guid("9dbe4c0d-3572-4dd9-9825-5530813bb712")]
 [NativeTypeName("struct ID2D1SvgPointCollection : ID2D1SvgAttribute")]
@@ -98,7 +98,7 @@ public unsafe partial struct ID2D1SvgPointCollection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), attribute);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::RemovePointsAtEnd"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::RemovePointsAtEnd"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult RemovePointsAtEnd(uint pointsCount)
@@ -106,7 +106,7 @@ public unsafe partial struct ID2D1SvgPointCollection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, uint, int>)(lpVtbl[6]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), pointsCount);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::UpdatePoints"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::UpdatePoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult UpdatePoints(System.Drawing.PointF* points, uint pointsCount, uint startIndex)
@@ -114,7 +114,7 @@ public unsafe partial struct ID2D1SvgPointCollection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, System.Drawing.PointF*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), points, pointsCount, startIndex);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::GetPoints"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::GetPoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetPoints(System.Drawing.PointF* points, uint pointsCount, uint startIndex)
@@ -122,7 +122,7 @@ public unsafe partial struct ID2D1SvgPointCollection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, System.Drawing.PointF*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), points, pointsCount, startIndex);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::GetPointsCount"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::GetPointsCount"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public uint GetPointsCount()

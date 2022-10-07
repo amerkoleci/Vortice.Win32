@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SCALING"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING"]/*' />
 /// <unmanaged>DXGI_SCALING</unmanaged>
 public enum Scaling : int
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_STRETCH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_STRETCH"]/*' />
 	/// <unmanaged>DXGI_SCALING_STRETCH</unmanaged>
 	Stretch = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_NONE"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_NONE"]/*' />
 	/// <unmanaged>DXGI_SCALING_NONE</unmanaged>
 	None = 1,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_ASPECT_RATIO_STRETCH"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SCALING::DXGI_SCALING_ASPECT_RATIO_STRETCH"]/*' />
 	/// <unmanaged>DXGI_SCALING_ASPECT_RATIO_STRETCH</unmanaged>
 	AspectRatioStretch = 2,
 }

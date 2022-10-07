@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgAttribute"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgAttribute"]/*' />
 /// <unmanaged>ID2D1SvgAttribute</unmanaged>
 [Guid("c9cdb0dd-f8c9-4e70-b7c2-301c80292c5e")]
 [NativeTypeName("struct ID2D1SvgAttribute : ID2D1Resource")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1SvgAttribute : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1SvgAttribute*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SvgAttribute*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgAttribute::GetElement"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgAttribute::GetElement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void GetElement(ID2D1SvgElement** element)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1SvgAttribute : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1SvgAttribute*, ID2D1SvgElement**, void>)(lpVtbl[4]))((ID2D1SvgAttribute*)Unsafe.AsPointer(ref this), element);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1SvgAttribute::Clone"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgAttribute::Clone"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult Clone(ID2D1SvgAttribute** attribute)

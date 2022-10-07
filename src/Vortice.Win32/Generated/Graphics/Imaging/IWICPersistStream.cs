@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="IWICPersistStream"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream"]/*' />
 /// <unmanaged>IWICPersistStream</unmanaged>
 [Guid("00675040-6908-45f8-86a3-49c7dfd6d9ad")]
 [NativeTypeName("struct IWICPersistStream : IPersistStream")]
@@ -48,7 +48,7 @@ public unsafe partial struct IWICPersistStream : INativeGuid
 
 	public void** lpVtbl;
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICPersistStream::LoadEx"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::LoadEx"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, uint dwPersistOptions)
@@ -56,7 +56,7 @@ public unsafe partial struct IWICPersistStream : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Com.IStream*, Guid*, uint, int>)(lpVtbl[0]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, pguidPreferredVendor, dwPersistOptions);
 	}
 
-	/// <include file='Imaging.xml' path='doc/member[@name="IWICPersistStream::SaveEx"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::SaveEx"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
 	public HResult SaveEx(Com.IStream* pIStream, uint dwPersistOptions, Bool32 fClearDirty)

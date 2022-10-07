@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE"]/*' />
 /// <unmanaged>D2D1_COLOR_CONTEXT_TYPE</unmanaged>
 public enum ColorContextType : uint
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_ICC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_ICC"]/*' />
 	/// <unmanaged>D2D1_COLOR_CONTEXT_TYPE_ICC</unmanaged>
 	Icc = 0,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_SIMPLE"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_SIMPLE"]/*' />
 	/// <unmanaged>D2D1_COLOR_CONTEXT_TYPE_SIMPLE</unmanaged>
 	Simple = 1,
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_DXGI"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_COLOR_CONTEXT_TYPE::D2D1_COLOR_CONTEXT_TYPE_DXGI"]/*' />
 	/// <unmanaged>D2D1_COLOR_CONTEXT_TYPE_DXGI</unmanaged>
 	DXGI = 2,
 }

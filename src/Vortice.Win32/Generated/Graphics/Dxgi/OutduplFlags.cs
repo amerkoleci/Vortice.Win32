@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG"]/*' />
 /// <unmanaged>DXGI_OUTDUPL_FLAG</unmanaged>
 [Flags]
 public enum OutduplFlags : int
 {
 	None = 0,
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG::DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FLAG::DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY"]/*' />
 	/// <unmanaged>DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY</unmanaged>
 	CompositedUICaptureOnly = 1,
 }

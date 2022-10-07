@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EllipseGeometry"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EllipseGeometry"]/*' />
 /// <unmanaged>ID2D1EllipseGeometry</unmanaged>
 [Guid("2cd906a4-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1EllipseGeometry : ID2D1Geometry")]
@@ -186,7 +186,7 @@ public unsafe partial struct ID2D1EllipseGeometry : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1EllipseGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1EllipseGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1EllipseGeometry::GetEllipse"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EllipseGeometry::GetEllipse"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public void GetEllipse(Ellipse* ellipse)

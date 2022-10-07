@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICRawParameterSet"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet"]/*' />
 /// <unmanaged>WICRawParameterSet</unmanaged>
 public enum WICRawParameterSet : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICAsShotParameterSet"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICAsShotParameterSet"]/*' />
 	/// <unmanaged>WICAsShotParameterSet</unmanaged>
 	WICAsShotParameterSet = 1,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICUserAdjustedParameterSet"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICUserAdjustedParameterSet"]/*' />
 	/// <unmanaged>WICUserAdjustedParameterSet</unmanaged>
 	WICUserAdjustedParameterSet = 2,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICAutoAdjustedParameterSet"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICAutoAdjustedParameterSet"]/*' />
 	/// <unmanaged>WICAutoAdjustedParameterSet</unmanaged>
 	WICAutoAdjustedParameterSet = 3,
 }

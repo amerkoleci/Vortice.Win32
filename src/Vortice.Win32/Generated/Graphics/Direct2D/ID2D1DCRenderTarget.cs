@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DCRenderTarget"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DCRenderTarget"]/*' />
 /// <unmanaged>ID2D1DCRenderTarget</unmanaged>
 [Guid("1c51bc64-de61-46fd-9899-63a5d8f03950")]
 [NativeTypeName("struct ID2D1DCRenderTarget : ID2D1RenderTarget")]
@@ -509,7 +509,7 @@ public unsafe partial struct ID2D1DCRenderTarget : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, RenderTargetProperties*, Bool32>)(lpVtbl[56]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this), renderTargetProperties);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1DCRenderTarget::BindDC"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DCRenderTarget::BindDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
 	public HResult BindDC(IntPtr hDC, RawRect* pSubRect)

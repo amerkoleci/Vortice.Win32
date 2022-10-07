@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandList"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandList"]/*' />
 /// <unmanaged>ID2D1CommandList</unmanaged>
 [Guid("b4f34a19-2383-4d76-94f6-ec343657c3dc")]
 [NativeTypeName("struct ID2D1CommandList : ID2D1Image")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID2D1CommandList : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID2D1CommandList*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1CommandList*)Unsafe.AsPointer(ref this), factory);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandList::Stream"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandList::Stream"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult Stream(ID2D1CommandSink* sink)
@@ -90,7 +90,7 @@ public unsafe partial struct ID2D1CommandList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandList*, ID2D1CommandSink*, int>)(lpVtbl[4]))((ID2D1CommandList*)Unsafe.AsPointer(ref this), sink);
 	}
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="ID2D1CommandList::Close"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandList::Close"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult Close()

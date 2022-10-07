@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct2D;
 
-/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION"]/*' />
+/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION"]/*' />
 /// <unmanaged>D2D1_DRAWING_STATE_DESCRIPTION</unmanaged>
 public partial struct DrawingStateDescription
 {
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::antialiasMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::antialiasMode"]/*' />
 	public AntialiasMode antialiasMode;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::textAntialiasMode"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::textAntialiasMode"]/*' />
 	public TextAntialiasMode textAntialiasMode;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::tag1"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::tag1"]/*' />
 	public ulong tag1;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::tag2"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::tag2"]/*' />
 	public ulong tag2;
 
-	/// <include file='Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::transform"]/*' />
+	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_DRAWING_STATE_DESCRIPTION::transform"]/*' />
 	public Matrix3x2 transform;
 }

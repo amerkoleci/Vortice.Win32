@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Dxgi;
 
-/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10"]/*' />
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10"]/*' />
 /// <unmanaged>DXGI_HDR_METADATA_HDR10</unmanaged>
 public partial struct HDRMetadataHdr10
 {
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::RedPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::RedPrimary"]/*' />
 	public unsafe fixed ushort RedPrimary[2];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::GreenPrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::GreenPrimary"]/*' />
 	public unsafe fixed ushort GreenPrimary[2];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::BluePrimary"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::BluePrimary"]/*' />
 	public unsafe fixed ushort BluePrimary[2];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::WhitePoint"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::WhitePoint"]/*' />
 	public unsafe fixed ushort WhitePoint[2];
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxMasteringLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxMasteringLuminance"]/*' />
 	public uint MaxMasteringLuminance;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MinMasteringLuminance"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MinMasteringLuminance"]/*' />
 	public uint MinMasteringLuminance;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxContentLightLevel"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxContentLightLevel"]/*' />
 	public ushort MaxContentLightLevel;
 
-	/// <include file='DXGI.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxFrameAverageLightLevel"]/*' />
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_HDR_METADATA_HDR10::MaxFrameAverageLightLevel"]/*' />
 	public ushort MaxFrameAverageLightLevel;
 }

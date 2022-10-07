@@ -9,37 +9,37 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS"]/*' />
 /// <unmanaged>DWRITE_FONT_METRICS</unmanaged>
 public partial struct FontMetrics
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::designUnitsPerEm"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::designUnitsPerEm"]/*' />
 	public ushort designUnitsPerEm;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::ascent"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::ascent"]/*' />
 	public ushort ascent;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::descent"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::descent"]/*' />
 	public ushort descent;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::lineGap"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::lineGap"]/*' />
 	public short lineGap;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::capHeight"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::capHeight"]/*' />
 	public ushort capHeight;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::xHeight"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::xHeight"]/*' />
 	public ushort xHeight;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::underlinePosition"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::underlinePosition"]/*' />
 	public short underlinePosition;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::underlineThickness"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::underlineThickness"]/*' />
 	public ushort underlineThickness;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::strikethroughPosition"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::strikethroughPosition"]/*' />
 	public short strikethroughPosition;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::strikethroughThickness"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_METRICS::strikethroughThickness"]/*' />
 	public ushort strikethroughThickness;
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.DirectWrite;
 
-/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE"]/*' />
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE"]/*' />
 /// <unmanaged>DWRITE_FONT_FEATURE</unmanaged>
 public partial struct FontFeature
 {
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE::nameTag"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE::nameTag"]/*' />
 	public FontFeatureTag nameTag;
 
-	/// <include file='DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE::parameter"]/*' />
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FEATURE::parameter"]/*' />
 	public uint parameter;
 }

@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Imaging;
 
-/// <include file='Imaging.xml' path='doc/member[@name="WICProgressNotification"]/*' />
+/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification"]/*' />
 /// <unmanaged>WICProgressNotification</unmanaged>
 public enum WICProgressNotification : int
 {
-	/// <include file='Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationBegin"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationBegin"]/*' />
 	/// <unmanaged>WICProgressNotificationBegin</unmanaged>
 	Begin = 65536,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationEnd"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationEnd"]/*' />
 	/// <unmanaged>WICProgressNotificationEnd</unmanaged>
 	End = 131072,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationFrequent"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationFrequent"]/*' />
 	/// <unmanaged>WICProgressNotificationFrequent</unmanaged>
 	Frequent = 262144,
-	/// <include file='Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationAll"]/*' />
+	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationAll"]/*' />
 	/// <unmanaged>WICProgressNotificationAll</unmanaged>
 	All = -65536,
 }
