@@ -1163,7 +1163,7 @@ public static class Program
         }
         else if (jsonFile == "Graphics.Imaging.D2D.json")
         {
-            docFile = $"../Vortice.Win32/Generated/Graphics/Imaging";
+            docFile = $"../Vortice.Win32.Graphics.Imaging/Imaging";
         }
         else if (jsonFile == "Graphics.Direct3D11on12.json")
         {
