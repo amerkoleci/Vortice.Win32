@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation"]/*' />
 /// <unmanaged>ID3DUserDefinedAnnotation</unmanaged>
 [Guid("b2daad8b-03d4-4dbf-95eb-32ab4b63d0ab")]
 [NativeTypeName("struct ID3DUserDefinedAnnotation : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3DUserDefinedAnnotation : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::BeginEvent"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::BeginEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public int BeginEvent(ushort* Name)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3DUserDefinedAnnotation : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, ushort*, int>)(lpVtbl[3]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::EndEvent"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::EndEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public int EndEvent()
@@ -90,7 +90,7 @@ public unsafe partial struct ID3DUserDefinedAnnotation : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, int>)(lpVtbl[4]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::SetMarker"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::SetMarker"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void SetMarker(ushort* Name)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3DUserDefinedAnnotation : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, ushort*, void>)(lpVtbl[5]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::GetStatus"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::GetStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public Bool32 GetStatus()

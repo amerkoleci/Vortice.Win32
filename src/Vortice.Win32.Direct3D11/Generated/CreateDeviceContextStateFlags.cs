@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG"]/*' />
 /// <unmanaged>D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG</unmanaged>
 [Flags]
 public enum CreateDeviceContextStateFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG::D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG::D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED"]/*' />
 	/// <unmanaged>D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED</unmanaged>
 	SingleThreaded = 1,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice"]/*' />
 /// <unmanaged>ID3D12DebugDevice</unmanaged>
 [Guid("3febd6dd-4973-4787-8194-e45f9e28923e")]
 [NativeTypeName("struct ID3D12DebugDevice : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12DebugDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::SetFeatureMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::SetFeatureMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetFeatureMask(DebugFeature Mask)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12DebugDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice*, DebugFeature, int>)(lpVtbl[3]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this), Mask);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::GetFeatureMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::GetFeatureMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public DebugFeature GetFeatureMask()
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12DebugDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice*, DebugFeature>)(lpVtbl[4]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::ReportLiveDeviceObjects"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice::ReportLiveDeviceObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags)

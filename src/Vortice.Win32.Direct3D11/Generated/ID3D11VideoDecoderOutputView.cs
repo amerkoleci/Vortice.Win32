@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoderOutputView"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoderOutputView"]/*' />
 /// <unmanaged>ID3D11VideoDecoderOutputView</unmanaged>
 [Guid("c2931aea-2a85-4f20-860f-fba1fd256e18")]
 [NativeTypeName("struct ID3D11VideoDecoderOutputView : ID3D11View")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11VideoDecoderOutputView : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11VideoDecoderOutputView*, ID3D11Resource**, void>)(lpVtbl[7]))((ID3D11VideoDecoderOutputView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoderOutputView::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoderOutputView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(VideoDecoderOutputViewDescription* pDesc)

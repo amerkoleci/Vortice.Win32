@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeOwner"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeOwner"]/*' />
 /// <unmanaged>ID3D12LifetimeOwner</unmanaged>
 [Guid("e667af9f-cd56-4f46-83ce-032e595d70a8")]
 [NativeTypeName("struct ID3D12LifetimeOwner : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12LifetimeOwner : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeOwner::LifetimeStateUpdated"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeOwner::LifetimeStateUpdated"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void LifetimeStateUpdated(LifetimeState NewState)

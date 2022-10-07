@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT</unmanaged>
 public partial struct AuthenticatedQueryOutputIdCountInput
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::Input"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::Input"]/*' />
 	public AuthenticatedQueryInput Input;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::DeviceHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::DeviceHandle"]/*' />
 	public Handle DeviceHandle;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::CryptoSessionHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT_ID_COUNT_INPUT::CryptoSessionHandle"]/*' />
 	public Handle CryptoSessionHandle;
 }

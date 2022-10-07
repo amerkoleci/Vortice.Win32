@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS</unmanaged>
 public partial struct RenderPassEndingAccessResolveSubresourceParameters
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::SrcSubresource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::SrcSubresource"]/*' />
 	public uint SrcSubresource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::DstSubresource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::DstSubresource"]/*' />
 	public uint DstSubresource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::DstX"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::DstX"]/*' />
 	public uint DstX;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::DstY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::DstY"]/*' />
 	public uint DstY;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::SrcRect"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::SrcRect"]/*' />
 	public RawRect SrcRect;
 }

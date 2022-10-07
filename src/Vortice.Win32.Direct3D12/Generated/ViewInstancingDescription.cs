@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC"]/*' />
 /// <unmanaged>D3D12_VIEW_INSTANCING_DESC</unmanaged>
 public partial struct ViewInstancingDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC::ViewInstanceCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC::ViewInstanceCount"]/*' />
 	public uint ViewInstanceCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC::pViewInstanceLocations"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC::pViewInstanceLocations"]/*' />
 	public unsafe ViewInstanceLocation* pViewInstanceLocations;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_DESC::Flags"]/*' />
 	public ViewInstancingFlags Flags;
 }

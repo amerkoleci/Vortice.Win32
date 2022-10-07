@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE"]/*' />
 /// <unmanaged>D3D11_CONTEXT_TYPE</unmanaged>
 public enum ContextType : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_ALL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_ALL"]/*' />
 	/// <unmanaged>D3D11_CONTEXT_TYPE_ALL</unmanaged>
 	All = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_3D"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_3D"]/*' />
 	/// <unmanaged>D3D11_CONTEXT_TYPE_3D</unmanaged>
 	_3D = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_COMPUTE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_COMPUTE"]/*' />
 	/// <unmanaged>D3D11_CONTEXT_TYPE_COMPUTE</unmanaged>
 	Compute = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_COPY"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_COPY"]/*' />
 	/// <unmanaged>D3D11_CONTEXT_TYPE_COPY</unmanaged>
 	Copy = 3,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_VIDEO"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_VIDEO"]/*' />
 	/// <unmanaged>D3D11_CONTEXT_TYPE_VIDEO</unmanaged>
 	Video = 4,
 }

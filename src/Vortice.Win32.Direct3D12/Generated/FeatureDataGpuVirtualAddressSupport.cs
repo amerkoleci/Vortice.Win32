@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT</unmanaged>
 public partial struct FeatureDataGpuVirtualAddressSupport
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT::MaxGPUVirtualAddressBitsPerResource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT::MaxGPUVirtualAddressBitsPerResource"]/*' />
 	public uint MaxGPUVirtualAddressBitsPerResource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT::MaxGPUVirtualAddressBitsPerProcess"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_GPU_VIRTUAL_ADDRESS_SUPPORT::MaxGPUVirtualAddressBitsPerProcess"]/*' />
 	public uint MaxGPUVirtualAddressBitsPerProcess;
 }

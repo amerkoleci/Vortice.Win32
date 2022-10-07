@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA"]/*' />
 /// <unmanaged>D3D11_VIDEO_COLOR_YCbCrA</unmanaged>
 public partial struct VideoColorYcbcra
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA::Y"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA::Y"]/*' />
 	public float Y;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA::Cb"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA::Cb"]/*' />
 	public float Cb;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA::Cr"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA::Cr"]/*' />
 	public float Cr;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA::A"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_YCbCrA::A"]/*' />
 	public float A;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorInputView"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorInputView"]/*' />
 /// <unmanaged>ID3D11VideoProcessorInputView</unmanaged>
 [Guid("11ec5a5f-51dc-4945-ab34-6e8c21300ea5")]
 [NativeTypeName("struct ID3D11VideoProcessorInputView : ID3D11View")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11VideoProcessorInputView : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorInputView*, ID3D11Resource**, void>)(lpVtbl[7]))((ID3D11VideoProcessorInputView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorInputView::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorInputView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(VideoProcessorInputViewDescription* pDesc)

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILL_MODE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILL_MODE"]/*' />
 /// <unmanaged>D3D11_FILL_MODE</unmanaged>
 public enum FillMode : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILL_MODE::D3D11_FILL_WIREFRAME"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILL_MODE::D3D11_FILL_WIREFRAME"]/*' />
 	/// <unmanaged>D3D11_FILL_WIREFRAME</unmanaged>
 	Wireframe = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILL_MODE::D3D11_FILL_SOLID"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILL_MODE::D3D11_FILL_SOLID"]/*' />
 	/// <unmanaged>D3D11_FILL_SOLID</unmanaged>
 	Solid = 3,
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC</unmanaged>
 public partial struct RaytracingAccelerationStructurePostbuildInfoDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC::DestBuffer"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC::DestBuffer"]/*' />
 	public ulong DestBuffer;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC::InfoType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC::InfoType"]/*' />
 	public RaytracingAccelerationStructurePostbuildInfoType InfoType;
 }

@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT</unmanaged>
 public partial struct FeatureDataD3d9ShadowSupport
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT::SupportsDepthAsTextureWithLessEqualComparisonFilter"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT::SupportsDepthAsTextureWithLessEqualComparisonFilter"]/*' />
 	public Bool32 SupportsDepthAsTextureWithLessEqualComparisonFilter;
 }

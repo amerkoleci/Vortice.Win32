@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device5"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device5"]/*' />
 /// <unmanaged>ID3D11Device5</unmanaged>
 [Guid("8ffde202-a0e7-45df-9e01-e837801b5ea0")]
 [NativeTypeName("struct ID3D11Device5 : ID3D11Device4")]
@@ -586,7 +586,7 @@ public unsafe partial struct ID3D11Device5 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Device5*, uint, void>)(lpVtbl[66]))((ID3D11Device5*)Unsafe.AsPointer(ref this), dwCookie);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device5::OpenSharedFence"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device5::OpenSharedFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
 	public HResult OpenSharedFence(Handle hFence, Guid* ReturnedInterface, void** ppFence)
@@ -594,7 +594,7 @@ public unsafe partial struct ID3D11Device5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, Handle, Guid*, void**, int>)(lpVtbl[67]))((ID3D11Device5*)Unsafe.AsPointer(ref this), hFence, ReturnedInterface, ppFence);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device5::CreateFence"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device5::CreateFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
 	public HResult CreateFence(ulong InitialValue, FenceFlags Flags, Guid* ReturnedInterface, void** ppFence)

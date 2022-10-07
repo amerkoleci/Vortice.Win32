@@ -9,40 +9,40 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1"]/*' />
 /// <unmanaged>D3D11_RASTERIZER_DESC1</unmanaged>
 public partial struct RasterizerDescription1
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::FillMode"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::FillMode"]/*' />
 	public FillMode FillMode;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::CullMode"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::CullMode"]/*' />
 	public CullMode CullMode;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::FrontCounterClockwise"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::FrontCounterClockwise"]/*' />
 	public Bool32 FrontCounterClockwise;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::DepthBias"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::DepthBias"]/*' />
 	public int DepthBias;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::DepthBiasClamp"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::DepthBiasClamp"]/*' />
 	public float DepthBiasClamp;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::SlopeScaledDepthBias"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::SlopeScaledDepthBias"]/*' />
 	public float SlopeScaledDepthBias;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::DepthClipEnable"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::DepthClipEnable"]/*' />
 	public Bool32 DepthClipEnable;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::ScissorEnable"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::ScissorEnable"]/*' />
 	public Bool32 ScissorEnable;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::MultisampleEnable"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::MultisampleEnable"]/*' />
 	public Bool32 MultisampleEnable;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::AntialiasedLineEnable"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::AntialiasedLineEnable"]/*' />
 	public Bool32 AntialiasedLineEnable;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::ForcedSampleCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RASTERIZER_DESC1::ForcedSampleCount"]/*' />
 	public uint ForcedSampleCount;
 }

@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM</unmanaged>
 public partial struct FeatureDataVideoDecoderHistogram
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM::DecoderDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM::DecoderDesc"]/*' />
 	public VideoDecoderDescription DecoderDesc;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM::Components"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM::Components"]/*' />
 	public VideoDecoderHistogramComponentFlags Components;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM::BinCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM::BinCount"]/*' />
 	public uint BinCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM::CounterBitDepth"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_VIDEO_DECODER_HISTOGRAM::CounterBitDepth"]/*' />
 	public uint CounterBitDepth;
 }

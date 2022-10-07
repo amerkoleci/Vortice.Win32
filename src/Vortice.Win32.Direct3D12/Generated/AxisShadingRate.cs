@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE"]/*' />
 /// <unmanaged>D3D12_AXIS_SHADING_RATE</unmanaged>
 public enum AxisShadingRate : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE::D3D12_AXIS_SHADING_RATE_1X"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE::D3D12_AXIS_SHADING_RATE_1X"]/*' />
 	/// <unmanaged>D3D12_AXIS_SHADING_RATE_1X</unmanaged>
 	Rate1x = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE::D3D12_AXIS_SHADING_RATE_2X"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE::D3D12_AXIS_SHADING_RATE_2X"]/*' />
 	/// <unmanaged>D3D12_AXIS_SHADING_RATE_2X</unmanaged>
 	Rate2x = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE::D3D12_AXIS_SHADING_RATE_4X"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE::D3D12_AXIS_SHADING_RATE_4X"]/*' />
 	/// <unmanaged>D3D12_AXIS_SHADING_RATE_4X</unmanaged>
 	Rate4x = 2,
 }

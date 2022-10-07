@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC"]/*' />
 /// <unmanaged>D3D11_SHADER_TRACE_DESC</unmanaged>
 public partial struct ShaderTraceDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC::Type"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC::Type"]/*' />
 	public ShaderType Type;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC::Flags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC::Flags"]/*' />
 	public uint Flags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC::Anonymous"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACE_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -85,27 +85,27 @@ public partial struct ShaderTraceDescription
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::VertexShaderTraceDesc"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::VertexShaderTraceDesc"]/*' />
 		[FieldOffset(0)]
 		public VertexShaderTraceDescription VertexShaderTraceDesc;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::HullShaderTraceDesc"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::HullShaderTraceDesc"]/*' />
 		[FieldOffset(0)]
 		public HullShaderTraceDescription HullShaderTraceDesc;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::DomainShaderTraceDesc"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::DomainShaderTraceDesc"]/*' />
 		[FieldOffset(0)]
 		public DomainShaderTraceDescription DomainShaderTraceDesc;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::GeometryShaderTraceDesc"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::GeometryShaderTraceDesc"]/*' />
 		[FieldOffset(0)]
 		public GeometryShaderTraceDescription GeometryShaderTraceDesc;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::PixelShaderTraceDesc"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::PixelShaderTraceDesc"]/*' />
 		[FieldOffset(0)]
 		public PixelShaderTraceDescription PixelShaderTraceDesc;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::ComputeShaderTraceDesc"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::ComputeShaderTraceDesc"]/*' />
 		[FieldOffset(0)]
 		public ComputeShaderTraceDescription ComputeShaderTraceDesc;
 	}

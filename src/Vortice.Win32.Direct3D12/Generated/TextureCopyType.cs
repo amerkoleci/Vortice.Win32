@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_TYPE"]/*' />
 /// <unmanaged>D3D12_TEXTURE_COPY_TYPE</unmanaged>
 public enum TextureCopyType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_TYPE::D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_TYPE::D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX</unmanaged>
 	SubresourceIndex = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_TYPE::D3D12_TEXTURE_COPY_TYPE_PLACED_FOOTPRINT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_TYPE::D3D12_TEXTURE_COPY_TYPE_PLACED_FOOTPRINT"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_COPY_TYPE_PLACED_FOOTPRINT</unmanaged>
 	PlacedFootprint = 1,
 }

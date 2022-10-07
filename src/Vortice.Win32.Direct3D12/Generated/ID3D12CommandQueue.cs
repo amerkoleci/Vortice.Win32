@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue"]/*' />
 /// <unmanaged>ID3D12CommandQueue</unmanaged>
 [Guid("0ec870a6-5d7e-4c22-8cfc-5baae07616ed")]
 [NativeTypeName("struct ID3D12CommandQueue : ID3D12Pageable")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::UpdateTileMappings"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::UpdateTileMappings"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void UpdateTileMappings(ID3D12Resource* pResource, uint NumResourceRegions, TiledResourceCoordinate* pResourceRegionStartCoordinates, TileRegionSize* pResourceRegionSizes, ID3D12Heap* pHeap, uint NumRanges, TileRangeFlags* pRangeFlags, uint* pHeapRangeStartOffsets, uint* pRangeTileCounts, TileMappingFlags Flags)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, ID3D12Resource*, uint, TiledResourceCoordinate*, TileRegionSize*, ID3D12Heap*, uint, TileRangeFlags*, uint*, uint*, TileMappingFlags, void>)(lpVtbl[8]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pResource, NumResourceRegions, pResourceRegionStartCoordinates, pResourceRegionSizes, pHeap, NumRanges, pRangeFlags, pHeapRangeStartOffsets, pRangeTileCounts, Flags);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::CopyTileMappings"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::CopyTileMappings"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public void CopyTileMappings(ID3D12Resource* pDstResource, TiledResourceCoordinate* pDstRegionStartCoordinate, ID3D12Resource* pSrcResource, TiledResourceCoordinate* pSrcRegionStartCoordinate, TileRegionSize* pRegionSize, TileMappingFlags Flags)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, ID3D12Resource*, TiledResourceCoordinate*, ID3D12Resource*, TiledResourceCoordinate*, TileRegionSize*, TileMappingFlags, void>)(lpVtbl[9]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pDstResource, pDstRegionStartCoordinate, pSrcResource, pSrcRegionStartCoordinate, pRegionSize, Flags);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::ExecuteCommandLists"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::ExecuteCommandLists"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public void ExecuteCommandLists(uint NumCommandLists, ID3D12CommandList** ppCommandLists)
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, uint, ID3D12CommandList**, void>)(lpVtbl[10]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), NumCommandLists, ppCommandLists);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::SetMarker"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::SetMarker"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public void SetMarker(uint Metadata, void* pData, uint Size)
@@ -146,7 +146,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, uint, void*, uint, void>)(lpVtbl[11]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), Metadata, pData, Size);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::BeginEvent"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::BeginEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public void BeginEvent(uint Metadata, void* pData, uint Size)
@@ -154,7 +154,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, uint, void*, uint, void>)(lpVtbl[12]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), Metadata, pData, Size);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::EndEvent"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::EndEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public void EndEvent()
@@ -162,7 +162,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, void>)(lpVtbl[13]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::Signal"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::Signal"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult Signal(ID3D12Fence* pFence, ulong Value)
@@ -170,7 +170,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, ID3D12Fence*, ulong, int>)(lpVtbl[14]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pFence, Value);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::Wait"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::Wait"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult Wait(ID3D12Fence* pFence, ulong Value)
@@ -178,7 +178,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, ID3D12Fence*, ulong, int>)(lpVtbl[15]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pFence, Value);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetTimestampFrequency"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetTimestampFrequency"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult GetTimestampFrequency(ulong* pFrequency)
@@ -186,7 +186,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, ulong*, int>)(lpVtbl[16]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pFrequency);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetClockCalibration"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetClockCalibration"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult GetClockCalibration(ulong* pGpuTimestamp, ulong* pCpuTimestamp)
@@ -194,7 +194,7 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, ulong*, ulong*, int>)(lpVtbl[17]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), pGpuTimestamp, pCpuTimestamp);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandQueue::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public CommandQueueDescription GetDesc()

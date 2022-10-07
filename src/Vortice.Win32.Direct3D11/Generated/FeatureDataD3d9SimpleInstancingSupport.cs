@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT</unmanaged>
 public partial struct FeatureDataD3d9SimpleInstancingSupport
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT::SimpleInstancingSupported"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_SIMPLE_INSTANCING_SUPPORT::SimpleInstancingSupported"]/*' />
 	public Bool32 SimpleInstancingSupported;
 }

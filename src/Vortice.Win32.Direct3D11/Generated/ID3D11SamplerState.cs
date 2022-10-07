@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11SamplerState"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SamplerState"]/*' />
 /// <unmanaged>ID3D11SamplerState</unmanaged>
 [Guid("da6fea51-564c-4487-9810-f0d0f9b4e3a5")]
 [NativeTypeName("struct ID3D11SamplerState : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11SamplerState : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11SamplerState*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11SamplerState*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11SamplerState::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SamplerState::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetDesc(SamplerDescription* pDesc)

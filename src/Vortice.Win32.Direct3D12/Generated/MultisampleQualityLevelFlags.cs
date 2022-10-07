@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS"]/*' />
 /// <unmanaged>D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS</unmanaged>
 [Flags]
 public enum MultisampleQualityLevelFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS::D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS::D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS::D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_TILED_RESOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS::D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_TILED_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_TILED_RESOURCE</unmanaged>
 	TiledResource = 1,
 }

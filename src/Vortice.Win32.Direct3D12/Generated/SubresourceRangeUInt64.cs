@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64"]/*' />
 /// <unmanaged>D3D12_SUBRESOURCE_RANGE_UINT64</unmanaged>
 public partial struct SubresourceRangeUInt64
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64::Subresource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64::Subresource"]/*' />
 	public uint Subresource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64::Range"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_RANGE_UINT64::Range"]/*' />
 	public RangeUInt64 Range;
 }

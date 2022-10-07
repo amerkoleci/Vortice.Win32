@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_CONFIGURE_INPUT</unmanaged>
 public partial struct AuthenticatedConfigureInput
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::omac"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::omac"]/*' />
 	public Omac omac;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::ConfigureType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::ConfigureType"]/*' />
 	public Guid ConfigureType;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::hChannel"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::hChannel"]/*' />
 	public Handle hChannel;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::SequenceNumber"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
 }

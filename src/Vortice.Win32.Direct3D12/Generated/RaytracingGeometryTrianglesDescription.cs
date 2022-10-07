@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC</unmanaged>
 public partial struct RaytracingGeometryTrianglesDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::Transform3x4"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::Transform3x4"]/*' />
 	public ulong Transform3x4;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::IndexFormat"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::IndexFormat"]/*' />
 	public Graphics.Dxgi.Common.Format IndexFormat;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::VertexFormat"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::VertexFormat"]/*' />
 	public Graphics.Dxgi.Common.Format VertexFormat;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::IndexCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::IndexCount"]/*' />
 	public uint IndexCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::VertexCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::VertexCount"]/*' />
 	public uint VertexCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::IndexBuffer"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::IndexBuffer"]/*' />
 	public ulong IndexBuffer;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::VertexBuffer"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC::VertexBuffer"]/*' />
 	public GpuVirtualAddressAndStride VertexBuffer;
 }

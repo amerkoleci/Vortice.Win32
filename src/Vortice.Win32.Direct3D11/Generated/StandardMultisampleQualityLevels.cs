@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS"]/*' />
 /// <unmanaged>D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS</unmanaged>
 public enum StandardMultisampleQualityLevels : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D11_STANDARD_MULTISAMPLE_PATTERN"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D11_STANDARD_MULTISAMPLE_PATTERN"]/*' />
 	/// <unmanaged>D3D11_STANDARD_MULTISAMPLE_PATTERN</unmanaged>
 	Standard = -1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D11_CENTER_MULTISAMPLE_PATTERN"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D11_CENTER_MULTISAMPLE_PATTERN"]/*' />
 	/// <unmanaged>D3D11_CENTER_MULTISAMPLE_PATTERN</unmanaged>
 	Center = -2,
 }

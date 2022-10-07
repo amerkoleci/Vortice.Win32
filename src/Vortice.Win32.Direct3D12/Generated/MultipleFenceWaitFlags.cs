@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS"]/*' />
 /// <unmanaged>D3D12_MULTIPLE_FENCE_WAIT_FLAGS</unmanaged>
 [Flags]
 public enum MultipleFenceWaitFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS::D3D12_MULTIPLE_FENCE_WAIT_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS::D3D12_MULTIPLE_FENCE_WAIT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_MULTIPLE_FENCE_WAIT_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS::D3D12_MULTIPLE_FENCE_WAIT_FLAG_ANY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS::D3D12_MULTIPLE_FENCE_WAIT_FLAG_ANY"]/*' />
 	/// <unmanaged>D3D12_MULTIPLE_FENCE_WAIT_FLAG_ANY</unmanaged>
 	Any = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS::D3D12_MULTIPLE_FENCE_WAIT_FLAG_ALL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS::D3D12_MULTIPLE_FENCE_WAIT_FLAG_ALL"]/*' />
 	/// <unmanaged>D3D12_MULTIPLE_FENCE_WAIT_FLAG_ALL</unmanaged>
 	All = 0,
 }

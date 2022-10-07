@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY"]/*' />
 /// <unmanaged>D3D12_SO_DECLARATION_ENTRY</unmanaged>
 public partial struct SODeclarationEntry
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::Stream"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::Stream"]/*' />
 	public uint Stream;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::SemanticName"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::SemanticName"]/*' />
 	public unsafe sbyte* SemanticName;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::SemanticIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::SemanticIndex"]/*' />
 	public uint SemanticIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::StartComponent"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::StartComponent"]/*' />
 	public byte StartComponent;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::ComponentCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::ComponentCount"]/*' />
 	public byte ComponentCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::OutputSlot"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::OutputSlot"]/*' />
 	public byte OutputSlot;
 }

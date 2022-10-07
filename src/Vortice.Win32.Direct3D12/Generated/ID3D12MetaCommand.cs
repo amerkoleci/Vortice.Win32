@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12MetaCommand"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12MetaCommand"]/*' />
 /// <unmanaged>ID3D12MetaCommand</unmanaged>
 [Guid("dbb84c27-36ce-4fc9-b801-f048c46ac570")]
 [NativeTypeName("struct ID3D12MetaCommand : ID3D12Pageable")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12MetaCommand : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12MetaCommand*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12MetaCommand*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12MetaCommand::GetRequiredParameterResourceSize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12MetaCommand::GetRequiredParameterResourceSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public ulong GetRequiredParameterResourceSize(MetaCommandParameterStage Stage, uint ParameterIndex)

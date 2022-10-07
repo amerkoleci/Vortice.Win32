@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CPU_DESCRIPTOR_HANDLE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_DESCRIPTOR_HANDLE"]/*' />
 /// <unmanaged>D3D12_CPU_DESCRIPTOR_HANDLE</unmanaged>
 public partial struct CpuDescriptorHandle
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CPU_DESCRIPTOR_HANDLE::ptr"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_DESCRIPTOR_HANDLE::ptr"]/*' />
 	public nuint ptr;
 }

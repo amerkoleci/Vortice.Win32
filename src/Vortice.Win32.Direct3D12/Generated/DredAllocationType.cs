@@ -9,95 +9,95 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE"]/*' />
 /// <unmanaged>D3D12_DRED_ALLOCATION_TYPE</unmanaged>
 public enum DredAllocationType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_QUEUE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_QUEUE"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_COMMAND_QUEUE</unmanaged>
 	CommandQueue = 19,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_ALLOCATOR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_ALLOCATOR"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_COMMAND_ALLOCATOR</unmanaged>
 	CommandAllocator = 20,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_PIPELINE_STATE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_PIPELINE_STATE"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_PIPELINE_STATE</unmanaged>
 	PipelineState = 21,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_LIST"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_LIST"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_COMMAND_LIST</unmanaged>
 	CommandList = 22,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_FENCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_FENCE"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_FENCE</unmanaged>
 	Fence = 23,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_DESCRIPTOR_HEAP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_DESCRIPTOR_HEAP"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_DESCRIPTOR_HEAP</unmanaged>
 	DescriptorHeap = 24,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_HEAP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_HEAP"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_HEAP</unmanaged>
 	Heap = 25,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_QUERY_HEAP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_QUERY_HEAP"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_QUERY_HEAP</unmanaged>
 	QueryHeap = 27,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_SIGNATURE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_SIGNATURE"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_COMMAND_SIGNATURE</unmanaged>
 	CommandSignature = 28,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_PIPELINE_LIBRARY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_PIPELINE_LIBRARY"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_PIPELINE_LIBRARY</unmanaged>
 	PipelineLibrary = 29,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_DECODER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_DECODER"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_VIDEO_DECODER</unmanaged>
 	VideoDecoder = 30,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_PROCESSOR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_PROCESSOR"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_VIDEO_PROCESSOR</unmanaged>
 	VideoProcessor = 32,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_RESOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_RESOURCE</unmanaged>
 	Resource = 34,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_PASS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_PASS"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_PASS</unmanaged>
 	Pass = 35,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_CRYPTOSESSION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_CRYPTOSESSION"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_CRYPTOSESSION</unmanaged>
 	CryptoSession = 36,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_CRYPTOSESSIONPOLICY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_CRYPTOSESSIONPOLICY"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_CRYPTOSESSIONPOLICY</unmanaged>
 	CryptoSessionPolicy = 37,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_PROTECTEDRESOURCESESSION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_PROTECTEDRESOURCESESSION"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_PROTECTEDRESOURCESESSION</unmanaged>
 	ProtectedResourceSession = 38,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_DECODER_HEAP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_DECODER_HEAP"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_VIDEO_DECODER_HEAP</unmanaged>
 	VideoDecoderHeap = 39,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_POOL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_POOL"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_COMMAND_POOL</unmanaged>
 	CommandPool = 40,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_RECORDER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_RECORDER"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_COMMAND_RECORDER</unmanaged>
 	CommandRecorder = 41,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_STATE_OBJECT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_STATE_OBJECT"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_STATE_OBJECT</unmanaged>
 	StateObject = 42,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_METACOMMAND"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_METACOMMAND"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_METACOMMAND</unmanaged>
 	MetaCommand = 43,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_SCHEDULINGGROUP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_SCHEDULINGGROUP"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_SCHEDULINGGROUP</unmanaged>
 	SchedulingGroup = 44,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_MOTION_ESTIMATOR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_MOTION_ESTIMATOR"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_VIDEO_MOTION_ESTIMATOR</unmanaged>
 	VideoMotionEstimator = 45,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_MOTION_VECTOR_HEAP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_MOTION_VECTOR_HEAP"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_VIDEO_MOTION_VECTOR_HEAP</unmanaged>
 	VideoMotionVectorHeap = 46,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_EXTENSION_COMMAND"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_EXTENSION_COMMAND"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_VIDEO_EXTENSION_COMMAND</unmanaged>
 	VideoExtensionCommand = 47,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_ENCODER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_ENCODER"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_VIDEO_ENCODER</unmanaged>
 	VideoEncoder = 48,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_ENCODER_HEAP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_VIDEO_ENCODER_HEAP"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_VIDEO_ENCODER_HEAP</unmanaged>
 	VideoEncoderHeap = 49,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_INVALID"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_INVALID"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_INVALID</unmanaged>
 	Invalid = -1,
 }

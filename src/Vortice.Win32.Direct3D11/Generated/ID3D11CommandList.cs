@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11CommandList"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CommandList"]/*' />
 /// <unmanaged>ID3D11CommandList</unmanaged>
 [Guid("a24bc4d1-769e-43f7-8013-98ff566c18e2")]
 [NativeTypeName("struct ID3D11CommandList : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11CommandList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11CommandList*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11CommandList*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11CommandList::GetContextFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CommandList::GetContextFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public uint GetContextFlags()

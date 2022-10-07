@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11LinkingNode"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LinkingNode"]/*' />
 /// <unmanaged>ID3D11LinkingNode</unmanaged>
 [Guid("d80dd70c-8d2f-4751-94a1-03c79b3556db")]
 [NativeTypeName("struct ID3D11LinkingNode : IUnknown")]

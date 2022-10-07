@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Resource"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Resource"]/*' />
 /// <unmanaged>ID3D11Resource</unmanaged>
 [Guid("dc8e63f3-d12b-4952-b47b-5e45026a862d")]
 [NativeTypeName("struct ID3D11Resource : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11Resource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Resource*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11Resource*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Resource::GetType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Resource::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetType(ResourceDimension* pResourceDimension)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11Resource : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Resource*, ResourceDimension*, void>)(lpVtbl[7]))((ID3D11Resource*)Unsafe.AsPointer(ref this), pResourceDimension);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Resource::SetEvictionPriority"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Resource::SetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void SetEvictionPriority(uint EvictionPriority)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D11Resource : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Resource*, uint, void>)(lpVtbl[8]))((ID3D11Resource*)Unsafe.AsPointer(ref this), EvictionPriority);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Resource::GetEvictionPriority"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Resource::GetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public uint GetEvictionPriority()

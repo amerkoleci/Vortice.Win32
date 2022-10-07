@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS"]/*' />
 /// <unmanaged>D3D12_DRED_FLAGS</unmanaged>
 [Flags]
 public enum DredFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS::D3D12_DRED_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS::D3D12_DRED_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_DRED_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS::D3D12_DRED_FLAG_FORCE_ENABLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS::D3D12_DRED_FLAG_FORCE_ENABLE"]/*' />
 	/// <unmanaged>D3D12_DRED_FLAG_FORCE_ENABLE</unmanaged>
 	ForceEnable = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS::D3D12_DRED_FLAG_DISABLE_AUTOBREADCRUMBS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS::D3D12_DRED_FLAG_DISABLE_AUTOBREADCRUMBS"]/*' />
 	/// <unmanaged>D3D12_DRED_FLAG_DISABLE_AUTOBREADCRUMBS</unmanaged>
 	DisableAutobreadcrumbs = 2,
 }

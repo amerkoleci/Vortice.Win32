@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT</unmanaged>
 public partial struct AuthenticatedQueryDeviceHandleOutput
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT::Output"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT::Output"]/*' />
 	public AuthenticatedQueryOutput Output;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT::DeviceHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_DEVICE_HANDLE_OUTPUT::DeviceHandle"]/*' />
 	public Handle DeviceHandle;
 }

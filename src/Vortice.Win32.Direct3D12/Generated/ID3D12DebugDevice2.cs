@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice2"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice2"]/*' />
 /// <unmanaged>ID3D12DebugDevice2</unmanaged>
 [Guid("60eccbc1-378d-4df1-894c-f8ac5ce4d7dd")]
 [NativeTypeName("struct ID3D12DebugDevice2 : ID3D12DebugDevice")]
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D12DebugDevice2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice2*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[5]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this), Flags);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice2::SetDebugParameter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice2::SetDebugParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult SetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize)
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D12DebugDevice2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice2*, DebugDeviceParameterType, void*, uint, int>)(lpVtbl[6]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice2::GetDebugParameter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice2::GetDebugParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize)

@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_FLAGS"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_HEAP_FLAGS</unmanaged>
 [Flags]
 public enum DescriptorHeapFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_FLAGS::D3D12_DESCRIPTOR_HEAP_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_FLAGS::D3D12_DESCRIPTOR_HEAP_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_HEAP_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_FLAGS::D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_FLAGS::D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE</unmanaged>
 	ShaderVisible = 1,
 }

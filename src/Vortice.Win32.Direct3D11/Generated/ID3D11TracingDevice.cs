@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice"]/*' />
 /// <unmanaged>ID3D11TracingDevice</unmanaged>
 [Guid("1911c771-1587-413e-a7e0-fb26c3de0268")]
 [NativeTypeName("struct ID3D11TracingDevice : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11TracingDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice::SetShaderTrackingOptionsByType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice::SetShaderTrackingOptionsByType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetShaderTrackingOptionsByType(uint ResourceTypeFlags, uint Options)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D11TracingDevice : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11TracingDevice*, uint, uint, int>)(lpVtbl[3]))((ID3D11TracingDevice*)Unsafe.AsPointer(ref this), ResourceTypeFlags, Options);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice::SetShaderTrackingOptions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11TracingDevice::SetShaderTrackingOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetShaderTrackingOptions(IUnknown* pShader, uint Options)

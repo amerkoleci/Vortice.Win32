@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT"]/*' />
 /// <unmanaged>D3D12_DRED_ENABLEMENT</unmanaged>
 public enum DredEnablement : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT::D3D12_DRED_ENABLEMENT_SYSTEM_CONTROLLED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT::D3D12_DRED_ENABLEMENT_SYSTEM_CONTROLLED"]/*' />
 	/// <unmanaged>D3D12_DRED_ENABLEMENT_SYSTEM_CONTROLLED</unmanaged>
 	SystemControlled = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT::D3D12_DRED_ENABLEMENT_FORCED_OFF"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT::D3D12_DRED_ENABLEMENT_FORCED_OFF"]/*' />
 	/// <unmanaged>D3D12_DRED_ENABLEMENT_FORCED_OFF</unmanaged>
 	ForcedOff = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT::D3D12_DRED_ENABLEMENT_FORCED_ON"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT::D3D12_DRED_ENABLEMENT_FORCED_ON"]/*' />
 	/// <unmanaged>D3D12_DRED_ENABLEMENT_FORCED_ON</unmanaged>
 	ForcedOn = 2,
 }

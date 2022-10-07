@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12QueryHeap"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12QueryHeap"]/*' />
 /// <unmanaged>ID3D12QueryHeap</unmanaged>
 [Guid("0d9658ae-ed45-469e-a61d-970ec583cab4")]
 [NativeTypeName("struct ID3D12QueryHeap : ID3D12Pageable")]

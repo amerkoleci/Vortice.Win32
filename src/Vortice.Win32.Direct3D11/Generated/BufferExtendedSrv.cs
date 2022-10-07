@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV"]/*' />
 /// <unmanaged>D3D11_BUFFEREX_SRV</unmanaged>
 public partial struct BufferExtendedSrv
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV::FirstElement"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV::FirstElement"]/*' />
 	public uint FirstElement;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV::NumElements"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV::NumElements"]/*' />
 	public uint NumElements;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV::Flags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV::Flags"]/*' />
 	public BufferExtendedSrvFlags Flags;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1"]/*' />
 /// <unmanaged>ID3D12GraphicsCommandList1</unmanaged>
 [Guid("553103fb-1fe7-4557-bb38-946d7d0e7ca7")]
 [NativeTypeName("struct ID3D12GraphicsCommandList1 : ID3D12GraphicsCommandList")]
@@ -530,7 +530,7 @@ public unsafe partial struct ID3D12GraphicsCommandList1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ID3D12CommandSignature*, uint, ID3D12Resource*, ulong, ID3D12Resource*, ulong, void>)(lpVtbl[59]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), pCommandSignature, MaxCommandCount, pArgumentBuffer, ArgumentBufferOffset, pCountBuffer, CountBufferOffset);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::AtomicCopyBufferUINT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::AtomicCopyBufferUINT"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
 	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUInt64* pDependentSubresourceRanges)
@@ -538,7 +538,7 @@ public unsafe partial struct ID3D12GraphicsCommandList1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUInt64*, void>)(lpVtbl[60]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::AtomicCopyBufferUINT64"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::AtomicCopyBufferUINT64"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
 	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUInt64* pDependentSubresourceRanges)
@@ -546,7 +546,7 @@ public unsafe partial struct ID3D12GraphicsCommandList1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUInt64*, void>)(lpVtbl[61]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::OMSetDepthBounds"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::OMSetDepthBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
 	public void OMSetDepthBounds(float Min, float Max)
@@ -554,7 +554,7 @@ public unsafe partial struct ID3D12GraphicsCommandList1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, float, float, void>)(lpVtbl[62]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), Min, Max);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::SetSamplePositions"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::SetSamplePositions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(63)]
 	public void SetSamplePositions(uint NumSamplesPerPixel, uint NumPixels, SamplePosition* pSamplePositions)
@@ -562,7 +562,7 @@ public unsafe partial struct ID3D12GraphicsCommandList1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, uint, uint, SamplePosition*, void>)(lpVtbl[63]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), NumSamplesPerPixel, NumPixels, pSamplePositions);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::ResolveSubresourceRegion"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::ResolveSubresourceRegion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
 	public void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, RawRect* pSrcRect, Graphics.Dxgi.Common.Format Format, ResolveMode ResolveMode)
@@ -570,7 +570,7 @@ public unsafe partial struct ID3D12GraphicsCommandList1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, RawRect*, Graphics.Dxgi.Common.Format, ResolveMode, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::SetViewInstanceMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList1::SetViewInstanceMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
 	public void SetViewInstanceMask(uint Mask)

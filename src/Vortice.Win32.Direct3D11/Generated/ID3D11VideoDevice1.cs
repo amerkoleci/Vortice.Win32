@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1"]/*' />
 /// <unmanaged>ID3D11VideoDevice1</unmanaged>
 [Guid("29da1d51-1321-4454-804b-f5fc9f861f0f")]
 [NativeTypeName("struct ID3D11VideoDevice1 : ID3D11VideoDevice")]
@@ -210,7 +210,7 @@ public unsafe partial struct ID3D11VideoDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice1*, Guid*, IUnknown*, int>)(lpVtbl[19]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::GetCryptoSessionPrivateDataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::GetCryptoSessionPrivateDataSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult GetCryptoSessionPrivateDataSize(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, uint* pPrivateInputSize, uint* pPrivateOutputSize)
@@ -218,7 +218,7 @@ public unsafe partial struct ID3D11VideoDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice1*, Guid*, Guid*, Guid*, uint*, uint*, int>)(lpVtbl[20]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, pKeyExchangeType, pPrivateInputSize, pPrivateOutputSize);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::GetVideoDecoderCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::GetVideoDecoderCaps"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, Graphics.Dxgi.Common.Rational* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps)
@@ -226,7 +226,7 @@ public unsafe partial struct ID3D11VideoDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice1*, Guid*, uint, uint, Graphics.Dxgi.Common.Rational*, uint, Guid*, uint*, int>)(lpVtbl[21]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pDecoderProfile, SampleWidth, SampleHeight, pFrameRate, BitRate, pCryptoType, pDecoderCaps);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::CheckVideoDecoderDownsampling"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::CheckVideoDecoderDownsampling"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult CheckVideoDecoderDownsampling(VideoDecoderDescription* pInputDesc, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, VideoDecoderConfig* pInputConfig, Graphics.Dxgi.Common.Rational* pFrameRate, VideoSampleDescription* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint)
@@ -234,7 +234,7 @@ public unsafe partial struct ID3D11VideoDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice1*, VideoDecoderDescription*, Graphics.Dxgi.Common.ColorSpaceType, VideoDecoderConfig*, Graphics.Dxgi.Common.Rational*, VideoSampleDescription*, Bool32*, Bool32*, int>)(lpVtbl[22]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pOutputDesc, pSupported, pRealTimeHint);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::RecommendVideoDecoderDownsampleParameters"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice1::RecommendVideoDecoderDownsampleParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult RecommendVideoDecoderDownsampleParameters(VideoDecoderDescription* pInputDesc, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, VideoDecoderConfig* pInputConfig, Graphics.Dxgi.Common.Rational* pFrameRate, VideoSampleDescription* pRecommendedOutputDesc)

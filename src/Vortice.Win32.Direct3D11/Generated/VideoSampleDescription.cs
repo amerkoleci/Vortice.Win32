@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC"]/*' />
 /// <unmanaged>D3D11_VIDEO_SAMPLE_DESC</unmanaged>
 public partial struct VideoSampleDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC::Width"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC::Width"]/*' />
 	public uint Width;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC::Height"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC::Height"]/*' />
 	public uint Height;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC::Format"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC::ColorSpace"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_SAMPLE_DESC::ColorSpace"]/*' />
 	public Graphics.Dxgi.Common.ColorSpaceType ColorSpace;
 }

@@ -9,21 +9,21 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS"]/*' />
 /// <unmanaged>D3D12_TILE_RANGE_FLAGS</unmanaged>
 [Flags]
 public enum TileRangeFlags : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_TILE_RANGE_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_NULL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_NULL"]/*' />
 	/// <unmanaged>D3D12_TILE_RANGE_FLAG_NULL</unmanaged>
 	Null = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_SKIP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_SKIP"]/*' />
 	/// <unmanaged>D3D12_TILE_RANGE_FLAG_SKIP</unmanaged>
 	Skip = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_REUSE_SINGLE_TILE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_REUSE_SINGLE_TILE"]/*' />
 	/// <unmanaged>D3D12_TILE_RANGE_FLAG_REUSE_SINGLE_TILE</unmanaged>
 	ReuseSingleTile = 4,
 }

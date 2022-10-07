@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR"]/*' />
 /// <unmanaged>D3D11_VIDEO_COLOR</unmanaged>
 public partial struct VideoColor
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR::Anonymous"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -39,11 +39,11 @@ public partial struct VideoColor
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::YCbCr"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::YCbCr"]/*' />
 		[FieldOffset(0)]
 		public VideoColorYcbcra YCbCr;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::RGBA"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::RGBA"]/*' />
 		[FieldOffset(0)]
 		public VideoColorRgba RGBA;
 	}

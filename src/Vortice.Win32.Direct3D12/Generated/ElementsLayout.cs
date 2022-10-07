@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT"]/*' />
 /// <unmanaged>D3D12_ELEMENTS_LAYOUT</unmanaged>
 public enum ElementsLayout : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT::D3D12_ELEMENTS_LAYOUT_ARRAY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT::D3D12_ELEMENTS_LAYOUT_ARRAY"]/*' />
 	/// <unmanaged>D3D12_ELEMENTS_LAYOUT_ARRAY</unmanaged>
 	Array = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT::D3D12_ELEMENTS_LAYOUT_ARRAY_OF_POINTERS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT::D3D12_ELEMENTS_LAYOUT_ARRAY_OF_POINTERS"]/*' />
 	/// <unmanaged>D3D12_ELEMENTS_LAYOUT_ARRAY_OF_POINTERS</unmanaged>
 	ArrayOfPointers = 1,
 }

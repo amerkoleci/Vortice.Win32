@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC"]/*' />
 /// <unmanaged>D3D12_EXPORT_DESC</unmanaged>
 public partial struct ExportDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Name"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Name"]/*' />
 	public unsafe ushort* Name;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::ExportToRename"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::ExportToRename"]/*' />
 	public unsafe ushort* ExportToRename;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Flags"]/*' />
 	public ExportFlags Flags;
 }

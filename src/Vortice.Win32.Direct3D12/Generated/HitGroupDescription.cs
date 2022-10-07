@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC"]/*' />
 /// <unmanaged>D3D12_HIT_GROUP_DESC</unmanaged>
 public partial struct HitGroupDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::HitGroupExport"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::HitGroupExport"]/*' />
 	public unsafe ushort* HitGroupExport;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::Type"]/*' />
 	public HitGroupType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::AnyHitShaderImport"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::AnyHitShaderImport"]/*' />
 	public unsafe ushort* AnyHitShaderImport;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::ClosestHitShaderImport"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::ClosestHitShaderImport"]/*' />
 	public unsafe ushort* ClosestHitShaderImport;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::IntersectionShaderImport"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::IntersectionShaderImport"]/*' />
 	public unsafe ushort* IntersectionShaderImport;
 }

@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT"]/*' />
 /// <unmanaged>D3D11_TEXTURE_LAYOUT</unmanaged>
 public enum TextureLayout : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT::D3D11_TEXTURE_LAYOUT_UNDEFINED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT::D3D11_TEXTURE_LAYOUT_UNDEFINED"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_LAYOUT_UNDEFINED</unmanaged>
 	Undefined = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT::D3D11_TEXTURE_LAYOUT_ROW_MAJOR"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT::D3D11_TEXTURE_LAYOUT_ROW_MAJOR"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_LAYOUT_ROW_MAJOR</unmanaged>
 	RowMajor = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT::D3D11_TEXTURE_LAYOUT_64K_STANDARD_SWIZZLE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT::D3D11_TEXTURE_LAYOUT_64K_STANDARD_SWIZZLE"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_LAYOUT_64K_STANDARD_SWIZZLE</unmanaged>
 	_64kStandardSwizzle = 2,
 }

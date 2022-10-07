@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS"]/*' />
 /// <unmanaged>D3D12_ROOT_CONSTANTS</unmanaged>
 public partial struct RootConstants
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS::ShaderRegister"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS::ShaderRegister"]/*' />
 	public uint ShaderRegister;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS::RegisterSpace"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS::RegisterSpace"]/*' />
 	public uint RegisterSpace;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS::Num32BitValues"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_CONSTANTS::Num32BitValues"]/*' />
 	public uint Num32BitValues;
 }

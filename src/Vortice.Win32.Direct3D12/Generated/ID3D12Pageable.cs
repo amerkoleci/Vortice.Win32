@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Pageable"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Pageable"]/*' />
 /// <unmanaged>ID3D12Pageable</unmanaged>
 [Guid("63ee58fb-1268-4835-86da-f008ce62f0d6")]
 [NativeTypeName("struct ID3D12Pageable : ID3D12DeviceChild")]

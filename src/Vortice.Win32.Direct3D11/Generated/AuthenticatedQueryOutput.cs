@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_QUERY_OUTPUT</unmanaged>
 public partial struct AuthenticatedQueryOutput
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::omac"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::omac"]/*' />
 	public Omac omac;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::QueryType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::QueryType"]/*' />
 	public Guid QueryType;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::hChannel"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::hChannel"]/*' />
 	public Handle hChannel;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::SequenceNumber"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::SequenceNumber"]/*' />
 	public uint SequenceNumber;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::ReturnCode"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_OUTPUT::ReturnCode"]/*' />
 	public HResult ReturnCode;
 }

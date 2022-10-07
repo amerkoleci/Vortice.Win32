@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_DEPTH_STENCIL_DESC</unmanaged>
 public partial struct RenderPassDepthStencilDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::cpuDescriptor"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::cpuDescriptor"]/*' />
 	public CpuDescriptorHandle cpuDescriptor;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::DepthBeginningAccess"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::DepthBeginningAccess"]/*' />
 	public RenderPassBeginningAccess DepthBeginningAccess;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::StencilBeginningAccess"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::StencilBeginningAccess"]/*' />
 	public RenderPassBeginningAccess StencilBeginningAccess;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::DepthEndingAccess"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::DepthEndingAccess"]/*' />
 	public RenderPassEndingAccess DepthEndingAccess;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::StencilEndingAccess"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_DEPTH_STENCIL_DESC::StencilEndingAccess"]/*' />
 	public RenderPassEndingAccess StencilEndingAccess;
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT</unmanaged>
 public partial struct FeatureDataProtectedResourceSessionSupport
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT::NodeIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT::NodeIndex"]/*' />
 	public uint NodeIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT::Support"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT::Support"]/*' />
 	public ProtectedResourceSessionSupportFlags Support;
 }

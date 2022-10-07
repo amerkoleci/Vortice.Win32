@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_GEOMETRY_DESC</unmanaged>
 public partial struct RaytracingGeometryDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC::Type"]/*' />
 	public RaytracingGeometryType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC::Flags"]/*' />
 	public RaytracingGeometryFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -45,11 +45,11 @@ public partial struct RaytracingGeometryDescription
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Triangles"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Triangles"]/*' />
 		[FieldOffset(0)]
 		public RaytracingGeometryTrianglesDescription Triangles;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::AABBs"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::AABBs"]/*' />
 		[FieldOffset(0)]
 		public RaytracingGeometryAabbsDescription AABBs;
 	}

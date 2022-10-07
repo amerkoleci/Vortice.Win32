@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_BUFFER_DESC</unmanaged>
 public partial struct ShaderBufferDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Name"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Name"]/*' />
 	public unsafe sbyte* Name;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Type"]/*' />
 	public Graphics.Direct3D.CBufferType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Variables"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Variables"]/*' />
 	public uint Variables;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Size"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Size"]/*' />
 	public uint Size;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::uFlags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::uFlags"]/*' />
 	public uint uFlags;
 }

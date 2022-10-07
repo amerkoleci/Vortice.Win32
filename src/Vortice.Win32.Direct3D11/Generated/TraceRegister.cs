@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER"]/*' />
 /// <unmanaged>D3D11_TRACE_REGISTER</unmanaged>
 public partial struct TraceRegister
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::RegType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::RegType"]/*' />
 	public TraceRegisterType RegType;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::Anonymous"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::OperandIndex"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::OperandIndex"]/*' />
 	public byte OperandIndex;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::Flags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER::Flags"]/*' />
 	public byte Flags;
 
 	[UnscopedRef]
@@ -48,11 +48,11 @@ public partial struct TraceRegister
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Index1D"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Index1D"]/*' />
 		[FieldOffset(0)]
 		public ushort Index1D;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Index2D"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Index2D"]/*' />
 		[FieldOffset(0)]
 		public unsafe fixed ushort Index2D[2];
 	}

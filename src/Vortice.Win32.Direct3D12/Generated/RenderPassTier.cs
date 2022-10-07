@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_TIER</unmanaged>
 public enum RenderPassTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER::D3D12_RENDER_PASS_TIER_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER::D3D12_RENDER_PASS_TIER_0"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_TIER_0</unmanaged>
 	Tier0 = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER::D3D12_RENDER_PASS_TIER_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER::D3D12_RENDER_PASS_TIER_1"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_TIER_1</unmanaged>
 	Tier1 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER::D3D12_RENDER_PASS_TIER_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER::D3D12_RENDER_PASS_TIER_2"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_TIER_2</unmanaged>
 	Tier2 = 2,
 }

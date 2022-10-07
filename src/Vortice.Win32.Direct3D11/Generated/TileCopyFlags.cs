@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG"]/*' />
 /// <unmanaged>D3D11_TILE_COPY_FLAG</unmanaged>
 [Flags]
 public enum TileCopyFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_NO_OVERWRITE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_NO_OVERWRITE"]/*' />
 	/// <unmanaged>D3D11_TILE_COPY_NO_OVERWRITE</unmanaged>
 	NoOverwrite = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_TILE_COPY_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE</unmanaged>
 	LinearBufferToSwizzledTiledResource = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER"]/*' />
 	/// <unmanaged>D3D11_TILE_COPY_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER</unmanaged>
 	SwizzledTiledResourceToLinearBuffer = 4,
 }

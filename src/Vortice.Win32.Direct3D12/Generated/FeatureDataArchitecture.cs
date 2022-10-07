@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_ARCHITECTURE</unmanaged>
 public partial struct FeatureDataArchitecture
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::NodeIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::NodeIndex"]/*' />
 	public uint NodeIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::TileBasedRenderer"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::TileBasedRenderer"]/*' />
 	public Bool32 TileBasedRenderer;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::UMA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::UMA"]/*' />
 	public Bool32 UMA;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::CacheCoherentUMA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ARCHITECTURE::CacheCoherentUMA"]/*' />
 	public Bool32 CacheCoherentUMA;
 }

@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER"]/*' />
 /// <unmanaged>D3D11_COUNTER</unmanaged>
 public enum Counter : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER::D3D11_COUNTER_DEVICE_DEPENDENT_0"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER::D3D11_COUNTER_DEVICE_DEPENDENT_0"]/*' />
 	/// <unmanaged>D3D11_COUNTER_DEVICE_DEPENDENT_0</unmanaged>
 	DeviceDependent0 = 1073741824,
 }

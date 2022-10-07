@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAP"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP"]/*' />
 /// <unmanaged>D3D11_MAP</unmanaged>
 public enum MapMode : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_READ"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_READ"]/*' />
 	/// <unmanaged>D3D11_MAP_READ</unmanaged>
 	Read = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_WRITE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_WRITE"]/*' />
 	/// <unmanaged>D3D11_MAP_WRITE</unmanaged>
 	Write = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_READ_WRITE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_READ_WRITE"]/*' />
 	/// <unmanaged>D3D11_MAP_READ_WRITE</unmanaged>
 	ReadWrite = 3,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_WRITE_DISCARD"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_WRITE_DISCARD"]/*' />
 	/// <unmanaged>D3D11_MAP_WRITE_DISCARD</unmanaged>
 	WriteDiscard = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_WRITE_NO_OVERWRITE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_WRITE_NO_OVERWRITE"]/*' />
 	/// <unmanaged>D3D11_MAP_WRITE_NO_OVERWRITE</unmanaged>
 	WriteNoOverwrite = 5,
 }

@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_VIDEO"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_VIDEO"]/*' />
 /// <unmanaged>D3D11_FEATURE_VIDEO</unmanaged>
 public enum FeatureVideo : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_VIDEO::D3D11_FEATURE_VIDEO_DECODER_HISTOGRAM"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_VIDEO::D3D11_FEATURE_VIDEO_DECODER_HISTOGRAM"]/*' />
 	/// <unmanaged>D3D11_FEATURE_VIDEO_DECODER_HISTOGRAM</unmanaged>
 	DecoderHistogram = 0,
 }

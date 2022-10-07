@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderResourceView"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderResourceView"]/*' />
 /// <unmanaged>ID3D11ShaderResourceView</unmanaged>
 [Guid("b0e06fe0-8192-4e1a-b1ca-36d7414710b2")]
 [NativeTypeName("struct ID3D11ShaderResourceView : ID3D11View")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11ShaderResourceView : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView*, ID3D11Resource**, void>)(lpVtbl[7]))((ID3D11ShaderResourceView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderResourceView::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderResourceView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(ShaderResourceViewDescription* pDesc)

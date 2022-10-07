@@ -9,58 +9,58 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_CONFIG</unmanaged>
 public partial struct VideoDecoderConfig
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::guidConfigBitstreamEncryption"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::guidConfigBitstreamEncryption"]/*' />
 	public Guid guidConfigBitstreamEncryption;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::guidConfigMBcontrolEncryption"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::guidConfigMBcontrolEncryption"]/*' />
 	public Guid guidConfigMBcontrolEncryption;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::guidConfigResidDiffEncryption"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::guidConfigResidDiffEncryption"]/*' />
 	public Guid guidConfigResidDiffEncryption;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigBitstreamRaw"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigBitstreamRaw"]/*' />
 	public uint ConfigBitstreamRaw;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigMBcontrolRasterOrder"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigMBcontrolRasterOrder"]/*' />
 	public uint ConfigMBcontrolRasterOrder;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigResidDiffHost"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigResidDiffHost"]/*' />
 	public uint ConfigResidDiffHost;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigSpatialResid8"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigSpatialResid8"]/*' />
 	public uint ConfigSpatialResid8;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigResid8Subtraction"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigResid8Subtraction"]/*' />
 	public uint ConfigResid8Subtraction;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigSpatialHost8or9Clipping"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigSpatialHost8or9Clipping"]/*' />
 	public uint ConfigSpatialHost8or9Clipping;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigSpatialResidInterleaved"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigSpatialResidInterleaved"]/*' />
 	public uint ConfigSpatialResidInterleaved;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigIntraResidUnsigned"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigIntraResidUnsigned"]/*' />
 	public uint ConfigIntraResidUnsigned;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigResidDiffAccelerator"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigResidDiffAccelerator"]/*' />
 	public uint ConfigResidDiffAccelerator;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigHostInverseScan"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigHostInverseScan"]/*' />
 	public uint ConfigHostInverseScan;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigSpecificIDCT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigSpecificIDCT"]/*' />
 	public uint ConfigSpecificIDCT;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::Config4GroupedCoefs"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::Config4GroupedCoefs"]/*' />
 	public uint Config4GroupedCoefs;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigMinRenderTargetBuffCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigMinRenderTargetBuffCount"]/*' />
 	public ushort ConfigMinRenderTargetBuffCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigDecoderSpecific"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CONFIG::ConfigDecoderSpecific"]/*' />
 	public ushort ConfigDecoderSpecific;
 }

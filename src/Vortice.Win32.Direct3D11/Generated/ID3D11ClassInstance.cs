@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance"]/*' />
 /// <unmanaged>ID3D11ClassInstance</unmanaged>
 [Guid("a6cd7faa-b0b7-4a2f-9436-8662a65797cb")]
 [NativeTypeName("struct ID3D11ClassInstance : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11ClassInstance : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetClassLinkage"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetClassLinkage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetClassLinkage(ID3D11ClassLinkage** ppLinkage)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11ClassInstance : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, ID3D11ClassLinkage**, void>)(lpVtbl[7]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), ppLinkage);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(ClassInstanceDescription* pDesc)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D11ClassInstance : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, ClassInstanceDescription*, void>)(lpVtbl[8]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetInstanceName"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetInstanceName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public void GetInstanceName(byte* pInstanceName, nuint* pBufferLength)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D11ClassInstance : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, byte*, nuint*, void>)(lpVtbl[9]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), pInstanceName, pBufferLength);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetTypeName"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassInstance::GetTypeName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public void GetTypeName(byte* pTypeName, nuint* pBufferLength)

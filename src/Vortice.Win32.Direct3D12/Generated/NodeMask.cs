@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_NODE_MASK"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_MASK"]/*' />
 /// <unmanaged>D3D12_NODE_MASK</unmanaged>
 public partial struct NodeMask
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_NODE_MASK::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_MASK::NodeMask"]/*' />
 	public uint Mask;
 }

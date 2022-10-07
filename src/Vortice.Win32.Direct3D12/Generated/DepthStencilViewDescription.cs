@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCIL_VIEW_DESC</unmanaged>
 public partial struct DepthStencilViewDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC::ViewDimension"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC::ViewDimension"]/*' />
 	public DsvDimension ViewDimension;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC::Flags"]/*' />
 	public DsvFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -88,27 +88,27 @@ public partial struct DepthStencilViewDescription
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
 		[FieldOffset(0)]
 		public Texture1DDsv Texture1D;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture1DArrayDsv Texture1DArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
 		public Texture2DDsv Texture2D;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture2DArrayDsv Texture2DArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
 		[FieldOffset(0)]
 		public Texture2DMsDsv Texture2DMS;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
 		[FieldOffset(0)]
 		public Texture2DMsArrayDsv Texture2DMSArray;
 	}

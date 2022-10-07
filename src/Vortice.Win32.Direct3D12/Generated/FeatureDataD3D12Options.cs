@@ -9,52 +9,52 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS</unmanaged>
 public partial struct FeatureDataD3D12Options
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::DoublePrecisionFloatShaderOps"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::DoublePrecisionFloatShaderOps"]/*' />
 	public Bool32 DoublePrecisionFloatShaderOps;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::OutputMergerLogicOp"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::OutputMergerLogicOp"]/*' />
 	public Bool32 OutputMergerLogicOp;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::MinPrecisionSupport"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::MinPrecisionSupport"]/*' />
 	public ShaderMinPrecisionSupport MinPrecisionSupport;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::TiledResourcesTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::TiledResourcesTier"]/*' />
 	public TiledResourcesTier TiledResourcesTier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ResourceBindingTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ResourceBindingTier"]/*' />
 	public ResourceBindingTier ResourceBindingTier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::PSSpecifiedStencilRefSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::PSSpecifiedStencilRefSupported"]/*' />
 	public Bool32 PSSpecifiedStencilRefSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::TypedUAVLoadAdditionalFormats"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::TypedUAVLoadAdditionalFormats"]/*' />
 	public Bool32 TypedUAVLoadAdditionalFormats;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ROVsSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ROVsSupported"]/*' />
 	public Bool32 ROVsSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ConservativeRasterizationTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ConservativeRasterizationTier"]/*' />
 	public ConservativeRasterizationTier ConservativeRasterizationTier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::MaxGPUVirtualAddressBitsPerResource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::MaxGPUVirtualAddressBitsPerResource"]/*' />
 	public uint MaxGPUVirtualAddressBitsPerResource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::StandardSwizzle64KBSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::StandardSwizzle64KBSupported"]/*' />
 	public Bool32 StandardSwizzle64KBSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::CrossNodeSharingTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::CrossNodeSharingTier"]/*' />
 	public CrossNodeSharingTier CrossNodeSharingTier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::CrossAdapterRowMajorTextureSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::CrossAdapterRowMajorTextureSupported"]/*' />
 	public Bool32 CrossAdapterRowMajorTextureSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::VPAndRTArrayIndexFromAnyShaderFeedingRasterizerSupportedWithoutGSEmulation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::VPAndRTArrayIndexFromAnyShaderFeedingRasterizerSupportedWithoutGSEmulation"]/*' />
 	public Bool32 VPAndRTArrayIndexFromAnyShaderFeedingRasterizerSupportedWithoutGSEmulation;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ResourceHeapTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS::ResourceHeapTier"]/*' />
 	public ResourceHeapTier ResourceHeapTier;
 }

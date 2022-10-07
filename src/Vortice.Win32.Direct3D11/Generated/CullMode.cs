@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE"]/*' />
 /// <unmanaged>D3D11_CULL_MODE</unmanaged>
 public enum CullMode : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE::D3D11_CULL_NONE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE::D3D11_CULL_NONE"]/*' />
 	/// <unmanaged>D3D11_CULL_NONE</unmanaged>
 	None = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE::D3D11_CULL_FRONT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE::D3D11_CULL_FRONT"]/*' />
 	/// <unmanaged>D3D11_CULL_FRONT</unmanaged>
 	Front = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE::D3D11_CULL_BACK"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE::D3D11_CULL_BACK"]/*' />
 	/// <unmanaged>D3D11_CULL_BACK</unmanaged>
 	Back = 3,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandList"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandList"]/*' />
 /// <unmanaged>ID3D12CommandList</unmanaged>
 [Guid("7116d91c-e7e4-47ce-b8c6-ec8168f437e5")]
 [NativeTypeName("struct ID3D12CommandList : ID3D12DeviceChild")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12CommandList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandList*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12CommandList*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandList::GetType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandList::GetType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public new CommandListType GetType()

@@ -9,34 +9,34 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC"]/*' />
 /// <unmanaged>D3D11_SHADER_VARIABLE_DESC</unmanaged>
 public partial struct ShaderVariableDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::Name"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::Name"]/*' />
 	public unsafe sbyte* Name;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::StartOffset"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::StartOffset"]/*' />
 	public uint StartOffset;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::Size"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::Size"]/*' />
 	public uint Size;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::uFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::uFlags"]/*' />
 	public uint uFlags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::DefaultValue"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::DefaultValue"]/*' />
 	public unsafe void* DefaultValue;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::StartTexture"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::StartTexture"]/*' />
 	public uint StartTexture;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::TextureSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::TextureSize"]/*' />
 	public uint TextureSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::StartSampler"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::StartSampler"]/*' />
 	public uint StartSampler;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::SamplerSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VARIABLE_DESC::SamplerSize"]/*' />
 	public uint SamplerSize;
 }

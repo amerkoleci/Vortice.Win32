@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_FORMAT_SUPPORT</unmanaged>
 public partial struct FeatureDataFormatSupport
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT::Support1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT::Support1"]/*' />
 	public FormatSupport1 Support1;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT::Support2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_SUPPORT::Support2"]/*' />
 	public FormatSupport2 Support2;
 }

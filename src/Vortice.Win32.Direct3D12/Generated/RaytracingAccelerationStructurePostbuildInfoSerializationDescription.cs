@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC</unmanaged>
 public partial struct RaytracingAccelerationStructurePostbuildInfoSerializationDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC::SerializedSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC::SerializedSizeInBytes"]/*' />
 	public ulong SerializedSizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC::NumBottomLevelAccelerationStructurePointers"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_SERIALIZATION_DESC::NumBottomLevelAccelerationStructurePointers"]/*' />
 	public ulong NumBottomLevelAccelerationStructurePointers;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession"]/*' />
 /// <unmanaged>ID3D12ShaderCacheSession</unmanaged>
 [Guid("28e2495d-0f64-4ae4-a6ec-129255dc49a8")]
 [NativeTypeName("struct ID3D12ShaderCacheSession : ID3D12DeviceChild")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::FindValue"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::FindValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult FindValue(void* pKey, uint KeySize, void* pValue, uint* pValueSize)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, void*, uint, void*, uint*, int>)(lpVtbl[8]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), pKey, KeySize, pValue, pValueSize);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::StoreValue"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::StoreValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult StoreValue(void* pKey, uint KeySize, void* pValue, uint ValueSize)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, void*, uint, void*, uint, int>)(lpVtbl[9]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), pKey, KeySize, pValue, ValueSize);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::SetDeleteOnDestroy"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::SetDeleteOnDestroy"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public void SetDeleteOnDestroy()
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, void>)(lpVtbl[10]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::GetDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderCacheSession::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public ShaderCacheSessionDescription GetDesc()

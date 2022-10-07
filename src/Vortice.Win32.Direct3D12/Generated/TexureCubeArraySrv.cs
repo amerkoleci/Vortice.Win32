@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEXCUBE_ARRAY_SRV</unmanaged>
 public partial struct TexureCubeArraySrv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::MostDetailedMip"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::MipLevels"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::MipLevels"]/*' />
 	public uint MipLevels;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::First2DArrayFace"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::First2DArrayFace"]/*' />
 	public uint First2DArrayFace;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::NumCubes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::NumCubes"]/*' />
 	public uint NumCubes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::ResourceMinLODClamp"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_ARRAY_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Asynchronous"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Asynchronous"]/*' />
 /// <unmanaged>ID3D11Asynchronous</unmanaged>
 [Guid("4b35d0cd-1e15-4258-9c98-1b1333f6dd3b")]
 [NativeTypeName("struct ID3D11Asynchronous : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11Asynchronous : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Asynchronous*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11Asynchronous*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Asynchronous::GetDataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Asynchronous::GetDataSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public uint GetDataSize()

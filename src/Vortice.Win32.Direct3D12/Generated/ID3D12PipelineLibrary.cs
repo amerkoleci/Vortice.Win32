@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary"]/*' />
 /// <unmanaged>ID3D12PipelineLibrary</unmanaged>
 [Guid("c64226a8-9201-46af-b4cc-53fb9ff7414f")]
 [NativeTypeName("struct ID3D12PipelineLibrary : ID3D12DeviceChild")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12PipelineLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::StorePipeline"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::StorePipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult StorePipeline(ushort* pName, ID3D12PipelineState* pPipeline)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D12PipelineLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, ushort*, ID3D12PipelineState*, int>)(lpVtbl[8]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pPipeline);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadGraphicsPipeline"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadGraphicsPipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult LoadGraphicsPipeline(ushort* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D12PipelineLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, ushort*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadComputePipeline"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadComputePipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult LoadComputePipeline(ushort* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D12PipelineLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, ushort*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::GetSerializedSize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::GetSerializedSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public nuint GetSerializedSize()
@@ -146,7 +146,7 @@ public unsafe partial struct ID3D12PipelineLibrary : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, nuint>)(lpVtbl[11]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::Serialize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::Serialize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult Serialize(void* pData, nuint DataSizeInBytes)

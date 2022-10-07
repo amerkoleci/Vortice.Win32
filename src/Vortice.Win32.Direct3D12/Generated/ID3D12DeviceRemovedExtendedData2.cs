@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2"]/*' />
 /// <unmanaged>ID3D12DeviceRemovedExtendedData2</unmanaged>
 [Guid("67fc5816-e4ca-4915-bf18-42541272da54")]
 [NativeTypeName("struct ID3D12DeviceRemovedExtendedData2 : ID3D12DeviceRemovedExtendedData1")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData2*, DredPageFaultOutput1*, int>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2::GetPageFaultAllocationOutput2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2::GetPageFaultAllocationOutput2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetPageFaultAllocationOutput2(DredPageFaultOutput2* pOutput)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData2*, DredPageFaultOutput2*, int>)(lpVtbl[7]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2::GetDeviceState"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData2::GetDeviceState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public DredDeviceState GetDeviceState()

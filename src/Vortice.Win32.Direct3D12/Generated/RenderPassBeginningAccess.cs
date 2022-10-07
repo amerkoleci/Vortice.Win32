@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS</unmanaged>
 public partial struct RenderPassBeginningAccess
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS::Type"]/*' />
 	public RenderPassBeginningAccessType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -32,7 +32,7 @@ public partial struct RenderPassBeginningAccess
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Clear"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Clear"]/*' />
 		[FieldOffset(0)]
 		public RenderPassBeginningAccessClearParameters Clear;
 	}

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11on12;
 
-/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device"]/*' />
+/// <include file='../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device"]/*' />
 /// <unmanaged>ID3D11On12Device</unmanaged>
 [Guid("85611e73-70a9-490e-9614-a9e302777904")]
 [NativeTypeName("struct ID3D11On12Device : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11On12Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device::CreateWrappedResource"]/*' />
+	/// <include file='../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device::CreateWrappedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateWrappedResource(IUnknown* pResource12, ResourceFlags* pFlags11, Graphics.Direct3D12.ResourceStates InState, Graphics.Direct3D12.ResourceStates OutState, Guid* riid, void** ppResource11)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D11On12Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device*, IUnknown*, ResourceFlags*, Graphics.Direct3D12.ResourceStates, Graphics.Direct3D12.ResourceStates, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
 	}
 
-	/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device::ReleaseWrappedResources"]/*' />
+	/// <include file='../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device::ReleaseWrappedResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void ReleaseWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D11On12Device : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11On12Device*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[4]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), ppResources, NumResources);
 	}
 
-	/// <include file='Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device::AcquireWrappedResources"]/*' />
+	/// <include file='../Direct3D11on12.xml' path='doc/member[@name="ID3D11On12Device::AcquireWrappedResources"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void AcquireWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources)

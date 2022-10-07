@@ -9,91 +9,91 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES"]/*' />
 /// <unmanaged>D3D12_RESOURCE_STATES</unmanaged>
 [Flags]
 public enum ResourceStates : uint
 {
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_COMMON"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_COMMON"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_COMMON</unmanaged>
 	Common = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER</unmanaged>
 	VertexAndConstantBuffer = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_INDEX_BUFFER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_INDEX_BUFFER"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_INDEX_BUFFER</unmanaged>
 	IndexBuffer = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_RENDER_TARGET"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_RENDER_TARGET"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_RENDER_TARGET</unmanaged>
 	RenderTarget = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_UNORDERED_ACCESS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_UNORDERED_ACCESS"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_UNORDERED_ACCESS</unmanaged>
 	UnorderedAccess = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_DEPTH_WRITE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_DEPTH_WRITE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_DEPTH_WRITE</unmanaged>
 	DepthWrite = 16,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_DEPTH_READ"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_DEPTH_READ"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_DEPTH_READ</unmanaged>
 	DepthRead = 32,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_NON_PIXEL_SHADER_RESOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_NON_PIXEL_SHADER_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_NON_PIXEL_SHADER_RESOURCE</unmanaged>
 	NonPixelShaderResource = 64,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE</unmanaged>
 	PixelShaderResource = 128,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_STREAM_OUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_STREAM_OUT"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_STREAM_OUT</unmanaged>
 	StreamOut = 256,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_INDIRECT_ARGUMENT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_INDIRECT_ARGUMENT"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_INDIRECT_ARGUMENT</unmanaged>
 	IndirectArgument = 512,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_COPY_DEST"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_COPY_DEST"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_COPY_DEST</unmanaged>
 	CopyDest = 1024,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_COPY_SOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_COPY_SOURCE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_COPY_SOURCE</unmanaged>
 	CopySource = 2048,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_RESOLVE_DEST"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_RESOLVE_DEST"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_RESOLVE_DEST</unmanaged>
 	ResolveDest = 4096,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_RESOLVE_SOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_RESOLVE_SOURCE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_RESOLVE_SOURCE</unmanaged>
 	ResolveSource = 8192,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE</unmanaged>
 	RaytracingAccelerationStructure = 4194304,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE</unmanaged>
 	ShadingRateSource = 16777216,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_GENERIC_READ"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_GENERIC_READ"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_GENERIC_READ</unmanaged>
 	GenericRead = 2755,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_ALL_SHADER_RESOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_ALL_SHADER_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_ALL_SHADER_RESOURCE</unmanaged>
 	AllShaderResource = 192,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_PRESENT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_PRESENT"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_PRESENT</unmanaged>
 	Present = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_PREDICATION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_PREDICATION"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_PREDICATION</unmanaged>
 	Predication = 512,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_DECODE_READ"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_DECODE_READ"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_VIDEO_DECODE_READ</unmanaged>
 	VideoDecodeRead = 65536,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_DECODE_WRITE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_DECODE_WRITE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_VIDEO_DECODE_WRITE</unmanaged>
 	VideoDecodeWrite = 131072,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_PROCESS_READ"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_PROCESS_READ"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_VIDEO_PROCESS_READ</unmanaged>
 	VideoProcessRead = 262144,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_PROCESS_WRITE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_PROCESS_WRITE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_VIDEO_PROCESS_WRITE</unmanaged>
 	VideoProcessWrite = 524288,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_ENCODE_READ"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_ENCODE_READ"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_VIDEO_ENCODE_READ</unmanaged>
 	VideoEncodeRead = 2097152,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_ENCODE_WRITE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_VIDEO_ENCODE_WRITE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_STATE_VIDEO_ENCODE_WRITE</unmanaged>
 	VideoEncodeWrite = 8388608,
 }

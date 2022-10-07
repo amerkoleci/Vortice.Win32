@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_INFO"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_INFO"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_FORMAT_INFO</unmanaged>
 public partial struct FeatureDataFormatInfo
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_INFO::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_INFO::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_INFO::PlaneCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FORMAT_INFO::PlaneCount"]/*' />
 	public byte PlaneCount;
 }

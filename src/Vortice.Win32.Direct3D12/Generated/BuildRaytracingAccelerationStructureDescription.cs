@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC"]/*' />
 /// <unmanaged>D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC</unmanaged>
 public partial struct BuildRaytracingAccelerationStructureDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::DestAccelerationStructureData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::DestAccelerationStructureData"]/*' />
 	public ulong DestAccelerationStructureData;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::Inputs"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::Inputs"]/*' />
 	public BuildRaytracingAccelerationStructureInputs Inputs;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::SourceAccelerationStructureData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::SourceAccelerationStructureData"]/*' />
 	public ulong SourceAccelerationStructureData;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::ScratchAccelerationStructureData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC::ScratchAccelerationStructureData"]/*' />
 	public ulong ScratchAccelerationStructureData;
 }

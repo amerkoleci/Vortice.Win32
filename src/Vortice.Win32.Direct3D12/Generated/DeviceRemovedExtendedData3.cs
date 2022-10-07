@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3"]/*' />
 /// <unmanaged>D3D12_DEVICE_REMOVED_EXTENDED_DATA3</unmanaged>
 public partial struct DeviceRemovedExtendedData3
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::DeviceRemovedReason"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::DeviceRemovedReason"]/*' />
 	public HResult DeviceRemovedReason;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::AutoBreadcrumbsOutput"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::AutoBreadcrumbsOutput"]/*' />
 	public DredAutoBreadcrumbsOutput1 AutoBreadcrumbsOutput;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::PageFaultOutput"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::PageFaultOutput"]/*' />
 	public DredPageFaultOutput2 PageFaultOutput;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::DeviceState"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA3::DeviceState"]/*' />
 	public DredDeviceState DeviceState;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11RefDefaultTrackingOptions"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RefDefaultTrackingOptions"]/*' />
 /// <unmanaged>ID3D11RefDefaultTrackingOptions</unmanaged>
 [Guid("03916615-c644-418c-9bf4-75db5be63ca0")]
 [NativeTypeName("struct ID3D11RefDefaultTrackingOptions : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11RefDefaultTrackingOptions::SetTrackingOptions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RefDefaultTrackingOptions::SetTrackingOptions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetTrackingOptions(uint ResourceTypeFlags, uint Options)

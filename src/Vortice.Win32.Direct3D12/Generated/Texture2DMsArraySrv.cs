@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_ARRAY_SRV</unmanaged>
 public partial struct Texture2DMsArraySrv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV::FirstArraySlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV::FirstArraySlice"]/*' />
 	public uint FirstArraySlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV::ArraySize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_ARRAY_SRV::ArraySize"]/*' />
 	public uint ArraySize;
 }

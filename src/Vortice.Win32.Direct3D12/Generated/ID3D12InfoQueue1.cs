@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1"]/*' />
 /// <unmanaged>ID3D12InfoQueue1</unmanaged>
 [Guid("2852dd88-b484-4c0c-b6b1-67168500e600")]
 [NativeTypeName("struct ID3D12InfoQueue1 : ID3D12InfoQueue")]
@@ -354,7 +354,7 @@ public unsafe partial struct ID3D12InfoQueue1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, Bool32>)(lpVtbl[37]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1::RegisterMessageCallback"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1::RegisterMessageCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
 	public HResult RegisterMessageCallback(delegate* unmanaged[Stdcall]<MessageCategory, MessageSeverity, MessageId, sbyte*, void*, void> CallbackFunc, MessageCallbackFlags CallbackFilterFlags, void* pContext, uint* pCallbackCookie)
@@ -362,7 +362,7 @@ public unsafe partial struct ID3D12InfoQueue1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, delegate* unmanaged[Stdcall]<MessageCategory, MessageSeverity, MessageId, sbyte*, void*, void>, MessageCallbackFlags, void*, uint*, int>)(lpVtbl[38]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), CallbackFunc, CallbackFilterFlags, pContext, pCallbackCookie);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1::UnregisterMessageCallback"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue1::UnregisterMessageCallback"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
 	public HResult UnregisterMessageCallback(uint CallbackCookie)

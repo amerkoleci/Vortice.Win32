@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG"]/*' />
 /// <unmanaged>D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG</unmanaged>
 [Flags]
 public enum CheckMultisampleQualityLevelsFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG::D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_TILED_RESOURCE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG::D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_TILED_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_TILED_RESOURCE</unmanaged>
 	TiledResource = 1,
 }

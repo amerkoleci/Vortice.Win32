@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE"]/*' />
 /// <unmanaged>D3D11_TRACE_VALUE</unmanaged>
 public partial struct TraceValue
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE::Bits"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE::Bits"]/*' />
 	public unsafe fixed uint Bits[4];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE::ValidMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_VALUE::ValidMask"]/*' />
 	public byte ValidMask;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Linker"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker"]/*' />
 /// <unmanaged>ID3D11Linker</unmanaged>
 [Guid("59a6cd0e-e10d-4c1f-88c0-63aba1daf30e")]
 [NativeTypeName("struct ID3D11Linker : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11Linker : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Linker::Link"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::Link"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult Link(ID3D11ModuleInstance* pEntry, sbyte* pEntryName, sbyte* pTargetName, uint uFlags, Graphics.Direct3D.ID3DBlob** ppShaderBlob, Graphics.Direct3D.ID3DBlob** ppErrorBuffer)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D11Linker : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, ID3D11ModuleInstance*, sbyte*, sbyte*, uint, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[3]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pEntry, pEntryName, pTargetName, uFlags, ppShaderBlob, ppErrorBuffer);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Linker::UseLibrary"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::UseLibrary"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult UseLibrary(ID3D11ModuleInstance* pLibraryMI)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D11Linker : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, ID3D11ModuleInstance*, int>)(lpVtbl[4]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pLibraryMI);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Linker::AddClipPlaneFromCBuffer"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::AddClipPlaneFromCBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult AddClipPlaneFromCBuffer(uint uCBufferSlot, uint uCBufferEntry)

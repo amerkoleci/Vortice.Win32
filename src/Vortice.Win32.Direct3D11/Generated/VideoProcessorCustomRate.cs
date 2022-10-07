@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_CUSTOM_RATE</unmanaged>
 public partial struct VideoProcessorCustomRate
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::CustomRate"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::CustomRate"]/*' />
 	public Graphics.Dxgi.Common.Rational CustomRate;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::OutputFrames"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::OutputFrames"]/*' />
 	public uint OutputFrames;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::InputInterlaced"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::InputInterlaced"]/*' />
 	public Bool32 InputInterlaced;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::InputFramesOrFields"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CUSTOM_RATE::InputFramesOrFields"]/*' />
 	public uint InputFramesOrFields;
 }

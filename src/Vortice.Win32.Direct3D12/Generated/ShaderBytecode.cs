@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BYTECODE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BYTECODE"]/*' />
 /// <unmanaged>D3D12_SHADER_BYTECODE</unmanaged>
 public partial struct ShaderBytecode
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BYTECODE::pShaderBytecode"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BYTECODE::pShaderBytecode"]/*' />
 	public unsafe void* pShaderBytecode;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BYTECODE::BytecodeLength"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BYTECODE::BytecodeLength"]/*' />
 	public nuint BytecodeLength;
 }

@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC"]/*' />
 /// <unmanaged>D3D12_DISPATCH_RAYS_DESC</unmanaged>
 public partial struct DispatchRaysDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::RayGenerationShaderRecord"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::RayGenerationShaderRecord"]/*' />
 	public GpuVirtualAddressRange RayGenerationShaderRecord;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::MissShaderTable"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::MissShaderTable"]/*' />
 	public GpuVirtualAddressRangeAndStride MissShaderTable;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::HitGroupTable"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::HitGroupTable"]/*' />
 	public GpuVirtualAddressRangeAndStride HitGroupTable;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::CallableShaderTable"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::CallableShaderTable"]/*' />
 	public GpuVirtualAddressRangeAndStride CallableShaderTable;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::Width"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::Width"]/*' />
 	public uint Width;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::Height"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::Height"]/*' />
 	public uint Height;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::Depth"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_RAYS_DESC::Depth"]/*' />
 	public uint Depth;
 }

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION"]/*' />
 /// <unmanaged>D3D_ROOT_SIGNATURE_VERSION</unmanaged>
 public enum RootSignatureVersion : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION::D3D_ROOT_SIGNATURE_VERSION_1_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION::D3D_ROOT_SIGNATURE_VERSION_1_0"]/*' />
 	/// <unmanaged>D3D_ROOT_SIGNATURE_VERSION_1_0</unmanaged>
 	V1_0 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION::D3D_ROOT_SIGNATURE_VERSION_1_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION::D3D_ROOT_SIGNATURE_VERSION_1_1"]/*' />
 	/// <unmanaged>D3D_ROOT_SIGNATURE_VERSION_1_1</unmanaged>
 	V1_1 = 2,
 }

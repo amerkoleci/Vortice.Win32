@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2"]/*' />
 /// <unmanaged>ID3D11VideoDevice2</unmanaged>
 [Guid("59c0cb01-35f0-4a70-8f67-87905c906a53")]
 [NativeTypeName("struct ID3D11VideoDevice2 : ID3D11VideoDevice1")]
@@ -242,7 +242,7 @@ public unsafe partial struct ID3D11VideoDevice2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice2*, VideoDecoderDescription*, Graphics.Dxgi.Common.ColorSpaceType, VideoDecoderConfig*, Graphics.Dxgi.Common.Rational*, VideoSampleDescription*, int>)(lpVtbl[23]))((ID3D11VideoDevice2*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pRecommendedOutputDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2::CheckFeatureSupport"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CheckFeatureSupport(FeatureVideo Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
@@ -250,7 +250,7 @@ public unsafe partial struct ID3D11VideoDevice2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice2*, FeatureVideo, void*, uint, int>)(lpVtbl[24]))((ID3D11VideoDevice2*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2::NegotiateCryptoSessionKeyExchangeMT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2::NegotiateCryptoSessionKeyExchangeMT"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult NegotiateCryptoSessionKeyExchangeMT(ID3D11CryptoSession* pCryptoSession, CryptoSessionKeyExchangeFlags flags, uint DataSize, void* pData)

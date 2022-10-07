@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS"]/*' />
 /// <unmanaged>D3D12_DISPATCH_MESH_ARGUMENTS</unmanaged>
 public partial struct DispatchMeshArguments
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS::ThreadGroupCountX"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS::ThreadGroupCountX"]/*' />
 	public uint ThreadGroupCountX;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS::ThreadGroupCountY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS::ThreadGroupCountY"]/*' />
 	public uint ThreadGroupCountY;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS::ThreadGroupCountZ"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISPATCH_MESH_ARGUMENTS::ThreadGroupCountZ"]/*' />
 	public uint ThreadGroupCountZ;
 }

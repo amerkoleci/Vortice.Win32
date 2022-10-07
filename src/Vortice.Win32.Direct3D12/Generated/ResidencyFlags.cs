@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_FLAGS"]/*' />
 /// <unmanaged>D3D12_RESIDENCY_FLAGS</unmanaged>
 [Flags]
 public enum ResidencyFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_FLAGS::D3D12_RESIDENCY_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_FLAGS::D3D12_RESIDENCY_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_FLAGS::D3D12_RESIDENCY_FLAG_DENY_OVERBUDGET"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_FLAGS::D3D12_RESIDENCY_FLAG_DENY_OVERBUDGET"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_FLAG_DENY_OVERBUDGET</unmanaged>
 	DenyOverBudget = 1,
 }

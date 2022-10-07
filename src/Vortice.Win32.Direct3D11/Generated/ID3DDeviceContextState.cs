@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3DDeviceContextState"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DDeviceContextState"]/*' />
 /// <unmanaged>ID3DDeviceContextState</unmanaged>
 [Guid("5c1e0d8a-7c23-48f9-8c59-a92958ceff11")]
 [NativeTypeName("struct ID3DDeviceContextState : ID3D11DeviceChild")]

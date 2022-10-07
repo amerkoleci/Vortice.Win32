@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap"]/*' />
 /// <unmanaged>ID3D12DescriptorHeap</unmanaged>
 [Guid("8efb471d-616c-4f49-90f7-127bb763fa51")]
 [NativeTypeName("struct ID3D12DescriptorHeap : ID3D12Pageable")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12DescriptorHeap : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public DescriptorHeapDescription GetDesc()
@@ -123,7 +123,7 @@ public unsafe partial struct ID3D12DescriptorHeap : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, DescriptorHeapDescription*, DescriptorHeapDescription*>)(lpVtbl[8]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetCPUDescriptorHandleForHeapStart"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetCPUDescriptorHandleForHeapStart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public CpuDescriptorHandle GetCPUDescriptorHandleForHeapStart()
@@ -132,7 +132,7 @@ public unsafe partial struct ID3D12DescriptorHeap : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, CpuDescriptorHandle*, CpuDescriptorHandle*>)(lpVtbl[9]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetGPUDescriptorHandleForHeapStart"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetGPUDescriptorHandleForHeapStart"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public GpuDescriptorHandle GetGPUDescriptorHandleForHeapStart()

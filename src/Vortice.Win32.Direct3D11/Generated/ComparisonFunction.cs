@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC"]/*' />
 /// <unmanaged>D3D11_COMPARISON_FUNC</unmanaged>
 public enum ComparisonFunction : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_NEVER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_NEVER"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_NEVER</unmanaged>
 	Never = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_LESS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_LESS"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_LESS</unmanaged>
 	Less = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_EQUAL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_EQUAL"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_EQUAL</unmanaged>
 	Equal = 3,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_LESS_EQUAL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_LESS_EQUAL"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_LESS_EQUAL</unmanaged>
 	LessEqual = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_GREATER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_GREATER"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_GREATER</unmanaged>
 	Greater = 5,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_NOT_EQUAL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_NOT_EQUAL"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_NOT_EQUAL</unmanaged>
 	NotEqual = 6,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_GREATER_EQUAL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_GREATER_EQUAL"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_GREATER_EQUAL</unmanaged>
 	GreaterEqual = 7,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_ALWAYS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_ALWAYS"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_ALWAYS</unmanaged>
 	Always = 8,
 }

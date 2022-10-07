@@ -9,143 +9,143 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP"]/*' />
 /// <unmanaged>D3D12_AUTO_BREADCRUMB_OP</unmanaged>
 public enum AutoBreadcrumbOperation : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_SETMARKER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_SETMARKER"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_SETMARKER</unmanaged>
 	SetMarker = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_BEGINEVENT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_BEGINEVENT"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_BEGINEVENT</unmanaged>
 	BeginEvent = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ENDEVENT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ENDEVENT"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_ENDEVENT</unmanaged>
 	EndEvent = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DRAWINSTANCED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DRAWINSTANCED"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_DRAWINSTANCED</unmanaged>
 	DrawInstanced = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DRAWINDEXEDINSTANCED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DRAWINDEXEDINSTANCED"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_DRAWINDEXEDINSTANCED</unmanaged>
 	DrawIndexedInstanced = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EXECUTEINDIRECT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EXECUTEINDIRECT"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_EXECUTEINDIRECT</unmanaged>
 	ExecuteIndirect = 5,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DISPATCH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DISPATCH"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_DISPATCH</unmanaged>
 	Dispatch = 6,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYBUFFERREGION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYBUFFERREGION"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_COPYBUFFERREGION</unmanaged>
 	CopyBufferRegion = 7,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYTEXTUREREGION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYTEXTUREREGION"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_COPYTEXTUREREGION</unmanaged>
 	CopyTextureRegion = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYRESOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYRESOURCE"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_COPYRESOURCE</unmanaged>
 	CopyResource = 9,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYTILES"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYTILES"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_COPYTILES</unmanaged>
 	CopyTiles = 10,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVESUBRESOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVESUBRESOURCE"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_RESOLVESUBRESOURCE</unmanaged>
 	ResolveSubresource = 11,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_CLEARRENDERTARGETVIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_CLEARRENDERTARGETVIEW"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_CLEARRENDERTARGETVIEW</unmanaged>
 	ClearRenderTargetView = 12,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_CLEARUNORDEREDACCESSVIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_CLEARUNORDEREDACCESSVIEW"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_CLEARUNORDEREDACCESSVIEW</unmanaged>
 	ClearUnorderedAccessView = 13,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_CLEARDEPTHSTENCILVIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_CLEARDEPTHSTENCILVIEW"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_CLEARDEPTHSTENCILVIEW</unmanaged>
 	ClearDepthStencilView = 14,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOURCEBARRIER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOURCEBARRIER"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_RESOURCEBARRIER</unmanaged>
 	ResourceBarrier = 15,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EXECUTEBUNDLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EXECUTEBUNDLE"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_EXECUTEBUNDLE</unmanaged>
 	ExecuteBundle = 16,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_PRESENT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_PRESENT"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_PRESENT</unmanaged>
 	Present = 17,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVEQUERYDATA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVEQUERYDATA"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_RESOLVEQUERYDATA</unmanaged>
 	ResolveQueryData = 18,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_BEGINSUBMISSION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_BEGINSUBMISSION"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_BEGINSUBMISSION</unmanaged>
 	BeginSubmission = 19,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ENDSUBMISSION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ENDSUBMISSION"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_ENDSUBMISSION</unmanaged>
 	EndSubmission = 20,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME</unmanaged>
 	DecodeFrame = 21,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES</unmanaged>
 	ProcessFrames = 22,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ATOMICCOPYBUFFERUINT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ATOMICCOPYBUFFERUINT"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_ATOMICCOPYBUFFERUINT</unmanaged>
 	AtomicCopyBufferUInt = 23,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ATOMICCOPYBUFFERUINT64"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ATOMICCOPYBUFFERUINT64"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_ATOMICCOPYBUFFERUINT64</unmanaged>
 	AtomicCopyBufferUInt64 = 24,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVESUBRESOURCEREGION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVESUBRESOURCEREGION"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_RESOLVESUBRESOURCEREGION</unmanaged>
 	ResolveSubresourceRegion = 25,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_WRITEBUFFERIMMEDIATE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_WRITEBUFFERIMMEDIATE"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_WRITEBUFFERIMMEDIATE</unmanaged>
 	WriteBufferImmediate = 26,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME1"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME1</unmanaged>
 	DecodeFrame1 = 27,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_SETPROTECTEDRESOURCESESSION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_SETPROTECTEDRESOURCESESSION"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_SETPROTECTEDRESOURCESESSION</unmanaged>
 	SetProtectedResourceSession = 28,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME2"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_DECODEFRAME2</unmanaged>
 	DecodeFrame2 = 29,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES1"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_PROCESSFRAMES1</unmanaged>
 	ProcessFrames1 = 30,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_BUILDRAYTRACINGACCELERATIONSTRUCTURE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_BUILDRAYTRACINGACCELERATIONSTRUCTURE"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_BUILDRAYTRACINGACCELERATIONSTRUCTURE</unmanaged>
 	BuildRaytracingAccelerationStructure = 31,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EMITRAYTRACINGACCELERATIONSTRUCTUREPOSTBUILDINFO"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EMITRAYTRACINGACCELERATIONSTRUCTUREPOSTBUILDINFO"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_EMITRAYTRACINGACCELERATIONSTRUCTUREPOSTBUILDINFO</unmanaged>
 	EmitRaytracingAccelerationStructurePostBuildInfo = 32,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYRAYTRACINGACCELERATIONSTRUCTURE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_COPYRAYTRACINGACCELERATIONSTRUCTURE"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_COPYRAYTRACINGACCELERATIONSTRUCTURE</unmanaged>
 	CopyRaytracingAccelerationStructure = 33,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DISPATCHRAYS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DISPATCHRAYS"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_DISPATCHRAYS</unmanaged>
 	DispatchRays = 34,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_INITIALIZEMETACOMMAND"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_INITIALIZEMETACOMMAND"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_INITIALIZEMETACOMMAND</unmanaged>
 	InitializeMetaCommand = 35,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EXECUTEMETACOMMAND"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EXECUTEMETACOMMAND"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_EXECUTEMETACOMMAND</unmanaged>
 	ExecuteMetaCommand = 36,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ESTIMATEMOTION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ESTIMATEMOTION"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_ESTIMATEMOTION</unmanaged>
 	EstimateMotion = 37,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVEMOTIONVECTORHEAP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVEMOTIONVECTORHEAP"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_RESOLVEMOTIONVECTORHEAP</unmanaged>
 	ResolveMotionVectorHeap = 38,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_SETPIPELINESTATE1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_SETPIPELINESTATE1"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_SETPIPELINESTATE1</unmanaged>
 	SetPipelineState1 = 39,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_INITIALIZEEXTENSIONCOMMAND"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_INITIALIZEEXTENSIONCOMMAND"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_INITIALIZEEXTENSIONCOMMAND</unmanaged>
 	InitializeExtensionCommand = 40,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EXECUTEEXTENSIONCOMMAND"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_EXECUTEEXTENSIONCOMMAND"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_EXECUTEEXTENSIONCOMMAND</unmanaged>
 	ExecuteExtensionCommand = 41,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DISPATCHMESH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_DISPATCHMESH"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_DISPATCHMESH</unmanaged>
 	DispatchMesh = 42,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ENCODEFRAME"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_ENCODEFRAME"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_ENCODEFRAME</unmanaged>
 	EncodeFrame = 43,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVEENCODEROUTPUTMETADATA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVEENCODEROUTPUTMETADATA"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_RESOLVEENCODEROUTPUTMETADATA</unmanaged>
 	ResolveEncoderOutputMetadata = 44,
 }

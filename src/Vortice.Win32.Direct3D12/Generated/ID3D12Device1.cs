@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device1"]/*' />
 /// <unmanaged>ID3D12Device1</unmanaged>
 [Guid("77acce80-638e-4e65-8895-c1f23386863e")]
 [NativeTypeName("struct ID3D12Device1 : ID3D12Device")]
@@ -405,7 +405,7 @@ public unsafe partial struct ID3D12Device1 : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID3D12Device1*, Luid*, Luid*>)(lpVtbl[43]))((ID3D12Device1*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device1::CreatePipelineLibrary"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device1::CreatePipelineLibrary"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
 	public HResult CreatePipelineLibrary(void* pLibraryBlob, nuint BlobLength, Guid* riid, void** ppPipelineLibrary)
@@ -413,7 +413,7 @@ public unsafe partial struct ID3D12Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, void*, nuint, Guid*, void**, int>)(lpVtbl[44]))((ID3D12Device1*)Unsafe.AsPointer(ref this), pLibraryBlob, BlobLength, riid, ppPipelineLibrary);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device1::SetEventOnMultipleFenceCompletion"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device1::SetEventOnMultipleFenceCompletion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
 	public HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, Handle hEvent)
@@ -421,7 +421,7 @@ public unsafe partial struct ID3D12Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, ID3D12Fence**, ulong*, uint, MultipleFenceWaitFlags, Handle, int>)(lpVtbl[45]))((ID3D12Device1*)Unsafe.AsPointer(ref this), ppFences, pFenceValues, NumFences, Flags, hEvent);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device1::SetResidencyPriority"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device1::SetResidencyPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
 	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)

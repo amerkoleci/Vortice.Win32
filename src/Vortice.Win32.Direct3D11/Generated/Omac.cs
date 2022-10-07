@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_OMAC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_OMAC"]/*' />
 /// <unmanaged>D3D11_OMAC</unmanaged>
 public partial struct Omac
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_OMAC::Omac"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_OMAC::Omac"]/*' />
 	public unsafe fixed byte Buffer[16];
 }

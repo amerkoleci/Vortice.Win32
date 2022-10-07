@@ -9,67 +9,67 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG"]/*' />
 /// <unmanaged>D3D11_RESOURCE_MISC_FLAG</unmanaged>
 [Flags]
 public enum ResourceMiscFlags : uint
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_GENERATE_MIPS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_GENERATE_MIPS"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_GENERATE_MIPS</unmanaged>
 	GenerateMips = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_SHARED</unmanaged>
 	Shared = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_TEXTURECUBE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_TEXTURECUBE"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_TEXTURECUBE</unmanaged>
 	TextureCube = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_DRAWINDIRECT_ARGS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_DRAWINDIRECT_ARGS"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_DRAWINDIRECT_ARGS</unmanaged>
 	DrawIndirectArgs = 16,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_BUFFER_ALLOW_RAW_VIEWS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_BUFFER_ALLOW_RAW_VIEWS"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_BUFFER_ALLOW_RAW_VIEWS</unmanaged>
 	BufferAllowRawViews = 32,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_BUFFER_STRUCTURED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_BUFFER_STRUCTURED"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_BUFFER_STRUCTURED</unmanaged>
 	BufferStructured = 64,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESOURCE_CLAMP"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESOURCE_CLAMP"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_RESOURCE_CLAMP</unmanaged>
 	ResourceClamp = 128,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX</unmanaged>
 	SharedKeyedMutex = 256,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_GDI_COMPATIBLE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_GDI_COMPATIBLE"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_GDI_COMPATIBLE</unmanaged>
 	GDICompatible = 512,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_NTHANDLE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_NTHANDLE"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_SHARED_NTHANDLE</unmanaged>
 	SharedNthandle = 2048,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESTRICTED_CONTENT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESTRICTED_CONTENT"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_RESTRICTED_CONTENT</unmanaged>
 	RestrictedContent = 4096,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESTRICT_SHARED_RESOURCE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESTRICT_SHARED_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_RESTRICT_SHARED_RESOURCE</unmanaged>
 	RestrictSharedResource = 8192,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESTRICT_SHARED_RESOURCE_DRIVER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESTRICT_SHARED_RESOURCE_DRIVER"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_RESTRICT_SHARED_RESOURCE_DRIVER</unmanaged>
 	RestrictSharedResourceDriver = 16384,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_GUARDED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_GUARDED"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_GUARDED</unmanaged>
 	Guarded = 32768,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_TILE_POOL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_TILE_POOL"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_TILE_POOL</unmanaged>
 	TilePool = 131072,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_TILED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_TILED"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_TILED</unmanaged>
 	Tiled = 262144,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_HW_PROTECTED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_HW_PROTECTED"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_HW_PROTECTED</unmanaged>
 	HWProtected = 524288,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_DISPLAYABLE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_DISPLAYABLE"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_SHARED_DISPLAYABLE</unmanaged>
 	SharedDisplayable = 1048576,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_EXCLUSIVE_WRITER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_EXCLUSIVE_WRITER"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_SHARED_EXCLUSIVE_WRITER</unmanaged>
 	SharedExclusiveWriter = 2097152,
 }

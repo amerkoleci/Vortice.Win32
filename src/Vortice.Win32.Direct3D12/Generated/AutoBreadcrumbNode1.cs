@@ -9,43 +9,43 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1"]/*' />
 /// <unmanaged>D3D12_AUTO_BREADCRUMB_NODE1</unmanaged>
 public partial struct AutoBreadcrumbNode1
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandListDebugNameA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandListDebugNameA"]/*' />
 	public unsafe byte* pCommandListDebugNameA;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandListDebugNameW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandListDebugNameW"]/*' />
 	public unsafe ushort* pCommandListDebugNameW;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueueDebugNameA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueueDebugNameA"]/*' />
 	public unsafe byte* pCommandQueueDebugNameA;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueueDebugNameW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueueDebugNameW"]/*' />
 	public unsafe ushort* pCommandQueueDebugNameW;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandList"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandList"]/*' />
 	public unsafe ID3D12GraphicsCommandList* pCommandList;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueue"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueue"]/*' />
 	public unsafe ID3D12CommandQueue* pCommandQueue;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::BreadcrumbCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::BreadcrumbCount"]/*' />
 	public uint BreadcrumbCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pLastBreadcrumbValue"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pLastBreadcrumbValue"]/*' />
 	public unsafe uint* pLastBreadcrumbValue;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandHistory"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandHistory"]/*' />
 	public unsafe AutoBreadcrumbOperation* pCommandHistory;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pNext"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pNext"]/*' />
 	public unsafe AutoBreadcrumbNode1* pNext;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::BreadcrumbContextsCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::BreadcrumbContextsCount"]/*' />
 	public uint BreadcrumbContextsCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pBreadcrumbContexts"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pBreadcrumbContexts"]/*' />
 	public unsafe DredBreadcrumbContext* pBreadcrumbContexts;
 }

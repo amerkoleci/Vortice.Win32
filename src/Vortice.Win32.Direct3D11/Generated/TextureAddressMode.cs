@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE"]/*' />
 /// <unmanaged>D3D11_TEXTURE_ADDRESS_MODE</unmanaged>
 public enum TextureAddressMode : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_WRAP"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_WRAP"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_WRAP</unmanaged>
 	Wrap = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_MIRROR"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_MIRROR"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_MIRROR</unmanaged>
 	Mirror = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_CLAMP"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_CLAMP"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_CLAMP</unmanaged>
 	Clamp = 3,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_BORDER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_BORDER"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_BORDER</unmanaged>
 	Border = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_MIRROR_ONCE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_MIRROR_ONCE"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_MIRROR_ONCE</unmanaged>
 	MirrorOnce = 5,
 }

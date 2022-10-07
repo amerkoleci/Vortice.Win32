@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE"]/*' />
 /// <unmanaged>D3D12_GPU_VIRTUAL_ADDRESS_RANGE</unmanaged>
 public partial struct GpuVirtualAddressRange
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE::StartAddress"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE::StartAddress"]/*' />
 	public ulong StartAddress;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE::SizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE::SizeInBytes"]/*' />
 	public ulong SizeInBytes;
 }

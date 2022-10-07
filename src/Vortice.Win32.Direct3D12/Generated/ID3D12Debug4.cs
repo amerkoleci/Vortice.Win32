@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug4"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug4"]/*' />
 /// <unmanaged>ID3D12Debug4</unmanaged>
 [Guid("014b816e-9ec5-4a2f-a845-ffbe441ce13a")]
 [NativeTypeName("struct ID3D12Debug4 : ID3D12Debug3")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D12Debug4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Debug4*, GpuBasedValidationFlags, void>)(lpVtbl[6]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), Flags);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug4::DisableDebugLayer"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug4::DisableDebugLayer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void DisableDebugLayer()

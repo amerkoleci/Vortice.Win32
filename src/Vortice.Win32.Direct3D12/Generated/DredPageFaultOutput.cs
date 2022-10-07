@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT"]/*' />
 /// <unmanaged>D3D12_DRED_PAGE_FAULT_OUTPUT</unmanaged>
 public partial struct DredPageFaultOutput
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT::PageFaultVA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT::PageFaultVA"]/*' />
 	public ulong PageFaultVA;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT::pHeadExistingAllocationNode"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT::pHeadExistingAllocationNode"]/*' />
 	public unsafe DredAllocationNode* pHeadExistingAllocationNode;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT::pHeadRecentFreedAllocationNode"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_OUTPUT::pHeadRecentFreedAllocationNode"]/*' />
 	public unsafe DredAllocationNode* pHeadRecentFreedAllocationNode;
 }

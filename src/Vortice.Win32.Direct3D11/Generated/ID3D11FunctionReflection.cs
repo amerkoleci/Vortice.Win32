@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection"]/*' />
 /// <unmanaged>ID3D11FunctionReflection</unmanaged>
 [Guid("207bcecb-d683-4a06-a8a3-9b149b9f73a4")]
 public unsafe partial struct ID3D11FunctionReflection : INativeGuid
@@ -46,7 +46,7 @@ public unsafe partial struct ID3D11FunctionReflection : INativeGuid
 
 	public void** lpVtbl;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public HResult GetDesc(FunctionDescription* pDesc)
@@ -54,7 +54,7 @@ public unsafe partial struct ID3D11FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, FunctionDescription*, int>)(lpVtbl[0]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByIndex"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
 	public ID3D11ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint BufferIndex)
@@ -62,7 +62,7 @@ public unsafe partial struct ID3D11FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, uint, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[1]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), BufferIndex);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByName"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
 	public ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
@@ -70,7 +70,7 @@ public unsafe partial struct ID3D11FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetResourceBindingDesc(uint ResourceIndex, ShaderInputBindDescription* pDesc)
@@ -78,7 +78,7 @@ public unsafe partial struct ID3D11FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, uint, ShaderInputBindDescription*, int>)(lpVtbl[3]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ResourceIndex, pDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetVariableByName"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
@@ -86,7 +86,7 @@ public unsafe partial struct ID3D11FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ID3D11ShaderReflectionVariable>)(lpVtbl[4]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDescByName"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDescByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc)
@@ -94,7 +94,7 @@ public unsafe partial struct ID3D11FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[5]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetFunctionParameter"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetFunctionParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public ID3D11FunctionParameterReflection GetFunctionParameter(int ParameterIndex)

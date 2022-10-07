@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Query"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Query"]/*' />
 /// <unmanaged>ID3D11Query</unmanaged>
 [Guid("d6c00747-87b7-425e-b84d-44d108560afd")]
 [NativeTypeName("struct ID3D11Query : ID3D11Asynchronous")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11Query : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Query*, uint>)(lpVtbl[7]))((ID3D11Query*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Query::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Query::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(QueryDescription* pDesc)

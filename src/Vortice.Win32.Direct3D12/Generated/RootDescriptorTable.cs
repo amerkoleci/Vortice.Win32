@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE"]/*' />
 /// <unmanaged>D3D12_ROOT_DESCRIPTOR_TABLE</unmanaged>
 public partial struct RootDescriptorTable
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE::NumDescriptorRanges"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE::NumDescriptorRanges"]/*' />
 	public uint NumDescriptorRanges;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE::pDescriptorRanges"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_TABLE::pDescriptorRanges"]/*' />
 	public unsafe DescriptorRange* pDescriptorRanges;
 }

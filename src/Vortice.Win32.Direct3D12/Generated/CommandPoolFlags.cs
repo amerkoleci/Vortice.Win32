@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_POOL_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_POOL_FLAGS"]/*' />
 /// <unmanaged>D3D12_COMMAND_POOL_FLAGS</unmanaged>
 [Flags]
 public enum CommandPoolFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_POOL_FLAGS::D3D12_COMMAND_POOL_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_POOL_FLAGS::D3D12_COMMAND_POOL_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_POOL_FLAG_NONE</unmanaged>
 	None = 0,
 }

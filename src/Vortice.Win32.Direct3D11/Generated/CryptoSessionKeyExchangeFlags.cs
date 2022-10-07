@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS"]/*' />
 /// <unmanaged>D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS</unmanaged>
 [Flags]
 public enum CryptoSessionKeyExchangeFlags : uint
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS::D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS::D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAG_NONE</unmanaged>
 	FlagNone = 0,
 }

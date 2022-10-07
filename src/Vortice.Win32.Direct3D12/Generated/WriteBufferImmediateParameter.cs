@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_PARAMETER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_PARAMETER"]/*' />
 /// <unmanaged>D3D12_WRITEBUFFERIMMEDIATE_PARAMETER</unmanaged>
 public partial struct WriteBufferImmediateParameter
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_PARAMETER::Dest"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_PARAMETER::Dest"]/*' />
 	public ulong Dest;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_PARAMETER::Value"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_PARAMETER::Value"]/*' />
 	public uint Value;
 }

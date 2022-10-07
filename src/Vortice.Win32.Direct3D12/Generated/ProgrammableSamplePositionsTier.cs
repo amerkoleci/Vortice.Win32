@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER"]/*' />
 /// <unmanaged>D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER</unmanaged>
 public enum ProgrammableSamplePositionsTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER::D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_NOT_SUPPORTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER::D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_NOT_SUPPORTED</unmanaged>
 	NotSupported = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER::D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER::D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_1"]/*' />
 	/// <unmanaged>D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_1</unmanaged>
 	Tier1 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER::D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER::D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_2"]/*' />
 	/// <unmanaged>D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_2</unmanaged>
 	Tier2 = 2,
 }

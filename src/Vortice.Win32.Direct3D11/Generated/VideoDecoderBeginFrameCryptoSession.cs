@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION</unmanaged>
 public partial struct VideoDecoderBeginFrameCryptoSession
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pCryptoSession"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pCryptoSession"]/*' />
 	public unsafe ID3D11CryptoSession* pCryptoSession;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::BlobSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::BlobSize"]/*' />
 	public uint BlobSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pBlob"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pBlob"]/*' />
 	public unsafe void* pBlob;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pKeyInfoId"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pKeyInfoId"]/*' />
 	public unsafe Guid* pKeyInfoId;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::PrivateDataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::PrivateDataSize"]/*' />
 	public uint PrivateDataSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pPrivateData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BEGIN_FRAME_CRYPTO_SESSION::pPrivateData"]/*' />
 	public unsafe void* pPrivateData;
 }

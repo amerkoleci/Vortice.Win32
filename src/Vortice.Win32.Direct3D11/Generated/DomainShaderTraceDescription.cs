@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DOMAIN_SHADER_TRACE_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DOMAIN_SHADER_TRACE_DESC"]/*' />
 /// <unmanaged>D3D11_DOMAIN_SHADER_TRACE_DESC</unmanaged>
 public partial struct DomainShaderTraceDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DOMAIN_SHADER_TRACE_DESC::Invocation"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DOMAIN_SHADER_TRACE_DESC::Invocation"]/*' />
 	public ulong Invocation;
 }

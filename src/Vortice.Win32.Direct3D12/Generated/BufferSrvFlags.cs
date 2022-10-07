@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV_FLAGS"]/*' />
 /// <unmanaged>D3D12_BUFFER_SRV_FLAGS</unmanaged>
 [Flags]
 public enum BufferSrvFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV_FLAGS::D3D12_BUFFER_SRV_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV_FLAGS::D3D12_BUFFER_SRV_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_BUFFER_SRV_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV_FLAGS::D3D12_BUFFER_SRV_FLAG_RAW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV_FLAGS::D3D12_BUFFER_SRV_FLAG_RAW"]/*' />
 	/// <unmanaged>D3D12_BUFFER_SRV_FLAG_RAW</unmanaged>
 	Raw = 1,
 }

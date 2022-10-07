@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS"]/*' />
 /// <unmanaged>D3D12_DRAW_ARGUMENTS</unmanaged>
 public partial struct DrawArguments
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::VertexCountPerInstance"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::VertexCountPerInstance"]/*' />
 	public uint VertexCountPerInstance;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::InstanceCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::InstanceCount"]/*' />
 	public uint InstanceCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::StartVertexLocation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::StartVertexLocation"]/*' />
 	public uint StartVertexLocation;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::StartInstanceLocation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_ARGUMENTS::StartInstanceLocation"]/*' />
 	public uint StartInstanceLocation;
 }

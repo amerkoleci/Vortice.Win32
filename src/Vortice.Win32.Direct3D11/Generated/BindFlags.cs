@@ -9,40 +9,40 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG"]/*' />
 /// <unmanaged>D3D11_BIND_FLAG</unmanaged>
 [Flags]
 public enum BindFlags : uint
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_VERTEX_BUFFER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_VERTEX_BUFFER"]/*' />
 	/// <unmanaged>D3D11_BIND_VERTEX_BUFFER</unmanaged>
 	VertexBuffer = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_INDEX_BUFFER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_INDEX_BUFFER"]/*' />
 	/// <unmanaged>D3D11_BIND_INDEX_BUFFER</unmanaged>
 	IndexBuffer = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_CONSTANT_BUFFER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_CONSTANT_BUFFER"]/*' />
 	/// <unmanaged>D3D11_BIND_CONSTANT_BUFFER</unmanaged>
 	ConstantBuffer = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_SHADER_RESOURCE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_SHADER_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_BIND_SHADER_RESOURCE</unmanaged>
 	ShaderResource = 8,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_STREAM_OUTPUT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_STREAM_OUTPUT"]/*' />
 	/// <unmanaged>D3D11_BIND_STREAM_OUTPUT</unmanaged>
 	StreamOutput = 16,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_RENDER_TARGET"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_RENDER_TARGET"]/*' />
 	/// <unmanaged>D3D11_BIND_RENDER_TARGET</unmanaged>
 	RenderTarget = 32,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_DEPTH_STENCIL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_DEPTH_STENCIL"]/*' />
 	/// <unmanaged>D3D11_BIND_DEPTH_STENCIL</unmanaged>
 	DepthStencil = 64,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_UNORDERED_ACCESS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_UNORDERED_ACCESS"]/*' />
 	/// <unmanaged>D3D11_BIND_UNORDERED_ACCESS</unmanaged>
 	UnorderedAccess = 128,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_DECODER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_DECODER"]/*' />
 	/// <unmanaged>D3D11_BIND_DECODER</unmanaged>
 	Decoder = 512,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_VIDEO_ENCODER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_VIDEO_ENCODER"]/*' />
 	/// <unmanaged>D3D11_BIND_VIDEO_ENCODER</unmanaged>
 	VideoEncoder = 1024,
 }

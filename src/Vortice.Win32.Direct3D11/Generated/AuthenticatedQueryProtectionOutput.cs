@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT</unmanaged>
 public partial struct AuthenticatedQueryProtectionOutput
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT::Output"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT::Output"]/*' />
 	public AuthenticatedQueryOutput Output;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT::ProtectionFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_PROTECTION_OUTPUT::ProtectionFlags"]/*' />
 	public AuthenticatedProtectionFlags ProtectionFlags;
 }

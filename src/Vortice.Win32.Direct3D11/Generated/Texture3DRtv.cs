@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_RTV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_RTV"]/*' />
 /// <unmanaged>D3D11_TEX3D_RTV</unmanaged>
 public partial struct Texture3DRtv
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_RTV::MipSlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_RTV::MipSlice"]/*' />
 	public uint MipSlice;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_RTV::FirstWSlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_RTV::FirstWSlice"]/*' />
 	public uint FirstWSlice;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_RTV::WSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_RTV::WSize"]/*' />
 	public uint WSize;
 }

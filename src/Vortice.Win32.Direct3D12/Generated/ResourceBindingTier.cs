@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_BINDING_TIER</unmanaged>
 public enum ResourceBindingTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER::D3D12_RESOURCE_BINDING_TIER_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER::D3D12_RESOURCE_BINDING_TIER_1"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BINDING_TIER_1</unmanaged>
 	Tier1 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER::D3D12_RESOURCE_BINDING_TIER_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER::D3D12_RESOURCE_BINDING_TIER_2"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BINDING_TIER_2</unmanaged>
 	Tier2 = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER::D3D12_RESOURCE_BINDING_TIER_3"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER::D3D12_RESOURCE_BINDING_TIER_3"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BINDING_TIER_3</unmanaged>
 	Tier3 = 3,
 }

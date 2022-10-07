@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE"]/*' />
 /// <unmanaged>D3D12_WRITEBUFFERIMMEDIATE_MODE</unmanaged>
 public enum WriteBufferImmediateMode : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE::D3D12_WRITEBUFFERIMMEDIATE_MODE_DEFAULT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE::D3D12_WRITEBUFFERIMMEDIATE_MODE_DEFAULT"]/*' />
 	/// <unmanaged>D3D12_WRITEBUFFERIMMEDIATE_MODE_DEFAULT</unmanaged>
 	Default = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE::D3D12_WRITEBUFFERIMMEDIATE_MODE_MARKER_IN"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE::D3D12_WRITEBUFFERIMMEDIATE_MODE_MARKER_IN"]/*' />
 	/// <unmanaged>D3D12_WRITEBUFFERIMMEDIATE_MODE_MARKER_IN</unmanaged>
 	MarkerIn = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE::D3D12_WRITEBUFFERIMMEDIATE_MODE_MARKER_OUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE::D3D12_WRITEBUFFERIMMEDIATE_MODE_MARKER_OUT"]/*' />
 	/// <unmanaged>D3D12_WRITEBUFFERIMMEDIATE_MODE_MARKER_OUT</unmanaged>
 	MarkerOut = 2,
 }

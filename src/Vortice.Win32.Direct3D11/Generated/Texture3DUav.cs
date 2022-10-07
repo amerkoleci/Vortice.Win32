@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_UAV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_UAV"]/*' />
 /// <unmanaged>D3D11_TEX3D_UAV</unmanaged>
 public partial struct Texture3DUav
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_UAV::MipSlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_UAV::MipSlice"]/*' />
 	public uint MipSlice;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_UAV::FirstWSlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_UAV::FirstWSlice"]/*' />
 	public uint FirstWSlice;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_UAV::WSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX3D_UAV::WSize"]/*' />
 	public uint WSize;
 }

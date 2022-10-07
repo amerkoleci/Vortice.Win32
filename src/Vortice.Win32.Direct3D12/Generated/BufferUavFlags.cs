@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS"]/*' />
 /// <unmanaged>D3D12_BUFFER_UAV_FLAGS</unmanaged>
 [Flags]
 public enum BufferUavFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS::D3D12_BUFFER_UAV_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS::D3D12_BUFFER_UAV_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_BUFFER_UAV_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS::D3D12_BUFFER_UAV_FLAG_RAW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS::D3D12_BUFFER_UAV_FLAG_RAW"]/*' />
 	/// <unmanaged>D3D12_BUFFER_UAV_FLAG_RAW</unmanaged>
 	Raw = 1,
 }

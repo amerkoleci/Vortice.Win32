@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV</unmanaged>
 public partial struct RaytracingAccelerationStructureSrv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV::Location"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV::Location"]/*' />
 	public ulong Location;
 }

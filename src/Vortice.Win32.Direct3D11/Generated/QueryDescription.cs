@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC"]/*' />
 /// <unmanaged>D3D11_QUERY_DESC</unmanaged>
 public partial struct QueryDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC::Query"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC::Query"]/*' />
 	public QueryType Query;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC::MiscFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DESC::MiscFlags"]/*' />
 	public QueryMiscFlags MiscFlags;
 }

@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY</unmanaged>
 public partial struct FeatureDataCommandQueuePriority
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY::CommandListType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY::CommandListType"]/*' />
 	public CommandListType CommandListType;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY::Priority"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY::Priority"]/*' />
 	public uint Priority;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY::PriorityForTypeIsSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_COMMAND_QUEUE_PRIORITY::PriorityForTypeIsSupported"]/*' />
 	public Bool32 PriorityForTypeIsSupported;
 }

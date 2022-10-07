@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_TYPE"]/*' />
 /// <unmanaged>D3D12_SERIALIZED_DATA_TYPE</unmanaged>
 public enum SerializedDataType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_TYPE::D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_TYPE::D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
 	/// <unmanaged>D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE</unmanaged>
 	RaytracingAccelerationStructure = 0,
 }

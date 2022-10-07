@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11HullShader"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11HullShader"]/*' />
 /// <unmanaged>ID3D11HullShader</unmanaged>
 [Guid("8e5c6061-628a-4c8e-8264-bbe45cb3d5dd")]
 [NativeTypeName("struct ID3D11HullShader : ID3D11DeviceChild")]

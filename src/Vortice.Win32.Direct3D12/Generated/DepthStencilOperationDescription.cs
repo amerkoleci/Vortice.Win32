@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCILOP_DESC</unmanaged>
 public partial struct DepthStencilOperationDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilFailOp"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilFailOp"]/*' />
 	public StencilOperation StencilFailOp;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilDepthFailOp"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilDepthFailOp"]/*' />
 	public StencilOperation StencilDepthFailOp;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilPassOp"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilPassOp"]/*' />
 	public StencilOperation StencilPassOp;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilFunc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCILOP_DESC::StencilFunc"]/*' />
 	public ComparisonFunction StencilFunc;
 }

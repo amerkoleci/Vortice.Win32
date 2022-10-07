@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER"]/*' />
 /// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_TIER</unmanaged>
 public enum ConservativeRasterizationTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_NOT_SUPPORTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_TIER_NOT_SUPPORTED</unmanaged>
 	NotSupported = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_1"]/*' />
 	/// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_TIER_1</unmanaged>
 	Tier1 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_2"]/*' />
 	/// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_TIER_2</unmanaged>
 	Tier2 = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_3"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_3"]/*' />
 	/// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_TIER_3</unmanaged>
 	Tier3 = 3,
 }

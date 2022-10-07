@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE"]/*' />
 /// <unmanaged>D3D11_FILTER_REDUCTION_TYPE</unmanaged>
 public enum FilterReductionType : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_STANDARD"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_STANDARD"]/*' />
 	/// <unmanaged>D3D11_FILTER_REDUCTION_TYPE_STANDARD</unmanaged>
 	Standard = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_COMPARISON"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_COMPARISON"]/*' />
 	/// <unmanaged>D3D11_FILTER_REDUCTION_TYPE_COMPARISON</unmanaged>
 	Comparison = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_MINIMUM"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_MINIMUM"]/*' />
 	/// <unmanaged>D3D11_FILTER_REDUCTION_TYPE_MINIMUM</unmanaged>
 	Minimum = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_MAXIMUM"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_MAXIMUM"]/*' />
 	/// <unmanaged>D3D11_FILTER_REDUCTION_TYPE_MAXIMUM</unmanaged>
 	Maximum = 3,
 }

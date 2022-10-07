@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_FLAGS"]/*' />
 /// <unmanaged>D3D12_DRED_PAGE_FAULT_FLAGS</unmanaged>
 [Flags]
 public enum DredPageFaultFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_FLAGS::D3D12_DRED_PAGE_FAULT_FLAGS_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_FLAGS::D3D12_DRED_PAGE_FAULT_FLAGS_NONE"]/*' />
 	/// <unmanaged>D3D12_DRED_PAGE_FAULT_FLAGS_NONE</unmanaged>
 	None = 0,
 }

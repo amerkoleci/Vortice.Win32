@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG"]/*' />
 /// <unmanaged>D3D11_BUFFER_UAV_FLAG</unmanaged>
 [Flags]
 public enum BufferUavFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG::D3D11_BUFFER_UAV_FLAG_RAW"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG::D3D11_BUFFER_UAV_FLAG_RAW"]/*' />
 	/// <unmanaged>D3D11_BUFFER_UAV_FLAG_RAW</unmanaged>
 	Raw = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG::D3D11_BUFFER_UAV_FLAG_APPEND"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG::D3D11_BUFFER_UAV_FLAG_APPEND"]/*' />
 	/// <unmanaged>D3D11_BUFFER_UAV_FLAG_APPEND</unmanaged>
 	Append = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG::D3D11_BUFFER_UAV_FLAG_COUNTER"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG::D3D11_BUFFER_UAV_FLAG_COUNTER"]/*' />
 	/// <unmanaged>D3D11_BUFFER_UAV_FLAG_COUNTER</unmanaged>
 	Counter = 4,
 }

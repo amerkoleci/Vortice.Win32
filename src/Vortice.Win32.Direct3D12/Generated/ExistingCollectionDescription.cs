@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC"]/*' />
 /// <unmanaged>D3D12_EXISTING_COLLECTION_DESC</unmanaged>
 public partial struct ExistingCollectionDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::pExistingCollection"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::pExistingCollection"]/*' />
 	public unsafe ID3D12StateObject* pExistingCollection;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::NumExports"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::NumExports"]/*' />
 	public uint NumExports;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::pExports"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXISTING_COLLECTION_DESC::pExports"]/*' />
 	public unsafe ExportDescription* pExports;
 }

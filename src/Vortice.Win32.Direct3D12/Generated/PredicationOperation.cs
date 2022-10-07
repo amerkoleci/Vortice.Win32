@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PREDICATION_OP"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PREDICATION_OP"]/*' />
 /// <unmanaged>D3D12_PREDICATION_OP</unmanaged>
 public enum PredicationOperation : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PREDICATION_OP::D3D12_PREDICATION_OP_EQUAL_ZERO"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PREDICATION_OP::D3D12_PREDICATION_OP_EQUAL_ZERO"]/*' />
 	/// <unmanaged>D3D12_PREDICATION_OP_EQUAL_ZERO</unmanaged>
 	EqualZero = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PREDICATION_OP::D3D12_PREDICATION_OP_NOT_EQUAL_ZERO"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PREDICATION_OP::D3D12_PREDICATION_OP_NOT_EQUAL_ZERO"]/*' />
 	/// <unmanaged>D3D12_PREDICATION_OP_NOT_EQUAL_ZERO</unmanaged>
 	NotEqualZero = 1,
 }

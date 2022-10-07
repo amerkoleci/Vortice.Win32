@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY"]/*' />
 /// <unmanaged>D3D12_SHADER_VISIBILITY</unmanaged>
 public enum ShaderVisibility : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_ALL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_ALL"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_ALL</unmanaged>
 	All = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_VERTEX"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_VERTEX"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_VERTEX</unmanaged>
 	Vertex = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_HULL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_HULL"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_HULL</unmanaged>
 	Hull = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_DOMAIN"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_DOMAIN"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_DOMAIN</unmanaged>
 	Domain = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_GEOMETRY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_GEOMETRY"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_GEOMETRY</unmanaged>
 	Geometry = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_PIXEL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_PIXEL"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_PIXEL</unmanaged>
 	Pixel = 5,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_AMPLIFICATION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_AMPLIFICATION"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_AMPLIFICATION</unmanaged>
 	Amplification = 6,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_MESH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_MESH"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_MESH</unmanaged>
 	Mesh = 7,
 }

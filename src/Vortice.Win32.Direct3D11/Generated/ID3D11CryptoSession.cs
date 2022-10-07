@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession"]/*' />
 /// <unmanaged>ID3D11CryptoSession</unmanaged>
 [Guid("9b32f9ad-bdcc-40a6-a39d-d5c865845720")]
 [NativeTypeName("struct ID3D11CryptoSession : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11CryptoSession : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCryptoType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCryptoType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetCryptoType(Guid* pCryptoType)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11CryptoSession : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, Guid*, void>)(lpVtbl[7]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCryptoType);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetDecoderProfile"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetDecoderProfile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDecoderProfile(Guid* pDecoderProfile)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D11CryptoSession : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, Guid*, void>)(lpVtbl[8]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pDecoderProfile);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCertificateSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCertificateSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetCertificateSize(uint* pCertificateSize)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D11CryptoSession : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, uint*, int>)(lpVtbl[9]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCertificateSize);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCertificate"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCertificate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetCertificate(uint CertificateSize, byte* pCertificate)
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D11CryptoSession : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, uint, byte*, int>)(lpVtbl[10]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), CertificateSize, pCertificate);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCryptoSessionHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11CryptoSession::GetCryptoSessionHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public void GetCryptoSessionHandle(Handle* pCryptoSessionHandle)

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_SO_STATISTICS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_SO_STATISTICS"]/*' />
 /// <unmanaged>D3D11_QUERY_DATA_SO_STATISTICS</unmanaged>
 public partial struct QueryDataSOStatistics
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_SO_STATISTICS::NumPrimitivesWritten"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_SO_STATISTICS::NumPrimitivesWritten"]/*' />
 	public ulong NumPrimitivesWritten;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_SO_STATISTICS::PrimitivesStorageNeeded"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_SO_STATISTICS::PrimitivesStorageNeeded"]/*' />
 	public ulong PrimitivesStorageNeeded;
 }

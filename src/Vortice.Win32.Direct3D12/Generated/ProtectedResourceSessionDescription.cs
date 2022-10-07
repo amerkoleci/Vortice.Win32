@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC"]/*' />
 /// <unmanaged>D3D12_PROTECTED_RESOURCE_SESSION_DESC</unmanaged>
 public partial struct ProtectedResourceSessionDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC::Flags"]/*' />
 	public ProtectedResourceSessionFlags Flags;
 }

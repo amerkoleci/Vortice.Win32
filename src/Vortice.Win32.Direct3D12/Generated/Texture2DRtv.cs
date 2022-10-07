@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2D_RTV</unmanaged>
 public partial struct Texture2DRtv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV::MipSlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV::MipSlice"]/*' />
 	public uint MipSlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV::PlaneSlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_RTV::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 }

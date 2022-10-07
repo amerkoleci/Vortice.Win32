@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_CONTENT_DESC</unmanaged>
 public partial struct VideoProcessorContentDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::InputFrameFormat"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::InputFrameFormat"]/*' />
 	public VideoFrameFormat InputFrameFormat;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::InputFrameRate"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::InputFrameRate"]/*' />
 	public Graphics.Dxgi.Common.Rational InputFrameRate;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::InputWidth"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::InputWidth"]/*' />
 	public uint InputWidth;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::InputHeight"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::InputHeight"]/*' />
 	public uint InputHeight;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::OutputFrameRate"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::OutputFrameRate"]/*' />
 	public Graphics.Dxgi.Common.Rational OutputFrameRate;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::OutputWidth"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::OutputWidth"]/*' />
 	public uint OutputWidth;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::OutputHeight"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::OutputHeight"]/*' />
 	public uint OutputHeight;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::Usage"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CONTENT_DESC::Usage"]/*' />
 	public VideoUsage Usage;
 }

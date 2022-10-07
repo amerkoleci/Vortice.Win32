@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D9_OPTIONS1</unmanaged>
 public partial struct FeatureDataD3d9Options1
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::FullNonPow2TextureSupported"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::FullNonPow2TextureSupported"]/*' />
 	public Bool32 FullNonPow2TextureSupported;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::DepthAsTextureWithLessEqualComparisonFilterSupported"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::DepthAsTextureWithLessEqualComparisonFilterSupported"]/*' />
 	public Bool32 DepthAsTextureWithLessEqualComparisonFilterSupported;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::SimpleInstancingSupported"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::SimpleInstancingSupported"]/*' />
 	public Bool32 SimpleInstancingSupported;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::TextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS1::TextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported"]/*' />
 	public Bool32 TextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported;
 }

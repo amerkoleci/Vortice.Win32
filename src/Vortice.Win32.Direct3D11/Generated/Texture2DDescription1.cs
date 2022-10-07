@@ -9,40 +9,40 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1"]/*' />
 /// <unmanaged>D3D11_TEXTURE2D_DESC1</unmanaged>
 public partial struct Texture2DDescription1
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::Width"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::Width"]/*' />
 	public uint Width;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::Height"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::Height"]/*' />
 	public uint Height;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::MipLevels"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::MipLevels"]/*' />
 	public uint MipLevels;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::ArraySize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::ArraySize"]/*' />
 	public uint ArraySize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::Format"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::SampleDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::SampleDesc"]/*' />
 	public Graphics.Dxgi.Common.SampleDescription SampleDesc;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::Usage"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::Usage"]/*' />
 	public Usage Usage;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::BindFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::BindFlags"]/*' />
 	public BindFlags BindFlags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::CPUAccessFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::CPUAccessFlags"]/*' />
 	public CpuAccessFlags CPUAccessFlags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::MiscFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::MiscFlags"]/*' />
 	public ResourceMiscFlags MiscFlags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::TextureLayout"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE2D_DESC1::TextureLayout"]/*' />
 	public TextureLayout TextureLayout;
 }

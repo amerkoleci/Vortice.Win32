@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11SwitchToRef"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SwitchToRef"]/*' />
 /// <unmanaged>ID3D11SwitchToRef</unmanaged>
 [Guid("1ef337e3-58e7-4f83-a692-db221f5ed47e")]
 [NativeTypeName("struct ID3D11SwitchToRef : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11SwitchToRef : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11SwitchToRef::SetUseRef"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SwitchToRef::SetUseRef"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public Bool32 SetUseRef(Bool32 UseRef)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D11SwitchToRef : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11SwitchToRef*, Bool32, Bool32>)(lpVtbl[3]))((ID3D11SwitchToRef*)Unsafe.AsPointer(ref this), UseRef);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11SwitchToRef::GetUseRef"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11SwitchToRef::GetUseRef"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public Bool32 GetUseRef()

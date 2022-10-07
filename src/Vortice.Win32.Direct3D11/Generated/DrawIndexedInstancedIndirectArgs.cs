@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS"]/*' />
 /// <unmanaged>D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS</unmanaged>
 public partial struct DrawIndexedInstancedIndirectArgs
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::IndexCountPerInstance"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::IndexCountPerInstance"]/*' />
 	public uint IndexCountPerInstance;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::InstanceCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::InstanceCount"]/*' />
 	public uint InstanceCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::StartIndexLocation"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::StartIndexLocation"]/*' />
 	public uint StartIndexLocation;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::BaseVertexLocation"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::BaseVertexLocation"]/*' />
 	public int BaseVertexLocation;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::StartInstanceLocation"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS::StartInstanceLocation"]/*' />
 	public uint StartInstanceLocation;
 }

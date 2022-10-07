@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_SUB_SAMPLE_MAPPING_BLOCK"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_SUB_SAMPLE_MAPPING_BLOCK"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_SUB_SAMPLE_MAPPING_BLOCK</unmanaged>
 public partial struct VideoDecoderSubSampleMappingBlock
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_SUB_SAMPLE_MAPPING_BLOCK::ClearSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_SUB_SAMPLE_MAPPING_BLOCK::ClearSize"]/*' />
 	public uint ClearSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_SUB_SAMPLE_MAPPING_BLOCK::EncryptedSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_SUB_SAMPLE_MAPPING_BLOCK::EncryptedSize"]/*' />
 	public uint EncryptedSize;
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_SHADER_CONFIG</unmanaged>
 public partial struct RaytracingShaderConfig
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG::MaxPayloadSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG::MaxPayloadSizeInBytes"]/*' />
 	public uint MaxPayloadSizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG::MaxAttributeSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG::MaxAttributeSizeInBytes"]/*' />
 	public uint MaxAttributeSizeInBytes;
 }

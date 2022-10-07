@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC</unmanaged>
 public partial struct VideoProcessorOutputViewDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC::ViewDimension"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC::ViewDimension"]/*' />
 	public VpovDimension ViewDimension;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC::Anonymous"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -42,11 +42,11 @@ public partial struct VideoProcessorOutputViewDescription
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
 		public Texture2DVpov Texture2D;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture2DArrayVpov Texture2DArray;
 	}

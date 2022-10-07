@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild"]/*' />
 /// <unmanaged>ID3D11DeviceChild</unmanaged>
 [Guid("1841e5c8-16b0-489b-bcc8-44cfb0d5deae")]
 [NativeTypeName("struct ID3D11DeviceChild : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11DeviceChild : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::GetDevice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::GetDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void GetDevice(ID3D11Device** ppDevice)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D11DeviceChild : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceChild*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::GetPrivateData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::GetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D11DeviceChild : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceChild*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::SetPrivateData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::SetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D11DeviceChild : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceChild*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::SetPrivateDataInterface"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceChild::SetPrivateDataInterface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)

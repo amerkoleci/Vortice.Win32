@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE"]/*' />
 /// <unmanaged>D3D11_COLOR_WRITE_ENABLE</unmanaged>
 [Flags]
 public enum ColorWriteEnable : byte
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_RED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_RED"]/*' />
 	/// <unmanaged>D3D11_COLOR_WRITE_ENABLE_RED</unmanaged>
 	Red = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_GREEN"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_GREEN"]/*' />
 	/// <unmanaged>D3D11_COLOR_WRITE_ENABLE_GREEN</unmanaged>
 	Green = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_BLUE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_BLUE"]/*' />
 	/// <unmanaged>D3D11_COLOR_WRITE_ENABLE_BLUE</unmanaged>
 	Blue = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_ALPHA"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_ALPHA"]/*' />
 	/// <unmanaged>D3D11_COLOR_WRITE_ENABLE_ALPHA</unmanaged>
 	Alpha = 8,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_ALL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COLOR_WRITE_ENABLE::D3D11_COLOR_WRITE_ENABLE_ALL"]/*' />
 	/// <unmanaged>D3D11_COLOR_WRITE_ENABLE_ALL</unmanaged>
 	All = 15,
 }

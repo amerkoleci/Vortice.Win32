@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA"]/*' />
 /// <unmanaged>D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA</unmanaged>
 public partial struct KeyExchangeHWProtectionData
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::HWProtectionFunctionID"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::HWProtectionFunctionID"]/*' />
 	public uint HWProtectionFunctionID;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::pInputData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::pInputData"]/*' />
 	public unsafe KeyExchangeHWProtectionInputData* pInputData;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::pOutputData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::pOutputData"]/*' />
 	public unsafe KeyExchangeHWProtectionOutputData* pOutputData;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::Status"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_DATA::Status"]/*' />
 	public HResult Status;
 }

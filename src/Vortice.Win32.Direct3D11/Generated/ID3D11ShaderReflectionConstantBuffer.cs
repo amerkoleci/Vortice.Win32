@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer"]/*' />
 /// <unmanaged>ID3D11ShaderReflectionConstantBuffer</unmanaged>
 [Guid("eb62d63d-93dd-4318-8ae8-c6f83ad371b8")]
 public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : INativeGuid
@@ -46,7 +46,7 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : INativeGuid
 
 	public void** lpVtbl;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public HResult GetDesc(ShaderBufferDescription* pDesc)
@@ -54,7 +54,7 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, ShaderBufferDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByIndex"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
 	public ID3D11ShaderReflectionVariable GetVariableByIndex(uint Index)
@@ -62,7 +62,7 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, uint, ID3D11ShaderReflectionVariable>)(lpVtbl[1]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Index);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByName"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
 	public ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)

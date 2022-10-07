@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_SRV1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_SRV1"]/*' />
 /// <unmanaged>D3D11_TEX2D_SRV1</unmanaged>
 public partial struct Texture2DSrv1
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_SRV1::MostDetailedMip"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_SRV1::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_SRV1::MipLevels"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_SRV1::MipLevels"]/*' />
 	public uint MipLevels;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_SRV1::PlaneSlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_SRV1::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 }

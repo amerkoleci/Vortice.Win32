@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5"]/*' />
 /// <unmanaged>ID3D12Device5</unmanaged>
 [Guid("8b4f173b-2fea-4b80-8f58-4307191ab95d")]
 [NativeTypeName("struct ID3D12Device5 : ID3D12Device4")]
@@ -510,7 +510,7 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID3D12Device5*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[56]))((ID3D12Device5*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CreateLifetimeTracker"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CreateLifetimeTracker"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
 	public HResult CreateLifetimeTracker(ID3D12LifetimeOwner* pOwner, Guid* riid, void** ppvTracker)
@@ -518,7 +518,7 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, ID3D12LifetimeOwner*, Guid*, void**, int>)(lpVtbl[57]))((ID3D12Device5*)Unsafe.AsPointer(ref this), pOwner, riid, ppvTracker);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5::RemoveDevice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::RemoveDevice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(58)]
 	public void RemoveDevice()
@@ -526,7 +526,7 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Device5*, void>)(lpVtbl[58]))((ID3D12Device5*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5::EnumerateMetaCommands"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::EnumerateMetaCommands"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(59)]
 	public HResult EnumerateMetaCommands(uint* pNumMetaCommands, MetaCommandDescription* pDescs)
@@ -534,7 +534,7 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, uint*, MetaCommandDescription*, int>)(lpVtbl[59]))((ID3D12Device5*)Unsafe.AsPointer(ref this), pNumMetaCommands, pDescs);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5::EnumerateMetaCommandParameters"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::EnumerateMetaCommandParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
 	public HResult EnumerateMetaCommandParameters(Guid* CommandId, MetaCommandParameterStage Stage, uint* pTotalStructureSizeInBytes, uint* pParameterCount, MetaCommandParameterDescription* pParameterDescs)
@@ -542,7 +542,7 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, Guid*, MetaCommandParameterStage, uint*, uint*, MetaCommandParameterDescription*, int>)(lpVtbl[60]))((ID3D12Device5*)Unsafe.AsPointer(ref this), CommandId, Stage, pTotalStructureSizeInBytes, pParameterCount, pParameterDescs);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CreateMetaCommand"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CreateMetaCommand"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(61)]
 	public HResult CreateMetaCommand(Guid* CommandId, uint NodeMask, void* pCreationParametersData, nuint CreationParametersDataSizeInBytes, Guid* riid, void** ppMetaCommand)
@@ -550,7 +550,7 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, Guid*, uint, void*, nuint, Guid*, void**, int>)(lpVtbl[61]))((ID3D12Device5*)Unsafe.AsPointer(ref this), CommandId, NodeMask, pCreationParametersData, CreationParametersDataSizeInBytes, riid, ppMetaCommand);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CreateStateObject"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CreateStateObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(62)]
 	public HResult CreateStateObject(StateObjectDescription* pDesc, Guid* riid, void** ppStateObject)
@@ -558,7 +558,7 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, StateObjectDescription*, Guid*, void**, int>)(lpVtbl[62]))((ID3D12Device5*)Unsafe.AsPointer(ref this), pDesc, riid, ppStateObject);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5::GetRaytracingAccelerationStructurePrebuildInfo"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::GetRaytracingAccelerationStructurePrebuildInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(63)]
 	public void GetRaytracingAccelerationStructurePrebuildInfo(BuildRaytracingAccelerationStructureInputs* pDesc, RaytracingAccelerationStructurePrebuildInfo* pInfo)
@@ -566,7 +566,7 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Device5*, BuildRaytracingAccelerationStructureInputs*, RaytracingAccelerationStructurePrebuildInfo*, void>)(lpVtbl[63]))((ID3D12Device5*)Unsafe.AsPointer(ref this), pDesc, pInfo);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CheckDriverMatchingIdentifier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device5::CheckDriverMatchingIdentifier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
 	public DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)

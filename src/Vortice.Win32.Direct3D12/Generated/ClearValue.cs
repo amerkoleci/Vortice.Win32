@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_VALUE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_VALUE"]/*' />
 /// <unmanaged>D3D12_CLEAR_VALUE</unmanaged>
 public partial struct ClearValue
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_VALUE::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_VALUE::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_VALUE::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_VALUE::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -42,11 +42,11 @@ public partial struct ClearValue
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Color"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Color"]/*' />
 		[FieldOffset(0)]
 		public unsafe fixed float Color[4];
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::DepthStencil"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::DepthStencil"]/*' />
 		[FieldOffset(0)]
 		public DepthStencilValue DepthStencil;
 	}

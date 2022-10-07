@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS</unmanaged>
 public partial struct FeatureDataD3D10XHardwareOptions
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D10_X_HARDWARE_OPTIONS::ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x"]/*' />
 	public Bool32 ComputeShaders_Plus_RawAndStructuredBuffers_Via_Shader_4_x;
 }

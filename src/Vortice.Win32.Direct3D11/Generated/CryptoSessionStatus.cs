@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS"]/*' />
 /// <unmanaged>D3D11_CRYPTO_SESSION_STATUS</unmanaged>
 public enum CryptoSessionStatus : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS::D3D11_CRYPTO_SESSION_STATUS_OK"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS::D3D11_CRYPTO_SESSION_STATUS_OK"]/*' />
 	/// <unmanaged>D3D11_CRYPTO_SESSION_STATUS_OK</unmanaged>
 	Ok = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS::D3D11_CRYPTO_SESSION_STATUS_KEY_LOST"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS::D3D11_CRYPTO_SESSION_STATUS_KEY_LOST"]/*' />
 	/// <unmanaged>D3D11_CRYPTO_SESSION_STATUS_KEY_LOST</unmanaged>
 	KeyLost = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS::D3D11_CRYPTO_SESSION_STATUS_KEY_AND_CONTENT_LOST"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS::D3D11_CRYPTO_SESSION_STATUS_KEY_AND_CONTENT_LOST"]/*' />
 	/// <unmanaged>D3D11_CRYPTO_SESSION_STATUS_KEY_AND_CONTENT_LOST</unmanaged>
 	KeyAndContentLost = 2,
 }

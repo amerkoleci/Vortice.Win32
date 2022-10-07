@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCE_LOCATION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCE_LOCATION"]/*' />
 /// <unmanaged>D3D12_VIEW_INSTANCE_LOCATION</unmanaged>
 public partial struct ViewInstanceLocation
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCE_LOCATION::ViewportArrayIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCE_LOCATION::ViewportArrayIndex"]/*' />
 	public uint ViewportArrayIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCE_LOCATION::RenderTargetArrayIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCE_LOCATION::RenderTargetArrayIndex"]/*' />
 	public uint RenderTargetArrayIndex;
 }

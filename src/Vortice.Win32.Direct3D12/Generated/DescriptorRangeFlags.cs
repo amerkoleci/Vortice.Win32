@@ -9,27 +9,27 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAGS</unmanaged>
 [Flags]
 public enum DescriptorRangeFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_VOLATILE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_VOLATILE"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_VOLATILE</unmanaged>
 	DescriptorsVolatile = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DATA_VOLATILE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DATA_VOLATILE"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAG_DATA_VOLATILE</unmanaged>
 	DataVolatile = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DATA_STATIC_WHILE_SET_AT_EXECUTE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DATA_STATIC_WHILE_SET_AT_EXECUTE"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAG_DATA_STATIC_WHILE_SET_AT_EXECUTE</unmanaged>
 	DataStaticWhileSetAtExecute = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DATA_STATIC"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DATA_STATIC"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAG_DATA_STATIC</unmanaged>
 	DataStatic = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_STATIC_KEEPING_BUFFER_BOUNDS_CHECKS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_STATIC_KEEPING_BUFFER_BOUNDS_CHECKS"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_STATIC_KEEPING_BUFFER_BOUNDS_CHECKS</unmanaged>
 	DescriptorsStaticKeepingBufferBoundsChecks = 65536,
 }

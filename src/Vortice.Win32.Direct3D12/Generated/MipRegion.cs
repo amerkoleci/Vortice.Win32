@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION"]/*' />
 /// <unmanaged>D3D12_MIP_REGION</unmanaged>
 public partial struct MipRegion
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION::Width"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION::Width"]/*' />
 	public uint Width;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION::Height"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION::Height"]/*' />
 	public uint Height;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION::Depth"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MIP_REGION::Depth"]/*' />
 	public uint Depth;
 }

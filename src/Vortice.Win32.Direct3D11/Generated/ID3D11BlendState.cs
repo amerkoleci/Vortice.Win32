@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11BlendState"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11BlendState"]/*' />
 /// <unmanaged>ID3D11BlendState</unmanaged>
 [Guid("75b68faa-347d-4159-8f45-a0640f01cd9a")]
 [NativeTypeName("struct ID3D11BlendState : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11BlendState : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11BlendState*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11BlendState*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11BlendState::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11BlendState::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetDesc(BlendDescription* pDesc)

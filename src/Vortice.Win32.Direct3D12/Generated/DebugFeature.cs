@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE"]/*' />
 /// <unmanaged>D3D12_DEBUG_FEATURE</unmanaged>
 public enum DebugFeature : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_NONE"]/*' />
 	/// <unmanaged>D3D12_DEBUG_FEATURE_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_ALLOW_BEHAVIOR_CHANGING_DEBUG_AIDS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_ALLOW_BEHAVIOR_CHANGING_DEBUG_AIDS"]/*' />
 	/// <unmanaged>D3D12_DEBUG_FEATURE_ALLOW_BEHAVIOR_CHANGING_DEBUG_AIDS</unmanaged>
 	AllowBehaviorChangingDebugAids = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_CONSERVATIVE_RESOURCE_STATE_TRACKING"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_CONSERVATIVE_RESOURCE_STATE_TRACKING"]/*' />
 	/// <unmanaged>D3D12_DEBUG_FEATURE_CONSERVATIVE_RESOURCE_STATE_TRACKING</unmanaged>
 	ConservativeResourceStateTracking = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_DISABLE_VIRTUALIZED_BUNDLES_VALIDATION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_DISABLE_VIRTUALIZED_BUNDLES_VALIDATION"]/*' />
 	/// <unmanaged>D3D12_DEBUG_FEATURE_DISABLE_VIRTUALIZED_BUNDLES_VALIDATION</unmanaged>
 	DisableVirtualizedBundlesValidation = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_EMULATE_WINDOWS7"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_EMULATE_WINDOWS7"]/*' />
 	/// <unmanaged>D3D12_DEBUG_FEATURE_EMULATE_WINDOWS7</unmanaged>
 	EmulateWindows7 = 8,
 }

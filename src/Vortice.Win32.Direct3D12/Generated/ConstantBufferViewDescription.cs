@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CONSTANT_BUFFER_VIEW_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSTANT_BUFFER_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_CONSTANT_BUFFER_VIEW_DESC</unmanaged>
 public partial struct ConstantBufferViewDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CONSTANT_BUFFER_VIEW_DESC::BufferLocation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSTANT_BUFFER_VIEW_DESC::BufferLocation"]/*' />
 	public ulong BufferLocation;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CONSTANT_BUFFER_VIEW_DESC::SizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSTANT_BUFFER_VIEW_DESC::SizeInBytes"]/*' />
 	public uint SizeInBytes;
 }

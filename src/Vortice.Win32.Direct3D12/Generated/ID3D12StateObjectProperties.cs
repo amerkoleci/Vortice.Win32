@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties"]/*' />
 /// <unmanaged>ID3D12StateObjectProperties</unmanaged>
 [Guid("de5fa827-9bf9-4f26-89ff-d7f56fde3860")]
 [NativeTypeName("struct ID3D12StateObjectProperties : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12StateObjectProperties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderIdentifier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderIdentifier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void* GetShaderIdentifier(ushort* pExportName)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12StateObjectProperties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ushort*, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderStackSize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public ulong GetShaderStackSize(ushort* pExportName)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12StateObjectProperties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ushort*, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetPipelineStackSize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetPipelineStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public ulong GetPipelineStackSize()
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D12StateObjectProperties : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ulong>)(lpVtbl[5]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::SetPipelineStackSize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::SetPipelineStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void SetPipelineStackSize(ulong PipelineStackSizeInBytes)

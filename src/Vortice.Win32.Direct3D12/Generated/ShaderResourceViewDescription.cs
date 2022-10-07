@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_RESOURCE_VIEW_DESC</unmanaged>
 public partial struct ShaderResourceViewDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC::ViewDimension"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC::ViewDimension"]/*' />
 	public SrvDimension ViewDimension;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC::Shader4ComponentMapping"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC::Shader4ComponentMapping"]/*' />
 	public uint Shader4ComponentMapping;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_RESOURCE_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -138,47 +138,47 @@ public partial struct ShaderResourceViewDescription
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
 		[FieldOffset(0)]
 		public BufferSrv Buffer;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
 		[FieldOffset(0)]
 		public Texture1DSrv Texture1D;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture1DArraySrv Texture1DArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
 		public Texture2DSrv Texture2D;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture2DArraySrv Texture2DArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
 		[FieldOffset(0)]
 		public Texture2DMsSrv Texture2DMS;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
 		[FieldOffset(0)]
 		public Texture2DMsArraySrv Texture2DMSArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
 		[FieldOffset(0)]
 		public Texture3DSrv Texture3D;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCube"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCube"]/*' />
 		[FieldOffset(0)]
 		public TexureCubeSrv TextureCube;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCubeArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::TextureCubeArray"]/*' />
 		[FieldOffset(0)]
 		public TexureCubeArraySrv TextureCubeArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::RaytracingAccelerationStructure"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::RaytracingAccelerationStructure"]/*' />
 		[FieldOffset(0)]
 		public RaytracingAccelerationStructureSrv RaytracingAccelerationStructure;
 	}

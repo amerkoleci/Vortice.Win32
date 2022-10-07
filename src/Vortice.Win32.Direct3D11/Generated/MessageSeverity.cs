@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY"]/*' />
 /// <unmanaged>D3D11_MESSAGE_SEVERITY</unmanaged>
 public enum MessageSeverity : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_CORRUPTION"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_CORRUPTION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_SEVERITY_CORRUPTION</unmanaged>
 	Corruption = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_ERROR"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_ERROR"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_SEVERITY_ERROR</unmanaged>
 	Error = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_WARNING"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_WARNING"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_SEVERITY_WARNING</unmanaged>
 	Warning = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_INFO"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_INFO"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_SEVERITY_INFO</unmanaged>
 	Info = 3,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_MESSAGE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_MESSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_SEVERITY_MESSAGE</unmanaged>
 	Message = 4,
 }

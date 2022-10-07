@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device2"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device2"]/*' />
 /// <unmanaged>ID3D12Device2</unmanaged>
 [Guid("30baa41e-b15b-475c-a0bb-1af5c5b64328")]
 [NativeTypeName("struct ID3D12Device2 : ID3D12Device1")]
@@ -429,7 +429,7 @@ public unsafe partial struct ID3D12Device2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[46]))((ID3D12Device2*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device2::CreatePipelineState"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device2::CreatePipelineState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
 	public HResult CreatePipelineState(PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState)

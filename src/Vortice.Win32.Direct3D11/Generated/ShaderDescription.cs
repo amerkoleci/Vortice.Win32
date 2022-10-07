@@ -9,121 +9,121 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC"]/*' />
 /// <unmanaged>D3D11_SHADER_DESC</unmanaged>
 public partial struct ShaderDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Version"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Version"]/*' />
 	public uint Version;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Creator"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Creator"]/*' />
 	public unsafe sbyte* Creator;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Flags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::Flags"]/*' />
 	public uint Flags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::ConstantBuffers"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::ConstantBuffers"]/*' />
 	public uint ConstantBuffers;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::BoundResources"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::BoundResources"]/*' />
 	public uint BoundResources;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::InputParameters"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::InputParameters"]/*' />
 	public uint InputParameters;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::OutputParameters"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::OutputParameters"]/*' />
 	public uint OutputParameters;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::InstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::InstructionCount"]/*' />
 	public uint InstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TempRegisterCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TempRegisterCount"]/*' />
 	public uint TempRegisterCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TempArrayCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TempArrayCount"]/*' />
 	public uint TempArrayCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::DefCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::DefCount"]/*' />
 	public uint DefCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::DclCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::DclCount"]/*' />
 	public uint DclCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureNormalInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureNormalInstructions"]/*' />
 	public uint TextureNormalInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureLoadInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureLoadInstructions"]/*' />
 	public uint TextureLoadInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureCompInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureCompInstructions"]/*' />
 	public uint TextureCompInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureBiasInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureBiasInstructions"]/*' />
 	public uint TextureBiasInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureGradientInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TextureGradientInstructions"]/*' />
 	public uint TextureGradientInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::FloatInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::FloatInstructionCount"]/*' />
 	public uint FloatInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::IntInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::IntInstructionCount"]/*' />
 	public uint IntInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::UintInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::UintInstructionCount"]/*' />
 	public uint UintInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::StaticFlowControlCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::StaticFlowControlCount"]/*' />
 	public uint StaticFlowControlCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::DynamicFlowControlCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::DynamicFlowControlCount"]/*' />
 	public uint DynamicFlowControlCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::MacroInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::MacroInstructionCount"]/*' />
 	public uint MacroInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::ArrayInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::ArrayInstructionCount"]/*' />
 	public uint ArrayInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::CutInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::CutInstructionCount"]/*' />
 	public uint CutInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::EmitInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::EmitInstructionCount"]/*' />
 	public uint EmitInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::GSOutputTopology"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::GSOutputTopology"]/*' />
 	public Graphics.Direct3D.PrimitiveTopology GSOutputTopology;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::GSMaxOutputVertexCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::GSMaxOutputVertexCount"]/*' />
 	public uint GSMaxOutputVertexCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::InputPrimitive"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::InputPrimitive"]/*' />
 	public Graphics.Direct3D.Primitive InputPrimitive;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::PatchConstantParameters"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::PatchConstantParameters"]/*' />
 	public uint PatchConstantParameters;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cGSInstanceCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cGSInstanceCount"]/*' />
 	public uint cGSInstanceCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cControlPoints"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cControlPoints"]/*' />
 	public uint cControlPoints;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::HSOutputPrimitive"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::HSOutputPrimitive"]/*' />
 	public Graphics.Direct3D.TessellatorOutputPrimitive HSOutputPrimitive;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::HSPartitioning"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::HSPartitioning"]/*' />
 	public Graphics.Direct3D.TessellatorPartitioning HSPartitioning;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TessellatorDomain"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::TessellatorDomain"]/*' />
 	public Graphics.Direct3D.TessellatorDomain TessellatorDomain;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cBarrierInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cBarrierInstructions"]/*' />
 	public uint cBarrierInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cInterlockedInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cInterlockedInstructions"]/*' />
 	public uint cInterlockedInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cTextureStoreInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_DESC::cTextureStoreInstructions"]/*' />
 	public uint cTextureStoreInstructions;
 }

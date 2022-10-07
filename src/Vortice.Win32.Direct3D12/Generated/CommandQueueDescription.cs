@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC"]/*' />
 /// <unmanaged>D3D12_COMMAND_QUEUE_DESC</unmanaged>
 public partial struct CommandQueueDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::Type"]/*' />
 	public CommandListType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::Priority"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::Priority"]/*' />
 	public int Priority;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::Flags"]/*' />
 	public CommandQueueFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 }

@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE"]/*' />
 /// <unmanaged>D3D12_PRIMITIVE_TOPOLOGY_TYPE</unmanaged>
 public enum PrimitiveTopologyType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_UNDEFINED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_UNDEFINED"]/*' />
 	/// <unmanaged>D3D12_PRIMITIVE_TOPOLOGY_TYPE_UNDEFINED</unmanaged>
 	Undefined = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_POINT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_POINT"]/*' />
 	/// <unmanaged>D3D12_PRIMITIVE_TOPOLOGY_TYPE_POINT</unmanaged>
 	Point = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_LINE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_LINE"]/*' />
 	/// <unmanaged>D3D12_PRIMITIVE_TOPOLOGY_TYPE_LINE</unmanaged>
 	Line = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_TRIANGLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_TRIANGLE"]/*' />
 	/// <unmanaged>D3D12_PRIMITIVE_TOPOLOGY_TYPE_TRIANGLE</unmanaged>
 	Triangle = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_PATCH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_PATCH"]/*' />
 	/// <unmanaged>D3D12_PRIMITIVE_TOPOLOGY_TYPE_PATCH</unmanaged>
 	Patch = 4,
 }

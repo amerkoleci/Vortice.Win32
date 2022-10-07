@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D1"]/*' />
 /// <unmanaged>ID3D11Texture2D1</unmanaged>
 [Guid("51218251-1e33-4617-9ccb-4d3a4367e7bb")]
 [NativeTypeName("struct ID3D11Texture2D1 : ID3D11Texture2D")]
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D11Texture2D1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Texture2DDescription*, void>)(lpVtbl[10]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D1::GetDesc1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public void GetDesc1(Texture2DDescription1* pDesc)

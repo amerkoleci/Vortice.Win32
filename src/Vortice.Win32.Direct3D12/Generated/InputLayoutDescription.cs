@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_LAYOUT_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_LAYOUT_DESC"]/*' />
 /// <unmanaged>D3D12_INPUT_LAYOUT_DESC</unmanaged>
 public partial struct InputLayoutDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_LAYOUT_DESC::pInputElementDescs"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_LAYOUT_DESC::pInputElementDescs"]/*' />
 	public unsafe InputElementDescription* pInputElementDescs;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_LAYOUT_DESC::NumElements"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_LAYOUT_DESC::NumElements"]/*' />
 	public uint NumElements;
 }

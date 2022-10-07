@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_DESC"]/*' />
 /// <unmanaged>D3D11_COUNTER_DESC</unmanaged>
 public partial struct CounterDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_DESC::Counter"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_DESC::Counter"]/*' />
 	public Counter Counter;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_DESC::MiscFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_DESC::MiscFlags"]/*' />
 	public uint MiscFlags;
 }

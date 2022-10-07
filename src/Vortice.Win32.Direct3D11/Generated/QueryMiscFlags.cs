@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG"]/*' />
 /// <unmanaged>D3D11_QUERY_MISC_FLAG</unmanaged>
 [Flags]
 public enum QueryMiscFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG::D3D11_QUERY_MISC_PREDICATEHINT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG::D3D11_QUERY_MISC_PREDICATEHINT"]/*' />
 	/// <unmanaged>D3D11_QUERY_MISC_PREDICATEHINT</unmanaged>
 	PredicateHint = 1,
 }

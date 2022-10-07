@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary1"]/*' />
 /// <unmanaged>ID3D12PipelineLibrary1</unmanaged>
 [Guid("80eabf42-2568-4e5e-bd82-c37f86961dc3")]
 [NativeTypeName("struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary")]
@@ -154,7 +154,7 @@ public unsafe partial struct ID3D12PipelineLibrary1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, void*, nuint, int>)(lpVtbl[12]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pData, DataSizeInBytes);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary1::LoadPipeline"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary1::LoadPipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult LoadPipeline(ushort* pName, PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState)

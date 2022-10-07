@@ -9,35 +9,35 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL"]/*' />
 /// <unmanaged>D3D_SHADER_MODEL</unmanaged>
 public enum ShaderModel : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_5_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_5_1"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_5_1</unmanaged>
 	SM_5_1 = 81,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_0"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_0</unmanaged>
 	SM_6_0 = 96,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_1"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_1</unmanaged>
 	SM_6_1 = 97,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_2"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_2</unmanaged>
 	SM_6_2 = 98,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_3"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_3"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_3</unmanaged>
 	SM_6_3 = 99,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_4"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_4"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_4</unmanaged>
 	SM_6_4 = 100,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_5"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_5"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_5</unmanaged>
 	SM_6_5 = 101,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_6"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_6"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_6</unmanaged>
 	SM_6_6 = 102,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_7"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_7"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_7</unmanaged>
 	SM_6_7 = 103,
 }

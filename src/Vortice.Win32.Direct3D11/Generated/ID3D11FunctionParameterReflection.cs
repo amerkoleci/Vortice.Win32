@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection"]/*' />
 /// <unmanaged>ID3D11FunctionParameterReflection</unmanaged>
 [Guid("42757488-334f-47fe-982e-1a65d08cc462")]
 public unsafe partial struct ID3D11FunctionParameterReflection : INativeGuid
@@ -46,7 +46,7 @@ public unsafe partial struct ID3D11FunctionParameterReflection : INativeGuid
 
 	public void** lpVtbl;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public HResult GetDesc(ParameterDescription* pDesc)

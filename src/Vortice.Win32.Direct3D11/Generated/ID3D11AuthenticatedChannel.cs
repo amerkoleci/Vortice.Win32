@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel"]/*' />
 /// <unmanaged>ID3D11AuthenticatedChannel</unmanaged>
 [Guid("3015a308-dcbd-47aa-a747-192486d14d4a")]
 [NativeTypeName("struct ID3D11AuthenticatedChannel : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11AuthenticatedChannel : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetCertificateSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetCertificateSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetCertificateSize(uint* pCertificateSize)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11AuthenticatedChannel : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, uint*, int>)(lpVtbl[7]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pCertificateSize);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetCertificate"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetCertificate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetCertificate(uint CertificateSize, byte* pCertificate)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D11AuthenticatedChannel : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, uint, byte*, int>)(lpVtbl[8]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), CertificateSize, pCertificate);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetChannelHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetChannelHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public void GetChannelHandle(Handle* pChannelHandle)

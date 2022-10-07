@@ -9,26 +9,26 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING"]/*' />
 /// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING</unmanaged>
 public enum ShaderComponentMapping : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_0"]/*' />
 	/// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_0</unmanaged>
 	FromMemoryComponent0 = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_1"]/*' />
 	/// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_1</unmanaged>
 	FromMemoryComponent1 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_2"]/*' />
 	/// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_2</unmanaged>
 	FromMemoryComponent2 = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_3"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_3"]/*' />
 	/// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_3</unmanaged>
 	FromMemoryComponent3 = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FORCE_VALUE_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FORCE_VALUE_0"]/*' />
 	/// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING_FORCE_VALUE_0</unmanaged>
 	ForceValue0 = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FORCE_VALUE_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FORCE_VALUE_1"]/*' />
 	/// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING_FORCE_VALUE_1</unmanaged>
 	ForceValue1 = 5,
 }

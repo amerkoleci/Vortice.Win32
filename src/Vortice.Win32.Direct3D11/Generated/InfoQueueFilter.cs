@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER"]/*' />
 /// <unmanaged>D3D11_INFO_QUEUE_FILTER</unmanaged>
 public partial struct InfoQueueFilter
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER::AllowList"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER::AllowList"]/*' />
 	public InfoQueueFilterDescription AllowList;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER::DenyList"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER::DenyList"]/*' />
 	public InfoQueueFilterDescription DenyList;
 }

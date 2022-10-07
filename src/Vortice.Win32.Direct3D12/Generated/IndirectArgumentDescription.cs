@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_DESC"]/*' />
 /// <unmanaged>D3D12_INDIRECT_ARGUMENT_DESC</unmanaged>
 public partial struct IndirectArgumentDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_DESC::Type"]/*' />
 	public IndirectArgumentType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_DESC::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -72,55 +72,55 @@ public partial struct IndirectArgumentDescription
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::VertexBuffer"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::VertexBuffer"]/*' />
 		[FieldOffset(0)]
 		public _Anonymous_e__Union._VertexBuffer_e__Struct VertexBuffer;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Constant"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Constant"]/*' />
 		[FieldOffset(0)]
 		public _Anonymous_e__Union._Constant_e__Struct Constant;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::ConstantBufferView"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::ConstantBufferView"]/*' />
 		[FieldOffset(0)]
 		public _Anonymous_e__Union._ConstantBufferView_e__Struct ConstantBufferView;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::ShaderResourceView"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::ShaderResourceView"]/*' />
 		[FieldOffset(0)]
 		public _Anonymous_e__Union._ShaderResourceView_e__Struct ShaderResourceView;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::UnorderedAccessView"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::UnorderedAccessView"]/*' />
 		[FieldOffset(0)]
 		public _Anonymous_e__Union._UnorderedAccessView_e__Struct UnorderedAccessView;
 
 		public partial struct _ShaderResourceView_e__Struct
 		{
-			/// <include file='Direct3D12.xml' path='doc/member[@name="_ShaderResourceView_e__Struct::RootParameterIndex"]/*' />
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_ShaderResourceView_e__Struct::RootParameterIndex"]/*' />
 			public uint RootParameterIndex;
 		}
 		public partial struct _Constant_e__Struct
 		{
-			/// <include file='Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::RootParameterIndex"]/*' />
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::RootParameterIndex"]/*' />
 			public uint RootParameterIndex;
 
-			/// <include file='Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::DestOffsetIn32BitValues"]/*' />
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::DestOffsetIn32BitValues"]/*' />
 			public uint DestOffsetIn32BitValues;
 
-			/// <include file='Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::Num32BitValuesToSet"]/*' />
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_Constant_e__Struct::Num32BitValuesToSet"]/*' />
 			public uint Num32BitValuesToSet;
 		}
 		public partial struct _UnorderedAccessView_e__Struct
 		{
-			/// <include file='Direct3D12.xml' path='doc/member[@name="_UnorderedAccessView_e__Struct::RootParameterIndex"]/*' />
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_UnorderedAccessView_e__Struct::RootParameterIndex"]/*' />
 			public uint RootParameterIndex;
 		}
 		public partial struct _VertexBuffer_e__Struct
 		{
-			/// <include file='Direct3D12.xml' path='doc/member[@name="_VertexBuffer_e__Struct::Slot"]/*' />
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_VertexBuffer_e__Struct::Slot"]/*' />
 			public uint Slot;
 		}
 		public partial struct _ConstantBufferView_e__Struct
 		{
-			/// <include file='Direct3D12.xml' path='doc/member[@name="_ConstantBufferView_e__Struct::RootParameterIndex"]/*' />
+			/// <include file='../Direct3D12.xml' path='doc/member[@name="_ConstantBufferView_e__Struct::RootParameterIndex"]/*' />
 			public uint RootParameterIndex;
 		}
 	}

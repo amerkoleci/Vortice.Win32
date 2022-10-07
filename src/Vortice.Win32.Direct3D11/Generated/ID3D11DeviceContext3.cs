@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3"]/*' />
 /// <unmanaged>ID3D11DeviceContext3</unmanaged>
 [Guid("b4e3c01d-e79e-4637-91b2-510e9f4c9b8f")]
 [NativeTypeName("struct ID3D11DeviceContext3 : ID3D11DeviceContext2")]
@@ -1202,7 +1202,7 @@ public unsafe partial struct ID3D11DeviceContext3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, void>)(lpVtbl[143]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::Flush1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::Flush1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(144)]
 	public void Flush1(ContextType ContextType, Handle hEvent)
@@ -1210,7 +1210,7 @@ public unsafe partial struct ID3D11DeviceContext3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ContextType, Handle, void>)(lpVtbl[144]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ContextType, hEvent);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::SetHardwareProtectionState"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::SetHardwareProtectionState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(145)]
 	public void SetHardwareProtectionState(Bool32 HwProtectionEnable)
@@ -1218,7 +1218,7 @@ public unsafe partial struct ID3D11DeviceContext3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Bool32, void>)(lpVtbl[145]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), HwProtectionEnable);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::GetHardwareProtectionState"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::GetHardwareProtectionState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(146)]
 	public void GetHardwareProtectionState(Bool32* pHwProtectionEnable)

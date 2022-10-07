@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Object"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Object"]/*' />
 /// <unmanaged>ID3D12Object</unmanaged>
 [Guid("c4fec28f-7966-4e95-9f94-f431cb56c3b8")]
 [NativeTypeName("struct ID3D12Object : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12Object : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Object::GetPrivateData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Object::GetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12Object : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Object*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12Object*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Object::SetPrivateData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Object::SetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12Object : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Object*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12Object*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Object::SetPrivateDataInterface"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Object::SetPrivateDataInterface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D12Object : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Object*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12Object*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Object::SetName"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Object::SetName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult SetName(ushort* Name)

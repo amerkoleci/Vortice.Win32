@@ -8,7 +8,7 @@ namespace Win32.Graphics.Dxgi;
 
 public unsafe partial struct AdapterDescription
 {
-    /// <include file='../Generated/Graphics/Dxgi/DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
+    /// <include file='../Generated/Graphics/Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
     public readonly string GetDescription()
     {
         fixed (ushort* ptr = Description)
@@ -20,7 +20,7 @@ public unsafe partial struct AdapterDescription
 
 public unsafe partial struct AdapterDescription1
 {
-    /// <include file='../Generated/Graphics/Dxgi/DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
+    /// <include file='../Generated/Graphics/Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
     public readonly string GetDescription()
     {
         fixed (ushort* ptr = Description)
@@ -32,7 +32,7 @@ public unsafe partial struct AdapterDescription1
 
 public unsafe partial struct AdapterDescription2
 {
-    /// <include file='../Generated/Graphics/Dxgi/DXGI.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
+    /// <include file='../Generated/Graphics/Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
     public readonly string GetDescription()
     {
         fixed (ushort* ptr = Description)

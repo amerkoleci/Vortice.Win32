@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_FEATURE_LEVELS</unmanaged>
 public partial struct FeatureDataFeatureLevels
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS::NumFeatureLevels"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS::NumFeatureLevels"]/*' />
 	public uint NumFeatureLevels;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS::pFeatureLevelsRequested"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS::pFeatureLevelsRequested"]/*' />
 	public unsafe Graphics.Direct3D.FeatureLevel* pFeatureLevelsRequested;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS::MaxSupportedFeatureLevel"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_FEATURE_LEVELS::MaxSupportedFeatureLevel"]/*' />
 	public Graphics.Direct3D.FeatureLevel MaxSupportedFeatureLevel;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device7"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device7"]/*' />
 /// <unmanaged>ID3D12Device7</unmanaged>
 [Guid("5c014b53-68a1-4b9b-8bd1-dd6046b9358b")]
 [NativeTypeName("struct ID3D12Device7 : ID3D12Device6")]
@@ -582,7 +582,7 @@ public unsafe partial struct ID3D12Device7 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, BackgroundProcessingMode, MeasurementsAction, Handle, Bool32*, int>)(lpVtbl[65]))((ID3D12Device7*)Unsafe.AsPointer(ref this), Mode, MeasurementsAction, hEventToSignalUponCompletion, pbFurtherMeasurementsDesired);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device7::AddToStateObject"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device7::AddToStateObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
 	public HResult AddToStateObject(StateObjectDescription* pAddition, ID3D12StateObject* pStateObjectToGrowFrom, Guid* riid, void** ppNewStateObject)
@@ -590,7 +590,7 @@ public unsafe partial struct ID3D12Device7 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, StateObjectDescription*, ID3D12StateObject*, Guid*, void**, int>)(lpVtbl[66]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pAddition, pStateObjectToGrowFrom, riid, ppNewStateObject);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device7::CreateProtectedResourceSession1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device7::CreateProtectedResourceSession1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
 	public HResult CreateProtectedResourceSession1(ProtectedResourceSessionDescription1* pDesc, Guid* riid, void** ppSession)

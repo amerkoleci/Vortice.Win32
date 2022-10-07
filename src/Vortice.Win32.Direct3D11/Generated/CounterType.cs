@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE"]/*' />
 /// <unmanaged>D3D11_COUNTER_TYPE</unmanaged>
 public enum CounterType : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_FLOAT32"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_FLOAT32"]/*' />
 	/// <unmanaged>D3D11_COUNTER_TYPE_FLOAT32</unmanaged>
 	Float32 = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT16"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT16"]/*' />
 	/// <unmanaged>D3D11_COUNTER_TYPE_UINT16</unmanaged>
 	UInt16 = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT32"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT32"]/*' />
 	/// <unmanaged>D3D11_COUNTER_TYPE_UINT32</unmanaged>
 	UInt32 = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT64"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_UINT64"]/*' />
 	/// <unmanaged>D3D11_COUNTER_TYPE_UINT64</unmanaged>
 	UInt64 = 3,
 }

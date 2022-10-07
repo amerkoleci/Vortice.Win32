@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device2"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2"]/*' />
 /// <unmanaged>ID3D11Device2</unmanaged>
 [Guid("9d06dffa-d1e5-4d07-83a8-1bb123f2f841")]
 [NativeTypeName("struct ID3D11Device2 : ID3D11Device1")]
@@ -450,7 +450,7 @@ public unsafe partial struct ID3D11Device2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device2*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device2::GetImmediateContext2"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::GetImmediateContext2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
 	public void GetImmediateContext2(ID3D11DeviceContext2** ppImmediateContext)
@@ -458,7 +458,7 @@ public unsafe partial struct ID3D11Device2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext2**, void>)(lpVtbl[50]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device2::CreateDeferredContext2"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::CreateDeferredContext2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
 	public HResult CreateDeferredContext2(uint ContextFlags, ID3D11DeviceContext2** ppDeferredContext)
@@ -466,7 +466,7 @@ public unsafe partial struct ID3D11Device2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint, ID3D11DeviceContext2**, int>)(lpVtbl[51]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device2::GetResourceTiling"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::GetResourceTiling"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
 	public void GetResourceTiling(ID3D11Resource* pTiledResource, uint* pNumTilesForEntireResource, PackedMipDescription* pPackedMipDesc, TileShape* pStandardTileShapeForNonPackedMips, uint* pNumSubresourceTilings, uint FirstSubresourceTilingToGet, SubresourceTiling* pSubresourceTilingsForNonPackedMips)
@@ -474,7 +474,7 @@ public unsafe partial struct ID3D11Device2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11Resource*, uint*, PackedMipDescription*, TileShape*, uint*, uint, SubresourceTiling*, void>)(lpVtbl[52]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pTiledResource, pNumTilesForEntireResource, pPackedMipDesc, pStandardTileShapeForNonPackedMips, pNumSubresourceTilings, FirstSubresourceTilingToGet, pSubresourceTilingsForNonPackedMips);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device2::CheckMultisampleQualityLevels1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::CheckMultisampleQualityLevels1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
 	public HResult CheckMultisampleQualityLevels1(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint Flags, uint* pNumQualityLevels)

@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC"]/*' />
 /// <unmanaged>D3D12_COMMAND_SIGNATURE_DESC</unmanaged>
 public partial struct CommandSignatureDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::ByteStride"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::ByteStride"]/*' />
 	public uint ByteStride;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::NumArgumentDescs"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::NumArgumentDescs"]/*' />
 	public uint NumArgumentDescs;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::pArgumentDescs"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::pArgumentDescs"]/*' />
 	public unsafe IndirectArgumentDescription* pArgumentDescs;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_SIGNATURE_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 }

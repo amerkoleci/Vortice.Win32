@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device8"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8"]/*' />
 /// <unmanaged>ID3D12Device8</unmanaged>
 [Guid("9218e6bb-f944-4f7e-a75c-b1b2c7b701f3")]
 [NativeTypeName("struct ID3D12Device8 : ID3D12Device7")]
@@ -598,7 +598,7 @@ public unsafe partial struct ID3D12Device8 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ProtectedResourceSessionDescription1*, Guid*, void**, int>)(lpVtbl[67]))((ID3D12Device8*)Unsafe.AsPointer(ref this), pDesc, riid, ppSession);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device8::GetResourceAllocationInfo2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8::GetResourceAllocationInfo2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
 	public ResourceAllocationInfo GetResourceAllocationInfo2(uint visibleMask, uint numResourceDescs, ResourceDescription1* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)
@@ -607,7 +607,7 @@ public unsafe partial struct ID3D12Device8 : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID3D12Device8*, ResourceAllocationInfo*, uint, uint, ResourceDescription1*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[68]))((ID3D12Device8*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device8::CreateCommittedResource2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8::CreateCommittedResource2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(69)]
 	public HResult CreateCommittedResource2(HeapProperties* pHeapProperties, HeapFlags HeapFlags, ResourceDescription1* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, Guid* riidResource, void** ppvResource)
@@ -615,7 +615,7 @@ public unsafe partial struct ID3D12Device8 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, HeapProperties*, HeapFlags, ResourceDescription1*, ResourceStates, ClearValue*, ID3D12ProtectedResourceSession*, Guid*, void**, int>)(lpVtbl[69]))((ID3D12Device8*)Unsafe.AsPointer(ref this), pHeapProperties, HeapFlags, pDesc, InitialResourceState, pOptimizedClearValue, pProtectedSession, riidResource, ppvResource);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device8::CreatePlacedResource1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8::CreatePlacedResource1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
 	public HResult CreatePlacedResource1(ID3D12Heap* pHeap, ulong HeapOffset, ResourceDescription1* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource)
@@ -623,7 +623,7 @@ public unsafe partial struct ID3D12Device8 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device8*, ID3D12Heap*, ulong, ResourceDescription1*, ResourceStates, ClearValue*, Guid*, void**, int>)(lpVtbl[70]))((ID3D12Device8*)Unsafe.AsPointer(ref this), pHeap, HeapOffset, pDesc, InitialState, pOptimizedClearValue, riid, ppvResource);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device8::CreateSamplerFeedbackUnorderedAccessView"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8::CreateSamplerFeedbackUnorderedAccessView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(71)]
 	public void CreateSamplerFeedbackUnorderedAccessView(ID3D12Resource* pTargetedResource, ID3D12Resource* pFeedbackResource, CpuDescriptorHandle* DestDescriptor)
@@ -631,7 +631,7 @@ public unsafe partial struct ID3D12Device8 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Device8*, ID3D12Resource*, ID3D12Resource*, CpuDescriptorHandle*, void>)(lpVtbl[71]))((ID3D12Device8*)Unsafe.AsPointer(ref this), pTargetedResource, pFeedbackResource, DestDescriptor);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device8::GetCopyableFootprints1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device8::GetCopyableFootprints1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
 	public void GetCopyableFootprints1(ResourceDescription1* pResourceDesc, uint FirstSubresource, uint NumSubresources, ulong BaseOffset, PlacedSubresourceFootprint* pLayouts, uint* pNumRows, ulong* pRowSizeInBytes, ulong* pTotalBytes)

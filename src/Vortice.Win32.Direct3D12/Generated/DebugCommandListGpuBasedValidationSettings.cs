@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS"]/*' />
 /// <unmanaged>D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS</unmanaged>
 public partial struct DebugCommandListGpuBasedValidationSettings
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS::ShaderPatchMode"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS::ShaderPatchMode"]/*' />
 	public GpuBasedValidationShaderPatchMode ShaderPatchMode;
 }

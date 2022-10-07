@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Buffer"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Buffer"]/*' />
 /// <unmanaged>ID3D11Buffer</unmanaged>
 [Guid("48570b85-d1ee-4fcd-a250-eb350722b037")]
 [NativeTypeName("struct ID3D11Buffer : ID3D11Resource")]
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D11Buffer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Buffer*, uint>)(lpVtbl[9]))((ID3D11Buffer*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Buffer::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Buffer::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public void GetDesc(BufferDescription* pDesc)

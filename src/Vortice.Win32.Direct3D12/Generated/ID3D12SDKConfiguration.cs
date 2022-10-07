@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration"]/*' />
 /// <unmanaged>ID3D12SDKConfiguration</unmanaged>
 [Guid("e9eb5314-33aa-42b2-a718-d77f58b1f1c7")]
 [NativeTypeName("struct ID3D12SDKConfiguration : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12SDKConfiguration : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration::SetSDKVersion"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration::SetSDKVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetSDKVersion(uint SDKVersion, sbyte* SDKPath)

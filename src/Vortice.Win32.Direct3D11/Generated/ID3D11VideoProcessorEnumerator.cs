@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator"]/*' />
 /// <unmanaged>ID3D11VideoProcessorEnumerator</unmanaged>
 [Guid("31627037-53ab-4200-9061-05faa9ab45f9")]
 [NativeTypeName("struct ID3D11VideoProcessorEnumerator : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorContentDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorContentDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetVideoProcessorContentDesc(VideoProcessorContentDescription* pContentDesc)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, VideoProcessorContentDescription*, int>)(lpVtbl[7]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), pContentDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::CheckVideoProcessorFormat"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::CheckVideoProcessorFormat"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CheckVideoProcessorFormat(Graphics.Dxgi.Common.Format Format, uint* pFlags)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[8]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), Format, pFlags);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorCaps"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetVideoProcessorCaps(VideoProcessorCaps* pCaps)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, VideoProcessorCaps*, int>)(lpVtbl[9]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), pCaps);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorRateConversionCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorRateConversionCaps"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetVideoProcessorRateConversionCaps(uint TypeIndex, VideoProcessorRateConversionCaps* pCaps)
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, uint, VideoProcessorRateConversionCaps*, int>)(lpVtbl[10]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), TypeIndex, pCaps);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorCustomRate"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorCustomRate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult GetVideoProcessorCustomRate(uint TypeIndex, uint CustomRateIndex, VideoProcessorCustomRate* pRate)
@@ -146,7 +146,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, uint, uint, VideoProcessorCustomRate*, int>)(lpVtbl[11]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), TypeIndex, CustomRateIndex, pRate);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorFilterRange"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator::GetVideoProcessorFilterRange"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult GetVideoProcessorFilterRange(VideoProcessorFilter Filter, VideoProcessorFilterRange* pRange)

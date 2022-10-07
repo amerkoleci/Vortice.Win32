@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor"]/*' />
 /// <unmanaged>ID3D11VideoProcessor</unmanaged>
 [Guid("1d7b0652-185f-41c6-85ce-0c5be3d4ae6c")]
 [NativeTypeName("struct ID3D11VideoProcessor : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11VideoProcessor : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessor*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor::GetContentDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor::GetContentDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetContentDesc(VideoProcessorContentDescription* pDesc)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11VideoProcessor : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessor*, VideoProcessorContentDescription*, void>)(lpVtbl[7]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor::GetRateConversionCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessor::GetRateConversionCaps"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetRateConversionCaps(VideoProcessorRateConversionCaps* pCaps)

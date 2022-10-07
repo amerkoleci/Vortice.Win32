@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_PARAMETER_DESC</unmanaged>
 public partial struct MetaCommandParameterDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Name"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Name"]/*' />
 	public unsafe ushort* Name;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Type"]/*' />
 	public MetaCommandParameterType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Flags"]/*' />
 	public MetaCommandParameterFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::RequiredResourceState"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::RequiredResourceState"]/*' />
 	public ResourceStates RequiredResourceState;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::StructureOffset"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::StructureOffset"]/*' />
 	public uint StructureOffset;
 }

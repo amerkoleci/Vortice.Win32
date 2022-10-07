@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_FLAGS</unmanaged>
 [Flags]
 public enum ShaderCacheFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS::D3D12_SHADER_CACHE_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS::D3D12_SHADER_CACHE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS::D3D12_SHADER_CACHE_FLAG_DRIVER_VERSIONED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS::D3D12_SHADER_CACHE_FLAG_DRIVER_VERSIONED"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_FLAG_DRIVER_VERSIONED</unmanaged>
 	DriverVersioned = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS::D3D12_SHADER_CACHE_FLAG_USE_WORKING_DIR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS::D3D12_SHADER_CACHE_FLAG_USE_WORKING_DIR"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_FLAG_USE_WORKING_DIR</unmanaged>
 	UseWorkingDir = 2,
 }

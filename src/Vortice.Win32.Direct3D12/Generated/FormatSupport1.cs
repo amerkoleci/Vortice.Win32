@@ -9,99 +9,99 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1"]/*' />
 /// <unmanaged>D3D12_FORMAT_SUPPORT1</unmanaged>
 [Flags]
 public enum FormatSupport1 : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_NONE"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_BUFFER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_BUFFER"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_BUFFER</unmanaged>
 	Buffer = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_IA_VERTEX_BUFFER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_IA_VERTEX_BUFFER"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_IA_VERTEX_BUFFER</unmanaged>
 	IAVertexBuffer = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_IA_INDEX_BUFFER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_IA_INDEX_BUFFER"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_IA_INDEX_BUFFER</unmanaged>
 	IAIndexBuffer = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SO_BUFFER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SO_BUFFER"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_SO_BUFFER</unmanaged>
 	SOBuffer = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TEXTURE1D"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TEXTURE1D"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_TEXTURE1D</unmanaged>
 	Texture1D = 16,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TEXTURE2D"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TEXTURE2D"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_TEXTURE2D</unmanaged>
 	Texture2D = 32,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TEXTURE3D"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TEXTURE3D"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_TEXTURE3D</unmanaged>
 	Texture3D = 64,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TEXTURECUBE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TEXTURECUBE"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_TEXTURECUBE</unmanaged>
 	TextureCube = 128,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_LOAD"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_LOAD"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_SHADER_LOAD</unmanaged>
 	ShaderLoad = 256,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE</unmanaged>
 	ShaderSample = 512,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE_COMPARISON"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE_COMPARISON"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE_COMPARISON</unmanaged>
 	ShaderSampleComparison = 1024,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE_MONO_TEXT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE_MONO_TEXT"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_SHADER_SAMPLE_MONO_TEXT</unmanaged>
 	ShaderSampleMonoText = 2048,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_MIP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_MIP"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_MIP</unmanaged>
 	Mip = 4096,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_RENDER_TARGET"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_RENDER_TARGET"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_RENDER_TARGET</unmanaged>
 	RenderTarget = 16384,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_BLENDABLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_BLENDABLE"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_BLENDABLE</unmanaged>
 	Blendable = 32768,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_DEPTH_STENCIL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_DEPTH_STENCIL"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_DEPTH_STENCIL</unmanaged>
 	DepthStencil = 65536,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_MULTISAMPLE_RESOLVE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_MULTISAMPLE_RESOLVE"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_MULTISAMPLE_RESOLVE</unmanaged>
 	MultisampleResolve = 262144,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_DISPLAY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_DISPLAY"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_DISPLAY</unmanaged>
 	Display = 524288,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_CAST_WITHIN_BIT_LAYOUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_CAST_WITHIN_BIT_LAYOUT"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_CAST_WITHIN_BIT_LAYOUT</unmanaged>
 	CastWithinBitLayout = 1048576,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_MULTISAMPLE_RENDERTARGET"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_MULTISAMPLE_RENDERTARGET"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_MULTISAMPLE_RENDERTARGET</unmanaged>
 	MultisampleRendertarget = 2097152,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_MULTISAMPLE_LOAD"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_MULTISAMPLE_LOAD"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_MULTISAMPLE_LOAD</unmanaged>
 	MultisampleLoad = 4194304,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_GATHER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_GATHER"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_SHADER_GATHER</unmanaged>
 	ShaderGather = 8388608,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_BACK_BUFFER_CAST"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_BACK_BUFFER_CAST"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_BACK_BUFFER_CAST</unmanaged>
 	BackBufferCast = 16777216,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TYPED_UNORDERED_ACCESS_VIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_TYPED_UNORDERED_ACCESS_VIEW"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_TYPED_UNORDERED_ACCESS_VIEW</unmanaged>
 	TypedUnorderedAccessView = 33554432,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_GATHER_COMPARISON"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_SHADER_GATHER_COMPARISON"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_SHADER_GATHER_COMPARISON</unmanaged>
 	ShaderGatherComparison = 67108864,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_DECODER_OUTPUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_DECODER_OUTPUT"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_DECODER_OUTPUT</unmanaged>
 	DecoderOutput = 134217728,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_VIDEO_PROCESSOR_OUTPUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_VIDEO_PROCESSOR_OUTPUT"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_VIDEO_PROCESSOR_OUTPUT</unmanaged>
 	VideoProcessorOutput = 268435456,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_VIDEO_PROCESSOR_INPUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_VIDEO_PROCESSOR_INPUT"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_VIDEO_PROCESSOR_INPUT</unmanaged>
 	VideoProcessorInput = 536870912,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_VIDEO_ENCODER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_VIDEO_ENCODER"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_VIDEO_ENCODER</unmanaged>
 	VideoEncoder = 1073741824,
 }

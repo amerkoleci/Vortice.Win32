@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device4"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device4"]/*' />
 /// <unmanaged>ID3D11Device4</unmanaged>
 [Guid("8992ab71-02e6-4b8d-ba48-b056dcda42c4")]
 [NativeTypeName("struct ID3D11Device4 : ID3D11Device3")]
@@ -570,7 +570,7 @@ public unsafe partial struct ID3D11Device4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Device4*, void*, uint, uint, ID3D11Resource*, uint, Box*, void>)(lpVtbl[64]))((ID3D11Device4*)Unsafe.AsPointer(ref this), pDstData, DstRowPitch, DstDepthPitch, pSrcResource, SrcSubresource, pSrcBox);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device4::RegisterDeviceRemovedEvent"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device4::RegisterDeviceRemovedEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
 	public HResult RegisterDeviceRemovedEvent(Handle hEvent, uint* pdwCookie)
@@ -578,7 +578,7 @@ public unsafe partial struct ID3D11Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device4*, Handle, uint*, int>)(lpVtbl[65]))((ID3D11Device4*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device4::UnregisterDeviceRemoved"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device4::UnregisterDeviceRemoved"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
 	public void UnregisterDeviceRemoved(uint dwCookie)

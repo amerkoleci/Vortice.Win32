@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DepthStencilView"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DepthStencilView"]/*' />
 /// <unmanaged>ID3D11DepthStencilView</unmanaged>
 [Guid("9fdac92a-1876-48c3-afad-25b94f84a9b6")]
 [NativeTypeName("struct ID3D11DepthStencilView : ID3D11View")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11DepthStencilView : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilView*, ID3D11Resource**, void>)(lpVtbl[7]))((ID3D11DepthStencilView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DepthStencilView::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DepthStencilView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(DepthStencilViewDescription* pDesc)

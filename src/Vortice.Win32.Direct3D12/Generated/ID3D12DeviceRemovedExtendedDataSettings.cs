@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings"]/*' />
 /// <unmanaged>ID3D12DeviceRemovedExtendedDataSettings</unmanaged>
 [Guid("82bc481c-6b9b-4030-aedb-7ee3d1df1e63")]
 [NativeTypeName("struct ID3D12DeviceRemovedExtendedDataSettings : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings : INativeGu
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings::SetAutoBreadcrumbsEnablement"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings::SetAutoBreadcrumbsEnablement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void SetAutoBreadcrumbsEnablement(DredEnablement Enablement)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings : INativeGu
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings*, DredEnablement, void>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedDataSettings*)Unsafe.AsPointer(ref this), Enablement);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings::SetPageFaultEnablement"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings::SetPageFaultEnablement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetPageFaultEnablement(DredEnablement Enablement)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings : INativeGu
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings*, DredEnablement, void>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedDataSettings*)Unsafe.AsPointer(ref this), Enablement);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings::SetWatsonDumpEnablement"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings::SetWatsonDumpEnablement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void SetWatsonDumpEnablement(DredEnablement Enablement)

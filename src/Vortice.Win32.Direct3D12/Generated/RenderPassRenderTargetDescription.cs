@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_RENDER_TARGET_DESC</unmanaged>
 public partial struct RenderPassRenderTargetDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC::cpuDescriptor"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC::cpuDescriptor"]/*' />
 	public CpuDescriptorHandle cpuDescriptor;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC::BeginningAccess"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC::BeginningAccess"]/*' />
 	public RenderPassBeginningAccess BeginningAccess;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC::EndingAccess"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_RENDER_TARGET_DESC::EndingAccess"]/*' />
 	public RenderPassEndingAccess EndingAccess;
 }

@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE"]/*' />
 /// <unmanaged>D3D12_COMMAND_LIST_TYPE</unmanaged>
 public enum CommandListType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_DIRECT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_DIRECT"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_DIRECT</unmanaged>
 	Direct = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_BUNDLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_BUNDLE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_BUNDLE</unmanaged>
 	Bundle = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_COMPUTE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_COMPUTE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_COMPUTE</unmanaged>
 	Compute = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_COPY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_COPY"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_COPY</unmanaged>
 	Copy = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_VIDEO_DECODE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_VIDEO_DECODE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_VIDEO_DECODE</unmanaged>
 	VideoDecode = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_VIDEO_PROCESS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_VIDEO_PROCESS"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_VIDEO_PROCESS</unmanaged>
 	VideoProcess = 5,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE</unmanaged>
 	VideoEncode = 6,
 }

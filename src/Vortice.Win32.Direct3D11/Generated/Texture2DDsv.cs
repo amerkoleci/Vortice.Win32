@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_DSV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_DSV"]/*' />
 /// <unmanaged>D3D11_TEX2D_DSV</unmanaged>
 public partial struct Texture2DDsv
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_DSV::MipSlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_DSV::MipSlice"]/*' />
 	public uint MipSlice;
 }

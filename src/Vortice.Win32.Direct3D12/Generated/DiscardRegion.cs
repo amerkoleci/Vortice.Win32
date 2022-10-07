@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION"]/*' />
 /// <unmanaged>D3D12_DISCARD_REGION</unmanaged>
 public partial struct DiscardRegion
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::NumRects"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::NumRects"]/*' />
 	public uint NumRects;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::pRects"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::pRects"]/*' />
 	public unsafe RawRect* pRects;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::FirstSubresource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::FirstSubresource"]/*' />
 	public uint FirstSubresource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::NumSubresources"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::NumSubresources"]/*' />
 	public uint NumSubresources;
 }

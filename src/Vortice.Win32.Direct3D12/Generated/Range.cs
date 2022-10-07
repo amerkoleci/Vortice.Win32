@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RANGE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE"]/*' />
 /// <unmanaged>D3D12_RANGE</unmanaged>
 public partial struct Range
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RANGE::Begin"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE::Begin"]/*' />
 	public nuint Begin;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RANGE::End"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RANGE::End"]/*' />
 	public nuint End;
 }

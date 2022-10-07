@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS5"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS5"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS5</unmanaged>
 public partial struct FeatureDataD3D11Options5
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS5::SharedResourceTier"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS5::SharedResourceTier"]/*' />
 	public SharedResourceTier SharedResourceTier;
 }

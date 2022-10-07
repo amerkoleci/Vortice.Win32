@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE</unmanaged>
 public enum MetaCommandParameterType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_FLOAT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_FLOAT"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE_FLOAT</unmanaged>
 	Float = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_UINT64"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_UINT64"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE_UINT64</unmanaged>
 	UInt64 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_GPU_VIRTUAL_ADDRESS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_GPU_VIRTUAL_ADDRESS"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE_GPU_VIRTUAL_ADDRESS</unmanaged>
 	GpuVirtualAddress = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_CPU_DESCRIPTOR_HANDLE_HEAP_TYPE_CBV_SRV_UAV"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_CPU_DESCRIPTOR_HANDLE_HEAP_TYPE_CBV_SRV_UAV"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE_CPU_DESCRIPTOR_HANDLE_HEAP_TYPE_CBV_SRV_UAV</unmanaged>
 	CpuDescriptorHandleHeapTypeCbvSrvUav = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_GPU_DESCRIPTOR_HANDLE_HEAP_TYPE_CBV_SRV_UAV"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_GPU_DESCRIPTOR_HANDLE_HEAP_TYPE_CBV_SRV_UAV"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE_GPU_DESCRIPTOR_HANDLE_HEAP_TYPE_CBV_SRV_UAV</unmanaged>
 	GpuDescriptorHandleHeapTypeCbvSrvUav = 4,
 }

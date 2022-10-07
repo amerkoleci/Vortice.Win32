@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_MODE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_MODE"]/*' />
 /// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_MODE</unmanaged>
 public enum ConservativeRasterizationMode : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_MODE::D3D11_CONSERVATIVE_RASTERIZATION_MODE_OFF"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_MODE::D3D11_CONSERVATIVE_RASTERIZATION_MODE_OFF"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_MODE_OFF</unmanaged>
 	Off = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_MODE::D3D11_CONSERVATIVE_RASTERIZATION_MODE_ON"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_MODE::D3D11_CONSERVATIVE_RASTERIZATION_MODE_ON"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_MODE_ON</unmanaged>
 	On = 1,
 }

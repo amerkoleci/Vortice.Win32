@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_CACHE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_CACHE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_SHADER_CACHE</unmanaged>
 public partial struct FeatureDataShaderCache
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_CACHE::SupportFlags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_CACHE::SupportFlags"]/*' />
 	public ShaderCacheSupportFlags SupportFlags;
 }

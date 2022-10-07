@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2"]/*' />
 /// <unmanaged>ID3D11DeviceContext2</unmanaged>
 [Guid("420d5b32-b90c-4da4-bef0-359f6a24a83a")]
 [NativeTypeName("struct ID3D11DeviceContext2 : ID3D11DeviceContext1")]
@@ -1122,7 +1122,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11View*, RawRect*, uint, void>)(lpVtbl[133]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pResourceView, pRects, NumRects);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::UpdateTileMappings"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::UpdateTileMappings"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(134)]
 	public HResult UpdateTileMappings(ID3D11Resource* pTiledResource, uint NumTiledResourceRegions, TiledResourceCoordinate* pTiledResourceRegionStartCoordinates, TileRegionSize* pTiledResourceRegionSizes, ID3D11Buffer* pTilePool, uint NumRanges, uint* pRangeFlags, uint* pTilePoolStartOffsets, uint* pRangeTileCounts, uint Flags)
@@ -1130,7 +1130,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Resource*, uint, TiledResourceCoordinate*, TileRegionSize*, ID3D11Buffer*, uint, uint*, uint*, uint*, uint, int>)(lpVtbl[134]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pTiledResource, NumTiledResourceRegions, pTiledResourceRegionStartCoordinates, pTiledResourceRegionSizes, pTilePool, NumRanges, pRangeFlags, pTilePoolStartOffsets, pRangeTileCounts, Flags);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::CopyTileMappings"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::CopyTileMappings"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(135)]
 	public HResult CopyTileMappings(ID3D11Resource* pDestTiledResource, TiledResourceCoordinate* pDestRegionStartCoordinate, ID3D11Resource* pSourceTiledResource, TiledResourceCoordinate* pSourceRegionStartCoordinate, TileRegionSize* pTileRegionSize, uint Flags)
@@ -1138,7 +1138,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Resource*, TiledResourceCoordinate*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, uint, int>)(lpVtbl[135]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pDestTiledResource, pDestRegionStartCoordinate, pSourceTiledResource, pSourceRegionStartCoordinate, pTileRegionSize, Flags);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::CopyTiles"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::CopyTiles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(136)]
 	public void CopyTiles(ID3D11Resource* pTiledResource, TiledResourceCoordinate* pTileRegionStartCoordinate, TileRegionSize* pTileRegionSize, ID3D11Buffer* pBuffer, ulong BufferStartOffsetInBytes, uint Flags)
@@ -1146,7 +1146,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, ID3D11Buffer*, ulong, uint, void>)(lpVtbl[136]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::UpdateTiles"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::UpdateTiles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(137)]
 	public void UpdateTiles(ID3D11Resource* pDestTiledResource, TiledResourceCoordinate* pDestTileRegionStartCoordinate, TileRegionSize* pDestTileRegionSize, void* pSourceTileData, uint Flags)
@@ -1154,7 +1154,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, void*, uint, void>)(lpVtbl[137]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pDestTiledResource, pDestTileRegionStartCoordinate, pDestTileRegionSize, pSourceTileData, Flags);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::ResizeTilePool"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::ResizeTilePool"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(138)]
 	public HResult ResizeTilePool(ID3D11Buffer* pTilePool, ulong NewSizeInBytes)
@@ -1162,7 +1162,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11Buffer*, ulong, int>)(lpVtbl[138]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pTilePool, NewSizeInBytes);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::TiledResourceBarrier"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::TiledResourceBarrier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(139)]
 	public void TiledResourceBarrier(ID3D11DeviceChild* pTiledResourceOrViewAccessBeforeBarrier, ID3D11DeviceChild* pTiledResourceOrViewAccessAfterBarrier)
@@ -1170,7 +1170,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ID3D11DeviceChild*, ID3D11DeviceChild*, void>)(lpVtbl[139]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pTiledResourceOrViewAccessBeforeBarrier, pTiledResourceOrViewAccessAfterBarrier);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::IsAnnotationEnabled"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::IsAnnotationEnabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(140)]
 	public Bool32 IsAnnotationEnabled()
@@ -1178,7 +1178,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, Bool32>)(lpVtbl[140]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::SetMarkerInt"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::SetMarkerInt"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(141)]
 	public void SetMarkerInt(ushort* pLabel, int Data)
@@ -1186,7 +1186,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ushort*, int, void>)(lpVtbl[141]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::BeginEventInt"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::BeginEventInt"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(142)]
 	public void BeginEventInt(ushort* pLabel, int Data)
@@ -1194,7 +1194,7 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, ushort*, int, void>)(lpVtbl[142]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::EndEvent"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::EndEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(143)]
 	public void EndEvent()

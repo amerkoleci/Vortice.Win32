@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV"]/*' />
 /// <unmanaged>D3D12_TEX1D_ARRAY_UAV</unmanaged>
 public partial struct Texture1DArrayUav
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV::MipSlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV::MipSlice"]/*' />
 	public uint MipSlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV::FirstArraySlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV::FirstArraySlice"]/*' />
 	public uint FirstArraySlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV::ArraySize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX1D_ARRAY_UAV::ArraySize"]/*' />
 	public uint ArraySize;
 }

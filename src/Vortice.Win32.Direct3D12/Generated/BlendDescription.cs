@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC"]/*' />
 /// <unmanaged>D3D12_BLEND_DESC</unmanaged>
 public partial struct BlendDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC::AlphaToCoverageEnable"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC::AlphaToCoverageEnable"]/*' />
 	public Bool32 AlphaToCoverageEnable;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC::IndependentBlendEnable"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC::IndependentBlendEnable"]/*' />
 	public Bool32 IndependentBlendEnable;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC::RenderTarget"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_DESC::RenderTarget"]/*' />
 	public RenderTarget__FixedBuffer RenderTarget;
 
 	public unsafe struct RenderTarget__FixedBuffer

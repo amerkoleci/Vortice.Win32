@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER"]/*' />
 /// <unmanaged>D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER</unmanaged>
 public enum SharedResourceCompatibilityTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER::D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER::D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_0"]/*' />
 	/// <unmanaged>D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_0</unmanaged>
 	Tier0 = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER::D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER::D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_1"]/*' />
 	/// <unmanaged>D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_1</unmanaged>
 	Tier1 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER::D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER::D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_2"]/*' />
 	/// <unmanaged>D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_2</unmanaged>
 	Tier2 = 2,
 }

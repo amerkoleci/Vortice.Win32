@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE"]/*' />
 /// <unmanaged>D3D12_QUERY_HEAP_TYPE</unmanaged>
 public enum QueryHeapType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_OCCLUSION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_OCCLUSION"]/*' />
 	/// <unmanaged>D3D12_QUERY_HEAP_TYPE_OCCLUSION</unmanaged>
 	Occlusion = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_TIMESTAMP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_TIMESTAMP"]/*' />
 	/// <unmanaged>D3D12_QUERY_HEAP_TYPE_TIMESTAMP</unmanaged>
 	Timestamp = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_PIPELINE_STATISTICS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_PIPELINE_STATISTICS"]/*' />
 	/// <unmanaged>D3D12_QUERY_HEAP_TYPE_PIPELINE_STATISTICS</unmanaged>
 	PipelineStatistics = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_SO_STATISTICS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_SO_STATISTICS"]/*' />
 	/// <unmanaged>D3D12_QUERY_HEAP_TYPE_SO_STATISTICS</unmanaged>
 	SOStatistics = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_VIDEO_DECODE_STATISTICS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_VIDEO_DECODE_STATISTICS"]/*' />
 	/// <unmanaged>D3D12_QUERY_HEAP_TYPE_VIDEO_DECODE_STATISTICS</unmanaged>
 	VideoDecodeStatistics = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_COPY_QUEUE_TIMESTAMP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_COPY_QUEUE_TIMESTAMP"]/*' />
 	/// <unmanaged>D3D12_QUERY_HEAP_TYPE_COPY_QUEUE_TIMESTAMP</unmanaged>
 	CopyQueueTimestamp = 5,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_PIPELINE_STATISTICS1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_PIPELINE_STATISTICS1"]/*' />
 	/// <unmanaged>D3D12_QUERY_HEAP_TYPE_PIPELINE_STATISTICS1</unmanaged>
 	PipelineStatistics1 = 7,
 }

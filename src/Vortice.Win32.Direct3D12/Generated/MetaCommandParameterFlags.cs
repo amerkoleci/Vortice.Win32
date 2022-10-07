@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_FLAGS"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_PARAMETER_FLAGS</unmanaged>
 [Flags]
 public enum MetaCommandParameterFlags : uint
 {
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_FLAGS::D3D12_META_COMMAND_PARAMETER_FLAG_INPUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_FLAGS::D3D12_META_COMMAND_PARAMETER_FLAG_INPUT"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_FLAG_INPUT</unmanaged>
 	Input = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_FLAGS::D3D12_META_COMMAND_PARAMETER_FLAG_OUTPUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_FLAGS::D3D12_META_COMMAND_PARAMETER_FLAG_OUTPUT"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_FLAG_OUTPUT</unmanaged>
 	Output = 2,
 }

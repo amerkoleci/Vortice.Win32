@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA"]/*' />
 /// <unmanaged>D3D12_SUBRESOURCE_DATA</unmanaged>
 public partial struct SubresourceData
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA::pData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA::pData"]/*' />
 	public unsafe void* pData;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA::RowPitch"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA::RowPitch"]/*' />
 	public nint RowPitch;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA::SlicePitch"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBRESOURCE_DATA::SlicePitch"]/*' />
 	public nint SlicePitch;
 }

@@ -9,35 +9,35 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_TYPE</unmanaged>
 public enum VideoDecoderBufferType : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_PICTURE_PARAMETERS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_PICTURE_PARAMETERS"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_PICTURE_PARAMETERS</unmanaged>
 	PictureParameters = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_MACROBLOCK_CONTROL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_MACROBLOCK_CONTROL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_MACROBLOCK_CONTROL</unmanaged>
 	MacroblockControl = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_RESIDUAL_DIFFERENCE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_RESIDUAL_DIFFERENCE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_RESIDUAL_DIFFERENCE</unmanaged>
 	ResidualDifference = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_DEBLOCKING_CONTROL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_DEBLOCKING_CONTROL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_DEBLOCKING_CONTROL</unmanaged>
 	DeblockingControl = 3,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_INVERSE_QUANTIZATION_MATRIX"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_INVERSE_QUANTIZATION_MATRIX"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_INVERSE_QUANTIZATION_MATRIX</unmanaged>
 	InverseQuantizationMatrix = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_SLICE_CONTROL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_SLICE_CONTROL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_SLICE_CONTROL</unmanaged>
 	SliceControl = 5,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_BITSTREAM"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_BITSTREAM"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_BITSTREAM</unmanaged>
 	Bitstream = 6,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_MOTION_VECTOR"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_MOTION_VECTOR"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_MOTION_VECTOR</unmanaged>
 	MotionVector = 7,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_FILM_GRAIN</unmanaged>
 	FilmGrain = 8,
 }

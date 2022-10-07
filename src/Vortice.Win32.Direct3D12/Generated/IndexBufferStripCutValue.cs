@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE"]/*' />
 /// <unmanaged>D3D12_INDEX_BUFFER_STRIP_CUT_VALUE</unmanaged>
 public enum IndexBufferStripCutValue : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE::D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_DISABLED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE::D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_DISABLED"]/*' />
 	/// <unmanaged>D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_DISABLED</unmanaged>
 	Disabled = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE::D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFF"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE::D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFF"]/*' />
 	/// <unmanaged>D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFF</unmanaged>
 	I16Bits = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE::D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFFFFFF"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE::D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFFFFFF"]/*' />
 	/// <unmanaged>D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFFFFFF</unmanaged>
 	I32Bits = 2,
 }

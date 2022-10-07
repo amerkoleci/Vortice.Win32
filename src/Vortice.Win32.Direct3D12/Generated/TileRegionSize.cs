@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE"]/*' />
 /// <unmanaged>D3D12_TILE_REGION_SIZE</unmanaged>
 public partial struct TileRegionSize
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::NumTiles"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::NumTiles"]/*' />
 	public uint NumTiles;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::UseBox"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::UseBox"]/*' />
 	public Bool32 UseBox;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::Width"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::Width"]/*' />
 	public uint Width;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::Height"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::Height"]/*' />
 	public ushort Height;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::Depth"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_REGION_SIZE::Depth"]/*' />
 	public ushort Depth;
 }

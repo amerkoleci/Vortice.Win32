@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_DESCRIPTOR_HANDLE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_DESCRIPTOR_HANDLE"]/*' />
 /// <unmanaged>D3D12_GPU_DESCRIPTOR_HANDLE</unmanaged>
 public partial struct GpuDescriptorHandle
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_DESCRIPTOR_HANDLE::ptr"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_DESCRIPTOR_HANDLE::ptr"]/*' />
 	public ulong ptr;
 }

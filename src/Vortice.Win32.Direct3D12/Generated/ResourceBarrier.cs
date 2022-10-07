@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_BARRIER</unmanaged>
 public partial struct ResourceBarrier
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER::Type"]/*' />
 	public ResourceBarrierType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER::Flags"]/*' />
 	public ResourceBarrierFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -55,15 +55,15 @@ public partial struct ResourceBarrier
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Transition"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Transition"]/*' />
 		[FieldOffset(0)]
 		public ResourceTransitionBarrier Transition;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Aliasing"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Aliasing"]/*' />
 		[FieldOffset(0)]
 		public ResourceAliasingBarrier Aliasing;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::UAV"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::UAV"]/*' />
 		[FieldOffset(0)]
 		public ResourceUavBarrier UAV;
 	}

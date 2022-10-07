@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER"]/*' />
 /// <unmanaged>D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER</unmanaged>
 public partial struct SerializedDataDriverMatchingIdentifier
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER::DriverOpaqueGUID"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER::DriverOpaqueGUID"]/*' />
 	public Guid DriverOpaqueGUID;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER::DriverOpaqueVersioningData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER::DriverOpaqueVersioningData"]/*' />
 	public unsafe fixed byte DriverOpaqueVersioningData[16];
 }

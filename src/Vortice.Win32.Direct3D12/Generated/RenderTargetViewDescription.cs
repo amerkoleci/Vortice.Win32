@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC"]/*' />
 /// <unmanaged>D3D12_RENDER_TARGET_VIEW_DESC</unmanaged>
 public partial struct RenderTargetViewDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC::ViewDimension"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC::ViewDimension"]/*' />
 	public RtvDimension ViewDimension;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_TARGET_VIEW_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -105,35 +105,35 @@ public partial struct RenderTargetViewDescription
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
 		[FieldOffset(0)]
 		public BufferRtv Buffer;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
 		[FieldOffset(0)]
 		public Texture1DRtv Texture1D;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture1DArrayRtv Texture1DArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
 		public Texture2DRtv Texture2D;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture2DArrayRtv Texture2DArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMS"]/*' />
 		[FieldOffset(0)]
 		public Texture2DMsRtv Texture2DMS;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DMSArray"]/*' />
 		[FieldOffset(0)]
 		public Texture2DMsArrayRtv Texture2DMSArray;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
 		[FieldOffset(0)]
 		public Texture3DRtv Texture3D;
 	}

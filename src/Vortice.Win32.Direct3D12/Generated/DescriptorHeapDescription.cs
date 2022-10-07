@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_HEAP_DESC</unmanaged>
 public partial struct DescriptorHeapDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::Type"]/*' />
 	public DescriptorHeapType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::NumDescriptors"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::NumDescriptors"]/*' />
 	public uint NumDescriptors;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::Flags"]/*' />
 	public DescriptorHeapFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 }

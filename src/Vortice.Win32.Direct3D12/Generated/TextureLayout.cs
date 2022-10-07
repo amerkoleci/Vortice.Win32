@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT"]/*' />
 /// <unmanaged>D3D12_TEXTURE_LAYOUT</unmanaged>
 public enum TextureLayout : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_UNKNOWN"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_LAYOUT_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_ROW_MAJOR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_ROW_MAJOR"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_LAYOUT_ROW_MAJOR</unmanaged>
 	RowMajor = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_64KB_UNDEFINED_SWIZZLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_64KB_UNDEFINED_SWIZZLE"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_LAYOUT_64KB_UNDEFINED_SWIZZLE</unmanaged>
 	L64KbUndefinedSwizzle = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_64KB_STANDARD_SWIZZLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_64KB_STANDARD_SWIZZLE"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_LAYOUT_64KB_STANDARD_SWIZZLE</unmanaged>
 	L64KbStandardSwizzle = 3,
 }

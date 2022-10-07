@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug2"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug2"]/*' />
 /// <unmanaged>ID3D12Debug2</unmanaged>
 [Guid("93a665c4-a3b2-4e5d-b692-a26ae14e3374")]
 [NativeTypeName("struct ID3D12Debug2 : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12Debug2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug2::SetGPUBasedValidationFlags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug2::SetGPUBasedValidationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags)

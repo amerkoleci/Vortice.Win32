@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS</unmanaged>
 public enum VideoProcessorAutoStreamCaps : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_DENOISE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_DENOISE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_DENOISE</unmanaged>
 	Denoise = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_DERINGING"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_DERINGING"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_DERINGING</unmanaged>
 	Deringing = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_EDGE_ENHANCEMENT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_EDGE_ENHANCEMENT"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_EDGE_ENHANCEMENT</unmanaged>
 	EdgeEnhancement = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_COLOR_CORRECTION"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_COLOR_CORRECTION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_COLOR_CORRECTION</unmanaged>
 	ColorCorrection = 8,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_FLESH_TONE_MAPPING"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_FLESH_TONE_MAPPING"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_FLESH_TONE_MAPPING</unmanaged>
 	FleshToneMapping = 16,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_IMAGE_STABILIZATION"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_IMAGE_STABILIZATION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_IMAGE_STABILIZATION</unmanaged>
 	ImageStabilization = 32,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_SUPER_RESOLUTION"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_SUPER_RESOLUTION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_SUPER_RESOLUTION</unmanaged>
 	SuperResolution = 64,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_ANAMORPHIC_SCALING"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_ANAMORPHIC_SCALING"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_ANAMORPHIC_SCALING</unmanaged>
 	AnamorphicScaling = 128,
 }

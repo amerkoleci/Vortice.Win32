@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW"]/*' />
 /// <unmanaged>D3D12_INDEX_BUFFER_VIEW</unmanaged>
 public partial struct IndexBufferView
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW::BufferLocation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW::BufferLocation"]/*' />
 	public ulong BufferLocation;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW::SizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW::SizeInBytes"]/*' />
 	public uint SizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_VIEW::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 }

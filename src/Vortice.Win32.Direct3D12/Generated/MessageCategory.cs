@@ -9,41 +9,41 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY"]/*' />
 /// <unmanaged>D3D12_MESSAGE_CATEGORY</unmanaged>
 public enum MessageCategory : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_APPLICATION_DEFINED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_APPLICATION_DEFINED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_APPLICATION_DEFINED</unmanaged>
 	ApplicationDefined = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_MISCELLANEOUS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_MISCELLANEOUS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_MISCELLANEOUS</unmanaged>
 	Miscellaneous = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_INITIALIZATION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_INITIALIZATION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_INITIALIZATION</unmanaged>
 	Initialization = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_CLEANUP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_CLEANUP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_CLEANUP</unmanaged>
 	Cleanup = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_COMPILATION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_COMPILATION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_COMPILATION</unmanaged>
 	Compilation = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_STATE_CREATION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_STATE_CREATION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_STATE_CREATION</unmanaged>
 	StateCreation = 5,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_STATE_SETTING"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_STATE_SETTING"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_STATE_SETTING</unmanaged>
 	StateSetting = 6,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_STATE_GETTING"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_STATE_GETTING"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_STATE_GETTING</unmanaged>
 	StateGetting = 7,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_RESOURCE_MANIPULATION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_RESOURCE_MANIPULATION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_RESOURCE_MANIPULATION</unmanaged>
 	ResourceManipulation = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_EXECUTION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_EXECUTION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_EXECUTION</unmanaged>
 	Execution = 9,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_SHADER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_SHADER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_SHADER</unmanaged>
 	Shader = 10,
 }

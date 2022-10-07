@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Heap"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap"]/*' />
 /// <unmanaged>ID3D12Heap</unmanaged>
 [Guid("6b3b2502-6e51-45b3-90ee-9884265e8df3")]
 [NativeTypeName("struct ID3D12Heap : ID3D12Pageable")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12Heap : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Heap*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12Heap*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Heap::GetDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Heap::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HeapDescription GetDesc()

@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_DESC</unmanaged>
 public partial struct VideoDecoderDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC::Guid"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC::Guid"]/*' />
 	public Guid Guid;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC::SampleWidth"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC::SampleWidth"]/*' />
 	public uint SampleWidth;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC::SampleHeight"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC::SampleHeight"]/*' />
 	public uint SampleHeight;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC::OutputFormat"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_DESC::OutputFormat"]/*' />
 	public Graphics.Dxgi.Common.Format OutputFormat;
 }

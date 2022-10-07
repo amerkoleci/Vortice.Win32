@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV"]/*' />
 /// <unmanaged>D3D12_BUFFER_SRV</unmanaged>
 public partial struct BufferSrv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::FirstElement"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::FirstElement"]/*' />
 	public ulong FirstElement;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::NumElements"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::NumElements"]/*' />
 	public uint NumElements;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::StructureByteStride"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::StructureByteStride"]/*' />
 	public uint StructureByteStride;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV::Flags"]/*' />
 	public BufferSrvFlags Flags;
 }

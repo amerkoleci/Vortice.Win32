@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS</unmanaged>
 public partial struct FeatureDataMultisampleQualityLevels
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::SampleCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::SampleCount"]/*' />
 	public uint SampleCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::Flags"]/*' />
 	public MultisampleQualityLevelFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::NumQualityLevels"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_MULTISAMPLE_QUALITY_LEVELS::NumQualityLevels"]/*' />
 	public uint NumQualityLevels;
 }

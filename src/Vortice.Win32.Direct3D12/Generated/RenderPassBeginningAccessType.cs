@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE</unmanaged>
 public enum RenderPassBeginningAccessType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_DISCARD"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_DISCARD"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_DISCARD</unmanaged>
 	Discard = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE</unmanaged>
 	Preserve = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_CLEAR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_CLEAR"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_CLEAR</unmanaged>
 	Clear = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_NO_ACCESS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_NO_ACCESS"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_NO_ACCESS</unmanaged>
 	NoAccess = 3,
 }

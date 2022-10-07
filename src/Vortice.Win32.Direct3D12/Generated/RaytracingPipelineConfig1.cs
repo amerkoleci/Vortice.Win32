@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG1"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_PIPELINE_CONFIG1</unmanaged>
 public partial struct RaytracingPipelineConfig1
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG1::MaxTraceRecursionDepth"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG1::MaxTraceRecursionDepth"]/*' />
 	public uint MaxTraceRecursionDepth;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG1::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_CONFIG1::Flags"]/*' />
 	public RaytracingPipelineFlags Flags;
 }

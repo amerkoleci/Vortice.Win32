@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER"]/*' />
 /// <unmanaged>D3D12_CROSS_NODE_SHARING_TIER</unmanaged>
 public enum CrossNodeSharingTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_NOT_SUPPORTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_CROSS_NODE_SHARING_TIER_NOT_SUPPORTED</unmanaged>
 	NotSupported = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_1_EMULATED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_1_EMULATED"]/*' />
 	/// <unmanaged>D3D12_CROSS_NODE_SHARING_TIER_1_EMULATED</unmanaged>
 	Tier1Emulated = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_1"]/*' />
 	/// <unmanaged>D3D12_CROSS_NODE_SHARING_TIER_1</unmanaged>
 	Tier1 = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_2"]/*' />
 	/// <unmanaged>D3D12_CROSS_NODE_SHARING_TIER_2</unmanaged>
 	Tier2 = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_3"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_3"]/*' />
 	/// <unmanaged>D3D12_CROSS_NODE_SHARING_TIER_3</unmanaged>
 	Tier3 = 4,
 }

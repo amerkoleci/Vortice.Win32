@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WAVE_MMA_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WAVE_MMA_TIER"]/*' />
 /// <unmanaged>D3D12_WAVE_MMA_TIER</unmanaged>
 public enum WaveMmaTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WAVE_MMA_TIER::D3D12_WAVE_MMA_TIER_NOT_SUPPORTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WAVE_MMA_TIER::D3D12_WAVE_MMA_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_WAVE_MMA_TIER_NOT_SUPPORTED</unmanaged>
 	NotSupported = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_WAVE_MMA_TIER::D3D12_WAVE_MMA_TIER_1_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WAVE_MMA_TIER::D3D12_WAVE_MMA_TIER_1_0"]/*' />
 	/// <unmanaged>D3D12_WAVE_MMA_TIER_1_0</unmanaged>
 	Tier1_0 = 10,
 }

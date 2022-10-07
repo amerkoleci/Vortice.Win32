@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_PROTECTION_FLAGS</unmanaged>
 [StructLayout(LayoutKind.Explicit)]
 public partial struct AuthenticatedProtectionFlags
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS::Flags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS::Flags"]/*' />
 	[FieldOffset(0)]
 	public _Flags_e__Struct Flags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS::Value"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROTECTION_FLAGS::Value"]/*' />
 	[FieldOffset(0)]
 	public uint Value;
 
 	public partial struct _Flags_e__Struct
 	{
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Flags_e__Struct::_bitfield"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Flags_e__Struct::_bitfield"]/*' />
 		public uint _bitfield;
 	}
 }

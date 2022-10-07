@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Counter"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Counter"]/*' />
 /// <unmanaged>ID3D11Counter</unmanaged>
 [Guid("6e8c49fb-a371-4770-b440-29086022b741")]
 [NativeTypeName("struct ID3D11Counter : ID3D11Asynchronous")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11Counter : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Counter*, uint>)(lpVtbl[7]))((ID3D11Counter*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Counter::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Counter::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(CounterDescription* pDesc)

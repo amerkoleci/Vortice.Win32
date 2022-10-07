@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_STREAM_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_STREAM_DESC"]/*' />
 /// <unmanaged>D3D12_PIPELINE_STATE_STREAM_DESC</unmanaged>
 public partial struct PipelineStateStreamDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_STREAM_DESC::SizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_STREAM_DESC::SizeInBytes"]/*' />
 	public nuint SizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_STREAM_DESC::pPipelineStateSubobjectStream"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_STREAM_DESC::pPipelineStateSubobjectStream"]/*' />
 	public unsafe void* pPipelineStateSubobjectStream;
 }

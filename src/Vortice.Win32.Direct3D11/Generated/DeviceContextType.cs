@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE"]/*' />
 /// <unmanaged>D3D11_DEVICE_CONTEXT_TYPE</unmanaged>
 public enum DeviceContextType : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE::D3D11_DEVICE_CONTEXT_IMMEDIATE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE::D3D11_DEVICE_CONTEXT_IMMEDIATE"]/*' />
 	/// <unmanaged>D3D11_DEVICE_CONTEXT_IMMEDIATE</unmanaged>
 	Immediate = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE::D3D11_DEVICE_CONTEXT_DEFERRED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE::D3D11_DEVICE_CONTEXT_DEFERRED"]/*' />
 	/// <unmanaged>D3D11_DEVICE_CONTEXT_DEFERRED</unmanaged>
 	Deferred = 1,
 }

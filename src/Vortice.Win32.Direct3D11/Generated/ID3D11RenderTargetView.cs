@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11RenderTargetView"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RenderTargetView"]/*' />
 /// <unmanaged>ID3D11RenderTargetView</unmanaged>
 [Guid("dfdba067-0b8d-4865-875b-d7b4516cc164")]
 [NativeTypeName("struct ID3D11RenderTargetView : ID3D11View")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11RenderTargetView : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView*, ID3D11Resource**, void>)(lpVtbl[7]))((ID3D11RenderTargetView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11RenderTargetView::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RenderTargetView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(RenderTargetViewDescription* pDesc)

@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_DESC</unmanaged>
 public partial struct MetaCommandDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::Id"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::Id"]/*' />
 	public Guid Id;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::Name"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::Name"]/*' />
 	public unsafe ushort* Name;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::InitializationDirtyState"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::InitializationDirtyState"]/*' />
 	public GraphicsStates InitializationDirtyState;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::ExecutionDirtyState"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::ExecutionDirtyState"]/*' />
 	public GraphicsStates ExecutionDirtyState;
 }

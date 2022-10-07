@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE_OUTPUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE_OUTPUT"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE_OUTPUT</unmanaged>
 public partial struct AuthenticatedQueryChannelTypeOutput
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE_OUTPUT::Output"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE_OUTPUT::Output"]/*' />
 	public AuthenticatedQueryOutput Output;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE_OUTPUT::ChannelType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_QUERY_CHANNEL_TYPE_OUTPUT::ChannelType"]/*' />
 	public AuthenticatedChannelType ChannelType;
 }

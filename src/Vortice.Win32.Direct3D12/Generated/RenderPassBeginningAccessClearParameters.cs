@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS</unmanaged>
 public partial struct RenderPassBeginningAccessClearParameters
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS::ClearValue"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS::ClearValue"]/*' />
 	public ClearValue ClearValue;
 }

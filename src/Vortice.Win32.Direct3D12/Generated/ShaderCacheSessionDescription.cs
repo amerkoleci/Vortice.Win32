@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_SESSION_DESC</unmanaged>
 public partial struct ShaderCacheSessionDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Identifier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Identifier"]/*' />
 	public Guid Identifier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Mode"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Mode"]/*' />
 	public ShaderCacheMode Mode;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Flags"]/*' />
 	public ShaderCacheFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::MaximumInMemoryCacheSizeBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::MaximumInMemoryCacheSizeBytes"]/*' />
 	public uint MaximumInMemoryCacheSizeBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::MaximumInMemoryCacheEntries"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::MaximumInMemoryCacheEntries"]/*' />
 	public uint MaximumInMemoryCacheEntries;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::MaximumValueFileSizeBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::MaximumValueFileSizeBytes"]/*' />
 	public uint MaximumValueFileSizeBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Version"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SESSION_DESC::Version"]/*' />
 	public ulong Version;
 }

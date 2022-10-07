@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC"]/*' />
 /// <unmanaged>D3D12_QUERY_HEAP_DESC</unmanaged>
 public partial struct QueryHeapDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC::Type"]/*' />
 	public QueryHeapType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC::Count"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC::Count"]/*' />
 	public uint Count;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT"]/*' />
 /// <unmanaged>D3D12_DRED_BREADCRUMB_CONTEXT</unmanaged>
 public partial struct DredBreadcrumbContext
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT::BreadcrumbIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT::BreadcrumbIndex"]/*' />
 	public uint BreadcrumbIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT::pContextString"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT::pContextString"]/*' />
 	public unsafe ushort* pContextString;
 }

@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS3"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS3"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS3</unmanaged>
 public partial struct FeatureDataD3D11Options3
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS3::VPAndRTArrayIndexFromAnyShaderFeedingRasterizer"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS3::VPAndRTArrayIndexFromAnyShaderFeedingRasterizer"]/*' />
 	public Bool32 VPAndRTArrayIndexFromAnyShaderFeedingRasterizer;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device3"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device3"]/*' />
 /// <unmanaged>ID3D12Device3</unmanaged>
 [Guid("81dadc15-2bad-4392-93c5-101345c4aa98")]
 [NativeTypeName("struct ID3D12Device3 : ID3D12Device2")]
@@ -437,7 +437,7 @@ public unsafe partial struct ID3D12Device3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[47]))((ID3D12Device3*)Unsafe.AsPointer(ref this), pDesc, riid, ppPipelineState);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device3::OpenExistingHeapFromAddress"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device3::OpenExistingHeapFromAddress"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
 	public HResult OpenExistingHeapFromAddress(void* pAddress, Guid* riid, void** ppvHeap)
@@ -445,7 +445,7 @@ public unsafe partial struct ID3D12Device3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, void*, Guid*, void**, int>)(lpVtbl[48]))((ID3D12Device3*)Unsafe.AsPointer(ref this), pAddress, riid, ppvHeap);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device3::OpenExistingHeapFromFileMapping"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device3::OpenExistingHeapFromFileMapping"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
 	public HResult OpenExistingHeapFromFileMapping(Handle hFileMapping, Guid* riid, void** ppvHeap)
@@ -453,7 +453,7 @@ public unsafe partial struct ID3D12Device3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, Handle, Guid*, void**, int>)(lpVtbl[49]))((ID3D12Device3*)Unsafe.AsPointer(ref this), hFileMapping, riid, ppvHeap);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device3::EnqueueMakeResident"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device3::EnqueueMakeResident"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
 	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)

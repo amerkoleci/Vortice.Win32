@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE"]/*' />
 /// <unmanaged>D3D11_TILED_RESOURCE_COORDINATE</unmanaged>
 public partial struct TiledResourceCoordinate
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE::X"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE::X"]/*' />
 	public uint X;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE::Y"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE::Y"]/*' />
 	public uint Y;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE::Z"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE::Z"]/*' />
 	public uint Z;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE::Subresource"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCE_COORDINATE::Subresource"]/*' />
 	public uint Subresource;
 }

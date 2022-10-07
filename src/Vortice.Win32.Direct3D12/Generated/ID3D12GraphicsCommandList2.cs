@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList2"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList2"]/*' />
 /// <unmanaged>ID3D12GraphicsCommandList2</unmanaged>
 [Guid("38c3e585-ff17-412c-9150-4fc6f9d72a28")]
 [NativeTypeName("struct ID3D12GraphicsCommandList2 : ID3D12GraphicsCommandList1")]
@@ -578,7 +578,7 @@ public unsafe partial struct ID3D12GraphicsCommandList2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, uint, void>)(lpVtbl[65]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), Mask);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList2::WriteBufferImmediate"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList2::WriteBufferImmediate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(66)]
 	public void WriteBufferImmediate(uint Count, WriteBufferImmediateParameter* pParams, WriteBufferImmediateMode* pModes)

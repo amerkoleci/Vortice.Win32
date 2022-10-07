@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER"]/*' />
 /// <unmanaged>D3D12_SAMPLER_FEEDBACK_TIER</unmanaged>
 public enum SamplerFeedbackTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER::D3D12_SAMPLER_FEEDBACK_TIER_NOT_SUPPORTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER::D3D12_SAMPLER_FEEDBACK_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_SAMPLER_FEEDBACK_TIER_NOT_SUPPORTED</unmanaged>
 	NotSupported = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER::D3D12_SAMPLER_FEEDBACK_TIER_0_9"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER::D3D12_SAMPLER_FEEDBACK_TIER_0_9"]/*' />
 	/// <unmanaged>D3D12_SAMPLER_FEEDBACK_TIER_0_9</unmanaged>
 	Tier0_9 = 90,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER::D3D12_SAMPLER_FEEDBACK_TIER_1_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER::D3D12_SAMPLER_FEEDBACK_TIER_1_0"]/*' />
 	/// <unmanaged>D3D12_SAMPLER_FEEDBACK_TIER_1_0</unmanaged>
 	Tier1_0 = 100,
 }

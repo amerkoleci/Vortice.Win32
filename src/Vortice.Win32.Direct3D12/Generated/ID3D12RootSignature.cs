@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12RootSignature"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12RootSignature"]/*' />
 /// <unmanaged>ID3D12RootSignature</unmanaged>
 [Guid("c54a6b66-72df-4ee8-8be5-a946a1429214")]
 [NativeTypeName("struct ID3D12RootSignature : ID3D12DeviceChild")]

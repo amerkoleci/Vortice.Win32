@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2"]/*' />
 /// <unmanaged>ID3D11VideoContext2</unmanaged>
 [Guid("c4e7374c-6243-4d1b-ae87-52b4f740e261")]
 [NativeTypeName("struct ID3D11VideoContext2 : ID3D11VideoContext1")]
@@ -682,7 +682,7 @@ public unsafe partial struct ID3D11VideoContext2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, uint, Graphics.Dxgi.Common.Format, uint, VideoProcessorStreamBehaviorHint*, uint*, int>)(lpVtbl[78]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, OutputWidth, OutputHeight, OutputFormat, StreamCount, pStreams, pBehaviorHints);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2::VideoProcessorSetOutputHDRMetaData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2::VideoProcessorSetOutputHDRMetaData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(79)]
 	public void VideoProcessorSetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HDRMetadataType Type, uint Size, void* pHDRMetaData)
@@ -690,7 +690,7 @@ public unsafe partial struct ID3D11VideoContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, Graphics.Dxgi.HDRMetadataType, uint, void*, void>)(lpVtbl[79]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, Type, Size, pHDRMetaData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2::VideoProcessorGetOutputHDRMetaData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2::VideoProcessorGetOutputHDRMetaData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(80)]
 	public void VideoProcessorGetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData)
@@ -698,7 +698,7 @@ public unsafe partial struct ID3D11VideoContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[80]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, pType, Size, pMetaData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2::VideoProcessorSetStreamHDRMetaData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2::VideoProcessorSetStreamHDRMetaData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(81)]
 	public void VideoProcessorSetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType Type, uint Size, void* pHDRMetaData)
@@ -706,7 +706,7 @@ public unsafe partial struct ID3D11VideoContext2 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType, uint, void*, void>)(lpVtbl[81]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Type, Size, pHDRMetaData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2::VideoProcessorGetStreamHDRMetaData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext2::VideoProcessorGetStreamHDRMetaData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
 	public void VideoProcessorGetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData)

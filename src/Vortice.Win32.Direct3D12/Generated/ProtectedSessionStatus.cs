@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_SESSION_STATUS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_SESSION_STATUS"]/*' />
 /// <unmanaged>D3D12_PROTECTED_SESSION_STATUS</unmanaged>
 public enum ProtectedSessionStatus : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_SESSION_STATUS::D3D12_PROTECTED_SESSION_STATUS_OK"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_SESSION_STATUS::D3D12_PROTECTED_SESSION_STATUS_OK"]/*' />
 	/// <unmanaged>D3D12_PROTECTED_SESSION_STATUS_OK</unmanaged>
 	Ok = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_SESSION_STATUS::D3D12_PROTECTED_SESSION_STATUS_INVALID"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_SESSION_STATUS::D3D12_PROTECTED_SESSION_STATUS_INVALID"]/*' />
 	/// <unmanaged>D3D12_PROTECTED_SESSION_STATUS_INVALID</unmanaged>
 	Invalid = 1,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug5"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug5"]/*' />
 /// <unmanaged>ID3D12Debug5</unmanaged>
 [Guid("548d6b12-09fa-40e0-9069-5dcd589a52c9")]
 [NativeTypeName("struct ID3D12Debug5 : ID3D12Debug4")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12Debug5 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Debug5*, void>)(lpVtbl[7]))((ID3D12Debug5*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug5::SetEnableAutoName"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug5::SetEnableAutoName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void SetEnableAutoName(Bool32 Enable)

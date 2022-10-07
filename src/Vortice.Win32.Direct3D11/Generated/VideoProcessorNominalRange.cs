@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE</unmanaged>
 public enum VideoProcessorNominalRange : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_UNDEFINED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_UNDEFINED"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_UNDEFINED</unmanaged>
 	Undefined = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_16_235"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_16_235"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_16_235</unmanaged>
 	Range_16_235 = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_0_255"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_0_255"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_0_255</unmanaged>
 	Range_0_255 = 2,
 }

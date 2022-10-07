@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_TYPE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_TYPE"]/*' />
 /// <unmanaged>D3D11_FILTER_TYPE</unmanaged>
 public enum FilterType : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_TYPE::D3D11_FILTER_TYPE_POINT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_TYPE::D3D11_FILTER_TYPE_POINT"]/*' />
 	/// <unmanaged>D3D11_FILTER_TYPE_POINT</unmanaged>
 	Point = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_TYPE::D3D11_FILTER_TYPE_LINEAR"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_TYPE::D3D11_FILTER_TYPE_LINEAR"]/*' />
 	/// <unmanaged>D3D11_FILTER_TYPE_LINEAR</unmanaged>
 	Linear = 1,
 }

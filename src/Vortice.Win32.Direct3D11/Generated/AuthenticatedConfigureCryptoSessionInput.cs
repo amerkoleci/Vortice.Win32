@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT</unmanaged>
 public partial struct AuthenticatedConfigureCryptoSessionInput
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::Parameters"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::Parameters"]/*' />
 	public AuthenticatedConfigureInput Parameters;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::DecoderHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::DecoderHandle"]/*' />
 	public Handle DecoderHandle;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::CryptoSessionHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::CryptoSessionHandle"]/*' />
 	public Handle CryptoSessionHandle;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::DeviceHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_CRYPTO_SESSION_INPUT::DeviceHandle"]/*' />
 	public Handle DeviceHandle;
 }

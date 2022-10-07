@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLE_POSITION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLE_POSITION"]/*' />
 /// <unmanaged>D3D12_SAMPLE_POSITION</unmanaged>
 public partial struct SamplePosition
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLE_POSITION::X"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLE_POSITION::X"]/*' />
 	public sbyte X;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLE_POSITION::Y"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLE_POSITION::Y"]/*' />
 	public sbyte Y;
 }

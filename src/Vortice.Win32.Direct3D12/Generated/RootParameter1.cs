@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1"]/*' />
 /// <unmanaged>D3D12_ROOT_PARAMETER1</unmanaged>
 public partial struct RootParameter1
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1::ParameterType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1::ParameterType"]/*' />
 	public RootParameterType ParameterType;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1::ShaderVisibility"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER1::ShaderVisibility"]/*' />
 	public ShaderVisibility ShaderVisibility;
 
 	[UnscopedRef]
@@ -55,15 +55,15 @@ public partial struct RootParameter1
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::DescriptorTable"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::DescriptorTable"]/*' />
 		[FieldOffset(0)]
 		public RootDescriptorTable1 DescriptorTable;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Constants"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Constants"]/*' />
 		[FieldOffset(0)]
 		public RootConstants Constants;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Descriptor"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Descriptor"]/*' />
 		[FieldOffset(0)]
 		public RootDescriptor1 Descriptor;
 	}

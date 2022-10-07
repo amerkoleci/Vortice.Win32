@@ -9,26 +9,26 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE"]/*' />
 /// <unmanaged>D3D12_RESOLVE_MODE</unmanaged>
 public enum ResolveMode : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_DECOMPRESS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_DECOMPRESS"]/*' />
 	/// <unmanaged>D3D12_RESOLVE_MODE_DECOMPRESS</unmanaged>
 	Decompress = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_MIN"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_MIN"]/*' />
 	/// <unmanaged>D3D12_RESOLVE_MODE_MIN</unmanaged>
 	Min = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_MAX"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_MAX"]/*' />
 	/// <unmanaged>D3D12_RESOLVE_MODE_MAX</unmanaged>
 	Max = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_AVERAGE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_AVERAGE"]/*' />
 	/// <unmanaged>D3D12_RESOLVE_MODE_AVERAGE</unmanaged>
 	Average = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_ENCODE_SAMPLER_FEEDBACK"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_ENCODE_SAMPLER_FEEDBACK"]/*' />
 	/// <unmanaged>D3D12_RESOLVE_MODE_ENCODE_SAMPLER_FEEDBACK</unmanaged>
 	EncodeSamplerFeedback = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_DECODE_SAMPLER_FEEDBACK"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_DECODE_SAMPLER_FEEDBACK"]/*' />
 	/// <unmanaged>D3D12_RESOLVE_MODE_DECODE_SAMPLER_FEEDBACK</unmanaged>
 	DecodeSamplerFeedback = 5,
 }

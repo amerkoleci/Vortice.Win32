@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_VPIV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_VPIV"]/*' />
 /// <unmanaged>D3D11_TEX2D_VPIV</unmanaged>
 public partial struct Texture2DVpiv
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_VPIV::MipSlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_VPIV::MipSlice"]/*' />
 	public uint MipSlice;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_VPIV::ArraySlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX2D_VPIV::ArraySlice"]/*' />
 	public uint ArraySlice;
 }

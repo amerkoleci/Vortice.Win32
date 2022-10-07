@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug3"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug3"]/*' />
 /// <unmanaged>ID3D12Debug3</unmanaged>
 [Guid("5cf4e58f-f671-4ff1-a542-3686e3d153d1")]
 [NativeTypeName("struct ID3D12Debug3 : ID3D12Debug")]
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12Debug3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Debug3*, void>)(lpVtbl[3]))((ID3D12Debug3*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug3::SetEnableGPUBasedValidation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug3::SetEnableGPUBasedValidation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetEnableGPUBasedValidation(Bool32 Enable)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12Debug3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Debug3*, Bool32, void>)(lpVtbl[4]))((ID3D12Debug3*)Unsafe.AsPointer(ref this), Enable);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug3::SetEnableSynchronizedCommandQueueValidation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug3::SetEnableSynchronizedCommandQueueValidation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void SetEnableSynchronizedCommandQueueValidation(Bool32 Enable)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D12Debug3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Debug3*, Bool32, void>)(lpVtbl[5]))((ID3D12Debug3*)Unsafe.AsPointer(ref this), Enable);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug3::SetGPUBasedValidationFlags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug3::SetGPUBasedValidationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags)

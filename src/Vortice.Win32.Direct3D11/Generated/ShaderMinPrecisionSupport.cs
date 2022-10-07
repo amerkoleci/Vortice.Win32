@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT"]/*' />
 /// <unmanaged>D3D11_SHADER_MIN_PRECISION_SUPPORT</unmanaged>
 public enum ShaderMinPrecisionSupport : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_10_BIT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_10_BIT"]/*' />
 	/// <unmanaged>D3D11_SHADER_MIN_PRECISION_10_BIT</unmanaged>
 	P10Bit = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_16_BIT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_16_BIT"]/*' />
 	/// <unmanaged>D3D11_SHADER_MIN_PRECISION_16_BIT</unmanaged>
 	P16Bit = 2,
 }

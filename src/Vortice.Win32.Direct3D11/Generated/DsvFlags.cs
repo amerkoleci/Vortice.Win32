@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG"]/*' />
 /// <unmanaged>D3D11_DSV_FLAG</unmanaged>
 [Flags]
 public enum DsvFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG::D3D11_DSV_READ_ONLY_DEPTH"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG::D3D11_DSV_READ_ONLY_DEPTH"]/*' />
 	/// <unmanaged>D3D11_DSV_READ_ONLY_DEPTH</unmanaged>
 	ReadOnlyDepth = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG::D3D11_DSV_READ_ONLY_STENCIL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG::D3D11_DSV_READ_ONLY_STENCIL"]/*' />
 	/// <unmanaged>D3D11_DSV_READ_ONLY_STENCIL</unmanaged>
 	ReadOnlyStencil = 2,
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG"]/*' />
 /// <unmanaged>D3D11_ASYNC_GETDATA_FLAG</unmanaged>
 [Flags]
 public enum AsyncGetDataFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG::D3D11_ASYNC_GETDATA_DONOTFLUSH"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG::D3D11_ASYNC_GETDATA_DONOTFLUSH"]/*' />
 	/// <unmanaged>D3D11_ASYNC_GETDATA_DONOTFLUSH</unmanaged>
 	DoNotFlush = 1,
 }

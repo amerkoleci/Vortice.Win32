@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1"]/*' />
 /// <unmanaged>ID3D12DebugDevice1</unmanaged>
 [Guid("a9b71770-d099-4a65-a698-3dee10020f88")]
 [NativeTypeName("struct ID3D12DebugDevice1 : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12DebugDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::SetDebugParameter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::SetDebugParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12DebugDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice1*, DebugDeviceParameterType, void*, uint, int>)(lpVtbl[3]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::GetDebugParameter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::GetDebugParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12DebugDevice1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice1*, DebugDeviceParameterType, void*, uint, int>)(lpVtbl[4]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::ReportLiveDeviceObjects"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::ReportLiveDeviceObjects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags)

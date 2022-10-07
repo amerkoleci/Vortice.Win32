@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC"]/*' />
 /// <unmanaged>D3D11_LIBRARY_DESC</unmanaged>
 public partial struct LibraryDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::Creator"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::Creator"]/*' />
 	public unsafe sbyte* Creator;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::Flags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::Flags"]/*' />
 	public uint Flags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::FunctionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LIBRARY_DESC::FunctionCount"]/*' />
 	public uint FunctionCount;
 }

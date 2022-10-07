@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE"]/*' />
 /// <unmanaged>D3D12_RESOURCE_BARRIER_TYPE</unmanaged>
 public enum ResourceBarrierType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE::D3D12_RESOURCE_BARRIER_TYPE_TRANSITION"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE::D3D12_RESOURCE_BARRIER_TYPE_TRANSITION"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BARRIER_TYPE_TRANSITION</unmanaged>
 	Transition = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE::D3D12_RESOURCE_BARRIER_TYPE_ALIASING"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE::D3D12_RESOURCE_BARRIER_TYPE_ALIASING"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BARRIER_TYPE_ALIASING</unmanaged>
 	Aliasing = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE::D3D12_RESOURCE_BARRIER_TYPE_UAV"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE::D3D12_RESOURCE_BARRIER_TYPE_UAV"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BARRIER_TYPE_UAV</unmanaged>
 	Uav = 2,
 }

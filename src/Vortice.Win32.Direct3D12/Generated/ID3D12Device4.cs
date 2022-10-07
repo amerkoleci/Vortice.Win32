@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device4"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4"]/*' />
 /// <unmanaged>ID3D12Device4</unmanaged>
 [Guid("e865df17-a9ee-46f9-a463-3098315aa2e5")]
 [NativeTypeName("struct ID3D12Device4 : ID3D12Device3")]
@@ -461,7 +461,7 @@ public unsafe partial struct ID3D12Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[50]))((ID3D12Device4*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateCommandList1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateCommandList1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(51)]
 	public HResult CreateCommandList1(uint nodeMask, CommandListType type, CommandListFlags flags, Guid* riid, void** ppCommandList)
@@ -469,7 +469,7 @@ public unsafe partial struct ID3D12Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, uint, CommandListType, CommandListFlags, Guid*, void**, int>)(lpVtbl[51]))((ID3D12Device4*)Unsafe.AsPointer(ref this), nodeMask, type, flags, riid, ppCommandList);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateProtectedResourceSession"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateProtectedResourceSession"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(52)]
 	public HResult CreateProtectedResourceSession(ProtectedResourceSessionDescription* pDesc, Guid* riid, void** ppSession)
@@ -477,7 +477,7 @@ public unsafe partial struct ID3D12Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ProtectedResourceSessionDescription*, Guid*, void**, int>)(lpVtbl[52]))((ID3D12Device4*)Unsafe.AsPointer(ref this), pDesc, riid, ppSession);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateCommittedResource1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateCommittedResource1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
 	public HResult CreateCommittedResource1(HeapProperties* pHeapProperties, HeapFlags HeapFlags, ResourceDescription* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, Guid* riidResource, void** ppvResource)
@@ -485,7 +485,7 @@ public unsafe partial struct ID3D12Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, HeapProperties*, HeapFlags, ResourceDescription*, ResourceStates, ClearValue*, ID3D12ProtectedResourceSession*, Guid*, void**, int>)(lpVtbl[53]))((ID3D12Device4*)Unsafe.AsPointer(ref this), pHeapProperties, HeapFlags, pDesc, InitialResourceState, pOptimizedClearValue, pProtectedSession, riidResource, ppvResource);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateHeap1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateHeap1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(54)]
 	public HResult CreateHeap1(HeapDescription* pDesc, ID3D12ProtectedResourceSession* pProtectedSession, Guid* riid, void** ppvHeap)
@@ -493,7 +493,7 @@ public unsafe partial struct ID3D12Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, HeapDescription*, ID3D12ProtectedResourceSession*, Guid*, void**, int>)(lpVtbl[54]))((ID3D12Device4*)Unsafe.AsPointer(ref this), pDesc, pProtectedSession, riid, ppvHeap);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateReservedResource1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4::CreateReservedResource1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(55)]
 	public HResult CreateReservedResource1(ResourceDescription* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, Guid* riid, void** ppvResource)
@@ -501,7 +501,7 @@ public unsafe partial struct ID3D12Device4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device4*, ResourceDescription*, ResourceStates, ClearValue*, ID3D12ProtectedResourceSession*, Guid*, void**, int>)(lpVtbl[55]))((ID3D12Device4*)Unsafe.AsPointer(ref this), pDesc, InitialState, pOptimizedClearValue, pProtectedSession, riid, ppvResource);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device4::GetResourceAllocationInfo1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device4::GetResourceAllocationInfo1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(56)]
 	public ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1)

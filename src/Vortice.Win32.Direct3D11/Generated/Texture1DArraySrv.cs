@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D11_TEX1D_ARRAY_SRV</unmanaged>
 public partial struct Texture1DArraySrv
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV::MostDetailedMip"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV::MipLevels"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV::MipLevels"]/*' />
 	public uint MipLevels;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV::FirstArraySlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV::FirstArraySlice"]/*' />
 	public uint FirstArraySlice;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV::ArraySize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_ARRAY_SRV::ArraySize"]/*' />
 	public uint ArraySize;
 }

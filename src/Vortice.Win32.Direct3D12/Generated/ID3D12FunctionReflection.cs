@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection"]/*' />
 /// <unmanaged>ID3D12FunctionReflection</unmanaged>
 [Guid("1108795c-2772-4ba9-b2a8-d464dc7e2799")]
 public unsafe partial struct ID3D12FunctionReflection : INativeGuid
@@ -46,7 +46,7 @@ public unsafe partial struct ID3D12FunctionReflection : INativeGuid
 
 	public void** lpVtbl;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public HResult GetDesc(FunctionDescription* pDesc)
@@ -54,7 +54,7 @@ public unsafe partial struct ID3D12FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, FunctionDescription*, int>)(lpVtbl[0]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetConstantBufferByIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetConstantBufferByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(1)]
 	public ID3D12ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint BufferIndex)
@@ -62,7 +62,7 @@ public unsafe partial struct ID3D12FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, uint, ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[1]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), BufferIndex);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetConstantBufferByName"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
 	public ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
@@ -70,7 +70,7 @@ public unsafe partial struct ID3D12FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, ID3D12ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetResourceBindingDesc(uint ResourceIndex, ShaderInputBindDescription* pDesc)
@@ -78,7 +78,7 @@ public unsafe partial struct ID3D12FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, uint, ShaderInputBindDescription*, int>)(lpVtbl[3]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), ResourceIndex, pDesc);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetVariableByName"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
@@ -86,7 +86,7 @@ public unsafe partial struct ID3D12FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, ID3D12ShaderReflectionVariable>)(lpVtbl[4]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDescByName"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetResourceBindingDescByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc)
@@ -94,7 +94,7 @@ public unsafe partial struct ID3D12FunctionReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[5]))((ID3D12FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetFunctionParameter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12FunctionReflection::GetFunctionParameter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public ID3D12FunctionParameterReflection GetFunctionParameter(int ParameterIndex)

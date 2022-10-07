@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT</unmanaged>
 public partial struct AuthenticatedConfigureInitializeInput
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT::Parameters"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT::Parameters"]/*' />
 	public AuthenticatedConfigureInput Parameters;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT::StartSequenceQuery"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT::StartSequenceQuery"]/*' />
 	public uint StartSequenceQuery;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT::StartSequenceConfigure"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CONFIGURE_INITIALIZE_INPUT::StartSequenceConfigure"]/*' />
 	public uint StartSequenceConfigure;
 }

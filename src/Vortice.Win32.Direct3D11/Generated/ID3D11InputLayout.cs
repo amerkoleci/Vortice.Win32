@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11InputLayout"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InputLayout"]/*' />
 /// <unmanaged>ID3D11InputLayout</unmanaged>
 [Guid("e4819ddc-4cf0-4025-bd26-5de82a3e07b7")]
 [NativeTypeName("struct ID3D11InputLayout : ID3D11DeviceChild")]

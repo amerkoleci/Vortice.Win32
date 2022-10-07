@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV"]/*' />
 /// <unmanaged>D3D12_TEXCUBE_SRV</unmanaged>
 public partial struct TexureCubeSrv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV::MostDetailedMip"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV::MipLevels"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV::MipLevels"]/*' />
 	public uint MipLevels;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV::ResourceMinLODClamp"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXCUBE_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource2"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource2"]/*' />
 /// <unmanaged>ID3D12Resource2</unmanaged>
 [Guid("be36ec3b-ea85-4aeb-a45a-e9d76404a495")]
 [NativeTypeName("struct ID3D12Resource2 : ID3D12Resource1")]
@@ -179,7 +179,7 @@ public unsafe partial struct ID3D12Resource2 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Resource2*, Guid*, void**, int>)(lpVtbl[15]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), riid, ppProtectedSession);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource2::GetDesc1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource2::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public ResourceDescription1 GetDesc1()

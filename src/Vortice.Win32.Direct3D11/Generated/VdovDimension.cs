@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION"]/*' />
 /// <unmanaged>D3D11_VDOV_DIMENSION</unmanaged>
 public enum VdovDimension : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION::D3D11_VDOV_DIMENSION_UNKNOWN"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION::D3D11_VDOV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_VDOV_DIMENSION_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION::D3D11_VDOV_DIMENSION_TEXTURE2D"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION::D3D11_VDOV_DIMENSION_TEXTURE2D"]/*' />
 	/// <unmanaged>D3D11_VDOV_DIMENSION_TEXTURE2D</unmanaged>
 	Texture2D = 1,
 }

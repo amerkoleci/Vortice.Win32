@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS"]/*' />
 /// <unmanaged>D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS</unmanaged>
 public partial struct BuildRaytracingAccelerationStructureInputs
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::Type"]/*' />
 	public RaytracingAccelerationStructureType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::Flags"]/*' />
 	public RaytracingAccelerationStructureBuildFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::NumDescs"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::NumDescs"]/*' />
 	public uint NumDescs;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::DescsLayout"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::DescsLayout"]/*' />
 	public ElementsLayout DescsLayout;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -61,15 +61,15 @@ public partial struct BuildRaytracingAccelerationStructureInputs
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::InstanceDescs"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::InstanceDescs"]/*' />
 		[FieldOffset(0)]
 		public ulong InstanceDescs;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::pGeometryDescs"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::pGeometryDescs"]/*' />
 		[FieldOffset(0)]
 		public unsafe RaytracingGeometryDescription* pGeometryDescs;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::ppGeometryDescs"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::ppGeometryDescs"]/*' />
 		[FieldOffset(0)]
 		public unsafe RaytracingGeometryDescription** ppGeometryDescs;
 	}

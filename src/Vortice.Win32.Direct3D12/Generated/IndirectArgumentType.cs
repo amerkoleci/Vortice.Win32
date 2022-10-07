@@ -9,41 +9,41 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE"]/*' />
 /// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE</unmanaged>
 public enum IndirectArgumentType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DRAW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DRAW"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_DRAW</unmanaged>
 	Draw = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DRAW_INDEXED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DRAW_INDEXED"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_DRAW_INDEXED</unmanaged>
 	DrawIndexed = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH</unmanaged>
 	Dispatch = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_VERTEX_BUFFER_VIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_VERTEX_BUFFER_VIEW"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_VERTEX_BUFFER_VIEW</unmanaged>
 	VertexBufferView = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_INDEX_BUFFER_VIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_INDEX_BUFFER_VIEW"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_INDEX_BUFFER_VIEW</unmanaged>
 	IndexBufferView = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_CONSTANT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_CONSTANT"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_CONSTANT</unmanaged>
 	Constant = 5,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_CONSTANT_BUFFER_VIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_CONSTANT_BUFFER_VIEW"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_CONSTANT_BUFFER_VIEW</unmanaged>
 	ConstantBufferView = 6,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_SHADER_RESOURCE_VIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_SHADER_RESOURCE_VIEW"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_SHADER_RESOURCE_VIEW</unmanaged>
 	ShaderResourceView = 7,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_UNORDERED_ACCESS_VIEW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_UNORDERED_ACCESS_VIEW"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_UNORDERED_ACCESS_VIEW</unmanaged>
 	UnorderedAccessView = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH_RAYS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH_RAYS"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH_RAYS</unmanaged>
 	DispatchRays = 9,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH_MESH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH_MESH"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_DISPATCH_MESH</unmanaged>
 	DispatchMesh = 10,
 }

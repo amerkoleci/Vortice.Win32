@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_MAPPING_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_MAPPING_FLAGS"]/*' />
 /// <unmanaged>D3D12_TILE_MAPPING_FLAGS</unmanaged>
 [Flags]
 public enum TileMappingFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_MAPPING_FLAGS::D3D12_TILE_MAPPING_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_MAPPING_FLAGS::D3D12_TILE_MAPPING_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_TILE_MAPPING_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_MAPPING_FLAGS::D3D12_TILE_MAPPING_FLAG_NO_HAZARD"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_MAPPING_FLAGS::D3D12_TILE_MAPPING_FLAG_NO_HAZARD"]/*' />
 	/// <unmanaged>D3D12_TILE_MAPPING_FLAG_NO_HAZARD</unmanaged>
 	NoHazard = 1,
 }

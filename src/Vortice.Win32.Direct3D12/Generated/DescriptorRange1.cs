@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_RANGE1</unmanaged>
 public partial struct DescriptorRange1
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::RangeType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::RangeType"]/*' />
 	public DescriptorRangeType RangeType;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::NumDescriptors"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::NumDescriptors"]/*' />
 	public uint NumDescriptors;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::BaseShaderRegister"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::BaseShaderRegister"]/*' />
 	public uint BaseShaderRegister;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::RegisterSpace"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::RegisterSpace"]/*' />
 	public uint RegisterSpace;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::Flags"]/*' />
 	public DescriptorRangeFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::OffsetInDescriptorsFromTableStart"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE1::OffsetInDescriptorsFromTableStart"]/*' />
 	public uint OffsetInDescriptorsFromTableStart;
 }

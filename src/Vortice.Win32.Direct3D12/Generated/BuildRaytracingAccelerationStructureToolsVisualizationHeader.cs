@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER"]/*' />
 /// <unmanaged>D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER</unmanaged>
 public partial struct BuildRaytracingAccelerationStructureToolsVisualizationHeader
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER::Type"]/*' />
 	public RaytracingAccelerationStructureType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER::NumDescs"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_TOOLS_VISUALIZATION_HEADER::NumDescs"]/*' />
 	public uint NumDescs;
 }

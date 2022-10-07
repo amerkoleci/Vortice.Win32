@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT</unmanaged>
 public partial struct VideoProcessorStreamBehaviorHint
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Enable"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Enable"]/*' />
 	public Bool32 Enable;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Width"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Width"]/*' />
 	public uint Width;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Height"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Height"]/*' />
 	public uint Height;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Format"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STREAM_BEHAVIOR_HINT::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 }

@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS"]/*' />
 /// <unmanaged>D3D12_DRAW_INDEXED_ARGUMENTS</unmanaged>
 public partial struct DrawIndexedArguments
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::IndexCountPerInstance"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::IndexCountPerInstance"]/*' />
 	public uint IndexCountPerInstance;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::InstanceCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::InstanceCount"]/*' />
 	public uint InstanceCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::StartIndexLocation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::StartIndexLocation"]/*' />
 	public uint StartIndexLocation;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::BaseVertexLocation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::BaseVertexLocation"]/*' />
 	public int BaseVertexLocation;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::StartInstanceLocation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRAW_INDEXED_ARGUMENTS::StartInstanceLocation"]/*' />
 	public uint StartInstanceLocation;
 }

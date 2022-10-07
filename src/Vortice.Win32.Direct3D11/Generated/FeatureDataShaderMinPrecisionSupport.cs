@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT</unmanaged>
 public partial struct FeatureDataShaderMinPrecisionSupport
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT::PixelShaderMinPrecision"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT::PixelShaderMinPrecision"]/*' />
 	public uint PixelShaderMinPrecision;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT::AllOtherShaderStagesMinPrecision"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_SHADER_MIN_PRECISION_SUPPORT::AllOtherShaderStagesMinPrecision"]/*' />
 	public uint AllOtherShaderStagesMinPrecision;
 }

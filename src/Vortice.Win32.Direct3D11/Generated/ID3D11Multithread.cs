@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Multithread"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread"]/*' />
 /// <unmanaged>ID3D11Multithread</unmanaged>
 [Guid("9b7e4e00-342c-4106-a19f-4f2704f689f0")]
 [NativeTypeName("struct ID3D11Multithread : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11Multithread : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::Enter"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::Enter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void Enter()
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D11Multithread : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Multithread*, void>)(lpVtbl[3]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::Leave"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::Leave"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void Leave()
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D11Multithread : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Multithread*, void>)(lpVtbl[4]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::SetMultithreadProtected"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::SetMultithreadProtected"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public Bool32 SetMultithreadProtected(Bool32 bMTProtect)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D11Multithread : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, Bool32, Bool32>)(lpVtbl[5]))((ID3D11Multithread*)Unsafe.AsPointer(ref this), bMTProtect);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::GetMultithreadProtected"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::GetMultithreadProtected"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public Bool32 GetMultithreadProtected()

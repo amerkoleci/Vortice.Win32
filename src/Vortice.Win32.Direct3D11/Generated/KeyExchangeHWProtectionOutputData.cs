@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA"]/*' />
 /// <unmanaged>D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA</unmanaged>
 public partial struct KeyExchangeHWProtectionOutputData
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::PrivateDataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::PrivateDataSize"]/*' />
 	public uint PrivateDataSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::MaxHWProtectionDataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::MaxHWProtectionDataSize"]/*' />
 	public uint MaxHWProtectionDataSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::HWProtectionDataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::HWProtectionDataSize"]/*' />
 	public uint HWProtectionDataSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::TransportTime"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::TransportTime"]/*' />
 	public ulong TransportTime;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::ExecutionTime"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::ExecutionTime"]/*' />
 	public ulong ExecutionTime;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::pbOutput"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_KEY_EXCHANGE_HW_PROTECTION_OUTPUT_DATA::pbOutput"]/*' />
 	public unsafe fixed byte pbOutput[4];
 }

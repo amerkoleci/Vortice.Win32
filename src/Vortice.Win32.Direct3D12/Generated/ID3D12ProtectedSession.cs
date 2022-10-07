@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession"]/*' />
 /// <unmanaged>ID3D12ProtectedSession</unmanaged>
 [Guid("a1533d18-0ac1-4084-85b9-89a96116806b")]
 [NativeTypeName("struct ID3D12ProtectedSession : ID3D12DeviceChild")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12ProtectedSession : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedSession*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession::GetStatusFence"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession::GetStatusFence"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetStatusFence(Guid* riid, void** ppFence)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D12ProtectedSession : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedSession*, Guid*, void**, int>)(lpVtbl[8]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), riid, ppFence);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession::GetSessionStatus"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ProtectedSession::GetSessionStatus"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public ProtectedSessionStatus GetSessionStatus()

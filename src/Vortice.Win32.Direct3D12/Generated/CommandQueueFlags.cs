@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_FLAGS"]/*' />
 /// <unmanaged>D3D12_COMMAND_QUEUE_FLAGS</unmanaged>
 [Flags]
 public enum CommandQueueFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_FLAGS::D3D12_COMMAND_QUEUE_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_FLAGS::D3D12_COMMAND_QUEUE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_QUEUE_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_FLAGS::D3D12_COMMAND_QUEUE_FLAG_DISABLE_GPU_TIMEOUT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_FLAGS::D3D12_COMMAND_QUEUE_FLAG_DISABLE_GPU_TIMEOUT"]/*' />
 	/// <unmanaged>D3D12_COMMAND_QUEUE_FLAG_DISABLE_GPU_TIMEOUT</unmanaged>
 	DisableGpuTimeout = 1,
 }

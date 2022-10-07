@@ -9,56 +9,56 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP"]/*' />
 /// <unmanaged>D3D12_LOGIC_OP</unmanaged>
 public enum LogicOperation : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_CLEAR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_CLEAR"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_CLEAR</unmanaged>
 	Clear = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_SET"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_SET"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_SET</unmanaged>
 	Set = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_COPY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_COPY"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_COPY</unmanaged>
 	Copy = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_COPY_INVERTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_COPY_INVERTED"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_COPY_INVERTED</unmanaged>
 	CopyInverted = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_NOOP"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_NOOP"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_NOOP</unmanaged>
 	Noop = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_INVERT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_INVERT"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_INVERT</unmanaged>
 	Invert = 5,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_AND"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_AND"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_AND</unmanaged>
 	And = 6,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_NAND"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_NAND"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_NAND</unmanaged>
 	Nand = 7,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_OR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_OR"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_OR</unmanaged>
 	Or = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_NOR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_NOR"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_NOR</unmanaged>
 	Nor = 9,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_XOR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_XOR"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_XOR</unmanaged>
 	Xor = 10,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_EQUIV"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_EQUIV"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_EQUIV</unmanaged>
 	Equiv = 11,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_AND_REVERSE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_AND_REVERSE"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_AND_REVERSE</unmanaged>
 	AndReverse = 12,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_AND_INVERTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_AND_INVERTED"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_AND_INVERTED</unmanaged>
 	AndInverted = 13,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_OR_REVERSE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_OR_REVERSE"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_OR_REVERSE</unmanaged>
 	OrReverse = 14,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_OR_INVERTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_OR_INVERTED"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_OR_INVERTED</unmanaged>
 	OrInverted = 15,
 }

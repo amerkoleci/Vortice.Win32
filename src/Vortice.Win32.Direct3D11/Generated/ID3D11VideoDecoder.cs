@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoder"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoder"]/*' />
 /// <unmanaged>ID3D11VideoDecoder</unmanaged>
 [Guid("3c9c5b51-995d-48d1-9b8d-fa5caeded65c")]
 [NativeTypeName("struct ID3D11VideoDecoder : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11VideoDecoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoder::GetCreationParameters"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoder::GetCreationParameters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetCreationParameters(VideoDecoderDescription* pVideoDesc, VideoDecoderConfig* pConfig)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11VideoDecoder : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, VideoDecoderDescription*, VideoDecoderConfig*, int>)(lpVtbl[7]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), pVideoDesc, pConfig);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoder::GetDriverHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDecoder::GetDriverHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetDriverHandle(Handle* pDriverHandle)

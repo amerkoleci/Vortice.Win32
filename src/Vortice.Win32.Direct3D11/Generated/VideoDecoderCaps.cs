@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_CAPS</unmanaged>
 public enum VideoDecoderCaps : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE</unmanaged>
 	Downsample = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_NON_REAL_TIME"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_NON_REAL_TIME"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_CAPS_NON_REAL_TIME</unmanaged>
 	NonRealTime = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE_DYNAMIC"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE_DYNAMIC"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE_DYNAMIC</unmanaged>
 	DownsampleDynamic = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE_REQUIRED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE_REQUIRED"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE_REQUIRED</unmanaged>
 	DownsampleRequired = 8,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_UNSUPPORTED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_CAPS_UNSUPPORTED</unmanaged>
 	Unsupported = 16,
 }

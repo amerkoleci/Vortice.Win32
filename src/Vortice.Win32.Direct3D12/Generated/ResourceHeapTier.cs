@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_HEAP_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_HEAP_TIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_HEAP_TIER</unmanaged>
 public enum ResourceHeapTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_HEAP_TIER::D3D12_RESOURCE_HEAP_TIER_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_HEAP_TIER::D3D12_RESOURCE_HEAP_TIER_1"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_HEAP_TIER_1</unmanaged>
 	Tier1 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_HEAP_TIER::D3D12_RESOURCE_HEAP_TIER_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_HEAP_TIER::D3D12_RESOURCE_HEAP_TIER_2"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_HEAP_TIER_2</unmanaged>
 	Tier2 = 2,
 }

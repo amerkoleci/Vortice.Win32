@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList6"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList6"]/*' />
 /// <unmanaged>ID3D12GraphicsCommandList6</unmanaged>
 [Guid("c3827890-e548-4cfa-96cf-5689a9370f80")]
 [NativeTypeName("struct ID3D12GraphicsCommandList6 : ID3D12GraphicsCommandList5")]
@@ -682,7 +682,7 @@ public unsafe partial struct ID3D12GraphicsCommandList6 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, ID3D12Resource*, void>)(lpVtbl[78]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), shadingRateImage);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList6::DispatchMesh"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList6::DispatchMesh"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(79)]
 	public void DispatchMesh(uint ThreadGroupCountX, uint ThreadGroupCountY, uint ThreadGroupCountZ)

@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC"]/*' />
 /// <unmanaged>D3D11_BUFFER_DESC</unmanaged>
 public partial struct BufferDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::ByteWidth"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::ByteWidth"]/*' />
 	public uint ByteWidth;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::Usage"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::Usage"]/*' />
 	public Usage Usage;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::BindFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::BindFlags"]/*' />
 	public BindFlags BindFlags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::CPUAccessFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::CPUAccessFlags"]/*' />
 	public CpuAccessFlags CPUAccessFlags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::MiscFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::MiscFlags"]/*' />
 	public ResourceMiscFlags MiscFlags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::StructureByteStride"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_DESC::StructureByteStride"]/*' />
 	public uint StructureByteStride;
 }

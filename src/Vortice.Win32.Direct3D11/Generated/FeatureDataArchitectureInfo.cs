@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_ARCHITECTURE_INFO"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_ARCHITECTURE_INFO"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_ARCHITECTURE_INFO</unmanaged>
 public partial struct FeatureDataArchitectureInfo
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_ARCHITECTURE_INFO::TileBasedDeferredRenderer"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_ARCHITECTURE_INFO::TileBasedDeferredRenderer"]/*' />
 	public Bool32 TileBasedDeferredRenderer;
 }

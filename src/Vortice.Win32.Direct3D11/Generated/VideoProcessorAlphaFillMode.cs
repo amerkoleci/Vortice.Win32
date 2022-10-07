@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE</unmanaged>
 public enum VideoProcessorAlphaFillMode : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_OPAQUE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_OPAQUE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_OPAQUE</unmanaged>
 	Opaque = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_BACKGROUND"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_BACKGROUND"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_BACKGROUND</unmanaged>
 	Background = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_DESTINATION"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_DESTINATION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_DESTINATION</unmanaged>
 	Destination = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_SOURCE_STREAM"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_SOURCE_STREAM"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_SOURCE_STREAM</unmanaged>
 	SourceStream = 3,
 }

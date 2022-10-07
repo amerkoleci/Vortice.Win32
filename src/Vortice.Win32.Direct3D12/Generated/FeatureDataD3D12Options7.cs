@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS7</unmanaged>
 public partial struct FeatureDataD3D12Options7
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7::MeshShaderTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7::MeshShaderTier"]/*' />
 	public MeshShaderTier MeshShaderTier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7::SamplerFeedbackTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS7::SamplerFeedbackTier"]/*' />
 	public SamplerFeedbackTier SamplerFeedbackTier;
 }

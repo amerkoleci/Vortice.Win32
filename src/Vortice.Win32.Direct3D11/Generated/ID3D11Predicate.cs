@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Predicate"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Predicate"]/*' />
 /// <unmanaged>ID3D11Predicate</unmanaged>
 [Guid("9eb576dd-9f77-4d86-81aa-8bab5fe490e2")]
 [NativeTypeName("struct ID3D11Predicate : ID3D11Query")]

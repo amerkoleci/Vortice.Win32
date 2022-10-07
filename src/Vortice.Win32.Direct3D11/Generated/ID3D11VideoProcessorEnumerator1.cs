@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1"]/*' />
 /// <unmanaged>ID3D11VideoProcessorEnumerator1</unmanaged>
 [Guid("465217f2-5568-43cf-b5b9-f61d54531ca1")]
 [NativeTypeName("struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProcessorEnumerator")]
@@ -154,7 +154,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, VideoProcessorFilter, VideoProcessorFilterRange*, int>)(lpVtbl[12]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Filter, pRange);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1::CheckVideoProcessorFormatConversion"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1::CheckVideoProcessorFormatConversion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult CheckVideoProcessorFormatConversion(Graphics.Dxgi.Common.Format InputFormat, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, Graphics.Dxgi.Common.Format OutputFormat, Graphics.Dxgi.Common.ColorSpaceType OutputColorSpace, Bool32* pSupported)

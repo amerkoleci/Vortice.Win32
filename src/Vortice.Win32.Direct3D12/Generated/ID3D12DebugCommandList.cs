@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList"]/*' />
 /// <unmanaged>ID3D12DebugCommandList</unmanaged>
 [Guid("09e0bf36-54ac-484f-8847-4baeeab6053f")]
 [NativeTypeName("struct ID3D12DebugCommandList : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12DebugCommandList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList::AssertResourceState"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList::AssertResourceState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public Bool32 AssertResourceState(ID3D12Resource* pResource, uint Subresource, uint State)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12DebugCommandList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList*, ID3D12Resource*, uint, uint, Bool32>)(lpVtbl[3]))((ID3D12DebugCommandList*)Unsafe.AsPointer(ref this), pResource, Subresource, State);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList::SetFeatureMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList::SetFeatureMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult SetFeatureMask(DebugFeature Mask)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12DebugCommandList : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList*, DebugFeature, int>)(lpVtbl[4]))((ID3D12DebugCommandList*)Unsafe.AsPointer(ref this), Mask);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList::GetFeatureMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList::GetFeatureMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public DebugFeature GetFeatureMask()

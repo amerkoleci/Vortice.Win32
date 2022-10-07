@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_CLASSIFICATION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_CLASSIFICATION"]/*' />
 /// <unmanaged>D3D12_INPUT_CLASSIFICATION</unmanaged>
 public enum InputClassification : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_CLASSIFICATION::D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_CLASSIFICATION::D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA"]/*' />
 	/// <unmanaged>D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA</unmanaged>
 	PerVertexData = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_CLASSIFICATION::D3D12_INPUT_CLASSIFICATION_PER_INSTANCE_DATA"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_CLASSIFICATION::D3D12_INPUT_CLASSIFICATION_PER_INSTANCE_DATA"]/*' />
 	/// <unmanaged>D3D12_INPUT_CLASSIFICATION_PER_INSTANCE_DATA</unmanaged>
 	PerInstanceData = 1,
 }

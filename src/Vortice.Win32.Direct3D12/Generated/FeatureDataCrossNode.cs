@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_CROSS_NODE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_CROSS_NODE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_CROSS_NODE</unmanaged>
 public partial struct FeatureDataCrossNode
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_CROSS_NODE::SharingTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_CROSS_NODE::SharingTier"]/*' />
 	public CrossNodeSharingTier SharingTier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_CROSS_NODE::AtomicShaderInstructions"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_CROSS_NODE::AtomicShaderInstructions"]/*' />
 	public Bool32 AtomicShaderInstructions;
 }

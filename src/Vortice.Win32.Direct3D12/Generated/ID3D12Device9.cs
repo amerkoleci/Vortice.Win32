@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device9"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device9"]/*' />
 /// <unmanaged>ID3D12Device9</unmanaged>
 [Guid("4c80e962-f032-4f60-bc9e-ebc2cfa1d83c")]
 [NativeTypeName("struct ID3D12Device9 : ID3D12Device8")]
@@ -639,7 +639,7 @@ public unsafe partial struct ID3D12Device9 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Device9*, ResourceDescription1*, uint, uint, ulong, PlacedSubresourceFootprint*, uint*, ulong*, ulong*, void>)(lpVtbl[72]))((ID3D12Device9*)Unsafe.AsPointer(ref this), pResourceDesc, FirstSubresource, NumSubresources, BaseOffset, pLayouts, pNumRows, pRowSizeInBytes, pTotalBytes);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device9::CreateShaderCacheSession"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device9::CreateShaderCacheSession"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(73)]
 	public HResult CreateShaderCacheSession(ShaderCacheSessionDescription* pDesc, Guid* riid, void** ppvSession)
@@ -647,7 +647,7 @@ public unsafe partial struct ID3D12Device9 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ShaderCacheSessionDescription*, Guid*, void**, int>)(lpVtbl[73]))((ID3D12Device9*)Unsafe.AsPointer(ref this), pDesc, riid, ppvSession);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device9::ShaderCacheControl"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device9::ShaderCacheControl"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(74)]
 	public HResult ShaderCacheControl(ShaderCacheKindFlags Kinds, ShaderCacheControlFlags Control)
@@ -655,7 +655,7 @@ public unsafe partial struct ID3D12Device9 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, ShaderCacheKindFlags, ShaderCacheControlFlags, int>)(lpVtbl[74]))((ID3D12Device9*)Unsafe.AsPointer(ref this), Kinds, Control);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device9::CreateCommandQueue1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device9::CreateCommandQueue1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(75)]
 	public HResult CreateCommandQueue1(CommandQueueDescription* pDesc, Guid* CreatorID, Guid* riid, void** ppCommandQueue)

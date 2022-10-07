@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS"]/*' />
 /// <unmanaged>D3D12_RESOURCE_BARRIER_FLAGS</unmanaged>
 [Flags]
 public enum ResourceBarrierFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS::D3D12_RESOURCE_BARRIER_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS::D3D12_RESOURCE_BARRIER_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BARRIER_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS::D3D12_RESOURCE_BARRIER_FLAG_BEGIN_ONLY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS::D3D12_RESOURCE_BARRIER_FLAG_BEGIN_ONLY"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BARRIER_FLAG_BEGIN_ONLY</unmanaged>
 	BeginOnly = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS::D3D12_RESOURCE_BARRIER_FLAG_END_ONLY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS::D3D12_RESOURCE_BARRIER_FLAG_END_ONLY"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BARRIER_FLAG_END_ONLY</unmanaged>
 	EndOnly = 2,
 }

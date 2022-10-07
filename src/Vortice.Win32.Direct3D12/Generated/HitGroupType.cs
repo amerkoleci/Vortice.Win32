@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_TYPE"]/*' />
 /// <unmanaged>D3D12_HIT_GROUP_TYPE</unmanaged>
 public enum HitGroupType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_TYPE::D3D12_HIT_GROUP_TYPE_TRIANGLES"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_TYPE::D3D12_HIT_GROUP_TYPE_TRIANGLES"]/*' />
 	/// <unmanaged>D3D12_HIT_GROUP_TYPE_TRIANGLES</unmanaged>
 	Triangles = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_TYPE::D3D12_HIT_GROUP_TYPE_PROCEDURAL_PRIMITIVE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_TYPE::D3D12_HIT_GROUP_TYPE_PROCEDURAL_PRIMITIVE"]/*' />
 	/// <unmanaged>D3D12_HIT_GROUP_TYPE_PROCEDURAL_PRIMITIVE</unmanaged>
 	ProceduralPrimitive = 1,
 }

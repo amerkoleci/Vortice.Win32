@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_QUERY_META_COMMAND</unmanaged>
 public partial struct FeatureDataQueryMetaCommand
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::CommandId"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::CommandId"]/*' />
 	public Guid CommandId;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::NodeMask"]/*' />
 	public uint NodeMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::pQueryInputData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::pQueryInputData"]/*' />
 	public unsafe void* pQueryInputData;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::QueryInputDataSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::QueryInputDataSizeInBytes"]/*' />
 	public nuint QueryInputDataSizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::pQueryOutputData"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::pQueryOutputData"]/*' />
 	public unsafe void* pQueryOutputData;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::QueryOutputDataSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_QUERY_META_COMMAND::QueryOutputDataSizeInBytes"]/*' />
 	public nuint QueryOutputDataSizeInBytes;
 }

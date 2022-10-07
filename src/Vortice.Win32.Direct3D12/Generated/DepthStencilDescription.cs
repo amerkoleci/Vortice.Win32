@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCIL_DESC</unmanaged>
 public partial struct DepthStencilDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::DepthEnable"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::DepthEnable"]/*' />
 	public Bool32 DepthEnable;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::DepthWriteMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::DepthWriteMask"]/*' />
 	public DepthWriteMask DepthWriteMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::DepthFunc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::DepthFunc"]/*' />
 	public ComparisonFunction DepthFunc;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::StencilEnable"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::StencilEnable"]/*' />
 	public Bool32 StencilEnable;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::StencilReadMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::StencilReadMask"]/*' />
 	public byte StencilReadMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::StencilWriteMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::StencilWriteMask"]/*' />
 	public byte StencilWriteMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::FrontFace"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::FrontFace"]/*' />
 	public DepthStencilOperationDescription FrontFace;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::BackFace"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_DESC::BackFace"]/*' />
 	public DepthStencilOperationDescription BackFace;
 }

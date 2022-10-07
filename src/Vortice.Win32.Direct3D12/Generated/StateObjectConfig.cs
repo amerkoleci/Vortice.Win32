@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_CONFIG"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_CONFIG"]/*' />
 /// <unmanaged>D3D12_STATE_OBJECT_CONFIG</unmanaged>
 public partial struct StateObjectConfig
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_CONFIG::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_CONFIG::Flags"]/*' />
 	public StateObjectFlags Flags;
 }

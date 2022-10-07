@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE"]/*' />
 /// <unmanaged>D3D12_SHADER_VERSION_TYPE</unmanaged>
 public enum ShaderVersionType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_PIXEL_SHADER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_PIXEL_SHADER"]/*' />
 	/// <unmanaged>D3D12_SHVER_PIXEL_SHADER</unmanaged>
 	PixelShader = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_VERTEX_SHADER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_VERTEX_SHADER"]/*' />
 	/// <unmanaged>D3D12_SHVER_VERTEX_SHADER</unmanaged>
 	VertexShader = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_GEOMETRY_SHADER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_GEOMETRY_SHADER"]/*' />
 	/// <unmanaged>D3D12_SHVER_GEOMETRY_SHADER</unmanaged>
 	GeometryShader = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_HULL_SHADER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_HULL_SHADER"]/*' />
 	/// <unmanaged>D3D12_SHVER_HULL_SHADER</unmanaged>
 	HullShader = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_DOMAIN_SHADER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_DOMAIN_SHADER"]/*' />
 	/// <unmanaged>D3D12_SHVER_DOMAIN_SHADER</unmanaged>
 	DomainShader = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_COMPUTE_SHADER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_COMPUTE_SHADER"]/*' />
 	/// <unmanaged>D3D12_SHVER_COMPUTE_SHADER</unmanaged>
 	ComputeShader = 5,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_RESERVED0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_RESERVED0"]/*' />
 	/// <unmanaged>D3D12_SHVER_RESERVED0</unmanaged>
 	Reserved0 = 65520,
 }

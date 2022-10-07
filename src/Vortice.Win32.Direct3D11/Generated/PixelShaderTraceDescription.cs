@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC"]/*' />
 /// <unmanaged>D3D11_PIXEL_SHADER_TRACE_DESC</unmanaged>
 public partial struct PixelShaderTraceDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC::Invocation"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC::Invocation"]/*' />
 	public ulong Invocation;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC::X"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC::X"]/*' />
 	public int X;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC::Y"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC::Y"]/*' />
 	public int Y;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC::SampleMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_PIXEL_SHADER_TRACE_DESC::SampleMask"]/*' />
 	public ulong SampleMask;
 }

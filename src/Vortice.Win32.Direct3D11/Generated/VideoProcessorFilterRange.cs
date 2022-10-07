@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_RANGE</unmanaged>
 public partial struct VideoProcessorFilterRange
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE::Minimum"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE::Minimum"]/*' />
 	public int Minimum;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE::Maximum"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE::Maximum"]/*' />
 	public int Maximum;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE::Default"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE::Default"]/*' />
 	public int Default;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE::Multiplier"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_RANGE::Multiplier"]/*' />
 	public float Multiplier;
 }

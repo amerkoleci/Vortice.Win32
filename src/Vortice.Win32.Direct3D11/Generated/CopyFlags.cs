@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS"]/*' />
 /// <unmanaged>D3D11_COPY_FLAGS</unmanaged>
 [Flags]
 public enum CopyFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS::D3D11_COPY_NO_OVERWRITE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS::D3D11_COPY_NO_OVERWRITE"]/*' />
 	/// <unmanaged>D3D11_COPY_NO_OVERWRITE</unmanaged>
 	NoOverwrite = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS::D3D11_COPY_DISCARD"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS::D3D11_COPY_DISCARD"]/*' />
 	/// <unmanaged>D3D11_COPY_DISCARD</unmanaged>
 	Discard = 2,
 }

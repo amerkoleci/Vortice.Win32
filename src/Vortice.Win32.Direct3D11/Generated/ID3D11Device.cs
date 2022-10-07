@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device"]/*' />
 /// <unmanaged>ID3D11Device</unmanaged>
 [Guid("db6f6ddb-ac77-4e88-8253-819df9bbf140")]
 [NativeTypeName("struct ID3D11Device : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateBuffer"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateBuffer(BufferDescription* pDesc, SubresourceData* pInitialData, ID3D11Buffer** ppBuffer)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, BufferDescription*, SubresourceData*, ID3D11Buffer**, int>)(lpVtbl[3]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppBuffer);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture1D"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture1D"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult CreateTexture1D(Texture1DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture1D** ppTexture1D)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Texture1DDescription*, SubresourceData*, ID3D11Texture1D**, int>)(lpVtbl[4]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture1D);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture2D"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture2D"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult CreateTexture2D(Texture2DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture2D** ppTexture2D)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Texture2DDescription*, SubresourceData*, ID3D11Texture2D**, int>)(lpVtbl[5]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture2D);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture3D"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateTexture3D"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult CreateTexture3D(Texture3DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture3D** ppTexture3D)
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Texture3DDescription*, SubresourceData*, ID3D11Texture3D**, int>)(lpVtbl[6]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture3D);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateShaderResourceView"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateShaderResourceView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult CreateShaderResourceView(ID3D11Resource* pResource, ShaderResourceViewDescription* pDesc, ID3D11ShaderResourceView** ppSRView)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, ID3D11Resource*, ShaderResourceViewDescription*, ID3D11ShaderResourceView**, int>)(lpVtbl[7]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppSRView);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateUnorderedAccessView"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateUnorderedAccessView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CreateUnorderedAccessView(ID3D11Resource* pResource, UnorderedAccessViewDescription* pDesc, ID3D11UnorderedAccessView** ppUAView)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, ID3D11Resource*, UnorderedAccessViewDescription*, ID3D11UnorderedAccessView**, int>)(lpVtbl[8]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppUAView);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateRenderTargetView"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateRenderTargetView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult CreateRenderTargetView(ID3D11Resource* pResource, RenderTargetViewDescription* pDesc, ID3D11RenderTargetView** ppRTView)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, ID3D11Resource*, RenderTargetViewDescription*, ID3D11RenderTargetView**, int>)(lpVtbl[9]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppRTView);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDepthStencilView"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDepthStencilView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult CreateDepthStencilView(ID3D11Resource* pResource, DepthStencilViewDescription* pDesc, ID3D11DepthStencilView** ppDepthStencilView)
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, ID3D11Resource*, DepthStencilViewDescription*, ID3D11DepthStencilView**, int>)(lpVtbl[10]))((ID3D11Device*)Unsafe.AsPointer(ref this), pResource, pDesc, ppDepthStencilView);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateInputLayout"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateInputLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public HResult CreateInputLayout(InputElementDescription* pInputElementDescs, uint NumElements, void* pShaderBytecodeWithInputSignature, nuint BytecodeLength, ID3D11InputLayout** ppInputLayout)
@@ -146,7 +146,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, InputElementDescription*, uint, void*, nuint, ID3D11InputLayout**, int>)(lpVtbl[11]))((ID3D11Device*)Unsafe.AsPointer(ref this), pInputElementDescs, NumElements, pShaderBytecodeWithInputSignature, BytecodeLength, ppInputLayout);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateVertexShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateVertexShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult CreateVertexShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11VertexShader** ppVertexShader)
@@ -154,7 +154,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, void*, nuint, ID3D11ClassLinkage*, ID3D11VertexShader**, int>)(lpVtbl[12]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppVertexShader);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateGeometryShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateGeometryShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult CreateGeometryShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader)
@@ -162,7 +162,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, void*, nuint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[13]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppGeometryShader);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateGeometryShaderWithStreamOutput"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateGeometryShaderWithStreamOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult CreateGeometryShaderWithStreamOutput(void* pShaderBytecode, nuint BytecodeLength, SODeclarationEntry* pSODeclaration, uint NumEntries, uint* pBufferStrides, uint NumStrides, uint RasterizedStream, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader)
@@ -170,7 +170,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, void*, nuint, SODeclarationEntry*, uint, uint*, uint, uint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[14]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pSODeclaration, NumEntries, pBufferStrides, NumStrides, RasterizedStream, pClassLinkage, ppGeometryShader);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreatePixelShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreatePixelShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult CreatePixelShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11PixelShader** ppPixelShader)
@@ -178,7 +178,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, void*, nuint, ID3D11ClassLinkage*, ID3D11PixelShader**, int>)(lpVtbl[15]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppPixelShader);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateHullShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateHullShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult CreateHullShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11HullShader** ppHullShader)
@@ -186,7 +186,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, void*, nuint, ID3D11ClassLinkage*, ID3D11HullShader**, int>)(lpVtbl[16]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppHullShader);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDomainShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDomainShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult CreateDomainShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11DomainShader** ppDomainShader)
@@ -194,7 +194,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, void*, nuint, ID3D11ClassLinkage*, ID3D11DomainShader**, int>)(lpVtbl[17]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppDomainShader);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateComputeShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateComputeShader"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public HResult CreateComputeShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11ComputeShader** ppComputeShader)
@@ -202,7 +202,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, void*, nuint, ID3D11ClassLinkage*, ID3D11ComputeShader**, int>)(lpVtbl[18]))((ID3D11Device*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppComputeShader);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateClassLinkage"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateClassLinkage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public HResult CreateClassLinkage(ID3D11ClassLinkage** ppLinkage)
@@ -210,7 +210,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, ID3D11ClassLinkage**, int>)(lpVtbl[19]))((ID3D11Device*)Unsafe.AsPointer(ref this), ppLinkage);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateBlendState"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateBlendState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult CreateBlendState(BlendDescription* pBlendStateDesc, ID3D11BlendState** ppBlendState)
@@ -218,7 +218,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, BlendDescription*, ID3D11BlendState**, int>)(lpVtbl[20]))((ID3D11Device*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDepthStencilState"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDepthStencilState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult CreateDepthStencilState(DepthStencilDescription* pDepthStencilDesc, ID3D11DepthStencilState** ppDepthStencilState)
@@ -226,7 +226,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, DepthStencilDescription*, ID3D11DepthStencilState**, int>)(lpVtbl[21]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDepthStencilDesc, ppDepthStencilState);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateRasterizerState"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateRasterizerState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public HResult CreateRasterizerState(RasterizerDescription* pRasterizerDesc, ID3D11RasterizerState** ppRasterizerState)
@@ -234,7 +234,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, RasterizerDescription*, ID3D11RasterizerState**, int>)(lpVtbl[22]))((ID3D11Device*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateSamplerState"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateSamplerState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult CreateSamplerState(SamplerDescription* pSamplerDesc, ID3D11SamplerState** ppSamplerState)
@@ -242,7 +242,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, SamplerDescription*, ID3D11SamplerState**, int>)(lpVtbl[23]))((ID3D11Device*)Unsafe.AsPointer(ref this), pSamplerDesc, ppSamplerState);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateQuery"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateQuery"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult CreateQuery(QueryDescription* pQueryDesc, ID3D11Query** ppQuery)
@@ -250,7 +250,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, QueryDescription*, ID3D11Query**, int>)(lpVtbl[24]))((ID3D11Device*)Unsafe.AsPointer(ref this), pQueryDesc, ppQuery);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreatePredicate"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreatePredicate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult CreatePredicate(QueryDescription* pPredicateDesc, ID3D11Predicate** ppPredicate)
@@ -258,7 +258,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, QueryDescription*, ID3D11Predicate**, int>)(lpVtbl[25]))((ID3D11Device*)Unsafe.AsPointer(ref this), pPredicateDesc, ppPredicate);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateCounter"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateCounter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public HResult CreateCounter(CounterDescription* pCounterDesc, ID3D11Counter** ppCounter)
@@ -266,7 +266,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, CounterDescription*, ID3D11Counter**, int>)(lpVtbl[26]))((ID3D11Device*)Unsafe.AsPointer(ref this), pCounterDesc, ppCounter);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDeferredContext"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CreateDeferredContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public HResult CreateDeferredContext(uint ContextFlags, ID3D11DeviceContext** ppDeferredContext)
@@ -274,7 +274,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, uint, ID3D11DeviceContext**, int>)(lpVtbl[27]))((ID3D11Device*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::OpenSharedResource"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::OpenSharedResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult OpenSharedResource(Handle hResource, Guid* ReturnedInterface, void** ppResource)
@@ -282,7 +282,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Handle, Guid*, void**, int>)(lpVtbl[28]))((ID3D11Device*)Unsafe.AsPointer(ref this), hResource, ReturnedInterface, ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckFormatSupport"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckFormatSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult CheckFormatSupport(Graphics.Dxgi.Common.Format Format, uint* pFormatSupport)
@@ -290,7 +290,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[29]))((ID3D11Device*)Unsafe.AsPointer(ref this), Format, pFormatSupport);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckMultisampleQualityLevels"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckMultisampleQualityLevels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult CheckMultisampleQualityLevels(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint* pNumQualityLevels)
@@ -298,7 +298,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Graphics.Dxgi.Common.Format, uint, uint*, int>)(lpVtbl[30]))((ID3D11Device*)Unsafe.AsPointer(ref this), Format, SampleCount, pNumQualityLevels);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckCounterInfo"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckCounterInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public void CheckCounterInfo(CounterInfo* pCounterInfo)
@@ -306,7 +306,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Device*, CounterInfo*, void>)(lpVtbl[31]))((ID3D11Device*)Unsafe.AsPointer(ref this), pCounterInfo);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckCounter"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckCounter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult CheckCounter(CounterDescription* pDesc, CounterType* pType, uint* pActiveCounters, byte* szName, uint* pNameLength, byte* szUnits, uint* pUnitsLength, byte* szDescription, uint* pDescriptionLength)
@@ -314,7 +314,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, CounterDescription*, CounterType*, uint*, byte*, uint*, byte*, uint*, byte*, uint*, int>)(lpVtbl[32]))((ID3D11Device*)Unsafe.AsPointer(ref this), pDesc, pType, pActiveCounters, szName, pNameLength, szUnits, pUnitsLength, szDescription, pDescriptionLength);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckFeatureSupport"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
@@ -322,7 +322,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Feature, void*, uint, int>)(lpVtbl[33]))((ID3D11Device*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetPrivateData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
@@ -330,7 +330,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Guid*, uint*, void*, int>)(lpVtbl[34]))((ID3D11Device*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::SetPrivateData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::SetPrivateData"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
@@ -338,7 +338,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Guid*, uint, void*, int>)(lpVtbl[35]))((ID3D11Device*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::SetPrivateDataInterface"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::SetPrivateDataInterface"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
@@ -346,7 +346,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Guid*, IUnknown*, int>)(lpVtbl[36]))((ID3D11Device*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetFeatureLevel"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetFeatureLevel"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
 	public Graphics.Direct3D.FeatureLevel GetFeatureLevel()
@@ -354,7 +354,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Graphics.Direct3D.FeatureLevel>)(lpVtbl[37]))((ID3D11Device*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetCreationFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetCreationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
 	public uint GetCreationFlags()
@@ -362,7 +362,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, uint>)(lpVtbl[38]))((ID3D11Device*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetDeviceRemovedReason"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetDeviceRemovedReason"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
 	public HResult GetDeviceRemovedReason()
@@ -370,7 +370,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, int>)(lpVtbl[39]))((ID3D11Device*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetImmediateContext"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetImmediateContext"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
 	public void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext)
@@ -378,7 +378,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Device*, ID3D11DeviceContext**, void>)(lpVtbl[40]))((ID3D11Device*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::SetExceptionMode"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::SetExceptionMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
 	public HResult SetExceptionMode(uint RaiseFlags)
@@ -386,7 +386,7 @@ public unsafe partial struct ID3D11Device : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, uint, int>)(lpVtbl[41]))((ID3D11Device*)Unsafe.AsPointer(ref this), RaiseFlags);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetExceptionMode"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetExceptionMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(42)]
 	public uint GetExceptionMode()

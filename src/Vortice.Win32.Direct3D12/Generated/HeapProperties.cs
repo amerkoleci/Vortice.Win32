@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES"]/*' />
 /// <unmanaged>D3D12_HEAP_PROPERTIES</unmanaged>
 public partial struct HeapProperties
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::Type"]/*' />
 	public HeapType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::CPUPageProperty"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::CPUPageProperty"]/*' />
 	public CpuPageProperty CPUPageProperty;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::MemoryPoolPreference"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::MemoryPoolPreference"]/*' />
 	public MemoryPool MemoryPoolPreference;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::CreationNodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::CreationNodeMask"]/*' />
 	public uint CreationNodeMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::VisibleNodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_PROPERTIES::VisibleNodeMask"]/*' />
 	public uint VisibleNodeMask;
 }

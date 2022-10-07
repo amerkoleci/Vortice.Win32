@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_DOUBLES"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_DOUBLES"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_DOUBLES</unmanaged>
 public partial struct FeatureDataDoubles
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_DOUBLES::DoublePrecisionFloatShaderOps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_DOUBLES::DoublePrecisionFloatShaderOps"]/*' />
 	public Bool32 DoublePrecisionFloatShaderOps;
 }

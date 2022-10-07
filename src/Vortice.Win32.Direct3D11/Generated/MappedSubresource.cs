@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAPPED_SUBRESOURCE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAPPED_SUBRESOURCE"]/*' />
 /// <unmanaged>D3D11_MAPPED_SUBRESOURCE</unmanaged>
 public partial struct MappedSubresource
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAPPED_SUBRESOURCE::pData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAPPED_SUBRESOURCE::pData"]/*' />
 	public unsafe void* pData;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAPPED_SUBRESOURCE::RowPitch"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAPPED_SUBRESOURCE::RowPitch"]/*' />
 	public uint RowPitch;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_MAPPED_SUBRESOURCE::DepthPitch"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAPPED_SUBRESOURCE::DepthPitch"]/*' />
 	public uint DepthPitch;
 }

@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS5</unmanaged>
 public partial struct FeatureDataD3D12Options5
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5::SRVOnlyTiledResourceTier3"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5::SRVOnlyTiledResourceTier3"]/*' />
 	public Bool32 SRVOnlyTiledResourceTier3;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5::RenderPassesTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5::RenderPassesTier"]/*' />
 	public RenderPassTier RenderPassesTier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5::RaytracingTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS5::RaytracingTier"]/*' />
 	public RaytracingTier RaytracingTier;
 }

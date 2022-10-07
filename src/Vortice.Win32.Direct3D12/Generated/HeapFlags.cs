@@ -9,57 +9,57 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS"]/*' />
 /// <unmanaged>D3D12_HEAP_FLAGS</unmanaged>
 [Flags]
 public enum HeapFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_SHARED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_SHARED"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_SHARED</unmanaged>
 	Shared = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_DENY_BUFFERS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_DENY_BUFFERS"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_DENY_BUFFERS</unmanaged>
 	DenyBuffers = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_DISPLAY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_DISPLAY"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_ALLOW_DISPLAY</unmanaged>
 	AllowDisplay = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_SHARED_CROSS_ADAPTER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_SHARED_CROSS_ADAPTER"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_SHARED_CROSS_ADAPTER</unmanaged>
 	SharedCrossAdapter = 32,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_DENY_RT_DS_TEXTURES"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_DENY_RT_DS_TEXTURES"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_DENY_RT_DS_TEXTURES</unmanaged>
 	DenyRtDSTextures = 64,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_DENY_NON_RT_DS_TEXTURES"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_DENY_NON_RT_DS_TEXTURES"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_DENY_NON_RT_DS_TEXTURES</unmanaged>
 	DenyNonRtDSTextures = 128,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_HARDWARE_PROTECTED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_HARDWARE_PROTECTED"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_HARDWARE_PROTECTED</unmanaged>
 	HardwareProtected = 256,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_WRITE_WATCH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_WRITE_WATCH"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_ALLOW_WRITE_WATCH</unmanaged>
 	AllowWriteWatch = 512,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_SHADER_ATOMICS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_SHADER_ATOMICS"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_ALLOW_SHADER_ATOMICS</unmanaged>
 	AllowShaderAtomics = 1024,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_CREATE_NOT_RESIDENT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_CREATE_NOT_RESIDENT"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_CREATE_NOT_RESIDENT</unmanaged>
 	CreateNotResident = 2048,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_CREATE_NOT_ZEROED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_CREATE_NOT_ZEROED"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_CREATE_NOT_ZEROED</unmanaged>
 	CreateNotZeroed = 4096,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ALL_BUFFERS_AND_TEXTURES"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ALL_BUFFERS_AND_TEXTURES"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_ALLOW_ALL_BUFFERS_AND_TEXTURES</unmanaged>
 	AllowAllBuffersAndTextures = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ONLY_BUFFERS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ONLY_BUFFERS"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_ALLOW_ONLY_BUFFERS</unmanaged>
 	AllowOnlyBuffers = 192,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ONLY_NON_RT_DS_TEXTURES"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ONLY_NON_RT_DS_TEXTURES"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_ALLOW_ONLY_NON_RT_DS_TEXTURES</unmanaged>
 	AllowOnlyNonRtDSTextures = 68,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ONLY_RT_DS_TEXTURES"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ONLY_RT_DS_TEXTURES"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_ALLOW_ONLY_RT_DS_TEXTURES</unmanaged>
 	AllowOnlyRtDSTextures = 132,
 }

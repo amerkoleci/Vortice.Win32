@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS"]/*' />
 /// <unmanaged>D3D12_GPU_BASED_VALIDATION_FLAGS</unmanaged>
 [Flags]
 public enum GpuBasedValidationFlags : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS::D3D12_GPU_BASED_VALIDATION_FLAGS_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS::D3D12_GPU_BASED_VALIDATION_FLAGS_NONE"]/*' />
 	/// <unmanaged>D3D12_GPU_BASED_VALIDATION_FLAGS_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS::D3D12_GPU_BASED_VALIDATION_FLAGS_DISABLE_STATE_TRACKING"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS::D3D12_GPU_BASED_VALIDATION_FLAGS_DISABLE_STATE_TRACKING"]/*' />
 	/// <unmanaged>D3D12_GPU_BASED_VALIDATION_FLAGS_DISABLE_STATE_TRACKING</unmanaged>
 	DisableStateTracking = 1,
 }

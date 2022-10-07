@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION"]/*' />
 /// <unmanaged>D3D12_TEXTURE_COPY_LOCATION</unmanaged>
 public partial struct TextureCopyLocation
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION::pResource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION::pResource"]/*' />
 	public unsafe ID3D12Resource* pResource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION::Type"]/*' />
 	public TextureCopyType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_LOCATION::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -45,11 +45,11 @@ public partial struct TextureCopyLocation
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::PlacedFootprint"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::PlacedFootprint"]/*' />
 		[FieldOffset(0)]
 		public PlacedSubresourceFootprint PlacedFootprint;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::SubresourceIndex"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::SubresourceIndex"]/*' />
 		[FieldOffset(0)]
 		public uint SubresourceIndex;
 	}

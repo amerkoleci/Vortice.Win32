@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS"]/*' />
 /// <unmanaged>D3D12_MESSAGE_CALLBACK_FLAGS</unmanaged>
 [Flags]
 public enum MessageCallbackFlags : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS::D3D12_MESSAGE_CALLBACK_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS::D3D12_MESSAGE_CALLBACK_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CALLBACK_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS::D3D12_MESSAGE_CALLBACK_IGNORE_FILTERS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS::D3D12_MESSAGE_CALLBACK_IGNORE_FILTERS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CALLBACK_IGNORE_FILTERS</unmanaged>
 	IgnoreFilters = 1,
 }

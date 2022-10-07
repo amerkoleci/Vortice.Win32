@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_DESC1</unmanaged>
 public partial struct VideoDecoderBufferDescription1
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::BufferType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::BufferType"]/*' />
 	public VideoDecoderBufferType BufferType;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::DataOffset"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::DataOffset"]/*' />
 	public uint DataOffset;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::DataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::DataSize"]/*' />
 	public uint DataSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::pIV"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::pIV"]/*' />
 	public unsafe void* pIV;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::IVSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::IVSize"]/*' />
 	public uint IVSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::pSubSampleMappingBlock"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::pSubSampleMappingBlock"]/*' />
 	public unsafe VideoDecoderSubSampleMappingBlock* pSubSampleMappingBlock;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::SubSampleMappingCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC1::SubSampleMappingCount"]/*' />
 	public uint SubSampleMappingCount;
 }

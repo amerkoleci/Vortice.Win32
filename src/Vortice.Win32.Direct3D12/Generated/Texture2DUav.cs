@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV"]/*' />
 /// <unmanaged>D3D12_TEX2D_UAV</unmanaged>
 public partial struct Texture2DUav
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV::MipSlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV::MipSlice"]/*' />
 	public uint MipSlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV::PlaneSlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_UAV::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 }

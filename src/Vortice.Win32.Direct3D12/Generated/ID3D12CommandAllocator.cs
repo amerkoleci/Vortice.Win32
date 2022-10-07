@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandAllocator"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandAllocator"]/*' />
 /// <unmanaged>ID3D12CommandAllocator</unmanaged>
 [Guid("6102dee4-af59-4b09-b999-b44d73f09b24")]
 [NativeTypeName("struct ID3D12CommandAllocator : ID3D12Pageable")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12CommandAllocator : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandAllocator*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12CommandAllocator*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandAllocator::Reset"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandAllocator::Reset"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Reset()

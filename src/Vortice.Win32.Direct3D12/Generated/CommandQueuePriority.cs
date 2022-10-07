@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY"]/*' />
 /// <unmanaged>D3D12_COMMAND_QUEUE_PRIORITY</unmanaged>
 public enum CommandQueuePriority : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY::D3D12_COMMAND_QUEUE_PRIORITY_NORMAL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY::D3D12_COMMAND_QUEUE_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>D3D12_COMMAND_QUEUE_PRIORITY_NORMAL</unmanaged>
 	Normal = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY::D3D12_COMMAND_QUEUE_PRIORITY_HIGH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY::D3D12_COMMAND_QUEUE_PRIORITY_HIGH"]/*' />
 	/// <unmanaged>D3D12_COMMAND_QUEUE_PRIORITY_HIGH</unmanaged>
 	High = 100,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY::D3D12_COMMAND_QUEUE_PRIORITY_GLOBAL_REALTIME"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY::D3D12_COMMAND_QUEUE_PRIORITY_GLOBAL_REALTIME"]/*' />
 	/// <unmanaged>D3D12_COMMAND_QUEUE_PRIORITY_GLOBAL_REALTIME</unmanaged>
 	GlobalRealtime = 10000,
 }

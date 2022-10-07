@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT"]/*' />
 /// <unmanaged>D3D12_STATE_SUBOBJECT</unmanaged>
 public partial struct StateSubObject
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT::Type"]/*' />
 	public StateSubObjectType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT::pDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT::pDesc"]/*' />
 	public unsafe void* pDesc;
 }

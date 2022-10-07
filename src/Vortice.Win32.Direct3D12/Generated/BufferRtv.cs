@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_RTV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_RTV"]/*' />
 /// <unmanaged>D3D12_BUFFER_RTV</unmanaged>
 public partial struct BufferRtv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_RTV::FirstElement"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_RTV::FirstElement"]/*' />
 	public ulong FirstElement;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_RTV::NumElements"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_RTV::NumElements"]/*' />
 	public uint NumElements;
 }

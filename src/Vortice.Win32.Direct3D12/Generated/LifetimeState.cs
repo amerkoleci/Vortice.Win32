@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LIFETIME_STATE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIFETIME_STATE"]/*' />
 /// <unmanaged>D3D12_LIFETIME_STATE</unmanaged>
 public enum LifetimeState : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LIFETIME_STATE::D3D12_LIFETIME_STATE_IN_USE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIFETIME_STATE::D3D12_LIFETIME_STATE_IN_USE"]/*' />
 	/// <unmanaged>D3D12_LIFETIME_STATE_IN_USE</unmanaged>
 	InUse = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LIFETIME_STATE::D3D12_LIFETIME_STATE_NOT_IN_USE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIFETIME_STATE::D3D12_LIFETIME_STATE_NOT_IN_USE"]/*' />
 	/// <unmanaged>D3D12_LIFETIME_STATE_NOT_IN_USE</unmanaged>
 	NotInUse = 1,
 }

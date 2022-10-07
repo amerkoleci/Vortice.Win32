@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1"]/*' />
 /// <unmanaged>D3D12_PROTECTED_RESOURCE_SESSION_DESC1</unmanaged>
 public partial struct ProtectedResourceSessionDescription1
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1::NodeMask"]/*' />
 	public uint NodeMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1::Flags"]/*' />
 	public ProtectedResourceSessionFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1::ProtectionType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_DESC1::ProtectionType"]/*' />
 	public Guid ProtectionType;
 }

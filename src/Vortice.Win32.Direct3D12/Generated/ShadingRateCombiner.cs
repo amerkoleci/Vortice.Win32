@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER"]/*' />
 /// <unmanaged>D3D12_SHADING_RATE_COMBINER</unmanaged>
 public enum ShadingRateCombiner : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_PASSTHROUGH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_PASSTHROUGH"]/*' />
 	/// <unmanaged>D3D12_SHADING_RATE_COMBINER_PASSTHROUGH</unmanaged>
 	Passthrough = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_OVERRIDE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_OVERRIDE"]/*' />
 	/// <unmanaged>D3D12_SHADING_RATE_COMBINER_OVERRIDE</unmanaged>
 	Override = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_MIN"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_MIN"]/*' />
 	/// <unmanaged>D3D12_SHADING_RATE_COMBINER_MIN</unmanaged>
 	Min = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_MAX"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_MAX"]/*' />
 	/// <unmanaged>D3D12_SHADING_RATE_COMBINER_MAX</unmanaged>
 	Max = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_SUM"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_SUM"]/*' />
 	/// <unmanaged>D3D12_SHADING_RATE_COMBINER_SUM</unmanaged>
 	Sum = 4,
 }

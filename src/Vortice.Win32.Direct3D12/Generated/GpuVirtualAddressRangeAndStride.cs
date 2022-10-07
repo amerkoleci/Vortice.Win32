@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE"]/*' />
 /// <unmanaged>D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE</unmanaged>
 public partial struct GpuVirtualAddressRangeAndStride
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE::StartAddress"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE::StartAddress"]/*' />
 	public ulong StartAddress;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE::SizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE::SizeInBytes"]/*' />
 	public ulong SizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE::StrideInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_VIRTUAL_ADDRESS_RANGE_AND_STRIDE::StrideInBytes"]/*' />
 	public ulong StrideInBytes;
 }

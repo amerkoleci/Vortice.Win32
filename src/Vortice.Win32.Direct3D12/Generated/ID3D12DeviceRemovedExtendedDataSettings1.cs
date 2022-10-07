@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings1"]/*' />
 /// <unmanaged>ID3D12DeviceRemovedExtendedDataSettings1</unmanaged>
 [Guid("dbd5ae51-3317-4f0a-adf9-1d7cedcaae0b")]
 [NativeTypeName("struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12DeviceRemovedExtendedDataSettings")]
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : INativeG
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings1::SetBreadcrumbContextEnablement"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings1::SetBreadcrumbContextEnablement"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void SetBreadcrumbContextEnablement(DredEnablement Enablement)

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12CommandSignature"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12CommandSignature"]/*' />
 /// <unmanaged>ID3D12CommandSignature</unmanaged>
 [Guid("c36a797c-ec80-4f0a-8985-a7b2475082d1")]
 [NativeTypeName("struct ID3D12CommandSignature : ID3D12Pageable")]

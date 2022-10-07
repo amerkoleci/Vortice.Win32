@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER"]/*' />
 /// <unmanaged>D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER</unmanaged>
 public partial struct SerializedRaytracingAccelerationStructureHeader
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::DriverMatchingIdentifier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::DriverMatchingIdentifier"]/*' />
 	public SerializedDataDriverMatchingIdentifier DriverMatchingIdentifier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::SerializedSizeInBytesIncludingHeader"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::SerializedSizeInBytesIncludingHeader"]/*' />
 	public ulong SerializedSizeInBytesIncludingHeader;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::DeserializedSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::DeserializedSizeInBytes"]/*' />
 	public ulong DeserializedSizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::NumBottomLevelAccelerationStructurePointersAfterHeader"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_RAYTRACING_ACCELERATION_STRUCTURE_HEADER::NumBottomLevelAccelerationStructurePointersAfterHeader"]/*' />
 	public ulong NumBottomLevelAccelerationStructurePointersAfterHeader;
 }

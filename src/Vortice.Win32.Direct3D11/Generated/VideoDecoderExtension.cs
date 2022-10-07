@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_EXTENSION</unmanaged>
 public partial struct VideoDecoderExtension
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::Function"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::Function"]/*' />
 	public uint Function;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::pPrivateInputData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::pPrivateInputData"]/*' />
 	public unsafe void* pPrivateInputData;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::PrivateInputDataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::PrivateInputDataSize"]/*' />
 	public uint PrivateInputDataSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::pPrivateOutputData"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::pPrivateOutputData"]/*' />
 	public unsafe void* pPrivateOutputData;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::PrivateOutputDataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::PrivateOutputDataSize"]/*' />
 	public uint PrivateOutputDataSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::ResourceCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::ResourceCount"]/*' />
 	public uint ResourceCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::ppResourceList"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_EXTENSION::ppResourceList"]/*' />
 	public unsafe ID3D11Resource* ppResourceList;
 }

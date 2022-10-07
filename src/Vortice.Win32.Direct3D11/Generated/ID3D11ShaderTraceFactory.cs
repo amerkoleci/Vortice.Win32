@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory"]/*' />
 /// <unmanaged>ID3D11ShaderTraceFactory</unmanaged>
 [Guid("1fbad429-66ab-41cc-9617-667ac10e4459")]
 [NativeTypeName("struct ID3D11ShaderTraceFactory : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11ShaderTraceFactory : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory::CreateShaderTrace"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory::CreateShaderTrace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateShaderTrace(IUnknown* pShader, ShaderTraceDescription* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace)

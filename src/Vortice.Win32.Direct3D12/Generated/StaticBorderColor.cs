@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR"]/*' />
 /// <unmanaged>D3D12_STATIC_BORDER_COLOR</unmanaged>
 public enum StaticBorderColor : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_TRANSPARENT_BLACK"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_TRANSPARENT_BLACK"]/*' />
 	/// <unmanaged>D3D12_STATIC_BORDER_COLOR_TRANSPARENT_BLACK</unmanaged>
 	TransparentBlack = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_OPAQUE_BLACK"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_OPAQUE_BLACK"]/*' />
 	/// <unmanaged>D3D12_STATIC_BORDER_COLOR_OPAQUE_BLACK</unmanaged>
 	OpaqueBlack = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_OPAQUE_WHITE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_OPAQUE_WHITE"]/*' />
 	/// <unmanaged>D3D12_STATIC_BORDER_COLOR_OPAQUE_WHITE</unmanaged>
 	OpaqueWhite = 2,
 }

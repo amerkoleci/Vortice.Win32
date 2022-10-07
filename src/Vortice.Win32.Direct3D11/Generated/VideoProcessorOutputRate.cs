@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_OUTPUT_RATE</unmanaged>
 public enum VideoProcessorOutputRate : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE::D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_NORMAL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE::D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_NORMAL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_NORMAL</unmanaged>
 	Normal = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE::D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_HALF"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE::D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_HALF"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_HALF</unmanaged>
 	Half = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE::D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_CUSTOM"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE::D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_CUSTOM"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_CUSTOM</unmanaged>
 	Custom = 2,
 }

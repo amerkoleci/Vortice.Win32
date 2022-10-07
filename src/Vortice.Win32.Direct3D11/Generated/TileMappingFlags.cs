@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG"]/*' />
 /// <unmanaged>D3D11_TILE_MAPPING_FLAG</unmanaged>
 [Flags]
 public enum TileMappingFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG::D3D11_TILE_MAPPING_NO_OVERWRITE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG::D3D11_TILE_MAPPING_NO_OVERWRITE"]/*' />
 	/// <unmanaged>D3D11_TILE_MAPPING_NO_OVERWRITE</unmanaged>
 	NoOverwrite = 1,
 }

@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_FLAGS"]/*' />
 /// <unmanaged>D3D12_CLEAR_FLAGS</unmanaged>
 [Flags]
 public enum ClearFlags : uint
 {
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_FLAGS::D3D12_CLEAR_FLAG_DEPTH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_FLAGS::D3D12_CLEAR_FLAG_DEPTH"]/*' />
 	/// <unmanaged>D3D12_CLEAR_FLAG_DEPTH</unmanaged>
 	Depth = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_FLAGS::D3D12_CLEAR_FLAG_STENCIL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_FLAGS::D3D12_CLEAR_FLAG_STENCIL"]/*' />
 	/// <unmanaged>D3D12_CLEAR_FLAG_STENCIL</unmanaged>
 	Stencil = 2,
 }

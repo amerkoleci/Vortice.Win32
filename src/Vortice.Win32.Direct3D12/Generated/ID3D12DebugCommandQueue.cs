@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandQueue"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandQueue"]/*' />
 /// <unmanaged>ID3D12DebugCommandQueue</unmanaged>
 [Guid("09e0bf36-54ac-484f-8847-4baeeab6053a")]
 [NativeTypeName("struct ID3D12DebugCommandQueue : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12DebugCommandQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandQueue::AssertResourceState"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandQueue::AssertResourceState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public Bool32 AssertResourceState(ID3D12Resource* pResource, uint Subresource, uint State)

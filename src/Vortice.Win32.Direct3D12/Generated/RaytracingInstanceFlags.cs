@@ -9,24 +9,24 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAGS</unmanaged>
 [Flags]
 public enum RaytracingInstanceFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_CULL_DISABLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_CULL_DISABLE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_CULL_DISABLE</unmanaged>
 	TriangleCullDisable = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_FRONT_COUNTERCLOCKWISE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_FRONT_COUNTERCLOCKWISE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_TRIANGLE_FRONT_COUNTERCLOCKWISE</unmanaged>
 	TriangleFrontCounterclockwise = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OPAQUE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OPAQUE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OPAQUE</unmanaged>
 	ForceOpaque = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_NON_OPAQUE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_NON_OPAQUE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_NON_OPAQUE</unmanaged>
 	ForceNonOpaque = 8,
 }

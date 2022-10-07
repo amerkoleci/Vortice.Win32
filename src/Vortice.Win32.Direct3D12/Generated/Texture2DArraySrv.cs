@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_SRV</unmanaged>
 public partial struct Texture2DArraySrv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::MostDetailedMip"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::MipLevels"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::MipLevels"]/*' />
 	public uint MipLevels;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::FirstArraySlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::FirstArraySlice"]/*' />
 	public uint FirstArraySlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::ArraySize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::ArraySize"]/*' />
 	public uint ArraySize;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::PlaneSlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::ResourceMinLODClamp"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_SRV::ResourceMinLODClamp"]/*' />
 	public float ResourceMinLODClamp;
 }

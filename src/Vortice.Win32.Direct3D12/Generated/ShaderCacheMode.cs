@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_MODE</unmanaged>
 public enum ShaderCacheMode : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE::D3D12_SHADER_CACHE_MODE_MEMORY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE::D3D12_SHADER_CACHE_MODE_MEMORY"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_MODE_MEMORY</unmanaged>
 	Memory = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE::D3D12_SHADER_CACHE_MODE_DISK"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE::D3D12_SHADER_CACHE_MODE_DISK"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_MODE_DISK</unmanaged>
 	Disk = 1,
 }

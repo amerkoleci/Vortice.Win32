@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO"]/*' />
 /// <unmanaged>D3D12_PACKED_MIP_INFO</unmanaged>
 public partial struct PackedMipInfo
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::NumStandardMips"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::NumStandardMips"]/*' />
 	public byte NumStandardMips;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::NumPackedMips"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::NumPackedMips"]/*' />
 	public byte NumPackedMips;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::NumTilesForPackedMips"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::NumTilesForPackedMips"]/*' />
 	public uint NumTilesForPackedMips;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::StartTileIndexInOverallResource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PACKED_MIP_INFO::StartTileIndexInOverallResource"]/*' />
 	public uint StartTileIndexInOverallResource;
 }

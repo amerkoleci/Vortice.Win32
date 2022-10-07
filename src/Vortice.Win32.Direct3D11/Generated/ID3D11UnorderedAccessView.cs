@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11UnorderedAccessView"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11UnorderedAccessView"]/*' />
 /// <unmanaged>ID3D11UnorderedAccessView</unmanaged>
 [Guid("28acf509-7f5c-48f6-8611-f316010a6380")]
 [NativeTypeName("struct ID3D11UnorderedAccessView : ID3D11View")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11UnorderedAccessView : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView*, ID3D11Resource**, void>)(lpVtbl[7]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11UnorderedAccessView::GetDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11UnorderedAccessView::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc(UnorderedAccessViewDescription* pDesc)

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_ROOT_SIGNATURE_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_ROOT_SIGNATURE_DESC"]/*' />
 /// <unmanaged>D3D12_VERSIONED_ROOT_SIGNATURE_DESC</unmanaged>
 public partial struct VersionedRootSignatureDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_ROOT_SIGNATURE_DESC::Version"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_ROOT_SIGNATURE_DESC::Version"]/*' />
 	public RootSignatureVersion Version;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_ROOT_SIGNATURE_DESC::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_ROOT_SIGNATURE_DESC::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -42,11 +42,11 @@ public partial struct VersionedRootSignatureDescription
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Desc_1_0"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Desc_1_0"]/*' />
 		[FieldOffset(0)]
 		public RootSignatureDescription Desc_1_0;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Desc_1_1"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Desc_1_1"]/*' />
 		[FieldOffset(0)]
 		public RootSignatureDescription1 Desc_1_1;
 	}

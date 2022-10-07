@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_EXISTING_HEAPS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_EXISTING_HEAPS"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_EXISTING_HEAPS</unmanaged>
 public partial struct FeatureDataExistingHeaps
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_EXISTING_HEAPS::Supported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_EXISTING_HEAPS::Supported"]/*' />
 	public Bool32 Supported;
 }

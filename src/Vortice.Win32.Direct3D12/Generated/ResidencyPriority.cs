@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY"]/*' />
 /// <unmanaged>D3D12_RESIDENCY_PRIORITY</unmanaged>
 public enum ResidencyPriority : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_MINIMUM"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_MINIMUM"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_PRIORITY_MINIMUM</unmanaged>
 	Minimum = 671088640,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_LOW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_LOW"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_PRIORITY_LOW</unmanaged>
 	Low = 1342177280,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_NORMAL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_PRIORITY_NORMAL</unmanaged>
 	Normal = 2013265920,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_HIGH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_HIGH"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_PRIORITY_HIGH</unmanaged>
 	High = -1610547200,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_MAXIMUM"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_MAXIMUM"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_PRIORITY_MAXIMUM</unmanaged>
 	Maximum = -939524096,
 }

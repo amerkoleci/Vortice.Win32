@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION"]/*' />
 /// <unmanaged>D3D12_DRED_VERSION</unmanaged>
 public enum DredVersion : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_0"]/*' />
 	/// <unmanaged>D3D12_DRED_VERSION_1_0</unmanaged>
 	V1_0 = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_1"]/*' />
 	/// <unmanaged>D3D12_DRED_VERSION_1_1</unmanaged>
 	V1_1 = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_2"]/*' />
 	/// <unmanaged>D3D12_DRED_VERSION_1_2</unmanaged>
 	V1_2 = 3,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_3"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_3"]/*' />
 	/// <unmanaged>D3D12_DRED_VERSION_1_3</unmanaged>
 	V1_3 = 4,
 }

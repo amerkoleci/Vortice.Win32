@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY"]/*' />
 /// <unmanaged>D3D12_CPU_PAGE_PROPERTY</unmanaged>
 public enum CpuPageProperty : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_UNKNOWN"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_CPU_PAGE_PROPERTY_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_NOT_AVAILABLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_NOT_AVAILABLE"]/*' />
 	/// <unmanaged>D3D12_CPU_PAGE_PROPERTY_NOT_AVAILABLE</unmanaged>
 	NotAvailable = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_WRITE_COMBINE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_WRITE_COMBINE"]/*' />
 	/// <unmanaged>D3D12_CPU_PAGE_PROPERTY_WRITE_COMBINE</unmanaged>
 	WriteCombine = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_WRITE_BACK"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_WRITE_BACK"]/*' />
 	/// <unmanaged>D3D12_CPU_PAGE_PROPERTY_WRITE_BACK</unmanaged>
 	WriteBack = 3,
 }

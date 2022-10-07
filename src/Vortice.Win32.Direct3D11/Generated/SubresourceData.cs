@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA"]/*' />
 /// <unmanaged>D3D11_SUBRESOURCE_DATA</unmanaged>
 public partial struct SubresourceData
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA::pSysMem"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA::pSysMem"]/*' />
 	public unsafe void* pSysMem;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA::SysMemPitch"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA::SysMemPitch"]/*' />
 	public uint SysMemPitch;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA::SysMemSlicePitch"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SUBRESOURCE_DATA::SysMemSlicePitch"]/*' />
 	public uint SysMemSlicePitch;
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VALUE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VALUE"]/*' />
 /// <unmanaged>D3D12_DEPTH_STENCIL_VALUE</unmanaged>
 public partial struct DepthStencilValue
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VALUE::Depth"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VALUE::Depth"]/*' />
 	public float Depth;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VALUE::Stencil"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_STENCIL_VALUE::Stencil"]/*' />
 	public byte Stencil;
 }

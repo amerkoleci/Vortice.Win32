@@ -9,26 +9,26 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE"]/*' />
 /// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE</unmanaged>
 public enum TraceGSInputPrimitive : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_UNDEFINED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_UNDEFINED"]/*' />
 	/// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE_UNDEFINED</unmanaged>
 	Undefined = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_POINT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_POINT"]/*' />
 	/// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE_POINT</unmanaged>
 	Point = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_LINE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_LINE"]/*' />
 	/// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE_LINE</unmanaged>
 	Line = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_TRIANGLE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_TRIANGLE"]/*' />
 	/// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE_TRIANGLE</unmanaged>
 	Triangle = 3,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_LINE_ADJ"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_LINE_ADJ"]/*' />
 	/// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE_LINE_ADJ</unmanaged>
 	LineAdj = 6,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_TRIANGLE_ADJ"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_TRIANGLE_ADJ"]/*' />
 	/// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE_TRIANGLE_ADJ</unmanaged>
 	TriangleAdj = 7,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue"]/*' />
 /// <unmanaged>ID3D12InfoQueue</unmanaged>
 [Guid("0742a90b-c387-483f-b946-30a7e4e61458")]
 [NativeTypeName("struct ID3D12InfoQueue : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetMessageCountLimit"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetMessageCountLimit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult SetMessageCountLimit(ulong MessageCountLimit)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, ulong, int>)(lpVtbl[3]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), MessageCountLimit);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::ClearStoredMessages"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::ClearStoredMessages"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void ClearStoredMessages()
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, void>)(lpVtbl[4]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetMessage"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetMessage(ulong MessageIndex, Message* pMessage, nuint* pMessageByteLength)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, ulong, Message*, nuint*, int>)(lpVtbl[5]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumMessagesAllowedByStorageFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumMessagesAllowedByStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public ulong GetNumMessagesAllowedByStorageFilter()
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, ulong>)(lpVtbl[6]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumMessagesDeniedByStorageFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumMessagesDeniedByStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public ulong GetNumMessagesDeniedByStorageFilter()
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, ulong>)(lpVtbl[7]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumStoredMessages"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumStoredMessages"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public ulong GetNumStoredMessages()
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, ulong>)(lpVtbl[8]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumStoredMessagesAllowedByRetrievalFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumStoredMessagesAllowedByRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public ulong GetNumStoredMessagesAllowedByRetrievalFilter()
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, ulong>)(lpVtbl[9]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumMessagesDiscardedByMessageCountLimit"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetNumMessagesDiscardedByMessageCountLimit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public ulong GetNumMessagesDiscardedByMessageCountLimit()
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, ulong>)(lpVtbl[10]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetMessageCountLimit"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetMessageCountLimit"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public ulong GetMessageCountLimit()
@@ -146,7 +146,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, ulong>)(lpVtbl[11]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddStorageFilterEntries"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddStorageFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult AddStorageFilterEntries(InfoQueueFilter* pFilter)
@@ -154,7 +154,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[12]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetStorageFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult GetStorageFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength)
@@ -162,7 +162,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::ClearStorageFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::ClearStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public void ClearStorageFilter()
@@ -170,7 +170,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, void>)(lpVtbl[14]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushEmptyStorageFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushEmptyStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
 	public HResult PushEmptyStorageFilter()
@@ -178,7 +178,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, int>)(lpVtbl[15]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushCopyOfStorageFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushCopyOfStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
 	public HResult PushCopyOfStorageFilter()
@@ -186,7 +186,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, int>)(lpVtbl[16]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushStorageFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
 	public HResult PushStorageFilter(InfoQueueFilter* pFilter)
@@ -194,7 +194,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[17]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PopStorageFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PopStorageFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
 	public void PopStorageFilter()
@@ -202,7 +202,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, void>)(lpVtbl[18]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetStorageFilterStackSize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetStorageFilterStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
 	public uint GetStorageFilterStackSize()
@@ -210,7 +210,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, uint>)(lpVtbl[19]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddRetrievalFilterEntries"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddRetrievalFilterEntries"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
 	public HResult AddRetrievalFilterEntries(InfoQueueFilter* pFilter)
@@ -218,7 +218,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[20]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetRetrievalFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
 	public HResult GetRetrievalFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength)
@@ -226,7 +226,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[21]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::ClearRetrievalFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::ClearRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
 	public void ClearRetrievalFilter()
@@ -234,7 +234,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, void>)(lpVtbl[22]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushEmptyRetrievalFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushEmptyRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
 	public HResult PushEmptyRetrievalFilter()
@@ -242,7 +242,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, int>)(lpVtbl[23]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushCopyOfRetrievalFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushCopyOfRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
 	public HResult PushCopyOfRetrievalFilter()
@@ -250,7 +250,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, int>)(lpVtbl[24]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushRetrievalFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PushRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
 	public HResult PushRetrievalFilter(InfoQueueFilter* pFilter)
@@ -258,7 +258,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[25]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PopRetrievalFilter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::PopRetrievalFilter"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
 	public void PopRetrievalFilter()
@@ -266,7 +266,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, void>)(lpVtbl[26]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetRetrievalFilterStackSize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetRetrievalFilterStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
 	public uint GetRetrievalFilterStackSize()
@@ -274,7 +274,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, uint>)(lpVtbl[27]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddMessage"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
 	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, sbyte* pDescription)
@@ -282,7 +282,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageCategory, MessageSeverity, MessageId, sbyte*, int>)(lpVtbl[28]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddApplicationMessage"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
 	public HResult AddApplicationMessage(MessageSeverity Severity, sbyte* pDescription)
@@ -290,7 +290,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageSeverity, sbyte*, int>)(lpVtbl[29]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnCategory"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
 	public HResult SetBreakOnCategory(MessageCategory Category, Bool32 bEnable)
@@ -298,7 +298,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageCategory, Bool32, int>)(lpVtbl[30]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category, bEnable);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnSeverity"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
 	public HResult SetBreakOnSeverity(MessageSeverity Severity, Bool32 bEnable)
@@ -306,7 +306,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageSeverity, Bool32, int>)(lpVtbl[31]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity, bEnable);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnID"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetBreakOnID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
 	public HResult SetBreakOnID(MessageId ID, Bool32 bEnable)
@@ -314,7 +314,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageId, Bool32, int>)(lpVtbl[32]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), ID, bEnable);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnCategory"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnCategory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
 	public Bool32 GetBreakOnCategory(MessageCategory Category)
@@ -322,7 +322,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageCategory, Bool32>)(lpVtbl[33]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Category);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnSeverity"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnSeverity"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
 	public Bool32 GetBreakOnSeverity(MessageSeverity Severity)
@@ -330,7 +330,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageSeverity, Bool32>)(lpVtbl[34]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), Severity);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnID"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetBreakOnID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
 	public Bool32 GetBreakOnID(MessageId ID)
@@ -338,7 +338,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, MessageId, Bool32>)(lpVtbl[35]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), ID);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetMuteDebugOutput"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::SetMuteDebugOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
 	public void SetMuteDebugOutput(Bool32 bMute)
@@ -346,7 +346,7 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, Bool32, void>)(lpVtbl[36]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this), bMute);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetMuteDebugOutput"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12InfoQueue::GetMuteDebugOutput"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
 	public Bool32 GetMuteDebugOutput()

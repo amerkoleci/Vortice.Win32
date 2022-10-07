@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug"]/*' />
 /// <unmanaged>ID3D12Debug</unmanaged>
 [Guid("344488b7-6846-474b-b989-f027448245e0")]
 [NativeTypeName("struct ID3D12Debug : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12Debug : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug::EnableDebugLayer"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug::EnableDebugLayer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void EnableDebugLayer()

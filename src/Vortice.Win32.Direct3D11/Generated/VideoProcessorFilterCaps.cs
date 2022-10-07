@@ -9,32 +9,32 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS</unmanaged>
 public enum VideoProcessorFilterCaps : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_BRIGHTNESS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_BRIGHTNESS"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_BRIGHTNESS</unmanaged>
 	Brightness = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_CONTRAST"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_CONTRAST"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_CONTRAST</unmanaged>
 	Contrast = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_HUE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_HUE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_HUE</unmanaged>
 	Hue = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_SATURATION"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_SATURATION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_SATURATION</unmanaged>
 	Saturation = 8,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_NOISE_REDUCTION"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_NOISE_REDUCTION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_NOISE_REDUCTION</unmanaged>
 	NoiseReduction = 16,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_EDGE_ENHANCEMENT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_EDGE_ENHANCEMENT"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_EDGE_ENHANCEMENT</unmanaged>
 	EdgeEnhancement = 32,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_ANAMORPHIC_SCALING"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_ANAMORPHIC_SCALING"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_ANAMORPHIC_SCALING</unmanaged>
 	AnamorphicScaling = 64,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_STEREO_ADJUSTMENT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_STEREO_ADJUSTMENT"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_STEREO_ADJUSTMENT</unmanaged>
 	StereoAdjustment = 128,
 }

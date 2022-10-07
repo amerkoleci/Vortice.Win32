@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION"]/*' />
 /// <unmanaged>D3D11_VPOV_DIMENSION</unmanaged>
 public enum VpovDimension : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION::D3D11_VPOV_DIMENSION_UNKNOWN"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION::D3D11_VPOV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_VPOV_DIMENSION_UNKNOWN</unmanaged>
 	Unknown = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION::D3D11_VPOV_DIMENSION_TEXTURE2D"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION::D3D11_VPOV_DIMENSION_TEXTURE2D"]/*' />
 	/// <unmanaged>D3D11_VPOV_DIMENSION_TEXTURE2D</unmanaged>
 	Texture2D = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION::D3D11_VPOV_DIMENSION_TEXTURE2DARRAY"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION::D3D11_VPOV_DIMENSION_TEXTURE2DARRAY"]/*' />
 	/// <unmanaged>D3D11_VPOV_DIMENSION_TEXTURE2DARRAY</unmanaged>
 	Texture2DArray = 2,
 }

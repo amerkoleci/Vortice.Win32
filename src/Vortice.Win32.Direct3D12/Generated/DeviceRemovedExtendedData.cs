@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA"]/*' />
 /// <unmanaged>D3D12_DEVICE_REMOVED_EXTENDED_DATA</unmanaged>
 public partial struct DeviceRemovedExtendedData
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA::Flags"]/*' />
 	public DredFlags Flags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA::pHeadAutoBreadcrumbNode"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_REMOVED_EXTENDED_DATA::pHeadAutoBreadcrumbNode"]/*' />
 	public unsafe AutoBreadcrumbNode* pHeadAutoBreadcrumbNode;
 }

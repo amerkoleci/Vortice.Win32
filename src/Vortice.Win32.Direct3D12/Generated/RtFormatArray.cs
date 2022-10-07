@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RT_FORMAT_ARRAY"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RT_FORMAT_ARRAY"]/*' />
 /// <unmanaged>D3D12_RT_FORMAT_ARRAY</unmanaged>
 public partial struct RtFormatArray
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RT_FORMAT_ARRAY::RTFormats"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RT_FORMAT_ARRAY::RTFormats"]/*' />
 	public RTFormats__FixedBuffer RTFormats;
 
 	public unsafe struct RTFormats__FixedBuffer
@@ -45,6 +45,6 @@ public partial struct RtFormatArray
 		}
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RT_FORMAT_ARRAY::NumRenderTargets"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RT_FORMAT_ARRAY::NumRenderTargets"]/*' />
 	public uint NumRenderTargets;
 }

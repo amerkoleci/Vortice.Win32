@@ -9,106 +9,106 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC"]/*' />
 /// <unmanaged>D3D11_FUNCTION_DESC</unmanaged>
 public partial struct FunctionDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Version"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Version"]/*' />
 	public uint Version;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Creator"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Creator"]/*' />
 	public unsafe sbyte* Creator;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Flags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Flags"]/*' />
 	public uint Flags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::ConstantBuffers"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::ConstantBuffers"]/*' />
 	public uint ConstantBuffers;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::BoundResources"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::BoundResources"]/*' />
 	public uint BoundResources;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::InstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::InstructionCount"]/*' />
 	public uint InstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TempRegisterCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TempRegisterCount"]/*' />
 	public uint TempRegisterCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TempArrayCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TempArrayCount"]/*' />
 	public uint TempArrayCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::DefCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::DefCount"]/*' />
 	public uint DefCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::DclCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::DclCount"]/*' />
 	public uint DclCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureNormalInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureNormalInstructions"]/*' />
 	public uint TextureNormalInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureLoadInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureLoadInstructions"]/*' />
 	public uint TextureLoadInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureCompInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureCompInstructions"]/*' />
 	public uint TextureCompInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureBiasInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureBiasInstructions"]/*' />
 	public uint TextureBiasInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureGradientInstructions"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::TextureGradientInstructions"]/*' />
 	public uint TextureGradientInstructions;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::FloatInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::FloatInstructionCount"]/*' />
 	public uint FloatInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::IntInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::IntInstructionCount"]/*' />
 	public uint IntInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::UintInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::UintInstructionCount"]/*' />
 	public uint UintInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::StaticFlowControlCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::StaticFlowControlCount"]/*' />
 	public uint StaticFlowControlCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::DynamicFlowControlCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::DynamicFlowControlCount"]/*' />
 	public uint DynamicFlowControlCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::MacroInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::MacroInstructionCount"]/*' />
 	public uint MacroInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::ArrayInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::ArrayInstructionCount"]/*' />
 	public uint ArrayInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::MovInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::MovInstructionCount"]/*' />
 	public uint MovInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::MovcInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::MovcInstructionCount"]/*' />
 	public uint MovcInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::ConversionInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::ConversionInstructionCount"]/*' />
 	public uint ConversionInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::BitwiseInstructionCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::BitwiseInstructionCount"]/*' />
 	public uint BitwiseInstructionCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::MinFeatureLevel"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::MinFeatureLevel"]/*' />
 	public Graphics.Direct3D.FeatureLevel MinFeatureLevel;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::RequiredFeatureFlags"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::RequiredFeatureFlags"]/*' />
 	public ulong RequiredFeatureFlags;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Name"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Name"]/*' />
 	public unsafe sbyte* Name;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::FunctionParameterCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::FunctionParameterCount"]/*' />
 	public int FunctionParameterCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::HasReturn"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::HasReturn"]/*' />
 	public Bool32 HasReturn;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Has10Level9VertexShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Has10Level9VertexShader"]/*' />
 	public Bool32 Has10Level9VertexShader;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Has10Level9PixelShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FUNCTION_DESC::Has10Level9PixelShader"]/*' />
 	public Bool32 Has10Level9PixelShader;
 }

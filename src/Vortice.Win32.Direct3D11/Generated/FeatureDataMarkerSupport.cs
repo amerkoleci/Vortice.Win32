@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_MARKER_SUPPORT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_MARKER_SUPPORT"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_MARKER_SUPPORT</unmanaged>
 public partial struct FeatureDataMarkerSupport
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_MARKER_SUPPORT::Profile"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_MARKER_SUPPORT::Profile"]/*' />
 	public Bool32 Profile;
 }

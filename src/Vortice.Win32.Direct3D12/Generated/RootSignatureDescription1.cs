@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1"]/*' />
 /// <unmanaged>D3D12_ROOT_SIGNATURE_DESC1</unmanaged>
 public partial struct RootSignatureDescription1
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::NumParameters"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::NumParameters"]/*' />
 	public uint NumParameters;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::pParameters"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::pParameters"]/*' />
 	public unsafe RootParameter1* pParameters;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::NumStaticSamplers"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::NumStaticSamplers"]/*' />
 	public uint NumStaticSamplers;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::pStaticSamplers"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::pStaticSamplers"]/*' />
 	public unsafe StaticSamplerDescription* pStaticSamplers;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_DESC1::Flags"]/*' />
 	public RootSignatureFlags Flags;
 }

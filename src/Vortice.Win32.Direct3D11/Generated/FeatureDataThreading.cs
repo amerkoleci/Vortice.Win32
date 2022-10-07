@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_THREADING</unmanaged>
 public partial struct FeatureDataThreading
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING::DriverConcurrentCreates"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING::DriverConcurrentCreates"]/*' />
 	public Bool32 DriverConcurrentCreates;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING::DriverCommandLists"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_THREADING::DriverCommandLists"]/*' />
 	public Bool32 DriverCommandLists;
 }

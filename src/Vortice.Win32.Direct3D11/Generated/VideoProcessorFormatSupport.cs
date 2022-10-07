@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT</unmanaged>
 public enum VideoProcessorFormatSupport : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT::D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT_INPUT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT::D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT_INPUT"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT_INPUT</unmanaged>
 	Input = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT::D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT_OUTPUT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT::D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT_OUTPUT"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT_OUTPUT</unmanaged>
 	Output = 2,
 }

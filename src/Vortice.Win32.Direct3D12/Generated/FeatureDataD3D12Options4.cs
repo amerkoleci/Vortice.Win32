@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS4</unmanaged>
 public partial struct FeatureDataD3D12Options4
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4::MSAA64KBAlignedTextureSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4::MSAA64KBAlignedTextureSupported"]/*' />
 	public Bool32 MSAA64KBAlignedTextureSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4::SharedResourceCompatibilityTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4::SharedResourceCompatibilityTier"]/*' />
 	public SharedResourceCompatibilityTier SharedResourceCompatibilityTier;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4::Native16BitShaderOpsSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS4::Native16BitShaderOpsSupported"]/*' />
 	public Bool32 Native16BitShaderOpsSupported;
 }

@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND"]/*' />
 /// <unmanaged>D3D12_HIT_KIND</unmanaged>
 public enum HitKind : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND::D3D12_HIT_KIND_TRIANGLE_FRONT_FACE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND::D3D12_HIT_KIND_TRIANGLE_FRONT_FACE"]/*' />
 	/// <unmanaged>D3D12_HIT_KIND_TRIANGLE_FRONT_FACE</unmanaged>
 	TriangleFrontFace = 254,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND::D3D12_HIT_KIND_TRIANGLE_BACK_FACE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND::D3D12_HIT_KIND_TRIANGLE_BACK_FACE"]/*' />
 	/// <unmanaged>D3D12_HIT_KIND_TRIANGLE_BACK_FACE</unmanaged>
 	TriangleBackFace = 255,
 }

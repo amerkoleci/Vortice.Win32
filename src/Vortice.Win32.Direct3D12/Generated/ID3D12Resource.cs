@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource"]/*' />
 /// <unmanaged>ID3D12Resource</unmanaged>
 [Guid("696442be-a72e-4059-bc79-5b5c98040fad")]
 [NativeTypeName("struct ID3D12Resource : ID3D12Pageable")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12Resource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12Resource*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource::Map"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult Map(uint Subresource, Range* pReadRange, void** ppData)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D12Resource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, uint, Range*, void**, int>)(lpVtbl[8]))((ID3D12Resource*)Unsafe.AsPointer(ref this), Subresource, pReadRange, ppData);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource::Unmap"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::Unmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public void Unmap(uint Subresource, Range* pWrittenRange)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D12Resource : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Resource*, uint, Range*, void>)(lpVtbl[9]))((ID3D12Resource*)Unsafe.AsPointer(ref this), Subresource, pWrittenRange);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public ResourceDescription GetDesc()
@@ -139,7 +139,7 @@ public unsafe partial struct ID3D12Resource : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID3D12Resource*, ResourceDescription*, ResourceDescription*>)(lpVtbl[10]))((ID3D12Resource*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetGPUVirtualAddress"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetGPUVirtualAddress"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public ulong GetGPUVirtualAddress()
@@ -147,7 +147,7 @@ public unsafe partial struct ID3D12Resource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, ulong>)(lpVtbl[11]))((ID3D12Resource*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource::WriteToSubresource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::WriteToSubresource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
 	public HResult WriteToSubresource(uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch)
@@ -155,7 +155,7 @@ public unsafe partial struct ID3D12Resource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, uint, Box*, void*, uint, uint, int>)(lpVtbl[12]))((ID3D12Resource*)Unsafe.AsPointer(ref this), DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource::ReadFromSubresource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::ReadFromSubresource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
 	public HResult ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, Box* pSrcBox)
@@ -163,7 +163,7 @@ public unsafe partial struct ID3D12Resource : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, void*, uint, uint, uint, Box*, int>)(lpVtbl[13]))((ID3D12Resource*)Unsafe.AsPointer(ref this), pDstData, DstRowPitch, DstDepthPitch, SrcSubresource, pSrcBox);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetHeapProperties"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Resource::GetHeapProperties"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
 	public HResult GetHeapProperties(HeapProperties* pHeapProperties, HeapFlags* pHeapFlags)

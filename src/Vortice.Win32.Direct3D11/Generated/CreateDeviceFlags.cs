@@ -9,37 +9,37 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG"]/*' />
 /// <unmanaged>D3D11_CREATE_DEVICE_FLAG</unmanaged>
 [Flags]
 public enum CreateDeviceFlags : uint
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_SINGLETHREADED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_SINGLETHREADED"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_SINGLETHREADED</unmanaged>
 	SingleThreaded = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DEBUG"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DEBUG"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_DEBUG</unmanaged>
 	Debug = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_SWITCH_TO_REF"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_SWITCH_TO_REF"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_SWITCH_TO_REF</unmanaged>
 	SwitchToRef = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_PREVENT_INTERNAL_THREADING_OPTIMIZATIONS"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_PREVENT_INTERNAL_THREADING_OPTIMIZATIONS"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_PREVENT_INTERNAL_THREADING_OPTIMIZATIONS</unmanaged>
 	PreventInternalThreadingOptimizations = 8,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_BGRA_SUPPORT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_BGRA_SUPPORT"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_BGRA_SUPPORT</unmanaged>
 	BgraSupport = 32,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DEBUGGABLE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DEBUGGABLE"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_DEBUGGABLE</unmanaged>
 	Debuggable = 64,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_PREVENT_ALTERING_LAYER_SETTINGS_FROM_REGISTRY"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_PREVENT_ALTERING_LAYER_SETTINGS_FROM_REGISTRY"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_PREVENT_ALTERING_LAYER_SETTINGS_FROM_REGISTRY</unmanaged>
 	PreventAlteringLayerSettingsFromRegistry = 128,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT</unmanaged>
 	DisableGpuTimeout = 256,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_VIDEO_SUPPORT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CREATE_DEVICE_FLAG::D3D11_CREATE_DEVICE_VIDEO_SUPPORT"]/*' />
 	/// <unmanaged>D3D11_CREATE_DEVICE_VIDEO_SUPPORT</unmanaged>
 	VideoSupport = 2048,
 }

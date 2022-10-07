@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV"]/*' />
 /// <unmanaged>D3D12_TEX2D_ARRAY_RTV</unmanaged>
 public partial struct Texture2DArrayRtv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::MipSlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::MipSlice"]/*' />
 	public uint MipSlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::FirstArraySlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::FirstArraySlice"]/*' />
 	public uint FirstArraySlice;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::ArraySize"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::ArraySize"]/*' />
 	public uint ArraySize;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::PlaneSlice"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2D_ARRAY_RTV::PlaneSlice"]/*' />
 	public uint PlaneSlice;
 }

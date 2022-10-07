@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_CAPS</unmanaged>
 public enum VideoProcessorFormatCaps : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_INTERLACED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_INTERLACED"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_INTERLACED</unmanaged>
 	RgbInterlaced = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_PROCAMP"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_PROCAMP"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_PROCAMP</unmanaged>
 	RgbProcamp = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_LUMA_KEY"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_LUMA_KEY"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_LUMA_KEY</unmanaged>
 	RgbLumaKey = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_PALETTE_INTERLACED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_PALETTE_INTERLACED"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_PALETTE_INTERLACED</unmanaged>
 	PaletteInterlaced = 8,
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Tools"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools"]/*' />
 /// <unmanaged>ID3D12Tools</unmanaged>
 [Guid("7071e1f0-e84b-4b33-974f-12fa49de65c5")]
 [NativeTypeName("struct ID3D12Tools : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12Tools : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Tools::EnableShaderInstrumentation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools::EnableShaderInstrumentation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void EnableShaderInstrumentation(Bool32 bEnable)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12Tools : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Tools*, Bool32, void>)(lpVtbl[3]))((ID3D12Tools*)Unsafe.AsPointer(ref this), bEnable);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Tools::ShaderInstrumentationEnabled"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools::ShaderInstrumentationEnabled"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public Bool32 ShaderInstrumentationEnabled()

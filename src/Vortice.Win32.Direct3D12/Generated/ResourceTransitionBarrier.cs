@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_TRANSITION_BARRIER</unmanaged>
 public partial struct ResourceTransitionBarrier
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::pResource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::pResource"]/*' />
 	public unsafe ID3D12Resource* pResource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::Subresource"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::Subresource"]/*' />
 	public uint Subresource;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::StateBefore"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::StateBefore"]/*' />
 	public ResourceStates StateBefore;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::StateAfter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_TRANSITION_BARRIER::StateAfter"]/*' />
 	public ResourceStates StateAfter;
 }

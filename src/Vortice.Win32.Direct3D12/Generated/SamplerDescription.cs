@@ -9,37 +9,37 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC"]/*' />
 /// <unmanaged>D3D12_SAMPLER_DESC</unmanaged>
 public partial struct SamplerDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::Filter"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::Filter"]/*' />
 	public Filter Filter;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::AddressU"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::AddressU"]/*' />
 	public TextureAddressMode AddressU;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::AddressV"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::AddressV"]/*' />
 	public TextureAddressMode AddressV;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::AddressW"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::AddressW"]/*' />
 	public TextureAddressMode AddressW;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MipLODBias"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MipLODBias"]/*' />
 	public float MipLODBias;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MaxAnisotropy"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MaxAnisotropy"]/*' />
 	public uint MaxAnisotropy;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::ComparisonFunc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::ComparisonFunc"]/*' />
 	public ComparisonFunction ComparisonFunc;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::BorderColor"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::BorderColor"]/*' />
 	public unsafe fixed float BorderColor[4];
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MinLOD"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MinLOD"]/*' />
 	public float MinLOD;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MaxLOD"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_DESC::MaxLOD"]/*' />
 	public float MaxLOD;
 }

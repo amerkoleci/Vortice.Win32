@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext4"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext4"]/*' />
 /// <unmanaged>ID3D11DeviceContext4</unmanaged>
 [Guid("917600da-f58c-4c33-98d8-3e15b390fa24")]
 [NativeTypeName("struct ID3D11DeviceContext4 : ID3D11DeviceContext3")]
@@ -1226,7 +1226,7 @@ public unsafe partial struct ID3D11DeviceContext4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, Bool32*, void>)(lpVtbl[146]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pHwProtectionEnable);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext4::Signal"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext4::Signal"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(147)]
 	public HResult Signal(ID3D11Fence* pFence, ulong Value)
@@ -1234,7 +1234,7 @@ public unsafe partial struct ID3D11DeviceContext4 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Fence*, ulong, int>)(lpVtbl[147]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pFence, Value);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext4::Wait"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext4::Wait"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(148)]
 	public HResult Wait(ID3D11Fence* pFence, ulong Value)

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage"]/*' />
 /// <unmanaged>ID3D11ClassLinkage</unmanaged>
 [Guid("ddf57cba-9543-46e4-a12b-f207a0fe7fed")]
 [NativeTypeName("struct ID3D11ClassLinkage : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11ClassLinkage : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage::GetClassInstance"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage::GetClassInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetClassInstance(sbyte* pClassInstanceName, uint InstanceIndex, ID3D11ClassInstance** ppInstance)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11ClassLinkage : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, sbyte*, uint, ID3D11ClassInstance**, int>)(lpVtbl[7]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassInstanceName, InstanceIndex, ppInstance);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage::CreateClassInstance"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ClassLinkage::CreateClassInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult CreateClassInstance(sbyte* pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance)

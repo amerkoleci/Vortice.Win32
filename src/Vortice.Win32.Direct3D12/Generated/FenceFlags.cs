@@ -9,21 +9,21 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS"]/*' />
 /// <unmanaged>D3D12_FENCE_FLAGS</unmanaged>
 [Flags]
 public enum FenceFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_FENCE_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_SHARED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_SHARED"]/*' />
 	/// <unmanaged>D3D12_FENCE_FLAG_SHARED</unmanaged>
 	Shared = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_SHARED_CROSS_ADAPTER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_SHARED_CROSS_ADAPTER"]/*' />
 	/// <unmanaged>D3D12_FENCE_FLAG_SHARED_CROSS_ADAPTER</unmanaged>
 	SharedCrossAdapter = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_NON_MONITORED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_NON_MONITORED"]/*' />
 	/// <unmanaged>D3D12_FENCE_FLAG_NON_MONITORED</unmanaged>
 	NonMonitored = 4,
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_FORMAT_SUPPORT</unmanaged>
 public partial struct FeatureDataFormatSupport
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT::InFormat"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT::InFormat"]/*' />
 	public Graphics.Dxgi.Common.Format InFormat;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT::OutFormatSupport"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_FORMAT_SUPPORT::OutFormatSupport"]/*' />
 	public FormatSupport OutFormatSupport;
 }

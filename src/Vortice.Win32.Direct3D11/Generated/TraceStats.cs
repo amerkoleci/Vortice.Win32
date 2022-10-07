@@ -9,76 +9,76 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS"]/*' />
 /// <unmanaged>D3D11_TRACE_STATS</unmanaged>
 public partial struct TraceStats
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::TraceDesc"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::TraceDesc"]/*' />
 	public ShaderTraceDescription TraceDesc;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::NumInvocationsInStamp"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::NumInvocationsInStamp"]/*' />
 	public byte NumInvocationsInStamp;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::TargetStampIndex"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::TargetStampIndex"]/*' />
 	public byte TargetStampIndex;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::NumTraceSteps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::NumTraceSteps"]/*' />
 	public uint NumTraceSteps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::InputMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::InputMask"]/*' />
 	public unsafe fixed byte InputMask[32];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::OutputMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::OutputMask"]/*' />
 	public unsafe fixed byte OutputMask[32];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::NumTemps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::NumTemps"]/*' />
 	public ushort NumTemps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::MaxIndexableTempIndex"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::MaxIndexableTempIndex"]/*' />
 	public ushort MaxIndexableTempIndex;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::IndexableTempSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::IndexableTempSize"]/*' />
 	public unsafe fixed ushort IndexableTempSize[4096];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::ImmediateConstantBufferSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::ImmediateConstantBufferSize"]/*' />
 	public ushort ImmediateConstantBufferSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelPosition"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelPosition"]/*' />
 	public unsafe fixed uint PixelPosition[8];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMask"]/*' />
 	public unsafe fixed ulong PixelCoverageMask[4];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelDiscardedMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelDiscardedMask"]/*' />
 	public unsafe fixed ulong PixelDiscardedMask[4];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterShader"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterShader"]/*' />
 	public unsafe fixed ulong PixelCoverageMaskAfterShader[4];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMask"]/*' />
 	public unsafe fixed ulong PixelCoverageMaskAfterA2CSampleMask[4];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMaskDepth"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMaskDepth"]/*' />
 	public unsafe fixed ulong PixelCoverageMaskAfterA2CSampleMaskDepth[4];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMaskDepthStencil"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PixelCoverageMaskAfterA2CSampleMaskDepthStencil"]/*' />
 	public unsafe fixed ulong PixelCoverageMaskAfterA2CSampleMaskDepthStencil[4];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PSOutputsDepth"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PSOutputsDepth"]/*' />
 	public Bool32 PSOutputsDepth;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PSOutputsMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::PSOutputsMask"]/*' />
 	public Bool32 PSOutputsMask;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::GSInputPrimitive"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::GSInputPrimitive"]/*' />
 	public TraceGSInputPrimitive GSInputPrimitive;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::GSInputsPrimitiveID"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::GSInputsPrimitiveID"]/*' />
 	public Bool32 GSInputsPrimitiveID;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::HSOutputPatchConstantMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::HSOutputPatchConstantMask"]/*' />
 	public unsafe fixed byte HSOutputPatchConstantMask[32];
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::DSInputPatchConstantMask"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_STATS::DSInputPatchConstantMask"]/*' />
 	public unsafe fixed byte DSInputPatchConstantMask[32];
 }

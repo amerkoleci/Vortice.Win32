@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER"]/*' />
 /// <unmanaged>D3D11_SHARED_RESOURCE_TIER</unmanaged>
 public enum SharedResourceTier : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_0"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_0"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_0</unmanaged>
 	Tier0 = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_1"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_1</unmanaged>
 	Tier1 = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_2"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_2"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_2</unmanaged>
 	Tier2 = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_3"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_3"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_3</unmanaged>
 	Tier3 = 3,
 }

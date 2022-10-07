@@ -9,34 +9,34 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_CAPS</unmanaged>
 public partial struct VideoProcessorCaps
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::DeviceCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::DeviceCaps"]/*' />
 	public uint DeviceCaps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::FeatureCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::FeatureCaps"]/*' />
 	public uint FeatureCaps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::FilterCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::FilterCaps"]/*' />
 	public uint FilterCaps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::InputFormatCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::InputFormatCaps"]/*' />
 	public uint InputFormatCaps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::AutoStreamCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::AutoStreamCaps"]/*' />
 	public uint AutoStreamCaps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::StereoCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::StereoCaps"]/*' />
 	public uint StereoCaps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::RateConversionCapsCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::RateConversionCapsCount"]/*' />
 	public uint RateConversionCapsCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::MaxInputStreams"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::MaxInputStreams"]/*' />
 	public uint MaxInputStreams;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::MaxStreamStates"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_CAPS::MaxStreamStates"]/*' />
 	public uint MaxStreamStates;
 }

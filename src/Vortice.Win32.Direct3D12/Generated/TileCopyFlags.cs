@@ -9,21 +9,21 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS"]/*' />
 /// <unmanaged>D3D12_TILE_COPY_FLAGS</unmanaged>
 [Flags]
 public enum TileCopyFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_TILE_COPY_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_NO_HAZARD"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_NO_HAZARD"]/*' />
 	/// <unmanaged>D3D12_TILE_COPY_FLAG_NO_HAZARD</unmanaged>
 	NoHazard = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE"]/*' />
 	/// <unmanaged>D3D12_TILE_COPY_FLAG_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE</unmanaged>
 	LinearBufferToSwizzledTiledResource = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER"]/*' />
 	/// <unmanaged>D3D12_TILE_COPY_FLAG_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER</unmanaged>
 	SwizzledTiledResourceToLinearBuffer = 4,
 }

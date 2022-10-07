@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC"]/*' />
 /// <unmanaged>D3D12_DXIL_LIBRARY_DESC</unmanaged>
 public partial struct DxilLibraryDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC::DXILLibrary"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC::DXILLibrary"]/*' />
 	public ShaderBytecode DXILLibrary;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC::NumExports"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC::NumExports"]/*' />
 	public uint NumExports;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC::pExports"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_LIBRARY_DESC::pExports"]/*' />
 	public unsafe ExportDescription* pExports;
 }

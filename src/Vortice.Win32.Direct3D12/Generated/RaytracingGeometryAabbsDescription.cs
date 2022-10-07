@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_AABBS_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_AABBS_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_GEOMETRY_AABBS_DESC</unmanaged>
 public partial struct RaytracingGeometryAabbsDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_AABBS_DESC::AABBCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_AABBS_DESC::AABBCount"]/*' />
 	public ulong AABBCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_AABBS_DESC::AABBs"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_AABBS_DESC::AABBs"]/*' />
 	public GpuVirtualAddressAndStride AABBs;
 }

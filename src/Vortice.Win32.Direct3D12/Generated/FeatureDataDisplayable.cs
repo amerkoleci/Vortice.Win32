@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_DISPLAYABLE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_DISPLAYABLE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_DISPLAYABLE</unmanaged>
 public partial struct FeatureDataDisplayable
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_DISPLAYABLE::DisplayableTexture"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_DISPLAYABLE::DisplayableTexture"]/*' />
 	public Bool32 DisplayableTexture;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_DISPLAYABLE::SharedResourceCompatibilityTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_DISPLAYABLE::SharedResourceCompatibilityTier"]/*' />
 	public SharedResourceCompatibilityTier SharedResourceCompatibilityTier;
 }

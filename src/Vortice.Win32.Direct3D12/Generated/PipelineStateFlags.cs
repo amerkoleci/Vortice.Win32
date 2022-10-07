@@ -9,15 +9,15 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS"]/*' />
 /// <unmanaged>D3D12_PIPELINE_STATE_FLAGS</unmanaged>
 [Flags]
 public enum PipelineStateFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_TOOL_DEBUG"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_TOOL_DEBUG"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_FLAG_TOOL_DEBUG</unmanaged>
 	ToolDebug = 1,
 }

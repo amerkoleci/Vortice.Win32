@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_DSV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_DSV"]/*' />
 /// <unmanaged>D3D12_TEX2DMS_DSV</unmanaged>
 public partial struct Texture2DMsDsv
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_DSV::UnusedField_NothingToDefine"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEX2DMS_DSV::UnusedField_NothingToDefine"]/*' />
 	public uint UnusedField_NothingToDefine;
 }

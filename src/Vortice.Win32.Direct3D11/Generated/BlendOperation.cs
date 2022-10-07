@@ -9,23 +9,23 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP"]/*' />
 /// <unmanaged>D3D11_BLEND_OP</unmanaged>
 public enum BlendOperation : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_ADD"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_ADD"]/*' />
 	/// <unmanaged>D3D11_BLEND_OP_ADD</unmanaged>
 	Add = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_SUBTRACT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_SUBTRACT"]/*' />
 	/// <unmanaged>D3D11_BLEND_OP_SUBTRACT</unmanaged>
 	Subtract = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_REV_SUBTRACT"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_REV_SUBTRACT"]/*' />
 	/// <unmanaged>D3D11_BLEND_OP_REV_SUBTRACT</unmanaged>
 	RevSubtract = 3,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_MIN"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_MIN"]/*' />
 	/// <unmanaged>D3D11_BLEND_OP_MIN</unmanaged>
 	Min = 4,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_MAX"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_MAX"]/*' />
 	/// <unmanaged>D3D11_BLEND_OP_MAX</unmanaged>
 	Max = 5,
 }

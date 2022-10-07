@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS</unmanaged>
 public partial struct VideoProcessorRateConversionCaps
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::PastFrames"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::PastFrames"]/*' />
 	public uint PastFrames;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::FutureFrames"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::FutureFrames"]/*' />
 	public uint FutureFrames;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::ProcessorCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::ProcessorCaps"]/*' />
 	public uint ProcessorCaps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::ITelecineCaps"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::ITelecineCaps"]/*' />
 	public uint ITelecineCaps;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::CustomRateCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS::CustomRateCount"]/*' />
 	public uint CustomRateCount;
 }

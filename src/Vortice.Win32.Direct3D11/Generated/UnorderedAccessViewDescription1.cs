@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1"]/*' />
 /// <unmanaged>D3D11_UNORDERED_ACCESS_VIEW_DESC1</unmanaged>
 public partial struct UnorderedAccessViewDescription1
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1::Format"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1::ViewDimension"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1::ViewDimension"]/*' />
 	public UavDimension ViewDimension;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1::Anonymous"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_UNORDERED_ACCESS_VIEW_DESC1::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -85,27 +85,27 @@ public partial struct UnorderedAccessViewDescription1
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Buffer"]/*' />
 		[FieldOffset(0)]
 		public BufferUav Buffer;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1D"]/*' />
 		[FieldOffset(0)]
 		public Texture1DUav Texture1D;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture1DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture1DArrayUav Texture1DArray;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2D"]/*' />
 		[FieldOffset(0)]
 		public Texture2DUav1 Texture2D;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture2DArray"]/*' />
 		[FieldOffset(0)]
 		public Texture2DArrayUav1 Texture2DArray;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous_e__Union::Texture3D"]/*' />
 		[FieldOffset(0)]
 		public Texture3DUav Texture3D;
 	}

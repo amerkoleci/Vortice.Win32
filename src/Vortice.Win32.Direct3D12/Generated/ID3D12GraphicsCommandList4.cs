@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4"]/*' />
 /// <unmanaged>ID3D12GraphicsCommandList4</unmanaged>
 [Guid("8754318e-d3a9-4541-98cf-645b50dc4874")]
 [NativeTypeName("struct ID3D12GraphicsCommandList4 : ID3D12GraphicsCommandList3")]
@@ -594,7 +594,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ID3D12ProtectedResourceSession*, void>)(lpVtbl[67]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pProtectedResourceSession);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::BeginRenderPass"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::BeginRenderPass"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(68)]
 	public void BeginRenderPass(uint NumRenderTargets, RenderPassRenderTargetDescription* pRenderTargets, RenderPassDepthStencilDescription* pDepthStencil, RenderPassFlags Flags)
@@ -602,7 +602,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, uint, RenderPassRenderTargetDescription*, RenderPassDepthStencilDescription*, RenderPassFlags, void>)(lpVtbl[68]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), NumRenderTargets, pRenderTargets, pDepthStencil, Flags);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::EndRenderPass"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::EndRenderPass"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(69)]
 	public void EndRenderPass()
@@ -610,7 +610,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, void>)(lpVtbl[69]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::InitializeMetaCommand"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::InitializeMetaCommand"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
 	public void InitializeMetaCommand(ID3D12MetaCommand* pMetaCommand, void* pInitializationParametersData, nuint InitializationParametersDataSizeInBytes)
@@ -618,7 +618,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ID3D12MetaCommand*, void*, nuint, void>)(lpVtbl[70]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pMetaCommand, pInitializationParametersData, InitializationParametersDataSizeInBytes);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::ExecuteMetaCommand"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::ExecuteMetaCommand"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(71)]
 	public void ExecuteMetaCommand(ID3D12MetaCommand* pMetaCommand, void* pExecutionParametersData, nuint ExecutionParametersDataSizeInBytes)
@@ -626,7 +626,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ID3D12MetaCommand*, void*, nuint, void>)(lpVtbl[71]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pMetaCommand, pExecutionParametersData, ExecutionParametersDataSizeInBytes);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::BuildRaytracingAccelerationStructure"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::BuildRaytracingAccelerationStructure"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
 	public void BuildRaytracingAccelerationStructure(BuildRaytracingAccelerationStructureDescription* pDesc, uint NumPostbuildInfoDescs, RaytracingAccelerationStructurePostbuildInfoDescription* pPostbuildInfoDescs)
@@ -634,7 +634,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, BuildRaytracingAccelerationStructureDescription*, uint, RaytracingAccelerationStructurePostbuildInfoDescription*, void>)(lpVtbl[72]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pDesc, NumPostbuildInfoDescs, pPostbuildInfoDescs);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::EmitRaytracingAccelerationStructurePostbuildInfo"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::EmitRaytracingAccelerationStructurePostbuildInfo"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(73)]
 	public void EmitRaytracingAccelerationStructurePostbuildInfo(RaytracingAccelerationStructurePostbuildInfoDescription* pDesc, uint NumSourceAccelerationStructures, ulong* pSourceAccelerationStructureData)
@@ -642,7 +642,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, RaytracingAccelerationStructurePostbuildInfoDescription*, uint, ulong*, void>)(lpVtbl[73]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pDesc, NumSourceAccelerationStructures, pSourceAccelerationStructureData);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::CopyRaytracingAccelerationStructure"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::CopyRaytracingAccelerationStructure"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(74)]
 	public void CopyRaytracingAccelerationStructure(ulong DestAccelerationStructureData, ulong SourceAccelerationStructureData, RaytracingAccelerationStructureCopyMode Mode)
@@ -650,7 +650,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ulong, ulong, RaytracingAccelerationStructureCopyMode, void>)(lpVtbl[74]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), DestAccelerationStructureData, SourceAccelerationStructureData, Mode);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::SetPipelineState1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::SetPipelineState1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(75)]
 	public void SetPipelineState1(ID3D12StateObject* pStateObject)
@@ -658,7 +658,7 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, ID3D12StateObject*, void>)(lpVtbl[75]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pStateObject);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::DispatchRays"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList4::DispatchRays"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(76)]
 	public void DispatchRays(DispatchRaysDescription* pDesc)

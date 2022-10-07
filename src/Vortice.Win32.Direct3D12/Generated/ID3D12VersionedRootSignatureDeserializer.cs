@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer"]/*' />
 /// <unmanaged>ID3D12VersionedRootSignatureDeserializer</unmanaged>
 [Guid("7f91ce67-090c-4bb7-b78e-ed8ff2e31da0")]
 [NativeTypeName("struct ID3D12VersionedRootSignatureDeserializer : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer : INativeG
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetRootSignatureDescAtVersion"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetRootSignatureDescAtVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetRootSignatureDescAtVersion(RootSignatureVersion convertToVersion, VersionedRootSignatureDescription** ppDesc)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12VersionedRootSignatureDeserializer : INativeG
 		return ((delegate* unmanaged[Stdcall]<ID3D12VersionedRootSignatureDeserializer*, RootSignatureVersion, VersionedRootSignatureDescription**, int>)(lpVtbl[3]))((ID3D12VersionedRootSignatureDeserializer*)Unsafe.AsPointer(ref this), convertToVersion, ppDesc);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetUnconvertedRootSignatureDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VersionedRootSignatureDeserializer::GetUnconvertedRootSignatureDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public VersionedRootSignatureDescription* GetUnconvertedRootSignatureDesc()

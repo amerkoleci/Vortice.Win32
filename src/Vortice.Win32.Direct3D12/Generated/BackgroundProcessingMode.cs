@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE"]/*' />
 /// <unmanaged>D3D12_BACKGROUND_PROCESSING_MODE</unmanaged>
 public enum BackgroundProcessingMode : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_ALLOWED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_ALLOWED"]/*' />
 	/// <unmanaged>D3D12_BACKGROUND_PROCESSING_MODE_ALLOWED</unmanaged>
 	Allowed = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_ALLOW_INTRUSIVE_MEASUREMENTS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_ALLOW_INTRUSIVE_MEASUREMENTS"]/*' />
 	/// <unmanaged>D3D12_BACKGROUND_PROCESSING_MODE_ALLOW_INTRUSIVE_MEASUREMENTS</unmanaged>
 	AllowIntrusiveMeasurements = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_DISABLE_BACKGROUND_WORK"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_DISABLE_BACKGROUND_WORK"]/*' />
 	/// <unmanaged>D3D12_BACKGROUND_PROCESSING_MODE_DISABLE_BACKGROUND_WORK</unmanaged>
 	DisableBackgroundWork = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_DISABLE_PROFILING_BY_SYSTEM"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_DISABLE_PROFILING_BY_SYSTEM"]/*' />
 	/// <unmanaged>D3D12_BACKGROUND_PROCESSING_MODE_DISABLE_PROFILING_BY_SYSTEM</unmanaged>
 	DisableProfilingBySystem = 3,
 }

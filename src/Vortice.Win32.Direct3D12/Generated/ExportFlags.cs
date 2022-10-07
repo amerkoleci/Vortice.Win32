@@ -9,12 +9,12 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_FLAGS"]/*' />
 /// <unmanaged>D3D12_EXPORT_FLAGS</unmanaged>
 [Flags]
 public enum ExportFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_FLAGS::D3D12_EXPORT_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_FLAGS::D3D12_EXPORT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_EXPORT_FLAG_NONE</unmanaged>
 	None = 0,
 }

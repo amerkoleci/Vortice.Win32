@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12RootSignatureDeserializer"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12RootSignatureDeserializer"]/*' />
 /// <unmanaged>ID3D12RootSignatureDeserializer</unmanaged>
 [Guid("34ab647b-3cc8-46ac-841b-c0965645c046")]
 [NativeTypeName("struct ID3D12RootSignatureDeserializer : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12RootSignatureDeserializer : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12RootSignatureDeserializer::GetRootSignatureDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12RootSignatureDeserializer::GetRootSignatureDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public RootSignatureDescription* GetRootSignatureDesc()

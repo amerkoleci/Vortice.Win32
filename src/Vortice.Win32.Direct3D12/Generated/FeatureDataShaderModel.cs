@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_MODEL"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_MODEL"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_SHADER_MODEL</unmanaged>
 public partial struct FeatureDataShaderModel
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_MODEL::HighestShaderModel"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SHADER_MODEL::HighestShaderModel"]/*' />
 	public ShaderModel HighestShaderModel;
 }

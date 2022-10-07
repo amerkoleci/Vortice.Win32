@@ -9,17 +9,17 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE"]/*' />
 /// <unmanaged>D3D11_VIDEO_USAGE</unmanaged>
 public enum VideoUsage : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE::D3D11_VIDEO_USAGE_PLAYBACK_NORMAL"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE::D3D11_VIDEO_USAGE_PLAYBACK_NORMAL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_USAGE_PLAYBACK_NORMAL</unmanaged>
 	PlaybackNormal = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE::D3D11_VIDEO_USAGE_OPTIMAL_SPEED"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE::D3D11_VIDEO_USAGE_OPTIMAL_SPEED"]/*' />
 	/// <unmanaged>D3D11_VIDEO_USAGE_OPTIMAL_SPEED</unmanaged>
 	OptimalSpeed = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE::D3D11_VIDEO_USAGE_OPTIMAL_QUALITY"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE::D3D11_VIDEO_USAGE_OPTIMAL_QUALITY"]/*' />
 	/// <unmanaged>D3D11_VIDEO_USAGE_OPTIMAL_QUALITY</unmanaged>
 	OptimalQuality = 2,
 }

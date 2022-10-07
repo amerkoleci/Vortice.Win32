@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant"]/*' />
 /// <unmanaged>ID3D12SwapChainAssistant</unmanaged>
 [Guid("f1df64b6-57fd-49cd-8807-c0eb88b45c8f")]
 [NativeTypeName("struct ID3D12SwapChainAssistant : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12SwapChainAssistant : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::GetLUID"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::GetLUID"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public Luid GetLUID()
@@ -83,7 +83,7 @@ public unsafe partial struct ID3D12SwapChainAssistant : INativeGuid
 		return *((delegate* unmanaged[Stdcall]<ID3D12SwapChainAssistant*, Luid*, Luid*>)(lpVtbl[3]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this), &result);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::GetSwapChainObject"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::GetSwapChainObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public HResult GetSwapChainObject(Guid* riid, void** ppv)
@@ -91,7 +91,7 @@ public unsafe partial struct ID3D12SwapChainAssistant : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12SwapChainAssistant*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this), riid, ppv);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::GetCurrentResourceAndCommandQueue"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::GetCurrentResourceAndCommandQueue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetCurrentResourceAndCommandQueue(Guid* riidResource, void** ppvResource, Guid* riidQueue, void** ppvQueue)
@@ -99,7 +99,7 @@ public unsafe partial struct ID3D12SwapChainAssistant : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12SwapChainAssistant*, Guid*, void**, Guid*, void**, int>)(lpVtbl[5]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this), riidResource, ppvResource, riidQueue, ppvQueue);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::InsertImplicitSync"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SwapChainAssistant::InsertImplicitSync"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult InsertImplicitSync()

@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA"]/*' />
 /// <unmanaged>D3D11_VIDEO_COLOR_RGBA</unmanaged>
 public partial struct VideoColorRgba
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA::R"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA::R"]/*' />
 	public float R;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA::G"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA::G"]/*' />
 	public float G;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA::B"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA::B"]/*' />
 	public float B;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA::A"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_COLOR_RGBA::A"]/*' />
 	public float A;
 }

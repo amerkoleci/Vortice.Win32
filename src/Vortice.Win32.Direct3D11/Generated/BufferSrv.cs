@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_SRV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_SRV"]/*' />
 /// <unmanaged>D3D11_BUFFER_SRV</unmanaged>
 public partial struct BufferSrv
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_SRV::Anonymous1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_SRV::Anonymous1"]/*' />
 	public _Anonymous1_e__Union Anonymous1;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_SRV::Anonymous2"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_SRV::Anonymous2"]/*' />
 	public _Anonymous2_e__Union Anonymous2;
 
 	[UnscopedRef]
@@ -62,22 +62,22 @@ public partial struct BufferSrv
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous1_e__Union
 	{
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::FirstElement"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::FirstElement"]/*' />
 		[FieldOffset(0)]
 		public uint FirstElement;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::ElementOffset"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::ElementOffset"]/*' />
 		[FieldOffset(0)]
 		public uint ElementOffset;
 	}
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous2_e__Union
 	{
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::NumElements"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::NumElements"]/*' />
 		[FieldOffset(0)]
 		public uint NumElements;
 
-		/// <include file='Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::ElementWidth"]/*' />
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::ElementWidth"]/*' />
 		[FieldOffset(0)]
 		public uint ElementWidth;
 	}

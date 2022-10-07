@@ -9,20 +9,20 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION</unmanaged>
 public enum VideoProcessorRotation : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_IDENTITY"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_IDENTITY"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION_IDENTITY</unmanaged>
 	Identity = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_90"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_90"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION_90</unmanaged>
 	Rotation90 = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_180"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_180"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION_180</unmanaged>
 	Rotation180 = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_270"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_270"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION_270</unmanaged>
 	Rotation270 = 3,
 }

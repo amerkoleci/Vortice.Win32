@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA"]/*' />
 /// <unmanaged>D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA</unmanaged>
 public partial struct VersionedDeviceRemovedExtendedData
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA::Version"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA::Version"]/*' />
 	public DredVersion Version;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA::Anonymous"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA::Anonymous"]/*' />
 	public _Anonymous_e__Union Anonymous;
 
 	[UnscopedRef]
@@ -62,19 +62,19 @@ public partial struct VersionedDeviceRemovedExtendedData
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous_e__Union
 	{
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Dred_1_0"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Dred_1_0"]/*' />
 		[FieldOffset(0)]
 		public DeviceRemovedExtendedData Dred_1_0;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Dred_1_1"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Dred_1_1"]/*' />
 		[FieldOffset(0)]
 		public DeviceRemovedExtendedData1 Dred_1_1;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Dred_1_2"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Dred_1_2"]/*' />
 		[FieldOffset(0)]
 		public DeviceRemovedExtendedData2 Dred_1_2;
 
-		/// <include file='Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Dred_1_3"]/*' />
+		/// <include file='../Direct3D12.xml' path='doc/member[@name="_Anonymous_e__Union::Dred_1_3"]/*' />
 		[FieldOffset(0)]
 		public DeviceRemovedExtendedData3 Dred_1_3;
 	}

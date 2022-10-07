@@ -9,34 +9,34 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC"]/*' />
 /// <unmanaged>D3D12_SIGNATURE_PARAMETER_DESC</unmanaged>
 public partial struct SignatureParameterDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SemanticName"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SemanticName"]/*' />
 	public unsafe sbyte* SemanticName;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SemanticIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::Register"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::Register"]/*' />
 	public uint Register;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SystemValueType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SystemValueType"]/*' />
 	public Graphics.Direct3D.Name SystemValueType;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::ComponentType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::ComponentType"]/*' />
 	public Graphics.Direct3D.RegisterComponentType ComponentType;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::Mask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::Mask"]/*' />
 	public byte Mask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::ReadWriteMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::ReadWriteMask"]/*' />
 	public byte ReadWriteMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::Stream"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::Stream"]/*' />
 	public uint Stream;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::MinPrecision"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::MinPrecision"]/*' />
 	public Graphics.Direct3D.MinPrecision MinPrecision;
 }

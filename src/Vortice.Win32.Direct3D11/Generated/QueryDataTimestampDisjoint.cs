@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_TIMESTAMP_DISJOINT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_TIMESTAMP_DISJOINT"]/*' />
 /// <unmanaged>D3D11_QUERY_DATA_TIMESTAMP_DISJOINT</unmanaged>
 public partial struct QueryDataTimestampDisjoint
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_TIMESTAMP_DISJOINT::Frequency"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_TIMESTAMP_DISJOINT::Frequency"]/*' />
 	public ulong Frequency;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_TIMESTAMP_DISJOINT::Disjoint"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_DATA_TIMESTAMP_DISJOINT::Disjoint"]/*' />
 	public Bool32 Disjoint;
 }

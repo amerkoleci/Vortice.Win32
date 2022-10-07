@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Module"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Module"]/*' />
 /// <unmanaged>ID3D11Module</unmanaged>
 [Guid("cac701ee-80fc-4122-8242-10b39c8cec34")]
 [NativeTypeName("struct ID3D11Module : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11Module : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Module::CreateInstance"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Module::CreateInstance"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult CreateInstance(sbyte* pNamespace, ID3D11ModuleInstance** ppModuleInstance)

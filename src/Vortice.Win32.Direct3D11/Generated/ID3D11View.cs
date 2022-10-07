@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11View"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11View"]/*' />
 /// <unmanaged>ID3D11View</unmanaged>
 [Guid("839d1216-bb2e-412b-b7f4-a9dbebe08ed1")]
 [NativeTypeName("struct ID3D11View : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11View : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11View*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11View*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11View::GetResource"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11View::GetResource"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public void GetResource(ID3D11Resource** ppResource)

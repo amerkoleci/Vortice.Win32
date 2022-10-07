@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D11on12;
 
-/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS"]/*' />
+/// <include file='../Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS"]/*' />
 /// <unmanaged>D3D11_RESOURCE_FLAGS</unmanaged>
 public partial struct ResourceFlags
 {
-	/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::BindFlags"]/*' />
-	public D3D11_BIND_FLAG BindFlags;
+	/// <include file='../Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::BindFlags"]/*' />
+	public Win32.Graphics.Direct3D11.BindFlags BindFlags;
 
-	/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::MiscFlags"]/*' />
-	public D3D11_RESOURCE_MISC_FLAG MiscFlags;
+	/// <include file='../Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::MiscFlags"]/*' />
+	public Win32.Graphics.Direct3D11.ResourceMiscFlags MiscFlags;
 
-	/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::CPUAccessFlags"]/*' />
-	public D3D11_CPU_ACCESS_FLAG CPUAccessFlags;
+	/// <include file='../Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::CPUAccessFlags"]/*' />
+	public Win32.Graphics.Direct3D11.CpuAccessFlags CPUAccessFlags;
 
-	/// <include file='Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::StructureByteStride"]/*' />
+	/// <include file='../Direct3D11on12.xml' path='doc/member[@name="D3D11_RESOURCE_FLAGS::StructureByteStride"]/*' />
 	public uint StructureByteStride;
 }

@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1"]/*' />
 /// <unmanaged>D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1</unmanaged>
 public partial struct DredAutoBreadcrumbsOutput1
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1::pHeadAutoBreadcrumbNode"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1::pHeadAutoBreadcrumbNode"]/*' />
 	public unsafe AutoBreadcrumbNode1* pHeadAutoBreadcrumbNode;
 }

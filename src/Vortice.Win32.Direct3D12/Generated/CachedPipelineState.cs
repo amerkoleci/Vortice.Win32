@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CACHED_PIPELINE_STATE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CACHED_PIPELINE_STATE"]/*' />
 /// <unmanaged>D3D12_CACHED_PIPELINE_STATE</unmanaged>
 public partial struct CachedPipelineState
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CACHED_PIPELINE_STATE::pCachedBlob"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CACHED_PIPELINE_STATE::pCachedBlob"]/*' />
 	public unsafe void* pCachedBlob;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_CACHED_PIPELINE_STATE::CachedBlobSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CACHED_PIPELINE_STATE::CachedBlobSizeInBytes"]/*' />
 	public nuint CachedBlobSizeInBytes;
 }

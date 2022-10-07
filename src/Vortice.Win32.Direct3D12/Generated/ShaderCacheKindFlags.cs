@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAGS</unmanaged>
 [Flags]
 public enum ShaderCacheKindFlags : uint
 {
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CACHE_FOR_DRIVER"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CACHE_FOR_DRIVER"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CACHE_FOR_DRIVER</unmanaged>
 	ImplicitD3DCacheForDriver = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CONVERSIONS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CONVERSIONS"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CONVERSIONS</unmanaged>
 	ImplicitD3DConversions = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_DRIVER_MANAGED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_DRIVER_MANAGED"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_DRIVER_MANAGED</unmanaged>
 	ImplicitDriverManaged = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_APPLICATION_MANAGED"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_APPLICATION_MANAGED"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAG_APPLICATION_MANAGED</unmanaged>
 	ApplicationManaged = 8,
 }

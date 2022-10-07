@@ -9,40 +9,40 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS"]/*' />
 /// <unmanaged>D3D12_QUERY_DATA_PIPELINE_STATISTICS</unmanaged>
 public partial struct QueryDataPipelineStatistics
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::IAVertices"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::IAVertices"]/*' />
 	public ulong IAVertices;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::IAPrimitives"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::IAPrimitives"]/*' />
 	public ulong IAPrimitives;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::VSInvocations"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::VSInvocations"]/*' />
 	public ulong VSInvocations;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::GSInvocations"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::GSInvocations"]/*' />
 	public ulong GSInvocations;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::GSPrimitives"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::GSPrimitives"]/*' />
 	public ulong GSPrimitives;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::CInvocations"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::CInvocations"]/*' />
 	public ulong CInvocations;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::CPrimitives"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::CPrimitives"]/*' />
 	public ulong CPrimitives;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::PSInvocations"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::PSInvocations"]/*' />
 	public ulong PSInvocations;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::HSInvocations"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::HSInvocations"]/*' />
 	public ulong HSInvocations;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::DSInvocations"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::DSInvocations"]/*' />
 	public ulong DSInvocations;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::CSInvocations"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_DATA_PIPELINE_STATISTICS::CSInvocations"]/*' />
 	public ulong CSInvocations;
 }

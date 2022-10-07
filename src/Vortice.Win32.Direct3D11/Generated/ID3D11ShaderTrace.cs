@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace"]/*' />
 /// <unmanaged>ID3D11ShaderTrace</unmanaged>
 [Guid("36b013e6-2811-4845-baa7-d623fe0df104")]
 [NativeTypeName("struct ID3D11ShaderTrace : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::TraceReady"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::TraceReady"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult TraceReady(ulong* pTestCount)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, ulong*, int>)(lpVtbl[3]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pTestCount);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::ResetTrace"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::ResetTrace"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void ResetTrace()
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, void>)(lpVtbl[4]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetTraceStats"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetTraceStats"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetTraceStats(TraceStats* pTraceStats)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, TraceStats*, int>)(lpVtbl[5]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pTraceStats);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::PSSelectStamp"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::PSSelectStamp"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public HResult PSSelectStamp(uint stampIndex)
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, int>)(lpVtbl[6]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stampIndex);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetInitialRegisterContents"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetInitialRegisterContents"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult GetInitialRegisterContents(TraceRegister* pRegister, TraceValue* pValue)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, TraceRegister*, TraceValue*, int>)(lpVtbl[7]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pRegister, pValue);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetStep"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetStep"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetStep(uint stepIndex, TraceStep* pTraceStep)
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, TraceStep*, int>)(lpVtbl[8]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, pTraceStep);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetWrittenRegister"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetWrittenRegister"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult GetWrittenRegister(uint stepIndex, uint writtenRegisterIndex, TraceRegister* pRegister, TraceValue* pValue)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, uint, TraceRegister*, TraceValue*, int>)(lpVtbl[9]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, writtenRegisterIndex, pRegister, pValue);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetReadRegister"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetReadRegister"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult GetReadRegister(uint stepIndex, uint readRegisterIndex, TraceRegister* pRegister, TraceValue* pValue)

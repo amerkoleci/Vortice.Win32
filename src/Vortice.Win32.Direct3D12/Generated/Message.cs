@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE"]/*' />
 /// <unmanaged>D3D12_MESSAGE</unmanaged>
 public partial struct Message
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::Category"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::Category"]/*' />
 	public MessageCategory Category;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::Severity"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::Severity"]/*' />
 	public MessageSeverity Severity;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::ID"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::ID"]/*' />
 	public MessageId ID;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::pDescription"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::pDescription"]/*' />
 	public unsafe byte* pDescription;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::DescriptionByteLength"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE::DescriptionByteLength"]/*' />
 	public nuint DescriptionByteLength;
 }

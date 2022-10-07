@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS9</unmanaged>
 public partial struct FeatureDataD3D12Options9
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::MeshShaderPipelineStatsSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::MeshShaderPipelineStatsSupported"]/*' />
 	public Bool32 MeshShaderPipelineStatsSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::MeshShaderSupportsFullRangeRenderTargetArrayIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::MeshShaderSupportsFullRangeRenderTargetArrayIndex"]/*' />
 	public Bool32 MeshShaderSupportsFullRangeRenderTargetArrayIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::AtomicInt64OnTypedResourceSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::AtomicInt64OnTypedResourceSupported"]/*' />
 	public Bool32 AtomicInt64OnTypedResourceSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::AtomicInt64OnGroupSharedSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::AtomicInt64OnGroupSharedSupported"]/*' />
 	public Bool32 AtomicInt64OnGroupSharedSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::DerivativesInMeshAndAmplificationShadersSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::DerivativesInMeshAndAmplificationShadersSupported"]/*' />
 	public Bool32 DerivativesInMeshAndAmplificationShadersSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::WaveMMATier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS9::WaveMMATier"]/*' />
 	public WaveMmaTier WaveMMATier;
 }

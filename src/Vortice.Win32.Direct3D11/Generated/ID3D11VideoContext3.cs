@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3"]/*' />
 /// <unmanaged>ID3D11VideoContext3</unmanaged>
 [Guid("a9e2faa0-cb39-418f-a0b7-d8aad4de672e")]
 [NativeTypeName("struct ID3D11VideoContext3 : ID3D11VideoContext2")]
@@ -714,7 +714,7 @@ public unsafe partial struct ID3D11VideoContext3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[82]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pType, Size, pMetaData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3::DecoderBeginFrame1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3::DecoderBeginFrame1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
 	public HResult DecoderBeginFrame1(ID3D11VideoDecoder* pDecoder, ID3D11VideoDecoderOutputView* pView, uint ContentKeySize, void* pContentKey, uint NumComponentHistograms, uint* pHistogramOffsets, ID3D11Buffer** ppHistogramBuffers)
@@ -722,7 +722,7 @@ public unsafe partial struct ID3D11VideoContext3 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, ID3D11VideoDecoderOutputView*, uint, void*, uint, uint*, ID3D11Buffer**, int>)(lpVtbl[83]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pView, ContentKeySize, pContentKey, NumComponentHistograms, pHistogramOffsets, ppHistogramBuffers);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3::SubmitDecoderBuffers2"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3::SubmitDecoderBuffers2"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(84)]
 	public HResult SubmitDecoderBuffers2(ID3D11VideoDecoder* pDecoder, uint NumBuffers, VideoDecoderBufferDescription2* pBufferDesc)

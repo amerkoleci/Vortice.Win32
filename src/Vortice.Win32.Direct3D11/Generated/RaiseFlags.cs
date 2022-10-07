@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RAISE_FLAG"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RAISE_FLAG"]/*' />
 /// <unmanaged>D3D11_RAISE_FLAG</unmanaged>
 [Flags]
 public enum RaiseFlags : int
 {
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_RAISE_FLAG::D3D11_RAISE_FLAG_DRIVER_INTERNAL_ERROR"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RAISE_FLAG::D3D11_RAISE_FLAG_DRIVER_INTERNAL_ERROR"]/*' />
 	/// <unmanaged>D3D11_RAISE_FLAG_DRIVER_INTERNAL_ERROR</unmanaged>
 	DriverInternalError = 1,
 }

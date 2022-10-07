@@ -9,25 +9,25 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC"]/*' />
 /// <unmanaged>D3D11_INFO_QUEUE_FILTER_DESC</unmanaged>
 public partial struct InfoQueueFilterDescription
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::NumCategories"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::NumCategories"]/*' />
 	public uint NumCategories;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::pCategoryList"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::pCategoryList"]/*' />
 	public unsafe MessageCategory* pCategoryList;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::NumSeverities"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::NumSeverities"]/*' />
 	public uint NumSeverities;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::pSeverityList"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::pSeverityList"]/*' />
 	public unsafe MessageSeverity* pSeverityList;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::NumIDs"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::NumIDs"]/*' />
 	public uint NumIDs;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INFO_QUEUE_FILTER_DESC::pIDList"]/*' />
 	public unsafe MessageId* pIDList;
 }

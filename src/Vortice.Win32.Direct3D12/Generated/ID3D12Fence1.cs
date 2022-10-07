@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Fence1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence1"]/*' />
 /// <unmanaged>ID3D12Fence1</unmanaged>
 [Guid("433685fe-e22b-4ca0-a8db-b5b4f4dd0e4a")]
 [NativeTypeName("struct ID3D12Fence1 : ID3D12Fence")]
@@ -138,7 +138,7 @@ public unsafe partial struct ID3D12Fence1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Fence1*, ulong, int>)(lpVtbl[10]))((ID3D12Fence1*)Unsafe.AsPointer(ref this), Value);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Fence1::GetCreationFlags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence1::GetCreationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
 	public FenceFlags GetCreationFlags()

@@ -9,33 +9,33 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_FLAGS</unmanaged>
 [Flags]
 public enum ShaderCacheSupportFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_NONE"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_SINGLE_PSO"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_SINGLE_PSO"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_SINGLE_PSO</unmanaged>
 	SinglePso = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_LIBRARY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_LIBRARY"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_LIBRARY</unmanaged>
 	Library = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE</unmanaged>
 	AutomaticInprocCache = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE</unmanaged>
 	AutomaticDiskCache = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_DRIVER_MANAGED_CACHE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_DRIVER_MANAGED_CACHE"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_DRIVER_MANAGED_CACHE</unmanaged>
 	DriverManagedCache = 16,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_SHADER_CONTROL_CLEAR"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_SHADER_CONTROL_CLEAR"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_SHADER_CONTROL_CLEAR</unmanaged>
 	ShaderControlClear = 32,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_SHADER_SESSION_DELETE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_SHADER_SESSION_DELETE"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_SHADER_SESSION_DELETE</unmanaged>
 	ShaderSessionDelete = 64,
 }

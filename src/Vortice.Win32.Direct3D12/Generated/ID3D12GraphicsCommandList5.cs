@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5"]/*' />
 /// <unmanaged>ID3D12GraphicsCommandList5</unmanaged>
 [Guid("55050859-4024-474c-87f5-6472eaee44ea")]
 [NativeTypeName("struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandList4")]
@@ -666,7 +666,7 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, DispatchRaysDescription*, void>)(lpVtbl[76]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5::RSSetShadingRate"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5::RSSetShadingRate"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(77)]
 	public void RSSetShadingRate(ShadingRate baseShadingRate, ShadingRateCombiner* combiners)
@@ -674,7 +674,7 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ShadingRate, ShadingRateCombiner*, void>)(lpVtbl[77]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), baseShadingRate, combiners);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5::RSSetShadingRateImage"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5::RSSetShadingRateImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(78)]
 	public void RSSetShadingRateImage(ID3D12Resource* shadingRateImage)

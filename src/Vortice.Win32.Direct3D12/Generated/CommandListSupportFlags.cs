@@ -9,33 +9,33 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAGS</unmanaged>
 [Flags]
 public enum CommandListSupportFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_DIRECT"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_DIRECT"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_DIRECT</unmanaged>
 	Direct = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_BUNDLE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_BUNDLE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_BUNDLE</unmanaged>
 	Bundle = 2,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_COMPUTE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_COMPUTE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_COMPUTE</unmanaged>
 	Compute = 4,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_COPY"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_COPY"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_COPY</unmanaged>
 	Copy = 8,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_DECODE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_DECODE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_DECODE</unmanaged>
 	VideoDecode = 16,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_PROCESS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_PROCESS"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_PROCESS</unmanaged>
 	VideoProcess = 32,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_ENCODE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_ENCODE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_ENCODE</unmanaged>
 	VideoEncode = 64,
 }

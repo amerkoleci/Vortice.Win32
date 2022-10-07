@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12LibraryReflection"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LibraryReflection"]/*' />
 /// <unmanaged>ID3D12LibraryReflection</unmanaged>
 [Guid("8e349d19-54db-4a56-9dc9-119d87bdb804")]
 [NativeTypeName("struct ID3D12LibraryReflection : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12LibraryReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12LibraryReflection::GetDesc"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LibraryReflection::GetDesc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public HResult GetDesc(LibraryDescription* pDesc)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12LibraryReflection : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12LibraryReflection*, LibraryDescription*, int>)(lpVtbl[3]))((ID3D12LibraryReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12LibraryReflection::GetFunctionByIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LibraryReflection::GetFunctionByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public ID3D12FunctionReflection GetFunctionByIndex(int FunctionIndex)

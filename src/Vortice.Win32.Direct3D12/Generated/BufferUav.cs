@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV"]/*' />
 /// <unmanaged>D3D12_BUFFER_UAV</unmanaged>
 public partial struct BufferUav
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::FirstElement"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::FirstElement"]/*' />
 	public ulong FirstElement;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::NumElements"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::NumElements"]/*' />
 	public uint NumElements;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::StructureByteStride"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::StructureByteStride"]/*' />
 	public uint StructureByteStride;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::CounterOffsetInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::CounterOffsetInBytes"]/*' />
 	public ulong CounterOffsetInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV::Flags"]/*' />
 	public BufferUavFlags Flags;
 }

@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC"]/*' />
 /// <unmanaged>D3D12_COMPUTE_PIPELINE_STATE_DESC</unmanaged>
 public partial struct ComputePipelineStateDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::pRootSignature"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::pRootSignature"]/*' />
 	public unsafe ID3D12RootSignature* pRootSignature;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::CS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::CS"]/*' />
 	public ShaderBytecode CS;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::NodeMask"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::NodeMask"]/*' />
 	public uint NodeMask;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::CachedPSO"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::CachedPSO"]/*' />
 	public CachedPipelineState CachedPSO;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::Flags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPUTE_PIPELINE_STATE_DESC::Flags"]/*' />
 	public PipelineStateFlags Flags;
 }

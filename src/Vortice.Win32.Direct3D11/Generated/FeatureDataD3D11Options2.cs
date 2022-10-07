@@ -9,31 +9,31 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D11_OPTIONS2</unmanaged>
 public partial struct FeatureDataD3D11Options2
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::PSSpecifiedStencilRefSupported"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::PSSpecifiedStencilRefSupported"]/*' />
 	public Bool32 PSSpecifiedStencilRefSupported;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::TypedUAVLoadAdditionalFormats"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::TypedUAVLoadAdditionalFormats"]/*' />
 	public Bool32 TypedUAVLoadAdditionalFormats;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::ROVsSupported"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::ROVsSupported"]/*' />
 	public Bool32 ROVsSupported;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::ConservativeRasterizationTier"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::ConservativeRasterizationTier"]/*' />
 	public ConservativeRasterizationTier ConservativeRasterizationTier;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::TiledResourcesTier"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::TiledResourcesTier"]/*' />
 	public TiledResourcesTier TiledResourcesTier;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::MapOnDefaultTextures"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::MapOnDefaultTextures"]/*' />
 	public Bool32 MapOnDefaultTextures;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::StandardSwizzle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::StandardSwizzle"]/*' />
 	public Bool32 StandardSwizzle;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::UnifiedMemoryArchitecture"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D11_OPTIONS2::UnifiedMemoryArchitecture"]/*' />
 	public Bool32 UnifiedMemoryArchitecture;
 }

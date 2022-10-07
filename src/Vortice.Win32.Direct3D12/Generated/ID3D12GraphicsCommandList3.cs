@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList3"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList3"]/*' />
 /// <unmanaged>ID3D12GraphicsCommandList3</unmanaged>
 [Guid("6fda83a7-b84c-4e38-9ac8-c7bd22016b3d")]
 [NativeTypeName("struct ID3D12GraphicsCommandList3 : ID3D12GraphicsCommandList2")]
@@ -586,7 +586,7 @@ public unsafe partial struct ID3D12GraphicsCommandList3 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, uint, WriteBufferImmediateParameter*, WriteBufferImmediateMode*, void>)(lpVtbl[66]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), Count, pParams, pModes);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList3::SetProtectedResourceSession"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList3::SetProtectedResourceSession"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(67)]
 	public void SetProtectedResourceSession(ID3D12ProtectedResourceSession* pProtectedResourceSession)

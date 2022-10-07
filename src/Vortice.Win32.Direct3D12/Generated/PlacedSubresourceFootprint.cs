@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PLACED_SUBRESOURCE_FOOTPRINT"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PLACED_SUBRESOURCE_FOOTPRINT"]/*' />
 /// <unmanaged>D3D12_PLACED_SUBRESOURCE_FOOTPRINT</unmanaged>
 public partial struct PlacedSubresourceFootprint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PLACED_SUBRESOURCE_FOOTPRINT::Offset"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PLACED_SUBRESOURCE_FOOTPRINT::Offset"]/*' />
 	public ulong Offset;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_PLACED_SUBRESOURCE_FOOTPRINT::Footprint"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PLACED_SUBRESOURCE_FOOTPRINT::Footprint"]/*' />
 	public SubresourceFootprint Footprint;
 }

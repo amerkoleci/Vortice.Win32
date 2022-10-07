@@ -9,34 +9,34 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_DESC2</unmanaged>
 public partial struct VideoDecoderBufferDescription2
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::BufferType"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::BufferType"]/*' />
 	public VideoDecoderBufferType BufferType;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::DataOffset"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::DataOffset"]/*' />
 	public uint DataOffset;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::DataSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::DataSize"]/*' />
 	public uint DataSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::pIV"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::pIV"]/*' />
 	public unsafe void* pIV;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::IVSize"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::IVSize"]/*' />
 	public uint IVSize;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::pSubSampleMappingBlock"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::pSubSampleMappingBlock"]/*' />
 	public unsafe VideoDecoderSubSampleMappingBlock* pSubSampleMappingBlock;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::SubSampleMappingCount"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::SubSampleMappingCount"]/*' />
 	public uint SubSampleMappingCount;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::cBlocksStripeEncrypted"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::cBlocksStripeEncrypted"]/*' />
 	public uint cBlocksStripeEncrypted;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::cBlocksStripeClear"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_DESC2::cBlocksStripeClear"]/*' />
 	public uint cBlocksStripeClear;
 }

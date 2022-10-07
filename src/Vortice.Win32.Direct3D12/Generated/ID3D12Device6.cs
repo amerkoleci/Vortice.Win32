@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device6"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device6"]/*' />
 /// <unmanaged>ID3D12Device6</unmanaged>
 [Guid("c70b221b-40e4-4a17-89af-025a0727a6dc")]
 [NativeTypeName("struct ID3D12Device6 : ID3D12Device5")]
@@ -574,7 +574,7 @@ public unsafe partial struct ID3D12Device6 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, DriverMatchingIdentifierStatus>)(lpVtbl[64]))((ID3D12Device6*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Device6::SetBackgroundProcessingMode"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Device6::SetBackgroundProcessingMode"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(65)]
 	public HResult SetBackgroundProcessingMode(BackgroundProcessingMode Mode, MeasurementsAction MeasurementsAction, Handle hEventToSignalUponCompletion, Bool32* pbFurtherMeasurementsDesired)

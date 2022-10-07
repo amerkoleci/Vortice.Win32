@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_INFO"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_INFO"]/*' />
 /// <unmanaged>D3D11_COUNTER_INFO</unmanaged>
 public partial struct CounterInfo
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_INFO::LastDeviceDependentCounter"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_INFO::LastDeviceDependentCounter"]/*' />
 	public Counter LastDeviceDependentCounter;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_INFO::NumSimultaneousCounters"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_INFO::NumSimultaneousCounters"]/*' />
 	public uint NumSimultaneousCounters;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_INFO::NumDetectableParallelUnits"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_INFO::NumDetectableParallelUnits"]/*' />
 	public byte NumDetectableParallelUnits;
 }

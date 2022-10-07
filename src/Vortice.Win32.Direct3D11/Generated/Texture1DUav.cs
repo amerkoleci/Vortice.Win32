@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_UAV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_UAV"]/*' />
 /// <unmanaged>D3D11_TEX1D_UAV</unmanaged>
 public partial struct Texture1DUav
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_UAV::MipSlice"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEX1D_UAV::MipSlice"]/*' />
 	public uint MipSlice;
 }

@@ -9,19 +9,19 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_INSTANCE_DESC</unmanaged>
 public partial struct RaytracingInstanceDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::Transform"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::Transform"]/*' />
 	public unsafe fixed float Transform[12];
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::_bitfield1"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::_bitfield1"]/*' />
 	public uint _bitfield1;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::_bitfield2"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::_bitfield2"]/*' />
 	public uint _bitfield2;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::AccelerationStructure"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_DESC::AccelerationStructure"]/*' />
 	public ulong AccelerationStructure;
 }

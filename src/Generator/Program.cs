@@ -1010,51 +1010,90 @@ public static class Program
 
     private static bool s_generateUnmanagedDocs = true;
 
+    public static string FindRepoRoot()
+    {
+        string currentDir = Directory.GetCurrentDirectory();
+        Console.WriteLine("cwd is '{0}'", currentDir);
+        while (true)
+        {
+            string repoDir = Path.Combine(currentDir, "Vortice.Win32");
+            Console.WriteLine("looking for Vortice.Win32 at '{0}'", repoDir);
+            if (Directory.Exists(repoDir))
+            {
+                return repoDir;
+            }
+
+            string? nextDir = Path.GetDirectoryName(currentDir);
+            if (nextDir == null || nextDir == currentDir)
+            {
+                Console.WriteLine("Error: failed to find the 'Vortice.Win32' repository in any of the parent directories");
+                Console.WriteLine("       feel free to clone it so one of the directories that were searched above");
+                System.Environment.Exit(1);
+            }
+
+            currentDir = nextDir;
+        }
+    }
+
     public static int Main(string[] args)
     {
-        string outputPath = AppContext.BaseDirectory;
-        if (args.Length > 0)
-        {
-            outputPath = args[0];
-        }
+        string repoRoot = FindRepoRoot();
+        string d3d11Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11");
+        string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D12");
+        string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Direct3D11on12");
 
-        if (!Path.IsPathRooted(outputPath))
-        {
-            outputPath = Path.Combine(AppContext.BaseDirectory, outputPath);
-        }
+        // Generate docs
+        //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
+        //DocGenerator.Generate(new[] { "D3D" }, Path.Combine(repoRoot, "Generated", "Graphics", "Direct3D.xml"));
+        //DocGenerator.Generate(new[] { "D2D1" }, Path.Combine(repoRoot, "Generated", "Graphics", "Direct2D.xml"));
+        //DocGenerator.Generate(new[] { "DWRITE" }, Path.Combine(repoRoot, "Generated", "Graphics", "DirectWrite.xml"));
+        //DocGenerator.Generate(new[] { "WIC" }, Path.Combine(repoRoot, "Generated", "Graphics", "Imaging.xml"));
 
-        if (!Directory.Exists(outputPath))
-        {
-            Directory.CreateDirectory(outputPath);
-        }
+        //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(d3d11Path, "Direct3D11.xml"));
+        //DocGenerator.Generate(new[] { "D3D12" }, Path.Combine(d3d12Path, "Direct3D12.xml"));
 
         foreach (string jsonFile in jsons)
         {
             string finalPath = Path.Combine(AppContext.BaseDirectory, "win32json", "api", jsonFile);
             string jsonData = File.ReadAllText(finalPath);
             ApiData? api = JsonConvert.DeserializeObject<ApiData>(jsonData);
-            Generate(api!, outputPath, jsonFile);
+
+            string outputPath = repoRoot;
+            bool useSubFolders = true;
+            if (jsonFile.EndsWith("Direct3D11.json"))
+            {
+                outputPath = d3d11Path;
+                useSubFolders = false;
+            }
+            else if (jsonFile.EndsWith("Direct3D12.json"))
+            {
+                outputPath = d3d12Path;
+                useSubFolders = false;
+            }
+            else if (jsonFile.EndsWith("Direct3D11on12.json"))
+            {
+                outputPath = d3d11on12Path;
+                useSubFolders = false;
+            }
+
+            outputPath = Path.Combine(outputPath, "Generated");
+            if (!Directory.Exists(outputPath))
+            {
+                Directory.CreateDirectory(outputPath);
+            }
+
+            Generate(api!, outputPath, jsonFile, useSubFolders);
         }
 
-        // Generate docs
-        //DocGenerator.Generate(new[] { "D2D1" }, Path.Combine(outputPath, "Direct2D.xml"));
-        //DocGenerator.Generate(new[] { "DWRITE" }, Path.Combine(outputPath, "DirectWrite.xml"));
-        //DocGenerator.Generate(new[] { "D3D" }, Path.Combine(outputPath, "Direct3D.xml"));
-        //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(outputPath, "Dxgi.xml"));
-        //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(outputPath, "Direct3D11.xml"));
+
         return 0;
     }
 
-    private static void Generate(ApiData api, string outputPath, string jsonFile)
+    private static void Generate(ApiData api, string outputPath, string jsonFile, bool useSubFolders)
     {
         string[] splits = jsonFile.Split(".", StringSplitOptions.RemoveEmptyEntries);
         string folderRoot = splits[0];
         string outputFolder = Path.Combine(outputPath, folderRoot);
-
-        if (!Directory.Exists(outputFolder))
-        {
-            Directory.CreateDirectory(outputFolder);
-        }
 
         string docFile = splits[1];
         string subFolderName = string.Empty;
@@ -1083,23 +1122,35 @@ public static class Program
         if (docFile != "json")
         {
             string subdirectory = Path.Combine(outputFolder, docFile);
-           
+
         }
         else
         {
             docFile = string.Empty;
         }
 
-        if (docFile.Equals("dxgi", StringComparison.OrdinalIgnoreCase))
+        string apiName = ns;
+        string apiFolder;
+        if (useSubFolders)
         {
-            docFile = "DXGI";
+            if (!Directory.Exists(outputFolder))
+            {
+                Directory.CreateDirectory(outputFolder);
+            }
+
+            apiFolder = Path.Combine(outputFolder, subFolderName);
+        }
+        else
+        {
+            apiFolder = outputPath;
         }
 
-        string apiName = ns;
-        string apiFolder = Path.Combine(outputFolder, subFolderName);
-
         if (Directory.Exists(apiFolder) == false)
+        {
             Directory.CreateDirectory(apiFolder);
+        }
+
+        docFile = $"../{docFile}";
 
         GenerateConstants(apiFolder, apiName, docFile, api);
         GenerateTypes(apiFolder, apiName, docFile, api);
@@ -1286,7 +1337,7 @@ public static class Program
                 apiName,
                 docFileName,
                 $"Win32.{apiName}");
-            GenerateStruct(writer, api,  structType);
+            GenerateStruct(writer, api, structType);
             s_visitedStructs.Add($"{apiName}.{structType.Name}");
         }
 

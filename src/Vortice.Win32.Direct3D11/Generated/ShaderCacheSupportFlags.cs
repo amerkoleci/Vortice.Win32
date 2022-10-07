@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_FLAGS</unmanaged>
 [Flags]
 public enum ShaderCacheSupportFlags : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_NONE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_NONE"]/*' />
 	/// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE"]/*' />
 	/// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_INPROC_CACHE</unmanaged>
 	AutomaticInprocCache = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE"]/*' />
 	/// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_AUTOMATIC_DISK_CACHE</unmanaged>
 	AutomaticDiskCache = 2,
 }

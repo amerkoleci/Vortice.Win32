@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract"]/*' />
 /// <unmanaged>ID3D12SharingContract</unmanaged>
 [Guid("0adf7d52-929c-4e61-addb-ffed30de66ef")]
 [NativeTypeName("struct ID3D12SharingContract : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12SharingContract : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::Present"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::Present"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void Present(ID3D12Resource* pResource, uint Subresource, IntPtr window)
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12SharingContract : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, ID3D12Resource*, uint, IntPtr, void>)(lpVtbl[3]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), pResource, Subresource, window);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::SharedFenceSignal"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::SharedFenceSignal"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SharedFenceSignal(ID3D12Fence* pFence, ulong FenceValue)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12SharingContract : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, ID3D12Fence*, ulong, void>)(lpVtbl[4]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), pFence, FenceValue);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::BeginCapturableWork"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::BeginCapturableWork"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void BeginCapturableWork(Guid* guid)
@@ -98,7 +98,7 @@ public unsafe partial struct ID3D12SharingContract : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, Guid*, void>)(lpVtbl[5]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), guid);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::EndCapturableWork"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::EndCapturableWork"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public void EndCapturableWork(Guid* guid)

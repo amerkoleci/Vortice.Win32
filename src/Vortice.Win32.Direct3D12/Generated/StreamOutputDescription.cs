@@ -9,22 +9,22 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC"]/*' />
 /// <unmanaged>D3D12_STREAM_OUTPUT_DESC</unmanaged>
 public partial struct StreamOutputDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::pSODeclaration"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::pSODeclaration"]/*' />
 	public unsafe SODeclarationEntry* pSODeclaration;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::NumEntries"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::NumEntries"]/*' />
 	public uint NumEntries;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::pBufferStrides"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::pBufferStrides"]/*' />
 	public unsafe uint* pBufferStrides;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::NumStrides"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::NumStrides"]/*' />
 	public uint NumStrides;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::RasterizedStream"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STREAM_OUTPUT_DESC::RasterizedStream"]/*' />
 	public uint RasterizedStream;
 }

@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOCAL_ROOT_SIGNATURE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOCAL_ROOT_SIGNATURE"]/*' />
 /// <unmanaged>D3D12_LOCAL_ROOT_SIGNATURE</unmanaged>
 public partial struct LocalRootSignature
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_LOCAL_ROOT_SIGNATURE::pLocalRootSignature"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOCAL_ROOT_SIGNATURE::pLocalRootSignature"]/*' />
 	public unsafe ID3D12RootSignature* pLocalRootSignature;
 }

@@ -9,28 +9,28 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC"]/*' />
 /// <unmanaged>D3D12_INPUT_ELEMENT_DESC</unmanaged>
 public partial struct InputElementDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::SemanticName"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::SemanticName"]/*' />
 	public unsafe sbyte* SemanticName;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::SemanticIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::Format"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::Format"]/*' />
 	public Graphics.Dxgi.Common.Format Format;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::InputSlot"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::InputSlot"]/*' />
 	public uint InputSlot;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::AlignedByteOffset"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::AlignedByteOffset"]/*' />
 	public uint AlignedByteOffset;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::InputSlotClass"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::InputSlotClass"]/*' />
 	public InputClassification InputSlotClass;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::InstanceDataStepRate"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::InstanceDataStepRate"]/*' />
 	public uint InstanceDataStepRate;
 }

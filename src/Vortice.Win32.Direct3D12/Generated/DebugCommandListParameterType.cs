@@ -9,11 +9,11 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE"]/*' />
 /// <unmanaged>D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE</unmanaged>
 public enum DebugCommandListParameterType : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE::D3D12_DEBUG_COMMAND_LIST_PARAMETER_GPU_BASED_VALIDATION_SETTINGS"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE::D3D12_DEBUG_COMMAND_LIST_PARAMETER_GPU_BASED_VALIDATION_SETTINGS"]/*' />
 	/// <unmanaged>D3D12_DEBUG_COMMAND_LIST_PARAMETER_GPU_BASED_VALIDATION_SETTINGS</unmanaged>
 	GpuBasedValidationSettings = 0,
 }

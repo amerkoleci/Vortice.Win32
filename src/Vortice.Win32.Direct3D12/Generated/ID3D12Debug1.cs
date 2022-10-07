@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug1"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug1"]/*' />
 /// <unmanaged>ID3D12Debug1</unmanaged>
 [Guid("affaa4ca-63fe-4d8e-b8ad-159000af4304")]
 [NativeTypeName("struct ID3D12Debug1 : IUnknown")]
@@ -74,7 +74,7 @@ public unsafe partial struct ID3D12Debug1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug1::EnableDebugLayer"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug1::EnableDebugLayer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
 	public void EnableDebugLayer()
@@ -82,7 +82,7 @@ public unsafe partial struct ID3D12Debug1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Debug1*, void>)(lpVtbl[3]))((ID3D12Debug1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug1::SetEnableGPUBasedValidation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug1::SetEnableGPUBasedValidation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
 	public void SetEnableGPUBasedValidation(Bool32 Enable)
@@ -90,7 +90,7 @@ public unsafe partial struct ID3D12Debug1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D12Debug1*, Bool32, void>)(lpVtbl[4]))((ID3D12Debug1*)Unsafe.AsPointer(ref this), Enable);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Debug1::SetEnableSynchronizedCommandQueueValidation"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug1::SetEnableSynchronizedCommandQueueValidation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public void SetEnableSynchronizedCommandQueueValidation(Bool32 Enable)

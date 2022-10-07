@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SERIALIZATION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SERIALIZATION"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_SERIALIZATION</unmanaged>
 public partial struct FeatureDataSerialization
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SERIALIZATION::NodeIndex"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SERIALIZATION::NodeIndex"]/*' />
 	public uint NodeIndex;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SERIALIZATION::HeapSerializationTier"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_SERIALIZATION::HeapSerializationTier"]/*' />
 	public HeapSerializationTier HeapSerializationTier;
 }

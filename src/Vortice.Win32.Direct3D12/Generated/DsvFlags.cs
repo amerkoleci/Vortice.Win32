@@ -9,18 +9,18 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS"]/*' />
 /// <unmanaged>D3D12_DSV_FLAGS</unmanaged>
 [Flags]
 public enum DsvFlags : uint
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS::D3D12_DSV_FLAG_NONE"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS::D3D12_DSV_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_DSV_FLAG_NONE</unmanaged>
 	None = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS::D3D12_DSV_FLAG_READ_ONLY_DEPTH"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS::D3D12_DSV_FLAG_READ_ONLY_DEPTH"]/*' />
 	/// <unmanaged>D3D12_DSV_FLAG_READ_ONLY_DEPTH</unmanaged>
 	ReadOnlyDepth = 1,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS::D3D12_DSV_FLAG_READ_ONLY_STENCIL"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS::D3D12_DSV_FLAG_READ_ONLY_STENCIL"]/*' />
 	/// <unmanaged>D3D12_DSV_FLAG_READ_ONLY_STENCIL</unmanaged>
 	ReadOnlyStencil = 2,
 }

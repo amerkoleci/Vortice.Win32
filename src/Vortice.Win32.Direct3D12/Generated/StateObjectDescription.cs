@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC"]/*' />
 /// <unmanaged>D3D12_STATE_OBJECT_DESC</unmanaged>
 public partial struct StateObjectDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC::Type"]/*' />
 	public StateObjectType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC::NumSubobjects"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC::NumSubobjects"]/*' />
 	public uint NumSubobjects;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC::pSubobjects"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_DESC::pSubobjects"]/*' />
 	public unsafe StateSubObject* pSubobjects;
 }

@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState1"]/*' />
 /// <unmanaged>ID3D11RasterizerState1</unmanaged>
 [Guid("1217d7a6-5039-418c-b042-9cbe256afd6e")]
 [NativeTypeName("struct ID3D11RasterizerState1 : ID3D11RasterizerState")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11RasterizerState1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState1*, RasterizerDescription*, void>)(lpVtbl[7]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState1::GetDesc1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RasterizerState1::GetDesc1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public void GetDesc1(RasterizerDescription1* pDesc)

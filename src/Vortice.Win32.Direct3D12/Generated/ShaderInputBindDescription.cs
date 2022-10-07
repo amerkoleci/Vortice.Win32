@@ -9,37 +9,37 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC"]/*' />
 /// <unmanaged>D3D12_SHADER_INPUT_BIND_DESC</unmanaged>
 public partial struct ShaderInputBindDescription
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Name"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Name"]/*' />
 	public unsafe sbyte* Name;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Type"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Type"]/*' />
 	public Graphics.Direct3D.ShaderInputType Type;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::BindPoint"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::BindPoint"]/*' />
 	public uint BindPoint;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::BindCount"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::BindCount"]/*' />
 	public uint BindCount;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::uFlags"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::uFlags"]/*' />
 	public uint uFlags;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::ReturnType"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::ReturnType"]/*' />
 	public Graphics.Direct3D.ResourceReturnType ReturnType;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Dimension"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Dimension"]/*' />
 	public Graphics.Direct3D.SrvDimension Dimension;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::NumSamples"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::NumSamples"]/*' />
 	public uint NumSamples;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Space"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Space"]/*' />
 	public uint Space;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::uID"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::uID"]/*' />
 	public uint uID;
 }

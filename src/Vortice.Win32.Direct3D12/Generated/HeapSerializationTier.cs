@@ -9,14 +9,14 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_SERIALIZATION_TIER"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_SERIALIZATION_TIER"]/*' />
 /// <unmanaged>D3D12_HEAP_SERIALIZATION_TIER</unmanaged>
 public enum HeapSerializationTier : int
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_SERIALIZATION_TIER::D3D12_HEAP_SERIALIZATION_TIER_0"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_SERIALIZATION_TIER::D3D12_HEAP_SERIALIZATION_TIER_0"]/*' />
 	/// <unmanaged>D3D12_HEAP_SERIALIZATION_TIER_0</unmanaged>
 	Tier0 = 0,
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_SERIALIZATION_TIER::D3D12_HEAP_SERIALIZATION_TIER_10"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_SERIALIZATION_TIER::D3D12_HEAP_SERIALIZATION_TIER_10"]/*' />
 	/// <unmanaged>D3D12_HEAP_SERIALIZATION_TIER_10</unmanaged>
 	Tier1_0 = 10,
 }

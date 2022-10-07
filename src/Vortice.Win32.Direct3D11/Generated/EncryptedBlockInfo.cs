@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_ENCRYPTED_BLOCK_INFO"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ENCRYPTED_BLOCK_INFO"]/*' />
 /// <unmanaged>D3D11_ENCRYPTED_BLOCK_INFO</unmanaged>
 public partial struct EncryptedBlockInfo
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_ENCRYPTED_BLOCK_INFO::NumEncryptedBytesAtBeginning"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ENCRYPTED_BLOCK_INFO::NumEncryptedBytesAtBeginning"]/*' />
 	public uint NumEncryptedBytesAtBeginning;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_ENCRYPTED_BLOCK_INFO::NumBytesInSkipPattern"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ENCRYPTED_BLOCK_INFO::NumBytesInSkipPattern"]/*' />
 	public uint NumBytesInSkipPattern;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_ENCRYPTED_BLOCK_INFO::NumBytesInEncryptPattern"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ENCRYPTED_BLOCK_INFO::NumBytesInEncryptPattern"]/*' />
 	public uint NumBytesInEncryptPattern;
 }

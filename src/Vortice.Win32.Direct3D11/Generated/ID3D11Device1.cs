@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device1"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1"]/*' />
 /// <unmanaged>ID3D11Device1</unmanaged>
 [Guid("a04bfb29-08ef-43d6-a49c-a9bdbdcbe686")]
 [NativeTypeName("struct ID3D11Device1 : ID3D11Device")]
@@ -394,7 +394,7 @@ public unsafe partial struct ID3D11Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, uint>)(lpVtbl[42]))((ID3D11Device1*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device1::GetImmediateContext1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::GetImmediateContext1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(43)]
 	public void GetImmediateContext1(ID3D11DeviceContext1** ppImmediateContext)
@@ -402,7 +402,7 @@ public unsafe partial struct ID3D11Device1 : INativeGuid
 		((delegate* unmanaged[Stdcall]<ID3D11Device1*, ID3D11DeviceContext1**, void>)(lpVtbl[43]))((ID3D11Device1*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateDeferredContext1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateDeferredContext1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(44)]
 	public HResult CreateDeferredContext1(uint ContextFlags, ID3D11DeviceContext1** ppDeferredContext)
@@ -410,7 +410,7 @@ public unsafe partial struct ID3D11Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, uint, ID3D11DeviceContext1**, int>)(lpVtbl[44]))((ID3D11Device1*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateBlendState1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateBlendState1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
 	public HResult CreateBlendState1(BlendDescription1* pBlendStateDesc, ID3D11BlendState1** ppBlendState)
@@ -418,7 +418,7 @@ public unsafe partial struct ID3D11Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, BlendDescription1*, ID3D11BlendState1**, int>)(lpVtbl[45]))((ID3D11Device1*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateRasterizerState1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateRasterizerState1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
 	public HResult CreateRasterizerState1(RasterizerDescription1* pRasterizerDesc, ID3D11RasterizerState1** ppRasterizerState)
@@ -426,7 +426,7 @@ public unsafe partial struct ID3D11Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, RasterizerDescription1*, ID3D11RasterizerState1**, int>)(lpVtbl[46]))((ID3D11Device1*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateDeviceContextState"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::CreateDeviceContextState"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
 	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
@@ -434,7 +434,7 @@ public unsafe partial struct ID3D11Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[47]))((ID3D11Device1*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device1::OpenSharedResource1"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::OpenSharedResource1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
 	public HResult OpenSharedResource1(Handle hResource, Guid* returnedInterface, void** ppResource)
@@ -442,7 +442,7 @@ public unsafe partial struct ID3D11Device1 : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, Handle, Guid*, void**, int>)(lpVtbl[48]))((ID3D11Device1*)Unsafe.AsPointer(ref this), hResource, returnedInterface, ppResource);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Device1::OpenSharedResourceByName"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::OpenSharedResourceByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
 	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)

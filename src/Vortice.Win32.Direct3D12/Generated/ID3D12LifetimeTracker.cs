@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeTracker"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeTracker"]/*' />
 /// <unmanaged>ID3D12LifetimeTracker</unmanaged>
 [Guid("3fd03d36-4eb1-424a-a582-494ecb8ba813")]
 [NativeTypeName("struct ID3D12LifetimeTracker : ID3D12DeviceChild")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12LifetimeTracker : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12LifetimeTracker*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12LifetimeTracker*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeTracker::DestroyOwnedObject"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12LifetimeTracker::DestroyOwnedObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult DestroyOwnedObject(ID3D12DeviceChild* pObject)

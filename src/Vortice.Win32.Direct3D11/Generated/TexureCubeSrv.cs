@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXCUBE_SRV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXCUBE_SRV"]/*' />
 /// <unmanaged>D3D11_TEXCUBE_SRV</unmanaged>
 public partial struct TexureCubeSrv
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXCUBE_SRV::MostDetailedMip"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXCUBE_SRV::MostDetailedMip"]/*' />
 	public uint MostDetailedMip;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_TEXCUBE_SRV::MipLevels"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXCUBE_SRV::MipLevels"]/*' />
 	public uint MipLevels;
 }

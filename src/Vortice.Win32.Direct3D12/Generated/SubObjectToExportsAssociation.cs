@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION"]/*' />
 /// <unmanaged>D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION</unmanaged>
 public partial struct SubObjectToExportsAssociation
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pSubobjectToAssociate"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pSubobjectToAssociate"]/*' />
 	public unsafe StateSubObject* pSubobjectToAssociate;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::NumExports"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::NumExports"]/*' />
 	public uint NumExports;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pExports"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pExports"]/*' />
 	public unsafe ushort** pExports;
 }

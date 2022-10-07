@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Fence"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence"]/*' />
 /// <unmanaged>ID3D12Fence</unmanaged>
 [Guid("0a753dcf-c4d8-4b91-adf6-be5a60d95a76")]
 [NativeTypeName("struct ID3D12Fence : ID3D12Pageable")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12Fence : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Fence*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12Fence*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Fence::GetCompletedValue"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence::GetCompletedValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public ulong GetCompletedValue()
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D12Fence : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Fence*, ulong>)(lpVtbl[8]))((ID3D12Fence*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Fence::SetEventOnCompletion"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence::SetEventOnCompletion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetEventOnCompletion(ulong Value, Handle hEvent)
@@ -130,7 +130,7 @@ public unsafe partial struct ID3D12Fence : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12Fence*, ulong, Handle, int>)(lpVtbl[9]))((ID3D12Fence*)Unsafe.AsPointer(ref this), Value, hEvent);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12Fence::Signal"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Fence::Signal"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
 	public HResult Signal(ulong Value)

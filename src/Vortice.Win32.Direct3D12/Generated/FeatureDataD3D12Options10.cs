@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_D3D12_OPTIONS10</unmanaged>
 public partial struct FeatureDataD3D12Options10
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10::VariableRateShadingSumCombinerSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10::VariableRateShadingSumCombinerSupported"]/*' />
 	public Bool32 VariableRateShadingSumCombinerSupported;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10::MeshShaderPerPrimitiveShadingRateSupported"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_D3D12_OPTIONS10::MeshShaderPerPrimitiveShadingRateSupported"]/*' />
 	public Bool32 MeshShaderPerPrimitiveShadingRateSupported;
 }

@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ROOT_SIGNATURE"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ROOT_SIGNATURE"]/*' />
 /// <unmanaged>D3D12_FEATURE_DATA_ROOT_SIGNATURE</unmanaged>
 public partial struct FeatureDataRootSignature
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ROOT_SIGNATURE::HighestVersion"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE_DATA_ROOT_SIGNATURE::HighestVersion"]/*' />
 	public RootSignatureVersion HighestVersion;
 }

@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AES_CTR_IV"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AES_CTR_IV"]/*' />
 /// <unmanaged>D3D11_AES_CTR_IV</unmanaged>
 public partial struct AesCtrIv
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AES_CTR_IV::IV"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AES_CTR_IV::IV"]/*' />
 	public ulong IV;
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_AES_CTR_IV::Count"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AES_CTR_IV::Count"]/*' />
 	public ulong Count;
 }

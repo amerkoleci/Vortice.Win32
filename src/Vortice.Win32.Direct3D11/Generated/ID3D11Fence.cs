@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Fence"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence"]/*' />
 /// <unmanaged>ID3D11Fence</unmanaged>
 [Guid("affde9d1-1df7-4bb7-8a34-0f46251dab80")]
 [NativeTypeName("struct ID3D11Fence : ID3D11DeviceChild")]
@@ -106,7 +106,7 @@ public unsafe partial struct ID3D11Fence : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11Fence*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Fence::CreateSharedHandle"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle)
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D11Fence : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Fence::GetCompletedValue"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::GetCompletedValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public ulong GetCompletedValue()
@@ -122,7 +122,7 @@ public unsafe partial struct ID3D11Fence : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D11Fence*, ulong>)(lpVtbl[8]))((ID3D11Fence*)Unsafe.AsPointer(ref this));
 	}
 
-	/// <include file='Direct3D11.xml' path='doc/member[@name="ID3D11Fence::SetEventOnCompletion"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::SetEventOnCompletion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
 	public HResult SetEventOnCompletion(ulong Value, Handle hEvent)

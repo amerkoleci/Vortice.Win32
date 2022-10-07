@@ -9,16 +9,16 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO</unmanaged>
 public partial struct RaytracingAccelerationStructurePrebuildInfo
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO::ResultDataMaxSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO::ResultDataMaxSizeInBytes"]/*' />
 	public ulong ResultDataMaxSizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO::ScratchDataSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO::ScratchDataSizeInBytes"]/*' />
 	public ulong ScratchDataSizeInBytes;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO::UpdateScratchDataSizeInBytes"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO::UpdateScratchDataSizeInBytes"]/*' />
 	public ulong UpdateScratchDataSizeInBytes;
 }

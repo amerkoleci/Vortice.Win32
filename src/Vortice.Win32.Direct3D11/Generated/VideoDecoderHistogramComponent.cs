@@ -9,29 +9,29 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT</unmanaged>
 public enum VideoDecoderHistogramComponent : int
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_Y"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_Y"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_Y</unmanaged>
 	Y = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_U"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_U"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_U</unmanaged>
 	U = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_V"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_V"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_V</unmanaged>
 	V = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_R"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_R"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_R</unmanaged>
 	R = 0,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_G"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_G"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_G</unmanaged>
 	G = 1,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_B"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_B"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_B</unmanaged>
 	B = 2,
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_A"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_A"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_A</unmanaged>
 	A = 3,
 }

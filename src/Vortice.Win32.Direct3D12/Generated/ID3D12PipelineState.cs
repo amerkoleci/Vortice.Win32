@@ -9,7 +9,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineState"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineState"]/*' />
 /// <unmanaged>ID3D12PipelineState</unmanaged>
 [Guid("765a30f3-f624-4c6f-a828-ace948622445")]
 [NativeTypeName("struct ID3D12PipelineState : ID3D12Pageable")]
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12PipelineState : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineState*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12PipelineState*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="ID3D12PipelineState::GetCachedBlob"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineState::GetCachedBlob"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
 	public HResult GetCachedBlob(Graphics.Direct3D.ID3DBlob** ppBlob)

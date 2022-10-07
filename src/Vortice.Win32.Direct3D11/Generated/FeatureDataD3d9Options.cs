@@ -9,10 +9,10 @@
 
 namespace Win32.Graphics.Direct3D11;
 
-/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS"]/*' />
+/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS"]/*' />
 /// <unmanaged>D3D11_FEATURE_DATA_D3D9_OPTIONS</unmanaged>
 public partial struct FeatureDataD3d9Options
 {
-	/// <include file='Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS::FullNonPow2TextureSupport"]/*' />
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_DATA_D3D9_OPTIONS::FullNonPow2TextureSupport"]/*' />
 	public Bool32 FullNonPow2TextureSupport;
 }

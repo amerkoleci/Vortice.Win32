@@ -9,13 +9,13 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR"]/*' />
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR"]/*' />
 /// <unmanaged>D3D12_ROOT_DESCRIPTOR</unmanaged>
 public partial struct RootDescriptor
 {
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR::ShaderRegister"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR::ShaderRegister"]/*' />
 	public uint ShaderRegister;
 
-	/// <include file='Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR::RegisterSpace"]/*' />
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR::RegisterSpace"]/*' />
 	public uint RegisterSpace;
 }
