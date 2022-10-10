@@ -1,0 +1,1394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <member name="IDCompositionDevice::CreateTargetForHwnd">
+    <summary>
+      <para>Creates a composition target object that is bound to the window that is represented by the specified window handle (HWND).</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createtargetforhwnd" /></para>
+      <param name="hwnd">The window to which the  composition target object should be bound. This parameter must not be NULL.</param>
+      <param name="topmost">TRUE if the visual tree should be displayed on top of the children of the window specified by the <i>hwnd</i> parameter; otherwise, the visual tree is displayed behind the children.</param>
+      <param name="target">The new composition target object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateTranslateTransform3D">
+    <summary>
+      <para>Creates a 3D translation transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createtranslatetransform3d" /></para>
+      <param name="translateTransform3D">The new 3D translation transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDeviceDebug">
+    <summary>
+      <para>Provides access to rendering features that help with application debugging and performance tuning. This interface can be queried from the DirectComposition device interface.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiondevicedebug" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateColorMatrixEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionColorMatrixEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createcolormatrixeffect" /></para>
+      <param name="colorMatrixEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositioncolormatrixeffect">IDCompositionColorMatrixEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateSkewTransform">
+    <summary>
+      <para>Creates a 2D skew transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createskewtransform" /></para>
+      <param name="skewTransform">The new 2D skew transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionMatrixTransform3D">
+    <summary>
+      <para>Represents an arbitrary 3D transformation defined by a 4-by-4 matrix.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionmatrixtransform3d" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateRotateTransform">
+    <summary>
+      <para>Creates a 2D rotation transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createrotatetransform" /></para>
+      <param name="rotateTransform">The new rotation transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTarget">
+    <summary>
+      <para>Represents a binding between a Microsoft DirectComposition visual tree and a destination on top of which the visual tree should be composed.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiontarget" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionArithmeticCompositeEffect::SetCoefficients">
+    <summary>
+      <para>Sets the coefficients for the equation used to composite the two input images.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionarithmeticcompositeeffect-setcoefficients" /></para>
+      <param name="coefficients">The coefficients for the equation used to composite the two input images.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionGaussianBlurEffect">
+    <summary>
+      <para>The Gaussian blur effect is used to blur an image by a Gaussian function, typically to reduce image noise and reduce detail.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiongaussianblureffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual2">
+    <summary>
+      <para>Represents one DirectComposition visual in a visual tree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionvisual2" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionSurfaceFactory::CreateSurface">
+    <summary>
+      <para>Creates a surface object that can be associated with one or more visuals for composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionsurfacefactory-createsurface" /></para>
+      <param name="width">The width of the surface, in pixels.</param>
+      <param name="height">The height of the surface, in pixels.</param>
+      <param name="pixelFormat">The pixel format of the surface.</param>
+      <param name="alphaMode">The format of the alpha channel, if an alpha channel is included in the pixel format. This can be one of DXGI_ALPHA_MODE_PREMULTIPLIED or DXGI_ALPHA_MODE_IGNORE. It can also be DXGI_ALPHA_MODE_UNSPECIFIED, which is interpreted as DXGI_ALPHA_MODE_IGNORE.</param>
+      <param name="surface">The newly created surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateRotateTransform3D">
+    <summary>
+      <para>Creates a 3D rotation transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createrotatetransform3d" /></para>
+      <param name="rotateTransform3D">The new 3D rotation transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionLinearTransferEffect::SetAlphaDisable">
+    <summary>
+      <para>Specifies whether to apply the transfer function to the alpha channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionlineartransfereffect-setalphadisable" /></para>
+      <param name="alphaDisable">A boolean value that specifies whether to apply the transfer function to the alpha channel.
+            If you set this to TRUE the effect does not apply the transfer function to the Alpha channel. If you set this to FALSE it applies the AlphaLinearTransfer function to the Alpha channel.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionSurfaceFactory">
+    <summary>
+      <para>Creates surface and virtual surface objects associated with an application-provided rendering device.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionsurfacefactory" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::SetContent">
+    <summary>
+      <para>Sets the Content property of this visual to the specified bitmap or window wrapper.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-setcontent" /></para>
+      <param name="content">The object that is the new content of this visual. This parameter can be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateTransformGroup">
+    <summary>
+      <para>Creates a 2D transform group object that holds an array of 2D transform objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createtransformgroup" /></para>
+      <param name="transforms">An array of 2D transform objects that make up this transform group.</param>
+      <param name="elements">The number of elements in the <i>transforms</i> array.</param>
+      <param name="transformGroup">The new transform group object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionAnimation">
+    <summary>
+      <para>Represents a function for animating one or more properties of one or more Microsoft DirectComposition objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcompanimation/nn-dcompanimation-idcompositionanimation" /></para>
+    </summary>
+  </member>
+  <member name="DCompositionCreateDevice3">
+    <summary>
+      <para>Creates a new DirectComposition device object, which can be used to create other DirectComposition objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-dcompositioncreatedevice3" /></para>
+      <param name="renderingDevice">An optional pointer to a DirectX device to be used to create DirectComposition surface objects. Must be a pointer to an object implementing the <a href="https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgidevice">IDXGIDevice</a> or <a href="https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1device">ID2D1Device</a> interfaces.</param>
+      <param name="iid">The identifier of the interface to retrieve. This must be one of __uuidof(IDCompositionDevice) or __uuidof(IDCompositionDesktopDevice).</param>
+      <param name="dcompositionDevice">Receives an interface pointer to the newly created device object. The pointer is of the type specified by the <i>iid</i> parameter. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionBrightnessEffect">
+    <summary>
+      <para>The brightness effect controls the brightness of the image.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionbrightnesseffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateScaleTransform3D">
+    <summary>
+      <para>Creates a 3D scale transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createscaletransform3d" /></para>
+      <param name="scaleTransform3D">The new 3D scale transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionRotateTransform">
+    <summary>
+      <para>Represents a 2D transformation that affects the rotation of a visual around the z-axis. The coordinate system is rotated around the specified center point.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionrotatetransform" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionVirtualSurface::Resize">
+    <summary>
+      <para>Changes the logical size of this virtual surface object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvirtualsurface-resize" /></para>
+      <param name="width">The new width of the virtual surface, in pixels. The maximum width is 16,777,216 pixels.</param>
+      <param name="height">The new height of the virtual surface, in pixels. The maximum height is 16,777,216 pixels.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateVisual">
+    <summary>
+      <para>Creates a new visual object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createvisual" /></para>
+      <param name="visual">The new visual object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateSurface">
+    <summary>
+      <para>Creates an updateable surface object that can be associated with one or more visuals for composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createsurface" /></para>
+      <param name="width">The width of the surface, in pixels.</param>
+      <param name="height">The height of the surface, in pixels.</param>
+      <param name="pixelFormat">The pixel format of the surface.</param>
+      <param name="alphaMode" />
+      <param name="surface">The newly created surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionSaturationEffect">
+    <summary>
+      <para>This effect is used to alter the saturation of an image. The saturation effect is a specialization of the color matrix effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionsaturationeffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionVisualDebug::DisableHeatMap">
+    <summary>
+      <para>Disables visual heatmaps.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisualdebug-disableheatmap" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTurbulenceEffect::SetOffset">
+    <summary>
+      <para>Sets the coordinates where the turbulence output is generated.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionturbulenceeffect-setoffset" /></para>
+      <param name="offset">The coordinates where the turbulence output is generated.
+            The algorithm used to generate the Perlin noise is position dependent, so a different offset results in a different output. This value is not bounded and the units are specified in DIPs
+            
+
+<div class="alert"><b>Note</b>  Note  The offset does not have the same effect as a translation because the noise function output is infinite and the function will wrap around the tile.</div>
+<div> </div></param>
+    </summary>
+  </member>
+  <member name="IDCompositionDesktopDevice::CreateTargetForHwnd">
+    <summary>
+      <para>Creates a composition target object that is bound to the window that is represented by the specified window handle.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondesktopdevice-createtargetforhwnd" /></para>
+      <param name="hwnd">The window to which the composition target object should be bound. This parameter must not be NULL.</param>
+      <param name="topmost">TRUE if the visual tree should be displayed on top of the children of the window specified by the hwnd parameter; otherwise, the visual tree is displayed behind the children.</param>
+      <param name="target">The new composition target object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateAnimation">
+    <summary>
+      <para>Creates an animation object that is used to animate one or more scalar properties of one or more Microsoft DirectComposition objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createanimation" /></para>
+      <param name="animation">The new animation object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateTransformGroup">
+    <summary>
+      <para>Creates a 2D transform group object that holds an array of 2D transform objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createtransformgroup" /></para>
+      <param name="transforms">An array of 2D transform objects that make up this transform group.</param>
+      <param name="elements">The number of elements in the <i>transforms</i> array.</param>
+      <param name="transformGroup">The new transform group object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateScaleTransform3D">
+    <summary>
+      <para>Creates a 3D scale transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createscaletransform3d" /></para>
+      <param name="scaleTransform3D">The new 3D scale transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTranslateTransform3D">
+    <summary>
+      <para>Represents a 3D transformation that affects the offset of a visual along the x-axis, y-axis, and z-axis.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiontranslatetransform3d" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CheckDeviceState">
+    <summary>
+      <para>Determines whether the DirectComposition device object is still valid.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-checkdevicestate" /></para>
+      <param name="pfValid">TRUE if the  DirectComposition device object is still valid; otherwise FALSE.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionAnimation::AddSinusoidal">
+    <summary>
+      <para>Adds a sinusoidal segment to the animation function.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcompanimation/nf-dcompanimation-idcompositionanimation-addsinusoidal" /></para>
+      <param name="beginOffset">The offset, in seconds, from the beginning of the animation function to the point when this segment should take effect.</param>
+      <param name="bias">A constant that is added to the sinusoidal.</param>
+      <param name="amplitude">A scale factor that is applied to the sinusoidal.</param>
+      <param name="frequency">A scale factor that is applied to the time offset, in Hertz.</param>
+      <param name="phase">A constant that is added to the time offset, in degrees.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTransform">
+    <summary>
+      <para>Represents a 2D transformation that can be used to modify the coordinate space of a visual subtree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiontransform" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateSurfaceFactory">
+    <summary>
+      <para>Creates a Microsoft DirectComposition surface factory object, which can be used to create other DirectComposition surface or virtual surface objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createsurfacefactory" /></para>
+      <param name="renderingDevice">A pointer to a DirectX device to be used to create DirectComposition surface objects. Must be a pointer to an object implementing the <a href="https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgidevice">IDXGIDevice</a> or <a href="https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1device">ID2D1Device</a> interfaces. This parameter must not be NULL.</param>
+      <param name="surfaceFactory">The newly created surface factory object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="DCompositionCreateDevice">
+    <summary>
+      <para>Creates a new device object that can be used to create other Microsoft DirectComposition objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-dcompositioncreatedevice" /></para>
+      <param name="dxgiDevice">The DXGI device to use to create DirectComposition surface objects.</param>
+      <param name="iid">The identifier of the interface to retrieve.</param>
+      <param name="dcompositionDevice">Receives an interface pointer to the newly created device object. The pointer is of the type specified by the <i>iid</i> parameter. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateEffectGroup">
+    <summary>
+      <para>Creates an object that represents multiple effects to be applied to a visual subtree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createeffectgroup" /></para>
+      <param name="effectGroup">The new effect group object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual">
+    <summary>
+      <para>Represents a Microsoft DirectComposition visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionvisual" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionColorMatrixEffect">
+    <summary>
+      <para>The color matrix effect alters the RGBA values of a bitmap.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositioncolormatrixeffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateTransform3DGroup">
+    <summary>
+      <para>Creates a 3D transform group object that holds an array of 3D transform objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createtransform3dgroup" /></para>
+      <param name="transforms3D">An array of 3D transform objects that make up this transform group.</param>
+      <param name="elements">The number of elements in the <i>transforms</i> array.</param>
+      <param name="transform3DGroup">The new 3D transform group object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionColorMatrixEffect::SetAlphaMode">
+    <summary>
+      <para>Sets the alpha mode of the output for the color matrix effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositioncolormatrixeffect-setalphamode" /></para>
+      <param name="mode">The alpha mode of the output for the color matrix effect.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateTranslateTransform">
+    <summary>
+      <para>Creates a 2D translation transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createtranslatetransform" /></para>
+      <param name="translateTransform">The new 2D translation transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionShadowEffect::SetColor">
+    <summary>
+      <para>Sets color of the shadow.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionshadoweffect-setcolor" /></para>
+      <param name="color">The color of the shadow.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionGaussianBlurEffect::SetBorderMode">
+    <summary>
+      <para>Sets the mode used to calculate the border of the image.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiongaussianblureffect-setbordermode" /></para>
+      <param name="mode">The mode used to calculate the border of the image.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTarget::SetRoot">
+    <summary>
+      <para>Sets a visual object as the new root object of a visual tree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontarget-setroot" /></para>
+      <param name="visual">The visual object that is the new root of this visual tree. This parameter can be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::GetFrameStatistics">
+    <summary>
+      <para>Retrieves information from the composition engine about composition times and the frame rate.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-getframestatistics" /></para>
+      <param name="statistics">A structure that receives composition times and frame rate information.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionAnimation::AddCubic">
+    <summary>
+      <para>Adds a cubic polynomial segment to the animation function.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcompanimation/nf-dcompanimation-idcompositionanimation-addcubic" /></para>
+      <param name="beginOffset">The offset, in seconds, from the beginning of the animation function to the point when this segment should take effect.</param>
+      <param name="constantCoefficient">The constant coefficient of the polynomial.</param>
+      <param name="linearCoefficient">The linear coefficient of the polynomial.</param>
+      <param name="quadraticCoefficient">The quadratic coefficient of the polynomial.</param>
+      <param name="cubicCoefficient">The cubic coefficient of the polynomial.</param>
+    </summary>
+  </member>
+  <member name="DCompositionAttachMouseWheelToHwnd">
+    <summary>
+      <para>Creates an Interaction/InputSink to route mouse wheel messages to the given HWND.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-dcompositionattachmousewheeltohwnd" /></para>
+      <param name="visual">The visual to route messages from.</param>
+      <param name="hwnd">The HWND to route messages to.</param>
+      <param name="enable">Boolean value indicating whether to enable or disable routing.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionScaleTransform">
+    <summary>
+      <para>Represents a 2D transformation that affects the scale of a visual along the x-axis and y-axis. The coordinate system is scaled from the specified center point.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionscaletransform" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateHueRotationEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionHueRotationEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createhuerotationeffect" /></para>
+      <param name="hueRotationEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionhuerotationeffect">IDCompositionHueRotationEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual3::SetVisible">
+    <summary>
+      <para>Changes the value of the visual's Visible property.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual3-setvisible" /></para>
+      <param name="visible">The new value for the visible property.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::WaitForCommitCompletion">
+    <summary>
+      <para>Waits for the composition engine to finish processing the previous call to the IDCompositionDevice::Commit method.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-waitforcommitcompletion" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionVisualDebug::EnableRedrawRegions">
+    <summary>
+      <para>Enables highlighting visuals when content is being redrawn.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisualdebug-enableredrawregions" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateSurfaceFromHwnd">
+    <summary>
+      <para>Creates a wrapper object that represents the rasterization of a layered window, and that can be associated with a visual for composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createsurfacefromhwnd" /></para>
+      <param name="hwnd">The handle of the layered window for which to create a  wrapper. A layered window is created by specifying <b>WS_EX_LAYERED</b> when creating the window with the <a href="https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-createwindowexa">CreateWindowEx</a> function or by setting <b>WS_EX_LAYERED</b> via <a href="https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowlonga">SetWindowLong</a> after the window has been created.</param>
+      <param name="surface">The new composition surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual3::SetDepthMode">
+    <summary>
+      <para>Sets the depth mode property associated with this visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual3-setdepthmode" /></para>
+      <param name="mode">The new depth mode.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionSurfaceFactory::CreateVirtualSurface">
+    <summary>
+      <para>Creates a sparsely populated surface that can be associated with one or more visuals for composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionsurfacefactory-createvirtualsurface" /></para>
+      <param name="initialWidth">The width of the surface, in pixels. The maximum width is 16,777,216 pixels.</param>
+      <param name="initialHeight">The height of the surface, in pixels.
+The maximum height is 16,777,216 pixels.</param>
+      <param name="pixelFormat">The pixel format of the surface.</param>
+      <param name="alphaMode">The format of the alpha channel, if an alpha channel is included in the pixel format. This can be one of DXGI_ALPHA_MODE_PREMULTIPLIED or DXGI_ALPHA_MODE_IGNORE. It can also be DXGI_ALPHA_MODE_UNSPECIFIED, which is interpreted as DXGI_ALPHA_MODE_IGNORE.</param>
+      <param name="virtualSurface">The newly created virtual surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionMatrixTransform::SetMatrix">
+    <summary>
+      <para>Changes all values of the matrix of this 2D transform.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionmatrixtransform-setmatrix" /></para>
+      <param name="matrix">The new matrix for this 2D transform.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateRectangleClip">
+    <summary>
+      <para>Creates a clip object that can be used to restrict the rendering of a visual subtree to a rectangular area.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createrectangleclip" /></para>
+      <param name="clip">The new clip object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetRedTable">
+    <summary>
+      <para>Sets the list of values used to define the transfer function for the red channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setredtable" /></para>
+      <param name="tableValues">The list of values used to define the transfer function for the red channel.</param>
+      <param name="count">The number of values in the tableValues parameter.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVirtualSurface::Trim">
+    <summary>
+      <para>Discards pixels that fall outside of the specified trim rectangles.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvirtualsurface-trim" /></para>
+      <param name="rectangles">An array of rectangles to keep.</param>
+      <param name="count">The number of rectangles in the <i>rectangles</i> array.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateCompositeEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionCompositeEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createcompositeeffect" /></para>
+      <param name="compositeEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositioncompositeeffect">IDCompositionCompositeEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateBlendEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionBlendEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createblendeffect" /></para>
+      <param name="blendEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionblendeffect">IDCompositionBlendEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="DCompositionAttachMouseDragToHwnd">
+    <summary>
+      <para>Creates an Interaction/InputSink to route mouse button down and any subsequent move and up events to the given HWND.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-dcompositionattachmousedragtohwnd" /></para>
+      <param name="visual">The visual to route messages from.</param>
+      <param name="hwnd">The HWND to route messages to.</param>
+      <param name="enable">Boolean value indicating whether to enable or disable routing.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionLinearTransferEffect">
+    <summary>
+      <para>The linear transfer effect is used to map the color intensities of an image using a linear function created from a list of values you provide for each channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionlineartransfereffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateTranslateTransform3D">
+    <summary>
+      <para>Creates a 3D translation transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createtranslatetransform3d" /></para>
+      <param name="translateTransform3D">The new 3D translation transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateMatrixTransform3D">
+    <summary>
+      <para>Creates a 3D 4-by-4 matrix transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-creatematrixtransform3d" /></para>
+      <param name="matrixTransform3D">The new 3D matrix transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionEffectGroup">
+    <summary>
+      <para>Represents a group of bitmap effects that are applied together to modify the rasterization of a visual's subtree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositioneffectgroup" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2">
+    <summary>
+      <para>Serves as a factory for all other Microsoft DirectComposition objects and provides methods to control transactional composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiondevice2" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionAnimation::SetAbsoluteBeginTime">
+    <summary>
+      <para>Sets the absolute time at which the animation function starts.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcompanimation/nf-dcompanimation-idcompositionanimation-setabsolutebegintime" /></para>
+      <param name="beginTime">The starting time for this animation.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionAffineTransform2DEffect">
+    <summary>
+      <para>The arithmetic composite effect is used to combine 2 images using a weighted sum of pixels from the input images.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionaffinetransform2deffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionShadowEffect">
+    <summary>
+      <para>The shadow effect is used to generate a shadow from the alpha channel of an image. The shadow is more opaque for higher alpha values and more transparent for lower alpha values. You can set the amount of blur and the color of the shadow.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionshadoweffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionRectangleClip">
+    <summary>
+      <para>Represents a clip object that restricts the rendering of a visual subtree to the specified rectangular region. Optionally, the clip object may have rounded corners specified.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionrectangleclip" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionVirtualSurface">
+    <summary>
+      <para>Represents a sparsely allocated bitmap that can be associated with a visual for composition in a visual tree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionvirtualsurface" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateVisual">
+    <summary>
+      <para>Creates a new visual object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createvisual" /></para>
+      <param name="visual">The new visual object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionLinearTransferEffect::SetClampOutput">
+    <summary>
+      <para>Specifies whether the effect clamps color values to between 0 and 1 before the effect passes the values to the next effect in the graph.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionlineartransfereffect-setclampoutput" /></para>
+      <param name="clampOutput">A boolean value that specifies whether the effect clamps color values to between 0 and 1 before the effect passes the values to the next effect in the graph.
+            If you set this to TRUE the effect will clamp the values. If you set this to FALSE, the effect will not clamp the color values, but other effects and the output
+            surface may clamp the values if they are not of high enough precision.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisualDebug::EnableHeatMap">
+    <summary>
+      <para>Enables a visual heatmap that represents overdraw regions.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisualdebug-enableheatmap" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateScaleTransform">
+    <summary>
+      <para>Creates a 2D scale transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createscaletransform" /></para>
+      <param name="scaleTransform">The new 2D scale transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionClip">
+    <summary>
+      <para>Represents a clip object that is used to restrict the rendering of a visual subtree to a rectangular area.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionclip" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTurbulenceEffect::SetSeed">
+    <summary>
+      <para>Sets the seed for the pseudo random generator.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionturbulenceeffect-setseed" /></para>
+      <param name="seed">The seed for the pseudo random generator. This value is unbounded.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::SetEffect">
+    <summary>
+      <para>Sets the Effect property of this visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-seteffect" /></para>
+      <param name="effect">A pointer to an effect object. This parameter can be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionSurface::BeginDraw">
+    <summary>
+      <para>Initiates drawing on this Microsoft DirectComposition surface object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionsurface-begindraw" /></para>
+      <param name="updateRect">The rectangle to be updated. If this parameter is NULL, the entire bitmap is updated.</param>
+      <param name="iid">The identifier of the interface to retrieve.</param>
+      <param name="updateObject">Receives an interface pointer of the type specified in the <i>iid</i> parameter.   This parameter must not be NULL.
+
+<div class="alert"><b>Note</b>  In Windows 8, this parameter was <i>surface</i>.</div>
+<div> </div></param>
+      <param name="updateOffset">The offset into the surface where the application should draw updated content. This offset will reference the upper left corner of the update rectangle.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionSurface::Scroll">
+    <summary>
+      <para>Scrolls a rectangular area of a Microsoft DirectComposition logical surface.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionsurface-scroll" /></para>
+      <param name="scrollRect">The rectangular area of the surface to be scrolled, relative to the upper-left corner of the surface. If this parameter is NULL, the entire surface is scrolled.</param>
+      <param name="clipRect">The <i>clipRect</i> clips the destination (<i>scrollRect</i> after offset) of the scroll.
+The only bitmap content that will be scrolled are those that remain inside the clip rectangle after the scroll is completed.</param>
+      <param name="offsetX">The amount of horizontal scrolling, in pixels. Use positive values to scroll right, and negative values to scroll left.</param>
+      <param name="offsetY">The amount of vertical scrolling, in pixels. Use positive values to scroll down, and negative values to scroll up.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionHueRotationEffect">
+    <summary>
+      <para>The hue rotate effect alters the hue of an image by applying a color matrix based on the rotation angle.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionhuerotationeffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionMatrixTransform3D::SetMatrix">
+    <summary>
+      <para>Changes all values of the matrix of this 3D transformation effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionmatrixtransform3d-setmatrix" /></para>
+      <param name="matrix">The new matrix for this 3D transformation effect.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTransform3D">
+    <summary>
+      <para>Represents a 3D transformation effect that can be used to modify the rasterization of a visual subtree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiontransform3d" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionSurface">
+    <summary>
+      <para>Represents a physical bitmap that can be associated with a visual for composition in a visual tree. This interface can also be used to update the bitmap contents.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionsurface" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetBlueDisable">
+    <summary>
+      <para>Specifies whether to apply the transfer function to the blue channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setbluedisable" /></para>
+      <param name="blueDisable">A boolean value that specifies whether to apply the transfer function to the blue channel.
+            If you set this to TRUE the effect does not apply the transfer function to the blue channel. If you set this to FALSE it applies the BlueTableTransfer function to the Blue channel.</param>
+    </summary>
+  </member>
+  <member name="DCompositionCreateSurfaceHandle">
+    <summary>
+      <para>Creates a new composition surface object that can be bound to a Microsoft DirectX swap chain or swap buffer and associated with a visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-dcompositioncreatesurfacehandle" /></para>
+      <param name="desiredAccess" />
+      <param name="securityAttributes">Contains the security descriptor for the composition surface object, and specifies whether the handle of the composition surface object is inheritable when a child process is created. If this parameter is NULL, the composition surface object is created with default security attributes  that grant read and write access to the current process,  but do not enable child processes to  inherit the handle.</param>
+      <param name="surfaceHandle">The handle of the new composition surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateVirtualSurface">
+    <summary>
+      <para>Creates a sparsely populated surface that can be associated with one or more visuals for composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createvirtualsurface" /></para>
+      <param name="initialWidth">The width of the surface, in pixels. The maximum width is 16,777,216 pixels.</param>
+      <param name="initialHeight">The height of the surface, in pixels. The maximum height is 16,777,216 pixels.</param>
+      <param name="pixelFormat">The pixel format of the surface.</param>
+      <param name="alphaMode" />
+      <param name="virtualSurface">The newly created surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateTransform3DGroup">
+    <summary>
+      <para>Creates a 3D transform group object that holds an array of 3D transform objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createtransform3dgroup" /></para>
+      <param name="transforms3D">An array of 3D transform objects that make up this transform group.</param>
+      <param name="elements">The number of elements in the <i>transforms</i> array.</param>
+      <param name="transform3DGroup">The new 3D transform group object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionAffineTransform2DEffect::SetBorderMode">
+    <summary>
+      <para>Sets the border mode to use with the effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionaffinetransform2deffect-setbordermode" /></para>
+      <param name="borderMode">Specifies the border mode to use with the effect.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3">
+    <summary>
+      <para>Serves as a factory for all other Microsoft DirectComposition objects and provides methods to control transactional composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiondevice3" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDesktopDevice::CreateSurfaceFromHwnd">
+    <summary>
+      <para>Creates a wrapper object that represents the rasterization of a layered window, and that can be associated with a visual for composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondesktopdevice-createsurfacefromhwnd" /></para>
+      <param name="hwnd">The handle of the layered window for which to create a wrapper. A layered window is created by specifying WS_EX_LAYERED when creating the window with the <a href="https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-createwindowexa">CreateWindowEx</a> function or by setting WS_EX_LAYERED via <a href="https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowlonga">SetWindowLong</a> after the window has been created.</param>
+      <param name="surface">The new composition surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateArithmeticCompositeEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionArithmeticCompositeEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createarithmeticcompositeeffect" /></para>
+      <param name="arithmeticCompositeEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionarithmeticcompositeeffect">IDCompositionArithmeticCompositeEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionBlendEffect::SetMode">
+    <summary>
+      <para>Sets the blend mode to use when the blend effect combines the two images.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionblendeffect-setmode" /></para>
+      <param name="mode">The blend mode to use when the blend effect combines the two images.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionSurface::ResumeDraw">
+    <summary>
+      <para>Resumes drawing on this Microsoft DirectComposition surface object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionsurface-resumedraw" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetGreenDisable">
+    <summary>
+      <para>Specifies whether to apply the transfer function to the green channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setgreendisable" /></para>
+      <param name="greenDisable">A boolean value that specifies whether to apply the transfer function to the green channel.
+            If you set this to TRUE the effect does not apply the transfer function to the green channel. If you set this to FALSE it applies the GreenTableTransfer function to the green channel.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionBlendEffect">
+    <summary>
+      <para>The Blend Effect is used to combine 2 images.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionblendeffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateSurfaceFromHandle">
+    <summary>
+      <para>Creates a new composition surface object that wraps an existing composition surface.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createsurfacefromhandle" /></para>
+      <param name="handle">The handle of an existing composition surface that was created by a call to the <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nf-dcomp-dcompositioncreatesurfacehandle">DCompositionCreateSurfaceHandle</a> function.</param>
+      <param name="surface">The new composition surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionFilterEffect::SetInput">
+    <summary>
+      <para>Sets the the input at an index to the specified filter effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionfiltereffect-setinput" /></para>
+      <param name="index">Specifies the index the to apply the filter effect at.</param>
+      <param name="input">The filter effect to apply.
+          The following effects are available:
+          
+
+<ul>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionaffinetransform2deffect">IDCompositionAffineTransform2DEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionarithmeticcompositeeffect">IDCompositionArithmeticCompositeEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionblendeffect">IDCompositionBlendEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionbrightnesseffect">IDCompositionBrightnessEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositioncolormatrixeffect">IDCompositionColorNatrixEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositioncompositeeffect">IDCompositionCompositeEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/previous-versions/windows/desktop/legacy/dn919732(v=vs.85)">IDCompositionFloodEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositiongaussianblureffect">IDCompositionGaussianBlurEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionhuerotationeffect">IDCompositionHueRotationEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionlineartransfereffect">IDCompositionLinearTransferRffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionsaturationeffect">IDCompositionSaturationRffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionshadoweffect">IDCompositionShadowEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositiontabletransfereffect">IDCompositionTableTransferEffect</a>
+</li>
+<li>
+<a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionturbulenceeffect">IDCompositionTurbulenceEffect</a>
+</li>
+</ul></param>
+      <param name="flags">Flags to apply to the filter effect.</param>
+    </summary>
+  </member>
+  <member name="DCompositionCreateDevice2">
+    <summary>
+      <para>Creates a new device object that can be used to create other Microsoft DirectComposition objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-dcompositioncreatedevice2" /></para>
+      <param name="renderingDevice">An optional pointer to a DirectX device to be used to create DirectComposition surface objects. Must be a pointer to an object implementing the <a href="https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgidevice">IDXGIDevice</a> or <a href="https://docs.microsoft.com/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1device">ID2D1Device</a> interfaces.</param>
+      <param name="iid">The identifier of the interface to retrieve. This must be one of __uuidof(IDCompositionDevice) or __uuidof(IDCompositionDesktopDevice).</param>
+      <param name="dcompositionDevice">Receives an interface pointer to the newly created device object. The pointer is of the type specified by the <i>iid</i> parameter. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateTableTransferEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionTableTransferEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createtabletransfereffect" /></para>
+      <param name="tableTransferEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositiontabletransfereffect">IDCompositionTableTransferEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateTranslateTransform">
+    <summary>
+      <para>Creates a 2D translation transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createtranslatetransform" /></para>
+      <param name="translateTransform">The new 2D translation transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateSkewTransform">
+    <summary>
+      <para>Creates a 2D skew transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createskewtransform" /></para>
+      <param name="skewTransform">The new 2D skew transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::SetTransformParent">
+    <summary>
+      <para>Sets the TransformParent property of this visual. The TransformParent property establishes the coordinate system relative to which this visual is composed.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-settransformparent" /></para>
+      <param name="visual">The new visual that establishes the base coordinate system for this visual. This parameter can be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateGaussianBlurEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionGaussianBlurEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-creategaussianblureffect" /></para>
+      <param name="gaussianBlurEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositiongaussianblureffect">IDCompositionGaussianBlurEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateLinearTransferEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionLinearTransferEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createlineartransfereffect" /></para>
+      <param name="linearTransferEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionlineartransfereffect">IDCompositionLinearTransferEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionAffineTransform2DEffect::SetInterpolationMode">
+    <summary>
+      <para>Sets the interpolation mode of the effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionaffinetransform2deffect-setinterpolationmode" /></para>
+      <param name="interpolationMode">Specifies the interpolation mode of the effect.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateRectangleClip">
+    <summary>
+      <para>Creates a clip object that can be used to restrict the rendering of a visual subtree to a rectangular area.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createrectangleclip" /></para>
+      <param name="clip">The new clip object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual3">
+    <summary>
+      <para>Represents one DirectComposition visual in a visual tree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionvisual3" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionAnimation::Reset">
+    <summary>
+      <para>Resets the animation function so that it contains no segments.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcompanimation/nf-dcompanimation-idcompositionanimation-reset" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionSurface::SuspendDraw">
+    <summary>
+      <para>Suspends the drawing on this Microsoft DirectComposition surface object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionsurface-suspenddraw" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionLinearTransferEffect::SetBlueDisable">
+    <summary>
+      <para>Specifies whether to apply the transfer function to the blue channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionlineartransfereffect-setbluedisable" /></para>
+      <param name="blueDisable">A boolean value that specifies whether to apply the transfer function to the blue channel.
+            If you set this to TRUE the effect does not apply the transfer function to the blue channel. If you set this to FALSE it applies the BlueLinearTransfer function to the blue channel.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual2::SetBackFaceVisibility">
+    <summary>
+      <para>Specifies whether or not surfaces that have 3D transformations applied to them should be displayed when facing away from the observer.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual2-setbackfacevisibility" /></para>
+      <param name="visibility">[in]
+
+The back face visibility to use when composing surfaces in this visual’s sub-tree to the screen.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionBrightnessEffect::SetWhitePoint">
+    <summary>
+      <para>Sets the upper portion of the brightness transfer curve.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepoint" /></para>
+      <param name="whitePoint">The upper portion of the brightness transfer curve. The white point adjusts the appearance of the brighter portions of the image. 
+This vector is for both the x value and the y value, in that order. Each of the values must be between 0 and 1, inclusive.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::SetBitmapInterpolationMode">
+    <summary>
+      <para>Sets the BitmapInterpolationMode property, which specifies the mode for Microsoft DirectComposition to use when interpolating pixels from bitmaps that are not axis-aligned or drawn exactly at scale.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-setbitmapinterpolationmode" /></para>
+      <param name="interpolationMode">The interpolation mode to use.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionCompositeEffect::SetMode">
+    <summary>
+      <para>Sets the mode for the composite effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositioncompositeeffect-setmode" /></para>
+      <param name="mode">The mode for the composite effect.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionColorMatrixEffect::SetMatrix">
+    <summary>
+      <para>Sets the matrix used by the effect to multiply the RGBA values of the image.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositioncolormatrixeffect-setmatrix" /></para>
+      <param name="matrix">The matrix used by the effect to multiply the RGBA values of the image. The matrix is column major and is applied as shown in the following equation:
+          
+
+<img alt="Matrix equation" src="./images/color_matrix_formula.png"/></param>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetGreenTable">
+    <summary>
+      <para>Sets the list of values used to define the transfer function for the green channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setgreentable" /></para>
+      <param name="tableValues">The list of values used to define the transfer function for the green channel.</param>
+      <param name="count">The number of values in the tableValues parameter.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateMatrixTransform3D">
+    <summary>
+      <para>Creates a 3D 4-by-4 matrix transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-creatematrixtransform3d" /></para>
+      <param name="matrixTransform3D">The new 3D matrix transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDeviceDebug::DisableDebugCounters">
+    <summary>
+      <para>Disables display of performance debugging counters.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevicedebug-disabledebugcounters" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionAffineTransform2DEffect::SetTransformMatrix">
+    <summary>
+      <para>Sets the transform matrix of the effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionaffinetransform2deffect-settransformmatrix" /></para>
+      <param name="transformMatrix">Specifies the transform matrix for the effect to use.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionRotateTransform3D">
+    <summary>
+      <para>Represents a 3D transformation that affects the rotation of a visual along an arbitrary axis in 3D space. The coordinate system is rotated around the specified center point.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionrotatetransform3d" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateMatrixTransform">
+    <summary>
+      <para>Creates a 2D 3-by-2 matrix transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-creatematrixtransform" /></para>
+      <param name="matrixTransform">The new matrix transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::AddVisual">
+    <summary>
+      <para>Adds a new child visual to the children list of this visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-addvisual" /></para>
+      <param name="visual">The child visual to add. This parameter must not be NULL.</param>
+      <param name="insertAbove">TRUE to place the new child visual in front of the visual specified by the <i>referenceVisual</i> parameter, or FALSE to place it behind <i>referenceVisual</i>.</param>
+      <param name="referenceVisual">The existing child visual next to which the new visual should be added.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::GetFrameStatistics">
+    <summary>
+      <para>Retrieves information from the composition engine about composition times and the frame rate.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-getframestatistics" /></para>
+      <param name="statistics">A structure that receives composition times and frame rate information.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionBrightnessEffect::SetBlackPoint">
+    <summary>
+      <para>Specifies the lower portion of the brightness transfer curve for the brightness effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionbrightnesseffect-setblackpoint" /></para>
+      <param name="blackPoint">The lower portion of the brightness transfer curve. The black point adjusts the appearance of the darker portions of the image. The vector is for both the x value and the y value, in that order. Each of the values must be between 0 and 1, inclusive.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionEffect">
+    <summary>
+      <para>Represents a bitmap effect that modifies the rasterization of a visual's subtree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositioneffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionAnimation::End">
+    <summary>
+      <para>Adds an end segment that marks the end of an animation function.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcompanimation/nf-dcompanimation-idcompositionanimation-end" /></para>
+      <param name="endOffset">The offset, in seconds, from the beginning of the animation function to the point when the function ends.</param>
+      <param name="endValue">The final value of the animation.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateBrightnessEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionBrightnessEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createbrightnesseffect" /></para>
+      <param name="brightnessEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionbrightnesseffect">IDCompositionBrightnessEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDeviceDebug::EnableDebugCounters">
+    <summary>
+      <para>Enables display of performance debugging counters.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevicedebug-enabledebugcounters" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetRedDisable">
+    <summary>
+      <para>Specifies whether to apply the transfer function to the red channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setreddisable" /></para>
+      <param name="redDisable">A boolean value that specifies whether to apply the transfer function to the red channel.
+            If you set this to TRUE the effect does not apply the transfer function to the red channel. If you set this to FALSE it applies the RedTableTransfer function to the red channel.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionSkewTransform">
+    <summary>
+      <para>Represents a 2D transformation that affects the skew of a visual along the x-axis and y-axis. The coordinate system is skewed around the specified center point.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionskewtransform" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateVirtualSurface">
+    <summary>
+      <para>Creates a sparsely populated surface that can be associated with one or more visuals for composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createvirtualsurface" /></para>
+      <param name="initialWidth">The width of the surface, in pixels. The maximum width is 16,777,216 pixels.</param>
+      <param name="initialHeight">The height of the surface, in pixels. The maximum height is 16,777,216 pixels.</param>
+      <param name="pixelFormat">The pixel format of the surface.</param>
+      <param name="alphaMode" />
+      <param name="virtualSurface">The newly created surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateSurface">
+    <summary>
+      <para>Creates an updateable surface object that can be associated with one or more visuals for composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createsurface" /></para>
+      <param name="width">The width of the surface, in pixels. Constrained by the <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">feature level</a> of the rendering device that was passed in at the time the DirectComposition device was created.</param>
+      <param name="height">The height of the surface, in pixels. Constrained by the <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">feature level</a> of the rendering device that was passed in at the time the DirectComposition device was created.</param>
+      <param name="pixelFormat">The pixel format of the surface.</param>
+      <param name="alphaMode" />
+      <param name="surface">The newly created surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::SetBorderMode">
+    <summary>
+      <para>Sets the BorderMode property, which specifies how to compose the edges of bitmaps and clips associated with this visual, or with visuals in the subtree rooted at this visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-setbordermode" /></para>
+      <param name="borderMode">The border mode to use.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::RemoveVisual">
+    <summary>
+      <para>Removes a child visual from the children list of this visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-removevisual" /></para>
+      <param name="visual">The child visual to remove from the children list. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionColorMatrixEffect::SetClampOutput">
+    <summary>
+      <para>Specifies whether the effect clamps color values to between 0 and 1 before the effects passes the values to the next effect in the chain.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositioncolormatrixeffect-setclampoutput" /></para>
+      <param name="clamp">A boolean value indicating whether the effect clamps color values to between 0 and 1 before the effects passes the values to the next effect in the chain.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateRotateTransform3D">
+    <summary>
+      <para>Creates a 3D rotation transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createrotatetransform3d" /></para>
+      <param name="rotateTransform3D">The new 3D rotation transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionEffectGroup::SetTransform3D">
+    <summary>
+      <para>Sets the 3D transformation effect object that modifies the rasterization of the visuals that this effect group is applied to.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositioneffectgroup-settransform3d" /></para>
+      <param name="transform3D">Pointer to an <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositiontransform3d">IDCompositionTransform3D</a> interface or one of its derived interfaces. This parameter can be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionMatrixTransform">
+    <summary>
+      <para>Represents an arbitrary affine 2D transformation defined by a 3-by-2 matrix.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionmatrixtransform" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateAnimation">
+    <summary>
+      <para>Creates an animation object that is used to animate one or more scalar properties of one or more Microsoft DirectComposition objects.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createanimation" /></para>
+      <param name="animation">The new animation object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTurbulenceEffect::SetNumOctaves">
+    <summary>
+      <para>Sets the number of octaves for the noise function.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionturbulenceeffect-setnumoctaves" /></para>
+      <param name="numOctaves">The number of octaves for the noise function. This value must be greater than 0.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::Commit">
+    <summary>
+      <para>Commits all DirectComposition commands that are pending on this device.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-commit" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateShadowEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionShadowEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createshadoweffect" /></para>
+      <param name="shadowEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionshadoweffect">IDCompositionShadowEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateEffectGroup">
+    <summary>
+      <para>Creates an object that represents multiple effects to be applied to a visual subtree.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createeffectgroup" /></para>
+      <param name="effectGroup">The new effect group object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetClampOutput">
+    <summary>
+      <para>Specifies whether the effect clamps color values to between 0 and 1 before the effect passes the values to the next effect in the graph.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setclampoutput" /></para>
+      <param name="clampOutput">A boolean value that specifies whether the effect clamps color values to between 0 and 1 before the effect passes the values to the next effect in the graph.
+            If you set this to TRUE the effect will clamp the values. If you set this to FALSE, the effect will not clamp the color values,
+            but other effects and the output surface may clamp the values if they are not of high enough precision.
+            The effect clamps the values before it premultiplies the alpha.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetBlueTable">
+    <summary>
+      <para>Sets the list of values used to define the transfer function for the blue channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setbluetable" /></para>
+      <param name="tableValues">The list of values used to define the transfer function for the blue channel.</param>
+      <param name="count">The number of values in the tableValues parameter.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionCompositeEffect">
+    <summary>
+      <para>The composite effect is used to combine 2 or more images.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositioncompositeeffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionSurface::EndDraw">
+    <summary>
+      <para>Marks the end of drawing on this Microsoft DirectComposition surface object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionsurface-enddraw" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTurbulenceEffect::SetStitchable">
+    <summary>
+      <para>Specifies whether stitching is on or off.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionturbulenceeffect-setstitchable" /></para>
+      <param name="stitchable">A boolean value that specifies whether stitching is on or off. The base frequency is adjusted so that the output bitmap can be stitched.
+            This is useful if you want to tile multiple copies of the turbulence effect output.
+            If this value is TRUE, the output bitmap can be tiled (using the tile effect) without the appearance of seams and the base frequency is adjusted so that output bitmap can be stitched.
+            If this value is FALSE, the base frequency is not adjusted, so seams may appear between tiles if the bitmap is tiled.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTurbulenceEffect">
+    <summary>
+      <para>The turbulence effect is used to generate a bitmap based on the Perlin noise function. The turbulence effect has no input image.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionturbulenceeffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionLinearTransferEffect::SetGreenDisable">
+    <summary>
+      <para>Specifies whether to apply the transfer function to the green channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreendisable" /></para>
+      <param name="greenDisable">A boolean value that specifies whether to apply the transfer function to the green channel.
+            If you set this to TRUE the effect does not apply the transfer function to the green channel. If you set this to FALSE it applies the GreenLinearTransfer function to the green channel.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::WaitForCommitCompletion">
+    <summary>
+      <para>Waits for the composition engine to finish processing the previous call to the IDCompositionDevice2::Commit method.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-waitforcommitcompletion" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDesktopDevice::CreateSurfaceFromHandle">
+    <summary>
+      <para>Creates a new composition surface object that wraps an existing composition surface.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondesktopdevice-createsurfacefromhandle" /></para>
+      <param name="handle">The handle of an existing composition surface that was created by a call to the <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nf-dcomp-dcompositioncreatesurfacehandle">DCompositionCreateSurfaceHandle</a> function.</param>
+      <param name="surface">The new composition surface object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateMatrixTransform">
+    <summary>
+      <para>Creates a 2D 3-by-2 matrix transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-creatematrixtransform" /></para>
+      <param name="matrixTransform">The new matrix transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionArithmeticCompositeEffect::SetClampOutput">
+    <summary>
+      <para>Specifies whether to clamp color values before the effect passes the values to the next effect in the graph.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionarithmeticcompositeeffect-setclampoutput" /></para>
+      <param name="clampoutput">A boolean value indicating whether to clamp the color values.  A value of TRUE causes color values to be clamped between 0 and 1.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::SetCompositeMode">
+    <summary>
+      <para>Sets the blending mode for this visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-setcompositemode" /></para>
+      <param name="compositeMode">The blending mode to use when composing the visual to the screen.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateAffineTransform2DEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionAffineTransform2DEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createaffinetransform2deffect" /></para>
+      <param name="affineTransform2dEffect">Recieves the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionaffinetransform2deffect">IDCompositionAffineTransform2DEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionLinearTransferEffect::SetRedDisable">
+    <summary>
+      <para>Specifies whether to apply the transfer function to the red channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionlineartransfereffect-setreddisable" /></para>
+      <param name="redDisable">A boolean value that specifies whether to apply the transfer function to the red channel.
+            If you set this to TRUE the effect does not apply the transfer function to the red channel. If you set this to FALSE the effect applies the RedLinearTransfer function to the red channel.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionScaleTransform3D">
+    <summary>
+      <para>Represents a 3D transformation effect that affects the scale of a visual along the x-axis, y-axis, and z-axis. The coordinate system is scaled from the specified center point.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionscaletransform3d" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTranslateTransform">
+    <summary>
+      <para>Represents a 2D transformation that affects only the offset of a visual along the x-axis and y-axis.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiontranslatetransform" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTurbulenceEffect::SetBaseFrequency">
+    <summary>
+      <para>Sets the base frequencies in the X and Y direction.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionturbulenceeffect-setbasefrequency" /></para>
+      <param name="frequency">The base frequencies in the X and Y direction. This must be greater than 0. The units are specified in 1/DIPs.
+            A value of 1 (1/DIPs) for the base frequency results in the Perlin noise completing an entire cycle between two pixels. The ease interpolation for these pixels results in completely random pixels,
+            since there is no correlation between the pixels.
+            A value of 0.1(1/DIPs) for the base frequency results in the Perlin noise function repeating every 10 DIPs. This results in correlation between pixels and the typical turbulence effect is visible.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionAnimation::AddRepeat">
+    <summary>
+      <para>Adds a repeat segment that causes the specified portion of an animation function to be repeated.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcompanimation/nf-dcompanimation-idcompositionanimation-addrepeat" /></para>
+      <param name="beginOffset">The offset, in seconds, from the beginning of the animation to the point at which the repeat should begin.</param>
+      <param name="durationToRepeat">The duration, in seconds, of a portion of the animation immediately preceding the begin time that is specified by <i>beginOffset</i>.  This is the portion that will be repeated.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice">
+    <summary>
+      <para>Serves as a factory for all other Microsoft DirectComposition objects and provides methods to control transactional composition.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiondevice" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDesktopDevice">
+    <summary>
+      <para>An application must use the IDCompositionDesktopDevice interface in order to use DirectComposition in a Win32 desktop application.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiondesktopdevice" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionVisualDebug::DisableRedrawRegions">
+    <summary>
+      <para>Disables visual redraw regions.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisualdebug-disableredrawregions" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateSaturationEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionSaturationEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createsaturationeffect" /></para>
+      <param name="saturationEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionsaturationeffect">IDCompositionSaturationEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionFilterEffect">
+    <summary>
+      <para>Represents a filter effect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionfiltereffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice3::CreateTurbulenceEffect">
+    <summary>
+      <para>Creates an instance of IDCompositionTurbulenceEffect.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice3-createturbulenceeffect" /></para>
+      <param name="turbulenceEffect">Receives the created instance of <a href="https://docs.microsoft.com/windows/desktop/api/dcomp/nn-dcomp-idcompositionturbulenceeffect">IDCompositionTurbulenceEffect</a>.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual2::SetOpacityMode">
+    <summary>
+      <para>Sets the opacity mode for this visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual2-setopacitymode" /></para>
+      <param name="mode">The opacity mode to use when composing the visual to the screen.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisualDebug">
+    <summary>
+      <para>Represents a debug visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionvisualdebug" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTurbulenceEffect::SetSize">
+    <summary>
+      <para>Sets the size of the turbulence output.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionturbulenceeffect-setsize" /></para>
+      <param name="size">The size of the turbulence output</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect">
+    <summary>
+      <para>The table transfer effect is used to map the color intensities of an image using a transfer function created from interpolating a list of values you provide.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositiontabletransfereffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::Commit">
+    <summary>
+      <para>Commits all DirectComposition commands that are pending on this device.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-commit" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionArithmeticCompositeEffect">
+    <summary>
+      <para>The arithmetic composite effect is used to combine 2 images using a weighted sum of pixels from the input images.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nn-dcomp-idcompositionarithmeticcompositeeffect" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice::CreateScaleTransform">
+    <summary>
+      <para>Creates a 2D scale transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice-createscaletransform" /></para>
+      <param name="scaleTransform">The new 2D scale transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionVisual::RemoveAllVisuals">
+    <summary>
+      <para>Removes all visuals from the children list of this visual.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionvisual-removeallvisuals" /></para>
+    </summary>
+  </member>
+  <member name="IDCompositionTurbulenceEffect::SetNoise">
+    <summary>
+      <para>Sets the turbulence noise mode.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositionturbulenceeffect-setnoise" /></para>
+      <param name="noise">The turbulence noise mode. Indicates whether to generate a bitmap based on Fractal Noise or the Turbulence function.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetAlphaDisable">
+    <summary>
+      <para>Specifies whether to apply the transfer function to the Alpha channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setalphadisable" /></para>
+      <param name="alphaDisable">A boolean value that specifies whether to apply the transfer function to the alpha channel.
+            If you set this to TRUE the effect does not apply the transfer function to the Alpha channel. If you set this to FALSE it applies the AlphaTableTransfer function to the Alpha channel.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionTableTransferEffect::SetAlphaTable">
+    <summary>
+      <para>Sets the list of values used to define the transfer function for the alpha channel.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiontabletransfereffect-setalphatable" /></para>
+      <param name="tableValues">The list of values used to define the transfer function for the alpha channel.</param>
+      <param name="count">The number of values in the tableValues parameter.</param>
+    </summary>
+  </member>
+  <member name="IDCompositionDevice2::CreateRotateTransform">
+    <summary>
+      <para>Creates a 2D rotation transform object.</para>
+      <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//dcomp/nf-dcomp-idcompositiondevice2-createrotatetransform" /></para>
+      <param name="rotateTransform">The new rotation transform object. This parameter must not be NULL.</param>
+    </summary>
+  </member>
+</doc>

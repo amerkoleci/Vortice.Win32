@@ -40,6 +40,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Dxgi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Direct3D.Fxc", "src\Vortice.Win32.Graphics.Direct3D.Fxc\Vortice.Win32.Graphics.Direct3D.Fxc.csproj", "{65052A2C-E59E-4A75-B15D-2276225D859C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.DirectComposition", "src\Vortice.Win32.Graphics.DirectComposition\Vortice.Win32.Graphics.DirectComposition.csproj", "{F7EBB80F-26EA-4C64-9454-C087BBC43549}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,10 @@ Global
 		{65052A2C-E59E-4A75-B15D-2276225D859C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65052A2C-E59E-4A75-B15D-2276225D859C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65052A2C-E59E-4A75-B15D-2276225D859C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7EBB80F-26EA-4C64-9454-C087BBC43549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7EBB80F-26EA-4C64-9454-C087BBC43549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7EBB80F-26EA-4C64-9454-C087BBC43549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7EBB80F-26EA-4C64-9454-C087BBC43549}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

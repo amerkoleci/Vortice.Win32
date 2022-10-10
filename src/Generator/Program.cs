@@ -25,6 +25,7 @@ public static class Program
         "Graphics.DirectWrite.json",
         "Graphics.Direct2D.json",
         "Graphics.Imaging.D2D.json",
+        "Graphics.DirectComposition.json",
 
         // Media
         //"Media.Audio.json",
@@ -776,6 +777,9 @@ public static class Program
         // FXC
         { "D3DCOMPILER_STRIP_FLAGS", "D3DCOMPILER_STRIP" },
         { "D3D_BLOB_PART", "D3D_BLOB" },
+
+        // DirectComposition
+        { "COMPOSITION_FRAME_ID_TYPE", "COMPOSITION_FRAME_ID" },
     };
 
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
@@ -842,6 +846,7 @@ public static class Program
         "D2D1",
         "DWRITE",
         "D3DCOMPILER",
+        "DCOMPOSITION",
     };
 
     private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
@@ -1048,6 +1053,7 @@ public static class Program
         string d2dPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct2D");
         string dxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D.Dxc");
         string fxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D.Fxc");
+        string directCompositionPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.DirectComposition");
 
         // Generate docs
         //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
@@ -1058,6 +1064,7 @@ public static class Program
 
         //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(d3d11Path, "Direct3D11.xml"));
         //DocGenerator.Generate(new[] { "D3D12" }, Path.Combine(d3d12Path, "Direct3D12.xml"));
+        //DocGenerator.Generate(new[] { "DComposition" }, Path.Combine(directCompositionPath, "DirectComposition.xml"));
 
         foreach (string jsonFile in jsons)
         {
@@ -1118,6 +1125,11 @@ public static class Program
             else if (jsonFile == "Graphics.Direct3D.Fxc.json")
             {
                 outputPath = fxcPath;
+                useSubFolders = false;
+            }
+            else if (jsonFile == "Graphics.DirectComposition.json")
+            {
+                outputPath = directCompositionPath;
                 useSubFolders = false;
             }
 
@@ -1328,6 +1340,13 @@ public static class Program
 
     private static void GenerateTypes(string folder, string apiName, string docFileName, ApiData api)
     {
+        using CodeWriter writer = new(
+            Path.Combine(folder, $"{apiName}.Enums.cs"),
+            apiName,
+            docFileName,
+            $"Win32.{apiName}");
+
+        bool needNewLine = false;
         foreach (ApiType enumType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "enum"))
         {
             if (enumType.Name.StartsWith("D3DX11"))
@@ -1335,13 +1354,20 @@ public static class Program
                 continue;
             }
 
-            GenerateEnum(folder, apiName, docFileName, enumType, false);
+            if (needNewLine)
+            {
+                writer.WriteLine();
+            }
+
+            GenerateEnum(writer, enumType, false);
             s_visitedEnums.Add($"{apiName}.{enumType.Name}");
+            needNewLine = true;
         }
 
         // Generated enums -> from constants
 
         Dictionary<string, ApiType> createdEnums = new();
+        needNewLine = false;
 
         foreach (ApiDataConstant constant in api.Constants)
         {
@@ -1378,20 +1404,29 @@ public static class Program
                         Value = constant.Value
                     };
                     createdEnumType.Values.Add(enumValue);
-
-                    //string enumValueName = GetPrettyFieldName(constant.Name, createdEnumName);
-                    //writer.WriteLine($"{enumValueName} = {constant.Value},");
                 }
             }
         }
 
         foreach (ApiType enumType in createdEnums.Values)
         {
-            GenerateEnum(folder, apiName, docFileName, enumType, true);
+            if (needNewLine)
+            {
+                writer.WriteLine();
+            }
+
+            GenerateEnum(writer, enumType, true);
+            needNewLine = true;
         }
 
-        // Unions
+        using var structWriter = new CodeWriter(
+            Path.Combine(folder, $"{apiName}.Structs.cs"),
+            apiName,
+            docFileName,
+            $"Win32.{apiName}");
+        needNewLine = true;
 
+        // Unions
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "union"))
         {
             if (structType.Name.StartsWith("D3DX11") ||
@@ -1405,17 +1440,19 @@ public static class Program
                 continue;
             }
 
+            if (needNewLine)
+            {
+                structWriter.WriteLine();
+            }
+
             string structCsTypeName = GetCsStructTypeName(structType, apiName);
-            using var writer = new CodeWriter(
-                Path.Combine(folder, $"{structCsTypeName}.cs"),
-                apiName,
-                docFileName,
-                $"Win32.{apiName}");
-            GenerateStruct(writer, api, structType);
+            GenerateStruct(structWriter, api, structType);
             s_visitedStructs.Add($"{apiName}.{structType.Name}");
+            needNewLine = true;
         }
 
         // Structs
+        needNewLine = false;
         foreach (ApiType structType in api.Types.Where(item => item.Kind.ToLowerInvariant() == "struct"))
         {
             if (structType.Name.StartsWith("D3DX11") ||
@@ -1430,14 +1467,15 @@ public static class Program
                 continue;
             }
 
+            if (needNewLine)
+            {
+                structWriter.WriteLine();
+            }
+
             string structCsTypeName = GetCsStructTypeName(structType, apiName);
-            using var writer = new CodeWriter(
-                Path.Combine(folder, $"{structCsTypeName}.cs"),
-                apiName,
-                docFileName,
-                $"Win32.{apiName}");
-            GenerateStruct(writer, api, structType);
+            GenerateStruct(structWriter, api, structType);
             s_visitedStructs.Add($"{apiName}.{structType.Name}");
+            needNewLine = true;
         }
 
         // Com types
@@ -1681,7 +1719,7 @@ public static class Program
         return functionSignature.ToString();
     }
 
-    private static void GenerateEnum(string folder, string apiName, string docFileName, ApiType enumType, bool autoGenerated)
+    private static void GenerateEnum(CodeWriter writer, ApiType enumType, bool autoGenerated)
     {
         string csTypeName;
         string enumPrefix = string.Empty;
@@ -1700,16 +1738,10 @@ public static class Program
         else
         {
             csTypeName = GetDataTypeName(enumType.Name, out enumPrefix);
-            AddCsMapping(apiName, enumType.Name, csTypeName);
+            AddCsMapping(writer.Api, enumType.Name, csTypeName);
         }
 
         string baseTypeName = GetTypeName(enumType.IntegerBase);
-
-        using var writer = new CodeWriter(
-            Path.Combine(folder, $"{csTypeName}.cs"),
-            apiName,
-            docFileName,
-            $"Win32.{apiName}");
 
         if (!autoGenerated && string.IsNullOrEmpty(writer.DocFileName) == false)
         {
@@ -1869,6 +1901,11 @@ public static class Program
                 structType.Name.StartsWith("WIC"))
             {
                 csTypeName = structType.Name;
+            }
+            else if (structType.Name.StartsWith("DComposition"))
+            {
+                csTypeName = structType.Name.Substring("DComposition".Length);
+                AddCsMapping(writer.Api, structType.Name, csTypeName);
             }
             else
             {
