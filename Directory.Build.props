@@ -11,7 +11,7 @@
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>CS1591;CS1701;CA2252;</NoWarn>
+    <NoWarn>$(NoWarn);AD0001;CS1591;CS1701;CA2252;</NoWarn>
     <UseSharedCompilation>true</UseSharedCompilation>
   </PropertyGroup>
 
@@ -40,11 +40,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-
-    <PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="4.5.0-1.22479.14">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>

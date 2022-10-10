@@ -4,9 +4,7 @@
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
     <Description>Windows API low level bindings.</Description>
     
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <EnablePreviewFeatures>True</EnablePreviewFeatures>
-    <NoWarn>0419;$(NoWarn)</NoWarn>
+    <NoWarn>$(NoWarn);CS0419;IDE0017</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

@@ -4,8 +4,7 @@
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
     <Description>Direct3D11 bindings.</Description>
     
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>0419;$(NoWarn)</NoWarn>
+    <NoWarn>$(NoWarn);CS0419;IDE0017</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
