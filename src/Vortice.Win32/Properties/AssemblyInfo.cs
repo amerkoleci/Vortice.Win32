@@ -8,3 +8,4 @@
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.DirectWrite")]
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct2D")]
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct3D.Dxc")]
+[assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct3D.Fxc")]

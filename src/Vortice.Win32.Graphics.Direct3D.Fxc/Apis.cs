@@ -2,9 +2,8 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Buffers;
-using System.Text;
 using System.Text.RegularExpressions;
-using static Win32.Apis;
+using System.Text;
 
 namespace Win32.Graphics.Direct3D.Fxc;
 
