@@ -26,6 +26,7 @@ public static class Program
         "Graphics.Direct2D.json",
         "Graphics.Imaging.D2D.json",
         "Graphics.DirectComposition.json",
+        "Graphics.Direct3D9.json",
 
         // Media
         //"Media.Audio.json",
@@ -91,6 +92,8 @@ public static class Program
         { "Globalization.FONTSIGNATURE", "Win32.Graphics.Gdi.FontSignature" },
         { "Graphics.Gdi.LOGFONTA", "Win32.Graphics.Gdi.LogFontA" },
         { "Graphics.Gdi.LOGFONTW", "Win32.Graphics.Gdi.LogFontW" },
+        { "Graphics.Gdi.RGNDATA", "Win32.Graphics.Gdi.RgnData" },
+        { "Graphics.Gdi.PALETTEENTRY", "Win32.Graphics.Gdi.PaletteEntry" },
 
         { "Graphics.Direct3D.D3DVECTOR", "Vector3" },
         { "Graphics.Direct3D.D3DMATRIX", "Matrix4x4" },
@@ -671,6 +674,56 @@ public static class Program
         "TriangleList",
         "TriangleStrip",
         "PatchList",
+        "MissingSemantic",
+        "MaskmisMatch",
+        "CantHaveOnlyGaps",
+        "DeclTooComplex",
+        "InvalidSourceRect",
+        "PrimitiveTopology",
+        "UnrecognizedDstFormat",
+        "InvalidDstDimensions",
+        "InvalidDstRowPitch",
+        "InvalidDstPlacement",
+        "InvalidDstdsPlacedFootPrintFormat",
+        "DstRegionOutOfBounds",
+        "UnrecognizedSrcType",
+        "InvalidSrcResource",
+        "InvalidSrcSubresource",
+        "InvalidSrcOffset",
+        "NullRange",
+        "VideoDecodeStream",
+        "VideoDecodeCommandList",
+        "SetResidencyPriority",
+        "AtomicCopyBuffer",
+        "VideoProcessCommandQueue",
+        "VideoProcessStream",
+        "OpenExistingHeap",
+        "RSSetShading",
+        "RSSetShadingRate",
+        "RSSetShadingRateImage",
+        "CreateMeshShader",
+        "GroupSharedExceedsMaxSize",
+        "MismatchedASMSPayloadSize",
+        "CreateAmplificationShader",
+        "ShaderCacheSession",
+        "CreateShaderCacheSession",
+        "AlreadyOpen",
+        "DeveloperMode",
+        "ShaderCacheControl",
+        "StateAlreadySet",
+        "IgnoredFlag",
+        "StoreValue",
+        "StoreValueAlreadyPresent",
+        "HashCollision",
+        "CacheFull",
+        "NotFound",
+        "FindValue",
+        "VideoEncoder",
+        "VideoEncoderHeap",
+        "ShaderCacheDelete",
+        "ShaderCacheClear",
+        "VideoExtensionCommand",
+        "VideoMotionEstimator",
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
@@ -847,6 +900,7 @@ public static class Program
         "DWRITE",
         "D3DCOMPILER",
         "DCOMPOSITION",
+        "D3DADAPTER",
     };
 
     private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
@@ -1045,6 +1099,7 @@ public static class Program
     {
         string repoRoot = FindRepoRoot();
         string dxgiPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Dxgi");
+        string d3d9Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D9");
         string d3d11Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D11");
         string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D12");
         string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D11on12");
@@ -1062,6 +1117,7 @@ public static class Program
         //DocGenerator.Generate(new[] { "DWRITE" }, Path.Combine(repoRoot, "Generated", "Graphics", "DirectWrite.xml"));
         //DocGenerator.Generate(new[] { "WIC" }, Path.Combine(repoRoot, "Generated", "Graphics", "Imaging.xml"));
 
+        DocGenerator.Generate(new[] { "D3D9" }, Path.Combine(d3d9Path, "Direct3D9.xml"));
         //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(d3d11Path, "Direct3D11.xml"));
         //DocGenerator.Generate(new[] { "D3D12" }, Path.Combine(d3d12Path, "Direct3D12.xml"));
         //DocGenerator.Generate(new[] { "DComposition" }, Path.Combine(directCompositionPath, "DirectComposition.xml"));
@@ -1130,6 +1186,11 @@ public static class Program
             else if (jsonFile == "Graphics.DirectComposition.json")
             {
                 outputPath = directCompositionPath;
+                useSubFolders = false;
+            }
+            else if (jsonFile == "Graphics.Direct3D9.json")
+            {
+                outputPath = d3d9Path;
                 useSubFolders = false;
             }
 
@@ -1735,6 +1796,25 @@ public static class Program
                 skipPrettify = true;
             }
         }
+        else if (enumType.Name.StartsWith("D3D")
+            && !enumType.Name.StartsWith("D3D_")
+            && !enumType.Name.StartsWith("D3D11_")
+            && !enumType.Name.StartsWith("D3D12_")
+            && !enumType.Name.StartsWith("D3DCOMPILER_")
+            && !enumType.Name.StartsWith("D3DCOMPILE"))
+        {
+            csTypeName = enumType.Name.Substring(3);
+            skipPrettify = true;
+
+            if (s_knownTypesPrefixes.TryGetValue(enumType.Name, out string? knowPrefix))
+            {
+                enumPrefix = knowPrefix!;
+            }
+            else
+            {
+                enumPrefix = "D3D";
+            }
+        }
         else
         {
             csTypeName = GetDataTypeName(enumType.Name, out enumPrefix);
@@ -1945,7 +2025,7 @@ public static class Program
 
                 string fieldValueName = field.Name;
 
-                if (structType.Name == "D3D11_OMAC")
+                if (structType.Name == "D3D11_OMAC" || structType.Name == "D3D_OMAC")
                 {
                     fieldValueName = "Buffer";
                 }
@@ -3168,3 +3248,4 @@ public static class Program
         return name;
     }
 }
+

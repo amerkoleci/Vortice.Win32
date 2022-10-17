@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Dxgi")]
+[assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct3D9")]
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct3D11")]
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct3D12")]
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct3D11on12")]

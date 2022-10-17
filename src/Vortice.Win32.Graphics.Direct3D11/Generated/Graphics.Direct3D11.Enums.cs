@@ -2532,16 +2532,16 @@ public enum MessageId : int
 	CreateGeometryShaderWithStreamOutputInvalidOutputStreamStride = 185,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_MISSINGSEMANTIC"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_MISSINGSEMANTIC</unmanaged>
-	CreateGeometryShaderWithStreamOutputMissingsemantic = 186,
+	CreateGeometryShaderWithStreamOutputMissingSemantic = 186,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_MASKMISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_MASKMISMATCH</unmanaged>
-	CreateGeometryShaderWithStreamOutputMaskmismatch = 187,
+	CreateGeometryShaderWithStreamOutputMaskmisMatch = 187,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_CANTHAVEONLYGAPS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_CANTHAVEONLYGAPS</unmanaged>
-	CreateGeometryShaderWithStreamOutputCanthaveonlygaps = 188,
+	CreateGeometryShaderWithStreamOutputCantHaveOnlyGaps = 188,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_DECLTOOCOMPLEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_DECLTOOCOMPLEX</unmanaged>
-	CreateGeometryShaderWithStreamOutputDecltoocomplex = 189,
+	CreateGeometryShaderWithStreamOutputDeclTooComplex = 189,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_MISSINGOUTPUTSIGNATURE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEGEOMETRYSHADERWITHSTREAMOUTPUT_MISSINGOUTPUTSIGNATURE</unmanaged>
 	CreateGeometryShaderWithStreamOutputMissingOutputSignature = 190,
@@ -3069,7 +3069,7 @@ public enum MessageId : int
 	DeviceDrawBoundResourceMapped = 364,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_INVALID_PRIMITIVETOPOLOGY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_INVALID_PRIMITIVETOPOLOGY</unmanaged>
-	DeviceDrawInvalidPrimitivetopology = 365,
+	DeviceDrawInvalidPrimitiveTopology = 365,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_VERTEX_OFFSET_UNALIGNED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_VERTEX_OFFSET_UNALIGNED</unmanaged>
 	DeviceDrawVertexOffsetUnaligned = 366,
@@ -4797,7 +4797,7 @@ public enum MessageId : int
 	VideoprocessorbltInvalidfutureframes = 3145894,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORBLT_INVALIDSOURCERECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORBLT_INVALIDSOURCERECT</unmanaged>
-	VideoprocessorbltInvalidsourcerect = 3145895,
+	VideoprocessorbltInvalidSourceRect = 3145895,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORBLT_INVALIDDESTRECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORBLT_INVALIDDESTRECT</unmanaged>
 	VideoprocessorbltInvaliddestrect = 3145896,
@@ -5337,7 +5337,7 @@ public enum MessageId : int
 	CreatevideoprocessoroutputviewInvalidmsaa = 3146074,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_CLEARVIEW_INVALIDSOURCERECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_CLEARVIEW_INVALIDSOURCERECT</unmanaged>
-	DeviceClearViewInvalidsourcerect = 3146075,
+	DeviceClearViewInvalidSourceRect = 3146075,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_CLEARVIEW_EMPTYRECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_CLEARVIEW_EMPTYRECT</unmanaged>
 	DeviceClearViewEmptyRect = 3146076,
@@ -5454,7 +5454,7 @@ public enum MessageId : int
 	VideoprocessorgetbehaviorhintsTargetrect = 3146113,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETBEHAVIORHINTS_INVALIDSOURCERECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETBEHAVIORHINTS_INVALIDSOURCERECT</unmanaged>
-	VideoprocessorgetbehaviorhintsInvalidsourcerect = 3146114,
+	VideoprocessorgetbehaviorhintsInvalidSourceRect = 3146114,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETBEHAVIORHINTS_INVALIDDESTRECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETBEHAVIORHINTS_INVALIDDESTRECT</unmanaged>
 	VideoprocessorgetbehaviorhintsInvaliddestrect = 3146115,

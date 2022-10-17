@@ -123,4 +123,6 @@ public static unsafe partial class Apis
 
     [DllImport("kernel32", ExactSpelling = true)]
     public static extern Handle GetProcessHeap();
+
+    public const int RDH_RECTANGLES = 1;
 }

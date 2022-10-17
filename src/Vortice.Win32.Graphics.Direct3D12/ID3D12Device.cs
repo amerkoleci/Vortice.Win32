@@ -14,4 +14,10 @@ public unsafe partial struct ID3D12Device
         CheckFeatureSupport(feature, &featureData, (uint)sizeof(TFeature)).ThrowIfFailed();
         return featureData;
     }
+
+    public HResult CreateCommittedResource(HeapType heapType, ResourceDescription* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource)
+    {
+        HeapProperties heapProperties = new(heapType);
+        return CreateCommittedResource(&heapProperties, HeapFlags.None, pDesc, InitialResourceState, pOptimizedClearValue, riidResource, ppvResource);
+    }
 }

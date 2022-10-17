@@ -5,9 +5,8 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
-    <EnablePreviewFeatures>true</EnablePreviewFeatures>
 
-    <VersionPrefix>1.8.3</VersionPrefix>
+    <VersionPrefix>1.8.4</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
