@@ -11,8 +11,17 @@ public unsafe partial struct ID3D12Device
         where TFeature : unmanaged
     {
         TFeature featureData = default;
-        CheckFeatureSupport(feature, &featureData, (uint)sizeof(TFeature)).ThrowIfFailed();
+        CheckFeatureSupport(feature, &featureData, sizeof(TFeature)).ThrowIfFailed();
         return featureData;
+    }
+
+    public HResult CheckFeatureSupport<TFeature>(Feature feature, ref TFeature featureData)
+        where TFeature : unmanaged
+    {
+        fixed (TFeature* featureDataPtr = &featureData)
+        {
+            return CheckFeatureSupport(feature, featureDataPtr, sizeof(TFeature));
+        }
     }
 
     public HResult CreateCommittedResource(HeapType heapType, ResourceDescription* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource)

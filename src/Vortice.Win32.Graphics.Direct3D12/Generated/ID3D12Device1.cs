@@ -157,9 +157,9 @@ public unsafe partial struct ID3D12Device1 : INativeGuid
 	/// <inheritdoc cref="ID3D12Device.CheckFeatureSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
+	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, Feature, void*, uint, int>)(lpVtbl[13]))((ID3D12Device1*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, Feature, void*, int, int>)(lpVtbl[13]))((ID3D12Device1*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateDescriptorHeap" />

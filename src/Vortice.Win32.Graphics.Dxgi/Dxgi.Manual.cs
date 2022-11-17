@@ -48,7 +48,7 @@ public static unsafe class IDXGIFactory5Extensions
         where TFeature : unmanaged
     {
         TFeature featureData = default;
-        factory.CheckFeatureSupport(feature, &featureData, (uint)sizeof(TFeature)).ThrowIfFailed();
+        factory.CheckFeatureSupport(feature, &featureData, sizeof(TFeature)).ThrowIfFailed();
         return featureData;
     }
 }

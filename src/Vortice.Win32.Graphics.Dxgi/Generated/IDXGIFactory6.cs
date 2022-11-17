@@ -277,9 +277,9 @@ public unsafe partial struct IDXGIFactory6 : INativeGuid
 	/// <inheritdoc cref="IDXGIFactory5.CheckFeatureSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
+	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Feature, void*, uint, int>)(lpVtbl[28]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory6*, Feature, void*, int, int>)(lpVtbl[28]))((IDXGIFactory6*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory6::EnumAdapterByGpuPreference"]/*' />

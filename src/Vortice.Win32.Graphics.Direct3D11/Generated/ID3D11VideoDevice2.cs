@@ -245,9 +245,9 @@ public unsafe partial struct ID3D11VideoDevice2 : INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult CheckFeatureSupport(FeatureVideo Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
+	public HResult CheckFeatureSupport(FeatureVideo Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice2*, FeatureVideo, void*, uint, int>)(lpVtbl[24]))((ID3D11VideoDevice2*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice2*, FeatureVideo, void*, int, int>)(lpVtbl[24]))((ID3D11VideoDevice2*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice2::NegotiateCryptoSessionKeyExchangeMT"]/*' />

@@ -91,7 +91,7 @@ public static unsafe partial class Apis
             PlaneCount = 0,
         };
 
-        if (device->CheckFeatureSupport(Feature.FormatInfo, &formatInfo, (uint)(sizeof(FeatureDataFormatInfo))).Failure)
+        if (device->CheckFeatureSupport(Feature.FormatInfo, &formatInfo, sizeof(FeatureDataFormatInfo)).Failure)
         {
             return 0;
         }

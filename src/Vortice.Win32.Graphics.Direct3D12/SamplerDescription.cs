@@ -5,7 +5,7 @@ using static Win32.Graphics.Direct3D12.Apis;
 
 namespace Win32.Graphics.Direct3D12;
 
-public unsafe partial struct SamplerDescription
+public partial struct SamplerDescription
 {
     public static readonly SamplerDescription PointWrap = new(Filter.MinMagMipPoint, TextureAddressMode.Wrap);
     public static readonly SamplerDescription PointClamp = new(Filter.MinMagMipPoint, TextureAddressMode.Clamp);
@@ -29,7 +29,7 @@ public unsafe partial struct SamplerDescription
     /// <param name="borderColor">Border color to use if <see cref="TextureAddressMode.Border"/> is specified for AddressU, AddressV, or AddressW.</param>
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
-    public SamplerDescription(
+    public unsafe SamplerDescription(
         Filter filter,
         TextureAddressMode addressU,
         TextureAddressMode addressV,
@@ -68,7 +68,7 @@ public unsafe partial struct SamplerDescription
     /// <param name="comparisonFunction">A function that compares sampled data against existing sampled data. </param>
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
-    public SamplerDescription(
+    public unsafe SamplerDescription(
         Filter filter,
         TextureAddressMode addressU,
         TextureAddressMode addressV,
@@ -104,7 +104,7 @@ public unsafe partial struct SamplerDescription
     /// <param name="comparisonFunction">A function that compares sampled data against existing sampled data. </param>
     /// <param name="minLOD">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.</param>
     /// <param name="maxLOD">Upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. </param>
-    public SamplerDescription(
+    public unsafe SamplerDescription(
         Filter filter,
         TextureAddressMode address,
         float mipLODBias = 0.0f,

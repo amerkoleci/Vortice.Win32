@@ -26,7 +26,7 @@ public static class Program
         "Graphics.Direct2D.json",
         "Graphics.Imaging.D2D.json",
         "Graphics.DirectComposition.json",
-        "Graphics.Direct3D9.json",
+        //"Graphics.Direct3D9.json",
 
         // Media
         //"Media.Audio.json",
@@ -1117,7 +1117,7 @@ public static class Program
         //DocGenerator.Generate(new[] { "DWRITE" }, Path.Combine(repoRoot, "Generated", "Graphics", "DirectWrite.xml"));
         //DocGenerator.Generate(new[] { "WIC" }, Path.Combine(repoRoot, "Generated", "Graphics", "Imaging.xml"));
 
-        DocGenerator.Generate(new[] { "D3D9" }, Path.Combine(d3d9Path, "Direct3D9.xml"));
+        //DocGenerator.Generate(new[] { "D3D9" }, Path.Combine(d3d9Path, "Direct3D9.xml"));
         //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(d3d11Path, "Direct3D11.xml"));
         //DocGenerator.Generate(new[] { "D3D12" }, Path.Combine(d3d12Path, "Direct3D12.xml"));
         //DocGenerator.Generate(new[] { "DComposition" }, Path.Combine(directCompositionPath, "DirectComposition.xml"));
@@ -2391,9 +2391,10 @@ public static class Program
                             out string parameterType,
                             out string parameterName);
 
-                        if (method.Name == "CreateWrappedResource")
+                        if (method.Name == "CheckFeatureSupport" &&
+                            parameterName == "FeatureSupportDataSize")
                         {
-
+                            parameterType = "int";
                         }
 
                         argumentBuilder

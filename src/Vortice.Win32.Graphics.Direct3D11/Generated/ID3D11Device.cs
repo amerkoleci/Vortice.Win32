@@ -317,9 +317,9 @@ public unsafe partial struct ID3D11Device : INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::CheckFeatureSupport"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, uint FeatureSupportDataSize)
+	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Feature, void*, uint, int>)(lpVtbl[33]))((ID3D11Device*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, Feature, void*, int, int>)(lpVtbl[33]))((ID3D11Device*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device::GetPrivateData"]/*' />

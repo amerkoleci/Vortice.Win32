@@ -5,7 +5,7 @@ using static Win32.Graphics.Direct3D12.Apis;
 
 namespace Win32.Graphics.Direct3D12;
 
-public unsafe partial struct DepthStencilDescription
+public partial struct DepthStencilDescription
 {
     /// <summary>
     /// A built-in description with settings for not using a depth stencil buffer.

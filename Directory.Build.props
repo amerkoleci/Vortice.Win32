@@ -1,31 +1,38 @@
 <Project>
   <PropertyGroup>
-    <LangVersion>preview</LangVersion>
+    <RepositoryUrl>https://github.com/amerkoleci/Vortice.Win32</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>11.0</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <DebugType>embedded</DebugType>
+    <Features>strict</Features>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <RestoreConfigFile>$(MSBuildThisFileDirectory)NuGet.config</RestoreConfigFile>
 
-    <VersionPrefix>1.8.4</VersionPrefix>
+    <VersionPrefix>1.8.5</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);AD0001;CS1591;CS1701;CA2252;</NoWarn>
-    <UseSharedCompilation>true</UseSharedCompilation>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
 
   <PropertyGroup>
-    <RepositoryUrl>https://github.com/amerkoleci/Vortice.Win32</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-
-    <ProjectUrl>https://github.com/amerkoleci/Vortice.Win32</ProjectUrl>
-    <Authors>Amer Koleci</Authors>
-    <Owners>Amer Koleci</Owners>
+    <Authors>Amer Koleci and Contributors</Authors>
     <Company>Amer Koleci</Company>
-    <Copyright>Copyright © 2022 Amer Koleci</Copyright>
+    <Copyright>Copyright © Amer Koleci and Contributors</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageTags>win32 graphics gamedev core standard game vortice</PackageTags>
+    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
   </PropertyGroup>
 
   <!-- https://github.com/dotnet/sourcelink -->
@@ -38,10 +45,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="all" />
+    <PackageReference Include="PolySharp" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>

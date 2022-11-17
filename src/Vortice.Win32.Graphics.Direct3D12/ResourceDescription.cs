@@ -99,7 +99,7 @@ public unsafe partial struct ResourceDescription : IEquatable<ResourceDescriptio
             flags);
     }
 
-    public static ResourceDescription Texture3D(Format format,
+    public static ResourceDescription Tex3D(Format format,
         ulong width,
         uint height,
         ushort depth,
