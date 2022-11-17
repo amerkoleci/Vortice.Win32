@@ -37,7 +37,7 @@ jobs:
 
     - name: Publish to NuGet
       if: github.event_name == 'push'
-      run: dotnet nuget push build/packages/**/*.nupkg -k ${{secrets.NUGET_TOKEN}} --skip-duplicate --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push artifacts/**/*.nupkg -k ${{secrets.NUGET_TOKEN}} --skip-duplicate --source https://api.nuget.org/v3/index.json
 
     - name: Upload Package Artifacts
       uses: actions/upload-artifact@v3
