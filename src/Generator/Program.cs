@@ -4,6 +4,7 @@
 using System.Dynamic;
 using System.Globalization;
 using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
 namespace Generator;
@@ -1022,24 +1023,12 @@ public static class Program
         { "IDXGIDevice::CreateSurface::Usage", "DXGI_USAGE" },
         { "IDXGIOutput::GetDisplayModeList::Flags", "DXGI_ENUM_MODES" },
         { "IDXGISwapChain::Present::Flags", "DXGI_PRESENT" },
-        { "IDXGISwapChain1::Present::Flags", "DXGI_PRESENT" },
-        { "IDXGISwapChain2::Present::Flags", "DXGI_PRESENT" },
-        { "IDXGISwapChain3::Present::Flags", "DXGI_PRESENT" },
-        { "IDXGISwapChain4::Present::Flags", "DXGI_PRESENT" },
-
         { "IDXGISwapChain::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
-        { "IDXGISwapChain1::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
-        { "IDXGISwapChain2::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
-        { "IDXGISwapChain3::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
-        { "IDXGISwapChain4::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
+        { "IDXGIFactory::MakeWindowAssociation::Flags", "DXGI_MWA" },
 
         // D3D11
         { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" },
         { "ID3D11DeviceContext::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
-        { "ID3D11DeviceContext1::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
-        { "ID3D11DeviceContext2::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
-        { "ID3D11DeviceContext3::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
-        { "ID3D11DeviceContext4::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
 
         // D3D12
 
@@ -2532,7 +2521,10 @@ public static class Program
         {
             if (string.IsNullOrEmpty(memberLookup) == false)
             {
+                string interfaceType = memberLookup.Split("::")[0];
+
                 string parameterNameLookup = $"{memberLookup}::{parameter.Name}";
+            retryLookup:
                 if (s_mapFunctionParameters.TryGetValue(parameterNameLookup, out string? remapType))
                 {
                     if (remapType.Contains('.'))
@@ -2551,6 +2543,16 @@ public static class Program
                 }
                 else
                 {
+                    var result = Regex.Match(interfaceType, @"\d+$", RegexOptions.RightToLeft);
+                    if (result.Success)
+                    {
+                        string interfaceTypeNoNumber = interfaceType.Replace(result.Value, string.Empty);
+                        memberLookup = memberLookup.Replace(interfaceType, interfaceTypeNoNumber);
+                        parameterNameLookup = $"{memberLookup}::{parameter.Name}";
+                        interfaceType = interfaceTypeNoNumber;
+                        goto retryLookup;
+                    }
+
                     parameterType = GetTypeName(parameter.Type, asPointer);
                 }
             }

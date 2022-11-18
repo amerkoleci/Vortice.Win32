@@ -117,9 +117,9 @@ public unsafe partial struct IDXGIFactory : INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::MakeWindowAssociation"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult MakeWindowAssociation(IntPtr WindowHandle, uint Flags)
+	public HResult MakeWindowAssociation(IntPtr WindowHandle, WindowAssociationFlags Flags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr, uint, int>)(lpVtbl[8]))((IDXGIFactory*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr, WindowAssociationFlags, int>)(lpVtbl[8]))((IDXGIFactory*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory::GetWindowAssociation"]/*' />
