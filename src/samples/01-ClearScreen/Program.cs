@@ -93,7 +93,7 @@ public static unsafe class Program
             d2d1Factory2.GetVoidAddressOf()).ThrowIfFailed();
 
         using ComPtr<IDWriteFactory> dwriteFactory = default;
-        DWriteCreateFactory(DWriteFactoryType.Shared, __uuidof<IDWriteFactory>(), dwriteFactory.GetIUnknownAddressOf()).ThrowIfFailed();
+        DWriteCreateFactory(DWriteFactoryType.Shared, __uuidof<IDWriteFactory>(), dwriteFactory.GetVoidAddressOf()).ThrowIfFailed();
 
         using ComPtr<IDWriteTextFormat> textFormat =
             dwriteFactory.Get()->CreateTextFormat(
