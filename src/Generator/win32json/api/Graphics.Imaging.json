@@ -5029,7 +5029,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"wzFilename","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pguidVendor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"pguidVendor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"metadataOptions","Type":{"Kind":"ApiRef","Name":"WICDecodeOptions","TargetKind":"Default","Api":"Graphics.Imaging","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppIDecoder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWICBitmapDecoder","TargetKind":"Com","Api":"Graphics.Imaging","Parents":[]}},"Attrs":["Out","RetVal"]}

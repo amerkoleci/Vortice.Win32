@@ -141,9 +141,9 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.GetBaseline" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetBaseline(IDWriteFontFace* fontFace, Baseline baseline, Bool32 isVertical, Bool32 isSimulationAllowed, ScriptAnalysis* scriptAnalysis, ushort* localeName, int* baselineCoordinate, Bool32* exists)
+	public HResult GetBaseline(IDWriteFontFace* fontFace, Baseline baseline, Bool32 isVertical, Bool32 isSimulationAllowed, ScriptAnalysis scriptAnalysis, ushort* localeName, int* baselineCoordinate, Bool32* exists)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, Baseline, Bool32, Bool32, ScriptAnalysis*, ushort*, int*, Bool32*, int>)(lpVtbl[11]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, baseline, isVertical, isSimulationAllowed, scriptAnalysis, localeName, baselineCoordinate, exists);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, Baseline, Bool32, Bool32, ScriptAnalysis, ushort*, int*, Bool32*, int>)(lpVtbl[11]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, baseline, isVertical, isSimulationAllowed, scriptAnalysis, localeName, baselineCoordinate, exists);
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.AnalyzeVerticalGlyphOrientation" />
@@ -165,9 +165,9 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.GetScriptProperties" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetScriptProperties(ScriptAnalysis* scriptAnalysis, ScriptProperties* scriptProperties)
+	public HResult GetScriptProperties(ScriptAnalysis scriptAnalysis, ScriptProperties* scriptProperties)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, ScriptAnalysis*, ScriptProperties*, int>)(lpVtbl[14]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), scriptAnalysis, scriptProperties);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, ScriptAnalysis, ScriptProperties*, int>)(lpVtbl[14]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), scriptAnalysis, scriptProperties);
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.GetTextComplexity" />
@@ -181,9 +181,9 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.GetJustificationOpportunities" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetJustificationOpportunities(IDWriteFontFace* fontFace, float fontEmSize, ScriptAnalysis* scriptAnalysis, uint textLength, uint glyphCount, ushort* textString, ushort* clusterMap, ShapingGlyphProperties* glyphProperties, JustificationOpportunity* justificationOpportunities)
+	public HResult GetJustificationOpportunities(IDWriteFontFace* fontFace, float fontEmSize, ScriptAnalysis scriptAnalysis, uint textLength, uint glyphCount, ushort* textString, ushort* clusterMap, ShapingGlyphProperties* glyphProperties, JustificationOpportunity* justificationOpportunities)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, float, ScriptAnalysis*, uint, uint, ushort*, ushort*, ShapingGlyphProperties*, JustificationOpportunity*, int>)(lpVtbl[16]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, fontEmSize, scriptAnalysis, textLength, glyphCount, textString, clusterMap, glyphProperties, justificationOpportunities);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, float, ScriptAnalysis, uint, uint, ushort*, ushort*, ShapingGlyphProperties*, JustificationOpportunity*, int>)(lpVtbl[16]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, fontEmSize, scriptAnalysis, textLength, glyphCount, textString, clusterMap, glyphProperties, justificationOpportunities);
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.JustifyGlyphAdvances" />
@@ -197,9 +197,9 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 	/// <inheritdoc cref="IDWriteTextAnalyzer1.GetJustifiedGlyphs" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult GetJustifiedGlyphs(IDWriteFontFace* fontFace, float fontEmSize, ScriptAnalysis* scriptAnalysis, uint textLength, uint glyphCount, uint maxGlyphCount, ushort* clusterMap, ushort* glyphIndices, float* glyphAdvances, float* justifiedGlyphAdvances, GlyphOffset* justifiedGlyphOffsets, ShapingGlyphProperties* glyphProperties, uint* actualGlyphCount, ushort* modifiedClusterMap, ushort* modifiedGlyphIndices, float* modifiedGlyphAdvances, GlyphOffset* modifiedGlyphOffsets)
+	public HResult GetJustifiedGlyphs(IDWriteFontFace* fontFace, float fontEmSize, ScriptAnalysis scriptAnalysis, uint textLength, uint glyphCount, uint maxGlyphCount, ushort* clusterMap, ushort* glyphIndices, float* glyphAdvances, float* justifiedGlyphAdvances, GlyphOffset* justifiedGlyphOffsets, ShapingGlyphProperties* glyphProperties, uint* actualGlyphCount, ushort* modifiedClusterMap, ushort* modifiedGlyphIndices, float* modifiedGlyphAdvances, GlyphOffset* modifiedGlyphOffsets)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, float, ScriptAnalysis*, uint, uint, uint, ushort*, ushort*, float*, float*, GlyphOffset*, ShapingGlyphProperties*, uint*, ushort*, ushort*, float*, GlyphOffset*, int>)(lpVtbl[18]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, fontEmSize, scriptAnalysis, textLength, glyphCount, maxGlyphCount, clusterMap, glyphIndices, glyphAdvances, justifiedGlyphAdvances, justifiedGlyphOffsets, glyphProperties, actualGlyphCount, modifiedClusterMap, modifiedGlyphIndices, modifiedGlyphAdvances, modifiedGlyphOffsets);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, float, ScriptAnalysis, uint, uint, uint, ushort*, ushort*, float*, float*, GlyphOffset*, ShapingGlyphProperties*, uint*, ushort*, ushort*, float*, GlyphOffset*, int>)(lpVtbl[18]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, fontEmSize, scriptAnalysis, textLength, glyphCount, maxGlyphCount, clusterMap, glyphIndices, glyphAdvances, justifiedGlyphAdvances, justifiedGlyphOffsets, glyphProperties, actualGlyphCount, modifiedClusterMap, modifiedGlyphIndices, modifiedGlyphAdvances, modifiedGlyphOffsets);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::GetGlyphOrientationTransform"]/*' />
@@ -213,17 +213,17 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::GetTypographicFeatures"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult GetTypographicFeatures(IDWriteFontFace* fontFace, ScriptAnalysis* scriptAnalysis, ushort* localeName, uint maxTagCount, uint* actualTagCount, FontFeatureTag* tags)
+	public HResult GetTypographicFeatures(IDWriteFontFace* fontFace, ScriptAnalysis scriptAnalysis, ushort* localeName, uint maxTagCount, uint* actualTagCount, FontFeatureTag* tags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, ScriptAnalysis*, ushort*, uint, uint*, FontFeatureTag*, int>)(lpVtbl[20]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, scriptAnalysis, localeName, maxTagCount, actualTagCount, tags);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, ScriptAnalysis, ushort*, uint, uint*, FontFeatureTag*, int>)(lpVtbl[20]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, scriptAnalysis, localeName, maxTagCount, actualTagCount, tags);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer2::CheckTypographicFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult CheckTypographicFeature(IDWriteFontFace* fontFace, ScriptAnalysis* scriptAnalysis, ushort* localeName, FontFeatureTag featureTag, uint glyphCount, ushort* glyphIndices, byte* featureApplies)
+	public HResult CheckTypographicFeature(IDWriteFontFace* fontFace, ScriptAnalysis scriptAnalysis, ushort* localeName, FontFeatureTag featureTag, uint glyphCount, ushort* glyphIndices, byte* featureApplies)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, ScriptAnalysis*, ushort*, FontFeatureTag, uint, ushort*, byte*, int>)(lpVtbl[21]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, scriptAnalysis, localeName, featureTag, glyphCount, glyphIndices, featureApplies);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, ScriptAnalysis, ushort*, FontFeatureTag, uint, ushort*, byte*, int>)(lpVtbl[21]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, scriptAnalysis, localeName, featureTag, glyphCount, glyphIndices, featureApplies);
 	}
 }
 

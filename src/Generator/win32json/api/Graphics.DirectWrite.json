@@ -9089,7 +9089,7 @@
 		,"Params":[
 			{"Name":"factoryType","Type":{"Kind":"ApiRef","Name":"DWRITE_FACTORY_TYPE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
 			,{"Name":"iid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-			,{"Name":"factory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+			,{"Name":"factory","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 		]
 	}
 ]

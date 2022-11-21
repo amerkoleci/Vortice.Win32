@@ -125,9 +125,9 @@ public unsafe partial struct IDXGIResource1 : INativeGuid
 	/// <inheritdoc cref="IDXGIResource.GetUsage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetUsage(uint* pUsage)
+	public HResult GetUsage(Usage* pUsage)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint*, int>)(lpVtbl[9]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pUsage);
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Usage*, int>)(lpVtbl[9]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pUsage);
 	}
 
 	/// <inheritdoc cref="IDXGIResource.SetEvictionPriority" />

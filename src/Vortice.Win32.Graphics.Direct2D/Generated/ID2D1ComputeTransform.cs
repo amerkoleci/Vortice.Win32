@@ -101,9 +101,9 @@ public unsafe partial struct ID2D1ComputeTransform : INativeGuid
 	/// <inheritdoc cref="ID2D1Transform.MapInvalidRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult MapInvalidRect(uint inputIndex, RawRect* invalidInputRect, RawRect* invalidOutputRect)
+	public HResult MapInvalidRect(uint inputIndex, RawRect invalidInputRect, RawRect* invalidOutputRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, uint, RawRect*, RawRect*, int>)(lpVtbl[6]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, uint, RawRect, RawRect*, int>)(lpVtbl[6]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::SetComputeInfo"]/*' />

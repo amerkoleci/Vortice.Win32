@@ -77,9 +77,9 @@ public unsafe partial struct ID2D1RenderInfo : INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetInputDescription"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetInputDescription(uint inputIndex, InputDescription* inputDescription)
+	public HResult SetInputDescription(uint inputIndex, InputDescription inputDescription)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RenderInfo*, uint, InputDescription*, int>)(lpVtbl[3]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
+		return ((delegate* unmanaged[Stdcall]<ID2D1RenderInfo*, uint, InputDescription, int>)(lpVtbl[3]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderInfo::SetOutputBuffer"]/*' />

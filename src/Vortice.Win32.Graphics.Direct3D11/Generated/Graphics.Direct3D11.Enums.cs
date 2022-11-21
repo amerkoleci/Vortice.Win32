@@ -337,7 +337,7 @@ public enum RaiseFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CLEAR_FLAG"]/*' />
 /// <unmanaged>D3D11_CLEAR_FLAG</unmanaged>
 [Flags]
-public enum ClearFlags : int
+public enum ClearFlags : uint
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CLEAR_FLAG::D3D11_CLEAR_DEPTH"]/*' />

@@ -77,9 +77,9 @@ public unsafe partial struct IDWriteTypography : INativeGuid
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::AddFontFeature"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult AddFontFeature(FontFeature* fontFeature)
+	public HResult AddFontFeature(FontFeature fontFeature)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, FontFeature*, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, FontFeature, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeatureCount"]/*' />

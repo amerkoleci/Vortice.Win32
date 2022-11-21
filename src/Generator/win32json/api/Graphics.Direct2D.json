@@ -6851,45 +6851,6 @@
 		]
 	}
 	,{
-		"Name":"Matrix4x3F"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_4X3_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"Matrix4x4F"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_4X4_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"Matrix5x4F"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"D2D_MATRIX_5X4_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"PD2D1_PROPERTY_SET_FUNCTION"
 		,"Architectures":[]
 		,"Platform":null

@@ -293,97 +293,97 @@ public unsafe partial struct IDWriteTextLayout : INativeGuid
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult SetFontCollection(IDWriteFontCollection* fontCollection, TextRange* textRange)
+	public HResult SetFontCollection(IDWriteFontCollection* fontCollection, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteFontCollection*, TextRange*, int>)(lpVtbl[30]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontCollection, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteFontCollection*, TextRange, int>)(lpVtbl[30]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontCollection, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult SetFontFamilyName(ushort* fontFamilyName, TextRange* textRange)
+	public HResult SetFontFamilyName(ushort* fontFamilyName, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ushort*, TextRange*, int>)(lpVtbl[31]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ushort*, TextRange, int>)(lpVtbl[31]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontWeight"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult SetFontWeight(FontWeight fontWeight, TextRange* textRange)
+	public HResult SetFontWeight(FontWeight fontWeight, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontWeight, TextRange*, int>)(lpVtbl[32]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontWeight, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontWeight, TextRange, int>)(lpVtbl[32]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontWeight, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontStyle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult SetFontStyle(FontStyle fontStyle, TextRange* textRange)
+	public HResult SetFontStyle(FontStyle fontStyle, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontStyle, TextRange*, int>)(lpVtbl[33]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStyle, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontStyle, TextRange, int>)(lpVtbl[33]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStyle, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontStretch"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(34)]
-	public HResult SetFontStretch(FontStretch fontStretch, TextRange* textRange)
+	public HResult SetFontStretch(FontStretch fontStretch, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontStretch, TextRange*, int>)(lpVtbl[34]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStretch, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, FontStretch, TextRange, int>)(lpVtbl[34]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontStretch, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public HResult SetFontSize(float fontSize, TextRange* textRange)
+	public HResult SetFontSize(float fontSize, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float, TextRange*, int>)(lpVtbl[35]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontSize, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, float, TextRange, int>)(lpVtbl[35]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontSize, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetUnderline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(36)]
-	public HResult SetUnderline(Bool32 hasUnderline, TextRange* textRange)
+	public HResult SetUnderline(Bool32 hasUnderline, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Bool32, TextRange*, int>)(lpVtbl[36]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasUnderline, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Bool32, TextRange, int>)(lpVtbl[36]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasUnderline, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetStrikethrough"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(37)]
-	public HResult SetStrikethrough(Bool32 hasStrikethrough, TextRange* textRange)
+	public HResult SetStrikethrough(Bool32 hasStrikethrough, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Bool32, TextRange*, int>)(lpVtbl[37]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasStrikethrough, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, Bool32, TextRange, int>)(lpVtbl[37]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), hasStrikethrough, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetDrawingEffect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(38)]
-	public HResult SetDrawingEffect(IUnknown* drawingEffect, TextRange* textRange)
+	public HResult SetDrawingEffect(IUnknown* drawingEffect, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IUnknown*, TextRange*, int>)(lpVtbl[38]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), drawingEffect, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IUnknown*, TextRange, int>)(lpVtbl[38]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), drawingEffect, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetInlineObject"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(39)]
-	public HResult SetInlineObject(IDWriteInlineObject* inlineObject, TextRange* textRange)
+	public HResult SetInlineObject(IDWriteInlineObject* inlineObject, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteInlineObject*, TextRange*, int>)(lpVtbl[39]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), inlineObject, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteInlineObject*, TextRange, int>)(lpVtbl[39]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), inlineObject, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetTypography"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(40)]
-	public HResult SetTypography(IDWriteTypography* typography, TextRange* textRange)
+	public HResult SetTypography(IDWriteTypography* typography, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteTypography*, TextRange*, int>)(lpVtbl[40]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), typography, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, IDWriteTypography*, TextRange, int>)(lpVtbl[40]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), typography, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public HResult SetLocaleName(ushort* localeName, TextRange* textRange)
+	public HResult SetLocaleName(ushort* localeName, TextRange textRange)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ushort*, TextRange*, int>)(lpVtbl[41]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, textRange);
+		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, ushort*, TextRange, int>)(lpVtbl[41]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMaxWidth"]/*' />

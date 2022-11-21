@@ -2,55 +2,6 @@
 
 "Constants":[
 	{
-		"Name":"DXGI_USAGE_SHADER_INPUT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_USAGE_RENDER_TARGET_OUTPUT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_USAGE_BACK_BUFFER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":64
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_USAGE_SHARED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":128
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_USAGE_READ_ONLY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":256
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_USAGE_DISCARD_ON_PRESENT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":512
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_USAGE_UNORDERED_ACCESS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1024
-		,"Attrs":[]
-	}
-	,{
 		"Name":"DXGI_MAP_READ"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -527,6 +478,24 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"DXGI_USAGE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DXGI_USAGE_SHADER_INPUT","Value":16}
+			,{"Name":"DXGI_USAGE_RENDER_TARGET_OUTPUT","Value":32}
+			,{"Name":"DXGI_USAGE_BACK_BUFFER","Value":64}
+			,{"Name":"DXGI_USAGE_SHARED","Value":128}
+			,{"Name":"DXGI_USAGE_READ_ONLY","Value":256}
+			,{"Name":"DXGI_USAGE_DISCARD_ON_PRESENT","Value":512}
+			,{"Name":"DXGI_USAGE_UNORDERED_ACCESS","Value":1024}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"DXGI_FRAME_STATISTICS"
 		,"Architectures":[]
 		,"Platform":null
@@ -687,7 +656,7 @@
 		,"Fields":[
 			{"Name":"BufferDesc","Type":{"Kind":"ApiRef","Name":"DXGI_MODE_DESC","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
 			,{"Name":"SampleDesc","Type":{"Kind":"ApiRef","Name":"DXGI_SAMPLE_DESC","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
-			,{"Name":"BufferUsage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"BufferUsage","Type":{"Kind":"ApiRef","Name":"DXGI_USAGE","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}
 			,{"Name":"BufferCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OutputWindow","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Windowed","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -813,7 +782,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pUsage","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					{"Name":"pUsage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_USAGE","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1409,7 +1378,7 @@
 				,"Params":[
 					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SURFACE_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"NumSurfaces","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"Usage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"Usage","Type":{"Kind":"ApiRef","Name":"DXGI_USAGE","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pSharedResource","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SHARED_RESOURCE","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"ppSurface","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"IDXGISurface","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
 				]
@@ -2006,7 +1975,7 @@
 			,{"Name":"Format","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
 			,{"Name":"Stereo","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"SampleDesc","Type":{"Kind":"ApiRef","Name":"DXGI_SAMPLE_DESC","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
-			,{"Name":"BufferUsage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"BufferUsage","Type":{"Kind":"ApiRef","Name":"DXGI_USAGE","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}
 			,{"Name":"BufferCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Scaling","Type":{"Kind":"ApiRef","Name":"DXGI_SCALING","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}
 			,{"Name":"SwapEffect","Type":{"Kind":"ApiRef","Name":"DXGI_SWAP_EFFECT","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}

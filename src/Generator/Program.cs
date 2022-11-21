@@ -2375,6 +2375,11 @@ public static class Program
 
                     foreach (ApiParameter parameter in method.Params)
                     {
+                        if(method.Name == "CreateRenderTargetView" && comType.Name == "ID3D12Device")
+                        {
+
+                        }
+
                         GetParameterSignature(api, writer, parameter,
                             $"{comType.Name}::{method.Name}",
                             out string parameterType,
@@ -2510,7 +2515,7 @@ public static class Program
             else
             {
                 string fullTypeName = $"{parameter.Type.Api}.{parameter.Type.Name}";
-                if (!IsPrimitive(parameter.Type) && !IsEnum(fullTypeName))
+                if (!IsPrimitive(parameter.Type) && !IsStruct(fullTypeName) && !IsEnum(fullTypeName))
                 {
                     asPointer = true;
                 }

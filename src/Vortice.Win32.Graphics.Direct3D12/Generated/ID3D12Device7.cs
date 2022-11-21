@@ -189,49 +189,49 @@ public unsafe partial struct ID3D12Device7 : INativeGuid
 	/// <inheritdoc cref="ID3D12Device.CreateConstantBufferView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void CreateConstantBufferView(ConstantBufferViewDescription* pDesc, CpuDescriptorHandle* DestDescriptor)
+	public void CreateConstantBufferView(ConstantBufferViewDescription* pDesc, CpuDescriptorHandle DestDescriptor)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ConstantBufferViewDescription*, CpuDescriptorHandle*, void>)(lpVtbl[17]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pDesc, DestDescriptor);
+		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ConstantBufferViewDescription*, CpuDescriptorHandle, void>)(lpVtbl[17]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pDesc, DestDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateShaderResourceView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public void CreateShaderResourceView(ID3D12Resource* pResource, ShaderResourceViewDescription* pDesc, CpuDescriptorHandle* DestDescriptor)
+	public void CreateShaderResourceView(ID3D12Resource* pResource, ShaderResourceViewDescription* pDesc, CpuDescriptorHandle DestDescriptor)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Resource*, ShaderResourceViewDescription*, CpuDescriptorHandle*, void>)(lpVtbl[18]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pResource, pDesc, DestDescriptor);
+		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Resource*, ShaderResourceViewDescription*, CpuDescriptorHandle, void>)(lpVtbl[18]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pResource, pDesc, DestDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateUnorderedAccessView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public void CreateUnorderedAccessView(ID3D12Resource* pResource, ID3D12Resource* pCounterResource, UnorderedAccessViewDescription* pDesc, CpuDescriptorHandle* DestDescriptor)
+	public void CreateUnorderedAccessView(ID3D12Resource* pResource, ID3D12Resource* pCounterResource, UnorderedAccessViewDescription* pDesc, CpuDescriptorHandle DestDescriptor)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Resource*, ID3D12Resource*, UnorderedAccessViewDescription*, CpuDescriptorHandle*, void>)(lpVtbl[19]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pResource, pCounterResource, pDesc, DestDescriptor);
+		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Resource*, ID3D12Resource*, UnorderedAccessViewDescription*, CpuDescriptorHandle, void>)(lpVtbl[19]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pResource, pCounterResource, pDesc, DestDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateRenderTargetView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public void CreateRenderTargetView(ID3D12Resource* pResource, RenderTargetViewDescription* pDesc, CpuDescriptorHandle* DestDescriptor)
+	public void CreateRenderTargetView(ID3D12Resource* pResource, RenderTargetViewDescription* pDesc, CpuDescriptorHandle DestDescriptor)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Resource*, RenderTargetViewDescription*, CpuDescriptorHandle*, void>)(lpVtbl[20]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pResource, pDesc, DestDescriptor);
+		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Resource*, RenderTargetViewDescription*, CpuDescriptorHandle, void>)(lpVtbl[20]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pResource, pDesc, DestDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateDepthStencilView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public void CreateDepthStencilView(ID3D12Resource* pResource, DepthStencilViewDescription* pDesc, CpuDescriptorHandle* DestDescriptor)
+	public void CreateDepthStencilView(ID3D12Resource* pResource, DepthStencilViewDescription* pDesc, CpuDescriptorHandle DestDescriptor)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Resource*, DepthStencilViewDescription*, CpuDescriptorHandle*, void>)(lpVtbl[21]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pResource, pDesc, DestDescriptor);
+		((delegate* unmanaged[Stdcall]<ID3D12Device7*, ID3D12Resource*, DepthStencilViewDescription*, CpuDescriptorHandle, void>)(lpVtbl[21]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pResource, pDesc, DestDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CreateSampler" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public void CreateSampler(SamplerDescription* pDesc, CpuDescriptorHandle* DestDescriptor)
+	public void CreateSampler(SamplerDescription* pDesc, CpuDescriptorHandle DestDescriptor)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12Device7*, SamplerDescription*, CpuDescriptorHandle*, void>)(lpVtbl[22]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pDesc, DestDescriptor);
+		((delegate* unmanaged[Stdcall]<ID3D12Device7*, SamplerDescription*, CpuDescriptorHandle, void>)(lpVtbl[22]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pDesc, DestDescriptor);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.CopyDescriptors" />
@@ -245,9 +245,9 @@ public unsafe partial struct ID3D12Device7 : INativeGuid
 	/// <inheritdoc cref="ID3D12Device.CopyDescriptorsSimple" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public void CopyDescriptorsSimple(uint NumDescriptors, CpuDescriptorHandle* DestDescriptorRangeStart, CpuDescriptorHandle* SrcDescriptorRangeStart, DescriptorHeapType DescriptorHeapsType)
+	public void CopyDescriptorsSimple(uint NumDescriptors, CpuDescriptorHandle DestDescriptorRangeStart, CpuDescriptorHandle SrcDescriptorRangeStart, DescriptorHeapType DescriptorHeapsType)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, CpuDescriptorHandle*, CpuDescriptorHandle*, DescriptorHeapType, void>)(lpVtbl[24]))((ID3D12Device7*)Unsafe.AsPointer(ref this), NumDescriptors, DestDescriptorRangeStart, SrcDescriptorRangeStart, DescriptorHeapsType);
+		((delegate* unmanaged[Stdcall]<ID3D12Device7*, uint, CpuDescriptorHandle, CpuDescriptorHandle, DescriptorHeapType, void>)(lpVtbl[24]))((ID3D12Device7*)Unsafe.AsPointer(ref this), NumDescriptors, DestDescriptorRangeStart, SrcDescriptorRangeStart, DescriptorHeapsType);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetResourceAllocationInfo" />

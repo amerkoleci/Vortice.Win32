@@ -3856,13 +3856,13 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"D3D11_CLEAR_DEPTH","Value":1}
 			,{"Name":"D3D11_CLEAR_STENCIL","Value":2}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"D3D11_BOX"

@@ -30,6 +30,35 @@ public enum ResourcePriority : uint
 	Maximum = 3355443200,
 }
 
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE"]/*' />
+/// <unmanaged>DXGI_USAGE</unmanaged>
+[Flags]
+public enum Usage : uint
+{
+	None = 0,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_SHADER_INPUT"]/*' />
+	/// <unmanaged>DXGI_USAGE_SHADER_INPUT</unmanaged>
+	ShaderInput = 16,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_RENDER_TARGET_OUTPUT"]/*' />
+	/// <unmanaged>DXGI_USAGE_RENDER_TARGET_OUTPUT</unmanaged>
+	RenderTargetOutput = 32,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_BACK_BUFFER"]/*' />
+	/// <unmanaged>DXGI_USAGE_BACK_BUFFER</unmanaged>
+	BackBuffer = 64,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_SHARED"]/*' />
+	/// <unmanaged>DXGI_USAGE_SHARED</unmanaged>
+	Shared = 128,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_READ_ONLY"]/*' />
+	/// <unmanaged>DXGI_USAGE_READ_ONLY</unmanaged>
+	ReadOnly = 256,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_DISCARD_ON_PRESENT"]/*' />
+	/// <unmanaged>DXGI_USAGE_DISCARD_ON_PRESENT</unmanaged>
+	DiscardOnPresent = 512,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_USAGE::DXGI_USAGE_UNORDERED_ACCESS"]/*' />
+	/// <unmanaged>DXGI_USAGE_UNORDERED_ACCESS</unmanaged>
+	UnorderedAccess = 1024,
+}
+
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY"]/*' />
 /// <unmanaged>DXGI_RESIDENCY</unmanaged>
 public enum Residency : int
@@ -1498,27 +1527,6 @@ public enum MessageId : int
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired</unmanaged>
 	Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired = 1031,
 }
-/// <unmanaged>DXGI_USAGE</unmanaged>
-[Flags]
-public enum Usage : uint
-{
-	None = 0,
-	/// <unmanaged>DXGI_USAGE_SHADER_INPUT</unmanaged>
-	ShaderInput = 16,
-	/// <unmanaged>DXGI_USAGE_RENDER_TARGET_OUTPUT</unmanaged>
-	RenderTargetOutput = 32,
-	/// <unmanaged>DXGI_USAGE_BACK_BUFFER</unmanaged>
-	BackBuffer = 64,
-	/// <unmanaged>DXGI_USAGE_SHARED</unmanaged>
-	Shared = 128,
-	/// <unmanaged>DXGI_USAGE_READ_ONLY</unmanaged>
-	ReadOnly = 256,
-	/// <unmanaged>DXGI_USAGE_DISCARD_ON_PRESENT</unmanaged>
-	DiscardOnPresent = 512,
-	/// <unmanaged>DXGI_USAGE_UNORDERED_ACCESS</unmanaged>
-	UnorderedAccess = 1024,
-}
-
 /// <unmanaged>DXGI_MAP</unmanaged>
 [Flags]
 public enum MapFlags : uint

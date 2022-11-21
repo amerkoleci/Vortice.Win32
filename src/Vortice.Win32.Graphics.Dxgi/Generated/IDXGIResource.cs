@@ -125,9 +125,9 @@ public unsafe partial struct IDXGIResource : INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetUsage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetUsage(uint* pUsage)
+	public HResult GetUsage(Usage* pUsage)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, uint*, int>)(lpVtbl[9]))((IDXGIResource*)Unsafe.AsPointer(ref this), pUsage);
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, Usage*, int>)(lpVtbl[9]))((IDXGIResource*)Unsafe.AsPointer(ref this), pUsage);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::SetEvictionPriority"]/*' />
