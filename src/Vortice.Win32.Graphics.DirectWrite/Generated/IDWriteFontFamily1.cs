@@ -53,7 +53,7 @@ public unsafe partial struct IDWriteFontFamily1 : INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +62,7 @@ public unsafe partial struct IDWriteFontFamily1 : INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily1*, uint>)(lpVtbl[1]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +71,7 @@ public unsafe partial struct IDWriteFontFamily1 : INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily1*, uint>)(lpVtbl[2]))((IDWriteFontFamily1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFontList.GetFontCollection" />

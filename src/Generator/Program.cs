@@ -2294,7 +2294,7 @@ public static class Program
                 writer.WriteLine("[VtblIndex(0)]");
                 using (writer.PushBlock($"public HResult QueryInterface([NativeTypeName(\"const IID &\")] Guid* riid, void** ppvObject)"))
                 {
-                    writer.WriteLine("return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);");
+                    writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, Guid*, void**, int>)(lpVtbl[0]))(({comType.Name}*)Unsafe.AsPointer(ref this), riid, ppvObject);");
                 }
                 writer.WriteLine();
 
@@ -2305,7 +2305,7 @@ public static class Program
                 writer.WriteLine("[return: NativeTypeName(\"ULONG\")]");
                 using (writer.PushBlock($"public uint AddRef()"))
                 {
-                    writer.WriteLine("return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));");
+                    writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, uint>)(lpVtbl[1]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
                 }
                 writer.WriteLine();
 
@@ -2316,7 +2316,7 @@ public static class Program
                 writer.WriteLine("[return: NativeTypeName(\"ULONG\")]");
                 using (writer.PushBlock($"public uint Release()"))
                 {
-                    writer.WriteLine("return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));");
+                    writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, uint>)(lpVtbl[2]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
                 }
                 writer.WriteLine();
                 vtblIndex = 3;

@@ -53,7 +53,7 @@ public unsafe partial struct ID3D11Multithread : INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Multithread*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +62,7 @@ public unsafe partial struct ID3D11Multithread : INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, uint>)(lpVtbl[1]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +71,7 @@ public unsafe partial struct ID3D11Multithread : INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, uint>)(lpVtbl[2]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::Enter"]/*' />

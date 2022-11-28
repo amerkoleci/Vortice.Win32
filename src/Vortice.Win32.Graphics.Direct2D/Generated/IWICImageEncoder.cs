@@ -53,7 +53,7 @@ public unsafe partial struct IWICImageEncoder : INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +62,7 @@ public unsafe partial struct IWICImageEncoder : INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, uint>)(lpVtbl[1]))((IWICImageEncoder*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +71,7 @@ public unsafe partial struct IWICImageEncoder : INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, uint>)(lpVtbl[2]))((IWICImageEncoder*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../../Vortice.Win32.Graphics.Imaging/Imaging.xml' path='doc/member[@name="IWICImageEncoder::WriteFrame"]/*' />

@@ -53,7 +53,7 @@ public unsafe partial struct IWICMetadataHandlerInfo : INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, Guid*, void**, int>)(lpVtbl[0]))((IUnknown*)Unsafe.AsPointer(ref this), riid, ppvObject);
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +62,7 @@ public unsafe partial struct IWICMetadataHandlerInfo : INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[1]))((IUnknown*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, uint>)(lpVtbl[1]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +71,7 @@ public unsafe partial struct IWICMetadataHandlerInfo : INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-		return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, uint>)(lpVtbl[2]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetComponentType" />
