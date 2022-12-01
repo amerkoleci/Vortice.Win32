@@ -5,6 +5,40 @@ using static Win32.StringUtilities;
 
 namespace Win32.Graphics.Direct3D11;
 
+public static unsafe class ID3D11DeviceChildExtensions
+{
+    public static string? GetDebugName<TD3D11DeviceChild>(ref this TD3D11DeviceChild self)
+        where TD3D11DeviceChild : unmanaged, ID3D11DeviceChild.Interface
+    {
+        sbyte* pname = stackalloc sbyte[1024];
+        uint size = 1024 - 1;
+        if (self.GetPrivateData(ID3D11DeviceChild.D3DDebugObjectNameGuid, &size, pname).Failure)
+        {
+            return string.Empty;
+        }
+
+        pname[size] = 0;
+        return GetString(pname);
+    }
+
+    public static void SetDebugName<TD3D11DeviceChild>(ref this TD3D11DeviceChild self, string? value)
+        where TD3D11DeviceChild : unmanaged, ID3D11DeviceChild.Interface
+    {
+        if (string.IsNullOrEmpty(value))
+        {
+            _ = self.SetPrivateData(ID3D11DeviceChild.D3DDebugObjectNameGuid, 0, null);
+        }
+        else
+        {
+            fixed (sbyte* valuePtr = value.GetUtf8Span())
+            {
+                _ = self.SetPrivateData(ID3D11DeviceChild.D3DDebugObjectNameGuid, (uint)value.Length, valuePtr);
+            }
+        }
+    }
+}
+
+
 public unsafe partial struct ID3D11DeviceChild
 {
     public static ref readonly Guid WKPDID_D3DDebugObjectName
@@ -32,37 +66,4 @@ public unsafe partial struct ID3D11DeviceChild
     }
 
     public static Guid* D3DDebugObjectNameGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in WKPDID_D3DDebugObjectName));
-
-    /// <summary>
-    /// Gets or sets the debug-name for this object.
-    /// </summary>
-    public string? DebugName
-    {
-        get
-        {
-            sbyte* pname = stackalloc sbyte[1024];
-            uint size = 1024 - 1;
-            if (GetPrivateData(D3DDebugObjectNameGuid, &size, pname).Failure)
-            {
-                return string.Empty;
-            }
-
-            pname[size] = 0;
-            return GetString(pname);
-        }
-        set
-        {
-            if (string.IsNullOrEmpty(value))
-            {
-                SetPrivateData(D3DDebugObjectNameGuid, 0, null);
-            }
-            else
-            {
-                fixed (sbyte* valuePtr = value.GetUtf8Span())
-                {
-                    SetPrivateData(D3DDebugObjectNameGuid, (uint)value.Length, valuePtr);
-                }
-            }
-        }
-    }
 }

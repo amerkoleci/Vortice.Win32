@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("9a1b41c3-d3bb-466a-87fc-fe67556a3b65")]
 [NativeTypeName("struct IDWriteFactory3 : IDWriteFactory2")]
 [NativeInheritance("IDWriteFactory2")]
-public unsafe partial struct IDWriteFactory3 : INativeGuid
+public unsafe partial struct IDWriteFactory3 : IDWriteFactory3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory3
 	{
@@ -368,6 +368,35 @@ public unsafe partial struct IDWriteFactory3 : INativeGuid
 	public HResult GetFontDownloadQueue(IDWriteFontDownloadQueue** fontDownloadQueue)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory3*, IDWriteFontDownloadQueue**, int>)(lpVtbl[39]))((IDWriteFactory3*)Unsafe.AsPointer(ref this), fontDownloadQueue);
+	}
+	public interface Interface : IDWriteFactory2.Interface
+	{
+		[VtblIndex(31)]
+		HResult CreateGlyphRunAnalysis(GlyphRun* glyphRun, Matrix3x2* transform, RenderingMode1 renderingMode, MeasuringMode measuringMode, GridFitMode gridFitMode, TextAntialiasMode antialiasMode, float baselineOriginX, float baselineOriginY, IDWriteGlyphRunAnalysis** glyphRunAnalysis);
+
+		[VtblIndex(32)]
+		HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float grayscaleEnhancedContrast, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode1 renderingMode, GridFitMode gridFitMode, IDWriteRenderingParams3** renderingParams);
+
+		[VtblIndex(33)]
+		HResult CreateFontFaceReference(IDWriteFontFile* fontFile, uint faceIndex, FontSimulations fontSimulations, IDWriteFontFaceReference** fontFaceReference);
+
+		[VtblIndex(34)]
+		HResult CreateFontFaceReference(ushort* filePath, ulong* lastWriteTime, uint faceIndex, FontSimulations fontSimulations, IDWriteFontFaceReference** fontFaceReference);
+
+		[VtblIndex(35)]
+		HResult GetSystemFontSet(IDWriteFontSet** fontSet);
+
+		[VtblIndex(36)]
+		HResult CreateFontSetBuilder(IDWriteFontSetBuilder** fontSetBuilder);
+
+		[VtblIndex(37)]
+		HResult CreateFontCollectionFromFontSet(IDWriteFontSet* fontSet, IDWriteFontCollection1** fontCollection);
+
+		[VtblIndex(38)]
+		HResult GetSystemFontCollection(Bool32 includeDownloadableFonts, IDWriteFontCollection1** fontCollection, Bool32 checkForUpdates);
+
+		[VtblIndex(39)]
+		HResult GetFontDownloadQueue(IDWriteFontDownloadQueue** fontDownloadQueue);
 	}
 }
 

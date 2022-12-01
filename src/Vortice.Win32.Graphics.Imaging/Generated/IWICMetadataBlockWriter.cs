@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("08fb9676-b444-41e8-8dbe-6a53a542bff1")]
 [NativeTypeName("struct IWICMetadataBlockWriter : IWICMetadataBlockReader")]
 [NativeInheritance("IWICMetadataBlockReader")]
-public unsafe partial struct IWICMetadataBlockWriter : INativeGuid
+public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataBlockWriter
 	{
@@ -144,6 +144,23 @@ public unsafe partial struct IWICMetadataBlockWriter : INativeGuid
 	public HResult RemoveWriterByIndex(uint nIndex)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, int>)(lpVtbl[11]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex);
+	}
+	public interface Interface : IWICMetadataBlockReader.Interface
+	{
+		[VtblIndex(7)]
+		HResult InitializeFromBlockReader(IWICMetadataBlockReader* pIMDBlockReader);
+
+		[VtblIndex(8)]
+		HResult GetWriterByIndex(uint nIndex, IWICMetadataWriter** ppIMetadataWriter);
+
+		[VtblIndex(9)]
+		HResult AddWriter(IWICMetadataWriter* pIMetadataWriter);
+
+		[VtblIndex(10)]
+		HResult SetWriterByIndex(uint nIndex, IWICMetadataWriter* pIMetadataWriter);
+
+		[VtblIndex(11)]
+		HResult RemoveWriterByIndex(uint nIndex);
 	}
 }
 

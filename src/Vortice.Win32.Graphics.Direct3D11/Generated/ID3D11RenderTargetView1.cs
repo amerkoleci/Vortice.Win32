@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("ffbe2e23-f011-418a-ac56-5ceed7c5b94b")]
 [NativeTypeName("struct ID3D11RenderTargetView1 : ID3D11RenderTargetView")]
 [NativeInheritance("ID3D11RenderTargetView")]
-public unsafe partial struct ID3D11RenderTargetView1 : INativeGuid
+public unsafe partial struct ID3D11RenderTargetView1 : ID3D11RenderTargetView1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11RenderTargetView1
 	{
@@ -128,6 +128,11 @@ public unsafe partial struct ID3D11RenderTargetView1 : INativeGuid
 	public void GetDesc1(RenderTargetViewDescription1* pDesc1)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView1*, RenderTargetViewDescription1*, void>)(lpVtbl[9]))((ID3D11RenderTargetView1*)Unsafe.AsPointer(ref this), pDesc1);
+	}
+	public interface Interface : ID3D11RenderTargetView.Interface
+	{
+		[VtblIndex(9)]
+		void GetDesc1(RenderTargetViewDescription1* pDesc1);
 	}
 }
 

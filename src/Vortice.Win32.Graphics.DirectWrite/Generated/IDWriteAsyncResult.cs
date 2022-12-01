@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("ce25f8fd-863b-4d13-9651-c1f88dc73fe2")]
 [NativeTypeName("struct IDWriteAsyncResult : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteAsyncResult : INativeGuid
+public unsafe partial struct IDWriteAsyncResult : IDWriteAsyncResult.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteAsyncResult
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDWriteAsyncResult : INativeGuid
 	public HResult GetResult()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteAsyncResult*, int>)(lpVtbl[4]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		Handle GetWaitHandle();
+
+		[VtblIndex(4)]
+		HResult GetResult();
 	}
 }
 

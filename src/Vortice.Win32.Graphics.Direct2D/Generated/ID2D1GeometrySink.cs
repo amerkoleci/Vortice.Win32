@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Win32.Graphics.Direct2D.Common;
+
 namespace Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink"]/*' />
@@ -14,7 +16,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd9069f-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1GeometrySink : ID2D1SimplifiedGeometrySink")]
 [NativeInheritance("ID2D1SimplifiedGeometrySink")]
-public unsafe partial struct ID2D1GeometrySink : INativeGuid
+public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GeometrySink
 	{
@@ -48,8 +50,34 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 
 	public void** lpVtbl;
 
-	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetFillMode" />
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+    /// <inheritdoc cref="IUnknown.QueryInterface" />
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    [VtblIndex(0)]
+    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    {
+        return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
+    }
+
+    /// <inheritdoc cref="IUnknown.AddRef" />
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    [VtblIndex(1)]
+    [return: NativeTypeName("ULONG")]
+    public uint AddRef()
+    {
+        return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, uint>)(lpVtbl[1]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
+    }
+
+    /// <inheritdoc cref="IUnknown.Release" />
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    [VtblIndex(2)]
+    [return: NativeTypeName("ULONG")]
+    public uint Release()
+    {
+        return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, uint>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
+    }
+
+    /// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetFillMode" />
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
 	public void SetFillMode(Common.FillMode fillMode)
 	{
@@ -142,6 +170,23 @@ public unsafe partial struct ID2D1GeometrySink : INativeGuid
 	public void AddArc(ArcSegment* arc)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, ArcSegment*, void>)(lpVtbl[11]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), arc);
+	}
+	public interface Interface : ID2D1SimplifiedGeometrySink.Interface
+	{
+		[VtblIndex(7)]
+		void AddLine(System.Drawing.PointF point);
+
+		[VtblIndex(8)]
+		void AddBezier(Common.BezierSegment* bezier);
+
+		[VtblIndex(9)]
+		void AddQuadraticBezier(QuadraticBezierSegment* bezier);
+
+		[VtblIndex(10)]
+		void AddQuadraticBeziers(QuadraticBezierSegment* beziers, uint beziersCount);
+
+		[VtblIndex(11)]
+		void AddArc(ArcSegment* arc);
 	}
 }
 

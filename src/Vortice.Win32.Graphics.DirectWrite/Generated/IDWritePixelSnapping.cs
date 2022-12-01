@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("eaf3a2da-ecf4-4d24-b644-b34f6842024b")]
 [NativeTypeName("struct IDWritePixelSnapping : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWritePixelSnapping : INativeGuid
+public unsafe partial struct IDWritePixelSnapping : IDWritePixelSnapping.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWritePixelSnapping
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IDWritePixelSnapping : INativeGuid
 	public HResult GetPixelsPerDip(void* clientDrawingContext, float* pixelsPerDip)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWritePixelSnapping*, void*, float*, int>)(lpVtbl[5]))((IDWritePixelSnapping*)Unsafe.AsPointer(ref this), clientDrawingContext, pixelsPerDip);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult IsPixelSnappingDisabled(void* clientDrawingContext, Bool32* isDisabled);
+
+		[VtblIndex(4)]
+		HResult GetCurrentTransform(void* clientDrawingContext, Matrix3x2* transform);
+
+		[VtblIndex(5)]
+		HResult GetPixelsPerDip(void* clientDrawingContext, float* pixelsPerDip);
 	}
 }
 

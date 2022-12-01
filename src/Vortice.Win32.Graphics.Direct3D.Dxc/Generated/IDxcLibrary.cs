@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("e5204dc7-d18c-4c3c-bdfb-851673980fe7")]
 [NativeTypeName("struct IDxcLibrary : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcLibrary : INativeGuid
+public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcLibrary
 	{
@@ -141,6 +141,38 @@ public unsafe partial struct IDxcLibrary : INativeGuid
 	public HResult GetBlobAsUtf16(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcLibrary*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[12]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pBlob, pBlobEncoding);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetMalloc(Com.IMalloc* pMalloc);
+
+		[VtblIndex(4)]
+		HResult CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult);
+
+		[VtblIndex(5)]
+		HResult CreateBlobFromFile(ushort* pFileName, DxcCp* codePage, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(6)]
+		HResult CreateBlobWithEncodingFromPinned(void* pText, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(7)]
+		HResult CreateBlobWithEncodingOnHeapCopy(void* pText, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(8)]
+		HResult CreateBlobWithEncodingOnMalloc(void* pText, Com.IMalloc* pIMalloc, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(9)]
+		HResult CreateIncludeHandler(IDxcIncludeHandler** ppResult);
+
+		[VtblIndex(10)]
+		HResult CreateStreamFromBlobReadOnly(IDxcBlob* pBlob, Com.IStream** ppStream);
+
+		[VtblIndex(11)]
+		HResult GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(12)]
+		HResult GetBlobAsUtf16(IDxcBlob* pBlob, IDxcBlobEncoding** pBlobEncoding);
 	}
 }
 

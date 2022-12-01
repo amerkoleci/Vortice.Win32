@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("eacdd04c-117e-4e17-88f4-d1b12b0e3d89")]
 [NativeTypeName("struct IDCompositionTarget : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionTarget : INativeGuid
+public unsafe partial struct IDCompositionTarget : IDCompositionTarget.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionTarget
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IDCompositionTarget : INativeGuid
 	public HResult SetRoot(IDCompositionVisual* visual)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTarget*, IDCompositionVisual*, int>)(lpVtbl[3]))((IDCompositionTarget*)Unsafe.AsPointer(ref this), visual);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetRoot(IDCompositionVisual* visual);
 	}
 }
 

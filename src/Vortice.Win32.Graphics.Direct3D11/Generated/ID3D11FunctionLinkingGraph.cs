@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("54133220-1ce8-43d3-8236-9855c5ceecff")]
 [NativeTypeName("struct ID3D11FunctionLinkingGraph : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11FunctionLinkingGraph : INativeGuid
+public unsafe partial struct ID3D11FunctionLinkingGraph : ID3D11FunctionLinkingGraph.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11FunctionLinkingGraph
 	{
@@ -136,6 +136,32 @@ public unsafe partial struct ID3D11FunctionLinkingGraph : INativeGuid
 	public HResult GenerateHlsl(uint uFlags, Graphics.Direct3D.ID3DBlob** ppBuffer)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionLinkingGraph*, uint, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[10]))((ID3D11FunctionLinkingGraph*)Unsafe.AsPointer(ref this), uFlags, ppBuffer);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateModuleInstance(ID3D11ModuleInstance** ppModuleInstance, Graphics.Direct3D.ID3DBlob** ppErrorBuffer);
+
+		[VtblIndex(4)]
+		HResult SetInputSignature(ParameterDescription* pInputParameters, uint cInputParameters, ID3D11LinkingNode** ppInputNode);
+
+		[VtblIndex(5)]
+		HResult SetOutputSignature(ParameterDescription* pOutputParameters, uint cOutputParameters, ID3D11LinkingNode** ppOutputNode);
+
+		[VtblIndex(6)]
+		HResult CallFunction(sbyte* pModuleInstanceNamespace, ID3D11Module* pModuleWithFunctionPrototype, sbyte* pFunctionName, ID3D11LinkingNode** ppCallNode);
+
+		[VtblIndex(7)]
+		HResult PassValue(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, ID3D11LinkingNode* pDstNode, int DstParameterIndex);
+
+		[VtblIndex(8)]
+		HResult PassValueWithSwizzle(ID3D11LinkingNode* pSrcNode, int SrcParameterIndex, sbyte* pSrcSwizzle, ID3D11LinkingNode* pDstNode, int DstParameterIndex, sbyte* pDstSwizzle);
+
+		[VtblIndex(9)]
+		HResult GetLastError(Graphics.Direct3D.ID3DBlob** ppErrorBuffer);
+
+		[VtblIndex(10)]
+		HResult GenerateHlsl(uint uFlags, Graphics.Direct3D.ID3DBlob** ppBuffer);
 	}
 }
 

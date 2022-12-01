@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("595e39d1-2724-4663-99b1-da969de28364")]
 [NativeTypeName("struct IDXGIOutput2 : IDXGIOutput1")]
 [NativeInheritance("IDXGIOutput1")]
-public unsafe partial struct IDXGIOutput2 : INativeGuid
+public unsafe partial struct IDXGIOutput2 : IDXGIOutput2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput2
 	{
@@ -240,6 +240,11 @@ public unsafe partial struct IDXGIOutput2 : INativeGuid
 	public Bool32 SupportsOverlays()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Bool32>)(lpVtbl[23]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDXGIOutput1.Interface
+	{
+		[VtblIndex(23)]
+		Bool32 SupportsOverlays();
 	}
 }
 

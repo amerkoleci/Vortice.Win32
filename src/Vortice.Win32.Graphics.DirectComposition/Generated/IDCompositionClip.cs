@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("64ac3703-9d3f-45ec-a109-7cac0e7a13a7")]
 [NativeTypeName("struct IDCompositionClip : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionClip : INativeGuid
+public unsafe partial struct IDCompositionClip : IDCompositionClip.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionClip
 	{
@@ -74,5 +74,8 @@ public unsafe partial struct IDCompositionClip : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDCompositionClip*, uint>)(lpVtbl[2]))((IDCompositionClip*)Unsafe.AsPointer(ref this));
 	}
 
+	public interface Interface : IUnknown.Interface
+	{
+	}
 }
 

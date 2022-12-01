@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("41343a53-e41a-49a2-91cd-21793bbb62e5")]
 [NativeTypeName("struct ID2D1BitmapBrush1 : ID2D1BitmapBrush")]
 [NativeInheritance("ID2D1BitmapBrush")]
-public unsafe partial struct ID2D1BitmapBrush1 : INativeGuid
+public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1BitmapBrush1
 	{
@@ -192,6 +192,14 @@ public unsafe partial struct ID2D1BitmapBrush1 : INativeGuid
 	public InterpolationMode GetInterpolationMode1()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, InterpolationMode>)(lpVtbl[17]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1BitmapBrush.Interface
+	{
+		[VtblIndex(16)]
+		void SetInterpolationMode1(InterpolationMode interpolationMode);
+
+		[VtblIndex(17)]
+		InterpolationMode GetInterpolationMode1();
 	}
 }
 

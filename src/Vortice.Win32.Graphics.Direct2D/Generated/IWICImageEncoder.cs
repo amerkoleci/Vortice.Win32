@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging.D2D;
 [Guid("04c75bf8-3ce1-473b-acc5-3cc4f5e94999")]
 [NativeTypeName("struct IWICImageEncoder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICImageEncoder : INativeGuid
+public unsafe partial struct IWICImageEncoder : IWICImageEncoder.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICImageEncoder
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IWICImageEncoder : INativeGuid
 	public HResult WriteThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapEncoder* pEncoder, Graphics.Imaging.WICImageParameters* pImageParameters)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapEncoder*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[5]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pEncoder, pImageParameters);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult WriteFrame(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters);
+
+		[VtblIndex(4)]
+		HResult WriteFrameThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapFrameEncode* pFrameEncode, Graphics.Imaging.WICImageParameters* pImageParameters);
+
+		[VtblIndex(5)]
+		HResult WriteThumbnail(Graphics.Direct2D.ID2D1Image* pImage, Graphics.Imaging.IWICBitmapEncoder* pEncoder, Graphics.Imaging.WICImageParameters* pImageParameters);
 	}
 }
 

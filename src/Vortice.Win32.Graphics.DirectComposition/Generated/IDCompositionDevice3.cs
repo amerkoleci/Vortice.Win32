@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("0987cb06-f916-48bf-8d35-ce7641781bd9")]
 [NativeTypeName("struct IDCompositionDevice3 : IDCompositionDevice2")]
 [NativeInheritance("IDCompositionDevice2")]
-public unsafe partial struct IDCompositionDevice3 : INativeGuid
+public unsafe partial struct IDCompositionDevice3 : IDCompositionDevice3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionDevice3
 	{
@@ -344,6 +344,47 @@ public unsafe partial struct IDCompositionDevice3 : INativeGuid
 	public HResult CreateAffineTransform2DEffect(IDCompositionAffineTransform2DEffect** affineTransform2dEffect)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice3*, IDCompositionAffineTransform2DEffect**, int>)(lpVtbl[36]))((IDCompositionDevice3*)Unsafe.AsPointer(ref this), affineTransform2dEffect);
+	}
+	public interface Interface : IDCompositionDevice2.Interface
+	{
+		[VtblIndex(24)]
+		HResult CreateGaussianBlurEffect(IDCompositionGaussianBlurEffect** gaussianBlurEffect);
+
+		[VtblIndex(25)]
+		HResult CreateBrightnessEffect(IDCompositionBrightnessEffect** brightnessEffect);
+
+		[VtblIndex(26)]
+		HResult CreateColorMatrixEffect(IDCompositionColorMatrixEffect** colorMatrixEffect);
+
+		[VtblIndex(27)]
+		HResult CreateShadowEffect(IDCompositionShadowEffect** shadowEffect);
+
+		[VtblIndex(28)]
+		HResult CreateHueRotationEffect(IDCompositionHueRotationEffect** hueRotationEffect);
+
+		[VtblIndex(29)]
+		HResult CreateSaturationEffect(IDCompositionSaturationEffect** saturationEffect);
+
+		[VtblIndex(30)]
+		HResult CreateTurbulenceEffect(IDCompositionTurbulenceEffect** turbulenceEffect);
+
+		[VtblIndex(31)]
+		HResult CreateLinearTransferEffect(IDCompositionLinearTransferEffect** linearTransferEffect);
+
+		[VtblIndex(32)]
+		HResult CreateTableTransferEffect(IDCompositionTableTransferEffect** tableTransferEffect);
+
+		[VtblIndex(33)]
+		HResult CreateCompositeEffect(IDCompositionCompositeEffect** compositeEffect);
+
+		[VtblIndex(34)]
+		HResult CreateBlendEffect(IDCompositionBlendEffect** blendEffect);
+
+		[VtblIndex(35)]
+		HResult CreateArithmeticCompositeEffect(IDCompositionArithmeticCompositeEffect** arithmeticCompositeEffect);
+
+		[VtblIndex(36)]
+		HResult CreateAffineTransform2DEffect(IDCompositionAffineTransform2DEffect** affineTransform2dEffect);
 	}
 }
 

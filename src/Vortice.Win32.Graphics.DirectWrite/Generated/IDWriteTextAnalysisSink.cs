@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("5810cd44-0ca0-4701-b3fa-bec5182ae4f6")]
 [NativeTypeName("struct IDWriteTextAnalysisSink : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteTextAnalysisSink : INativeGuid
+public unsafe partial struct IDWriteTextAnalysisSink : IDWriteTextAnalysisSink.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextAnalysisSink
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IDWriteTextAnalysisSink : INativeGuid
 	public HResult SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink*, uint, uint, IDWriteNumberSubstitution*, int>)(lpVtbl[6]))((IDWriteTextAnalysisSink*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetScriptAnalysis(uint textPosition, uint textLength, ScriptAnalysis* scriptAnalysis);
+
+		[VtblIndex(4)]
+		HResult SetLineBreakpoints(uint textPosition, uint textLength, LineBreakpoint* lineBreakpoints);
+
+		[VtblIndex(5)]
+		HResult SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel);
+
+		[VtblIndex(6)]
+		HResult SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution);
 	}
 }
 

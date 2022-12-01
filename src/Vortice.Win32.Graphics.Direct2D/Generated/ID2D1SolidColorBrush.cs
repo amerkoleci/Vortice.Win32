@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906a9-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1SolidColorBrush : ID2D1Brush")]
 [NativeInheritance("ID2D1Brush")]
-public unsafe partial struct ID2D1SolidColorBrush : INativeGuid
+public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SolidColorBrush
 	{
@@ -129,6 +129,14 @@ public unsafe partial struct ID2D1SolidColorBrush : INativeGuid
 	{
 		Color4 result;
 		return *((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Color4*, Color4*>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), &result);
+	}
+	public interface Interface : ID2D1Brush.Interface
+	{
+		[VtblIndex(8)]
+		void SetColor(Color4* color);
+
+		[VtblIndex(9)]
+		Color4 GetColor();
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("a04bfb29-08ef-43d6-a49c-a9bdbdcbe686")]
 [NativeTypeName("struct ID3D11Device1 : ID3D11Device")]
 [NativeInheritance("ID3D11Device")]
-public unsafe partial struct ID3D11Device1 : INativeGuid
+public unsafe partial struct ID3D11Device1 : ID3D11Device1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Device1
 	{
@@ -448,6 +448,29 @@ public unsafe partial struct ID3D11Device1 : INativeGuid
 	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device1*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device1*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
+	}
+	public interface Interface : ID3D11Device.Interface
+	{
+		[VtblIndex(43)]
+		void GetImmediateContext1(ID3D11DeviceContext1** ppImmediateContext);
+
+		[VtblIndex(44)]
+		HResult CreateDeferredContext1(uint ContextFlags, ID3D11DeviceContext1** ppDeferredContext);
+
+		[VtblIndex(45)]
+		HResult CreateBlendState1(BlendDescription1* pBlendStateDesc, ID3D11BlendState1** ppBlendState);
+
+		[VtblIndex(46)]
+		HResult CreateRasterizerState1(RasterizerDescription1* pRasterizerDesc, ID3D11RasterizerState1** ppRasterizerState);
+
+		[VtblIndex(47)]
+		HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState);
+
+		[VtblIndex(48)]
+		HResult OpenSharedResource1(Handle hResource, Guid* returnedInterface, void** ppResource);
+
+		[VtblIndex(49)]
+		HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("433685fe-e22b-4ca0-a8db-b5b4f4dd0e4a")]
 [NativeTypeName("struct ID3D12Fence1 : ID3D12Fence")]
 [NativeInheritance("ID3D12Fence")]
-public unsafe partial struct ID3D12Fence1 : INativeGuid
+public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Fence1
 	{
@@ -144,6 +144,11 @@ public unsafe partial struct ID3D12Fence1 : INativeGuid
 	public FenceFlags GetCreationFlags()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Fence1*, FenceFlags>)(lpVtbl[11]))((ID3D12Fence1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID3D12Fence.Interface
+	{
+		[VtblIndex(11)]
+		FenceFlags GetCreationFlags();
 	}
 }
 

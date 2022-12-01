@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("3fe6adea-7643-4f53-bd14-a0ce63f24042")]
 [NativeTypeName("struct ID2D1OffsetTransform : ID2D1TransformNode")]
 [NativeInheritance("ID2D1TransformNode")]
-public unsafe partial struct ID2D1OffsetTransform : INativeGuid
+public unsafe partial struct ID2D1OffsetTransform : ID2D1OffsetTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1OffsetTransform
 	{
@@ -97,6 +97,14 @@ public unsafe partial struct ID2D1OffsetTransform : INativeGuid
 	{
 		System.Drawing.Point result;
 		return *((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point*, System.Drawing.Point*>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), &result);
+	}
+	public interface Interface : ID2D1TransformNode.Interface
+	{
+		[VtblIndex(4)]
+		void SetOffset(System.Drawing.Point offset);
+
+		[VtblIndex(5)]
+		System.Drawing.Point GetOffset();
 	}
 }
 

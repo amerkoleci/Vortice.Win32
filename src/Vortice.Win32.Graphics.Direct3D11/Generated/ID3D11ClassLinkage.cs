@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("ddf57cba-9543-46e4-a12b-f207a0fe7fed")]
 [NativeTypeName("struct ID3D11ClassLinkage : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11ClassLinkage : INativeGuid
+public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11ClassLinkage
 	{
@@ -120,6 +120,14 @@ public unsafe partial struct ID3D11ClassLinkage : INativeGuid
 	public HResult CreateClassInstance(sbyte* pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, sbyte*, uint, uint, uint, uint, ID3D11ClassInstance**, int>)(lpVtbl[8]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassTypeName, ConstantBufferOffset, ConstantVectorOffset, TextureOffset, SamplerOffset, ppInstance);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetClassInstance(sbyte* pClassInstanceName, uint InstanceIndex, ID3D11ClassInstance** ppInstance);
+
+		[VtblIndex(8)]
+		HResult CreateClassInstance(sbyte* pClassTypeName, uint ConstantBufferOffset, uint ConstantVectorOffset, uint TextureOffset, uint SamplerOffset, ID3D11ClassInstance** ppInstance);
 	}
 }
 

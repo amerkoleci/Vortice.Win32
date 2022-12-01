@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("9f251514-9d4d-4902-9d60-18988ab7d4b5")]
 [NativeTypeName("struct IDXGraphicsAnalysis : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGraphicsAnalysis : INativeGuid
+public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGraphicsAnalysis
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDXGraphicsAnalysis : INativeGuid
 	public void EndCapture()
 	{
 		((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, void>)(lpVtbl[4]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void BeginCapture();
+
+		[VtblIndex(4)]
+		void EndCapture();
 	}
 }
 

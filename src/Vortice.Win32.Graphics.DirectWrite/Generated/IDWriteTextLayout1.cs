@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("9064d822-80a7-465c-a986-df65f78b8feb")]
 [NativeTypeName("struct IDWriteTextLayout1 : IDWriteTextLayout")]
 [NativeInheritance("IDWriteTextLayout")]
-public unsafe partial struct IDWriteTextLayout1 : INativeGuid
+public unsafe partial struct IDWriteTextLayout1 : IDWriteTextLayout1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextLayout1
 	{
@@ -616,6 +616,20 @@ public unsafe partial struct IDWriteTextLayout1 : INativeGuid
 	public HResult GetCharacterSpacing(uint currentPosition, float* leadingSpacing, float* trailingSpacing, float* minimumAdvanceWidth, TextRange* textRange)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout1*, uint, float*, float*, float*, TextRange*, int>)(lpVtbl[70]))((IDWriteTextLayout1*)Unsafe.AsPointer(ref this), currentPosition, leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
+	}
+	public interface Interface : IDWriteTextLayout.Interface
+	{
+		[VtblIndex(67)]
+		HResult SetPairKerning(Bool32 isPairKerningEnabled, TextRange textRange);
+
+		[VtblIndex(68)]
+		HResult GetPairKerning(uint currentPosition, Bool32* isPairKerningEnabled, TextRange* textRange);
+
+		[VtblIndex(69)]
+		HResult SetCharacterSpacing(float leadingSpacing, float trailingSpacing, float minimumAdvanceWidth, TextRange textRange);
+
+		[VtblIndex(70)]
+		HResult GetCharacterSpacing(uint currentPosition, float* leadingSpacing, float* trailingSpacing, float* minimumAdvanceWidth, TextRange* textRange);
 	}
 }
 

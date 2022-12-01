@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("a6cd7faa-b0b7-4a2f-9436-8662a65797cb")]
 [NativeTypeName("struct ID3D11ClassInstance : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11ClassInstance : INativeGuid
+public unsafe partial struct ID3D11ClassInstance : ID3D11ClassInstance.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11ClassInstance
 	{
@@ -136,6 +136,20 @@ public unsafe partial struct ID3D11ClassInstance : INativeGuid
 	public void GetTypeName(byte* pTypeName, nuint* pBufferLength)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, byte*, nuint*, void>)(lpVtbl[10]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), pTypeName, pBufferLength);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		void GetClassLinkage(ID3D11ClassLinkage** ppLinkage);
+
+		[VtblIndex(8)]
+		void GetDesc(ClassInstanceDescription* pDesc);
+
+		[VtblIndex(9)]
+		void GetInstanceName(byte* pInstanceName, nuint* pBufferLength);
+
+		[VtblIndex(10)]
+		void GetTypeName(byte* pTypeName, nuint* pBufferLength);
 	}
 }
 

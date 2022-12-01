@@ -1,6 +1,7 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using static Win32.Apis;
 using static Win32.Graphics.Direct3D11.Apis;
 
 namespace Win32.Graphics.Direct3D11;
@@ -141,7 +142,7 @@ public unsafe partial struct ID3D11DeviceContext
     {
         uint subresource = resource->CalculateSubResourceIndex(mipSlice, arraySlice, out uint mipSize);
         MappedSubresource mappedSubresource;
-        Map((ID3D11Resource*)resource, subresource, mode, flags, &mappedSubresource).ThrowIfFailed();
+        ThrowIfFailed(Map((ID3D11Resource*)resource, subresource, mode, flags, &mappedSubresource));
 
         Span<byte> source = new(mappedSubresource.pData, (int)(mipSize * mappedSubresource.RowPitch));
         return global::System.Runtime.InteropServices.MemoryMarshal.Cast<byte, T>(source);
@@ -168,7 +169,7 @@ public unsafe partial struct ID3D11DeviceContext
     public ComPtr<ID3D11CommandList> FinishCommandList(bool RestoreDeferredContextState = false)
     {
         using ComPtr<ID3D11CommandList> commandList = default;
-        FinishCommandList(RestoreDeferredContextState, commandList.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(FinishCommandList(RestoreDeferredContextState, commandList.GetAddressOf()));
 
         return commandList.Move();
     }

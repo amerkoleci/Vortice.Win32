@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("38c3e585-ff17-412c-9150-4fc6f9d72a28")]
 [NativeTypeName("struct ID3D12GraphicsCommandList2 : ID3D12GraphicsCommandList1")]
 [NativeInheritance("ID3D12GraphicsCommandList1")]
-public unsafe partial struct ID3D12GraphicsCommandList2 : INativeGuid
+public unsafe partial struct ID3D12GraphicsCommandList2 : ID3D12GraphicsCommandList2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12GraphicsCommandList2
 	{
@@ -584,6 +584,11 @@ public unsafe partial struct ID3D12GraphicsCommandList2 : INativeGuid
 	public void WriteBufferImmediate(uint Count, WriteBufferImmediateParameter* pParams, WriteBufferImmediateMode* pModes)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList2*, uint, WriteBufferImmediateParameter*, WriteBufferImmediateMode*, void>)(lpVtbl[66]))((ID3D12GraphicsCommandList2*)Unsafe.AsPointer(ref this), Count, pParams, pModes);
+	}
+	public interface Interface : ID3D12GraphicsCommandList1.Interface
+	{
+		[VtblIndex(66)]
+		void WriteBufferImmediate(uint Count, WriteBufferImmediateParameter* pParams, WriteBufferImmediateMode* pModes);
 	}
 }
 

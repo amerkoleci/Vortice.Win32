@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("3febd6dd-4973-4787-8194-e45f9e28923e")]
 [NativeTypeName("struct ID3D12DebugDevice : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12DebugDevice : INativeGuid
+public unsafe partial struct ID3D12DebugDevice : ID3D12DebugDevice.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12DebugDevice
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct ID3D12DebugDevice : INativeGuid
 	public HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[5]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this), Flags);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetFeatureMask(DebugFeature Mask);
+
+		[VtblIndex(4)]
+		DebugFeature GetFeatureMask();
+
+		[VtblIndex(5)]
+		HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags);
 	}
 }
 

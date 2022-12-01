@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("a6a55bda-c09c-49f3-9193-a41922c89715")]
 [NativeTypeName("struct IDCompositionTurbulenceEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionTurbulenceEffect : INativeGuid
+public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbulenceEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionTurbulenceEffect
 	{
@@ -136,6 +136,29 @@ public unsafe partial struct IDCompositionTurbulenceEffect : INativeGuid
 	public HResult SetStitchable(Bool32 stitchable)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), stitchable);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetOffset(Vector2* offset);
+
+		[VtblIndex(5)]
+		HResult SetBaseFrequency(Vector2* frequency);
+
+		[VtblIndex(6)]
+		HResult SetSize(Vector2* size);
+
+		[VtblIndex(7)]
+		HResult SetNumOctaves(uint numOctaves);
+
+		[VtblIndex(8)]
+		HResult SetSeed(uint seed);
+
+		[VtblIndex(9)]
+		HResult SetNoise(Graphics.Direct2D.Common.TurbulenceNoise noise);
+
+		[VtblIndex(10)]
+		HResult SetStitchable(Bool32 stitchable);
 	}
 }
 

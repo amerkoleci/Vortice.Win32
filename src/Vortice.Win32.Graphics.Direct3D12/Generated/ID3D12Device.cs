@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("189819f1-1db6-4b57-be54-1821339b85f7")]
 [NativeTypeName("struct ID3D12Device : ID3D12Object")]
 [NativeInheritance("ID3D12Object")]
-public unsafe partial struct ID3D12Device : INativeGuid
+public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device
 	{
@@ -403,6 +403,119 @@ public unsafe partial struct ID3D12Device : INativeGuid
 	{
 		Luid result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12Device*, Luid*, Luid*>)(lpVtbl[43]))((ID3D12Device*)Unsafe.AsPointer(ref this), &result);
+	}
+	public interface Interface : ID3D12Object.Interface
+	{
+		[VtblIndex(7)]
+		uint GetNodeCount();
+
+		[VtblIndex(8)]
+		HResult CreateCommandQueue(CommandQueueDescription* pDesc, Guid* riid, void** ppCommandQueue);
+
+		[VtblIndex(9)]
+		HResult CreateCommandAllocator(CommandListType type, Guid* riid, void** ppCommandAllocator);
+
+		[VtblIndex(10)]
+		HResult CreateGraphicsPipelineState(GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
+
+		[VtblIndex(11)]
+		HResult CreateComputePipelineState(ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
+
+		[VtblIndex(12)]
+		HResult CreateCommandList(uint nodeMask, CommandListType type, ID3D12CommandAllocator* pCommandAllocator, ID3D12PipelineState* pInitialState, Guid* riid, void** ppCommandList);
+
+		[VtblIndex(13)]
+		HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
+
+		[VtblIndex(14)]
+		HResult CreateDescriptorHeap(DescriptorHeapDescription* pDescriptorHeapDesc, Guid* riid, void** ppvHeap);
+
+		[VtblIndex(15)]
+		uint GetDescriptorHandleIncrementSize(DescriptorHeapType DescriptorHeapType);
+
+		[VtblIndex(16)]
+		HResult CreateRootSignature(uint nodeMask, void* pBlobWithRootSignature, nuint blobLengthInBytes, Guid* riid, void** ppvRootSignature);
+
+		[VtblIndex(17)]
+		void CreateConstantBufferView(ConstantBufferViewDescription* pDesc, CpuDescriptorHandle DestDescriptor);
+
+		[VtblIndex(18)]
+		void CreateShaderResourceView(ID3D12Resource* pResource, ShaderResourceViewDescription* pDesc, CpuDescriptorHandle DestDescriptor);
+
+		[VtblIndex(19)]
+		void CreateUnorderedAccessView(ID3D12Resource* pResource, ID3D12Resource* pCounterResource, UnorderedAccessViewDescription* pDesc, CpuDescriptorHandle DestDescriptor);
+
+		[VtblIndex(20)]
+		void CreateRenderTargetView(ID3D12Resource* pResource, RenderTargetViewDescription* pDesc, CpuDescriptorHandle DestDescriptor);
+
+		[VtblIndex(21)]
+		void CreateDepthStencilView(ID3D12Resource* pResource, DepthStencilViewDescription* pDesc, CpuDescriptorHandle DestDescriptor);
+
+		[VtblIndex(22)]
+		void CreateSampler(SamplerDescription* pDesc, CpuDescriptorHandle DestDescriptor);
+
+		[VtblIndex(23)]
+		void CopyDescriptors(uint NumDestDescriptorRanges, CpuDescriptorHandle* pDestDescriptorRangeStarts, uint* pDestDescriptorRangeSizes, uint NumSrcDescriptorRanges, CpuDescriptorHandle* pSrcDescriptorRangeStarts, uint* pSrcDescriptorRangeSizes, DescriptorHeapType DescriptorHeapsType);
+
+		[VtblIndex(24)]
+		void CopyDescriptorsSimple(uint NumDescriptors, CpuDescriptorHandle DestDescriptorRangeStart, CpuDescriptorHandle SrcDescriptorRangeStart, DescriptorHeapType DescriptorHeapsType);
+
+		[VtblIndex(25)]
+		ResourceAllocationInfo GetResourceAllocationInfo(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs);
+
+		[VtblIndex(26)]
+		HeapProperties GetCustomHeapProperties(uint nodeMask, HeapType heapType);
+
+		[VtblIndex(27)]
+		HResult CreateCommittedResource(HeapProperties* pHeapProperties, HeapFlags HeapFlags, ResourceDescription* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, Guid* riidResource, void** ppvResource);
+
+		[VtblIndex(28)]
+		HResult CreateHeap(HeapDescription* pDesc, Guid* riid, void** ppvHeap);
+
+		[VtblIndex(29)]
+		HResult CreatePlacedResource(ID3D12Heap* pHeap, ulong HeapOffset, ResourceDescription* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource);
+
+		[VtblIndex(30)]
+		HResult CreateReservedResource(ResourceDescription* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource);
+
+		[VtblIndex(31)]
+		HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, Handle* pHandle);
+
+		[VtblIndex(32)]
+		HResult OpenSharedHandle(Handle NTHandle, Guid* riid, void** ppvObj);
+
+		[VtblIndex(33)]
+		HResult OpenSharedHandleByName(ushort* Name, uint Access, Handle* pNTHandle);
+
+		[VtblIndex(34)]
+		HResult MakeResident(uint NumObjects, ID3D12Pageable** ppObjects);
+
+		[VtblIndex(35)]
+		HResult Evict(uint NumObjects, ID3D12Pageable** ppObjects);
+
+		[VtblIndex(36)]
+		HResult CreateFence(ulong InitialValue, FenceFlags Flags, Guid* riid, void** ppFence);
+
+		[VtblIndex(37)]
+		HResult GetDeviceRemovedReason();
+
+		[VtblIndex(38)]
+		void GetCopyableFootprints(ResourceDescription* pResourceDesc, uint FirstSubresource, uint NumSubresources, ulong BaseOffset, PlacedSubresourceFootprint* pLayouts, uint* pNumRows, ulong* pRowSizeInBytes, ulong* pTotalBytes);
+
+		[VtblIndex(39)]
+		HResult CreateQueryHeap(QueryHeapDescription* pDesc, Guid* riid, void** ppvHeap);
+
+		[VtblIndex(40)]
+		HResult SetStablePowerState(Bool32 Enable);
+
+		[VtblIndex(41)]
+		HResult CreateCommandSignature(CommandSignatureDescription* pDesc, ID3D12RootSignature* pRootSignature, Guid* riid, void** ppvCommandSignature);
+
+		[VtblIndex(42)]
+		void GetResourceTiling(ID3D12Resource* pTiledResource, uint* pNumTilesForEntireResource, PackedMipInfo* pPackedMipDesc, TileShape* pStandardTileShapeForNonPackedMips, uint* pNumSubresourceTilings, uint FirstSubresourceTilingToGet, SubresourceTiling* pSubresourceTilingsForNonPackedMips);
+
+		[VtblIndex(43)]
+		Luid GetAdapterLuid();
 	}
 }
 

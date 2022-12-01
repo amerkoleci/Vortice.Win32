@@ -1,6 +1,8 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using static Win32.Apis;
+
 namespace Win32.Graphics.Imaging;
 
 public unsafe partial struct IWICImagingFactory
@@ -24,12 +26,12 @@ public unsafe partial struct IWICImagingFactory
 
         fixed (char* filenamePtr = filename)
         {
-            CreateDecoderFromFilename(
+            ThrowIfFailed(CreateDecoderFromFilename(
                 (ushort*)filenamePtr,
                 null,
                 nativeAccess,
                 metadataOptions,
-                decoder.GetAddressOf()).ThrowIfFailed();
+                decoder.GetAddressOf()));
 
             return decoder.Move();
         }

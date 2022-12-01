@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("5e13e843-9d25-473c-9ad2-03b2d0b44b1e")]
 [NativeTypeName("struct IDxcVersionInfo3 : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcVersionInfo3 : INativeGuid
+public unsafe partial struct IDxcVersionInfo3 : IDxcVersionInfo3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcVersionInfo3
 	{
@@ -78,6 +78,11 @@ public unsafe partial struct IDxcVersionInfo3 : INativeGuid
 	public HResult GetCustomVersionString(sbyte** pVersionString)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo3*, sbyte**, int>)(lpVtbl[3]))((IDxcVersionInfo3*)Unsafe.AsPointer(ref this), pVersionString);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetCustomVersionString(sbyte** pVersionString);
 	}
 }
 

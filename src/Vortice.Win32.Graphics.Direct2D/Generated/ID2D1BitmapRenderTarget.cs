@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd90695-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1BitmapRenderTarget : ID2D1RenderTarget")]
 [NativeInheritance("ID2D1RenderTarget")]
-public unsafe partial struct ID2D1BitmapRenderTarget : INativeGuid
+public unsafe partial struct ID2D1BitmapRenderTarget : ID2D1BitmapRenderTarget.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1BitmapRenderTarget
 	{
@@ -515,6 +515,11 @@ public unsafe partial struct ID2D1BitmapRenderTarget : INativeGuid
 	public HResult GetBitmap(ID2D1Bitmap** bitmap)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, ID2D1Bitmap**, int>)(lpVtbl[57]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), bitmap);
+	}
+	public interface Interface : ID2D1RenderTarget.Interface
+	{
+		[VtblIndex(57)]
+		HResult GetBitmap(ID2D1Bitmap** bitmap);
 	}
 }
 

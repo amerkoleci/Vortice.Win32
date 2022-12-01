@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("b22e3fba-3925-4323-b5c1-9ebfc430f236")]
 [NativeTypeName("struct IWICMetadataWriterInfo : IWICMetadataHandlerInfo")]
 [NativeInheritance("IWICMetadataHandlerInfo")]
-public unsafe partial struct IWICMetadataWriterInfo : INativeGuid
+public unsafe partial struct IWICMetadataWriterInfo : IWICMetadataWriterInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataWriterInfo
 	{
@@ -208,6 +208,14 @@ public unsafe partial struct IWICMetadataWriterInfo : INativeGuid
 	public HResult CreateInstance(IWICMetadataWriter** ppIWriter)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriterInfo*, IWICMetadataWriter**, int>)(lpVtbl[19]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), ppIWriter);
+	}
+	public interface Interface : IWICMetadataHandlerInfo.Interface
+	{
+		[VtblIndex(18)]
+		HResult GetHeader(Guid* guidContainerFormat, uint cbSize, WICMetadataHeader* pHeader, uint* pcbActual);
+
+		[VtblIndex(19)]
+		HResult CreateInstance(IWICMetadataWriter** ppIWriter);
 	}
 }
 

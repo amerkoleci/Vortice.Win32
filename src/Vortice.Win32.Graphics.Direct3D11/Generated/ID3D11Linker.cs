@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("59a6cd0e-e10d-4c1f-88c0-63aba1daf30e")]
 [NativeTypeName("struct ID3D11Linker : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11Linker : INativeGuid
+public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Linker
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct ID3D11Linker : INativeGuid
 	public HResult AddClipPlaneFromCBuffer(uint uCBufferSlot, uint uCBufferEntry)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, uint, uint, int>)(lpVtbl[5]))((ID3D11Linker*)Unsafe.AsPointer(ref this), uCBufferSlot, uCBufferEntry);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Link(ID3D11ModuleInstance* pEntry, sbyte* pEntryName, sbyte* pTargetName, uint uFlags, Graphics.Direct3D.ID3DBlob** ppShaderBlob, Graphics.Direct3D.ID3DBlob** ppErrorBuffer);
+
+		[VtblIndex(4)]
+		HResult UseLibrary(ID3D11ModuleInstance* pLibraryMI);
+
+		[VtblIndex(5)]
+		HResult AddClipPlaneFromCBuffer(uint uCBufferSlot, uint uCBufferEntry);
 	}
 }
 

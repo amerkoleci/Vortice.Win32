@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("b859ee5a-d838-4b5b-a2e8-1adc7d93db48")]
 [NativeTypeName("struct IDWriteFactory : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFactory : INativeGuid
+public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory
 	{
@@ -240,6 +240,71 @@ public unsafe partial struct IDWriteFactory : INativeGuid
 	public HResult CreateGlyphRunAnalysis(GlyphRun* glyphRun, float pixelsPerDip, Matrix3x2* transform, RenderingMode renderingMode, MeasuringMode measuringMode, float baselineOriginX, float baselineOriginY, IDWriteGlyphRunAnalysis** glyphRunAnalysis)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, GlyphRun*, float, Matrix3x2*, RenderingMode, MeasuringMode, float, float, IDWriteGlyphRunAnalysis**, int>)(lpVtbl[23]))((IDWriteFactory*)Unsafe.AsPointer(ref this), glyphRun, pixelsPerDip, transform, renderingMode, measuringMode, baselineOriginX, baselineOriginY, glyphRunAnalysis);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetSystemFontCollection(IDWriteFontCollection** fontCollection, Bool32 checkForUpdates);
+
+		[VtblIndex(4)]
+		HResult CreateCustomFontCollection(IDWriteFontCollectionLoader* collectionLoader, void* collectionKey, uint collectionKeySize, IDWriteFontCollection** fontCollection);
+
+		[VtblIndex(5)]
+		HResult RegisterFontCollectionLoader(IDWriteFontCollectionLoader* fontCollectionLoader);
+
+		[VtblIndex(6)]
+		HResult UnregisterFontCollectionLoader(IDWriteFontCollectionLoader* fontCollectionLoader);
+
+		[VtblIndex(7)]
+		HResult CreateFontFileReference(ushort* filePath, ulong* lastWriteTime, IDWriteFontFile** fontFile);
+
+		[VtblIndex(8)]
+		HResult CreateCustomFontFileReference(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileLoader* fontFileLoader, IDWriteFontFile** fontFile);
+
+		[VtblIndex(9)]
+		HResult CreateFontFace(FontFaceType fontFaceType, uint numberOfFiles, IDWriteFontFile** fontFiles, uint faceIndex, FontSimulations fontFaceSimulationFlags, IDWriteFontFace** fontFace);
+
+		[VtblIndex(10)]
+		HResult CreateRenderingParams(IDWriteRenderingParams** renderingParams);
+
+		[VtblIndex(11)]
+		HResult CreateMonitorRenderingParams(IntPtr monitor, IDWriteRenderingParams** renderingParams);
+
+		[VtblIndex(12)]
+		HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode renderingMode, IDWriteRenderingParams** renderingParams);
+
+		[VtblIndex(13)]
+		HResult RegisterFontFileLoader(IDWriteFontFileLoader* fontFileLoader);
+
+		[VtblIndex(14)]
+		HResult UnregisterFontFileLoader(IDWriteFontFileLoader* fontFileLoader);
+
+		[VtblIndex(15)]
+		HResult CreateTextFormat(ushort* fontFamilyName, IDWriteFontCollection* fontCollection, FontWeight fontWeight, FontStyle fontStyle, FontStretch fontStretch, float fontSize, ushort* localeName, IDWriteTextFormat** textFormat);
+
+		[VtblIndex(16)]
+		HResult CreateTypography(IDWriteTypography** typography);
+
+		[VtblIndex(17)]
+		HResult GetGdiInterop(IDWriteGdiInterop** gdiInterop);
+
+		[VtblIndex(18)]
+		HResult CreateTextLayout(ushort* @string, uint stringLength, IDWriteTextFormat* textFormat, float maxWidth, float maxHeight, IDWriteTextLayout** textLayout);
+
+		[VtblIndex(19)]
+		HResult CreateGdiCompatibleTextLayout(ushort* @string, uint stringLength, IDWriteTextFormat* textFormat, float layoutWidth, float layoutHeight, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, IDWriteTextLayout** textLayout);
+
+		[VtblIndex(20)]
+		HResult CreateEllipsisTrimmingSign(IDWriteTextFormat* textFormat, IDWriteInlineObject** trimmingSign);
+
+		[VtblIndex(21)]
+		HResult CreateTextAnalyzer(IDWriteTextAnalyzer** textAnalyzer);
+
+		[VtblIndex(22)]
+		HResult CreateNumberSubstitution(NumberSubstitutionMethod substitutionMethod, ushort* localeName, Bool32 ignoreUserOverride, IDWriteNumberSubstitution** numberSubstitution);
+
+		[VtblIndex(23)]
+		HResult CreateGlyphRunAnalysis(GlyphRun* glyphRun, float pixelsPerDip, Matrix3x2* transform, RenderingMode renderingMode, MeasuringMode measuringMode, float baselineOriginX, float baselineOriginY, IDWriteGlyphRunAnalysis** glyphRunAnalysis);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("4776f9cd-9517-45fa-bf24-e89c5ec5c60c")]
 [NativeTypeName("struct IWICProgressCallback : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICProgressCallback : INativeGuid
+public unsafe partial struct IWICProgressCallback : IWICProgressCallback.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICProgressCallback
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IWICProgressCallback : INativeGuid
 	public HResult Notify(uint uFrameNum, WICProgressOperation operation, double dblProgress)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICProgressCallback*, uint, WICProgressOperation, double, int>)(lpVtbl[3]))((IWICProgressCallback*)Unsafe.AsPointer(ref this), uFrameNum, operation, dblProgress);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Notify(uint uFrameNum, WICProgressOperation operation, double dblProgress);
 	}
 }
 

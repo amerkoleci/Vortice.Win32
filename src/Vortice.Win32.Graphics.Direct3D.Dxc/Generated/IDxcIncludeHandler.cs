@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("7f61fc7d-950d-467f-b3e3-3c02fb49187c")]
 [NativeTypeName("struct IDxcIncludeHandler : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcIncludeHandler : INativeGuid
+public unsafe partial struct IDxcIncludeHandler : IDxcIncludeHandler.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcIncludeHandler
 	{
@@ -78,6 +78,11 @@ public unsafe partial struct IDxcIncludeHandler : INativeGuid
 	public HResult LoadSource(ushort* pFilename, IDxcBlob** ppIncludeSource)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcIncludeHandler*, ushort*, IDxcBlob**, int>)(lpVtbl[3]))((IDxcIncludeHandler*)Unsafe.AsPointer(ref this), pFilename, ppIncludeSource);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult LoadSource(ushort* pFilename, IDxcBlob** ppIncludeSource);
 	}
 }
 

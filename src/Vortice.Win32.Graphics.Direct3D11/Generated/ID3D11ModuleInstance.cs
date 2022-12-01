@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("469e07f7-045a-48d5-aa12-68a478cdf75d")]
 [NativeTypeName("struct ID3D11ModuleInstance : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11ModuleInstance : INativeGuid
+public unsafe partial struct ID3D11ModuleInstance : ID3D11ModuleInstance.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11ModuleInstance
 	{
@@ -152,6 +152,38 @@ public unsafe partial struct ID3D11ModuleInstance : INativeGuid
 	public HResult BindResourceAsUnorderedAccessViewByName(sbyte* pSrvName, uint uDstUavSlot, uint uCount)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ModuleInstance*, sbyte*, uint, uint, int>)(lpVtbl[12]))((ID3D11ModuleInstance*)Unsafe.AsPointer(ref this), pSrvName, uDstUavSlot, uCount);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult BindConstantBuffer(uint uSrcSlot, uint uDstSlot, uint cbDstOffset);
+
+		[VtblIndex(4)]
+		HResult BindConstantBufferByName(sbyte* pName, uint uDstSlot, uint cbDstOffset);
+
+		[VtblIndex(5)]
+		HResult BindResource(uint uSrcSlot, uint uDstSlot, uint uCount);
+
+		[VtblIndex(6)]
+		HResult BindResourceByName(sbyte* pName, uint uDstSlot, uint uCount);
+
+		[VtblIndex(7)]
+		HResult BindSampler(uint uSrcSlot, uint uDstSlot, uint uCount);
+
+		[VtblIndex(8)]
+		HResult BindSamplerByName(sbyte* pName, uint uDstSlot, uint uCount);
+
+		[VtblIndex(9)]
+		HResult BindUnorderedAccessView(uint uSrcSlot, uint uDstSlot, uint uCount);
+
+		[VtblIndex(10)]
+		HResult BindUnorderedAccessViewByName(sbyte* pName, uint uDstSlot, uint uCount);
+
+		[VtblIndex(11)]
+		HResult BindResourceAsUnorderedAccessView(uint uSrcSrvSlot, uint uDstUavSlot, uint uCount);
+
+		[VtblIndex(12)]
+		HResult BindResourceAsUnorderedAccessViewByName(sbyte* pSrvName, uint uDstUavSlot, uint uCount);
 	}
 }
 

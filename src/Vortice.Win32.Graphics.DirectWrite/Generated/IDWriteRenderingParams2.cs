@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("f9d711c3-9777-40ae-87e8-3e5af9bf0948")]
 [NativeTypeName("struct IDWriteRenderingParams2 : IDWriteRenderingParams1")]
 [NativeInheritance("IDWriteRenderingParams1")]
-public unsafe partial struct IDWriteRenderingParams2 : INativeGuid
+public unsafe partial struct IDWriteRenderingParams2 : IDWriteRenderingParams2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteRenderingParams2
 	{
@@ -128,6 +128,11 @@ public unsafe partial struct IDWriteRenderingParams2 : INativeGuid
 	public GridFitMode GetGridFitMode()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDWriteRenderingParams1.Interface
+	{
+		[VtblIndex(9)]
+		GridFitMode GetGridFitMode();
 	}
 }
 

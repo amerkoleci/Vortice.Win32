@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("9c906818-31d7-4fd3-a151-7c5e225db55a")]
 [NativeTypeName("struct IDWriteTextFormat : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteTextFormat : INativeGuid
+public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextFormat
 	{
@@ -272,6 +272,83 @@ public unsafe partial struct IDWriteTextFormat : INativeGuid
 	public HResult GetLocaleName(ushort* localeName, uint nameSize)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), localeName, nameSize);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetTextAlignment(TextAlignment textAlignment);
+
+		[VtblIndex(4)]
+		HResult SetParagraphAlignment(ParagraphAlignment paragraphAlignment);
+
+		[VtblIndex(5)]
+		HResult SetWordWrapping(WordWrapping wordWrapping);
+
+		[VtblIndex(6)]
+		HResult SetReadingDirection(ReadingDirection readingDirection);
+
+		[VtblIndex(7)]
+		HResult SetFlowDirection(FlowDirection flowDirection);
+
+		[VtblIndex(8)]
+		HResult SetIncrementalTabStop(float incrementalTabStop);
+
+		[VtblIndex(9)]
+		HResult SetTrimming(Trimming* trimmingOptions, IDWriteInlineObject* trimmingSign);
+
+		[VtblIndex(10)]
+		HResult SetLineSpacing(LineSpacingMethod lineSpacingMethod, float lineSpacing, float baseline);
+
+		[VtblIndex(11)]
+		TextAlignment GetTextAlignment();
+
+		[VtblIndex(12)]
+		ParagraphAlignment GetParagraphAlignment();
+
+		[VtblIndex(13)]
+		WordWrapping GetWordWrapping();
+
+		[VtblIndex(14)]
+		ReadingDirection GetReadingDirection();
+
+		[VtblIndex(15)]
+		FlowDirection GetFlowDirection();
+
+		[VtblIndex(16)]
+		float GetIncrementalTabStop();
+
+		[VtblIndex(17)]
+		HResult GetTrimming(Trimming* trimmingOptions, IDWriteInlineObject** trimmingSign);
+
+		[VtblIndex(18)]
+		HResult GetLineSpacing(LineSpacingMethod* lineSpacingMethod, float* lineSpacing, float* baseline);
+
+		[VtblIndex(19)]
+		HResult GetFontCollection(IDWriteFontCollection** fontCollection);
+
+		[VtblIndex(20)]
+		uint GetFontFamilyNameLength();
+
+		[VtblIndex(21)]
+		HResult GetFontFamilyName(ushort* fontFamilyName, uint nameSize);
+
+		[VtblIndex(22)]
+		FontWeight GetFontWeight();
+
+		[VtblIndex(23)]
+		FontStyle GetFontStyle();
+
+		[VtblIndex(24)]
+		FontStretch GetFontStretch();
+
+		[VtblIndex(25)]
+		float GetFontSize();
+
+		[VtblIndex(26)]
+		uint GetLocaleNameLength();
+
+		[VtblIndex(27)]
+		HResult GetLocaleName(ushort* localeName, uint nameSize);
 	}
 }
 

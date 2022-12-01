@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("8b4f173b-2fea-4b80-8f58-4307191ab95d")]
 [NativeTypeName("struct ID3D12Device5 : ID3D12Device4")]
 [NativeInheritance("ID3D12Device4")]
-public unsafe partial struct ID3D12Device5 : INativeGuid
+public unsafe partial struct ID3D12Device5 : ID3D12Device5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device5
 	{
@@ -572,6 +572,32 @@ public unsafe partial struct ID3D12Device5 : INativeGuid
 	public DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, DriverMatchingIdentifierStatus>)(lpVtbl[64]))((ID3D12Device5*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
+	}
+	public interface Interface : ID3D12Device4.Interface
+	{
+		[VtblIndex(57)]
+		HResult CreateLifetimeTracker(ID3D12LifetimeOwner* pOwner, Guid* riid, void** ppvTracker);
+
+		[VtblIndex(58)]
+		void RemoveDevice();
+
+		[VtblIndex(59)]
+		HResult EnumerateMetaCommands(uint* pNumMetaCommands, MetaCommandDescription* pDescs);
+
+		[VtblIndex(60)]
+		HResult EnumerateMetaCommandParameters(Guid* CommandId, MetaCommandParameterStage Stage, uint* pTotalStructureSizeInBytes, uint* pParameterCount, MetaCommandParameterDescription* pParameterDescs);
+
+		[VtblIndex(61)]
+		HResult CreateMetaCommand(Guid* CommandId, uint NodeMask, void* pCreationParametersData, nuint CreationParametersDataSizeInBytes, Guid* riid, void** ppMetaCommand);
+
+		[VtblIndex(62)]
+		HResult CreateStateObject(StateObjectDescription* pDesc, Guid* riid, void** ppStateObject);
+
+		[VtblIndex(63)]
+		void GetRaytracingAccelerationStructurePrebuildInfo(BuildRaytracingAccelerationStructureInputs* pDesc, RaytracingAccelerationStructurePrebuildInfo* pInfo);
+
+		[VtblIndex(64)]
+		DriverMatchingIdentifierStatus CheckDriverMatchingIdentifier(SerializedDataType SerializedDataType, SerializedDataDriverMatchingIdentifier* pIdentifierToCheck);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("9b32f9ad-bdcc-40a6-a39d-d5c865845720")]
 [NativeTypeName("struct ID3D11CryptoSession : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11CryptoSession : INativeGuid
+public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11CryptoSession
 	{
@@ -144,6 +144,23 @@ public unsafe partial struct ID3D11CryptoSession : INativeGuid
 	public void GetCryptoSessionHandle(Handle* pCryptoSessionHandle)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, Handle*, void>)(lpVtbl[11]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCryptoSessionHandle);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		void GetCryptoType(Guid* pCryptoType);
+
+		[VtblIndex(8)]
+		void GetDecoderProfile(Guid* pDecoderProfile);
+
+		[VtblIndex(9)]
+		HResult GetCertificateSize(uint* pCertificateSize);
+
+		[VtblIndex(10)]
+		HResult GetCertificate(uint CertificateSize, byte* pCertificate);
+
+		[VtblIndex(11)]
+		void GetCryptoSessionHandle(Handle* pCryptoSessionHandle);
 	}
 }
 

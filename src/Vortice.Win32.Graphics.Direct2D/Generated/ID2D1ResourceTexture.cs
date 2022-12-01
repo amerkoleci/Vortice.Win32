@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("688d15c3-02b0-438d-b13a-d1b44c32c39a")]
 [NativeTypeName("struct ID2D1ResourceTexture : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1ResourceTexture : INativeGuid
+public unsafe partial struct ID2D1ResourceTexture : ID2D1ResourceTexture.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ResourceTexture
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID2D1ResourceTexture : INativeGuid
 	public HResult Update(uint* minimumExtents, uint* maximimumExtents, uint* strides, uint dimensions, byte* data, uint dataCount)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1ResourceTexture*, uint*, uint*, uint*, uint, byte*, uint, int>)(lpVtbl[3]))((ID2D1ResourceTexture*)Unsafe.AsPointer(ref this), minimumExtents, maximimumExtents, strides, dimensions, data, dataCount);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Update(uint* minimumExtents, uint* maximimumExtents, uint* strides, uint dimensions, byte* data, uint dataCount);
 	}
 }
 

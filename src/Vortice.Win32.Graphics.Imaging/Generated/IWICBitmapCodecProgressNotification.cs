@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("64c1024e-c3cf-4462-8078-88c2b11c46d9")]
 [NativeTypeName("struct IWICBitmapCodecProgressNotification : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICBitmapCodecProgressNotification : INativeGuid
+public unsafe partial struct IWICBitmapCodecProgressNotification : IWICBitmapCodecProgressNotification.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapCodecProgressNotification
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IWICBitmapCodecProgressNotification : INativeGuid
 	public HResult RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult> pfnProgressNotification, void* pvData, uint dwProgressFlags)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapCodecProgressNotification*, delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult>, void*, uint, int>)(lpVtbl[3]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), pfnProgressNotification, pvData, dwProgressFlags);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult RegisterProgressNotification(delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult> pfnProgressNotification, void* pvData, uint dwProgressFlags);
 	}
 }
 

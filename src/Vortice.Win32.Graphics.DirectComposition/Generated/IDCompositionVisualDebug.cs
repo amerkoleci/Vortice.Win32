@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("fed2b808-5eb4-43a0-aea3-35f65280f91b")]
 [NativeTypeName("struct IDCompositionVisualDebug : IDCompositionVisual2")]
 [NativeInheritance("IDCompositionVisual2")]
-public unsafe partial struct IDCompositionVisualDebug : INativeGuid
+public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionVisualDebug
 	{
@@ -256,6 +256,20 @@ public unsafe partial struct IDCompositionVisualDebug : INativeGuid
 	public HResult DisableRedrawRegions()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, int>)(lpVtbl[25]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDCompositionVisual2.Interface
+	{
+		[VtblIndex(22)]
+		HResult EnableHeatMap(Color4* color);
+
+		[VtblIndex(23)]
+		HResult DisableHeatMap();
+
+		[VtblIndex(24)]
+		HResult EnableRedrawRegions();
+
+		[VtblIndex(25)]
+		HResult DisableRedrawRegions();
 	}
 }
 

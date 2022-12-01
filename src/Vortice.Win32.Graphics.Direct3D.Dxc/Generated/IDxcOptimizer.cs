@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("25740e2e-9cba-401b-9119-4fb42f39f270")]
 [NativeTypeName("struct IDxcOptimizer : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcOptimizer : INativeGuid
+public unsafe partial struct IDxcOptimizer : IDxcOptimizer.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcOptimizer
 	{
@@ -92,6 +92,17 @@ public unsafe partial struct IDxcOptimizer : INativeGuid
 	public HResult RunOptimizer(IDxcBlob* pBlob, ushort** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizer*, IDxcBlob*, ushort**, uint, IDxcBlob**, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), pBlob, ppOptions, optionCount, pOutputModule, ppOutputText);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetAvailablePassCount(uint* pCount);
+
+		[VtblIndex(4)]
+		HResult GetAvailablePass(uint index, IDxcOptimizerPass** ppResult);
+
+		[VtblIndex(5)]
+		HResult RunOptimizer(IDxcBlob* pBlob, ushort** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText);
 	}
 }
 

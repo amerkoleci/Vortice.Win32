@@ -1,0 +1,29 @@
+{
+
+"Constants":[
+	{
+		"Name":"D3DCOMPILE_OPTIMIZATION_LEVEL2"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":49152
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D_COMPILE_STANDARD_FILE_INCLUDE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+]
+
+,"Types":[
+]
+
+,"Functions":[
+]
+
+,"UnicodeAliases":[
+]
+
+}

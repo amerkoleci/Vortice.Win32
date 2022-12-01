@@ -92,22 +92,4 @@ public readonly partial struct HResult : IComparable, IComparable<HResult>, IEqu
     public bool Failure => Value < 0;
 
     public bool Success => Value >= 0;
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void ThrowIfFailed([CallerMemberName] string? method = null)
-    {
-        if (Failure)
-        {
-            ThrowExternalException(method ?? "Method", this);
-        }
-    }
-
-#if NET6_0_OR_GREATER
-    [DoesNotReturn]
-#endif
-    private static void ThrowExternalException(string methodName, int errorCode)
-    {
-        string message = string.Format("'{0}' failed with an error code of '{1}'", methodName, errorCode);
-        throw new ExternalException(message, errorCode);
-    }
 }

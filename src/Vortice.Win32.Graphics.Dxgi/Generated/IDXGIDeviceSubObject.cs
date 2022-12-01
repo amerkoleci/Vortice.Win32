@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("3d3e0379-f9de-4d58-bb6c-18d62992f1a6")]
 [NativeTypeName("struct IDXGIDeviceSubObject : IDXGIObject")]
 [NativeInheritance("IDXGIObject")]
-public unsafe partial struct IDXGIDeviceSubObject : INativeGuid
+public unsafe partial struct IDXGIDeviceSubObject : IDXGIDeviceSubObject.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDeviceSubObject
 	{
@@ -112,6 +112,11 @@ public unsafe partial struct IDXGIDeviceSubObject : INativeGuid
 	public HResult GetDevice(Guid* riid, void** ppDevice)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDeviceSubObject*, Guid*, void**, int>)(lpVtbl[7]))((IDXGIDeviceSubObject*)Unsafe.AsPointer(ref this), riid, ppDevice);
+	}
+	public interface Interface : IDXGIObject.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetDevice(Guid* riid, void** ppDevice);
 	}
 }
 

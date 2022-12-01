@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("8939f66e-c46a-4c21-a9d1-98b327ce1679")]
 [NativeTypeName("struct IWICJpegFrameDecode : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICJpegFrameDecode : INativeGuid
+public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICJpegFrameDecode
 	{
@@ -152,6 +152,38 @@ public unsafe partial struct IWICJpegFrameDecode : INativeGuid
 	public HResult CopyMinimalStream(uint streamOffset, uint cbStreamData, byte* pbStreamData, uint* pcbStreamDataActual)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, byte*, uint*, int>)(lpVtbl[12]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), streamOffset, cbStreamData, pbStreamData, pcbStreamDataActual);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult DoesSupportIndexing(Bool32* pfIndexingSupported);
+
+		[VtblIndex(4)]
+		HResult SetIndexing(WICJpegIndexingOptions options, uint horizontalIntervalSize);
+
+		[VtblIndex(5)]
+		HResult ClearIndexing();
+
+		[VtblIndex(6)]
+		HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegAcHuffmanTable* pAcHuffmanTable);
+
+		[VtblIndex(7)]
+		HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegDCHuffmanTable* pDcHuffmanTable);
+
+		[VtblIndex(8)]
+		HResult GetQuantizationTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegQuantizationTable* pQuantizationTable);
+
+		[VtblIndex(9)]
+		HResult GetFrameHeader(WICJpegFrameHeader* pFrameHeader);
+
+		[VtblIndex(10)]
+		HResult GetScanHeader(uint scanIndex, WICJpegScanHeader* pScanHeader);
+
+		[VtblIndex(11)]
+		HResult CopyScan(uint scanIndex, uint scanOffset, uint cbScanData, byte* pbScanData, uint* pcbScanDataActual);
+
+		[VtblIndex(12)]
+		HResult CopyMinimalStream(uint streamOffset, uint cbStreamData, byte* pbStreamData, uint* pcbStreamDataActual);
 	}
 }
 

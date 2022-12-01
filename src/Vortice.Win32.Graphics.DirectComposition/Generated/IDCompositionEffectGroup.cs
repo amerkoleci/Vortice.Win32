@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("a7929a74-e6b2-4bd6-8b95-4040119ca34d")]
 [NativeTypeName("struct IDCompositionEffectGroup : IDCompositionEffect")]
 [NativeInheritance("IDCompositionEffect")]
-public unsafe partial struct IDCompositionEffectGroup : INativeGuid
+public unsafe partial struct IDCompositionEffectGroup : IDCompositionEffectGroup.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionEffectGroup
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IDCompositionEffectGroup : INativeGuid
 	public HResult SetTransform3D(IDCompositionTransform3D* transform3D)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionEffectGroup*, IDCompositionTransform3D*, int>)(lpVtbl[5]))((IDCompositionEffectGroup*)Unsafe.AsPointer(ref this), transform3D);
+	}
+	public interface Interface : IDCompositionEffect.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetOpacity(IDCompositionAnimation* animation);
+
+		[VtblIndex(4)]
+		HResult SetOpacity(float opacity);
+
+		[VtblIndex(5)]
+		HResult SetTransform3D(IDCompositionTransform3D* transform3D);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906bb-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1TransformedGeometry : ID2D1Geometry")]
 [NativeInheritance("ID2D1Geometry")]
-public unsafe partial struct ID2D1TransformedGeometry : INativeGuid
+public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1TransformedGeometry
 	{
@@ -200,6 +200,14 @@ public unsafe partial struct ID2D1TransformedGeometry : INativeGuid
 	public void GetTransform(Matrix3x2* transform)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, void>)(lpVtbl[18]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), transform);
+	}
+	public interface Interface : ID2D1Geometry.Interface
+	{
+		[VtblIndex(17)]
+		void GetSourceGeometry(ID2D1Geometry** sourceGeometry);
+
+		[VtblIndex(18)]
+		void GetTransform(Matrix3x2* transform);
 	}
 }
 

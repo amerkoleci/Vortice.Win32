@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("8efb471d-616c-4f49-90f7-127bb763fa51")]
 [NativeTypeName("struct ID3D12DescriptorHeap : ID3D12Pageable")]
 [NativeInheritance("ID3D12Pageable")]
-public unsafe partial struct ID3D12DescriptorHeap : INativeGuid
+public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12DescriptorHeap
 	{
@@ -139,6 +139,17 @@ public unsafe partial struct ID3D12DescriptorHeap : INativeGuid
 	{
 		GpuDescriptorHandle result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, GpuDescriptorHandle*, GpuDescriptorHandle*>)(lpVtbl[10]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+	}
+	public interface Interface : ID3D12Pageable.Interface
+	{
+		[VtblIndex(8)]
+		DescriptorHeapDescription GetDesc();
+
+		[VtblIndex(9)]
+		CpuDescriptorHandle GetCPUDescriptorHandleForHeapStart();
+
+		[VtblIndex(10)]
+		GpuDescriptorHandle GetGPUDescriptorHandleForHeapStart();
 	}
 }
 

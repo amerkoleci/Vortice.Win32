@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("03823efb-8d8f-4e1c-9aa2-f64bb2cbfdf1")]
 [NativeTypeName("struct ID3D11DepthStencilState : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11DepthStencilState : INativeGuid
+public unsafe partial struct ID3D11DepthStencilState : ID3D11DepthStencilState.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11DepthStencilState
 	{
@@ -112,6 +112,11 @@ public unsafe partial struct ID3D11DepthStencilState : INativeGuid
 	public void GetDesc(DepthStencilDescription* pDesc)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilState*, DepthStencilDescription*, void>)(lpVtbl[7]))((ID3D11DepthStencilState*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		void GetDesc(DepthStencilDescription* pDesc);
 	}
 }
 

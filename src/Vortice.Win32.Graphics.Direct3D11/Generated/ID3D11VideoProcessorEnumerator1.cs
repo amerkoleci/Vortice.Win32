@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("465217f2-5568-43cf-b5b9-f61d54531ca1")]
 [NativeTypeName("struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProcessorEnumerator")]
 [NativeInheritance("ID3D11VideoProcessorEnumerator")]
-public unsafe partial struct ID3D11VideoProcessorEnumerator1 : INativeGuid
+public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProcessorEnumerator1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoProcessorEnumerator1
 	{
@@ -160,6 +160,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : INativeGuid
 	public HResult CheckVideoProcessorFormatConversion(Graphics.Dxgi.Common.Format InputFormat, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, Graphics.Dxgi.Common.Format OutputFormat, Graphics.Dxgi.Common.ColorSpaceType OutputColorSpace, Bool32* pSupported)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), InputFormat, InputColorSpace, OutputFormat, OutputColorSpace, pSupported);
+	}
+	public interface Interface : ID3D11VideoProcessorEnumerator.Interface
+	{
+		[VtblIndex(13)]
+		HResult CheckVideoProcessorFormatConversion(Graphics.Dxgi.Common.Format InputFormat, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, Graphics.Dxgi.Common.Format OutputFormat, Graphics.Dxgi.Common.ColorSpaceType OutputColorSpace, Bool32* pSupported);
 	}
 }
 

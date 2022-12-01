@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("c64226a8-9201-46af-b4cc-53fb9ff7414f")]
 [NativeTypeName("struct ID3D12PipelineLibrary : ID3D12DeviceChild")]
 [NativeInheritance("ID3D12DeviceChild")]
-public unsafe partial struct ID3D12PipelineLibrary : INativeGuid
+public unsafe partial struct ID3D12PipelineLibrary : ID3D12PipelineLibrary.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12PipelineLibrary
 	{
@@ -152,6 +152,23 @@ public unsafe partial struct ID3D12PipelineLibrary : INativeGuid
 	public HResult Serialize(void* pData, nuint DataSizeInBytes)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary*, void*, nuint, int>)(lpVtbl[12]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pData, DataSizeInBytes);
+	}
+	public interface Interface : ID3D12DeviceChild.Interface
+	{
+		[VtblIndex(8)]
+		HResult StorePipeline(ushort* pName, ID3D12PipelineState* pPipeline);
+
+		[VtblIndex(9)]
+		HResult LoadGraphicsPipeline(ushort* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
+
+		[VtblIndex(10)]
+		HResult LoadComputePipeline(ushort* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
+
+		[VtblIndex(11)]
+		nuint GetSerializedSize();
+
+		[VtblIndex(12)]
+		HResult Serialize(void* pData, nuint DataSizeInBytes);
 	}
 }
 

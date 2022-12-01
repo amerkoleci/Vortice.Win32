@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("7b7166ec-21c7-44ae-b21a-c9ae321ae369")]
 [NativeTypeName("struct IDXGIFactory : IDXGIObject")]
 [NativeInheritance("IDXGIObject")]
-public unsafe partial struct IDXGIFactory : INativeGuid
+public unsafe partial struct IDXGIFactory : IDXGIFactory.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory
 	{
@@ -144,6 +144,23 @@ public unsafe partial struct IDXGIFactory : INativeGuid
 	public HResult CreateSoftwareAdapter(IntPtr Module, IDXGIAdapter** ppAdapter)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory*, IntPtr, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+	}
+	public interface Interface : IDXGIObject.Interface
+	{
+		[VtblIndex(7)]
+		HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter);
+
+		[VtblIndex(8)]
+		HResult MakeWindowAssociation(IntPtr WindowHandle, WindowAssociationFlags Flags);
+
+		[VtblIndex(9)]
+		HResult GetWindowAssociation(IntPtr* pWindowHandle);
+
+		[VtblIndex(10)]
+		HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain);
+
+		[VtblIndex(11)]
+		HResult CreateSoftwareAdapter(IntPtr Module, IDXGIAdapter** ppAdapter);
 	}
 }
 

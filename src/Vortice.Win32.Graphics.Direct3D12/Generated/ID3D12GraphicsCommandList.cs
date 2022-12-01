@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("5b160d0f-ac1b-4185-8ba8-b3ae42a5a455")]
 [NativeTypeName("struct ID3D12GraphicsCommandList : ID3D12CommandList")]
 [NativeInheritance("ID3D12CommandList")]
-public unsafe partial struct ID3D12GraphicsCommandList : INativeGuid
+public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandList.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12GraphicsCommandList
 	{
@@ -528,6 +528,161 @@ public unsafe partial struct ID3D12GraphicsCommandList : INativeGuid
 	public void ExecuteIndirect(ID3D12CommandSignature* pCommandSignature, uint MaxCommandCount, ID3D12Resource* pArgumentBuffer, ulong ArgumentBufferOffset, ID3D12Resource* pCountBuffer, ulong CountBufferOffset)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, ID3D12CommandSignature*, uint, ID3D12Resource*, ulong, ID3D12Resource*, ulong, void>)(lpVtbl[59]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pCommandSignature, MaxCommandCount, pArgumentBuffer, ArgumentBufferOffset, pCountBuffer, CountBufferOffset);
+	}
+	public interface Interface : ID3D12CommandList.Interface
+	{
+		[VtblIndex(9)]
+		HResult Close();
+
+		[VtblIndex(10)]
+		HResult Reset(ID3D12CommandAllocator* pAllocator, ID3D12PipelineState* pInitialState);
+
+		[VtblIndex(11)]
+		void ClearState(ID3D12PipelineState* pPipelineState);
+
+		[VtblIndex(12)]
+		void DrawInstanced(uint VertexCountPerInstance, uint InstanceCount, uint StartVertexLocation, uint StartInstanceLocation);
+
+		[VtblIndex(13)]
+		void DrawIndexedInstanced(uint IndexCountPerInstance, uint InstanceCount, uint StartIndexLocation, int BaseVertexLocation, uint StartInstanceLocation);
+
+		[VtblIndex(14)]
+		void Dispatch(uint ThreadGroupCountX, uint ThreadGroupCountY, uint ThreadGroupCountZ);
+
+		[VtblIndex(15)]
+		void CopyBufferRegion(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, ulong NumBytes);
+
+		[VtblIndex(16)]
+		void CopyTextureRegion(TextureCopyLocation* pDst, uint DstX, uint DstY, uint DstZ, TextureCopyLocation* pSrc, Box* pSrcBox);
+
+		[VtblIndex(17)]
+		void CopyResource(ID3D12Resource* pDstResource, ID3D12Resource* pSrcResource);
+
+		[VtblIndex(18)]
+		void CopyTiles(ID3D12Resource* pTiledResource, TiledResourceCoordinate* pTileRegionStartCoordinate, TileRegionSize* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, TileCopyFlags Flags);
+
+		[VtblIndex(19)]
+		void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.Format Format);
+
+		[VtblIndex(20)]
+		void IASetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology PrimitiveTopology);
+
+		[VtblIndex(21)]
+		void RSSetViewports(uint NumViewports, Viewport* pViewports);
+
+		[VtblIndex(22)]
+		void RSSetScissorRects(uint NumRects, RawRect* pRects);
+
+		[VtblIndex(23)]
+		void OMSetBlendFactor(float* BlendFactor);
+
+		[VtblIndex(24)]
+		void OMSetStencilRef(uint StencilRef);
+
+		[VtblIndex(25)]
+		void SetPipelineState(ID3D12PipelineState* pPipelineState);
+
+		[VtblIndex(26)]
+		void ResourceBarrier(uint NumBarriers, ResourceBarrier* pBarriers);
+
+		[VtblIndex(27)]
+		void ExecuteBundle(ID3D12GraphicsCommandList* pCommandList);
+
+		[VtblIndex(28)]
+		void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps);
+
+		[VtblIndex(29)]
+		void SetComputeRootSignature(ID3D12RootSignature* pRootSignature);
+
+		[VtblIndex(30)]
+		void SetGraphicsRootSignature(ID3D12RootSignature* pRootSignature);
+
+		[VtblIndex(31)]
+		void SetComputeRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor);
+
+		[VtblIndex(32)]
+		void SetGraphicsRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor);
+
+		[VtblIndex(33)]
+		void SetComputeRoot32BitConstant(uint RootParameterIndex, uint SrcData, uint DestOffsetIn32BitValues);
+
+		[VtblIndex(34)]
+		void SetGraphicsRoot32BitConstant(uint RootParameterIndex, uint SrcData, uint DestOffsetIn32BitValues);
+
+		[VtblIndex(35)]
+		void SetComputeRoot32BitConstants(uint RootParameterIndex, uint Num32BitValuesToSet, void* pSrcData, uint DestOffsetIn32BitValues);
+
+		[VtblIndex(36)]
+		void SetGraphicsRoot32BitConstants(uint RootParameterIndex, uint Num32BitValuesToSet, void* pSrcData, uint DestOffsetIn32BitValues);
+
+		[VtblIndex(37)]
+		void SetComputeRootConstantBufferView(uint RootParameterIndex, ulong BufferLocation);
+
+		[VtblIndex(38)]
+		void SetGraphicsRootConstantBufferView(uint RootParameterIndex, ulong BufferLocation);
+
+		[VtblIndex(39)]
+		void SetComputeRootShaderResourceView(uint RootParameterIndex, ulong BufferLocation);
+
+		[VtblIndex(40)]
+		void SetGraphicsRootShaderResourceView(uint RootParameterIndex, ulong BufferLocation);
+
+		[VtblIndex(41)]
+		void SetComputeRootUnorderedAccessView(uint RootParameterIndex, ulong BufferLocation);
+
+		[VtblIndex(42)]
+		void SetGraphicsRootUnorderedAccessView(uint RootParameterIndex, ulong BufferLocation);
+
+		[VtblIndex(43)]
+		void IASetIndexBuffer(IndexBufferView* pView);
+
+		[VtblIndex(44)]
+		void IASetVertexBuffers(uint StartSlot, uint NumViews, VertexBufferView* pViews);
+
+		[VtblIndex(45)]
+		void SOSetTargets(uint StartSlot, uint NumViews, StreamOutputBufferView* pViews);
+
+		[VtblIndex(46)]
+		void OMSetRenderTargets(uint NumRenderTargetDescriptors, CpuDescriptorHandle* pRenderTargetDescriptors, Bool32 RTsSingleHandleToDescriptorRange, CpuDescriptorHandle* pDepthStencilDescriptor);
+
+		[VtblIndex(47)]
+		void ClearDepthStencilView(CpuDescriptorHandle DepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil, uint NumRects, RawRect* pRects);
+
+		[VtblIndex(48)]
+		void ClearRenderTargetView(CpuDescriptorHandle RenderTargetView, float* ColorRGBA, uint NumRects, RawRect* pRects);
+
+		[VtblIndex(49)]
+		void ClearUnorderedAccessViewUint(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, RawRect* pRects);
+
+		[VtblIndex(50)]
+		void ClearUnorderedAccessViewFloat(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, RawRect* pRects);
+
+		[VtblIndex(51)]
+		void DiscardResource(ID3D12Resource* pResource, DiscardRegion* pRegion);
+
+		[VtblIndex(52)]
+		void BeginQuery(ID3D12QueryHeap* pQueryHeap, QueryType Type, uint Index);
+
+		[VtblIndex(53)]
+		void EndQuery(ID3D12QueryHeap* pQueryHeap, QueryType Type, uint Index);
+
+		[VtblIndex(54)]
+		void ResolveQueryData(ID3D12QueryHeap* pQueryHeap, QueryType Type, uint StartIndex, uint NumQueries, ID3D12Resource* pDestinationBuffer, ulong AlignedDestinationBufferOffset);
+
+		[VtblIndex(55)]
+		void SetPredication(ID3D12Resource* pBuffer, ulong AlignedBufferOffset, PredicationOperation Operation);
+
+		[VtblIndex(56)]
+		void SetMarker(uint Metadata, void* pData, uint Size);
+
+		[VtblIndex(57)]
+		void BeginEvent(uint Metadata, void* pData, uint Size);
+
+		[VtblIndex(58)]
+		void EndEvent();
+
+		[VtblIndex(59)]
+		void ExecuteIndirect(ID3D12CommandSignature* pCommandSignature, uint MaxCommandCount, ID3D12Resource* pArgumentBuffer, ulong ArgumentBufferOffset, ID3D12Resource* pCountBuffer, ulong CountBufferOffset);
 	}
 }
 

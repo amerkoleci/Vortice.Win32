@@ -1,16 +1,12 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using static Win32.Apis;
-
 namespace Win32.Com;
 
 [Guid("0C733A30-2A1C-11CE-ADE5-00AA0044773D")]
 [NativeTypeName("struct ISequentialStream : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ISequentialStream
+public unsafe partial struct ISequentialStream : ISequentialStream.Interface, INativeGuid
 {
     public static ref readonly Guid IID_ISequentialStream
     {
@@ -35,14 +31,18 @@ public unsafe partial struct ISequentialStream
         }
     }
 
+#if NET6_0_OR_GREATER
+    static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ISequentialStream));
+#else
     public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ISequentialStream));
+#endif
 
     public void** lpVtbl;
 
     /// <inheritdoc cref="IUnknown.QueryInterface" />
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+    public HResult QueryInterface(Guid* riid, void** ppvObject)
     {
         return ((delegate* unmanaged[Stdcall]<ISequentialStream*, Guid*, void**, int>)(lpVtbl[0]))((ISequentialStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
     }
@@ -74,8 +74,17 @@ public unsafe partial struct ISequentialStream
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(4)]
-    public HResult Write([NativeTypeName("const void *")] void* pv, [NativeTypeName("ULONG")] uint cb, [NativeTypeName("ULONG *")] uint* pcbWritten)
+    public HResult Write(void* pv, uint cb, uint* pcbWritten)
     {
         return ((delegate* unmanaged[Stdcall]<ISequentialStream*, void*, uint, uint*, int>)(lpVtbl[4]))((ISequentialStream*)Unsafe.AsPointer(ref this), pv, cb, pcbWritten);
+    }
+
+    public interface Interface : IUnknown.Interface
+    {
+        [VtblIndex(3)]
+        HResult Read(void* pv, uint cb, uint* pcbRead);
+
+        [VtblIndex(4)]
+        HResult Write(void* pv, uint cb, uint* pcbWritten);
     }
 }

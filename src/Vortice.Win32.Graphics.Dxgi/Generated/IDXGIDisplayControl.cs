@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("ea9dbf1a-c88e-4486-854a-98aa0138f30c")]
 [NativeTypeName("struct IDXGIDisplayControl : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIDisplayControl : INativeGuid
+public unsafe partial struct IDXGIDisplayControl : IDXGIDisplayControl.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDisplayControl
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDXGIDisplayControl : INativeGuid
 	public void SetStereoEnabled(Bool32 enabled)
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIDisplayControl*, Bool32, void>)(lpVtbl[4]))((IDXGIDisplayControl*)Unsafe.AsPointer(ref this), enabled);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		Bool32 IsStereoEnabled();
+
+		[VtblIndex(4)]
+		void SetStereoEnabled(Bool32 enabled);
 	}
 }
 

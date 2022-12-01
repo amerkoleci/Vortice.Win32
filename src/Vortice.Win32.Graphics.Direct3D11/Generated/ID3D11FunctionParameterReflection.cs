@@ -12,7 +12,7 @@ namespace Win32.Graphics.Direct3D11;
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionParameterReflection"]/*' />
 /// <unmanaged>ID3D11FunctionParameterReflection</unmanaged>
 [Guid("42757488-334f-47fe-982e-1a65d08cc462")]
-public unsafe partial struct ID3D11FunctionParameterReflection : INativeGuid
+public unsafe partial struct ID3D11FunctionParameterReflection : ID3D11FunctionParameterReflection.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11FunctionParameterReflection
 	{
@@ -52,6 +52,11 @@ public unsafe partial struct ID3D11FunctionParameterReflection : INativeGuid
 	public HResult GetDesc(ParameterDescription* pDesc)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionParameterReflection*, ParameterDescription*, int>)(lpVtbl[0]))((ID3D11FunctionParameterReflection*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface 
+	{
+		[VtblIndex(0)]
+		HResult GetDesc(ParameterDescription* pDesc);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("db1800dd-0c34-4cf9-be90-31cc0a5653e1")]
 [NativeTypeName("struct ID2D1SourceTransform : ID2D1Transform")]
 [NativeInheritance("ID2D1Transform")]
-public unsafe partial struct ID2D1SourceTransform : INativeGuid
+public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SourceTransform
 	{
@@ -120,6 +120,14 @@ public unsafe partial struct ID2D1SourceTransform : INativeGuid
 	public HResult Draw(ID2D1Bitmap1* target, RawRect* drawRect, System.Drawing.Point targetOrigin)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SourceTransform*, ID2D1Bitmap1*, RawRect*, System.Drawing.Point, int>)(lpVtbl[8]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), target, drawRect, targetOrigin);
+	}
+	public interface Interface : ID2D1Transform.Interface
+	{
+		[VtblIndex(7)]
+		HResult SetRenderInfo(ID2D1RenderInfo* renderInfo);
+
+		[VtblIndex(8)]
+		HResult Draw(ID2D1Bitmap1* target, RawRect* drawRect, System.Drawing.Point targetOrigin);
 	}
 }
 

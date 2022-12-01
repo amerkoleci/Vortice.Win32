@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("035f3ab4-482e-4e50-b41f-8a7f8bd8960b")]
 [NativeTypeName("struct IDXGIResource : IDXGIDeviceSubObject")]
 [NativeInheritance("IDXGIDeviceSubObject")]
-public unsafe partial struct IDXGIResource : INativeGuid
+public unsafe partial struct IDXGIResource : IDXGIResource.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIResource
 	{
@@ -144,6 +144,20 @@ public unsafe partial struct IDXGIResource : INativeGuid
 	public HResult GetEvictionPriority(uint* pEvictionPriority)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, uint*, int>)(lpVtbl[11]))((IDXGIResource*)Unsafe.AsPointer(ref this), pEvictionPriority);
+	}
+	public interface Interface : IDXGIDeviceSubObject.Interface
+	{
+		[VtblIndex(8)]
+		HResult GetSharedHandle(Handle* pSharedHandle);
+
+		[VtblIndex(9)]
+		HResult GetUsage(Usage* pUsage);
+
+		[VtblIndex(10)]
+		HResult SetEvictionPriority(ResourcePriority EvictionPriority);
+
+		[VtblIndex(11)]
+		HResult GetEvictionPriority(uint* pEvictionPriority);
 	}
 }
 

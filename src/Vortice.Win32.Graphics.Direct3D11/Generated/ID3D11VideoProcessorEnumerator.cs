@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("31627037-53ab-4200-9061-05faa9ab45f9")]
 [NativeTypeName("struct ID3D11VideoProcessorEnumerator : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11VideoProcessorEnumerator : INativeGuid
+public unsafe partial struct ID3D11VideoProcessorEnumerator : ID3D11VideoProcessorEnumerator.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoProcessorEnumerator
 	{
@@ -152,6 +152,26 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator : INativeGuid
 	public HResult GetVideoProcessorFilterRange(VideoProcessorFilter Filter, VideoProcessorFilterRange* pRange)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator*, VideoProcessorFilter, VideoProcessorFilterRange*, int>)(lpVtbl[12]))((ID3D11VideoProcessorEnumerator*)Unsafe.AsPointer(ref this), Filter, pRange);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetVideoProcessorContentDesc(VideoProcessorContentDescription* pContentDesc);
+
+		[VtblIndex(8)]
+		HResult CheckVideoProcessorFormat(Graphics.Dxgi.Common.Format Format, uint* pFlags);
+
+		[VtblIndex(9)]
+		HResult GetVideoProcessorCaps(VideoProcessorCaps* pCaps);
+
+		[VtblIndex(10)]
+		HResult GetVideoProcessorRateConversionCaps(uint TypeIndex, VideoProcessorRateConversionCaps* pCaps);
+
+		[VtblIndex(11)]
+		HResult GetVideoProcessorCustomRate(uint TypeIndex, uint CustomRateIndex, VideoProcessorCustomRate* pRate);
+
+		[VtblIndex(12)]
+		HResult GetVideoProcessorFilterRange(VideoProcessorFilter Filter, VideoProcessorFilterRange* pRange);
 	}
 }
 

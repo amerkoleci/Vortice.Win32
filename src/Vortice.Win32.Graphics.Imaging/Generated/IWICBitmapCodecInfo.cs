@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("e87a44c4-b76e-4c47-8b09-298eb12a2714")]
 [NativeTypeName("struct IWICBitmapCodecInfo : IWICComponentInfo")]
 [NativeInheritance("IWICComponentInfo")]
-public unsafe partial struct IWICBitmapCodecInfo : INativeGuid
+public unsafe partial struct IWICBitmapCodecInfo : IWICBitmapCodecInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapCodecInfo
 	{
@@ -232,6 +232,44 @@ public unsafe partial struct IWICBitmapCodecInfo : INativeGuid
 	public HResult MatchesMimeType(ushort* wzMimeType, Bool32* pfMatches)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapCodecInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
+	}
+	public interface Interface : IWICComponentInfo.Interface
+	{
+		[VtblIndex(11)]
+		HResult GetContainerFormat(Guid* pguidContainerFormat);
+
+		[VtblIndex(12)]
+		HResult GetPixelFormats(uint cFormats, Guid* pguidPixelFormats, uint* pcActual);
+
+		[VtblIndex(13)]
+		HResult GetColorManagementVersion(uint cchColorManagementVersion, ushort* wzColorManagementVersion, uint* pcchActual);
+
+		[VtblIndex(14)]
+		HResult GetDeviceManufacturer(uint cchDeviceManufacturer, ushort* wzDeviceManufacturer, uint* pcchActual);
+
+		[VtblIndex(15)]
+		HResult GetDeviceModels(uint cchDeviceModels, ushort* wzDeviceModels, uint* pcchActual);
+
+		[VtblIndex(16)]
+		HResult GetMimeTypes(uint cchMimeTypes, ushort* wzMimeTypes, uint* pcchActual);
+
+		[VtblIndex(17)]
+		HResult GetFileExtensions(uint cchFileExtensions, ushort* wzFileExtensions, uint* pcchActual);
+
+		[VtblIndex(18)]
+		HResult DoesSupportAnimation(Bool32* pfSupportAnimation);
+
+		[VtblIndex(19)]
+		HResult DoesSupportChromakey(Bool32* pfSupportChromakey);
+
+		[VtblIndex(20)]
+		HResult DoesSupportLossless(Bool32* pfSupportLossless);
+
+		[VtblIndex(21)]
+		HResult DoesSupportMultiframe(Bool32* pfSupportMultiframe);
+
+		[VtblIndex(22)]
+		HResult MatchesMimeType(ushort* wzMimeType, Bool32* pfMatches);
 	}
 }
 

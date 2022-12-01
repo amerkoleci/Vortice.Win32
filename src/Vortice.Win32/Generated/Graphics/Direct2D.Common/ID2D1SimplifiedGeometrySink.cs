@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D.Common;
 [Guid("2cd9069e-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1SimplifiedGeometrySink : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1SimplifiedGeometrySink : INativeGuid
+public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeometrySink.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SimplifiedGeometrySink
 	{
@@ -128,6 +128,29 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : INativeGuid
 	public HResult Close()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void SetFillMode(FillMode fillMode);
+
+		[VtblIndex(4)]
+		void SetSegmentFlags(PathSegment vertexFlags);
+
+		[VtblIndex(5)]
+		void BeginFigure(System.Drawing.PointF startPoint, FigureBegin figureBegin);
+
+		[VtblIndex(6)]
+		void AddLines(System.Drawing.PointF* points, uint pointsCount);
+
+		[VtblIndex(7)]
+		void AddBeziers(BezierSegment* beziers, uint beziersCount);
+
+		[VtblIndex(8)]
+		void EndFigure(FigureEnd figureEnd);
+
+		[VtblIndex(9)]
+		HResult Close();
 	}
 }
 

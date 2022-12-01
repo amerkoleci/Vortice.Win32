@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("dc102f47-a12d-4b1c-822d-9e117e33043f")]
 [NativeTypeName("struct IDWriteInMemoryFontFileLoader : IDWriteFontFileLoader")]
 [NativeInheritance("IDWriteFontFileLoader")]
-public unsafe partial struct IDWriteInMemoryFontFileLoader : INativeGuid
+public unsafe partial struct IDWriteInMemoryFontFileLoader : IDWriteInMemoryFontFileLoader.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteInMemoryFontFileLoader
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader : INativeGuid
 	public uint GetFileCount()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteInMemoryFontFileLoader*, uint>)(lpVtbl[5]))((IDWriteInMemoryFontFileLoader*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDWriteFontFileLoader.Interface
+	{
+		[VtblIndex(4)]
+		HResult CreateInMemoryFontFileReference(IDWriteFactory* factory, void* fontData, uint fontDataSize, IUnknown* ownerObject, IDWriteFontFile** fontFile);
+
+		[VtblIndex(5)]
+		uint GetFileCount();
 	}
 }
 

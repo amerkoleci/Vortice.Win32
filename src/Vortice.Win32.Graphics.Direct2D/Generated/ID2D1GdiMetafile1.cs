@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2e69f9e8-dd3f-4bf9-95ba-c04f49d788df")]
 [NativeTypeName("struct ID2D1GdiMetafile1 : ID2D1GdiMetafile")]
 [NativeInheritance("ID2D1GdiMetafile")]
-public unsafe partial struct ID2D1GdiMetafile1 : INativeGuid
+public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GdiMetafile1
 	{
@@ -112,6 +112,14 @@ public unsafe partial struct ID2D1GdiMetafile1 : INativeGuid
 	public HResult GetSourceBounds(Common.RectF* bounds)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, Common.RectF*, int>)(lpVtbl[7]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
+	}
+	public interface Interface : ID2D1GdiMetafile.Interface
+	{
+		[VtblIndex(6)]
+		HResult GetDpi(float* dpiX, float* dpiY);
+
+		[VtblIndex(7)]
+		HResult GetSourceBounds(Common.RectF* bounds);
 	}
 }
 

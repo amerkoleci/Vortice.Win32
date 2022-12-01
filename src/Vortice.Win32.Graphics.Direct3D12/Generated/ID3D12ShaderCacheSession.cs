@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("28e2495d-0f64-4ae4-a6ec-129255dc49a8")]
 [NativeTypeName("struct ID3D12ShaderCacheSession : ID3D12DeviceChild")]
 [NativeInheritance("ID3D12DeviceChild")]
-public unsafe partial struct ID3D12ShaderCacheSession : INativeGuid
+public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12ShaderCacheSession
 	{
@@ -145,6 +145,20 @@ public unsafe partial struct ID3D12ShaderCacheSession : INativeGuid
 	{
 		ShaderCacheSessionDescription result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, ShaderCacheSessionDescription*, ShaderCacheSessionDescription*>)(lpVtbl[11]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), &result);
+	}
+	public interface Interface : ID3D12DeviceChild.Interface
+	{
+		[VtblIndex(8)]
+		HResult FindValue(void* pKey, uint KeySize, void* pValue, uint* pValueSize);
+
+		[VtblIndex(9)]
+		HResult StoreValue(void* pKey, uint KeySize, void* pValue, uint ValueSize);
+
+		[VtblIndex(10)]
+		void SetDeleteOnDestroy();
+
+		[VtblIndex(11)]
+		ShaderCacheSessionDescription GetDesc();
 	}
 }
 

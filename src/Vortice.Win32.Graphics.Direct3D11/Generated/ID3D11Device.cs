@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("db6f6ddb-ac77-4e88-8253-819df9bbf140")]
 [NativeTypeName("struct ID3D11Device : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11Device : INativeGuid
+public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Device
 	{
@@ -392,6 +392,128 @@ public unsafe partial struct ID3D11Device : INativeGuid
 	public uint GetExceptionMode()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, uint>)(lpVtbl[42]))((ID3D11Device*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateBuffer(BufferDescription* pDesc, SubresourceData* pInitialData, ID3D11Buffer** ppBuffer);
+
+		[VtblIndex(4)]
+		HResult CreateTexture1D(Texture1DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture1D** ppTexture1D);
+
+		[VtblIndex(5)]
+		HResult CreateTexture2D(Texture2DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture2D** ppTexture2D);
+
+		[VtblIndex(6)]
+		HResult CreateTexture3D(Texture3DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture3D** ppTexture3D);
+
+		[VtblIndex(7)]
+		HResult CreateShaderResourceView(ID3D11Resource* pResource, ShaderResourceViewDescription* pDesc, ID3D11ShaderResourceView** ppSRView);
+
+		[VtblIndex(8)]
+		HResult CreateUnorderedAccessView(ID3D11Resource* pResource, UnorderedAccessViewDescription* pDesc, ID3D11UnorderedAccessView** ppUAView);
+
+		[VtblIndex(9)]
+		HResult CreateRenderTargetView(ID3D11Resource* pResource, RenderTargetViewDescription* pDesc, ID3D11RenderTargetView** ppRTView);
+
+		[VtblIndex(10)]
+		HResult CreateDepthStencilView(ID3D11Resource* pResource, DepthStencilViewDescription* pDesc, ID3D11DepthStencilView** ppDepthStencilView);
+
+		[VtblIndex(11)]
+		HResult CreateInputLayout(InputElementDescription* pInputElementDescs, uint NumElements, void* pShaderBytecodeWithInputSignature, nuint BytecodeLength, ID3D11InputLayout** ppInputLayout);
+
+		[VtblIndex(12)]
+		HResult CreateVertexShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11VertexShader** ppVertexShader);
+
+		[VtblIndex(13)]
+		HResult CreateGeometryShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader);
+
+		[VtblIndex(14)]
+		HResult CreateGeometryShaderWithStreamOutput(void* pShaderBytecode, nuint BytecodeLength, SODeclarationEntry* pSODeclaration, uint NumEntries, uint* pBufferStrides, uint NumStrides, uint RasterizedStream, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader);
+
+		[VtblIndex(15)]
+		HResult CreatePixelShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11PixelShader** ppPixelShader);
+
+		[VtblIndex(16)]
+		HResult CreateHullShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11HullShader** ppHullShader);
+
+		[VtblIndex(17)]
+		HResult CreateDomainShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11DomainShader** ppDomainShader);
+
+		[VtblIndex(18)]
+		HResult CreateComputeShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11ComputeShader** ppComputeShader);
+
+		[VtblIndex(19)]
+		HResult CreateClassLinkage(ID3D11ClassLinkage** ppLinkage);
+
+		[VtblIndex(20)]
+		HResult CreateBlendState(BlendDescription* pBlendStateDesc, ID3D11BlendState** ppBlendState);
+
+		[VtblIndex(21)]
+		HResult CreateDepthStencilState(DepthStencilDescription* pDepthStencilDesc, ID3D11DepthStencilState** ppDepthStencilState);
+
+		[VtblIndex(22)]
+		HResult CreateRasterizerState(RasterizerDescription* pRasterizerDesc, ID3D11RasterizerState** ppRasterizerState);
+
+		[VtblIndex(23)]
+		HResult CreateSamplerState(SamplerDescription* pSamplerDesc, ID3D11SamplerState** ppSamplerState);
+
+		[VtblIndex(24)]
+		HResult CreateQuery(QueryDescription* pQueryDesc, ID3D11Query** ppQuery);
+
+		[VtblIndex(25)]
+		HResult CreatePredicate(QueryDescription* pPredicateDesc, ID3D11Predicate** ppPredicate);
+
+		[VtblIndex(26)]
+		HResult CreateCounter(CounterDescription* pCounterDesc, ID3D11Counter** ppCounter);
+
+		[VtblIndex(27)]
+		HResult CreateDeferredContext(uint ContextFlags, ID3D11DeviceContext** ppDeferredContext);
+
+		[VtblIndex(28)]
+		HResult OpenSharedResource(Handle hResource, Guid* ReturnedInterface, void** ppResource);
+
+		[VtblIndex(29)]
+		HResult CheckFormatSupport(Graphics.Dxgi.Common.Format Format, uint* pFormatSupport);
+
+		[VtblIndex(30)]
+		HResult CheckMultisampleQualityLevels(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint* pNumQualityLevels);
+
+		[VtblIndex(31)]
+		void CheckCounterInfo(CounterInfo* pCounterInfo);
+
+		[VtblIndex(32)]
+		HResult CheckCounter(CounterDescription* pDesc, CounterType* pType, uint* pActiveCounters, byte* szName, uint* pNameLength, byte* szUnits, uint* pUnitsLength, byte* szDescription, uint* pDescriptionLength);
+
+		[VtblIndex(33)]
+		HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
+
+		[VtblIndex(34)]
+		HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData);
+
+		[VtblIndex(35)]
+		HResult SetPrivateData(Guid* guid, uint DataSize, void* pData);
+
+		[VtblIndex(36)]
+		HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData);
+
+		[VtblIndex(37)]
+		Graphics.Direct3D.FeatureLevel GetFeatureLevel();
+
+		[VtblIndex(38)]
+		uint GetCreationFlags();
+
+		[VtblIndex(39)]
+		HResult GetDeviceRemovedReason();
+
+		[VtblIndex(40)]
+		void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext);
+
+		[VtblIndex(41)]
+		HResult SetExceptionMode(uint RaiseFlags);
+
+		[VtblIndex(42)]
+		uint GetExceptionMode();
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("af671749-d241-4db8-8e41-dcc2e5c1a438")]
 [NativeTypeName("struct ID2D1SvgGlyphStyle : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1SvgGlyphStyle : INativeGuid
+public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgGlyphStyle
 	{
@@ -120,6 +120,23 @@ public unsafe partial struct ID2D1SvgGlyphStyle : INativeGuid
 	public void GetStroke(ID2D1Brush** brush, float* strokeWidth, float* dashes, uint dashesCount, float* dashOffset)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, ID2D1Brush**, float*, float*, uint, float*, void>)(lpVtbl[8]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush, strokeWidth, dashes, dashesCount, dashOffset);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetFill(ID2D1Brush* brush);
+
+		[VtblIndex(5)]
+		void GetFill(ID2D1Brush** brush);
+
+		[VtblIndex(6)]
+		HResult SetStroke(ID2D1Brush* brush, float strokeWidth, float* dashes, uint dashesCount, float dashOffset);
+
+		[VtblIndex(7)]
+		uint GetStrokeDashesCount();
+
+		[VtblIndex(8)]
+		void GetStroke(ID2D1Brush** brush, float* strokeWidth, float* dashes, uint dashesCount, float* dashOffset);
 	}
 }
 

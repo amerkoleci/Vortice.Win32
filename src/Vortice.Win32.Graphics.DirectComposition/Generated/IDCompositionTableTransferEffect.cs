@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("9b7e82e2-69c5-4eb4-a5f5-a7033f5132cd")]
 [NativeTypeName("struct IDCompositionTableTransferEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionTableTransferEffect : INativeGuid
+public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTableTransferEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionTableTransferEffect
 	{
@@ -216,6 +216,59 @@ public unsafe partial struct IDCompositionTableTransferEffect : INativeGuid
 	public HResult SetAlphaTableValue(uint index, float value)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[20]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetRedTable(float* tableValues, uint count);
+
+		[VtblIndex(5)]
+		HResult SetGreenTable(float* tableValues, uint count);
+
+		[VtblIndex(6)]
+		HResult SetBlueTable(float* tableValues, uint count);
+
+		[VtblIndex(7)]
+		HResult SetAlphaTable(float* tableValues, uint count);
+
+		[VtblIndex(8)]
+		HResult SetRedDisable(Bool32 redDisable);
+
+		[VtblIndex(9)]
+		HResult SetGreenDisable(Bool32 greenDisable);
+
+		[VtblIndex(10)]
+		HResult SetBlueDisable(Bool32 blueDisable);
+
+		[VtblIndex(11)]
+		HResult SetAlphaDisable(Bool32 alphaDisable);
+
+		[VtblIndex(12)]
+		HResult SetClampOutput(Bool32 clampOutput);
+
+		[VtblIndex(13)]
+		HResult SetRedTableValue(uint index, IDCompositionAnimation* animation);
+
+		[VtblIndex(14)]
+		HResult SetRedTableValue(uint index, float value);
+
+		[VtblIndex(15)]
+		HResult SetGreenTableValue(uint index, IDCompositionAnimation* animation);
+
+		[VtblIndex(16)]
+		HResult SetGreenTableValue(uint index, float value);
+
+		[VtblIndex(17)]
+		HResult SetBlueTableValue(uint index, IDCompositionAnimation* animation);
+
+		[VtblIndex(18)]
+		HResult SetBlueTableValue(uint index, float value);
+
+		[VtblIndex(19)]
+		HResult SetAlphaTableValue(uint index, IDCompositionAnimation* animation);
+
+		[VtblIndex(20)]
+		HResult SetAlphaTableValue(uint index, float value);
 	}
 }
 

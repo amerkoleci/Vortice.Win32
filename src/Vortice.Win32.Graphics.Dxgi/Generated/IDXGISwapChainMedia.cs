@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("dd95b90b-f05f-4f6a-bd65-25bfb264bd84")]
 [NativeTypeName("struct IDXGISwapChainMedia : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGISwapChainMedia : INativeGuid
+public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISwapChainMedia
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IDXGISwapChainMedia : INativeGuid
 	public HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint, uint*, uint*, int>)(lpVtbl[5]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), DesiredPresentDuration, pClosestSmallerPresentDuration, pClosestLargerPresentDuration);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetFrameStatisticsMedia(FrameStatisticsMedia* pStats);
+
+		[VtblIndex(4)]
+		HResult SetPresentDuration(uint Duration);
+
+		[VtblIndex(5)]
+		HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("0b74b9e8-cdd6-492f-bbbc-5ed32157026d")]
 [NativeTypeName("struct IDCompositionAffineTransform2DEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionAffineTransform2DEffect : INativeGuid
+public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositionAffineTransform2DEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionAffineTransform2DEffect
 	{
@@ -136,6 +136,29 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : INativeGuid
 	public HResult SetSharpness(float sharpness)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, float, int>)(lpVtbl[10]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), sharpness);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetInterpolationMode(Graphics.Direct2D.Common.AffineTransform2DInterpolationMode interpolationMode);
+
+		[VtblIndex(5)]
+		HResult SetBorderMode(Graphics.Direct2D.Common.BorderMode borderMode);
+
+		[VtblIndex(6)]
+		HResult SetTransformMatrix(Matrix3x2* transformMatrix);
+
+		[VtblIndex(7)]
+		HResult SetTransformMatrixElement(int row, int column, IDCompositionAnimation* animation);
+
+		[VtblIndex(8)]
+		HResult SetTransformMatrixElement(int row, int column, float value);
+
+		[VtblIndex(9)]
+		HResult SetSharpness(IDCompositionAnimation* animation);
+
+		[VtblIndex(10)]
+		HResult SetSharpness(float sharpness);
 	}
 }
 

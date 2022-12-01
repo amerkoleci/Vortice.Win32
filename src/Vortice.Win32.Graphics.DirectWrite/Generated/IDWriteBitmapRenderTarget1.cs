@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("791e8298-3ef3-4230-9880-c9bdecc42064")]
 [NativeTypeName("struct IDWriteBitmapRenderTarget1 : IDWriteBitmapRenderTarget")]
 [NativeInheritance("IDWriteBitmapRenderTarget")]
-public unsafe partial struct IDWriteBitmapRenderTarget1 : INativeGuid
+public unsafe partial struct IDWriteBitmapRenderTarget1 : IDWriteBitmapRenderTarget1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteBitmapRenderTarget1
 	{
@@ -152,6 +152,14 @@ public unsafe partial struct IDWriteBitmapRenderTarget1 : INativeGuid
 	public HResult SetTextAntialiasMode(TextAntialiasMode antialiasMode)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, TextAntialiasMode, int>)(lpVtbl[12]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), antialiasMode);
+	}
+	public interface Interface : IDWriteBitmapRenderTarget.Interface
+	{
+		[VtblIndex(11)]
+		TextAntialiasMode GetTextAntialiasMode();
+
+		[VtblIndex(12)]
+		HResult SetTextAntialiasMode(TextAntialiasMode antialiasMode);
 	}
 }
 

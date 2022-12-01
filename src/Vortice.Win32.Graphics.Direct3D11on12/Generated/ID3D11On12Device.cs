@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11on12;
 [Guid("85611e73-70a9-490e-9614-a9e302777904")]
 [NativeTypeName("struct ID3D11On12Device : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11On12Device : INativeGuid
+public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11On12Device
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct ID3D11On12Device : INativeGuid
 	public void AcquireWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11On12Device*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[5]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), ppResources, NumResources);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateWrappedResource(IUnknown* pResource12, ResourceFlags* pFlags11, Graphics.Direct3D12.ResourceStates InState, Graphics.Direct3D12.ResourceStates OutState, Guid* riid, void** ppResource11);
+
+		[VtblIndex(4)]
+		void ReleaseWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources);
+
+		[VtblIndex(5)]
+		void AcquireWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("affaa4ca-63fe-4d8e-b8ad-159000af4304")]
 [NativeTypeName("struct ID3D12Debug1 : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12Debug1 : INativeGuid
+public unsafe partial struct ID3D12Debug1 : ID3D12Debug1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Debug1
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct ID3D12Debug1 : INativeGuid
 	public void SetEnableSynchronizedCommandQueueValidation(Bool32 Enable)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12Debug1*, Bool32, void>)(lpVtbl[5]))((ID3D12Debug1*)Unsafe.AsPointer(ref this), Enable);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void EnableDebugLayer();
+
+		[VtblIndex(4)]
+		void SetEnableGPUBasedValidation(Bool32 Enable);
+
+		[VtblIndex(5)]
+		void SetEnableSynchronizedCommandQueueValidation(Bool32 Enable);
 	}
 }
 

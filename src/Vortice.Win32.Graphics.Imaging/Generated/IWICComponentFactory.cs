@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("412d0c3a-9650-44fa-af5b-dd2a06c8e8fb")]
 [NativeTypeName("struct IWICComponentFactory : IWICImagingFactory")]
 [NativeInheritance("IWICImagingFactory")]
-public unsafe partial struct IWICComponentFactory : INativeGuid
+public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICComponentFactory
 	{
@@ -77,9 +77,9 @@ public unsafe partial struct IWICComponentFactory : INativeGuid
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromFilename" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateDecoderFromFilename(ushort* wzFilename, Guid* pguidVendor, uint dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
+	public HResult CreateDecoderFromFilename(ushort* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, ushort*, Guid*, uint, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, ushort*, Guid*, uint, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, (uint)dwDesiredAccess, metadataOptions, ppIDecoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromStream" />
@@ -328,6 +328,29 @@ public unsafe partial struct IWICComponentFactory : INativeGuid
 	public HResult CreateEncoderPropertyBag(Com.PropertyBagMetadata** ppropOptions, uint cCount, Com.IPropertyBag2** ppIPropertyBag)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Com.PropertyBagMetadata**, uint, Com.IPropertyBag2**, int>)(lpVtbl[34]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppropOptions, cCount, ppIPropertyBag);
+	}
+	public interface Interface : IWICImagingFactory.Interface
+	{
+		[VtblIndex(28)]
+		HResult CreateMetadataReader(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader** ppIReader);
+
+		[VtblIndex(29)]
+		HResult CreateMetadataReaderFromContainer(Guid* guidContainerFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader** ppIReader);
+
+		[VtblIndex(30)]
+		HResult CreateMetadataWriter(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwMetadataOptions, IWICMetadataWriter** ppIWriter);
+
+		[VtblIndex(31)]
+		HResult CreateMetadataWriterFromReader(IWICMetadataReader* pIReader, Guid* pguidVendor, IWICMetadataWriter** ppIWriter);
+
+		[VtblIndex(32)]
+		HResult CreateQueryReaderFromBlockReader(IWICMetadataBlockReader* pIBlockReader, IWICMetadataQueryReader** ppIQueryReader);
+
+		[VtblIndex(33)]
+		HResult CreateQueryWriterFromBlockWriter(IWICMetadataBlockWriter* pIBlockWriter, IWICMetadataQueryWriter** ppIQueryWriter);
+
+		[VtblIndex(34)]
+		HResult CreateEncoderPropertyBag(Com.PropertyBagMetadata** ppropOptions, uint cCount, Com.IPropertyBag2** ppIPropertyBag);
 	}
 }
 

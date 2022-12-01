@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("de5fa827-9bf9-4f26-89ff-d7f56fde3860")]
 [NativeTypeName("struct ID3D12StateObjectProperties : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12StateObjectProperties : INativeGuid
+public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProperties.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12StateObjectProperties
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct ID3D12StateObjectProperties : INativeGuid
 	public void SetPipelineStackSize(ulong PipelineStackSizeInBytes)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ulong, void>)(lpVtbl[6]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), PipelineStackSizeInBytes);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void* GetShaderIdentifier(ushort* pExportName);
+
+		[VtblIndex(4)]
+		ulong GetShaderStackSize(ushort* pExportName);
+
+		[VtblIndex(5)]
+		ulong GetPipelineStackSize();
+
+		[VtblIndex(6)]
+		void SetPipelineStackSize(ulong PipelineStackSizeInBytes);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906c1-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1TessellationSink : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1TessellationSink : INativeGuid
+public unsafe partial struct ID2D1TessellationSink : ID2D1TessellationSink.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1TessellationSink
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID2D1TessellationSink : INativeGuid
 	public HResult Close()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1TessellationSink*, int>)(lpVtbl[4]))((ID2D1TessellationSink*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void AddTriangles(Triangle* triangles, uint trianglesCount);
+
+		[VtblIndex(4)]
+		HResult Close();
 	}
 }
 

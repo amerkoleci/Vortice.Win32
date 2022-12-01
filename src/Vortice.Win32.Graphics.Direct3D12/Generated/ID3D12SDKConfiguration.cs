@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("e9eb5314-33aa-42b2-a718-d77f58b1f1c7")]
 [NativeTypeName("struct ID3D12SDKConfiguration : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12SDKConfiguration : INativeGuid
+public unsafe partial struct ID3D12SDKConfiguration : ID3D12SDKConfiguration.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12SDKConfiguration
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID3D12SDKConfiguration : INativeGuid
 	public HResult SetSDKVersion(uint SDKVersion, sbyte* SDKPath)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration*, uint, sbyte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetSDKVersion(uint SDKVersion, sbyte* SDKPath);
 	}
 }
 

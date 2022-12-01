@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("8754318e-d3a9-4541-98cf-645b50dc4874")]
 [NativeTypeName("struct ID3D12GraphicsCommandList4 : ID3D12GraphicsCommandList3")]
 [NativeInheritance("ID3D12GraphicsCommandList3")]
-public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
+public unsafe partial struct ID3D12GraphicsCommandList4 : ID3D12GraphicsCommandList4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12GraphicsCommandList4
 	{
@@ -664,6 +664,35 @@ public unsafe partial struct ID3D12GraphicsCommandList4 : INativeGuid
 	public void DispatchRays(DispatchRaysDescription* pDesc)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList4*, DispatchRaysDescription*, void>)(lpVtbl[76]))((ID3D12GraphicsCommandList4*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : ID3D12GraphicsCommandList3.Interface
+	{
+		[VtblIndex(68)]
+		void BeginRenderPass(uint NumRenderTargets, RenderPassRenderTargetDescription* pRenderTargets, RenderPassDepthStencilDescription* pDepthStencil, RenderPassFlags Flags);
+
+		[VtblIndex(69)]
+		void EndRenderPass();
+
+		[VtblIndex(70)]
+		void InitializeMetaCommand(ID3D12MetaCommand* pMetaCommand, void* pInitializationParametersData, nuint InitializationParametersDataSizeInBytes);
+
+		[VtblIndex(71)]
+		void ExecuteMetaCommand(ID3D12MetaCommand* pMetaCommand, void* pExecutionParametersData, nuint ExecutionParametersDataSizeInBytes);
+
+		[VtblIndex(72)]
+		void BuildRaytracingAccelerationStructure(BuildRaytracingAccelerationStructureDescription* pDesc, uint NumPostbuildInfoDescs, RaytracingAccelerationStructurePostbuildInfoDescription* pPostbuildInfoDescs);
+
+		[VtblIndex(73)]
+		void EmitRaytracingAccelerationStructurePostbuildInfo(RaytracingAccelerationStructurePostbuildInfoDescription* pDesc, uint NumSourceAccelerationStructures, ulong* pSourceAccelerationStructureData);
+
+		[VtblIndex(74)]
+		void CopyRaytracingAccelerationStructure(ulong DestAccelerationStructureData, ulong SourceAccelerationStructureData, RaytracingAccelerationStructureCopyMode Mode);
+
+		[VtblIndex(75)]
+		void SetPipelineState1(ID3D12StateObject* pStateObject);
+
+		[VtblIndex(76)]
+		void DispatchRays(DispatchRaysDescription* pDesc);
 	}
 }
 

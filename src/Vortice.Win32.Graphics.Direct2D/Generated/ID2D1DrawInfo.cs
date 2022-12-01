@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("693ce632-7f2f-45de-93fe-18d88b37aa21")]
 [NativeTypeName("struct ID2D1DrawInfo : ID2D1RenderInfo")]
 [NativeInheritance("ID2D1RenderInfo")]
-public unsafe partial struct ID2D1DrawInfo : INativeGuid
+public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DrawInfo
 	{
@@ -144,6 +144,23 @@ public unsafe partial struct ID2D1DrawInfo : INativeGuid
 	public HResult SetVertexProcessing(ID2D1VertexBuffer* vertexBuffer, VertexOptions vertexOptions, BlendDescription* blendDescription, VertexRange* vertexRange, Guid* vertexShader)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawInfo*, ID2D1VertexBuffer*, VertexOptions, BlendDescription*, VertexRange*, Guid*, int>)(lpVtbl[11]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), vertexBuffer, vertexOptions, blendDescription, vertexRange, vertexShader);
+	}
+	public interface Interface : ID2D1RenderInfo.Interface
+	{
+		[VtblIndex(7)]
+		HResult SetPixelShaderConstantBuffer(byte* buffer, uint bufferCount);
+
+		[VtblIndex(8)]
+		HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture);
+
+		[VtblIndex(9)]
+		HResult SetVertexShaderConstantBuffer(byte* buffer, uint bufferCount);
+
+		[VtblIndex(10)]
+		HResult SetPixelShader(Guid* shaderId, PixelOptions pixelOptions);
+
+		[VtblIndex(11)]
+		HResult SetVertexProcessing(ID2D1VertexBuffer* vertexBuffer, VertexOptions vertexOptions, BlendDescription* blendDescription, VertexRange* vertexRange, Guid* vertexShader);
 	}
 }
 

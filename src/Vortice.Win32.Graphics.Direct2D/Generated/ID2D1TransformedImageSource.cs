@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("7f1f79e5-2796-416c-8f55-700f911445e5")]
 [NativeTypeName("struct ID2D1TransformedImageSource : ID2D1Image")]
 [NativeInheritance("ID2D1Image")]
-public unsafe partial struct ID2D1TransformedImageSource : INativeGuid
+public unsafe partial struct ID2D1TransformedImageSource : ID2D1TransformedImageSource.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1TransformedImageSource
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct ID2D1TransformedImageSource : INativeGuid
 	public void GetProperties(TransformedImageSourceProperties* properties)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1TransformedImageSource*, TransformedImageSourceProperties*, void>)(lpVtbl[5]))((ID2D1TransformedImageSource*)Unsafe.AsPointer(ref this), properties);
+	}
+	public interface Interface : ID2D1Image.Interface
+	{
+		[VtblIndex(4)]
+		void GetSource(ID2D1ImageSource** imageSource);
+
+		[VtblIndex(5)]
+		void GetProperties(TransformedImageSourceProperties* properties);
 	}
 }
 

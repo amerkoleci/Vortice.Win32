@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("c095e4f4-bb98-43d6-9745-4d1b84ec9888")]
 [NativeTypeName("struct ID2D1SvgPathData : ID2D1SvgAttribute")]
 [NativeInheritance("ID2D1SvgAttribute")]
-public unsafe partial struct ID2D1SvgPathData : INativeGuid
+public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgPathData
 	{
@@ -168,6 +168,35 @@ public unsafe partial struct ID2D1SvgPathData : INativeGuid
 	public HResult CreatePathGeometry(Common.FillMode fillMode, ID2D1PathGeometry1** pathGeometry)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, Common.FillMode, ID2D1PathGeometry1**, int>)(lpVtbl[14]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), fillMode, pathGeometry);
+	}
+	public interface Interface : ID2D1SvgAttribute.Interface
+	{
+		[VtblIndex(6)]
+		HResult RemoveSegmentDataAtEnd(uint dataCount);
+
+		[VtblIndex(7)]
+		HResult UpdateSegmentData(float* data, uint dataCount, uint startIndex);
+
+		[VtblIndex(8)]
+		HResult GetSegmentData(float* data, uint dataCount, uint startIndex);
+
+		[VtblIndex(9)]
+		uint GetSegmentDataCount();
+
+		[VtblIndex(10)]
+		HResult RemoveCommandsAtEnd(uint commandsCount);
+
+		[VtblIndex(11)]
+		HResult UpdateCommands(SvgPathCommand* commands, uint commandsCount, uint startIndex);
+
+		[VtblIndex(12)]
+		HResult GetCommands(SvgPathCommand* commands, uint commandsCount, uint startIndex);
+
+		[VtblIndex(13)]
+		uint GetCommandsCount();
+
+		[VtblIndex(14)]
+		HResult CreatePathGeometry(Common.FillMode fillMode, ID2D1PathGeometry1** pathGeometry);
 	}
 }
 

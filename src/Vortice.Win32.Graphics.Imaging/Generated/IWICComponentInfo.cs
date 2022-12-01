@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("23bc3f0a-698b-4357-886b-f24d50671334")]
 [NativeTypeName("struct IWICComponentInfo : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICComponentInfo : INativeGuid
+public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICComponentInfo
 	{
@@ -136,6 +136,32 @@ public unsafe partial struct IWICComponentInfo : INativeGuid
 	public HResult GetFriendlyName(uint cchFriendlyName, ushort* wzFriendlyName, uint* pcchActual)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetComponentType(WICComponentType* pType);
+
+		[VtblIndex(4)]
+		HResult GetCLSID(Guid* pclsid);
+
+		[VtblIndex(5)]
+		HResult GetSigningStatus(uint* pStatus);
+
+		[VtblIndex(6)]
+		HResult GetAuthor(uint cchAuthor, ushort* wzAuthor, uint* pcchActual);
+
+		[VtblIndex(7)]
+		HResult GetVendorGUID(Guid* pguidVendor);
+
+		[VtblIndex(8)]
+		HResult GetVersion(uint cchVersion, ushort* wzVersion, uint* pcchActual);
+
+		[VtblIndex(9)]
+		HResult GetSpecVersion(uint cchSpecVersion, ushort* wzSpecVersion, uint* pcchActual);
+
+		[VtblIndex(10)]
+		HResult GetFriendlyName(uint cchFriendlyName, ushort* wzFriendlyName, uint* pcchActual);
 	}
 }
 

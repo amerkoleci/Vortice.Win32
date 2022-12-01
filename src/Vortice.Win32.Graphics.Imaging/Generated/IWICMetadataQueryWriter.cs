@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("a721791a-0def-4d06-bd91-2118bf1db10b")]
 [NativeTypeName("struct IWICMetadataQueryWriter : IWICMetadataQueryReader")]
 [NativeInheritance("IWICMetadataQueryReader")]
-public unsafe partial struct IWICMetadataQueryWriter : INativeGuid
+public unsafe partial struct IWICMetadataQueryWriter : IWICMetadataQueryWriter.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataQueryWriter
 	{
@@ -120,6 +120,14 @@ public unsafe partial struct IWICMetadataQueryWriter : INativeGuid
 	public HResult RemoveMetadataByName(ushort* wzName)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryWriter*, ushort*, int>)(lpVtbl[8]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName);
+	}
+	public interface Interface : IWICMetadataQueryReader.Interface
+	{
+		[VtblIndex(7)]
+		HResult SetMetadataByName(ushort* wzName, Com.Variant* pvarValue);
+
+		[VtblIndex(8)]
+		HResult RemoveMetadataByName(ushort* wzName);
 	}
 }
 

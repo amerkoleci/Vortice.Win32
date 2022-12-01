@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("54d7898a-a061-40a7-bec7-e465bcba2c4f")]
 [NativeTypeName("struct ID2D1CommandSink : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1CommandSink : INativeGuid
+public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1CommandSink
 	{
@@ -272,6 +272,83 @@ public unsafe partial struct ID2D1CommandSink : INativeGuid
 	public HResult PopLayer()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, int>)(lpVtbl[27]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult BeginDraw();
+
+		[VtblIndex(4)]
+		HResult EndDraw();
+
+		[VtblIndex(5)]
+		HResult SetAntialiasMode(AntialiasMode antialiasMode);
+
+		[VtblIndex(6)]
+		HResult SetTags(ulong tag1, ulong tag2);
+
+		[VtblIndex(7)]
+		HResult SetTextAntialiasMode(TextAntialiasMode textAntialiasMode);
+
+		[VtblIndex(8)]
+		HResult SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams);
+
+		[VtblIndex(9)]
+		HResult SetTransform(Matrix3x2* transform);
+
+		[VtblIndex(10)]
+		HResult SetPrimitiveBlend(PrimitiveBlend primitiveBlend);
+
+		[VtblIndex(11)]
+		HResult SetUnitMode(UnitMode unitMode);
+
+		[VtblIndex(12)]
+		HResult Clear(Color4* color);
+
+		[VtblIndex(13)]
+		HResult DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode);
+
+		[VtblIndex(14)]
+		HResult DrawLine(System.Drawing.PointF point0, System.Drawing.PointF point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+		[VtblIndex(15)]
+		HResult DrawGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+		[VtblIndex(16)]
+		HResult DrawRectangle(Common.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+		[VtblIndex(17)]
+		HResult DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Common.RectF* sourceRectangle, Matrix4x4* perspectiveTransform);
+
+		[VtblIndex(18)]
+		HResult DrawImage(ID2D1Image* image, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode);
+
+		[VtblIndex(19)]
+		HResult DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, System.Drawing.PointF* targetOffset);
+
+		[VtblIndex(20)]
+		HResult FillMesh(ID2D1Mesh* mesh, ID2D1Brush* brush);
+
+		[VtblIndex(21)]
+		HResult FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle);
+
+		[VtblIndex(22)]
+		HResult FillGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, ID2D1Brush* opacityBrush);
+
+		[VtblIndex(23)]
+		HResult FillRectangle(Common.RectF* rect, ID2D1Brush* brush);
+
+		[VtblIndex(24)]
+		HResult PushAxisAlignedClip(Common.RectF* clipRect, AntialiasMode antialiasMode);
+
+		[VtblIndex(25)]
+		HResult PushLayer(LayerParameters1* layerParameters1, ID2D1Layer* layer);
+
+		[VtblIndex(26)]
+		HResult PopAxisAlignedClip();
+
+		[VtblIndex(27)]
+		HResult PopLayer();
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("29748ed6-8c9c-4a6a-be0b-d912e8538944")]
 [NativeTypeName("struct IDWriteFont3 : IDWriteFont2")]
 [NativeInheritance("IDWriteFont2")]
-public unsafe partial struct IDWriteFont3 : INativeGuid
+public unsafe partial struct IDWriteFont3 : IDWriteFont3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFont3
 	{
@@ -240,6 +240,23 @@ public unsafe partial struct IDWriteFont3 : INativeGuid
 	public Locality GetLocality()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont3*, Locality>)(lpVtbl[23]))((IDWriteFont3*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDWriteFont2.Interface
+	{
+		[VtblIndex(19)]
+		HResult CreateFontFace(IDWriteFontFace3** fontFace);
+
+		[VtblIndex(20)]
+		Bool32 Equals(IDWriteFont* font);
+
+		[VtblIndex(21)]
+		HResult GetFontFaceReference(IDWriteFontFaceReference** fontFaceReference);
+
+		[VtblIndex(22)]
+		Bool32 HasCharacter(uint unicodeValue);
+
+		[VtblIndex(23)]
+		Locality GetLocality();
 	}
 }
 

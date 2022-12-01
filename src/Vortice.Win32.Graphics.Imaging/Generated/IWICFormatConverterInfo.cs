@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("9f34fb65-13f4-4f15-bc57-3726b5e53d9f")]
 [NativeTypeName("struct IWICFormatConverterInfo : IWICComponentInfo")]
 [NativeInheritance("IWICComponentInfo")]
-public unsafe partial struct IWICFormatConverterInfo : INativeGuid
+public unsafe partial struct IWICFormatConverterInfo : IWICFormatConverterInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICFormatConverterInfo
 	{
@@ -152,6 +152,14 @@ public unsafe partial struct IWICFormatConverterInfo : INativeGuid
 	public HResult CreateInstance(IWICFormatConverter** ppIConverter)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICFormatConverterInfo*, IWICFormatConverter**, int>)(lpVtbl[12]))((IWICFormatConverterInfo*)Unsafe.AsPointer(ref this), ppIConverter);
+	}
+	public interface Interface : IWICComponentInfo.Interface
+	{
+		[VtblIndex(11)]
+		HResult GetPixelFormats(uint cFormats, Guid* pPixelFormatGUIDs, uint* pcActual);
+
+		[VtblIndex(12)]
+		HResult CreateInstance(IWICFormatConverter** ppIConverter);
 	}
 }
 

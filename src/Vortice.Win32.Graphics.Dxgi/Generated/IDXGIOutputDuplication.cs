@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("191cfac3-a341-470d-b26e-a864f428319c")]
 [NativeTypeName("struct IDXGIOutputDuplication : IDXGIObject")]
 [NativeInheritance("IDXGIObject")]
-public unsafe partial struct IDXGIOutputDuplication : INativeGuid
+public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutputDuplication
 	{
@@ -168,6 +168,32 @@ public unsafe partial struct IDXGIOutputDuplication : INativeGuid
 	public HResult ReleaseFrame()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, int>)(lpVtbl[14]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDXGIObject.Interface
+	{
+		[VtblIndex(7)]
+		void GetDesc(OutduplDescription* pDesc);
+
+		[VtblIndex(8)]
+		HResult AcquireNextFrame(uint TimeoutInMilliseconds, OutduplFrameInfo* pFrameInfo, IDXGIResource** ppDesktopResource);
+
+		[VtblIndex(9)]
+		HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, RawRect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired);
+
+		[VtblIndex(10)]
+		HResult GetFrameMoveRects(uint MoveRectsBufferSize, OutduplMoveRect* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired);
+
+		[VtblIndex(11)]
+		HResult GetFramePointerShape(uint PointerShapeBufferSize, void* pPointerShapeBuffer, uint* pPointerShapeBufferSizeRequired, OutduplPointerShapeInfo* pPointerShapeInfo);
+
+		[VtblIndex(12)]
+		HResult MapDesktopSurface(MappedRect* pLockedRect);
+
+		[VtblIndex(13)]
+		HResult UnMapDesktopSurface();
+
+		[VtblIndex(14)]
+		HResult ReleaseFrame();
 	}
 }
 

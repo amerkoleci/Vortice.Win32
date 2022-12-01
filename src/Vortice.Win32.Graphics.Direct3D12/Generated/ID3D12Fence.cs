@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("0a753dcf-c4d8-4b91-adf6-be5a60d95a76")]
 [NativeTypeName("struct ID3D12Fence : ID3D12Pageable")]
 [NativeInheritance("ID3D12Pageable")]
-public unsafe partial struct ID3D12Fence : INativeGuid
+public unsafe partial struct ID3D12Fence : ID3D12Fence.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Fence
 	{
@@ -136,6 +136,17 @@ public unsafe partial struct ID3D12Fence : INativeGuid
 	public HResult Signal(ulong Value)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Fence*, ulong, int>)(lpVtbl[10]))((ID3D12Fence*)Unsafe.AsPointer(ref this), Value);
+	}
+	public interface Interface : ID3D12Pageable.Interface
+	{
+		[VtblIndex(8)]
+		ulong GetCompletedValue();
+
+		[VtblIndex(9)]
+		HResult SetEventOnCompletion(ulong Value, Handle hEvent);
+
+		[VtblIndex(10)]
+		HResult Signal(ulong Value);
 	}
 }
 

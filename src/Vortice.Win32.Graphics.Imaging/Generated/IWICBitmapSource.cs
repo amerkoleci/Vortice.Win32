@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("00000120-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmapSource : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICBitmapSource : INativeGuid
+public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapSource
 	{
@@ -112,6 +112,23 @@ public unsafe partial struct IWICBitmapSource : INativeGuid
 	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSource*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetSize(uint* puiWidth, uint* puiHeight);
+
+		[VtblIndex(4)]
+		HResult GetPixelFormat(Guid* pPixelFormat);
+
+		[VtblIndex(5)]
+		HResult GetResolution(double* pDpiX, double* pDpiY);
+
+		[VtblIndex(6)]
+		HResult CopyPalette(IWICPalette* pIPalette);
+
+		[VtblIndex(7)]
+		HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer);
 	}
 }
 

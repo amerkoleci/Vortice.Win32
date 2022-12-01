@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("c70b221b-40e4-4a17-89af-025a0727a6dc")]
 [NativeTypeName("struct ID3D12Device6 : ID3D12Device5")]
 [NativeInheritance("ID3D12Device5")]
-public unsafe partial struct ID3D12Device6 : INativeGuid
+public unsafe partial struct ID3D12Device6 : ID3D12Device6.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device6
 	{
@@ -580,6 +580,11 @@ public unsafe partial struct ID3D12Device6 : INativeGuid
 	public HResult SetBackgroundProcessingMode(BackgroundProcessingMode Mode, MeasurementsAction MeasurementsAction, Handle hEventToSignalUponCompletion, Bool32* pbFurtherMeasurementsDesired)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, BackgroundProcessingMode, MeasurementsAction, Handle, Bool32*, int>)(lpVtbl[65]))((ID3D12Device6*)Unsafe.AsPointer(ref this), Mode, MeasurementsAction, hEventToSignalUponCompletion, pbFurtherMeasurementsDesired);
+	}
+	public interface Interface : ID3D12Device5.Interface
+	{
+		[VtblIndex(65)]
+		HResult SetBackgroundProcessingMode(BackgroundProcessingMode Mode, MeasurementsAction MeasurementsAction, Handle hEventToSignalUponCompletion, Bool32* pbFurtherMeasurementsDesired);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("27f2a904-4eb8-441d-9678-0563f53e3e2f")]
 [NativeTypeName("struct IDWriteFontFace4 : IDWriteFontFace3")]
 [NativeInheritance("IDWriteFontFace3")]
-public unsafe partial struct IDWriteFontFace4 : INativeGuid
+public unsafe partial struct IDWriteFontFace4 : IDWriteFontFace4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFace4
 	{
@@ -472,6 +472,20 @@ public unsafe partial struct IDWriteFontFace4 : INativeGuid
 	public void ReleaseGlyphImageData(void* glyphDataContext)
 	{
 		((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, void*, void>)(lpVtbl[52]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this), glyphDataContext);
+	}
+	public interface Interface : IDWriteFontFace3.Interface
+	{
+		[VtblIndex(49)]
+		HResult GetGlyphImageFormats(ushort glyphId, uint pixelsPerEmFirst, uint pixelsPerEmLast, GlyphImageFormats* glyphImageFormats);
+
+		[VtblIndex(50)]
+		GlyphImageFormats GetGlyphImageFormats();
+
+		[VtblIndex(51)]
+		HResult GetGlyphImageData(ushort glyphId, uint pixelsPerEm, GlyphImageFormats glyphImageFormat, GlyphImageData* glyphData, void** glyphDataContext);
+
+		[VtblIndex(52)]
+		void ReleaseGlyphImageData(void* glyphDataContext);
 	}
 }
 

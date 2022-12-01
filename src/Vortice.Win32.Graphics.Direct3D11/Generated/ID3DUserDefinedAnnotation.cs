@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("b2daad8b-03d4-4dbf-95eb-32ab4b63d0ab")]
 [NativeTypeName("struct ID3DUserDefinedAnnotation : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DUserDefinedAnnotation : INativeGuid
+public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotation.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3DUserDefinedAnnotation
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct ID3DUserDefinedAnnotation : INativeGuid
 	public Bool32 GetStatus()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, Bool32>)(lpVtbl[6]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		int BeginEvent(ushort* Name);
+
+		[VtblIndex(4)]
+		int EndEvent();
+
+		[VtblIndex(5)]
+		void SetMarker(ushort* Name);
+
+		[VtblIndex(6)]
+		Bool32 GetStatus();
 	}
 }
 

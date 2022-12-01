@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D;
 [Guid("a06eb39a-50da-425b-8c31-4eecd6c270f3")]
 [NativeTypeName("struct ID3DDestructionNotifier : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DDestructionNotifier : INativeGuid
+public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3DDestructionNotifier
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID3DDestructionNotifier : INativeGuid
 	public HResult UnregisterDestructionCallback(uint callbackID)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, uint, int>)(lpVtbl[4]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackID);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult RegisterDestructionCallback(delegate* unmanaged[Stdcall]<void*, void> callbackFn, void* pData, uint* pCallbackID);
+
+		[VtblIndex(4)]
+		HResult UnregisterDestructionCallback(uint callbackID);
 	}
 }
 

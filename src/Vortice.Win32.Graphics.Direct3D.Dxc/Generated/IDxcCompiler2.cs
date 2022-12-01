@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("a005a9d9-b8bb-4594-b5c9-0e633bec4d37")]
 [NativeTypeName("struct IDxcCompiler2 : IDxcCompiler")]
 [NativeInheritance("IDxcCompiler")]
-public unsafe partial struct IDxcCompiler2 : INativeGuid
+public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcCompiler2
 	{
@@ -102,6 +102,11 @@ public unsafe partial struct IDxcCompiler2 : INativeGuid
 	public HResult CompileWithDebug(IDxcBlob* pSource, ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult, ushort** ppDebugBlobName, IDxcBlob** ppDebugBlob)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler2*, IDxcBlob*, ushort*, ushort*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, ushort**, IDxcBlob**, int>)(lpVtbl[6]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), pSource, pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, pIncludeHandler, ppResult, ppDebugBlobName, ppDebugBlob);
+	}
+	public interface Interface : IDxcCompiler.Interface
+	{
+		[VtblIndex(6)]
+		HResult CompileWithDebug(IDxcBlob* pSource, ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult, ushort** ppDebugBlobName, IDxcBlob** ppDebugBlob);
 	}
 }
 

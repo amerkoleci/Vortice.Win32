@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("13d29038-c3e6-4034-9081-13b53a417992")]
 [NativeTypeName("struct ID2D1TransformGraph : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1TransformGraph : INativeGuid
+public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1TransformGraph
 	{
@@ -144,6 +144,35 @@ public unsafe partial struct ID2D1TransformGraph : INativeGuid
 	public HResult SetPassthroughGraph(uint effectInputIndex)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint, int>)(lpVtbl[11]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), effectInputIndex);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		uint GetInputCount();
+
+		[VtblIndex(4)]
+		HResult SetSingleTransformNode(ID2D1TransformNode* node);
+
+		[VtblIndex(5)]
+		HResult AddNode(ID2D1TransformNode* node);
+
+		[VtblIndex(6)]
+		HResult RemoveNode(ID2D1TransformNode* node);
+
+		[VtblIndex(7)]
+		HResult SetOutputNode(ID2D1TransformNode* node);
+
+		[VtblIndex(8)]
+		HResult ConnectNode(ID2D1TransformNode* fromNode, ID2D1TransformNode* toNode, uint toNodeInputIndex);
+
+		[VtblIndex(9)]
+		HResult ConnectToEffectInput(uint toEffectInputIndex, ID2D1TransformNode* node, uint toNodeInputIndex);
+
+		[VtblIndex(10)]
+		void Clear();
+
+		[VtblIndex(11)]
+		HResult SetPassthroughGraph(uint effectInputIndex);
 	}
 }
 

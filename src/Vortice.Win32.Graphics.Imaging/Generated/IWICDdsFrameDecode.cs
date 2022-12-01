@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("3d4c0c61-18a4-41e4-bd80-481a4fc9f464")]
 [NativeTypeName("struct IWICDdsFrameDecode : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICDdsFrameDecode : INativeGuid
+public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICDdsFrameDecode
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IWICDdsFrameDecode : INativeGuid
 	public HResult CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[5]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), prcBoundsInBlocks, cbStride, cbBufferSize, pbBuffer);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetSizeInBlocks(uint* pWidthInBlocks, uint* pHeightInBlocks);
+
+		[VtblIndex(4)]
+		HResult GetFormatInfo(WICDdsFormatInfo* pFormatInfo);
+
+		[VtblIndex(5)]
+		HResult CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer);
 	}
 }
 

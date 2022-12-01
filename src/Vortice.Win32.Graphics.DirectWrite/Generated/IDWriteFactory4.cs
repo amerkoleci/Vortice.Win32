@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("4b0b5bd3-0797-4549-8ac5-fe915cc53856")]
 [NativeTypeName("struct IDWriteFactory4 : IDWriteFactory3")]
 [NativeInheritance("IDWriteFactory3")]
-public unsafe partial struct IDWriteFactory4 : INativeGuid
+public unsafe partial struct IDWriteFactory4 : IDWriteFactory4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory4
 	{
@@ -392,6 +392,17 @@ public unsafe partial struct IDWriteFactory4 : INativeGuid
 	public HResult ComputeGlyphOrigins(GlyphRun* glyphRun, MeasuringMode measuringMode, System.Drawing.PointF baselineOrigin, Matrix3x2* worldAndDpiTransform, System.Drawing.PointF* glyphOrigins)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory4*, GlyphRun*, MeasuringMode, System.Drawing.PointF, Matrix3x2*, System.Drawing.PointF*, int>)(lpVtbl[42]))((IDWriteFactory4*)Unsafe.AsPointer(ref this), glyphRun, measuringMode, baselineOrigin, worldAndDpiTransform, glyphOrigins);
+	}
+	public interface Interface : IDWriteFactory3.Interface
+	{
+		[VtblIndex(40)]
+		HResult TranslateColorGlyphRun(System.Drawing.PointF baselineOrigin, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, GlyphImageFormats desiredGlyphImageFormats, MeasuringMode measuringMode, Matrix3x2* worldAndDpiTransform, uint colorPaletteIndex, IDWriteColorGlyphRunEnumerator1** colorLayers);
+
+		[VtblIndex(41)]
+		HResult ComputeGlyphOrigins(GlyphRun* glyphRun, System.Drawing.PointF baselineOrigin, System.Drawing.PointF* glyphOrigins);
+
+		[VtblIndex(42)]
+		HResult ComputeGlyphOrigins(GlyphRun* glyphRun, MeasuringMode measuringMode, System.Drawing.PointF baselineOrigin, Matrix3x2* worldAndDpiTransform, System.Drawing.PointF* glyphOrigins);
 	}
 }
 

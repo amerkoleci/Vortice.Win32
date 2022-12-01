@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("dc7dca35-2196-414d-9f53-617884032a60")]
 [NativeTypeName("struct IDXGIOutput4 : IDXGIOutput3")]
 [NativeInheritance("IDXGIOutput3")]
-public unsafe partial struct IDXGIOutput4 : INativeGuid
+public unsafe partial struct IDXGIOutput4 : IDXGIOutput4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput4
 	{
@@ -256,6 +256,11 @@ public unsafe partial struct IDXGIOutput4 : INativeGuid
 	public HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput4*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[25]))((IDXGIOutput4*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
+	}
+	public interface Interface : IDXGIOutput3.Interface
+	{
+		[VtblIndex(25)]
+		HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags);
 	}
 }
 

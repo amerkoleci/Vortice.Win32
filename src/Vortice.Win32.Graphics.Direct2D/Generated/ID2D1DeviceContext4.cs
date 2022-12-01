@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("8c427831-3d90-4476-b647-c4fae349e4db")]
 [NativeTypeName("struct ID2D1DeviceContext4 : ID2D1DeviceContext3")]
 [NativeInheritance("ID2D1DeviceContext3")]
-public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
+public unsafe partial struct ID2D1DeviceContext4 : ID2D1DeviceContext4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext4
 	{
@@ -971,6 +971,29 @@ public unsafe partial struct ID2D1DeviceContext4 : INativeGuid
 	public HResult GetSvgGlyphImage(System.Drawing.PointF glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Matrix3x2* glyphTransform, ID2D1CommandList** glyphImage)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteFontFace*, float, ushort, Bool32, Matrix3x2*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, Matrix3x2*, ID2D1CommandList**, int>)(lpVtbl[114]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), glyphOrigin, fontFace, fontEmSize, glyphIndex, isSideways, worldTransform, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, glyphTransform, glyphImage);
+	}
+	public interface Interface : ID2D1DeviceContext3.Interface
+	{
+		[VtblIndex(108)]
+		HResult CreateSvgGlyphStyle(ID2D1SvgGlyphStyle** svgGlyphStyle);
+
+		[VtblIndex(109)]
+		void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Common.RectF* layoutRect, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode);
+
+		[VtblIndex(110)]
+		void DrawTextLayout(System.Drawing.PointF origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, DrawTextOptions options);
+
+		[VtblIndex(111)]
+		void DrawColorBitmapGlyphRun(Graphics.DirectWrite.GlyphImageFormats glyphImageFormat, System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, ColorBitmapGlyphSnapOption bitmapSnapOption);
+
+		[VtblIndex(112)]
+		void DrawSvgGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Graphics.DirectWrite.MeasuringMode measuringMode);
+
+		[VtblIndex(113)]
+		HResult GetColorBitmapGlyphImage(Graphics.DirectWrite.GlyphImageFormats glyphImageFormat, System.Drawing.PointF glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, float dpiX, float dpiY, Matrix3x2* glyphTransform, ID2D1Image** glyphImage);
+
+		[VtblIndex(114)]
+		HResult GetSvgGlyphImage(System.Drawing.PointF glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Matrix3x2* glyphTransform, ID2D1CommandList** glyphImage);
 	}
 }
 

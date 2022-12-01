@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("b66f034f-d0e2-40ab-b436-6de39e321a94")]
 [NativeTypeName("struct IWICColorTransform : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICColorTransform : INativeGuid
+public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICColorTransform
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct IWICColorTransform : INativeGuid
 	public HResult Initialize(IWICBitmapSource* pIBitmapSource, IWICColorContext* pIContextSource, IWICColorContext* pIContextDest, Guid* pixelFmtDest)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, IWICBitmapSource*, IWICColorContext*, IWICColorContext*, Guid*, int>)(lpVtbl[8]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pIBitmapSource, pIContextSource, pIContextDest, pixelFmtDest);
+	}
+	public interface Interface : IWICBitmapSource.Interface
+	{
+		[VtblIndex(8)]
+		HResult Initialize(IWICBitmapSource* pIBitmapSource, IWICColorContext* pIContextSource, IWICColorContext* pIContextDest, Guid* pixelFmtDest);
 	}
 }
 

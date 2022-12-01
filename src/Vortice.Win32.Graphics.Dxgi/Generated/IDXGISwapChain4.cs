@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("3d585d5a-bd4a-489e-b1f4-3dbcb6452ffb")]
 [NativeTypeName("struct IDXGISwapChain4 : IDXGISwapChain3")]
 [NativeInheritance("IDXGISwapChain3")]
-public unsafe partial struct IDXGISwapChain4 : INativeGuid
+public unsafe partial struct IDXGISwapChain4 : IDXGISwapChain4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISwapChain4
 	{
@@ -376,6 +376,11 @@ public unsafe partial struct IDXGISwapChain4 : INativeGuid
 	public HResult SetHDRMetaData(HDRMetadataType Type, uint Size, void* pMetaData)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, HDRMetadataType, uint, void*, int>)(lpVtbl[40]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Type, Size, pMetaData);
+	}
+	public interface Interface : IDXGISwapChain3.Interface
+	{
+		[VtblIndex(40)]
+		HResult SetHDRMetaData(HDRMetadataType Type, uint Size, void* pMetaData);
 	}
 }
 

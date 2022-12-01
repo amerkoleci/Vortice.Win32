@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("e8f7fe7a-191c-466d-ad95-975678bda998")]
 [NativeTypeName("struct ID2D1DeviceContext : ID2D1RenderTarget")]
 [NativeInheritance("ID2D1RenderTarget")]
-public unsafe partial struct ID2D1DeviceContext : INativeGuid
+public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext
 	{
@@ -787,6 +787,113 @@ public unsafe partial struct ID2D1DeviceContext : INativeGuid
 	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, ID2D1Brush*, Common.RectF*, Common.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
+	}
+	public interface Interface : ID2D1RenderTarget.Interface
+	{
+		[VtblIndex(57)]
+		HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap);
+
+		[VtblIndex(58)]
+		HResult CreateBitmapFromWicBitmap(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap);
+
+		[VtblIndex(59)]
+		HResult CreateColorContext(ColorSpace space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext);
+
+		[VtblIndex(60)]
+		HResult CreateColorContextFromFilename(ushort* filename, ID2D1ColorContext** colorContext);
+
+		[VtblIndex(61)]
+		HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext);
+
+		[VtblIndex(62)]
+		HResult CreateBitmapFromDxgiSurface(Graphics.Dxgi.IDXGISurface* surface, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap);
+
+		[VtblIndex(63)]
+		HResult CreateEffect(Guid* effectId, ID2D1Effect** effect);
+
+		[VtblIndex(64)]
+		HResult CreateGradientStopCollection(GradientStop* straightAlphaGradientStops, uint straightAlphaGradientStopsCount, ColorSpace preInterpolationSpace, ColorSpace postInterpolationSpace, BufferPrecision bufferPrecision, ExtendMode extendMode, ColorInterpolationMode colorInterpolationMode, ID2D1GradientStopCollection1** gradientStopCollection1);
+
+		[VtblIndex(65)]
+		HResult CreateImageBrush(ID2D1Image* image, ImageBrushProperties* imageBrushProperties, BrushProperties* brushProperties, ID2D1ImageBrush** imageBrush);
+
+		[VtblIndex(66)]
+		HResult CreateBitmapBrush(ID2D1Bitmap* bitmap, BitmapBrushProperties1* bitmapBrushProperties, BrushProperties* brushProperties, ID2D1BitmapBrush1** bitmapBrush);
+
+		[VtblIndex(67)]
+		HResult CreateCommandList(ID2D1CommandList** commandList);
+
+		[VtblIndex(68)]
+		Bool32 IsDxgiFormatSupported(Graphics.Dxgi.Common.Format format);
+
+		[VtblIndex(69)]
+		Bool32 IsBufferPrecisionSupported(BufferPrecision bufferPrecision);
+
+		[VtblIndex(70)]
+		HResult GetImageLocalBounds(ID2D1Image* image, Common.RectF* localBounds);
+
+		[VtblIndex(71)]
+		HResult GetImageWorldBounds(ID2D1Image* image, Common.RectF* worldBounds);
+
+		[VtblIndex(72)]
+		HResult GetGlyphRunWorldBounds(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Common.RectF* bounds);
+
+		[VtblIndex(73)]
+		void GetDevice(ID2D1Device** device);
+
+		[VtblIndex(74)]
+		void SetTarget(ID2D1Image* image);
+
+		[VtblIndex(75)]
+		void GetTarget(ID2D1Image** image);
+
+		[VtblIndex(76)]
+		void SetRenderingControls(RenderingControls* renderingControls);
+
+		[VtblIndex(77)]
+		void GetRenderingControls(RenderingControls* renderingControls);
+
+		[VtblIndex(78)]
+		void SetPrimitiveBlend(PrimitiveBlend primitiveBlend);
+
+		[VtblIndex(79)]
+		PrimitiveBlend GetPrimitiveBlend();
+
+		[VtblIndex(80)]
+		void SetUnitMode(UnitMode unitMode);
+
+		[VtblIndex(81)]
+		UnitMode GetUnitMode();
+
+		[VtblIndex(82)]
+		void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode);
+
+		[VtblIndex(83)]
+		void DrawImage(ID2D1Image* image, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode);
+
+		[VtblIndex(84)]
+		void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, System.Drawing.PointF* targetOffset);
+
+		[VtblIndex(85)]
+		void DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Common.RectF* sourceRectangle, Matrix4x4* perspectiveTransform);
+
+		[VtblIndex(86)]
+		void PushLayer(LayerParameters1* layerParameters, ID2D1Layer* layer);
+
+		[VtblIndex(87)]
+		HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Common.RectF* inputRectangle);
+
+		[VtblIndex(88)]
+		HResult GetEffectInvalidRectangleCount(ID2D1Effect* effect, uint* rectangleCount);
+
+		[VtblIndex(89)]
+		HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Common.RectF* rectangles, uint rectanglesCount);
+
+		[VtblIndex(90)]
+		HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Common.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Common.RectF* requiredInputRects, uint inputCount);
+
+		[VtblIndex(91)]
+		void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle);
 	}
 }
 

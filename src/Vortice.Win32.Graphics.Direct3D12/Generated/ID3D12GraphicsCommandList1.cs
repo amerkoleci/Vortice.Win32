@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("553103fb-1fe7-4557-bb38-946d7d0e7ca7")]
 [NativeTypeName("struct ID3D12GraphicsCommandList1 : ID3D12GraphicsCommandList")]
 [NativeInheritance("ID3D12GraphicsCommandList")]
-public unsafe partial struct ID3D12GraphicsCommandList1 : INativeGuid
+public unsafe partial struct ID3D12GraphicsCommandList1 : ID3D12GraphicsCommandList1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12GraphicsCommandList1
 	{
@@ -576,6 +576,26 @@ public unsafe partial struct ID3D12GraphicsCommandList1 : INativeGuid
 	public void SetViewInstanceMask(uint Mask)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList1*, uint, void>)(lpVtbl[65]))((ID3D12GraphicsCommandList1*)Unsafe.AsPointer(ref this), Mask);
+	}
+	public interface Interface : ID3D12GraphicsCommandList.Interface
+	{
+		[VtblIndex(60)]
+		void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUInt64* pDependentSubresourceRanges);
+
+		[VtblIndex(61)]
+		void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUInt64* pDependentSubresourceRanges);
+
+		[VtblIndex(62)]
+		void OMSetDepthBounds(float Min, float Max);
+
+		[VtblIndex(63)]
+		void SetSamplePositions(uint NumSamplesPerPixel, uint NumPixels, SamplePosition* pSamplePositions);
+
+		[VtblIndex(64)]
+		void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, RawRect* pSrcRect, Graphics.Dxgi.Common.Format Format, ResolveMode ResolveMode);
+
+		[VtblIndex(65)]
+		void SetViewInstanceMask(uint Mask);
 	}
 }
 

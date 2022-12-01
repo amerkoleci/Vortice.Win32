@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("62baa2d2-ab54-41b7-b872-787e0106a421")]
 [NativeTypeName("struct ID2D1PathGeometry1 : ID2D1PathGeometry")]
 [NativeInheritance("ID2D1PathGeometry")]
-public unsafe partial struct ID2D1PathGeometry1 : INativeGuid
+public unsafe partial struct ID2D1PathGeometry1 : ID2D1PathGeometry1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1PathGeometry1
 	{
@@ -224,6 +224,11 @@ public unsafe partial struct ID2D1PathGeometry1 : INativeGuid
 	public HResult ComputePointAndSegmentAtLength(float length, uint startSegment, Matrix3x2* worldTransform, float flatteningTolerance, PointDescription* pointDescription)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1PathGeometry1*, float, uint, Matrix3x2*, float, PointDescription*, int>)(lpVtbl[21]))((ID2D1PathGeometry1*)Unsafe.AsPointer(ref this), length, startSegment, worldTransform, flatteningTolerance, pointDescription);
+	}
+	public interface Interface : ID2D1PathGeometry.Interface
+	{
+		[VtblIndex(21)]
+		HResult ComputePointAndSegmentAtLength(float length, uint startSegment, Matrix3x2* worldTransform, float flatteningTolerance, PointDescription* pointDescription);
 	}
 }
 

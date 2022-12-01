@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("2852dd88-b484-4c0c-b6b1-67168500e600")]
 [NativeTypeName("struct ID3D12InfoQueue1 : ID3D12InfoQueue")]
 [NativeInheritance("ID3D12InfoQueue")]
-public unsafe partial struct ID3D12InfoQueue1 : INativeGuid
+public unsafe partial struct ID3D12InfoQueue1 : ID3D12InfoQueue1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12InfoQueue1
 	{
@@ -368,6 +368,14 @@ public unsafe partial struct ID3D12InfoQueue1 : INativeGuid
 	public HResult UnregisterMessageCallback(uint CallbackCookie)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue1*, uint, int>)(lpVtbl[39]))((ID3D12InfoQueue1*)Unsafe.AsPointer(ref this), CallbackCookie);
+	}
+	public interface Interface : ID3D12InfoQueue.Interface
+	{
+		[VtblIndex(38)]
+		HResult RegisterMessageCallback(delegate* unmanaged[Stdcall]<MessageCategory, MessageSeverity, MessageId, sbyte*, void*, void> CallbackFunc, MessageCallbackFlags CallbackFilterFlags, void* pContext, uint* pCallbackCookie);
+
+		[VtblIndex(39)]
+		HResult UnregisterMessageCallback(uint CallbackCookie);
 	}
 }
 

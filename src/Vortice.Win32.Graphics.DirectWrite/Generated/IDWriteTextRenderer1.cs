@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("d3e0e934-22a0-427e-aae4-7d9574b59db1")]
 [NativeTypeName("struct IDWriteTextRenderer1 : IDWriteTextRenderer")]
 [NativeInheritance("IDWriteTextRenderer")]
-public unsafe partial struct IDWriteTextRenderer1 : INativeGuid
+public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextRenderer1
 	{
@@ -160,6 +160,20 @@ public unsafe partial struct IDWriteTextRenderer1 : INativeGuid
 	public HResult DrawInlineObject(void* clientDrawingContext, float originX, float originY, GlyphOrientationAngle orientationAngle, IDWriteInlineObject* inlineObject, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[13]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, orientationAngle, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
+	}
+	public interface Interface : IDWriteTextRenderer.Interface
+	{
+		[VtblIndex(10)]
+		HResult DrawGlyphRun(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, GlyphOrientationAngle orientationAngle, MeasuringMode measuringMode, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, IUnknown* clientDrawingEffect);
+
+		[VtblIndex(11)]
+		HResult DrawUnderline(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, GlyphOrientationAngle orientationAngle, Underline* underline, IUnknown* clientDrawingEffect);
+
+		[VtblIndex(12)]
+		HResult DrawStrikethrough(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, GlyphOrientationAngle orientationAngle, Strikethrough* strikethrough, IUnknown* clientDrawingEffect);
+
+		[VtblIndex(13)]
+		HResult DrawInlineObject(void* clientDrawingContext, float originX, float originY, GlyphOrientationAngle orientationAngle, IDWriteInlineObject* inlineObject, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect);
 	}
 }
 

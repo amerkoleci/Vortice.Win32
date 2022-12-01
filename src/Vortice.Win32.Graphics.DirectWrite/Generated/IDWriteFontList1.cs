@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("da20d8ef-812a-4c43-9802-62ec4abd7ade")]
 [NativeTypeName("struct IDWriteFontList1 : IDWriteFontList")]
 [NativeInheritance("IDWriteFontList")]
-public unsafe partial struct IDWriteFontList1 : INativeGuid
+public unsafe partial struct IDWriteFontList1 : IDWriteFontList1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontList1
 	{
@@ -120,6 +120,17 @@ public unsafe partial struct IDWriteFontList1 : INativeGuid
 	public HResult GetFontFaceReference(uint listIndex, IDWriteFontFaceReference** fontFaceReference)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontList1*, uint, IDWriteFontFaceReference**, int>)(lpVtbl[8]))((IDWriteFontList1*)Unsafe.AsPointer(ref this), listIndex, fontFaceReference);
+	}
+	public interface Interface : IDWriteFontList.Interface
+	{
+		[VtblIndex(6)]
+		Locality GetFontLocality(uint listIndex);
+
+		[VtblIndex(7)]
+		HResult GetFont(uint listIndex, IDWriteFont3** font);
+
+		[VtblIndex(8)]
+		HResult GetFontFaceReference(uint listIndex, IDWriteFontFaceReference** fontFaceReference);
 	}
 }
 

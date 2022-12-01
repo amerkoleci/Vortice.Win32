@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("41e7d1f2-a591-4f7b-a2e5-fa9c843e1c12")]
 [NativeTypeName("struct IDXGIFactoryMedia : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIFactoryMedia : INativeGuid
+public unsafe partial struct IDXGIFactoryMedia : IDXGIFactoryMedia.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactoryMedia
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDXGIFactoryMedia : INativeGuid
 	public HResult CreateDecodeSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, Handle hSurface, DecodeSwapChainDescription* pDesc, IDXGIResource* pYuvDecodeBuffers, IDXGIOutput* pRestrictToOutput, IDXGIDecodeSwapChain** ppSwapChain)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactoryMedia*, IUnknown*, Handle, DecodeSwapChainDescription*, IDXGIResource*, IDXGIOutput*, IDXGIDecodeSwapChain**, int>)(lpVtbl[4]))((IDXGIFactoryMedia*)Unsafe.AsPointer(ref this), pDevice, hSurface, pDesc, pYuvDecodeBuffers, pRestrictToOutput, ppSwapChain);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, Handle hSurface, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain);
+
+		[VtblIndex(4)]
+		HResult CreateDecodeSwapChainForCompositionSurfaceHandle(IUnknown* pDevice, Handle hSurface, DecodeSwapChainDescription* pDesc, IDXGIResource* pYuvDecodeBuffers, IDXGIOutput* pRestrictToOutput, IDXGIDecodeSwapChain** ppSwapChain);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("5e7fa7ca-dde3-424c-89f0-9fcd6fed58cd")]
 [NativeTypeName("struct IDWriteFontFaceReference : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFaceReference : INativeGuid
+public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFaceReference
 	{
@@ -184,6 +184,50 @@ public unsafe partial struct IDWriteFontFaceReference : INativeGuid
 	public HResult EnqueueFileFragmentDownloadRequest(ulong fileOffset, ulong fragmentSize)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, ulong, ulong, int>)(lpVtbl[16]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), fileOffset, fragmentSize);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateFontFace(IDWriteFontFace3** fontFace);
+
+		[VtblIndex(4)]
+		HResult CreateFontFaceWithSimulations(FontSimulations fontFaceSimulationFlags, IDWriteFontFace3** fontFace);
+
+		[VtblIndex(5)]
+		Bool32 Equals(IDWriteFontFaceReference* fontFaceReference);
+
+		[VtblIndex(6)]
+		uint GetFontFaceIndex();
+
+		[VtblIndex(7)]
+		FontSimulations GetSimulations();
+
+		[VtblIndex(8)]
+		HResult GetFontFile(IDWriteFontFile** fontFile);
+
+		[VtblIndex(9)]
+		ulong GetLocalFileSize();
+
+		[VtblIndex(10)]
+		ulong GetFileSize();
+
+		[VtblIndex(11)]
+		HResult GetFileTime(ulong* lastWriteTime);
+
+		[VtblIndex(12)]
+		Locality GetLocality();
+
+		[VtblIndex(13)]
+		HResult EnqueueFontDownloadRequest();
+
+		[VtblIndex(14)]
+		HResult EnqueueCharacterDownloadRequest(ushort* characters, uint characterCount);
+
+		[VtblIndex(15)]
+		HResult EnqueueGlyphDownloadRequest(ushort* glyphIndices, uint glyphCount);
+
+		[VtblIndex(16)]
+		HResult EnqueueFileFragmentDownloadRequest(ulong fileOffset, ulong fragmentSize);
 	}
 }
 

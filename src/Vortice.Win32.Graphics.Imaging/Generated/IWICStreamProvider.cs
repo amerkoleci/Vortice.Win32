@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("449494bc-b468-4927-96d7-ba90d31ab505")]
 [NativeTypeName("struct IWICStreamProvider : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICStreamProvider : INativeGuid
+public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICStreamProvider
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IWICStreamProvider : INativeGuid
 	public HResult RefreshStream()
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, int>)(lpVtbl[6]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetStream(Com.IStream** ppIStream);
+
+		[VtblIndex(4)]
+		HResult GetPersistOptions(uint* pdwPersistOptions);
+
+		[VtblIndex(5)]
+		HResult GetPreferredVendorGUID(Guid* pguidPreferredVendor);
+
+		[VtblIndex(6)]
+		HResult RefreshStream();
 	}
 }
 

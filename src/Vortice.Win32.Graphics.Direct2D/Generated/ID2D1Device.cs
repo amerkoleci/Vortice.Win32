@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("47dd575d-ac05-4cdd-8049-9b02cd16f44c")]
 [NativeTypeName("struct ID2D1Device : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Device : INativeGuid
+public unsafe partial struct ID2D1Device : ID2D1Device.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Device
 	{
@@ -112,6 +112,20 @@ public unsafe partial struct ID2D1Device : INativeGuid
 	public void ClearResources(uint millisecondsSinceUse)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Device*, uint, void>)(lpVtbl[7]))((ID2D1Device*)Unsafe.AsPointer(ref this), millisecondsSinceUse);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext** deviceContext);
+
+		[VtblIndex(5)]
+		void SetMaximumTextureMemory(ulong maximumInBytes);
+
+		[VtblIndex(6)]
+		ulong GetMaximumTextureMemory();
+
+		[VtblIndex(7)]
+		void ClearResources(uint millisecondsSinceUse);
 	}
 }
 

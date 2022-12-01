@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("30572f99-dac6-41db-a16e-0486307e606a")]
 [NativeTypeName("struct IDWriteFactory1 : IDWriteFactory")]
 [NativeInheritance("IDWriteFactory")]
-public unsafe partial struct IDWriteFactory1 : INativeGuid
+public unsafe partial struct IDWriteFactory1 : IDWriteFactory1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory1
 	{
@@ -256,6 +256,14 @@ public unsafe partial struct IDWriteFactory1 : INativeGuid
 	public HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float enhancedContrastGrayscale, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode renderingMode, IDWriteRenderingParams1** renderingParams)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory1*, float, float, float, float, PixelGeometry, RenderingMode, IDWriteRenderingParams1**, int>)(lpVtbl[25]))((IDWriteFactory1*)Unsafe.AsPointer(ref this), gamma, enhancedContrast, enhancedContrastGrayscale, clearTypeLevel, pixelGeometry, renderingMode, renderingParams);
+	}
+	public interface Interface : IDWriteFactory.Interface
+	{
+		[VtblIndex(24)]
+		HResult GetEudcFontCollection(IDWriteFontCollection** fontCollection, Bool32 checkForUpdates);
+
+		[VtblIndex(25)]
+		HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float enhancedContrastGrayscale, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode renderingMode, IDWriteRenderingParams1** renderingParams);
 	}
 }
 

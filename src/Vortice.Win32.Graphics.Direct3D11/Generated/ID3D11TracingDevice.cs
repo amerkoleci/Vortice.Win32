@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("1911c771-1587-413e-a7e0-fb26c3de0268")]
 [NativeTypeName("struct ID3D11TracingDevice : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11TracingDevice : INativeGuid
+public unsafe partial struct ID3D11TracingDevice : ID3D11TracingDevice.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11TracingDevice
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID3D11TracingDevice : INativeGuid
 	public HResult SetShaderTrackingOptions(IUnknown* pShader, uint Options)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11TracingDevice*, IUnknown*, uint, int>)(lpVtbl[4]))((ID3D11TracingDevice*)Unsafe.AsPointer(ref this), pShader, Options);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetShaderTrackingOptionsByType(uint ResourceTypeFlags, uint Options);
+
+		[VtblIndex(4)]
+		HResult SetShaderTrackingOptions(IUnknown* pShader, uint Options);
 	}
 }
 

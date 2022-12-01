@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("6102dee4-af59-4b09-b999-b44d73f09b24")]
 [NativeTypeName("struct ID3D12CommandAllocator : ID3D12Pageable")]
 [NativeInheritance("ID3D12Pageable")]
-public unsafe partial struct ID3D12CommandAllocator : INativeGuid
+public unsafe partial struct ID3D12CommandAllocator : ID3D12CommandAllocator.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12CommandAllocator
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct ID3D12CommandAllocator : INativeGuid
 	public HResult Reset()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandAllocator*, int>)(lpVtbl[8]))((ID3D12CommandAllocator*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID3D12Pageable.Interface
+	{
+		[VtblIndex(8)]
+		HResult Reset();
 	}
 }
 

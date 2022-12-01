@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("d2c21b26-8350-4bdc-976a-331ce6f4c54c")]
 [NativeTypeName("struct IDxcContainerReflection : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcContainerReflection : INativeGuid
+public unsafe partial struct IDxcContainerReflection : IDxcContainerReflection.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcContainerReflection
 	{
@@ -113,6 +113,26 @@ public unsafe partial struct IDxcContainerReflection : INativeGuid
 	public HResult GetPartReflection(uint idx, Guid* iid, void** ppvObject)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerReflection*, uint, Guid*, void**, int>)(lpVtbl[8]))((IDxcContainerReflection*)Unsafe.AsPointer(ref this), idx, iid, ppvObject);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Load(IDxcBlob* pContainer);
+
+		[VtblIndex(4)]
+		HResult GetPartCount(uint* pResult);
+
+		[VtblIndex(5)]
+		HResult GetPartKind(uint idx, uint* pResult);
+
+		[VtblIndex(6)]
+		HResult GetPartContent(uint idx, IDxcBlob** ppResult);
+
+		[VtblIndex(7)]
+		HResult FindFirstPartKind(uint kind, uint* pResult);
+
+		[VtblIndex(8)]
+		HResult GetPartReflection(uint idx, Guid* iid, void** ppvObject);
 	}
 }
 

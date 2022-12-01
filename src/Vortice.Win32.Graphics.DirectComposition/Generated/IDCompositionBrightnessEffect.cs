@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("6027496e-cb3a-49ab-934f-d798da4f7da6")]
 [NativeTypeName("struct IDCompositionBrightnessEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionBrightnessEffect : INativeGuid
+public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBrightnessEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionBrightnessEffect
 	{
@@ -160,6 +160,38 @@ public unsafe partial struct IDCompositionBrightnessEffect : INativeGuid
 	public HResult SetBlackPointY(float blackPointY)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionBrightnessEffect*, float, int>)(lpVtbl[13]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), blackPointY);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetWhitePoint(Vector2* whitePoint);
+
+		[VtblIndex(5)]
+		HResult SetBlackPoint(Vector2* blackPoint);
+
+		[VtblIndex(6)]
+		HResult SetWhitePointX(IDCompositionAnimation* animation);
+
+		[VtblIndex(7)]
+		HResult SetWhitePointX(float whitePointX);
+
+		[VtblIndex(8)]
+		HResult SetWhitePointY(IDCompositionAnimation* animation);
+
+		[VtblIndex(9)]
+		HResult SetWhitePointY(float whitePointY);
+
+		[VtblIndex(10)]
+		HResult SetBlackPointX(IDCompositionAnimation* animation);
+
+		[VtblIndex(11)]
+		HResult SetBlackPointX(float blackPointX);
+
+		[VtblIndex(12)]
+		HResult SetBlackPointY(IDCompositionAnimation* animation);
+
+		[VtblIndex(13)]
+		HResult SetBlackPointY(float blackPointY);
 	}
 }
 

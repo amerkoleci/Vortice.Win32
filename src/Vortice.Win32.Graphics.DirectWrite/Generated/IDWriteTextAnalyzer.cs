@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("b7e6163e-7f46-43b4-84b3-e4e6249c365d")]
 [NativeTypeName("struct IDWriteTextAnalyzer : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteTextAnalyzer : INativeGuid
+public unsafe partial struct IDWriteTextAnalyzer : IDWriteTextAnalyzer.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextAnalyzer
 	{
@@ -128,6 +128,29 @@ public unsafe partial struct IDWriteTextAnalyzer : INativeGuid
 	public HResult GetGdiCompatibleGlyphPlacements(ushort* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer*, ushort*, ushort*, ShapingTextProperties*, uint, ushort*, ShapingGlyphProperties*, uint, IDWriteFontFace*, float, float, Matrix3x2*, Bool32, Bool32, Bool32, ScriptAnalysis*, ushort*, TypographicFeatures**, uint*, uint, float*, GlyphOffset*, int>)(lpVtbl[9]))((IDWriteTextAnalyzer*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, pixelsPerDip, transform, useGdiNatural, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult AnalyzeScript(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
+
+		[VtblIndex(4)]
+		HResult AnalyzeBidi(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
+
+		[VtblIndex(5)]
+		HResult AnalyzeNumberSubstitution(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
+
+		[VtblIndex(6)]
+		HResult AnalyzeLineBreakpoints(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink* analysisSink);
+
+		[VtblIndex(7)]
+		HResult GetGlyphs(ushort* textString, uint textLength, IDWriteFontFace* fontFace, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, IDWriteNumberSubstitution* numberSubstitution, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, uint maxGlyphCount, ushort* clusterMap, ShapingTextProperties* textProps, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint* actualGlyphCount);
+
+		[VtblIndex(8)]
+		HResult GetGlyphPlacements(ushort* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets);
+
+		[VtblIndex(9)]
+		HResult GetGdiCompatibleGlyphPlacements(ushort* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets);
 	}
 }
 

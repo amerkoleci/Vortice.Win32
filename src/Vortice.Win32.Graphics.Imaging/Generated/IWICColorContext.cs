@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("3c613a02-34b2-44ea-9a7c-45aea9c6fd6d")]
 [NativeTypeName("struct IWICColorContext : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICColorContext : INativeGuid
+public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICColorContext
 	{
@@ -120,6 +120,26 @@ public unsafe partial struct IWICColorContext : INativeGuid
 	public HResult GetExifColorSpace(uint* pValue)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint*, int>)(lpVtbl[8]))((IWICColorContext*)Unsafe.AsPointer(ref this), pValue);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult InitializeFromFilename(ushort* wzFilename);
+
+		[VtblIndex(4)]
+		HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);
+
+		[VtblIndex(5)]
+		HResult InitializeFromExifColorSpace(uint value);
+
+		[VtblIndex(6)]
+		HResult GetType(WICColorContextType* pType);
+
+		[VtblIndex(7)]
+		HResult GetProfileBytes(uint cbBuffer, byte* pbBuffer, uint* pcbActual);
+
+		[VtblIndex(8)]
+		HResult GetExifColorSpace(uint* pValue);
 	}
 }
 

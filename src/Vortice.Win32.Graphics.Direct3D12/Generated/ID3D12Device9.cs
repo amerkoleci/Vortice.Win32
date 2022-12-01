@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("4c80e962-f032-4f60-bc9e-ebc2cfa1d83c")]
 [NativeTypeName("struct ID3D12Device9 : ID3D12Device8")]
 [NativeInheritance("ID3D12Device8")]
-public unsafe partial struct ID3D12Device9 : INativeGuid
+public unsafe partial struct ID3D12Device9 : ID3D12Device9.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device9
 	{
@@ -661,6 +661,17 @@ public unsafe partial struct ID3D12Device9 : INativeGuid
 	public HResult CreateCommandQueue1(CommandQueueDescription* pDesc, Guid* CreatorID, Guid* riid, void** ppCommandQueue)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, CommandQueueDescription*, Guid*, Guid*, void**, int>)(lpVtbl[75]))((ID3D12Device9*)Unsafe.AsPointer(ref this), pDesc, CreatorID, riid, ppCommandQueue);
+	}
+	public interface Interface : ID3D12Device8.Interface
+	{
+		[VtblIndex(73)]
+		HResult CreateShaderCacheSession(ShaderCacheSessionDescription* pDesc, Guid* riid, void** ppvSession);
+
+		[VtblIndex(74)]
+		HResult ShaderCacheControl(ShaderCacheKindFlags Kinds, ShaderCacheControlFlags Control);
+
+		[VtblIndex(75)]
+		HResult CreateCommandQueue1(CommandQueueDescription* pDesc, Guid* CreatorID, Guid* riid, void** ppCommandQueue);
 	}
 }
 

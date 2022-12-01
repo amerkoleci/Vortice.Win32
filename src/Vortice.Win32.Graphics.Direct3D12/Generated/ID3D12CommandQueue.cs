@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("0ec870a6-5d7e-4c22-8cfc-5baae07616ed")]
 [NativeTypeName("struct ID3D12CommandQueue : ID3D12Pageable")]
 [NativeInheritance("ID3D12Pageable")]
-public unsafe partial struct ID3D12CommandQueue : INativeGuid
+public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12CommandQueue
 	{
@@ -201,6 +201,41 @@ public unsafe partial struct ID3D12CommandQueue : INativeGuid
 	{
 		CommandQueueDescription result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, CommandQueueDescription*, CommandQueueDescription*>)(lpVtbl[18]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), &result);
+	}
+	public interface Interface : ID3D12Pageable.Interface
+	{
+		[VtblIndex(8)]
+		void UpdateTileMappings(ID3D12Resource* pResource, uint NumResourceRegions, TiledResourceCoordinate* pResourceRegionStartCoordinates, TileRegionSize* pResourceRegionSizes, ID3D12Heap* pHeap, uint NumRanges, TileRangeFlags* pRangeFlags, uint* pHeapRangeStartOffsets, uint* pRangeTileCounts, TileMappingFlags Flags);
+
+		[VtblIndex(9)]
+		void CopyTileMappings(ID3D12Resource* pDstResource, TiledResourceCoordinate* pDstRegionStartCoordinate, ID3D12Resource* pSrcResource, TiledResourceCoordinate* pSrcRegionStartCoordinate, TileRegionSize* pRegionSize, TileMappingFlags Flags);
+
+		[VtblIndex(10)]
+		void ExecuteCommandLists(uint NumCommandLists, ID3D12CommandList** ppCommandLists);
+
+		[VtblIndex(11)]
+		void SetMarker(uint Metadata, void* pData, uint Size);
+
+		[VtblIndex(12)]
+		void BeginEvent(uint Metadata, void* pData, uint Size);
+
+		[VtblIndex(13)]
+		void EndEvent();
+
+		[VtblIndex(14)]
+		HResult Signal(ID3D12Fence* pFence, ulong Value);
+
+		[VtblIndex(15)]
+		HResult Wait(ID3D12Fence* pFence, ulong Value);
+
+		[VtblIndex(16)]
+		HResult GetTimestampFrequency(ulong* pFrequency);
+
+		[VtblIndex(17)]
+		HResult GetClockCalibration(ulong* pGpuTimestamp, ulong* pCpuTimestamp);
+
+		[VtblIndex(18)]
+		CommandQueueDescription GetDesc();
 	}
 }
 

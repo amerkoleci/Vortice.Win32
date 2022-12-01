@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("1ef337e3-58e7-4f83-a692-db221f5ed47e")]
 [NativeTypeName("struct ID3D11SwitchToRef : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11SwitchToRef : INativeGuid
+public unsafe partial struct ID3D11SwitchToRef : ID3D11SwitchToRef.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11SwitchToRef
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID3D11SwitchToRef : INativeGuid
 	public Bool32 GetUseRef()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11SwitchToRef*, Bool32>)(lpVtbl[4]))((ID3D11SwitchToRef*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		Bool32 SetUseRef(Bool32 UseRef);
+
+		[VtblIndex(4)]
+		Bool32 GetUseRef();
 	}
 }
 

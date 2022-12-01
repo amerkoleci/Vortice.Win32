@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("31e6e7bc-e0ff-4d46-8c64-a0a8c41c15d3")]
 [NativeTypeName("struct ID2D1Multithread : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1Multithread : INativeGuid
+public unsafe partial struct ID2D1Multithread : ID2D1Multithread.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Multithread
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct ID2D1Multithread : INativeGuid
 	public void Leave()
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Multithread*, void>)(lpVtbl[5]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		Bool32 GetMultithreadProtected();
+
+		[VtblIndex(4)]
+		void Enter();
+
+		[VtblIndex(5)]
+		void Leave();
 	}
 }
 

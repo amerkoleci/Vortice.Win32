@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("00000105-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmapFrameEncode : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICBitmapFrameEncode : INativeGuid
+public unsafe partial struct IWICBitmapFrameEncode : IWICBitmapFrameEncode.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapFrameEncode
 	{
@@ -160,6 +160,41 @@ public unsafe partial struct IWICBitmapFrameEncode : INativeGuid
 	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameEncode*, IWICMetadataQueryWriter**, int>)(lpVtbl[13]))((IWICBitmapFrameEncode*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Initialize(Com.IPropertyBag2* pIEncoderOptions);
+
+		[VtblIndex(4)]
+		HResult SetSize(uint uiWidth, uint uiHeight);
+
+		[VtblIndex(5)]
+		HResult SetResolution(double dpiX, double dpiY);
+
+		[VtblIndex(6)]
+		HResult SetPixelFormat(Guid* pPixelFormat);
+
+		[VtblIndex(7)]
+		HResult SetColorContexts(uint cCount, IWICColorContext** ppIColorContext);
+
+		[VtblIndex(8)]
+		HResult SetPalette(IWICPalette* pIPalette);
+
+		[VtblIndex(9)]
+		HResult SetThumbnail(IWICBitmapSource* pIThumbnail);
+
+		[VtblIndex(10)]
+		HResult WritePixels(uint lineCount, uint cbStride, uint cbBufferSize, byte* pbPixels);
+
+		[VtblIndex(11)]
+		HResult WriteSource(IWICBitmapSource* pIBitmapSource, System.Drawing.Rectangle* prc);
+
+		[VtblIndex(12)]
+		HResult Commit();
+
+		[VtblIndex(13)]
+		HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter);
 	}
 }
 

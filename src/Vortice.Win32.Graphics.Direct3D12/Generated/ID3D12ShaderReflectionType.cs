@@ -12,7 +12,7 @@ namespace Win32.Graphics.Direct3D12;
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType"]/*' />
 /// <unmanaged>ID3D12ShaderReflectionType</unmanaged>
 [Guid("e913c351-783d-48ca-a1d1-4f306284ad56")]
-public unsafe partial struct ID3D12ShaderReflectionType : INativeGuid
+public unsafe partial struct ID3D12ShaderReflectionType : ID3D12ShaderReflectionType.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12ShaderReflectionType
 	{
@@ -132,6 +132,41 @@ public unsafe partial struct ID3D12ShaderReflectionType : INativeGuid
 	public HResult ImplementsInterface(ID3D12ShaderReflectionType* pBase)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionType*, ID3D12ShaderReflectionType*, int>)(lpVtbl[10]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), pBase);
+	}
+	public interface Interface 
+	{
+		[VtblIndex(0)]
+		HResult GetDesc(ShaderTypeDescription* pDesc);
+
+		[VtblIndex(1)]
+		ID3D12ShaderReflectionType GetMemberTypeByIndex(uint Index);
+
+		[VtblIndex(2)]
+		ID3D12ShaderReflectionType GetMemberTypeByName(sbyte* Name);
+
+		[VtblIndex(3)]
+		sbyte* GetMemberTypeName(uint Index);
+
+		[VtblIndex(4)]
+		HResult IsEqual(ID3D12ShaderReflectionType* pType);
+
+		[VtblIndex(5)]
+		ID3D12ShaderReflectionType GetSubType();
+
+		[VtblIndex(6)]
+		ID3D12ShaderReflectionType GetBaseClass();
+
+		[VtblIndex(7)]
+		uint GetNumInterfaces();
+
+		[VtblIndex(8)]
+		ID3D12ShaderReflectionType GetInterfaceByIndex(uint uIndex);
+
+		[VtblIndex(9)]
+		HResult IsOfType(ID3D12ShaderReflectionType* pType);
+
+		[VtblIndex(10)]
+		HResult ImplementsInterface(ID3D12ShaderReflectionType* pBase);
 	}
 }
 

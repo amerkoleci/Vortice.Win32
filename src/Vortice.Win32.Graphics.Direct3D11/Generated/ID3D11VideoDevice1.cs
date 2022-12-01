@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("29da1d51-1321-4454-804b-f5fc9f861f0f")]
 [NativeTypeName("struct ID3D11VideoDevice1 : ID3D11VideoDevice")]
 [NativeInheritance("ID3D11VideoDevice")]
-public unsafe partial struct ID3D11VideoDevice1 : INativeGuid
+public unsafe partial struct ID3D11VideoDevice1 : ID3D11VideoDevice1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoDevice1
 	{
@@ -240,6 +240,20 @@ public unsafe partial struct ID3D11VideoDevice1 : INativeGuid
 	public HResult RecommendVideoDecoderDownsampleParameters(VideoDecoderDescription* pInputDesc, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, VideoDecoderConfig* pInputConfig, Graphics.Dxgi.Common.Rational* pFrameRate, VideoSampleDescription* pRecommendedOutputDesc)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice1*, VideoDecoderDescription*, Graphics.Dxgi.Common.ColorSpaceType, VideoDecoderConfig*, Graphics.Dxgi.Common.Rational*, VideoSampleDescription*, int>)(lpVtbl[23]))((ID3D11VideoDevice1*)Unsafe.AsPointer(ref this), pInputDesc, InputColorSpace, pInputConfig, pFrameRate, pRecommendedOutputDesc);
+	}
+	public interface Interface : ID3D11VideoDevice.Interface
+	{
+		[VtblIndex(20)]
+		HResult GetCryptoSessionPrivateDataSize(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, uint* pPrivateInputSize, uint* pPrivateOutputSize);
+
+		[VtblIndex(21)]
+		HResult GetVideoDecoderCaps(Guid* pDecoderProfile, uint SampleWidth, uint SampleHeight, Graphics.Dxgi.Common.Rational* pFrameRate, uint BitRate, Guid* pCryptoType, uint* pDecoderCaps);
+
+		[VtblIndex(22)]
+		HResult CheckVideoDecoderDownsampling(VideoDecoderDescription* pInputDesc, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, VideoDecoderConfig* pInputConfig, Graphics.Dxgi.Common.Rational* pFrameRate, VideoSampleDescription* pOutputDesc, Bool32* pSupported, Bool32* pRealTimeHint);
+
+		[VtblIndex(23)]
+		HResult RecommendVideoDecoderDownsampleParameters(VideoDecoderDescription* pInputDesc, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, VideoDecoderConfig* pInputConfig, Graphics.Dxgi.Common.Rational* pFrameRate, VideoSampleDescription* pRecommendedOutputDesc);
 	}
 }
 

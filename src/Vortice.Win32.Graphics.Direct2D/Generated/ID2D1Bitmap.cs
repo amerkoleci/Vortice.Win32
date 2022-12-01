@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("a2296057-ea42-4099-983b-539fb6505426")]
 [NativeTypeName("struct ID2D1Bitmap : ID2D1Image")]
 [NativeInheritance("ID2D1Image")]
-public unsafe partial struct ID2D1Bitmap : INativeGuid
+public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Bitmap
 	{
@@ -139,6 +139,29 @@ public unsafe partial struct ID2D1Bitmap : INativeGuid
 	public HResult CopyFromMemory(Common.RectU* dstRect, void* srcData, uint pitch)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Common.RectU*, void*, uint, int>)(lpVtbl[10]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), dstRect, srcData, pitch);
+	}
+	public interface Interface : ID2D1Image.Interface
+	{
+		[VtblIndex(4)]
+		System.Drawing.SizeF GetSize();
+
+		[VtblIndex(5)]
+		System.Drawing.Size GetPixelSize();
+
+		[VtblIndex(6)]
+		Common.PixelFormat GetPixelFormat();
+
+		[VtblIndex(7)]
+		void GetDpi(float* dpiX, float* dpiY);
+
+		[VtblIndex(8)]
+		HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Common.RectU* srcRect);
+
+		[VtblIndex(9)]
+		HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Common.RectU* srcRect);
+
+		[VtblIndex(10)]
+		HResult CopyFromMemory(Common.RectU* dstRect, void* srcData, uint pitch);
 	}
 }
 

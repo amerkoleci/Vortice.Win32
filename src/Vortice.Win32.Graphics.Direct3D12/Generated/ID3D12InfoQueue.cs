@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("0742a90b-c387-483f-b946-30a7e4e61458")]
 [NativeTypeName("struct ID3D12InfoQueue : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12InfoQueue : INativeGuid
+public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12InfoQueue
 	{
@@ -352,6 +352,113 @@ public unsafe partial struct ID3D12InfoQueue : INativeGuid
 	public Bool32 GetMuteDebugOutput()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, Bool32>)(lpVtbl[37]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetMessageCountLimit(ulong MessageCountLimit);
+
+		[VtblIndex(4)]
+		void ClearStoredMessages();
+
+		[VtblIndex(5)]
+		HResult GetMessage(ulong MessageIndex, Message* pMessage, nuint* pMessageByteLength);
+
+		[VtblIndex(6)]
+		ulong GetNumMessagesAllowedByStorageFilter();
+
+		[VtblIndex(7)]
+		ulong GetNumMessagesDeniedByStorageFilter();
+
+		[VtblIndex(8)]
+		ulong GetNumStoredMessages();
+
+		[VtblIndex(9)]
+		ulong GetNumStoredMessagesAllowedByRetrievalFilter();
+
+		[VtblIndex(10)]
+		ulong GetNumMessagesDiscardedByMessageCountLimit();
+
+		[VtblIndex(11)]
+		ulong GetMessageCountLimit();
+
+		[VtblIndex(12)]
+		HResult AddStorageFilterEntries(InfoQueueFilter* pFilter);
+
+		[VtblIndex(13)]
+		HResult GetStorageFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+
+		[VtblIndex(14)]
+		void ClearStorageFilter();
+
+		[VtblIndex(15)]
+		HResult PushEmptyStorageFilter();
+
+		[VtblIndex(16)]
+		HResult PushCopyOfStorageFilter();
+
+		[VtblIndex(17)]
+		HResult PushStorageFilter(InfoQueueFilter* pFilter);
+
+		[VtblIndex(18)]
+		void PopStorageFilter();
+
+		[VtblIndex(19)]
+		uint GetStorageFilterStackSize();
+
+		[VtblIndex(20)]
+		HResult AddRetrievalFilterEntries(InfoQueueFilter* pFilter);
+
+		[VtblIndex(21)]
+		HResult GetRetrievalFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+
+		[VtblIndex(22)]
+		void ClearRetrievalFilter();
+
+		[VtblIndex(23)]
+		HResult PushEmptyRetrievalFilter();
+
+		[VtblIndex(24)]
+		HResult PushCopyOfRetrievalFilter();
+
+		[VtblIndex(25)]
+		HResult PushRetrievalFilter(InfoQueueFilter* pFilter);
+
+		[VtblIndex(26)]
+		void PopRetrievalFilter();
+
+		[VtblIndex(27)]
+		uint GetRetrievalFilterStackSize();
+
+		[VtblIndex(28)]
+		HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, sbyte* pDescription);
+
+		[VtblIndex(29)]
+		HResult AddApplicationMessage(MessageSeverity Severity, sbyte* pDescription);
+
+		[VtblIndex(30)]
+		HResult SetBreakOnCategory(MessageCategory Category, Bool32 bEnable);
+
+		[VtblIndex(31)]
+		HResult SetBreakOnSeverity(MessageSeverity Severity, Bool32 bEnable);
+
+		[VtblIndex(32)]
+		HResult SetBreakOnID(MessageId ID, Bool32 bEnable);
+
+		[VtblIndex(33)]
+		Bool32 GetBreakOnCategory(MessageCategory Category);
+
+		[VtblIndex(34)]
+		Bool32 GetBreakOnSeverity(MessageSeverity Severity);
+
+		[VtblIndex(35)]
+		Bool32 GetBreakOnID(MessageId ID);
+
+		[VtblIndex(36)]
+		void SetMuteDebugOutput(Bool32 bMute);
+
+		[VtblIndex(37)]
+		Bool32 GetMuteDebugOutput();
 	}
 }
 

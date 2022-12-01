@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("7e9fda85-6c92-4053-bc47-7ae3530db4d3")]
 [NativeTypeName("struct IDWriteFontSet1 : IDWriteFontSet")]
 [NativeInheritance("IDWriteFontSet")]
-public unsafe partial struct IDWriteFontSet1 : INativeGuid
+public unsafe partial struct IDWriteFontSet1 : IDWriteFontSet1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontSet1
 	{
@@ -256,6 +256,47 @@ public unsafe partial struct IDWriteFontSet1 : INativeGuid
 	public Locality GetFontLocality(uint listIndex)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet1*, uint, Locality>)(lpVtbl[25]))((IDWriteFontSet1*)Unsafe.AsPointer(ref this), listIndex);
+	}
+	public interface Interface : IDWriteFontSet.Interface
+	{
+		[VtblIndex(13)]
+		HResult GetMatchingFonts(FontProperty* fontProperty, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontSet1** matchingFonts);
+
+		[VtblIndex(14)]
+		HResult GetFirstFontResources(IDWriteFontSet1** filteredFontSet);
+
+		[VtblIndex(15)]
+		HResult GetFilteredFonts(uint* indices, uint indexCount, IDWriteFontSet1** filteredFontSet);
+
+		[VtblIndex(16)]
+		HResult GetFilteredFonts(FontAxisRange* fontAxisRanges, uint fontAxisRangeCount, Bool32 selectAnyRange, IDWriteFontSet1** filteredFontSet);
+
+		[VtblIndex(17)]
+		HResult GetFilteredFonts(FontProperty* properties, uint propertyCount, Bool32 selectAnyProperty, IDWriteFontSet1** filteredFontSet);
+
+		[VtblIndex(18)]
+		HResult GetFilteredFontIndices(FontAxisRange* fontAxisRanges, uint fontAxisRangeCount, Bool32 selectAnyRange, uint* indices, uint maxIndexCount, uint* actualIndexCount);
+
+		[VtblIndex(19)]
+		HResult GetFilteredFontIndices(FontProperty* properties, uint propertyCount, Bool32 selectAnyProperty, uint* indices, uint maxIndexCount, uint* actualIndexCount);
+
+		[VtblIndex(20)]
+		HResult GetFontAxisRanges(uint listIndex, FontAxisRange* fontAxisRanges, uint maxFontAxisRangeCount, uint* actualFontAxisRangeCount);
+
+		[VtblIndex(21)]
+		HResult GetFontAxisRanges(FontAxisRange* fontAxisRanges, uint maxFontAxisRangeCount, uint* actualFontAxisRangeCount);
+
+		[VtblIndex(22)]
+		HResult GetFontFaceReference(uint listIndex, IDWriteFontFaceReference1** fontFaceReference);
+
+		[VtblIndex(23)]
+		HResult CreateFontResource(uint listIndex, IDWriteFontResource** fontResource);
+
+		[VtblIndex(24)]
+		HResult CreateFontFace(uint listIndex, IDWriteFontFace5** fontFace);
+
+		[VtblIndex(25)]
+		Locality GetFontLocality(uint listIndex);
 	}
 }
 

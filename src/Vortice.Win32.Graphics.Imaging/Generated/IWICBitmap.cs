@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("00000121-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmap : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICBitmap : INativeGuid
+public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmap
 	{
@@ -136,6 +136,17 @@ public unsafe partial struct IWICBitmap : INativeGuid
 	public HResult SetResolution(double dpiX, double dpiY)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, double, double, int>)(lpVtbl[10]))((IWICBitmap*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+	}
+	public interface Interface : IWICBitmapSource.Interface
+	{
+		[VtblIndex(8)]
+		HResult Lock(System.Drawing.Rectangle* prcLock, WICBitmapLockFlags flags, IWICBitmapLock** ppILock);
+
+		[VtblIndex(9)]
+		HResult SetPalette(IWICPalette* pIPalette);
+
+		[VtblIndex(10)]
+		HResult SetResolution(double dpiX, double dpiY);
 	}
 }
 

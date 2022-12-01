@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("e57aa735-dcdb-4c72-9c61-0591f58889ee")]
 [NativeTypeName("struct IDCompositionSkewTransform : IDCompositionTransform")]
 [NativeInheritance("IDCompositionTransform")]
-public unsafe partial struct IDCompositionSkewTransform : INativeGuid
+public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionSkewTransform
 	{
@@ -136,6 +136,32 @@ public unsafe partial struct IDCompositionSkewTransform : INativeGuid
 	public HResult SetCenterY(float centerY)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionSkewTransform*, float, int>)(lpVtbl[10]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), centerY);
+	}
+	public interface Interface : IDCompositionTransform.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetAngleX(IDCompositionAnimation* animation);
+
+		[VtblIndex(4)]
+		HResult SetAngleX(float angleX);
+
+		[VtblIndex(5)]
+		HResult SetAngleY(IDCompositionAnimation* animation);
+
+		[VtblIndex(6)]
+		HResult SetAngleY(float angleY);
+
+		[VtblIndex(7)]
+		HResult SetCenterX(IDCompositionAnimation* animation);
+
+		[VtblIndex(8)]
+		HResult SetCenterX(float centerX);
+
+		[VtblIndex(9)]
+		HResult SetCenterY(IDCompositionAnimation* animation);
+
+		[VtblIndex(10)]
+		HResult SetCenterY(float centerY);
 	}
 }
 

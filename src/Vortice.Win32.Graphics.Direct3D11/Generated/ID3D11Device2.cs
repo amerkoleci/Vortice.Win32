@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("9d06dffa-d1e5-4d07-83a8-1bb123f2f841")]
 [NativeTypeName("struct ID3D11Device2 : ID3D11Device1")]
 [NativeInheritance("ID3D11Device1")]
-public unsafe partial struct ID3D11Device2 : INativeGuid
+public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Device2
 	{
@@ -480,6 +480,20 @@ public unsafe partial struct ID3D11Device2 : INativeGuid
 	public HResult CheckMultisampleQualityLevels1(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint Flags, uint* pNumQualityLevels)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint, uint*, int>)(lpVtbl[53]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, Flags, pNumQualityLevels);
+	}
+	public interface Interface : ID3D11Device1.Interface
+	{
+		[VtblIndex(50)]
+		void GetImmediateContext2(ID3D11DeviceContext2** ppImmediateContext);
+
+		[VtblIndex(51)]
+		HResult CreateDeferredContext2(uint ContextFlags, ID3D11DeviceContext2** ppDeferredContext);
+
+		[VtblIndex(52)]
+		void GetResourceTiling(ID3D11Resource* pTiledResource, uint* pNumTilesForEntireResource, PackedMipDescription* pPackedMipDesc, TileShape* pStandardTileShapeForNonPackedMips, uint* pNumSubresourceTilings, uint FirstSubresourceTilingToGet, SubresourceTiling* pSubresourceTilingsForNonPackedMips);
+
+		[VtblIndex(53)]
+		HResult CheckMultisampleQualityLevels1(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint Flags, uint* pNumQualityLevels);
 	}
 }
 

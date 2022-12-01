@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("5f49804d-7024-4d43-bfa9-d25984f53849")]
 [NativeTypeName("struct IDWriteFontFace : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFace : INativeGuid
+public unsafe partial struct IDWriteFontFace : IDWriteFontFace.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFace
 	{
@@ -192,6 +192,53 @@ public unsafe partial struct IDWriteFontFace : INativeGuid
 	public HResult GetGdiCompatibleGlyphMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, ushort* glyphIndices, uint glyphCount, GlyphMetrics* glyphMetrics, Bool32 isSideways)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, float, float, Matrix3x2*, Bool32, ushort*, uint, GlyphMetrics*, Bool32, int>)(lpVtbl[17]))((IDWriteFontFace*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, useGdiNatural, glyphIndices, glyphCount, glyphMetrics, isSideways);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		FontFaceType GetType();
+
+		[VtblIndex(4)]
+		HResult GetFiles(uint* numberOfFiles, IDWriteFontFile** fontFiles);
+
+		[VtblIndex(5)]
+		uint GetIndex();
+
+		[VtblIndex(6)]
+		FontSimulations GetSimulations();
+
+		[VtblIndex(7)]
+		Bool32 IsSymbolFont();
+
+		[VtblIndex(8)]
+		void GetMetrics(FontMetrics* fontFaceMetrics);
+
+		[VtblIndex(9)]
+		ushort GetGlyphCount();
+
+		[VtblIndex(10)]
+		HResult GetDesignGlyphMetrics(ushort* glyphIndices, uint glyphCount, GlyphMetrics* glyphMetrics, Bool32 isSideways);
+
+		[VtblIndex(11)]
+		HResult GetGlyphIndices(uint* codePoints, uint codePointCount, ushort* glyphIndices);
+
+		[VtblIndex(12)]
+		HResult TryGetFontTable(uint openTypeTableTag, void** tableData, uint* tableSize, void** tableContext, Bool32* exists);
+
+		[VtblIndex(13)]
+		void ReleaseFontTable(void* tableContext);
+
+		[VtblIndex(14)]
+		HResult GetGlyphRunOutline(float emSize, ushort* glyphIndices, float* glyphAdvances, GlyphOffset* glyphOffsets, uint glyphCount, Bool32 isSideways, Bool32 isRightToLeft, Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink* geometrySink);
+
+		[VtblIndex(15)]
+		HResult GetRecommendedRenderingMode(float emSize, float pixelsPerDip, MeasuringMode measuringMode, IDWriteRenderingParams* renderingParams, RenderingMode* renderingMode);
+
+		[VtblIndex(16)]
+		HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, FontMetrics* fontFaceMetrics);
+
+		[VtblIndex(17)]
+		HResult GetGdiCompatibleGlyphMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, ushort* glyphIndices, uint glyphCount, GlyphMetrics* glyphMetrics, Bool32 isSideways);
 	}
 }
 

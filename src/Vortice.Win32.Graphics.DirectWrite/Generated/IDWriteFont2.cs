@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("29748ed6-8c9c-4a6a-be0b-d912e8538944")]
 [NativeTypeName("struct IDWriteFont2 : IDWriteFont1")]
 [NativeInheritance("IDWriteFont1")]
-public unsafe partial struct IDWriteFont2 : INativeGuid
+public unsafe partial struct IDWriteFont2 : IDWriteFont2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFont2
 	{
@@ -200,6 +200,11 @@ public unsafe partial struct IDWriteFont2 : INativeGuid
 	public Bool32 IsColorFont()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont2*, Bool32>)(lpVtbl[18]))((IDWriteFont2*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDWriteFont1.Interface
+	{
+		[VtblIndex(18)]
+		Bool32 IsColorFont();
 	}
 }
 

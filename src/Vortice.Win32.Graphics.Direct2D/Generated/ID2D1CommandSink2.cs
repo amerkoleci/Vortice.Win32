@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("3bab440e-417e-47df-a2e2-bc0be6a00916")]
 [NativeTypeName("struct ID2D1CommandSink2 : ID2D1CommandSink1")]
 [NativeInheritance("ID2D1CommandSink1")]
-public unsafe partial struct ID2D1CommandSink2 : INativeGuid
+public unsafe partial struct ID2D1CommandSink2 : ID2D1CommandSink2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1CommandSink2
 	{
@@ -304,6 +304,17 @@ public unsafe partial struct ID2D1CommandSink2 : INativeGuid
 	public HResult DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink2*, ID2D1GdiMetafile*, Common.RectF*, Common.RectF*, int>)(lpVtbl[31]))((ID2D1CommandSink2*)Unsafe.AsPointer(ref this), gdiMetafile, destinationRectangle, sourceRectangle);
+	}
+	public interface Interface : ID2D1CommandSink1.Interface
+	{
+		[VtblIndex(29)]
+		HResult DrawInk(ID2D1Ink* ink, ID2D1Brush* brush, ID2D1InkStyle* inkStyle);
+
+		[VtblIndex(30)]
+		HResult DrawGradientMesh(ID2D1GradientMesh* gradientMesh);
+
+		[VtblIndex(31)]
+		HResult DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle);
 	}
 }
 

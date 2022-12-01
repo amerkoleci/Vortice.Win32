@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("765a30f3-f624-4c6f-a828-ace948622445")]
 [NativeTypeName("struct ID3D12PipelineState : ID3D12Pageable")]
 [NativeInheritance("ID3D12Pageable")]
-public unsafe partial struct ID3D12PipelineState : INativeGuid
+public unsafe partial struct ID3D12PipelineState : ID3D12PipelineState.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12PipelineState
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct ID3D12PipelineState : INativeGuid
 	public HResult GetCachedBlob(Graphics.Direct3D.ID3DBlob** ppBlob)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineState*, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[8]))((ID3D12PipelineState*)Unsafe.AsPointer(ref this), ppBlob);
+	}
+	public interface Interface : ID3D12Pageable.Interface
+	{
+		[VtblIndex(8)]
+		HResult GetCachedBlob(Graphics.Direct3D.ID3DBlob** ppBlob);
 	}
 }
 

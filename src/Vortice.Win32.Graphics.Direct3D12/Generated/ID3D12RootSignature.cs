@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("c54a6b66-72df-4ee8-8be5-a946a1429214")]
 [NativeTypeName("struct ID3D12RootSignature : ID3D12DeviceChild")]
 [NativeInheritance("ID3D12DeviceChild")]
-public unsafe partial struct ID3D12RootSignature : INativeGuid
+public unsafe partial struct ID3D12RootSignature : ID3D12RootSignature.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12RootSignature
 	{
@@ -112,6 +112,9 @@ public unsafe partial struct ID3D12RootSignature : INativeGuid
 	public HResult GetDevice(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12RootSignature*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12RootSignature*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+	}
+	public interface Interface : ID3D12DeviceChild.Interface
+	{
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906a7-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1GradientStopCollection : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1GradientStopCollection : INativeGuid
+public unsafe partial struct ID2D1GradientStopCollection : ID2D1GradientStopCollection.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GradientStopCollection
 	{
@@ -112,6 +112,20 @@ public unsafe partial struct ID2D1GradientStopCollection : INativeGuid
 	public ExtendMode GetExtendMode()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection*, ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		uint GetGradientStopCount();
+
+		[VtblIndex(5)]
+		void GetGradientStops(GradientStop* gradientStops, uint gradientStopsCount);
+
+		[VtblIndex(6)]
+		Gamma GetColorInterpolationGamma();
+
+		[VtblIndex(7)]
+		ExtendMode GetExtendMode();
 	}
 }
 

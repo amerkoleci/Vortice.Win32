@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("420d5b32-b90c-4da4-bef0-359f6a24a83a")]
 [NativeTypeName("struct ID3D11DeviceContext2 : ID3D11DeviceContext1")]
 [NativeInheritance("ID3D11DeviceContext1")]
-public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
+public unsafe partial struct ID3D11DeviceContext2 : ID3D11DeviceContext2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11DeviceContext2
 	{
@@ -1200,6 +1200,38 @@ public unsafe partial struct ID3D11DeviceContext2 : INativeGuid
 	public void EndEvent()
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext2*, void>)(lpVtbl[143]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID3D11DeviceContext1.Interface
+	{
+		[VtblIndex(134)]
+		HResult UpdateTileMappings(ID3D11Resource* pTiledResource, uint NumTiledResourceRegions, TiledResourceCoordinate* pTiledResourceRegionStartCoordinates, TileRegionSize* pTiledResourceRegionSizes, ID3D11Buffer* pTilePool, uint NumRanges, uint* pRangeFlags, uint* pTilePoolStartOffsets, uint* pRangeTileCounts, uint Flags);
+
+		[VtblIndex(135)]
+		HResult CopyTileMappings(ID3D11Resource* pDestTiledResource, TiledResourceCoordinate* pDestRegionStartCoordinate, ID3D11Resource* pSourceTiledResource, TiledResourceCoordinate* pSourceRegionStartCoordinate, TileRegionSize* pTileRegionSize, uint Flags);
+
+		[VtblIndex(136)]
+		void CopyTiles(ID3D11Resource* pTiledResource, TiledResourceCoordinate* pTileRegionStartCoordinate, TileRegionSize* pTileRegionSize, ID3D11Buffer* pBuffer, ulong BufferStartOffsetInBytes, uint Flags);
+
+		[VtblIndex(137)]
+		void UpdateTiles(ID3D11Resource* pDestTiledResource, TiledResourceCoordinate* pDestTileRegionStartCoordinate, TileRegionSize* pDestTileRegionSize, void* pSourceTileData, uint Flags);
+
+		[VtblIndex(138)]
+		HResult ResizeTilePool(ID3D11Buffer* pTilePool, ulong NewSizeInBytes);
+
+		[VtblIndex(139)]
+		void TiledResourceBarrier(ID3D11DeviceChild* pTiledResourceOrViewAccessBeforeBarrier, ID3D11DeviceChild* pTiledResourceOrViewAccessAfterBarrier);
+
+		[VtblIndex(140)]
+		Bool32 IsAnnotationEnabled();
+
+		[VtblIndex(141)]
+		void SetMarkerInt(ushort* pLabel, int Data);
+
+		[VtblIndex(142)]
+		void BeginEventInt(ushort* pLabel, int Data);
+
+		[VtblIndex(143)]
+		void EndEvent();
 	}
 }
 

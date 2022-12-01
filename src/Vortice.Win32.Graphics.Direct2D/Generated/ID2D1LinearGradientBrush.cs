@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906ab-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1LinearGradientBrush : ID2D1Brush")]
 [NativeInheritance("ID2D1Brush")]
-public unsafe partial struct ID2D1LinearGradientBrush : INativeGuid
+public unsafe partial struct ID2D1LinearGradientBrush : ID2D1LinearGradientBrush.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1LinearGradientBrush
 	{
@@ -154,6 +154,23 @@ public unsafe partial struct ID2D1LinearGradientBrush : INativeGuid
 	public void GetGradientStopCollection(ID2D1GradientStopCollection** gradientStopCollection)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1LinearGradientBrush*, ID2D1GradientStopCollection**, void>)(lpVtbl[12]))((ID2D1LinearGradientBrush*)Unsafe.AsPointer(ref this), gradientStopCollection);
+	}
+	public interface Interface : ID2D1Brush.Interface
+	{
+		[VtblIndex(8)]
+		void SetStartPoint(System.Drawing.PointF startPoint);
+
+		[VtblIndex(9)]
+		void SetEndPoint(System.Drawing.PointF endPoint);
+
+		[VtblIndex(10)]
+		System.Drawing.PointF GetStartPoint();
+
+		[VtblIndex(11)]
+		System.Drawing.PointF GetEndPoint();
+
+		[VtblIndex(12)]
+		void GetGradientStopCollection(ID2D1GradientStopCollection** gradientStopCollection);
 	}
 }
 

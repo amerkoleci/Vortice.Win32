@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("33ecdc0a-578a-4a11-9c14-0cb90517f9c5")]
 [NativeTypeName("struct IDCompositionBlendEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionBlendEffect : INativeGuid
+public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionBlendEffect
 	{
@@ -88,6 +88,11 @@ public unsafe partial struct IDCompositionBlendEffect : INativeGuid
 	public HResult SetMode(Graphics.Direct2D.Common.BlendMode mode)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionBlendEffect*, Graphics.Direct2D.Common.BlendMode, int>)(lpVtbl[4]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), mode);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetMode(Graphics.Direct2D.Common.BlendMode mode);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("8a6bb301-7e7e-41f4-a8e0-5b32f7f99b18")]
 [NativeTypeName("struct IDXGIOutput3 : IDXGIOutput2")]
 [NativeInheritance("IDXGIOutput2")]
-public unsafe partial struct IDXGIOutput3 : INativeGuid
+public unsafe partial struct IDXGIOutput3 : IDXGIOutput3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput3
 	{
@@ -248,6 +248,11 @@ public unsafe partial struct IDXGIOutput3 : INativeGuid
 	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput3*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput3*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
+	}
+	public interface Interface : IDXGIOutput2.Interface
+	{
+		[VtblIndex(24)]
+		HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("553a9ff3-5693-4df7-b52b-74806f7f2eb9")]
 [NativeTypeName("struct IDWriteTextAnalyzer2 : IDWriteTextAnalyzer1")]
 [NativeInheritance("IDWriteTextAnalyzer1")]
-public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
+public unsafe partial struct IDWriteTextAnalyzer2 : IDWriteTextAnalyzer2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextAnalyzer2
 	{
@@ -224,6 +224,17 @@ public unsafe partial struct IDWriteTextAnalyzer2 : INativeGuid
 	public HResult CheckTypographicFeature(IDWriteFontFace* fontFace, ScriptAnalysis scriptAnalysis, ushort* localeName, FontFeatureTag featureTag, uint glyphCount, ushort* glyphIndices, byte* featureApplies)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, ScriptAnalysis, ushort*, FontFeatureTag, uint, ushort*, byte*, int>)(lpVtbl[21]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, scriptAnalysis, localeName, featureTag, glyphCount, glyphIndices, featureApplies);
+	}
+	public interface Interface : IDWriteTextAnalyzer1.Interface
+	{
+		[VtblIndex(19)]
+		HResult GetGlyphOrientationTransform(GlyphOrientationAngle glyphOrientationAngle, Bool32 isSideways, float originX, float originY, Matrix3x2* transform);
+
+		[VtblIndex(20)]
+		HResult GetTypographicFeatures(IDWriteFontFace* fontFace, ScriptAnalysis scriptAnalysis, ushort* localeName, uint maxTagCount, uint* actualTagCount, FontFeatureTag* tags);
+
+		[VtblIndex(21)]
+		HResult CheckTypographicFeature(IDWriteFontFace* fontFace, ScriptAnalysis scriptAnalysis, ushort* localeName, FontFeatureTag featureTag, uint glyphCount, ushort* glyphIndices, byte* featureApplies);
 	}
 }
 

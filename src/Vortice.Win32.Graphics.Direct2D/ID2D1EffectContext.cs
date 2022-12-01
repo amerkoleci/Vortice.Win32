@@ -1,6 +1,8 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using static Win32.Apis;
+
 namespace Win32.Graphics.Direct2D;
 
 public unsafe partial struct ID2D1EffectContext
@@ -13,7 +15,7 @@ public unsafe partial struct ID2D1EffectContext
     public ComPtr<ID2D1Effect> CreateEffect(in Guid effectId)
     {
         using ComPtr<ID2D1Effect> effect = default;
-        CreateEffect((Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in effectId)), effect.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateEffect((Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in effectId)), effect.GetAddressOf()));
         return effect.Move();
     }
 }

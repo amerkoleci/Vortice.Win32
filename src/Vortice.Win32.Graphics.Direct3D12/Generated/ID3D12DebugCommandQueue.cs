@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("09e0bf36-54ac-484f-8847-4baeeab6053a")]
 [NativeTypeName("struct ID3D12DebugCommandQueue : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12DebugCommandQueue : INativeGuid
+public unsafe partial struct ID3D12DebugCommandQueue : ID3D12DebugCommandQueue.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12DebugCommandQueue
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID3D12DebugCommandQueue : INativeGuid
 	public Bool32 AssertResourceState(ID3D12Resource* pResource, uint Subresource, uint State)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandQueue*, ID3D12Resource*, uint, uint, Bool32>)(lpVtbl[3]))((ID3D12DebugCommandQueue*)Unsafe.AsPointer(ref this), pResource, Subresource, State);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		Bool32 AssertResourceState(ID3D12Resource* pResource, uint Subresource, uint State);
 	}
 }
 

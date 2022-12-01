@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("0439fc60-ca44-4994-8dee-3a9af7b732ec")]
 [NativeTypeName("struct IDWriteFactory2 : IDWriteFactory1")]
 [NativeInheritance("IDWriteFactory1")]
-public unsafe partial struct IDWriteFactory2 : INativeGuid
+public unsafe partial struct IDWriteFactory2 : IDWriteFactory2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory2
 	{
@@ -296,6 +296,23 @@ public unsafe partial struct IDWriteFactory2 : INativeGuid
 	public HResult CreateGlyphRunAnalysis(GlyphRun* glyphRun, Matrix3x2* transform, RenderingMode renderingMode, MeasuringMode measuringMode, GridFitMode gridFitMode, TextAntialiasMode antialiasMode, float baselineOriginX, float baselineOriginY, IDWriteGlyphRunAnalysis** glyphRunAnalysis)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory2*, GlyphRun*, Matrix3x2*, RenderingMode, MeasuringMode, GridFitMode, TextAntialiasMode, float, float, IDWriteGlyphRunAnalysis**, int>)(lpVtbl[30]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), glyphRun, transform, renderingMode, measuringMode, gridFitMode, antialiasMode, baselineOriginX, baselineOriginY, glyphRunAnalysis);
+	}
+	public interface Interface : IDWriteFactory1.Interface
+	{
+		[VtblIndex(26)]
+		HResult GetSystemFontFallback(IDWriteFontFallback** fontFallback);
+
+		[VtblIndex(27)]
+		HResult CreateFontFallbackBuilder(IDWriteFontFallbackBuilder** fontFallbackBuilder);
+
+		[VtblIndex(28)]
+		HResult TranslateColorGlyphRun(float baselineOriginX, float baselineOriginY, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, MeasuringMode measuringMode, Matrix3x2* worldToDeviceTransform, uint colorPaletteIndex, IDWriteColorGlyphRunEnumerator** colorLayers);
+
+		[VtblIndex(29)]
+		HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float grayscaleEnhancedContrast, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode renderingMode, GridFitMode gridFitMode, IDWriteRenderingParams2** renderingParams);
+
+		[VtblIndex(30)]
+		HResult CreateGlyphRunAnalysis(GlyphRun* glyphRun, Matrix3x2* transform, RenderingMode renderingMode, MeasuringMode measuringMode, GridFitMode gridFitMode, TextAntialiasMode antialiasMode, float baselineOriginX, float baselineOriginY, IDWriteGlyphRunAnalysis** glyphRunAnalysis);
 	}
 }
 

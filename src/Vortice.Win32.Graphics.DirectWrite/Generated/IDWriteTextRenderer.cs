@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("ef8a8135-5cc6-45fe-8825-c5a0724eb819")]
 [NativeTypeName("struct IDWriteTextRenderer : IDWritePixelSnapping")]
 [NativeInheritance("IDWritePixelSnapping")]
-public unsafe partial struct IDWriteTextRenderer : INativeGuid
+public unsafe partial struct IDWriteTextRenderer : IDWriteTextRenderer.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextRenderer
 	{
@@ -128,6 +128,20 @@ public unsafe partial struct IDWriteTextRenderer : INativeGuid
 	public HResult DrawInlineObject(void* clientDrawingContext, float originX, float originY, IDWriteInlineObject* inlineObject, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer*, void*, float, float, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[9]))((IDWriteTextRenderer*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
+	}
+	public interface Interface : IDWritePixelSnapping.Interface
+	{
+		[VtblIndex(6)]
+		HResult DrawGlyphRun(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, IUnknown* clientDrawingEffect);
+
+		[VtblIndex(7)]
+		HResult DrawUnderline(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, Underline* underline, IUnknown* clientDrawingEffect);
+
+		[VtblIndex(8)]
+		HResult DrawStrikethrough(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, Strikethrough* strikethrough, IUnknown* clientDrawingEffect);
+
+		[VtblIndex(9)]
+		HResult DrawInlineObject(void* clientDrawingContext, float originX, float originY, IDWriteInlineObject* inlineObject, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect);
 	}
 }
 

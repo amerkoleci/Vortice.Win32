@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("aba496dd-b617-4cb8-a866-bc44d7eb1fa2")]
 [NativeTypeName("struct IDXGISurface2 : IDXGISurface1")]
 [NativeInheritance("IDXGISurface1")]
-public unsafe partial struct IDXGISurface2 : INativeGuid
+public unsafe partial struct IDXGISurface2 : IDXGISurface2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISurface2
 	{
@@ -160,6 +160,11 @@ public unsafe partial struct IDXGISurface2 : INativeGuid
 	public HResult GetResource(Guid* riid, void** ppParentResource, uint* pSubresourceIndex)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, void**, uint*, int>)(lpVtbl[13]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppParentResource, pSubresourceIndex);
+	}
+	public interface Interface : IDXGISurface1.Interface
+	{
+		[VtblIndex(13)]
+		HResult GetResource(Guid* riid, void** ppParentResource, uint* pSubresourceIndex);
 	}
 }
 

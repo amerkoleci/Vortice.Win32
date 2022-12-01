@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("310d36a0-d2e7-4c0a-aa04-6a9d23b8886a")]
 [NativeTypeName("struct IDXGISwapChain : IDXGIDeviceSubObject")]
 [NativeInheritance("IDXGIDeviceSubObject")]
-public unsafe partial struct IDXGISwapChain : INativeGuid
+public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISwapChain
 	{
@@ -192,6 +192,38 @@ public unsafe partial struct IDXGISwapChain : INativeGuid
 	public HResult GetLastPresentCount(uint* pLastPresentCount)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint*, int>)(lpVtbl[17]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pLastPresentCount);
+	}
+	public interface Interface : IDXGIDeviceSubObject.Interface
+	{
+		[VtblIndex(8)]
+		HResult Present(uint SyncInterval, PresentFlags Flags);
+
+		[VtblIndex(9)]
+		HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface);
+
+		[VtblIndex(10)]
+		HResult SetFullscreenState(Bool32 Fullscreen, IDXGIOutput* pTarget);
+
+		[VtblIndex(11)]
+		HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget);
+
+		[VtblIndex(12)]
+		HResult GetDesc(SwapChainDescription* pDesc);
+
+		[VtblIndex(13)]
+		HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, SwapChainFlags SwapChainFlags);
+
+		[VtblIndex(14)]
+		HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters);
+
+		[VtblIndex(15)]
+		HResult GetContainingOutput(IDXGIOutput** ppOutput);
+
+		[VtblIndex(16)]
+		HResult GetFrameStatistics(FrameStatistics* pStats);
+
+		[VtblIndex(17)]
+		HResult GetLastPresentCount(uint* pLastPresentCount);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("0d85573c-01e3-4f7d-bfd9-0d60608bf3c3")]
 [NativeTypeName("struct ID2D1ComputeTransform : ID2D1Transform")]
 [NativeInheritance("ID2D1Transform")]
-public unsafe partial struct ID2D1ComputeTransform : INativeGuid
+public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ComputeTransform
 	{
@@ -120,6 +120,14 @@ public unsafe partial struct ID2D1ComputeTransform : INativeGuid
 	public HResult CalculateThreadgroups(RawRect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, RawRect*, uint*, uint*, uint*, int>)(lpVtbl[8]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), outputRect, dimensionX, dimensionY, dimensionZ);
+	}
+	public interface Interface : ID2D1Transform.Interface
+	{
+		[VtblIndex(7)]
+		HResult SetComputeInfo(ID2D1ComputeInfo* computeInfo);
+
+		[VtblIndex(8)]
+		HResult CalculateThreadgroups(RawRect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ);
 	}
 }
 

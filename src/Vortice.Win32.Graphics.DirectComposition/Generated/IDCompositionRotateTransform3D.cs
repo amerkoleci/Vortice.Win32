@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("d8f5b23f-d429-4a91-b55a-d2f45fd75b18")]
 [NativeTypeName("struct IDCompositionRotateTransform3D : IDCompositionTransform3D")]
 [NativeInheritance("IDCompositionTransform3D")]
-public unsafe partial struct IDCompositionRotateTransform3D : INativeGuid
+public unsafe partial struct IDCompositionRotateTransform3D : IDCompositionRotateTransform3D.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionRotateTransform3D
 	{
@@ -184,6 +184,50 @@ public unsafe partial struct IDCompositionRotateTransform3D : INativeGuid
 	public HResult SetCenterZ(float centerZ)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform3D*, float, int>)(lpVtbl[16]))((IDCompositionRotateTransform3D*)Unsafe.AsPointer(ref this), centerZ);
+	}
+	public interface Interface : IDCompositionTransform3D.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetAngle(IDCompositionAnimation* animation);
+
+		[VtblIndex(4)]
+		HResult SetAngle(float angle);
+
+		[VtblIndex(5)]
+		HResult SetAxisX(IDCompositionAnimation* animation);
+
+		[VtblIndex(6)]
+		HResult SetAxisX(float axisX);
+
+		[VtblIndex(7)]
+		HResult SetAxisY(IDCompositionAnimation* animation);
+
+		[VtblIndex(8)]
+		HResult SetAxisY(float axisY);
+
+		[VtblIndex(9)]
+		HResult SetAxisZ(IDCompositionAnimation* animation);
+
+		[VtblIndex(10)]
+		HResult SetAxisZ(float axisZ);
+
+		[VtblIndex(11)]
+		HResult SetCenterX(IDCompositionAnimation* animation);
+
+		[VtblIndex(12)]
+		HResult SetCenterX(float centerX);
+
+		[VtblIndex(13)]
+		HResult SetCenterY(IDCompositionAnimation* animation);
+
+		[VtblIndex(14)]
+		HResult SetCenterY(float centerY);
+
+		[VtblIndex(15)]
+		HResult SetCenterZ(IDCompositionAnimation* animation);
+
+		[VtblIndex(16)]
+		HResult SetCenterZ(float centerZ);
 	}
 }
 

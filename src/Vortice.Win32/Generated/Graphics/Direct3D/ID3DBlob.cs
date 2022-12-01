@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D;
 [Guid("8ba5fb08-5195-40e2-ac58-0d989c3a0102")]
 [NativeTypeName("struct ID3DBlob : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3DBlob : INativeGuid
+public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3DBlob
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID3DBlob : INativeGuid
 	public nuint GetBufferSize()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, nuint>)(lpVtbl[4]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void* GetBufferPointer();
+
+		[VtblIndex(4)]
+		nuint GetBufferSize();
 	}
 }
 

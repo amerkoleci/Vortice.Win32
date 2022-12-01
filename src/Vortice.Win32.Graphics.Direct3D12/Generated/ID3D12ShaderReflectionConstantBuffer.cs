@@ -12,7 +12,7 @@ namespace Win32.Graphics.Direct3D12;
 /// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionConstantBuffer"]/*' />
 /// <unmanaged>ID3D12ShaderReflectionConstantBuffer</unmanaged>
 [Guid("c59598b4-48b3-4869-b9b1-b1618b14a8b7")]
-public unsafe partial struct ID3D12ShaderReflectionConstantBuffer : INativeGuid
+public unsafe partial struct ID3D12ShaderReflectionConstantBuffer : ID3D12ShaderReflectionConstantBuffer.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12ShaderReflectionConstantBuffer
 	{
@@ -68,6 +68,17 @@ public unsafe partial struct ID3D12ShaderReflectionConstantBuffer : INativeGuid
 	public ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionConstantBuffer*, sbyte*, ID3D12ShaderReflectionVariable>)(lpVtbl[2]))((ID3D12ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
+	}
+	public interface Interface 
+	{
+		[VtblIndex(0)]
+		HResult GetDesc(ShaderBufferDescription* pDesc);
+
+		[VtblIndex(1)]
+		ID3D12ShaderReflectionVariable GetVariableByIndex(uint Index);
+
+		[VtblIndex(2)]
+		ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name);
 	}
 }
 

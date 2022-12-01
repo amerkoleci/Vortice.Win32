@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906a1-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Geometry : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Geometry : INativeGuid
+public unsafe partial struct ID2D1Geometry : ID2D1Geometry.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Geometry
 	{
@@ -184,6 +184,47 @@ public unsafe partial struct ID2D1Geometry : INativeGuid
 	public HResult Widen(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Geometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		HResult GetBounds(Matrix3x2* worldTransform, Common.RectF* bounds);
+
+		[VtblIndex(5)]
+		HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.RectF* bounds);
+
+		[VtblIndex(6)]
+		HResult StrokeContainsPoint(System.Drawing.PointF point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains);
+
+		[VtblIndex(7)]
+		HResult FillContainsPoint(System.Drawing.PointF point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains);
+
+		[VtblIndex(8)]
+		HResult CompareWithGeometry(ID2D1Geometry* inputGeometry, Matrix3x2* inputGeometryTransform, float flatteningTolerance, GeometryRelation* relation);
+
+		[VtblIndex(9)]
+		HResult Simplify(GeometrySimplificationOption simplificationOption, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);
+
+		[VtblIndex(10)]
+		HResult Tessellate(Matrix3x2* worldTransform, float flatteningTolerance, ID2D1TessellationSink* tessellationSink);
+
+		[VtblIndex(11)]
+		HResult CombineWithGeometry(ID2D1Geometry* inputGeometry, CombineMode combineMode, Matrix3x2* inputGeometryTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);
+
+		[VtblIndex(12)]
+		HResult Outline(Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);
+
+		[VtblIndex(13)]
+		HResult ComputeArea(Matrix3x2* worldTransform, float flatteningTolerance, float* area);
+
+		[VtblIndex(14)]
+		HResult ComputeLength(Matrix3x2* worldTransform, float flatteningTolerance, float* length);
+
+		[VtblIndex(15)]
+		HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, System.Drawing.PointF* point, System.Drawing.PointF* unitTangentVector);
+
+		[VtblIndex(16)]
+		HResult Widen(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("59c0cb01-35f0-4a70-8f67-87905c906a53")]
 [NativeTypeName("struct ID3D11VideoDevice2 : ID3D11VideoDevice1")]
 [NativeInheritance("ID3D11VideoDevice1")]
-public unsafe partial struct ID3D11VideoDevice2 : INativeGuid
+public unsafe partial struct ID3D11VideoDevice2 : ID3D11VideoDevice2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoDevice2
 	{
@@ -256,6 +256,14 @@ public unsafe partial struct ID3D11VideoDevice2 : INativeGuid
 	public HResult NegotiateCryptoSessionKeyExchangeMT(ID3D11CryptoSession* pCryptoSession, CryptoSessionKeyExchangeFlags flags, uint DataSize, void* pData)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice2*, ID3D11CryptoSession*, CryptoSessionKeyExchangeFlags, uint, void*, int>)(lpVtbl[25]))((ID3D11VideoDevice2*)Unsafe.AsPointer(ref this), pCryptoSession, flags, DataSize, pData);
+	}
+	public interface Interface : ID3D11VideoDevice1.Interface
+	{
+		[VtblIndex(24)]
+		HResult CheckFeatureSupport(FeatureVideo Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
+
+		[VtblIndex(25)]
+		HResult NegotiateCryptoSessionKeyExchangeMT(ID3D11CryptoSession* pCryptoSession, CryptoSessionKeyExchangeFlags flags, uint DataSize, void* pData);
 	}
 }
 

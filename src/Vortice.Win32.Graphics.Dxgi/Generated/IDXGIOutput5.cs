@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("80a07424-ab52-42eb-833c-0c42fd282d98")]
 [NativeTypeName("struct IDXGIOutput5 : IDXGIOutput4")]
 [NativeInheritance("IDXGIOutput4")]
-public unsafe partial struct IDXGIOutput5 : INativeGuid
+public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput5
 	{
@@ -264,6 +264,11 @@ public unsafe partial struct IDXGIOutput5 : INativeGuid
 	public HResult DuplicateOutput1(IUnknown* pDevice, uint Flags, uint SupportedFormatsCount, Common.Format* pSupportedFormats, IDXGIOutputDuplication** ppOutputDuplication)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
+	}
+	public interface Interface : IDXGIOutput4.Interface
+	{
+		[VtblIndex(26)]
+		HResult DuplicateOutput1(IUnknown* pDevice, uint Flags, uint SupportedFormatsCount, Common.Format* pSupportedFormats, IDXGIOutputDuplication** ppOutputDuplication);
 	}
 }
 

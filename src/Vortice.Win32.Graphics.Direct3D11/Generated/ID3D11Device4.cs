@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("8992ab71-02e6-4b8d-ba48-b056dcda42c4")]
 [NativeTypeName("struct ID3D11Device4 : ID3D11Device3")]
 [NativeInheritance("ID3D11Device3")]
-public unsafe partial struct ID3D11Device4 : INativeGuid
+public unsafe partial struct ID3D11Device4 : ID3D11Device4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Device4
 	{
@@ -584,6 +584,14 @@ public unsafe partial struct ID3D11Device4 : INativeGuid
 	public void UnregisterDeviceRemoved(uint dwCookie)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Device4*, uint, void>)(lpVtbl[66]))((ID3D11Device4*)Unsafe.AsPointer(ref this), dwCookie);
+	}
+	public interface Interface : ID3D11Device3.Interface
+	{
+		[VtblIndex(65)]
+		HResult RegisterDeviceRemovedEvent(Handle hEvent, uint* pdwCookie);
+
+		[VtblIndex(66)]
+		void UnregisterDeviceRemoved(uint dwCookie);
 	}
 }
 

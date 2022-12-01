@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("b2efe1e7-729f-4102-949f-505fa21bf666")]
 [NativeTypeName("struct ID2D1TransformNode : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1TransformNode : INativeGuid
+public unsafe partial struct ID2D1TransformNode : ID2D1TransformNode.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1TransformNode
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID2D1TransformNode : INativeGuid
 	public uint GetInputCount()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformNode*, uint>)(lpVtbl[3]))((ID2D1TransformNode*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		uint GetInputCount();
 	}
 }
 

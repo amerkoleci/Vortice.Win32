@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("54ec77fa-1377-44e6-8c32-88fd5f44c84c")]
 [NativeTypeName("struct IDXGIDevice : IDXGIObject")]
 [NativeInheritance("IDXGIObject")]
-public unsafe partial struct IDXGIDevice : INativeGuid
+public unsafe partial struct IDXGIDevice : IDXGIDevice.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDevice
 	{
@@ -144,6 +144,23 @@ public unsafe partial struct IDXGIDevice : INativeGuid
 	public HResult GetGPUThreadPriority(int* pPriority)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice*, int*, int>)(lpVtbl[11]))((IDXGIDevice*)Unsafe.AsPointer(ref this), pPriority);
+	}
+	public interface Interface : IDXGIObject.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetAdapter(IDXGIAdapter** pAdapter);
+
+		[VtblIndex(8)]
+		HResult CreateSurface(SurfaceDescription* pDesc, uint NumSurfaces, Usage Usage, SharedResource* pSharedResource, IDXGISurface** ppSurface);
+
+		[VtblIndex(9)]
+		HResult QueryResourceResidency(IUnknown** ppResources, Residency* pResidencyStatus, uint NumResources);
+
+		[VtblIndex(10)]
+		HResult SetGPUThreadPriority(int Priority);
+
+		[VtblIndex(11)]
+		HResult GetGPUThreadPriority(int* pPriority);
 	}
 }
 

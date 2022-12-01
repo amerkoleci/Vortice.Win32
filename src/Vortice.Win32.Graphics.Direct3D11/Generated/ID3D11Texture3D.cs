@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("037e866e-f56d-4357-a8af-9dabbe6e250e")]
 [NativeTypeName("struct ID3D11Texture3D : ID3D11Resource")]
 [NativeInheritance("ID3D11Resource")]
-public unsafe partial struct ID3D11Texture3D : INativeGuid
+public unsafe partial struct ID3D11Texture3D : ID3D11Texture3D.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Texture3D
 	{
@@ -136,6 +136,11 @@ public unsafe partial struct ID3D11Texture3D : INativeGuid
 	public void GetDesc(Texture3DDescription* pDesc)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Texture3D*, Texture3DDescription*, void>)(lpVtbl[10]))((ID3D11Texture3D*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : ID3D11Resource.Interface
+	{
+		[VtblIndex(10)]
+		void GetDesc(Texture3DDescription* pDesc);
 	}
 }
 

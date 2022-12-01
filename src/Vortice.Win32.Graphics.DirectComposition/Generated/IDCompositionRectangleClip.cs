@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("9842ad7d-d9cf-4908-aed7-48b51da5e7c2")]
 [NativeTypeName("struct IDCompositionRectangleClip : IDCompositionClip")]
 [NativeInheritance("IDCompositionClip")]
-public unsafe partial struct IDCompositionRectangleClip : INativeGuid
+public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangleClip.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionRectangleClip
 	{
@@ -264,6 +264,80 @@ public unsafe partial struct IDCompositionRectangleClip : INativeGuid
 	public HResult SetBottomRightRadiusY(float radius)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[26]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+	}
+	public interface Interface : IDCompositionClip.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetLeft(IDCompositionAnimation* animation);
+
+		[VtblIndex(4)]
+		HResult SetLeft(float left);
+
+		[VtblIndex(5)]
+		HResult SetTop(IDCompositionAnimation* animation);
+
+		[VtblIndex(6)]
+		HResult SetTop(float top);
+
+		[VtblIndex(7)]
+		HResult SetRight(IDCompositionAnimation* animation);
+
+		[VtblIndex(8)]
+		HResult SetRight(float right);
+
+		[VtblIndex(9)]
+		HResult SetBottom(IDCompositionAnimation* animation);
+
+		[VtblIndex(10)]
+		HResult SetBottom(float bottom);
+
+		[VtblIndex(11)]
+		HResult SetTopLeftRadiusX(IDCompositionAnimation* animation);
+
+		[VtblIndex(12)]
+		HResult SetTopLeftRadiusX(float radius);
+
+		[VtblIndex(13)]
+		HResult SetTopLeftRadiusY(IDCompositionAnimation* animation);
+
+		[VtblIndex(14)]
+		HResult SetTopLeftRadiusY(float radius);
+
+		[VtblIndex(15)]
+		HResult SetTopRightRadiusX(IDCompositionAnimation* animation);
+
+		[VtblIndex(16)]
+		HResult SetTopRightRadiusX(float radius);
+
+		[VtblIndex(17)]
+		HResult SetTopRightRadiusY(IDCompositionAnimation* animation);
+
+		[VtblIndex(18)]
+		HResult SetTopRightRadiusY(float radius);
+
+		[VtblIndex(19)]
+		HResult SetBottomLeftRadiusX(IDCompositionAnimation* animation);
+
+		[VtblIndex(20)]
+		HResult SetBottomLeftRadiusX(float radius);
+
+		[VtblIndex(21)]
+		HResult SetBottomLeftRadiusY(IDCompositionAnimation* animation);
+
+		[VtblIndex(22)]
+		HResult SetBottomLeftRadiusY(float radius);
+
+		[VtblIndex(23)]
+		HResult SetBottomRightRadiusX(IDCompositionAnimation* animation);
+
+		[VtblIndex(24)]
+		HResult SetBottomRightRadiusX(float radius);
+
+		[VtblIndex(25)]
+		HResult SetBottomRightRadiusY(IDCompositionAnimation* animation);
+
+		[VtblIndex(26)]
+		HResult SetBottomRightRadiusY(float radius);
 	}
 }
 

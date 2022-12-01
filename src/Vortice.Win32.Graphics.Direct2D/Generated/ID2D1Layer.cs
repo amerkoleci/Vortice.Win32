@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd9069b-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Layer : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Layer : INativeGuid
+public unsafe partial struct ID2D1Layer : ID2D1Layer.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Layer
 	{
@@ -89,6 +89,11 @@ public unsafe partial struct ID2D1Layer : INativeGuid
 	{
 		System.Drawing.SizeF result;
 		return *((delegate* unmanaged[Stdcall]<ID2D1Layer*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Layer*)Unsafe.AsPointer(ref this), &result);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		System.Drawing.SizeF GetSize();
 	}
 }
 

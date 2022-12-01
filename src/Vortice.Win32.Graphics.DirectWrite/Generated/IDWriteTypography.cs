@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("55f1112b-1dc2-4b3c-9541-f46894ed85b6")]
 [NativeTypeName("struct IDWriteTypography : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteTypography : INativeGuid
+public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTypography
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IDWriteTypography : INativeGuid
 	public HResult GetFontFeature(uint fontFeatureIndex, FontFeature* fontFeature)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, uint, FontFeature*, int>)(lpVtbl[5]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeatureIndex, fontFeature);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult AddFontFeature(FontFeature fontFeature);
+
+		[VtblIndex(4)]
+		uint GetFontFeatureCount();
+
+		[VtblIndex(5)]
+		HResult GetFontFeature(uint fontFeatureIndex, FontFeature* fontFeature);
 	}
 }
 

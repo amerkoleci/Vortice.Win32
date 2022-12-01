@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("c5a05f0c-16f2-4adf-9f4d-a8c4d58ac550")]
 [NativeTypeName("struct IDXGIDebug1 : IDXGIDebug")]
 [NativeInheritance("IDXGIDebug")]
-public unsafe partial struct IDXGIDebug1 : INativeGuid
+public unsafe partial struct IDXGIDebug1 : IDXGIDebug1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDebug1
 	{
@@ -104,6 +104,17 @@ public unsafe partial struct IDXGIDebug1 : INativeGuid
 	public Bool32 IsLeakTrackingEnabledForThread()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDebug1*, Bool32>)(lpVtbl[6]))((IDXGIDebug1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDXGIDebug.Interface
+	{
+		[VtblIndex(4)]
+		void EnableLeakTrackingForThread();
+
+		[VtblIndex(5)]
+		void DisableLeakTrackingForThread();
+
+		[VtblIndex(6)]
+		Bool32 IsLeakTrackingEnabledForThread();
 	}
 }
 

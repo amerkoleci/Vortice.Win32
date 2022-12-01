@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906a4-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1EllipseGeometry : ID2D1Geometry")]
 [NativeInheritance("ID2D1Geometry")]
-public unsafe partial struct ID2D1EllipseGeometry : INativeGuid
+public unsafe partial struct ID2D1EllipseGeometry : ID2D1EllipseGeometry.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1EllipseGeometry
 	{
@@ -192,6 +192,11 @@ public unsafe partial struct ID2D1EllipseGeometry : INativeGuid
 	public void GetEllipse(Ellipse* ellipse)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1EllipseGeometry*, Ellipse*, void>)(lpVtbl[17]))((ID2D1EllipseGeometry*)Unsafe.AsPointer(ref this), ellipse);
+	}
+	public interface Interface : ID2D1Geometry.Interface
+	{
+		[VtblIndex(17)]
+		void GetEllipse(Ellipse* ellipse);
 	}
 }
 

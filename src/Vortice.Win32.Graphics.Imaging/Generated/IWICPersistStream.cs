@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Win32.Com;
+
 namespace Win32.Graphics.Imaging;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream"]/*' />
@@ -14,7 +16,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("00675040-6908-45f8-86a3-49c7dfd6d9ad")]
 [NativeTypeName("struct IWICPersistStream : IPersistStream")]
 [NativeInheritance("IPersistStream")]
-public unsafe partial struct IWICPersistStream : INativeGuid
+public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICPersistStream
 	{
@@ -62,6 +64,15 @@ public unsafe partial struct IWICPersistStream : INativeGuid
 	public HResult SaveEx(Com.IStream* pIStream, uint dwPersistOptions, Bool32 fClearDirty)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Com.IStream*, uint, Bool32, int>)(lpVtbl[1]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, dwPersistOptions, fClearDirty);
+	}
+
+	public interface Interface : IPersistStream.Interface
+	{
+		[VtblIndex(0)]
+		HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, uint dwPersistOptions);
+
+		[VtblIndex(1)]
+		HResult SaveEx(Com.IStream* pIStream, uint dwPersistOptions, Bool32 fClearDirty);
 	}
 }
 

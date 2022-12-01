@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("ec5ec8a9-c395-4314-9c77-54d7a935ff70")]
 [NativeTypeName("struct IWICImagingFactory : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICImagingFactory : INativeGuid
+public unsafe partial struct IWICImagingFactory : IWICImagingFactory.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICImagingFactory
 	{
@@ -272,6 +272,83 @@ public unsafe partial struct IWICImagingFactory : INativeGuid
 	public HResult CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICImagingFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[27]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateDecoderFromFilename(ushort* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder);
+
+		[VtblIndex(4)]
+		HResult CreateDecoderFromStream(Com.IStream* pIStream, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder);
+
+		[VtblIndex(5)]
+		HResult CreateDecoderFromFileHandle(nuint hFile, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder);
+
+		[VtblIndex(6)]
+		HResult CreateComponentInfo(Guid* clsidComponent, IWICComponentInfo** ppIInfo);
+
+		[VtblIndex(7)]
+		HResult CreateDecoder(Guid* guidContainerFormat, Guid* pguidVendor, IWICBitmapDecoder** ppIDecoder);
+
+		[VtblIndex(8)]
+		HResult CreateEncoder(Guid* guidContainerFormat, Guid* pguidVendor, IWICBitmapEncoder** ppIEncoder);
+
+		[VtblIndex(9)]
+		HResult CreatePalette(IWICPalette** ppIPalette);
+
+		[VtblIndex(10)]
+		HResult CreateFormatConverter(IWICFormatConverter** ppIFormatConverter);
+
+		[VtblIndex(11)]
+		HResult CreateBitmapScaler(IWICBitmapScaler** ppIBitmapScaler);
+
+		[VtblIndex(12)]
+		HResult CreateBitmapClipper(IWICBitmapClipper** ppIBitmapClipper);
+
+		[VtblIndex(13)]
+		HResult CreateBitmapFlipRotator(IWICBitmapFlipRotator** ppIBitmapFlipRotator);
+
+		[VtblIndex(14)]
+		HResult CreateStream(IWICStream** ppIWICStream);
+
+		[VtblIndex(15)]
+		HResult CreateColorContext(IWICColorContext** ppIWICColorContext);
+
+		[VtblIndex(16)]
+		HResult CreateColorTransformer(IWICColorTransform** ppIWICColorTransform);
+
+		[VtblIndex(17)]
+		HResult CreateBitmap(uint uiWidth, uint uiHeight, Guid* pixelFormat, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap);
+
+		[VtblIndex(18)]
+		HResult CreateBitmapFromSource(IWICBitmapSource* pIBitmapSource, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap);
+
+		[VtblIndex(19)]
+		HResult CreateBitmapFromSourceRect(IWICBitmapSource* pIBitmapSource, uint x, uint y, uint width, uint height, IWICBitmap** ppIBitmap);
+
+		[VtblIndex(20)]
+		HResult CreateBitmapFromMemory(uint uiWidth, uint uiHeight, Guid* pixelFormat, uint cbStride, uint cbBufferSize, byte* pbBuffer, IWICBitmap** ppIBitmap);
+
+		[VtblIndex(21)]
+		HResult CreateBitmapFromHBITMAP(IntPtr hBitmap, IntPtr hPalette, WICBitmapAlphaChannelOption options, IWICBitmap** ppIBitmap);
+
+		[VtblIndex(22)]
+		HResult CreateBitmapFromHICON(IntPtr hIcon, IWICBitmap** ppIBitmap);
+
+		[VtblIndex(23)]
+		HResult CreateComponentEnumerator(uint componentTypes, uint options, Com.IEnumUnknown** ppIEnumUnknown);
+
+		[VtblIndex(24)]
+		HResult CreateFastMetadataEncoderFromDecoder(IWICBitmapDecoder* pIDecoder, IWICFastMetadataEncoder** ppIFastEncoder);
+
+		[VtblIndex(25)]
+		HResult CreateFastMetadataEncoderFromFrameDecode(IWICBitmapFrameDecode* pIFrameDecoder, IWICFastMetadataEncoder** ppIFastEncoder);
+
+		[VtblIndex(26)]
+		HResult CreateQueryWriter(Guid* guidMetadataFormat, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter);
+
+		[VtblIndex(27)]
+		HResult CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter);
 	}
 }
 

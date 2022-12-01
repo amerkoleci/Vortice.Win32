@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("4db3757a-2c72-4ed9-b2b6-1ababe1aff9c")]
 [NativeTypeName("struct IDWriteRemoteFontFileStream : IDWriteFontFileStream")]
 [NativeInheritance("IDWriteFontFileStream")]
-public unsafe partial struct IDWriteRemoteFontFileStream : INativeGuid
+public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFileStream.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteRemoteFontFileStream
 	{
@@ -136,6 +136,20 @@ public unsafe partial struct IDWriteRemoteFontFileStream : INativeGuid
 	public HResult BeginDownload(Guid* downloadOperationID, FileFragment* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileStream*, Guid*, FileFragment*, uint, IDWriteAsyncResult**, int>)(lpVtbl[10]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), downloadOperationID, fileFragments, fragmentCount, asyncResult);
+	}
+	public interface Interface : IDWriteFontFileStream.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetLocalFileSize(ulong* localFileSize);
+
+		[VtblIndex(8)]
+		HResult GetFileFragmentLocality(ulong fileOffset, ulong fragmentSize, Bool32* isLocal, ulong* partialSize);
+
+		[VtblIndex(9)]
+		Locality GetLocality();
+
+		[VtblIndex(10)]
+		HResult BeginDownload(Guid* downloadOperationID, FileFragment* fileFragments, uint fragmentCount, IDWriteAsyncResult** asyncResult);
 	}
 }
 

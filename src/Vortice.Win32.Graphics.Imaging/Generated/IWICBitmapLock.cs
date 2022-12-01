@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("00000123-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmapLock : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICBitmapLock : INativeGuid
+public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapLock
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IWICBitmapLock : INativeGuid
 	public HResult GetPixelFormat(Guid* pPixelFormat)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, Guid*, int>)(lpVtbl[6]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pPixelFormat);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetSize(uint* puiWidth, uint* puiHeight);
+
+		[VtblIndex(4)]
+		HResult GetStride(uint* pcbStride);
+
+		[VtblIndex(5)]
+		HResult GetDataPointer(uint* pcbBufferSize, byte** ppbData);
+
+		[VtblIndex(6)]
+		HResult GetPixelFormat(Guid* pPixelFormat);
 	}
 }
 

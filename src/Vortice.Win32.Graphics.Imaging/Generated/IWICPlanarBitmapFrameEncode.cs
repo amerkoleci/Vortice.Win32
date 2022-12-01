@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("f928b7b8-2221-40c1-b72e-7e82f1974d1a")]
 [NativeTypeName("struct IWICPlanarBitmapFrameEncode : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICPlanarBitmapFrameEncode : INativeGuid
+public unsafe partial struct IWICPlanarBitmapFrameEncode : IWICPlanarBitmapFrameEncode.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICPlanarBitmapFrameEncode
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode : INativeGuid
 	public HResult WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, System.Drawing.Rectangle* prcSource)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapFrameEncode*, IWICBitmapSource**, uint, System.Drawing.Rectangle*, int>)(lpVtbl[4]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, prcSource);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult WritePixels(uint lineCount, WICBitmapPlane* pPlanes, uint cPlanes);
+
+		[VtblIndex(4)]
+		HResult WriteSource(IWICBitmapSource** ppPlanes, uint cPlanes, System.Drawing.Rectangle* prcSource);
 	}
 }
 

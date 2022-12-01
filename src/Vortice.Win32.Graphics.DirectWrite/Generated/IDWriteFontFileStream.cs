@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("6d4865fe-0ab8-4d91-8f62-5dd6be34a3e0")]
 [NativeTypeName("struct IDWriteFontFileStream : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFileStream : INativeGuid
+public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFileStream
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IDWriteFontFileStream : INativeGuid
 	public HResult GetLastWriteTime(ulong* lastWriteTime)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileStream*, ulong*, int>)(lpVtbl[6]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), lastWriteTime);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult ReadFileFragment(void** fragmentStart, ulong fileOffset, ulong fragmentSize, void** fragmentContext);
+
+		[VtblIndex(4)]
+		void ReleaseFileFragment(void* fragmentContext);
+
+		[VtblIndex(5)]
+		HResult GetFileSize(ulong* fileSize);
+
+		[VtblIndex(6)]
+		HResult GetLastWriteTime(ulong* lastWriteTime);
 	}
 }
 

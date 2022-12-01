@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("54384f1b-5b3e-4bb7-ae01-60ba3097cbb6")]
 [NativeTypeName("struct ID3D11LibraryReflection : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11LibraryReflection : INativeGuid
+public unsafe partial struct ID3D11LibraryReflection : ID3D11LibraryReflection.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11LibraryReflection
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID3D11LibraryReflection : INativeGuid
 	public ID3D11FunctionReflection GetFunctionByIndex(int FunctionIndex)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11LibraryReflection*, int, ID3D11FunctionReflection>)(lpVtbl[4]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetDesc(LibraryDescription* pDesc);
+
+		[VtblIndex(4)]
+		ID3D11FunctionReflection GetFunctionByIndex(int FunctionIndex);
 	}
 }
 

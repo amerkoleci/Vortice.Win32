@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("c1170a22-3ce2-4966-90d4-55408bfc84c4")]
 [NativeTypeName("struct IDCompositionColorMatrixEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionColorMatrixEffect : INativeGuid
+public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColorMatrixEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionColorMatrixEffect
 	{
@@ -120,6 +120,23 @@ public unsafe partial struct IDCompositionColorMatrixEffect : INativeGuid
 	public HResult SetClampOutput(Bool32 clamp)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), clamp);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetMatrix(Matrix5x4* matrix);
+
+		[VtblIndex(5)]
+		HResult SetMatrixElement(int row, int column, IDCompositionAnimation* animation);
+
+		[VtblIndex(6)]
+		HResult SetMatrixElement(int row, int column, float value);
+
+		[VtblIndex(7)]
+		HResult SetAlphaMode(Graphics.Direct2D.Common.ColorMatrixAlphaMode mode);
+
+		[VtblIndex(8)]
+		HResult SetClampOutput(Bool32 clamp);
 	}
 }
 

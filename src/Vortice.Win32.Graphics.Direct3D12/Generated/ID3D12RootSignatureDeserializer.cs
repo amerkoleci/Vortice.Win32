@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("34ab647b-3cc8-46ac-841b-c0965645c046")]
 [NativeTypeName("struct ID3D12RootSignatureDeserializer : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12RootSignatureDeserializer : INativeGuid
+public unsafe partial struct ID3D12RootSignatureDeserializer : ID3D12RootSignatureDeserializer.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12RootSignatureDeserializer
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID3D12RootSignatureDeserializer : INativeGuid
 	public RootSignatureDescription* GetRootSignatureDesc()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12RootSignatureDeserializer*, RootSignatureDescription*>)(lpVtbl[3]))((ID3D12RootSignatureDeserializer*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		RootSignatureDescription* GetRootSignatureDesc();
 	}
 }
 

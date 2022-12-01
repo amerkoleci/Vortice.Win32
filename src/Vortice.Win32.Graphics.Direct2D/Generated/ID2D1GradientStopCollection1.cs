@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("ae1572f4-5dd0-4777-998b-9279472ae63b")]
 [NativeTypeName("struct ID2D1GradientStopCollection1 : ID2D1GradientStopCollection")]
 [NativeInheritance("ID2D1GradientStopCollection")]
-public unsafe partial struct ID2D1GradientStopCollection1 : INativeGuid
+public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCollection1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GradientStopCollection1
 	{
@@ -152,6 +152,23 @@ public unsafe partial struct ID2D1GradientStopCollection1 : INativeGuid
 	public ColorInterpolationMode GetColorInterpolationMode()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorInterpolationMode>)(lpVtbl[12]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1GradientStopCollection.Interface
+	{
+		[VtblIndex(8)]
+		void GetGradientStops1(GradientStop* gradientStops, uint gradientStopsCount);
+
+		[VtblIndex(9)]
+		ColorSpace GetPreInterpolationSpace();
+
+		[VtblIndex(10)]
+		ColorSpace GetPostInterpolationSpace();
+
+		[VtblIndex(11)]
+		BufferPrecision GetBufferPrecision();
+
+		[VtblIndex(12)]
+		ColorInterpolationMode GetColorInterpolationMode();
 	}
 }
 

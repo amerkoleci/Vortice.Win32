@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("548d6b12-09fa-40e0-9069-5dcd589a52c9")]
 [NativeTypeName("struct ID3D12Debug5 : ID3D12Debug4")]
 [NativeInheritance("ID3D12Debug4")]
-public unsafe partial struct ID3D12Debug5 : INativeGuid
+public unsafe partial struct ID3D12Debug5 : ID3D12Debug5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Debug5
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct ID3D12Debug5 : INativeGuid
 	public void SetEnableAutoName(Bool32 Enable)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12Debug5*, Bool32, void>)(lpVtbl[8]))((ID3D12Debug5*)Unsafe.AsPointer(ref this), Enable);
+	}
+	public interface Interface : ID3D12Debug4.Interface
+	{
+		[VtblIndex(8)]
+		void SetEnableAutoName(Bool32 Enable);
 	}
 }
 

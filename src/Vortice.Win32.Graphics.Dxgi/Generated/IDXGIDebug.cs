@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("119e7452-de9e-40fe-8806-88f90c12b441")]
 [NativeTypeName("struct IDXGIDebug : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIDebug : INativeGuid
+public unsafe partial struct IDXGIDebug : IDXGIDebug.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDebug
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IDXGIDebug : INativeGuid
 	public HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDebug*, Guid, ReportLiveObjectFlags, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult ReportLiveObjects(Guid apiid, ReportLiveObjectFlags flags);
 	}
 }
 

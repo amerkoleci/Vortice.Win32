@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd90694-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1RenderTarget : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1RenderTarget : INativeGuid
+public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1RenderTarget
 	{
@@ -507,6 +507,167 @@ public unsafe partial struct ID2D1RenderTarget : INativeGuid
 	public Bool32 IsSupported(RenderTargetProperties* renderTargetProperties)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, RenderTargetProperties*, Bool32>)(lpVtbl[56]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), renderTargetProperties);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap);
+
+		[VtblIndex(5)]
+		HResult CreateBitmapFromWicBitmap(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap);
+
+		[VtblIndex(6)]
+		HResult CreateSharedBitmap(Guid* riid, void* data, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap);
+
+		[VtblIndex(7)]
+		HResult CreateBitmapBrush(ID2D1Bitmap* bitmap, BitmapBrushProperties* bitmapBrushProperties, BrushProperties* brushProperties, ID2D1BitmapBrush** bitmapBrush);
+
+		[VtblIndex(8)]
+		HResult CreateSolidColorBrush(Color4* color, BrushProperties* brushProperties, ID2D1SolidColorBrush** solidColorBrush);
+
+		[VtblIndex(9)]
+		HResult CreateGradientStopCollection(GradientStop* gradientStops, uint gradientStopsCount, Gamma colorInterpolationGamma, ExtendMode extendMode, ID2D1GradientStopCollection** gradientStopCollection);
+
+		[VtblIndex(10)]
+		HResult CreateLinearGradientBrush(LinearGradientBrushProperties* linearGradientBrushProperties, BrushProperties* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1LinearGradientBrush** linearGradientBrush);
+
+		[VtblIndex(11)]
+		HResult CreateRadialGradientBrush(RadialGradientBrushProperties* radialGradientBrushProperties, BrushProperties* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1RadialGradientBrush** radialGradientBrush);
+
+		[VtblIndex(12)]
+		HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget);
+
+		[VtblIndex(13)]
+		HResult CreateLayer(System.Drawing.SizeF* size, ID2D1Layer** layer);
+
+		[VtblIndex(14)]
+		HResult CreateMesh(ID2D1Mesh** mesh);
+
+		[VtblIndex(15)]
+		void DrawLine(System.Drawing.PointF point0, System.Drawing.PointF point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+		[VtblIndex(16)]
+		void DrawRectangle(Common.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+		[VtblIndex(17)]
+		void FillRectangle(Common.RectF* rect, ID2D1Brush* brush);
+
+		[VtblIndex(18)]
+		void DrawRoundedRectangle(RoundedRect* roundedRect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+		[VtblIndex(19)]
+		void FillRoundedRectangle(RoundedRect* roundedRect, ID2D1Brush* brush);
+
+		[VtblIndex(20)]
+		void DrawEllipse(Ellipse* ellipse, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+		[VtblIndex(21)]
+		void FillEllipse(Ellipse* ellipse, ID2D1Brush* brush);
+
+		[VtblIndex(22)]
+		void DrawGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+		[VtblIndex(23)]
+		void FillGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, ID2D1Brush* opacityBrush);
+
+		[VtblIndex(24)]
+		void FillMesh(ID2D1Mesh* mesh, ID2D1Brush* brush);
+
+		[VtblIndex(25)]
+		void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle);
+
+		[VtblIndex(26)]
+		void DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Common.RectF* sourceRectangle);
+
+		[VtblIndex(27)]
+		void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Common.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode);
+
+		[VtblIndex(28)]
+		void DrawTextLayout(System.Drawing.PointF origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options);
+
+		[VtblIndex(29)]
+		void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode);
+
+		[VtblIndex(30)]
+		void SetTransform(Matrix3x2* transform);
+
+		[VtblIndex(31)]
+		void GetTransform(Matrix3x2* transform);
+
+		[VtblIndex(32)]
+		void SetAntialiasMode(AntialiasMode antialiasMode);
+
+		[VtblIndex(33)]
+		AntialiasMode GetAntialiasMode();
+
+		[VtblIndex(34)]
+		void SetTextAntialiasMode(TextAntialiasMode textAntialiasMode);
+
+		[VtblIndex(35)]
+		TextAntialiasMode GetTextAntialiasMode();
+
+		[VtblIndex(36)]
+		void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams);
+
+		[VtblIndex(37)]
+		void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams);
+
+		[VtblIndex(38)]
+		void SetTags(ulong tag1, ulong tag2);
+
+		[VtblIndex(39)]
+		void GetTags(ulong* tag1, ulong* tag2);
+
+		[VtblIndex(40)]
+		void PushLayer(LayerParameters* layerParameters, ID2D1Layer* layer);
+
+		[VtblIndex(41)]
+		void PopLayer();
+
+		[VtblIndex(42)]
+		HResult Flush(ulong* tag1, ulong* tag2);
+
+		[VtblIndex(43)]
+		void SaveDrawingState(ID2D1DrawingStateBlock* drawingStateBlock);
+
+		[VtblIndex(44)]
+		void RestoreDrawingState(ID2D1DrawingStateBlock* drawingStateBlock);
+
+		[VtblIndex(45)]
+		void PushAxisAlignedClip(Common.RectF* clipRect, AntialiasMode antialiasMode);
+
+		[VtblIndex(46)]
+		void PopAxisAlignedClip();
+
+		[VtblIndex(47)]
+		void Clear(Color4* clearColor);
+
+		[VtblIndex(48)]
+		void BeginDraw();
+
+		[VtblIndex(49)]
+		HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null);
+
+		[VtblIndex(50)]
+		Common.PixelFormat GetPixelFormat();
+
+		[VtblIndex(51)]
+		void SetDpi(float dpiX, float dpiY);
+
+		[VtblIndex(52)]
+		void GetDpi(float* dpiX, float* dpiY);
+
+		[VtblIndex(53)]
+		System.Drawing.SizeF GetSize();
+
+		[VtblIndex(54)]
+		System.Drawing.Size GetPixelSize();
+
+		[VtblIndex(55)]
+		uint GetMaximumBitmapSize();
+
+		[VtblIndex(56)]
+		Bool32 IsSupported(RenderTargetProperties* renderTargetProperties);
 	}
 }
 

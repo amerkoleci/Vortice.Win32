@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("18079135-4cf3-4868-bc8e-06067e6d242d")]
 [NativeTypeName("struct ID2D1CommandSink3 : ID2D1CommandSink2")]
 [NativeInheritance("ID2D1CommandSink2")]
-public unsafe partial struct ID2D1CommandSink3 : INativeGuid
+public unsafe partial struct ID2D1CommandSink3 : ID2D1CommandSink3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1CommandSink3
 	{
@@ -312,6 +312,11 @@ public unsafe partial struct ID2D1CommandSink3 : INativeGuid
 	public HResult DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, BitmapInterpolationMode interpolationMode, SpriteOptions spriteOptions)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink3*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, int>)(lpVtbl[32]))((ID2D1CommandSink3*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
+	}
+	public interface Interface : ID2D1CommandSink2.Interface
+	{
+		[VtblIndex(32)]
+		HResult DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, BitmapInterpolationMode interpolationMode, SpriteOptions spriteOptions);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("d8b768ff-64bc-4e66-982b-ec8e87f693f7")]
 [NativeTypeName("struct IDWriteFontFace2 : IDWriteFontFace1")]
 [NativeInheritance("IDWriteFontFace1")]
-public unsafe partial struct IDWriteFontFace2 : INativeGuid
+public unsafe partial struct IDWriteFontFace2 : IDWriteFontFace2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFace2
 	{
@@ -328,6 +328,23 @@ public unsafe partial struct IDWriteFontFace2 : INativeGuid
 	public HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, OutlineThreshold outlineThreshold, MeasuringMode measuringMode, IDWriteRenderingParams* renderingParams, RenderingMode* renderingMode, GridFitMode* gridFitMode)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, float, float, float, Matrix3x2*, Bool32, OutlineThreshold, MeasuringMode, IDWriteRenderingParams*, RenderingMode*, GridFitMode*, int>)(lpVtbl[34]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this), fontEmSize, dpiX, dpiY, transform, isSideways, outlineThreshold, measuringMode, renderingParams, renderingMode, gridFitMode);
+	}
+	public interface Interface : IDWriteFontFace1.Interface
+	{
+		[VtblIndex(30)]
+		Bool32 IsColorFont();
+
+		[VtblIndex(31)]
+		uint GetColorPaletteCount();
+
+		[VtblIndex(32)]
+		uint GetPaletteEntryCount();
+
+		[VtblIndex(33)]
+		HResult GetPaletteEntries(uint colorPaletteIndex, uint firstEntryIndex, uint entryCount, Color4** paletteEntries);
+
+		[VtblIndex(34)]
+		HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, OutlineThreshold outlineThreshold, MeasuringMode measuringMode, IDWriteRenderingParams* renderingParams, RenderingMode* renderingMode, GridFitMode* gridFitMode);
 	}
 }
 

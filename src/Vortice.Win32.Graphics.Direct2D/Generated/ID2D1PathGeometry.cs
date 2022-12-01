@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906a5-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1PathGeometry : ID2D1Geometry")]
 [NativeInheritance("ID2D1Geometry")]
-public unsafe partial struct ID2D1PathGeometry : INativeGuid
+public unsafe partial struct ID2D1PathGeometry : ID2D1PathGeometry.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1PathGeometry
 	{
@@ -216,6 +216,20 @@ public unsafe partial struct ID2D1PathGeometry : INativeGuid
 	public HResult GetFigureCount(uint* count)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1PathGeometry*, uint*, int>)(lpVtbl[20]))((ID2D1PathGeometry*)Unsafe.AsPointer(ref this), count);
+	}
+	public interface Interface : ID2D1Geometry.Interface
+	{
+		[VtblIndex(17)]
+		HResult Open(ID2D1GeometrySink** geometrySink);
+
+		[VtblIndex(18)]
+		HResult Stream(ID2D1GeometrySink* geometrySink);
+
+		[VtblIndex(19)]
+		HResult GetSegmentCount(uint* count);
+
+		[VtblIndex(20)]
+		HResult GetFigureCount(uint* count);
 	}
 }
 

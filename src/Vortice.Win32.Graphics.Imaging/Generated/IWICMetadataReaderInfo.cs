@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("eebf1f5b-07c1-4447-a3ab-22acaf78a804")]
 [NativeTypeName("struct IWICMetadataReaderInfo : IWICMetadataHandlerInfo")]
 [NativeInheritance("IWICMetadataHandlerInfo")]
-public unsafe partial struct IWICMetadataReaderInfo : INativeGuid
+public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataReaderInfo
 	{
@@ -216,6 +216,17 @@ public unsafe partial struct IWICMetadataReaderInfo : INativeGuid
 	public HResult CreateInstance(IWICMetadataReader** ppIReader)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, IWICMetadataReader**, int>)(lpVtbl[20]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), ppIReader);
+	}
+	public interface Interface : IWICMetadataHandlerInfo.Interface
+	{
+		[VtblIndex(18)]
+		HResult GetPatterns(Guid* guidContainerFormat, uint cbSize, WICMetadataPattern* pPattern, uint* pcCount, uint* pcbActual);
+
+		[VtblIndex(19)]
+		HResult MatchesPattern(Guid* guidContainerFormat, Com.IStream* pIStream, Bool32* pfMatches);
+
+		[VtblIndex(20)]
+		HResult CreateInstance(IWICMetadataReader** ppIReader);
 	}
 }
 

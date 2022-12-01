@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("334b1f50-2292-4b35-99a1-25588d8c17fe")]
 [NativeTypeName("struct IDxcContainerBuilder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcContainerBuilder : INativeGuid
+public unsafe partial struct IDxcContainerBuilder : IDxcContainerBuilder.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcContainerBuilder
 	{
@@ -99,6 +99,20 @@ public unsafe partial struct IDxcContainerBuilder : INativeGuid
 	public HResult SerializeContainer(IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerBuilder*, IDxcOperationResult**, int>)(lpVtbl[6]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), ppResult);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Load(IDxcBlob* pDxilContainerHeader);
+
+		[VtblIndex(4)]
+		HResult AddPart(uint fourCC, IDxcBlob* pSource);
+
+		[VtblIndex(5)]
+		HResult RemovePart(uint fourCC);
+
+		[VtblIndex(6)]
+		HResult SerializeContainer(IDxcOperationResult** ppResult);
 	}
 }
 

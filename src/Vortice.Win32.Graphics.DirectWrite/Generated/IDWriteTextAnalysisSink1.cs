@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("b0d941a0-85e7-4d8b-9fd3-5ced9934482a")]
 [NativeTypeName("struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink")]
 [NativeInheritance("IDWriteTextAnalysisSink")]
-public unsafe partial struct IDWriteTextAnalysisSink1 : INativeGuid
+public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextAnalysisSink1
 	{
@@ -112,6 +112,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : INativeGuid
 	public HResult SetGlyphOrientation(uint textPosition, uint textLength, GlyphOrientationAngle glyphOrientationAngle, byte adjustedBidiLevel, Bool32 isSideways, Bool32 isRightToLeft)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint, uint, GlyphOrientationAngle, byte, Bool32, Bool32, int>)(lpVtbl[7]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientationAngle, adjustedBidiLevel, isSideways, isRightToLeft);
+	}
+	public interface Interface : IDWriteTextAnalysisSink.Interface
+	{
+		[VtblIndex(7)]
+		HResult SetGlyphOrientation(uint textPosition, uint textLength, GlyphOrientationAngle glyphOrientationAngle, byte adjustedBidiLevel, Bool32 isSideways, Bool32 isRightToLeft);
 	}
 }
 

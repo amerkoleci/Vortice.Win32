@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("00000040-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICPalette : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICPalette : INativeGuid
+public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICPalette
 	{
@@ -152,6 +152,38 @@ public unsafe partial struct IWICPalette : INativeGuid
 	public HResult HasAlpha(Bool32* pfHasAlpha)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPalette*, Bool32*, int>)(lpVtbl[12]))((IWICPalette*)Unsafe.AsPointer(ref this), pfHasAlpha);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult InitializePredefined(WICBitmapPaletteType ePaletteType, Bool32 fAddTransparentColor);
+
+		[VtblIndex(4)]
+		HResult InitializeCustom(uint* pColors, uint cCount);
+
+		[VtblIndex(5)]
+		HResult InitializeFromBitmap(IWICBitmapSource* pISurface, uint cCount, Bool32 fAddTransparentColor);
+
+		[VtblIndex(6)]
+		HResult InitializeFromPalette(IWICPalette* pIPalette);
+
+		[VtblIndex(7)]
+		HResult GetType(WICBitmapPaletteType* pePaletteType);
+
+		[VtblIndex(8)]
+		HResult GetColorCount(uint* pcCount);
+
+		[VtblIndex(9)]
+		HResult GetColors(uint cCount, uint* pColors, uint* pcActualColors);
+
+		[VtblIndex(10)]
+		HResult IsBlackWhite(Bool32* pfIsBlackWhite);
+
+		[VtblIndex(11)]
+		HResult IsGrayscale(Bool32* pfIsGrayscale);
+
+		[VtblIndex(12)]
+		HResult HasAlpha(Bool32* pfHasAlpha);
 	}
 }
 

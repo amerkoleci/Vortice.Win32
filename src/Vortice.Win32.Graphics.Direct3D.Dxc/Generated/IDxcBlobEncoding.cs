@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("7241d424-2646-4191-97c0-98e96e42fc68")]
 [NativeTypeName("struct IDxcBlobEncoding : IDxcBlob")]
 [NativeInheritance("IDxcBlob")]
-public unsafe partial struct IDxcBlobEncoding : INativeGuid
+public unsafe partial struct IDxcBlobEncoding : IDxcBlobEncoding.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcBlobEncoding
 	{
@@ -94,6 +94,11 @@ public unsafe partial struct IDxcBlobEncoding : INativeGuid
 	public HResult GetEncoding(Bool32* pKnown, DxcCp* pCodePage)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobEncoding*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobEncoding*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
+	}
+	public interface Interface : IDxcBlob.Interface
+	{
+		[VtblIndex(5)]
+		HResult GetEncoding(Bool32* pKnown, DxcCp* pCodePage);
 	}
 }
 

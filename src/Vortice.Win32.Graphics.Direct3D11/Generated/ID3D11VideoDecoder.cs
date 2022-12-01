@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("3c9c5b51-995d-48d1-9b8d-fa5caeded65c")]
 [NativeTypeName("struct ID3D11VideoDecoder : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11VideoDecoder : INativeGuid
+public unsafe partial struct ID3D11VideoDecoder : ID3D11VideoDecoder.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoDecoder
 	{
@@ -120,6 +120,14 @@ public unsafe partial struct ID3D11VideoDecoder : INativeGuid
 	public HResult GetDriverHandle(Handle* pDriverHandle)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, Handle*, int>)(lpVtbl[8]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), pDriverHandle);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetCreationParameters(VideoDecoderDescription* pVideoDesc, VideoDecoderConfig* pConfig);
+
+		[VtblIndex(8)]
+		HResult GetDriverHandle(Handle* pDriverHandle);
 	}
 }
 

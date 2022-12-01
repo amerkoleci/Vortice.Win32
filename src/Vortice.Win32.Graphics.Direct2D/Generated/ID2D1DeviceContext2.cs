@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("394ea6a3-0c34-4321-950b-6ca20f0be6c7")]
 [NativeTypeName("struct ID2D1DeviceContext2 : ID2D1DeviceContext1")]
 [NativeInheritance("ID2D1DeviceContext1")]
-public unsafe partial struct ID2D1DeviceContext2 : INativeGuid
+public unsafe partial struct ID2D1DeviceContext2 : ID2D1DeviceContext2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext2
 	{
@@ -899,6 +899,41 @@ public unsafe partial struct ID2D1DeviceContext2 : INativeGuid
 	public HResult CreateTransformedImageSource(ID2D1ImageSource* imageSource, TransformedImageSourceProperties* properties, ID2D1TransformedImageSource** transformedImageSource)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, ID2D1ImageSource*, TransformedImageSourceProperties*, ID2D1TransformedImageSource**, int>)(lpVtbl[105]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), imageSource, properties, transformedImageSource);
+	}
+	public interface Interface : ID2D1DeviceContext1.Interface
+	{
+		[VtblIndex(95)]
+		HResult CreateInk(InkPoint* startPoint, ID2D1Ink** ink);
+
+		[VtblIndex(96)]
+		HResult CreateInkStyle(InkStyleProperties* inkStyleProperties, ID2D1InkStyle** inkStyle);
+
+		[VtblIndex(97)]
+		HResult CreateGradientMesh(GradientMeshPatch* patches, uint patchesCount, ID2D1GradientMesh** gradientMesh);
+
+		[VtblIndex(98)]
+		HResult CreateImageSourceFromWic(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, ImageSourceLoadingOptions loadingOptions, Common.AlphaMode alphaMode, ID2D1ImageSourceFromWic** imageSource);
+
+		[VtblIndex(99)]
+		HResult CreateLookupTable3D(BufferPrecision precision, uint* extents, byte* data, uint dataCount, uint* strides, ID2D1LookupTable3D** lookupTable);
+
+		[VtblIndex(100)]
+		HResult CreateImageSourceFromDxgi(Graphics.Dxgi.IDXGISurface** surfaces, uint surfaceCount, Graphics.Dxgi.Common.ColorSpaceType colorSpace, ImageSourceFromDxgiOptions options, ID2D1ImageSource** imageSource);
+
+		[VtblIndex(101)]
+		HResult GetGradientMeshWorldBounds(ID2D1GradientMesh* gradientMesh, Common.RectF* pBounds);
+
+		[VtblIndex(102)]
+		void DrawInk(ID2D1Ink* ink, ID2D1Brush* brush, ID2D1InkStyle* inkStyle);
+
+		[VtblIndex(103)]
+		void DrawGradientMesh(ID2D1GradientMesh* gradientMesh);
+
+		[VtblIndex(104)]
+		void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle);
+
+		[VtblIndex(105)]
+		HResult CreateTransformedImageSource(ID2D1ImageSource* imageSource, TransformedImageSourceProperties* properties, ID2D1TransformedImageSource** transformedImageSource);
 	}
 }
 

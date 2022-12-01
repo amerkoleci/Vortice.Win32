@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("48570b85-d1ee-4fcd-a250-eb350722b037")]
 [NativeTypeName("struct ID3D11Buffer : ID3D11Resource")]
 [NativeInheritance("ID3D11Resource")]
-public unsafe partial struct ID3D11Buffer : INativeGuid
+public unsafe partial struct ID3D11Buffer : ID3D11Buffer.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Buffer
 	{
@@ -136,6 +136,11 @@ public unsafe partial struct ID3D11Buffer : INativeGuid
 	public void GetDesc(BufferDescription* pDesc)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Buffer*, BufferDescription*, void>)(lpVtbl[10]))((ID3D11Buffer*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : ID3D11Resource.Interface
+	{
+		[VtblIndex(10)]
+		void GetDesc(BufferDescription* pDesc);
 	}
 }
 

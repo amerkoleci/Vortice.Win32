@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("94413cf4-a6fc-4248-8b50-6674348fcad3")]
 [NativeTypeName("struct IDWriteRenderingParams1 : IDWriteRenderingParams")]
 [NativeInheritance("IDWriteRenderingParams")]
-public unsafe partial struct IDWriteRenderingParams1 : INativeGuid
+public unsafe partial struct IDWriteRenderingParams1 : IDWriteRenderingParams1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteRenderingParams1
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct IDWriteRenderingParams1 : INativeGuid
 	public float GetGrayscaleEnhancedContrast()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams1*, float>)(lpVtbl[8]))((IDWriteRenderingParams1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDWriteRenderingParams.Interface
+	{
+		[VtblIndex(8)]
+		float GetGrayscaleEnhancedContrast();
 	}
 }
 

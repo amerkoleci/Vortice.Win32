@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("9b8b1336-00a5-4668-92b7-ced5d8bf9b7b")]
 [NativeTypeName("struct ID2D1VertexBuffer : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1VertexBuffer : INativeGuid
+public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1VertexBuffer
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID2D1VertexBuffer : INativeGuid
 	public HResult Unmap()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1VertexBuffer*, int>)(lpVtbl[4]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Map(byte** data, uint bufferSize);
+
+		[VtblIndex(4)]
+		HResult Unmap();
 	}
 }
 

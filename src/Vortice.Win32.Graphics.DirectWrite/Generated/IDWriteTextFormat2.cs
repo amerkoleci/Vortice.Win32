@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("f67e0edd-9e3d-4ecc-8c32-4183253dfe70")]
 [NativeTypeName("struct IDWriteTextFormat2 : IDWriteTextFormat1")]
 [NativeInheritance("IDWriteTextFormat1")]
-public unsafe partial struct IDWriteTextFormat2 : INativeGuid
+public unsafe partial struct IDWriteTextFormat2 : IDWriteTextFormat2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextFormat2
 	{
@@ -352,6 +352,14 @@ public unsafe partial struct IDWriteTextFormat2 : INativeGuid
 	public HResult GetLineSpacing(LineSpacing* lineSpacingOptions)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, LineSpacing*, int>)(lpVtbl[37]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this), lineSpacingOptions);
+	}
+	public interface Interface : IDWriteTextFormat1.Interface
+	{
+		[VtblIndex(36)]
+		HResult SetLineSpacing(LineSpacing* lineSpacingOptions);
+
+		[VtblIndex(37)]
+		HResult GetLineSpacing(LineSpacing* lineSpacingOptions);
 	}
 }
 

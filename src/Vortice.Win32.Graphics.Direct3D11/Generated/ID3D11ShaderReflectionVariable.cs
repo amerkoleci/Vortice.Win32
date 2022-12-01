@@ -12,7 +12,7 @@ namespace Win32.Graphics.Direct3D11;
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionVariable"]/*' />
 /// <unmanaged>ID3D11ShaderReflectionVariable</unmanaged>
 [Guid("51f23923-f3e5-4bd1-91cb-606177d8db4c")]
-public unsafe partial struct ID3D11ShaderReflectionVariable : INativeGuid
+public unsafe partial struct ID3D11ShaderReflectionVariable : ID3D11ShaderReflectionVariable.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11ShaderReflectionVariable
 	{
@@ -76,6 +76,20 @@ public unsafe partial struct ID3D11ShaderReflectionVariable : INativeGuid
 	public uint GetInterfaceSlot(uint uArrayIndex)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, uint, uint>)(lpVtbl[3]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this), uArrayIndex);
+	}
+	public interface Interface 
+	{
+		[VtblIndex(0)]
+		HResult GetDesc(ShaderVariableDescription* pDesc);
+
+		[VtblIndex(1)]
+		ID3D11ShaderReflectionType GetType();
+
+		[VtblIndex(2)]
+		ID3D11ShaderReflectionConstantBuffer GetBuffer();
+
+		[VtblIndex(3)]
+		uint GetInterfaceSlot(uint uArrayIndex);
 	}
 }
 

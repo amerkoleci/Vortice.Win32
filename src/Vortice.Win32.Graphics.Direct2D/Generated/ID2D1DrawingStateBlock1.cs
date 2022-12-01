@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("689f1f85-c72e-4e33-8f19-85754efd5ace")]
 [NativeTypeName("struct ID2D1DrawingStateBlock1 : ID2D1DrawingStateBlock")]
 [NativeInheritance("ID2D1DrawingStateBlock")]
-public unsafe partial struct ID2D1DrawingStateBlock1 : INativeGuid
+public unsafe partial struct ID2D1DrawingStateBlock1 : ID2D1DrawingStateBlock1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DrawingStateBlock1
 	{
@@ -128,6 +128,14 @@ public unsafe partial struct ID2D1DrawingStateBlock1 : INativeGuid
 	public void SetDescription(DrawingStateDescription1* stateDescription)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DrawingStateBlock1*, DrawingStateDescription1*, void>)(lpVtbl[9]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
+	}
+	public interface Interface : ID2D1DrawingStateBlock.Interface
+	{
+		[VtblIndex(8)]
+		void GetDescription(DrawingStateDescription1* stateDescription);
+
+		[VtblIndex(9)]
+		void SetDescription(DrawingStateDescription1* stateDescription);
 	}
 }
 

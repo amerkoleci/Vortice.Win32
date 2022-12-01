@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("7632e1f5-ee65-4dca-87fd-84cd75f8838d")]
 [NativeTypeName("struct IDXGIFactory5 : IDXGIFactory4")]
 [NativeInheritance("IDXGIFactory4")]
-public unsafe partial struct IDXGIFactory5 : INativeGuid
+public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory5
 	{
@@ -280,6 +280,11 @@ public unsafe partial struct IDXGIFactory5 : INativeGuid
 	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Feature, void*, int, int>)(lpVtbl[28]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+	}
+	public interface Interface : IDXGIFactory4.Interface
+	{
+		[VtblIndex(28)]
+		HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize);
 	}
 }
 

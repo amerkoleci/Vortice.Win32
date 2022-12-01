@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("6db9f920-0770-4781-b0c6-381912f9d167")]
 [NativeTypeName("struct IDCompositionHueRotationEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionHueRotationEffect : INativeGuid
+public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRotationEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionHueRotationEffect
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct IDCompositionHueRotationEffect : INativeGuid
 	public HResult SetAngle(float amountDegrees)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionHueRotationEffect*, float, int>)(lpVtbl[5]))((IDCompositionHueRotationEffect*)Unsafe.AsPointer(ref this), amountDegrees);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetAngle(IDCompositionAnimation* animation);
+
+		[VtblIndex(5)]
+		HResult SetAngle(float amountDegrees);
 	}
 }
 

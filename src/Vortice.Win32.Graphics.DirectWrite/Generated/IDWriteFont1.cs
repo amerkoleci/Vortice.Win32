@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("acd16696-8c14-4f5d-877e-fe3fc1d32738")]
 [NativeTypeName("struct IDWriteFont1 : IDWriteFont")]
 [NativeInheritance("IDWriteFont")]
-public unsafe partial struct IDWriteFont1 : INativeGuid
+public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFont1
 	{
@@ -192,6 +192,20 @@ public unsafe partial struct IDWriteFont1 : INativeGuid
 	public Bool32 IsMonospacedFont()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Bool32>)(lpVtbl[17]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDWriteFont.Interface
+	{
+		[VtblIndex(14)]
+		void GetMetrics(FontMetrics1* fontMetrics);
+
+		[VtblIndex(15)]
+		void GetPanose(Panose* panose);
+
+		[VtblIndex(16)]
+		HResult GetUnicodeRanges(uint maxRangeCount, UnicodeRange* unicodeRanges, uint* actualRangeCount);
+
+		[VtblIndex(17)]
+		Bool32 IsMonospacedFont();
 	}
 }
 

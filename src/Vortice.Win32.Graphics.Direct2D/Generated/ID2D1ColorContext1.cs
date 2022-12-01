@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("1ab42875-c57f-4be9-bd85-9cd78d6f55ee")]
 [NativeTypeName("struct ID2D1ColorContext1 : ID2D1ColorContext")]
 [NativeInheritance("ID2D1ColorContext")]
-public unsafe partial struct ID2D1ColorContext1 : INativeGuid
+public unsafe partial struct ID2D1ColorContext1 : ID2D1ColorContext1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ColorContext1
 	{
@@ -128,6 +128,17 @@ public unsafe partial struct ID2D1ColorContext1 : INativeGuid
 	public HResult GetSimpleColorProfile(SimpleColorProfile* simpleProfile)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext1*, SimpleColorProfile*, int>)(lpVtbl[9]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this), simpleProfile);
+	}
+	public interface Interface : ID2D1ColorContext.Interface
+	{
+		[VtblIndex(7)]
+		ColorContextType GetColorContextType();
+
+		[VtblIndex(8)]
+		Graphics.Dxgi.Common.ColorSpaceType GetDXGIColorSpace();
+
+		[VtblIndex(9)]
+		HResult GetSimpleColorProfile(SimpleColorProfile* simpleProfile);
 	}
 }
 

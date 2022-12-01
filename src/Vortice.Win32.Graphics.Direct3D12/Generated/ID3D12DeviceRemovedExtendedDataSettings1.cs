@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("dbd5ae51-3317-4f0a-adf9-1d7cedcaae0b")]
 [NativeTypeName("struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12DeviceRemovedExtendedDataSettings")]
 [NativeInheritance("ID3D12DeviceRemovedExtendedDataSettings")]
-public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : INativeGuid
+public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12DeviceRemovedExtendedDataSettings1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12DeviceRemovedExtendedDataSettings1
 	{
@@ -104,6 +104,11 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : INativeG
 	public void SetBreadcrumbContextEnablement(DredEnablement Enablement)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+	}
+	public interface Interface : ID3D12DeviceRemovedExtendedDataSettings.Interface
+	{
+		[VtblIndex(6)]
+		void SetBreadcrumbContextEnablement(DredEnablement Enablement);
 	}
 }
 

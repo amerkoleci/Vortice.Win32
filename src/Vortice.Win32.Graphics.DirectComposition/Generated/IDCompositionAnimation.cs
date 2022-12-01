@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("cbfd91d9-51b2-45e4-b3de-d19ccfb863c5")]
 [NativeTypeName("struct IDCompositionAnimation : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionAnimation : INativeGuid
+public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionAnimation
 	{
@@ -120,6 +120,26 @@ public unsafe partial struct IDCompositionAnimation : INativeGuid
 	public HResult End(double endOffset, float endValue)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, double, float, int>)(lpVtbl[8]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), endOffset, endValue);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Reset();
+
+		[VtblIndex(4)]
+		HResult SetAbsoluteBeginTime(LargeInteger beginTime);
+
+		[VtblIndex(5)]
+		HResult AddCubic(double beginOffset, float constantCoefficient, float linearCoefficient, float quadraticCoefficient, float cubicCoefficient);
+
+		[VtblIndex(6)]
+		HResult AddSinusoidal(double beginOffset, float bias, float amplitude, float frequency, float phase);
+
+		[VtblIndex(7)]
+		HResult AddRepeat(double beginOffset, double durationToRepeat);
+
+		[VtblIndex(8)]
+		HResult End(double endOffset, float endValue);
 	}
 }
 

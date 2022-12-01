@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("daac296f-7aa5-4dbf-8d15-225c5976f891")]
 [NativeTypeName("struct IWICProgressiveLevelControl : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICProgressiveLevelControl : INativeGuid
+public unsafe partial struct IWICProgressiveLevelControl : IWICProgressiveLevelControl.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICProgressiveLevelControl
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IWICProgressiveLevelControl : INativeGuid
 	public HResult SetCurrentLevel(uint nLevel)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICProgressiveLevelControl*, uint, int>)(lpVtbl[5]))((IWICProgressiveLevelControl*)Unsafe.AsPointer(ref this), nLevel);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetLevelCount(uint* pcLevels);
+
+		[VtblIndex(4)]
+		HResult GetCurrentLevel(uint* pnLevel);
+
+		[VtblIndex(5)]
+		HResult SetCurrentLevel(uint nLevel);
 	}
 }
 

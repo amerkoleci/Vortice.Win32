@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("aec22fb8-76f3-4639-9be0-28eb43a67a2e")]
 [NativeTypeName("struct IDXGIObject : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIObject : INativeGuid
+public unsafe partial struct IDXGIObject : IDXGIObject.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIObject
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IDXGIObject : INativeGuid
 	public HResult GetParent(Guid* riid, void** ppParent)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIObject*)Unsafe.AsPointer(ref this), riid, ppParent);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetPrivateData(Guid* Name, uint DataSize, void* pData);
+
+		[VtblIndex(4)]
+		HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown);
+
+		[VtblIndex(5)]
+		HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData);
+
+		[VtblIndex(6)]
+		HResult GetParent(Guid* riid, void** ppParent);
 	}
 }
 

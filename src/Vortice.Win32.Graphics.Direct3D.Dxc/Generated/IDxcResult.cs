@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("58346cda-dde7-4497-9461-6f87af5e0659")]
 [NativeTypeName("struct IDxcResult : IDxcOperationResult")]
 [NativeInheritance("IDxcOperationResult")]
-public unsafe partial struct IDxcResult : INativeGuid
+public unsafe partial struct IDxcResult : IDxcResult.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcResult
 	{
@@ -130,6 +130,23 @@ public unsafe partial struct IDxcResult : INativeGuid
 	public DxcOutKind PrimaryOutput()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcResult*, DxcOutKind>)(lpVtbl[10]))((IDxcResult*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDxcOperationResult.Interface
+	{
+		[VtblIndex(6)]
+		Bool32 HasOutput(DxcOutKind dxcOutKind);
+
+		[VtblIndex(7)]
+		HResult GetOutput(DxcOutKind dxcOutKind, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputName);
+
+		[VtblIndex(8)]
+		uint GetNumOutputs();
+
+		[VtblIndex(9)]
+		DxcOutKind GetOutputByIndex(uint Index);
+
+		[VtblIndex(10)]
+		DxcOutKind PrimaryOutput();
 	}
 }
 

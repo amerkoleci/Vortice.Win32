@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("68648c83-6ede-46c0-ab46-20083a887fde")]
 [NativeTypeName("struct IDWriteRemoteFontFileLoader : IDWriteFontFileLoader")]
 [NativeInheritance("IDWriteFontFileLoader")]
-public unsafe partial struct IDWriteRemoteFontFileLoader : INativeGuid
+public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFileLoader.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteRemoteFontFileLoader
 	{
@@ -104,6 +104,17 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : INativeGuid
 	public HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, ushort* baseUrl, ushort* fontFileUrl, IDWriteFontFile** fontFile)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileLoader*, IDWriteFactory*, ushort*, ushort*, IDWriteFontFile**, int>)(lpVtbl[6]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), factory, baseUrl, fontFileUrl, fontFile);
+	}
+	public interface Interface : IDWriteFontFileLoader.Interface
+	{
+		[VtblIndex(4)]
+		HResult CreateRemoteStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteRemoteFontFileStream** fontFileStream);
+
+		[VtblIndex(5)]
+		HResult GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, Locality* locality);
+
+		[VtblIndex(6)]
+		HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, ushort* baseUrl, ushort* fontFileUrl, IDWriteFontFile** fontFile);
 	}
 }
 

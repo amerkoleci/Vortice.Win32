@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2c1d867d-c290-41c8-ae7e-34a98702e9a5")]
 [NativeTypeName("struct ID2D1PrintControl : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1PrintControl : INativeGuid
+public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1PrintControl
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID2D1PrintControl : INativeGuid
 	public HResult Close()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, int>)(lpVtbl[4]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2);
+
+		[VtblIndex(4)]
+		HResult Close();
 	}
 }
 

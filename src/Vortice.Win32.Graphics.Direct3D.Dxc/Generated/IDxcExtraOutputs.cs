@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("319b37a2-a5c2-494a-a5de-4801b2faf989")]
 [NativeTypeName("struct IDxcExtraOutputs : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcExtraOutputs : INativeGuid
+public unsafe partial struct IDxcExtraOutputs : IDxcExtraOutputs.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcExtraOutputs
 	{
@@ -85,6 +85,14 @@ public unsafe partial struct IDxcExtraOutputs : INativeGuid
 	public HResult GetOutput(uint uIndex, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputType, IDxcBlobUtf16** ppOutputName)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcExtraOutputs*, uint, Guid*, void**, IDxcBlobUtf16**, IDxcBlobUtf16**, int>)(lpVtbl[4]))((IDxcExtraOutputs*)Unsafe.AsPointer(ref this), uIndex, iid, ppvObject, ppOutputType, ppOutputName);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		uint GetOutputCount();
+
+		[VtblIndex(4)]
+		HResult GetOutput(uint uIndex, Guid* iid, void** ppvObject, IDxcBlobUtf16** ppOutputType, IDxcBlobUtf16** ppOutputName);
 	}
 }
 

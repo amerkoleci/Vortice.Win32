@@ -4,6 +4,7 @@
 using System.Buffers;
 using System.Text.RegularExpressions;
 using System.Text;
+using static Win32.Apis;
 
 namespace Win32.Graphics.Direct3D.Fxc;
 
@@ -51,7 +52,7 @@ public static unsafe partial class Apis
                 }
             }
 
-            hr.ThrowIfFailed();
+            ThrowIfFailed(hr);
 
             return d3dBlobBytecode.Move();
         }

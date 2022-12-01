@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("409cd537-8532-40cb-9774-e2feb2df4e9c")]
 [NativeTypeName("struct IWICDdsDecoder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICDdsDecoder : INativeGuid
+public unsafe partial struct IWICDdsDecoder : IWICDdsDecoder.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICDdsDecoder
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IWICDdsDecoder : INativeGuid
 	public HResult GetFrame(uint arrayIndex, uint mipLevel, uint sliceIndex, IWICBitmapFrameDecode** ppIBitmapFrame)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICDdsDecoder*, uint, uint, uint, IWICBitmapFrameDecode**, int>)(lpVtbl[4]))((IWICDdsDecoder*)Unsafe.AsPointer(ref this), arrayIndex, mipLevel, sliceIndex, ppIBitmapFrame);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetParameters(WICDdsParameters* pParameters);
+
+		[VtblIndex(4)]
+		HResult GetFrame(uint arrayIndex, uint mipLevel, uint sliceIndex, IWICBitmapFrameDecode** ppIBitmapFrame);
 	}
 }
 

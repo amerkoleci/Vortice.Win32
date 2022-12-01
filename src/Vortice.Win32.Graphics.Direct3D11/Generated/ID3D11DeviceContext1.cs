@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("bb2c6faa-b5fb-4082-8e6b-388b8cfa90e1")]
 [NativeTypeName("struct ID3D11DeviceContext1 : ID3D11DeviceContext")]
 [NativeInheritance("ID3D11DeviceContext")]
-public unsafe partial struct ID3D11DeviceContext1 : INativeGuid
+public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11DeviceContext1
 	{
@@ -165,9 +165,9 @@ public unsafe partial struct ID3D11DeviceContext1 : INativeGuid
 	/// <inheritdoc cref="ID3D11DeviceContext.Map" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Map(ID3D11Resource* pResource, uint Subresource, MapMode MapType, uint MapFlags, MappedSubresource* pMappedResource)
+	public HResult Map(ID3D11Resource* pResource, uint Subresource, MapMode MapType, MapFlags MapFlags, MappedSubresource* pMappedResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11Resource*, uint, MapMode, uint, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11Resource*, uint, MapMode, MapFlags, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Unmap" />
@@ -477,9 +477,9 @@ public unsafe partial struct ID3D11DeviceContext1 : INativeGuid
 	/// <inheritdoc cref="ID3D11DeviceContext.ClearDepthStencilView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, uint ClearFlags, float Depth, byte Stencil)
+	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11DepthStencilView*, uint, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11DepthStencilView*, ClearFlags, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GenerateMips" />
@@ -1120,6 +1120,65 @@ public unsafe partial struct ID3D11DeviceContext1 : INativeGuid
 	public void DiscardView1(ID3D11View* pResourceView, RawRect* pRects, uint NumRects)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11View*, RawRect*, uint, void>)(lpVtbl[133]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResourceView, pRects, NumRects);
+	}
+	public interface Interface : ID3D11DeviceContext.Interface
+	{
+		[VtblIndex(115)]
+		void CopySubresourceRegion1(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox, uint CopyFlags);
+
+		[VtblIndex(116)]
+		void UpdateSubresource1(ID3D11Resource* pDstResource, uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch, uint CopyFlags);
+
+		[VtblIndex(117)]
+		void DiscardResource(ID3D11Resource* pResource);
+
+		[VtblIndex(118)]
+		void DiscardView(ID3D11View* pResourceView);
+
+		[VtblIndex(119)]
+		void VSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(120)]
+		void HSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(121)]
+		void DSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(122)]
+		void GSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(123)]
+		void PSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(124)]
+		void CSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(125)]
+		void VSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(126)]
+		void HSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(127)]
+		void DSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(128)]
+		void GSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(129)]
+		void PSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(130)]
+		void CSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants);
+
+		[VtblIndex(131)]
+		void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState** ppPreviousState);
+
+		[VtblIndex(132)]
+		void ClearView(ID3D11View* pView, float* Color, RawRect* pRect, uint NumRects);
+
+		[VtblIndex(133)]
+		void DiscardView1(ID3D11View* pResourceView, RawRect* pRects, uint NumRects);
 	}
 }
 

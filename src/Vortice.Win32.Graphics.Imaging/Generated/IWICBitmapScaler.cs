@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("00000302-a8f2-4877-ba0a-fd2b6645fb94")]
 [NativeTypeName("struct IWICBitmapScaler : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICBitmapScaler : INativeGuid
+public unsafe partial struct IWICBitmapScaler : IWICBitmapScaler.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapScaler
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct IWICBitmapScaler : INativeGuid
 	public HResult Initialize(IWICBitmapSource* pISource, uint uiWidth, uint uiHeight, WICBitmapInterpolationMode mode)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapScaler*, IWICBitmapSource*, uint, uint, WICBitmapInterpolationMode, int>)(lpVtbl[8]))((IWICBitmapScaler*)Unsafe.AsPointer(ref this), pISource, uiWidth, uiHeight, mode);
+	}
+	public interface Interface : IWICBitmapSource.Interface
+	{
+		[VtblIndex(8)]
+		HResult Initialize(IWICBitmapSource* pISource, uint uiWidth, uint uiHeight, WICBitmapInterpolationMode mode);
 	}
 }
 

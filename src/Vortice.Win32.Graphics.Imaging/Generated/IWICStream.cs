@@ -7,6 +7,8 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+using Win32.Com;
+
 namespace Win32.Graphics.Imaging;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="IWICStream"]/*' />
@@ -14,7 +16,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("135ff860-22b7-4ddf-b0f6-218f4f299a43")]
 [NativeTypeName("struct IWICStream : IStream")]
 [NativeInheritance("IStream")]
-public unsafe partial struct IWICStream : INativeGuid
+public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICStream
 	{
@@ -78,6 +80,20 @@ public unsafe partial struct IWICStream : INativeGuid
 	public HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ULargeInteger ulOffset, ULargeInteger ulMaxSize)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, ULargeInteger, ULargeInteger, int>)(lpVtbl[3]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
+	}
+	public interface Interface : IStream.Interface
+	{
+		[VtblIndex(0)]
+		HResult InitializeFromIStream(Com.IStream* pIStream);
+
+		[VtblIndex(1)]
+		HResult InitializeFromFilename(ushort* wzFileName, uint dwDesiredAccess);
+
+		[VtblIndex(2)]
+		HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);
+
+		[VtblIndex(3)]
+		HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ULargeInteger ulOffset, ULargeInteger ulMaxSize);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("9d8e1289-d7b3-465f-8126-250e349af85d")]
 [NativeTypeName("struct IDXGIKeyedMutex : IDXGIDeviceSubObject")]
 [NativeInheritance("IDXGIDeviceSubObject")]
-public unsafe partial struct IDXGIKeyedMutex : INativeGuid
+public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIKeyedMutex
 	{
@@ -128,6 +128,14 @@ public unsafe partial struct IDXGIKeyedMutex : INativeGuid
 	public HResult ReleaseSync(ulong Key)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, ulong, int>)(lpVtbl[9]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key);
+	}
+	public interface Interface : IDXGIDeviceSubObject.Interface
+	{
+		[VtblIndex(8)]
+		HResult AcquireSync(ulong Key, uint dwMilliseconds);
+
+		[VtblIndex(9)]
+		HResult ReleaseSync(ulong Key);
 	}
 }
 

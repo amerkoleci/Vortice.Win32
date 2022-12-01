@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("a05c8c37-d2c6-4732-b3a0-9ce0b0dc9ae6")]
 [NativeTypeName("struct ID3D11Device3 : ID3D11Device2")]
 [NativeInheritance("ID3D11Device2")]
-public unsafe partial struct ID3D11Device3 : INativeGuid
+public unsafe partial struct ID3D11Device3 : ID3D11Device3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Device3
 	{
@@ -568,6 +568,41 @@ public unsafe partial struct ID3D11Device3 : INativeGuid
 	public void ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Device3*, void*, uint, uint, ID3D11Resource*, uint, Box*, void>)(lpVtbl[64]))((ID3D11Device3*)Unsafe.AsPointer(ref this), pDstData, DstRowPitch, DstDepthPitch, pSrcResource, SrcSubresource, pSrcBox);
+	}
+	public interface Interface : ID3D11Device2.Interface
+	{
+		[VtblIndex(54)]
+		HResult CreateTexture2D1(Texture2DDescription1* pDesc1, SubresourceData* pInitialData, ID3D11Texture2D1** ppTexture2D);
+
+		[VtblIndex(55)]
+		HResult CreateTexture3D1(Texture3DDescription1* pDesc1, SubresourceData* pInitialData, ID3D11Texture3D1** ppTexture3D);
+
+		[VtblIndex(56)]
+		HResult CreateRasterizerState2(RasterizerDescription2* pRasterizerDesc, ID3D11RasterizerState2** ppRasterizerState);
+
+		[VtblIndex(57)]
+		HResult CreateShaderResourceView1(ID3D11Resource* pResource, ShaderResourceViewDescription1* pDesc1, ID3D11ShaderResourceView1** ppSRView1);
+
+		[VtblIndex(58)]
+		HResult CreateUnorderedAccessView1(ID3D11Resource* pResource, UnorderedAccessViewDescription1* pDesc1, ID3D11UnorderedAccessView1** ppUAView1);
+
+		[VtblIndex(59)]
+		HResult CreateRenderTargetView1(ID3D11Resource* pResource, RenderTargetViewDescription1* pDesc1, ID3D11RenderTargetView1** ppRTView1);
+
+		[VtblIndex(60)]
+		HResult CreateQuery1(QueryDescription1* pQueryDesc1, ID3D11Query1** ppQuery1);
+
+		[VtblIndex(61)]
+		void GetImmediateContext3(ID3D11DeviceContext3** ppImmediateContext);
+
+		[VtblIndex(62)]
+		HResult CreateDeferredContext3(uint ContextFlags, ID3D11DeviceContext3** ppDeferredContext);
+
+		[VtblIndex(63)]
+		void WriteToSubresource(ID3D11Resource* pDstResource, uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch);
+
+		[VtblIndex(64)]
+		void ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906ac-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1RadialGradientBrush : ID2D1Brush")]
 [NativeInheritance("ID2D1Brush")]
-public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
+public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1RadialGradientBrush
 	{
@@ -186,6 +186,35 @@ public unsafe partial struct ID2D1RadialGradientBrush : INativeGuid
 	public void GetGradientStopCollection(ID2D1GradientStopCollection** gradientStopCollection)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, ID2D1GradientStopCollection**, void>)(lpVtbl[16]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientStopCollection);
+	}
+	public interface Interface : ID2D1Brush.Interface
+	{
+		[VtblIndex(8)]
+		void SetCenter(System.Drawing.PointF center);
+
+		[VtblIndex(9)]
+		void SetGradientOriginOffset(System.Drawing.PointF gradientOriginOffset);
+
+		[VtblIndex(10)]
+		void SetRadiusX(float radiusX);
+
+		[VtblIndex(11)]
+		void SetRadiusY(float radiusY);
+
+		[VtblIndex(12)]
+		System.Drawing.PointF GetCenter();
+
+		[VtblIndex(13)]
+		System.Drawing.PointF GetGradientOriginOffset();
+
+		[VtblIndex(14)]
+		float GetRadiusX();
+
+		[VtblIndex(15)]
+		float GetRadiusY();
+
+		[VtblIndex(16)]
+		void GetGradientStopCollection(ID2D1GradientStopCollection** gradientStopCollection);
 	}
 }
 

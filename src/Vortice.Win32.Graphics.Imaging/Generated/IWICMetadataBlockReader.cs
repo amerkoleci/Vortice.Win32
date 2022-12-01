@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("feaa2a8d-b3f3-43e4-b25c-d1de990a1ae1")]
 [NativeTypeName("struct IWICMetadataBlockReader : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICMetadataBlockReader : INativeGuid
+public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataBlockReader
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IWICMetadataBlockReader : INativeGuid
 	public HResult GetEnumerator(Com.IEnumUnknown** ppIEnumMetadata)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetContainerFormat(Guid* pguidContainerFormat);
+
+		[VtblIndex(4)]
+		HResult GetCount(uint* pcCount);
+
+		[VtblIndex(5)]
+		HResult GetReaderByIndex(uint nIndex, IWICMetadataReader** ppIMetadataReader);
+
+		[VtblIndex(6)]
+		HResult GetEnumerator(Com.IEnumUnknown** ppIEnumMetadata);
 	}
 }
 

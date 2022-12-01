@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("0359dc30-95e6-4568-9055-27720d130e93")]
 [NativeTypeName("struct ID2D1AnalysisTransform : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1AnalysisTransform : INativeGuid
+public unsafe partial struct ID2D1AnalysisTransform : ID2D1AnalysisTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1AnalysisTransform
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID2D1AnalysisTransform : INativeGuid
 	public HResult ProcessAnalysisResults(byte* analysisData, uint analysisDataCount)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1AnalysisTransform*, byte*, uint, int>)(lpVtbl[3]))((ID2D1AnalysisTransform*)Unsafe.AsPointer(ref this), analysisData, analysisDataCount);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult ProcessAnalysisResults(byte* analysisData, uint analysisDataCount);
 	}
 }
 

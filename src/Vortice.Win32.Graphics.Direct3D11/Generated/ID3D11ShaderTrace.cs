@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("36b013e6-2811-4845-baa7-d623fe0df104")]
 [NativeTypeName("struct ID3D11ShaderTrace : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11ShaderTrace : INativeGuid
+public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11ShaderTrace
 	{
@@ -136,6 +136,32 @@ public unsafe partial struct ID3D11ShaderTrace : INativeGuid
 	public HResult GetReadRegister(uint stepIndex, uint readRegisterIndex, TraceRegister* pRegister, TraceValue* pValue)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, uint, TraceRegister*, TraceValue*, int>)(lpVtbl[10]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, readRegisterIndex, pRegister, pValue);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult TraceReady(ulong* pTestCount);
+
+		[VtblIndex(4)]
+		void ResetTrace();
+
+		[VtblIndex(5)]
+		HResult GetTraceStats(TraceStats* pTraceStats);
+
+		[VtblIndex(6)]
+		HResult PSSelectStamp(uint stampIndex);
+
+		[VtblIndex(7)]
+		HResult GetInitialRegisterContents(TraceRegister* pRegister, TraceValue* pValue);
+
+		[VtblIndex(8)]
+		HResult GetStep(uint stepIndex, TraceStep* pTraceStep);
+
+		[VtblIndex(9)]
+		HResult GetWrittenRegister(uint stepIndex, uint writtenRegisterIndex, TraceRegister* pRegister, TraceValue* pValue);
+
+		[VtblIndex(10)]
+		HResult GetReadRegister(uint stepIndex, uint readRegisterIndex, TraceRegister* pRegister, TraceValue* pValue);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("35d0e0b3-9076-4d2e-a016-a91b568a06b4")]
 [NativeTypeName("struct IDWriteFactory7 : IDWriteFactory6")]
 [NativeInheritance("IDWriteFactory6")]
-public unsafe partial struct IDWriteFactory7 : INativeGuid
+public unsafe partial struct IDWriteFactory7 : IDWriteFactory7.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory7
 	{
@@ -504,6 +504,14 @@ public unsafe partial struct IDWriteFactory7 : INativeGuid
 	public HResult GetSystemFontCollection(Bool32 includeDownloadableFonts, FontFamilyModel fontFamilyModel, IDWriteFontCollection3** fontCollection)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory7*, Bool32, FontFamilyModel, IDWriteFontCollection3**, int>)(lpVtbl[56]))((IDWriteFactory7*)Unsafe.AsPointer(ref this), includeDownloadableFonts, fontFamilyModel, fontCollection);
+	}
+	public interface Interface : IDWriteFactory6.Interface
+	{
+		[VtblIndex(55)]
+		HResult GetSystemFontSet(Bool32 includeDownloadableFonts, IDWriteFontSet2** fontSet);
+
+		[VtblIndex(56)]
+		HResult GetSystemFontCollection(Bool32 includeDownloadableFonts, FontFamilyModel fontFamilyModel, IDWriteFontCollection3** fontCollection);
 	}
 }
 

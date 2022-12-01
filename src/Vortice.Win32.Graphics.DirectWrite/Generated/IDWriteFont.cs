@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("acd16696-8c14-4f5d-877e-fe3fc1d32737")]
 [NativeTypeName("struct IDWriteFont : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFont : INativeGuid
+public unsafe partial struct IDWriteFont : IDWriteFont.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFont
 	{
@@ -160,6 +160,41 @@ public unsafe partial struct IDWriteFont : INativeGuid
 	public HResult CreateFontFace(IDWriteFontFace** fontFace)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont*, IDWriteFontFace**, int>)(lpVtbl[13]))((IDWriteFont*)Unsafe.AsPointer(ref this), fontFace);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetFontFamily(IDWriteFontFamily** fontFamily);
+
+		[VtblIndex(4)]
+		FontWeight GetWeight();
+
+		[VtblIndex(5)]
+		FontStretch GetStretch();
+
+		[VtblIndex(6)]
+		FontStyle GetStyle();
+
+		[VtblIndex(7)]
+		Bool32 IsSymbolFont();
+
+		[VtblIndex(8)]
+		HResult GetFaceNames(IDWriteLocalizedStrings** names);
+
+		[VtblIndex(9)]
+		HResult GetInformationalStrings(InformationalStringId informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists);
+
+		[VtblIndex(10)]
+		FontSimulations GetSimulations();
+
+		[VtblIndex(11)]
+		void GetMetrics(FontMetrics* fontMetrics);
+
+		[VtblIndex(12)]
+		HResult HasCharacter(uint unicodeValue, Bool32* exists);
+
+		[VtblIndex(13)]
+		HResult CreateFontFace(IDWriteFontFace** fontFace);
 	}
 }
 

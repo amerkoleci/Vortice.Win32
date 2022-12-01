@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("a84cee02-3eea-4eee-a827-87c1a02a0fcc")]
 [NativeTypeName("struct IDWriteFontCollection : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontCollection : INativeGuid
+public unsafe partial struct IDWriteFontCollection : IDWriteFontCollection.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontCollection
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IDWriteFontCollection : INativeGuid
 	public HResult GetFontFromFontFace(IDWriteFontFace* fontFace, IDWriteFont** font)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection*, IDWriteFontFace*, IDWriteFont**, int>)(lpVtbl[6]))((IDWriteFontCollection*)Unsafe.AsPointer(ref this), fontFace, font);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		uint GetFontFamilyCount();
+
+		[VtblIndex(4)]
+		HResult GetFontFamily(uint index, IDWriteFontFamily** fontFamily);
+
+		[VtblIndex(5)]
+		HResult FindFamilyName(ushort* familyName, uint* index, Bool32* exists);
+
+		[VtblIndex(6)]
+		HResult GetFontFromFontFace(IDWriteFontFace* fontFace, IDWriteFont** font);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("5e5a32a3-8dff-4773-9ff6-0696eab77267")]
 [NativeTypeName("struct IDWriteBitmapRenderTarget : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteBitmapRenderTarget : INativeGuid
+public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarget.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteBitmapRenderTarget
 	{
@@ -136,6 +136,32 @@ public unsafe partial struct IDWriteBitmapRenderTarget : INativeGuid
 	public HResult Resize(uint width, uint height)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget*, uint, uint, int>)(lpVtbl[10]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), width, height);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult DrawGlyphRun(float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, IDWriteRenderingParams* renderingParams, uint textColor, RawRect* blackBoxRect);
+
+		[VtblIndex(4)]
+		IntPtr GetMemoryDC();
+
+		[VtblIndex(5)]
+		float GetPixelsPerDip();
+
+		[VtblIndex(6)]
+		HResult SetPixelsPerDip(float pixelsPerDip);
+
+		[VtblIndex(7)]
+		HResult GetCurrentTransform(Matrix3x2* transform);
+
+		[VtblIndex(8)]
+		HResult SetCurrentTransform(Matrix3x2* transform);
+
+		[VtblIndex(9)]
+		HResult GetSize(System.Drawing.Size* size);
+
+		[VtblIndex(10)]
+		HResult Resize(uint width, uint height);
 	}
 }
 

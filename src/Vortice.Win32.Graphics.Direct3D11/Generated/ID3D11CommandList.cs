@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("a24bc4d1-769e-43f7-8013-98ff566c18e2")]
 [NativeTypeName("struct ID3D11CommandList : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11CommandList : INativeGuid
+public unsafe partial struct ID3D11CommandList : ID3D11CommandList.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11CommandList
 	{
@@ -112,6 +112,11 @@ public unsafe partial struct ID3D11CommandList : INativeGuid
 	public uint GetContextFlags()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11CommandList*, uint>)(lpVtbl[7]))((ID3D11CommandList*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		uint GetContextFlags();
 	}
 }
 

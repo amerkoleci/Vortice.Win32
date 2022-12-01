@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("77acce80-638e-4e65-8895-c1f23386863e")]
 [NativeTypeName("struct ID3D12Device1 : ID3D12Device")]
 [NativeInheritance("ID3D12Device")]
-public unsafe partial struct ID3D12Device1 : INativeGuid
+public unsafe partial struct ID3D12Device1 : ID3D12Device1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device1
 	{
@@ -427,6 +427,17 @@ public unsafe partial struct ID3D12Device1 : INativeGuid
 	public HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device1*, uint, ID3D12Pageable**, ResidencyPriority*, int>)(lpVtbl[46]))((ID3D12Device1*)Unsafe.AsPointer(ref this), NumObjects, ppObjects, pPriorities);
+	}
+	public interface Interface : ID3D12Device.Interface
+	{
+		[VtblIndex(44)]
+		HResult CreatePipelineLibrary(void* pLibraryBlob, nuint BlobLength, Guid* riid, void** ppPipelineLibrary);
+
+		[VtblIndex(45)]
+		HResult SetEventOnMultipleFenceCompletion(ID3D12Fence** ppFences, ulong* pFenceValues, uint NumFences, MultipleFenceWaitFlags Flags, Handle hEvent);
+
+		[VtblIndex(46)]
+		HResult SetResidencyPriority(uint NumObjects, ID3D12Pageable** ppObjects, ResidencyPriority* pPriorities);
 	}
 }
 

@@ -2,7 +2,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Drawing;
-using System.Runtime.CompilerServices;
+using static Win32.Apis;
 using Win32.Graphics.Direct2D.Common;
 using Win32.Graphics.Imaging;
 using Win32.Numerics;
@@ -108,7 +108,7 @@ public unsafe partial struct ID2D1DeviceContext
     public ComPtr<ID2D1Effect> CreateEffect(in Guid effectId)
     {
         using ComPtr<ID2D1Effect> effect = default;
-        CreateEffect((Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in effectId)), effect.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateEffect((Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in effectId)), effect.GetAddressOf()));
         return effect.Move();
     }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("1d7b0652-185f-41c6-85ce-0c5be3d4ae6c")]
 [NativeTypeName("struct ID3D11VideoProcessor : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11VideoProcessor : INativeGuid
+public unsafe partial struct ID3D11VideoProcessor : ID3D11VideoProcessor.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoProcessor
 	{
@@ -120,6 +120,14 @@ public unsafe partial struct ID3D11VideoProcessor : INativeGuid
 	public void GetRateConversionCaps(VideoProcessorRateConversionCaps* pCaps)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessor*, VideoProcessorRateConversionCaps*, void>)(lpVtbl[8]))((ID3D11VideoProcessor*)Unsafe.AsPointer(ref this), pCaps);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		void GetContentDesc(VideoProcessorContentDescription* pDesc);
+
+		[VtblIndex(8)]
+		void GetRateConversionCaps(VideoProcessorRateConversionCaps* pCaps);
 	}
 }
 

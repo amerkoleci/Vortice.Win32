@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("fd0ecb6b-91e6-411e-8655-395e760f91b4")]
 [NativeTypeName("struct ID2D1GdiMetafileSink1 : ID2D1GdiMetafileSink")]
 [NativeInheritance("ID2D1GdiMetafileSink")]
-public unsafe partial struct ID2D1GdiMetafileSink1 : INativeGuid
+public unsafe partial struct ID2D1GdiMetafileSink1 : ID2D1GdiMetafileSink1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GdiMetafileSink1
 	{
@@ -88,6 +88,11 @@ public unsafe partial struct ID2D1GdiMetafileSink1 : INativeGuid
 	public HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize, uint flags)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafileSink1*, uint, void*, uint, uint, int>)(lpVtbl[4]))((ID2D1GdiMetafileSink1*)Unsafe.AsPointer(ref this), recordType, recordData, recordDataSize, flags);
+	}
+	public interface Interface : ID2D1GdiMetafileSink.Interface
+	{
+		[VtblIndex(4)]
+		HResult ProcessRecord(uint recordType, void* recordData, uint recordDataSize, uint flags);
 	}
 }
 

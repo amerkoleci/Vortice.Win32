@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("4ad18ac0-cfd2-4c2f-bb62-96e54fdb6879")]
 [NativeTypeName("struct IDCompositionShadowEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionShadowEffect : INativeGuid
+public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionShadowEffect
 	{
@@ -168,6 +168,41 @@ public unsafe partial struct IDCompositionShadowEffect : INativeGuid
 	public HResult SetAlpha(float amount)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, float, int>)(lpVtbl[14]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetStandardDeviation(IDCompositionAnimation* animation);
+
+		[VtblIndex(5)]
+		HResult SetStandardDeviation(float amount);
+
+		[VtblIndex(6)]
+		HResult SetColor(Vector4* color);
+
+		[VtblIndex(7)]
+		HResult SetRed(IDCompositionAnimation* animation);
+
+		[VtblIndex(8)]
+		HResult SetRed(float amount);
+
+		[VtblIndex(9)]
+		HResult SetGreen(IDCompositionAnimation* animation);
+
+		[VtblIndex(10)]
+		HResult SetGreen(float amount);
+
+		[VtblIndex(11)]
+		HResult SetBlue(IDCompositionAnimation* animation);
+
+		[VtblIndex(12)]
+		HResult SetBlue(float amount);
+
+		[VtblIndex(13)]
+		HResult SetAlpha(IDCompositionAnimation* animation);
+
+		[VtblIndex(14)]
+		HResult SetAlpha(float amount);
 	}
 }
 

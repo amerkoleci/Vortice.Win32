@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("aba958bf-c672-44d1-8d61-ce6df2e682c2")]
 [NativeTypeName("struct IWICMetadataHandlerInfo : IWICComponentInfo")]
 [NativeInheritance("IWICComponentInfo")]
-public unsafe partial struct IWICMetadataHandlerInfo : INativeGuid
+public unsafe partial struct IWICMetadataHandlerInfo : IWICMetadataHandlerInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataHandlerInfo
 	{
@@ -192,6 +192,29 @@ public unsafe partial struct IWICMetadataHandlerInfo : INativeGuid
 	public HResult DoesRequireFixedSize(Bool32* pfFixedSize)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, Bool32*, int>)(lpVtbl[17]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), pfFixedSize);
+	}
+	public interface Interface : IWICComponentInfo.Interface
+	{
+		[VtblIndex(11)]
+		HResult GetMetadataFormat(Guid* pguidMetadataFormat);
+
+		[VtblIndex(12)]
+		HResult GetContainerFormats(uint cContainerFormats, Guid* pguidContainerFormats, uint* pcchActual);
+
+		[VtblIndex(13)]
+		HResult GetDeviceManufacturer(uint cchDeviceManufacturer, ushort* wzDeviceManufacturer, uint* pcchActual);
+
+		[VtblIndex(14)]
+		HResult GetDeviceModels(uint cchDeviceModels, ushort* wzDeviceModels, uint* pcchActual);
+
+		[VtblIndex(15)]
+		HResult DoesRequireFullStream(Bool32* pfRequiresFullStream);
+
+		[VtblIndex(16)]
+		HResult DoesSupportPadding(Bool32* pfSupportsPadding);
+
+		[VtblIndex(17)]
+		HResult DoesRequireFixedSize(Bool32* pfFixedSize);
 	}
 }
 

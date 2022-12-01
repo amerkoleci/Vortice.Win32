@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("bae8b344-23fc-4071-8cb5-d05d6f073848")]
 [NativeTypeName("struct ID2D1InkStyle : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1InkStyle : INativeGuid
+public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1InkStyle
 	{
@@ -112,6 +112,20 @@ public unsafe partial struct ID2D1InkStyle : INativeGuid
 	public InkNibShape GetNibShape()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, InkNibShape>)(lpVtbl[7]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		void SetNibTransform(Matrix3x2* transform);
+
+		[VtblIndex(5)]
+		void GetNibTransform(Matrix3x2* transform);
+
+		[VtblIndex(6)]
+		void SetNibShape(InkNibShape nibShape);
+
+		[VtblIndex(7)]
+		InkNibShape GetNibShape();
 	}
 }
 

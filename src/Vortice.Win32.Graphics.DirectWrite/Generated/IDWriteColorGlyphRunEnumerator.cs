@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("d31fbe17-f157-41a2-8d24-cb779e0560e8")]
 [NativeTypeName("struct IDWriteColorGlyphRunEnumerator : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteColorGlyphRunEnumerator : INativeGuid
+public unsafe partial struct IDWriteColorGlyphRunEnumerator : IDWriteColorGlyphRunEnumerator.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteColorGlyphRunEnumerator
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator : INativeGuid
 	public HResult GetCurrentRun(ColorGlyphRun** colorGlyphRun)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator*, ColorGlyphRun**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator*)Unsafe.AsPointer(ref this), colorGlyphRun);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult MoveNext(Bool32* hasRun);
+
+		[VtblIndex(4)]
+		HResult GetCurrentRun(ColorGlyphRun** colorGlyphRun);
 	}
 }
 

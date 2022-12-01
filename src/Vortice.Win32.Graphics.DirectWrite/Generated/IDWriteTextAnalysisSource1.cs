@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("639cfad8-0fb4-4b21-a58a-067920120009")]
 [NativeTypeName("struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSource")]
 [NativeInheritance("IDWriteTextAnalysisSource")]
-public unsafe partial struct IDWriteTextAnalysisSource1 : INativeGuid
+public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSource1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextAnalysisSource1
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : INativeGuid
 	public HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, VerticalGlyphOrientation* glyphOrientation, byte* bidiLevel)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource1*, uint, uint*, VerticalGlyphOrientation*, byte*, int>)(lpVtbl[8]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientation, bidiLevel);
+	}
+	public interface Interface : IDWriteTextAnalysisSource.Interface
+	{
+		[VtblIndex(8)]
+		HResult GetVerticalGlyphOrientation(uint textPosition, uint* textLength, VerticalGlyphOrientation* glyphOrientation, byte* bidiLevel);
 	}
 }
 

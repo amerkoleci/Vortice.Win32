@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("d59bab0a-68a2-455b-a5dc-9eb2854e2490")]
 [NativeTypeName("struct ID2D1SvgPaint : ID2D1SvgAttribute")]
 [NativeInheritance("ID2D1SvgAttribute")]
-public unsafe partial struct ID2D1SvgPaint : INativeGuid
+public unsafe partial struct ID2D1SvgPaint : ID2D1SvgPaint.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgPaint
 	{
@@ -152,6 +152,29 @@ public unsafe partial struct ID2D1SvgPaint : INativeGuid
 	public uint GetIdLength()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPaint*, uint>)(lpVtbl[12]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1SvgAttribute.Interface
+	{
+		[VtblIndex(6)]
+		HResult SetPaintType(SvgPaintType paintType);
+
+		[VtblIndex(7)]
+		SvgPaintType GetPaintType();
+
+		[VtblIndex(8)]
+		HResult SetColor(Color4* color);
+
+		[VtblIndex(9)]
+		void GetColor(Color4** color);
+
+		[VtblIndex(10)]
+		HResult SetId(ushort* id);
+
+		[VtblIndex(11)]
+		HResult GetId(ushort* id, uint idCount);
+
+		[VtblIndex(12)]
+		uint GetIdLength();
 	}
 }
 

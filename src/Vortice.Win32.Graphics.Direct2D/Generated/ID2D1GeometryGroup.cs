@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906a6-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1GeometryGroup : ID2D1Geometry")]
 [NativeInheritance("ID2D1Geometry")]
-public unsafe partial struct ID2D1GeometryGroup : INativeGuid
+public unsafe partial struct ID2D1GeometryGroup : ID2D1GeometryGroup.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GeometryGroup
 	{
@@ -208,6 +208,17 @@ public unsafe partial struct ID2D1GeometryGroup : INativeGuid
 	public void GetSourceGeometries(ID2D1Geometry** geometries, uint geometriesCount)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1GeometryGroup*, ID2D1Geometry**, uint, void>)(lpVtbl[19]))((ID2D1GeometryGroup*)Unsafe.AsPointer(ref this), geometries, geometriesCount);
+	}
+	public interface Interface : ID2D1Geometry.Interface
+	{
+		[VtblIndex(17)]
+		Common.FillMode GetFillMode();
+
+		[VtblIndex(18)]
+		uint GetSourceGeometryCount();
+
+		[VtblIndex(19)]
+		void GetSourceGeometries(ID2D1Geometry** geometries, uint geometriesCount);
 	}
 }
 

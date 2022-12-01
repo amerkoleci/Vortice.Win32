@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("688e1a58-5094-47c8-adc8-fbcea60ae92b")]
 [NativeTypeName("struct IDWriteTextAnalysisSource : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteTextAnalysisSource : INativeGuid
+public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSource.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextAnalysisSource
 	{
@@ -112,6 +112,23 @@ public unsafe partial struct IDWriteTextAnalysisSource : INativeGuid
 	public HResult GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint, uint*, IDWriteNumberSubstitution**, int>)(lpVtbl[7]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength);
+
+		[VtblIndex(4)]
+		HResult GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength);
+
+		[VtblIndex(5)]
+		ReadingDirection GetParagraphReadingDirection();
+
+		[VtblIndex(6)]
+		HResult GetLocaleName(uint textPosition, uint* textLength, ushort** localeName);
+
+		[VtblIndex(7)]
+		HResult GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution);
 	}
 }
 

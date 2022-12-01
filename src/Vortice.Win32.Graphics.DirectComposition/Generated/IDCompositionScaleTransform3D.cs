@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("2a9e9ead-364b-4b15-a7c4-a1997f78b389")]
 [NativeTypeName("struct IDCompositionScaleTransform3D : IDCompositionTransform3D")]
 [NativeInheritance("IDCompositionTransform3D")]
-public unsafe partial struct IDCompositionScaleTransform3D : INativeGuid
+public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleTransform3D.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionScaleTransform3D
 	{
@@ -168,6 +168,44 @@ public unsafe partial struct IDCompositionScaleTransform3D : INativeGuid
 	public HResult SetCenterZ(float centerZ)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[14]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerZ);
+	}
+	public interface Interface : IDCompositionTransform3D.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetScaleX(IDCompositionAnimation* animation);
+
+		[VtblIndex(4)]
+		HResult SetScaleX(float scaleX);
+
+		[VtblIndex(5)]
+		HResult SetScaleY(IDCompositionAnimation* animation);
+
+		[VtblIndex(6)]
+		HResult SetScaleY(float scaleY);
+
+		[VtblIndex(7)]
+		HResult SetScaleZ(IDCompositionAnimation* animation);
+
+		[VtblIndex(8)]
+		HResult SetScaleZ(float scaleZ);
+
+		[VtblIndex(9)]
+		HResult SetCenterX(IDCompositionAnimation* animation);
+
+		[VtblIndex(10)]
+		HResult SetCenterX(float centerX);
+
+		[VtblIndex(11)]
+		HResult SetCenterY(IDCompositionAnimation* animation);
+
+		[VtblIndex(12)]
+		HResult SetCenterY(float centerY);
+
+		[VtblIndex(13)]
+		HResult SetCenterZ(IDCompositionAnimation* animation);
+
+		[VtblIndex(14)]
+		HResult SetCenterZ(float centerZ);
 	}
 }
 

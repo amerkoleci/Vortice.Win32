@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("d37f57e4-6908-459f-a199-e72f24f79987")]
 [NativeTypeName("struct ID2D1DeviceContext1 : ID2D1DeviceContext")]
 [NativeInheritance("ID2D1DeviceContext")]
-public unsafe partial struct ID2D1DeviceContext1 : INativeGuid
+public unsafe partial struct ID2D1DeviceContext1 : ID2D1DeviceContext1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext1
 	{
@@ -811,6 +811,17 @@ public unsafe partial struct ID2D1DeviceContext1 : INativeGuid
 	public void DrawGeometryRealization(ID2D1GeometryRealization* geometryRealization, ID2D1Brush* brush)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, ID2D1GeometryRealization*, ID2D1Brush*, void>)(lpVtbl[94]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), geometryRealization, brush);
+	}
+	public interface Interface : ID2D1DeviceContext.Interface
+	{
+		[VtblIndex(92)]
+		HResult CreateFilledGeometryRealization(ID2D1Geometry* geometry, float flatteningTolerance, ID2D1GeometryRealization** geometryRealization);
+
+		[VtblIndex(93)]
+		HResult CreateStrokedGeometryRealization(ID2D1Geometry* geometry, float flatteningTolerance, float strokeWidth, ID2D1StrokeStyle* strokeStyle, ID2D1GeometryRealization** geometryRealization);
+
+		[VtblIndex(94)]
+		void DrawGeometryRealization(ID2D1GeometryRealization* geometryRealization, ID2D1Brush* brush);
 	}
 }
 

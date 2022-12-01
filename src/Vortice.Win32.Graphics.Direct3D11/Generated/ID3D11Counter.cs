@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("6e8c49fb-a371-4770-b440-29086022b741")]
 [NativeTypeName("struct ID3D11Counter : ID3D11Asynchronous")]
 [NativeInheritance("ID3D11Asynchronous")]
-public unsafe partial struct ID3D11Counter : INativeGuid
+public unsafe partial struct ID3D11Counter : ID3D11Counter.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Counter
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct ID3D11Counter : INativeGuid
 	public void GetDesc(CounterDescription* pDesc)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Counter*, CounterDescription*, void>)(lpVtbl[8]))((ID3D11Counter*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : ID3D11Asynchronous.Interface
+	{
+		[VtblIndex(8)]
+		void GetDesc(CounterDescription* pDesc);
 	}
 }
 

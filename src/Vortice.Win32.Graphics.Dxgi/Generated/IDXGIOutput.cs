@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("ae02eedb-c735-4690-8d52-5a8dc20213aa")]
 [NativeTypeName("struct IDXGIOutput : IDXGIObject")]
 [NativeInheritance("IDXGIObject")]
-public unsafe partial struct IDXGIOutput : INativeGuid
+public unsafe partial struct IDXGIOutput : IDXGIOutput.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput
 	{
@@ -200,6 +200,44 @@ public unsafe partial struct IDXGIOutput : INativeGuid
 	public HResult GetFrameStatistics(FrameStatistics* pStats)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput*)Unsafe.AsPointer(ref this), pStats);
+	}
+	public interface Interface : IDXGIObject.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetDesc(OutputDescription* pDesc);
+
+		[VtblIndex(8)]
+		HResult GetDisplayModeList(Common.Format EnumFormat, EnumModesFlags Flags, uint* pNumModes, Common.ModeDescription* pDesc);
+
+		[VtblIndex(9)]
+		HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice);
+
+		[VtblIndex(10)]
+		HResult WaitForVBlank();
+
+		[VtblIndex(11)]
+		HResult TakeOwnership(IUnknown* pDevice, Bool32 Exclusive);
+
+		[VtblIndex(12)]
+		void ReleaseOwnership();
+
+		[VtblIndex(13)]
+		HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps);
+
+		[VtblIndex(14)]
+		HResult SetGammaControl(Common.GammaControl* pArray);
+
+		[VtblIndex(15)]
+		HResult GetGammaControl(Common.GammaControl* pArray);
+
+		[VtblIndex(16)]
+		HResult SetDisplaySurface(IDXGISurface* pScanoutSurface);
+
+		[VtblIndex(17)]
+		HResult GetDisplaySurfaceData(IDXGISurface* pDestination);
+
+		[VtblIndex(18)]
+		HResult GetFrameStatistics(FrameStatistics* pStats);
 	}
 }
 

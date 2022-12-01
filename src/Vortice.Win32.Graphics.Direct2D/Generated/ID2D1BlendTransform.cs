@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("63ac0b32-ba44-450f-8806-7f4ca1ff2f1b")]
 [NativeTypeName("struct ID2D1BlendTransform : ID2D1ConcreteTransform")]
 [NativeInheritance("ID2D1ConcreteTransform")]
-public unsafe partial struct ID2D1BlendTransform : INativeGuid
+public unsafe partial struct ID2D1BlendTransform : ID2D1BlendTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1BlendTransform
 	{
@@ -112,6 +112,14 @@ public unsafe partial struct ID2D1BlendTransform : INativeGuid
 	public void GetDescription(BlendDescription* description)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1BlendTransform*, BlendDescription*, void>)(lpVtbl[7]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), description);
+	}
+	public interface Interface : ID2D1ConcreteTransform.Interface
+	{
+		[VtblIndex(6)]
+		void SetDescription(BlendDescription* description);
+
+		[VtblIndex(7)]
+		void GetDescription(BlendDescription* description);
 	}
 }
 

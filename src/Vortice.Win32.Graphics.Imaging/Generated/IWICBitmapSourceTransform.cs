@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("3b16811b-6a43-4ec9-b713-3d5a0c13b940")]
 [NativeTypeName("struct IWICBitmapSourceTransform : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICBitmapSourceTransform : INativeGuid
+public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapSourceTransform
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IWICBitmapSourceTransform : INativeGuid
 	public HResult DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSourceTransform*, WICBitmapTransformOptions, Bool32*, int>)(lpVtbl[6]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), dstTransform, pfIsSupported);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CopyPixels(System.Drawing.Rectangle* prc, uint uiWidth, uint uiHeight, Guid* pguidDstFormat, WICBitmapTransformOptions dstTransform, uint nStride, uint cbBufferSize, byte* pbBuffer);
+
+		[VtblIndex(4)]
+		HResult GetClosestSize(uint* puiWidth, uint* puiHeight);
+
+		[VtblIndex(5)]
+		HResult GetClosestPixelFormat(Guid* pguidDstFormat);
+
+		[VtblIndex(6)]
+		HResult DoesSupportTransform(WICBitmapTransformOptions dstTransform, Bool32* pfIsSupported);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("4b35d0cd-1e15-4258-9c98-1b1333f6dd3b")]
 [NativeTypeName("struct ID3D11Asynchronous : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11Asynchronous : INativeGuid
+public unsafe partial struct ID3D11Asynchronous : ID3D11Asynchronous.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Asynchronous
 	{
@@ -112,6 +112,11 @@ public unsafe partial struct ID3D11Asynchronous : INativeGuid
 	public uint GetDataSize()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Asynchronous*, uint>)(lpVtbl[7]))((ID3D11Asynchronous*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		uint GetDataSize();
 	}
 }
 

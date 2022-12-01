@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("cca920e4-52f0-492b-bfa8-29c72ee0a468")]
 [NativeTypeName("struct IDWriteFontCollectionLoader : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontCollectionLoader : INativeGuid
+public unsafe partial struct IDWriteFontCollectionLoader : IDWriteFontCollectionLoader.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontCollectionLoader
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IDWriteFontCollectionLoader : INativeGuid
 	public HResult CreateEnumeratorFromKey(IDWriteFactory* factory, void* collectionKey, uint collectionKeySize, IDWriteFontFileEnumerator** fontFileEnumerator)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollectionLoader*, IDWriteFactory*, void*, uint, IDWriteFontFileEnumerator**, int>)(lpVtbl[3]))((IDWriteFontCollectionLoader*)Unsafe.AsPointer(ref this), factory, collectionKey, collectionKeySize, fontFileEnumerator);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateEnumeratorFromKey(IDWriteFactory* factory, void* collectionKey, uint collectionKeySize, IDWriteFontFileEnumerator** fontFileEnumerator);
 	}
 }
 

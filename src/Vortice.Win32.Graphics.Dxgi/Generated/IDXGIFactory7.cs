@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("a4966eed-76db-44da-84c1-ee9a7afb20a8")]
 [NativeTypeName("struct IDXGIFactory7 : IDXGIFactory6")]
 [NativeInheritance("IDXGIFactory6")]
-public unsafe partial struct IDXGIFactory7 : INativeGuid
+public unsafe partial struct IDXGIFactory7 : IDXGIFactory7.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory7
 	{
@@ -304,6 +304,14 @@ public unsafe partial struct IDXGIFactory7 : INativeGuid
 	public HResult UnregisterAdaptersChangedEvent(uint dwCookie)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, int>)(lpVtbl[31]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
+	}
+	public interface Interface : IDXGIFactory6.Interface
+	{
+		[VtblIndex(30)]
+		HResult RegisterAdaptersChangedEvent(Handle hEvent, uint* pdwCookie);
+
+		[VtblIndex(31)]
+		HResult UnregisterAdaptersChangedEvent(uint dwCookie);
 	}
 }
 

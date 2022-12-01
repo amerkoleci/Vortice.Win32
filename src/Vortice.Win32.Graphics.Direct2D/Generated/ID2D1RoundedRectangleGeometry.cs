@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906a3-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1RoundedRectangleGeometry : ID2D1Geometry")]
 [NativeInheritance("ID2D1Geometry")]
-public unsafe partial struct ID2D1RoundedRectangleGeometry : INativeGuid
+public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectangleGeometry.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1RoundedRectangleGeometry
 	{
@@ -192,6 +192,11 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : INativeGuid
 	public void GetRoundedRect(RoundedRect* roundedRect)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1RoundedRectangleGeometry*, RoundedRect*, void>)(lpVtbl[17]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), roundedRect);
+	}
+	public interface Interface : ID2D1Geometry.Interface
+	{
+		[VtblIndex(17)]
+		void GetRoundedRect(RoundedRect* roundedRect);
 	}
 }
 

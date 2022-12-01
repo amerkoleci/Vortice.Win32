@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("9eb767fd-4269-4467-b8c2-eb30cb305743")]
 [NativeTypeName("struct ID2D1CommandSink1 : ID2D1CommandSink")]
 [NativeInheritance("ID2D1CommandSink")]
-public unsafe partial struct ID2D1CommandSink1 : INativeGuid
+public unsafe partial struct ID2D1CommandSink1 : ID2D1CommandSink1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1CommandSink1
 	{
@@ -280,6 +280,11 @@ public unsafe partial struct ID2D1CommandSink1 : INativeGuid
 	public HResult SetPrimitiveBlend1(PrimitiveBlend primitiveBlend)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, PrimitiveBlend, int>)(lpVtbl[28]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), primitiveBlend);
+	}
+	public interface Interface : ID2D1CommandSink.Interface
+	{
+		[VtblIndex(28)]
+		HResult SetPrimitiveBlend1(PrimitiveBlend primitiveBlend);
 	}
 }
 

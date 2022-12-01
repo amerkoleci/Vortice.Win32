@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("4556be70-3abd-4f70-90be-421780a6f515")]
 [NativeTypeName("struct IDWriteGdiInterop1 : IDWriteGdiInterop")]
 [NativeInheritance("IDWriteGdiInterop")]
-public unsafe partial struct IDWriteGdiInterop1 : INativeGuid
+public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteGdiInterop1
 	{
@@ -144,6 +144,20 @@ public unsafe partial struct IDWriteGdiInterop1 : INativeGuid
 	public HResult GetMatchingFontsByLOGFONT(Win32.Graphics.Gdi.LogFontA* logFont, IDWriteFontSet* fontSet, IDWriteFontSet** filteredSet)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, Win32.Graphics.Gdi.LogFontA*, IDWriteFontSet*, IDWriteFontSet**, int>)(lpVtbl[11]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, fontSet, filteredSet);
+	}
+	public interface Interface : IDWriteGdiInterop.Interface
+	{
+		[VtblIndex(8)]
+		HResult CreateFontFromLOGFONT(Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFontCollection* fontCollection, IDWriteFont** font);
+
+		[VtblIndex(9)]
+		HResult GetFontSignature(IDWriteFontFace* fontFace, Win32.Graphics.Gdi.FontSignature** fontSignature);
+
+		[VtblIndex(10)]
+		HResult GetFontSignature(IDWriteFont* font, Win32.Graphics.Gdi.FontSignature** fontSignature);
+
+		[VtblIndex(11)]
+		HResult GetMatchingFontsByLOGFONT(Win32.Graphics.Gdi.LogFontA* logFont, IDWriteFontSet* fontSet, IDWriteFontSet** filteredSet);
 	}
 }
 

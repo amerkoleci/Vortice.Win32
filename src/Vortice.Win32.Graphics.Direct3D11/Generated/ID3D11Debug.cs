@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("79cf2233-7536-4948-9d36-1e4692dc5760")]
 [NativeTypeName("struct ID3D11Debug : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11Debug : INativeGuid
+public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Debug
 	{
@@ -144,6 +144,35 @@ public unsafe partial struct ID3D11Debug : INativeGuid
 	public HResult ValidateContextForDispatch(ID3D11DeviceContext* pContext)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, ID3D11DeviceContext*, int>)(lpVtbl[11]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pContext);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetFeatureMask(uint Mask);
+
+		[VtblIndex(4)]
+		uint GetFeatureMask();
+
+		[VtblIndex(5)]
+		HResult SetPresentPerRenderOpDelay(uint Milliseconds);
+
+		[VtblIndex(6)]
+		uint GetPresentPerRenderOpDelay();
+
+		[VtblIndex(7)]
+		HResult SetSwapChain(Graphics.Dxgi.IDXGISwapChain* pSwapChain);
+
+		[VtblIndex(8)]
+		HResult GetSwapChain(Graphics.Dxgi.IDXGISwapChain** ppSwapChain);
+
+		[VtblIndex(9)]
+		HResult ValidateContext(ID3D11DeviceContext* pContext);
+
+		[VtblIndex(10)]
+		HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags);
+
+		[VtblIndex(11)]
+		HResult ValidateContextForDispatch(ID3D11DeviceContext* pContext);
 	}
 }
 

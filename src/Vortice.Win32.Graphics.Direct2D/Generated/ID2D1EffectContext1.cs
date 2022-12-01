@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("84ab595a-fc81-4546-bacd-e8ef4d8abe7a")]
 [NativeTypeName("struct ID2D1EffectContext1 : ID2D1EffectContext")]
 [NativeInheritance("ID2D1EffectContext")]
-public unsafe partial struct ID2D1EffectContext1 : INativeGuid
+public unsafe partial struct ID2D1EffectContext1 : ID2D1EffectContext1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1EffectContext1
 	{
@@ -248,6 +248,11 @@ public unsafe partial struct ID2D1EffectContext1 : INativeGuid
 	public HResult CreateLookupTable3D(BufferPrecision precision, uint* extents, byte* data, uint dataCount, uint* strides, ID2D1LookupTable3D** lookupTable)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext1*, BufferPrecision, uint*, byte*, uint, uint*, ID2D1LookupTable3D**, int>)(lpVtbl[24]))((ID2D1EffectContext1*)Unsafe.AsPointer(ref this), precision, extents, data, dataCount, strides, lookupTable);
+	}
+	public interface Interface : ID2D1EffectContext.Interface
+	{
+		[VtblIndex(24)]
+		HResult CreateLookupTable3D(BufferPrecision precision, uint* extents, byte* data, uint dataCount, uint* strides, ID2D1LookupTable3D** lookupTable);
 	}
 }
 

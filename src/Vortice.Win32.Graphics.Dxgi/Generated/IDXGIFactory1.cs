@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("770aae78-f26f-4dba-a829-253c83d1b387")]
 [NativeTypeName("struct IDXGIFactory1 : IDXGIFactory")]
 [NativeInheritance("IDXGIFactory")]
-public unsafe partial struct IDXGIFactory1 : INativeGuid
+public unsafe partial struct IDXGIFactory1 : IDXGIFactory1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory1
 	{
@@ -160,6 +160,14 @@ public unsafe partial struct IDXGIFactory1 : INativeGuid
 	public Bool32 IsCurrent()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory1*, Bool32>)(lpVtbl[13]))((IDXGIFactory1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDXGIFactory.Interface
+	{
+		[VtblIndex(12)]
+		HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter);
+
+		[VtblIndex(13)]
+		Bool32 IsCurrent();
 	}
 }
 

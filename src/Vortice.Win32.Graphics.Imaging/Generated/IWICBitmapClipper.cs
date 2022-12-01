@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("e4fbcf03-223d-4e81-9333-d635556dd1b5")]
 [NativeTypeName("struct IWICBitmapClipper : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICBitmapClipper : INativeGuid
+public unsafe partial struct IWICBitmapClipper : IWICBitmapClipper.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapClipper
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct IWICBitmapClipper : INativeGuid
 	public HResult Initialize(IWICBitmapSource* pISource, System.Drawing.Rectangle* prc)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapClipper*, IWICBitmapSource*, System.Drawing.Rectangle*, int>)(lpVtbl[8]))((IWICBitmapClipper*)Unsafe.AsPointer(ref this), pISource, prc);
+	}
+	public interface Interface : IWICBitmapSource.Interface
+	{
+		[VtblIndex(8)]
+		HResult Initialize(IWICBitmapSource* pISource, System.Drawing.Rectangle* prc);
 	}
 }
 

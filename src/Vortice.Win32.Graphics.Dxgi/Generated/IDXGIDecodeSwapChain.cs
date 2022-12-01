@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("2633066b-4514-4c7a-8fd8-12ea98059d18")]
 [NativeTypeName("struct IDXGIDecodeSwapChain : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIDecodeSwapChain : INativeGuid
+public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDecodeSwapChain
 	{
@@ -144,6 +144,35 @@ public unsafe partial struct IDXGIDecodeSwapChain : INativeGuid
 	public MultiplaneOverlayYcbcrFlags GetColorSpace()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, MultiplaneOverlayYcbcrFlags>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, uint Flags);
+
+		[VtblIndex(4)]
+		HResult SetSourceRect(RawRect* pRect);
+
+		[VtblIndex(5)]
+		HResult SetTargetRect(RawRect* pRect);
+
+		[VtblIndex(6)]
+		HResult SetDestSize(uint Width, uint Height);
+
+		[VtblIndex(7)]
+		HResult GetSourceRect(RawRect* pRect);
+
+		[VtblIndex(8)]
+		HResult GetTargetRect(RawRect* pRect);
+
+		[VtblIndex(9)]
+		HResult GetDestSize(uint* pWidth, uint* pHeight);
+
+		[VtblIndex(10)]
+		HResult SetColorSpace(MultiplaneOverlayYcbcrFlags ColorSpace);
+
+		[VtblIndex(11)]
+		MultiplaneOverlayYcbcrFlags GetColorSpace();
 	}
 }
 

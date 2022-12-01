@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("a9e2faa0-cb39-418f-a0b7-d8aad4de672e")]
 [NativeTypeName("struct ID3D11VideoContext3 : ID3D11VideoContext2")]
 [NativeInheritance("ID3D11VideoContext2")]
-public unsafe partial struct ID3D11VideoContext3 : INativeGuid
+public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoContext3
 	{
@@ -728,6 +728,14 @@ public unsafe partial struct ID3D11VideoContext3 : INativeGuid
 	public HResult SubmitDecoderBuffers2(ID3D11VideoDecoder* pDecoder, uint NumBuffers, VideoDecoderBufferDescription2* pBufferDesc)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription2*, int>)(lpVtbl[84]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
+	}
+	public interface Interface : ID3D11VideoContext2.Interface
+	{
+		[VtblIndex(83)]
+		HResult DecoderBeginFrame1(ID3D11VideoDecoder* pDecoder, ID3D11VideoDecoderOutputView* pView, uint ContentKeySize, void* pContentKey, uint NumComponentHistograms, uint* pHistogramOffsets, ID3D11Buffer** ppHistogramBuffers);
+
+		[VtblIndex(84)]
+		HResult SubmitDecoderBuffers2(ID3D11VideoDecoder* pDecoder, uint NumBuffers, VideoDecoderBufferDescription2* pBufferDesc);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("4f5b196e-c2bd-495e-bd01-1fded38e4969")]
 [NativeTypeName("struct ID3D11ComputeShader : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11ComputeShader : INativeGuid
+public unsafe partial struct ID3D11ComputeShader : ID3D11ComputeShader.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11ComputeShader
 	{
@@ -104,6 +104,9 @@ public unsafe partial struct ID3D11ComputeShader : INativeGuid
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ComputeShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11ComputeShader*)Unsafe.AsPointer(ref this), guid, pData);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
 	}
 }
 

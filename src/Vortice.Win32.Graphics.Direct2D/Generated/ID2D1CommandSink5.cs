@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("7047dd26-b1e7-44a7-959a-8349e2144fa8")]
 [NativeTypeName("struct ID2D1CommandSink5 : ID2D1CommandSink4")]
 [NativeInheritance("ID2D1CommandSink4")]
-public unsafe partial struct ID2D1CommandSink5 : INativeGuid
+public unsafe partial struct ID2D1CommandSink5 : ID2D1CommandSink5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1CommandSink5
 	{
@@ -328,6 +328,11 @@ public unsafe partial struct ID2D1CommandSink5 : INativeGuid
 	public HResult BlendImage(ID2D1Image* image, Common.BlendMode blendMode, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink5*, ID2D1Image*, Common.BlendMode, System.Drawing.PointF*, Common.RectF*, InterpolationMode, int>)(lpVtbl[34]))((ID2D1CommandSink5*)Unsafe.AsPointer(ref this), image, blendMode, targetOffset, imageRectangle, interpolationMode);
+	}
+	public interface Interface : ID2D1CommandSink4.Interface
+	{
+		[VtblIndex(34)]
+		HResult BlendImage(ID2D1Image* image, Common.BlendMode blendMode, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode);
 	}
 }
 

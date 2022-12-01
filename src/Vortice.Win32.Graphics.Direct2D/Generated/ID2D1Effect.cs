@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("28211a43-7d89-476f-8181-2d6159b220ad")]
 [NativeTypeName("struct ID2D1Effect : ID2D1Properties")]
 [NativeInheritance("ID2D1Properties")]
-public unsafe partial struct ID2D1Effect : INativeGuid
+public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Effect
 	{
@@ -200,6 +200,23 @@ public unsafe partial struct ID2D1Effect : INativeGuid
 	public void GetOutput(ID2D1Image** outputImage)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Effect*, ID2D1Image**, void>)(lpVtbl[18]))((ID2D1Effect*)Unsafe.AsPointer(ref this), outputImage);
+	}
+	public interface Interface : ID2D1Properties.Interface
+	{
+		[VtblIndex(14)]
+		void SetInput(uint index, ID2D1Image* input, Bool32 invalidate);
+
+		[VtblIndex(15)]
+		HResult SetInputCount(uint inputCount);
+
+		[VtblIndex(16)]
+		void GetInput(uint index, ID2D1Image** input);
+
+		[VtblIndex(17)]
+		uint GetInputCount();
+
+		[VtblIndex(18)]
+		void GetOutput(ID2D1Image** outputImage);
 	}
 }
 

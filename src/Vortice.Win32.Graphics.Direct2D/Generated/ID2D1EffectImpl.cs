@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("a248fd3f-3e6c-4e63-9f03-7f68ecc91db9")]
 [NativeTypeName("struct ID2D1EffectImpl : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1EffectImpl : INativeGuid
+public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1EffectImpl
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct ID2D1EffectImpl : INativeGuid
 	public HResult SetGraph(ID2D1TransformGraph* transformGraph)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, ID2D1TransformGraph*, int>)(lpVtbl[5]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), transformGraph);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Initialize(ID2D1EffectContext* effectContext, ID2D1TransformGraph* transformGraph);
+
+		[VtblIndex(4)]
+		HResult PrepareForRender(ChangeType changeType);
+
+		[VtblIndex(5)]
+		HResult SetGraph(ID2D1TransformGraph* transformGraph);
 	}
 }
 

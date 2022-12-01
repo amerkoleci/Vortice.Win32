@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("3c8d99d1-4fbf-4181-a82c-af66bf7bd24e")]
 [NativeTypeName("struct IDXGIAdapter4 : IDXGIAdapter3")]
 [NativeInheritance("IDXGIAdapter3")]
-public unsafe partial struct IDXGIAdapter4 : INativeGuid
+public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIAdapter4
 	{
@@ -200,6 +200,11 @@ public unsafe partial struct IDXGIAdapter4 : INativeGuid
 	public HResult GetDesc3(AdapterDescription3* pDesc)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, AdapterDescription3*, int>)(lpVtbl[18]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : IDXGIAdapter3.Interface
+	{
+		[VtblIndex(18)]
+		HResult GetDesc3(AdapterDescription3* pDesc);
 	}
 }
 

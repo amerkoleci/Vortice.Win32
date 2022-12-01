@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("d7bdb159-5683-4a46-bc9c-72dc720b858b")]
 [NativeTypeName("struct ID2D1Device4 : ID2D1Device3")]
 [NativeInheritance("ID2D1Device3")]
-public unsafe partial struct ID2D1Device4 : INativeGuid
+public unsafe partial struct ID2D1Device4 : ID2D1Device4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Device4
 	{
@@ -192,6 +192,17 @@ public unsafe partial struct ID2D1Device4 : INativeGuid
 	public ulong GetMaximumColorGlyphCacheMemory()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device4*, ulong>)(lpVtbl[17]))((ID2D1Device4*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1Device3.Interface
+	{
+		[VtblIndex(15)]
+		HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext4** deviceContext4);
+
+		[VtblIndex(16)]
+		void SetMaximumColorGlyphCacheMemory(ulong maximumInBytes);
+
+		[VtblIndex(17)]
+		ulong GetMaximumColorGlyphCacheMemory();
 	}
 }
 

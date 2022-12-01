@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("4305ee5b-c4a0-4c88-9385-67124e017683")]
 [NativeTypeName("struct IDCompositionLinearTransferEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionLinearTransferEffect : INativeGuid
+public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLinearTransferEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionLinearTransferEffect
 	{
@@ -248,6 +248,71 @@ public unsafe partial struct IDCompositionLinearTransferEffect : INativeGuid
 	public HResult SetClampOutput(Bool32 clampOutput)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionLinearTransferEffect*, Bool32, int>)(lpVtbl[24]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), clampOutput);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetRedYIntercept(IDCompositionAnimation* animation);
+
+		[VtblIndex(5)]
+		HResult SetRedYIntercept(float redYIntercept);
+
+		[VtblIndex(6)]
+		HResult SetRedSlope(IDCompositionAnimation* animation);
+
+		[VtblIndex(7)]
+		HResult SetRedSlope(float redSlope);
+
+		[VtblIndex(8)]
+		HResult SetRedDisable(Bool32 redDisable);
+
+		[VtblIndex(9)]
+		HResult SetGreenYIntercept(IDCompositionAnimation* animation);
+
+		[VtblIndex(10)]
+		HResult SetGreenYIntercept(float greenYIntercept);
+
+		[VtblIndex(11)]
+		HResult SetGreenSlope(IDCompositionAnimation* animation);
+
+		[VtblIndex(12)]
+		HResult SetGreenSlope(float greenSlope);
+
+		[VtblIndex(13)]
+		HResult SetGreenDisable(Bool32 greenDisable);
+
+		[VtblIndex(14)]
+		HResult SetBlueYIntercept(IDCompositionAnimation* animation);
+
+		[VtblIndex(15)]
+		HResult SetBlueYIntercept(float blueYIntercept);
+
+		[VtblIndex(16)]
+		HResult SetBlueSlope(IDCompositionAnimation* animation);
+
+		[VtblIndex(17)]
+		HResult SetBlueSlope(float blueSlope);
+
+		[VtblIndex(18)]
+		HResult SetBlueDisable(Bool32 blueDisable);
+
+		[VtblIndex(19)]
+		HResult SetAlphaYIntercept(IDCompositionAnimation* animation);
+
+		[VtblIndex(20)]
+		HResult SetAlphaYIntercept(float alphaYIntercept);
+
+		[VtblIndex(21)]
+		HResult SetAlphaSlope(IDCompositionAnimation* animation);
+
+		[VtblIndex(22)]
+		HResult SetAlphaSlope(float alphaSlope);
+
+		[VtblIndex(23)]
+		HResult SetAlphaDisable(Bool32 alphaDisable);
+
+		[VtblIndex(24)]
+		HResult SetClampOutput(Bool32 clampOutput);
 	}
 }
 

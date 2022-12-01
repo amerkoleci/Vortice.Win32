@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("a9db33a2-af5f-43c7-b679-74f5984b5aa4")]
 [NativeTypeName("struct IWICPixelFormatInfo2 : IWICPixelFormatInfo")]
 [NativeInheritance("IWICPixelFormatInfo")]
-public unsafe partial struct IWICPixelFormatInfo2 : INativeGuid
+public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICPixelFormatInfo2
 	{
@@ -192,6 +192,14 @@ public unsafe partial struct IWICPixelFormatInfo2 : INativeGuid
 	public HResult GetNumericRepresentation(WICPixelFormatNumericRepresentation* pNumericRepresentation)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo2*, WICPixelFormatNumericRepresentation*, int>)(lpVtbl[17]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pNumericRepresentation);
+	}
+	public interface Interface : IWICPixelFormatInfo.Interface
+	{
+		[VtblIndex(16)]
+		HResult SupportsTransparency(Bool32* pfSupportsTransparency);
+
+		[VtblIndex(17)]
+		HResult GetNumericRepresentation(WICPixelFormatNumericRepresentation* pNumericRepresentation);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("3d9f916b-27dc-4ad7-b4f1-64945340f563")]
 [NativeTypeName("struct ID2D1EffectContext : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1EffectContext : INativeGuid
+public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1EffectContext
 	{
@@ -240,6 +240,71 @@ public unsafe partial struct ID2D1EffectContext : INativeGuid
 	public Bool32 IsBufferPrecisionSupported(BufferPrecision bufferPrecision)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext*, BufferPrecision, Bool32>)(lpVtbl[23]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), bufferPrecision);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void GetDpi(float* dpiX, float* dpiY);
+
+		[VtblIndex(4)]
+		HResult CreateEffect(Guid* effectId, ID2D1Effect** effect);
+
+		[VtblIndex(5)]
+		HResult GetMaximumSupportedFeatureLevel(Graphics.Direct3D.FeatureLevel* featureLevels, uint featureLevelsCount, Graphics.Direct3D.FeatureLevel* maximumSupportedFeatureLevel);
+
+		[VtblIndex(6)]
+		HResult CreateTransformNodeFromEffect(ID2D1Effect* effect, ID2D1TransformNode** transformNode);
+
+		[VtblIndex(7)]
+		HResult CreateBlendTransform(uint numInputs, BlendDescription* blendDescription, ID2D1BlendTransform** transform);
+
+		[VtblIndex(8)]
+		HResult CreateBorderTransform(ExtendMode extendModeX, ExtendMode extendModeY, ID2D1BorderTransform** transform);
+
+		[VtblIndex(9)]
+		HResult CreateOffsetTransform(System.Drawing.Point offset, ID2D1OffsetTransform** transform);
+
+		[VtblIndex(10)]
+		HResult CreateBoundsAdjustmentTransform(RawRect* outputRectangle, ID2D1BoundsAdjustmentTransform** transform);
+
+		[VtblIndex(11)]
+		HResult LoadPixelShader(Guid* shaderId, byte* shaderBuffer, uint shaderBufferCount);
+
+		[VtblIndex(12)]
+		HResult LoadVertexShader(Guid* resourceId, byte* shaderBuffer, uint shaderBufferCount);
+
+		[VtblIndex(13)]
+		HResult LoadComputeShader(Guid* resourceId, byte* shaderBuffer, uint shaderBufferCount);
+
+		[VtblIndex(14)]
+		Bool32 IsShaderLoaded(Guid* shaderId);
+
+		[VtblIndex(15)]
+		HResult CreateResourceTexture(Guid* resourceId, ResourceTextureProperties* resourceTextureProperties, byte* data, uint* strides, uint dataSize, ID2D1ResourceTexture** resourceTexture);
+
+		[VtblIndex(16)]
+		HResult FindResourceTexture(Guid* resourceId, ID2D1ResourceTexture** resourceTexture);
+
+		[VtblIndex(17)]
+		HResult CreateVertexBuffer(VertexBufferProperties* vertexBufferProperties, Guid* resourceId, CustomVertexBufferProperties* customVertexBufferProperties, ID2D1VertexBuffer** buffer);
+
+		[VtblIndex(18)]
+		HResult FindVertexBuffer(Guid* resourceId, ID2D1VertexBuffer** buffer);
+
+		[VtblIndex(19)]
+		HResult CreateColorContext(ColorSpace space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext);
+
+		[VtblIndex(20)]
+		HResult CreateColorContextFromFilename(ushort* filename, ID2D1ColorContext** colorContext);
+
+		[VtblIndex(21)]
+		HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext);
+
+		[VtblIndex(22)]
+		HResult CheckFeatureSupport(Feature feature, void* featureSupportData, uint featureSupportDataSize);
+
+		[VtblIndex(23)]
+		Bool32 IsBufferPrecisionSupported(BufferPrecision bufferPrecision);
 	}
 }
 

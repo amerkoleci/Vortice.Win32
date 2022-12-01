@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("f292e401-c050-4cde-83d7-04962d3b23c2")]
 [NativeTypeName("struct ID2D1GradientMesh : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1GradientMesh : INativeGuid
+public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GradientMesh
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct ID2D1GradientMesh : INativeGuid
 	public HResult GetPatches(uint startIndex, GradientMeshPatch* patches, uint patchesCount)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, uint, GradientMeshPatch*, uint, int>)(lpVtbl[5]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), startIndex, patches, patchesCount);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		uint GetPatchCount();
+
+		[VtblIndex(5)]
+		HResult GetPatches(uint startIndex, GradientMeshPatch* patches, uint patchesCount);
 	}
 }
 

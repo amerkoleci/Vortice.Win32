@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("f1df64b6-57fd-49cd-8807-c0eb88b45c8f")]
 [NativeTypeName("struct ID3D12SwapChainAssistant : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12SwapChainAssistant : INativeGuid
+public unsafe partial struct ID3D12SwapChainAssistant : ID3D12SwapChainAssistant.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12SwapChainAssistant
 	{
@@ -105,6 +105,20 @@ public unsafe partial struct ID3D12SwapChainAssistant : INativeGuid
 	public HResult InsertImplicitSync()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12SwapChainAssistant*, int>)(lpVtbl[6]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		Luid GetLUID();
+
+		[VtblIndex(4)]
+		HResult GetSwapChainObject(Guid* riid, void** ppv);
+
+		[VtblIndex(5)]
+		HResult GetCurrentResourceAndCommandQueue(Guid* riidResource, void** ppvResource, Guid* riidQueue, void** ppvQueue);
+
+		[VtblIndex(6)]
+		HResult InsertImplicitSync();
 	}
 }
 

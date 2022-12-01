@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("1edd9491-9853-4299-898f-6432983b6f3a")]
 [NativeTypeName("struct IDWriteGdiInterop : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteGdiInterop : INativeGuid
+public unsafe partial struct IDWriteGdiInterop : IDWriteGdiInterop.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteGdiInterop
 	{
@@ -112,6 +112,23 @@ public unsafe partial struct IDWriteGdiInterop : INativeGuid
 	public HResult CreateBitmapRenderTarget(IntPtr hdc, uint width, uint height, IDWriteBitmapRenderTarget** renderTarget)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop*, IntPtr, uint, uint, IDWriteBitmapRenderTarget**, int>)(lpVtbl[7]))((IDWriteGdiInterop*)Unsafe.AsPointer(ref this), hdc, width, height, renderTarget);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateFontFromLOGFONT(Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFont** font);
+
+		[VtblIndex(4)]
+		HResult ConvertFontToLOGFONT(IDWriteFont* font, Win32.Graphics.Gdi.LogFontW** logFont, Bool32* isSystemFont);
+
+		[VtblIndex(5)]
+		HResult ConvertFontFaceToLOGFONT(IDWriteFontFace* font, Win32.Graphics.Gdi.LogFontW** logFont);
+
+		[VtblIndex(6)]
+		HResult CreateFontFaceFromHdc(IntPtr hdc, IDWriteFontFace** fontFace);
+
+		[VtblIndex(7)]
+		HResult CreateBitmapRenderTarget(IntPtr hdc, uint width, uint height, IDWriteBitmapRenderTarget** renderTarget);
 	}
 }
 

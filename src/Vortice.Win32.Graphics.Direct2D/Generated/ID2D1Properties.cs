@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("483473d7-cd46-4f9d-9d3a-3112aa80159d")]
 [NativeTypeName("struct ID2D1Properties : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1Properties : INativeGuid
+public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Properties
 	{
@@ -160,6 +160,41 @@ public unsafe partial struct ID2D1Properties : INativeGuid
 	public HResult GetSubProperties(uint index, ID2D1Properties** subProperties)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, subProperties);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		uint GetPropertyCount();
+
+		[VtblIndex(4)]
+		HResult GetPropertyName(uint index, ushort* name, uint nameCount);
+
+		[VtblIndex(5)]
+		uint GetPropertyNameLength(uint index);
+
+		[VtblIndex(6)]
+		PropertyType GetType(uint index);
+
+		[VtblIndex(7)]
+		uint GetPropertyIndex(ushort* name);
+
+		[VtblIndex(8)]
+		HResult SetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize);
+
+		[VtblIndex(9)]
+		HResult SetValue(uint index, PropertyType type, byte* data, uint dataSize);
+
+		[VtblIndex(10)]
+		HResult GetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize);
+
+		[VtblIndex(11)]
+		HResult GetValue(uint index, PropertyType type, byte* data, uint dataSize);
+
+		[VtblIndex(12)]
+		uint GetValueSize(uint index);
+
+		[VtblIndex(13)]
+		HResult GetSubProperties(uint index, ID2D1Properties** subProperties);
 	}
 }
 

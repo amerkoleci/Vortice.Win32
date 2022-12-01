@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("b499923b-7029-478f-a8b3-432c7c5f5312")]
 [NativeTypeName("struct ID2D1Ink : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Ink : INativeGuid
+public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Ink
 	{
@@ -161,6 +161,38 @@ public unsafe partial struct ID2D1Ink : INativeGuid
 	public HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Common.RectF* bounds)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, Common.RectF*, int>)(lpVtbl[13]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, bounds);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		void SetStartPoint(InkPoint* startPoint);
+
+		[VtblIndex(5)]
+		InkPoint GetStartPoint();
+
+		[VtblIndex(6)]
+		HResult AddSegments(InkBezierSegment* segments, uint segmentsCount);
+
+		[VtblIndex(7)]
+		HResult RemoveSegmentsAtEnd(uint segmentsCount);
+
+		[VtblIndex(8)]
+		HResult SetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount);
+
+		[VtblIndex(9)]
+		HResult SetSegmentAtEnd(InkBezierSegment* segment);
+
+		[VtblIndex(10)]
+		uint GetSegmentCount();
+
+		[VtblIndex(11)]
+		HResult GetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount);
+
+		[VtblIndex(12)]
+		HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);
+
+		[VtblIndex(13)]
+		HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Common.RectF* bounds);
 	}
 }
 

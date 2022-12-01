@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("a4d055a6-f9e3-4e25-93b7-9e309f3af8e9")]
 [NativeTypeName("struct IDWriteFontCollection3 : IDWriteFontCollection2")]
 [NativeInheritance("IDWriteFontCollection2")]
-public unsafe partial struct IDWriteFontCollection3 : INativeGuid
+public unsafe partial struct IDWriteFontCollection3 : IDWriteFontCollection3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontCollection3
 	{
@@ -160,6 +160,11 @@ public unsafe partial struct IDWriteFontCollection3 : INativeGuid
 	public Handle GetExpirationEvent()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontCollection3*, Handle>)(lpVtbl[13]))((IDWriteFontCollection3*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDWriteFontCollection2.Interface
+	{
+		[VtblIndex(13)]
+		Handle GetExpirationEvent();
 	}
 }
 

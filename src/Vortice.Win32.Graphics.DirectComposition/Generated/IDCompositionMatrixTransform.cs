@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("16cdff07-c503-419c-83f2-0965c7af1fa6")]
 [NativeTypeName("struct IDCompositionMatrixTransform : IDCompositionTransform")]
 [NativeInheritance("IDCompositionTransform")]
-public unsafe partial struct IDCompositionMatrixTransform : INativeGuid
+public unsafe partial struct IDCompositionMatrixTransform : IDCompositionMatrixTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionMatrixTransform
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IDCompositionMatrixTransform : INativeGuid
 	public HResult SetMatrixElement(int row, int column, float value)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionMatrixTransform*, int, int, float, int>)(lpVtbl[5]))((IDCompositionMatrixTransform*)Unsafe.AsPointer(ref this), row, column, value);
+	}
+	public interface Interface : IDCompositionTransform.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetMatrix(Matrix3x2* matrix);
+
+		[VtblIndex(4)]
+		HResult SetMatrixElement(int row, int column, IDCompositionAnimation* animation);
+
+		[VtblIndex(5)]
+		HResult SetMatrixElement(int row, int column, float value);
 	}
 }
 

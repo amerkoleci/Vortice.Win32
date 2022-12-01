@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("df0c7cec-cdeb-4d4a-b91c-721bf22f4e6c")]
 [NativeTypeName("struct IDCompositionInkTrailDevice : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionInkTrailDevice : INativeGuid
+public unsafe partial struct IDCompositionInkTrailDevice : IDCompositionInkTrailDevice.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionInkTrailDevice
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDCompositionInkTrailDevice : INativeGuid
 	public HResult CreateDelegatedInkTrailForSwapChain(IUnknown* swapChain, IDCompositionDelegatedInkTrail** inkTrail)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionInkTrailDevice*, IUnknown*, IDCompositionDelegatedInkTrail**, int>)(lpVtbl[4]))((IDCompositionInkTrailDevice*)Unsafe.AsPointer(ref this), swapChain, inkTrail);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateDelegatedInkTrail(IDCompositionDelegatedInkTrail** inkTrail);
+
+		[VtblIndex(4)]
+		HResult CreateDelegatedInkTrailForSwapChain(IUnknown* swapChain, IDCompositionDelegatedInkTrail** inkTrail);
 	}
 }
 

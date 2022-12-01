@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("a71efdb4-9fdb-4838-ad90-cfc3be8c3daf")]
 [NativeTypeName("struct IDWriteFontFace1 : IDWriteFontFace")]
 [NativeInheritance("IDWriteFontFace")]
-public unsafe partial struct IDWriteFontFace1 : INativeGuid
+public unsafe partial struct IDWriteFontFace1 : IDWriteFontFace1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFace1
 	{
@@ -288,6 +288,44 @@ public unsafe partial struct IDWriteFontFace1 : INativeGuid
 	public Bool32 HasVerticalGlyphVariants()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace1*, Bool32>)(lpVtbl[29]))((IDWriteFontFace1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDWriteFontFace.Interface
+	{
+		[VtblIndex(18)]
+		void GetMetrics(FontMetrics1* fontMetrics);
+
+		[VtblIndex(19)]
+		HResult GetGdiCompatibleMetrics(float emSize, float pixelsPerDip, Matrix3x2* transform, FontMetrics1* fontMetrics);
+
+		[VtblIndex(20)]
+		void GetCaretMetrics(CaretMetrics* caretMetrics);
+
+		[VtblIndex(21)]
+		HResult GetUnicodeRanges(uint maxRangeCount, UnicodeRange* unicodeRanges, uint* actualRangeCount);
+
+		[VtblIndex(22)]
+		Bool32 IsMonospacedFont();
+
+		[VtblIndex(23)]
+		HResult GetDesignGlyphAdvances(uint glyphCount, ushort* glyphIndices, int* glyphAdvances, Bool32 isSideways);
+
+		[VtblIndex(24)]
+		HResult GetGdiCompatibleGlyphAdvances(float emSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, uint glyphCount, ushort* glyphIndices, int* glyphAdvances);
+
+		[VtblIndex(25)]
+		HResult GetKerningPairAdjustments(uint glyphCount, ushort* glyphIndices, int* glyphAdvanceAdjustments);
+
+		[VtblIndex(26)]
+		Bool32 HasKerningPairs();
+
+		[VtblIndex(27)]
+		HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, OutlineThreshold outlineThreshold, MeasuringMode measuringMode, RenderingMode* renderingMode);
+
+		[VtblIndex(28)]
+		HResult GetVerticalGlyphVariants(uint glyphCount, ushort* nominalGlyphIndices, ushort* verticalGlyphIndices);
+
+		[VtblIndex(29)]
+		Bool32 HasVerticalGlyphVariants();
 	}
 }
 

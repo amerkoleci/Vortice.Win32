@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("94d99bdb-f1f8-4ab0-b236-7da0170edab1")]
 [NativeTypeName("struct IDXGISwapChain3 : IDXGISwapChain2")]
 [NativeInheritance("IDXGISwapChain2")]
-public unsafe partial struct IDXGISwapChain3 : INativeGuid
+public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISwapChain3
 	{
@@ -368,6 +368,20 @@ public unsafe partial struct IDXGISwapChain3 : INativeGuid
 	public HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.Format Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown** ppPresentQueue)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, uint*, IUnknown**, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
+	}
+	public interface Interface : IDXGISwapChain2.Interface
+	{
+		[VtblIndex(36)]
+		uint GetCurrentBackBufferIndex();
+
+		[VtblIndex(37)]
+		HResult CheckColorSpaceSupport(Common.ColorSpaceType ColorSpace, uint* pColorSpaceSupport);
+
+		[VtblIndex(38)]
+		HResult SetColorSpace1(Common.ColorSpaceType ColorSpace);
+
+		[VtblIndex(39)]
+		HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.Format Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown** ppPresentQueue);
 	}
 }
 

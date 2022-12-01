@@ -12,7 +12,7 @@ namespace Win32.Graphics.Direct3D11;
 /// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection"]/*' />
 /// <unmanaged>ID3D11FunctionReflection</unmanaged>
 [Guid("207bcecb-d683-4a06-a8a3-9b149b9f73a4")]
-public unsafe partial struct ID3D11FunctionReflection : INativeGuid
+public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11FunctionReflection
 	{
@@ -100,6 +100,29 @@ public unsafe partial struct ID3D11FunctionReflection : INativeGuid
 	public ID3D11FunctionParameterReflection GetFunctionParameter(int ParameterIndex)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, int, ID3D11FunctionParameterReflection>)(lpVtbl[6]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ParameterIndex);
+	}
+	public interface Interface 
+	{
+		[VtblIndex(0)]
+		HResult GetDesc(FunctionDescription* pDesc);
+
+		[VtblIndex(1)]
+		ID3D11ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint BufferIndex);
+
+		[VtblIndex(2)]
+		ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name);
+
+		[VtblIndex(3)]
+		HResult GetResourceBindingDesc(uint ResourceIndex, ShaderInputBindDescription* pDesc);
+
+		[VtblIndex(4)]
+		ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name);
+
+		[VtblIndex(5)]
+		HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc);
+
+		[VtblIndex(6)]
+		ID3D11FunctionParameterReflection GetFunctionParameter(int ParameterIndex);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("53585141-d9f8-4095-8321-d73cf6bd116b")]
 [NativeTypeName("struct IDWriteFontSet : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontSet : INativeGuid
+public unsafe partial struct IDWriteFontSet : IDWriteFontSet.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontSet
 	{
@@ -152,6 +152,38 @@ public unsafe partial struct IDWriteFontSet : INativeGuid
 	public HResult GetMatchingFonts(FontProperty* properties, uint propertyCount, IDWriteFontSet** filteredSet)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSet*, FontProperty*, uint, IDWriteFontSet**, int>)(lpVtbl[12]))((IDWriteFontSet*)Unsafe.AsPointer(ref this), properties, propertyCount, filteredSet);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		uint GetFontCount();
+
+		[VtblIndex(4)]
+		HResult GetFontFaceReference(uint listIndex, IDWriteFontFaceReference** fontFaceReference);
+
+		[VtblIndex(5)]
+		HResult FindFontFaceReference(IDWriteFontFaceReference* fontFaceReference, uint* listIndex, Bool32* exists);
+
+		[VtblIndex(6)]
+		HResult FindFontFace(IDWriteFontFace* fontFace, uint* listIndex, Bool32* exists);
+
+		[VtblIndex(7)]
+		HResult GetPropertyValues(FontPropertyId propertyID, IDWriteStringList** values);
+
+		[VtblIndex(8)]
+		HResult GetPropertyValues(FontPropertyId propertyID, ushort* preferredLocaleNames, IDWriteStringList** values);
+
+		[VtblIndex(9)]
+		HResult GetPropertyValues(uint listIndex, FontPropertyId propertyId, Bool32* exists, IDWriteLocalizedStrings** values);
+
+		[VtblIndex(10)]
+		HResult GetPropertyOccurrenceCount(FontProperty* property, uint* propertyOccurrenceCount);
+
+		[VtblIndex(11)]
+		HResult GetMatchingFonts(ushort* familyName, FontWeight fontWeight, FontStretch fontStretch, FontStyle fontStyle, IDWriteFontSet** filteredSet);
+
+		[VtblIndex(12)]
+		HResult GetMatchingFonts(FontProperty* properties, uint propertyCount, IDWriteFontSet** filteredSet);
 	}
 }
 

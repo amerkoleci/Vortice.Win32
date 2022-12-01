@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("8c210bf3-011f-4422-8d70-6f9acb8db617")]
 [NativeTypeName("struct IDxcCompiler : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcCompiler : INativeGuid
+public unsafe partial struct IDxcCompiler : IDxcCompiler.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcCompiler
 	{
@@ -92,6 +92,17 @@ public unsafe partial struct IDxcCompiler : INativeGuid
 	public HResult Disassemble(IDxcBlob* pSource, IDxcBlobEncoding** ppDisassembly)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler*, IDxcBlob*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcCompiler*)Unsafe.AsPointer(ref this), pSource, ppDisassembly);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Compile(IDxcBlob* pSource, ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult);
+
+		[VtblIndex(4)]
+		HResult Preprocess(IDxcBlob* pSource, ushort* pSourceName, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcIncludeHandler* pIncludeHandler, IDxcOperationResult** ppResult);
+
+		[VtblIndex(5)]
+		HResult Disassemble(IDxcBlob* pSource, IDxcBlobEncoding** ppDisassembly);
 	}
 }
 

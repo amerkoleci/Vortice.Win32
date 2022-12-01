@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("30961379-4609-4a41-998e-54fe567ee0c1")]
 [NativeTypeName("struct IDXGIResource1 : IDXGIResource")]
 [NativeInheritance("IDXGIResource")]
-public unsafe partial struct IDXGIResource1 : INativeGuid
+public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIResource1
 	{
@@ -160,6 +160,14 @@ public unsafe partial struct IDXGIResource1 : INativeGuid
 	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+	}
+	public interface Interface : IDXGIResource.Interface
+	{
+		[VtblIndex(12)]
+		HResult CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface);
+
+		[VtblIndex(13)]
+		HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle);
 	}
 }
 

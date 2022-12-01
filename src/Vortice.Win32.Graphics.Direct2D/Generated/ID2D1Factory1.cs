@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("bb12d362-daee-4b9a-aa1d-14ba401cfa1f")]
 [NativeTypeName("struct ID2D1Factory1 : ID2D1Factory")]
 [NativeInheritance("ID2D1Factory")]
-public unsafe partial struct ID2D1Factory1 : INativeGuid
+public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Factory1
 	{
@@ -264,6 +264,38 @@ public unsafe partial struct ID2D1Factory1 : INativeGuid
 	public HResult GetEffectProperties(Guid* effectId, ID2D1Properties** properties)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Factory1*, Guid*, ID2D1Properties**, int>)(lpVtbl[26]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), effectId, properties);
+	}
+	public interface Interface : ID2D1Factory.Interface
+	{
+		[VtblIndex(17)]
+		HResult CreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, ID2D1Device** d2dDevice);
+
+		[VtblIndex(18)]
+		HResult CreateStrokeStyle(StrokeStyleProperties1* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle1** strokeStyle);
+
+		[VtblIndex(19)]
+		HResult CreatePathGeometry(ID2D1PathGeometry1** pathGeometry);
+
+		[VtblIndex(20)]
+		HResult CreateDrawingStateBlock(DrawingStateDescription1* drawingStateDescription, Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock1** drawingStateBlock);
+
+		[VtblIndex(21)]
+		HResult CreateGdiMetafile(Com.IStream* metafileStream, ID2D1GdiMetafile** metafile);
+
+		[VtblIndex(22)]
+		HResult RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
+
+		[VtblIndex(23)]
+		HResult RegisterEffectFromString(Guid* classId, ushort* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
+
+		[VtblIndex(24)]
+		HResult UnregisterEffect(Guid* classId);
+
+		[VtblIndex(25)]
+		HResult GetRegisteredEffects(Guid* effects, uint effectsCount, uint* effectsReturned, uint* effectsRegistered);
+
+		[VtblIndex(26)]
+		HResult GetEffectProperties(Guid* effectId, ID2D1Properties** properties);
 	}
 }
 

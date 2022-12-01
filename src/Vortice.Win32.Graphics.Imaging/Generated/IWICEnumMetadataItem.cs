@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("dc2bb46d-3f07-481e-8625-220c4aedbb33")]
 [NativeTypeName("struct IWICEnumMetadataItem : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICEnumMetadataItem : INativeGuid
+public unsafe partial struct IWICEnumMetadataItem : IWICEnumMetadataItem.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICEnumMetadataItem
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IWICEnumMetadataItem : INativeGuid
 	public HResult Clone(IWICEnumMetadataItem** ppIEnumMetadataItem)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICEnumMetadataItem*, IWICEnumMetadataItem**, int>)(lpVtbl[6]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), ppIEnumMetadataItem);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Next(uint celt, Com.Variant** rgeltSchema, Com.Variant** rgeltId, Com.Variant** rgeltValue, uint* pceltFetched);
+
+		[VtblIndex(4)]
+		HResult Skip(uint celt);
+
+		[VtblIndex(5)]
+		HResult Reset();
+
+		[VtblIndex(6)]
+		HResult Clone(IWICEnumMetadataItem** ppIEnumMetadataItem);
 	}
 }
 

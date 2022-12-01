@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("a1a3c64a-224f-4a81-9773-4f03a89d3c6c")]
 [NativeTypeName("struct IDCompositionDeviceDebug : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionDeviceDebug : INativeGuid
+public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionDeviceDebug
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDCompositionDeviceDebug : INativeGuid
 	public HResult DisableDebugCounters()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDeviceDebug*, int>)(lpVtbl[4]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult EnableDebugCounters();
+
+		[VtblIndex(4)]
+		HResult DisableDebugCounters();
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("e334bc12-3937-4e02-85eb-fcf4eb30d2c8")]
 [NativeTypeName("struct IDCompositionSurfaceFactory : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionSurfaceFactory : INativeGuid
+public unsafe partial struct IDCompositionSurfaceFactory : IDCompositionSurfaceFactory.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionSurfaceFactory
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDCompositionSurfaceFactory : INativeGuid
 	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionVirtualSurface** virtualSurface)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionSurfaceFactory*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionVirtualSurface**, int>)(lpVtbl[4]))((IDCompositionSurfaceFactory*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionSurface** surface);
+
+		[VtblIndex(4)]
+		HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionVirtualSurface** virtualSurface);
 	}
 }
 

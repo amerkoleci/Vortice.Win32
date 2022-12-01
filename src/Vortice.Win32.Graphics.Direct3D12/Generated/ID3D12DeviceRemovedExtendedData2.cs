@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("67fc5816-e4ca-4915-bf18-42541272da54")]
 [NativeTypeName("struct ID3D12DeviceRemovedExtendedData2 : ID3D12DeviceRemovedExtendedData1")]
 [NativeInheritance("ID3D12DeviceRemovedExtendedData1")]
-public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : INativeGuid
+public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : ID3D12DeviceRemovedExtendedData2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12DeviceRemovedExtendedData2
 	{
@@ -120,6 +120,14 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData2 : INativeGuid
 	public DredDeviceState GetDeviceState()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData2*, DredDeviceState>)(lpVtbl[8]))((ID3D12DeviceRemovedExtendedData2*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID3D12DeviceRemovedExtendedData1.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetPageFaultAllocationOutput2(DredPageFaultOutput2* pOutput);
+
+		[VtblIndex(8)]
+		DredDeviceState GetDeviceState();
 	}
 }
 

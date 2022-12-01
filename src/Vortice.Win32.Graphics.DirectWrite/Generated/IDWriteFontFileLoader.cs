@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("727cad4e-d6af-4c9e-8a08-d695b11caa49")]
 [NativeTypeName("struct IDWriteFontFileLoader : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFileLoader : INativeGuid
+public unsafe partial struct IDWriteFontFileLoader : IDWriteFontFileLoader.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFileLoader
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IDWriteFontFileLoader : INativeGuid
 	public HResult CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileLoader*, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[3]))((IDWriteFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream);
 	}
 }
 

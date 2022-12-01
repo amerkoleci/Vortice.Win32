@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("80eabf42-2568-4e5e-bd82-c37f86961dc3")]
 [NativeTypeName("struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary")]
 [NativeInheritance("ID3D12PipelineLibrary")]
-public unsafe partial struct ID3D12PipelineLibrary1 : INativeGuid
+public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12PipelineLibrary1
 	{
@@ -160,6 +160,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : INativeGuid
 	public HResult LoadPipeline(ushort* pName, PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[13]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+	}
+	public interface Interface : ID3D12PipelineLibrary.Interface
+	{
+		[VtblIndex(13)]
+		HResult LoadPipeline(ushort* pName, PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState);
 	}
 }
 

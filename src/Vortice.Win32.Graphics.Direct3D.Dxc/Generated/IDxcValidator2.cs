@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("458e1fd1-b1b2-4750-a6e1-9c10f03bed92")]
 [NativeTypeName("struct IDxcValidator2 : IDxcValidator")]
 [NativeInheritance("IDxcValidator")]
-public unsafe partial struct IDxcValidator2 : INativeGuid
+public unsafe partial struct IDxcValidator2 : IDxcValidator2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcValidator2
 	{
@@ -86,6 +86,11 @@ public unsafe partial struct IDxcValidator2 : INativeGuid
 	public HResult ValidateWithDebug(IDxcBlob* pShader, DxcValidatorFlags Flags, DxcBuffer* pOptDebugBitcode, IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcValidator2*, IDxcBlob*, DxcValidatorFlags, DxcBuffer*, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcValidator2*)Unsafe.AsPointer(ref this), pShader, Flags, pOptDebugBitcode, ppResult);
+	}
+	public interface Interface : IDxcValidator.Interface
+	{
+		[VtblIndex(4)]
+		HResult ValidateWithDebug(IDxcBlob* pShader, DxcValidatorFlags Flags, DxcBuffer* pOptDebugBitcode, IDxcOperationResult** ppResult);
 	}
 }
 

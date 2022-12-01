@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("6d3b5641-e550-430d-a85b-b7bf48a93427")]
 [NativeTypeName("struct IDWriteTextFormat3 : IDWriteTextFormat2")]
 [NativeInheritance("IDWriteTextFormat2")]
-public unsafe partial struct IDWriteTextFormat3 : INativeGuid
+public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextFormat3
 	{
@@ -392,6 +392,23 @@ public unsafe partial struct IDWriteTextFormat3 : INativeGuid
 	public HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, AutomaticFontAxes, int>)(lpVtbl[42]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), automaticFontAxes);
+	}
+	public interface Interface : IDWriteTextFormat2.Interface
+	{
+		[VtblIndex(38)]
+		HResult SetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount);
+
+		[VtblIndex(39)]
+		uint GetFontAxisValueCount();
+
+		[VtblIndex(40)]
+		HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount);
+
+		[VtblIndex(41)]
+		AutomaticFontAxes GetAutomaticFontAxes();
+
+		[VtblIndex(42)]
+		HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes);
 	}
 }
 

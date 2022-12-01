@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("55050859-4024-474c-87f5-6472eaee44ea")]
 [NativeTypeName("struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandList4")]
 [NativeInheritance("ID3D12GraphicsCommandList4")]
-public unsafe partial struct ID3D12GraphicsCommandList5 : INativeGuid
+public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandList5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12GraphicsCommandList5
 	{
@@ -680,6 +680,14 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : INativeGuid
 	public void RSSetShadingRateImage(ID3D12Resource* shadingRateImage)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, void>)(lpVtbl[78]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), shadingRateImage);
+	}
+	public interface Interface : ID3D12GraphicsCommandList4.Interface
+	{
+		[VtblIndex(77)]
+		void RSSetShadingRate(ShadingRate baseShadingRate, ShadingRateCombiner* combiners);
+
+		[VtblIndex(78)]
+		void RSSetShadingRateImage(ID3D12Resource* shadingRateImage);
 	}
 }
 

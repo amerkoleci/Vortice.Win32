@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("519ae1bd-d19a-420d-b849-364f594776b7")]
 [NativeTypeName("struct ID2D1RenderInfo : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1RenderInfo : INativeGuid
+public unsafe partial struct ID2D1RenderInfo : ID2D1RenderInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1RenderInfo
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct ID2D1RenderInfo : INativeGuid
 	public void SetInstructionCountHint(uint instructionCount)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1RenderInfo*, uint, void>)(lpVtbl[6]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), instructionCount);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetInputDescription(uint inputIndex, InputDescription inputDescription);
+
+		[VtblIndex(4)]
+		HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth);
+
+		[VtblIndex(5)]
+		void SetCached(Bool32 isCached);
+
+		[VtblIndex(6)]
+		void SetInstructionCountHint(uint instructionCount);
 	}
 }
 

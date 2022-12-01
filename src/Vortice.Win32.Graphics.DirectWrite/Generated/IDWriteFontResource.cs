@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("1f803a76-6871-48e8-987f-b975551c50f2")]
 [NativeTypeName("struct IDWriteFontResource : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontResource : INativeGuid
+public unsafe partial struct IDWriteFontResource : IDWriteFontResource.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontResource
 	{
@@ -168,6 +168,44 @@ public unsafe partial struct IDWriteFontResource : INativeGuid
 	public HResult CreateFontFaceReference(FontSimulations fontSimulations, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontFaceReference1** fontFaceReference)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontResource*, FontSimulations, FontAxisValue*, uint, IDWriteFontFaceReference1**, int>)(lpVtbl[14]))((IDWriteFontResource*)Unsafe.AsPointer(ref this), fontSimulations, fontAxisValues, fontAxisValueCount, fontFaceReference);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetFontFile(IDWriteFontFile** fontFile);
+
+		[VtblIndex(4)]
+		uint GetFontFaceIndex();
+
+		[VtblIndex(5)]
+		uint GetFontAxisCount();
+
+		[VtblIndex(6)]
+		HResult GetDefaultFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount);
+
+		[VtblIndex(7)]
+		HResult GetFontAxisRanges(FontAxisRange* fontAxisRanges, uint fontAxisRangeCount);
+
+		[VtblIndex(8)]
+		FontAxisAttributes GetFontAxisAttributes(uint axisIndex);
+
+		[VtblIndex(9)]
+		HResult GetAxisNames(uint axisIndex, IDWriteLocalizedStrings** names);
+
+		[VtblIndex(10)]
+		uint GetAxisValueNameCount(uint axisIndex);
+
+		[VtblIndex(11)]
+		HResult GetAxisValueNames(uint axisIndex, uint axisValueIndex, FontAxisRange* fontAxisRange, IDWriteLocalizedStrings** names);
+
+		[VtblIndex(12)]
+		Bool32 HasVariations();
+
+		[VtblIndex(13)]
+		HResult CreateFontFace(FontSimulations fontSimulations, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontFace5** fontFace);
+
+		[VtblIndex(14)]
+		HResult CreateFontFaceReference(FontSimulations fontSimulations, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontFaceReference1** fontFaceReference);
 	}
 }
 

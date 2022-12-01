@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("2f0c601f-d2c6-468c-abfa-49495d983ed1")]
 [NativeTypeName("struct IWICJpegFrameEncode : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICJpegFrameEncode : INativeGuid
+public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICJpegFrameEncode
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IWICJpegFrameEncode : INativeGuid
 	public HResult WriteScan(uint cbScanData, byte* pbScanData)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, uint, byte*, int>)(lpVtbl[6]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), cbScanData, pbScanData);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegAcHuffmanTable* pAcHuffmanTable);
+
+		[VtblIndex(4)]
+		HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegDCHuffmanTable* pDcHuffmanTable);
+
+		[VtblIndex(5)]
+		HResult GetQuantizationTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegQuantizationTable* pQuantizationTable);
+
+		[VtblIndex(6)]
+		HResult WriteScan(uint cbScanData, byte* pbScanData);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("7116d91c-e7e4-47ce-b8c6-ec8168f437e5")]
 [NativeTypeName("struct ID3D12CommandList : ID3D12DeviceChild")]
 [NativeInheritance("ID3D12DeviceChild")]
-public unsafe partial struct ID3D12CommandList : INativeGuid
+public unsafe partial struct ID3D12CommandList : ID3D12CommandList.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12CommandList
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct ID3D12CommandList : INativeGuid
 	public new CommandListType GetType()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandList*, CommandListType>)(lpVtbl[8]))((ID3D12CommandList*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID3D12DeviceChild.Interface
+	{
+		[VtblIndex(8)]
+		CommandListType GetType();
 	}
 }
 

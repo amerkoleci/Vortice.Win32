@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("7836d248-68cc-4df6-b9e8-de991bf62eb7")]
 [NativeTypeName("struct ID2D1DeviceContext5 : ID2D1DeviceContext4")]
 [NativeInheritance("ID2D1DeviceContext4")]
-public unsafe partial struct ID2D1DeviceContext5 : INativeGuid
+public unsafe partial struct ID2D1DeviceContext5 : ID2D1DeviceContext5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext5
 	{
@@ -1003,6 +1003,20 @@ public unsafe partial struct ID2D1DeviceContext5 : INativeGuid
 	public HResult CreateColorContextFromSimpleColorProfile(SimpleColorProfile* simpleProfile, ID2D1ColorContext1** colorContext)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext5*, SimpleColorProfile*, ID2D1ColorContext1**, int>)(lpVtbl[118]))((ID2D1DeviceContext5*)Unsafe.AsPointer(ref this), simpleProfile, colorContext);
+	}
+	public interface Interface : ID2D1DeviceContext4.Interface
+	{
+		[VtblIndex(115)]
+		HResult CreateSvgDocument(Com.IStream* inputXmlStream, System.Drawing.SizeF viewportSize, ID2D1SvgDocument** svgDocument);
+
+		[VtblIndex(116)]
+		void DrawSvgDocument(ID2D1SvgDocument* svgDocument);
+
+		[VtblIndex(117)]
+		HResult CreateColorContextFromDxgiColorSpace(Graphics.Dxgi.Common.ColorSpaceType colorSpace, ID2D1ColorContext1** colorContext);
+
+		[VtblIndex(118)]
+		HResult CreateColorContextFromSimpleColorProfile(SimpleColorProfile* simpleProfile, ID2D1ColorContext1** colorContext);
 	}
 }
 

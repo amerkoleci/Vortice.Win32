@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("9218e6bb-f944-4f7e-a75c-b1b2c7b701f3")]
 [NativeTypeName("struct ID3D12Device8 : ID3D12Device7")]
 [NativeInheritance("ID3D12Device7")]
-public unsafe partial struct ID3D12Device8 : INativeGuid
+public unsafe partial struct ID3D12Device8 : ID3D12Device8.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device8
 	{
@@ -637,6 +637,23 @@ public unsafe partial struct ID3D12Device8 : INativeGuid
 	public void GetCopyableFootprints1(ResourceDescription1* pResourceDesc, uint FirstSubresource, uint NumSubresources, ulong BaseOffset, PlacedSubresourceFootprint* pLayouts, uint* pNumRows, ulong* pRowSizeInBytes, ulong* pTotalBytes)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12Device8*, ResourceDescription1*, uint, uint, ulong, PlacedSubresourceFootprint*, uint*, ulong*, ulong*, void>)(lpVtbl[72]))((ID3D12Device8*)Unsafe.AsPointer(ref this), pResourceDesc, FirstSubresource, NumSubresources, BaseOffset, pLayouts, pNumRows, pRowSizeInBytes, pTotalBytes);
+	}
+	public interface Interface : ID3D12Device7.Interface
+	{
+		[VtblIndex(68)]
+		ResourceAllocationInfo GetResourceAllocationInfo2(uint visibleMask, uint numResourceDescs, ResourceDescription1* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1);
+
+		[VtblIndex(69)]
+		HResult CreateCommittedResource2(HeapProperties* pHeapProperties, HeapFlags HeapFlags, ResourceDescription1* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, Guid* riidResource, void** ppvResource);
+
+		[VtblIndex(70)]
+		HResult CreatePlacedResource1(ID3D12Heap* pHeap, ulong HeapOffset, ResourceDescription1* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, Guid* riid, void** ppvResource);
+
+		[VtblIndex(71)]
+		void CreateSamplerFeedbackUnorderedAccessView(ID3D12Resource* pTargetedResource, ID3D12Resource* pFeedbackResource, CpuDescriptorHandle DestDescriptor);
+
+		[VtblIndex(72)]
+		void GetCopyableFootprints1(ResourceDescription1* pResourceDesc, uint FirstSubresource, uint NumSubresources, ulong BaseOffset, PlacedSubresourceFootprint* pLayouts, uint* pNumRows, ulong* pRowSizeInBytes, ulong* pTotalBytes);
 	}
 }
 

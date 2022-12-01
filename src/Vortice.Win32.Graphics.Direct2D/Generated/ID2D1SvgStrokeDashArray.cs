@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("f1c0ca52-92a3-4f00-b4ce-f35691efd9d9")]
 [NativeTypeName("struct ID2D1SvgStrokeDashArray : ID2D1SvgAttribute")]
 [NativeInheritance("ID2D1SvgAttribute")]
-public unsafe partial struct ID2D1SvgStrokeDashArray : INativeGuid
+public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgStrokeDashArray
 	{
@@ -144,6 +144,26 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : INativeGuid
 	public uint GetDashesCount()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[11]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1SvgAttribute.Interface
+	{
+		[VtblIndex(6)]
+		HResult RemoveDashesAtEnd(uint dashesCount);
+
+		[VtblIndex(7)]
+		HResult UpdateDashes(SvgLength* dashes, uint dashesCount, uint startIndex);
+
+		[VtblIndex(8)]
+		HResult UpdateDashes(float* dashes, uint dashesCount, uint startIndex);
+
+		[VtblIndex(9)]
+		HResult GetDashes(SvgLength* dashes, uint dashesCount, uint startIndex);
+
+		[VtblIndex(10)]
+		HResult GetDashes(float* dashes, uint dashesCount, uint startIndex);
+
+		[VtblIndex(11)]
+		uint GetDashesCount();
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11on12;
 [Guid("dc90f331-4740-43fa-866e-67f12cb58223")]
 [NativeTypeName("struct ID3D11On12Device2 : ID3D11On12Device1")]
 [NativeInheritance("ID3D11On12Device1")]
-public unsafe partial struct ID3D11On12Device2 : INativeGuid
+public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11On12Device2
 	{
@@ -120,6 +120,14 @@ public unsafe partial struct ID3D11On12Device2 : INativeGuid
 	public HResult ReturnUnderlyingResource(Graphics.Direct3D11.ID3D11Resource* pResource11, uint NumSync, ulong* pSignalValues, Graphics.Direct3D12.ID3D12Fence** ppFences)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device2*, Graphics.Direct3D11.ID3D11Resource*, uint, ulong*, Graphics.Direct3D12.ID3D12Fence**, int>)(lpVtbl[8]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), pResource11, NumSync, pSignalValues, ppFences);
+	}
+	public interface Interface : ID3D11On12Device1.Interface
+	{
+		[VtblIndex(7)]
+		HResult UnwrapUnderlyingResource(Graphics.Direct3D11.ID3D11Resource* pResource11, Graphics.Direct3D12.ID3D12CommandQueue* pCommandQueue, Guid* riid, void** ppvResource12);
+
+		[VtblIndex(8)]
+		HResult ReturnUnderlyingResource(Graphics.Direct3D11.ID3D11Resource* pResource11, uint NumSync, ulong* pSignalValues, Graphics.Direct3D12.ID3D12Fence** ppFences);
 	}
 }
 

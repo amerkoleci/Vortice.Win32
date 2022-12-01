@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("4998735c-3a19-473c-9781-656847e3a347")]
 [NativeTypeName("struct ID2D1BorderTransform : ID2D1ConcreteTransform")]
 [NativeInheritance("ID2D1ConcreteTransform")]
-public unsafe partial struct ID2D1BorderTransform : INativeGuid
+public unsafe partial struct ID2D1BorderTransform : ID2D1BorderTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1BorderTransform
 	{
@@ -128,6 +128,20 @@ public unsafe partial struct ID2D1BorderTransform : INativeGuid
 	public ExtendMode GetExtendModeY()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, ExtendMode>)(lpVtbl[9]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1ConcreteTransform.Interface
+	{
+		[VtblIndex(6)]
+		void SetExtendModeX(ExtendMode extendMode);
+
+		[VtblIndex(7)]
+		void SetExtendModeY(ExtendMode extendMode);
+
+		[VtblIndex(8)]
+		ExtendMode GetExtendModeX();
+
+		[VtblIndex(9)]
+		ExtendMode GetExtendModeY();
 	}
 }
 

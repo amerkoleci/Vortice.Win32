@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("b71e6052-5aea-4fa3-832e-f60d431f7e91")]
 [NativeTypeName("struct IDWriteFontDownloadQueue : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontDownloadQueue : INativeGuid
+public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontDownloadQueue
 	{
@@ -120,6 +120,26 @@ public unsafe partial struct IDWriteFontDownloadQueue : INativeGuid
 	public ulong GetGenerationCount()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontDownloadQueue*, ulong>)(lpVtbl[8]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult AddListener(IDWriteFontDownloadListener* listener, uint* token);
+
+		[VtblIndex(4)]
+		HResult RemoveListener(uint token);
+
+		[VtblIndex(5)]
+		Bool32 IsEmpty();
+
+		[VtblIndex(6)]
+		HResult BeginDownload(IUnknown* context);
+
+		[VtblIndex(7)]
+		HResult CancelDownload();
+
+		[VtblIndex(8)]
+		ulong GetGenerationCount();
 	}
 }
 

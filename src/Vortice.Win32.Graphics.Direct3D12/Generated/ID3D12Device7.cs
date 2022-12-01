@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("5c014b53-68a1-4b9b-8bd1-dd6046b9358b")]
 [NativeTypeName("struct ID3D12Device7 : ID3D12Device6")]
 [NativeInheritance("ID3D12Device6")]
-public unsafe partial struct ID3D12Device7 : INativeGuid
+public unsafe partial struct ID3D12Device7 : ID3D12Device7.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device7
 	{
@@ -596,6 +596,14 @@ public unsafe partial struct ID3D12Device7 : INativeGuid
 	public HResult CreateProtectedResourceSession1(ProtectedResourceSessionDescription1* pDesc, Guid* riid, void** ppSession)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device7*, ProtectedResourceSessionDescription1*, Guid*, void**, int>)(lpVtbl[67]))((ID3D12Device7*)Unsafe.AsPointer(ref this), pDesc, riid, ppSession);
+	}
+	public interface Interface : ID3D12Device6.Interface
+	{
+		[VtblIndex(66)]
+		HResult AddToStateObject(StateObjectDescription* pAddition, ID3D12StateObject* pStateObjectToGrowFrom, Guid* riid, void** ppNewStateObject);
+
+		[VtblIndex(67)]
+		HResult CreateProtectedResourceSession1(ProtectedResourceSessionDescription1* pDesc, Guid* riid, void** ppSession);
 	}
 }
 

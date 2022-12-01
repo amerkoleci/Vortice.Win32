@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("1841e5c8-16b0-489b-bcc8-44cfb0d5deae")]
 [NativeTypeName("struct ID3D11DeviceChild : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11DeviceChild : INativeGuid
+public unsafe partial struct ID3D11DeviceChild : ID3D11DeviceChild.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11DeviceChild
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct ID3D11DeviceChild : INativeGuid
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceChild*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11DeviceChild*)Unsafe.AsPointer(ref this), guid, pData);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void GetDevice(ID3D11Device** ppDevice);
+
+		[VtblIndex(4)]
+		HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData);
+
+		[VtblIndex(5)]
+		HResult SetPrivateData(Guid* guid, uint DataSize, void* pData);
+
+		[VtblIndex(6)]
+		HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData);
 	}
 }
 

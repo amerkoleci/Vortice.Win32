@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("10a72a66-e91c-43f4-993f-ddf4b82b0b4a")]
 [NativeTypeName("struct ID2D1StrokeStyle1 : ID2D1StrokeStyle")]
 [NativeInheritance("ID2D1StrokeStyle")]
-public unsafe partial struct ID2D1StrokeStyle1 : INativeGuid
+public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1StrokeStyle1
 	{
@@ -160,6 +160,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : INativeGuid
 	public StrokeTransformType GetStrokeTransformType()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, StrokeTransformType>)(lpVtbl[13]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1StrokeStyle.Interface
+	{
+		[VtblIndex(13)]
+		StrokeTransformType GetStrokeTransformType();
 	}
 }
 

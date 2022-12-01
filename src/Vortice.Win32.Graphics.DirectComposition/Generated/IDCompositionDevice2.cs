@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("75f6468d-1b8e-447c-9bc6-75fea80b5b25")]
 [NativeTypeName("struct IDCompositionDevice2 : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionDevice2 : INativeGuid
+public unsafe partial struct IDCompositionDevice2 : IDCompositionDevice2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionDevice2
 	{
@@ -240,6 +240,71 @@ public unsafe partial struct IDCompositionDevice2 : INativeGuid
 	public HResult CreateAnimation(IDCompositionAnimation** animation)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice2*, IDCompositionAnimation**, int>)(lpVtbl[23]))((IDCompositionDevice2*)Unsafe.AsPointer(ref this), animation);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Commit();
+
+		[VtblIndex(4)]
+		HResult WaitForCommitCompletion();
+
+		[VtblIndex(5)]
+		HResult GetFrameStatistics(FrameStatistics* statistics);
+
+		[VtblIndex(6)]
+		HResult CreateVisual(IDCompositionVisual2** visual);
+
+		[VtblIndex(7)]
+		HResult CreateSurfaceFactory(IUnknown* renderingDevice, IDCompositionSurfaceFactory** surfaceFactory);
+
+		[VtblIndex(8)]
+		HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionSurface** surface);
+
+		[VtblIndex(9)]
+		HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionVirtualSurface** virtualSurface);
+
+		[VtblIndex(10)]
+		HResult CreateTranslateTransform(IDCompositionTranslateTransform** translateTransform);
+
+		[VtblIndex(11)]
+		HResult CreateScaleTransform(IDCompositionScaleTransform** scaleTransform);
+
+		[VtblIndex(12)]
+		HResult CreateRotateTransform(IDCompositionRotateTransform** rotateTransform);
+
+		[VtblIndex(13)]
+		HResult CreateSkewTransform(IDCompositionSkewTransform** skewTransform);
+
+		[VtblIndex(14)]
+		HResult CreateMatrixTransform(IDCompositionMatrixTransform** matrixTransform);
+
+		[VtblIndex(15)]
+		HResult CreateTransformGroup(IDCompositionTransform** transforms, uint elements, IDCompositionTransform** transformGroup);
+
+		[VtblIndex(16)]
+		HResult CreateTranslateTransform3D(IDCompositionTranslateTransform3D** translateTransform3D);
+
+		[VtblIndex(17)]
+		HResult CreateScaleTransform3D(IDCompositionScaleTransform3D** scaleTransform3D);
+
+		[VtblIndex(18)]
+		HResult CreateRotateTransform3D(IDCompositionRotateTransform3D** rotateTransform3D);
+
+		[VtblIndex(19)]
+		HResult CreateMatrixTransform3D(IDCompositionMatrixTransform3D** matrixTransform3D);
+
+		[VtblIndex(20)]
+		HResult CreateTransform3DGroup(IDCompositionTransform3D** transforms3D, uint elements, IDCompositionTransform3D** transform3DGroup);
+
+		[VtblIndex(21)]
+		HResult CreateEffectGroup(IDCompositionEffectGroup** effectGroup);
+
+		[VtblIndex(22)]
+		HResult CreateRectangleClip(IDCompositionRectangleClip** clip);
+
+		[VtblIndex(23)]
+		HResult CreateAnimation(IDCompositionAnimation** animation);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("3015a308-dcbd-47aa-a747-192486d14d4a")]
 [NativeTypeName("struct ID3D11AuthenticatedChannel : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11AuthenticatedChannel : INativeGuid
+public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedChannel.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11AuthenticatedChannel
 	{
@@ -128,6 +128,17 @@ public unsafe partial struct ID3D11AuthenticatedChannel : INativeGuid
 	public void GetChannelHandle(Handle* pChannelHandle)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Handle*, void>)(lpVtbl[9]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pChannelHandle);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetCertificateSize(uint* pCertificateSize);
+
+		[VtblIndex(8)]
+		HResult GetCertificate(uint CertificateSize, byte* pCertificate);
+
+		[VtblIndex(9)]
+		void GetChannelHandle(Handle* pChannelHandle);
 	}
 }
 

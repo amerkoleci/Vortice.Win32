@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("fbec5e44-f7be-4b65-b7f8-c0c81fef026d")]
 [NativeTypeName("struct IWICDevelopRaw : IWICBitmapFrameDecode")]
 [NativeInheritance("IWICBitmapFrameDecode")]
-public unsafe partial struct IWICDevelopRaw : INativeGuid
+public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICDevelopRaw
 	{
@@ -392,6 +392,104 @@ public unsafe partial struct IWICDevelopRaw : INativeGuid
 	public HResult SetNotificationCallback(IWICDevelopRawNotificationCallback* pCallback)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICDevelopRawNotificationCallback*, int>)(lpVtbl[42]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pCallback);
+	}
+	public interface Interface : IWICBitmapFrameDecode.Interface
+	{
+		[VtblIndex(11)]
+		HResult QueryRawCapabilitiesInfo(WICRawCapabilitiesInfo* pInfo);
+
+		[VtblIndex(12)]
+		HResult LoadParameterSet(WICRawParameterSet ParameterSet);
+
+		[VtblIndex(13)]
+		HResult GetCurrentParameterSet(Com.IPropertyBag2** ppCurrentParameterSet);
+
+		[VtblIndex(14)]
+		HResult SetExposureCompensation(double ev);
+
+		[VtblIndex(15)]
+		HResult GetExposureCompensation(double* pEV);
+
+		[VtblIndex(16)]
+		HResult SetWhitePointRGB(uint Red, uint Green, uint Blue);
+
+		[VtblIndex(17)]
+		HResult GetWhitePointRGB(uint* pRed, uint* pGreen, uint* pBlue);
+
+		[VtblIndex(18)]
+		HResult SetNamedWhitePoint(WICNamedWhitePoint WhitePoint);
+
+		[VtblIndex(19)]
+		HResult GetNamedWhitePoint(WICNamedWhitePoint* pWhitePoint);
+
+		[VtblIndex(20)]
+		HResult SetWhitePointKelvin(uint WhitePointKelvin);
+
+		[VtblIndex(21)]
+		HResult GetWhitePointKelvin(uint* pWhitePointKelvin);
+
+		[VtblIndex(22)]
+		HResult GetKelvinRangeInfo(uint* pMinKelvinTemp, uint* pMaxKelvinTemp, uint* pKelvinTempStepValue);
+
+		[VtblIndex(23)]
+		HResult SetContrast(double Contrast);
+
+		[VtblIndex(24)]
+		HResult GetContrast(double* pContrast);
+
+		[VtblIndex(25)]
+		HResult SetGamma(double Gamma);
+
+		[VtblIndex(26)]
+		HResult GetGamma(double* pGamma);
+
+		[VtblIndex(27)]
+		HResult SetSharpness(double Sharpness);
+
+		[VtblIndex(28)]
+		HResult GetSharpness(double* pSharpness);
+
+		[VtblIndex(29)]
+		HResult SetSaturation(double Saturation);
+
+		[VtblIndex(30)]
+		HResult GetSaturation(double* pSaturation);
+
+		[VtblIndex(31)]
+		HResult SetTint(double Tint);
+
+		[VtblIndex(32)]
+		HResult GetTint(double* pTint);
+
+		[VtblIndex(33)]
+		HResult SetNoiseReduction(double NoiseReduction);
+
+		[VtblIndex(34)]
+		HResult GetNoiseReduction(double* pNoiseReduction);
+
+		[VtblIndex(35)]
+		HResult SetDestinationColorContext(IWICColorContext* pColorContext);
+
+		[VtblIndex(36)]
+		HResult SetToneCurve(uint cbToneCurveSize, WICRawToneCurve* pToneCurve);
+
+		[VtblIndex(37)]
+		HResult GetToneCurve(uint cbToneCurveBufferSize, WICRawToneCurve* pToneCurve, uint* pcbActualToneCurveBufferSize);
+
+		[VtblIndex(38)]
+		HResult SetRotation(double Rotation);
+
+		[VtblIndex(39)]
+		HResult GetRotation(double* pRotation);
+
+		[VtblIndex(40)]
+		HResult SetRenderMode(WICRawRenderMode RenderMode);
+
+		[VtblIndex(41)]
+		HResult GetRenderMode(WICRawRenderMode* pRenderMode);
+
+		[VtblIndex(42)]
+		HResult SetNotificationCallback(IWICDevelopRawNotificationCallback* pCallback);
 	}
 }
 

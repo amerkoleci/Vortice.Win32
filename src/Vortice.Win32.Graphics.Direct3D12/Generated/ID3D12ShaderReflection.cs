@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("5a58797d-a72c-478d-8ba2-efc6b0efe88e")]
 [NativeTypeName("struct ID3D12ShaderReflection : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12ShaderReflection : INativeGuid
+public unsafe partial struct ID3D12ShaderReflection : ID3D12ShaderReflection.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12ShaderReflection
 	{
@@ -224,6 +224,65 @@ public unsafe partial struct ID3D12ShaderReflection : INativeGuid
 	public ulong GetRequiresFlags()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, ulong>)(lpVtbl[21]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetDesc(ShaderDescription* pDesc);
+
+		[VtblIndex(4)]
+		ID3D12ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint Index);
+
+		[VtblIndex(5)]
+		ID3D12ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name);
+
+		[VtblIndex(6)]
+		HResult GetResourceBindingDesc(uint ResourceIndex, ShaderInputBindDescription* pDesc);
+
+		[VtblIndex(7)]
+		HResult GetInputParameterDesc(uint ParameterIndex, SignatureParameterDescription* pDesc);
+
+		[VtblIndex(8)]
+		HResult GetOutputParameterDesc(uint ParameterIndex, SignatureParameterDescription* pDesc);
+
+		[VtblIndex(9)]
+		HResult GetPatchConstantParameterDesc(uint ParameterIndex, SignatureParameterDescription* pDesc);
+
+		[VtblIndex(10)]
+		ID3D12ShaderReflectionVariable GetVariableByName(sbyte* Name);
+
+		[VtblIndex(11)]
+		HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc);
+
+		[VtblIndex(12)]
+		uint GetMovInstructionCount();
+
+		[VtblIndex(13)]
+		uint GetMovcInstructionCount();
+
+		[VtblIndex(14)]
+		uint GetConversionInstructionCount();
+
+		[VtblIndex(15)]
+		uint GetBitwiseInstructionCount();
+
+		[VtblIndex(16)]
+		Graphics.Direct3D.Primitive GetGSInputPrimitive();
+
+		[VtblIndex(17)]
+		Bool32 IsSampleFrequencyShader();
+
+		[VtblIndex(18)]
+		uint GetNumInterfaceSlots();
+
+		[VtblIndex(19)]
+		HResult GetMinFeatureLevel(Graphics.Direct3D.FeatureLevel* pLevel);
+
+		[VtblIndex(20)]
+		uint GetThreadGroupSize(uint* pSizeX, uint* pSizeY, uint* pSizeZ);
+
+		[VtblIndex(21)]
+		ulong GetRequiresFlags();
 	}
 }
 

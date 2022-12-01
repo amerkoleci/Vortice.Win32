@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("fd55faa7-37e0-4c20-95d2-9be45bc33f55")]
 [NativeTypeName("struct IDCompositionTransform : IDCompositionTransform3D")]
 [NativeInheritance("IDCompositionTransform3D")]
-public unsafe partial struct IDCompositionTransform : INativeGuid
+public unsafe partial struct IDCompositionTransform : IDCompositionTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionTransform
 	{
@@ -74,5 +74,8 @@ public unsafe partial struct IDCompositionTransform : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTransform*, uint>)(lpVtbl[2]))((IDCompositionTransform*)Unsafe.AsPointer(ref this));
 	}
 
+	public interface Interface : IDCompositionTransform3D.Interface
+	{
+	}
 }
 

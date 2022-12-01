@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("7d97dbf7-e085-42d4-81e3-6a883bded118")]
 [NativeTypeName("struct IDWriteGlyphRunAnalysis : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteGlyphRunAnalysis : INativeGuid
+public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteGlyphRunAnalysis
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : INativeGuid
 	public HResult GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, IDWriteRenderingParams*, float*, float*, float*, int>)(lpVtbl[5]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), renderingParams, blendGamma, blendEnhancedContrast, blendClearTypeLevel);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetAlphaTextureBounds(TextureType textureType, RawRect* textureBounds);
+
+		[VtblIndex(4)]
+		HResult CreateAlphaTexture(TextureType textureType, RawRect* textureBounds, byte* alphaValues, uint bufferSize);
+
+		[VtblIndex(5)]
+		HResult GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel);
 	}
 }
 

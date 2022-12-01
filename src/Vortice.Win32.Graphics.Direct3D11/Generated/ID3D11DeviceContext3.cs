@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("b4e3c01d-e79e-4637-91b2-510e9f4c9b8f")]
 [NativeTypeName("struct ID3D11DeviceContext3 : ID3D11DeviceContext2")]
 [NativeInheritance("ID3D11DeviceContext2")]
-public unsafe partial struct ID3D11DeviceContext3 : INativeGuid
+public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11DeviceContext3
 	{
@@ -165,9 +165,9 @@ public unsafe partial struct ID3D11DeviceContext3 : INativeGuid
 	/// <inheritdoc cref="ID3D11DeviceContext.Map" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult Map(ID3D11Resource* pResource, uint Subresource, MapMode MapType, uint MapFlags, MappedSubresource* pMappedResource)
+	public HResult Map(ID3D11Resource* pResource, uint Subresource, MapMode MapType, MapFlags MapFlags, MappedSubresource* pMappedResource)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, MapMode, uint, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
+		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, MapMode, MapFlags, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Unmap" />
@@ -477,9 +477,9 @@ public unsafe partial struct ID3D11DeviceContext3 : INativeGuid
 	/// <inheritdoc cref="ID3D11DeviceContext.ClearDepthStencilView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(53)]
-	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, uint ClearFlags, float Depth, byte Stencil)
+	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DepthStencilView*, uint, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DepthStencilView*, ClearFlags, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GenerateMips" />
@@ -1224,6 +1224,17 @@ public unsafe partial struct ID3D11DeviceContext3 : INativeGuid
 	public void GetHardwareProtectionState(Bool32* pHwProtectionEnable)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Bool32*, void>)(lpVtbl[146]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pHwProtectionEnable);
+	}
+	public interface Interface : ID3D11DeviceContext2.Interface
+	{
+		[VtblIndex(144)]
+		void Flush1(ContextType ContextType, Handle hEvent);
+
+		[VtblIndex(145)]
+		void SetHardwareProtectionState(Bool32 HwProtectionEnable);
+
+		[VtblIndex(146)]
+		void GetHardwareProtectionState(Bool32* pHwProtectionEnable);
 	}
 }
 

@@ -1,20 +1,26 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using static Win32.Apis;
+
 namespace Win32.Graphics.Direct3D11;
 
-public unsafe partial struct ID3D11Device
+public static unsafe class ID3D11DeviceExtension
 {
-    public ComPtr<ID3D11Buffer> CreateBuffer(BufferDescription* description, SubresourceData* initialData = default)
+    public static ComPtr<ID3D11Buffer> CheckFeatureSupport<TD3D11Device>(ref this ID3D11Device self, BufferDescription* description, SubresourceData* initialData = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Buffer> buffer = default;
-        CreateBuffer(description, initialData, buffer.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(self.CreateBuffer(description, initialData, buffer.GetAddressOf()));
         return buffer.Move();
     }
 
-    public ComPtr<ID3D11Buffer> CreateBuffer<T>(
+    public static ComPtr<ID3D11Buffer> CreateBuffer<TD3D11Device, T>(
+        ref this ID3D11Device self,
         in T data,
-        BufferDescription description) where T : unmanaged
+        BufferDescription description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+        where T : unmanaged
     {
         if (description.ByteWidth == 0)
             description.ByteWidth = (uint)sizeof(T);
@@ -27,10 +33,23 @@ public unsafe partial struct ID3D11Device
             };
 
             using ComPtr<ID3D11Buffer> buffer = default;
-            CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
+            ThrowIfFailed(self.CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()));
             return buffer.Move();
         }
     }
+
+    public static ComPtr<ID3D11DeviceContext> CreateDeferredContext<TD3D11Device>(ref this ID3D11Device self)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        using ComPtr<ID3D11DeviceContext> deferredContext = default;
+        ThrowIfFailed(self.CreateDeferredContext(0u, deferredContext.GetAddressOf()));
+        return deferredContext.Move();
+    }
+}
+
+
+public unsafe partial struct ID3D11Device
+{
 
     public ComPtr<ID3D11Buffer> CreateBuffer<T>(ReadOnlySpan<T> data, BufferDescription description) where T : unmanaged
     {
@@ -45,7 +64,7 @@ public unsafe partial struct ID3D11Device
             };
 
             using ComPtr<ID3D11Buffer> buffer = default;
-            CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
+            ThrowIfFailed(CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()));
             return buffer.Move();
         }
     }
@@ -89,7 +108,7 @@ public unsafe partial struct ID3D11Device
             };
 
             using ComPtr<ID3D11Buffer> buffer = default;
-            CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()).ThrowIfFailed();
+            ThrowIfFailed(CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()));
             return buffer.Move();
         }
     }
@@ -99,7 +118,7 @@ public unsafe partial struct ID3D11Device
         RenderTargetViewDescription* description)
     {
         using ComPtr<ID3D11RenderTargetView> view = default;
-        CreateRenderTargetView(resource, description, view.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateRenderTargetView(resource, description, view.GetAddressOf()));
 
         return view.Move();
     }
@@ -109,7 +128,7 @@ public unsafe partial struct ID3D11Device
         DepthStencilViewDescription* description)
     {
         using ComPtr<ID3D11DepthStencilView> view = default;
-        CreateDepthStencilView(resource, description, view.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateDepthStencilView(resource, description, view.GetAddressOf()));
 
         return view.Move();
     }
@@ -119,7 +138,7 @@ public unsafe partial struct ID3D11Device
         ShaderResourceViewDescription* description)
     {
         using ComPtr<ID3D11ShaderResourceView> view = default;
-        CreateShaderResourceView(resource, description, view.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateShaderResourceView(resource, description, view.GetAddressOf()));
 
         return view.Move();
     }
@@ -129,7 +148,7 @@ public unsafe partial struct ID3D11Device
         UnorderedAccessViewDescription* description)
     {
         using ComPtr<ID3D11UnorderedAccessView> view = default;
-        CreateUnorderedAccessView(resource, description, view.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateUnorderedAccessView(resource, description, view.GetAddressOf()));
 
         return view.Move();
     }
@@ -137,7 +156,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11BlendState> CreateBlendState(BlendDescription* description)
     {
         using ComPtr<ID3D11BlendState> state = default;
-        CreateBlendState(description, state.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateBlendState(description, state.GetAddressOf()));
 
         return state.Move();
     }
@@ -145,7 +164,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11BlendState> CreateBlendState(BlendDescription description)
     {
         using ComPtr<ID3D11BlendState> state = default;
-        CreateBlendState(&description, state.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateBlendState(&description, state.GetAddressOf()));
 
         return state.Move();
     }
@@ -153,7 +172,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11DepthStencilState> CreateDepthStencilState(DepthStencilDescription* description)
     {
         using ComPtr<ID3D11DepthStencilState> state = default;
-        CreateDepthStencilState(description, state.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateDepthStencilState(description, state.GetAddressOf()));
 
         return state.Move();
     }
@@ -161,7 +180,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11DepthStencilState> CreateDepthStencilState(DepthStencilDescription description)
     {
         using ComPtr<ID3D11DepthStencilState> state = default;
-        CreateDepthStencilState(&description, state.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateDepthStencilState(&description, state.GetAddressOf()));
 
         return state.Move();
     }
@@ -169,7 +188,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11RasterizerState> CreateRasterizerState(RasterizerDescription* description)
     {
         using ComPtr<ID3D11RasterizerState> state = default;
-        CreateRasterizerState(description, state.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateRasterizerState(description, state.GetAddressOf()));
 
         return state.Move();
     }
@@ -177,7 +196,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11RasterizerState> CreateRasterizerState(RasterizerDescription description)
     {
         using ComPtr<ID3D11RasterizerState> state = default;
-        CreateRasterizerState(&description, state.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateRasterizerState(&description, state.GetAddressOf()));
 
         return state.Move();
     }
@@ -185,7 +204,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11SamplerState> CreateSamplerState(SamplerDescription* description)
     {
         using ComPtr<ID3D11SamplerState> state = default;
-        CreateSamplerState(description, state.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateSamplerState(description, state.GetAddressOf()));
 
         return state.Move();
     }
@@ -193,7 +212,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11SamplerState> CreateSamplerState(SamplerDescription description)
     {
         using ComPtr<ID3D11SamplerState> state = default;
-        CreateSamplerState(&description, state.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateSamplerState(&description, state.GetAddressOf()));
 
         return state.Move();
     }
@@ -201,7 +220,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11Texture1D> CreateTexture1D(Texture1DDescription* description, SubresourceData* initialData = default)
     {
         using ComPtr<ID3D11Texture1D> texture = default;
-        CreateTexture1D(description, initialData, texture.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateTexture1D(description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
@@ -209,7 +228,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11Texture1D> CreateTexture1D(Texture1DDescription description, SubresourceData* initialData = default)
     {
         using ComPtr<ID3D11Texture1D> texture = default;
-        CreateTexture1D(&description, initialData, texture.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateTexture1D(&description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
@@ -217,7 +236,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11Texture2D> CreateTexture2D(Texture2DDescription* description, SubresourceData* initialData = default)
     {
         using ComPtr<ID3D11Texture2D> texture = default;
-        CreateTexture2D(description, initialData, texture.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateTexture2D(description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
@@ -225,7 +244,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11Texture2D> CreateTexture2D(Texture2DDescription description, SubresourceData* initialData = default)
     {
         using ComPtr<ID3D11Texture2D> texture = default;
-        CreateTexture2D(&description, initialData, texture.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateTexture2D(&description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
@@ -233,7 +252,7 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11Texture3D> CreateTexture3D(Texture3DDescription* description, SubresourceData* initialData = default)
     {
         using ComPtr<ID3D11Texture3D> texture = default;
-        CreateTexture3D(description, initialData, texture.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateTexture3D(description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
@@ -241,15 +260,8 @@ public unsafe partial struct ID3D11Device
     public ComPtr<ID3D11Texture3D> CreateTexture3D(Texture3DDescription description, SubresourceData* initialData = default)
     {
         using ComPtr<ID3D11Texture3D> texture = default;
-        CreateTexture3D(&description, initialData, texture.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateTexture3D(&description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
-    }
-
-    public ComPtr<ID3D11DeviceContext> CreateDeferredContext()
-    {
-        using ComPtr<ID3D11DeviceContext> deferredContext = default;
-        CreateDeferredContext(0u, deferredContext.GetAddressOf()).ThrowIfFailed();
-        return deferredContext.Move();
     }
 }

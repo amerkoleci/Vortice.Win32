@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("cedb484a-d4e9-445a-b991-ca21ca157dc2")]
 [NativeTypeName("struct IDxcOperationResult : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcOperationResult : INativeGuid
+public unsafe partial struct IDxcOperationResult : IDxcOperationResult.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcOperationResult
 	{
@@ -92,6 +92,17 @@ public unsafe partial struct IDxcOperationResult : INativeGuid
 	public HResult GetErrorBuffer(IDxcBlobEncoding** ppErrors)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcOperationResult*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcOperationResult*)Unsafe.AsPointer(ref this), ppErrors);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetStatus(HResult* pStatus);
+
+		[VtblIndex(4)]
+		HResult GetResult(IDxcBlob** ppResult);
+
+		[VtblIndex(5)]
+		HResult GetErrorBuffer(IDxcBlobEncoding** ppErrors);
 	}
 }
 

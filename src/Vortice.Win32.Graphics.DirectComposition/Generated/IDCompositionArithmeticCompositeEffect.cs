@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("3b67dfa8-e3dd-4e61-b640-46c2f3d739dc")]
 [NativeTypeName("struct IDCompositionArithmeticCompositeEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionArithmeticCompositeEffect : INativeGuid
+public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDCompositionArithmeticCompositeEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionArithmeticCompositeEffect
 	{
@@ -160,6 +160,38 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : INativeGui
 	public HResult SetCoefficient4(float Coefficient4)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[13]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coefficient4);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetCoefficients(Vector4* coefficients);
+
+		[VtblIndex(5)]
+		HResult SetClampOutput(Bool32 clampoutput);
+
+		[VtblIndex(6)]
+		HResult SetCoefficient1(IDCompositionAnimation* animation);
+
+		[VtblIndex(7)]
+		HResult SetCoefficient1(float Coeffcient1);
+
+		[VtblIndex(8)]
+		HResult SetCoefficient2(IDCompositionAnimation* animation);
+
+		[VtblIndex(9)]
+		HResult SetCoefficient2(float Coefficient2);
+
+		[VtblIndex(10)]
+		HResult SetCoefficient3(IDCompositionAnimation* animation);
+
+		[VtblIndex(11)]
+		HResult SetCoefficient3(float Coefficient3);
+
+		[VtblIndex(12)]
+		HResult SetCoefficient4(IDCompositionAnimation* animation);
+
+		[VtblIndex(13)]
+		HResult SetCoefficient4(float Coefficient4);
 	}
 }
 

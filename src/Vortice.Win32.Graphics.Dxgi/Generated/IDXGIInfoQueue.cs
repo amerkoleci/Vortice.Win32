@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("d67441c7-672a-476f-9e82-cd55b44949ce")]
 [NativeTypeName("struct IDXGIInfoQueue : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDXGIInfoQueue : INativeGuid
+public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIInfoQueue
 	{
@@ -368,6 +368,119 @@ public unsafe partial struct IDXGIInfoQueue : INativeGuid
 	public Bool32 GetMuteDebugOutput(Guid Producer)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, Bool32>)(lpVtbl[39]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetMessageCountLimit(Guid Producer, ulong MessageCountLimit);
+
+		[VtblIndex(4)]
+		void ClearStoredMessages(Guid Producer);
+
+		[VtblIndex(5)]
+		HResult GetMessage(Guid Producer, ulong MessageIndex, InfoQueueMessage* pMessage, nuint* pMessageByteLength);
+
+		[VtblIndex(6)]
+		ulong GetNumStoredMessagesAllowedByRetrievalFilters(Guid Producer);
+
+		[VtblIndex(7)]
+		ulong GetNumStoredMessages(Guid Producer);
+
+		[VtblIndex(8)]
+		ulong GetNumMessagesDiscardedByMessageCountLimit(Guid Producer);
+
+		[VtblIndex(9)]
+		ulong GetMessageCountLimit(Guid Producer);
+
+		[VtblIndex(10)]
+		ulong GetNumMessagesAllowedByStorageFilter(Guid Producer);
+
+		[VtblIndex(11)]
+		ulong GetNumMessagesDeniedByStorageFilter(Guid Producer);
+
+		[VtblIndex(12)]
+		HResult AddStorageFilterEntries(Guid Producer, InfoQueueFilter* pFilter);
+
+		[VtblIndex(13)]
+		HResult GetStorageFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+
+		[VtblIndex(14)]
+		void ClearStorageFilter(Guid Producer);
+
+		[VtblIndex(15)]
+		HResult PushEmptyStorageFilter(Guid Producer);
+
+		[VtblIndex(16)]
+		HResult PushDenyAllStorageFilter(Guid Producer);
+
+		[VtblIndex(17)]
+		HResult PushCopyOfStorageFilter(Guid Producer);
+
+		[VtblIndex(18)]
+		HResult PushStorageFilter(Guid Producer, InfoQueueFilter* pFilter);
+
+		[VtblIndex(19)]
+		void PopStorageFilter(Guid Producer);
+
+		[VtblIndex(20)]
+		uint GetStorageFilterStackSize(Guid Producer);
+
+		[VtblIndex(21)]
+		HResult AddRetrievalFilterEntries(Guid Producer, InfoQueueFilter* pFilter);
+
+		[VtblIndex(22)]
+		HResult GetRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter, nuint* pFilterByteLength);
+
+		[VtblIndex(23)]
+		void ClearRetrievalFilter(Guid Producer);
+
+		[VtblIndex(24)]
+		HResult PushEmptyRetrievalFilter(Guid Producer);
+
+		[VtblIndex(25)]
+		HResult PushDenyAllRetrievalFilter(Guid Producer);
+
+		[VtblIndex(26)]
+		HResult PushCopyOfRetrievalFilter(Guid Producer);
+
+		[VtblIndex(27)]
+		HResult PushRetrievalFilter(Guid Producer, InfoQueueFilter* pFilter);
+
+		[VtblIndex(28)]
+		void PopRetrievalFilter(Guid Producer);
+
+		[VtblIndex(29)]
+		uint GetRetrievalFilterStackSize(Guid Producer);
+
+		[VtblIndex(30)]
+		HResult AddMessage(Guid Producer, InfoQueueMessageCategory Category, InfoQueueMessageSeverity Severity, int ID, sbyte* pDescription);
+
+		[VtblIndex(31)]
+		HResult AddApplicationMessage(InfoQueueMessageSeverity Severity, sbyte* pDescription);
+
+		[VtblIndex(32)]
+		HResult SetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category, Bool32 bEnable);
+
+		[VtblIndex(33)]
+		HResult SetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity, Bool32 bEnable);
+
+		[VtblIndex(34)]
+		HResult SetBreakOnID(Guid Producer, int ID, Bool32 bEnable);
+
+		[VtblIndex(35)]
+		Bool32 GetBreakOnCategory(Guid Producer, InfoQueueMessageCategory Category);
+
+		[VtblIndex(36)]
+		Bool32 GetBreakOnSeverity(Guid Producer, InfoQueueMessageSeverity Severity);
+
+		[VtblIndex(37)]
+		Bool32 GetBreakOnID(Guid Producer, int ID);
+
+		[VtblIndex(38)]
+		void SetMuteDebugOutput(Guid Producer, Bool32 bMute);
+
+		[VtblIndex(39)]
+		Bool32 GetMuteDebugOutput(Guid Producer);
 	}
 }
 

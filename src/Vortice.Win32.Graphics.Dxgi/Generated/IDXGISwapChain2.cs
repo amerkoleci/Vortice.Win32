@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("a8be2ac4-199f-4946-b331-79599fb98de7")]
 [NativeTypeName("struct IDXGISwapChain2 : IDXGISwapChain1")]
 [NativeInheritance("IDXGISwapChain1")]
-public unsafe partial struct IDXGISwapChain2 : INativeGuid
+public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISwapChain2
 	{
@@ -336,6 +336,29 @@ public unsafe partial struct IDXGISwapChain2 : INativeGuid
 	public HResult GetMatrixTransform(Matrix3x2* pMatrix)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain2*, Matrix3x2*, int>)(lpVtbl[35]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), pMatrix);
+	}
+	public interface Interface : IDXGISwapChain1.Interface
+	{
+		[VtblIndex(29)]
+		HResult SetSourceSize(uint Width, uint Height);
+
+		[VtblIndex(30)]
+		HResult GetSourceSize(uint* pWidth, uint* pHeight);
+
+		[VtblIndex(31)]
+		HResult SetMaximumFrameLatency(uint MaxLatency);
+
+		[VtblIndex(32)]
+		HResult GetMaximumFrameLatency(uint* pMaxLatency);
+
+		[VtblIndex(33)]
+		Handle GetFrameLatencyWaitableObject();
+
+		[VtblIndex(34)]
+		HResult SetMatrixTransform(Matrix3x2* pMatrix);
+
+		[VtblIndex(35)]
+		HResult GetMatrixTransform(Matrix3x2* pMatrix);
 	}
 }
 

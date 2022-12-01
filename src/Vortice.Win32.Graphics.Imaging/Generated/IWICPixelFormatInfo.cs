@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("e8eda601-3d48-431a-ab44-69059be88bbe")]
 [NativeTypeName("struct IWICPixelFormatInfo : IWICComponentInfo")]
 [NativeInheritance("IWICComponentInfo")]
-public unsafe partial struct IWICPixelFormatInfo : INativeGuid
+public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICPixelFormatInfo
 	{
@@ -176,6 +176,23 @@ public unsafe partial struct IWICPixelFormatInfo : INativeGuid
 	public HResult GetChannelMask(uint uiChannelIndex, uint cbMaskBuffer, byte* pbMaskBuffer, uint* pcbActual)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint, uint, byte*, uint*, int>)(lpVtbl[15]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), uiChannelIndex, cbMaskBuffer, pbMaskBuffer, pcbActual);
+	}
+	public interface Interface : IWICComponentInfo.Interface
+	{
+		[VtblIndex(11)]
+		HResult GetFormatGUID(Guid* pFormat);
+
+		[VtblIndex(12)]
+		HResult GetColorContext(IWICColorContext** ppIColorContext);
+
+		[VtblIndex(13)]
+		HResult GetBitsPerPixel(uint* puiBitsPerPixel);
+
+		[VtblIndex(14)]
+		HResult GetChannelCount(uint* puiChannelCount);
+
+		[VtblIndex(15)]
+		HResult GetChannelMask(uint uiChannelIndex, uint cbMaskBuffer, byte* pbMaskBuffer, uint* pcbActual);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("ae471c51-5f53-4a24-8d3e-d0c39c30b3f0")]
 [NativeTypeName("struct IDCompositionVirtualSurface : IDCompositionSurface")]
 [NativeInheritance("IDCompositionSurface")]
-public unsafe partial struct IDCompositionVirtualSurface : INativeGuid
+public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualSurface.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionVirtualSurface
 	{
@@ -128,6 +128,14 @@ public unsafe partial struct IDCompositionVirtualSurface : INativeGuid
 	public HResult Trim(RawRect* rectangles, uint count)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, RawRect*, uint, int>)(lpVtbl[9]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), rectangles, count);
+	}
+	public interface Interface : IDCompositionSurface.Interface
+	{
+		[VtblIndex(8)]
+		HResult Resize(uint width, uint height);
+
+		[VtblIndex(9)]
+		HResult Trim(RawRect* rectangles, uint count);
 	}
 }
 

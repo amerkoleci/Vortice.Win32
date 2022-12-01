@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("1fbad429-66ab-41cc-9617-667ac10e4459")]
 [NativeTypeName("struct ID3D11ShaderTraceFactory : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11ShaderTraceFactory : INativeGuid
+public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11ShaderTraceFactory
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID3D11ShaderTraceFactory : INativeGuid
 	public HResult CreateShaderTrace(IUnknown* pShader, ShaderTraceDescription* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTraceFactory*, IUnknown*, ShaderTraceDescription*, ID3D11ShaderTrace**, int>)(lpVtbl[3]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), pShader, pTraceDesc, ppShaderTrace);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateShaderTrace(IUnknown* pShader, ShaderTraceDescription* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace);
 	}
 }
 

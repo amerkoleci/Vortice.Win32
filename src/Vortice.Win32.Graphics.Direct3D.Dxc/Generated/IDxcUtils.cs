@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("4605c4cb-2019-492a-ada4-65f20bb7d67f")]
 [NativeTypeName("struct IDxcUtils : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcUtils : INativeGuid
+public unsafe partial struct IDxcUtils : IDxcUtils.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcUtils
 	{
@@ -162,6 +162,47 @@ public unsafe partial struct IDxcUtils : INativeGuid
 	public HResult GetPDBContents(IDxcBlob* pPDBBlob, IDxcBlob** ppHash, IDxcBlob** ppContainer)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcUtils*, IDxcBlob*, IDxcBlob**, IDxcBlob**, int>)(lpVtbl[15]))((IDxcUtils*)Unsafe.AsPointer(ref this), pPDBBlob, ppHash, ppContainer);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult);
+
+		[VtblIndex(4)]
+		HResult CreateBlobFromPinned(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(5)]
+		HResult MoveToBlob(void* pData, Com.IMalloc* pIMalloc, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(6)]
+		HResult CreateBlob(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(7)]
+		HResult LoadFile(ushort* pFileName, DxcCp* pCodePage, IDxcBlobEncoding** pBlobEncoding);
+
+		[VtblIndex(8)]
+		HResult CreateReadOnlyStreamFromBlob(IDxcBlob* pBlob, Com.IStream** ppStream);
+
+		[VtblIndex(9)]
+		HResult CreateDefaultIncludeHandler(IDxcIncludeHandler** ppResult);
+
+		[VtblIndex(10)]
+		HResult GetBlobAsUtf8(IDxcBlob* pBlob, IDxcBlobUtf8** pBlobEncoding);
+
+		[VtblIndex(11)]
+		HResult GetBlobAsUtf16(IDxcBlob* pBlob, IDxcBlobUtf16** pBlobEncoding);
+
+		[VtblIndex(12)]
+		HResult GetDxilContainerPart(DxcBuffer* pShader, uint DxcPart, void** ppPartData, uint* pPartSizeInBytes);
+
+		[VtblIndex(13)]
+		HResult CreateReflection(DxcBuffer* pData, Guid* iid, void** ppvReflection);
+
+		[VtblIndex(14)]
+		HResult BuildArguments(ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcCompilerArgs** ppArgs);
+
+		[VtblIndex(15)]
+		HResult GetPDBContents(IDxcBlob* pPDBBlob, IDxcBlob** ppHash, IDxcBlob** ppContainer);
 	}
 }
 

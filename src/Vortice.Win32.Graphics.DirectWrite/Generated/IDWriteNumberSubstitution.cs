@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("14885cc9-bab0-4f90-b6ed-5c366a2cd03d")]
 [NativeTypeName("struct IDWriteNumberSubstitution : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteNumberSubstitution : INativeGuid
+public unsafe partial struct IDWriteNumberSubstitution : IDWriteNumberSubstitution.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteNumberSubstitution
 	{
@@ -74,5 +74,8 @@ public unsafe partial struct IDWriteNumberSubstitution : INativeGuid
 		return ((delegate* unmanaged[Stdcall]<IDWriteNumberSubstitution*, uint>)(lpVtbl[2]))((IDWriteNumberSubstitution*)Unsafe.AsPointer(ref this));
 	}
 
+	public interface Interface : IUnknown.Interface
+	{
+	}
 }
 

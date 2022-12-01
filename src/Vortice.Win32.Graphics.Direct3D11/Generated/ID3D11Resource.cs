@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("dc8e63f3-d12b-4952-b47b-5e45026a862d")]
 [NativeTypeName("struct ID3D11Resource : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11Resource : INativeGuid
+public unsafe partial struct ID3D11Resource : ID3D11Resource.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Resource
 	{
@@ -128,6 +128,17 @@ public unsafe partial struct ID3D11Resource : INativeGuid
 	public uint GetEvictionPriority()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Resource*, uint>)(lpVtbl[9]))((ID3D11Resource*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		void GetType(ResourceDimension* pResourceDimension);
+
+		[VtblIndex(8)]
+		void SetEvictionPriority(uint EvictionPriority);
+
+		[VtblIndex(9)]
+		uint GetEvictionPriority();
 	}
 }
 

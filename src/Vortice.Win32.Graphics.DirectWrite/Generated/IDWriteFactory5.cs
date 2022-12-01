@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("958db99a-be2a-4f09-af7d-65189803d1d3")]
 [NativeTypeName("struct IDWriteFactory5 : IDWriteFactory4")]
 [NativeInheritance("IDWriteFactory4")]
-public unsafe partial struct IDWriteFactory5 : INativeGuid
+public unsafe partial struct IDWriteFactory5 : IDWriteFactory5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory5
 	{
@@ -432,6 +432,23 @@ public unsafe partial struct IDWriteFactory5 : INativeGuid
 	public HResult UnpackFontFile(ContainerType containerType, void* fileData, uint fileDataSize, IDWriteFontFileStream** unpackedFontStream)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, ContainerType, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[47]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), containerType, fileData, fileDataSize, unpackedFontStream);
+	}
+	public interface Interface : IDWriteFactory4.Interface
+	{
+		[VtblIndex(43)]
+		HResult CreateFontSetBuilder(IDWriteFontSetBuilder1** fontSetBuilder);
+
+		[VtblIndex(44)]
+		HResult CreateInMemoryFontFileLoader(IDWriteInMemoryFontFileLoader** newLoader);
+
+		[VtblIndex(45)]
+		HResult CreateHttpFontFileLoader(ushort* referrerUrl, ushort* extraHeaders, IDWriteRemoteFontFileLoader** newLoader);
+
+		[VtblIndex(46)]
+		ContainerType AnalyzeContainerType(void* fileData, uint fileDataSize);
+
+		[VtblIndex(47)]
+		HResult UnpackFontFile(ContainerType containerType, void* fileData, uint fileDataSize, IDWriteFontFileStream** unpackedFontStream);
 	}
 }
 

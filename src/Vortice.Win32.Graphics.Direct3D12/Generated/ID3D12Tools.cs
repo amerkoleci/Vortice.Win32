@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("7071e1f0-e84b-4b33-974f-12fa49de65c5")]
 [NativeTypeName("struct ID3D12Tools : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12Tools : INativeGuid
+public unsafe partial struct ID3D12Tools : ID3D12Tools.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Tools
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID3D12Tools : INativeGuid
 	public Bool32 ShaderInstrumentationEnabled()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Tools*, Bool32>)(lpVtbl[4]))((ID3D12Tools*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void EnableShaderInstrumentation(Bool32 bEnable);
+
+		[VtblIndex(4)]
+		Bool32 ShaderInstrumentationEnabled();
 	}
 }
 

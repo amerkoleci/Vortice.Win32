@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("fd882d06-8aba-4fb8-b849-8be8b73e14de")]
 [NativeTypeName("struct IDWriteFontFallbackBuilder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFallbackBuilder : INativeGuid
+public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBuilder.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFallbackBuilder
 	{
@@ -96,6 +96,17 @@ public unsafe partial struct IDWriteFontFallbackBuilder : INativeGuid
 	public HResult CreateFontFallback(IDWriteFontFallback** fontFallback)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFallbackBuilder*, IDWriteFontFallback**, int>)(lpVtbl[5]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), fontFallback);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult AddMapping(UnicodeRange* ranges, uint rangesCount, ushort** targetFamilyNames, uint targetFamilyNamesCount, IDWriteFontCollection* fontCollection, ushort* localeName, ushort* baseFamilyName, float scale);
+
+		[VtblIndex(4)]
+		HResult AddMappings(IDWriteFontFallback* fontFallback);
+
+		[VtblIndex(5)]
+		HResult CreateFontFallback(IDWriteFontFallback** fontFallback);
 	}
 }
 

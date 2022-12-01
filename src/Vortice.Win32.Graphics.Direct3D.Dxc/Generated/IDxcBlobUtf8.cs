@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("3da636c9-ba71-4024-a301-30cbf125305b")]
 [NativeTypeName("struct IDxcBlobUtf8 : IDxcBlobEncoding")]
 [NativeInheritance("IDxcBlobEncoding")]
-public unsafe partial struct IDxcBlobUtf8 : INativeGuid
+public unsafe partial struct IDxcBlobUtf8 : IDxcBlobUtf8.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcBlobUtf8
 	{
@@ -109,6 +109,14 @@ public unsafe partial struct IDxcBlobUtf8 : INativeGuid
 	public nuint GetStringLength()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf8*, nuint>)(lpVtbl[7]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDxcBlobEncoding.Interface
+	{
+		[VtblIndex(6)]
+		sbyte* GetStringPointer();
+
+		[VtblIndex(7)]
+		nuint GetStringLength();
 	}
 }
 

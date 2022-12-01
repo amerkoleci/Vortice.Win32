@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("9dbe4c0d-3572-4dd9-9825-5530813bb712")]
 [NativeTypeName("struct ID2D1SvgPointCollection : ID2D1SvgAttribute")]
 [NativeInheritance("ID2D1SvgAttribute")]
-public unsafe partial struct ID2D1SvgPointCollection : INativeGuid
+public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgPointCollection
 	{
@@ -128,6 +128,20 @@ public unsafe partial struct ID2D1SvgPointCollection : INativeGuid
 	public uint GetPointsCount()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, uint>)(lpVtbl[9]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1SvgAttribute.Interface
+	{
+		[VtblIndex(6)]
+		HResult RemovePointsAtEnd(uint pointsCount);
+
+		[VtblIndex(7)]
+		HResult UpdatePoints(System.Drawing.PointF* points, uint pointsCount, uint startIndex);
+
+		[VtblIndex(8)]
+		HResult GetPoints(System.Drawing.PointF* points, uint pointsCount, uint startIndex);
+
+		[VtblIndex(9)]
+		uint GetPointsCount();
 	}
 }
 

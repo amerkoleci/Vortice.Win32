@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("6007896c-3244-4afd-bf18-a6d3beda5023")]
 [NativeTypeName("struct IDXGIDevice3 : IDXGIDevice2")]
 [NativeInheritance("IDXGIDevice2")]
-public unsafe partial struct IDXGIDevice3 : INativeGuid
+public unsafe partial struct IDXGIDevice3 : IDXGIDevice3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDevice3
 	{
@@ -192,6 +192,11 @@ public unsafe partial struct IDXGIDevice3 : INativeGuid
 	public void Trim()
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIDevice3*, void>)(lpVtbl[17]))((IDXGIDevice3*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IDXGIDevice2.Interface
+	{
+		[VtblIndex(17)]
+		void Trim();
 	}
 }
 

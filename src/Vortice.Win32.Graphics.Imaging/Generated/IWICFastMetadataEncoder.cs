@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("b84e2c09-78c9-4ac4-8bd3-524ae1663a2f")]
 [NativeTypeName("struct IWICFastMetadataEncoder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICFastMetadataEncoder : INativeGuid
+public unsafe partial struct IWICFastMetadataEncoder : IWICFastMetadataEncoder.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICFastMetadataEncoder
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IWICFastMetadataEncoder : INativeGuid
 	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICFastMetadataEncoder*, IWICMetadataQueryWriter**, int>)(lpVtbl[4]))((IWICFastMetadataEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Commit();
+
+		[VtblIndex(4)]
+		HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter);
 	}
 }
 

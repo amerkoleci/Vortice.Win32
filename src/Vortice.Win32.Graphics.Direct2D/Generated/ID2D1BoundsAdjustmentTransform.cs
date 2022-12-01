@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("90f732e2-5092-4606-a819-8651970baccd")]
 [NativeTypeName("struct ID2D1BoundsAdjustmentTransform : ID2D1TransformNode")]
 [NativeInheritance("ID2D1TransformNode")]
-public unsafe partial struct ID2D1BoundsAdjustmentTransform : INativeGuid
+public unsafe partial struct ID2D1BoundsAdjustmentTransform : ID2D1BoundsAdjustmentTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1BoundsAdjustmentTransform
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct ID2D1BoundsAdjustmentTransform : INativeGuid
 	public void GetOutputBounds(RawRect* outputBounds)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1BoundsAdjustmentTransform*, RawRect*, void>)(lpVtbl[5]))((ID2D1BoundsAdjustmentTransform*)Unsafe.AsPointer(ref this), outputBounds);
+	}
+	public interface Interface : ID2D1TransformNode.Interface
+	{
+		[VtblIndex(4)]
+		void SetOutputBounds(RawRect* outputBounds);
+
+		[VtblIndex(5)]
+		void GetOutputBounds(RawRect* outputBounds);
 	}
 }
 

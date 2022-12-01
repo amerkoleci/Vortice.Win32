@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("36bfdcb6-9739-435d-a30d-a653beff6a6f")]
 [NativeTypeName("struct ID2D1DrawTransform : ID2D1Transform")]
 [NativeInheritance("ID2D1Transform")]
-public unsafe partial struct ID2D1DrawTransform : INativeGuid
+public unsafe partial struct ID2D1DrawTransform : ID2D1DrawTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DrawTransform
 	{
@@ -112,6 +112,11 @@ public unsafe partial struct ID2D1DrawTransform : INativeGuid
 	public HResult SetDrawInfo(ID2D1DrawInfo* drawInfo)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawTransform*, ID2D1DrawInfo*, int>)(lpVtbl[7]))((ID2D1DrawTransform*)Unsafe.AsPointer(ref this), drawInfo);
+	}
+	public interface Interface : ID2D1Transform.Interface
+	{
+		[VtblIndex(7)]
+		HResult SetDrawInfo(ID2D1DrawInfo* drawInfo);
 	}
 }
 

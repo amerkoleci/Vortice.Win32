@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("068346e8-aaec-4b84-add7-137f513f77a1")]
 [NativeTypeName("struct IDXGIOutput6 : IDXGIOutput5")]
 [NativeInheritance("IDXGIOutput5")]
-public unsafe partial struct IDXGIOutput6 : INativeGuid
+public unsafe partial struct IDXGIOutput6 : IDXGIOutput6.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput6
 	{
@@ -280,6 +280,14 @@ public unsafe partial struct IDXGIOutput6 : INativeGuid
 	public HResult CheckHardwareCompositionSupport(uint* pFlags)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput6*, uint*, int>)(lpVtbl[28]))((IDXGIOutput6*)Unsafe.AsPointer(ref this), pFlags);
+	}
+	public interface Interface : IDXGIOutput5.Interface
+	{
+		[VtblIndex(27)]
+		HResult GetDesc1(OutputDescription1* pDesc);
+
+		[VtblIndex(28)]
+		HResult CheckHardwareCompositionSupport(uint* pFlags);
 	}
 }
 

@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("73effe2a-70dc-45f8-9690-eff64c02429d")]
 [NativeTypeName("struct IDxcCompilerArgs : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcCompilerArgs : INativeGuid
+public unsafe partial struct IDxcCompilerArgs : IDxcCompilerArgs.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcCompilerArgs
 	{
@@ -106,6 +106,23 @@ public unsafe partial struct IDxcCompilerArgs : INativeGuid
 	public HResult AddDefines(DxcDefine* pDefines, uint defineCount)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompilerArgs*, DxcDefine*, uint, int>)(lpVtbl[7]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pDefines, defineCount);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		ushort** GetArguments();
+
+		[VtblIndex(4)]
+		uint GetCount();
+
+		[VtblIndex(5)]
+		HResult AddArguments(ushort** pArguments, uint argCount);
+
+		[VtblIndex(6)]
+		HResult AddArgumentsUTF8(sbyte** pArguments, uint argCount);
+
+		[VtblIndex(7)]
+		HResult AddDefines(DxcDefine* pDefines, uint defineCount);
 	}
 }
 

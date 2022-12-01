@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd90691-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Resource : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1Resource : INativeGuid
+public unsafe partial struct ID2D1Resource : ID2D1Resource.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Resource
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID2D1Resource : INativeGuid
 	public void GetFactory(ID2D1Factory** factory)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Resource*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Resource*)Unsafe.AsPointer(ref this), factory);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void GetFactory(ID2D1Factory** factory);
 	}
 }
 

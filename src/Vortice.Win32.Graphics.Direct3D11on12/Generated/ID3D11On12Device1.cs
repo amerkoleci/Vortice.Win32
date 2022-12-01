@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11on12;
 [Guid("bdb64df4-ea2f-4c70-b861-aaab1258bb5d")]
 [NativeTypeName("struct ID3D11On12Device1 : ID3D11On12Device")]
 [NativeInheritance("ID3D11On12Device")]
-public unsafe partial struct ID3D11On12Device1 : INativeGuid
+public unsafe partial struct ID3D11On12Device1 : ID3D11On12Device1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11On12Device1
 	{
@@ -104,6 +104,11 @@ public unsafe partial struct ID3D11On12Device1 : INativeGuid
 	public HResult GetD3D12Device(Guid* riid, void** ppvDevice)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device1*, Guid*, void**, int>)(lpVtbl[6]))((ID3D11On12Device1*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+	}
+	public interface Interface : ID3D11On12Device.Interface
+	{
+		[VtblIndex(6)]
+		HResult GetD3D12Device(Guid* riid, void** ppvDevice);
 	}
 }
 

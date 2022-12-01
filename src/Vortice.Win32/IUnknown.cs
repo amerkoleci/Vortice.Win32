@@ -4,7 +4,7 @@
 namespace Win32;
 
 [Guid("00000000-0000-0000-C000-000000000046")]
-public unsafe partial struct IUnknown : INativeGuid
+public unsafe partial struct IUnknown : IUnknown.Interface, INativeGuid
 {
     public static ref readonly Guid IID_IUnknown
     {
@@ -68,5 +68,19 @@ public unsafe partial struct IUnknown : INativeGuid
 #else
         return ((delegate* unmanaged[Stdcall]<IUnknown*, uint>)(lpVtbl[2]))((IUnknown*)Unsafe.AsPointer(ref this));
 #endif
+    }
+
+    public interface Interface : INativeGuid
+    {
+        [VtblIndex(0)]
+        HResult QueryInterface(Guid* riid, void** ppvObject);
+
+        [VtblIndex(1)]
+        [return: NativeTypeName("ULONG")]
+        uint AddRef();
+
+        [VtblIndex(2)]
+        [return: NativeTypeName("ULONG")]
+        uint Release();
     }
 }

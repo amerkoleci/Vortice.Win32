@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("a7f026da-a5f8-4487-a564-15e34357651e")]
 [NativeTypeName("struct ID3D11VideoContext1 : ID3D11VideoContext")]
 [NativeInheritance("ID3D11VideoContext")]
-public unsafe partial struct ID3D11VideoContext1 : INativeGuid
+public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoContext1
 	{
@@ -680,6 +680,50 @@ public unsafe partial struct ID3D11VideoContext1 : INativeGuid
 	public HResult VideoProcessorGetBehaviorHints(ID3D11VideoProcessor* pVideoProcessor, uint OutputWidth, uint OutputHeight, Graphics.Dxgi.Common.Format OutputFormat, uint StreamCount, VideoProcessorStreamBehaviorHint* pStreams, uint* pBehaviorHints)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, uint, Graphics.Dxgi.Common.Format, uint, VideoProcessorStreamBehaviorHint*, uint*, int>)(lpVtbl[78]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, OutputWidth, OutputHeight, OutputFormat, StreamCount, pStreams, pBehaviorHints);
+	}
+	public interface Interface : ID3D11VideoContext.Interface
+	{
+		[VtblIndex(65)]
+		HResult SubmitDecoderBuffers1(ID3D11VideoDecoder* pDecoder, uint NumBuffers, VideoDecoderBufferDescription1* pBufferDesc);
+
+		[VtblIndex(66)]
+		HResult GetDataForNewHardwareKey(ID3D11CryptoSession* pCryptoSession, uint PrivateInputSize, void* pPrivatInputData, ulong* pPrivateOutputData);
+
+		[VtblIndex(67)]
+		HResult CheckCryptoSessionStatus(ID3D11CryptoSession* pCryptoSession, CryptoSessionStatus* pStatus);
+
+		[VtblIndex(68)]
+		HResult DecoderEnableDownsampling(ID3D11VideoDecoder* pDecoder, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, VideoSampleDescription* pOutputDesc, uint ReferenceFrameCount);
+
+		[VtblIndex(69)]
+		HResult DecoderUpdateDownsampling(ID3D11VideoDecoder* pDecoder, VideoSampleDescription* pOutputDesc);
+
+		[VtblIndex(70)]
+		void VideoProcessorSetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.Common.ColorSpaceType ColorSpace);
+
+		[VtblIndex(71)]
+		void VideoProcessorSetOutputShaderUsage(ID3D11VideoProcessor* pVideoProcessor, Bool32 ShaderUsage);
+
+		[VtblIndex(72)]
+		void VideoProcessorGetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.Common.ColorSpaceType* pColorSpace);
+
+		[VtblIndex(73)]
+		void VideoProcessorGetOutputShaderUsage(ID3D11VideoProcessor* pVideoProcessor, Bool32* pShaderUsage);
+
+		[VtblIndex(74)]
+		void VideoProcessorSetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.Common.ColorSpaceType ColorSpace);
+
+		[VtblIndex(75)]
+		void VideoProcessorSetStreamMirror(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Bool32 FlipHorizontal, Bool32 FlipVertical);
+
+		[VtblIndex(76)]
+		void VideoProcessorGetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.Common.ColorSpaceType* pColorSpace);
+
+		[VtblIndex(77)]
+		void VideoProcessorGetStreamMirror(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnable, Bool32* pFlipHorizontal, Bool32* pFlipVertical);
+
+		[VtblIndex(78)]
+		HResult VideoProcessorGetBehaviorHints(ID3D11VideoProcessor* pVideoProcessor, uint OutputWidth, uint OutputHeight, Graphics.Dxgi.Common.Format OutputFormat, uint StreamCount, VideoProcessorStreamBehaviorHint* pStreams, uint* pBehaviorHints);
 	}
 }
 

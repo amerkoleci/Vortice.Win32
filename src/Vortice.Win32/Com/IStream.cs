@@ -1,15 +1,12 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-
 namespace Win32.Com;
 
 [Guid("0000000C-0000-0000-C000-000000000046")]
 [NativeTypeName("struct IStream : ISequentialStream")]
 [NativeInheritance("ISequentialStream")]
-public unsafe partial struct IStream
+public unsafe partial struct IStream : IStream.Interface, INativeGuid
 {
     public static ref readonly Guid IID_IStream
     {
@@ -34,7 +31,11 @@ public unsafe partial struct IStream
         }
     }
 
+#if NET6_0_OR_GREATER
+    static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IStream));
+#else
     public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IStream));
+#endif
 
     public void** lpVtbl;
 
@@ -82,16 +83,16 @@ public unsafe partial struct IStream
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(5)]
-    public HResult Seek(LargeInteger dlibMove, uint dwOrigin, LargeInteger* plibNewPosition)
+    public HResult Seek(LargeInteger dlibMove, uint dwOrigin, ULargeInteger* plibNewPosition)
     {
-        return ((delegate* unmanaged[Stdcall]<IStream*, LargeInteger, uint, LargeInteger*, int>)(lpVtbl[5]))((IStream*)Unsafe.AsPointer(ref this), dlibMove, dwOrigin, plibNewPosition);
+        return ((delegate* unmanaged[Stdcall]<IStream*, LargeInteger, uint, ULargeInteger*, int>)(lpVtbl[5]))((IStream*)Unsafe.AsPointer(ref this), dlibMove, dwOrigin, plibNewPosition);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [VtblIndex(6)]
-    public HResult SetSize(LargeInteger libNewSize)
+    public HResult SetSize(ULargeInteger libNewSize)
     {
-        return ((delegate* unmanaged[Stdcall]<IStream*, LargeInteger, int>)(lpVtbl[6]))((IStream*)Unsafe.AsPointer(ref this), libNewSize);
+        return ((delegate* unmanaged[Stdcall]<IStream*, ULargeInteger, int>)(lpVtbl[6]))((IStream*)Unsafe.AsPointer(ref this), libNewSize);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -142,5 +143,35 @@ public unsafe partial struct IStream
     public HResult Clone(IStream** ppstm)
     {
         return ((delegate* unmanaged[Stdcall]<IStream*, IStream**, int>)(lpVtbl[13]))((IStream*)Unsafe.AsPointer(ref this), ppstm);
+    }
+
+    public interface Interface : ISequentialStream.Interface
+    {
+        [VtblIndex(5)]
+        HResult Seek(LargeInteger dlibMove, uint dwOrigin, ULargeInteger* plibNewPosition);
+
+        [VtblIndex(6)]
+        HResult SetSize(ULargeInteger libNewSize);
+
+        [VtblIndex(7)]
+        HResult CopyTo(IStream* pstm, ULargeInteger cb, ULargeInteger* pcbRead, ULargeInteger* pcbWritten);
+
+        [VtblIndex(8)]
+        HResult Commit( uint grfCommitFlags);
+
+        [VtblIndex(9)]
+        HResult Revert();
+
+        [VtblIndex(10)]
+        HResult LockRegion(ULargeInteger libOffset, ULargeInteger cb, uint dwLockType);
+
+        [VtblIndex(11)]
+        HResult UnlockRegion(ULargeInteger libOffset, ULargeInteger cb, uint dwLockType);
+
+        //[VtblIndex(12)]
+        //HResult Stat(STATSTG* pstatstg, [NativeTypeName("DWORD")] uint grfStatFlag);
+
+        [VtblIndex(13)]
+        HResult Clone(IStream** ppstm);
     }
 }

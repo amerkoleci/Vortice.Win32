@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("ac7b67a6-183e-49c1-a823-0ebe40b0db29")]
 [NativeTypeName("struct ID2D1SvgElement : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1SvgElement : INativeGuid
+public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgElement
 	{
@@ -320,6 +320,98 @@ public unsafe partial struct ID2D1SvgElement : INativeGuid
 	public HResult GetAttributeValueLength(ushort* name, SvgAttributeStringType type, uint* valueLength)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, uint*, int>)(lpVtbl[33]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, valueLength);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		void GetDocument(ID2D1SvgDocument** document);
+
+		[VtblIndex(5)]
+		HResult GetTagName(ushort* name, uint nameCount);
+
+		[VtblIndex(6)]
+		uint GetTagNameLength();
+
+		[VtblIndex(7)]
+		Bool32 IsTextContent();
+
+		[VtblIndex(8)]
+		void GetParent(ID2D1SvgElement** parent);
+
+		[VtblIndex(9)]
+		Bool32 HasChildren();
+
+		[VtblIndex(10)]
+		void GetFirstChild(ID2D1SvgElement** child);
+
+		[VtblIndex(11)]
+		void GetLastChild(ID2D1SvgElement** child);
+
+		[VtblIndex(12)]
+		HResult GetPreviousChild(ID2D1SvgElement* referenceChild, ID2D1SvgElement** previousChild);
+
+		[VtblIndex(13)]
+		HResult GetNextChild(ID2D1SvgElement* referenceChild, ID2D1SvgElement** nextChild);
+
+		[VtblIndex(14)]
+		HResult InsertChildBefore(ID2D1SvgElement* newChild, ID2D1SvgElement* referenceChild);
+
+		[VtblIndex(15)]
+		HResult AppendChild(ID2D1SvgElement* newChild);
+
+		[VtblIndex(16)]
+		HResult ReplaceChild(ID2D1SvgElement* newChild, ID2D1SvgElement* oldChild);
+
+		[VtblIndex(17)]
+		HResult RemoveChild(ID2D1SvgElement* oldChild);
+
+		[VtblIndex(18)]
+		HResult CreateChild(ushort* tagName, ID2D1SvgElement** newChild);
+
+		[VtblIndex(19)]
+		Bool32 IsAttributeSpecified(ushort* name, Bool32* inherited);
+
+		[VtblIndex(20)]
+		uint GetSpecifiedAttributeCount();
+
+		[VtblIndex(21)]
+		HResult GetSpecifiedAttributeName(uint index, ushort* name, uint nameCount, Bool32* inherited);
+
+		[VtblIndex(22)]
+		HResult GetSpecifiedAttributeNameLength(uint index, uint* nameLength, Bool32* inherited);
+
+		[VtblIndex(23)]
+		HResult RemoveAttribute(ushort* name);
+
+		[VtblIndex(24)]
+		HResult SetTextValue(ushort* name, uint nameCount);
+
+		[VtblIndex(25)]
+		HResult GetTextValue(ushort* name, uint nameCount);
+
+		[VtblIndex(26)]
+		uint GetTextValueLength();
+
+		[VtblIndex(27)]
+		HResult SetAttributeValue(ushort* name, ID2D1SvgAttribute* value);
+
+		[VtblIndex(28)]
+		HResult SetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
+
+		[VtblIndex(29)]
+		HResult SetAttributeValue(ushort* name, SvgAttributeStringType type, ushort* value);
+
+		[VtblIndex(30)]
+		HResult GetAttributeValue(ushort* name, Guid* riid, void** value);
+
+		[VtblIndex(31)]
+		HResult GetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
+
+		[VtblIndex(32)]
+		HResult GetAttributeValue(ushort* name, SvgAttributeStringType type, ushort* value, uint valueCount);
+
+		[VtblIndex(33)]
+		HResult GetAttributeValueLength(ushort* name, SvgAttributeStringType type, uint* valueLength);
 	}
 }
 

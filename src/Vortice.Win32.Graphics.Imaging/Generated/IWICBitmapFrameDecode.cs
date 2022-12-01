@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("3b16811b-6a43-4ec9-a813-3d930c13b940")]
 [NativeTypeName("struct IWICBitmapFrameDecode : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICBitmapFrameDecode : INativeGuid
+public unsafe partial struct IWICBitmapFrameDecode : IWICBitmapFrameDecode.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapFrameDecode
 	{
@@ -136,6 +136,17 @@ public unsafe partial struct IWICBitmapFrameDecode : INativeGuid
 	public HResult GetThumbnail(IWICBitmapSource** ppIThumbnail)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameDecode*, IWICBitmapSource**, int>)(lpVtbl[10]))((IWICBitmapFrameDecode*)Unsafe.AsPointer(ref this), ppIThumbnail);
+	}
+	public interface Interface : IWICBitmapSource.Interface
+	{
+		[VtblIndex(8)]
+		HResult GetMetadataQueryReader(IWICMetadataQueryReader** ppIMetadataQueryReader);
+
+		[VtblIndex(9)]
+		HResult GetColorContexts(uint cCount, IWICColorContext** ppIColorContexts, uint* pcActualCount);
+
+		[VtblIndex(10)]
+		HResult GetThumbnail(IWICBitmapSource** ppIThumbnail);
 	}
 }
 

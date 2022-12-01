@@ -7,6 +7,22 @@ namespace Win32;
 
 public static unsafe partial class Apis
 {
+    [DoesNotReturn]
+    public static void ThrowExternalException(string methodName, int errorCode)
+    {
+        var message = string.Format("'{0}' failed with an error code of '{1}'", methodName, errorCode);
+        throw new ExternalException(message, errorCode);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void ThrowIfFailed(HResult value, [CallerArgumentExpression("value")] string? valueExpression = null)
+    {
+        if (value.Failure)
+        {
+            ThrowExternalException(valueExpression ?? "Method", value);
+        }
+    }
+
     /// <summary>Retrieves the GUID of of a specified type.</summary>
     /// <param name="value">A value of type <typeparamref name="T"/>.</param>
     /// <typeparam name="T">The type to retrieve the GUID for.</typeparam>

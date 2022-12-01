@@ -61,7 +61,7 @@ public static unsafe class Program
         string textureFile = Path.Combine(assetsPath, "10points.png");
 
         using ComPtr<IWICImagingFactory2> wicImagingFactory = default;
-        CreateWICImagingFactory(wicImagingFactory.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(CreateWICImagingFactory(wicImagingFactory.GetAddressOf()));
 
         using ComPtr<IWICBitmapDecoder> decoder =
             ((IWICImagingFactory*)wicImagingFactory.Get())->CreateDecoderFromFilename(textureFile);
@@ -69,14 +69,14 @@ public static unsafe class Program
         using ComPtr<IWICBitmapFrameDecode> wicBitmapFrameDecode = default;
 
         // Get the first frame of the loaded image (if more are present, they will be ignored)
-        decoder.Get()->GetFrame(0, wicBitmapFrameDecode.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(decoder.Get()->GetFrame(0, wicBitmapFrameDecode.GetAddressOf()));
 
         uint width;
         uint height;
         Guid pixelFormat;
 
-        wicBitmapFrameDecode.Get()->GetSize(&width, &height).ThrowIfFailed();
-        wicBitmapFrameDecode.Get()->GetPixelFormat(&pixelFormat).ThrowIfFailed();
+        ThrowIfFailed(wicBitmapFrameDecode.Get()->GetSize(&width, &height));
+        ThrowIfFailed(wicBitmapFrameDecode.Get()->GetPixelFormat(&pixelFormat));
         //wicBitmapFrameDecode.Get()->CopyPixels(rowPitch, pixels);
     }
 
@@ -87,13 +87,14 @@ public static unsafe class Program
 
         using ComPtr<ID2D1Factory2> d2d1Factory2 = default;
 
-        D2D1CreateFactory(FactoryType.MultiThreaded,
+        ThrowIfFailed(D2D1CreateFactory(FactoryType.MultiThreaded,
             __uuidof<ID2D1Factory2>(),
             default,
-            d2d1Factory2.GetVoidAddressOf()).ThrowIfFailed();
+            d2d1Factory2.GetVoidAddressOf()));
 
         using ComPtr<IDWriteFactory> dwriteFactory = default;
-        DWriteCreateFactory(DWriteFactoryType.Shared, __uuidof<IDWriteFactory>(), dwriteFactory.GetVoidAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(
+            DWriteCreateFactory(DWriteFactoryType.Shared, __uuidof<IDWriteFactory>(), dwriteFactory.GetVoidAddressOf()));
 
         using ComPtr<IDWriteTextFormat> textFormat =
             dwriteFactory.Get()->CreateTextFormat(
@@ -103,8 +104,8 @@ public static unsafe class Program
                 localeName: "en-us".AsSpan()
                 );
 
-        textFormat.Get()->SetTextAlignment(TextAlignment.Center).ThrowIfFailed();
-        textFormat.Get()->SetParagraphAlignment(ParagraphAlignment.Center).ThrowIfFailed();
+        ThrowIfFailed(textFormat.Get()->SetTextAlignment(TextAlignment.Center));
+        ThrowIfFailed(textFormat.Get()->SetParagraphAlignment(ParagraphAlignment.Center));
     }
 
     public static void Main()
@@ -135,7 +136,8 @@ public static unsafe class Program
             using ComPtr<IDXGIFactory5> factory5 = default;
             if (factory.CopyTo(&factory5).Success)
             {
-                bool isTearingSupported = factory5.Get()->CheckFeatureSupport<Bool32>(Win32.Graphics.Dxgi.Feature.PresentAllowTearing);
+                var test = factory5.Get()->IsTearingSupported();
+                //bool isTearingSupported = factory5.Get()->CheckFeatureSupport<Bool32>(Win32.Graphics.Dxgi.Feature.PresentAllowTearing);
             }
         }
 
@@ -153,7 +155,7 @@ public static unsafe class Program
                 adapterIndex++)
             {
                 AdapterDescription1 desc = default;
-                adapter.Get()->GetDesc1(&desc).ThrowIfFailed();
+                ThrowIfFailed(adapter.Get()->GetDesc1(&desc));
 
                 if ((desc.Flags & AdapterFlags.Software) != AdapterFlags.None)
                     continue;
@@ -170,7 +172,7 @@ public static unsafe class Program
                 adapterIndex++)
             {
                 AdapterDescription1 desc = default;
-                adapter.Get()->GetDesc1(&desc).ThrowIfFailed();
+                ThrowIfFailed(adapter.Get()->GetDesc1(&desc));
 
                 if ((desc.Flags & AdapterFlags.Software) != AdapterFlags.None)
                     continue;
@@ -198,14 +200,14 @@ public static unsafe class Program
         FeatureLevel featureLevel;
         using ComPtr<ID3D11DeviceContext> tempImmediateContext = default;
 
-        D3D11CreateDevice(
+        ThrowIfFailed(D3D11CreateDevice(
             (IDXGIAdapter*)adapter.Get(),
             DriverType.Unknown,
             creationFlags,
             featureLevels,
             tempDevice.GetAddressOf(),
             &featureLevel,
-            tempImmediateContext.GetAddressOf()).ThrowIfFailed();
+            tempImmediateContext.GetAddressOf()));
 
 #if DEBUG
         using ComPtr<ID3D11Debug> d3dDebug = default;
@@ -233,8 +235,8 @@ public static unsafe class Program
         using ComPtr<ID3D11Device1> d3dDevice = default;
         using ComPtr<ID3D11DeviceContext1> immediateContext = default;
 
-        tempDevice.CopyTo(&d3dDevice).ThrowIfFailed();
-        tempImmediateContext.CopyTo(&immediateContext).ThrowIfFailed();
+        ThrowIfFailed(tempDevice.CopyTo(&d3dDevice));
+        ThrowIfFailed(tempImmediateContext.CopyTo(&immediateContext));
 
         ReadOnlySpan<VertexPositionColor> triangleVertices = stackalloc VertexPositionColor[]
         {
@@ -249,10 +251,11 @@ public static unsafe class Program
         using ComPtr<ID3D11DepthStencilView> depthStencilTextureView = default;
 
         Texture2DDescription texture2DDesc = new(Format.D32Float, 256, 256, 1, 1, BindFlags.DepthStencil);
-        tempDevice.Get()->CreateTexture2D(&texture2DDesc, null, depthStencilTexture.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(tempDevice.Get()->CreateTexture2D(&texture2DDesc, null, depthStencilTexture.GetAddressOf()));
         depthStencilTexture.Get()->GetDesc(&texture2DDesc);
-        ((ID3D11DeviceChild*)depthStencilTexture.Get())->DebugName = "CIAO";
+        depthStencilTexture.Get()->SetDebugName("CIAO");
 
-        tempDevice.Get()->CreateDepthStencilView((ID3D11Resource*)depthStencilTexture.Get(), null, depthStencilTextureView.GetAddressOf()).ThrowIfFailed();
+        ThrowIfFailed(tempDevice.Get()->CreateDepthStencilView(
+            (ID3D11Resource*)depthStencilTexture.Get(), null, depthStencilTextureView.GetAddressOf()));
     }
 }

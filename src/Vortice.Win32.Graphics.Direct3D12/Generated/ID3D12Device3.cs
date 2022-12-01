@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("81dadc15-2bad-4392-93c5-101345c4aa98")]
 [NativeTypeName("struct ID3D12Device3 : ID3D12Device2")]
 [NativeInheritance("ID3D12Device2")]
-public unsafe partial struct ID3D12Device3 : INativeGuid
+public unsafe partial struct ID3D12Device3 : ID3D12Device3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device3
 	{
@@ -459,6 +459,17 @@ public unsafe partial struct ID3D12Device3 : INativeGuid
 	public HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[50]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
+	}
+	public interface Interface : ID3D12Device2.Interface
+	{
+		[VtblIndex(48)]
+		HResult OpenExistingHeapFromAddress(void* pAddress, Guid* riid, void** ppvHeap);
+
+		[VtblIndex(49)]
+		HResult OpenExistingHeapFromFileMapping(Handle hFileMapping, Guid* riid, void** ppvHeap);
+
+		[VtblIndex(50)]
+		HResult EnqueueMakeResident(ResidencyFlags Flags, uint NumObjects, ID3D12Pageable** ppObjects, ID3D12Fence* pFenceToSignal, ulong FenceValueToSignal);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("10ec4d5b-975a-4689-b9e4-d0aac30fe333")]
 [NativeTypeName("struct ID3D11VideoDevice : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11VideoDevice : INativeGuid
+public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoDevice
 	{
@@ -208,6 +208,59 @@ public unsafe partial struct ID3D11VideoDevice : INativeGuid
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, IUnknown*, int>)(lpVtbl[19]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), guid, pData);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateVideoDecoder(VideoDecoderDescription* pVideoDesc, VideoDecoderConfig* pConfig, ID3D11VideoDecoder** ppDecoder);
+
+		[VtblIndex(4)]
+		HResult CreateVideoProcessor(ID3D11VideoProcessorEnumerator* pEnum, uint RateConversionIndex, ID3D11VideoProcessor** ppVideoProcessor);
+
+		[VtblIndex(5)]
+		HResult CreateAuthenticatedChannel(AuthenticatedChannelType ChannelType, ID3D11AuthenticatedChannel** ppAuthenticatedChannel);
+
+		[VtblIndex(6)]
+		HResult CreateCryptoSession(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, ID3D11CryptoSession** ppCryptoSession);
+
+		[VtblIndex(7)]
+		HResult CreateVideoDecoderOutputView(ID3D11Resource* pResource, VideoDecoderOutputViewDescription* pDesc, ID3D11VideoDecoderOutputView** ppVDOVView);
+
+		[VtblIndex(8)]
+		HResult CreateVideoProcessorInputView(ID3D11Resource* pResource, ID3D11VideoProcessorEnumerator* pEnum, VideoProcessorInputViewDescription* pDesc, ID3D11VideoProcessorInputView** ppVPIView);
+
+		[VtblIndex(9)]
+		HResult CreateVideoProcessorOutputView(ID3D11Resource* pResource, ID3D11VideoProcessorEnumerator* pEnum, VideoProcessorOutputViewDescription* pDesc, ID3D11VideoProcessorOutputView** ppVPOView);
+
+		[VtblIndex(10)]
+		HResult CreateVideoProcessorEnumerator(VideoProcessorContentDescription* pDesc, ID3D11VideoProcessorEnumerator** ppEnum);
+
+		[VtblIndex(11)]
+		uint GetVideoDecoderProfileCount();
+
+		[VtblIndex(12)]
+		HResult GetVideoDecoderProfile(uint Index, Guid* pDecoderProfile);
+
+		[VtblIndex(13)]
+		HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, Graphics.Dxgi.Common.Format Format, Bool32* pSupported);
+
+		[VtblIndex(14)]
+		HResult GetVideoDecoderConfigCount(VideoDecoderDescription* pDesc, uint* pCount);
+
+		[VtblIndex(15)]
+		HResult GetVideoDecoderConfig(VideoDecoderDescription* pDesc, uint Index, VideoDecoderConfig* pConfig);
+
+		[VtblIndex(16)]
+		HResult GetContentProtectionCaps(Guid* pCryptoType, Guid* pDecoderProfile, VideoContentProtectionCaps* pCaps);
+
+		[VtblIndex(17)]
+		HResult CheckCryptoKeyExchange(Guid* pCryptoType, Guid* pDecoderProfile, uint Index, Guid* pKeyExchangeType);
+
+		[VtblIndex(18)]
+		HResult SetPrivateData(Guid* guid, uint DataSize, void* pData);
+
+		[VtblIndex(19)]
+		HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("5009834f-2d6a-41ce-9e1b-17c5aff7a782")]
 [NativeTypeName("struct IWICBitmapFlipRotator : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICBitmapFlipRotator : INativeGuid
+public unsafe partial struct IWICBitmapFlipRotator : IWICBitmapFlipRotator.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapFlipRotator
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct IWICBitmapFlipRotator : INativeGuid
 	public HResult Initialize(IWICBitmapSource* pISource, WICBitmapTransformOptions options)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapFlipRotator*, IWICBitmapSource*, WICBitmapTransformOptions, int>)(lpVtbl[8]))((IWICBitmapFlipRotator*)Unsafe.AsPointer(ref this), pISource, options);
+	}
+	public interface Interface : IWICBitmapSource.Interface
+	{
+		[VtblIndex(8)]
+		HResult Initialize(IWICBitmapSource* pISource, WICBitmapTransformOptions options);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd9069d-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1StrokeStyle : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1StrokeStyle : INativeGuid
+public unsafe partial struct ID2D1StrokeStyle : ID2D1StrokeStyle.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1StrokeStyle
 	{
@@ -152,6 +152,35 @@ public unsafe partial struct ID2D1StrokeStyle : INativeGuid
 	public void GetDashes(float* dashes, uint dashesCount)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, float*, uint, void>)(lpVtbl[12]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this), dashes, dashesCount);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		CapStyle GetStartCap();
+
+		[VtblIndex(5)]
+		CapStyle GetEndCap();
+
+		[VtblIndex(6)]
+		CapStyle GetDashCap();
+
+		[VtblIndex(7)]
+		float GetMiterLimit();
+
+		[VtblIndex(8)]
+		LineJoin GetLineJoin();
+
+		[VtblIndex(9)]
+		float GetDashOffset();
+
+		[VtblIndex(10)]
+		DashStyle GetDashStyle();
+
+		[VtblIndex(11)]
+		uint GetDashesCount();
+
+		[VtblIndex(12)]
+		void GetDashes(float* dashes, uint dashesCount);
 	}
 }
 

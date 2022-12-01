@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906c2-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Mesh : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Mesh : INativeGuid
+public unsafe partial struct ID2D1Mesh : ID2D1Mesh.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Mesh
 	{
@@ -88,6 +88,11 @@ public unsafe partial struct ID2D1Mesh : INativeGuid
 	public HResult Open(ID2D1TessellationSink** tessellationSink)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Mesh*, ID2D1TessellationSink**, int>)(lpVtbl[4]))((ID2D1Mesh*)Unsafe.AsPointer(ref this), tessellationSink);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		HResult Open(ID2D1TessellationSink** tessellationSink);
 	}
 }
 

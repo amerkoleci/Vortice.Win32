@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("e6c9647e-9d6a-4c3b-b94c-524b5a6c343d")]
 [NativeTypeName("struct IDxcPdbUtils : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcPdbUtils : INativeGuid
+public unsafe partial struct IDxcPdbUtils : IDxcPdbUtils.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcPdbUtils
 	{
@@ -239,6 +239,80 @@ public unsafe partial struct IDxcPdbUtils : INativeGuid
 	public HResult OverrideRootSignature(ushort* pRootSignature)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcPdbUtils*, ushort*, int>)(lpVtbl[26]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pRootSignature);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Load(IDxcBlob* pPdbOrDxil);
+
+		[VtblIndex(4)]
+		HResult GetSourceCount(uint* pCount);
+
+		[VtblIndex(5)]
+		HResult GetSource(uint uIndex, IDxcBlobEncoding** ppResult);
+
+		[VtblIndex(6)]
+		HResult GetSourceName(uint uIndex, char** pResult);
+
+		[VtblIndex(7)]
+		HResult GetFlagCount(uint* pCount);
+
+		[VtblIndex(8)]
+		HResult GetFlag(uint uIndex, char** pResult);
+
+		[VtblIndex(9)]
+		HResult GetArgCount(uint* pCount);
+
+		[VtblIndex(10)]
+		HResult GetArg(uint uIndex, char** pResult);
+
+		[VtblIndex(11)]
+		HResult GetArgPairCount(uint* pCount);
+
+		[VtblIndex(12)]
+		HResult GetArgPair(uint uIndex, char** pName, char** pValue);
+
+		[VtblIndex(13)]
+		HResult GetDefineCount(uint* pCount);
+
+		[VtblIndex(14)]
+		HResult GetDefine(uint uIndex, char** pResult);
+
+		[VtblIndex(15)]
+		HResult GetTargetProfile(char** pResult);
+
+		[VtblIndex(16)]
+		HResult GetEntryPoint(char** pResult);
+
+		[VtblIndex(17)]
+		HResult GetMainFileName(char** pResult);
+
+		[VtblIndex(18)]
+		HResult GetHash(IDxcBlob** ppResult);
+
+		[VtblIndex(19)]
+		HResult GetName(char** pResult);
+
+		[VtblIndex(20)]
+		Bool32 IsFullPDB();
+
+		[VtblIndex(21)]
+		HResult GetFullPDB(IDxcBlob** ppFullPDB);
+
+		[VtblIndex(22)]
+		HResult GetVersionInfo(IDxcVersionInfo** ppVersionInfo);
+
+		[VtblIndex(23)]
+		HResult SetCompiler(IDxcCompiler3* pCompiler);
+
+		[VtblIndex(24)]
+		HResult CompileForFullPDB(IDxcResult** ppResult);
+
+		[VtblIndex(25)]
+		HResult OverrideArgs(DxcArgPair* pArgPairs, uint uNumArgPairs);
+
+		[VtblIndex(26)]
+		HResult OverrideRootSignature(ushort* pRootSignature);
 	}
 }
 

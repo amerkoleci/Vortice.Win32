@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("28506e39-ebf6-46a1-bb47-fd85565ab957")]
 [NativeTypeName("struct ID2D1DrawingStateBlock : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1DrawingStateBlock : INativeGuid
+public unsafe partial struct ID2D1DrawingStateBlock : ID2D1DrawingStateBlock.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DrawingStateBlock
 	{
@@ -112,6 +112,20 @@ public unsafe partial struct ID2D1DrawingStateBlock : INativeGuid
 	public void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DrawingStateBlock*, Graphics.DirectWrite.IDWriteRenderingParams**, void>)(lpVtbl[7]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), textRenderingParams);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		void GetDescription(DrawingStateDescription* stateDescription);
+
+		[VtblIndex(5)]
+		void SetDescription(DrawingStateDescription* stateDescription);
+
+		[VtblIndex(6)]
+		void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams);
+
+		[VtblIndex(7)]
+		void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams);
 	}
 }
 

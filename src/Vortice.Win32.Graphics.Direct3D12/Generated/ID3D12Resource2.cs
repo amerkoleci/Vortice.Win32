@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("be36ec3b-ea85-4aeb-a45a-e9d76404a495")]
 [NativeTypeName("struct ID3D12Resource2 : ID3D12Resource1")]
 [NativeInheritance("ID3D12Resource1")]
-public unsafe partial struct ID3D12Resource2 : INativeGuid
+public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Resource2
 	{
@@ -186,6 +186,11 @@ public unsafe partial struct ID3D12Resource2 : INativeGuid
 	{
 		ResourceDescription1 result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12Resource2*, ResourceDescription1*, ResourceDescription1*>)(lpVtbl[16]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), &result);
+	}
+	public interface Interface : ID3D12Resource1.Interface
+	{
+		[VtblIndex(16)]
+		ResourceDescription1 GetDesc1();
 	}
 }
 

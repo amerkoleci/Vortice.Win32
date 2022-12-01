@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("8339fde3-106f-47ab-8373-1c6295eb10b3")]
 [NativeTypeName("struct IDWriteInlineObject : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteInlineObject : INativeGuid
+public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteInlineObject
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IDWriteInlineObject : INativeGuid
 	public HResult GetBreakConditions(BreakCondition* breakConditionBefore, BreakCondition* breakConditionAfter)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, BreakCondition*, BreakCondition*, int>)(lpVtbl[6]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), breakConditionBefore, breakConditionAfter);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect);
+
+		[VtblIndex(4)]
+		HResult GetMetrics(InlineObjectMetrics* metrics);
+
+		[VtblIndex(5)]
+		HResult GetOverhangMetrics(OverhangMetrics* overhangs);
+
+		[VtblIndex(6)]
+		HResult GetBreakConditions(BreakCondition* breakConditionBefore, BreakCondition* breakConditionAfter);
 	}
 }
 

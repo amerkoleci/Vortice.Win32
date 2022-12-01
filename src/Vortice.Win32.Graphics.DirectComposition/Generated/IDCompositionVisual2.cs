@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("e8de1639-4331-4b26-bc5f-6a321d347a85")]
 [NativeTypeName("struct IDCompositionVisual2 : IDCompositionVisual")]
 [NativeInheritance("IDCompositionVisual")]
-public unsafe partial struct IDCompositionVisual2 : INativeGuid
+public unsafe partial struct IDCompositionVisual2 : IDCompositionVisual2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionVisual2
 	{
@@ -224,6 +224,14 @@ public unsafe partial struct IDCompositionVisual2 : INativeGuid
 	public HResult SetBackFaceVisibility(BackfaceVisibility visibility)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual2*, BackfaceVisibility, int>)(lpVtbl[21]))((IDCompositionVisual2*)Unsafe.AsPointer(ref this), visibility);
+	}
+	public interface Interface : IDCompositionVisual.Interface
+	{
+		[VtblIndex(20)]
+		HResult SetOpacityMode(OpacityMode mode);
+
+		[VtblIndex(21)]
+		HResult SetBackFaceVisibility(BackfaceVisibility visibility);
 	}
 }
 

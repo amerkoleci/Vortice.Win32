@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("c37ea93a-e7aa-450d-b16f-9746cb0407f3")]
 [NativeTypeName("struct IDCompositionDevice : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionDevice : INativeGuid
+public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionDevice
 	{
@@ -264,6 +264,80 @@ public unsafe partial struct IDCompositionDevice : INativeGuid
 	public HResult CheckDeviceState(Bool32* pfValid)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, Bool32*, int>)(lpVtbl[26]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), pfValid);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Commit();
+
+		[VtblIndex(4)]
+		HResult WaitForCommitCompletion();
+
+		[VtblIndex(5)]
+		HResult GetFrameStatistics(FrameStatistics* statistics);
+
+		[VtblIndex(6)]
+		HResult CreateTargetForHwnd(IntPtr hwnd, Bool32 topmost, IDCompositionTarget** target);
+
+		[VtblIndex(7)]
+		HResult CreateVisual(IDCompositionVisual** visual);
+
+		[VtblIndex(8)]
+		HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionSurface** surface);
+
+		[VtblIndex(9)]
+		HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionVirtualSurface** virtualSurface);
+
+		[VtblIndex(10)]
+		HResult CreateSurfaceFromHandle(Handle handle, IUnknown** surface);
+
+		[VtblIndex(11)]
+		HResult CreateSurfaceFromHwnd(IntPtr hwnd, IUnknown** surface);
+
+		[VtblIndex(12)]
+		HResult CreateTranslateTransform(IDCompositionTranslateTransform** translateTransform);
+
+		[VtblIndex(13)]
+		HResult CreateScaleTransform(IDCompositionScaleTransform** scaleTransform);
+
+		[VtblIndex(14)]
+		HResult CreateRotateTransform(IDCompositionRotateTransform** rotateTransform);
+
+		[VtblIndex(15)]
+		HResult CreateSkewTransform(IDCompositionSkewTransform** skewTransform);
+
+		[VtblIndex(16)]
+		HResult CreateMatrixTransform(IDCompositionMatrixTransform** matrixTransform);
+
+		[VtblIndex(17)]
+		HResult CreateTransformGroup(IDCompositionTransform** transforms, uint elements, IDCompositionTransform** transformGroup);
+
+		[VtblIndex(18)]
+		HResult CreateTranslateTransform3D(IDCompositionTranslateTransform3D** translateTransform3D);
+
+		[VtblIndex(19)]
+		HResult CreateScaleTransform3D(IDCompositionScaleTransform3D** scaleTransform3D);
+
+		[VtblIndex(20)]
+		HResult CreateRotateTransform3D(IDCompositionRotateTransform3D** rotateTransform3D);
+
+		[VtblIndex(21)]
+		HResult CreateMatrixTransform3D(IDCompositionMatrixTransform3D** matrixTransform3D);
+
+		[VtblIndex(22)]
+		HResult CreateTransform3DGroup(IDCompositionTransform3D** transforms3D, uint elements, IDCompositionTransform3D** transform3DGroup);
+
+		[VtblIndex(23)]
+		HResult CreateEffectGroup(IDCompositionEffectGroup** effectGroup);
+
+		[VtblIndex(24)]
+		HResult CreateRectangleClip(IDCompositionRectangleClip** clip);
+
+		[VtblIndex(25)]
+		HResult CreateAnimation(IDCompositionAnimation** animation);
+
+		[VtblIndex(26)]
+		HResult CheckDeviceState(Bool32* pfValid);
 	}
 }
 

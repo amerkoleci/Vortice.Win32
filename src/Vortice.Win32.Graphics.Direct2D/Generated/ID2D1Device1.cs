@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("d21768e1-23a4-4823-a14b-7c3eba85d658")]
 [NativeTypeName("struct ID2D1Device1 : ID2D1Device")]
 [NativeInheritance("ID2D1Device")]
-public unsafe partial struct ID2D1Device1 : INativeGuid
+public unsafe partial struct ID2D1Device1 : ID2D1Device1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Device1
 	{
@@ -136,6 +136,17 @@ public unsafe partial struct ID2D1Device1 : INativeGuid
 	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext1** deviceContext1)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device1*, DeviceContextOptions, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device1*)Unsafe.AsPointer(ref this), options, deviceContext1);
+	}
+	public interface Interface : ID2D1Device.Interface
+	{
+		[VtblIndex(8)]
+		RenderingPriority GetRenderingPriority();
+
+		[VtblIndex(9)]
+		void SetRenderingPriority(RenderingPriority renderingPriority);
+
+		[VtblIndex(10)]
+		HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext1** deviceContext1);
 	}
 }
 

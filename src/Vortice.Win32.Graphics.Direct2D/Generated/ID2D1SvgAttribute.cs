@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("c9cdb0dd-f8c9-4e70-b7c2-301c80292c5e")]
 [NativeTypeName("struct ID2D1SvgAttribute : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1SvgAttribute : INativeGuid
+public unsafe partial struct ID2D1SvgAttribute : ID2D1SvgAttribute.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgAttribute
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct ID2D1SvgAttribute : INativeGuid
 	public HResult Clone(ID2D1SvgAttribute** attribute)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgAttribute*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgAttribute*)Unsafe.AsPointer(ref this), attribute);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		void GetElement(ID2D1SvgElement** element);
+
+		[VtblIndex(5)]
+		HResult Clone(ID2D1SvgAttribute** attribute);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("bebee9cb-83b0-4dcc-8132-b0aaa55eac96")]
 [NativeTypeName("struct IWICPlanarFormatConverter : IWICBitmapSource")]
 [NativeInheritance("IWICBitmapSource")]
-public unsafe partial struct IWICPlanarFormatConverter : INativeGuid
+public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConverter.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICPlanarFormatConverter
 	{
@@ -128,6 +128,14 @@ public unsafe partial struct IWICPlanarFormatConverter : INativeGuid
 	public HResult CanConvert(Guid* pSrcPixelFormats, uint cSrcPlanes, Guid* dstPixelFormat, Bool32* pfCanConvert)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, Guid*, uint, Guid*, Bool32*, int>)(lpVtbl[9]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pSrcPixelFormats, cSrcPlanes, dstPixelFormat, pfCanConvert);
+	}
+	public interface Interface : IWICBitmapSource.Interface
+	{
+		[VtblIndex(8)]
+		HResult Initialize(IWICBitmapSource** ppPlanes, uint cPlanes, Guid* dstFormat, WICBitmapDitherType dither, IWICPalette* pIPalette, double alphaThresholdPercent, WICBitmapPaletteType paletteTranslate);
+
+		[VtblIndex(9)]
+		HResult CanConvert(Guid* pSrcPixelFormats, uint cSrcPlanes, Guid* dstPixelFormat, Bool32* pfCanConvert);
 	}
 }
 

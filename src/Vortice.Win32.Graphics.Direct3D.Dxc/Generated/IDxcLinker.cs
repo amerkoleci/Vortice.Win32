@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("f1b5be2a-62dd-4327-a1c2-42ac1e1e78e6")]
 [NativeTypeName("struct IDxcLinker : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcLinker : INativeGuid
+public unsafe partial struct IDxcLinker : IDxcLinker.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcLinker
 	{
@@ -85,6 +85,14 @@ public unsafe partial struct IDxcLinker : INativeGuid
 	public HResult Link(ushort* pEntryName, ushort* pTargetProfile, ushort** pLibNames, uint libCount, ushort** pArguments, uint argCount, IDxcOperationResult** ppResult)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcLinker*, ushort*, ushort*, ushort**, uint, ushort**, uint, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcLinker*)Unsafe.AsPointer(ref this), pEntryName, pTargetProfile, pLibNames, libCount, pArguments, argCount, ppResult);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult RegisterLibrary(ushort* pLibName, IDxcBlob* pLib);
+
+		[VtblIndex(4)]
+		HResult Link(ushort* pEntryName, ushort* pTargetProfile, ushort** pLibNames, uint libCount, ushort** pArguments, uint argCount, IDxcOperationResult** ppResult);
 	}
 }
 

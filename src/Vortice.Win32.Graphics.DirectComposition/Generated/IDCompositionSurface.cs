@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("bb8a4953-2c99-4f5a-96f5-4819027fa3ac")]
 [NativeTypeName("struct IDCompositionSurface : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionSurface : INativeGuid
+public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionSurface
 	{
@@ -112,6 +112,23 @@ public unsafe partial struct IDCompositionSurface : INativeGuid
 	public HResult Scroll(RawRect* scrollRect, RawRect* clipRect, int offsetX, int offsetY)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionSurface*, RawRect*, RawRect*, int, int, int>)(lpVtbl[7]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult BeginDraw(RawRect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset);
+
+		[VtblIndex(4)]
+		HResult EndDraw();
+
+		[VtblIndex(5)]
+		HResult SuspendDraw();
+
+		[VtblIndex(6)]
+		HResult ResumeDraw();
+
+		[VtblIndex(7)]
+		HResult Scroll(RawRect* scrollRect, RawRect* clipRect, int offsetX, int offsetY);
 	}
 }
 

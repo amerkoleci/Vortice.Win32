@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("95c75a6e-3e8c-4ec2-85a8-aebcc551e59b")]
 [NativeTypeName("struct IWICDevelopRawNotificationCallback : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICDevelopRawNotificationCallback : INativeGuid
+public unsafe partial struct IWICDevelopRawNotificationCallback : IWICDevelopRawNotificationCallback.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICDevelopRawNotificationCallback
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IWICDevelopRawNotificationCallback : INativeGuid
 	public HResult Notify(uint NotificationMask)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRawNotificationCallback*, uint, int>)(lpVtbl[3]))((IWICDevelopRawNotificationCallback*)Unsafe.AsPointer(ref this), NotificationMask);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult Notify(uint NotificationMask);
 	}
 }
 

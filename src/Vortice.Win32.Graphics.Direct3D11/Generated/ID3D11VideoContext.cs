@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("61f21c45-3c0e-4a74-9cea-67100d9ad5e4")]
 [NativeTypeName("struct ID3D11VideoContext : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11VideoContext : INativeGuid
+public unsafe partial struct ID3D11VideoContext : ID3D11VideoContext.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoContext
 	{
@@ -568,6 +568,182 @@ public unsafe partial struct ID3D11VideoContext : INativeGuid
 	public void VideoProcessorGetStreamRotation(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnable, VideoProcessorRotation* pRotation)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext*, ID3D11VideoProcessor*, uint, Bool32*, VideoProcessorRotation*, void>)(lpVtbl[64]))((ID3D11VideoContext*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnable, pRotation);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		HResult GetDecoderBuffer(ID3D11VideoDecoder* pDecoder, VideoDecoderBufferType Type, uint* pBufferSize, void** ppBuffer);
+
+		[VtblIndex(8)]
+		HResult ReleaseDecoderBuffer(ID3D11VideoDecoder* pDecoder, VideoDecoderBufferType Type);
+
+		[VtblIndex(9)]
+		HResult DecoderBeginFrame(ID3D11VideoDecoder* pDecoder, ID3D11VideoDecoderOutputView* pView, uint ContentKeySize, void* pContentKey);
+
+		[VtblIndex(10)]
+		HResult DecoderEndFrame(ID3D11VideoDecoder* pDecoder);
+
+		[VtblIndex(11)]
+		HResult SubmitDecoderBuffers(ID3D11VideoDecoder* pDecoder, uint NumBuffers, VideoDecoderBufferDescription* pBufferDesc);
+
+		[VtblIndex(12)]
+		int DecoderExtension(ID3D11VideoDecoder* pDecoder, VideoDecoderExtension* pExtensionData);
+
+		[VtblIndex(13)]
+		void VideoProcessorSetOutputTargetRect(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, RawRect* pRect);
+
+		[VtblIndex(14)]
+		void VideoProcessorSetOutputBackgroundColor(ID3D11VideoProcessor* pVideoProcessor, Bool32 YCbCr, VideoColor* pColor);
+
+		[VtblIndex(15)]
+		void VideoProcessorSetOutputColorSpace(ID3D11VideoProcessor* pVideoProcessor, VideoProcessorColorSpace* pColorSpace);
+
+		[VtblIndex(16)]
+		void VideoProcessorSetOutputAlphaFillMode(ID3D11VideoProcessor* pVideoProcessor, VideoProcessorAlphaFillMode AlphaFillMode, uint StreamIndex);
+
+		[VtblIndex(17)]
+		void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size Size);
+
+		[VtblIndex(18)]
+		void VideoProcessorSetOutputStereoMode(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable);
+
+		[VtblIndex(19)]
+		int VideoProcessorSetOutputExtension(ID3D11VideoProcessor* pVideoProcessor, Guid* pExtensionGuid, uint DataSize, void* pData);
+
+		[VtblIndex(20)]
+		void VideoProcessorGetOutputTargetRect(ID3D11VideoProcessor* pVideoProcessor, Bool32* Enabled, RawRect* pRect);
+
+		[VtblIndex(21)]
+		void VideoProcessorGetOutputBackgroundColor(ID3D11VideoProcessor* pVideoProcessor, Bool32* pYCbCr, VideoColor* pColor);
+
+		[VtblIndex(22)]
+		void VideoProcessorGetOutputColorSpace(ID3D11VideoProcessor* pVideoProcessor, VideoProcessorColorSpace* pColorSpace);
+
+		[VtblIndex(23)]
+		void VideoProcessorGetOutputAlphaFillMode(ID3D11VideoProcessor* pVideoProcessor, VideoProcessorAlphaFillMode* pAlphaFillMode, uint* pStreamIndex);
+
+		[VtblIndex(24)]
+		void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize);
+
+		[VtblIndex(25)]
+		void VideoProcessorGetOutputStereoMode(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled);
+
+		[VtblIndex(26)]
+		int VideoProcessorGetOutputExtension(ID3D11VideoProcessor* pVideoProcessor, Guid* pExtensionGuid, uint DataSize, void* pData);
+
+		[VtblIndex(27)]
+		void VideoProcessorSetStreamFrameFormat(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoFrameFormat FrameFormat);
+
+		[VtblIndex(28)]
+		void VideoProcessorSetStreamColorSpace(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorColorSpace* pColorSpace);
+
+		[VtblIndex(29)]
+		void VideoProcessorSetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorOutputRate OutputRate, Bool32 RepeatFrame, Graphics.Dxgi.Common.Rational* pCustomRate);
+
+		[VtblIndex(30)]
+		void VideoProcessorSetStreamSourceRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, RawRect* pRect);
+
+		[VtblIndex(31)]
+		void VideoProcessorSetStreamDestRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, RawRect* pRect);
+
+		[VtblIndex(32)]
+		void VideoProcessorSetStreamAlpha(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, float Alpha);
+
+		[VtblIndex(33)]
+		void VideoProcessorSetStreamPalette(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, uint Count, uint* pEntries);
+
+		[VtblIndex(34)]
+		void VideoProcessorSetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Graphics.Dxgi.Common.Rational* pSourceAspectRatio, Graphics.Dxgi.Common.Rational* pDestinationAspectRatio);
+
+		[VtblIndex(35)]
+		void VideoProcessorSetStreamLumaKey(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, float Lower, float Upper);
+
+		[VtblIndex(36)]
+		void VideoProcessorSetStreamStereoFormat(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, VideoProcessorStereoFormat Format, Bool32 LeftViewFrame0, Bool32 BaseViewFrame0, VideoProcessorStereoFlipMode FlipMode, int MonoOffset);
+
+		[VtblIndex(37)]
+		void VideoProcessorSetStreamAutoProcessingMode(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable);
+
+		[VtblIndex(38)]
+		void VideoProcessorSetStreamFilter(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorFilter Filter, Bool32 Enable, int Level);
+
+		[VtblIndex(39)]
+		int VideoProcessorSetStreamExtension(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Guid* pExtensionGuid, uint DataSize, void* pData);
+
+		[VtblIndex(40)]
+		void VideoProcessorGetStreamFrameFormat(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoFrameFormat* pFrameFormat);
+
+		[VtblIndex(41)]
+		void VideoProcessorGetStreamColorSpace(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorColorSpace* pColorSpace);
+
+		[VtblIndex(42)]
+		void VideoProcessorGetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorOutputRate* pOutputRate, Bool32* pRepeatFrame, Graphics.Dxgi.Common.Rational* pCustomRate);
+
+		[VtblIndex(43)]
+		void VideoProcessorGetStreamSourceRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, RawRect* pRect);
+
+		[VtblIndex(44)]
+		void VideoProcessorGetStreamDestRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, RawRect* pRect);
+
+		[VtblIndex(45)]
+		void VideoProcessorGetStreamAlpha(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, float* pAlpha);
+
+		[VtblIndex(46)]
+		void VideoProcessorGetStreamPalette(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, uint Count, uint* pEntries);
+
+		[VtblIndex(47)]
+		void VideoProcessorGetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, Graphics.Dxgi.Common.Rational* pSourceAspectRatio, Graphics.Dxgi.Common.Rational* pDestinationAspectRatio);
+
+		[VtblIndex(48)]
+		void VideoProcessorGetStreamLumaKey(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, float* pLower, float* pUpper);
+
+		[VtblIndex(49)]
+		void VideoProcessorGetStreamStereoFormat(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnable, VideoProcessorStereoFormat* pFormat, Bool32* pLeftViewFrame0, Bool32* pBaseViewFrame0, VideoProcessorStereoFlipMode* pFlipMode, int* MonoOffset);
+
+		[VtblIndex(50)]
+		void VideoProcessorGetStreamAutoProcessingMode(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled);
+
+		[VtblIndex(51)]
+		void VideoProcessorGetStreamFilter(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorFilter Filter, Bool32* pEnabled, int* pLevel);
+
+		[VtblIndex(52)]
+		int VideoProcessorGetStreamExtension(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Guid* pExtensionGuid, uint DataSize, void* pData);
+
+		[VtblIndex(53)]
+		HResult VideoProcessorBlt(ID3D11VideoProcessor* pVideoProcessor, ID3D11VideoProcessorOutputView* pView, uint OutputFrame, uint StreamCount, VideoProcessorStream* pStreams);
+
+		[VtblIndex(54)]
+		HResult NegotiateCryptoSessionKeyExchange(ID3D11CryptoSession* pCryptoSession, uint DataSize, void* pData);
+
+		[VtblIndex(55)]
+		void EncryptionBlt(ID3D11CryptoSession* pCryptoSession, ID3D11Texture2D* pSrcSurface, ID3D11Texture2D* pDstSurface, uint IVSize, void* pIV);
+
+		[VtblIndex(56)]
+		void DecryptionBlt(ID3D11CryptoSession* pCryptoSession, ID3D11Texture2D* pSrcSurface, ID3D11Texture2D* pDstSurface, EncryptedBlockInfo* pEncryptedBlockInfo, uint ContentKeySize, void* pContentKey, uint IVSize, void* pIV);
+
+		[VtblIndex(57)]
+		void StartSessionKeyRefresh(ID3D11CryptoSession* pCryptoSession, uint RandomNumberSize, void* pRandomNumber);
+
+		[VtblIndex(58)]
+		void FinishSessionKeyRefresh(ID3D11CryptoSession* pCryptoSession);
+
+		[VtblIndex(59)]
+		HResult GetEncryptionBltKey(ID3D11CryptoSession* pCryptoSession, uint KeySize, void* pReadbackKey);
+
+		[VtblIndex(60)]
+		HResult NegotiateAuthenticatedChannelKeyExchange(ID3D11AuthenticatedChannel* pChannel, uint DataSize, void* pData);
+
+		[VtblIndex(61)]
+		HResult QueryAuthenticatedChannel(ID3D11AuthenticatedChannel* pChannel, uint InputSize, void* pInput, uint OutputSize, void* pOutput);
+
+		[VtblIndex(62)]
+		HResult ConfigureAuthenticatedChannel(ID3D11AuthenticatedChannel* pChannel, uint InputSize, void* pInput, AuthenticatedConfigureOutput* pOutput);
+
+		[VtblIndex(63)]
+		void VideoProcessorSetStreamRotation(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, VideoProcessorRotation Rotation);
+
+		[VtblIndex(64)]
+		void VideoProcessorGetStreamRotation(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnable, VideoProcessorRotation* pRotation);
 	}
 }
 

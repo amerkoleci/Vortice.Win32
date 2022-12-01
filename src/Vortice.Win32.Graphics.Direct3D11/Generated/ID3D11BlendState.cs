@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("75b68faa-347d-4159-8f45-a0640f01cd9a")]
 [NativeTypeName("struct ID3D11BlendState : ID3D11DeviceChild")]
 [NativeInheritance("ID3D11DeviceChild")]
-public unsafe partial struct ID3D11BlendState : INativeGuid
+public unsafe partial struct ID3D11BlendState : ID3D11BlendState.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11BlendState
 	{
@@ -112,6 +112,11 @@ public unsafe partial struct ID3D11BlendState : INativeGuid
 	public void GetDesc(BlendDescription* pDesc)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11BlendState*, BlendDescription*, void>)(lpVtbl[7]))((ID3D11BlendState*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : ID3D11DeviceChild.Interface
+	{
+		[VtblIndex(7)]
+		void GetDesc(BlendDescription* pDesc);
 	}
 }
 

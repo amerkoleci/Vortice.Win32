@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("3fd03d36-4eb1-424a-a582-494ecb8ba813")]
 [NativeTypeName("struct ID3D12LifetimeTracker : ID3D12DeviceChild")]
 [NativeInheritance("ID3D12DeviceChild")]
-public unsafe partial struct ID3D12LifetimeTracker : INativeGuid
+public unsafe partial struct ID3D12LifetimeTracker : ID3D12LifetimeTracker.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12LifetimeTracker
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct ID3D12LifetimeTracker : INativeGuid
 	public HResult DestroyOwnedObject(ID3D12DeviceChild* pObject)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12LifetimeTracker*, ID3D12DeviceChild*, int>)(lpVtbl[8]))((ID3D12LifetimeTracker*)Unsafe.AsPointer(ref this), pObject);
+	}
+	public interface Interface : ID3D12DeviceChild.Interface
+	{
+		[VtblIndex(8)]
+		HResult DestroyOwnedObject(ID3D12DeviceChild* pObject);
 	}
 }
 

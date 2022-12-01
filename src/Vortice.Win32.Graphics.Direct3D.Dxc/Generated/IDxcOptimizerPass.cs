@@ -13,7 +13,7 @@ namespace Win32.Graphics.Direct3D.Dxc;
 [Guid("ae2cd79f-cc22-453f-9b6b-b124e7a5204c")]
 [NativeTypeName("struct IDxcOptimizerPass : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDxcOptimizerPass : INativeGuid
+public unsafe partial struct IDxcOptimizerPass : IDxcOptimizerPass.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDxcOptimizerPass
 	{
@@ -106,6 +106,23 @@ public unsafe partial struct IDxcOptimizerPass : INativeGuid
 	public HResult GetOptionArgDescription(uint argIndex, ushort** ppResult)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizerPass*, uint, ushort**, int>)(lpVtbl[7]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetOptionName(ushort** ppResult);
+
+		[VtblIndex(4)]
+		HResult GetDescription(ushort** ppResult);
+
+		[VtblIndex(5)]
+		HResult GetOptionArgCount(uint* pCount);
+
+		[VtblIndex(6)]
+		HResult GetOptionArgName(uint argIndex, ushort** ppResult);
+
+		[VtblIndex(7)]
+		HResult GetOptionArgDescription(uint argIndex, ushort** ppResult);
 	}
 }
 

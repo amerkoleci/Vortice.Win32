@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("71fde914-40ef-45ef-bd51-68b037c339f9")]
 [NativeTypeName("struct IDCompositionScaleTransform : IDCompositionTransform")]
 [NativeInheritance("IDCompositionTransform")]
-public unsafe partial struct IDCompositionScaleTransform : INativeGuid
+public unsafe partial struct IDCompositionScaleTransform : IDCompositionScaleTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionScaleTransform
 	{
@@ -136,6 +136,32 @@ public unsafe partial struct IDCompositionScaleTransform : INativeGuid
 	public HResult SetCenterY(float centerY)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform*, float, int>)(lpVtbl[10]))((IDCompositionScaleTransform*)Unsafe.AsPointer(ref this), centerY);
+	}
+	public interface Interface : IDCompositionTransform.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetScaleX(IDCompositionAnimation* animation);
+
+		[VtblIndex(4)]
+		HResult SetScaleX(float scaleX);
+
+		[VtblIndex(5)]
+		HResult SetScaleY(IDCompositionAnimation* animation);
+
+		[VtblIndex(6)]
+		HResult SetScaleY(float scaleY);
+
+		[VtblIndex(7)]
+		HResult SetCenterX(IDCompositionAnimation* animation);
+
+		[VtblIndex(8)]
+		HResult SetCenterX(float centerX);
+
+		[VtblIndex(9)]
+		HResult SetCenterY(IDCompositionAnimation* animation);
+
+		[VtblIndex(10)]
+		HResult SetCenterY(float centerY);
 	}
 }
 

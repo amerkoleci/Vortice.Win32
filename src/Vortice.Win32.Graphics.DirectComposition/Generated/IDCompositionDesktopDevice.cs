@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("5f4633fe-1e08-4cb8-8c75-ce24333f5602")]
 [NativeTypeName("struct IDCompositionDesktopDevice : IDCompositionDevice2")]
 [NativeInheritance("IDCompositionDevice2")]
-public unsafe partial struct IDCompositionDesktopDevice : INativeGuid
+public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDevice.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionDesktopDevice
 	{
@@ -264,6 +264,17 @@ public unsafe partial struct IDCompositionDesktopDevice : INativeGuid
 	public HResult CreateSurfaceFromHwnd(IntPtr hwnd, IUnknown** surface)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDesktopDevice*, IntPtr, IUnknown**, int>)(lpVtbl[26]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), hwnd, surface);
+	}
+	public interface Interface : IDCompositionDevice2.Interface
+	{
+		[VtblIndex(24)]
+		HResult CreateTargetForHwnd(IntPtr hwnd, Bool32 topmost, IDCompositionTarget** target);
+
+		[VtblIndex(25)]
+		HResult CreateSurfaceFromHandle(Handle handle, IUnknown** surface);
+
+		[VtblIndex(26)]
+		HResult CreateSurfaceFromHwnd(IntPtr hwnd, IUnknown** surface);
 	}
 }
 

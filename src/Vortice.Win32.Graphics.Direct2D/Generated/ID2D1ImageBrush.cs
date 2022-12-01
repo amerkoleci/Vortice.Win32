@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("fe9e984d-3f95-407c-b5db-cb94d4e8f87c")]
 [NativeTypeName("struct ID2D1ImageBrush : ID2D1Brush")]
 [NativeInheritance("ID2D1Brush")]
-public unsafe partial struct ID2D1ImageBrush : INativeGuid
+public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ImageBrush
 	{
@@ -192,6 +192,38 @@ public unsafe partial struct ID2D1ImageBrush : INativeGuid
 	public void GetSourceRectangle(Common.RectF* sourceRectangle)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Common.RectF*, void>)(lpVtbl[17]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
+	}
+	public interface Interface : ID2D1Brush.Interface
+	{
+		[VtblIndex(8)]
+		void SetImage(ID2D1Image* image);
+
+		[VtblIndex(9)]
+		void SetExtendModeX(ExtendMode extendModeX);
+
+		[VtblIndex(10)]
+		void SetExtendModeY(ExtendMode extendModeY);
+
+		[VtblIndex(11)]
+		void SetInterpolationMode(InterpolationMode interpolationMode);
+
+		[VtblIndex(12)]
+		void SetSourceRectangle(Common.RectF* sourceRectangle);
+
+		[VtblIndex(13)]
+		void GetImage(ID2D1Image** image);
+
+		[VtblIndex(14)]
+		ExtendMode GetExtendModeX();
+
+		[VtblIndex(15)]
+		ExtendMode GetExtendModeY();
+
+		[VtblIndex(16)]
+		InterpolationMode GetInterpolationMode();
+
+		[VtblIndex(17)]
+		void GetSourceRectangle(Common.RectF* sourceRectangle);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("696442be-a72e-4059-bc79-5b5c98040fad")]
 [NativeTypeName("struct ID3D12Resource : ID3D12Pageable")]
 [NativeInheritance("ID3D12Pageable")]
-public unsafe partial struct ID3D12Resource : INativeGuid
+public unsafe partial struct ID3D12Resource : ID3D12Resource.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Resource
 	{
@@ -169,6 +169,29 @@ public unsafe partial struct ID3D12Resource : INativeGuid
 	public HResult GetHeapProperties(HeapProperties* pHeapProperties, HeapFlags* pHeapFlags)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Resource*, HeapProperties*, HeapFlags*, int>)(lpVtbl[14]))((ID3D12Resource*)Unsafe.AsPointer(ref this), pHeapProperties, pHeapFlags);
+	}
+	public interface Interface : ID3D12Pageable.Interface
+	{
+		[VtblIndex(8)]
+		HResult Map(uint Subresource, Range* pReadRange, void** ppData);
+
+		[VtblIndex(9)]
+		void Unmap(uint Subresource, Range* pWrittenRange);
+
+		[VtblIndex(10)]
+		ResourceDescription GetDesc();
+
+		[VtblIndex(11)]
+		ulong GetGPUVirtualAddress();
+
+		[VtblIndex(12)]
+		HResult WriteToSubresource(uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch);
+
+		[VtblIndex(13)]
+		HResult ReadFromSubresource(void* pDstData, uint DstRowPitch, uint DstDepthPitch, uint SrcSubresource, Box* pSrcBox);
+
+		[VtblIndex(14)]
+		HResult GetHeapProperties(HeapProperties* pHeapProperties, HeapFlags* pHeapFlags);
 	}
 }
 

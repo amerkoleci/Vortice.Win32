@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("45d4d0b7-1bd4-454e-8894-2bfa68443033")]
 [NativeTypeName("struct IDCompositionGaussianBlurEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionGaussianBlurEffect : INativeGuid
+public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaussianBlurEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionGaussianBlurEffect
 	{
@@ -104,6 +104,17 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : INativeGuid
 	public HResult SetBorderMode(Graphics.Direct2D.Common.BorderMode mode)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionGaussianBlurEffect*, Graphics.Direct2D.Common.BorderMode, int>)(lpVtbl[6]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), mode);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetStandardDeviation(IDCompositionAnimation* animation);
+
+		[VtblIndex(5)]
+		HResult SetStandardDeviation(float amount);
+
+		[VtblIndex(6)]
+		HResult SetBorderMode(Graphics.Direct2D.Common.BorderMode mode);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("07ddcd52-020e-4de8-ac33-6c953d83f92d")]
 [NativeTypeName("struct IDWriteTextLayout3 : IDWriteTextLayout2")]
 [NativeInheritance("IDWriteTextLayout2")]
-public unsafe partial struct IDWriteTextLayout3 : INativeGuid
+public unsafe partial struct IDWriteTextLayout3 : IDWriteTextLayout3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextLayout3
 	{
@@ -720,6 +720,20 @@ public unsafe partial struct IDWriteTextLayout3 : INativeGuid
 	public HResult GetLineMetrics(LineMetrics1* lineMetrics, uint maxLineCount, uint* actualLineCount)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, LineMetrics1*, uint, uint*, int>)(lpVtbl[83]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
+	}
+	public interface Interface : IDWriteTextLayout2.Interface
+	{
+		[VtblIndex(80)]
+		HResult InvalidateLayout();
+
+		[VtblIndex(81)]
+		HResult SetLineSpacing(LineSpacing* lineSpacingOptions);
+
+		[VtblIndex(82)]
+		HResult GetLineSpacing(LineSpacing* lineSpacingOptions);
+
+		[VtblIndex(83)]
+		HResult GetLineMetrics(LineMetrics1* lineMetrics, uint maxLineCount, uint* actualLineCount);
 	}
 }
 

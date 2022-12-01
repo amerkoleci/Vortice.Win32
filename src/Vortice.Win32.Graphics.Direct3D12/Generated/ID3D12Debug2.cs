@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("93a665c4-a3b2-4e5d-b692-a26ae14e3374")]
 [NativeTypeName("struct ID3D12Debug2 : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12Debug2 : INativeGuid
+public unsafe partial struct ID3D12Debug2 : ID3D12Debug2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Debug2
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID3D12Debug2 : INativeGuid
 	public void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12Debug2*, GpuBasedValidationFlags, void>)(lpVtbl[3]))((ID3D12Debug2*)Unsafe.AsPointer(ref this), Flags);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("645967a4-1392-4310-a798-8053ce3e93fd")]
 [NativeTypeName("struct IDXGIAdapter3 : IDXGIAdapter2")]
 [NativeInheritance("IDXGIAdapter2")]
-public unsafe partial struct IDXGIAdapter3 : INativeGuid
+public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIAdapter3
 	{
@@ -192,6 +192,26 @@ public unsafe partial struct IDXGIAdapter3 : INativeGuid
 	public void UnregisterVideoMemoryBudgetChangeNotification(uint dwCookie)
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, void>)(lpVtbl[17]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+	}
+	public interface Interface : IDXGIAdapter2.Interface
+	{
+		[VtblIndex(12)]
+		HResult RegisterHardwareContentProtectionTeardownStatusEvent(Handle hEvent, uint* pdwCookie);
+
+		[VtblIndex(13)]
+		void UnregisterHardwareContentProtectionTeardownStatus(uint dwCookie);
+
+		[VtblIndex(14)]
+		HResult QueryVideoMemoryInfo(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, QueryVideoMemoryInfo* pVideoMemoryInfo);
+
+		[VtblIndex(15)]
+		HResult SetVideoMemoryReservation(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, ulong Reservation);
+
+		[VtblIndex(16)]
+		HResult RegisterVideoMemoryBudgetChangeNotificationEvent(Handle hEvent, uint* pdwCookie);
+
+		[VtblIndex(17)]
+		void UnregisterVideoMemoryBudgetChangeNotification(uint dwCookie);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("e865df17-a9ee-46f9-a463-3098315aa2e5")]
 [NativeTypeName("struct ID3D12Device4 : ID3D12Device3")]
 [NativeInheritance("ID3D12Device3")]
-public unsafe partial struct ID3D12Device4 : INativeGuid
+public unsafe partial struct ID3D12Device4 : ID3D12Device4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device4
 	{
@@ -508,6 +508,26 @@ public unsafe partial struct ID3D12Device4 : INativeGuid
 	{
 		ResourceAllocationInfo result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12Device4*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[56]))((ID3D12Device4*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
+	}
+	public interface Interface : ID3D12Device3.Interface
+	{
+		[VtblIndex(51)]
+		HResult CreateCommandList1(uint nodeMask, CommandListType type, CommandListFlags flags, Guid* riid, void** ppCommandList);
+
+		[VtblIndex(52)]
+		HResult CreateProtectedResourceSession(ProtectedResourceSessionDescription* pDesc, Guid* riid, void** ppSession);
+
+		[VtblIndex(53)]
+		HResult CreateCommittedResource1(HeapProperties* pHeapProperties, HeapFlags HeapFlags, ResourceDescription* pDesc, ResourceStates InitialResourceState, ClearValue* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, Guid* riidResource, void** ppvResource);
+
+		[VtblIndex(54)]
+		HResult CreateHeap1(HeapDescription* pDesc, ID3D12ProtectedResourceSession* pProtectedSession, Guid* riid, void** ppvHeap);
+
+		[VtblIndex(55)]
+		HResult CreateReservedResource1(ResourceDescription* pDesc, ResourceStates InitialState, ClearValue* pOptimizedClearValue, ID3D12ProtectedResourceSession* pProtectedSession, Guid* riid, void** ppvResource);
+
+		[VtblIndex(56)]
+		ResourceAllocationInfo GetResourceAllocationInfo1(uint visibleMask, uint numResourceDescs, ResourceDescription* pResourceDescs, ResourceAllocationInfo1* pResourceAllocationInfo1);
 	}
 }
 

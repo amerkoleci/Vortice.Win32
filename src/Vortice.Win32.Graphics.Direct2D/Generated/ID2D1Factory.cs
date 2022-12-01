@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("06152247-6f50-465a-9245-118bfd3b6007")]
 [NativeTypeName("struct ID2D1Factory : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1Factory : INativeGuid
+public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Factory
 	{
@@ -184,6 +184,50 @@ public unsafe partial struct ID2D1Factory : INativeGuid
 	public HResult CreateDCRenderTarget(RenderTargetProperties* renderTargetProperties, ID2D1DCRenderTarget** dcRenderTarget)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Factory*, RenderTargetProperties*, ID2D1DCRenderTarget**, int>)(lpVtbl[16]))((ID2D1Factory*)Unsafe.AsPointer(ref this), renderTargetProperties, dcRenderTarget);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult ReloadSystemMetrics();
+
+		[VtblIndex(4)]
+		void GetDesktopDpi(float* dpiX, float* dpiY);
+
+		[VtblIndex(5)]
+		HResult CreateRectangleGeometry(Common.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry);
+
+		[VtblIndex(6)]
+		HResult CreateRoundedRectangleGeometry(RoundedRect* roundedRectangle, ID2D1RoundedRectangleGeometry** roundedRectangleGeometry);
+
+		[VtblIndex(7)]
+		HResult CreateEllipseGeometry(Ellipse* ellipse, ID2D1EllipseGeometry** ellipseGeometry);
+
+		[VtblIndex(8)]
+		HResult CreateGeometryGroup(Common.FillMode fillMode, ID2D1Geometry** geometries, uint geometriesCount, ID2D1GeometryGroup** geometryGroup);
+
+		[VtblIndex(9)]
+		HResult CreateTransformedGeometry(ID2D1Geometry* sourceGeometry, Matrix3x2* transform, ID2D1TransformedGeometry** transformedGeometry);
+
+		[VtblIndex(10)]
+		HResult CreatePathGeometry(ID2D1PathGeometry** pathGeometry);
+
+		[VtblIndex(11)]
+		HResult CreateStrokeStyle(StrokeStyleProperties* strokeStyleProperties, float* dashes, uint dashesCount, ID2D1StrokeStyle** strokeStyle);
+
+		[VtblIndex(12)]
+		HResult CreateDrawingStateBlock(DrawingStateDescription* drawingStateDescription, Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams, ID2D1DrawingStateBlock** drawingStateBlock);
+
+		[VtblIndex(13)]
+		HResult CreateWicBitmapRenderTarget(Graphics.Imaging.IWICBitmap* target, RenderTargetProperties* renderTargetProperties, ID2D1RenderTarget** renderTarget);
+
+		[VtblIndex(14)]
+		HResult CreateHwndRenderTarget(RenderTargetProperties* renderTargetProperties, HwndRenderTargetProperties* hwndRenderTargetProperties, ID2D1HwndRenderTarget** hwndRenderTarget);
+
+		[VtblIndex(15)]
+		HResult CreateDxgiSurfaceRenderTarget(Graphics.Dxgi.IDXGISurface* dxgiSurface, RenderTargetProperties* renderTargetProperties, ID2D1RenderTarget** renderTarget);
+
+		[VtblIndex(16)]
+		HResult CreateDCRenderTarget(RenderTargetProperties* renderTargetProperties, ID2D1DCRenderTarget** dcRenderTarget);
 	}
 }
 

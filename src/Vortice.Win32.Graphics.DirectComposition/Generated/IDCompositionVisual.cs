@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("4d93059d-097b-4651-9a60-f0f25116e2f3")]
 [NativeTypeName("struct IDCompositionVisual : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionVisual : INativeGuid
+public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionVisual
 	{
@@ -208,6 +208,59 @@ public unsafe partial struct IDCompositionVisual : INativeGuid
 	public HResult SetCompositeMode(CompositeMode compositeMode)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual*, CompositeMode, int>)(lpVtbl[19]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), compositeMode);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult SetOffsetX(IDCompositionAnimation* animation);
+
+		[VtblIndex(4)]
+		HResult SetOffsetX(float offsetX);
+
+		[VtblIndex(5)]
+		HResult SetOffsetY(IDCompositionAnimation* animation);
+
+		[VtblIndex(6)]
+		HResult SetOffsetY(float offsetY);
+
+		[VtblIndex(7)]
+		HResult SetTransform(IDCompositionTransform* transform);
+
+		[VtblIndex(8)]
+		HResult SetTransform(Matrix3x2* matrix);
+
+		[VtblIndex(9)]
+		HResult SetTransformParent(IDCompositionVisual* visual);
+
+		[VtblIndex(10)]
+		HResult SetEffect(IDCompositionEffect* effect);
+
+		[VtblIndex(11)]
+		HResult SetBitmapInterpolationMode(BitmapInterpolationMode interpolationMode);
+
+		[VtblIndex(12)]
+		HResult SetBorderMode(BorderMode borderMode);
+
+		[VtblIndex(13)]
+		HResult SetClip(IDCompositionClip* clip);
+
+		[VtblIndex(14)]
+		HResult SetClip(Graphics.Direct2D.Common.RectF* rect);
+
+		[VtblIndex(15)]
+		HResult SetContent(IUnknown* content);
+
+		[VtblIndex(16)]
+		HResult AddVisual(IDCompositionVisual* visual, Bool32 insertAbove, IDCompositionVisual* referenceVisual);
+
+		[VtblIndex(17)]
+		HResult RemoveVisual(IDCompositionVisual* visual);
+
+		[VtblIndex(18)]
+		HResult RemoveAllVisuals();
+
+		[VtblIndex(19)]
+		HResult SetCompositeMode(CompositeMode compositeMode);
 	}
 }
 

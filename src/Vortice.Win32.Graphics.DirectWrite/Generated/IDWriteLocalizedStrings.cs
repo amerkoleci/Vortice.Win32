@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("08256209-099a-4b34-b86d-c22b110e7771")]
 [NativeTypeName("struct IDWriteLocalizedStrings : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteLocalizedStrings : INativeGuid
+public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteLocalizedStrings
 	{
@@ -120,6 +120,26 @@ public unsafe partial struct IDWriteLocalizedStrings : INativeGuid
 	public HResult GetString(uint index, ushort* stringBuffer, uint size)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalizedStrings*, uint, ushort*, uint, int>)(lpVtbl[8]))((IDWriteLocalizedStrings*)Unsafe.AsPointer(ref this), index, stringBuffer, size);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		uint GetCount();
+
+		[VtblIndex(4)]
+		HResult FindLocaleName(ushort* localeName, uint* index, Bool32* exists);
+
+		[VtblIndex(5)]
+		HResult GetLocaleNameLength(uint index, uint* length);
+
+		[VtblIndex(6)]
+		HResult GetLocaleName(uint index, ushort* localeName, uint size);
+
+		[VtblIndex(7)]
+		HResult GetStringLength(uint index, uint* length);
+
+		[VtblIndex(8)]
+		HResult GetString(uint index, ushort* stringBuffer, uint size);
 	}
 }
 

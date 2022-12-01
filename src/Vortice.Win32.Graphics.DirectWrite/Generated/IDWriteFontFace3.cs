@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("d37d7598-09be-4222-a236-2081341cc1f2")]
 [NativeTypeName("struct IDWriteFontFace3 : IDWriteFontFace2")]
 [NativeInheritance("IDWriteFontFace2")]
-public unsafe partial struct IDWriteFontFace3 : INativeGuid
+public unsafe partial struct IDWriteFontFace3 : IDWriteFontFace3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFace3
 	{
@@ -440,6 +440,50 @@ public unsafe partial struct IDWriteFontFace3 : INativeGuid
 	public HResult AreGlyphsLocal(ushort* glyphIndices, uint glyphCount, Bool32 enqueueIfNotLocal, Bool32* isLocal)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace3*, ushort*, uint, Bool32, Bool32*, int>)(lpVtbl[48]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this), glyphIndices, glyphCount, enqueueIfNotLocal, isLocal);
+	}
+	public interface Interface : IDWriteFontFace2.Interface
+	{
+		[VtblIndex(35)]
+		HResult GetFontFaceReference(IDWriteFontFaceReference** fontFaceReference);
+
+		[VtblIndex(36)]
+		void GetPanose(Panose* panose);
+
+		[VtblIndex(37)]
+		FontWeight GetWeight();
+
+		[VtblIndex(38)]
+		FontStretch GetStretch();
+
+		[VtblIndex(39)]
+		FontStyle GetStyle();
+
+		[VtblIndex(40)]
+		HResult GetFamilyNames(IDWriteLocalizedStrings** names);
+
+		[VtblIndex(41)]
+		HResult GetFaceNames(IDWriteLocalizedStrings** names);
+
+		[VtblIndex(42)]
+		HResult GetInformationalStrings(InformationalStringId informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists);
+
+		[VtblIndex(43)]
+		Bool32 HasCharacter(uint unicodeValue);
+
+		[VtblIndex(44)]
+		HResult GetRecommendedRenderingMode(float fontEmSize, float dpiX, float dpiY, Matrix3x2* transform, Bool32 isSideways, OutlineThreshold outlineThreshold, MeasuringMode measuringMode, IDWriteRenderingParams* renderingParams, RenderingMode1* renderingMode, GridFitMode* gridFitMode);
+
+		[VtblIndex(45)]
+		Bool32 IsCharacterLocal(uint unicodeValue);
+
+		[VtblIndex(46)]
+		Bool32 IsGlyphLocal(ushort glyphId);
+
+		[VtblIndex(47)]
+		HResult AreCharactersLocal(ushort* characters, uint characterCount, Bool32 enqueueIfNotLocal, Bool32* isLocal);
+
+		[VtblIndex(48)]
+		HResult AreGlyphsLocal(ushort* glyphIndices, uint glyphCount, Bool32 enqueueIfNotLocal, Bool32* isLocal);
 	}
 }
 

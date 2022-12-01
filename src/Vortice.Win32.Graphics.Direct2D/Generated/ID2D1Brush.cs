@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("2cd906a8-12e2-11dc-9fed-001143a055f9")]
 [NativeTypeName("struct ID2D1Brush : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1Brush : INativeGuid
+public unsafe partial struct ID2D1Brush : ID2D1Brush.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Brush
 	{
@@ -112,6 +112,20 @@ public unsafe partial struct ID2D1Brush : INativeGuid
 	public void GetTransform(Matrix3x2* transform)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Brush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1Brush*)Unsafe.AsPointer(ref this), transform);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		void SetOpacity(float opacity);
+
+		[VtblIndex(5)]
+		void SetTransform(Matrix3x2* transform);
+
+		[VtblIndex(6)]
+		float GetOpacity();
+
+		[VtblIndex(7)]
+		void GetTransform(Matrix3x2* transform);
 	}
 }
 

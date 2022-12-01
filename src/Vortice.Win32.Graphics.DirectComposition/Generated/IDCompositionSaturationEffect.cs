@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("a08debda-3258-4fa4-9f16-9174d3fe93b1")]
 [NativeTypeName("struct IDCompositionSaturationEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionSaturationEffect : INativeGuid
+public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSaturationEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionSaturationEffect
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct IDCompositionSaturationEffect : INativeGuid
 	public HResult SetSaturation(float ratio)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionSaturationEffect*, float, int>)(lpVtbl[5]))((IDCompositionSaturationEffect*)Unsafe.AsPointer(ref this), ratio);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetSaturation(IDCompositionAnimation* animation);
+
+		[VtblIndex(5)]
+		HResult SetSaturation(float ratio);
 	}
 }
 

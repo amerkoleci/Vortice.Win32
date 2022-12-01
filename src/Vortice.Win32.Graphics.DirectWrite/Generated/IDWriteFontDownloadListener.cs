@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("b06fe5b9-43ec-4393-881b-dbe4dc72fda7")]
 [NativeTypeName("struct IDWriteFontDownloadListener : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontDownloadListener : INativeGuid
+public unsafe partial struct IDWriteFontDownloadListener : IDWriteFontDownloadListener.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontDownloadListener
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IDWriteFontDownloadListener : INativeGuid
 	public void DownloadCompleted(IDWriteFontDownloadQueue* downloadQueue, IUnknown* context, HResult downloadResult)
 	{
 		((delegate* unmanaged[Stdcall]<IDWriteFontDownloadListener*, IDWriteFontDownloadQueue*, IUnknown*, HResult, void>)(lpVtbl[3]))((IDWriteFontDownloadListener*)Unsafe.AsPointer(ref this), downloadQueue, context, downloadResult);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void DownloadCompleted(IDWriteFontDownloadQueue* downloadQueue, IUnknown* context, HResult downloadResult);
 	}
 }
 

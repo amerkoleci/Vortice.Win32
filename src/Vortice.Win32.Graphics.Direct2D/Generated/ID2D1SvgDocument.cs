@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("86b88e4d-afa4-4d7b-88e4-68a51c4a0aec")]
 [NativeTypeName("struct ID2D1SvgDocument : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1SvgDocument : INativeGuid
+public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SvgDocument
 	{
@@ -169,6 +169,41 @@ public unsafe partial struct ID2D1SvgDocument : INativeGuid
 	public HResult CreatePathData(float* segmentData, uint segmentDataCount, SvgPathCommand* commands, uint commandsCount, ID2D1SvgPathData** pathData)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, float*, uint, SvgPathCommand*, uint, ID2D1SvgPathData**, int>)(lpVtbl[14]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), segmentData, segmentDataCount, commands, commandsCount, pathData);
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetViewportSize(System.Drawing.SizeF viewportSize);
+
+		[VtblIndex(5)]
+		System.Drawing.SizeF GetViewportSize();
+
+		[VtblIndex(6)]
+		HResult SetRoot(ID2D1SvgElement* root);
+
+		[VtblIndex(7)]
+		void GetRoot(ID2D1SvgElement** root);
+
+		[VtblIndex(8)]
+		HResult FindElementById(ushort* id, ID2D1SvgElement** svgElement);
+
+		[VtblIndex(9)]
+		HResult Serialize(Com.IStream* outputXmlStream, ID2D1SvgElement* subtree);
+
+		[VtblIndex(10)]
+		HResult Deserialize(Com.IStream* inputXmlStream, ID2D1SvgElement** subtree);
+
+		[VtblIndex(11)]
+		HResult CreatePaint(SvgPaintType paintType, Color4* color, ushort* id, ID2D1SvgPaint** paint);
+
+		[VtblIndex(12)]
+		HResult CreateStrokeDashArray(SvgLength* dashes, uint dashesCount, ID2D1SvgStrokeDashArray** strokeDashArray);
+
+		[VtblIndex(13)]
+		HResult CreatePointCollection(System.Drawing.PointF* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection);
+
+		[VtblIndex(14)]
+		HResult CreatePathData(float* segmentData, uint segmentDataCount, SvgPathCommand* commands, uint commandsCount, ID2D1SvgPathData** pathData);
 	}
 }
 

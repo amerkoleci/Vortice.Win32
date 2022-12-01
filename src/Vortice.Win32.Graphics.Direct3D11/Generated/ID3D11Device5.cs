@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("8ffde202-a0e7-45df-9e01-e837801b5ea0")]
 [NativeTypeName("struct ID3D11Device5 : ID3D11Device4")]
 [NativeInheritance("ID3D11Device4")]
-public unsafe partial struct ID3D11Device5 : INativeGuid
+public unsafe partial struct ID3D11Device5 : ID3D11Device5.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Device5
 	{
@@ -600,6 +600,14 @@ public unsafe partial struct ID3D11Device5 : INativeGuid
 	public HResult CreateFence(ulong InitialValue, FenceFlags Flags, Guid* ReturnedInterface, void** ppFence)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, ulong, FenceFlags, Guid*, void**, int>)(lpVtbl[68]))((ID3D11Device5*)Unsafe.AsPointer(ref this), InitialValue, Flags, ReturnedInterface, ppFence);
+	}
+	public interface Interface : ID3D11Device4.Interface
+	{
+		[VtblIndex(67)]
+		HResult OpenSharedFence(Handle hFence, Guid* ReturnedInterface, void** ppFence);
+
+		[VtblIndex(68)]
+		HResult CreateFence(ulong InitialValue, FenceFlags Flags, Guid* ReturnedInterface, void** ppFence);
 	}
 }
 

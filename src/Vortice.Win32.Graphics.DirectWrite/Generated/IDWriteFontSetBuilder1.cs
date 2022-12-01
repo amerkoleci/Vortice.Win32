@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("3ff7715f-3cdc-4dc6-9b72-ec5621dccafd")]
 [NativeTypeName("struct IDWriteFontSetBuilder1 : IDWriteFontSetBuilder")]
 [NativeInheritance("IDWriteFontSetBuilder")]
-public unsafe partial struct IDWriteFontSetBuilder1 : INativeGuid
+public unsafe partial struct IDWriteFontSetBuilder1 : IDWriteFontSetBuilder1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontSetBuilder1
 	{
@@ -112,6 +112,11 @@ public unsafe partial struct IDWriteFontSetBuilder1 : INativeGuid
 	public HResult AddFontFile(IDWriteFontFile* fontFile)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSetBuilder1*, IDWriteFontFile*, int>)(lpVtbl[7]))((IDWriteFontSetBuilder1*)Unsafe.AsPointer(ref this), fontFile);
+	}
+	public interface Interface : IDWriteFontSetBuilder.Interface
+	{
+		[VtblIndex(7)]
+		HResult AddFontFile(IDWriteFontFile* fontFile);
 	}
 }
 

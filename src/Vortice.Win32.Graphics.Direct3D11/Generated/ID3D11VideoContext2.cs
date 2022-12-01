@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("c4e7374c-6243-4d1b-ae87-52b4f740e261")]
 [NativeTypeName("struct ID3D11VideoContext2 : ID3D11VideoContext1")]
 [NativeInheritance("ID3D11VideoContext1")]
-public unsafe partial struct ID3D11VideoContext2 : INativeGuid
+public unsafe partial struct ID3D11VideoContext2 : ID3D11VideoContext2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11VideoContext2
 	{
@@ -712,6 +712,20 @@ public unsafe partial struct ID3D11VideoContext2 : INativeGuid
 	public void VideoProcessorGetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[82]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pType, Size, pMetaData);
+	}
+	public interface Interface : ID3D11VideoContext1.Interface
+	{
+		[VtblIndex(79)]
+		void VideoProcessorSetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HDRMetadataType Type, uint Size, void* pHDRMetaData);
+
+		[VtblIndex(80)]
+		void VideoProcessorGetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData);
+
+		[VtblIndex(81)]
+		void VideoProcessorSetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType Type, uint Size, void* pHDRMetaData);
+
+		[VtblIndex(82)]
+		void VideoProcessorGetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData);
 	}
 }
 

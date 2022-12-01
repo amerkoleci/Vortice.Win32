@@ -11,7 +11,7 @@ namespace Win32.Graphics.Direct3D;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude"]/*' />
 /// <unmanaged>ID3DInclude</unmanaged>
-public unsafe partial struct ID3DInclude
+public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 {
 	public void** lpVtbl;
 
@@ -29,6 +29,14 @@ public unsafe partial struct ID3DInclude
 	public HResult Close(void* pData)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
+	}
+	public interface Interface 
+	{
+		[VtblIndex(0)]
+		HResult Open(IncludeType IncludeType, sbyte* pFileName, void* pParentData, void** ppData, uint* pBytes);
+
+		[VtblIndex(1)]
+		HResult Close(void* pData);
 	}
 }
 

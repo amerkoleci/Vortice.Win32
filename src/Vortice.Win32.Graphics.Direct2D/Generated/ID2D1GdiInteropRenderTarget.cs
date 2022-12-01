@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("e0db51c3-6f77-4bae-b3d5-e47509b35838")]
 [NativeTypeName("struct ID2D1GdiInteropRenderTarget : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID2D1GdiInteropRenderTarget : INativeGuid
+public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRenderTarget.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1GdiInteropRenderTarget
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : INativeGuid
 	public HResult ReleaseDC(RawRect* update)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, RawRect*, int>)(lpVtbl[4]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), update);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetDC(DCInitializeMode mode, IntPtr* hdc);
+
+		[VtblIndex(4)]
+		HResult ReleaseDC(RawRect* update);
 	}
 }
 

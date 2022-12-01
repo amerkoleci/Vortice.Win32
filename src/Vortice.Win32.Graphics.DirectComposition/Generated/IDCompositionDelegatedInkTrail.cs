@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("c2448e9b-547d-4057-8cf5-8144ede1c2da")]
 [NativeTypeName("struct IDCompositionDelegatedInkTrail : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDCompositionDelegatedInkTrail : INativeGuid
+public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDelegatedInkTrail.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionDelegatedInkTrail
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : INativeGuid
 	public HResult StartNewTrail(Color4* color)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, Color4*, int>)(lpVtbl[6]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), color);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult AddTrailPoints(InkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId);
+
+		[VtblIndex(4)]
+		HResult AddTrailPointsWithPrediction(InkTrailPoint* inkPoints, uint inkPointsCount, InkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId);
+
+		[VtblIndex(5)]
+		HResult RemoveTrailPoints(uint generationId);
+
+		[VtblIndex(6)]
+		HResult StartNewTrail(Color4* color);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("1c51bc64-de61-46fd-9899-63a5d8f03950")]
 [NativeTypeName("struct ID2D1DCRenderTarget : ID2D1RenderTarget")]
 [NativeInheritance("ID2D1RenderTarget")]
-public unsafe partial struct ID2D1DCRenderTarget : INativeGuid
+public unsafe partial struct ID2D1DCRenderTarget : ID2D1DCRenderTarget.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DCRenderTarget
 	{
@@ -515,6 +515,11 @@ public unsafe partial struct ID2D1DCRenderTarget : INativeGuid
 	public HResult BindDC(IntPtr hDC, RawRect* pSubRect)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DCRenderTarget*, IntPtr, RawRect*, int>)(lpVtbl[57]))((ID2D1DCRenderTarget*)Unsafe.AsPointer(ref this), hDC, pSubRect);
+	}
+	public interface Interface : ID2D1RenderTarget.Interface
+	{
+		[VtblIndex(57)]
+		HResult BindDC(IntPtr hDC, RawRect* pSubRect);
 	}
 }
 

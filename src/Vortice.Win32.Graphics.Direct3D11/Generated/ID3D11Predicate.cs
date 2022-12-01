@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("9eb576dd-9f77-4d86-81aa-8bab5fe490e2")]
 [NativeTypeName("struct ID3D11Predicate : ID3D11Query")]
 [NativeInheritance("ID3D11Query")]
-public unsafe partial struct ID3D11Predicate : INativeGuid
+public unsafe partial struct ID3D11Predicate : ID3D11Predicate.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Predicate
 	{
@@ -120,6 +120,9 @@ public unsafe partial struct ID3D11Predicate : INativeGuid
 	public void GetDesc(QueryDescription* pDesc)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Predicate*, QueryDescription*, void>)(lpVtbl[8]))((ID3D11Predicate*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : ID3D11Query.Interface
+	{
 	}
 }
 

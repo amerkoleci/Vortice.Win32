@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("2f0da53a-2add-47cd-82ee-d9ec34688e75")]
 [NativeTypeName("struct IDWriteRenderingParams : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteRenderingParams : INativeGuid
+public unsafe partial struct IDWriteRenderingParams : IDWriteRenderingParams.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteRenderingParams
 	{
@@ -112,6 +112,23 @@ public unsafe partial struct IDWriteRenderingParams : INativeGuid
 	public RenderingMode GetRenderingMode()
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		float GetGamma();
+
+		[VtblIndex(4)]
+		float GetEnhancedContrast();
+
+		[VtblIndex(5)]
+		float GetClearTypeLevel();
+
+		[VtblIndex(6)]
+		PixelGeometry GetPixelGeometry();
+
+		[VtblIndex(7)]
+		RenderingMode GetRenderingMode();
 	}
 }
 

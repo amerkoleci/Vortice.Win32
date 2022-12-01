@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("53737037-6d14-410b-9bfe-0b182bb70961")]
 [NativeTypeName("struct IDWriteTextLayout : IDWriteTextFormat")]
 [NativeInheritance("IDWriteTextFormat")]
-public unsafe partial struct IDWriteTextLayout : INativeGuid
+public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextLayout
 	{
@@ -584,6 +584,125 @@ public unsafe partial struct IDWriteTextLayout : INativeGuid
 	public HResult HitTestTextRange(uint textPosition, uint textLength, float originX, float originY, HitTestMetrics* hitTestMetrics, uint maxHitTestMetricsCount, uint* actualHitTestMetricsCount)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, uint, float, float, HitTestMetrics*, uint, uint*, int>)(lpVtbl[66]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textPosition, textLength, originX, originY, hitTestMetrics, maxHitTestMetricsCount, actualHitTestMetricsCount);
+	}
+	public interface Interface : IDWriteTextFormat.Interface
+	{
+		[VtblIndex(28)]
+		HResult SetMaxWidth(float maxWidth);
+
+		[VtblIndex(29)]
+		HResult SetMaxHeight(float maxHeight);
+
+		[VtblIndex(30)]
+		HResult SetFontCollection(IDWriteFontCollection* fontCollection, TextRange textRange);
+
+		[VtblIndex(31)]
+		HResult SetFontFamilyName(ushort* fontFamilyName, TextRange textRange);
+
+		[VtblIndex(32)]
+		HResult SetFontWeight(FontWeight fontWeight, TextRange textRange);
+
+		[VtblIndex(33)]
+		HResult SetFontStyle(FontStyle fontStyle, TextRange textRange);
+
+		[VtblIndex(34)]
+		HResult SetFontStretch(FontStretch fontStretch, TextRange textRange);
+
+		[VtblIndex(35)]
+		HResult SetFontSize(float fontSize, TextRange textRange);
+
+		[VtblIndex(36)]
+		HResult SetUnderline(Bool32 hasUnderline, TextRange textRange);
+
+		[VtblIndex(37)]
+		HResult SetStrikethrough(Bool32 hasStrikethrough, TextRange textRange);
+
+		[VtblIndex(38)]
+		HResult SetDrawingEffect(IUnknown* drawingEffect, TextRange textRange);
+
+		[VtblIndex(39)]
+		HResult SetInlineObject(IDWriteInlineObject* inlineObject, TextRange textRange);
+
+		[VtblIndex(40)]
+		HResult SetTypography(IDWriteTypography* typography, TextRange textRange);
+
+		[VtblIndex(41)]
+		HResult SetLocaleName(ushort* localeName, TextRange textRange);
+
+		[VtblIndex(42)]
+		float GetMaxWidth();
+
+		[VtblIndex(43)]
+		float GetMaxHeight();
+
+		[VtblIndex(44)]
+		HResult GetFontCollection(uint currentPosition, IDWriteFontCollection** fontCollection, TextRange* textRange);
+
+		[VtblIndex(45)]
+		HResult GetFontFamilyNameLength(uint currentPosition, uint* nameLength, TextRange* textRange);
+
+		[VtblIndex(46)]
+		HResult GetFontFamilyName(uint currentPosition, ushort* fontFamilyName, uint nameSize, TextRange* textRange);
+
+		[VtblIndex(47)]
+		HResult GetFontWeight(uint currentPosition, FontWeight* fontWeight, TextRange* textRange);
+
+		[VtblIndex(48)]
+		HResult GetFontStyle(uint currentPosition, FontStyle* fontStyle, TextRange* textRange);
+
+		[VtblIndex(49)]
+		HResult GetFontStretch(uint currentPosition, FontStretch* fontStretch, TextRange* textRange);
+
+		[VtblIndex(50)]
+		HResult GetFontSize(uint currentPosition, float* fontSize, TextRange* textRange);
+
+		[VtblIndex(51)]
+		HResult GetUnderline(uint currentPosition, Bool32* hasUnderline, TextRange* textRange);
+
+		[VtblIndex(52)]
+		HResult GetStrikethrough(uint currentPosition, Bool32* hasStrikethrough, TextRange* textRange);
+
+		[VtblIndex(53)]
+		HResult GetDrawingEffect(uint currentPosition, IUnknown** drawingEffect, TextRange* textRange);
+
+		[VtblIndex(54)]
+		HResult GetInlineObject(uint currentPosition, IDWriteInlineObject** inlineObject, TextRange* textRange);
+
+		[VtblIndex(55)]
+		HResult GetTypography(uint currentPosition, IDWriteTypography** typography, TextRange* textRange);
+
+		[VtblIndex(56)]
+		HResult GetLocaleNameLength(uint currentPosition, uint* nameLength, TextRange* textRange);
+
+		[VtblIndex(57)]
+		HResult GetLocaleName(uint currentPosition, ushort* localeName, uint nameSize, TextRange* textRange);
+
+		[VtblIndex(58)]
+		HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY);
+
+		[VtblIndex(59)]
+		HResult GetLineMetrics(LineMetrics* lineMetrics, uint maxLineCount, uint* actualLineCount);
+
+		[VtblIndex(60)]
+		HResult GetMetrics(TextMetrics* textMetrics);
+
+		[VtblIndex(61)]
+		HResult GetOverhangMetrics(OverhangMetrics* overhangs);
+
+		[VtblIndex(62)]
+		HResult GetClusterMetrics(ClusterMetrics* clusterMetrics, uint maxClusterCount, uint* actualClusterCount);
+
+		[VtblIndex(63)]
+		HResult DetermineMinWidth(float* minWidth);
+
+		[VtblIndex(64)]
+		HResult HitTestPoint(float pointX, float pointY, Bool32* isTrailingHit, Bool32* isInside, HitTestMetrics* hitTestMetrics);
+
+		[VtblIndex(65)]
+		HResult HitTestTextPosition(uint textPosition, Bool32 isTrailingHit, float* pointX, float* pointY, HitTestMetrics* hitTestMetrics);
+
+		[VtblIndex(66)]
+		HResult HitTestTextRange(uint textPosition, uint textLength, float originX, float originY, HitTestMetrics* hitTestMetrics, uint maxHitTestMetricsCount, uint* actualHitTestMetricsCount);
 	}
 }
 

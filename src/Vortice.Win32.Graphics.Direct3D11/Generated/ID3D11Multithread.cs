@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("9b7e4e00-342c-4106-a19f-4f2704f689f0")]
 [NativeTypeName("struct ID3D11Multithread : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11Multithread : INativeGuid
+public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Multithread
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct ID3D11Multithread : INativeGuid
 	public Bool32 GetMultithreadProtected()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, Bool32>)(lpVtbl[6]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void Enter();
+
+		[VtblIndex(4)]
+		void Leave();
+
+		[VtblIndex(5)]
+		Bool32 SetMultithreadProtected(Bool32 bMTProtect);
+
+		[VtblIndex(6)]
+		Bool32 GetMultithreadProtected();
 	}
 }
 

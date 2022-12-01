@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("50c83a1c-e072-4c48-87b0-3630fa36a6d0")]
 [NativeTypeName("struct IDXGIFactory2 : IDXGIFactory1")]
 [NativeInheritance("IDXGIFactory1")]
-public unsafe partial struct IDXGIFactory2 : INativeGuid
+public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory2
 	{
@@ -248,6 +248,41 @@ public unsafe partial struct IDXGIFactory2 : INativeGuid
 	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[24]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+	}
+	public interface Interface : IDXGIFactory1.Interface
+	{
+		[VtblIndex(14)]
+		Bool32 IsWindowedStereoEnabled();
+
+		[VtblIndex(15)]
+		HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain);
+
+		[VtblIndex(16)]
+		HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain);
+
+		[VtblIndex(17)]
+		HResult GetSharedResourceAdapterLuid(Handle hResource, Luid* pLuid);
+
+		[VtblIndex(18)]
+		HResult RegisterStereoStatusWindow(IntPtr WindowHandle, uint wMsg, uint* pdwCookie);
+
+		[VtblIndex(19)]
+		HResult RegisterStereoStatusEvent(Handle hEvent, uint* pdwCookie);
+
+		[VtblIndex(20)]
+		void UnregisterStereoStatus(uint dwCookie);
+
+		[VtblIndex(21)]
+		HResult RegisterOcclusionStatusWindow(IntPtr WindowHandle, uint wMsg, uint* pdwCookie);
+
+		[VtblIndex(22)]
+		HResult RegisterOcclusionStatusEvent(Handle hEvent, uint* pdwCookie);
+
+		[VtblIndex(23)]
+		void UnregisterOcclusionStatus(uint dwCookie);
+
+		[VtblIndex(24)]
+		HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain);
 	}
 }
 

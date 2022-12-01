@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("60eccbc1-378d-4df1-894c-f8ac5ce4d7dd")]
 [NativeTypeName("struct ID3D12DebugDevice2 : ID3D12DebugDevice")]
 [NativeInheritance("ID3D12DebugDevice")]
-public unsafe partial struct ID3D12DebugDevice2 : INativeGuid
+public unsafe partial struct ID3D12DebugDevice2 : ID3D12DebugDevice2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12DebugDevice2
 	{
@@ -112,6 +112,14 @@ public unsafe partial struct ID3D12DebugDevice2 : INativeGuid
 	public HResult GetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice2*, DebugDeviceParameterType, void*, uint, int>)(lpVtbl[7]))((ID3D12DebugDevice2*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+	}
+	public interface Interface : ID3D12DebugDevice.Interface
+	{
+		[VtblIndex(6)]
+		HResult SetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize);
+
+		[VtblIndex(7)]
+		HResult GetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize);
 	}
 }
 

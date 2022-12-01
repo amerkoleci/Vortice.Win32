@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("cac701ee-80fc-4122-8242-10b39c8cec34")]
 [NativeTypeName("struct ID3D11Module : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D11Module : INativeGuid
+public unsafe partial struct ID3D11Module : ID3D11Module.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11Module
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID3D11Module : INativeGuid
 	public HResult CreateInstance(sbyte* pNamespace, ID3D11ModuleInstance** ppModuleInstance)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Module*, sbyte*, ID3D11ModuleInstance**, int>)(lpVtbl[3]))((ID3D11Module*)Unsafe.AsPointer(ref this), pNamespace, ppModuleInstance);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult CreateInstance(sbyte* pNamespace, ID3D11ModuleInstance** ppModuleInstance);
 	}
 }
 

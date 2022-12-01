@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("05008617-fbfd-4051-a790-144884b4f6a9")]
 [NativeTypeName("struct IDXGIDevice2 : IDXGIDevice1")]
 [NativeInheritance("IDXGIDevice1")]
-public unsafe partial struct IDXGIDevice2 : INativeGuid
+public unsafe partial struct IDXGIDevice2 : IDXGIDevice2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDevice2
 	{
@@ -184,6 +184,17 @@ public unsafe partial struct IDXGIDevice2 : INativeGuid
 	public HResult EnqueueSetEvent(Handle hEvent)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice2*, Handle, int>)(lpVtbl[16]))((IDXGIDevice2*)Unsafe.AsPointer(ref this), hEvent);
+	}
+	public interface Interface : IDXGIDevice1.Interface
+	{
+		[VtblIndex(14)]
+		HResult OfferResources(uint NumResources, IDXGIResource** ppResources, OfferResourcePriority Priority);
+
+		[VtblIndex(15)]
+		HResult ReclaimResources(uint NumResources, IDXGIResource** ppResources, Bool32* pDiscarded);
+
+		[VtblIndex(16)]
+		HResult EnqueueSetEvent(Handle hEvent);
 	}
 }
 

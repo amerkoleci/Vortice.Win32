@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("ef1a287d-342a-4f76-8fdb-da0d6ea9f92b")]
 [NativeTypeName("struct ID2D1Transform : ID2D1TransformNode")]
 [NativeInheritance("ID2D1TransformNode")]
-public unsafe partial struct ID2D1Transform : INativeGuid
+public unsafe partial struct ID2D1Transform : ID2D1Transform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1Transform
 	{
@@ -104,6 +104,17 @@ public unsafe partial struct ID2D1Transform : INativeGuid
 	public HResult MapInvalidRect(uint inputIndex, RawRect invalidInputRect, RawRect* invalidOutputRect)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, uint, RawRect, RawRect*, int>)(lpVtbl[6]))((ID2D1Transform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
+	}
+	public interface Interface : ID2D1TransformNode.Interface
+	{
+		[VtblIndex(4)]
+		HResult MapOutputRectToInputRects(RawRect* outputRect, RawRect* inputRects, uint inputRectsCount);
+
+		[VtblIndex(5)]
+		HResult MapInputRectsToOutputRect(RawRect* inputRects, RawRect* inputOpaqueSubRects, uint inputRectCount, RawRect* outputRect, RawRect* outputOpaqueSubRect);
+
+		[VtblIndex(6)]
+		HResult MapInvalidRect(uint inputIndex, RawRect invalidInputRect, RawRect* invalidOutputRect);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("efa008f9-f7a1-48bf-b05c-f224713cc0ff")]
 [NativeTypeName("struct IDWriteFontFallback : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFallback : INativeGuid
+public unsafe partial struct IDWriteFontFallback : IDWriteFontFallback.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFallback
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct IDWriteFontFallback : INativeGuid
 	public HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, ushort* baseFamilyName, FontWeight baseWeight, FontStyle baseStyle, FontStretch baseStretch, uint* mappedLength, IDWriteFont** mappedFont, float* scale)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFallback*, IDWriteTextAnalysisSource*, uint, uint, IDWriteFontCollection*, ushort*, FontWeight, FontStyle, FontStretch, uint*, IDWriteFont**, float*, int>)(lpVtbl[3]))((IDWriteFontFallback*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, baseFontCollection, baseFamilyName, baseWeight, baseStyle, baseStretch, mappedLength, mappedFont, scale);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, ushort* baseFamilyName, FontWeight baseWeight, FontStyle baseStyle, FontStretch baseStretch, uint* mappedLength, IDWriteFont** mappedFont, float* scale);
 	}
 }
 

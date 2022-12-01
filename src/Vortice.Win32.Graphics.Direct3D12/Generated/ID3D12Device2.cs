@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("30baa41e-b15b-475c-a0bb-1af5c5b64328")]
 [NativeTypeName("struct ID3D12Device2 : ID3D12Device1")]
 [NativeInheritance("ID3D12Device1")]
-public unsafe partial struct ID3D12Device2 : INativeGuid
+public unsafe partial struct ID3D12Device2 : ID3D12Device2.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Device2
 	{
@@ -435,6 +435,11 @@ public unsafe partial struct ID3D12Device2 : INativeGuid
 	public HResult CreatePipelineState(PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device2*, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[47]))((ID3D12Device2*)Unsafe.AsPointer(ref this), pDesc, riid, ppPipelineState);
+	}
+	public interface Interface : ID3D12Device1.Interface
+	{
+		[VtblIndex(47)]
+		HResult CreatePipelineState(PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState);
 	}
 }
 

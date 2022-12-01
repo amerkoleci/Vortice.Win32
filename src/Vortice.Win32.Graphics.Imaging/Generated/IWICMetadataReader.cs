@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("9204fe99-d8fc-4fd5-a001-9536b067a899")]
 [NativeTypeName("struct IWICMetadataReader : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICMetadataReader : INativeGuid
+public unsafe partial struct IWICMetadataReader : IWICMetadataReader.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICMetadataReader
 	{
@@ -120,6 +120,26 @@ public unsafe partial struct IWICMetadataReader : INativeGuid
 	public HResult GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReader*, IWICEnumMetadataItem**, int>)(lpVtbl[8]))((IWICMetadataReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult GetMetadataFormat(Guid* pguidMetadataFormat);
+
+		[VtblIndex(4)]
+		HResult GetMetadataHandlerInfo(IWICMetadataHandlerInfo** ppIHandler);
+
+		[VtblIndex(5)]
+		HResult GetCount(uint* pcCount);
+
+		[VtblIndex(6)]
+		HResult GetValueByIndex(uint nIndex, Com.Variant** pvarSchema, Com.Variant** pvarId, Com.Variant** pvarValue);
+
+		[VtblIndex(7)]
+		HResult GetValue(Com.Variant* pvarSchema, Com.Variant* pvarId, Com.Variant** pvarValue);
+
+		[VtblIndex(8)]
+		HResult GetEnumerator(IWICEnumMetadataItem** ppIEnumMetadata);
 	}
 }
 

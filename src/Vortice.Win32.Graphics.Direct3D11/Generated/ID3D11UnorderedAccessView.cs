@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("28acf509-7f5c-48f6-8611-f316010a6380")]
 [NativeTypeName("struct ID3D11UnorderedAccessView : ID3D11View")]
 [NativeInheritance("ID3D11View")]
-public unsafe partial struct ID3D11UnorderedAccessView : INativeGuid
+public unsafe partial struct ID3D11UnorderedAccessView : ID3D11UnorderedAccessView.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11UnorderedAccessView
 	{
@@ -120,6 +120,11 @@ public unsafe partial struct ID3D11UnorderedAccessView : INativeGuid
 	public void GetDesc(UnorderedAccessViewDescription* pDesc)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView*, UnorderedAccessViewDescription*, void>)(lpVtbl[8]))((ID3D11UnorderedAccessView*)Unsafe.AsPointer(ref this), pDesc);
+	}
+	public interface Interface : ID3D11View.Interface
+	{
+		[VtblIndex(8)]
+		void GetDesc(UnorderedAccessViewDescription* pDesc);
 	}
 }
 

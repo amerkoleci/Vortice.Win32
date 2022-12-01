@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("0adf7d52-929c-4e61-addb-ffed30de66ef")]
 [NativeTypeName("struct ID3D12SharingContract : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12SharingContract : INativeGuid
+public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12SharingContract
 	{
@@ -104,6 +104,20 @@ public unsafe partial struct ID3D12SharingContract : INativeGuid
 	public void EndCapturableWork(Guid* guid)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, Guid*, void>)(lpVtbl[6]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), guid);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void Present(ID3D12Resource* pResource, uint Subresource, IntPtr window);
+
+		[VtblIndex(4)]
+		void SharedFenceSignal(ID3D12Fence* pFence, ulong FenceValue);
+
+		[VtblIndex(5)]
+		void BeginCapturableWork(Guid* guid);
+
+		[VtblIndex(6)]
+		void EndCapturableWork(Guid* guid);
 	}
 }
 

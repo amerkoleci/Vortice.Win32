@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("5598b14b-9fd7-48b7-9bdb-8f0964eb38bc")]
 [NativeTypeName("struct ID2D1ComputeInfo : ID2D1RenderInfo")]
 [NativeInheritance("ID2D1RenderInfo")]
-public unsafe partial struct ID2D1ComputeInfo : INativeGuid
+public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ComputeInfo
 	{
@@ -128,6 +128,17 @@ public unsafe partial struct ID2D1ComputeInfo : INativeGuid
 	public HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, uint, ID2D1ResourceTexture*, int>)(lpVtbl[9]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), textureIndex, resourceTexture);
+	}
+	public interface Interface : ID2D1RenderInfo.Interface
+	{
+		[VtblIndex(7)]
+		HResult SetComputeShaderConstantBuffer(byte* buffer, uint bufferCount);
+
+		[VtblIndex(8)]
+		HResult SetComputeShader(Guid* shaderId);
+
+		[VtblIndex(9)]
+		HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture);
 	}
 }
 

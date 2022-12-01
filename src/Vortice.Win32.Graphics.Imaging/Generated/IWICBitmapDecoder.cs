@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("9edde9e7-8dee-47ea-99df-e6faf2ed44bf")]
 [NativeTypeName("struct IWICBitmapDecoder : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICBitmapDecoder : INativeGuid
+public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapDecoder
 	{
@@ -160,6 +160,41 @@ public unsafe partial struct IWICBitmapDecoder : INativeGuid
 	public HResult GetFrame(uint index, IWICBitmapFrameDecode** ppIBitmapFrame)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, uint, IWICBitmapFrameDecode**, int>)(lpVtbl[13]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), index, ppIBitmapFrame);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult QueryCapability(Com.IStream* pIStream, uint* pdwCapability);
+
+		[VtblIndex(4)]
+		HResult Initialize(Com.IStream* pIStream, WICDecodeOptions cacheOptions);
+
+		[VtblIndex(5)]
+		HResult GetContainerFormat(Guid* pguidContainerFormat);
+
+		[VtblIndex(6)]
+		HResult GetDecoderInfo(IWICBitmapDecoderInfo** ppIDecoderInfo);
+
+		[VtblIndex(7)]
+		HResult CopyPalette(IWICPalette* pIPalette);
+
+		[VtblIndex(8)]
+		HResult GetMetadataQueryReader(IWICMetadataQueryReader** ppIMetadataQueryReader);
+
+		[VtblIndex(9)]
+		HResult GetPreview(IWICBitmapSource** ppIBitmapSource);
+
+		[VtblIndex(10)]
+		HResult GetColorContexts(uint cCount, IWICColorContext** ppIColorContexts, uint* pcActualCount);
+
+		[VtblIndex(11)]
+		HResult GetThumbnail(IWICBitmapSource** ppIThumbnail);
+
+		[VtblIndex(12)]
+		HResult GetFrameCount(uint* pCount);
+
+		[VtblIndex(13)]
+		HResult GetFrame(uint index, IWICBitmapFrameDecode** ppIBitmapFrame);
 	}
 }
 

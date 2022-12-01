@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("c3827890-e548-4cfa-96cf-5689a9370f80")]
 [NativeTypeName("struct ID3D12GraphicsCommandList6 : ID3D12GraphicsCommandList5")]
 [NativeInheritance("ID3D12GraphicsCommandList5")]
-public unsafe partial struct ID3D12GraphicsCommandList6 : INativeGuid
+public unsafe partial struct ID3D12GraphicsCommandList6 : ID3D12GraphicsCommandList6.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12GraphicsCommandList6
 	{
@@ -688,6 +688,11 @@ public unsafe partial struct ID3D12GraphicsCommandList6 : INativeGuid
 	public void DispatchMesh(uint ThreadGroupCountX, uint ThreadGroupCountY, uint ThreadGroupCountZ)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, uint, uint, uint, void>)(lpVtbl[79]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), ThreadGroupCountX, ThreadGroupCountY, ThreadGroupCountZ);
+	}
+	public interface Interface : ID3D12GraphicsCommandList5.Interface
+	{
+		[VtblIndex(79)]
+		void DispatchMesh(uint ThreadGroupCountX, uint ThreadGroupCountY, uint ThreadGroupCountZ);
 	}
 }
 

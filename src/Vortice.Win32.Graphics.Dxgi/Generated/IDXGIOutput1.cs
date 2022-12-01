@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("00cddea8-939b-4b83-a340-a685226666cc")]
 [NativeTypeName("struct IDXGIOutput1 : IDXGIOutput")]
 [NativeInheritance("IDXGIOutput")]
-public unsafe partial struct IDXGIOutput1 : INativeGuid
+public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIOutput1
 	{
@@ -232,6 +232,20 @@ public unsafe partial struct IDXGIOutput1 : INativeGuid
 	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput1*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
+	}
+	public interface Interface : IDXGIOutput.Interface
+	{
+		[VtblIndex(19)]
+		HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc);
+
+		[VtblIndex(20)]
+		HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice);
+
+		[VtblIndex(21)]
+		HResult GetDisplaySurfaceData1(IDXGIResource* pDestination);
+
+		[VtblIndex(22)]
+		HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication);
 	}
 }
 

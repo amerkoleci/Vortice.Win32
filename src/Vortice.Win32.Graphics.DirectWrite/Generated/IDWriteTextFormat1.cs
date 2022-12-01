@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("5f174b49-0d8b-4cfb-8bca-f1cce9d06c67")]
 [NativeTypeName("struct IDWriteTextFormat1 : IDWriteTextFormat")]
 [NativeInheritance("IDWriteTextFormat")]
-public unsafe partial struct IDWriteTextFormat1 : INativeGuid
+public unsafe partial struct IDWriteTextFormat1 : IDWriteTextFormat1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextFormat1
 	{
@@ -336,6 +336,32 @@ public unsafe partial struct IDWriteTextFormat1 : INativeGuid
 	public HResult GetFontFallback(IDWriteFontFallback** fontFallback)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, IDWriteFontFallback**, int>)(lpVtbl[35]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this), fontFallback);
+	}
+	public interface Interface : IDWriteTextFormat.Interface
+	{
+		[VtblIndex(28)]
+		HResult SetVerticalGlyphOrientation(VerticalGlyphOrientation glyphOrientation);
+
+		[VtblIndex(29)]
+		VerticalGlyphOrientation GetVerticalGlyphOrientation();
+
+		[VtblIndex(30)]
+		HResult SetLastLineWrapping(Bool32 isLastLineWrappingEnabled);
+
+		[VtblIndex(31)]
+		Bool32 GetLastLineWrapping();
+
+		[VtblIndex(32)]
+		HResult SetOpticalAlignment(OpticalAlignment opticalAlignment);
+
+		[VtblIndex(33)]
+		OpticalAlignment GetOpticalAlignment();
+
+		[VtblIndex(34)]
+		HResult SetFontFallback(IDWriteFontFallback* fontFallback);
+
+		[VtblIndex(35)]
+		HResult GetFontFallback(IDWriteFontFallback** fontFallback);
 	}
 }
 

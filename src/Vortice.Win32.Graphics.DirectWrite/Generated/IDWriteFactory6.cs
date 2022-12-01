@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("f3744d80-21f7-42eb-b35d-995bc72fc223")]
 [NativeTypeName("struct IDWriteFactory6 : IDWriteFactory5")]
 [NativeInheritance("IDWriteFactory5")]
-public unsafe partial struct IDWriteFactory6 : INativeGuid
+public unsafe partial struct IDWriteFactory6 : IDWriteFactory6.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFactory6
 	{
@@ -488,6 +488,29 @@ public unsafe partial struct IDWriteFactory6 : INativeGuid
 	public HResult CreateTextFormat(ushort* fontFamilyName, IDWriteFontCollection* fontCollection, FontAxisValue* fontAxisValues, uint fontAxisValueCount, float fontSize, ushort* localeName, IDWriteTextFormat3** textFormat)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory6*, ushort*, IDWriteFontCollection*, FontAxisValue*, uint, float, ushort*, IDWriteTextFormat3**, int>)(lpVtbl[54]))((IDWriteFactory6*)Unsafe.AsPointer(ref this), fontFamilyName, fontCollection, fontAxisValues, fontAxisValueCount, fontSize, localeName, textFormat);
+	}
+	public interface Interface : IDWriteFactory5.Interface
+	{
+		[VtblIndex(48)]
+		HResult CreateFontFaceReference(IDWriteFontFile* fontFile, uint faceIndex, FontSimulations fontSimulations, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontFaceReference1** fontFaceReference);
+
+		[VtblIndex(49)]
+		HResult CreateFontResource(IDWriteFontFile* fontFile, uint faceIndex, IDWriteFontResource** fontResource);
+
+		[VtblIndex(50)]
+		HResult GetSystemFontSet(Bool32 includeDownloadableFonts, IDWriteFontSet1** fontSet);
+
+		[VtblIndex(51)]
+		HResult GetSystemFontCollection(Bool32 includeDownloadableFonts, FontFamilyModel fontFamilyModel, IDWriteFontCollection2** fontCollection);
+
+		[VtblIndex(52)]
+		HResult CreateFontCollectionFromFontSet(IDWriteFontSet* fontSet, FontFamilyModel fontFamilyModel, IDWriteFontCollection2** fontCollection);
+
+		[VtblIndex(53)]
+		HResult CreateFontSetBuilder(IDWriteFontSetBuilder2** fontSetBuilder);
+
+		[VtblIndex(54)]
+		HResult CreateTextFormat(ushort* fontFamilyName, IDWriteFontCollection* fontCollection, FontAxisValue* fontAxisValues, uint fontAxisValueCount, float fontSize, ushort* localeName, IDWriteTextFormat3** textFormat);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("2775f462-b6c1-4015-b0be-b3e7d6a4976d")]
 [NativeTypeName("struct IDCompositionVisual3 : IDCompositionVisualDebug")]
 [NativeInheritance("IDCompositionVisualDebug")]
-public unsafe partial struct IDCompositionVisual3 : INativeGuid
+public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionVisual3
 	{
@@ -320,6 +320,32 @@ public unsafe partial struct IDCompositionVisual3 : INativeGuid
 	public HResult SetVisible(Bool32 visible)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual3*, Bool32, int>)(lpVtbl[33]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), visible);
+	}
+	public interface Interface : IDCompositionVisualDebug.Interface
+	{
+		[VtblIndex(26)]
+		HResult SetDepthMode(DepthMode mode);
+
+		[VtblIndex(27)]
+		HResult SetOffsetZ(IDCompositionAnimation* animation);
+
+		[VtblIndex(28)]
+		HResult SetOffsetZ(float offsetZ);
+
+		[VtblIndex(29)]
+		HResult SetOpacity(IDCompositionAnimation* animation);
+
+		[VtblIndex(30)]
+		HResult SetOpacity(float opacity);
+
+		[VtblIndex(31)]
+		HResult SetTransform(IDCompositionTransform3D* transform);
+
+		[VtblIndex(32)]
+		HResult SetTransform(Matrix4x4* matrix);
+
+		[VtblIndex(33)]
+		HResult SetVisible(Bool32 visible);
 	}
 }
 

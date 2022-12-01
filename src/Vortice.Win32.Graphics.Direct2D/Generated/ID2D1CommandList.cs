@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("b4f34a19-2383-4d76-94f6-ec343657c3dc")]
 [NativeTypeName("struct ID2D1CommandList : ID2D1Image")]
 [NativeInheritance("ID2D1Image")]
-public unsafe partial struct ID2D1CommandList : INativeGuid
+public unsafe partial struct ID2D1CommandList : ID2D1CommandList.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1CommandList
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct ID2D1CommandList : INativeGuid
 	public HResult Close()
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandList*, int>)(lpVtbl[5]))((ID2D1CommandList*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1Image.Interface
+	{
+		[VtblIndex(4)]
+		HResult Stream(ID2D1CommandSink* sink);
+
+		[VtblIndex(5)]
+		HResult Close();
 	}
 }
 

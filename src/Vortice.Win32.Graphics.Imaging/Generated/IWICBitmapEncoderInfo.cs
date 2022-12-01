@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("94c9b4ee-a09f-4f92-8a1e-4a9bce7e76fb")]
 [NativeTypeName("struct IWICBitmapEncoderInfo : IWICBitmapCodecInfo")]
 [NativeInheritance("IWICBitmapCodecInfo")]
-public unsafe partial struct IWICBitmapEncoderInfo : INativeGuid
+public unsafe partial struct IWICBitmapEncoderInfo : IWICBitmapEncoderInfo.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICBitmapEncoderInfo
 	{
@@ -240,6 +240,11 @@ public unsafe partial struct IWICBitmapEncoderInfo : INativeGuid
 	public HResult CreateInstance(IWICBitmapEncoder** ppIBitmapEncoder)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoderInfo*, IWICBitmapEncoder**, int>)(lpVtbl[23]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapEncoder);
+	}
+	public interface Interface : IWICBitmapCodecInfo.Interface
+	{
+		[VtblIndex(23)]
+		HResult CreateInstance(IWICBitmapEncoder** ppIBitmapEncoder);
 	}
 }
 

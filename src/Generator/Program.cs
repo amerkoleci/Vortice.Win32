@@ -1029,6 +1029,12 @@ public static class Program
         // D3D11
         { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" },
         { "ID3D11DeviceContext::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
+        { "ID3D11DeviceContext1::Map::MapFlags", "D3D11_MAP_FLAG" },
+        { "ID3D11DeviceContext1::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
+        { "ID3D11DeviceContext2::Map::MapFlags", "D3D11_MAP_FLAG" },
+        { "ID3D11DeviceContext2::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
+        { "ID3D11DeviceContext3::Map::MapFlags", "D3D11_MAP_FLAG" },
+        { "ID3D11DeviceContext3::ClearDepthStencilView::ClearFlags", "D3D11_CLEAR_FLAG" },
 
         // D3D12
 
@@ -2251,10 +2257,10 @@ public static class Program
         string baseType = string.Empty;
         if (comType.Guid != null)
         {
-            baseType += " : INativeGuid";
+            baseType += ", INativeGuid";
         }
 
-        using (writer.PushBlock($"public unsafe partial struct {csTypeName}{baseType}"))
+        using (writer.PushBlock($"public unsafe partial struct {csTypeName} : {csTypeName}.Interface{baseType}"))
         {
             if (comType.Guid != null)
             {
@@ -2323,6 +2329,7 @@ public static class Program
             }
 
             bool needNewLine = false;
+            List<Tuple<int, string>> interfaceMethods = new();
             foreach (KeyValuePair<string, List<ApiType>> methodPair in methodsToGenerate)
             {
                 string docName = methodPair.Key;
@@ -2375,7 +2382,7 @@ public static class Program
 
                     foreach (ApiParameter parameter in method.Params)
                     {
-                        if(method.Name == "CreateRenderTargetView" && comType.Name == "ID3D12Device")
+                        if (method.Name == "CreateRenderTargetView" && comType.Name == "ID3D12Device")
                         {
 
                         }
@@ -2433,6 +2440,7 @@ public static class Program
                         argumentNamesString = ", " + argumentNamesString;
                     }
 
+                    bool needToAddInterfaceMethod = true;
                     if (comType.Name == docName)
                     {
                         if (string.IsNullOrEmpty(writer.DocFileName) == false)
@@ -2448,6 +2456,7 @@ public static class Program
                         }
 
                         writer.WriteLine($"/// <inheritdoc cref=\"{docName}.{method.Name}\" />");
+                        needToAddInterfaceMethod = false;
                     }
 
                     writer.WriteLine("[MethodImpl(MethodImplOptions.AggressiveInlining)]");
@@ -2484,8 +2493,41 @@ public static class Program
                         }
                     }
 
+                    if (needToAddInterfaceMethod)
+                    {
+                        string interfaceMethodDecl = $"{returnType} {method.Name}({argumentsString})";
+                        interfaceMethods.Add(Tuple.Create(vtblIndex, interfaceMethodDecl));
+                    }
+
                     needNewLine = true;
                     vtblIndex++;
+                }
+            }
+
+            // Generate interface
+            string baseInterfaceDecl = string.Empty;
+            if (comType.Interface != null)
+            {
+                baseInterfaceDecl += $": {comType.Interface.Name}.Interface";
+            }
+
+            if (csTypeName == "IDXGIAdapter")
+            {
+            }
+
+            needNewLine = false;
+            using (writer.PushBlock($"public interface Interface {baseInterfaceDecl}"))
+            {
+                foreach (var item in interfaceMethods)
+                {
+                    if (needNewLine)
+                    {
+                        writer.WriteLine();
+                    }
+
+                    writer.WriteLine($"[VtblIndex({item.Item1})]");
+                    writer.WriteLine($"{item.Item2};");
+                    needNewLine = true;
                 }
             }
         }

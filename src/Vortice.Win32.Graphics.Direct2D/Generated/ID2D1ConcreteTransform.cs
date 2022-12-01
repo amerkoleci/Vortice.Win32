@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("1a799d8a-69f7-4e4c-9fed-437ccc6684cc")]
 [NativeTypeName("struct ID2D1ConcreteTransform : ID2D1TransformNode")]
 [NativeInheritance("ID2D1TransformNode")]
-public unsafe partial struct ID2D1ConcreteTransform : INativeGuid
+public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1ConcreteTransform
 	{
@@ -96,6 +96,14 @@ public unsafe partial struct ID2D1ConcreteTransform : INativeGuid
 	public void SetCached(Bool32 isCached)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1ConcreteTransform*, Bool32, void>)(lpVtbl[5]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), isCached);
+	}
+	public interface Interface : ID2D1TransformNode.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth);
+
+		[VtblIndex(5)]
+		void SetCached(Bool32 isCached);
 	}
 }
 

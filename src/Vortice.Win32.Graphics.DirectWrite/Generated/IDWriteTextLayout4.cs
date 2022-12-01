@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("05a9bf42-223f-4441-b5fb-8263685f55e9")]
 [NativeTypeName("struct IDWriteTextLayout4 : IDWriteTextLayout3")]
 [NativeInheritance("IDWriteTextLayout3")]
-public unsafe partial struct IDWriteTextLayout4 : INativeGuid
+public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextLayout4
 	{
@@ -760,6 +760,23 @@ public unsafe partial struct IDWriteTextLayout4 : INativeGuid
 	public HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, AutomaticFontAxes, int>)(lpVtbl[88]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), automaticFontAxes);
+	}
+	public interface Interface : IDWriteTextLayout3.Interface
+	{
+		[VtblIndex(84)]
+		HResult SetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount, TextRange textRange);
+
+		[VtblIndex(85)]
+		uint GetFontAxisValueCount(uint currentPosition);
+
+		[VtblIndex(86)]
+		HResult GetFontAxisValues(uint currentPosition, FontAxisValue* fontAxisValues, uint fontAxisValueCount, TextRange* textRange);
+
+		[VtblIndex(87)]
+		AutomaticFontAxes GetAutomaticFontAxes();
+
+		[VtblIndex(88)]
+		HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes);
 	}
 }
 

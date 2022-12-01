@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectComposition;
 [Guid("576616c0-a231-494d-a38d-00fd5ec4db46")]
 [NativeTypeName("struct IDCompositionCompositeEffect : IDCompositionFilterEffect")]
 [NativeInheritance("IDCompositionFilterEffect")]
-public unsafe partial struct IDCompositionCompositeEffect : INativeGuid
+public unsafe partial struct IDCompositionCompositeEffect : IDCompositionCompositeEffect.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDCompositionCompositeEffect
 	{
@@ -88,6 +88,11 @@ public unsafe partial struct IDCompositionCompositeEffect : INativeGuid
 	public HResult SetMode(Graphics.Direct2D.Common.CompositeMode mode)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionCompositeEffect*, Graphics.Direct2D.Common.CompositeMode, int>)(lpVtbl[4]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), mode);
+	}
+	public interface Interface : IDCompositionFilterEffect.Interface
+	{
+		[VtblIndex(4)]
+		HResult SetMode(Graphics.Direct2D.Common.CompositeMode mode);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("80dad800-e21f-4e83-96ce-bfcce500db7c")]
 [NativeTypeName("struct IDWriteTextAnalyzer1 : IDWriteTextAnalyzer")]
 [NativeInheritance("IDWriteTextAnalyzer")]
-public unsafe partial struct IDWriteTextAnalyzer1 : INativeGuid
+public unsafe partial struct IDWriteTextAnalyzer1 : IDWriteTextAnalyzer1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteTextAnalyzer1
 	{
@@ -200,6 +200,35 @@ public unsafe partial struct IDWriteTextAnalyzer1 : INativeGuid
 	public HResult GetJustifiedGlyphs(IDWriteFontFace* fontFace, float fontEmSize, ScriptAnalysis scriptAnalysis, uint textLength, uint glyphCount, uint maxGlyphCount, ushort* clusterMap, ushort* glyphIndices, float* glyphAdvances, float* justifiedGlyphAdvances, GlyphOffset* justifiedGlyphOffsets, ShapingGlyphProperties* glyphProperties, uint* actualGlyphCount, ushort* modifiedClusterMap, ushort* modifiedGlyphIndices, float* modifiedGlyphAdvances, GlyphOffset* modifiedGlyphOffsets)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer1*, IDWriteFontFace*, float, ScriptAnalysis, uint, uint, uint, ushort*, ushort*, float*, float*, GlyphOffset*, ShapingGlyphProperties*, uint*, ushort*, ushort*, float*, GlyphOffset*, int>)(lpVtbl[18]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), fontFace, fontEmSize, scriptAnalysis, textLength, glyphCount, maxGlyphCount, clusterMap, glyphIndices, glyphAdvances, justifiedGlyphAdvances, justifiedGlyphOffsets, glyphProperties, actualGlyphCount, modifiedClusterMap, modifiedGlyphIndices, modifiedGlyphAdvances, modifiedGlyphOffsets);
+	}
+	public interface Interface : IDWriteTextAnalyzer.Interface
+	{
+		[VtblIndex(10)]
+		HResult ApplyCharacterSpacing(float leadingSpacing, float trailingSpacing, float minimumAdvanceWidth, uint textLength, uint glyphCount, ushort* clusterMap, float* glyphAdvances, GlyphOffset* glyphOffsets, ShapingGlyphProperties* glyphProperties, float* modifiedGlyphAdvances, GlyphOffset* modifiedGlyphOffsets);
+
+		[VtblIndex(11)]
+		HResult GetBaseline(IDWriteFontFace* fontFace, Baseline baseline, Bool32 isVertical, Bool32 isSimulationAllowed, ScriptAnalysis scriptAnalysis, ushort* localeName, int* baselineCoordinate, Bool32* exists);
+
+		[VtblIndex(12)]
+		HResult AnalyzeVerticalGlyphOrientation(IDWriteTextAnalysisSource1* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink1* analysisSink);
+
+		[VtblIndex(13)]
+		HResult GetGlyphOrientationTransform(GlyphOrientationAngle glyphOrientationAngle, Bool32 isSideways, Matrix3x2* transform);
+
+		[VtblIndex(14)]
+		HResult GetScriptProperties(ScriptAnalysis scriptAnalysis, ScriptProperties* scriptProperties);
+
+		[VtblIndex(15)]
+		HResult GetTextComplexity(ushort* textString, uint textLength, IDWriteFontFace* fontFace, Bool32* isTextSimple, uint* textLengthRead, ushort* glyphIndices);
+
+		[VtblIndex(16)]
+		HResult GetJustificationOpportunities(IDWriteFontFace* fontFace, float fontEmSize, ScriptAnalysis scriptAnalysis, uint textLength, uint glyphCount, ushort* textString, ushort* clusterMap, ShapingGlyphProperties* glyphProperties, JustificationOpportunity* justificationOpportunities);
+
+		[VtblIndex(17)]
+		HResult JustifyGlyphAdvances(float lineWidth, uint glyphCount, JustificationOpportunity* justificationOpportunities, float* glyphAdvances, GlyphOffset* glyphOffsets, float* justifiedGlyphAdvances, GlyphOffset* justifiedGlyphOffsets);
+
+		[VtblIndex(18)]
+		HResult GetJustifiedGlyphs(IDWriteFontFace* fontFace, float fontEmSize, ScriptAnalysis scriptAnalysis, uint textLength, uint glyphCount, uint maxGlyphCount, ushort* clusterMap, ushort* glyphIndices, float* glyphAdvances, float* justifiedGlyphAdvances, GlyphOffset* justifiedGlyphOffsets, ShapingGlyphProperties* glyphProperties, uint* actualGlyphCount, ushort* modifiedClusterMap, ushort* modifiedGlyphIndices, float* modifiedGlyphAdvances, GlyphOffset* modifiedGlyphOffsets);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("e667af9f-cd56-4f46-83ce-032e595d70a8")]
 [NativeTypeName("struct ID3D12LifetimeOwner : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12LifetimeOwner : INativeGuid
+public unsafe partial struct ID3D12LifetimeOwner : ID3D12LifetimeOwner.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12LifetimeOwner
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID3D12LifetimeOwner : INativeGuid
 	public void LifetimeStateUpdated(LifetimeState NewState)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12LifetimeOwner*, LifetimeState, void>)(lpVtbl[3]))((ID3D12LifetimeOwner*)Unsafe.AsPointer(ref this), NewState);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void LifetimeStateUpdated(LifetimeState NewState);
 	}
 }
 

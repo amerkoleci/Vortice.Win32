@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D11;
 [Guid("917600da-f58c-4c33-98d8-3e15b390fa24")]
 [NativeTypeName("struct ID3D11DeviceContext4 : ID3D11DeviceContext3")]
 [NativeInheritance("ID3D11DeviceContext3")]
-public unsafe partial struct ID3D11DeviceContext4 : INativeGuid
+public unsafe partial struct ID3D11DeviceContext4 : ID3D11DeviceContext4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D11DeviceContext4
 	{
@@ -1240,6 +1240,14 @@ public unsafe partial struct ID3D11DeviceContext4 : INativeGuid
 	public HResult Wait(ID3D11Fence* pFence, ulong Value)
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext4*, ID3D11Fence*, ulong, int>)(lpVtbl[148]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pFence, Value);
+	}
+	public interface Interface : ID3D11DeviceContext3.Interface
+	{
+		[VtblIndex(147)]
+		HResult Signal(ID3D11Fence* pFence, ulong Value);
+
+		[VtblIndex(148)]
+		HResult Wait(ID3D11Fence* pFence, ulong Value);
 	}
 }
 

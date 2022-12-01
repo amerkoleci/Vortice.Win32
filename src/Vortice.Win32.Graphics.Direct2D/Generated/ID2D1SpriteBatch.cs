@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("4dc583bf-3a10-438a-8722-e9765224f1f1")]
 [NativeTypeName("struct ID2D1SpriteBatch : ID2D1Resource")]
 [NativeInheritance("ID2D1Resource")]
-public unsafe partial struct ID2D1SpriteBatch : INativeGuid
+public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1SpriteBatch
 	{
@@ -120,6 +120,23 @@ public unsafe partial struct ID2D1SpriteBatch : INativeGuid
 	public void Clear()
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, void>)(lpVtbl[8]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : ID2D1Resource.Interface
+	{
+		[VtblIndex(4)]
+		HResult AddSprites(uint spriteCount, Common.RectF* destinationRectangles, Common.RectU* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
+
+		[VtblIndex(5)]
+		HResult SetSprites(uint startIndex, uint spriteCount, Common.RectF* destinationRectangles, Common.RectU* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride);
+
+		[VtblIndex(6)]
+		HResult GetSprites(uint startIndex, uint spriteCount, Common.RectF* destinationRectangles, Common.RectU* sourceRectangles, Color4** colors, Matrix3x2* transforms);
+
+		[VtblIndex(7)]
+		uint GetSpriteCount();
+
+		[VtblIndex(8)]
+		void Clear();
 	}
 }
 

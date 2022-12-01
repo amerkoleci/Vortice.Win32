@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("b2d9f3ec-c9fe-4a11-a2ec-d86208f7c0a2")]
 [NativeTypeName("struct IDWriteLocalFontFileLoader : IDWriteFontFileLoader")]
 [NativeInheritance("IDWriteFontFileLoader")]
-public unsafe partial struct IDWriteLocalFontFileLoader : INativeGuid
+public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLoader.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteLocalFontFileLoader
 	{
@@ -104,6 +104,17 @@ public unsafe partial struct IDWriteLocalFontFileLoader : INativeGuid
 	public HResult GetLastWriteTimeFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ulong* lastWriteTime)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, ulong*, int>)(lpVtbl[6]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, lastWriteTime);
+	}
+	public interface Interface : IDWriteFontFileLoader.Interface
+	{
+		[VtblIndex(4)]
+		HResult GetFilePathLengthFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, uint* filePathLength);
+
+		[VtblIndex(5)]
+		HResult GetFilePathFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ushort* filePath, uint filePathSize);
+
+		[VtblIndex(6)]
+		HResult GetLastWriteTimeFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ulong* lastWriteTime);
 	}
 }
 

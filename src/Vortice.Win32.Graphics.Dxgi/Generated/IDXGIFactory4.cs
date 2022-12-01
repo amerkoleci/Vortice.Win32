@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("1bc6ea02-ef36-464f-bf0c-21ca39e5168a")]
 [NativeTypeName("struct IDXGIFactory4 : IDXGIFactory3")]
 [NativeInheritance("IDXGIFactory3")]
-public unsafe partial struct IDXGIFactory4 : INativeGuid
+public unsafe partial struct IDXGIFactory4 : IDXGIFactory4.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIFactory4
 	{
@@ -272,6 +272,14 @@ public unsafe partial struct IDXGIFactory4 : INativeGuid
 	public HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory4*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory4*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+	}
+	public interface Interface : IDXGIFactory3.Interface
+	{
+		[VtblIndex(26)]
+		HResult EnumAdapterByLuid(Luid AdapterLuid, Guid* riid, void** ppvAdapter);
+
+		[VtblIndex(27)]
+		HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter);
 	}
 }
 

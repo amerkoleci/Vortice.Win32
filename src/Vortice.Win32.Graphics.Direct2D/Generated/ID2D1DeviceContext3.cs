@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct2D;
 [Guid("235a7496-8351-414c-bcd4-6672ab2d8e00")]
 [NativeTypeName("struct ID2D1DeviceContext3 : ID2D1DeviceContext2")]
 [NativeInheritance("ID2D1DeviceContext2")]
-public unsafe partial struct ID2D1DeviceContext3 : INativeGuid
+public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID2D1DeviceContext3
 	{
@@ -915,6 +915,14 @@ public unsafe partial struct ID2D1DeviceContext3 : INativeGuid
 	public void DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, BitmapInterpolationMode interpolationMode, SpriteOptions spriteOptions)
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, void>)(lpVtbl[107]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
+	}
+	public interface Interface : ID2D1DeviceContext2.Interface
+	{
+		[VtblIndex(106)]
+		HResult CreateSpriteBatch(ID2D1SpriteBatch** spriteBatch);
+
+		[VtblIndex(107)]
+		void DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, BitmapInterpolationMode interpolationMode, SpriteOptions spriteOptions);
 	}
 }
 

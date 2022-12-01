@@ -1,6 +1,8 @@
 // Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
+using static Win32.Apis;
+
 namespace Win32.Graphics.DirectWrite;
 
 public unsafe partial struct IDWriteFactory
@@ -16,7 +18,7 @@ public unsafe partial struct IDWriteFactory
 
         fixed (char* fontFamilyNamePtr = fontFamilyName)
         {
-            CreateTextFormat(
+            ThrowIfFailed(CreateTextFormat(
                 (ushort*)fontFamilyNamePtr,
                 null,
                 fontWeight,
@@ -24,7 +26,7 @@ public unsafe partial struct IDWriteFactory
                 fontStretch,
                 fontSize,
                 null,
-                textFormat.GetAddressOf()).ThrowIfFailed();
+                textFormat.GetAddressOf()));
 
             return textFormat.Move();
         }
@@ -44,7 +46,7 @@ public unsafe partial struct IDWriteFactory
         {
             fixed (char* localeNamePtr = localeName)
             {
-                CreateTextFormat(
+                ThrowIfFailed(CreateTextFormat(
                     (ushort*)fontFamilyNamePtr,
                     null,
                     fontWeight,
@@ -52,7 +54,8 @@ public unsafe partial struct IDWriteFactory
                     fontStretch,
                     fontSize,
                     (ushort*)localeNamePtr,
-                    textFormat.GetAddressOf()).ThrowIfFailed();
+                    textFormat.GetAddressOf())
+                    );
             }
 
             return textFormat.Move();
@@ -74,7 +77,7 @@ public unsafe partial struct IDWriteFactory
         {
             fixed (char* localeNamePtr = localeName)
             {
-                CreateTextFormat(
+                ThrowIfFailed(CreateTextFormat(
                     (ushort*)fontFamilyNamePtr,
                     fontCollection,
                     fontWeight,
@@ -82,7 +85,7 @@ public unsafe partial struct IDWriteFactory
                     fontStretch,
                     fontSize,
                     (ushort*)localeNamePtr,
-                    textFormat.GetAddressOf()).ThrowIfFailed();
+                    textFormat.GetAddressOf()));
             }
 
             return textFormat.Move();

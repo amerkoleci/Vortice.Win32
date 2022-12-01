@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("790a45f7-0d42-4876-983a-0a55cfe6f4aa")]
 [NativeTypeName("struct IDXGISwapChain1 : IDXGISwapChain")]
 [NativeInheritance("IDXGISwapChain")]
-public unsafe partial struct IDXGISwapChain1 : INativeGuid
+public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGISwapChain1
 	{
@@ -280,6 +280,41 @@ public unsafe partial struct IDXGISwapChain1 : INativeGuid
 	public HResult GetRotation(Common.ModeRotation* pRotation)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pRotation);
+	}
+	public interface Interface : IDXGISwapChain.Interface
+	{
+		[VtblIndex(18)]
+		HResult GetDesc1(SwapChainDescription1* pDesc);
+
+		[VtblIndex(19)]
+		HResult GetFullscreenDesc(SwapChainFullscreenDescription* pDesc);
+
+		[VtblIndex(20)]
+		HResult GetHwnd(IntPtr* pHwnd);
+
+		[VtblIndex(21)]
+		HResult GetCoreWindow(Guid* refiid, void** ppUnk);
+
+		[VtblIndex(22)]
+		HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters);
+
+		[VtblIndex(23)]
+		Bool32 IsTemporaryMonoSupported();
+
+		[VtblIndex(24)]
+		HResult GetRestrictToOutput(IDXGIOutput** ppRestrictToOutput);
+
+		[VtblIndex(25)]
+		HResult SetBackgroundColor(Color4* pColor);
+
+		[VtblIndex(26)]
+		HResult GetBackgroundColor(Color4** pColor);
+
+		[VtblIndex(27)]
+		HResult SetRotation(Common.ModeRotation Rotation);
+
+		[VtblIndex(28)]
+		HResult GetRotation(Common.ModeRotation* pRotation);
 	}
 }
 

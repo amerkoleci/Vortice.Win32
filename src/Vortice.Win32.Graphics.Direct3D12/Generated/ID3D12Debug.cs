@@ -14,7 +14,7 @@ namespace Win32.Graphics.Direct3D12;
 [Guid("344488b7-6846-474b-b989-f027448245e0")]
 [NativeTypeName("struct ID3D12Debug : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct ID3D12Debug : INativeGuid
+public unsafe partial struct ID3D12Debug : ID3D12Debug.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_ID3D12Debug
 	{
@@ -80,6 +80,11 @@ public unsafe partial struct ID3D12Debug : INativeGuid
 	public void EnableDebugLayer()
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12Debug*, void>)(lpVtbl[3]))((ID3D12Debug*)Unsafe.AsPointer(ref this));
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		void EnableDebugLayer();
 	}
 }
 

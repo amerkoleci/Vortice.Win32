@@ -14,7 +14,7 @@ namespace Win32.Graphics.Dxgi;
 [Guid("77db970f-6276-48ba-ba28-070143b4392c")]
 [NativeTypeName("struct IDXGIDevice1 : IDXGIDevice")]
 [NativeInheritance("IDXGIDevice")]
-public unsafe partial struct IDXGIDevice1 : INativeGuid
+public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDXGIDevice1
 	{
@@ -160,6 +160,14 @@ public unsafe partial struct IDXGIDevice1 : INativeGuid
 	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, uint*, int>)(lpVtbl[13]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pMaxLatency);
+	}
+	public interface Interface : IDXGIDevice.Interface
+	{
+		[VtblIndex(12)]
+		HResult SetMaximumFrameLatency(uint MaxLatency);
+
+		[VtblIndex(13)]
+		HResult GetMaximumFrameLatency(uint* pMaxLatency);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 [Guid("3aff9cce-be95-4303-b927-e7d16ff4a613")]
 [NativeTypeName("struct IWICPlanarBitmapSourceTransform : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IWICPlanarBitmapSourceTransform : INativeGuid
+public unsafe partial struct IWICPlanarBitmapSourceTransform : IWICPlanarBitmapSourceTransform.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IWICPlanarBitmapSourceTransform
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IWICPlanarBitmapSourceTransform : INativeGuid
 	public HResult CopyPixels(System.Drawing.Rectangle* prcSource, uint uiWidth, uint uiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, WICBitmapPlane* pDstPlanes, uint cPlanes)
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapSourceTransform*, System.Drawing.Rectangle*, uint, uint, WICBitmapTransformOptions, WICPlanarOptions, WICBitmapPlane*, uint, int>)(lpVtbl[4]))((IWICPlanarBitmapSourceTransform*)Unsafe.AsPointer(ref this), prcSource, uiWidth, uiHeight, dstTransform, dstPlanarOptions, pDstPlanes, cPlanes);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult DoesSupportTransform(uint* puiWidth, uint* puiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, Guid* pguidDstFormats, WICBitmapPlaneDescription* pPlaneDescriptions, uint cPlanes, Bool32* pfIsSupported);
+
+		[VtblIndex(4)]
+		HResult CopyPixels(System.Drawing.Rectangle* prcSource, uint uiWidth, uint uiHeight, WICBitmapTransformOptions dstTransform, WICPlanarOptions dstPlanarOptions, WICBitmapPlane* pDstPlanes, uint cPlanes);
 	}
 }
 

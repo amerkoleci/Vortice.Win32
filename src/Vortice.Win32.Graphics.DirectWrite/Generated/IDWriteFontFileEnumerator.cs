@@ -14,7 +14,7 @@ namespace Win32.Graphics.DirectWrite;
 [Guid("72755049-5ff7-435d-8348-4be97cfa6c7c")]
 [NativeTypeName("struct IDWriteFontFileEnumerator : IUnknown")]
 [NativeInheritance("IUnknown")]
-public unsafe partial struct IDWriteFontFileEnumerator : INativeGuid
+public unsafe partial struct IDWriteFontFileEnumerator : IDWriteFontFileEnumerator.Interface, INativeGuid
 {
 	public static ref readonly Guid IID_IDWriteFontFileEnumerator
 	{
@@ -88,6 +88,14 @@ public unsafe partial struct IDWriteFontFileEnumerator : INativeGuid
 	public HResult GetCurrentFontFile(IDWriteFontFile** fontFile)
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileEnumerator*, IDWriteFontFile**, int>)(lpVtbl[4]))((IDWriteFontFileEnumerator*)Unsafe.AsPointer(ref this), fontFile);
+	}
+	public interface Interface : IUnknown.Interface
+	{
+		[VtblIndex(3)]
+		HResult MoveNext(Bool32* hasCurrentFile);
+
+		[VtblIndex(4)]
+		HResult GetCurrentFontFile(IDWriteFontFile** fontFile);
 	}
 }
 
