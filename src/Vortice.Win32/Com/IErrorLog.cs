@@ -1,10 +1,6 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.ComTypes;
-
 namespace Win32.Com;
 
 [Guid("3127CA40-446E-11CE-8135-00AA004BB851")]

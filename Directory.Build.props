@@ -12,10 +12,9 @@
     <DebugType>embedded</DebugType>
     <Features>strict</Features>
     <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <RestoreConfigFile>$(MSBuildThisFileDirectory)NuGet.config</RestoreConfigFile>
 
-    <VersionPrefix>1.8.9</VersionPrefix>
+    <VersionPrefix>1.9.0</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -43,10 +42,5 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="all" />
-    <PackageReference Include="PolySharp" PrivateAssets="all" />
-  </ItemGroup>
 
 </Project>
