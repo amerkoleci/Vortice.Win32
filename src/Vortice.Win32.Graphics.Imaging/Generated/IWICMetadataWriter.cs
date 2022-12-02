@@ -153,6 +153,7 @@ public unsafe partial struct IWICMetadataWriter : IWICMetadataWriter.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriter*, uint, int>)(lpVtbl[12]))((IWICMetadataWriter*)Unsafe.AsPointer(ref this), nIndex);
 	}
+
 	public interface Interface : IWICMetadataReader.Interface
 	{
 		[VtblIndex(9)]

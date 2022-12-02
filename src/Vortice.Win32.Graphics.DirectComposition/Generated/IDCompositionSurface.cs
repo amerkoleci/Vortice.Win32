@@ -113,6 +113,7 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionSurface*, RawRect*, RawRect*, int, int, int>)(lpVtbl[7]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

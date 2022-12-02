@@ -121,6 +121,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint*, int>)(lpVtbl[8]))((IWICColorContext*)Unsafe.AsPointer(ref this), pValue);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

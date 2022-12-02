@@ -305,6 +305,7 @@ public unsafe partial struct IDXGIFactory7 : IDXGIFactory7.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory7*, uint, int>)(lpVtbl[31]))((IDXGIFactory7*)Unsafe.AsPointer(ref this), dwCookie);
 	}
+
 	public interface Interface : IDXGIFactory6.Interface
 	{
 		[VtblIndex(30)]

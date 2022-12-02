@@ -81,6 +81,7 @@ public unsafe partial struct ID2D1AnalysisTransform : ID2D1AnalysisTransform.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1AnalysisTransform*, byte*, uint, int>)(lpVtbl[3]))((ID2D1AnalysisTransform*)Unsafe.AsPointer(ref this), analysisData, analysisDataCount);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

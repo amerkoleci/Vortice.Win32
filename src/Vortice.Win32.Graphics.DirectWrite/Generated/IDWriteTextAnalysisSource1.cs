@@ -121,6 +121,7 @@ public unsafe partial struct IDWriteTextAnalysisSource1 : IDWriteTextAnalysisSou
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource1*, uint, uint*, VerticalGlyphOrientation*, byte*, int>)(lpVtbl[8]))((IDWriteTextAnalysisSource1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientation, bidiLevel);
 	}
+
 	public interface Interface : IDWriteTextAnalysisSource.Interface
 	{
 		[VtblIndex(8)]

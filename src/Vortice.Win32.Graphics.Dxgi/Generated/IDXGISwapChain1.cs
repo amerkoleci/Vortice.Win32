@@ -281,6 +281,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain1*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), pRotation);
 	}
+
 	public interface Interface : IDXGISwapChain.Interface
 	{
 		[VtblIndex(18)]

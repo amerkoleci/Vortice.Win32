@@ -89,6 +89,7 @@ public unsafe partial struct ID2D1TessellationSink : ID2D1TessellationSink.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1TessellationSink*, int>)(lpVtbl[4]))((ID2D1TessellationSink*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

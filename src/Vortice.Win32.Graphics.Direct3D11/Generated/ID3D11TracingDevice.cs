@@ -89,6 +89,7 @@ public unsafe partial struct ID3D11TracingDevice : ID3D11TracingDevice.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11TracingDevice*, IUnknown*, uint, int>)(lpVtbl[4]))((ID3D11TracingDevice*)Unsafe.AsPointer(ref this), pShader, Options);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -393,6 +393,7 @@ public unsafe partial struct IDWriteFactory4 : IDWriteFactory4.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory4*, GlyphRun*, MeasuringMode, System.Drawing.PointF, Matrix3x2*, System.Drawing.PointF*, int>)(lpVtbl[42]))((IDWriteFactory4*)Unsafe.AsPointer(ref this), glyphRun, measuringMode, baselineOrigin, worldAndDpiTransform, glyphOrigins);
 	}
+
 	public interface Interface : IDWriteFactory3.Interface
 	{
 		[VtblIndex(40)]

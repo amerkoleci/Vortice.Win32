@@ -121,6 +121,7 @@ public unsafe partial struct ID3D11ShaderResourceView : ID3D11ShaderResourceView
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11ShaderResourceView*, ShaderResourceViewDescription*, void>)(lpVtbl[8]))((ID3D11ShaderResourceView*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11View.Interface
 	{
 		[VtblIndex(8)]

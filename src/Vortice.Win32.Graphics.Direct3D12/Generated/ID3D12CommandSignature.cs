@@ -113,6 +113,7 @@ public unsafe partial struct ID3D12CommandSignature : ID3D12CommandSignature.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandSignature*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12CommandSignature*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 	}

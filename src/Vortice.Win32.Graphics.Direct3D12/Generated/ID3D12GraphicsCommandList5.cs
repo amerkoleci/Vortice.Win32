@@ -681,6 +681,7 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, void>)(lpVtbl[78]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), shadingRateImage);
 	}
+
 	public interface Interface : ID3D12GraphicsCommandList4.Interface
 	{
 		[VtblIndex(77)]

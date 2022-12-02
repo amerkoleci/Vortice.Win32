@@ -103,6 +103,7 @@ public unsafe partial struct IDxcCompiler2 : IDxcCompiler2.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompiler2*, IDxcBlob*, ushort*, ushort*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcIncludeHandler*, IDxcOperationResult**, ushort**, IDxcBlob**, int>)(lpVtbl[6]))((IDxcCompiler2*)Unsafe.AsPointer(ref this), pSource, pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, pIncludeHandler, ppResult, ppDebugBlobName, ppDebugBlob);
 	}
+
 	public interface Interface : IDxcCompiler.Interface
 	{
 		[VtblIndex(6)]

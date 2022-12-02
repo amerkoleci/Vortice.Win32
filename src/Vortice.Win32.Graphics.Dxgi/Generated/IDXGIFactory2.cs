@@ -249,6 +249,7 @@ public unsafe partial struct IDXGIFactory2 : IDXGIFactory2.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory2*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[24]))((IDXGIFactory2*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
 	}
+
 	public interface Interface : IDXGIFactory1.Interface
 	{
 		[VtblIndex(14)]

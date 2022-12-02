@@ -74,6 +74,7 @@ public unsafe partial struct IDWriteNumberSubstitution : IDWriteNumberSubstituti
 		return ((delegate* unmanaged[Stdcall]<IDWriteNumberSubstitution*, uint>)(lpVtbl[2]))((IDWriteNumberSubstitution*)Unsafe.AsPointer(ref this));
 	}
 
+
 	public interface Interface : IUnknown.Interface
 	{
 	}

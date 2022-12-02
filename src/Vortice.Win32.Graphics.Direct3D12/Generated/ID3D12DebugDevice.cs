@@ -97,6 +97,7 @@ public unsafe partial struct ID3D12DebugDevice : ID3D12DebugDevice.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[5]))((ID3D12DebugDevice*)Unsafe.AsPointer(ref this), Flags);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

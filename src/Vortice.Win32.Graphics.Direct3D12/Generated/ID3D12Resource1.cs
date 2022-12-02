@@ -178,6 +178,7 @@ public unsafe partial struct ID3D12Resource1 : ID3D12Resource1.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Resource1*, Guid*, void**, int>)(lpVtbl[15]))((ID3D12Resource1*)Unsafe.AsPointer(ref this), riid, ppProtectedSession);
 	}
+
 	public interface Interface : ID3D12Resource.Interface
 	{
 		[VtblIndex(15)]

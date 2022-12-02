@@ -74,6 +74,7 @@ public unsafe partial struct IDCompositionTransform : IDCompositionTransform.Int
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTransform*, uint>)(lpVtbl[2]))((IDCompositionTransform*)Unsafe.AsPointer(ref this));
 	}
 
+
 	public interface Interface : IDCompositionTransform3D.Interface
 	{
 	}

@@ -105,6 +105,7 @@ public unsafe partial struct IDWriteFontFileStream : IDWriteFontFileStream.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileStream*, ulong*, int>)(lpVtbl[6]))((IDWriteFontFileStream*)Unsafe.AsPointer(ref this), lastWriteTime);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

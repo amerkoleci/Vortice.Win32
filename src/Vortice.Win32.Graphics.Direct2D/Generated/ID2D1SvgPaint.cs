@@ -153,6 +153,7 @@ public unsafe partial struct ID2D1SvgPaint : ID2D1SvgPaint.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPaint*, uint>)(lpVtbl[12]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1SvgAttribute.Interface
 	{
 		[VtblIndex(6)]

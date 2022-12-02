@@ -121,6 +121,7 @@ public unsafe partial struct IWICBitmapClipper : IWICBitmapClipper.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapClipper*, IWICBitmapSource*, System.Drawing.Rectangle*, int>)(lpVtbl[8]))((IWICBitmapClipper*)Unsafe.AsPointer(ref this), pISource, prc);
 	}
+
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]

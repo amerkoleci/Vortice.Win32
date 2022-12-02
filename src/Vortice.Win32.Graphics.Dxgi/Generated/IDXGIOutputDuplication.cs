@@ -169,6 +169,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, int>)(lpVtbl[14]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDXGIObject.Interface
 	{
 		[VtblIndex(7)]

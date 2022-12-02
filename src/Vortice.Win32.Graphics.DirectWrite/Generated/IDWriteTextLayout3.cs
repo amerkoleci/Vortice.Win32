@@ -721,6 +721,7 @@ public unsafe partial struct IDWriteTextLayout3 : IDWriteTextLayout3.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout3*, LineMetrics1*, uint, uint*, int>)(lpVtbl[83]))((IDWriteTextLayout3*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
 	}
+
 	public interface Interface : IDWriteTextLayout2.Interface
 	{
 		[VtblIndex(80)]

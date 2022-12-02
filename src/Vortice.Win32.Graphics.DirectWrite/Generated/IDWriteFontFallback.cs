@@ -81,6 +81,7 @@ public unsafe partial struct IDWriteFontFallback : IDWriteFontFallback.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFallback*, IDWriteTextAnalysisSource*, uint, uint, IDWriteFontCollection*, ushort*, FontWeight, FontStyle, FontStretch, uint*, IDWriteFont**, float*, int>)(lpVtbl[3]))((IDWriteFontFallback*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, baseFontCollection, baseFamilyName, baseWeight, baseStyle, baseStretch, mappedLength, mappedFont, scale);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

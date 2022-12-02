@@ -137,6 +137,7 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), stitchable);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

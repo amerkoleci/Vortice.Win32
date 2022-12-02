@@ -162,6 +162,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, Common.RectF*, int>)(lpVtbl[13]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, bounds);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

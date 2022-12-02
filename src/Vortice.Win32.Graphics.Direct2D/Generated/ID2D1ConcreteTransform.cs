@@ -97,6 +97,7 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1ConcreteTransform*, Bool32, void>)(lpVtbl[5]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), isCached);
 	}
+
 	public interface Interface : ID2D1TransformNode.Interface
 	{
 		[VtblIndex(4)]

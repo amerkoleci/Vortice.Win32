@@ -433,6 +433,7 @@ public unsafe partial struct IDWriteFactory5 : IDWriteFactory5.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory5*, ContainerType, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[47]))((IDWriteFactory5*)Unsafe.AsPointer(ref this), containerType, fileData, fileDataSize, unpackedFontStream);
 	}
+
 	public interface Interface : IDWriteFactory4.Interface
 	{
 		[VtblIndex(43)]

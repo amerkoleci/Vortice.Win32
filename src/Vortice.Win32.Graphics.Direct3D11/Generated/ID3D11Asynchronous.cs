@@ -113,6 +113,7 @@ public unsafe partial struct ID3D11Asynchronous : ID3D11Asynchronous.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Asynchronous*, uint>)(lpVtbl[7]))((ID3D11Asynchronous*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

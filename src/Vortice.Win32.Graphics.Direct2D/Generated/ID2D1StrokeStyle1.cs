@@ -161,6 +161,7 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, StrokeTransformType>)(lpVtbl[13]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1StrokeStyle.Interface
 	{
 		[VtblIndex(13)]

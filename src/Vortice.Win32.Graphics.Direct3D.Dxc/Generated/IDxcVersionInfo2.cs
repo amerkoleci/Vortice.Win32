@@ -95,6 +95,7 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, uint*, sbyte**, int>)(lpVtbl[5]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pCommitCount, pCommitHash);
 	}
+
 	public interface Interface : IDxcVersionInfo.Interface
 	{
 		[VtblIndex(5)]

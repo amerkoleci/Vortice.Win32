@@ -281,6 +281,7 @@ public unsafe partial struct ID2D1Factory3 : ID2D1Factory3.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Factory3*, Graphics.Dxgi.IDXGIDevice*, ID2D1Device2**, int>)(lpVtbl[28]))((ID2D1Factory3*)Unsafe.AsPointer(ref this), dxgiDevice, d2dDevice2);
 	}
+
 	public interface Interface : ID2D1Factory2.Interface
 	{
 		[VtblIndex(28)]

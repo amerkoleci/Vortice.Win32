@@ -129,6 +129,7 @@ public unsafe partial struct ID2D1DrawingStateBlock1 : ID2D1DrawingStateBlock1.I
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DrawingStateBlock1*, DrawingStateDescription1*, void>)(lpVtbl[9]))((ID2D1DrawingStateBlock1*)Unsafe.AsPointer(ref this), stateDescription);
 	}
+
 	public interface Interface : ID2D1DrawingStateBlock.Interface
 	{
 		[VtblIndex(8)]

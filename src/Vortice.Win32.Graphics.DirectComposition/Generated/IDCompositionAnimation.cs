@@ -121,6 +121,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, double, float, int>)(lpVtbl[8]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), endOffset, endValue);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

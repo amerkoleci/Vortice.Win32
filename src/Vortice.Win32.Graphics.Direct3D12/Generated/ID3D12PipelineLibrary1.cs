@@ -161,6 +161,7 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[13]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
+
 	public interface Interface : ID3D12PipelineLibrary.Interface
 	{
 		[VtblIndex(13)]

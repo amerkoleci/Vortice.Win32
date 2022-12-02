@@ -122,6 +122,7 @@ public unsafe partial struct ID3D12Heap : ID3D12Heap.Interface, INativeGuid
 		HeapDescription result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12Heap*, HeapDescription*, HeapDescription*>)(lpVtbl[8]))((ID3D12Heap*)Unsafe.AsPointer(ref this), &result);
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]

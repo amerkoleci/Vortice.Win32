@@ -916,6 +916,7 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, void>)(lpVtbl[107]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
 	}
+
 	public interface Interface : ID2D1DeviceContext2.Interface
 	{
 		[VtblIndex(106)]

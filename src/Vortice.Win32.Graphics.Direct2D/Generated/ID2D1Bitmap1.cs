@@ -180,6 +180,7 @@ public unsafe partial struct ID2D1Bitmap1 : ID2D1Bitmap1.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap1*, int>)(lpVtbl[15]))((ID2D1Bitmap1*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1Bitmap.Interface
 	{
 		[VtblIndex(11)]

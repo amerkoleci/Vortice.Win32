@@ -265,6 +265,7 @@ public unsafe partial struct IDCompositionDesktopDevice : IDCompositionDesktopDe
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDesktopDevice*, IntPtr, IUnknown**, int>)(lpVtbl[26]))((IDCompositionDesktopDevice*)Unsafe.AsPointer(ref this), hwnd, surface);
 	}
+
 	public interface Interface : IDCompositionDevice2.Interface
 	{
 		[VtblIndex(24)]

@@ -137,6 +137,7 @@ public unsafe partial struct IDCompositionSkewTransform : IDCompositionSkewTrans
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionSkewTransform*, float, int>)(lpVtbl[10]))((IDCompositionSkewTransform*)Unsafe.AsPointer(ref this), centerY);
 	}
+
 	public interface Interface : IDCompositionTransform.Interface
 	{
 		[VtblIndex(3)]

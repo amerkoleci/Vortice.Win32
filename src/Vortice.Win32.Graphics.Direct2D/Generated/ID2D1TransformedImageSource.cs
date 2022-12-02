@@ -97,6 +97,7 @@ public unsafe partial struct ID2D1TransformedImageSource : ID2D1TransformedImage
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1TransformedImageSource*, TransformedImageSourceProperties*, void>)(lpVtbl[5]))((ID2D1TransformedImageSource*)Unsafe.AsPointer(ref this), properties);
 	}
+
 	public interface Interface : ID2D1Image.Interface
 	{
 		[VtblIndex(4)]

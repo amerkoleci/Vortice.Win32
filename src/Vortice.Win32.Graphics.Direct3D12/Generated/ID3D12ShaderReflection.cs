@@ -225,6 +225,7 @@ public unsafe partial struct ID3D12ShaderReflection : ID3D12ShaderReflection.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, ulong>)(lpVtbl[21]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

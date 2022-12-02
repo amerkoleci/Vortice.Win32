@@ -145,6 +145,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, MultiplaneOverlayYcbcrFlags>)(lpVtbl[11]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

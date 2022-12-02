@@ -105,6 +105,7 @@ public unsafe partial struct ID2D1Transform : ID2D1Transform.Interface, INativeG
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, uint, RawRect, RawRect*, int>)(lpVtbl[6]))((ID2D1Transform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
+
 	public interface Interface : ID2D1TransformNode.Interface
 	{
 		[VtblIndex(4)]

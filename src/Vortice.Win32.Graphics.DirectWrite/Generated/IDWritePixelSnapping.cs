@@ -97,6 +97,7 @@ public unsafe partial struct IDWritePixelSnapping : IDWritePixelSnapping.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWritePixelSnapping*, void*, float*, int>)(lpVtbl[5]))((IDWritePixelSnapping*)Unsafe.AsPointer(ref this), clientDrawingContext, pixelsPerDip);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

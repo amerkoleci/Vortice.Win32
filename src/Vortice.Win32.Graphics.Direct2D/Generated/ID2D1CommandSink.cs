@@ -273,6 +273,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, int>)(lpVtbl[27]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

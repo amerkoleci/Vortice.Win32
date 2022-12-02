@@ -345,6 +345,7 @@ public unsafe partial struct IDCompositionDevice3 : IDCompositionDevice3.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice3*, IDCompositionAffineTransform2DEffect**, int>)(lpVtbl[36]))((IDCompositionDevice3*)Unsafe.AsPointer(ref this), affineTransform2dEffect);
 	}
+
 	public interface Interface : IDCompositionDevice2.Interface
 	{
 		[VtblIndex(24)]

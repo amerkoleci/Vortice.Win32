@@ -788,6 +788,7 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, ID2D1Brush*, Common.RectF*, Common.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
 	}
+
 	public interface Interface : ID2D1RenderTarget.Interface
 	{
 		[VtblIndex(57)]

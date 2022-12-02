@@ -369,6 +369,7 @@ public unsafe partial struct IDXGIInfoQueue : IDXGIInfoQueue.Interface, INativeG
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIInfoQueue*, Guid, Bool32>)(lpVtbl[39]))((IDXGIInfoQueue*)Unsafe.AsPointer(ref this), Producer);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

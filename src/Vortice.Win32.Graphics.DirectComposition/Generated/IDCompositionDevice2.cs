@@ -241,6 +241,7 @@ public unsafe partial struct IDCompositionDevice2 : IDCompositionDevice2.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice2*, IDCompositionAnimation**, int>)(lpVtbl[23]))((IDCompositionDevice2*)Unsafe.AsPointer(ref this), animation);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

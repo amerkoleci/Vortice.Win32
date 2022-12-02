@@ -105,6 +105,7 @@ public unsafe partial struct ID3D11InputLayout : ID3D11InputLayout.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11InputLayout*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11InputLayout*)Unsafe.AsPointer(ref this), guid, pData);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 	}

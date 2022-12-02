@@ -105,6 +105,7 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ulong, void>)(lpVtbl[6]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), PipelineStackSizeInBytes);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

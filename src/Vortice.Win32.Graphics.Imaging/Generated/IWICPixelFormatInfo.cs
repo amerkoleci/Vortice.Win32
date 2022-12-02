@@ -177,6 +177,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint, uint, byte*, uint*, int>)(lpVtbl[15]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), uiChannelIndex, cbMaskBuffer, pbMaskBuffer, pcbActual);
 	}
+
 	public interface Interface : IWICComponentInfo.Interface
 	{
 		[VtblIndex(11)]

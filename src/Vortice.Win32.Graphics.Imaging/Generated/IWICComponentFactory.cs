@@ -79,7 +79,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(3)]
 	public HResult CreateDecoderFromFilename(ushort* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, ushort*, Guid*, uint, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, (uint)dwDesiredAccess, metadataOptions, ppIDecoder);
+		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, ushort*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromStream" />
@@ -329,6 +329,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Com.PropertyBagMetadata**, uint, Com.IPropertyBag2**, int>)(lpVtbl[34]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppropOptions, cCount, ppIPropertyBag);
 	}
+
 	public interface Interface : IWICImagingFactory.Interface
 	{
 		[VtblIndex(28)]

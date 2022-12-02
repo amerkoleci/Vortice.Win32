@@ -249,6 +249,7 @@ public unsafe partial struct IDCompositionLinearTransferEffect : IDCompositionLi
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionLinearTransferEffect*, Bool32, int>)(lpVtbl[24]))((IDCompositionLinearTransferEffect*)Unsafe.AsPointer(ref this), clampOutput);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

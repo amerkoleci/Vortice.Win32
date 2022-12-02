@@ -185,6 +185,7 @@ public unsafe partial struct ID2D1Geometry : ID2D1Geometry.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Geometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

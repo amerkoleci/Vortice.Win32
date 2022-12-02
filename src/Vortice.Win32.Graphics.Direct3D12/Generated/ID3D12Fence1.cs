@@ -145,6 +145,7 @@ public unsafe partial struct ID3D12Fence1 : ID3D12Fence1.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Fence1*, FenceFlags>)(lpVtbl[11]))((ID3D12Fence1*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID3D12Fence.Interface
 	{
 		[VtblIndex(11)]

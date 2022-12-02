@@ -137,6 +137,7 @@ public unsafe partial struct IWICBitmapFrameDecode : IWICBitmapFrameDecode.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapFrameDecode*, IWICBitmapSource**, int>)(lpVtbl[10]))((IWICBitmapFrameDecode*)Unsafe.AsPointer(ref this), ppIThumbnail);
 	}
+
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]

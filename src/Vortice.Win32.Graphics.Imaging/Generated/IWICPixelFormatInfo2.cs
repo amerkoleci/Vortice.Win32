@@ -193,6 +193,7 @@ public unsafe partial struct IWICPixelFormatInfo2 : IWICPixelFormatInfo2.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo2*, WICPixelFormatNumericRepresentation*, int>)(lpVtbl[17]))((IWICPixelFormatInfo2*)Unsafe.AsPointer(ref this), pNumericRepresentation);
 	}
+
 	public interface Interface : IWICPixelFormatInfo.Interface
 	{
 		[VtblIndex(16)]

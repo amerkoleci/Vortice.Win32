@@ -107,6 +107,7 @@ public unsafe partial struct IDxcCompilerArgs : IDxcCompilerArgs.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcCompilerArgs*, DxcDefine*, uint, int>)(lpVtbl[7]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pDefines, defineCount);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

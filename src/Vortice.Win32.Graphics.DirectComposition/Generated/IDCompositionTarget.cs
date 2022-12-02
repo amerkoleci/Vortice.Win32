@@ -81,6 +81,7 @@ public unsafe partial struct IDCompositionTarget : IDCompositionTarget.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTarget*, IDCompositionVisual*, int>)(lpVtbl[3]))((IDCompositionTarget*)Unsafe.AsPointer(ref this), visual);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

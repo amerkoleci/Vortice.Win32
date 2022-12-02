@@ -529,6 +529,7 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList*, ID3D12CommandSignature*, uint, ID3D12Resource*, ulong, ID3D12Resource*, ulong, void>)(lpVtbl[59]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), pCommandSignature, MaxCommandCount, pArgumentBuffer, ArgumentBufferOffset, pCountBuffer, CountBufferOffset);
 	}
+
 	public interface Interface : ID3D12CommandList.Interface
 	{
 		[VtblIndex(9)]

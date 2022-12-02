@@ -137,6 +137,7 @@ public unsafe partial struct IDWriteRemoteFontFileStream : IDWriteRemoteFontFile
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteRemoteFontFileStream*, Guid*, FileFragment*, uint, IDWriteAsyncResult**, int>)(lpVtbl[10]))((IDWriteRemoteFontFileStream*)Unsafe.AsPointer(ref this), downloadOperationID, fileFragments, fragmentCount, asyncResult);
 	}
+
 	public interface Interface : IDWriteFontFileStream.Interface
 	{
 		[VtblIndex(7)]

@@ -145,6 +145,7 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, Win32.Graphics.Gdi.LogFontA*, IDWriteFontSet*, IDWriteFontSet**, int>)(lpVtbl[11]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, fontSet, filteredSet);
 	}
+
 	public interface Interface : IDWriteGdiInterop.Interface
 	{
 		[VtblIndex(8)]

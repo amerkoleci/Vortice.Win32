@@ -393,6 +393,7 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat3*, AutomaticFontAxes, int>)(lpVtbl[42]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), automaticFontAxes);
 	}
+
 	public interface Interface : IDWriteTextFormat2.Interface
 	{
 		[VtblIndex(38)]

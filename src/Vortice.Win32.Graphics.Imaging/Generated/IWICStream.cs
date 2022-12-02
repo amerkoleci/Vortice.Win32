@@ -7,8 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using Win32.Com;
-
 namespace Win32.Graphics.Imaging;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="IWICStream"]/*' />
@@ -50,49 +48,76 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 
 	public void** lpVtbl;
 
-	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStream"]/*' />
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<IWICStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IWICStream*, uint>)(lpVtbl[1]))((IWICStream*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IWICStream*, uint>)(lpVtbl[2]))((IWICStream*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStream"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(14)]
 	public HResult InitializeFromIStream(Com.IStream* pIStream)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, int>)(lpVtbl[0]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream);
+		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, int>)(lpVtbl[14]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(1)]
+	[VtblIndex(15)]
 	public HResult InitializeFromFilename(ushort* wzFileName, uint dwDesiredAccess)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, ushort*, uint, int>)(lpVtbl[1]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
+		return ((delegate* unmanaged[Stdcall]<IWICStream*, ushort*, uint, int>)(lpVtbl[15]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(2)]
+	[VtblIndex(16)]
 	public HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, byte*, uint, int>)(lpVtbl[2]))((IWICStream*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
+		return ((delegate* unmanaged[Stdcall]<IWICStream*, byte*, uint, int>)(lpVtbl[16]))((IWICStream*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStreamRegion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(3)]
+	[VtblIndex(17)]
 	public HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ULargeInteger ulOffset, ULargeInteger ulMaxSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, ULargeInteger, ULargeInteger, int>)(lpVtbl[3]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
+		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, ULargeInteger, ULargeInteger, int>)(lpVtbl[17]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
 	}
-	public interface Interface : IStream.Interface
+
+	public interface Interface : Win32.Com.IStream.Interface
 	{
-		[VtblIndex(0)]
+		[VtblIndex(14)]
 		HResult InitializeFromIStream(Com.IStream* pIStream);
 
-		[VtblIndex(1)]
+		[VtblIndex(15)]
 		HResult InitializeFromFilename(ushort* wzFileName, uint dwDesiredAccess);
 
-		[VtblIndex(2)]
+		[VtblIndex(16)]
 		HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);
 
-		[VtblIndex(3)]
+		[VtblIndex(17)]
 		HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ULargeInteger ulOffset, ULargeInteger ulMaxSize);
 	}
 }

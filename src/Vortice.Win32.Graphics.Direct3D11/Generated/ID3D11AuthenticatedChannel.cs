@@ -129,6 +129,7 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Handle*, void>)(lpVtbl[9]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pChannelHandle);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

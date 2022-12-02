@@ -137,6 +137,7 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, float, int>)(lpVtbl[10]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), sharpness);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

@@ -81,6 +81,7 @@ public unsafe partial struct IDWriteFontDownloadListener : IDWriteFontDownloadLi
 	{
 		((delegate* unmanaged[Stdcall]<IDWriteFontDownloadListener*, IDWriteFontDownloadQueue*, IUnknown*, HResult, void>)(lpVtbl[3]))((IDWriteFontDownloadListener*)Unsafe.AsPointer(ref this), downloadQueue, context, downloadResult);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

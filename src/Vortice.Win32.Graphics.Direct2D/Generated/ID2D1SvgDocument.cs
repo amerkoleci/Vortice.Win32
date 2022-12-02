@@ -170,6 +170,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, float*, uint, SvgPathCommand*, uint, ID2D1SvgPathData**, int>)(lpVtbl[14]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), segmentData, segmentDataCount, commands, commandsCount, pathData);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

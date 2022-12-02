@@ -113,6 +113,7 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 	}

@@ -581,6 +581,7 @@ public unsafe partial struct ID3D12Device6 : ID3D12Device6.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device6*, BackgroundProcessingMode, MeasurementsAction, Handle, Bool32*, int>)(lpVtbl[65]))((ID3D12Device6*)Unsafe.AsPointer(ref this), Mode, MeasurementsAction, hEventToSignalUponCompletion, pbFurtherMeasurementsDesired);
 	}
+
 	public interface Interface : ID3D12Device5.Interface
 	{
 		[VtblIndex(65)]

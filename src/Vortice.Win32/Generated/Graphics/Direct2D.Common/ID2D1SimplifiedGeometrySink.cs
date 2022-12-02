@@ -129,6 +129,7 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

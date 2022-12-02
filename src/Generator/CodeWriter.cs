@@ -47,6 +47,11 @@ public sealed class CodeWriter : IDisposable
             _builder.AppendLine($"using {usingNamespace};");
         }
 
+        if (usingNamespaces.Length > 0)
+        {
+            _builder.AppendLine();
+        }
+
         _builder.AppendLine($"namespace {ns};");
         _builder.AppendLine();
     }

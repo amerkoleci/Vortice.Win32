@@ -137,6 +137,7 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface*, int>)(lpVtbl[10]))((IDXGISurface*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDXGIDeviceSubObject.Interface
 	{
 		[VtblIndex(8)]

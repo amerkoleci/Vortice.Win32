@@ -1225,6 +1225,7 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Bool32*, void>)(lpVtbl[146]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pHwProtectionEnable);
 	}
+
 	public interface Interface : ID3D11DeviceContext2.Interface
 	{
 		[VtblIndex(144)]

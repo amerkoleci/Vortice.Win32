@@ -241,6 +241,7 @@ public unsafe partial struct IDXGIOutput2 : IDXGIOutput2.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput2*, Bool32>)(lpVtbl[23]))((IDXGIOutput2*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDXGIOutput1.Interface
 	{
 		[VtblIndex(23)]

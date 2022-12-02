@@ -105,6 +105,7 @@ public unsafe partial struct ID3D11VertexShader : ID3D11VertexShader.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VertexShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VertexShader*)Unsafe.AsPointer(ref this), guid, pData);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 	}

@@ -121,6 +121,7 @@ public unsafe partial struct IDCompositionTranslateTransform3D : IDCompositionTr
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform3D*, float, int>)(lpVtbl[8]))((IDCompositionTranslateTransform3D*)Unsafe.AsPointer(ref this), offsetZ);
 	}
+
 	public interface Interface : IDCompositionTransform3D.Interface
 	{
 		[VtblIndex(3)]

@@ -107,6 +107,7 @@ public unsafe partial struct IDxcOptimizerPass : IDxcOptimizerPass.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcOptimizerPass*, uint, ushort**, int>)(lpVtbl[7]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

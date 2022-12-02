@@ -1012,6 +1012,7 @@ public unsafe partial struct ID2D1DeviceContext6 : ID2D1DeviceContext6.Interface
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, ID2D1Image*, Common.BlendMode, System.Drawing.PointF*, Common.RectF*, InterpolationMode, void>)(lpVtbl[119]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), image, blendMode, targetOffset, imageRectangle, interpolationMode);
 	}
+
 	public interface Interface : ID2D1DeviceContext5.Interface
 	{
 		[VtblIndex(119)]

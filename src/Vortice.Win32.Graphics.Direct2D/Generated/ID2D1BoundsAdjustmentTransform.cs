@@ -97,6 +97,7 @@ public unsafe partial struct ID2D1BoundsAdjustmentTransform : ID2D1BoundsAdjustm
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1BoundsAdjustmentTransform*, RawRect*, void>)(lpVtbl[5]))((ID2D1BoundsAdjustmentTransform*)Unsafe.AsPointer(ref this), outputBounds);
 	}
+
 	public interface Interface : ID2D1TransformNode.Interface
 	{
 		[VtblIndex(4)]

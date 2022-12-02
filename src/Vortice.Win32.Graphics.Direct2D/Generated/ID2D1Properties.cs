@@ -161,6 +161,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, subProperties);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

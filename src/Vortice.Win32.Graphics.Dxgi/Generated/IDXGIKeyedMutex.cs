@@ -129,6 +129,7 @@ public unsafe partial struct IDXGIKeyedMutex : IDXGIKeyedMutex.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIKeyedMutex*, ulong, int>)(lpVtbl[9]))((IDXGIKeyedMutex*)Unsafe.AsPointer(ref this), Key);
 	}
+
 	public interface Interface : IDXGIDeviceSubObject.Interface
 	{
 		[VtblIndex(8)]

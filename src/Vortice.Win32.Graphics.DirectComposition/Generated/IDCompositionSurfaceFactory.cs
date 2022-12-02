@@ -89,6 +89,7 @@ public unsafe partial struct IDCompositionSurfaceFactory : IDCompositionSurfaceF
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionSurfaceFactory*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionVirtualSurface**, int>)(lpVtbl[4]))((IDCompositionSurfaceFactory*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

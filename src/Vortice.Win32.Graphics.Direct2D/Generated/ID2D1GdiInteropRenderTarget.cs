@@ -89,6 +89,7 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, RawRect*, int>)(lpVtbl[4]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), update);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

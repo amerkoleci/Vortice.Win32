@@ -729,6 +729,7 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription2*, int>)(lpVtbl[84]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
 	}
+
 	public interface Interface : ID3D11VideoContext2.Interface
 	{
 		[VtblIndex(83)]

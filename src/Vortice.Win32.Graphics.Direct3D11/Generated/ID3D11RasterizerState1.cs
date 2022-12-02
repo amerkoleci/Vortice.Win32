@@ -121,6 +121,7 @@ public unsafe partial struct ID3D11RasterizerState1 : ID3D11RasterizerState1.Int
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11RasterizerState1*, RasterizerDescription1*, void>)(lpVtbl[8]))((ID3D11RasterizerState1*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11RasterizerState.Interface
 	{
 		[VtblIndex(8)]

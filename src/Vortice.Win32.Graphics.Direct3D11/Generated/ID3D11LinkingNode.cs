@@ -74,6 +74,7 @@ public unsafe partial struct ID3D11LinkingNode : ID3D11LinkingNode.Interface, IN
 		return ((delegate* unmanaged[Stdcall]<ID3D11LinkingNode*, uint>)(lpVtbl[2]))((ID3D11LinkingNode*)Unsafe.AsPointer(ref this));
 	}
 
+
 	public interface Interface : IUnknown.Interface
 	{
 	}

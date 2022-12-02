@@ -508,6 +508,7 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, RenderTargetProperties*, Bool32>)(lpVtbl[56]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), renderTargetProperties);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

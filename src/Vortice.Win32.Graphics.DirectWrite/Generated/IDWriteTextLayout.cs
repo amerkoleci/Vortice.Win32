@@ -585,6 +585,7 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout*, uint, uint, float, float, HitTestMetrics*, uint, uint*, int>)(lpVtbl[66]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), textPosition, textLength, originX, originY, hitTestMetrics, maxHitTestMetricsCount, actualHitTestMetricsCount);
 	}
+
 	public interface Interface : IDWriteTextFormat.Interface
 	{
 		[VtblIndex(28)]

@@ -145,6 +145,7 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, uint*, int>)(lpVtbl[11]))((IDXGIResource*)Unsafe.AsPointer(ref this), pEvictionPriority);
 	}
+
 	public interface Interface : IDXGIDeviceSubObject.Interface
 	{
 		[VtblIndex(8)]

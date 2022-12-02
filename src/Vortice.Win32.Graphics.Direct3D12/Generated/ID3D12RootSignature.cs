@@ -113,6 +113,7 @@ public unsafe partial struct ID3D12RootSignature : ID3D12RootSignature.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12RootSignature*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12RootSignature*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
+
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 	}

@@ -121,6 +121,7 @@ public unsafe partial struct ID3D12LifetimeTracker : ID3D12LifetimeTracker.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12LifetimeTracker*, ID3D12DeviceChild*, int>)(lpVtbl[8]))((ID3D12LifetimeTracker*)Unsafe.AsPointer(ref this), pObject);
 	}
+
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 		[VtblIndex(8)]

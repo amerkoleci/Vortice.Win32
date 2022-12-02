@@ -129,6 +129,7 @@ public unsafe partial struct IDXGIAdapter : IDXGIAdapter.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter*, Guid*, LargeInteger*, int>)(lpVtbl[9]))((IDXGIAdapter*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
 	}
+
 	public interface Interface : IDXGIObject.Interface
 	{
 		[VtblIndex(7)]

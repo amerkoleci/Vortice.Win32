@@ -105,6 +105,7 @@ public unsafe partial struct IDCompositionGaussianBlurEffect : IDCompositionGaus
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionGaussianBlurEffect*, Graphics.Direct2D.Common.BorderMode, int>)(lpVtbl[6]))((IDCompositionGaussianBlurEffect*)Unsafe.AsPointer(ref this), mode);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

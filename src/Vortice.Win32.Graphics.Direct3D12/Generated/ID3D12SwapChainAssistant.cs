@@ -106,6 +106,7 @@ public unsafe partial struct ID3D12SwapChainAssistant : ID3D12SwapChainAssistant
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12SwapChainAssistant*, int>)(lpVtbl[6]))((ID3D12SwapChainAssistant*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

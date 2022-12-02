@@ -97,6 +97,7 @@ public unsafe partial struct IDCompositionSaturationEffect : IDCompositionSatura
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionSaturationEffect*, float, int>)(lpVtbl[5]))((IDCompositionSaturationEffect*)Unsafe.AsPointer(ref this), ratio);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

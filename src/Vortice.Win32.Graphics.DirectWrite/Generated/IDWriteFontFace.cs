@@ -193,6 +193,7 @@ public unsafe partial struct IDWriteFontFace : IDWriteFontFace.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace*, float, float, Matrix3x2*, Bool32, ushort*, uint, GlyphMetrics*, Bool32, int>)(lpVtbl[17]))((IDWriteFontFace*)Unsafe.AsPointer(ref this), emSize, pixelsPerDip, transform, useGdiNatural, glyphIndices, glyphCount, glyphMetrics, isSideways);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

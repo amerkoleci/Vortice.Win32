@@ -201,6 +201,7 @@ public unsafe partial struct IDWriteTextAnalyzer1 : IDWriteTextAnalyzer1.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer1*, IDWriteFontFace*, float, ScriptAnalysis, uint, uint, uint, ushort*, ushort*, float*, float*, GlyphOffset*, ShapingGlyphProperties*, uint*, ushort*, ushort*, float*, GlyphOffset*, int>)(lpVtbl[18]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), fontFace, fontEmSize, scriptAnalysis, textLength, glyphCount, maxGlyphCount, clusterMap, glyphIndices, glyphAdvances, justifiedGlyphAdvances, justifiedGlyphOffsets, glyphProperties, actualGlyphCount, modifiedClusterMap, modifiedGlyphIndices, modifiedGlyphAdvances, modifiedGlyphOffsets);
 	}
+
 	public interface Interface : IDWriteTextAnalyzer.Interface
 	{
 		[VtblIndex(10)]

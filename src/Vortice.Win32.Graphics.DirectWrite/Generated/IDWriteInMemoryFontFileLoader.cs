@@ -97,6 +97,7 @@ public unsafe partial struct IDWriteInMemoryFontFileLoader : IDWriteInMemoryFont
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteInMemoryFontFileLoader*, uint>)(lpVtbl[5]))((IDWriteInMemoryFontFileLoader*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDWriteFontFileLoader.Interface
 	{
 		[VtblIndex(4)]

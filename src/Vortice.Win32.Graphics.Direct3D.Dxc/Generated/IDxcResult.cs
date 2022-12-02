@@ -131,6 +131,7 @@ public unsafe partial struct IDxcResult : IDxcResult.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcResult*, DxcOutKind>)(lpVtbl[10]))((IDxcResult*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDxcOperationResult.Interface
 	{
 		[VtblIndex(6)]

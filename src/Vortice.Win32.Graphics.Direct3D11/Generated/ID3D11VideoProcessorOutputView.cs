@@ -121,6 +121,7 @@ public unsafe partial struct ID3D11VideoProcessorOutputView : ID3D11VideoProcess
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorOutputView*, VideoProcessorOutputViewDescription*, void>)(lpVtbl[8]))((ID3D11VideoProcessorOutputView*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11View.Interface
 	{
 		[VtblIndex(8)]

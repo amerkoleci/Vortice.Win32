@@ -113,6 +113,7 @@ public unsafe partial struct ID2D1DrawTransform : ID2D1DrawTransform.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawTransform*, ID2D1DrawInfo*, int>)(lpVtbl[7]))((ID2D1DrawTransform*)Unsafe.AsPointer(ref this), drawInfo);
 	}
+
 	public interface Interface : ID2D1Transform.Interface
 	{
 		[VtblIndex(7)]

@@ -89,6 +89,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDeviceDebug*, int>)(lpVtbl[4]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

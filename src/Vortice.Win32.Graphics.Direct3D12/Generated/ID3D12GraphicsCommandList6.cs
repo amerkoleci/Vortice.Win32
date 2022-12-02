@@ -689,6 +689,7 @@ public unsafe partial struct ID3D12GraphicsCommandList6 : ID3D12GraphicsCommandL
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList6*, uint, uint, uint, void>)(lpVtbl[79]))((ID3D12GraphicsCommandList6*)Unsafe.AsPointer(ref this), ThreadGroupCountX, ThreadGroupCountY, ThreadGroupCountZ);
 	}
+
 	public interface Interface : ID3D12GraphicsCommandList5.Interface
 	{
 		[VtblIndex(79)]

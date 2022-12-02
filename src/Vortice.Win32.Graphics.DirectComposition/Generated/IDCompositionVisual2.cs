@@ -225,6 +225,7 @@ public unsafe partial struct IDCompositionVisual2 : IDCompositionVisual2.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual2*, BackfaceVisibility, int>)(lpVtbl[21]))((IDCompositionVisual2*)Unsafe.AsPointer(ref this), visibility);
 	}
+
 	public interface Interface : IDCompositionVisual.Interface
 	{
 		[VtblIndex(20)]

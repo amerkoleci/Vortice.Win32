@@ -121,6 +121,7 @@ public unsafe partial struct ID3D11Counter : ID3D11Counter.Interface, INativeGui
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Counter*, CounterDescription*, void>)(lpVtbl[8]))((ID3D11Counter*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11Asynchronous.Interface
 	{
 		[VtblIndex(8)]

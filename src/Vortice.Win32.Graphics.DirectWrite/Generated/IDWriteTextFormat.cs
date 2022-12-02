@@ -273,6 +273,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), localeName, nameSize);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

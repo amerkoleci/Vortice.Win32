@@ -113,6 +113,7 @@ public unsafe partial struct ID3D11SamplerState : ID3D11SamplerState.Interface, 
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11SamplerState*, SamplerDescription*, void>)(lpVtbl[7]))((ID3D11SamplerState*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

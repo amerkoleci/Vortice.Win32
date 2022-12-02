@@ -121,6 +121,7 @@ public unsafe partial struct IDWriteFontDownloadQueue : IDWriteFontDownloadQueue
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontDownloadQueue*, ulong>)(lpVtbl[8]))((IDWriteFontDownloadQueue*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

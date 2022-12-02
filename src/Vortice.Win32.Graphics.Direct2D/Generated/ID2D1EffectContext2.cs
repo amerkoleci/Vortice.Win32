@@ -265,6 +265,7 @@ public unsafe partial struct ID2D1EffectContext2 : ID2D1EffectContext2.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext2*, SimpleColorProfile*, ID2D1ColorContext1**, int>)(lpVtbl[26]))((ID2D1EffectContext2*)Unsafe.AsPointer(ref this), simpleProfile, colorContext);
 	}
+
 	public interface Interface : ID2D1EffectContext1.Interface
 	{
 		[VtblIndex(25)]

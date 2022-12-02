@@ -337,6 +337,7 @@ public unsafe partial struct IDWriteTextFormat1 : IDWriteTextFormat1.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat1*, IDWriteFontFallback**, int>)(lpVtbl[35]))((IDWriteTextFormat1*)Unsafe.AsPointer(ref this), fontFallback);
 	}
+
 	public interface Interface : IDWriteTextFormat.Interface
 	{
 		[VtblIndex(28)]

@@ -145,6 +145,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint, int>)(lpVtbl[11]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), effectInputIndex);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

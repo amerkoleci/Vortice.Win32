@@ -113,6 +113,7 @@ public unsafe partial struct ID2D1GradientStopCollection : ID2D1GradientStopColl
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection*, ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

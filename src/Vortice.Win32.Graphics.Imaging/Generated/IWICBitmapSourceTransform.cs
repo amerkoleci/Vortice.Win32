@@ -105,6 +105,7 @@ public unsafe partial struct IWICBitmapSourceTransform : IWICBitmapSourceTransfo
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSourceTransform*, WICBitmapTransformOptions, Bool32*, int>)(lpVtbl[6]))((IWICBitmapSourceTransform*)Unsafe.AsPointer(ref this), dstTransform, pfIsSupported);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

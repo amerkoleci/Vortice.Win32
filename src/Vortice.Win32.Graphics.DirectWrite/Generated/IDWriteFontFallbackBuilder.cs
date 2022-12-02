@@ -97,6 +97,7 @@ public unsafe partial struct IDWriteFontFallbackBuilder : IDWriteFontFallbackBui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFallbackBuilder*, IDWriteFontFallback**, int>)(lpVtbl[5]))((IDWriteFontFallbackBuilder*)Unsafe.AsPointer(ref this), fontFallback);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

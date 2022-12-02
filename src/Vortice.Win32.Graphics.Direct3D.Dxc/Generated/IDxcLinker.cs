@@ -86,6 +86,7 @@ public unsafe partial struct IDxcLinker : IDxcLinker.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcLinker*, ushort*, ushort*, ushort**, uint, ushort**, uint, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcLinker*)Unsafe.AsPointer(ref this), pEntryName, pTargetProfile, pLibNames, libCount, pArguments, argCount, ppResult);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

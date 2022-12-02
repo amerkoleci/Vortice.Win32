@@ -130,6 +130,7 @@ public unsafe partial struct ID3D12Heap1 : ID3D12Heap1.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Heap1*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12Heap1*)Unsafe.AsPointer(ref this), riid, ppProtectedSession);
 	}
+
 	public interface Interface : ID3D12Heap.Interface
 	{
 		[VtblIndex(9)]

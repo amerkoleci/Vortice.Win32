@@ -121,6 +121,7 @@ public unsafe partial struct ID3D12PipelineState : ID3D12PipelineState.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineState*, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[8]))((ID3D12PipelineState*)Unsafe.AsPointer(ref this), ppBlob);
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]

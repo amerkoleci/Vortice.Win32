@@ -129,6 +129,7 @@ public unsafe partial struct ID3D11RenderTargetView1 : ID3D11RenderTargetView1.I
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11RenderTargetView1*, RenderTargetViewDescription1*, void>)(lpVtbl[9]))((ID3D11RenderTargetView1*)Unsafe.AsPointer(ref this), pDesc1);
 	}
+
 	public interface Interface : ID3D11RenderTargetView.Interface
 	{
 		[VtblIndex(9)]

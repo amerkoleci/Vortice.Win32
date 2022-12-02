@@ -105,6 +105,7 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, Guid*, int>)(lpVtbl[6]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

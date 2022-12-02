@@ -89,6 +89,7 @@ public unsafe partial struct IDWriteAsyncResult : IDWriteAsyncResult.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteAsyncResult*, int>)(lpVtbl[4]))((IDWriteAsyncResult*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

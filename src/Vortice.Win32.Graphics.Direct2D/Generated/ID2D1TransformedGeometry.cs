@@ -201,6 +201,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, void>)(lpVtbl[18]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), transform);
 	}
+
 	public interface Interface : ID2D1Geometry.Interface
 	{
 		[VtblIndex(17)]

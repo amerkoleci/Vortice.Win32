@@ -95,6 +95,7 @@ public unsafe partial struct IDxcBlobEncoding : IDxcBlobEncoding.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobEncoding*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobEncoding*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
 	}
+
 	public interface Interface : IDxcBlob.Interface
 	{
 		[VtblIndex(5)]

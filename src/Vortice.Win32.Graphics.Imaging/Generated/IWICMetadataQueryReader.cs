@@ -105,6 +105,7 @@ public unsafe partial struct IWICMetadataQueryReader : IWICMetadataQueryReader.I
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryReader*, Com.IEnumString**, int>)(lpVtbl[6]))((IWICMetadataQueryReader*)Unsafe.AsPointer(ref this), ppIEnumString);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -79,6 +79,7 @@ public unsafe partial struct IDxcVersionInfo3 : IDxcVersionInfo3.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo3*, sbyte**, int>)(lpVtbl[3]))((IDxcVersionInfo3*)Unsafe.AsPointer(ref this), pVersionString);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -321,6 +321,7 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, uint*, int>)(lpVtbl[33]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, valueLength);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

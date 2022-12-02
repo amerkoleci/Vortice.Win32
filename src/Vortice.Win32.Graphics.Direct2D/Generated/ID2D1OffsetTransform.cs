@@ -98,6 +98,7 @@ public unsafe partial struct ID2D1OffsetTransform : ID2D1OffsetTransform.Interfa
 		System.Drawing.Point result;
 		return *((delegate* unmanaged[Stdcall]<ID2D1OffsetTransform*, System.Drawing.Point*, System.Drawing.Point*>)(lpVtbl[5]))((ID2D1OffsetTransform*)Unsafe.AsPointer(ref this), &result);
 	}
+
 	public interface Interface : ID2D1TransformNode.Interface
 	{
 		[VtblIndex(4)]

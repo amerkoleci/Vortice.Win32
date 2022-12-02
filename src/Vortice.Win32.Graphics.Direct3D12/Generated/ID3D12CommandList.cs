@@ -121,6 +121,7 @@ public unsafe partial struct ID3D12CommandList : ID3D12CommandList.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandList*, CommandListType>)(lpVtbl[8]))((ID3D12CommandList*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 		[VtblIndex(8)]

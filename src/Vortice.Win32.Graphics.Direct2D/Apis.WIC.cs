@@ -8,7 +8,6 @@ namespace Win32.Graphics.Imaging.D2D;
 
 public static unsafe partial class Apis
 {
-
     public static HResult CreateWICImagingFactory(IWICImagingFactory2** factory)
     {
         return CoCreateInstance(

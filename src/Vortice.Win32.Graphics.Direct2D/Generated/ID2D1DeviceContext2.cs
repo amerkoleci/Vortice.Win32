@@ -900,6 +900,7 @@ public unsafe partial struct ID2D1DeviceContext2 : ID2D1DeviceContext2.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext2*, ID2D1ImageSource*, TransformedImageSourceProperties*, ID2D1TransformedImageSource**, int>)(lpVtbl[105]))((ID2D1DeviceContext2*)Unsafe.AsPointer(ref this), imageSource, properties, transformedImageSource);
 	}
+
 	public interface Interface : ID2D1DeviceContext1.Interface
 	{
 		[VtblIndex(95)]

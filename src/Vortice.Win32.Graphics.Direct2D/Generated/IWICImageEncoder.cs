@@ -97,6 +97,7 @@ public unsafe partial struct IWICImageEncoder : IWICImageEncoder.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICImageEncoder*, Graphics.Direct2D.ID2D1Image*, Graphics.Imaging.IWICBitmapEncoder*, Graphics.Imaging.WICImageParameters*, int>)(lpVtbl[5]))((IWICImageEncoder*)Unsafe.AsPointer(ref this), pImage, pEncoder, pImageParameters);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

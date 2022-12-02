@@ -121,6 +121,7 @@ public unsafe partial struct IDWriteLocalizedStrings : IDWriteLocalizedStrings.I
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalizedStrings*, uint, ushort*, uint, int>)(lpVtbl[8]))((IDWriteLocalizedStrings*)Unsafe.AsPointer(ref this), index, stringBuffer, size);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

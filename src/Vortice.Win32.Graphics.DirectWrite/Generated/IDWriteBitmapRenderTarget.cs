@@ -137,6 +137,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget : IDWriteBitmapRenderTarg
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget*, uint, uint, int>)(lpVtbl[10]))((IDWriteBitmapRenderTarget*)Unsafe.AsPointer(ref this), width, height);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

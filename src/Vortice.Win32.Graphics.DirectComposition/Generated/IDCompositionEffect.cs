@@ -74,6 +74,7 @@ public unsafe partial struct IDCompositionEffect : IDCompositionEffect.Interface
 		return ((delegate* unmanaged[Stdcall]<IDCompositionEffect*, uint>)(lpVtbl[2]))((IDCompositionEffect*)Unsafe.AsPointer(ref this));
 	}
 
+
 	public interface Interface : IUnknown.Interface
 	{
 	}

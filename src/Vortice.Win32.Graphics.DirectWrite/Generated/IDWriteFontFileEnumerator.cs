@@ -89,6 +89,7 @@ public unsafe partial struct IDWriteFontFileEnumerator : IDWriteFontFileEnumerat
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileEnumerator*, IDWriteFontFile**, int>)(lpVtbl[4]))((IDWriteFontFileEnumerator*)Unsafe.AsPointer(ref this), fontFile);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

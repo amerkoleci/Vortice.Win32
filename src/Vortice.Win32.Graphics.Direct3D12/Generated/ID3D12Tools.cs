@@ -89,6 +89,7 @@ public unsafe partial struct ID3D12Tools : ID3D12Tools.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Tools*, Bool32>)(lpVtbl[4]))((ID3D12Tools*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

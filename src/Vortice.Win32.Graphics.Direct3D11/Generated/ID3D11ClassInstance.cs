@@ -137,6 +137,7 @@ public unsafe partial struct ID3D11ClassInstance : ID3D11ClassInstance.Interface
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11ClassInstance*, byte*, nuint*, void>)(lpVtbl[10]))((ID3D11ClassInstance*)Unsafe.AsPointer(ref this), pTypeName, pBufferLength);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

@@ -153,6 +153,7 @@ public unsafe partial struct IWICPalette : IWICPalette.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPalette*, Bool32*, int>)(lpVtbl[12]))((IWICPalette*)Unsafe.AsPointer(ref this), pfHasAlpha);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -97,6 +97,7 @@ public unsafe partial struct IDCompositionHueRotationEffect : IDCompositionHueRo
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionHueRotationEffect*, float, int>)(lpVtbl[5]))((IDCompositionHueRotationEffect*)Unsafe.AsPointer(ref this), amountDegrees);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

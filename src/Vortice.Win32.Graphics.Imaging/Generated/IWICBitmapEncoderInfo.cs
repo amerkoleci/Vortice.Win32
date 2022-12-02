@@ -241,6 +241,7 @@ public unsafe partial struct IWICBitmapEncoderInfo : IWICBitmapEncoderInfo.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoderInfo*, IWICBitmapEncoder**, int>)(lpVtbl[23]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapEncoder);
 	}
+
 	public interface Interface : IWICBitmapCodecInfo.Interface
 	{
 		[VtblIndex(23)]

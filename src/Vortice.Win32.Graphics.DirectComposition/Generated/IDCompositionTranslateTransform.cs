@@ -105,6 +105,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform*, float, int>)(lpVtbl[6]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetY);
 	}
+
 	public interface Interface : IDCompositionTransform.Interface
 	{
 		[VtblIndex(3)]

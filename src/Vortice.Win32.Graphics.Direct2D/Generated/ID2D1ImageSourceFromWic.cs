@@ -121,6 +121,7 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Graphics.Imaging.IWICBitmapSource**, void>)(lpVtbl[8]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), wicBitmapSource);
 	}
+
 	public interface Interface : ID2D1ImageSource.Interface
 	{
 		[VtblIndex(6)]

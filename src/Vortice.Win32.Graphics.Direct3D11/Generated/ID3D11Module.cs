@@ -81,6 +81,7 @@ public unsafe partial struct ID3D11Module : ID3D11Module.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Module*, sbyte*, ID3D11ModuleInstance**, int>)(lpVtbl[3]))((ID3D11Module*)Unsafe.AsPointer(ref this), pNamespace, ppModuleInstance);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

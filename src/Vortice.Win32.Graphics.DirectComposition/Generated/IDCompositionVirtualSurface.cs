@@ -129,6 +129,7 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, RawRect*, uint, int>)(lpVtbl[9]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), rectangles, count);
 	}
+
 	public interface Interface : IDCompositionSurface.Interface
 	{
 		[VtblIndex(8)]

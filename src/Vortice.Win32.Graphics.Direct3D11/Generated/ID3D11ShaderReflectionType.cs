@@ -133,6 +133,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[10]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pBase);
 	}
+
 	public interface Interface 
 	{
 		[VtblIndex(0)]

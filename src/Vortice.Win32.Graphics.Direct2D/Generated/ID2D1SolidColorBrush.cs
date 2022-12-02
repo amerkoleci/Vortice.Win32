@@ -130,6 +130,7 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 		Color4 result;
 		return *((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Color4*, Color4*>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), &result);
 	}
+
 	public interface Interface : ID2D1Brush.Interface
 	{
 		[VtblIndex(8)]

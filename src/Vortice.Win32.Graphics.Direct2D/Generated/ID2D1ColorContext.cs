@@ -105,6 +105,7 @@ public unsafe partial struct ID2D1ColorContext : ID2D1ColorContext.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext*, byte*, uint, int>)(lpVtbl[6]))((ID2D1ColorContext*)Unsafe.AsPointer(ref this), profile, profileSize);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

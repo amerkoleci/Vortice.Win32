@@ -113,6 +113,7 @@ public unsafe partial struct ID2D1DrawingStateBlock : ID2D1DrawingStateBlock.Int
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DrawingStateBlock*, Graphics.DirectWrite.IDWriteRenderingParams**, void>)(lpVtbl[7]))((ID2D1DrawingStateBlock*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

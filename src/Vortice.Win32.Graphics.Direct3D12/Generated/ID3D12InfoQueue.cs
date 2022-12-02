@@ -353,6 +353,7 @@ public unsafe partial struct ID3D12InfoQueue : ID3D12InfoQueue.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12InfoQueue*, Bool32>)(lpVtbl[37]))((ID3D12InfoQueue*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

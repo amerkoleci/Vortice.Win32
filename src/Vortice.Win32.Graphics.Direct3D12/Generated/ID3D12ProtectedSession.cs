@@ -129,6 +129,7 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12ProtectedSession*, ProtectedSessionStatus>)(lpVtbl[9]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 		[VtblIndex(8)]

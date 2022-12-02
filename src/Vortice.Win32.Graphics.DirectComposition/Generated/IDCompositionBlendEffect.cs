@@ -89,6 +89,7 @@ public unsafe partial struct IDCompositionBlendEffect : IDCompositionBlendEffect
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionBlendEffect*, Graphics.Direct2D.Common.BlendMode, int>)(lpVtbl[4]))((IDCompositionBlendEffect*)Unsafe.AsPointer(ref this), mode);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

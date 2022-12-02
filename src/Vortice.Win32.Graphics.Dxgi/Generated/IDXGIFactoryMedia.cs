@@ -89,6 +89,7 @@ public unsafe partial struct IDXGIFactoryMedia : IDXGIFactoryMedia.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactoryMedia*, IUnknown*, Handle, DecodeSwapChainDescription*, IDXGIResource*, IDXGIOutput*, IDXGIDecodeSwapChain**, int>)(lpVtbl[4]))((IDXGIFactoryMedia*)Unsafe.AsPointer(ref this), pDevice, hSurface, pDesc, pYuvDecodeBuffers, pRestrictToOutput, ppSwapChain);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

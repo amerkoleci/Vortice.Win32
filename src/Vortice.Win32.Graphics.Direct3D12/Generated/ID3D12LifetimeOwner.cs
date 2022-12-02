@@ -81,6 +81,7 @@ public unsafe partial struct ID3D12LifetimeOwner : ID3D12LifetimeOwner.Interface
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12LifetimeOwner*, LifetimeState, void>)(lpVtbl[3]))((ID3D12LifetimeOwner*)Unsafe.AsPointer(ref this), NewState);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

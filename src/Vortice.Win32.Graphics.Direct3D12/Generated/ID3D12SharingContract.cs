@@ -105,6 +105,7 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, Guid*, void>)(lpVtbl[6]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), guid);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

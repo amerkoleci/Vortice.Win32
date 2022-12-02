@@ -81,6 +81,7 @@ public unsafe partial struct ID3D12RootSignatureDeserializer : ID3D12RootSignatu
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12RootSignatureDeserializer*, RootSignatureDescription*>)(lpVtbl[3]))((ID3D12RootSignatureDeserializer*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

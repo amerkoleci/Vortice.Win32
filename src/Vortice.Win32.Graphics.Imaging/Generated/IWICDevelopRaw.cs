@@ -393,6 +393,7 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICDevelopRawNotificationCallback*, int>)(lpVtbl[42]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pCallback);
 	}
+
 	public interface Interface : IWICBitmapFrameDecode.Interface
 	{
 		[VtblIndex(11)]

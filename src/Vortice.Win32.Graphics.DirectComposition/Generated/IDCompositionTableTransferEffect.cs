@@ -217,6 +217,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[20]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

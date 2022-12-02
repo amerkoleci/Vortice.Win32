@@ -74,6 +74,7 @@ public unsafe partial struct IDCompositionClip : IDCompositionClip.Interface, IN
 		return ((delegate* unmanaged[Stdcall]<IDCompositionClip*, uint>)(lpVtbl[2]))((IDCompositionClip*)Unsafe.AsPointer(ref this));
 	}
 
+
 	public interface Interface : IUnknown.Interface
 	{
 	}

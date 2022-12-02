@@ -185,6 +185,7 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference*, ulong, ulong, int>)(lpVtbl[16]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), fileOffset, fragmentSize);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

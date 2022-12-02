@@ -89,6 +89,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator : IDWriteColorGlyphR
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator*, ColorGlyphRun**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator*)Unsafe.AsPointer(ref this), colorGlyphRun);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

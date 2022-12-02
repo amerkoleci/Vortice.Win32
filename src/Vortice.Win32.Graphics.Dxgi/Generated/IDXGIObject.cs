@@ -105,6 +105,7 @@ public unsafe partial struct IDXGIObject : IDXGIObject.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIObject*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIObject*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

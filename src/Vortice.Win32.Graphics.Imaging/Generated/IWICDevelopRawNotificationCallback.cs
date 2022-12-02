@@ -81,6 +81,7 @@ public unsafe partial struct IWICDevelopRawNotificationCallback : IWICDevelopRaw
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRawNotificationCallback*, uint, int>)(lpVtbl[3]))((IWICDevelopRawNotificationCallback*)Unsafe.AsPointer(ref this), NotificationMask);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

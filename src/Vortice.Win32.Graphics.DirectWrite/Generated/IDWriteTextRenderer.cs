@@ -129,6 +129,7 @@ public unsafe partial struct IDWriteTextRenderer : IDWriteTextRenderer.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer*, void*, float, float, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[9]))((IDWriteTextRenderer*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
 	}
+
 	public interface Interface : IDWritePixelSnapping.Interface
 	{
 		[VtblIndex(6)]

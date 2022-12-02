@@ -146,6 +146,7 @@ public unsafe partial struct ID3D12ShaderCacheSession : ID3D12ShaderCacheSession
 		ShaderCacheSessionDescription result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12ShaderCacheSession*, ShaderCacheSessionDescription*, ShaderCacheSessionDescription*>)(lpVtbl[11]))((ID3D12ShaderCacheSession*)Unsafe.AsPointer(ref this), &result);
 	}
+
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 		[VtblIndex(8)]

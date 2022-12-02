@@ -153,6 +153,7 @@ public unsafe partial struct IWICFormatConverterInfo : IWICFormatConverterInfo.I
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICFormatConverterInfo*, IWICFormatConverter**, int>)(lpVtbl[12]))((IWICFormatConverterInfo*)Unsafe.AsPointer(ref this), ppIConverter);
 	}
+
 	public interface Interface : IWICComponentInfo.Interface
 	{
 		[VtblIndex(11)]

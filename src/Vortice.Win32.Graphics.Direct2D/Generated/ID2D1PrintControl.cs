@@ -89,6 +89,7 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, int>)(lpVtbl[4]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

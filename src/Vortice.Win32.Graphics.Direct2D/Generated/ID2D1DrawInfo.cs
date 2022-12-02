@@ -145,6 +145,7 @@ public unsafe partial struct ID2D1DrawInfo : ID2D1DrawInfo.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DrawInfo*, ID2D1VertexBuffer*, VertexOptions, BlendDescription*, VertexRange*, Guid*, int>)(lpVtbl[11]))((ID2D1DrawInfo*)Unsafe.AsPointer(ref this), vertexBuffer, vertexOptions, blendDescription, vertexRange, vertexShader);
 	}
+
 	public interface Interface : ID2D1RenderInfo.Interface
 	{
 		[VtblIndex(7)]

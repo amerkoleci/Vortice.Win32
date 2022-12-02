@@ -129,6 +129,7 @@ public unsafe partial struct ID2D1ColorContext1 : ID2D1ColorContext1.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1ColorContext1*, SimpleColorProfile*, int>)(lpVtbl[9]))((ID2D1ColorContext1*)Unsafe.AsPointer(ref this), simpleProfile);
 	}
+
 	public interface Interface : ID2D1ColorContext.Interface
 	{
 		[VtblIndex(7)]

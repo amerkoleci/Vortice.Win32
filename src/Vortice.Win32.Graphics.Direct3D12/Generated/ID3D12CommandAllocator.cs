@@ -121,6 +121,7 @@ public unsafe partial struct ID3D12CommandAllocator : ID3D12CommandAllocator.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12CommandAllocator*, int>)(lpVtbl[8]))((ID3D12CommandAllocator*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]

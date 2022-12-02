@@ -187,6 +187,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, ID2D1GradientStopCollection**, void>)(lpVtbl[16]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientStopCollection);
 	}
+
 	public interface Interface : ID2D1Brush.Interface
 	{
 		[VtblIndex(8)]

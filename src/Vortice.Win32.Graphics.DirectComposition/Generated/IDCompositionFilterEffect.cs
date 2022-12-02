@@ -81,6 +81,7 @@ public unsafe partial struct IDCompositionFilterEffect : IDCompositionFilterEffe
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionFilterEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionFilterEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
+
 	public interface Interface : IDCompositionEffect.Interface
 	{
 		[VtblIndex(3)]

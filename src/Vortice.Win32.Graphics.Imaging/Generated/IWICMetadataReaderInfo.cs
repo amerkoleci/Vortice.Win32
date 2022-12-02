@@ -217,6 +217,7 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, IWICMetadataReader**, int>)(lpVtbl[20]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), ppIReader);
 	}
+
 	public interface Interface : IWICMetadataHandlerInfo.Interface
 	{
 		[VtblIndex(18)]

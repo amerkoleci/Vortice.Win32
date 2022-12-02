@@ -209,6 +209,7 @@ public unsafe partial struct IWICMetadataWriterInfo : IWICMetadataWriterInfo.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataWriterInfo*, IWICMetadataWriter**, int>)(lpVtbl[19]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), ppIWriter);
 	}
+
 	public interface Interface : IWICMetadataHandlerInfo.Interface
 	{
 		[VtblIndex(18)]

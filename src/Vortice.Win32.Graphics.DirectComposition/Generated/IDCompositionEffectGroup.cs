@@ -97,6 +97,7 @@ public unsafe partial struct IDCompositionEffectGroup : IDCompositionEffectGroup
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionEffectGroup*, IDCompositionTransform3D*, int>)(lpVtbl[5]))((IDCompositionEffectGroup*)Unsafe.AsPointer(ref this), transform3D);
 	}
+
 	public interface Interface : IDCompositionEffect.Interface
 	{
 		[VtblIndex(3)]

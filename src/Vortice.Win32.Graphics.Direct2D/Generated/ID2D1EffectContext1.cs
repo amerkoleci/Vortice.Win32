@@ -249,6 +249,7 @@ public unsafe partial struct ID2D1EffectContext1 : ID2D1EffectContext1.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext1*, BufferPrecision, uint*, byte*, uint, uint*, ID2D1LookupTable3D**, int>)(lpVtbl[24]))((ID2D1EffectContext1*)Unsafe.AsPointer(ref this), precision, extents, data, dataCount, strides, lookupTable);
 	}
+
 	public interface Interface : ID2D1EffectContext.Interface
 	{
 		[VtblIndex(24)]

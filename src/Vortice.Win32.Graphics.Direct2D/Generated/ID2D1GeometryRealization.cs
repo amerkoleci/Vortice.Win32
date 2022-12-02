@@ -81,6 +81,7 @@ public unsafe partial struct ID2D1GeometryRealization : ID2D1GeometryRealization
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1GeometryRealization*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GeometryRealization*)Unsafe.AsPointer(ref this), factory);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 	}

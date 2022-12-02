@@ -137,6 +137,7 @@ public unsafe partial struct ID3D11Buffer : ID3D11Buffer.Interface, INativeGuid
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Buffer*, BufferDescription*, void>)(lpVtbl[10]))((ID3D11Buffer*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11Resource.Interface
 	{
 		[VtblIndex(10)]

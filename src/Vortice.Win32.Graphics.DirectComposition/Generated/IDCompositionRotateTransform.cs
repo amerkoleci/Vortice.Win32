@@ -121,6 +121,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, float, int>)(lpVtbl[8]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerY);
 	}
+
 	public interface Interface : IDCompositionTransform.Interface
 	{
 		[VtblIndex(3)]

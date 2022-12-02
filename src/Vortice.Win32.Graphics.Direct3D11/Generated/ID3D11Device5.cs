@@ -601,6 +601,7 @@ public unsafe partial struct ID3D11Device5 : ID3D11Device5.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device5*, ulong, FenceFlags, Guid*, void**, int>)(lpVtbl[68]))((ID3D11Device5*)Unsafe.AsPointer(ref this), InitialValue, Flags, ReturnedInterface, ppFence);
 	}
+
 	public interface Interface : ID3D11Device4.Interface
 	{
 		[VtblIndex(67)]

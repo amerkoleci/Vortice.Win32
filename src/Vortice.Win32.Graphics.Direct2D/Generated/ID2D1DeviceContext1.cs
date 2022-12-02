@@ -812,6 +812,7 @@ public unsafe partial struct ID2D1DeviceContext1 : ID2D1DeviceContext1.Interface
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext1*, ID2D1GeometryRealization*, ID2D1Brush*, void>)(lpVtbl[94]))((ID2D1DeviceContext1*)Unsafe.AsPointer(ref this), geometryRealization, brush);
 	}
+
 	public interface Interface : ID2D1DeviceContext.Interface
 	{
 		[VtblIndex(92)]

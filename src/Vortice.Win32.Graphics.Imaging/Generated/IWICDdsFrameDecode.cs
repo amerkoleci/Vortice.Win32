@@ -97,6 +97,7 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[5]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), prcBoundsInBlocks, cbStride, cbBufferSize, pbBuffer);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

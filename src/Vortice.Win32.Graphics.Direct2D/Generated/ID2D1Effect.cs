@@ -201,6 +201,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Effect*, ID2D1Image**, void>)(lpVtbl[18]))((ID2D1Effect*)Unsafe.AsPointer(ref this), outputImage);
 	}
+
 	public interface Interface : ID2D1Properties.Interface
 	{
 		[VtblIndex(14)]

@@ -113,6 +113,7 @@ public unsafe partial struct IDWriteRenderingParams : IDWriteRenderingParams.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

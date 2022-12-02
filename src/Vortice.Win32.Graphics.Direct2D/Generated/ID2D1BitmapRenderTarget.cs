@@ -516,6 +516,7 @@ public unsafe partial struct ID2D1BitmapRenderTarget : ID2D1BitmapRenderTarget.I
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapRenderTarget*, ID2D1Bitmap**, int>)(lpVtbl[57]))((ID2D1BitmapRenderTarget*)Unsafe.AsPointer(ref this), bitmap);
 	}
+
 	public interface Interface : ID2D1RenderTarget.Interface
 	{
 		[VtblIndex(57)]

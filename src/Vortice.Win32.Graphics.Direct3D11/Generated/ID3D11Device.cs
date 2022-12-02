@@ -393,6 +393,7 @@ public unsafe partial struct ID3D11Device : ID3D11Device.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device*, uint>)(lpVtbl[42]))((ID3D11Device*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

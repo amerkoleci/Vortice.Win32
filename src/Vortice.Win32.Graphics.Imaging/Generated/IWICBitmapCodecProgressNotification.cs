@@ -81,6 +81,7 @@ public unsafe partial struct IWICBitmapCodecProgressNotification : IWICBitmapCod
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapCodecProgressNotification*, delegate* unmanaged[Stdcall]<void*, uint, WICProgressOperation, double, HResult>, void*, uint, int>)(lpVtbl[3]))((IWICBitmapCodecProgressNotification*)Unsafe.AsPointer(ref this), pfnProgressNotification, pvData, dwProgressFlags);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

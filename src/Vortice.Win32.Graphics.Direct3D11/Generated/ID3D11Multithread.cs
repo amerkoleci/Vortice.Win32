@@ -105,6 +105,7 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, Bool32>)(lpVtbl[6]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

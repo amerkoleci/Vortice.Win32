@@ -353,6 +353,7 @@ public unsafe partial struct IDWriteTextFormat2 : IDWriteTextFormat2.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextFormat2*, LineSpacing*, int>)(lpVtbl[37]))((IDWriteTextFormat2*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
+
 	public interface Interface : IDWriteTextFormat1.Interface
 	{
 		[VtblIndex(36)]

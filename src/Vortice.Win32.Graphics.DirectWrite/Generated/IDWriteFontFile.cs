@@ -97,6 +97,7 @@ public unsafe partial struct IDWriteFontFile : IDWriteFontFile.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFile*, Bool32*, FontFileType*, FontFaceType*, uint*, int>)(lpVtbl[5]))((IDWriteFontFile*)Unsafe.AsPointer(ref this), isSupportedFontType, fontFileType, fontFaceType, numberOfFaces);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -121,6 +121,7 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, RawRect*, uint*, uint*, uint*, int>)(lpVtbl[8]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), outputRect, dimensionX, dimensionY, dimensionZ);
 	}
+
 	public interface Interface : ID2D1Transform.Interface
 	{
 		[VtblIndex(7)]

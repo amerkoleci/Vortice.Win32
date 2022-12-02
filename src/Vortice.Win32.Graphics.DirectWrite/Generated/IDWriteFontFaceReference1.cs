@@ -209,6 +209,7 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, FontAxisValue*, uint, int>)(lpVtbl[19]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
 	}
+
 	public interface Interface : IDWriteFontFaceReference.Interface
 	{
 		[VtblIndex(17)]

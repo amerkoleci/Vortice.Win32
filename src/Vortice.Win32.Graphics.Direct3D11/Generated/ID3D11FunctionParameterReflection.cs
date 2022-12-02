@@ -53,6 +53,7 @@ public unsafe partial struct ID3D11FunctionParameterReflection : ID3D11FunctionP
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionParameterReflection*, ParameterDescription*, int>)(lpVtbl[0]))((ID3D11FunctionParameterReflection*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface 
 	{
 		[VtblIndex(0)]

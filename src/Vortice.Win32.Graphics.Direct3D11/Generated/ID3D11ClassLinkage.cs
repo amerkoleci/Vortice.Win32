@@ -121,6 +121,7 @@ public unsafe partial struct ID3D11ClassLinkage : ID3D11ClassLinkage.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ClassLinkage*, sbyte*, uint, uint, uint, uint, ID3D11ClassInstance**, int>)(lpVtbl[8]))((ID3D11ClassLinkage*)Unsafe.AsPointer(ref this), pClassTypeName, ConstantBufferOffset, ConstantVectorOffset, TextureOffset, SamplerOffset, ppInstance);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

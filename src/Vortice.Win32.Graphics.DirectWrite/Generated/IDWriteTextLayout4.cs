@@ -761,6 +761,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, AutomaticFontAxes, int>)(lpVtbl[88]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), automaticFontAxes);
 	}
+
 	public interface Interface : IDWriteTextLayout3.Interface
 	{
 		[VtblIndex(84)]

@@ -97,6 +97,7 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, ID2D1TransformGraph*, int>)(lpVtbl[5]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), transformGraph);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

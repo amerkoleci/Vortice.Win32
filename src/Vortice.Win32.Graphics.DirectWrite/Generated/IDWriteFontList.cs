@@ -97,6 +97,7 @@ public unsafe partial struct IDWriteFontList : IDWriteFontList.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontList*, uint, IDWriteFont**, int>)(lpVtbl[5]))((IDWriteFontList*)Unsafe.AsPointer(ref this), index, font);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

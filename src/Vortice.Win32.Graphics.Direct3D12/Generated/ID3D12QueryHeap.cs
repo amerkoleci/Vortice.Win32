@@ -113,6 +113,7 @@ public unsafe partial struct ID3D12QueryHeap : ID3D12QueryHeap.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12QueryHeap*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12QueryHeap*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 	}

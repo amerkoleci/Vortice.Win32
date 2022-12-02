@@ -305,6 +305,7 @@ public unsafe partial struct ID2D1CommandSink2 : ID2D1CommandSink2.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink2*, ID2D1GdiMetafile*, Common.RectF*, Common.RectF*, int>)(lpVtbl[31]))((ID2D1CommandSink2*)Unsafe.AsPointer(ref this), gdiMetafile, destinationRectangle, sourceRectangle);
 	}
+
 	public interface Interface : ID2D1CommandSink1.Interface
 	{
 		[VtblIndex(29)]

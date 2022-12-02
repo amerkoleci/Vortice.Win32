@@ -404,6 +404,7 @@ public unsafe partial struct ID3D12Device : ID3D12Device.Interface, INativeGuid
 		Luid result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12Device*, Luid*, Luid*>)(lpVtbl[43]))((ID3D12Device*)Unsafe.AsPointer(ref this), &result);
 	}
+
 	public interface Interface : ID3D12Object.Interface
 	{
 		[VtblIndex(7)]

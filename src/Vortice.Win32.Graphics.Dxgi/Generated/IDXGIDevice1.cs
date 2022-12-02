@@ -161,6 +161,7 @@ public unsafe partial struct IDXGIDevice1 : IDXGIDevice1.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDevice1*, uint*, int>)(lpVtbl[13]))((IDXGIDevice1*)Unsafe.AsPointer(ref this), pMaxLatency);
 	}
+
 	public interface Interface : IDXGIDevice.Interface
 	{
 		[VtblIndex(12)]

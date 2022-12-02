@@ -137,6 +137,7 @@ public unsafe partial struct ID3D11Texture3D : ID3D11Texture3D.Interface, INativ
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Texture3D*, Texture3DDescription*, void>)(lpVtbl[10]))((ID3D11Texture3D*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11Resource.Interface
 	{
 		[VtblIndex(10)]

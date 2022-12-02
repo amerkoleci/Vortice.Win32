@@ -97,6 +97,7 @@ public unsafe partial struct ID2D1Multithread : ID2D1Multithread.Interface, INat
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Multithread*, void>)(lpVtbl[5]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

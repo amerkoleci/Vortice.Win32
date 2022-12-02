@@ -89,6 +89,7 @@ public unsafe partial struct IDCompositionInkTrailDevice : IDCompositionInkTrail
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionInkTrailDevice*, IUnknown*, IDCompositionDelegatedInkTrail**, int>)(lpVtbl[4]))((IDCompositionInkTrailDevice*)Unsafe.AsPointer(ref this), swapChain, inkTrail);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

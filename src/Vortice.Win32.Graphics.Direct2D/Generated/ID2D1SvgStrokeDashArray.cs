@@ -145,6 +145,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[11]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1SvgAttribute.Interface
 	{
 		[VtblIndex(6)]

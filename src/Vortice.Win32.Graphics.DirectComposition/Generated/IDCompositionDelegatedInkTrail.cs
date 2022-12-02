@@ -105,6 +105,7 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, Color4*, int>)(lpVtbl[6]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), color);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

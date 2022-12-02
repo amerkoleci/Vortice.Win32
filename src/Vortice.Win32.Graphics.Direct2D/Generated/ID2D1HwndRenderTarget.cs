@@ -532,6 +532,7 @@ public unsafe partial struct ID2D1HwndRenderTarget : ID2D1HwndRenderTarget.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1HwndRenderTarget*, IntPtr>)(lpVtbl[59]))((ID2D1HwndRenderTarget*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1RenderTarget.Interface
 	{
 		[VtblIndex(57)]

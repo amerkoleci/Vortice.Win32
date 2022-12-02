@@ -97,6 +97,7 @@ public unsafe partial struct ID2D1CommandList : ID2D1CommandList.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandList*, int>)(lpVtbl[5]))((ID2D1CommandList*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1Image.Interface
 	{
 		[VtblIndex(4)]

@@ -153,6 +153,7 @@ public unsafe partial struct IDWriteBitmapRenderTarget1 : IDWriteBitmapRenderTar
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteBitmapRenderTarget1*, TextAntialiasMode, int>)(lpVtbl[12]))((IDWriteBitmapRenderTarget1*)Unsafe.AsPointer(ref this), antialiasMode);
 	}
+
 	public interface Interface : IDWriteBitmapRenderTarget.Interface
 	{
 		[VtblIndex(11)]

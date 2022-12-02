@@ -81,6 +81,7 @@ public unsafe partial struct ID2D1GdiMetafileSink : ID2D1GdiMetafileSink.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafileSink*, uint, void*, uint, int>)(lpVtbl[3]))((ID2D1GdiMetafileSink*)Unsafe.AsPointer(ref this), recordType, recordData, recordDataSize);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

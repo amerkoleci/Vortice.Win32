@@ -129,6 +129,7 @@ public unsafe partial struct ID3D11UnorderedAccessView1 : ID3D11UnorderedAccessV
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11UnorderedAccessView1*, UnorderedAccessViewDescription1*, void>)(lpVtbl[9]))((ID3D11UnorderedAccessView1*)Unsafe.AsPointer(ref this), pDesc1);
 	}
+
 	public interface Interface : ID3D11UnorderedAccessView.Interface
 	{
 		[VtblIndex(9)]

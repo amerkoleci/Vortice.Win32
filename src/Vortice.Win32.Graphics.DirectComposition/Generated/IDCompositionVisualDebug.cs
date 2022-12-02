@@ -257,6 +257,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, int>)(lpVtbl[25]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDCompositionVisual2.Interface
 	{
 		[VtblIndex(22)]

@@ -129,6 +129,7 @@ public unsafe partial struct IWICFormatConverter : IWICFormatConverter.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICFormatConverter*, Guid*, Guid*, Bool32*, int>)(lpVtbl[9]))((IWICFormatConverter*)Unsafe.AsPointer(ref this), srcPixelFormat, dstPixelFormat, pfCanConvert);
 	}
+
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]

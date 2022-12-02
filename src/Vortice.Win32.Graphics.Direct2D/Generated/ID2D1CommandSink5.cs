@@ -329,6 +329,7 @@ public unsafe partial struct ID2D1CommandSink5 : ID2D1CommandSink5.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink5*, ID2D1Image*, Common.BlendMode, System.Drawing.PointF*, Common.RectF*, InterpolationMode, int>)(lpVtbl[34]))((ID2D1CommandSink5*)Unsafe.AsPointer(ref this), image, blendMode, targetOffset, imageRectangle, interpolationMode);
 	}
+
 	public interface Interface : ID2D1CommandSink4.Interface
 	{
 		[VtblIndex(34)]

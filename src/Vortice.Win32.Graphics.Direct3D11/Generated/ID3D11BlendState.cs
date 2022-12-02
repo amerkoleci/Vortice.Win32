@@ -113,6 +113,7 @@ public unsafe partial struct ID3D11BlendState : ID3D11BlendState.Interface, INat
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11BlendState*, BlendDescription*, void>)(lpVtbl[7]))((ID3D11BlendState*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

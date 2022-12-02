@@ -140,6 +140,7 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 		GpuDescriptorHandle result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, GpuDescriptorHandle*, GpuDescriptorHandle*>)(lpVtbl[10]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]

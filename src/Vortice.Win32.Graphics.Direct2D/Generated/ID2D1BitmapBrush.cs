@@ -177,6 +177,7 @@ public unsafe partial struct ID2D1BitmapBrush : ID2D1BitmapBrush.Interface, INat
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush*, ID2D1Bitmap**, void>)(lpVtbl[15]))((ID2D1BitmapBrush*)Unsafe.AsPointer(ref this), bitmap);
 	}
+
 	public interface Interface : ID2D1Brush.Interface
 	{
 		[VtblIndex(8)]

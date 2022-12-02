@@ -121,6 +121,7 @@ public unsafe partial struct ID3D11On12Device2 : ID3D11On12Device2.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device2*, Graphics.Direct3D11.ID3D11Resource*, uint, ulong*, Graphics.Direct3D12.ID3D12Fence**, int>)(lpVtbl[8]))((ID3D11On12Device2*)Unsafe.AsPointer(ref this), pResource11, NumSync, pSignalValues, ppFences);
 	}
+
 	public interface Interface : ID3D11On12Device1.Interface
 	{
 		[VtblIndex(7)]

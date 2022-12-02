@@ -113,6 +113,7 @@ public unsafe partial struct IDWriteGdiInterop : IDWriteGdiInterop.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop*, IntPtr, uint, uint, IDWriteBitmapRenderTarget**, int>)(lpVtbl[7]))((IDWriteGdiInterop*)Unsafe.AsPointer(ref this), hdc, width, height, renderTarget);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

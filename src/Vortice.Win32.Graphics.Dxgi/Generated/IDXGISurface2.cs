@@ -161,6 +161,7 @@ public unsafe partial struct IDXGISurface2 : IDXGISurface2.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Guid*, void**, uint*, int>)(lpVtbl[13]))((IDXGISurface2*)Unsafe.AsPointer(ref this), riid, ppParentResource, pSubresourceIndex);
 	}
+
 	public interface Interface : IDXGISurface1.Interface
 	{
 		[VtblIndex(13)]

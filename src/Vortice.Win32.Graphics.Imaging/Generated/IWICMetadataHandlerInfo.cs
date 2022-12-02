@@ -193,6 +193,7 @@ public unsafe partial struct IWICMetadataHandlerInfo : IWICMetadataHandlerInfo.I
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataHandlerInfo*, Bool32*, int>)(lpVtbl[17]))((IWICMetadataHandlerInfo*)Unsafe.AsPointer(ref this), pfFixedSize);
 	}
+
 	public interface Interface : IWICComponentInfo.Interface
 	{
 		[VtblIndex(11)]

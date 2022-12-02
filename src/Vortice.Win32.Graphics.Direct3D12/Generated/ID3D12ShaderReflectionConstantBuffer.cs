@@ -69,6 +69,7 @@ public unsafe partial struct ID3D12ShaderReflectionConstantBuffer : ID3D12Shader
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflectionConstantBuffer*, sbyte*, ID3D12ShaderReflectionVariable>)(lpVtbl[2]))((ID3D12ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
 	}
+
 	public interface Interface 
 	{
 		[VtblIndex(0)]

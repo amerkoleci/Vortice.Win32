@@ -97,6 +97,7 @@ public unsafe partial struct ID2D1SvgAttribute : ID2D1SvgAttribute.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgAttribute*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgAttribute*)Unsafe.AsPointer(ref this), attribute);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

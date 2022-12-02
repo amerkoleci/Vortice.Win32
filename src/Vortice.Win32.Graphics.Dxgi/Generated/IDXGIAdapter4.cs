@@ -201,6 +201,7 @@ public unsafe partial struct IDXGIAdapter4 : IDXGIAdapter4.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter4*, AdapterDescription3*, int>)(lpVtbl[18]))((IDXGIAdapter4*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : IDXGIAdapter3.Interface
 	{
 		[VtblIndex(18)]

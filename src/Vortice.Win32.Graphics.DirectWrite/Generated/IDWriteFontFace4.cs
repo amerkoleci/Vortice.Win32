@@ -473,6 +473,7 @@ public unsafe partial struct IDWriteFontFace4 : IDWriteFontFace4.Interface, INat
 	{
 		((delegate* unmanaged[Stdcall]<IDWriteFontFace4*, void*, void>)(lpVtbl[52]))((IDWriteFontFace4*)Unsafe.AsPointer(ref this), glyphDataContext);
 	}
+
 	public interface Interface : IDWriteFontFace3.Interface
 	{
 		[VtblIndex(49)]

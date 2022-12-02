@@ -105,6 +105,7 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, Bool32>)(lpVtbl[6]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

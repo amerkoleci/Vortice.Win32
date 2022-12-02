@@ -265,6 +265,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
 	}
+
 	public interface Interface : IDXGIOutput4.Interface
 	{
 		[VtblIndex(26)]

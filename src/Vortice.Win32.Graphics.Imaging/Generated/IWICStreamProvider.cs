@@ -105,6 +105,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, int>)(lpVtbl[6]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

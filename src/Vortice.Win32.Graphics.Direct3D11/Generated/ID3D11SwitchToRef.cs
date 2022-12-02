@@ -89,6 +89,7 @@ public unsafe partial struct ID3D11SwitchToRef : ID3D11SwitchToRef.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11SwitchToRef*, Bool32>)(lpVtbl[4]))((ID3D11SwitchToRef*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

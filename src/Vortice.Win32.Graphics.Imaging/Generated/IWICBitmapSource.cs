@@ -113,6 +113,7 @@ public unsafe partial struct IWICBitmapSource : IWICBitmapSource.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapSource*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmapSource*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

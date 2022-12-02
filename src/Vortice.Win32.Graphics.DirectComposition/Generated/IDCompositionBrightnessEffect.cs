@@ -161,6 +161,7 @@ public unsafe partial struct IDCompositionBrightnessEffect : IDCompositionBright
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionBrightnessEffect*, float, int>)(lpVtbl[13]))((IDCompositionBrightnessEffect*)Unsafe.AsPointer(ref this), blackPointY);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

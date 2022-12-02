@@ -113,6 +113,7 @@ public unsafe partial struct ID2D1BlendTransform : ID2D1BlendTransform.Interface
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1BlendTransform*, BlendDescription*, void>)(lpVtbl[7]))((ID2D1BlendTransform*)Unsafe.AsPointer(ref this), description);
 	}
+
 	public interface Interface : ID2D1ConcreteTransform.Interface
 	{
 		[VtblIndex(6)]

@@ -105,6 +105,7 @@ public unsafe partial struct IWICEnumMetadataItem : IWICEnumMetadataItem.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICEnumMetadataItem*, IWICEnumMetadataItem**, int>)(lpVtbl[6]))((IWICEnumMetadataItem*)Unsafe.AsPointer(ref this), ppIEnumMetadataItem);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

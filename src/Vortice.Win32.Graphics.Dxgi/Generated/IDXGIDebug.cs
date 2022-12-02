@@ -81,6 +81,7 @@ public unsafe partial struct IDXGIDebug : IDXGIDebug.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIDebug*, Guid, ReportLiveObjectFlags, int>)(lpVtbl[3]))((IDXGIDebug*)Unsafe.AsPointer(ref this), apiid, flags);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -321,6 +321,7 @@ public unsafe partial struct IDCompositionVisual3 : IDCompositionVisual3.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual3*, Bool32, int>)(lpVtbl[33]))((IDCompositionVisual3*)Unsafe.AsPointer(ref this), visible);
 	}
+
 	public interface Interface : IDCompositionVisualDebug.Interface
 	{
 		[VtblIndex(26)]

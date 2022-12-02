@@ -193,6 +193,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Common.RectF*, void>)(lpVtbl[17]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
 	}
+
 	public interface Interface : ID2D1Brush.Interface
 	{
 		[VtblIndex(8)]

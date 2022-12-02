@@ -313,6 +313,7 @@ public unsafe partial struct ID2D1CommandSink3 : ID2D1CommandSink3.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink3*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, int>)(lpVtbl[32]))((ID2D1CommandSink3*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
 	}
+
 	public interface Interface : ID2D1CommandSink2.Interface
 	{
 		[VtblIndex(32)]

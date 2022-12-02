@@ -121,6 +121,7 @@ public unsafe partial struct ID3D11VideoDecoder : ID3D11VideoDecoder.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDecoder*, Handle*, int>)(lpVtbl[8]))((ID3D11VideoDecoder*)Unsafe.AsPointer(ref this), pDriverHandle);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

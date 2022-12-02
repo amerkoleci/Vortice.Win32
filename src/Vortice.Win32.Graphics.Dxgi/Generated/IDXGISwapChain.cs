@@ -193,6 +193,7 @@ public unsafe partial struct IDXGISwapChain : IDXGISwapChain.Interface, INativeG
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain*, uint*, int>)(lpVtbl[17]))((IDXGISwapChain*)Unsafe.AsPointer(ref this), pLastPresentCount);
 	}
+
 	public interface Interface : IDXGIDeviceSubObject.Interface
 	{
 		[VtblIndex(8)]

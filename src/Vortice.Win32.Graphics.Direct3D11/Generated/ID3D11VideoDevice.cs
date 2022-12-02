@@ -209,6 +209,7 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, IUnknown*, int>)(lpVtbl[19]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), guid, pData);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

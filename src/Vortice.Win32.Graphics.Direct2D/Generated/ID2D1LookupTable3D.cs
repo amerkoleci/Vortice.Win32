@@ -81,6 +81,7 @@ public unsafe partial struct ID2D1LookupTable3D : ID2D1LookupTable3D.Interface, 
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1LookupTable3D*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1LookupTable3D*)Unsafe.AsPointer(ref this), factory);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 	}

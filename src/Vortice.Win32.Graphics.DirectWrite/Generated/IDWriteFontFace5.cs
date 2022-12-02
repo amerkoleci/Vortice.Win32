@@ -513,6 +513,7 @@ public unsafe partial struct IDWriteFontFace5 : IDWriteFontFace5.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace5*, IDWriteFontFace*, Bool32>)(lpVtbl[57]))((IDWriteFontFace5*)Unsafe.AsPointer(ref this), fontFace);
 	}
+
 	public interface Interface : IDWriteFontFace4.Interface
 	{
 		[VtblIndex(53)]

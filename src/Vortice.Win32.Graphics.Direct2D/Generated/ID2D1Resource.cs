@@ -81,6 +81,7 @@ public unsafe partial struct ID2D1Resource : ID2D1Resource.Interface, INativeGui
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Resource*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Resource*)Unsafe.AsPointer(ref this), factory);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -233,6 +233,7 @@ public unsafe partial struct IWICBitmapCodecInfo : IWICBitmapCodecInfo.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapCodecInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
 	}
+
 	public interface Interface : IWICComponentInfo.Interface
 	{
 		[VtblIndex(11)]

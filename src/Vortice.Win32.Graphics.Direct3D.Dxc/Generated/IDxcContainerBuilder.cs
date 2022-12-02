@@ -100,6 +100,7 @@ public unsafe partial struct IDxcContainerBuilder : IDxcContainerBuilder.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcContainerBuilder*, IDxcOperationResult**, int>)(lpVtbl[6]))((IDxcContainerBuilder*)Unsafe.AsPointer(ref this), ppResult);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

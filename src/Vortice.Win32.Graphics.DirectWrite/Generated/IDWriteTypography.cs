@@ -97,6 +97,7 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, uint, FontFeature*, int>)(lpVtbl[5]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeatureIndex, fontFeature);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

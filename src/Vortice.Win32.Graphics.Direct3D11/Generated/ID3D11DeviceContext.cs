@@ -969,6 +969,7 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, Bool32, ID3D11CommandList**, int>)(lpVtbl[114]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), RestoreDeferredContextState, ppCommandList);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

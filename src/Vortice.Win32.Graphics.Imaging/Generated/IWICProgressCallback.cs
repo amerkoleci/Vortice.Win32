@@ -81,6 +81,7 @@ public unsafe partial struct IWICProgressCallback : IWICProgressCallback.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICProgressCallback*, uint, WICProgressOperation, double, int>)(lpVtbl[3]))((IWICProgressCallback*)Unsafe.AsPointer(ref this), uFrameNum, operation, dblProgress);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

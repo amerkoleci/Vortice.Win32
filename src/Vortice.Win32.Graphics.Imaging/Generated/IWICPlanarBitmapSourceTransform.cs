@@ -89,6 +89,7 @@ public unsafe partial struct IWICPlanarBitmapSourceTransform : IWICPlanarBitmapS
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapSourceTransform*, System.Drawing.Rectangle*, uint, uint, WICBitmapTransformOptions, WICPlanarOptions, WICBitmapPlane*, uint, int>)(lpVtbl[4]))((IWICPlanarBitmapSourceTransform*)Unsafe.AsPointer(ref this), prcSource, uiWidth, uiHeight, dstTransform, dstPlanarOptions, pDstPlanes, cPlanes);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -105,6 +105,7 @@ public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.I
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

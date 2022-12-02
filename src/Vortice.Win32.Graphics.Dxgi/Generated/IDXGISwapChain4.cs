@@ -377,6 +377,7 @@ public unsafe partial struct IDXGISwapChain4 : IDXGISwapChain4.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain4*, HDRMetadataType, uint, void*, int>)(lpVtbl[40]))((IDXGISwapChain4*)Unsafe.AsPointer(ref this), Type, Size, pMetaData);
 	}
+
 	public interface Interface : IDXGISwapChain3.Interface
 	{
 		[VtblIndex(40)]

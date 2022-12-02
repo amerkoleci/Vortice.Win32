@@ -113,6 +113,7 @@ public unsafe partial struct ID2D1Brush : ID2D1Brush.Interface, INativeGuid
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1Brush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1Brush*)Unsafe.AsPointer(ref this), transform);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

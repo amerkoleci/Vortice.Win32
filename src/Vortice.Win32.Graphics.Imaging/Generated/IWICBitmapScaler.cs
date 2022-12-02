@@ -121,6 +121,7 @@ public unsafe partial struct IWICBitmapScaler : IWICBitmapScaler.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapScaler*, IWICBitmapSource*, uint, uint, WICBitmapInterpolationMode, int>)(lpVtbl[8]))((IWICBitmapScaler*)Unsafe.AsPointer(ref this), pISource, uiWidth, uiHeight, mode);
 	}
+
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]

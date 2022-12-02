@@ -161,6 +161,7 @@ public unsafe partial struct IDWriteFontFamily2 : IDWriteFontFamily2.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFamily2*, IDWriteFontSet1**, int>)(lpVtbl[13]))((IDWriteFontFamily2*)Unsafe.AsPointer(ref this), fontSet);
 	}
+
 	public interface Interface : IDWriteFontFamily1.Interface
 	{
 		[VtblIndex(12)]

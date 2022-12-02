@@ -121,6 +121,7 @@ public unsafe partial struct IWICBitmapFlipRotator : IWICBitmapFlipRotator.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapFlipRotator*, IWICBitmapSource*, WICBitmapTransformOptions, int>)(lpVtbl[8]))((IWICBitmapFlipRotator*)Unsafe.AsPointer(ref this), pISource, options);
 	}
+
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]

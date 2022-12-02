@@ -169,6 +169,7 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, float, int>)(lpVtbl[14]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

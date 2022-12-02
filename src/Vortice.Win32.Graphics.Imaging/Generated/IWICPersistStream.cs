@@ -7,8 +7,6 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using Win32.Com;
-
 namespace Win32.Graphics.Imaging;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream"]/*' />
@@ -50,29 +48,55 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 
 	public void** lpVtbl;
 
-	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::LoadEx"]/*' />
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
-	public HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, uint dwPersistOptions)
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Com.IStream*, Guid*, uint, int>)(lpVtbl[0]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, pguidPreferredVendor, dwPersistOptions);
+		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICPersistStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, uint>)(lpVtbl[1]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, uint>)(lpVtbl[2]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::LoadEx"]/*' />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(8)]
+	public HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, WICPersistOptions dwPersistOptions)
+	{
+		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Com.IStream*, Guid*, WICPersistOptions, int>)(lpVtbl[8]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, pguidPreferredVendor, dwPersistOptions);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::SaveEx"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(1)]
-	public HResult SaveEx(Com.IStream* pIStream, uint dwPersistOptions, Bool32 fClearDirty)
+	[VtblIndex(9)]
+	public HResult SaveEx(Com.IStream* pIStream, WICPersistOptions dwPersistOptions, Bool32 fClearDirty)
 	{
-		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Com.IStream*, uint, Bool32, int>)(lpVtbl[1]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, dwPersistOptions, fClearDirty);
+		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Com.IStream*, WICPersistOptions, Bool32, int>)(lpVtbl[9]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, dwPersistOptions, fClearDirty);
 	}
 
-	public interface Interface : IPersistStream.Interface
+	public interface Interface : Win32.Com.IPersistStream.Interface
 	{
-		[VtblIndex(0)]
-		HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, uint dwPersistOptions);
+		[VtblIndex(8)]
+		HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, WICPersistOptions dwPersistOptions);
 
-		[VtblIndex(1)]
-		HResult SaveEx(Com.IStream* pIStream, uint dwPersistOptions, Bool32 fClearDirty);
+		[VtblIndex(9)]
+		HResult SaveEx(Com.IStream* pIStream, WICPersistOptions dwPersistOptions, Bool32 fClearDirty);
 	}
 }
 

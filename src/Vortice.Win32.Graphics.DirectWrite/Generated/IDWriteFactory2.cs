@@ -297,6 +297,7 @@ public unsafe partial struct IDWriteFactory2 : IDWriteFactory2.Interface, INativ
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory2*, GlyphRun*, Matrix3x2*, RenderingMode, MeasuringMode, GridFitMode, TextAntialiasMode, float, float, IDWriteGlyphRunAnalysis**, int>)(lpVtbl[30]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), glyphRun, transform, renderingMode, measuringMode, gridFitMode, antialiasMode, baselineOriginX, baselineOriginY, glyphRunAnalysis);
 	}
+
 	public interface Interface : IDWriteFactory1.Interface
 	{
 		[VtblIndex(26)]

@@ -169,6 +169,7 @@ public unsafe partial struct ID2D1SvgPathData : ID2D1SvgPathData.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPathData*, Common.FillMode, ID2D1PathGeometry1**, int>)(lpVtbl[14]))((ID2D1SvgPathData*)Unsafe.AsPointer(ref this), fillMode, pathGeometry);
 	}
+
 	public interface Interface : ID2D1SvgAttribute.Interface
 	{
 		[VtblIndex(6)]

@@ -81,6 +81,7 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : ID3D11RefDefaultT
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11RefDefaultTrackingOptions*, uint, uint, int>)(lpVtbl[3]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this), ResourceTypeFlags, Options);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

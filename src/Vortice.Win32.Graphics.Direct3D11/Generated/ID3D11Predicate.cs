@@ -121,6 +121,7 @@ public unsafe partial struct ID3D11Predicate : ID3D11Predicate.Interface, INativ
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Predicate*, QueryDescription*, void>)(lpVtbl[8]))((ID3D11Predicate*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11Query.Interface
 	{
 	}

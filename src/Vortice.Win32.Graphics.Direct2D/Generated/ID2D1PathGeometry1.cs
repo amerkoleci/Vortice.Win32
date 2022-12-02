@@ -225,6 +225,7 @@ public unsafe partial struct ID2D1PathGeometry1 : ID2D1PathGeometry1.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1PathGeometry1*, float, uint, Matrix3x2*, float, PointDescription*, int>)(lpVtbl[21]))((ID2D1PathGeometry1*)Unsafe.AsPointer(ref this), length, startSegment, worldTransform, flatteningTolerance, pointDescription);
 	}
+
 	public interface Interface : ID2D1PathGeometry.Interface
 	{
 		[VtblIndex(21)]

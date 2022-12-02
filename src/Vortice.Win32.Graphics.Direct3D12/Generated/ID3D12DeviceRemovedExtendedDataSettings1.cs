@@ -105,6 +105,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
 	}
+
 	public interface Interface : ID3D12DeviceRemovedExtendedDataSettings.Interface
 	{
 		[VtblIndex(6)]

@@ -121,6 +121,7 @@ public unsafe partial struct ID3D12MetaCommand : ID3D12MetaCommand.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12MetaCommand*, MetaCommandParameterStage, uint, ulong>)(lpVtbl[8]))((ID3D12MetaCommand*)Unsafe.AsPointer(ref this), Stage, ParameterIndex);
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]

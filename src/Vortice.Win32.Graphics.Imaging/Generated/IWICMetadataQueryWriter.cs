@@ -121,6 +121,7 @@ public unsafe partial struct IWICMetadataQueryWriter : IWICMetadataQueryWriter.I
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataQueryWriter*, ushort*, int>)(lpVtbl[8]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName);
 	}
+
 	public interface Interface : IWICMetadataQueryReader.Interface
 	{
 		[VtblIndex(7)]

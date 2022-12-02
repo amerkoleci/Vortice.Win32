@@ -193,6 +193,7 @@ public unsafe partial struct ID2D1EllipseGeometry : ID2D1EllipseGeometry.Interfa
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1EllipseGeometry*, Ellipse*, void>)(lpVtbl[17]))((ID2D1EllipseGeometry*)Unsafe.AsPointer(ref this), ellipse);
 	}
+
 	public interface Interface : ID2D1Geometry.Interface
 	{
 		[VtblIndex(17)]

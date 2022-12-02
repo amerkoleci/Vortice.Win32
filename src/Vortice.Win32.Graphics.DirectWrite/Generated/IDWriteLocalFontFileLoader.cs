@@ -105,6 +105,7 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, ulong*, int>)(lpVtbl[6]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, lastWriteTime);
 	}
+
 	public interface Interface : IDWriteFontFileLoader.Interface
 	{
 		[VtblIndex(4)]

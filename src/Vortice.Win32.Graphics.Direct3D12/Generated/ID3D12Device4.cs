@@ -509,6 +509,7 @@ public unsafe partial struct ID3D12Device4 : ID3D12Device4.Interface, INativeGui
 		ResourceAllocationInfo result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12Device4*, ResourceAllocationInfo*, uint, uint, ResourceDescription*, ResourceAllocationInfo1*, ResourceAllocationInfo*>)(lpVtbl[56]))((ID3D12Device4*)Unsafe.AsPointer(ref this), &result, visibleMask, numResourceDescs, pResourceDescs, pResourceAllocationInfo1);
 	}
+
 	public interface Interface : ID3D12Device3.Interface
 	{
 		[VtblIndex(51)]

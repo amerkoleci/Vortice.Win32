@@ -89,6 +89,7 @@ public unsafe partial struct IDXGIDisplayControl : IDXGIDisplayControl.Interface
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIDisplayControl*, Bool32, void>)(lpVtbl[4]))((IDXGIDisplayControl*)Unsafe.AsPointer(ref this), enabled);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

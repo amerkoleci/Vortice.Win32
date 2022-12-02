@@ -121,6 +121,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), clamp);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

@@ -460,6 +460,7 @@ public unsafe partial struct ID3D12Device3 : ID3D12Device3.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device3*, ResidencyFlags, uint, ID3D12Pageable**, ID3D12Fence*, ulong, int>)(lpVtbl[50]))((ID3D12Device3*)Unsafe.AsPointer(ref this), Flags, NumObjects, ppObjects, pFenceToSignal, FenceValueToSignal);
 	}
+
 	public interface Interface : ID3D12Device2.Interface
 	{
 		[VtblIndex(48)]

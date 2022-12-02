@@ -193,6 +193,7 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, void>)(lpVtbl[17]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
 	}
+
 	public interface Interface : IDXGIAdapter2.Interface
 	{
 		[VtblIndex(12)]

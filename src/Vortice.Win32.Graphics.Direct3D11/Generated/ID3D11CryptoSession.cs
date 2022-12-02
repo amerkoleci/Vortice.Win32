@@ -145,6 +145,7 @@ public unsafe partial struct ID3D11CryptoSession : ID3D11CryptoSession.Interface
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11CryptoSession*, Handle*, void>)(lpVtbl[11]))((ID3D11CryptoSession*)Unsafe.AsPointer(ref this), pCryptoSessionHandle);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

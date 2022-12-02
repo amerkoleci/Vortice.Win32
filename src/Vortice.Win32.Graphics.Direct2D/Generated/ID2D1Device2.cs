@@ -161,6 +161,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, Graphics.Dxgi.IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device2*)Unsafe.AsPointer(ref this), dxgiDevice);
 	}
+
 	public interface Interface : ID2D1Device1.Interface
 	{
 		[VtblIndex(11)]

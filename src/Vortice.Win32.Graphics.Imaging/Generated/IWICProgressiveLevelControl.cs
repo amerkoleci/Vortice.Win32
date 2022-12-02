@@ -97,6 +97,7 @@ public unsafe partial struct IWICProgressiveLevelControl : IWICProgressiveLevelC
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICProgressiveLevelControl*, uint, int>)(lpVtbl[5]))((IWICProgressiveLevelControl*)Unsafe.AsPointer(ref this), nLevel);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

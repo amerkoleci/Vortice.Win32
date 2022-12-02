@@ -1121,6 +1121,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11View*, RawRect*, uint, void>)(lpVtbl[133]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResourceView, pRects, NumRects);
 	}
+
 	public interface Interface : ID3D11DeviceContext.Interface
 	{
 		[VtblIndex(115)]

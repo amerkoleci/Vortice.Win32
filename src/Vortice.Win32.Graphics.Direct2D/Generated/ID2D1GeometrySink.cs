@@ -50,142 +50,143 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 
 	public void** lpVtbl;
 
-    /// <inheritdoc cref="IUnknown.QueryInterface" />
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [VtblIndex(0)]
-    public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
-    {
-        return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
-    }
-
-    /// <inheritdoc cref="IUnknown.AddRef" />
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [VtblIndex(1)]
-    [return: NativeTypeName("ULONG")]
-    public uint AddRef()
-    {
-        return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, uint>)(lpVtbl[1]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
-    }
-
-    /// <inheritdoc cref="IUnknown.Release" />
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [VtblIndex(2)]
-    [return: NativeTypeName("ULONG")]
-    public uint Release()
-    {
-        return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, uint>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
-    }
-
-    /// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetFillMode" />
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+	/// <inheritdoc cref="IUnknown.QueryInterface" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(0)]
+	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
+	{
+		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
+	}
+
+	/// <inheritdoc cref="IUnknown.AddRef" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(1)]
+	[return: NativeTypeName("ULONG")]
+	public uint AddRef()
+	{
+		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, uint>)(lpVtbl[1]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="IUnknown.Release" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(2)]
+	[return: NativeTypeName("ULONG")]
+	public uint Release()
+	{
+		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, uint>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
+	}
+
+	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetFillMode" />
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	[VtblIndex(3)]
 	public void SetFillMode(Common.FillMode fillMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.FillMode, void>)(lpVtbl[0]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), fillMode);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.FillMode, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), fillMode);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetSegmentFlags" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(1)]
+	[VtblIndex(4)]
 	public void SetSegmentFlags(Common.PathSegment vertexFlags)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.PathSegment, void>)(lpVtbl[1]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.PathSegment, void>)(lpVtbl[4]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.BeginFigure" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(2)]
+	[VtblIndex(5)]
 	public void BeginFigure(System.Drawing.PointF startPoint, Common.FigureBegin figureBegin)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF, Common.FigureBegin, void>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF, Common.FigureBegin, void>)(lpVtbl[5]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddLines" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(3)]
+	[VtblIndex(6)]
 	public void AddLines(System.Drawing.PointF* points, uint pointsCount)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF*, uint, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF*, uint, void>)(lpVtbl[6]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddBeziers" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(4)]
+	[VtblIndex(7)]
 	public void AddBeziers(Common.BezierSegment* beziers, uint beziersCount)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.BezierSegment*, uint, void>)(lpVtbl[4]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.BezierSegment*, uint, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.EndFigure" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(5)]
+	[VtblIndex(8)]
 	public void EndFigure(Common.FigureEnd figureEnd)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.FigureEnd, void>)(lpVtbl[5]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.FigureEnd, void>)(lpVtbl[8]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.Close" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(6)]
+	[VtblIndex(9)]
 	public HResult Close()
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, int>)(lpVtbl[6]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, int>)(lpVtbl[9]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddLine"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(7)]
+	[VtblIndex(10)]
 	public void AddLine(System.Drawing.PointF point)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), point);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, System.Drawing.PointF, void>)(lpVtbl[10]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), point);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddBezier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(8)]
+	[VtblIndex(11)]
 	public void AddBezier(Common.BezierSegment* bezier)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.BezierSegment*, void>)(lpVtbl[8]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.BezierSegment*, void>)(lpVtbl[11]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddQuadraticBezier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(9)]
+	[VtblIndex(12)]
 	public void AddQuadraticBezier(QuadraticBezierSegment* bezier)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, QuadraticBezierSegment*, void>)(lpVtbl[9]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, QuadraticBezierSegment*, void>)(lpVtbl[12]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddQuadraticBeziers"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(10)]
+	[VtblIndex(13)]
 	public void AddQuadraticBeziers(QuadraticBezierSegment* beziers, uint beziersCount)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, QuadraticBezierSegment*, uint, void>)(lpVtbl[10]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, QuadraticBezierSegment*, uint, void>)(lpVtbl[13]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddArc"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	[VtblIndex(11)]
+	[VtblIndex(14)]
 	public void AddArc(ArcSegment* arc)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, ArcSegment*, void>)(lpVtbl[11]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), arc);
+		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, ArcSegment*, void>)(lpVtbl[14]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), arc);
 	}
+
 	public interface Interface : ID2D1SimplifiedGeometrySink.Interface
 	{
-		[VtblIndex(7)]
+		[VtblIndex(10)]
 		void AddLine(System.Drawing.PointF point);
 
-		[VtblIndex(8)]
+		[VtblIndex(11)]
 		void AddBezier(Common.BezierSegment* bezier);
 
-		[VtblIndex(9)]
+		[VtblIndex(12)]
 		void AddQuadraticBezier(QuadraticBezierSegment* bezier);
 
-		[VtblIndex(10)]
+		[VtblIndex(13)]
 		void AddQuadraticBeziers(QuadraticBezierSegment* beziers, uint beziersCount);
 
-		[VtblIndex(11)]
+		[VtblIndex(14)]
 		void AddArc(ArcSegment* arc);
 	}
 }

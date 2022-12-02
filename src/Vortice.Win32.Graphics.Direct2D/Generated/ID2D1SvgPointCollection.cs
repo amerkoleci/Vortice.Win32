@@ -129,6 +129,7 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, uint>)(lpVtbl[9]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1SvgAttribute.Interface
 	{
 		[VtblIndex(6)]

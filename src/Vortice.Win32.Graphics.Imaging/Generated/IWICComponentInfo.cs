@@ -137,6 +137,7 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

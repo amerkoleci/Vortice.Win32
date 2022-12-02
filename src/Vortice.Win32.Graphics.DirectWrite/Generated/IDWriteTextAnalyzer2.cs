@@ -225,6 +225,7 @@ public unsafe partial struct IDWriteTextAnalyzer2 : IDWriteTextAnalyzer2.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalyzer2*, IDWriteFontFace*, ScriptAnalysis, ushort*, FontFeatureTag, uint, ushort*, byte*, int>)(lpVtbl[21]))((IDWriteTextAnalyzer2*)Unsafe.AsPointer(ref this), fontFace, scriptAnalysis, localeName, featureTag, glyphCount, glyphIndices, featureApplies);
 	}
+
 	public interface Interface : IDWriteTextAnalyzer1.Interface
 	{
 		[VtblIndex(19)]

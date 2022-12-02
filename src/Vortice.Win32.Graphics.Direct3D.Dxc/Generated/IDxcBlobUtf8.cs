@@ -110,6 +110,7 @@ public unsafe partial struct IDxcBlobUtf8 : IDxcBlobUtf8.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf8*, nuint>)(lpVtbl[7]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDxcBlobEncoding.Interface
 	{
 		[VtblIndex(6)]

@@ -81,6 +81,7 @@ public unsafe partial struct ID2D1TransformNode : ID2D1TransformNode.Interface, 
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1TransformNode*, uint>)(lpVtbl[3]))((ID2D1TransformNode*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

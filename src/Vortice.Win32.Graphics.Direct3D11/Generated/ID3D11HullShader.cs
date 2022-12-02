@@ -105,6 +105,7 @@ public unsafe partial struct ID3D11HullShader : ID3D11HullShader.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11HullShader*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11HullShader*)Unsafe.AsPointer(ref this), guid, pData);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 	}

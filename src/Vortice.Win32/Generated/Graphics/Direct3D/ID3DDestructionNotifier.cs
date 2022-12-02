@@ -89,6 +89,7 @@ public unsafe partial struct ID3DDestructionNotifier : ID3DDestructionNotifier.I
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DDestructionNotifier*, uint, int>)(lpVtbl[4]))((ID3DDestructionNotifier*)Unsafe.AsPointer(ref this), callbackID);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

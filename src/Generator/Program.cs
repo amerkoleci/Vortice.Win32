@@ -827,6 +827,7 @@ public static class Program
         { "WICComponentSigning", "WICComponent" },
         { "WICPixelFormatNumericRepresentation", "WICPixelFormatNumericRepresentation" },
         { "WICPlanarOptions", "WICPlanarOptions" },
+        { "WICPersistOptions", "WICPersistOption" },
 
         // FXC
         { "D3DCOMPILER_STRIP_FLAGS", "D3DCOMPILER_STRIP" },
@@ -1047,7 +1048,10 @@ public static class Program
 
         // WIC
         { "IWICImagingFactory::CreateDecoderFromFilename::dwDesiredAccess", "NativeFileAccess" },
+        { "IWICComponentFactory::CreateDecoderFromFilename::dwDesiredAccess", "NativeFileAccess" },
         { "IWICBitmap::Lock::flags", "WICBitmapLockFlags" },
+        { "IWICPersistStream::LoadEx::dwPersistOptions", "WICPersistOptions" },
+        { "IWICPersistStream::SaveEx::dwPersistOptions", "WICPersistOptions" },
 
         // FXC
         { "D3DCompile::Flags1", "D3DCOMPILE" },
@@ -1428,7 +1432,9 @@ public static class Program
         foreach (ApiDataConstant constant in api.Constants)
         {
             if (ShouldSkipConstant(constant))
+            {
                 continue;
+            }
 
             foreach (var enumToGenerate in s_generatedEnums)
             {
@@ -2029,10 +2035,6 @@ public static class Program
                     fieldValueName = "Mask";
                 }
 
-                if (structType.Name == "D2D1_LAYER_PARAMETERS")
-                {
-                }
-
                 bool asPointer = false;
                 if (field.Type.Kind == "ApiRef")
                 {
@@ -2226,12 +2228,20 @@ public static class Program
         Dictionary<string, List<ApiType>> methodsToGenerate)
     {
         string csTypeName = comType.Name;
+        List<string> namespaces = new();
+
+        if (comType.Name == "ID2D1GeometrySink")
+        {
+            namespaces.Add("Win32.Graphics.Direct2D.Common");
+        }
 
         using var writer = new CodeWriter(
             Path.Combine(folder, $"{csTypeName}.cs"),
             apiName,
             docFileName,
-            $"Win32.{apiName}");
+            $"Win32.{apiName}",
+            namespaces.ToArray()
+            );
 
         if (string.IsNullOrEmpty(writer.DocFileName) == false)
         {
@@ -2293,6 +2303,17 @@ public static class Program
                 iterateType = api.Types.FirstOrDefault(item => item.Name == iterateType.Interface.Name);
             }
 
+            if (!generateIUnknown)
+            {
+                if (csTypeName == "ID2D1GeometrySink" ||
+                    csTypeName == "IWICStream" ||
+                    csTypeName == "IWICPersistStream" ||
+                    csTypeName == "IWICImagingFactory2")
+                {
+                    generateIUnknown = true;
+                }
+            }
+
             if (generateIUnknown)
             {
                 writer.WriteLine("/// <inheritdoc cref=\"IUnknown.QueryInterface\" />");
@@ -2327,6 +2348,12 @@ public static class Program
                 writer.WriteLine();
                 vtblIndex = 3;
             }
+
+            // Offset some hacks
+            if (csTypeName == "IWICStream")
+                vtblIndex = 14;
+            if (csTypeName == "IWICPersistStream")
+                vtblIndex = 8;
 
             bool needNewLine = false;
             List<Tuple<int, string>> interfaceMethods = new();
@@ -2508,13 +2535,16 @@ public static class Program
             string baseInterfaceDecl = string.Empty;
             if (comType.Interface != null)
             {
-                baseInterfaceDecl += $": {comType.Interface.Name}.Interface";
+                string baseInterfacePrefix = string.Empty;
+                if (comType.Interface.Name == "IStream" ||
+                    comType.Interface.Name == "IPersistStream")
+                {
+                    baseInterfacePrefix = "Win32.Com.";
+                }
+                baseInterfaceDecl += $": {baseInterfacePrefix}{comType.Interface.Name}.Interface";
             }
 
-            if (csTypeName == "IDXGIAdapter")
-            {
-            }
-
+            writer.WriteLine();
             needNewLine = false;
             using (writer.PushBlock($"public interface Interface {baseInterfaceDecl}"))
             {

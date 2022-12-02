@@ -481,6 +481,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint, uint*, int>)(lpVtbl[53]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, Flags, pNumQualityLevels);
 	}
+
 	public interface Interface : ID3D11Device1.Interface
 	{
 		[VtblIndex(50)]

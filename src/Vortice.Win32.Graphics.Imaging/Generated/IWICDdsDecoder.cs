@@ -89,6 +89,7 @@ public unsafe partial struct IWICDdsDecoder : IWICDdsDecoder.Interface, INativeG
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICDdsDecoder*, uint, uint, uint, IWICBitmapFrameDecode**, int>)(lpVtbl[4]))((IWICDdsDecoder*)Unsafe.AsPointer(ref this), arrayIndex, mipLevel, sliceIndex, ppIBitmapFrame);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -137,6 +137,7 @@ public unsafe partial struct ID2D1Device1 : ID2D1Device1.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1Device1*, DeviceContextOptions, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device1*)Unsafe.AsPointer(ref this), options, deviceContext1);
 	}
+
 	public interface Interface : ID2D1Device.Interface
 	{
 		[VtblIndex(8)]

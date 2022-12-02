@@ -105,6 +105,7 @@ public unsafe partial struct ID3D12Debug3 : ID3D12Debug3.Interface, INativeGuid
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12Debug3*, GpuBasedValidationFlags, void>)(lpVtbl[6]))((ID3D12Debug3*)Unsafe.AsPointer(ref this), Flags);
 	}
+
 	public interface Interface : ID3D12Debug.Interface
 	{
 		[VtblIndex(4)]

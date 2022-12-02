@@ -89,6 +89,7 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, nuint>)(lpVtbl[4]))((ID3DBlob*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

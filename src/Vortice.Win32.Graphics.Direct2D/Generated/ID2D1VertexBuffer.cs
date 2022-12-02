@@ -89,6 +89,7 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1VertexBuffer*, int>)(lpVtbl[4]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

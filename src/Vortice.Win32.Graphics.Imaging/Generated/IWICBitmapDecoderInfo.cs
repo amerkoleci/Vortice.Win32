@@ -257,6 +257,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, IWICBitmapDecoder**, int>)(lpVtbl[25]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapDecoder);
 	}
+
 	public interface Interface : IWICBitmapCodecInfo.Interface
 	{
 		[VtblIndex(23)]

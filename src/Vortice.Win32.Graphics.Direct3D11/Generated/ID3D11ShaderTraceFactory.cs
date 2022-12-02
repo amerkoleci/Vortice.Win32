@@ -81,6 +81,7 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTraceFactory*, IUnknown*, ShaderTraceDescription*, ID3D11ShaderTrace**, int>)(lpVtbl[3]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), pShader, pTraceDesc, ppShaderTrace);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

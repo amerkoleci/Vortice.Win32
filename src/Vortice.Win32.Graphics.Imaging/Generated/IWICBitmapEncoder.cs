@@ -153,6 +153,7 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICMetadataQueryWriter**, int>)(lpVtbl[12]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

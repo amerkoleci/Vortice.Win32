@@ -681,6 +681,7 @@ public unsafe partial struct ID3D11VideoContext1 : ID3D11VideoContext1.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext1*, ID3D11VideoProcessor*, uint, uint, Graphics.Dxgi.Common.Format, uint, VideoProcessorStreamBehaviorHint*, uint*, int>)(lpVtbl[78]))((ID3D11VideoContext1*)Unsafe.AsPointer(ref this), pVideoProcessor, OutputWidth, OutputHeight, OutputFormat, StreamCount, pStreams, pBehaviorHints);
 	}
+
 	public interface Interface : ID3D11VideoContext.Interface
 	{
 		[VtblIndex(65)]

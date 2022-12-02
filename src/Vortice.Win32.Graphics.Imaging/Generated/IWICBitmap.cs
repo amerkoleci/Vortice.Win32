@@ -137,6 +137,7 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, double, double, int>)(lpVtbl[10]))((IWICBitmap*)Unsafe.AsPointer(ref this), dpiX, dpiY);
 	}
+
 	public interface Interface : IWICBitmapSource.Interface
 	{
 		[VtblIndex(8)]

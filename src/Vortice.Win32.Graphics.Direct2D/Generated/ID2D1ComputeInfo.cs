@@ -129,6 +129,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, uint, ID2D1ResourceTexture*, int>)(lpVtbl[9]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), textureIndex, resourceTexture);
 	}
+
 	public interface Interface : ID2D1RenderInfo.Interface
 	{
 		[VtblIndex(7)]

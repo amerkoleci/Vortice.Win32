@@ -145,6 +145,7 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Texture2DDescription1*, void>)(lpVtbl[11]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11Texture2D.Interface
 	{
 		[VtblIndex(11)]

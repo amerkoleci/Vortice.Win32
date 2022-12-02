@@ -129,6 +129,7 @@ public unsafe partial struct IDWriteRenderingParams2 : IDWriteRenderingParams2.I
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams2*, GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams2*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDWriteRenderingParams1.Interface
 	{
 		[VtblIndex(9)]

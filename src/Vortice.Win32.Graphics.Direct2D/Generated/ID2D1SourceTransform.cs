@@ -121,6 +121,7 @@ public unsafe partial struct ID2D1SourceTransform : ID2D1SourceTransform.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1SourceTransform*, ID2D1Bitmap1*, RawRect*, System.Drawing.Point, int>)(lpVtbl[8]))((ID2D1SourceTransform*)Unsafe.AsPointer(ref this), target, drawRect, targetOrigin);
 	}
+
 	public interface Interface : ID2D1Transform.Interface
 	{
 		[VtblIndex(7)]

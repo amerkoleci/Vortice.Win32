@@ -121,6 +121,7 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, void>)(lpVtbl[8]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

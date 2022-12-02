@@ -121,6 +121,7 @@ public unsafe partial struct ID3D12Debug5 : ID3D12Debug5.Interface, INativeGuid
 	{
 		((delegate* unmanaged[Stdcall]<ID3D12Debug5*, Bool32, void>)(lpVtbl[8]))((ID3D12Debug5*)Unsafe.AsPointer(ref this), Enable);
 	}
+
 	public interface Interface : ID3D12Debug4.Interface
 	{
 		[VtblIndex(8)]

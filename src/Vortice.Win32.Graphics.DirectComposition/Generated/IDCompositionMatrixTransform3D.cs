@@ -97,6 +97,7 @@ public unsafe partial struct IDCompositionMatrixTransform3D : IDCompositionMatri
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionMatrixTransform3D*, int, int, float, int>)(lpVtbl[5]))((IDCompositionMatrixTransform3D*)Unsafe.AsPointer(ref this), row, column, value);
 	}
+
 	public interface Interface : IDCompositionTransform3D.Interface
 	{
 		[VtblIndex(3)]

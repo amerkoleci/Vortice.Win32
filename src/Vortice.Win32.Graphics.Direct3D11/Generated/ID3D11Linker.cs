@@ -97,6 +97,7 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, uint, uint, int>)(lpVtbl[5]))((ID3D11Linker*)Unsafe.AsPointer(ref this), uCBufferSlot, uCBufferEntry);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

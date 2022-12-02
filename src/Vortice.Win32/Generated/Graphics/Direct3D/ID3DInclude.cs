@@ -30,6 +30,7 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
 	}
+
 	public interface Interface 
 	{
 		[VtblIndex(0)]

@@ -573,6 +573,7 @@ public unsafe partial struct ID3D12Device5 : ID3D12Device5.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device5*, SerializedDataType, SerializedDataDriverMatchingIdentifier*, DriverMatchingIdentifierStatus>)(lpVtbl[64]))((ID3D12Device5*)Unsafe.AsPointer(ref this), SerializedDataType, pIdentifierToCheck);
 	}
+
 	public interface Interface : ID3D12Device4.Interface
 	{
 		[VtblIndex(57)]

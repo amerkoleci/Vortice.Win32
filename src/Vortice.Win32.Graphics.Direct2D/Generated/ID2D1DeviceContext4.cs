@@ -972,6 +972,7 @@ public unsafe partial struct ID2D1DeviceContext4 : ID2D1DeviceContext4.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext4*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteFontFace*, float, ushort, Bool32, Matrix3x2*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, Matrix3x2*, ID2D1CommandList**, int>)(lpVtbl[114]))((ID2D1DeviceContext4*)Unsafe.AsPointer(ref this), glyphOrigin, fontFace, fontEmSize, glyphIndex, isSideways, worldTransform, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, glyphTransform, glyphImage);
 	}
+
 	public interface Interface : ID2D1DeviceContext3.Interface
 	{
 		[VtblIndex(108)]

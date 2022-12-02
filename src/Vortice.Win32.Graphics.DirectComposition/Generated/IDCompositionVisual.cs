@@ -209,6 +209,7 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual*, CompositeMode, int>)(lpVtbl[19]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), compositeMode);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

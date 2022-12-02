@@ -329,6 +329,7 @@ public unsafe partial struct IDWriteFontFace2 : IDWriteFontFace2.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFace2*, float, float, float, Matrix3x2*, Bool32, OutlineThreshold, MeasuringMode, IDWriteRenderingParams*, RenderingMode*, GridFitMode*, int>)(lpVtbl[34]))((IDWriteFontFace2*)Unsafe.AsPointer(ref this), fontEmSize, dpiX, dpiY, transform, isSideways, outlineThreshold, measuringMode, renderingParams, renderingMode, gridFitMode);
 	}
+
 	public interface Interface : IDWriteFontFace1.Interface
 	{
 		[VtblIndex(30)]

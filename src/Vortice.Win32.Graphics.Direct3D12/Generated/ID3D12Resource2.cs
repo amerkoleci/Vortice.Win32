@@ -187,6 +187,7 @@ public unsafe partial struct ID3D12Resource2 : ID3D12Resource2.Interface, INativ
 		ResourceDescription1 result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12Resource2*, ResourceDescription1*, ResourceDescription1*>)(lpVtbl[16]))((ID3D12Resource2*)Unsafe.AsPointer(ref this), &result);
 	}
+
 	public interface Interface : ID3D12Resource1.Interface
 	{
 		[VtblIndex(16)]

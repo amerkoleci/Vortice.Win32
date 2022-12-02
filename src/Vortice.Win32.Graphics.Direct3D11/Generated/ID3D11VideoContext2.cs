@@ -713,6 +713,7 @@ public unsafe partial struct ID3D11VideoContext2 : ID3D11VideoContext2.Interface
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext2*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[82]))((ID3D11VideoContext2*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pType, Size, pMetaData);
 	}
+
 	public interface Interface : ID3D11VideoContext1.Interface
 	{
 		[VtblIndex(79)]

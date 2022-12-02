@@ -97,6 +97,7 @@ public unsafe partial struct ID2D1GdiMetafile : ID2D1GdiMetafile.Interface, INat
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile*, Common.RectF*, int>)(lpVtbl[5]))((ID2D1GdiMetafile*)Unsafe.AsPointer(ref this), bounds);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

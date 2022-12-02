@@ -241,6 +241,7 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, GlyphRun*, float, Matrix3x2*, RenderingMode, MeasuringMode, float, float, IDWriteGlyphRunAnalysis**, int>)(lpVtbl[23]))((IDWriteFactory*)Unsafe.AsPointer(ref this), glyphRun, pixelsPerDip, transform, renderingMode, measuringMode, baselineOriginX, baselineOriginY, glyphRunAnalysis);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

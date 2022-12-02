@@ -105,6 +105,7 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, uint, byte*, int>)(lpVtbl[6]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), cbScanData, pbScanData);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

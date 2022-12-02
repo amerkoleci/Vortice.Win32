@@ -193,6 +193,7 @@ public unsafe partial struct ID2D1RoundedRectangleGeometry : ID2D1RoundedRectang
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1RoundedRectangleGeometry*, RoundedRect*, void>)(lpVtbl[17]))((ID2D1RoundedRectangleGeometry*)Unsafe.AsPointer(ref this), roundedRect);
 	}
+
 	public interface Interface : ID2D1Geometry.Interface
 	{
 		[VtblIndex(17)]

@@ -129,6 +129,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontSetBuilder2*, ushort*, int>)(lpVtbl[9]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), filePath);
 	}
+
 	public interface Interface : IDWriteFontSetBuilder1.Interface
 	{
 		[VtblIndex(8)]

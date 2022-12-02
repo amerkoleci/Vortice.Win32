@@ -662,6 +662,7 @@ public unsafe partial struct ID3D12Device9 : ID3D12Device9.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12Device9*, CommandQueueDescription*, Guid*, Guid*, void**, int>)(lpVtbl[75]))((ID3D12Device9*)Unsafe.AsPointer(ref this), pDesc, CreatorID, riid, ppCommandQueue);
 	}
+
 	public interface Interface : ID3D12Device8.Interface
 	{
 		[VtblIndex(73)]

@@ -137,6 +137,7 @@ public unsafe partial struct IDCompositionScaleTransform : IDCompositionScaleTra
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform*, float, int>)(lpVtbl[10]))((IDCompositionScaleTransform*)Unsafe.AsPointer(ref this), centerY);
 	}
+
 	public interface Interface : IDCompositionTransform.Interface
 	{
 		[VtblIndex(3)]

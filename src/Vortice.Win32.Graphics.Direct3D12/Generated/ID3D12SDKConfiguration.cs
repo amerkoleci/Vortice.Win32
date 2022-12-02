@@ -81,6 +81,7 @@ public unsafe partial struct ID3D12SDKConfiguration : ID3D12SDKConfiguration.Int
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration*, uint, sbyte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

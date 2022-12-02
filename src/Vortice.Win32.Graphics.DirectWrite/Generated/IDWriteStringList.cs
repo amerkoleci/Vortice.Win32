@@ -113,6 +113,7 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint, ushort*, uint, int>)(lpVtbl[7]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

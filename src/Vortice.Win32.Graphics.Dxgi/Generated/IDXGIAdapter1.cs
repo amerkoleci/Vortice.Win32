@@ -137,6 +137,7 @@ public unsafe partial struct IDXGIAdapter1 : IDXGIAdapter1.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter1*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter1*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : IDXGIAdapter.Interface
 	{
 		[VtblIndex(10)]

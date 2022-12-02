@@ -161,6 +161,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
+
 	public interface Interface : IDXGIResource.Interface
 	{
 		[VtblIndex(12)]

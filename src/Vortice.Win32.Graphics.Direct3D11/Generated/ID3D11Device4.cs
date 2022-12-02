@@ -585,6 +585,7 @@ public unsafe partial struct ID3D11Device4 : ID3D11Device4.Interface, INativeGui
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11Device4*, uint, void>)(lpVtbl[66]))((ID3D11Device4*)Unsafe.AsPointer(ref this), dwCookie);
 	}
+
 	public interface Interface : ID3D11Device3.Interface
 	{
 		[VtblIndex(65)]

@@ -81,6 +81,7 @@ public unsafe partial struct IDWriteFontFileLoader : IDWriteFontFileLoader.Inter
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFileLoader*, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[3]))((IDWriteFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

@@ -153,6 +153,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, byte*, uint*, int>)(lpVtbl[12]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), streamOffset, cbStreamData, pbStreamData, pcbStreamDataActual);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

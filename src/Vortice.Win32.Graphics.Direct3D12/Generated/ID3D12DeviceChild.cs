@@ -113,6 +113,7 @@ public unsafe partial struct ID3D12DeviceChild : ID3D12DeviceChild.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceChild*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12DeviceChild*)Unsafe.AsPointer(ref this), riid, ppvDevice);
 	}
+
 	public interface Interface : ID3D12Object.Interface
 	{
 		[VtblIndex(7)]

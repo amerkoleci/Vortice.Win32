@@ -202,6 +202,7 @@ public unsafe partial struct ID3D12CommandQueue : ID3D12CommandQueue.Interface, 
 		CommandQueueDescription result;
 		return *((delegate* unmanaged[Stdcall]<ID3D12CommandQueue*, CommandQueueDescription*, CommandQueueDescription*>)(lpVtbl[18]))((ID3D12CommandQueue*)Unsafe.AsPointer(ref this), &result);
 	}
+
 	public interface Interface : ID3D12Pageable.Interface
 	{
 		[VtblIndex(8)]

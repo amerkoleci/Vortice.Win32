@@ -161,6 +161,7 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[13]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coefficient4);
 	}
+
 	public interface Interface : IDCompositionFilterEffect.Interface
 	{
 		[VtblIndex(4)]

@@ -193,6 +193,7 @@ public unsafe partial struct IDXGIDevice3 : IDXGIDevice3.Interface, INativeGuid
 	{
 		((delegate* unmanaged[Stdcall]<IDXGIDevice3*, void>)(lpVtbl[17]))((IDXGIDevice3*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDXGIDevice2.Interface
 	{
 		[VtblIndex(17)]

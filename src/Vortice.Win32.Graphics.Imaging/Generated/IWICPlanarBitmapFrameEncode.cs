@@ -89,6 +89,7 @@ public unsafe partial struct IWICPlanarBitmapFrameEncode : IWICPlanarBitmapFrame
 	{
 		return ((delegate* unmanaged[Stdcall]<IWICPlanarBitmapFrameEncode*, IWICBitmapSource**, uint, System.Drawing.Rectangle*, int>)(lpVtbl[4]))((IWICPlanarBitmapFrameEncode*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, prcSource);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

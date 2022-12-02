@@ -153,6 +153,7 @@ public unsafe partial struct ID2D1StrokeStyle : ID2D1StrokeStyle.Interface, INat
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle*, float*, uint, void>)(lpVtbl[12]))((ID2D1StrokeStyle*)Unsafe.AsPointer(ref this), dashes, dashesCount);
 	}
+
 	public interface Interface : ID2D1Resource.Interface
 	{
 		[VtblIndex(4)]

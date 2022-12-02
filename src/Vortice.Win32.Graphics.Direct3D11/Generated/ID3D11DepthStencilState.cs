@@ -113,6 +113,7 @@ public unsafe partial struct ID3D11DepthStencilState : ID3D11DepthStencilState.I
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DepthStencilState*, DepthStencilDescription*, void>)(lpVtbl[7]))((ID3D11DepthStencilState*)Unsafe.AsPointer(ref this), pDesc);
 	}
+
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]

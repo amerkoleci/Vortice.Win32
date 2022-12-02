@@ -129,6 +129,7 @@ public unsafe partial struct ID2D1BorderTransform : ID2D1BorderTransform.Interfa
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1BorderTransform*, ExtendMode>)(lpVtbl[9]))((ID2D1BorderTransform*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1ConcreteTransform.Interface
 	{
 		[VtblIndex(6)]

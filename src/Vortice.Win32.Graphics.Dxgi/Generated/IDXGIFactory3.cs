@@ -257,6 +257,7 @@ public unsafe partial struct IDXGIFactory3 : IDXGIFactory3.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory3*, uint>)(lpVtbl[25]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDXGIFactory2.Interface
 	{
 		[VtblIndex(25)]

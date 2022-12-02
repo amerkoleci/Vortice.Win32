@@ -265,6 +265,7 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	{
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[26]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
 	}
+
 	public interface Interface : IDCompositionClip.Interface
 	{
 		[VtblIndex(3)]

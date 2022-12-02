@@ -105,6 +105,7 @@ public unsafe partial struct ID2D1RenderInfo : ID2D1RenderInfo.Interface, INativ
 	{
 		((delegate* unmanaged[Stdcall]<ID2D1RenderInfo*, uint, void>)(lpVtbl[6]))((ID2D1RenderInfo*)Unsafe.AsPointer(ref this), instructionCount);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

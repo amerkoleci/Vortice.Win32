@@ -79,6 +79,7 @@ public unsafe partial struct IDxcValidator : IDxcValidator.Interface, INativeGui
 	{
 		return ((delegate* unmanaged[Stdcall]<IDxcValidator*, IDxcBlob*, DxcValidatorFlags, IDxcOperationResult**, int>)(lpVtbl[3]))((IDxcValidator*)Unsafe.AsPointer(ref this), pShader, Flags, ppResult);
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

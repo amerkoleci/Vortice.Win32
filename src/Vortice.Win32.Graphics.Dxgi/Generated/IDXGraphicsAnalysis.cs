@@ -89,6 +89,7 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 	{
 		((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, void>)(lpVtbl[4]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]

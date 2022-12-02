@@ -193,6 +193,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	{
 		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Bool32>)(lpVtbl[17]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : IDWriteFont.Interface
 	{
 		[VtblIndex(14)]

@@ -193,6 +193,7 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	{
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, InterpolationMode>)(lpVtbl[17]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
 	}
+
 	public interface Interface : ID2D1BitmapBrush.Interface
 	{
 		[VtblIndex(16)]

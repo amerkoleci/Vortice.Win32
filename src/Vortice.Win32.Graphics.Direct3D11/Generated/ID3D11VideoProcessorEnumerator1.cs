@@ -161,6 +161,7 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	{
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), InputFormat, InputColorSpace, OutputFormat, OutputColorSpace, pSupported);
 	}
+
 	public interface Interface : ID3D11VideoProcessorEnumerator.Interface
 	{
 		[VtblIndex(13)]
