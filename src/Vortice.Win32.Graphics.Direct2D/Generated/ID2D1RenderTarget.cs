@@ -173,9 +173,9 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawLine"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public void DrawLine(System.Drawing.PointF point0, System.Drawing.PointF point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public void DrawLine(Vector2 point0, Vector2 point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, System.Drawing.PointF, System.Drawing.PointF, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[15]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Vector2, Vector2, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[15]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawRectangle"]/*' />
@@ -277,17 +277,17 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawTextLayout"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public void DrawTextLayout(System.Drawing.PointF origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options)
+	public void DrawTextLayout(Vector2 origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, DrawTextOptions, void>)(lpVtbl[28]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Vector2, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, DrawTextOptions, void>)(lpVtbl[28]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawGlyphRun"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[29]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Vector2, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[29]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::SetTransform"]/*' />
@@ -545,7 +545,7 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 		HResult CreateMesh(ID2D1Mesh** mesh);
 
 		[VtblIndex(15)]
-		void DrawLine(System.Drawing.PointF point0, System.Drawing.PointF point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+		void DrawLine(Vector2 point0, Vector2 point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
 
 		[VtblIndex(16)]
 		void DrawRectangle(Common.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
@@ -584,10 +584,10 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 		void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Common.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode);
 
 		[VtblIndex(28)]
-		void DrawTextLayout(System.Drawing.PointF origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options);
+		void DrawTextLayout(Vector2 origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options);
 
 		[VtblIndex(29)]
-		void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode);
+		void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode);
 
 		[VtblIndex(30)]
 		void SetTransform(Matrix3x2* transform);

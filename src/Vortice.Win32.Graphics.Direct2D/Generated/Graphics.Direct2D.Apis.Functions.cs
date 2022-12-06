@@ -17,11 +17,11 @@ public static unsafe partial class Apis
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1MakeRotateMatrix"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
-	public static extern void D2D1MakeRotateMatrix(float angle, System.Drawing.PointF center, Matrix3x2* matrix);
+	public static extern void D2D1MakeRotateMatrix(float angle, Vector2 center, Matrix3x2* matrix);
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1MakeSkewMatrix"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
-	public static extern void D2D1MakeSkewMatrix(float angleX, float angleY, System.Drawing.PointF center, Matrix3x2* matrix);
+	public static extern void D2D1MakeSkewMatrix(float angleX, float angleY, Vector2 center, Matrix3x2* matrix);
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1IsMatrixInvertible"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
@@ -61,5 +61,5 @@ public static unsafe partial class Apis
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1GetGradientMeshInteriorPointsFromCoonsPatch"]/*' />
 	[DllImport("d2d1.dll", ExactSpelling = true)]
-	public static extern void D2D1GetGradientMeshInteriorPointsFromCoonsPatch(System.Drawing.PointF* pPoint0, System.Drawing.PointF* pPoint1, System.Drawing.PointF* pPoint2, System.Drawing.PointF* pPoint3, System.Drawing.PointF* pPoint4, System.Drawing.PointF* pPoint5, System.Drawing.PointF* pPoint6, System.Drawing.PointF* pPoint7, System.Drawing.PointF* pPoint8, System.Drawing.PointF* pPoint9, System.Drawing.PointF* pPoint10, System.Drawing.PointF* pPoint11, System.Drawing.PointF* pTensorPoint11, System.Drawing.PointF* pTensorPoint12, System.Drawing.PointF* pTensorPoint21, System.Drawing.PointF* pTensorPoint22);
+	public static extern void D2D1GetGradientMeshInteriorPointsFromCoonsPatch(Vector2* pPoint0, Vector2* pPoint1, Vector2* pPoint2, Vector2* pPoint3, Vector2* pPoint4, Vector2* pPoint5, Vector2* pPoint6, Vector2* pPoint7, Vector2* pPoint8, Vector2* pPoint9, Vector2* pPoint10, Vector2* pPoint11, Vector2* pTensorPoint11, Vector2* pTensorPoint12, Vector2* pTensorPoint21, Vector2* pTensorPoint22);
 }

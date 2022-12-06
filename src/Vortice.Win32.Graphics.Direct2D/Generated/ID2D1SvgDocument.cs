@@ -158,9 +158,9 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePointCollection"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreatePointCollection(System.Drawing.PointF* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection)
+	public HResult CreatePointCollection(Vector2* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, System.Drawing.PointF*, uint, ID2D1SvgPointCollection**, int>)(lpVtbl[13]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), points, pointsCount, pointCollection);
+		return ((delegate* unmanaged[Stdcall]<ID2D1SvgDocument*, Vector2*, uint, ID2D1SvgPointCollection**, int>)(lpVtbl[13]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), points, pointsCount, pointCollection);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePathData"]/*' />
@@ -201,7 +201,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 		HResult CreateStrokeDashArray(SvgLength* dashes, uint dashesCount, ID2D1SvgStrokeDashArray** strokeDashArray);
 
 		[VtblIndex(13)]
-		HResult CreatePointCollection(System.Drawing.PointF* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection);
+		HResult CreatePointCollection(Vector2* points, uint pointsCount, ID2D1SvgPointCollection** pointCollection);
 
 		[VtblIndex(14)]
 		HResult CreatePathData(float* segmentData, uint segmentDataCount, SvgPathCommand* commands, uint commandsCount, ID2D1SvgPathData** pathData);

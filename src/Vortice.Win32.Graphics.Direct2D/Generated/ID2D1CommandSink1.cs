@@ -157,17 +157,17 @@ public unsafe partial struct ID2D1CommandSink1 : ID2D1CommandSink1.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public HResult DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, int>)(lpVtbl[13]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, int>)(lpVtbl[13]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawLine" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult DrawLine(System.Drawing.PointF point0, System.Drawing.PointF point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public HResult DrawLine(Vector2 point0, Vector2 point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, System.Drawing.PointF, System.Drawing.PointF, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[14]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, Vector2, Vector2, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[14]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawGeometry" />
@@ -197,17 +197,17 @@ public unsafe partial struct ID2D1CommandSink1 : ID2D1CommandSink1.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.DrawImage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult DrawImage(ID2D1Image* image, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
+	public HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1Image*, System.Drawing.PointF*, Common.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1Image*, Vector2*, Common.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawGdiMetafile" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, System.Drawing.PointF* targetOffset)
+	public HResult DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Vector2* targetOffset)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1GdiMetafile*, System.Drawing.PointF*, int>)(lpVtbl[19]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1GdiMetafile*, Vector2*, int>)(lpVtbl[19]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.FillMesh" />

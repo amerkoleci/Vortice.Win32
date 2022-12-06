@@ -6,129 +6,160 @@ namespace Win32.Graphics.Direct2D;
 public unsafe partial struct ID2D1Properties
 {
     public uint PropertyCount => GetPropertyCount();
+}
 
-    public bool Cached
-    {
-        get => GetBoolValue((uint)Property.Cached);
-        set => SetValue((uint)Property.Cached, value);
-    }
-
-    public HResult SetValueByName<T>(ReadOnlySpan<char> name, ReadOnlySpan<T> data)
+public static unsafe partial class ID2D1PropertiesExtensions
+{
+    public static HResult SetValueByName<TD2D1Properties, T>(ref this TD2D1Properties self, ReadOnlySpan<char> name, ReadOnlySpan<T> data)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
         where T : unmanaged
     {
         fixed (char* namePtr = name)
         {
             fixed (T* dataPtr = data)
             {
-                return SetValueByName((ushort*)namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
+                return self.SetValueByName((ushort*)namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
             }
         }
     }
 
-    public HResult SetValueByName(ReadOnlySpan<char> name, byte* data, uint dataSize)
+    public static HResult SetValueByName<TD2D1Properties>(ref this TD2D1Properties self, ReadOnlySpan<char> name, byte* data, uint dataSize)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
         fixed (char* namePtr = name)
         {
-            return SetValueByName((ushort*)namePtr, PropertyType.Unknown, data, dataSize);
+            return self.SetValueByName((ushort*)namePtr, PropertyType.Unknown, data, dataSize);
         }
     }
 
-    public HResult SetValueByName(ushort* name, byte* data, [NativeTypeName("UINT32")] uint dataSize)
+    public static HResult SetValueByName<TD2D1Properties>(ref this TD2D1Properties self, ushort* name, byte* data, uint dataSize)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
-        return SetValueByName(name, PropertyType.Unknown, data, dataSize);
+        return self.SetValueByName(name, PropertyType.Unknown, data, dataSize);
     }
 
-    public HResult SetValue(uint index, byte* data, [NativeTypeName("UINT32")] uint dataSize)
+    public static HResult SetValue<TD2D1Properties>(ref this TD2D1Properties self, uint index, byte* data, int dataSize)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
-        return SetValue(index, PropertyType.Unknown, data, dataSize);
+        return self.SetValue(index, PropertyType.Unknown, data, unchecked((uint)dataSize));
     }
 
-    public HResult GetValueByName(ReadOnlySpan<char> name, byte* data, uint dataSize)
+    public static HResult SetValue<TD2D1Properties, T>(ref this TD2D1Properties self, uint index, T* value)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
+        where T : unmanaged
+    {
+        return self.SetValue(index, PropertyType.Unknown, (byte*)value, unchecked((uint)sizeof(T)));
+    }
+
+    public static HResult SetValue<TD2D1Properties, T, U>(ref this TD2D1Properties self, U index, T* value)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
+        where T : unmanaged
+        where U : unmanaged
+    {
+        return self.SetValue((uint)(object)index, PropertyType.Unknown, (byte*)value, unchecked((uint)sizeof(T)));
+    }
+
+    public static HResult GetValueByName<TD2D1Properties>(ref this TD2D1Properties self, ReadOnlySpan<char> name, byte* data, uint dataSize)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
         fixed (char* namePtr = name)
         {
-            return GetValueByName((ushort*)namePtr, PropertyType.Unknown, data, dataSize);
+            return self.GetValueByName((ushort*)namePtr, PropertyType.Unknown, data, dataSize);
         }
     }
 
-    public HResult GetValueByName<T>(ReadOnlySpan<char> name, ReadOnlySpan<T> data)
+    public static HResult GetValueByName<TD2D1Properties, T>(ref this TD2D1Properties self, ReadOnlySpan<char> name, ReadOnlySpan<T> data)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
         where T : unmanaged
     {
         fixed (char* namePtr = name)
         {
             fixed (T* dataPtr = data)
             {
-                return GetValueByName((ushort*)namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
+                return self.GetValueByName((ushort*)namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
             }
         }
     }
 
-    public HResult GetValueByName(ushort* name, byte* data, uint dataSize)
+    public static HResult GetValueByName<TD2D1Properties>(ref this TD2D1Properties self, ushort* name, byte* data, uint dataSize)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
-        return GetValueByName(name, PropertyType.Unknown, data, dataSize);
+        return self.GetValueByName(name, PropertyType.Unknown, data, dataSize);
     }
 
-    public HResult GetValue(uint index, byte* data, uint dataSize)
+    public static HResult GetValue<TD2D1Properties>(ref this TD2D1Properties self, uint index, byte* data, uint dataSize)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
-        return GetValue(index, PropertyType.Unknown, data, dataSize);
+        return self.GetValue(index, PropertyType.Unknown, data, dataSize);
     }
 
-    public bool GetBoolValue(uint index)
+    public static bool GetBoolValue<TD2D1Properties>(ref this TD2D1Properties self, uint index)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
         int value = 0;
-        GetValue(index, PropertyType.Bool, (byte*)&value, (uint)sizeof(Bool32));
+        self.GetValue(index, PropertyType.Bool, (byte*)&value, (uint)sizeof(Bool32));
         return value != 0;
     }
 
-    public void SetValue(uint index, Bool32 value)
+    public static void SetValue<TD2D1Properties>(ref this TD2D1Properties self, uint index, Bool32 value)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
-        SetValue(index, PropertyType.Bool, (byte*)&value, (uint)sizeof(Bool32));
+        self.SetValue(index, PropertyType.Bool, (byte*)&value, (uint)sizeof(Bool32));
     }
 
-    public float GetFloatValue(uint index)
+    public static float GetFloatValue<TD2D1Properties>(ref this TD2D1Properties self, uint index)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
         float value = 0f;
-        GetValue(index, PropertyType.Float, (byte*)&value, 4);
+        self.GetValue(index, PropertyType.Float, (byte*)&value, 4);
         return value;
     }
 
-    public  void SetValue(uint index, float value)
+    public static void SetValue<TD2D1Properties>(ref this TD2D1Properties self, uint index, float value)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
-        SetValue(index, PropertyType.Float, (byte*)&value, 4u);
+        self.SetValue(index, PropertyType.Float, (byte*)&value, 4u);
     }
 
-    public T GetEnumValue<T>(uint index) where T : unmanaged, Enum
+    public static T GetEnumValue<TD2D1Properties, T>(ref this TD2D1Properties self, uint index)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
+        where T : unmanaged, Enum
     {
         T value = default;
-        GetValue(index, PropertyType.Enum, (byte*)&value, 4);
+        self.GetValue(index, PropertyType.Enum, (byte*)&value, 4);
         return value;
     }
 
-    public void SetValue<T>(uint index, T value) where T : unmanaged, Enum
+    public static void SetValue<TD2D1Properties, T>(ref this TD2D1Properties self, uint index, T value)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
+        where T : unmanaged, Enum
     {
-        SetValue(index, PropertyType.Enum, (byte*)&value, 4);
+        self.SetValue(index, PropertyType.Enum, (byte*)&value, 4);
     }
 
-    public Guid GetGuidValue(uint index)
+    public static Guid GetGuidValue<TD2D1Properties>(ref this TD2D1Properties self, uint index)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
         Guid value = default;
-        GetValue(index, PropertyType.Clsid, (byte*)&value, (uint)sizeof(Guid));
+        self.GetValue(index, PropertyType.Clsid, (byte*)&value, (uint)sizeof(Guid));
         return value;
     }
 
-    public void SetValue(uint index, Guid value)
+    public static void SetValue<TD2D1PropertiesExtensions>(ref this ID2D1Properties self, uint index, Guid value)
+        where TD2D1PropertiesExtensions : unmanaged, ID2D1Properties.Interface
     {
-      
-        SetValue(index, PropertyType.Clsid, (byte*)&value, (uint)sizeof(Guid));
+        self.SetValue(index, PropertyType.Clsid, (byte*)&value, (uint)sizeof(Guid));
     }
 
-    public void SetValue(uint index, IUnknown* value)
+    public static void SetValue<TD2D1Properties>(ref this TD2D1Properties self, uint index, IUnknown* value)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
-        SetValue(index, PropertyType.IUnknown, (byte*)value, (uint)sizeof(void*));
+        self.SetValue(index, PropertyType.IUnknown, (byte*)value, (uint)sizeof(void*));
     }
 
-    public void SetValue(uint index, ID2D1ColorContext* value)
+    public static void SetValue<TD2D1Properties>(ref this TD2D1Properties self, uint index, ID2D1ColorContext* value)
+        where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
-        SetValue(index, PropertyType.ColorContext, (byte*)value, (uint)sizeof(void*));
+        self.SetValue(index, PropertyType.ColorContext, (byte*)value, (uint)sizeof(void*));
     }
 }

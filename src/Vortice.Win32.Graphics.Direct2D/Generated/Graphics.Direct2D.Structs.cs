@@ -64,10 +64,10 @@ public partial struct BitmapBrushProperties
 public partial struct LinearGradientBrushProperties
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES::startPoint"]/*' />
-	public System.Drawing.PointF startPoint;
+	public Vector2 startPoint;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES::endPoint"]/*' />
-	public System.Drawing.PointF endPoint;
+	public Vector2 endPoint;
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES"]/*' />
@@ -75,10 +75,10 @@ public partial struct LinearGradientBrushProperties
 public partial struct RadialGradientBrushProperties
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::center"]/*' />
-	public System.Drawing.PointF center;
+	public Vector2 center;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::gradientOriginOffset"]/*' />
-	public System.Drawing.PointF gradientOriginOffset;
+	public Vector2 gradientOriginOffset;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES::radiusX"]/*' />
 	public float radiusX;
@@ -92,13 +92,13 @@ public partial struct RadialGradientBrushProperties
 public partial struct Triangle
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point1"]/*' />
-	public System.Drawing.PointF point1;
+	public Vector2 point1;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point2"]/*' />
-	public System.Drawing.PointF point2;
+	public Vector2 point2;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_TRIANGLE::point3"]/*' />
-	public System.Drawing.PointF point3;
+	public Vector2 point3;
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT"]/*' />
@@ -106,7 +106,7 @@ public partial struct Triangle
 public partial struct ArcSegment
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::point"]/*' />
-	public System.Drawing.PointF point;
+	public Vector2 point;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ARC_SEGMENT::size"]/*' />
 	public System.Drawing.SizeF size;
@@ -126,10 +126,10 @@ public partial struct ArcSegment
 public partial struct QuadraticBezierSegment
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT::point1"]/*' />
-	public System.Drawing.PointF point1;
+	public Vector2 point1;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_QUADRATIC_BEZIER_SEGMENT::point2"]/*' />
-	public System.Drawing.PointF point2;
+	public Vector2 point2;
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ELLIPSE"]/*' />
@@ -137,7 +137,7 @@ public partial struct QuadraticBezierSegment
 public partial struct Ellipse
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ELLIPSE::point"]/*' />
-	public System.Drawing.PointF point;
+	public Vector2 point;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_ELLIPSE::radiusX"]/*' />
 	public float radiusX;
@@ -338,10 +338,10 @@ public partial struct EffectInputDescription
 public partial struct PointDescription
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::point"]/*' />
-	public System.Drawing.PointF point;
+	public Vector2 point;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::unitTangentVector"]/*' />
-	public System.Drawing.PointF unitTangentVector;
+	public Vector2 unitTangentVector;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_POINT_DESCRIPTION::endSegment"]/*' />
 	public uint endSegment;
@@ -757,52 +757,52 @@ public partial struct InkStyleProperties
 public partial struct GradientMeshPatch
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point00"]/*' />
-	public System.Drawing.PointF point00;
+	public Vector2 point00;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point01"]/*' />
-	public System.Drawing.PointF point01;
+	public Vector2 point01;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point02"]/*' />
-	public System.Drawing.PointF point02;
+	public Vector2 point02;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point03"]/*' />
-	public System.Drawing.PointF point03;
+	public Vector2 point03;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point10"]/*' />
-	public System.Drawing.PointF point10;
+	public Vector2 point10;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point11"]/*' />
-	public System.Drawing.PointF point11;
+	public Vector2 point11;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point12"]/*' />
-	public System.Drawing.PointF point12;
+	public Vector2 point12;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point13"]/*' />
-	public System.Drawing.PointF point13;
+	public Vector2 point13;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point20"]/*' />
-	public System.Drawing.PointF point20;
+	public Vector2 point20;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point21"]/*' />
-	public System.Drawing.PointF point21;
+	public Vector2 point21;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point22"]/*' />
-	public System.Drawing.PointF point22;
+	public Vector2 point22;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point23"]/*' />
-	public System.Drawing.PointF point23;
+	public Vector2 point23;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point30"]/*' />
-	public System.Drawing.PointF point30;
+	public Vector2 point30;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point31"]/*' />
-	public System.Drawing.PointF point31;
+	public Vector2 point31;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point32"]/*' />
-	public System.Drawing.PointF point32;
+	public Vector2 point32;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::point33"]/*' />
-	public System.Drawing.PointF point33;
+	public Vector2 point33;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_MESH_PATCH::color00"]/*' />
 	public Color4 color00;
@@ -834,16 +834,16 @@ public partial struct GradientMeshPatch
 public partial struct SimpleColorProfile
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::redPrimary"]/*' />
-	public System.Drawing.PointF redPrimary;
+	public Vector2 redPrimary;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::greenPrimary"]/*' />
-	public System.Drawing.PointF greenPrimary;
+	public Vector2 greenPrimary;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::bluePrimary"]/*' />
-	public System.Drawing.PointF bluePrimary;
+	public Vector2 bluePrimary;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::whitePointXZ"]/*' />
-	public System.Drawing.PointF whitePointXZ;
+	public Vector2 whitePointXZ;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_SIMPLE_COLOR_PROFILE::gamma"]/*' />
 	public Gamma1 gamma;

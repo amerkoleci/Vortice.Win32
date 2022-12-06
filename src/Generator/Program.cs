@@ -104,7 +104,7 @@ public static class Program
         { "Graphics.Direct2D.Common.D2D_MATRIX_4X3_F", "Matrix4x3" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_4X4_F", "Matrix4x4" },
         { "Graphics.Direct2D.Common.D2D_MATRIX_5X4_F", "Matrix5x4" },
-        { "Graphics.Direct2D.Common.D2D_POINT_2F", "System.Drawing.PointF" },
+        { "Graphics.Direct2D.Common.D2D_POINT_2F", "Vector2" },
         { "Graphics.Direct2D.Common.D2D_VECTOR_2F", "Vector2" },
         { "Graphics.Direct2D.Common.D2D_VECTOR_3F", "Vector3" },
         { "Graphics.Direct2D.Common.D2D_VECTOR_4F", "Vector4" },

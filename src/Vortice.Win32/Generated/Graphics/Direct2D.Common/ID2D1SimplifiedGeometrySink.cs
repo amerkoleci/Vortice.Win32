@@ -93,17 +93,17 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::BeginFigure"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void BeginFigure(System.Drawing.PointF startPoint, FigureBegin figureBegin)
+	public void BeginFigure(Vector2 startPoint, FigureBegin figureBegin)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, System.Drawing.PointF, FigureBegin, void>)(lpVtbl[5]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
+		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, Vector2, FigureBegin, void>)(lpVtbl[5]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::AddLines"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public void AddLines(System.Drawing.PointF* points, uint pointsCount)
+	public void AddLines(Vector2* points, uint pointsCount)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, System.Drawing.PointF*, uint, void>)(lpVtbl[6]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
+		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, Vector2*, uint, void>)(lpVtbl[6]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::AddBeziers"]/*' />
@@ -139,10 +139,10 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 		void SetSegmentFlags(PathSegment vertexFlags);
 
 		[VtblIndex(5)]
-		void BeginFigure(System.Drawing.PointF startPoint, FigureBegin figureBegin);
+		void BeginFigure(Vector2 startPoint, FigureBegin figureBegin);
 
 		[VtblIndex(6)]
-		void AddLines(System.Drawing.PointF* points, uint pointsCount);
+		void AddLines(Vector2* points, uint pointsCount);
 
 		[VtblIndex(7)]
 		void AddBeziers(BezierSegment* beziers, uint beziersCount);

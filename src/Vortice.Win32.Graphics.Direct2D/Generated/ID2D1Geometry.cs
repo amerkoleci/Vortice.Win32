@@ -101,17 +101,17 @@ public unsafe partial struct ID2D1Geometry : ID2D1Geometry.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry::StrokeContainsPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult StrokeContainsPoint(System.Drawing.PointF point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
+	public HResult StrokeContainsPoint(Vector2 point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Geometry*, System.Drawing.PointF, float, ID2D1StrokeStyle*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[6]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), point, strokeWidth, strokeStyle, worldTransform, flatteningTolerance, contains);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Geometry*, Vector2, float, ID2D1StrokeStyle*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[6]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), point, strokeWidth, strokeStyle, worldTransform, flatteningTolerance, contains);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry::FillContainsPoint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult FillContainsPoint(System.Drawing.PointF point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
+	public HResult FillContainsPoint(Vector2 point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Geometry*, System.Drawing.PointF, Matrix3x2*, float, Bool32*, int>)(lpVtbl[7]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), point, worldTransform, flatteningTolerance, contains);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Geometry*, Vector2, Matrix3x2*, float, Bool32*, int>)(lpVtbl[7]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), point, worldTransform, flatteningTolerance, contains);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry::CompareWithGeometry"]/*' />
@@ -173,9 +173,9 @@ public unsafe partial struct ID2D1Geometry : ID2D1Geometry.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry::ComputePointAtLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, System.Drawing.PointF* point, System.Drawing.PointF* unitTangentVector)
+	public HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, Vector2* point, Vector2* unitTangentVector)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Geometry*, float, Matrix3x2*, float, System.Drawing.PointF*, System.Drawing.PointF*, int>)(lpVtbl[15]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), length, worldTransform, flatteningTolerance, point, unitTangentVector);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Geometry*, float, Matrix3x2*, float, Vector2*, Vector2*, int>)(lpVtbl[15]))((ID2D1Geometry*)Unsafe.AsPointer(ref this), length, worldTransform, flatteningTolerance, point, unitTangentVector);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Geometry::Widen"]/*' />
@@ -195,10 +195,10 @@ public unsafe partial struct ID2D1Geometry : ID2D1Geometry.Interface, INativeGui
 		HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.RectF* bounds);
 
 		[VtblIndex(6)]
-		HResult StrokeContainsPoint(System.Drawing.PointF point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains);
+		HResult StrokeContainsPoint(Vector2 point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains);
 
 		[VtblIndex(7)]
-		HResult FillContainsPoint(System.Drawing.PointF point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains);
+		HResult FillContainsPoint(Vector2 point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains);
 
 		[VtblIndex(8)]
 		HResult CompareWithGeometry(ID2D1Geometry* inputGeometry, Matrix3x2* inputGeometryTransform, float flatteningTolerance, GeometryRelation* relation);
@@ -222,7 +222,7 @@ public unsafe partial struct ID2D1Geometry : ID2D1Geometry.Interface, INativeGui
 		HResult ComputeLength(Matrix3x2* worldTransform, float flatteningTolerance, float* length);
 
 		[VtblIndex(15)]
-		HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, System.Drawing.PointF* point, System.Drawing.PointF* unitTangentVector);
+		HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, Vector2* point, Vector2* unitTangentVector);
 
 		[VtblIndex(16)]
 		HResult Widen(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink);

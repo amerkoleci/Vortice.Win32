@@ -109,17 +109,17 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::UpdatePoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult UpdatePoints(System.Drawing.PointF* points, uint pointsCount, uint startIndex)
+	public HResult UpdatePoints(Vector2* points, uint pointsCount, uint startIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, System.Drawing.PointF*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), points, pointsCount, startIndex);
+		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, Vector2*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), points, pointsCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::GetPoints"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetPoints(System.Drawing.PointF* points, uint pointsCount, uint startIndex)
+	public HResult GetPoints(Vector2* points, uint pointsCount, uint startIndex)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, System.Drawing.PointF*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), points, pointsCount, startIndex);
+		return ((delegate* unmanaged[Stdcall]<ID2D1SvgPointCollection*, Vector2*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgPointCollection*)Unsafe.AsPointer(ref this), points, pointsCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPointCollection::GetPointsCount"]/*' />
@@ -136,10 +136,10 @@ public unsafe partial struct ID2D1SvgPointCollection : ID2D1SvgPointCollection.I
 		HResult RemovePointsAtEnd(uint pointsCount);
 
 		[VtblIndex(7)]
-		HResult UpdatePoints(System.Drawing.PointF* points, uint pointsCount, uint startIndex);
+		HResult UpdatePoints(Vector2* points, uint pointsCount, uint startIndex);
 
 		[VtblIndex(8)]
-		HResult GetPoints(System.Drawing.PointF* points, uint pointsCount, uint startIndex);
+		HResult GetPoints(Vector2* points, uint pointsCount, uint startIndex);
 
 		[VtblIndex(9)]
 		uint GetPointsCount();

@@ -173,9 +173,9 @@ public unsafe partial struct ID2D1DeviceContext6 : ID2D1DeviceContext6.Interface
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawLine" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public void DrawLine(System.Drawing.PointF point0, System.Drawing.PointF point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public void DrawLine(Vector2 point0, Vector2 point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.PointF, System.Drawing.PointF, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[15]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Vector2, Vector2, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[15]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRectangle" />
@@ -277,17 +277,17 @@ public unsafe partial struct ID2D1DeviceContext6 : ID2D1DeviceContext6.Interface
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawTextLayout" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public void DrawTextLayout(System.Drawing.PointF origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options)
+	public void DrawTextLayout(Vector2 origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, DrawTextOptions, void>)(lpVtbl[28]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Vector2, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, DrawTextOptions, void>)(lpVtbl[28]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[29]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Vector2, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[29]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTransform" />
@@ -632,9 +632,9 @@ public unsafe partial struct ID2D1DeviceContext6 : ID2D1DeviceContext6.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext.GetGlyphRunWorldBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public HResult GetGlyphRunWorldBounds(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Common.RectF* bounds)
+	public HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Common.RectF* bounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Common.RectF*, int>)(lpVtbl[72]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Common.RectF*, int>)(lpVtbl[72]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetDevice" />
@@ -712,25 +712,25 @@ public unsafe partial struct ID2D1DeviceContext6 : ID2D1DeviceContext6.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(82)]
-	public void DrawGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[82]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[82]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawImage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public void DrawImage(ID2D1Image* image, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
+	public void DrawImage(ID2D1Image* image, Vector2* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, ID2D1Image*, System.Drawing.PointF*, Common.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, ID2D1Image*, Vector2*, Common.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGdiMetafile" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(84)]
-	public void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, System.Drawing.PointF* targetOffset)
+	public void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Vector2* targetOffset)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, ID2D1GdiMetafile*, System.Drawing.PointF*, void>)(lpVtbl[84]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, ID2D1GdiMetafile*, Vector2*, void>)(lpVtbl[84]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawBitmap" />
@@ -936,41 +936,41 @@ public unsafe partial struct ID2D1DeviceContext6 : ID2D1DeviceContext6.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext4.DrawTextLayout" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(110)]
-	public void DrawTextLayout(System.Drawing.PointF origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, DrawTextOptions options)
+	public void DrawTextLayout(Vector2 origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, DrawTextOptions options)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, DrawTextOptions, void>)(lpVtbl[110]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, options);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Vector2, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, DrawTextOptions, void>)(lpVtbl[110]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, options);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext4.DrawColorBitmapGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(111)]
-	public void DrawColorBitmapGlyphRun(Graphics.DirectWrite.GlyphImageFormats glyphImageFormat, System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, ColorBitmapGlyphSnapOption bitmapSnapOption)
+	public void DrawColorBitmapGlyphRun(Graphics.DirectWrite.GlyphImageFormats glyphImageFormat, Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, ColorBitmapGlyphSnapOption bitmapSnapOption)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.DirectWrite.GlyphImageFormats, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, ColorBitmapGlyphSnapOption, void>)(lpVtbl[111]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), glyphImageFormat, baselineOrigin, glyphRun, measuringMode, bitmapSnapOption);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.DirectWrite.GlyphImageFormats, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, ColorBitmapGlyphSnapOption, void>)(lpVtbl[111]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), glyphImageFormat, baselineOrigin, glyphRun, measuringMode, bitmapSnapOption);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext4.DrawSvgGlyphRun" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(112)]
-	public void DrawSvgGlyphRun(System.Drawing.PointF baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawSvgGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.PointF, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[112]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, measuringMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Vector2, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[112]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext4.GetColorBitmapGlyphImage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(113)]
-	public HResult GetColorBitmapGlyphImage(Graphics.DirectWrite.GlyphImageFormats glyphImageFormat, System.Drawing.PointF glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, float dpiX, float dpiY, Matrix3x2* glyphTransform, ID2D1Image** glyphImage)
+	public HResult GetColorBitmapGlyphImage(Graphics.DirectWrite.GlyphImageFormats glyphImageFormat, Vector2 glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, float dpiX, float dpiY, Matrix3x2* glyphTransform, ID2D1Image** glyphImage)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.DirectWrite.GlyphImageFormats, System.Drawing.PointF, Graphics.DirectWrite.IDWriteFontFace*, float, ushort, Bool32, Matrix3x2*, float, float, Matrix3x2*, ID2D1Image**, int>)(lpVtbl[113]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), glyphImageFormat, glyphOrigin, fontFace, fontEmSize, glyphIndex, isSideways, worldTransform, dpiX, dpiY, glyphTransform, glyphImage);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Graphics.DirectWrite.GlyphImageFormats, Vector2, Graphics.DirectWrite.IDWriteFontFace*, float, ushort, Bool32, Matrix3x2*, float, float, Matrix3x2*, ID2D1Image**, int>)(lpVtbl[113]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), glyphImageFormat, glyphOrigin, fontFace, fontEmSize, glyphIndex, isSideways, worldTransform, dpiX, dpiY, glyphTransform, glyphImage);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext4.GetSvgGlyphImage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(114)]
-	public HResult GetSvgGlyphImage(System.Drawing.PointF glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Matrix3x2* glyphTransform, ID2D1CommandList** glyphImage)
+	public HResult GetSvgGlyphImage(Vector2 glyphOrigin, Graphics.DirectWrite.IDWriteFontFace* fontFace, float fontEmSize, ushort glyphIndex, Bool32 isSideways, Matrix3x2* worldTransform, ID2D1Brush* defaultFillBrush, ID2D1SvgGlyphStyle* svgGlyphStyle, uint colorPaletteIndex, Matrix3x2* glyphTransform, ID2D1CommandList** glyphImage)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, System.Drawing.PointF, Graphics.DirectWrite.IDWriteFontFace*, float, ushort, Bool32, Matrix3x2*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, Matrix3x2*, ID2D1CommandList**, int>)(lpVtbl[114]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), glyphOrigin, fontFace, fontEmSize, glyphIndex, isSideways, worldTransform, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, glyphTransform, glyphImage);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, Vector2, Graphics.DirectWrite.IDWriteFontFace*, float, ushort, Bool32, Matrix3x2*, ID2D1Brush*, ID2D1SvgGlyphStyle*, uint, Matrix3x2*, ID2D1CommandList**, int>)(lpVtbl[114]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), glyphOrigin, fontFace, fontEmSize, glyphIndex, isSideways, worldTransform, defaultFillBrush, svgGlyphStyle, colorPaletteIndex, glyphTransform, glyphImage);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext5.CreateSvgDocument" />
@@ -1008,15 +1008,15 @@ public unsafe partial struct ID2D1DeviceContext6 : ID2D1DeviceContext6.Interface
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext6::BlendImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(119)]
-	public void BlendImage(ID2D1Image* image, Common.BlendMode blendMode, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode)
+	public void BlendImage(ID2D1Image* image, Common.BlendMode blendMode, Vector2* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, ID2D1Image*, Common.BlendMode, System.Drawing.PointF*, Common.RectF*, InterpolationMode, void>)(lpVtbl[119]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), image, blendMode, targetOffset, imageRectangle, interpolationMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext6*, ID2D1Image*, Common.BlendMode, Vector2*, Common.RectF*, InterpolationMode, void>)(lpVtbl[119]))((ID2D1DeviceContext6*)Unsafe.AsPointer(ref this), image, blendMode, targetOffset, imageRectangle, interpolationMode);
 	}
 
 	public interface Interface : ID2D1DeviceContext5.Interface
 	{
 		[VtblIndex(119)]
-		void BlendImage(ID2D1Image* image, Common.BlendMode blendMode, System.Drawing.PointF* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode);
+		void BlendImage(ID2D1Image* image, Common.BlendMode blendMode, Vector2* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode);
 	}
 }
 

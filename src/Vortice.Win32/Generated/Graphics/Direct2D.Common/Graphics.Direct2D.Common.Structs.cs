@@ -59,11 +59,11 @@ public partial struct RectU
 public partial struct BezierSegment
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point1"]/*' />
-	public System.Drawing.PointF point1;
+	public Vector2 point1;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point2"]/*' />
-	public System.Drawing.PointF point2;
+	public Vector2 point2;
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT::point3"]/*' />
-	public System.Drawing.PointF point3;
+	public Vector2 point3;
 }
