@@ -13,22 +13,68 @@ public static unsafe partial class Apis
     public static ID3DInclude* D3D_COMPILE_STANDARD_FILE_INCLUDE => (ID3DInclude*)(nuint)1;
 
     public static ComPtr<ID3DBlob> D3DCompile(
+        string source,
+        string entryPoint,
+        string target,
+        CompileFlags flags = CompileFlags.None)
+    {
+        byte[] sourceUtf8 = Encoding.UTF8.GetBytes(source);
+        byte[] entryPointUtf8 = Encoding.UTF8.GetBytes(entryPoint);
+        byte[] targetUtf8 = Encoding.UTF8.GetBytes(target);
+
+        using ComPtr<ID3DBlob> d3dBlobBytecode = default;
+        using ComPtr<ID3DBlob> d3dBlobErrors = default;
+
+        fixed (byte* sourcePtr = sourceUtf8)
+        fixed (byte* entryPointPtr = entryPointUtf8)
+        fixed (byte* targetPtr = targetUtf8)
+        {
+            HResult hr = D3DCompile(
+                pSrcData: sourcePtr,
+                SrcDataSize: (nuint)sourceUtf8.Length,
+                pSourceName: null,
+                pDefines: null,
+                pInclude: D3D_COMPILE_STANDARD_FILE_INCLUDE,
+                pEntrypoint: (sbyte*)entryPointPtr,
+                pTarget: (sbyte*)targetPtr,
+                Flags1: flags,
+                Flags2: 0u,
+                ppCode: d3dBlobBytecode.GetAddressOf(),
+                ppErrorMsgs: d3dBlobErrors.GetAddressOf()
+                );
+
+            if (hr.Failure)
+            {
+                // Throw if an error was retrieved, then also double check the HRESULT
+                if (d3dBlobErrors.Get() is not null)
+                {
+                    ThrowHslsCompilationException(d3dBlobErrors.Get());
+                }
+            }
+
+            ThrowIfFailed(hr);
+
+            return d3dBlobBytecode.Move();
+        }
+    }
+
+    public static ComPtr<ID3DBlob> D3DCompile(
         ReadOnlySpan<char> source,
         ReadOnlySpan<char> entryPoint,
         ReadOnlySpan<char> target,
         CompileFlags flags = CompileFlags.None)
     {
-        int maxLength = Encoding.ASCII.GetMaxByteCount(source.Length);
+        int maxLength = Encoding.UTF8.GetMaxByteCount(source.Length);
         byte[] sourceBuffer = ArrayPool<byte>.Shared.Rent(maxLength);
-        int writtenBytes = Encoding.ASCII.GetBytes(source, sourceBuffer);
+        int writtenBytes = Encoding.UTF8.GetBytes(source, sourceBuffer);
 
-        maxLength = Encoding.ASCII.GetMaxByteCount(entryPoint.Length);
+        maxLength = Encoding.UTF8.GetMaxByteCount(entryPoint.Length);
         byte[] entryPointBuffer = ArrayPool<byte>.Shared.Rent(maxLength);
-        int entryPointWrittenBytes = Encoding.ASCII.GetBytes(entryPoint, entryPointBuffer);
+        int entryPointWrittenBytes = Encoding.UTF8.GetBytes(entryPoint, entryPointBuffer);
 
-        maxLength = Encoding.ASCII.GetMaxByteCount(target.Length);
+        maxLength = Encoding.UTF8.GetMaxByteCount(target.Length);
         byte[] targetBuffer = ArrayPool<byte>.Shared.Rent(maxLength);
-        int targetWrittenBytes = Encoding.ASCII.GetBytes(target, targetBuffer);
+        int targetWrittenBytes = Encoding.UTF8.GetBytes(target, targetBuffer);
 
         try
         {
