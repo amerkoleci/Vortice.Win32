@@ -7,7 +7,7 @@ namespace Win32.Graphics.Direct3D11;
 
 public static unsafe class ID3D11DeviceExtension
 {
-    public static ComPtr<ID3D11Buffer> CheckFeatureSupport<TD3D11Device>(ref this ID3D11Device self, BufferDescription* description, SubresourceData* initialData = default)
+    public static ComPtr<ID3D11Buffer> CheckFeatureSupport<TD3D11Device>(ref this TD3D11Device self, BufferDescription* description, SubresourceData* initialData = default)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Buffer> buffer = default;
@@ -15,8 +15,9 @@ public static unsafe class ID3D11DeviceExtension
         return buffer.Move();
     }
 
+
     public static ComPtr<ID3D11Buffer> CreateBuffer<TD3D11Device, T>(
-        ref this ID3D11Device self,
+        ref this TD3D11Device self,
         in T data,
         BufferDescription description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
@@ -38,20 +39,11 @@ public static unsafe class ID3D11DeviceExtension
         }
     }
 
-    public static ComPtr<ID3D11DeviceContext> CreateDeferredContext<TD3D11Device>(ref this ID3D11Device self)
+    public static ComPtr<ID3D11Buffer> CreateBuffer<TD3D11Device, T>(
+        ref this TD3D11Device self,
+        ReadOnlySpan<T> data, BufferDescription description)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
-    {
-        using ComPtr<ID3D11DeviceContext> deferredContext = default;
-        ThrowIfFailed(self.CreateDeferredContext(0u, deferredContext.GetAddressOf()));
-        return deferredContext.Move();
-    }
-}
-
-
-public unsafe partial struct ID3D11Device
-{
-
-    public ComPtr<ID3D11Buffer> CreateBuffer<T>(ReadOnlySpan<T> data, BufferDescription description) where T : unmanaged
+        where T : unmanaged
     {
         if (description.ByteWidth == 0)
             description.ByteWidth = (uint)(sizeof(T) * data.Length);
@@ -64,7 +56,7 @@ public unsafe partial struct ID3D11Device
             };
 
             using ComPtr<ID3D11Buffer> buffer = default;
-            ThrowIfFailed(CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()));
+            ThrowIfFailed(self.CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()));
             return buffer.Move();
         }
     }
@@ -72,7 +64,9 @@ public unsafe partial struct ID3D11Device
     /// <summary>
     /// Creates a new instance of the <see cref="ID3D11Buffer"/> class.
     /// </summary>
+    /// <typeparam name="TD3D11Device">ID3D11Device type</typeparam>
     /// <typeparam name="T">Type of the data to upload</typeparam>
+    /// <param name="self">The instace type of <see cref="ID3D11Device"/>.</param>
     /// <param name="bindFlags">Flags specifying how the buffer will be bound to the pipeline.</param>
     /// <param name="data">Initial data used to initialize the buffer.</param>
     /// <param name="sizeInBytes">The size, in bytes, of the buffer. If 0 is specified, sizeof(T) * data.Length is used.</param>
@@ -81,14 +75,17 @@ public unsafe partial struct ID3D11Device
     /// <param name="miscFlags">Miscellaneous resource options.</param>
     /// <param name="structureByteStride">The size (in bytes) of the structure element for structured buffers.</param>
     /// <returns>An initialized buffer</returns>
-    public ComPtr<ID3D11Buffer> CreateBuffer<T>(
+    public static ComPtr<ID3D11Buffer> CreateBuffer<TD3D11Device, T>(
+        ref this TD3D11Device self,
         ReadOnlySpan<T> data,
         BindFlags bindFlags,
         Usage usage = Usage.Default,
         CpuAccessFlags accessFlags = CpuAccessFlags.None,
         ResourceMiscFlags miscFlags = ResourceMiscFlags.None,
         uint sizeInBytes = 0,
-        uint structureByteStride = 0) where T : unmanaged
+        uint structureByteStride = 0)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+        where T : unmanaged
     {
         BufferDescription description = new()
         {
@@ -108,160 +105,255 @@ public unsafe partial struct ID3D11Device
             };
 
             using ComPtr<ID3D11Buffer> buffer = default;
-            ThrowIfFailed(CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()));
+            ThrowIfFailed(self.CreateBuffer(&description, &subresourceData, buffer.GetAddressOf()));
             return buffer.Move();
         }
     }
 
-    public ComPtr<ID3D11RenderTargetView> CreateRenderTargetView(
+
+    public static ComPtr<ID3D11DeviceContext> CreateDeferredContext<TD3D11Device>(ref this ID3D11Device self)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        using ComPtr<ID3D11DeviceContext> deferredContext = default;
+        ThrowIfFailed(self.CreateDeferredContext(0u, deferredContext.GetAddressOf()));
+        return deferredContext.Move();
+    }
+
+    public static ComPtr<ID3D11RenderTargetView> CreateRenderTargetView<TD3D11Device>(ref this ID3D11Device self,
         ID3D11Resource* resource,
         RenderTargetViewDescription* description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11RenderTargetView> view = default;
-        ThrowIfFailed(CreateRenderTargetView(resource, description, view.GetAddressOf()));
-
+        ThrowIfFailed(self.CreateRenderTargetView(resource, description, view.GetAddressOf()));
         return view.Move();
     }
 
-    public ComPtr<ID3D11DepthStencilView> CreateDepthStencilView(
+    public static ComPtr<ID3D11DepthStencilView> CreateDepthStencilView<TD3D11Device>(ref this ID3D11Device self,
         ID3D11Resource* resource,
         DepthStencilViewDescription* description)
+         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11DepthStencilView> view = default;
-        ThrowIfFailed(CreateDepthStencilView(resource, description, view.GetAddressOf()));
+        ThrowIfFailed(self.CreateDepthStencilView(resource, description, view.GetAddressOf()));
 
         return view.Move();
     }
 
-    public ComPtr<ID3D11ShaderResourceView> CreateShaderResourceView(
+    public static ComPtr<ID3D11ShaderResourceView> CreateShaderResourceView<TD3D11Device>(ref this ID3D11Device self,
         ID3D11Resource* resource,
         ShaderResourceViewDescription* description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11ShaderResourceView> view = default;
-        ThrowIfFailed(CreateShaderResourceView(resource, description, view.GetAddressOf()));
+        ThrowIfFailed(self.CreateShaderResourceView(resource, description, view.GetAddressOf()));
 
         return view.Move();
     }
 
-    public ComPtr<ID3D11UnorderedAccessView> CreateUnorderedAccessView(
+    public static ComPtr<ID3D11UnorderedAccessView> CreateUnorderedAccessView<TD3D11Device>(ref this ID3D11Device self,
         ID3D11Resource* resource,
         UnorderedAccessViewDescription* description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11UnorderedAccessView> view = default;
-        ThrowIfFailed(CreateUnorderedAccessView(resource, description, view.GetAddressOf()));
+        ThrowIfFailed(self.CreateUnorderedAccessView(resource, description, view.GetAddressOf()));
 
         return view.Move();
     }
 
-    public ComPtr<ID3D11BlendState> CreateBlendState(BlendDescription* description)
+    public static ComPtr<ID3D11BlendState> CreateBlendState<TD3D11Device>(ref this ID3D11Device self, BlendDescription* description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11BlendState> state = default;
-        ThrowIfFailed(CreateBlendState(description, state.GetAddressOf()));
+        ThrowIfFailed(self.CreateBlendState(description, state.GetAddressOf()));
 
         return state.Move();
     }
 
-    public ComPtr<ID3D11BlendState> CreateBlendState(BlendDescription description)
+    public static ComPtr<ID3D11BlendState> CreateBlendState<TD3D11Device>(ref this ID3D11Device self, BlendDescription description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11BlendState> state = default;
-        ThrowIfFailed(CreateBlendState(&description, state.GetAddressOf()));
+        ThrowIfFailed(self.CreateBlendState(&description, state.GetAddressOf()));
 
         return state.Move();
     }
 
-    public ComPtr<ID3D11DepthStencilState> CreateDepthStencilState(DepthStencilDescription* description)
+    public static ComPtr<ID3D11DepthStencilState> CreateDepthStencilState<TD3D11Device>(ref this ID3D11Device self, DepthStencilDescription* description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11DepthStencilState> state = default;
-        ThrowIfFailed(CreateDepthStencilState(description, state.GetAddressOf()));
+        ThrowIfFailed(self.CreateDepthStencilState(description, state.GetAddressOf()));
 
         return state.Move();
     }
 
-    public ComPtr<ID3D11DepthStencilState> CreateDepthStencilState(DepthStencilDescription description)
+    public static ComPtr<ID3D11DepthStencilState> CreateDepthStencilState<TD3D11Device>(ref this ID3D11Device self, DepthStencilDescription description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11DepthStencilState> state = default;
-        ThrowIfFailed(CreateDepthStencilState(&description, state.GetAddressOf()));
+        ThrowIfFailed(self.CreateDepthStencilState(&description, state.GetAddressOf()));
 
         return state.Move();
     }
 
-    public ComPtr<ID3D11RasterizerState> CreateRasterizerState(RasterizerDescription* description)
+    public static ComPtr<ID3D11RasterizerState> CreateRasterizerState<TD3D11Device>(ref this ID3D11Device self, RasterizerDescription* description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11RasterizerState> state = default;
-        ThrowIfFailed(CreateRasterizerState(description, state.GetAddressOf()));
+        ThrowIfFailed(self.CreateRasterizerState(description, state.GetAddressOf()));
 
         return state.Move();
     }
 
-    public ComPtr<ID3D11RasterizerState> CreateRasterizerState(RasterizerDescription description)
+    public static ComPtr<ID3D11RasterizerState> CreateRasterizerState<TD3D11Device>(ref this ID3D11Device self, RasterizerDescription description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11RasterizerState> state = default;
-        ThrowIfFailed(CreateRasterizerState(&description, state.GetAddressOf()));
+        ThrowIfFailed(self.CreateRasterizerState(&description, state.GetAddressOf()));
 
         return state.Move();
     }
 
-    public ComPtr<ID3D11SamplerState> CreateSamplerState(SamplerDescription* description)
+    public static ComPtr<ID3D11SamplerState> CreateSamplerState<TD3D11Device>(ref this ID3D11Device self, SamplerDescription* description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11SamplerState> state = default;
-        ThrowIfFailed(CreateSamplerState(description, state.GetAddressOf()));
+        ThrowIfFailed(self.CreateSamplerState(description, state.GetAddressOf()));
 
         return state.Move();
     }
 
-    public ComPtr<ID3D11SamplerState> CreateSamplerState(SamplerDescription description)
+    public static ComPtr<ID3D11SamplerState> CreateSamplerState<TD3D11Device>(ref this ID3D11Device self, SamplerDescription description)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11SamplerState> state = default;
-        ThrowIfFailed(CreateSamplerState(&description, state.GetAddressOf()));
+        ThrowIfFailed(self.CreateSamplerState(&description, state.GetAddressOf()));
 
         return state.Move();
     }
 
-    public ComPtr<ID3D11Texture1D> CreateTexture1D(Texture1DDescription* description, SubresourceData* initialData = default)
+    public static ComPtr<ID3D11Texture1D> CreateTexture1D<TD3D11Device>(ref this TD3D11Device self, Texture1DDescription* description, SubresourceData* initialData = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture1D> texture = default;
-        ThrowIfFailed(CreateTexture1D(description, initialData, texture.GetAddressOf()));
+        ThrowIfFailed(self.CreateTexture1D(description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
 
-    public ComPtr<ID3D11Texture1D> CreateTexture1D(Texture1DDescription description, SubresourceData* initialData = default)
+    public static ComPtr<ID3D11Texture1D> CreateTexture1D<TD3D11Device>(ref this TD3D11Device self, Texture1DDescription description, SubresourceData* initialData = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture1D> texture = default;
-        ThrowIfFailed(CreateTexture1D(&description, initialData, texture.GetAddressOf()));
+        ThrowIfFailed(self.CreateTexture1D(&description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
 
-    public ComPtr<ID3D11Texture2D> CreateTexture2D(Texture2DDescription* description, SubresourceData* initialData = default)
+    public static ComPtr<ID3D11Texture2D> CreateTexture2D<TD3D11Device>(ref this TD3D11Device self, Texture2DDescription* description, SubresourceData* initialData = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture2D> texture = default;
-        ThrowIfFailed(CreateTexture2D(description, initialData, texture.GetAddressOf()));
+        ThrowIfFailed(self.CreateTexture2D(description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
 
-    public ComPtr<ID3D11Texture2D> CreateTexture2D(Texture2DDescription description, SubresourceData* initialData = default)
+    public static ComPtr<ID3D11Texture2D> CreateTexture2D<TD3D11Device>(ref this TD3D11Device self, Texture2DDescription description, SubresourceData* initialData = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture2D> texture = default;
-        ThrowIfFailed(CreateTexture2D(&description, initialData, texture.GetAddressOf()));
+        ThrowIfFailed(self.CreateTexture2D(&description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
 
-    public ComPtr<ID3D11Texture3D> CreateTexture3D(Texture3DDescription* description, SubresourceData* initialData = default)
+    public static ComPtr<ID3D11Texture3D> CreateTexture3D<TD3D11Device>(ref this TD3D11Device self, Texture3DDescription* description, SubresourceData* initialData = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture3D> texture = default;
-        ThrowIfFailed(CreateTexture3D(description, initialData, texture.GetAddressOf()));
+        ThrowIfFailed(self.CreateTexture3D(description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
     }
 
-    public ComPtr<ID3D11Texture3D> CreateTexture3D(Texture3DDescription description, SubresourceData* initialData = default)
+    public static ComPtr<ID3D11Texture3D> CreateTexture3D<TD3D11Device>(ref this TD3D11Device self, Texture3DDescription description, SubresourceData* initialData = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Texture3D> texture = default;
-        ThrowIfFailed(CreateTexture3D(&description, initialData, texture.GetAddressOf()));
+        ThrowIfFailed(self.CreateTexture3D(&description, initialData, texture.GetAddressOf()));
 
         return texture.Move();
+    }
+
+    public static HResult CreateVertexShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11VertexShader** ppVertexShader)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        fixed (byte* pShaderBytecode = shaderBytecode)
+        {
+            return self.CreateVertexShader(pShaderBytecode, (nuint)shaderBytecode.Length, pClassLinkage, ppVertexShader);
+        }
+    }
+
+    public static ComPtr<ID3D11VertexShader> CreateVertexShader<TD3D11Device>(ref this TD3D11Device self,
+        ReadOnlySpan<byte> shaderBytecode,
+        ID3D11ClassLinkage* classLinkage = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        using ComPtr<ID3D11VertexShader> shader = default;
+        fixed (byte* pShaderBytecode = shaderBytecode)
+        {
+            ThrowIfFailed(self.CreateVertexShader(pShaderBytecode, (nuint)shaderBytecode.Length, classLinkage, shader.GetAddressOf()));
+        }
+
+        return shader.Move();
+    }
+
+    public static HResult CreatePixelShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11PixelShader** ppPixelShader)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        fixed (byte* pShaderBytecode = shaderBytecode)
+        {
+            return self.CreatePixelShader(pShaderBytecode, (nuint)shaderBytecode.Length, pClassLinkage, ppPixelShader);
+        }
+    }
+
+    public static ComPtr<ID3D11PixelShader> CreatePixelShader<TD3D11Device>(ref this TD3D11Device self,
+        ReadOnlySpan<byte> shaderBytecode,
+        ID3D11ClassLinkage* classLinkage = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        using ComPtr<ID3D11PixelShader> shader = default;
+        fixed (byte* pShaderBytecode = shaderBytecode)
+        {
+            ThrowIfFailed(self.CreatePixelShader(pShaderBytecode, (nuint)shaderBytecode.Length, classLinkage, shader.GetAddressOf()));
+        }
+
+        return shader.Move();
+    }
+
+    public static HResult CreateComputeShader<TD3D11Device>(ref this TD3D11Device self, ReadOnlySpan<byte> shaderBytecode, ID3D11ClassLinkage* pClassLinkage, ID3D11ComputeShader** ppComputeShader)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        fixed (byte* pShaderBytecode = shaderBytecode)
+        {
+            return self.CreateComputeShader(pShaderBytecode, (nuint)shaderBytecode.Length, pClassLinkage, ppComputeShader);
+        }
+    }
+
+    public static ComPtr<ID3D11ComputeShader> CreateComputeShader<TD3D11Device>(ref this TD3D11Device self,
+        ReadOnlySpan<byte> shaderBytecode,
+        ID3D11ClassLinkage* classLinkage = default)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        using ComPtr<ID3D11ComputeShader> shader = default;
+        fixed (byte* pShaderBytecode = shaderBytecode)
+        {
+            ThrowIfFailed(self.CreateComputeShader(pShaderBytecode, (nuint)shaderBytecode.Length, classLinkage, shader.GetAddressOf()));
+        }
+
+        return shader.Move();
     }
 }
