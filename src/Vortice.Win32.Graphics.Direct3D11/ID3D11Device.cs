@@ -356,4 +356,40 @@ public static unsafe class ID3D11DeviceExtension
 
         return shader.Move();
     }
+
+    public static HResult CreateInputLayout<TD3D11Device>(ref this TD3D11Device self,
+        ReadOnlySpan<InputElementDescription> inputElements,
+        ReadOnlySpan<byte> shaderBytecode,
+        ID3D11InputLayout** ppInputLayout)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        fixed (InputElementDescription* pInputElements = inputElements)
+        fixed (byte* pShaderBytecode = shaderBytecode)
+        {
+            return self.CreateInputLayout(
+                pInputElements, (uint)inputElements.Length,
+                pShaderBytecode, (nuint)shaderBytecode.Length,
+                ppInputLayout);
+        }
+    }
+
+    public static ComPtr<ID3D11InputLayout> CreateInputLayout<TD3D11Device>(ref this TD3D11Device self,
+        ReadOnlySpan<InputElementDescription> inputElements,
+        ReadOnlySpan<byte> shaderBytecode)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+    {
+        using ComPtr<ID3D11InputLayout> inputLayout = default;
+
+        fixed (InputElementDescription* pInputElements = inputElements)
+        fixed (byte* pShaderBytecode = shaderBytecode)
+        {
+            ThrowIfFailed(self.CreateInputLayout(
+                pInputElements, (uint)inputElements.Length,
+                pShaderBytecode, (nuint)shaderBytecode.Length,
+                inputLayout.GetAddressOf())
+                );
+        }
+
+        return inputLayout.Move();
+    }
 }

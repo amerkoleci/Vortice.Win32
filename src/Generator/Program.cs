@@ -2409,11 +2409,6 @@ public static class Program
 
                     foreach (ApiParameter parameter in method.Params)
                     {
-                        if (method.Name == "CreateRenderTargetView" && comType.Name == "ID3D12Device")
-                        {
-
-                        }
-
                         GetParameterSignature(api, writer, parameter,
                             $"{comType.Name}::{method.Name}",
                             out string parameterType,
@@ -2433,6 +2428,36 @@ public static class Program
                         if (method.Name == "EndDraw")
                         {
                             argumentBuilder.Append(" = null");
+                        }
+                        else if (method.Name.EndsWith("SetShader") && comType.Name.StartsWith("ID3D11DeviceContext"))
+                        {
+                            if (parameterName.EndsWith("Shader"))
+                            {
+                                argumentBuilder.Append(" = null");
+                            }
+                            else if (parameterName == "ppClassInstances")
+                            {
+                                argumentBuilder.Append(" = null");
+                            }
+                            else if (parameterName == "NumClassInstances")
+                            {
+                                argumentBuilder.Append(" = 0");
+                            }
+                        }
+                        else if (method.Name == "OMSetBlendState" && comType.Name.StartsWith("ID3D11DeviceContext"))
+                        {
+                            if (parameterName == "pBlendState")
+                            {
+                                argumentBuilder.Append(" = default");
+                            }
+                            else if (parameterName == "BlendFactor")
+                            {
+                                argumentBuilder.Append(" = null");
+                            }
+                            else if (parameterName == "SampleMask")
+                            {
+                                argumentBuilder.Append(" = 0xffffffff");
+                            }
                         }
 
                         argumentsTypesBuilder.Append(parameterType);

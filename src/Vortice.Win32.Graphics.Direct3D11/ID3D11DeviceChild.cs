@@ -32,12 +32,11 @@ public static unsafe class ID3D11DeviceChildExtensions
         {
             fixed (sbyte* valuePtr = value.GetUtf8Span())
             {
-                _ = self.SetPrivateData(ID3D11DeviceChild.D3DDebugObjectNameGuid, (uint)value.Length, valuePtr);
+                _ = self.SetPrivateData(ID3D11DeviceChild.D3DDebugObjectNameGuid, (uint)value!.Length, valuePtr);
             }
         }
     }
 }
-
 
 public unsafe partial struct ID3D11DeviceChild
 {

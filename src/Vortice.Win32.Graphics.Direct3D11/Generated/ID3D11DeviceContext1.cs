@@ -125,7 +125,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.PSSetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public void PSSetShader(ID3D11PixelShader* pPixelShader, ID3D11ClassInstance** ppClassInstances, uint NumClassInstances)
+	public void PSSetShader(ID3D11PixelShader* pPixelShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11PixelShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[9]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pPixelShader, ppClassInstances, NumClassInstances);
 	}
@@ -141,7 +141,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.VSSetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public void VSSetShader(ID3D11VertexShader* pVertexShader, ID3D11ClassInstance** ppClassInstances, uint NumClassInstances)
+	public void VSSetShader(ID3D11VertexShader* pVertexShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11VertexShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[11]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pVertexShader, ppClassInstances, NumClassInstances);
 	}
@@ -237,7 +237,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.GSSetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public void GSSetShader(ID3D11GeometryShader* pShader, ID3D11ClassInstance** ppClassInstances, uint NumClassInstances)
+	public void GSSetShader(ID3D11GeometryShader* pShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[23]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pShader, ppClassInstances, NumClassInstances);
 	}
@@ -333,7 +333,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.OMSetBlendState" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(35)]
-	public void OMSetBlendState(ID3D11BlendState* pBlendState, float* BlendFactor, uint SampleMask)
+	public void OMSetBlendState(ID3D11BlendState* pBlendState = default, float* BlendFactor = null, uint SampleMask = 0xffffffff)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11BlendState*, float*, uint, void>)(lpVtbl[35]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pBlendState, BlendFactor, SampleMask);
 	}
@@ -533,7 +533,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.HSSetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
-	public void HSSetShader(ID3D11HullShader* pHullShader, ID3D11ClassInstance** ppClassInstances, uint NumClassInstances)
+	public void HSSetShader(ID3D11HullShader* pHullShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11HullShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[60]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pHullShader, ppClassInstances, NumClassInstances);
 	}
@@ -565,7 +565,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.DSSetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public void DSSetShader(ID3D11DomainShader* pDomainShader, ID3D11ClassInstance** ppClassInstances, uint NumClassInstances)
+	public void DSSetShader(ID3D11DomainShader* pDomainShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11DomainShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[64]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pDomainShader, ppClassInstances, NumClassInstances);
 	}
@@ -605,7 +605,7 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.CSSetShader" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(69)]
-	public void CSSetShader(ID3D11ComputeShader* pComputeShader, ID3D11ClassInstance** ppClassInstances, uint NumClassInstances)
+	public void CSSetShader(ID3D11ComputeShader* pComputeShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[69]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pComputeShader, ppClassInstances, NumClassInstances);
 	}
