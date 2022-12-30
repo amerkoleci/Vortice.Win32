@@ -2089,7 +2089,7 @@ public enum BlendOperation : uint
 	Subtract = 2,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_REV_SUBTRACT"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_REV_SUBTRACT</unmanaged>
-	RevSubtract = 3,
+	ReverseSubtract = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND_OPERATION::D2D1_BLEND_OPERATION_MIN"]/*' />
 	/// <unmanaged>D2D1_BLEND_OPERATION_MIN</unmanaged>
 	Min = 4,
@@ -2113,34 +2113,34 @@ public enum Blend : uint
 	SrcColor = 3,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_SRC_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_SRC_COLOR</unmanaged>
-	InvSrcColor = 4,
+	InverseSrcColor = 4,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_SRC_ALPHA"]/*' />
 	/// <unmanaged>D2D1_BLEND_SRC_ALPHA</unmanaged>
 	SrcAlpha = 5,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_SRC_ALPHA"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_SRC_ALPHA</unmanaged>
-	InvSrcAlpha = 6,
+	InverseSrcAlpha = 6,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_DEST_ALPHA"]/*' />
 	/// <unmanaged>D2D1_BLEND_DEST_ALPHA</unmanaged>
 	DestAlpha = 7,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_DEST_ALPHA"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_DEST_ALPHA</unmanaged>
-	InvDestAlpha = 8,
+	InverseDestAlpha = 8,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_DEST_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_DEST_COLOR</unmanaged>
 	DestColor = 9,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_DEST_COLOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_DEST_COLOR</unmanaged>
-	InvDestColor = 10,
+	InverseDestColor = 10,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_SRC_ALPHA_SAT"]/*' />
 	/// <unmanaged>D2D1_BLEND_SRC_ALPHA_SAT</unmanaged>
-	SrcAlphaSat = 11,
+	SrcAlphaSaturate = 11,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_BLEND_FACTOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_BLEND_FACTOR</unmanaged>
 	BlendFactor = 14,
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BLEND::D2D1_BLEND_INV_BLEND_FACTOR"]/*' />
 	/// <unmanaged>D2D1_BLEND_INV_BLEND_FACTOR</unmanaged>
-	InvBlendFactor = 15,
+	InverseBlendFactor = 15,
 }
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_CHANNEL_DEPTH"]/*' />

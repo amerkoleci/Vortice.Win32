@@ -208,6 +208,11 @@ public static class Program
         { "PROTECTEDRESOURCESESSION", "ProtectedResourceSession" },
         { "METACOMMAND", "MetaCommand" },
         { "SCHEDULINGGROUP", "SchedulingGroup" },
+        { "INCR", "Increment" },
+        { "DECR", "Decrement" },
+        { "SAT", "Saturate" },
+        { "INV", "Inverse" },
+        { "REV", "Reverse" },
     };
 
     private static readonly HashSet<string> s_partRenamesSet = new(StringComparer.OrdinalIgnoreCase)
@@ -761,7 +766,6 @@ public static class Program
         "DC",
         "XNA",
     };
-
 
     private static readonly Dictionary<string, string> s_knownTypesPrefixes = new()
     {

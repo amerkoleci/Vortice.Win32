@@ -181,19 +181,19 @@ public enum StencilOperation : int
 	Replace = 3,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STENCIL_OP::D3D12_STENCIL_OP_INCR_SAT"]/*' />
 	/// <unmanaged>D3D12_STENCIL_OP_INCR_SAT</unmanaged>
-	IncrSat = 4,
+	IncrementSaturate = 4,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STENCIL_OP::D3D12_STENCIL_OP_DECR_SAT"]/*' />
 	/// <unmanaged>D3D12_STENCIL_OP_DECR_SAT</unmanaged>
-	DecrSat = 5,
+	DecrementSaturate = 5,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STENCIL_OP::D3D12_STENCIL_OP_INVERT"]/*' />
 	/// <unmanaged>D3D12_STENCIL_OP_INVERT</unmanaged>
 	Invert = 6,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STENCIL_OP::D3D12_STENCIL_OP_INCR"]/*' />
 	/// <unmanaged>D3D12_STENCIL_OP_INCR</unmanaged>
-	Incr = 7,
+	Increment = 7,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STENCIL_OP::D3D12_STENCIL_OP_DECR"]/*' />
 	/// <unmanaged>D3D12_STENCIL_OP_DECR</unmanaged>
-	Decr = 8,
+	Decrement = 8,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND"]/*' />
@@ -211,46 +211,46 @@ public enum Blend : int
 	SrcColor = 3,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_SRC_COLOR"]/*' />
 	/// <unmanaged>D3D12_BLEND_INV_SRC_COLOR</unmanaged>
-	InvSrcColor = 4,
+	InverseSrcColor = 4,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_SRC_ALPHA"]/*' />
 	/// <unmanaged>D3D12_BLEND_SRC_ALPHA</unmanaged>
 	SrcAlpha = 5,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_SRC_ALPHA"]/*' />
 	/// <unmanaged>D3D12_BLEND_INV_SRC_ALPHA</unmanaged>
-	InvSrcAlpha = 6,
+	InverseSrcAlpha = 6,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_DEST_ALPHA"]/*' />
 	/// <unmanaged>D3D12_BLEND_DEST_ALPHA</unmanaged>
 	DestAlpha = 7,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_DEST_ALPHA"]/*' />
 	/// <unmanaged>D3D12_BLEND_INV_DEST_ALPHA</unmanaged>
-	InvDestAlpha = 8,
+	InverseDestAlpha = 8,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_DEST_COLOR"]/*' />
 	/// <unmanaged>D3D12_BLEND_DEST_COLOR</unmanaged>
 	DestColor = 9,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_DEST_COLOR"]/*' />
 	/// <unmanaged>D3D12_BLEND_INV_DEST_COLOR</unmanaged>
-	InvDestColor = 10,
+	InverseDestColor = 10,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_SRC_ALPHA_SAT"]/*' />
 	/// <unmanaged>D3D12_BLEND_SRC_ALPHA_SAT</unmanaged>
-	SrcAlphaSat = 11,
+	SrcAlphaSaturate = 11,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_BLEND_FACTOR"]/*' />
 	/// <unmanaged>D3D12_BLEND_BLEND_FACTOR</unmanaged>
 	BlendFactor = 14,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_BLEND_FACTOR"]/*' />
 	/// <unmanaged>D3D12_BLEND_INV_BLEND_FACTOR</unmanaged>
-	InvBlendFactor = 15,
+	InverseBlendFactor = 15,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_SRC1_COLOR"]/*' />
 	/// <unmanaged>D3D12_BLEND_SRC1_COLOR</unmanaged>
 	Src1Color = 16,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_SRC1_COLOR"]/*' />
 	/// <unmanaged>D3D12_BLEND_INV_SRC1_COLOR</unmanaged>
-	InvSrc1Color = 17,
+	InverseSrc1Color = 17,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_SRC1_ALPHA"]/*' />
 	/// <unmanaged>D3D12_BLEND_SRC1_ALPHA</unmanaged>
 	Src1Alpha = 18,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_SRC1_ALPHA"]/*' />
 	/// <unmanaged>D3D12_BLEND_INV_SRC1_ALPHA</unmanaged>
-	InvSrc1Alpha = 19,
+	InverseSrc1Alpha = 19,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_OP"]/*' />
@@ -265,7 +265,7 @@ public enum BlendOperation : int
 	Subtract = 2,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_OP::D3D12_BLEND_OP_REV_SUBTRACT"]/*' />
 	/// <unmanaged>D3D12_BLEND_OP_REV_SUBTRACT</unmanaged>
-	RevSubtract = 3,
+	ReverseSubtract = 3,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_OP::D3D12_BLEND_OP_MIN"]/*' />
 	/// <unmanaged>D3D12_BLEND_OP_MIN</unmanaged>
 	Min = 4,

@@ -15,7 +15,7 @@ public unsafe partial struct BlendDescription1
     /// <summary>
     /// A built-in description with settings for alpha blend, that is blending the source and destination data using alpha.
     /// </summary>
-    public static readonly BlendDescription1 AlphaBlend = new(Blend.One, Blend.InvSrcAlpha);
+    public static readonly BlendDescription1 AlphaBlend = new(Blend.One, Blend.InverseSrcAlpha);
 
     /// <summary>
     /// A built-in description with settings for additive blend, that is adding the destination data to the source data without using alpha.
@@ -25,7 +25,7 @@ public unsafe partial struct BlendDescription1
     /// <summary>
     /// A built-in description with settings for blending with non-premultipled alpha, that is blending source and destination data using alpha while assuming the color data contains no alpha information.
     /// </summary>
-    public static readonly BlendDescription1 NonPremultiplied = new(Blend.SrcAlpha, Blend.InvSrcAlpha);
+    public static readonly BlendDescription1 NonPremultiplied = new(Blend.SrcAlpha, Blend.InverseSrcAlpha);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="BlendDescription1"/> struct.
