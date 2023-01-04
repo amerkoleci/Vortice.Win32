@@ -14,7 +14,7 @@
     <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
     <RestoreConfigFile>$(MSBuildThisFileDirectory)NuGet.config</RestoreConfigFile>
 
-    <VersionPrefix>1.9.8</VersionPrefix>
+    <VersionPrefix>1.9.9</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
     
     <GenerateDocumentationFile>true</GenerateDocumentationFile>

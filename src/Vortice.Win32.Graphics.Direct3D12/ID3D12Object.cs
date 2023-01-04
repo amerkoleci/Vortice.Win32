@@ -3,21 +3,23 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-public partial struct ID3D12Object
+public static unsafe class ID3D12ObjectExtensions
 {
-    public unsafe HResult SetName(ReadOnlySpan<char> name)
+    public static void SetName<TID3D12Object>(ref this TID3D12Object self, ReadOnlySpan<char> name)
+        where TID3D12Object : unmanaged, ID3D12Object.Interface
     {
         fixed (char* namePtr = name)
         {
-            return SetName((ushort*)namePtr);
+            _ = self.SetName((ushort*)namePtr);
         }
     }
 
-    public unsafe HResult SetName(string name)
+    public static void SetName<TID3D12Object>(ref this TID3D12Object self, string name)
+        where TID3D12Object : unmanaged, ID3D12Object.Interface
     {
         fixed (char* namePtr = name)
         {
-            return SetName((ushort*)namePtr);
+            _ = self.SetName((ushort*)namePtr);
         }
     }
 }
