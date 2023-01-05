@@ -52,7 +52,7 @@ public static unsafe partial class ID3D12DeviceExtensions
 
         fixed (FeatureLevel* pFeatureLevels = featureLevels)
         {
-            var featureData = new FeatureDataFeatureLevels
+            FeatureDataFeatureLevels featureData = new()
             {
                 NumFeatureLevels = (uint)featureLevels.Length,
                 pFeatureLevelsRequested = pFeatureLevels,
