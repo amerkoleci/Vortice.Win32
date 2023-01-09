@@ -133,9 +133,9 @@ public unsafe partial struct ID2D1EffectContext2 : ID2D1EffectContext2.Interface
 	/// <inheritdoc cref="ID2D1EffectContext.CreateBoundsAdjustmentTransform" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateBoundsAdjustmentTransform(RawRect* outputRectangle, ID2D1BoundsAdjustmentTransform** transform)
+	public HResult CreateBoundsAdjustmentTransform(Rect* outputRectangle, ID2D1BoundsAdjustmentTransform** transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext2*, RawRect*, ID2D1BoundsAdjustmentTransform**, int>)(lpVtbl[10]))((ID2D1EffectContext2*)Unsafe.AsPointer(ref this), outputRectangle, transform);
+		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext2*, Rect*, ID2D1BoundsAdjustmentTransform**, int>)(lpVtbl[10]))((ID2D1EffectContext2*)Unsafe.AsPointer(ref this), outputRectangle, transform);
 	}
 
 	/// <inheritdoc cref="ID2D1EffectContext.LoadPixelShader" />

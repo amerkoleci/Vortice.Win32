@@ -149,9 +149,9 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface1::ReleaseDC"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult ReleaseDC(RawRect* pDirtyRect)
+	public HResult ReleaseDC(Rect* pDirtyRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, RawRect*, int>)(lpVtbl[12]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDirtyRect);
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Rect*, int>)(lpVtbl[12]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDirtyRect);
 	}
 
 	public interface Interface : IDXGISurface.Interface
@@ -160,7 +160,7 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 		HResult GetDC(Bool32 Discard, IntPtr* phdc);
 
 		[VtblIndex(12)]
-		HResult ReleaseDC(RawRect* pDirtyRect);
+		HResult ReleaseDC(Rect* pDirtyRect);
 	}
 }
 

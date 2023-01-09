@@ -7290,7 +7290,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPixelShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11PixelShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPixelShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11PixelShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppClassInstances","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"ID3D11ClassInstance","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
 					,{"Name":"pNumClassInstances","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 				]
@@ -7318,7 +7318,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppVertexShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11VertexShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppVertexShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11VertexShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppClassInstances","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"ID3D11ClassInstance","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
 					,{"Name":"pNumClassInstances","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 				]
@@ -7346,7 +7346,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppInputLayout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11InputLayout","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppInputLayout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11InputLayout","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -7402,7 +7402,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppGeometryShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11GeometryShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppGeometryShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11GeometryShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppClassInstances","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"ID3D11ClassInstance","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
 					,{"Name":"pNumClassInstances","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 				]
@@ -7568,7 +7568,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppRasterizerState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11RasterizerState","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppRasterizerState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11RasterizerState","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -7620,7 +7620,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppHullShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11HullShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppHullShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11HullShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppClassInstances","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"ID3D11ClassInstance","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
 					,{"Name":"pNumClassInstances","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 				]
@@ -7676,7 +7676,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppDomainShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11DomainShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppDomainShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11DomainShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppClassInstances","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"ID3D11ClassInstance","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
 					,{"Name":"pNumClassInstances","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 				]
@@ -7746,7 +7746,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppComputeShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11ComputeShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppComputeShader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D11ComputeShader","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppClassInstances","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"ID3D11ClassInstance","TargetKind":"Com","Api":"Graphics.Direct3D11","Parents":[]}},"Attrs":["Out","Optional"]}
 					,{"Name":"pNumClassInstances","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 				]

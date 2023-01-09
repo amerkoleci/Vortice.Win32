@@ -6,48 +6,64 @@ using static Win32.Graphics.Direct3D11.Apis;
 
 namespace Win32.Graphics.Direct3D11;
 
-public unsafe partial struct ID3D11DeviceContext
+public static unsafe class ID3D11DeviceContextExtensions
 {
-    public void RSSetViewport(float x, float y, float width, float height, float minDepth = 0.0f, float maxDepth = 1.0f)
+    public static void RSSetViewport<TD3D11DeviceContext>(
+        ref this TD3D11DeviceContext self,
+        float x, float y, float width, float height, float minDepth = 0.0f, float maxDepth = 1.0f)
+        where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
         var viewport = new Viewport(x, y, width, height, minDepth, maxDepth);
-        RSSetViewports(1, &viewport);
+        self.RSSetViewports(1, &viewport);
     }
 
-    public void RSSetViewport(Viewport viewport)
+    public static void RSSetViewport<TD3D11DeviceContext>(
+        ref this TD3D11DeviceContext self,
+        Viewport viewport)
+        where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
-        RSSetViewports(1, &viewport);
+        self.RSSetViewports(1, &viewport);
     }
 
-    public void RSSetScissorRect(int x, int y, int width, int height)
+    public static void RSSetScissorRect<TD3D11DeviceContext>(
+        ref this TD3D11DeviceContext self,
+        int x, int y, int width, int height)
+        where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
-        RawRect rawRect = new(x, y, x + width, y + height);
-        RSSetScissorRects(1, &rawRect);
+        Rect rawRect = Rect.Create(x, y, width, height);
+        self.RSSetScissorRects(1, &rawRect);
     }
 
-    public void RSSetScissorRect(RawRect rect)
+    public static void RSSetScissorRect<TD3D11DeviceContext>(
+        ref this TD3D11DeviceContext self,
+        Rect rect)
+        where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
-        RSSetScissorRects(1, &rect);
+        self.RSSetScissorRects(1, &rect);
     }
 
-    public void OMSetBlendState(ID3D11BlendState* blendState, float* blendFactor)
+    public static void OMSetBlendState<TD3D11DeviceContext>(
+        ref this TD3D11DeviceContext self,
+        ID3D11BlendState* blendState)
+        where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
-        OMSetBlendState(blendState, blendFactor, D3D11_DEFAULT_SAMPLE_MASK);
+        self.OMSetBlendState(blendState, null, D3D11_DEFAULT_SAMPLE_MASK);
     }
 
-    public void OMSetBlendState(ID3D11BlendState* blendState)
+    public static void OMSetBlendState<TD3D11DeviceContext>(
+        ref this TD3D11DeviceContext self,
+        ID3D11BlendState* blendState, float* blendFactor)
+        where TD3D11DeviceContext : unmanaged, ID3D11DeviceContext.Interface
     {
-        OMSetBlendState(blendState, null, D3D11_DEFAULT_SAMPLE_MASK);
+        self.OMSetBlendState(blendState, blendFactor, D3D11_DEFAULT_SAMPLE_MASK);
     }
+}
 
+public unsafe partial struct ID3D11DeviceContext
+{
     public void IASetVertexBuffer(int slot, ID3D11Buffer* buffer, uint stride, uint offset = 0)
     {
         IASetVertexBuffers((uint)slot, 1, buffer == null ? null : &buffer, &stride, &offset);
-    }
-
-    public void VSSetShader(ID3D11VertexShader* shader)
-    {
-        VSSetShader(shader, null, 0);
     }
 
     public void VSSetShaderResource(uint slot, ID3D11ShaderResourceView* view)
@@ -65,11 +81,6 @@ public unsafe partial struct ID3D11DeviceContext
         VSSetConstantBuffers(slot, 1, constantBuffer != null ? &constantBuffer : null);
     }
 
-    public void PSSetShader(ID3D11PixelShader* shader)
-    {
-        PSSetShader(shader, null, 0);
-    }
-
     public void PSSetShaderResource(uint slot, ID3D11ShaderResourceView* view)
     {
         PSSetShaderResources(slot, 1, view != null ? &view : null);
@@ -83,11 +94,6 @@ public unsafe partial struct ID3D11DeviceContext
     public void PSSetConstantBuffer(uint slot, ID3D11Buffer* constantBuffer)
     {
         PSSetConstantBuffers(slot, 1, constantBuffer != null ? &constantBuffer : null);
-    }
-
-    public void CSSetShader(ID3D11ComputeShader* shader)
-    {
-        CSSetShader(shader, null, 0);
     }
 
     public void CSSetShaderResource(uint slot, ID3D11ShaderResourceView* view)

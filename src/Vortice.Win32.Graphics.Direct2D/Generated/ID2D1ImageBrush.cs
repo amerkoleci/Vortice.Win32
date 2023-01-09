@@ -149,9 +149,9 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetSourceRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public void SetSourceRectangle(Common.RectF* sourceRectangle)
+	public void SetSourceRectangle(Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Common.RectF*, void>)(lpVtbl[12]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
+		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Win32.Numerics.RectF*, void>)(lpVtbl[12]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetImage"]/*' />
@@ -189,9 +189,9 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetSourceRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void GetSourceRectangle(Common.RectF* sourceRectangle)
+	public void GetSourceRectangle(Win32.Numerics.RectF** sourceRectangle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Common.RectF*, void>)(lpVtbl[17]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
+		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Win32.Numerics.RectF**, void>)(lpVtbl[17]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
 	}
 
 	public interface Interface : ID2D1Brush.Interface
@@ -209,7 +209,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 		void SetInterpolationMode(InterpolationMode interpolationMode);
 
 		[VtblIndex(12)]
-		void SetSourceRectangle(Common.RectF* sourceRectangle);
+		void SetSourceRectangle(Win32.Numerics.RectF* sourceRectangle);
 
 		[VtblIndex(13)]
 		void GetImage(ID2D1Image** image);
@@ -224,7 +224,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 		InterpolationMode GetInterpolationMode();
 
 		[VtblIndex(17)]
-		void GetSourceRectangle(Common.RectF* sourceRectangle);
+		void GetSourceRectangle(Win32.Numerics.RectF** sourceRectangle);
 	}
 }
 

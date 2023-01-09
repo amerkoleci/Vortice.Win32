@@ -85,26 +85,26 @@ public unsafe partial struct ID2D1BoundsAdjustmentTransform : ID2D1BoundsAdjustm
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BoundsAdjustmentTransform::SetOutputBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public void SetOutputBounds(RawRect* outputBounds)
+	public void SetOutputBounds(Rect* outputBounds)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1BoundsAdjustmentTransform*, RawRect*, void>)(lpVtbl[4]))((ID2D1BoundsAdjustmentTransform*)Unsafe.AsPointer(ref this), outputBounds);
+		((delegate* unmanaged[Stdcall]<ID2D1BoundsAdjustmentTransform*, Rect*, void>)(lpVtbl[4]))((ID2D1BoundsAdjustmentTransform*)Unsafe.AsPointer(ref this), outputBounds);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BoundsAdjustmentTransform::GetOutputBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetOutputBounds(RawRect* outputBounds)
+	public void GetOutputBounds(Rect* outputBounds)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1BoundsAdjustmentTransform*, RawRect*, void>)(lpVtbl[5]))((ID2D1BoundsAdjustmentTransform*)Unsafe.AsPointer(ref this), outputBounds);
+		((delegate* unmanaged[Stdcall]<ID2D1BoundsAdjustmentTransform*, Rect*, void>)(lpVtbl[5]))((ID2D1BoundsAdjustmentTransform*)Unsafe.AsPointer(ref this), outputBounds);
 	}
 
 	public interface Interface : ID2D1TransformNode.Interface
 	{
 		[VtblIndex(4)]
-		void SetOutputBounds(RawRect* outputBounds);
+		void SetOutputBounds(Rect* outputBounds);
 
 		[VtblIndex(5)]
-		void GetOutputBounds(RawRect* outputBounds);
+		void GetOutputBounds(Rect* outputBounds);
 	}
 }
 

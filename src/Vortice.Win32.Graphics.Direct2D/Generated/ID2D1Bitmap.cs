@@ -120,25 +120,25 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Common.RectU* srcRect)
+	public HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Win32.Numerics.Rect* srcRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1Bitmap*, Common.RectU*, int>)(lpVtbl[8]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1Bitmap*, Win32.Numerics.Rect*, int>)(lpVtbl[8]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromRenderTarget"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Common.RectU* srcRect)
+	public HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Win32.Numerics.Rect* srcRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1RenderTarget*, Common.RectU*, int>)(lpVtbl[9]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1RenderTarget*, Win32.Numerics.Rect*, int>)(lpVtbl[9]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromMemory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CopyFromMemory(Common.RectU* dstRect, void* srcData, uint pitch)
+	public HResult CopyFromMemory(Win32.Numerics.Rect* dstRect, void* srcData, uint pitch)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Common.RectU*, void*, uint, int>)(lpVtbl[10]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), dstRect, srcData, pitch);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Win32.Numerics.Rect*, void*, uint, int>)(lpVtbl[10]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), dstRect, srcData, pitch);
 	}
 
 	public interface Interface : ID2D1Image.Interface
@@ -156,13 +156,13 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 		void GetDpi(float* dpiX, float* dpiY);
 
 		[VtblIndex(8)]
-		HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Common.RectU* srcRect);
+		HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Win32.Numerics.Rect* srcRect);
 
 		[VtblIndex(9)]
-		HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Common.RectU* srcRect);
+		HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Win32.Numerics.Rect* srcRect);
 
 		[VtblIndex(10)]
-		HResult CopyFromMemory(Common.RectU* dstRect, void* srcData, uint pitch);
+		HResult CopyFromMemory(Win32.Numerics.Rect* dstRect, void* srcData, uint pitch);
 	}
 }
 

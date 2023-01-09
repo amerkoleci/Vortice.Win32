@@ -80,7 +80,7 @@ public partial struct OutputDescription
 	public unsafe fixed ushort DeviceName[32];
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DesktopCoordinates"]/*' />
-	public RawRect DesktopCoordinates;
+	public Rect DesktopCoordinates;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::AttachedToDesktop"]/*' />
 	public Bool32 AttachedToDesktop;
@@ -200,7 +200,7 @@ public partial struct OutduplMoveRect
 	public System.Drawing.Point SourcePoint;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_MOVE_RECT::DestinationRect"]/*' />
-	public RawRect DestinationRect;
+	public Rect DestinationRect;
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_DESC"]/*' />
@@ -366,10 +366,10 @@ public partial struct PresentParameters
 	public uint DirtyRectsCount;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pDirtyRects"]/*' />
-	public unsafe RawRect* pDirtyRects;
+	public unsafe Rect* pDirtyRects;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollRect"]/*' />
-	public unsafe RawRect* pScrollRect;
+	public unsafe Rect* pScrollRect;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT_PARAMETERS::pScrollOffset"]/*' />
 	public unsafe System.Drawing.Point* pScrollOffset;
@@ -553,7 +553,7 @@ public partial struct OutputDescription1
 	public unsafe fixed ushort DeviceName[32];
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DesktopCoordinates"]/*' />
-	public RawRect DesktopCoordinates;
+	public Rect DesktopCoordinates;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::AttachedToDesktop"]/*' />
 	public Bool32 AttachedToDesktop;

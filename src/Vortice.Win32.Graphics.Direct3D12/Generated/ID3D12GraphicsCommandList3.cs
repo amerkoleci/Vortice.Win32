@@ -229,9 +229,9 @@ public unsafe partial struct ID3D12GraphicsCommandList3 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.RSSetScissorRects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public void RSSetScissorRects(uint NumRects, RawRect* pRects)
+	public void RSSetScissorRects(uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, uint, RawRect*, void>)(lpVtbl[22]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), NumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, uint, Rect*, void>)(lpVtbl[22]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.OMSetBlendFactor" />
@@ -429,33 +429,33 @@ public unsafe partial struct ID3D12GraphicsCommandList3 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearDepthStencilView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public void ClearDepthStencilView(CpuDescriptorHandle DepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil, uint NumRects, RawRect* pRects)
+	public void ClearDepthStencilView(CpuDescriptorHandle DepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, CpuDescriptorHandle, ClearFlags, float, byte, uint, RawRect*, void>)(lpVtbl[47]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), DepthStencilView, ClearFlags, Depth, Stencil, NumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, CpuDescriptorHandle, ClearFlags, float, byte, uint, Rect*, void>)(lpVtbl[47]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), DepthStencilView, ClearFlags, Depth, Stencil, NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearRenderTargetView" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(48)]
-	public void ClearRenderTargetView(CpuDescriptorHandle RenderTargetView, float* ColorRGBA, uint NumRects, RawRect* pRects)
+	public void ClearRenderTargetView(CpuDescriptorHandle RenderTargetView, float* ColorRGBA, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, CpuDescriptorHandle, float*, uint, RawRect*, void>)(lpVtbl[48]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), RenderTargetView, ColorRGBA, NumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, CpuDescriptorHandle, float*, uint, Rect*, void>)(lpVtbl[48]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), RenderTargetView, ColorRGBA, NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearUnorderedAccessViewUint" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public void ClearUnorderedAccessViewUint(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, RawRect* pRects)
+	public void ClearUnorderedAccessViewUint(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, uint*, uint, RawRect*, void>)(lpVtbl[49]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, uint*, uint, Rect*, void>)(lpVtbl[49]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearUnorderedAccessViewFloat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(50)]
-	public void ClearUnorderedAccessViewFloat(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, RawRect* pRects)
+	public void ClearUnorderedAccessViewFloat(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, float*, uint, RawRect*, void>)(lpVtbl[50]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, float*, uint, Rect*, void>)(lpVtbl[50]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.DiscardResource" />
@@ -565,9 +565,9 @@ public unsafe partial struct ID3D12GraphicsCommandList3 : ID3D12GraphicsCommandL
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.ResolveSubresourceRegion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(64)]
-	public void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, RawRect* pSrcRect, Graphics.Dxgi.Common.Format Format, ResolveMode ResolveMode)
+	public void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, Rect* pSrcRect, Graphics.Dxgi.Common.Format Format, ResolveMode ResolveMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, RawRect*, Graphics.Dxgi.Common.Format, ResolveMode, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
+		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList3*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, Rect*, Graphics.Dxgi.Common.Format, ResolveMode, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.SetViewInstanceMask" />

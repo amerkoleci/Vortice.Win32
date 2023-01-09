@@ -77,17 +77,17 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaTextureBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetAlphaTextureBounds(TextureType textureType, RawRect* textureBounds)
+	public HResult GetAlphaTextureBounds(TextureType textureType, Rect* textureBounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, TextureType, RawRect*, int>)(lpVtbl[3]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds);
+		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, TextureType, Rect*, int>)(lpVtbl[3]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::CreateAlphaTexture"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateAlphaTexture(TextureType textureType, RawRect* textureBounds, byte* alphaValues, uint bufferSize)
+	public HResult CreateAlphaTexture(TextureType textureType, Rect* textureBounds, byte* alphaValues, uint bufferSize)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, TextureType, RawRect*, byte*, uint, int>)(lpVtbl[4]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds, alphaValues, bufferSize);
+		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, TextureType, Rect*, byte*, uint, int>)(lpVtbl[4]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds, alphaValues, bufferSize);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaBlendParams"]/*' />
@@ -101,10 +101,10 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetAlphaTextureBounds(TextureType textureType, RawRect* textureBounds);
+		HResult GetAlphaTextureBounds(TextureType textureType, Rect* textureBounds);
 
 		[VtblIndex(4)]
-		HResult CreateAlphaTexture(TextureType textureType, RawRect* textureBounds, byte* alphaValues, uint bufferSize);
+		HResult CreateAlphaTexture(TextureType textureType, Rect* textureBounds, byte* alphaValues, uint bufferSize);
 
 		[VtblIndex(5)]
 		HResult GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel);

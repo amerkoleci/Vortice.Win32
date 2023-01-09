@@ -85,17 +85,17 @@ public unsafe partial struct ID2D1RectangleGeometry : ID2D1RectangleGeometry.Int
 	/// <inheritdoc cref="ID2D1Geometry.GetBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetBounds(Matrix3x2* worldTransform, Common.RectF* bounds)
+	public HResult GetBounds(Matrix3x2* worldTransform, Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RectangleGeometry*, Matrix3x2*, Common.RectF*, int>)(lpVtbl[4]))((ID2D1RectangleGeometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1RectangleGeometry*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[4]))((ID2D1RectangleGeometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.GetWidenedBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.RectF* bounds)
+	public HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1RectangleGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.RectF*, int>)(lpVtbl[5]))((ID2D1RectangleGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1RectangleGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1RectangleGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.StrokeContainsPoint" />
@@ -189,15 +189,15 @@ public unsafe partial struct ID2D1RectangleGeometry : ID2D1RectangleGeometry.Int
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RectangleGeometry::GetRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void GetRect(Common.RectF* rect)
+	public void GetRect(Win32.Numerics.RectF** rect)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RectangleGeometry*, Common.RectF*, void>)(lpVtbl[17]))((ID2D1RectangleGeometry*)Unsafe.AsPointer(ref this), rect);
+		((delegate* unmanaged[Stdcall]<ID2D1RectangleGeometry*, Win32.Numerics.RectF**, void>)(lpVtbl[17]))((ID2D1RectangleGeometry*)Unsafe.AsPointer(ref this), rect);
 	}
 
 	public interface Interface : ID2D1Geometry.Interface
 	{
 		[VtblIndex(17)]
-		void GetRect(Common.RectF* rect);
+		void GetRect(Win32.Numerics.RectF** rect);
 	}
 }
 

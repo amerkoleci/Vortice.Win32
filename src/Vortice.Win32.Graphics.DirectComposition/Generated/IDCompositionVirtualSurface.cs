@@ -77,9 +77,9 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	/// <inheritdoc cref="IDCompositionSurface.BeginDraw" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult BeginDraw(RawRect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset)
+	public HResult BeginDraw(Rect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, RawRect*, Guid*, void**, System.Drawing.Point*, int>)(lpVtbl[3]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), updateRect, iid, updateObject, updateOffset);
+		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, Rect*, Guid*, void**, System.Drawing.Point*, int>)(lpVtbl[3]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), updateRect, iid, updateObject, updateOffset);
 	}
 
 	/// <inheritdoc cref="IDCompositionSurface.EndDraw" />
@@ -109,9 +109,9 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	/// <inheritdoc cref="IDCompositionSurface.Scroll" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult Scroll(RawRect* scrollRect, RawRect* clipRect, int offsetX, int offsetY)
+	public HResult Scroll(Rect* scrollRect, Rect* clipRect, int offsetX, int offsetY)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, RawRect*, RawRect*, int, int, int>)(lpVtbl[7]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
+		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, Rect*, Rect*, int, int, int>)(lpVtbl[7]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVirtualSurface::Resize"]/*' />
@@ -125,9 +125,9 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVirtualSurface::Trim"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Trim(RawRect* rectangles, uint count)
+	public HResult Trim(Rect* rectangles, uint count)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, RawRect*, uint, int>)(lpVtbl[9]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), rectangles, count);
+		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, Rect*, uint, int>)(lpVtbl[9]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), rectangles, count);
 	}
 
 	public interface Interface : IDCompositionSurface.Interface
@@ -136,7 +136,7 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 		HResult Resize(uint width, uint height);
 
 		[VtblIndex(9)]
-		HResult Trim(RawRect* rectangles, uint count);
+		HResult Trim(Rect* rectangles, uint count);
 	}
 }
 

@@ -165,9 +165,9 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual::SetClip"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetClip(Graphics.Direct2D.Common.RectF* rect)
+	public HResult SetClip(Win32.Numerics.RectF* rect)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual*, Graphics.Direct2D.Common.RectF*, int>)(lpVtbl[14]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), rect);
+		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual*, Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisual*)Unsafe.AsPointer(ref this), rect);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisual::SetContent"]/*' />
@@ -246,7 +246,7 @@ public unsafe partial struct IDCompositionVisual : IDCompositionVisual.Interface
 		HResult SetClip(IDCompositionClip* clip);
 
 		[VtblIndex(14)]
-		HResult SetClip(Graphics.Direct2D.Common.RectF* rect);
+		HResult SetClip(Win32.Numerics.RectF* rect);
 
 		[VtblIndex(15)]
 		HResult SetContent(IUnknown* content);

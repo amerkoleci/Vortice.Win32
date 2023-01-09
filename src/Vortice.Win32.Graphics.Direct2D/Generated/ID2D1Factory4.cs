@@ -93,9 +93,9 @@ public unsafe partial struct ID2D1Factory4 : ID2D1Factory4.Interface, INativeGui
 	/// <inheritdoc cref="ID2D1Factory.CreateRectangleGeometry" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateRectangleGeometry(Common.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry)
+	public HResult CreateRectangleGeometry(Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Factory4*, Common.RectF*, ID2D1RectangleGeometry**, int>)(lpVtbl[5]))((ID2D1Factory4*)Unsafe.AsPointer(ref this), rectangle, rectangleGeometry);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Factory4*, Win32.Numerics.RectF*, ID2D1RectangleGeometry**, int>)(lpVtbl[5]))((ID2D1Factory4*)Unsafe.AsPointer(ref this), rectangle, rectangleGeometry);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory.CreateRoundedRectangleGeometry" />

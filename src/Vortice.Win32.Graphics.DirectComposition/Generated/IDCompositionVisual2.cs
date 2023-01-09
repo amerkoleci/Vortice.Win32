@@ -165,9 +165,9 @@ public unsafe partial struct IDCompositionVisual2 : IDCompositionVisual2.Interfa
 	/// <inheritdoc cref="IDCompositionVisual.SetClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult SetClip(Graphics.Direct2D.Common.RectF* rect)
+	public HResult SetClip(Win32.Numerics.RectF* rect)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual2*, Graphics.Direct2D.Common.RectF*, int>)(lpVtbl[14]))((IDCompositionVisual2*)Unsafe.AsPointer(ref this), rect);
+		return ((delegate* unmanaged[Stdcall]<IDCompositionVisual2*, Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisual2*)Unsafe.AsPointer(ref this), rect);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetContent" />

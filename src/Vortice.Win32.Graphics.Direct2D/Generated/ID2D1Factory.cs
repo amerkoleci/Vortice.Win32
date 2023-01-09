@@ -93,9 +93,9 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateRectangleGeometry"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateRectangleGeometry(Common.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry)
+	public HResult CreateRectangleGeometry(Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Factory*, Common.RectF*, ID2D1RectangleGeometry**, int>)(lpVtbl[5]))((ID2D1Factory*)Unsafe.AsPointer(ref this), rectangle, rectangleGeometry);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Factory*, Win32.Numerics.RectF*, ID2D1RectangleGeometry**, int>)(lpVtbl[5]))((ID2D1Factory*)Unsafe.AsPointer(ref this), rectangle, rectangleGeometry);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory::CreateRoundedRectangleGeometry"]/*' />
@@ -195,7 +195,7 @@ public unsafe partial struct ID2D1Factory : ID2D1Factory.Interface, INativeGuid
 		void GetDesktopDpi(float* dpiX, float* dpiY);
 
 		[VtblIndex(5)]
-		HResult CreateRectangleGeometry(Common.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry);
+		HResult CreateRectangleGeometry(Win32.Numerics.RectF* rectangle, ID2D1RectangleGeometry** rectangleGeometry);
 
 		[VtblIndex(6)]
 		HResult CreateRoundedRectangleGeometry(RoundedRect* roundedRectangle, ID2D1RoundedRectangleGeometry** roundedRectangleGeometry);

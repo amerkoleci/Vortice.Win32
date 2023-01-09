@@ -85,37 +85,37 @@ public unsafe partial struct ID2D1Transform : ID2D1Transform.Interface, INativeG
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapOutputRectToInputRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult MapOutputRectToInputRects(RawRect* outputRect, RawRect* inputRects, uint inputRectsCount)
+	public HResult MapOutputRectToInputRects(Rect* outputRect, Rect* inputRects, uint inputRectsCount)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, RawRect*, RawRect*, uint, int>)(lpVtbl[4]))((ID2D1Transform*)Unsafe.AsPointer(ref this), outputRect, inputRects, inputRectsCount);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, Rect*, Rect*, uint, int>)(lpVtbl[4]))((ID2D1Transform*)Unsafe.AsPointer(ref this), outputRect, inputRects, inputRectsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapInputRectsToOutputRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult MapInputRectsToOutputRect(RawRect* inputRects, RawRect* inputOpaqueSubRects, uint inputRectCount, RawRect* outputRect, RawRect* outputOpaqueSubRect)
+	public HResult MapInputRectsToOutputRect(Rect* inputRects, Rect* inputOpaqueSubRects, uint inputRectCount, Rect* outputRect, Rect* outputOpaqueSubRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, RawRect*, RawRect*, uint, RawRect*, RawRect*, int>)(lpVtbl[5]))((ID2D1Transform*)Unsafe.AsPointer(ref this), inputRects, inputOpaqueSubRects, inputRectCount, outputRect, outputOpaqueSubRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, Rect*, Rect*, uint, Rect*, Rect*, int>)(lpVtbl[5]))((ID2D1Transform*)Unsafe.AsPointer(ref this), inputRects, inputOpaqueSubRects, inputRectCount, outputRect, outputOpaqueSubRect);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Transform::MapInvalidRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult MapInvalidRect(uint inputIndex, RawRect invalidInputRect, RawRect* invalidOutputRect)
+	public HResult MapInvalidRect(uint inputIndex, Rect invalidInputRect, Rect* invalidOutputRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, uint, RawRect, RawRect*, int>)(lpVtbl[6]))((ID2D1Transform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1Transform*, uint, Rect, Rect*, int>)(lpVtbl[6]))((ID2D1Transform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
 
 	public interface Interface : ID2D1TransformNode.Interface
 	{
 		[VtblIndex(4)]
-		HResult MapOutputRectToInputRects(RawRect* outputRect, RawRect* inputRects, uint inputRectsCount);
+		HResult MapOutputRectToInputRects(Rect* outputRect, Rect* inputRects, uint inputRectsCount);
 
 		[VtblIndex(5)]
-		HResult MapInputRectsToOutputRect(RawRect* inputRects, RawRect* inputOpaqueSubRects, uint inputRectCount, RawRect* outputRect, RawRect* outputOpaqueSubRect);
+		HResult MapInputRectsToOutputRect(Rect* inputRects, Rect* inputOpaqueSubRects, uint inputRectCount, Rect* outputRect, Rect* outputOpaqueSubRect);
 
 		[VtblIndex(6)]
-		HResult MapInvalidRect(uint inputIndex, RawRect invalidInputRect, RawRect* invalidOutputRect);
+		HResult MapInvalidRect(uint inputIndex, Rect invalidInputRect, Rect* invalidOutputRect);
 	}
 }
 

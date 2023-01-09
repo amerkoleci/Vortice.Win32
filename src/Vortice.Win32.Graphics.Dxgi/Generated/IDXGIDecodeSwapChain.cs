@@ -85,17 +85,17 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetSourceRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult SetSourceRect(RawRect* pRect)
+	public HResult SetSourceRect(Rect* pRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[4]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, Rect*, int>)(lpVtbl[4]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetTargetRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult SetTargetRect(RawRect* pRect)
+	public HResult SetTargetRect(Rect* pRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[5]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, Rect*, int>)(lpVtbl[5]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetDestSize"]/*' />
@@ -109,17 +109,17 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetSourceRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetSourceRect(RawRect* pRect)
+	public HResult GetSourceRect(Rect* pRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[7]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, Rect*, int>)(lpVtbl[7]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetTargetRect"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetTargetRect(RawRect* pRect)
+	public HResult GetTargetRect(Rect* pRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, RawRect*, int>)(lpVtbl[8]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
+		return ((delegate* unmanaged[Stdcall]<IDXGIDecodeSwapChain*, Rect*, int>)(lpVtbl[8]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), pRect);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::GetDestSize"]/*' />
@@ -152,19 +152,19 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 		HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, uint Flags);
 
 		[VtblIndex(4)]
-		HResult SetSourceRect(RawRect* pRect);
+		HResult SetSourceRect(Rect* pRect);
 
 		[VtblIndex(5)]
-		HResult SetTargetRect(RawRect* pRect);
+		HResult SetTargetRect(Rect* pRect);
 
 		[VtblIndex(6)]
 		HResult SetDestSize(uint Width, uint Height);
 
 		[VtblIndex(7)]
-		HResult GetSourceRect(RawRect* pRect);
+		HResult GetSourceRect(Rect* pRect);
 
 		[VtblIndex(8)]
-		HResult GetTargetRect(RawRect* pRect);
+		HResult GetTargetRect(Rect* pRect);
 
 		[VtblIndex(9)]
 		HResult GetDestSize(uint* pWidth, uint* pHeight);

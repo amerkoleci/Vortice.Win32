@@ -125,9 +125,9 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameDirtyRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, RawRect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired)
+	public HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, Rect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, uint, RawRect*, uint*, int>)(lpVtbl[9]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), DirtyRectsBufferSize, pDirtyRectsBuffer, pDirtyRectsBufferSizeRequired);
+		return ((delegate* unmanaged[Stdcall]<IDXGIOutputDuplication*, uint, Rect*, uint*, int>)(lpVtbl[9]))((IDXGIOutputDuplication*)Unsafe.AsPointer(ref this), DirtyRectsBufferSize, pDirtyRectsBuffer, pDirtyRectsBufferSizeRequired);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutputDuplication::GetFrameMoveRects"]/*' />
@@ -179,7 +179,7 @@ public unsafe partial struct IDXGIOutputDuplication : IDXGIOutputDuplication.Int
 		HResult AcquireNextFrame(uint TimeoutInMilliseconds, OutduplFrameInfo* pFrameInfo, IDXGIResource** ppDesktopResource);
 
 		[VtblIndex(9)]
-		HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, RawRect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired);
+		HResult GetFrameDirtyRects(uint DirtyRectsBufferSize, Rect* pDirtyRectsBuffer, uint* pDirtyRectsBufferSizeRequired);
 
 		[VtblIndex(10)]
 		HResult GetFrameMoveRects(uint MoveRectsBufferSize, OutduplMoveRect* pMoveRectBuffer, uint* pMoveRectsBufferSizeRequired);

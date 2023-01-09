@@ -93,9 +93,9 @@ public unsafe partial struct ID2D1GdiMetafile : ID2D1GdiMetafile.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile::GetBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetBounds(Common.RectF* bounds)
+	public HResult GetBounds(Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile*, Common.RectF*, int>)(lpVtbl[5]))((ID2D1GdiMetafile*)Unsafe.AsPointer(ref this), bounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile*, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1GdiMetafile*)Unsafe.AsPointer(ref this), bounds);
 	}
 
 	public interface Interface : ID2D1Resource.Interface
@@ -104,7 +104,7 @@ public unsafe partial struct ID2D1GdiMetafile : ID2D1GdiMetafile.Interface, INat
 		HResult Stream(ID2D1GdiMetafileSink* sink);
 
 		[VtblIndex(5)]
-		HResult GetBounds(Common.RectF* bounds);
+		HResult GetBounds(Win32.Numerics.RectF** bounds);
 	}
 }
 

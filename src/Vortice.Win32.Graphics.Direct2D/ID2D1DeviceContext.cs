@@ -115,7 +115,7 @@ public unsafe partial struct ID2D1DeviceContext
     public void DrawImage(
         ID2D1Effect* effect,
         Vector2* targetOffset = null,
-        Common.RectF* imageRectangle = null,
+        RectF* imageRectangle = null,
         InterpolationMode interpolationMode = InterpolationMode.Linear,
         CompositeMode compositeMode = CompositeMode.SourceOver)
     {
@@ -159,7 +159,7 @@ public unsafe partial struct ID2D1DeviceContext
 
     public void DrawImage(ID2D1Image* image,
         Vector2 targetOffset,
-        Common.RectF* imageRectangle,
+        RectF* imageRectangle,
         InterpolationMode interpolationMode = InterpolationMode.Linear,
         CompositeMode compositeMode = CompositeMode.SourceOver)
     {
@@ -168,7 +168,7 @@ public unsafe partial struct ID2D1DeviceContext
 
     public void DrawImage(ID2D1Effect* effect,
         Vector2 targetOffset,
-        Common.RectF* imageRectangle,
+        RectF* imageRectangle,
         InterpolationMode interpolationMode = InterpolationMode.Linear,
         CompositeMode compositeMode = CompositeMode.SourceOver)
     {

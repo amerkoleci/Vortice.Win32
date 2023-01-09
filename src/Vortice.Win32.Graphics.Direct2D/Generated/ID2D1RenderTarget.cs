@@ -181,17 +181,17 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public void DrawRectangle(Common.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public void DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Common.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::FillRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void FillRectangle(Common.RectF* rect, ID2D1Brush* brush)
+	public void FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Common.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), rect, brush);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Win32.Numerics.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), rect, brush);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawRoundedRectangle"]/*' />
@@ -253,25 +253,25 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::FillOpacityMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle)
+	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Common.RectF*, Common.RectF*, void>)(lpVtbl[25]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[25]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public void DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Common.RectF* sourceRectangle)
+	public void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, ID2D1Bitmap*, Common.RectF*, float, BitmapInterpolationMode, Common.RectF*, void>)(lpVtbl[26]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, BitmapInterpolationMode, Win32.Numerics.RectF*, void>)(lpVtbl[26]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawText"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Common.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, ushort*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Common.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, ushort*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Win32.Numerics.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::DrawTextLayout"]/*' />
@@ -413,9 +413,9 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::PushAxisAlignedClip"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public void PushAxisAlignedClip(Common.RectF* clipRect, AntialiasMode antialiasMode)
+	public void PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Common.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+		((delegate* unmanaged[Stdcall]<ID2D1RenderTarget*, Win32.Numerics.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1RenderTarget*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RenderTarget::PopAxisAlignedClip"]/*' />
@@ -548,10 +548,10 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 		void DrawLine(Vector2 point0, Vector2 point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
 
 		[VtblIndex(16)]
-		void DrawRectangle(Common.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+		void DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
 
 		[VtblIndex(17)]
-		void FillRectangle(Common.RectF* rect, ID2D1Brush* brush);
+		void FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush);
 
 		[VtblIndex(18)]
 		void DrawRoundedRectangle(RoundedRect* roundedRect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
@@ -575,13 +575,13 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 		void FillMesh(ID2D1Mesh* mesh, ID2D1Brush* brush);
 
 		[VtblIndex(25)]
-		void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle);
+		void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle);
 
 		[VtblIndex(26)]
-		void DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Common.RectF* sourceRectangle);
+		void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle);
 
 		[VtblIndex(27)]
-		void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Common.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode);
+		void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode);
 
 		[VtblIndex(28)]
 		void DrawTextLayout(Vector2 origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options);
@@ -635,7 +635,7 @@ public unsafe partial struct ID2D1RenderTarget : ID2D1RenderTarget.Interface, IN
 		void RestoreDrawingState(ID2D1DrawingStateBlock* drawingStateBlock);
 
 		[VtblIndex(45)]
-		void PushAxisAlignedClip(Common.RectF* clipRect, AntialiasMode antialiasMode);
+		void PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode);
 
 		[VtblIndex(46)]
 		void PopAxisAlignedClip();

@@ -413,9 +413,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.RSSetScissorRects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public void RSSetScissorRects(uint NumRects, RawRect* pRects)
+	public void RSSetScissorRects(uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, uint, RawRect*, void>)(lpVtbl[45]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), NumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, uint, Rect*, void>)(lpVtbl[45]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), NumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CopySubresourceRegion" />
@@ -821,9 +821,9 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetScissorRects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(96)]
-	public void RSGetScissorRects(uint* pNumRects, RawRect* pRects)
+	public void RSGetScissorRects(uint* pNumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, uint*, RawRect*, void>)(lpVtbl[96]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pNumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, uint*, Rect*, void>)(lpVtbl[96]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pNumRects, pRects);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetShaderResources" />
@@ -1109,17 +1109,17 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1::ClearView"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(132)]
-	public void ClearView(ID3D11View* pView, float* Color, RawRect* pRect, uint NumRects)
+	public void ClearView(ID3D11View* pView, float* Color, Rect* pRect, uint NumRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11View*, float*, RawRect*, uint, void>)(lpVtbl[132]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pView, Color, pRect, NumRects);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11View*, float*, Rect*, uint, void>)(lpVtbl[132]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pView, Color, pRect, NumRects);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext1::DiscardView1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(133)]
-	public void DiscardView1(ID3D11View* pResourceView, RawRect* pRects, uint NumRects)
+	public void DiscardView1(ID3D11View* pResourceView, Rect* pRects, uint NumRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11View*, RawRect*, uint, void>)(lpVtbl[133]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResourceView, pRects, NumRects);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext1*, ID3D11View*, Rect*, uint, void>)(lpVtbl[133]))((ID3D11DeviceContext1*)Unsafe.AsPointer(ref this), pResourceView, pRects, NumRects);
 	}
 
 	public interface Interface : ID3D11DeviceContext.Interface
@@ -1176,10 +1176,10 @@ public unsafe partial struct ID3D11DeviceContext1 : ID3D11DeviceContext1.Interfa
 		void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState** ppPreviousState);
 
 		[VtblIndex(132)]
-		void ClearView(ID3D11View* pView, float* Color, RawRect* pRect, uint NumRects);
+		void ClearView(ID3D11View* pView, float* Color, Rect* pRect, uint NumRects);
 
 		[VtblIndex(133)]
-		void DiscardView1(ID3D11View* pResourceView, RawRect* pRects, uint NumRects);
+		void DiscardView1(ID3D11View* pResourceView, Rect* pRects, uint NumRects);
 	}
 }
 

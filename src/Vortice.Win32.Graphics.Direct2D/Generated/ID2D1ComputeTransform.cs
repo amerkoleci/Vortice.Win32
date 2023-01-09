@@ -85,25 +85,25 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	/// <inheritdoc cref="ID2D1Transform.MapOutputRectToInputRects" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult MapOutputRectToInputRects(RawRect* outputRect, RawRect* inputRects, uint inputRectsCount)
+	public HResult MapOutputRectToInputRects(Rect* outputRect, Rect* inputRects, uint inputRectsCount)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, RawRect*, RawRect*, uint, int>)(lpVtbl[4]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), outputRect, inputRects, inputRectsCount);
+		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, Rect*, Rect*, uint, int>)(lpVtbl[4]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), outputRect, inputRects, inputRectsCount);
 	}
 
 	/// <inheritdoc cref="ID2D1Transform.MapInputRectsToOutputRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult MapInputRectsToOutputRect(RawRect* inputRects, RawRect* inputOpaqueSubRects, uint inputRectCount, RawRect* outputRect, RawRect* outputOpaqueSubRect)
+	public HResult MapInputRectsToOutputRect(Rect* inputRects, Rect* inputOpaqueSubRects, uint inputRectCount, Rect* outputRect, Rect* outputOpaqueSubRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, RawRect*, RawRect*, uint, RawRect*, RawRect*, int>)(lpVtbl[5]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputRects, inputOpaqueSubRects, inputRectCount, outputRect, outputOpaqueSubRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, Rect*, Rect*, uint, Rect*, Rect*, int>)(lpVtbl[5]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputRects, inputOpaqueSubRects, inputRectCount, outputRect, outputOpaqueSubRect);
 	}
 
 	/// <inheritdoc cref="ID2D1Transform.MapInvalidRect" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult MapInvalidRect(uint inputIndex, RawRect invalidInputRect, RawRect* invalidOutputRect)
+	public HResult MapInvalidRect(uint inputIndex, Rect invalidInputRect, Rect* invalidOutputRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, uint, RawRect, RawRect*, int>)(lpVtbl[6]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
+		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, uint, Rect, Rect*, int>)(lpVtbl[6]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), inputIndex, invalidInputRect, invalidOutputRect);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::SetComputeInfo"]/*' />
@@ -117,9 +117,9 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeTransform::CalculateThreadgroups"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult CalculateThreadgroups(RawRect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ)
+	public HResult CalculateThreadgroups(Rect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, RawRect*, uint*, uint*, uint*, int>)(lpVtbl[8]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), outputRect, dimensionX, dimensionY, dimensionZ);
+		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeTransform*, Rect*, uint*, uint*, uint*, int>)(lpVtbl[8]))((ID2D1ComputeTransform*)Unsafe.AsPointer(ref this), outputRect, dimensionX, dimensionY, dimensionZ);
 	}
 
 	public interface Interface : ID2D1Transform.Interface
@@ -128,7 +128,7 @@ public unsafe partial struct ID2D1ComputeTransform : ID2D1ComputeTransform.Inter
 		HResult SetComputeInfo(ID2D1ComputeInfo* computeInfo);
 
 		[VtblIndex(8)]
-		HResult CalculateThreadgroups(RawRect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ);
+		HResult CalculateThreadgroups(Rect* outputRect, uint* dimensionX, uint* dimensionY, uint* dimensionZ);
 	}
 }
 

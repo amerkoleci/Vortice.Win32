@@ -413,9 +413,9 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::RSSetScissorRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public void RSSetScissorRects(uint NumRects, RawRect* pRects)
+	public void RSSetScissorRects(uint NumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, uint, RawRect*, void>)(lpVtbl[45]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), NumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, uint, Rect*, void>)(lpVtbl[45]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), NumRects, pRects);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::CopySubresourceRegion"]/*' />
@@ -821,9 +821,9 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::RSGetScissorRects"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(96)]
-	public void RSGetScissorRects(uint* pNumRects, RawRect* pRects)
+	public void RSGetScissorRects(uint* pNumRects, Rect* pRects)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, uint*, RawRect*, void>)(lpVtbl[96]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pNumRects, pRects);
+		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext*, uint*, Rect*, void>)(lpVtbl[96]))((ID3D11DeviceContext*)Unsafe.AsPointer(ref this), pNumRects, pRects);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext::HSGetShaderResources"]/*' />
@@ -1087,7 +1087,7 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 		void RSSetViewports(uint NumViewports, Viewport* pViewports);
 
 		[VtblIndex(45)]
-		void RSSetScissorRects(uint NumRects, RawRect* pRects);
+		void RSSetScissorRects(uint NumRects, Rect* pRects);
 
 		[VtblIndex(46)]
 		void CopySubresourceRegion(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox);
@@ -1240,7 +1240,7 @@ public unsafe partial struct ID3D11DeviceContext : ID3D11DeviceContext.Interface
 		void RSGetViewports(uint* pNumViewports, Viewport* pViewports);
 
 		[VtblIndex(96)]
-		void RSGetScissorRects(uint* pNumRects, RawRect* pRects);
+		void RSGetScissorRects(uint* pNumRects, Rect* pRects);
 
 		[VtblIndex(97)]
 		void HSGetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews);

@@ -101,17 +101,17 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::EnsureCached"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult EnsureCached(Common.RectU* rectangleToFill)
+	public HResult EnsureCached(Win32.Numerics.Rect* rectangleToFill)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Common.RectU*, int>)(lpVtbl[6]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToFill);
+		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Win32.Numerics.Rect*, int>)(lpVtbl[6]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToFill);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::TrimCache"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult TrimCache(Common.RectU* rectangleToPreserve)
+	public HResult TrimCache(Win32.Numerics.Rect* rectangleToPreserve)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Common.RectU*, int>)(lpVtbl[7]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToPreserve);
+		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Win32.Numerics.Rect*, int>)(lpVtbl[7]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToPreserve);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::GetSource"]/*' />
@@ -125,10 +125,10 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	public interface Interface : ID2D1ImageSource.Interface
 	{
 		[VtblIndex(6)]
-		HResult EnsureCached(Common.RectU* rectangleToFill);
+		HResult EnsureCached(Win32.Numerics.Rect* rectangleToFill);
 
 		[VtblIndex(7)]
-		HResult TrimCache(Common.RectU* rectangleToPreserve);
+		HResult TrimCache(Win32.Numerics.Rect* rectangleToPreserve);
 
 		[VtblIndex(8)]
 		void GetSource(Graphics.Imaging.IWICBitmapSource** wicBitmapSource);

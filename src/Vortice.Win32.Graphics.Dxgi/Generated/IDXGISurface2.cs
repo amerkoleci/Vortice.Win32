@@ -149,9 +149,9 @@ public unsafe partial struct IDXGISurface2 : IDXGISurface2.Interface, INativeGui
 	/// <inheritdoc cref="IDXGISurface1.ReleaseDC" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(12)]
-	public HResult ReleaseDC(RawRect* pDirtyRect)
+	public HResult ReleaseDC(Rect* pDirtyRect)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, RawRect*, int>)(lpVtbl[12]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pDirtyRect);
+		return ((delegate* unmanaged[Stdcall]<IDXGISurface2*, Rect*, int>)(lpVtbl[12]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pDirtyRect);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface2::GetResource"]/*' />

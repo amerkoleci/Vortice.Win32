@@ -30,5 +30,5 @@ public partial struct RgnDataHeader
     /// <summary>
     /// A bounding rectangle for the region in logical units.
     /// </summary>
-    public RawRect rcBound;
+    public Rect rcBound;
 }

@@ -181,25 +181,25 @@ public unsafe partial struct ID2D1CommandSink1 : ID2D1CommandSink1.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.DrawRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult DrawRectangle(Common.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public HResult DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, Common.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[16]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[16]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Common.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
+	public HResult DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1Bitmap*, Common.RectF*, float, InterpolationMode, Common.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawImage" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
+	public HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1Image*, Vector2*, Common.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.DrawGdiMetafile" />
@@ -221,9 +221,9 @@ public unsafe partial struct ID2D1CommandSink1 : ID2D1CommandSink1.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.FillOpacityMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle)
+	public HResult FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1Bitmap*, ID2D1Brush*, Common.RectF*, Common.RectF*, int>)(lpVtbl[21]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, int>)(lpVtbl[21]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.FillGeometry" />
@@ -237,17 +237,17 @@ public unsafe partial struct ID2D1CommandSink1 : ID2D1CommandSink1.Interface, IN
 	/// <inheritdoc cref="ID2D1CommandSink.FillRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult FillRectangle(Common.RectF* rect, ID2D1Brush* brush)
+	public HResult FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, Common.RectF*, ID2D1Brush*, int>)(lpVtbl[23]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), rect, brush);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, Win32.Numerics.RectF*, ID2D1Brush*, int>)(lpVtbl[23]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), rect, brush);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.PushAxisAlignedClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult PushAxisAlignedClip(Common.RectF* clipRect, AntialiasMode antialiasMode)
+	public HResult PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, Common.RectF*, AntialiasMode, int>)(lpVtbl[24]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink1*, Win32.Numerics.RectF*, AntialiasMode, int>)(lpVtbl[24]))((ID2D1CommandSink1*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
 	}
 
 	/// <inheritdoc cref="ID2D1CommandSink.PushLayer" />

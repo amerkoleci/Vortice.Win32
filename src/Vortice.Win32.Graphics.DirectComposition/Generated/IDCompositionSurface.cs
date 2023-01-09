@@ -77,9 +77,9 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSurface::BeginDraw"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult BeginDraw(RawRect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset)
+	public HResult BeginDraw(Rect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDCompositionSurface*, RawRect*, Guid*, void**, System.Drawing.Point*, int>)(lpVtbl[3]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), updateRect, iid, updateObject, updateOffset);
+		return ((delegate* unmanaged[Stdcall]<IDCompositionSurface*, Rect*, Guid*, void**, System.Drawing.Point*, int>)(lpVtbl[3]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), updateRect, iid, updateObject, updateOffset);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSurface::EndDraw"]/*' />
@@ -109,15 +109,15 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionSurface::Scroll"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult Scroll(RawRect* scrollRect, RawRect* clipRect, int offsetX, int offsetY)
+	public HResult Scroll(Rect* scrollRect, Rect* clipRect, int offsetX, int offsetY)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDCompositionSurface*, RawRect*, RawRect*, int, int, int>)(lpVtbl[7]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
+		return ((delegate* unmanaged[Stdcall]<IDCompositionSurface*, Rect*, Rect*, int, int, int>)(lpVtbl[7]))((IDCompositionSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult BeginDraw(RawRect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset);
+		HResult BeginDraw(Rect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset);
 
 		[VtblIndex(4)]
 		HResult EndDraw();
@@ -129,7 +129,7 @@ public unsafe partial struct IDCompositionSurface : IDCompositionSurface.Interfa
 		HResult ResumeDraw();
 
 		[VtblIndex(7)]
-		HResult Scroll(RawRect* scrollRect, RawRect* clipRect, int offsetX, int offsetY);
+		HResult Scroll(Rect* scrollRect, Rect* clipRect, int offsetX, int offsetY);
 	}
 }
 

@@ -111,6 +111,8 @@ public static class Program
         { "Graphics.Direct2D.Common.D2D_SIZE_F", "System.Drawing.SizeF" },
         { "Graphics.Direct2D.Common.D2D_POINT_2U", "System.Drawing.Point" },
         { "Graphics.Direct2D.Common.D2D_SIZE_U", "System.Drawing.Size" },
+        { "Graphics.Direct2D.Common.D2D_RECT_U", "Win32.Numerics.Rect" },
+        { "Graphics.Direct2D.Common.D2D_RECT_F", "Win32.Numerics.RectF" },
 
         { "Graphics.Imaging.WICRect", "System.Drawing.Rectangle" },
 
@@ -125,8 +127,8 @@ public static class Program
         { "Graphics.Direct3D12.D3D12_VIEWPORT", "Viewport" },
 
         // TODO: Understand those ->
-        { "Foundation.RECT", "RawRect" },
-        { "Foundation.RECTL", "RawRect" },
+        { "Foundation.RECT", "Rect" },
+        { "Foundation.RECTL", "Rect" },
         { "Foundation.POINT", "System.Drawing.Point" },
         { "Foundation.POINTL", "System.Drawing.Point" },
         { "Foundation.SIZE", "System.Drawing.Size" },

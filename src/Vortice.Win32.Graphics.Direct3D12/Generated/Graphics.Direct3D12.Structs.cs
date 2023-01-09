@@ -2833,7 +2833,7 @@ public partial struct DiscardRegion
 	public uint NumRects;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::pRects"]/*' />
-	public unsafe RawRect* pRects;
+	public unsafe Rect* pRects;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DISCARD_REGION::FirstSubresource"]/*' />
 	public uint FirstSubresource;
@@ -4172,7 +4172,7 @@ public partial struct RenderPassEndingAccessResolveSubresourceParameters
 	public uint DstY;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS::SrcRect"]/*' />
-	public RawRect SrcRect;
+	public Rect SrcRect;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS"]/*' />

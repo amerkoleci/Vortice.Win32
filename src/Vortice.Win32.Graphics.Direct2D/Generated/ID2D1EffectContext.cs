@@ -133,9 +133,9 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateBoundsAdjustmentTransform"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult CreateBoundsAdjustmentTransform(RawRect* outputRectangle, ID2D1BoundsAdjustmentTransform** transform)
+	public HResult CreateBoundsAdjustmentTransform(Rect* outputRectangle, ID2D1BoundsAdjustmentTransform** transform)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext*, RawRect*, ID2D1BoundsAdjustmentTransform**, int>)(lpVtbl[10]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), outputRectangle, transform);
+		return ((delegate* unmanaged[Stdcall]<ID2D1EffectContext*, Rect*, ID2D1BoundsAdjustmentTransform**, int>)(lpVtbl[10]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), outputRectangle, transform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::LoadPixelShader"]/*' />
@@ -266,7 +266,7 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 		HResult CreateOffsetTransform(System.Drawing.Point offset, ID2D1OffsetTransform** transform);
 
 		[VtblIndex(10)]
-		HResult CreateBoundsAdjustmentTransform(RawRect* outputRectangle, ID2D1BoundsAdjustmentTransform** transform);
+		HResult CreateBoundsAdjustmentTransform(Rect* outputRectangle, ID2D1BoundsAdjustmentTransform** transform);
 
 		[VtblIndex(11)]
 		HResult LoadPixelShader(Guid* shaderId, byte* shaderBuffer, uint shaderBufferCount);

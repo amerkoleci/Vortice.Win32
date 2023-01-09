@@ -85,17 +85,17 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	/// <inheritdoc cref="ID2D1Geometry.GetBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetBounds(Matrix3x2* worldTransform, Common.RectF* bounds)
+	public HResult GetBounds(Matrix3x2* worldTransform, Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, Common.RectF*, int>)(lpVtbl[4]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[4]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.GetWidenedBounds" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.RectF* bounds)
+	public HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.RectF*, int>)(lpVtbl[5]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.StrokeContainsPoint" />

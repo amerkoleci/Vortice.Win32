@@ -181,17 +181,17 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public void DrawRectangle(Common.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
+	public void DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Common.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillRectangle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public void FillRectangle(Common.RectF* rect, ID2D1Brush* brush)
+	public void FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Common.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), rect, brush);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Win32.Numerics.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), rect, brush);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRoundedRectangle" />
@@ -253,25 +253,25 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillOpacityMask" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle)
+	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Common.RectF*, Common.RectF*, void>)(lpVtbl[25]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[25]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawBitmap" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public void DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Common.RectF* sourceRectangle)
+	public void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, Common.RectF*, float, BitmapInterpolationMode, Common.RectF*, void>)(lpVtbl[26]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, BitmapInterpolationMode, Win32.Numerics.RectF*, void>)(lpVtbl[26]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawText" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Common.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
+	public void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ushort*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Common.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ushort*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Win32.Numerics.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawTextLayout" />
@@ -413,9 +413,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <inheritdoc cref="ID2D1RenderTarget.PushAxisAlignedClip" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(45)]
-	public void PushAxisAlignedClip(Common.RectF* clipRect, AntialiasMode antialiasMode)
+	public void PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Common.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Win32.Numerics.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.PopAxisAlignedClip" />
@@ -616,25 +616,25 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetImageLocalBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(70)]
-	public HResult GetImageLocalBounds(ID2D1Image* image, Common.RectF* localBounds)
+	public HResult GetImageLocalBounds(ID2D1Image* image, Win32.Numerics.RectF** localBounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, Common.RectF*, int>)(lpVtbl[70]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, localBounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, Win32.Numerics.RectF**, int>)(lpVtbl[70]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, localBounds);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetImageWorldBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(71)]
-	public HResult GetImageWorldBounds(ID2D1Image* image, Common.RectF* worldBounds)
+	public HResult GetImageWorldBounds(ID2D1Image* image, Win32.Numerics.RectF** worldBounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, Common.RectF*, int>)(lpVtbl[71]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, worldBounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, Win32.Numerics.RectF**, int>)(lpVtbl[71]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, worldBounds);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetGlyphRunWorldBounds"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(72)]
-	public HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Common.RectF* bounds)
+	public HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Win32.Numerics.RectF** bounds)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Common.RectF*, int>)(lpVtbl[72]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Win32.Numerics.RectF**, int>)(lpVtbl[72]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetDevice"]/*' />
@@ -720,9 +720,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawImage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(83)]
-	public void DrawImage(ID2D1Image* image, Vector2* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
+	public void DrawImage(ID2D1Image* image, Vector2* targetOffset, Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, Vector2*, Common.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawGdiMetafile"]/*' />
@@ -736,9 +736,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::DrawBitmap"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(85)]
-	public void DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Common.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
+	public void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, Common.RectF*, float, InterpolationMode, Common.RectF*, Matrix4x4*, void>)(lpVtbl[85]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, void>)(lpVtbl[85]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::PushLayer"]/*' />
@@ -752,9 +752,9 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::InvalidateEffectInputRectangle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(87)]
-	public HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Common.RectF* inputRectangle)
+	public HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Win32.Numerics.RectF* inputRectangle)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, uint, Common.RectF*, int>)(lpVtbl[87]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), effect, input, inputRectangle);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, uint, Win32.Numerics.RectF*, int>)(lpVtbl[87]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), effect, input, inputRectangle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectInvalidRectangleCount"]/*' />
@@ -768,25 +768,25 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectInvalidRectangles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(89)]
-	public HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Common.RectF* rectangles, uint rectanglesCount)
+	public HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Win32.Numerics.RectF** rectangles, uint rectanglesCount)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, Common.RectF*, uint, int>)(lpVtbl[89]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), effect, rectangles, rectanglesCount);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, Win32.Numerics.RectF**, uint, int>)(lpVtbl[89]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), effect, rectangles, rectanglesCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::GetEffectRequiredInputRectangles"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(90)]
-	public HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Common.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Common.RectF* requiredInputRects, uint inputCount)
+	public HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Win32.Numerics.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Win32.Numerics.RectF** requiredInputRects, uint inputCount)
 	{
-		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, Common.RectF*, EffectInputDescription*, Common.RectF*, uint, int>)(lpVtbl[90]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), renderEffect, renderImageRectangle, inputDescriptions, requiredInputRects, inputCount);
+		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Effect*, Win32.Numerics.RectF*, EffectInputDescription*, Win32.Numerics.RectF**, uint, int>)(lpVtbl[90]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), renderEffect, renderImageRectangle, inputDescriptions, requiredInputRects, inputCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext::FillOpacityMask"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(91)]
-	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle)
+	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
 	{
-		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, ID2D1Brush*, Common.RectF*, Common.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
+		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
 	}
 
 	public interface Interface : ID2D1RenderTarget.Interface
@@ -831,13 +831,13 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 		Bool32 IsBufferPrecisionSupported(BufferPrecision bufferPrecision);
 
 		[VtblIndex(70)]
-		HResult GetImageLocalBounds(ID2D1Image* image, Common.RectF* localBounds);
+		HResult GetImageLocalBounds(ID2D1Image* image, Win32.Numerics.RectF** localBounds);
 
 		[VtblIndex(71)]
-		HResult GetImageWorldBounds(ID2D1Image* image, Common.RectF* worldBounds);
+		HResult GetImageWorldBounds(ID2D1Image* image, Win32.Numerics.RectF** worldBounds);
 
 		[VtblIndex(72)]
-		HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Common.RectF* bounds);
+		HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Win32.Numerics.RectF** bounds);
 
 		[VtblIndex(73)]
 		void GetDevice(ID2D1Device** device);
@@ -870,31 +870,31 @@ public unsafe partial struct ID2D1DeviceContext : ID2D1DeviceContext.Interface, 
 		void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode);
 
 		[VtblIndex(83)]
-		void DrawImage(ID2D1Image* image, Vector2* targetOffset, Common.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode);
+		void DrawImage(ID2D1Image* image, Vector2* targetOffset, Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode);
 
 		[VtblIndex(84)]
 		void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Vector2* targetOffset);
 
 		[VtblIndex(85)]
-		void DrawBitmap(ID2D1Bitmap* bitmap, Common.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Common.RectF* sourceRectangle, Matrix4x4* perspectiveTransform);
+		void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform);
 
 		[VtblIndex(86)]
 		void PushLayer(LayerParameters1* layerParameters, ID2D1Layer* layer);
 
 		[VtblIndex(87)]
-		HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Common.RectF* inputRectangle);
+		HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Win32.Numerics.RectF* inputRectangle);
 
 		[VtblIndex(88)]
 		HResult GetEffectInvalidRectangleCount(ID2D1Effect* effect, uint* rectangleCount);
 
 		[VtblIndex(89)]
-		HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Common.RectF* rectangles, uint rectanglesCount);
+		HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Win32.Numerics.RectF** rectangles, uint rectanglesCount);
 
 		[VtblIndex(90)]
-		HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Common.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Common.RectF* requiredInputRects, uint inputCount);
+		HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Win32.Numerics.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Win32.Numerics.RectF** requiredInputRects, uint inputCount);
 
 		[VtblIndex(91)]
-		void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Common.RectF* destinationRectangle, Common.RectF* sourceRectangle);
+		void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle);
 	}
 }
 
