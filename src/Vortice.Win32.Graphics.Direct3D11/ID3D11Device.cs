@@ -5,9 +5,30 @@ using static Win32.Apis;
 
 namespace Win32.Graphics.Direct3D11;
 
-public static unsafe class ID3D11DeviceExtension
+public static unsafe class ID3D11DeviceExtensions
 {
-    public static ComPtr<ID3D11Buffer> CheckFeatureSupport<TD3D11Device>(ref this TD3D11Device self, BufferDescription* description, SubresourceData* initialData = default)
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TFeature CheckFeatureSupport<TD3D11Device, TFeature>(ref this TD3D11Device self, Feature feature)
+        where TD3D11Device : unmanaged, ID3D11Device.Interface
+        where TFeature : unmanaged
+    {
+        TFeature featureData = default;
+        ThrowIfFailed(self.CheckFeatureSupport(feature, &featureData, sizeof(TFeature)));
+        return featureData;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static HResult CheckFeatureSupport<TD3D11Device, TFeature>(ref this TD3D11Device self, Feature feature, ref TFeature featureData)
+       where TD3D11Device : unmanaged, ID3D11Device.Interface
+       where TFeature : unmanaged
+    {
+        fixed (TFeature* featureDataPtr = &featureData)
+        {
+            return self.CheckFeatureSupport(feature, featureDataPtr, sizeof(TFeature));
+        }
+    }
+
+    public static ComPtr<ID3D11Buffer> CreateBuffer<TD3D11Device>(ref this TD3D11Device self, BufferDescription* description, SubresourceData* initialData = default)
         where TD3D11Device : unmanaged, ID3D11Device.Interface
     {
         using ComPtr<ID3D11Buffer> buffer = default;
