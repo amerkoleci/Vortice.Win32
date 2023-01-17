@@ -287,6 +287,17 @@ public unsafe struct ComPtr<T> : IDisposable
     }
 
     /// <summary>
+    /// Releases the current COM object in use and gets the address of the <see cref="ComPtr{T}"/> instance as a void* double pointer.
+    /// This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.</summary>
+    /// <returns>The raw pointer to the current <see cref="ComPtr{T}"/> instance.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public void** ReleaseAndGetVoidAddressOf()
+    {
+        _ = InternalRelease();
+        return GetVoidAddressOf();
+    }
+
+    /// <summary>
     /// Moves the current <see cref="ComPtr{T}"/> instance and resets it without releasing the reference.
     /// </summary>
     /// <returns>The moved <see cref="ComPtr{T}"/> instance.</returns>
