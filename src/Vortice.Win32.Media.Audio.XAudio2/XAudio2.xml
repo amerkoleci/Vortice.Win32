@@ -418,7 +418,6 @@ See Remarks for more information on volume levels.</param>
       <para>Changes global debug logging options for XAudio2.</para>
       <para>Microsoft Docs: <see href="https://docs.microsoft.com/windows/win32/api//xaudio2/nf-xaudio2-ixaudio2-setdebugconfiguration" /></para>
       <param name="pDebugConfiguration">Pointer to a <a href="https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_debug_configuration">XAUDIO2_DEBUG_CONFIGURATION</a> structure that contains the new debug configuration.</param>
-      <param name="X2DEFAULT">This parameter is reserved and must be NULL.</param>
     </summary>
   </member>
   <member name="IXAudio2::CreateSourceVoice">

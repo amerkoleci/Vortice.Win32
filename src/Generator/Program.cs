@@ -2527,6 +2527,11 @@ public static class Program
                             }
                         }
 
+                        if (parameterName == "pReserved")
+                        {
+                            argumentBuilder.Append(" = null");
+                        }
+
                         argumentsTypesBuilder.Append(parameterType);
                         argumentsNameBuilder.Append(parameterName);
 
@@ -3385,7 +3390,14 @@ public static class Program
 
     private static bool IsEnum(string typeName)
     {
-        return s_visitedEnums.Contains(typeName);
+        switch (typeName)
+        {
+            case "Media.Audio.AUDIO_STREAM_CATEGORY":
+                return true;
+
+            default:
+                return s_visitedEnums.Contains(typeName);
+        }
     }
 
     private static bool IsStruct(string typeName)
