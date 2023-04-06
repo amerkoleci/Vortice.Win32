@@ -53,7 +53,11 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGraphicsAnalysis*, Guid*, void**, int>)(lpVtbl[0]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, Guid*, void**, int>)(lpVtbl[0]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGraphicsAnalysis*, uint>)(lpVtbl[1]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, uint>)(lpVtbl[1]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGraphicsAnalysis*, uint>)(lpVtbl[2]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, uint>)(lpVtbl[2]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis::BeginCapture"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 	[VtblIndex(3)]
 	public void BeginCapture()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGraphicsAnalysis*, void>)(lpVtbl[3]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, void>)(lpVtbl[3]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGraphicsAnalysis::EndCapture"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDXGraphicsAnalysis : IDXGraphicsAnalysis.Interface
 	[VtblIndex(4)]
 	public void EndCapture()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGraphicsAnalysis*, void>)(lpVtbl[4]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<IDXGraphicsAnalysis*, void>)(lpVtbl[4]))((IDXGraphicsAnalysis*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

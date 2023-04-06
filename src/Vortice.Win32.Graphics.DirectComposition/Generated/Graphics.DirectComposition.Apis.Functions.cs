@@ -29,11 +29,11 @@ public static unsafe partial class Apis
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionAttachMouseWheelToHwnd"]/*' />
 	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionAttachMouseWheelToHwnd(IDCompositionVisual* visual, IntPtr hwnd, Bool32 enable);
+	public static extern HResult DCompositionAttachMouseWheelToHwnd(IDCompositionVisual* visual, nint hwnd, Bool32 enable);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionAttachMouseDragToHwnd"]/*' />
 	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionAttachMouseDragToHwnd(IDCompositionVisual* visual, IntPtr hwnd, Bool32 enable);
+	public static extern HResult DCompositionAttachMouseDragToHwnd(IDCompositionVisual* visual, nint hwnd, Bool32 enable);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionGetFrameId"]/*' />
 	[DllImport("dcomp.dll", ExactSpelling = true)]

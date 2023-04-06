@@ -53,7 +53,11 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICJpegFrameEncode*, Guid*, void**, int>)(lpVtbl[0]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, Guid*, void**, int>)(lpVtbl[0]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICJpegFrameEncode*, uint>)(lpVtbl[1]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, uint>)(lpVtbl[1]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICJpegFrameEncode*, uint>)(lpVtbl[2]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, uint>)(lpVtbl[2]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameEncode::GetAcHuffmanTable"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	[VtblIndex(3)]
 	public HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegAcHuffmanTable* pAcHuffmanTable)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICJpegFrameEncode*, uint, uint, Graphics.Dxgi.Common.JpegAcHuffmanTable*, int>)(lpVtbl[3]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, uint, uint, Graphics.Dxgi.Common.JpegAcHuffmanTable*, int>)(lpVtbl[3]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameEncode::GetDcHuffmanTable"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	[VtblIndex(4)]
 	public HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegDCHuffmanTable* pDcHuffmanTable)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICJpegFrameEncode*, uint, uint, Graphics.Dxgi.Common.JpegDCHuffmanTable*, int>)(lpVtbl[4]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, uint, uint, Graphics.Dxgi.Common.JpegDCHuffmanTable*, int>)(lpVtbl[4]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameEncode::GetQuantizationTable"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	[VtblIndex(5)]
 	public HResult GetQuantizationTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegQuantizationTable* pQuantizationTable)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICJpegFrameEncode*, uint, uint, Graphics.Dxgi.Common.JpegQuantizationTable*, int>)(lpVtbl[5]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, uint, uint, Graphics.Dxgi.Common.JpegQuantizationTable*, int>)(lpVtbl[5]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameEncode::WriteScan"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICJpegFrameEncode : IWICJpegFrameEncode.Interface
 	[VtblIndex(6)]
 	public HResult WriteScan(uint cbScanData, byte* pbScanData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICJpegFrameEncode*, uint, byte*, int>)(lpVtbl[6]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), cbScanData, pbScanData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameEncode*, uint, byte*, int>)(lpVtbl[6]))((IWICJpegFrameEncode*)Unsafe.AsPointer(ref this), cbScanData, pbScanData);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

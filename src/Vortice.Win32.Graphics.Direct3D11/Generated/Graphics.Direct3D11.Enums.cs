@@ -11,7 +11,7 @@ namespace Win32.Graphics.Direct3D11;
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INPUT_CLASSIFICATION"]/*' />
 /// <unmanaged>D3D11_INPUT_CLASSIFICATION</unmanaged>
-public enum InputClassification : int
+public enum InputClassification
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_INPUT_CLASSIFICATION::D3D11_INPUT_PER_VERTEX_DATA"]/*' />
 	/// <unmanaged>D3D11_INPUT_PER_VERTEX_DATA</unmanaged>
@@ -23,7 +23,7 @@ public enum InputClassification : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILL_MODE"]/*' />
 /// <unmanaged>D3D11_FILL_MODE</unmanaged>
-public enum FillMode : int
+public enum FillMode
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILL_MODE::D3D11_FILL_WIREFRAME"]/*' />
 	/// <unmanaged>D3D11_FILL_WIREFRAME</unmanaged>
@@ -35,7 +35,7 @@ public enum FillMode : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE"]/*' />
 /// <unmanaged>D3D11_CULL_MODE</unmanaged>
-public enum CullMode : int
+public enum CullMode
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CULL_MODE::D3D11_CULL_NONE"]/*' />
 	/// <unmanaged>D3D11_CULL_NONE</unmanaged>
@@ -50,7 +50,7 @@ public enum CullMode : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_DIMENSION"]/*' />
 /// <unmanaged>D3D11_RESOURCE_DIMENSION</unmanaged>
-public enum ResourceDimension : int
+public enum ResourceDimension
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_DIMENSION::D3D11_RESOURCE_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_DIMENSION_UNKNOWN</unmanaged>
@@ -71,7 +71,7 @@ public enum ResourceDimension : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_DIMENSION"]/*' />
 /// <unmanaged>D3D11_DSV_DIMENSION</unmanaged>
-public enum DsvDimension : int
+public enum DsvDimension
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_DIMENSION::D3D11_DSV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_DSV_DIMENSION_UNKNOWN</unmanaged>
@@ -98,7 +98,7 @@ public enum DsvDimension : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RTV_DIMENSION"]/*' />
 /// <unmanaged>D3D11_RTV_DIMENSION</unmanaged>
-public enum RtvDimension : int
+public enum RtvDimension
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RTV_DIMENSION::D3D11_RTV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_RTV_DIMENSION_UNKNOWN</unmanaged>
@@ -131,7 +131,7 @@ public enum RtvDimension : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_UAV_DIMENSION"]/*' />
 /// <unmanaged>D3D11_UAV_DIMENSION</unmanaged>
-public enum UavDimension : int
+public enum UavDimension
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_UAV_DIMENSION::D3D11_UAV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_UAV_DIMENSION_UNKNOWN</unmanaged>
@@ -158,7 +158,7 @@ public enum UavDimension : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_USAGE"]/*' />
 /// <unmanaged>D3D11_USAGE</unmanaged>
-public enum Usage : int
+public enum Usage
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_USAGE::D3D11_USAGE_DEFAULT"]/*' />
 	/// <unmanaged>D3D11_USAGE_DEFAULT</unmanaged>
@@ -177,7 +177,7 @@ public enum Usage : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG"]/*' />
 /// <unmanaged>D3D11_BIND_FLAG</unmanaged>
 [Flags]
-public enum BindFlags : uint
+public enum BindFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BIND_FLAG::D3D11_BIND_VERTEX_BUFFER"]/*' />
@@ -215,7 +215,7 @@ public enum BindFlags : uint
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CPU_ACCESS_FLAG"]/*' />
 /// <unmanaged>D3D11_CPU_ACCESS_FLAG</unmanaged>
 [Flags]
-public enum CpuAccessFlags : uint
+public enum CpuAccessFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CPU_ACCESS_FLAG::D3D11_CPU_ACCESS_WRITE"]/*' />
@@ -229,7 +229,7 @@ public enum CpuAccessFlags : uint
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG"]/*' />
 /// <unmanaged>D3D11_RESOURCE_MISC_FLAG</unmanaged>
 [Flags]
-public enum ResourceMiscFlags : uint
+public enum ResourceMiscFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_GENERATE_MIPS"]/*' />
@@ -293,7 +293,7 @@ public enum ResourceMiscFlags : uint
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP"]/*' />
 /// <unmanaged>D3D11_MAP</unmanaged>
-public enum MapMode : int
+public enum MapMode
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP::D3D11_MAP_READ"]/*' />
 	/// <unmanaged>D3D11_MAP_READ</unmanaged>
@@ -315,7 +315,7 @@ public enum MapMode : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP_FLAG"]/*' />
 /// <unmanaged>D3D11_MAP_FLAG</unmanaged>
 [Flags]
-public enum MapFlags : int
+public enum MapFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MAP_FLAG::D3D11_MAP_FLAG_DO_NOT_WAIT"]/*' />
@@ -326,7 +326,7 @@ public enum MapFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RAISE_FLAG"]/*' />
 /// <unmanaged>D3D11_RAISE_FLAG</unmanaged>
 [Flags]
-public enum RaiseFlags : int
+public enum RaiseFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RAISE_FLAG::D3D11_RAISE_FLAG_DRIVER_INTERNAL_ERROR"]/*' />
@@ -350,7 +350,7 @@ public enum ClearFlags : uint
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC"]/*' />
 /// <unmanaged>D3D11_COMPARISON_FUNC</unmanaged>
-public enum ComparisonFunction : int
+public enum ComparisonFunction
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COMPARISON_FUNC::D3D11_COMPARISON_NEVER"]/*' />
 	/// <unmanaged>D3D11_COMPARISON_NEVER</unmanaged>
@@ -380,7 +380,7 @@ public enum ComparisonFunction : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_WRITE_MASK"]/*' />
 /// <unmanaged>D3D11_DEPTH_WRITE_MASK</unmanaged>
-public enum DepthWriteMask : int
+public enum DepthWriteMask
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEPTH_WRITE_MASK::D3D11_DEPTH_WRITE_MASK_ZERO"]/*' />
 	/// <unmanaged>D3D11_DEPTH_WRITE_MASK_ZERO</unmanaged>
@@ -392,7 +392,7 @@ public enum DepthWriteMask : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STENCIL_OP"]/*' />
 /// <unmanaged>D3D11_STENCIL_OP</unmanaged>
-public enum StencilOperation : int
+public enum StencilOperation
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STENCIL_OP::D3D11_STENCIL_OP_KEEP"]/*' />
 	/// <unmanaged>D3D11_STENCIL_OP_KEEP</unmanaged>
@@ -422,7 +422,7 @@ public enum StencilOperation : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND"]/*' />
 /// <unmanaged>D3D11_BLEND</unmanaged>
-public enum Blend : int
+public enum Blend
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND::D3D11_BLEND_ZERO"]/*' />
 	/// <unmanaged>D3D11_BLEND_ZERO</unmanaged>
@@ -479,7 +479,7 @@ public enum Blend : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP"]/*' />
 /// <unmanaged>D3D11_BLEND_OP</unmanaged>
-public enum BlendOperation : int
+public enum BlendOperation
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BLEND_OP::D3D11_BLEND_OP_ADD"]/*' />
 	/// <unmanaged>D3D11_BLEND_OP_ADD</unmanaged>
@@ -523,7 +523,7 @@ public enum ColorWriteEnable : byte
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURECUBE_FACE"]/*' />
 /// <unmanaged>D3D11_TEXTURECUBE_FACE</unmanaged>
-public enum TextureCubeFace : int
+public enum TextureCubeFace
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURECUBE_FACE::D3D11_TEXTURECUBE_FACE_POSITIVE_X"]/*' />
 	/// <unmanaged>D3D11_TEXTURECUBE_FACE_POSITIVE_X</unmanaged>
@@ -548,7 +548,7 @@ public enum TextureCubeFace : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV_FLAG"]/*' />
 /// <unmanaged>D3D11_BUFFEREX_SRV_FLAG</unmanaged>
 [Flags]
-public enum BufferExtendedSrvFlags : int
+public enum BufferExtendedSrvFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFEREX_SRV_FLAG::D3D11_BUFFEREX_SRV_FLAG_RAW"]/*' />
@@ -559,7 +559,7 @@ public enum BufferExtendedSrvFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG"]/*' />
 /// <unmanaged>D3D11_DSV_FLAG</unmanaged>
 [Flags]
-public enum DsvFlags : int
+public enum DsvFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DSV_FLAG::D3D11_DSV_READ_ONLY_DEPTH"]/*' />
@@ -573,7 +573,7 @@ public enum DsvFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG"]/*' />
 /// <unmanaged>D3D11_BUFFER_UAV_FLAG</unmanaged>
 [Flags]
-public enum BufferUavFlags : int
+public enum BufferUavFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUFFER_UAV_FLAG::D3D11_BUFFER_UAV_FLAG_RAW"]/*' />
@@ -589,7 +589,7 @@ public enum BufferUavFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER"]/*' />
 /// <unmanaged>D3D11_FILTER</unmanaged>
-public enum Filter : int
+public enum Filter
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER::D3D11_FILTER_MIN_MAG_MIP_POINT"]/*' />
 	/// <unmanaged>D3D11_FILTER_MIN_MAG_MIP_POINT</unmanaged>
@@ -703,7 +703,7 @@ public enum Filter : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_TYPE"]/*' />
 /// <unmanaged>D3D11_FILTER_TYPE</unmanaged>
-public enum FilterType : int
+public enum FilterType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_TYPE::D3D11_FILTER_TYPE_POINT"]/*' />
 	/// <unmanaged>D3D11_FILTER_TYPE_POINT</unmanaged>
@@ -715,7 +715,7 @@ public enum FilterType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE"]/*' />
 /// <unmanaged>D3D11_FILTER_REDUCTION_TYPE</unmanaged>
-public enum FilterReductionType : int
+public enum FilterReductionType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FILTER_REDUCTION_TYPE::D3D11_FILTER_REDUCTION_TYPE_STANDARD"]/*' />
 	/// <unmanaged>D3D11_FILTER_REDUCTION_TYPE_STANDARD</unmanaged>
@@ -733,7 +733,7 @@ public enum FilterReductionType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE"]/*' />
 /// <unmanaged>D3D11_TEXTURE_ADDRESS_MODE</unmanaged>
-public enum TextureAddressMode : int
+public enum TextureAddressMode
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_WRAP"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_ADDRESS_WRAP</unmanaged>
@@ -755,7 +755,7 @@ public enum TextureAddressMode : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FORMAT_SUPPORT"]/*' />
 /// <unmanaged>D3D11_FORMAT_SUPPORT</unmanaged>
 [Flags]
-public enum FormatSupport : int
+public enum FormatSupport
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FORMAT_SUPPORT::D3D11_FORMAT_SUPPORT_BUFFER"]/*' />
@@ -856,7 +856,7 @@ public enum FormatSupport : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FORMAT_SUPPORT2"]/*' />
 /// <unmanaged>D3D11_FORMAT_SUPPORT2</unmanaged>
 [Flags]
-public enum FormatSupport2 : int
+public enum FormatSupport2
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FORMAT_SUPPORT2::D3D11_FORMAT_SUPPORT2_UAV_ATOMIC_ADD"]/*' />
@@ -900,7 +900,7 @@ public enum FormatSupport2 : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG"]/*' />
 /// <unmanaged>D3D11_ASYNC_GETDATA_FLAG</unmanaged>
 [Flags]
-public enum AsyncGetDataFlags : int
+public enum AsyncGetDataFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG::D3D11_ASYNC_GETDATA_DONOTFLUSH"]/*' />
@@ -910,7 +910,7 @@ public enum AsyncGetDataFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY"]/*' />
 /// <unmanaged>D3D11_QUERY</unmanaged>
-public enum QueryType : int
+public enum QueryType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY::D3D11_QUERY_EVENT"]/*' />
 	/// <unmanaged>D3D11_QUERY_EVENT</unmanaged>
@@ -965,7 +965,7 @@ public enum QueryType : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG"]/*' />
 /// <unmanaged>D3D11_QUERY_MISC_FLAG</unmanaged>
 [Flags]
-public enum QueryMiscFlags : int
+public enum QueryMiscFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_QUERY_MISC_FLAG::D3D11_QUERY_MISC_PREDICATEHINT"]/*' />
@@ -975,7 +975,7 @@ public enum QueryMiscFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER"]/*' />
 /// <unmanaged>D3D11_COUNTER</unmanaged>
-public enum Counter : int
+public enum Counter
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER::D3D11_COUNTER_DEVICE_DEPENDENT_0"]/*' />
 	/// <unmanaged>D3D11_COUNTER_DEVICE_DEPENDENT_0</unmanaged>
@@ -984,7 +984,7 @@ public enum Counter : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE"]/*' />
 /// <unmanaged>D3D11_COUNTER_TYPE</unmanaged>
-public enum CounterType : int
+public enum CounterType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COUNTER_TYPE::D3D11_COUNTER_TYPE_FLOAT32"]/*' />
 	/// <unmanaged>D3D11_COUNTER_TYPE_FLOAT32</unmanaged>
@@ -1002,7 +1002,7 @@ public enum CounterType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS"]/*' />
 /// <unmanaged>D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS</unmanaged>
-public enum StandardMultisampleQualityLevels : int
+public enum StandardMultisampleQualityLevels
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D11_STANDARD_MULTISAMPLE_PATTERN"]/*' />
 	/// <unmanaged>D3D11_STANDARD_MULTISAMPLE_PATTERN</unmanaged>
@@ -1014,7 +1014,7 @@ public enum StandardMultisampleQualityLevels : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE"]/*' />
 /// <unmanaged>D3D11_DEVICE_CONTEXT_TYPE</unmanaged>
-public enum DeviceContextType : int
+public enum DeviceContextType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_DEVICE_CONTEXT_TYPE::D3D11_DEVICE_CONTEXT_IMMEDIATE"]/*' />
 	/// <unmanaged>D3D11_DEVICE_CONTEXT_IMMEDIATE</unmanaged>
@@ -1026,7 +1026,7 @@ public enum DeviceContextType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE"]/*' />
 /// <unmanaged>D3D11_FEATURE</unmanaged>
-public enum Feature : int
+public enum Feature
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE::D3D11_FEATURE_THREADING"]/*' />
 	/// <unmanaged>D3D11_FEATURE_THREADING</unmanaged>
@@ -1095,7 +1095,7 @@ public enum Feature : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT"]/*' />
 /// <unmanaged>D3D11_SHADER_MIN_PRECISION_SUPPORT</unmanaged>
-public enum ShaderMinPrecisionSupport : int
+public enum ShaderMinPrecisionSupport
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_MIN_PRECISION_SUPPORT::D3D11_SHADER_MIN_PRECISION_10_BIT"]/*' />
 	/// <unmanaged>D3D11_SHADER_MIN_PRECISION_10_BIT</unmanaged>
@@ -1107,7 +1107,7 @@ public enum ShaderMinPrecisionSupport : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER"]/*' />
 /// <unmanaged>D3D11_TILED_RESOURCES_TIER</unmanaged>
-public enum TiledResourcesTier : int
+public enum TiledResourcesTier
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILED_RESOURCES_TIER::D3D11_TILED_RESOURCES_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_TILED_RESOURCES_NOT_SUPPORTED</unmanaged>
@@ -1125,7 +1125,7 @@ public enum TiledResourcesTier : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_TIER"]/*' />
 /// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_TIER</unmanaged>
-public enum ConservativeRasterizationTier : int
+public enum ConservativeRasterizationTier
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_TIER::D3D11_CONSERVATIVE_RASTERIZATION_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_NOT_SUPPORTED</unmanaged>
@@ -1144,7 +1144,7 @@ public enum ConservativeRasterizationTier : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_FLAGS</unmanaged>
 [Flags]
-public enum ShaderCacheSupportFlags : int
+public enum ShaderCacheSupportFlags
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_CACHE_SUPPORT_FLAGS::D3D11_SHADER_CACHE_SUPPORT_NONE"]/*' />
 	/// <unmanaged>D3D11_SHADER_CACHE_SUPPORT_NONE</unmanaged>
@@ -1159,7 +1159,7 @@ public enum ShaderCacheSupportFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER"]/*' />
 /// <unmanaged>D3D11_SHARED_RESOURCE_TIER</unmanaged>
-public enum SharedResourceTier : int
+public enum SharedResourceTier
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHARED_RESOURCE_TIER::D3D11_SHARED_RESOURCE_TIER_0"]/*' />
 	/// <unmanaged>D3D11_SHARED_RESOURCE_TIER_0</unmanaged>
@@ -1177,7 +1177,7 @@ public enum SharedResourceTier : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_TYPE</unmanaged>
-public enum VideoDecoderBufferType : int
+public enum VideoDecoderBufferType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_BUFFER_TYPE::D3D11_VIDEO_DECODER_BUFFER_PICTURE_PARAMETERS"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_BUFFER_PICTURE_PARAMETERS</unmanaged>
@@ -1210,7 +1210,7 @@ public enum VideoDecoderBufferType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT</unmanaged>
-public enum VideoProcessorFormatSupport : int
+public enum VideoProcessorFormatSupport
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT::D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT_INPUT"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_SUPPORT_INPUT</unmanaged>
@@ -1222,7 +1222,7 @@ public enum VideoProcessorFormatSupport : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_DEVICE_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_DEVICE_CAPS</unmanaged>
-public enum VideoProcessorDeviceCaps : int
+public enum VideoProcessorDeviceCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_DEVICE_CAPS::D3D11_VIDEO_PROCESSOR_DEVICE_CAPS_LINEAR_SPACE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_DEVICE_CAPS_LINEAR_SPACE</unmanaged>
@@ -1243,7 +1243,7 @@ public enum VideoProcessorDeviceCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FEATURE_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FEATURE_CAPS</unmanaged>
-public enum VideoProcessorFeatureCaps : int
+public enum VideoProcessorFeatureCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FEATURE_CAPS::D3D11_VIDEO_PROCESSOR_FEATURE_CAPS_ALPHA_FILL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FEATURE_CAPS_ALPHA_FILL</unmanaged>
@@ -1285,7 +1285,7 @@ public enum VideoProcessorFeatureCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS</unmanaged>
-public enum VideoProcessorFilterCaps : int
+public enum VideoProcessorFilterCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER_CAPS::D3D11_VIDEO_PROCESSOR_FILTER_CAPS_BRIGHTNESS"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_CAPS_BRIGHTNESS</unmanaged>
@@ -1315,7 +1315,7 @@ public enum VideoProcessorFilterCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_CAPS</unmanaged>
-public enum VideoProcessorFormatCaps : int
+public enum VideoProcessorFormatCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FORMAT_CAPS::D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_INTERLACED"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FORMAT_CAPS_RGB_INTERLACED</unmanaged>
@@ -1333,7 +1333,7 @@ public enum VideoProcessorFormatCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS</unmanaged>
-public enum VideoProcessorAutoStreamCaps : int
+public enum VideoProcessorAutoStreamCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS::D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_DENOISE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_AUTO_STREAM_CAPS_DENOISE</unmanaged>
@@ -1363,7 +1363,7 @@ public enum VideoProcessorAutoStreamCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_CAPS</unmanaged>
-public enum VideoProcessorStereoCaps : int
+public enum VideoProcessorStereoCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_CAPS::D3D11_VIDEO_PROCESSOR_STEREO_CAPS_MONO_OFFSET"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_CAPS_MONO_OFFSET</unmanaged>
@@ -1384,7 +1384,7 @@ public enum VideoProcessorStereoCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_PROCESSOR_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_PROCESSOR_CAPS</unmanaged>
-public enum VideoProcessorProcessorCaps : int
+public enum VideoProcessorProcessorCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_PROCESSOR_CAPS::D3D11_VIDEO_PROCESSOR_PROCESSOR_CAPS_DEINTERLACE_BLEND"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_PROCESSOR_CAPS_DEINTERLACE_BLEND</unmanaged>
@@ -1408,7 +1408,7 @@ public enum VideoProcessorProcessorCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ITELECINE_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_ITELECINE_CAPS</unmanaged>
-public enum VideoProcessorItelecineCaps : int
+public enum VideoProcessorItelecineCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ITELECINE_CAPS::D3D11_VIDEO_PROCESSOR_ITELECINE_CAPS_32"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ITELECINE_CAPS_32</unmanaged>
@@ -1444,7 +1444,7 @@ public enum VideoProcessorItelecineCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTENT_PROTECTION_CAPS"]/*' />
 /// <unmanaged>D3D11_CONTENT_PROTECTION_CAPS</unmanaged>
-public enum ContentProtectionCaps : int
+public enum ContentProtectionCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTENT_PROTECTION_CAPS::D3D11_CONTENT_PROTECTION_CAPS_SOFTWARE"]/*' />
 	/// <unmanaged>D3D11_CONTENT_PROTECTION_CAPS_SOFTWARE</unmanaged>
@@ -1498,7 +1498,7 @@ public enum ContentProtectionCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER</unmanaged>
-public enum VideoProcessorFilter : int
+public enum VideoProcessorFilter
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_FILTER::D3D11_VIDEO_PROCESSOR_FILTER_BRIGHTNESS"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_FILTER_BRIGHTNESS</unmanaged>
@@ -1528,7 +1528,7 @@ public enum VideoProcessorFilter : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_FRAME_FORMAT"]/*' />
 /// <unmanaged>D3D11_VIDEO_FRAME_FORMAT</unmanaged>
-public enum VideoFrameFormat : int
+public enum VideoFrameFormat
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_FRAME_FORMAT::D3D11_VIDEO_FRAME_FORMAT_PROGRESSIVE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_FRAME_FORMAT_PROGRESSIVE</unmanaged>
@@ -1543,7 +1543,7 @@ public enum VideoFrameFormat : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE"]/*' />
 /// <unmanaged>D3D11_VIDEO_USAGE</unmanaged>
-public enum VideoUsage : int
+public enum VideoUsage
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_USAGE::D3D11_VIDEO_USAGE_PLAYBACK_NORMAL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_USAGE_PLAYBACK_NORMAL</unmanaged>
@@ -1558,7 +1558,7 @@ public enum VideoUsage : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE</unmanaged>
-public enum VideoProcessorNominalRange : int
+public enum VideoProcessorNominalRange
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE::D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_UNDEFINED"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_NOMINAL_RANGE_UNDEFINED</unmanaged>
@@ -1573,7 +1573,7 @@ public enum VideoProcessorNominalRange : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE</unmanaged>
-public enum VideoProcessorAlphaFillMode : int
+public enum VideoProcessorAlphaFillMode
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE::D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_OPAQUE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ALPHA_FILL_MODE_OPAQUE</unmanaged>
@@ -1591,7 +1591,7 @@ public enum VideoProcessorAlphaFillMode : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_OUTPUT_RATE</unmanaged>
-public enum VideoProcessorOutputRate : int
+public enum VideoProcessorOutputRate
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_OUTPUT_RATE::D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_NORMAL"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_OUTPUT_RATE_NORMAL</unmanaged>
@@ -1606,7 +1606,7 @@ public enum VideoProcessorOutputRate : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_FORMAT"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_FORMAT</unmanaged>
-public enum VideoProcessorStereoFormat : int
+public enum VideoProcessorStereoFormat
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_FORMAT::D3D11_VIDEO_PROCESSOR_STEREO_FORMAT_MONO"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_FORMAT_MONO</unmanaged>
@@ -1636,7 +1636,7 @@ public enum VideoProcessorStereoFormat : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE</unmanaged>
-public enum VideoProcessorStereoFlipMode : int
+public enum VideoProcessorStereoFlipMode
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_STEREO_FLIP_MODE::D3D11_VIDEO_PROCESSOR_STEREO_FLIP_NONE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_STEREO_FLIP_NONE</unmanaged>
@@ -1651,7 +1651,7 @@ public enum VideoProcessorStereoFlipMode : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION</unmanaged>
-public enum VideoProcessorRotation : int
+public enum VideoProcessorRotation
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_ROTATION::D3D11_VIDEO_PROCESSOR_ROTATION_IDENTITY"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_ROTATION_IDENTITY</unmanaged>
@@ -1669,7 +1669,7 @@ public enum VideoProcessorRotation : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CHANNEL_TYPE"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_CHANNEL_TYPE</unmanaged>
-public enum AuthenticatedChannelType : int
+public enum AuthenticatedChannelType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_CHANNEL_TYPE::D3D11_AUTHENTICATED_CHANNEL_D3D11"]/*' />
 	/// <unmanaged>D3D11_AUTHENTICATED_CHANNEL_D3D11</unmanaged>
@@ -1684,7 +1684,7 @@ public enum AuthenticatedChannelType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE"]/*' />
 /// <unmanaged>D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE</unmanaged>
-public enum AuthenticatedProcessIdentifierType : int
+public enum AuthenticatedProcessIdentifierType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE::D3D11_PROCESSIDTYPE_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_PROCESSIDTYPE_UNKNOWN</unmanaged>
@@ -1699,7 +1699,7 @@ public enum AuthenticatedProcessIdentifierType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE"]/*' />
 /// <unmanaged>D3D11_BUS_TYPE</unmanaged>
-public enum BusType : int
+public enum BusType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_BUS_TYPE::D3D11_BUS_TYPE_OTHER"]/*' />
 	/// <unmanaged>D3D11_BUS_TYPE_OTHER</unmanaged>
@@ -1738,7 +1738,7 @@ public enum BusType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION"]/*' />
 /// <unmanaged>D3D11_VDOV_DIMENSION</unmanaged>
-public enum VdovDimension : int
+public enum VdovDimension
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VDOV_DIMENSION::D3D11_VDOV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_VDOV_DIMENSION_UNKNOWN</unmanaged>
@@ -1750,7 +1750,7 @@ public enum VdovDimension : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VPIV_DIMENSION"]/*' />
 /// <unmanaged>D3D11_VPIV_DIMENSION</unmanaged>
-public enum VpivDimension : int
+public enum VpivDimension
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VPIV_DIMENSION::D3D11_VPIV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_VPIV_DIMENSION_UNKNOWN</unmanaged>
@@ -1762,7 +1762,7 @@ public enum VpivDimension : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION"]/*' />
 /// <unmanaged>D3D11_VPOV_DIMENSION</unmanaged>
-public enum VpovDimension : int
+public enum VpovDimension
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VPOV_DIMENSION::D3D11_VPOV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_VPOV_DIMENSION_UNKNOWN</unmanaged>
@@ -1813,7 +1813,7 @@ public enum CreateDeviceFlags : uint
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RLDO_FLAGS"]/*' />
 /// <unmanaged>D3D11_RLDO_FLAGS</unmanaged>
 [Flags]
-public enum ReportLiveDeviceObjectFlags : int
+public enum ReportLiveDeviceObjectFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RLDO_FLAGS::D3D11_RLDO_SUMMARY"]/*' />
@@ -1829,7 +1829,7 @@ public enum ReportLiveDeviceObjectFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE"]/*' />
 /// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE</unmanaged>
-public enum ShaderTrackingResourceType : int
+public enum ShaderTrackingResourceType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_RESOURCE_TYPE::D3D11_SHADER_TRACKING_RESOURCE_TYPE_NONE"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_RESOURCE_TYPE_NONE</unmanaged>
@@ -1859,7 +1859,7 @@ public enum ShaderTrackingResourceType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS"]/*' />
 /// <unmanaged>D3D11_SHADER_TRACKING_OPTIONS</unmanaged>
-public enum ShaderTrackingOptions : int
+public enum ShaderTrackingOptions
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TRACKING_OPTIONS::D3D11_SHADER_TRACKING_OPTION_IGNORE"]/*' />
 	/// <unmanaged>D3D11_SHADER_TRACKING_OPTION_IGNORE</unmanaged>
@@ -1910,7 +1910,7 @@ public enum ShaderTrackingOptions : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_CATEGORY"]/*' />
 /// <unmanaged>D3D11_MESSAGE_CATEGORY</unmanaged>
-public enum MessageCategory : int
+public enum MessageCategory
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_CATEGORY::D3D11_MESSAGE_CATEGORY_APPLICATION_DEFINED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_CATEGORY_APPLICATION_DEFINED</unmanaged>
@@ -1949,7 +1949,7 @@ public enum MessageCategory : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY"]/*' />
 /// <unmanaged>D3D11_MESSAGE_SEVERITY</unmanaged>
-public enum MessageSeverity : int
+public enum MessageSeverity
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_SEVERITY::D3D11_MESSAGE_SEVERITY_CORRUPTION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_SEVERITY_CORRUPTION</unmanaged>
@@ -1970,7 +1970,7 @@ public enum MessageSeverity : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID"]/*' />
 /// <unmanaged>D3D11_MESSAGE_ID</unmanaged>
-public enum MessageId : int
+public enum MessageId
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_UNKNOWN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_UNKNOWN</unmanaged>
@@ -5461,492 +5461,495 @@ public enum MessageId : int
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETCRYPTOSESSIONPRIVATEDATASIZE_INVALID_KEY_EXCHANGE_TYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETCRYPTOSESSIONPRIVATEDATASIZE_INVALID_KEY_EXCHANGE_TYPE</unmanaged>
 	GetcryptosessionprivatedatasizeInvalidKeyExchangeType = 3146116,
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_OPEN_SHARED_RESOURCE1_ACCESS_DENIED"]/*' />
+	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_OPEN_SHARED_RESOURCE1_ACCESS_DENIED</unmanaged>
+	DeviceOpenSharedResource1AccessDenied = 3146117,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEBUFFER_INVALIDUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEBUFFER_INVALIDUSAGE</unmanaged>
-	CreateBufferInvalidUsage = 3146119,
+	CreateBufferInvalidUsage = 3146120,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATETEXTURE1D_INVALIDUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATETEXTURE1D_INVALIDUSAGE</unmanaged>
-	CreateTexture1DInvalidUsage = 3146120,
+	CreateTexture1DInvalidUsage = 3146121,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATETEXTURE2D_INVALIDUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATETEXTURE2D_INVALIDUSAGE</unmanaged>
-	CreateTexture2DInvalidUsage = 3146121,
+	CreateTexture2DInvalidUsage = 3146122,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEINPUTLAYOUT_LEVEL9_STEPRATE_NOT_1"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEINPUTLAYOUT_LEVEL9_STEPRATE_NOT_1</unmanaged>
-	CreateInputLayoutLevel9StepRateNot1 = 3146122,
+	CreateInputLayoutLevel9StepRateNot1 = 3146123,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEINPUTLAYOUT_LEVEL9_INSTANCING_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEINPUTLAYOUT_LEVEL9_INSTANCING_NOT_SUPPORTED</unmanaged>
-	CreateInputLayoutLevel9InstancingNotSupported = 3146123,
+	CreateInputLayoutLevel9InstancingNotSupported = 3146124,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_UPDATETILEMAPPINGS_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_UPDATETILEMAPPINGS_INVALID_PARAMETER</unmanaged>
-	UpdateTileMappingsInvalidParameter = 3146124,
+	UpdateTileMappingsInvalidParameter = 3146125,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYTILEMAPPINGS_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYTILEMAPPINGS_INVALID_PARAMETER</unmanaged>
-	CopyTileMappingsInvalidParameter = 3146125,
+	CopyTileMappingsInvalidParameter = 3146126,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYTILES_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYTILES_INVALID_PARAMETER</unmanaged>
-	CopyTilesInvalidParameter = 3146126,
+	CopyTilesInvalidParameter = 3146127,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_UPDATETILES_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_UPDATETILES_INVALID_PARAMETER</unmanaged>
-	UpdateTilesInvalidParameter = 3146127,
+	UpdateTilesInvalidParameter = 3146128,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_RESIZETILEPOOL_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_RESIZETILEPOOL_INVALID_PARAMETER</unmanaged>
-	ResizetilepoolInvalidParameter = 3146128,
+	ResizetilepoolInvalidParameter = 3146129,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TILEDRESOURCEBARRIER_INVALID_PARAMETER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TILEDRESOURCEBARRIER_INVALID_PARAMETER</unmanaged>
-	TiledresourcebarrierInvalidParameter = 3146129,
+	TiledresourcebarrierInvalidParameter = 3146130,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_NULL_TILE_MAPPING_ACCESS_WARNING"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_NULL_TILE_MAPPING_ACCESS_WARNING</unmanaged>
-	NullTileMappingAccessWarning = 3146130,
+	NullTileMappingAccessWarning = 3146131,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_NULL_TILE_MAPPING_ACCESS_ERROR"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_NULL_TILE_MAPPING_ACCESS_ERROR</unmanaged>
-	NullTileMappingAccessError = 3146131,
+	NullTileMappingAccessError = 3146132,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DIRTY_TILE_MAPPING_ACCESS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DIRTY_TILE_MAPPING_ACCESS</unmanaged>
-	DirtyTileMappingAccess = 3146132,
+	DirtyTileMappingAccess = 3146133,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DUPLICATE_TILE_MAPPINGS_IN_COVERED_AREA"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DUPLICATE_TILE_MAPPINGS_IN_COVERED_AREA</unmanaged>
-	DuplicateTileMappingsInCoveredArea = 3146133,
+	DuplicateTileMappingsInCoveredArea = 3146134,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TILE_MAPPINGS_IN_COVERED_AREA_DUPLICATED_OUTSIDE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TILE_MAPPINGS_IN_COVERED_AREA_DUPLICATED_OUTSIDE</unmanaged>
-	TileMappingsInCoveredAreaDuplicatedOutside = 3146134,
+	TileMappingsInCoveredAreaDuplicatedOutside = 3146135,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TILE_MAPPINGS_SHARED_BETWEEN_INCOMPATIBLE_RESOURCES"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TILE_MAPPINGS_SHARED_BETWEEN_INCOMPATIBLE_RESOURCES</unmanaged>
-	TileMappingsSharedBetweenIncompatibleResources = 3146135,
+	TileMappingsSharedBetweenIncompatibleResources = 3146136,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TILE_MAPPINGS_SHARED_BETWEEN_INPUT_AND_OUTPUT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TILE_MAPPINGS_SHARED_BETWEEN_INPUT_AND_OUTPUT</unmanaged>
-	TileMappingsSharedBetweenInputAndOutput = 3146136,
+	TileMappingsSharedBetweenInputAndOutput = 3146137,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CHECKMULTISAMPLEQUALITYLEVELS_INVALIDFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CHECKMULTISAMPLEQUALITYLEVELS_INVALIDFLAGS</unmanaged>
-	CheckMultisampleQualityLevelsInvalidFlags = 3146137,
+	CheckMultisampleQualityLevelsInvalidFlags = 3146138,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETRESOURCETILING_NONTILED_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETRESOURCETILING_NONTILED_RESOURCE</unmanaged>
-	GetresourcetilingNontiledResource = 3146138,
+	GetresourcetilingNontiledResource = 3146139,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_RESIZETILEPOOL_SHRINK_WITH_MAPPINGS_STILL_DEFINED_PAST_END"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_RESIZETILEPOOL_SHRINK_WITH_MAPPINGS_STILL_DEFINED_PAST_END</unmanaged>
-	ResizetilepoolShrinkWithMappingsStillDefinedPastEnd = 3146139,
+	ResizetilepoolShrinkWithMappingsStillDefinedPastEnd = 3146140,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_NEED_TO_CALL_TILEDRESOURCEBARRIER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_NEED_TO_CALL_TILEDRESOURCEBARRIER</unmanaged>
-	NeedToCallTiledresourcebarrier = 3146140,
+	NeedToCallTiledresourcebarrier = 3146141,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEDEVICE_INVALIDARGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEDEVICE_INVALIDARGS</unmanaged>
-	CreateDeviceInvalidArgs = 3146141,
+	CreateDeviceInvalidArgs = 3146142,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEDEVICE_WARNING"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEDEVICE_WARNING</unmanaged>
-	CreateDeviceWarning = 3146142,
+	CreateDeviceWarning = 3146143,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARUNORDEREDACCESSVIEWUINT_HAZARD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARUNORDEREDACCESSVIEWUINT_HAZARD</unmanaged>
-	ClearunorderedaccessviewuintHazard = 3146143,
+	ClearunorderedaccessviewuintHazard = 3146144,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARUNORDEREDACCESSVIEWFLOAT_HAZARD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARUNORDEREDACCESSVIEWFLOAT_HAZARD</unmanaged>
-	ClearUnorderedAccessViewFloatHazard = 3146144,
+	ClearUnorderedAccessViewFloatHazard = 3146145,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TILED_RESOURCE_TIER_1_BUFFER_TEXTURE_MISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TILED_RESOURCE_TIER_1_BUFFER_TEXTURE_MISMATCH</unmanaged>
-	TiledResourceTier1BufferTextureMismatch = 3146145,
+	TiledResourceTier1BufferTextureMismatch = 3146146,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_CRYPTOSESSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_CRYPTOSESSION</unmanaged>
-	CreateCryptoSession = 3146146,
+	CreateCryptoSession = 3146147,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_AUTHENTICATEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_AUTHENTICATEDCHANNEL</unmanaged>
-	CreateAuthenticatedChannel = 3146147,
+	CreateAuthenticatedChannel = 3146148,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_LIVE_CRYPTOSESSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_LIVE_CRYPTOSESSION</unmanaged>
-	LiveCryptoSession = 3146148,
+	LiveCryptoSession = 3146149,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_LIVE_AUTHENTICATEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_LIVE_AUTHENTICATEDCHANNEL</unmanaged>
-	LiveAuthenticatedChannel = 3146149,
+	LiveAuthenticatedChannel = 3146150,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DESTROY_CRYPTOSESSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DESTROY_CRYPTOSESSION</unmanaged>
-	DestroyCryptoSession = 3146150,
+	DestroyCryptoSession = 3146151,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DESTROY_AUTHENTICATEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DESTROY_AUTHENTICATEDCHANNEL</unmanaged>
-	DestroyAuthenticatedChannel = 3146151,
+	DestroyAuthenticatedChannel = 3146152,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERASTERIZERSTATE_INVALID_CONSERVATIVERASTERMODE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERASTERIZERSTATE_INVALID_CONSERVATIVERASTERMODE</unmanaged>
-	CreateRasterizerStateInvalidConservativeRasterMode = 3146154,
+	CreateRasterizerStateInvalidConservativeRasterMode = 3146155,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_INVALID_SYSTEMVALUE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_INVALID_SYSTEMVALUE</unmanaged>
-	DeviceDrawInvalidSystemValue = 3146155,
+	DeviceDrawInvalidSystemValue = 3146156,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_INVALIDCONTEXTTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_INVALIDCONTEXTTYPE</unmanaged>
-	CreateQueryOrPredicateInvalidContextType = 3146156,
+	CreateQueryOrPredicateInvalidContextType = 3146157,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_DECODENOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_DECODENOTSUPPORTED</unmanaged>
-	CreateQueryOrPredicateDecodenotsupported = 3146157,
+	CreateQueryOrPredicateDecodenotsupported = 3146158,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_ENCODENOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_ENCODENOTSUPPORTED</unmanaged>
-	CreateQueryOrPredicateEncodenotsupported = 3146158,
+	CreateQueryOrPredicateEncodenotsupported = 3146159,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDPLANEINDEX</unmanaged>
-	CreateShaderResourceViewInvalidplaneindex = 3146159,
+	CreateShaderResourceViewInvalidplaneindex = 3146160,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDVIDEOPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATESHADERRESOURCEVIEW_INVALIDVIDEOPLANEINDEX</unmanaged>
-	CreateShaderResourceViewInvalidvideoplaneindex = 3146160,
+	CreateShaderResourceViewInvalidvideoplaneindex = 3146161,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATESHADERRESOURCEVIEW_AMBIGUOUSVIDEOPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATESHADERRESOURCEVIEW_AMBIGUOUSVIDEOPLANEINDEX</unmanaged>
-	CreateShaderResourceViewAmbiguousvideoplaneindex = 3146161,
+	CreateShaderResourceViewAmbiguousvideoplaneindex = 3146162,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDPLANEINDEX</unmanaged>
-	CreateRenderTargetViewInvalidplaneindex = 3146162,
+	CreateRenderTargetViewInvalidplaneindex = 3146163,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDVIDEOPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERENDERTARGETVIEW_INVALIDVIDEOPLANEINDEX</unmanaged>
-	CreateRenderTargetViewInvalidvideoplaneindex = 3146163,
+	CreateRenderTargetViewInvalidvideoplaneindex = 3146164,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERENDERTARGETVIEW_AMBIGUOUSVIDEOPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERENDERTARGETVIEW_AMBIGUOUSVIDEOPLANEINDEX</unmanaged>
-	CreateRenderTargetViewAmbiguousvideoplaneindex = 3146164,
+	CreateRenderTargetViewAmbiguousvideoplaneindex = 3146165,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDPLANEINDEX</unmanaged>
-	CreateUnorderedAccessViewInvalidplaneindex = 3146165,
+	CreateUnorderedAccessViewInvalidplaneindex = 3146166,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDVIDEOPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_INVALIDVIDEOPLANEINDEX</unmanaged>
-	CreateUnorderedAccessViewInvalidvideoplaneindex = 3146166,
+	CreateUnorderedAccessViewInvalidvideoplaneindex = 3146167,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_AMBIGUOUSVIDEOPLANEINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEUNORDEREDACCESSVIEW_AMBIGUOUSVIDEOPLANEINDEX</unmanaged>
-	CreateUnorderedAccessViewAmbiguousvideoplaneindex = 3146167,
+	CreateUnorderedAccessViewAmbiguousvideoplaneindex = 3146168,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDSCANDATAOFFSET"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDSCANDATAOFFSET</unmanaged>
-	JpegDecodeInvalidScanDataOffset = 3146168,
+	JpegDecodeInvalidScanDataOffset = 3146169,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_NOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_NOTSUPPORTED</unmanaged>
-	JpegDecodeNotSupported = 3146169,
+	JpegDecodeNotSupported = 3146170,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_DIMENSIONSTOOLARGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_DIMENSIONSTOOLARGE</unmanaged>
-	JpegDecodeDimensionsTooLarge = 3146170,
+	JpegDecodeDimensionsTooLarge = 3146171,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDCOMPONENTS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDCOMPONENTS</unmanaged>
-	JpegDecodeInvalidComponents = 3146171,
+	JpegDecodeInvalidComponents = 3146172,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_DESTINATIONNOT2D"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_DESTINATIONNOT2D</unmanaged>
-	JpegDecodeDestinationNot2D = 3146172,
+	JpegDecodeDestinationNot2D = 3146173,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_TILEDRESOURCESUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_TILEDRESOURCESUNSUPPORTED</unmanaged>
-	JpegDecodeTiledresourcesunsupported = 3146173,
+	JpegDecodeTiledresourcesunsupported = 3146174,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_GUARDRECTSUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_GUARDRECTSUNSUPPORTED</unmanaged>
-	JpegDecodeGuardrectsunsupported = 3146174,
+	JpegDecodeGuardrectsunsupported = 3146175,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_FORMATUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_FORMATUNSUPPORTED</unmanaged>
-	JpegDecodeFormatunsupported = 3146175,
+	JpegDecodeFormatunsupported = 3146176,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDSUBRESOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDSUBRESOURCE</unmanaged>
-	JpegDecodeInvalidSubresource = 3146176,
+	JpegDecodeInvalidSubresource = 3146177,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDMIPLEVEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDMIPLEVEL</unmanaged>
-	JpegDecodeInvalidMipLevel = 3146177,
+	JpegDecodeInvalidMipLevel = 3146178,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_EMPTYDESTBOX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_EMPTYDESTBOX</unmanaged>
-	JpegDecodeEmptydestbox = 3146178,
+	JpegDecodeEmptydestbox = 3146179,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_DESTBOXNOT2D"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_DESTBOXNOT2D</unmanaged>
-	JpegDecodeDestboxnot2d = 3146179,
+	JpegDecodeDestboxnot2d = 3146180,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_DESTBOXNOTSUB"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_DESTBOXNOTSUB</unmanaged>
-	JpegDecodeDestboxnotsub = 3146180,
+	JpegDecodeDestboxnotsub = 3146181,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_DESTBOXESINTERSECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_DESTBOXESINTERSECT</unmanaged>
-	JpegDecodeDestboxesintersect = 3146181,
+	JpegDecodeDestboxesintersect = 3146182,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_XSUBSAMPLEMISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_XSUBSAMPLEMISMATCH</unmanaged>
-	JpegDecodeXsubsamplemismatch = 3146182,
+	JpegDecodeXsubsamplemismatch = 3146183,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_YSUBSAMPLEMISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_YSUBSAMPLEMISMATCH</unmanaged>
-	JpegDecodeYsubsamplemismatch = 3146183,
+	JpegDecodeYsubsamplemismatch = 3146184,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_XSUBSAMPLEODD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_XSUBSAMPLEODD</unmanaged>
-	JpegDecodeXsubsampleodd = 3146184,
+	JpegDecodeXsubsampleodd = 3146185,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_YSUBSAMPLEODD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_YSUBSAMPLEODD</unmanaged>
-	JpegDecodeYsubsampleodd = 3146185,
+	JpegDecodeYsubsampleodd = 3146186,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_OUTPUTDIMENSIONSTOOLARGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_OUTPUTDIMENSIONSTOOLARGE</unmanaged>
-	JpegDecodeOutputdimensionstoolarge = 3146186,
+	JpegDecodeOutputdimensionstoolarge = 3146187,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_NONPOW2SCALEUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_NONPOW2SCALEUNSUPPORTED</unmanaged>
-	JpegDecodeNonpow2scaleunsupported = 3146187,
+	JpegDecodeNonpow2scaleunsupported = 3146188,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_FRACTIONALDOWNSCALETOLARGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_FRACTIONALDOWNSCALETOLARGE</unmanaged>
-	JpegDecodeFractionaldownscaletolarge = 3146188,
+	JpegDecodeFractionaldownscaletolarge = 3146189,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_CHROMASIZEMISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_CHROMASIZEMISMATCH</unmanaged>
-	JpegDecodeChromasizemismatch = 3146189,
+	JpegDecodeChromasizemismatch = 3146190,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_LUMACHROMASIZEMISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_LUMACHROMASIZEMISMATCH</unmanaged>
-	JpegDecodeLumachromasizemismatch = 3146190,
+	JpegDecodeLumachromasizemismatch = 3146191,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDNUMDESTINATIONS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDNUMDESTINATIONS</unmanaged>
-	JpegDecodeInvalidnumdestinations = 3146191,
+	JpegDecodeInvalidnumdestinations = 3146192,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_SUBBOXUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_SUBBOXUNSUPPORTED</unmanaged>
-	JpegDecodeSubboxunsupported = 3146192,
+	JpegDecodeSubboxunsupported = 3146193,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_1DESTUNSUPPORTEDFORMAT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_1DESTUNSUPPORTEDFORMAT</unmanaged>
-	JpegDecode1destunsupportedformat = 3146193,
+	JpegDecode1destunsupportedformat = 3146194,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_3DESTUNSUPPORTEDFORMAT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_3DESTUNSUPPORTEDFORMAT</unmanaged>
-	JpegDecode3destunsupportedformat = 3146194,
+	JpegDecode3destunsupportedformat = 3146195,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_SCALEUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_SCALEUNSUPPORTED</unmanaged>
-	JpegDecodeScaleunsupported = 3146195,
+	JpegDecodeScaleunsupported = 3146196,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDSOURCESIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDSOURCESIZE</unmanaged>
-	JpegDecodeInvalidsourcesize = 3146196,
+	JpegDecodeInvalidsourcesize = 3146197,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_INVALIDCOPYFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_INVALIDCOPYFLAGS</unmanaged>
-	JpegDecodeInvalidCopyFlags = 3146197,
+	JpegDecodeInvalidCopyFlags = 3146198,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_HAZARD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_HAZARD</unmanaged>
-	JpegDecodeHazard = 3146198,
+	JpegDecodeHazard = 3146199,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPORTEDSRCBUFFERUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPORTEDSRCBUFFERUSAGE</unmanaged>
-	JpegDecodeUnsupportedsrcbufferusage = 3146199,
+	JpegDecodeUnsupportedsrcbufferusage = 3146200,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPORTEDSRCBUFFERMISCFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPORTEDSRCBUFFERMISCFLAGS</unmanaged>
-	JpegDecodeUnsupportedsrcbuffermiscflags = 3146200,
+	JpegDecodeUnsupportedsrcbuffermiscflags = 3146201,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPORTEDDSTTEXTUREUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPORTEDDSTTEXTUREUSAGE</unmanaged>
-	JpegDecodeUnsupporteddsttextureusage = 3146201,
+	JpegDecodeUnsupporteddsttextureusage = 3146202,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_BACKBUFFERNOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_BACKBUFFERNOTSUPPORTED</unmanaged>
-	JpegDecodeBackbufferNotSupported = 3146202,
+	JpegDecodeBackbufferNotSupported = 3146203,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPRTEDCOPYFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_UNSUPPRTEDCOPYFLAGS</unmanaged>
-	JpegDecodeUnsupprtedcopyflags = 3146203,
+	JpegDecodeUnsupprtedcopyflags = 3146204,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_NOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_NOTSUPPORTED</unmanaged>
-	JpegEncodeNotSupported = 3146204,
+	JpegEncodeNotSupported = 3146205,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_INVALIDSCANDATAOFFSET"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_INVALIDSCANDATAOFFSET</unmanaged>
-	JpegEncodeInvalidScanDataOffset = 3146205,
+	JpegEncodeInvalidScanDataOffset = 3146206,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_INVALIDCOMPONENTS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_INVALIDCOMPONENTS</unmanaged>
-	JpegEncodeInvalidComponents = 3146206,
+	JpegEncodeInvalidComponents = 3146207,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_SOURCENOT2D"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_SOURCENOT2D</unmanaged>
-	JpegEncodeSourceNot2D = 3146207,
+	JpegEncodeSourceNot2D = 3146208,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_TILEDRESOURCESUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_TILEDRESOURCESUNSUPPORTED</unmanaged>
-	JpegEncodeTiledresourcesunsupported = 3146208,
+	JpegEncodeTiledresourcesunsupported = 3146209,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_GUARDRECTSUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_GUARDRECTSUNSUPPORTED</unmanaged>
-	JpegEncodeGuardrectsunsupported = 3146209,
+	JpegEncodeGuardrectsunsupported = 3146210,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_XSUBSAMPLEMISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_XSUBSAMPLEMISMATCH</unmanaged>
-	JpegEncodeXsubsamplemismatch = 3146210,
+	JpegEncodeXsubsamplemismatch = 3146211,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_YSUBSAMPLEMISMATCH"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_YSUBSAMPLEMISMATCH</unmanaged>
-	JpegEncodeYsubsamplemismatch = 3146211,
+	JpegEncodeYsubsamplemismatch = 3146212,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_FORMATUNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_FORMATUNSUPPORTED</unmanaged>
-	JpegEncodeFormatunsupported = 3146212,
+	JpegEncodeFormatunsupported = 3146213,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_INVALIDSUBRESOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_INVALIDSUBRESOURCE</unmanaged>
-	JpegEncodeInvalidSubresource = 3146213,
+	JpegEncodeInvalidSubresource = 3146214,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_INVALIDMIPLEVEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_INVALIDMIPLEVEL</unmanaged>
-	JpegEncodeInvalidMipLevel = 3146214,
+	JpegEncodeInvalidMipLevel = 3146215,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_DIMENSIONSTOOLARGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_DIMENSIONSTOOLARGE</unmanaged>
-	JpegEncodeDimensionsTooLarge = 3146215,
+	JpegEncodeDimensionsTooLarge = 3146216,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_HAZARD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_HAZARD</unmanaged>
-	JpegEncodeHazard = 3146216,
+	JpegEncodeHazard = 3146217,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_UNSUPPORTEDDSTBUFFERUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_UNSUPPORTEDDSTBUFFERUSAGE</unmanaged>
-	JpegEncodeUnsupporteddstbufferusage = 3146217,
+	JpegEncodeUnsupporteddstbufferusage = 3146218,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_UNSUPPORTEDDSTBUFFERMISCFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_UNSUPPORTEDDSTBUFFERMISCFLAGS</unmanaged>
-	JpegEncodeUnsupporteddstbuffermiscflags = 3146218,
+	JpegEncodeUnsupporteddstbuffermiscflags = 3146219,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_UNSUPPORTEDSRCTEXTUREUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_UNSUPPORTEDSRCTEXTUREUSAGE</unmanaged>
-	JpegEncodeUnsupportedsrctextureusage = 3146219,
+	JpegEncodeUnsupportedsrctextureusage = 3146220,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGENCODE_BACKBUFFERNOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGENCODE_BACKBUFFERNOTSUPPORTED</unmanaged>
-	JpegEncodeBackbufferNotSupported = 3146220,
+	JpegEncodeBackbufferNotSupported = 3146221,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_UNSUPPORTEDCONTEXTTTYPEFORQUERY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_UNSUPPORTEDCONTEXTTTYPEFORQUERY</unmanaged>
-	CreateQueryOrPredicateUnsupportedcontextttypeforquery = 3146221,
+	CreateQueryOrPredicateUnsupportedcontextttypeforquery = 3146222,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_FLUSH1_INVALIDCONTEXTTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_FLUSH1_INVALIDCONTEXTTYPE</unmanaged>
-	Flush1InvalidContextType = 3146222,
+	Flush1InvalidContextType = 3146223,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_SETHARDWAREPROTECTION_INVALIDCONTEXT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_SETHARDWAREPROTECTION_INVALIDCONTEXT</unmanaged>
-	DeviceSethardwareprotectionInvalidcontext = 3146223,
+	DeviceSethardwareprotectionInvalidcontext = 3146224,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETOUTPUTHDRMETADATA_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETOUTPUTHDRMETADATA_NULLPARAM</unmanaged>
-	VideoprocessorsetoutputhdrmetadataNullParam = 3146224,
+	VideoprocessorsetoutputhdrmetadataNullParam = 3146225,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETOUTPUTHDRMETADATA_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETOUTPUTHDRMETADATA_INVALIDSIZE</unmanaged>
-	VideoprocessorsetoutputhdrmetadataInvalidSize = 3146225,
+	VideoprocessorsetoutputhdrmetadataInvalidSize = 3146226,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETOUTPUTHDRMETADATA_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETOUTPUTHDRMETADATA_NULLPARAM</unmanaged>
-	VideoprocessorgetoutputhdrmetadataNullParam = 3146226,
+	VideoprocessorgetoutputhdrmetadataNullParam = 3146227,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETOUTPUTHDRMETADATA_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETOUTPUTHDRMETADATA_INVALIDSIZE</unmanaged>
-	VideoprocessorgetoutputhdrmetadataInvalidSize = 3146227,
+	VideoprocessorgetoutputhdrmetadataInvalidSize = 3146228,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_NULLPARAM</unmanaged>
-	VideoprocessorsetstreamhdrmetadataNullParam = 3146228,
+	VideoprocessorsetstreamhdrmetadataNullParam = 3146229,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_INVALIDSTREAM</unmanaged>
-	VideoprocessorsetstreamhdrmetadataInvalidStream = 3146229,
+	VideoprocessorsetstreamhdrmetadataInvalidStream = 3146230,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_INVALIDSIZE</unmanaged>
-	VideoprocessorsetstreamhdrmetadataInvalidSize = 3146230,
+	VideoprocessorsetstreamhdrmetadataInvalidSize = 3146231,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_NULLPARAM</unmanaged>
-	VideoprocessorgetstreamhdrmetadataNullParam = 3146231,
+	VideoprocessorgetstreamhdrmetadataNullParam = 3146232,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamhdrmetadataInvalidStream = 3146232,
+	VideoprocessorgetstreamhdrmetadataInvalidStream = 3146233,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_INVALIDSIZE</unmanaged>
-	VideoprocessorgetstreamhdrmetadataInvalidSize = 3146233,
+	VideoprocessorgetstreamhdrmetadataInvalidSize = 3146234,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMFRAMEFORMAT_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMFRAMEFORMAT_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamframeformatInvalidStream = 3146234,
+	VideoprocessorgetstreamframeformatInvalidStream = 3146235,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMCOLORSPACE_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMCOLORSPACE_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamcolorspaceInvalidStream = 3146235,
+	VideoprocessorgetstreamcolorspaceInvalidStream = 3146236,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMOUTPUTRATE_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMOUTPUTRATE_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamoutputrateInvalidStream = 3146236,
+	VideoprocessorgetstreamoutputrateInvalidStream = 3146237,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMSOURCERECT_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMSOURCERECT_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamsourcerectInvalidStream = 3146237,
+	VideoprocessorgetstreamsourcerectInvalidStream = 3146238,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMDESTRECT_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMDESTRECT_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamdestrectInvalidStream = 3146238,
+	VideoprocessorgetstreamdestrectInvalidStream = 3146239,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMALPHA_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMALPHA_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamalphaInvalidStream = 3146239,
+	VideoprocessorgetstreamalphaInvalidStream = 3146240,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMPALETTE_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMPALETTE_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreampaletteInvalidStream = 3146240,
+	VideoprocessorgetstreampaletteInvalidStream = 3146241,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMPIXELASPECTRATIO_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMPIXELASPECTRATIO_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreampixelaspectratioInvalidStream = 3146241,
+	VideoprocessorgetstreampixelaspectratioInvalidStream = 3146242,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMLUMAKEY_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMLUMAKEY_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamlumakeyInvalidStream = 3146242,
+	VideoprocessorgetstreamlumakeyInvalidStream = 3146243,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMSTEREOFORMAT_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMSTEREOFORMAT_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamstereoformatInvalidStream = 3146243,
+	VideoprocessorgetstreamstereoformatInvalidStream = 3146244,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMAUTOPROCESSINGMODE_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMAUTOPROCESSINGMODE_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamautoprocessingmodeInvalidStream = 3146244,
+	VideoprocessorgetstreamautoprocessingmodeInvalidStream = 3146245,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMFILTER_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMFILTER_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamfilterInvalidStream = 3146245,
+	VideoprocessorgetstreamfilterInvalidStream = 3146246,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMROTATION_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMROTATION_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamrotationInvalidStream = 3146246,
+	VideoprocessorgetstreamrotationInvalidStream = 3146247,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMCOLORSPACE1_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMCOLORSPACE1_INVALIDSTREAM</unmanaged>
-	Videoprocessorgetstreamcolorspace1InvalidStream = 3146247,
+	Videoprocessorgetstreamcolorspace1InvalidStream = 3146248,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMMIRROR_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMMIRROR_INVALIDSTREAM</unmanaged>
-	VideoProcessorGetStreamMirrorInvalidStream = 3146248,
+	VideoProcessorGetStreamMirrorInvalidStream = 3146249,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_FENCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_FENCE</unmanaged>
-	CreateFence = 3146249,
+	CreateFence = 3146250,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_LIVE_FENCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_LIVE_FENCE</unmanaged>
-	LiveFence = 3146250,
+	LiveFence = 3146251,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DESTROY_FENCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DESTROY_FENCE</unmanaged>
-	DestroyFence = 3146251,
+	DestroyFence = 3146252,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_SYNCHRONIZEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_SYNCHRONIZEDCHANNEL</unmanaged>
-	CreateSynchronizedChannel = 3146252,
+	CreateSynchronizedChannel = 3146253,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_LIVE_SYNCHRONIZEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_LIVE_SYNCHRONIZEDCHANNEL</unmanaged>
-	LiveSynchronizedChannel = 3146253,
+	LiveSynchronizedChannel = 3146254,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DESTROY_SYNCHRONIZEDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DESTROY_SYNCHRONIZEDCHANNEL</unmanaged>
-	DestroySynchronizedChannel = 3146254,
+	DestroySynchronizedChannel = 3146255,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEFENCE_INVALIDFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEFENCE_INVALIDFLAGS</unmanaged>
-	CreateFenceInvalidFlags = 3146255,
+	CreateFenceInvalidFlags = 3146256,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_NEGOTIATECRYPTOSESSIONKEYEXCHANGEMT_INVALIDKEYEXCHANGETYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_NEGOTIATECRYPTOSESSIONKEYEXCHANGEMT_INVALIDKEYEXCHANGETYPE</unmanaged>
-	NegotiatecryptosessionkeyexchangemtInvalidkeyexchangetype = 3146258,
+	NegotiatecryptosessionkeyexchangemtInvalidkeyexchangetype = 3146259,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_NEGOTIATECRYPTOSESSIONKEYEXCHANGEMT_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_NEGOTIATECRYPTOSESSIONKEYEXCHANGEMT_NOT_SUPPORTED</unmanaged>
-	NegotiatecryptosessionkeyexchangemtNotSupported = 3146259,
+	NegotiatecryptosessionkeyexchangemtNotSupported = 3146260,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT_COUNT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT_COUNT</unmanaged>
-	DecoderBeginFrameInvalidHistogramComponentCount = 3146260,
+	DecoderBeginFrameInvalidHistogramComponentCount = 3146261,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT</unmanaged>
-	DecoderBeginFrameInvalidHistogramComponent = 3146261,
+	DecoderBeginFrameInvalidHistogramComponent = 3146262,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_SIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_SIZE</unmanaged>
-	DecoderBeginFrameInvalidHistogramBufferSize = 3146262,
+	DecoderBeginFrameInvalidHistogramBufferSize = 3146263,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_USAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_USAGE</unmanaged>
-	DecoderBeginFrameInvalidHistogramBufferUsage = 3146263,
+	DecoderBeginFrameInvalidHistogramBufferUsage = 3146264,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_MISC_FLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_MISC_FLAGS</unmanaged>
-	DecoderBeginFrameInvalidHistogramBufferMiscFlags = 3146264,
+	DecoderBeginFrameInvalidHistogramBufferMiscFlags = 3146265,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_OFFSET"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_BUFFER_OFFSET</unmanaged>
-	DecoderBeginFrameInvalidHistogramBufferOffset = 3146265,
+	DecoderBeginFrameInvalidHistogramBufferOffset = 3146266,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_TRACKEDWORKLOAD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_TRACKEDWORKLOAD</unmanaged>
-	CreateTrackedworkload = 3146266,
+	CreateTrackedworkload = 3146267,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_LIVE_TRACKEDWORKLOAD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_LIVE_TRACKEDWORKLOAD</unmanaged>
-	LiveTrackedworkload = 3146267,
+	LiveTrackedworkload = 3146268,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DESTROY_TRACKEDWORKLOAD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DESTROY_TRACKEDWORKLOAD</unmanaged>
-	DestroyTrackedworkload = 3146268,
+	DestroyTrackedworkload = 3146269,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_TRACKED_WORKLOAD_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_TRACKED_WORKLOAD_NULLPARAM</unmanaged>
-	CreateTrackedWorkloadNullParam = 3146269,
+	CreateTrackedWorkloadNullParam = 3146270,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_TRACKED_WORKLOAD_INVALID_MAX_INSTANCES"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_TRACKED_WORKLOAD_INVALID_MAX_INSTANCES</unmanaged>
-	CreateTrackedWorkloadInvalidMaxInstances = 3146270,
+	CreateTrackedWorkloadInvalidMaxInstances = 3146271,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_TRACKED_WORKLOAD_INVALID_DEADLINE_TYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_TRACKED_WORKLOAD_INVALID_DEADLINE_TYPE</unmanaged>
-	CreateTrackedWorkloadInvalidDeadlineType = 3146271,
+	CreateTrackedWorkloadInvalidDeadlineType = 3146272,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_TRACKED_WORKLOAD_INVALID_ENGINE_TYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_TRACKED_WORKLOAD_INVALID_ENGINE_TYPE</unmanaged>
-	CreateTrackedWorkloadInvalidEngineType = 3146272,
+	CreateTrackedWorkloadInvalidEngineType = 3146273,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_MULTIPLE_TRACKED_WORKLOADS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_MULTIPLE_TRACKED_WORKLOADS</unmanaged>
-	MultipleTrackedWorkloads = 3146273,
+	MultipleTrackedWorkloads = 3146274,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_MULTIPLE_TRACKED_WORKLOAD_PAIRS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_MULTIPLE_TRACKED_WORKLOAD_PAIRS</unmanaged>
-	MultipleTrackedWorkloadPairs = 3146274,
+	MultipleTrackedWorkloadPairs = 3146275,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_INCOMPLETE_TRACKED_WORKLOAD_PAIR"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_INCOMPLETE_TRACKED_WORKLOAD_PAIR</unmanaged>
-	IncompleteTrackedWorkloadPair = 3146275,
+	IncompleteTrackedWorkloadPair = 3146276,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_OUT_OF_ORDER_TRACKED_WORKLOAD_PAIR"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_OUT_OF_ORDER_TRACKED_WORKLOAD_PAIR</unmanaged>
-	OutOfOrderTrackedWorkloadPair = 3146276,
+	OutOfOrderTrackedWorkloadPair = 3146277,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CANNOT_ADD_TRACKED_WORKLOAD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CANNOT_ADD_TRACKED_WORKLOAD</unmanaged>
-	CannotAddTrackedWorkload = 3146277,
+	CannotAddTrackedWorkload = 3146278,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TRACKED_WORKLOAD_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TRACKED_WORKLOAD_NOT_SUPPORTED</unmanaged>
-	TrackedWorkloadNotSupported = 3146278,
+	TrackedWorkloadNotSupported = 3146279,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TRACKED_WORKLOAD_ENGINE_TYPE_NOT_FOUND"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TRACKED_WORKLOAD_ENGINE_TYPE_NOT_FOUND</unmanaged>
-	TrackedWorkloadEngineTypeNotFound = 3146279,
+	TrackedWorkloadEngineTypeNotFound = 3146280,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_NO_TRACKED_WORKLOAD_SLOT_AVAILABLE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_NO_TRACKED_WORKLOAD_SLOT_AVAILABLE</unmanaged>
-	NoTrackedWorkloadSlotAvailable = 3146280,
+	NoTrackedWorkloadSlotAvailable = 3146281,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_END_TRACKED_WORKLOAD_INVALID_ARG"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_END_TRACKED_WORKLOAD_INVALID_ARG</unmanaged>
-	EndTrackedWorkloadInvalidArg = 3146281,
+	EndTrackedWorkloadInvalidArg = 3146282,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_TRACKED_WORKLOAD_DISJOINT_FAILURE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_TRACKED_WORKLOAD_DISJOINT_FAILURE</unmanaged>
-	TrackedWorkloadDisjointFailure = 3146282,
+	TrackedWorkloadDisjointFailure = 3146283,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS"]/*' />
 /// <unmanaged>D3D11_COPY_FLAGS</unmanaged>
 [Flags]
-public enum CopyFlags : int
+public enum CopyFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_COPY_FLAGS::D3D11_COPY_NO_OVERWRITE"]/*' />
@@ -5959,7 +5962,7 @@ public enum CopyFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LOGIC_OP"]/*' />
 /// <unmanaged>D3D11_LOGIC_OP</unmanaged>
-public enum LogicOperation : int
+public enum LogicOperation
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_LOGIC_OP::D3D11_LOGIC_OP_CLEAR"]/*' />
 	/// <unmanaged>D3D11_LOGIC_OP_CLEAR</unmanaged>
@@ -6014,7 +6017,7 @@ public enum LogicOperation : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG"]/*' />
 /// <unmanaged>D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG</unmanaged>
 [Flags]
-public enum CreateDeviceContextStateFlags : int
+public enum CreateDeviceContextStateFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_1_CREATE_DEVICE_CONTEXT_STATE_FLAG::D3D11_1_CREATE_DEVICE_CONTEXT_STATE_SINGLETHREADED"]/*' />
@@ -6024,7 +6027,7 @@ public enum CreateDeviceContextStateFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_CAPS</unmanaged>
-public enum VideoDecoderCaps : int
+public enum VideoDecoderCaps
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_CAPS::D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_CAPS_DOWNSAMPLE</unmanaged>
@@ -6045,7 +6048,7 @@ public enum VideoDecoderCaps : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINTS"]/*' />
 /// <unmanaged>D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINTS</unmanaged>
-public enum VideoProcessorBehaviorHints : int
+public enum VideoProcessorBehaviorHints
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINTS::D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_ROTATION"]/*' />
 	/// <unmanaged>D3D11_VIDEO_PROCESSOR_BEHAVIOR_HINT_MULTIPLANE_OVERLAY_ROTATION</unmanaged>
@@ -6063,7 +6066,7 @@ public enum VideoProcessorBehaviorHints : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS"]/*' />
 /// <unmanaged>D3D11_CRYPTO_SESSION_STATUS</unmanaged>
-public enum CryptoSessionStatus : int
+public enum CryptoSessionStatus
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_STATUS::D3D11_CRYPTO_SESSION_STATUS_OK"]/*' />
 	/// <unmanaged>D3D11_CRYPTO_SESSION_STATUS_OK</unmanaged>
@@ -6079,7 +6082,7 @@ public enum CryptoSessionStatus : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG"]/*' />
 /// <unmanaged>D3D11_TILE_MAPPING_FLAG</unmanaged>
 [Flags]
-public enum TileMappingFlags : int
+public enum TileMappingFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_MAPPING_FLAG::D3D11_TILE_MAPPING_NO_OVERWRITE"]/*' />
@@ -6090,7 +6093,7 @@ public enum TileMappingFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_RANGE_FLAG"]/*' />
 /// <unmanaged>D3D11_TILE_RANGE_FLAG</unmanaged>
 [Flags]
-public enum TileRangeFlags : int
+public enum TileRangeFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_RANGE_FLAG::D3D11_TILE_RANGE_NULL"]/*' />
@@ -6107,7 +6110,7 @@ public enum TileRangeFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG"]/*' />
 /// <unmanaged>D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG</unmanaged>
 [Flags]
-public enum CheckMultisampleQualityLevelsFlags : int
+public enum CheckMultisampleQualityLevelsFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_FLAG::D3D11_CHECK_MULTISAMPLE_QUALITY_LEVELS_TILED_RESOURCE"]/*' />
@@ -6118,7 +6121,7 @@ public enum CheckMultisampleQualityLevelsFlags : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG"]/*' />
 /// <unmanaged>D3D11_TILE_COPY_FLAG</unmanaged>
 [Flags]
-public enum TileCopyFlags : int
+public enum TileCopyFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TILE_COPY_FLAG::D3D11_TILE_COPY_NO_OVERWRITE"]/*' />
@@ -6134,7 +6137,7 @@ public enum TileCopyFlags : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE"]/*' />
 /// <unmanaged>D3D11_CONTEXT_TYPE</unmanaged>
-public enum ContextType : int
+public enum ContextType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONTEXT_TYPE::D3D11_CONTEXT_TYPE_ALL"]/*' />
 	/// <unmanaged>D3D11_CONTEXT_TYPE_ALL</unmanaged>
@@ -6155,7 +6158,7 @@ public enum ContextType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT"]/*' />
 /// <unmanaged>D3D11_TEXTURE_LAYOUT</unmanaged>
-public enum TextureLayout : int
+public enum TextureLayout
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TEXTURE_LAYOUT::D3D11_TEXTURE_LAYOUT_UNDEFINED"]/*' />
 	/// <unmanaged>D3D11_TEXTURE_LAYOUT_UNDEFINED</unmanaged>
@@ -6170,7 +6173,7 @@ public enum TextureLayout : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_MODE"]/*' />
 /// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_MODE</unmanaged>
-public enum ConservativeRasterizationMode : int
+public enum ConservativeRasterizationMode
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CONSERVATIVE_RASTERIZATION_MODE::D3D11_CONSERVATIVE_RASTERIZATION_MODE_OFF"]/*' />
 	/// <unmanaged>D3D11_CONSERVATIVE_RASTERIZATION_MODE_OFF</unmanaged>
@@ -6183,7 +6186,7 @@ public enum ConservativeRasterizationMode : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FENCE_FLAG"]/*' />
 /// <unmanaged>D3D11_FENCE_FLAG</unmanaged>
 [Flags]
-public enum FenceFlags : uint
+public enum FenceFlags
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FENCE_FLAG::D3D11_FENCE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D11_FENCE_FLAG_NONE</unmanaged>
@@ -6201,7 +6204,7 @@ public enum FenceFlags : uint
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_VIDEO"]/*' />
 /// <unmanaged>D3D11_FEATURE_VIDEO</unmanaged>
-public enum FeatureVideo : int
+public enum FeatureVideo
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FEATURE_VIDEO::D3D11_FEATURE_VIDEO_DECODER_HISTOGRAM"]/*' />
 	/// <unmanaged>D3D11_FEATURE_VIDEO_DECODER_HISTOGRAM</unmanaged>
@@ -6210,7 +6213,7 @@ public enum FeatureVideo : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT</unmanaged>
-public enum VideoDecoderHistogramComponent : int
+public enum VideoDecoderHistogramComponent
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_Y"]/*' />
 	/// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_Y</unmanaged>
@@ -6238,7 +6241,7 @@ public enum VideoDecoderHistogramComponent : int
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS"]/*' />
 /// <unmanaged>D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS</unmanaged>
 [Flags]
-public enum VideoDecoderHistogramComponentFlags : uint
+public enum VideoDecoderHistogramComponentFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAGS::D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT_FLAG_NONE"]/*' />
@@ -6270,7 +6273,7 @@ public enum VideoDecoderHistogramComponentFlags : uint
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS"]/*' />
 /// <unmanaged>D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS</unmanaged>
 [Flags]
-public enum CryptoSessionKeyExchangeFlags : uint
+public enum CryptoSessionKeyExchangeFlags
 {
 	None = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS::D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAG_NONE"]/*' />
@@ -6280,7 +6283,7 @@ public enum CryptoSessionKeyExchangeFlags : uint
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE"]/*' />
 /// <unmanaged>D3D11_SHADER_VERSION_TYPE</unmanaged>
-public enum ShaderVersionType : int
+public enum ShaderVersionType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE::D3D11_SHVER_PIXEL_SHADER"]/*' />
 	/// <unmanaged>D3D11_SHVER_PIXEL_SHADER</unmanaged>
@@ -6307,7 +6310,7 @@ public enum ShaderVersionType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE"]/*' />
 /// <unmanaged>D3D11_SHADER_TYPE</unmanaged>
-public enum ShaderType : int
+public enum ShaderType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE::D3D11_VERTEX_SHADER"]/*' />
 	/// <unmanaged>D3D11_VERTEX_SHADER</unmanaged>
@@ -6331,7 +6334,7 @@ public enum ShaderType : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE"]/*' />
 /// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE</unmanaged>
-public enum TraceGSInputPrimitive : int
+public enum TraceGSInputPrimitive
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE::D3D11_TRACE_GS_INPUT_PRIMITIVE_UNDEFINED"]/*' />
 	/// <unmanaged>D3D11_TRACE_GS_INPUT_PRIMITIVE_UNDEFINED</unmanaged>
@@ -6355,7 +6358,7 @@ public enum TraceGSInputPrimitive : int
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE"]/*' />
 /// <unmanaged>D3D11_TRACE_REGISTER_TYPE</unmanaged>
-public enum TraceRegisterType : int
+public enum TraceRegisterType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_NULL_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_NULL_REGISTER</unmanaged>

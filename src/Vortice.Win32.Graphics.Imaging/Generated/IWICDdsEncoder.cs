@@ -53,7 +53,11 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsEncoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsEncoder*, uint>)(lpVtbl[1]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, uint>)(lpVtbl[1]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsEncoder*, uint>)(lpVtbl[2]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, uint>)(lpVtbl[2]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::SetParameters"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	[VtblIndex(3)]
 	public HResult SetParameters(WICDdsParameters* pParameters)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[3]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[3]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::GetParameters"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	[VtblIndex(4)]
 	public HResult GetParameters(WICDdsParameters* pParameters)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[4]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, WICDdsParameters*, int>)(lpVtbl[4]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), pParameters);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsEncoder::CreateNewFrame"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICDdsEncoder : IWICDdsEncoder.Interface, INativeG
 	[VtblIndex(5)]
 	public HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, uint* pArrayIndex, uint* pMipLevel, uint* pSliceIndex)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsEncoder*, IWICBitmapFrameEncode**, uint*, uint*, uint*, int>)(lpVtbl[5]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, pArrayIndex, pMipLevel, pSliceIndex);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsEncoder*, IWICBitmapFrameEncode**, uint*, uint*, uint*, int>)(lpVtbl[5]))((IWICDdsEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, pArrayIndex, pMipLevel, pSliceIndex);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, uint>)(lpVtbl[1]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, uint>)(lpVtbl[1]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, uint>)(lpVtbl[2]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, uint>)(lpVtbl[2]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionSurface.BeginDraw" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[VtblIndex(3)]
 	public HResult BeginDraw(Rect* updateRect, Guid* iid, void** updateObject, System.Drawing.Point* updateOffset)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, Rect*, Guid*, void**, System.Drawing.Point*, int>)(lpVtbl[3]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), updateRect, iid, updateObject, updateOffset);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, Rect*, Guid*, void**, System.Drawing.Point*, int>)(lpVtbl[3]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), updateRect, iid, updateObject, updateOffset);
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionSurface.EndDraw" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[VtblIndex(4)]
 	public HResult EndDraw()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, int>)(lpVtbl[4]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, int>)(lpVtbl[4]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionSurface.SuspendDraw" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[VtblIndex(5)]
 	public HResult SuspendDraw()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, int>)(lpVtbl[5]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, int>)(lpVtbl[5]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionSurface.ResumeDraw" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[VtblIndex(6)]
 	public HResult ResumeDraw()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, int>)(lpVtbl[6]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, int>)(lpVtbl[6]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionSurface.Scroll" />
@@ -111,7 +139,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[VtblIndex(7)]
 	public HResult Scroll(Rect* scrollRect, Rect* clipRect, int offsetX, int offsetY)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, Rect*, Rect*, int, int, int>)(lpVtbl[7]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, Rect*, Rect*, int, int, int>)(lpVtbl[7]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), scrollRect, clipRect, offsetX, offsetY);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVirtualSurface::Resize"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[VtblIndex(8)]
 	public HResult Resize(uint width, uint height)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, uint, uint, int>)(lpVtbl[8]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), width, height);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, uint, uint, int>)(lpVtbl[8]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), width, height);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVirtualSurface::Trim"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IDCompositionVirtualSurface : IDCompositionVirtualS
 	[VtblIndex(9)]
 	public HResult Trim(Rect* rectangles, uint count)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionVirtualSurface*, Rect*, uint, int>)(lpVtbl[9]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), rectangles, count);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionVirtualSurface*, Rect*, uint, int>)(lpVtbl[9]))((IDCompositionVirtualSurface*)Unsafe.AsPointer(ref this), rectangles, count);
+#endif
 	}
 
 	public interface Interface : IDCompositionSurface.Interface

@@ -33,6 +33,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"BindFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MiscFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}

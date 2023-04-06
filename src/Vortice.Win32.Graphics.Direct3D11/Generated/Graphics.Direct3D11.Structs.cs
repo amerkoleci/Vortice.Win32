@@ -449,26 +449,6 @@ public partial struct BufferSrv
 	public _Anonymous2_e__Union Anonymous2;
 
 	[UnscopedRef]
-	public ref uint FirstElement
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			return ref Anonymous1.FirstElement;
-		}
-	}
-
-	[UnscopedRef]
-	public ref uint ElementOffset
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			return ref Anonymous1.ElementOffset;
-		}
-	}
-
-	[UnscopedRef]
 	public ref uint NumElements
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -488,17 +468,26 @@ public partial struct BufferSrv
 		}
 	}
 
-	[StructLayout(LayoutKind.Explicit)]
-	public partial struct _Anonymous1_e__Union
+	[UnscopedRef]
+	public ref uint FirstElement
 	{
-		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::FirstElement"]/*' />
-		[FieldOffset(0)]
-		public uint FirstElement;
-
-		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::ElementOffset"]/*' />
-		[FieldOffset(0)]
-		public uint ElementOffset;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous1.FirstElement;
+		}
 	}
+
+	[UnscopedRef]
+	public ref uint ElementOffset
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous1.ElementOffset;
+		}
+	}
+
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous2_e__Union
 	{
@@ -509,6 +498,17 @@ public partial struct BufferSrv
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::ElementWidth"]/*' />
 		[FieldOffset(0)]
 		public uint ElementWidth;
+	}
+	[StructLayout(LayoutKind.Explicit)]
+	public partial struct _Anonymous1_e__Union
+	{
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::FirstElement"]/*' />
+		[FieldOffset(0)]
+		public uint FirstElement;
+
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::ElementOffset"]/*' />
+		[FieldOffset(0)]
+		public uint ElementOffset;
 	}
 }
 
@@ -823,26 +823,6 @@ public partial struct BufferRtv
 	public _Anonymous2_e__Union Anonymous2;
 
 	[UnscopedRef]
-	public ref uint NumElements
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			return ref Anonymous2.NumElements;
-		}
-	}
-
-	[UnscopedRef]
-	public ref uint ElementWidth
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			return ref Anonymous2.ElementWidth;
-		}
-	}
-
-	[UnscopedRef]
 	public ref uint FirstElement
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -862,17 +842,26 @@ public partial struct BufferRtv
 		}
 	}
 
-	[StructLayout(LayoutKind.Explicit)]
-	public partial struct _Anonymous2_e__Union
+	[UnscopedRef]
+	public ref uint NumElements
 	{
-		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::NumElements"]/*' />
-		[FieldOffset(0)]
-		public uint NumElements;
-
-		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::ElementWidth"]/*' />
-		[FieldOffset(0)]
-		public uint ElementWidth;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous2.NumElements;
+		}
 	}
+
+	[UnscopedRef]
+	public ref uint ElementWidth
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref Anonymous2.ElementWidth;
+		}
+	}
+
 	[StructLayout(LayoutKind.Explicit)]
 	public partial struct _Anonymous1_e__Union
 	{
@@ -883,6 +872,17 @@ public partial struct BufferRtv
 		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous1_e__Union::ElementOffset"]/*' />
 		[FieldOffset(0)]
 		public uint ElementOffset;
+	}
+	[StructLayout(LayoutKind.Explicit)]
+	public partial struct _Anonymous2_e__Union
+	{
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::NumElements"]/*' />
+		[FieldOffset(0)]
+		public uint NumElements;
+
+		/// <include file='../Direct3D11.xml' path='doc/member[@name="_Anonymous2_e__Union::ElementWidth"]/*' />
+		[FieldOffset(0)]
+		public uint ElementWidth;
 	}
 }
 

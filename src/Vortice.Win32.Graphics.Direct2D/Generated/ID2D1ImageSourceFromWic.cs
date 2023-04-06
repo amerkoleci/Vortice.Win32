@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ImageSourceFromWic*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ImageSourceFromWic*, uint>)(lpVtbl[1]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, uint>)(lpVtbl[1]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ImageSourceFromWic*, uint>)(lpVtbl[2]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, uint>)(lpVtbl[2]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1ImageSourceFromWic*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1ImageSource.OfferResources" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[VtblIndex(4)]
 	public HResult OfferResources()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ImageSourceFromWic*, int>)(lpVtbl[4]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, int>)(lpVtbl[4]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1ImageSource.TryReclaimResources" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[VtblIndex(5)]
 	public HResult TryReclaimResources(Bool32* resourcesDiscarded)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ImageSourceFromWic*, Bool32*, int>)(lpVtbl[5]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), resourcesDiscarded);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Bool32*, int>)(lpVtbl[5]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), resourcesDiscarded);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::EnsureCached"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[VtblIndex(6)]
 	public HResult EnsureCached(Win32.Numerics.Rect* rectangleToFill)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ImageSourceFromWic*, Win32.Numerics.Rect*, int>)(lpVtbl[6]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToFill);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Win32.Numerics.Rect*, int>)(lpVtbl[6]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToFill);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::TrimCache"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[VtblIndex(7)]
 	public HResult TrimCache(Win32.Numerics.Rect* rectangleToPreserve)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ImageSourceFromWic*, Win32.Numerics.Rect*, int>)(lpVtbl[7]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToPreserve);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Win32.Numerics.Rect*, int>)(lpVtbl[7]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), rectangleToPreserve);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageSourceFromWic::GetSource"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1ImageSourceFromWic : ID2D1ImageSourceFromWic.I
 	[VtblIndex(8)]
 	public void GetSource(Graphics.Imaging.IWICBitmapSource** wicBitmapSource)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1ImageSourceFromWic*, Graphics.Imaging.IWICBitmapSource**, void>)(lpVtbl[8]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), wicBitmapSource);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1ImageSourceFromWic*, Graphics.Imaging.IWICBitmapSource**, void>)(lpVtbl[8]))((ID2D1ImageSourceFromWic*)Unsafe.AsPointer(ref this), wicBitmapSource);
+#endif
 	}
 
 	public interface Interface : ID2D1ImageSource.Interface

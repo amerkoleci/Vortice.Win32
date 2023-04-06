@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12SharingContract*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12SharingContract*, uint>)(lpVtbl[1]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, uint>)(lpVtbl[1]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,15 +79,23 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12SharingContract*, uint>)(lpVtbl[2]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, uint>)(lpVtbl[2]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::Present"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void Present(ID3D12Resource* pResource, uint Subresource, IntPtr window)
+	public void Present(ID3D12Resource* pResource, uint Subresource, nint window)
 	{
-		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, ID3D12Resource*, uint, IntPtr, void>)(lpVtbl[3]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), pResource, Subresource, window);
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12SharingContract*, ID3D12Resource*, uint, nint, void>)(lpVtbl[3]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), pResource, Subresource, window);
+#else
+		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, ID3D12Resource*, uint, nint, void>)(lpVtbl[3]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), pResource, Subresource, window);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::SharedFenceSignal"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 	[VtblIndex(4)]
 	public void SharedFenceSignal(ID3D12Fence* pFence, ulong FenceValue)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12SharingContract*, ID3D12Fence*, ulong, void>)(lpVtbl[4]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), pFence, FenceValue);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, ID3D12Fence*, ulong, void>)(lpVtbl[4]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), pFence, FenceValue);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::BeginCapturableWork"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 	[VtblIndex(5)]
 	public void BeginCapturableWork(Guid* guid)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12SharingContract*, Guid*, void>)(lpVtbl[5]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), guid);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, Guid*, void>)(lpVtbl[5]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), guid);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SharingContract::EndCapturableWork"]/*' />
@@ -103,13 +127,17 @@ public unsafe partial struct ID3D12SharingContract : ID3D12SharingContract.Inter
 	[VtblIndex(6)]
 	public void EndCapturableWork(Guid* guid)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12SharingContract*, Guid*, void>)(lpVtbl[6]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), guid);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12SharingContract*, Guid*, void>)(lpVtbl[6]))((ID3D12SharingContract*)Unsafe.AsPointer(ref this), guid);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		void Present(ID3D12Resource* pResource, uint Subresource, IntPtr window);
+		void Present(ID3D12Resource* pResource, uint Subresource, nint window);
 
 		[VtblIndex(4)]
 		void SharedFenceSignal(ID3D12Fence* pFence, ulong FenceValue);

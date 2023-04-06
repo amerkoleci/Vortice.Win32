@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1InkStyle*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1InkStyle*, uint>)(lpVtbl[1]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, uint>)(lpVtbl[1]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1InkStyle*, uint>)(lpVtbl[2]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, uint>)(lpVtbl[2]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1InkStyle*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::SetNibTransform"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	[VtblIndex(4)]
 	public void SetNibTransform(Matrix3x2* transform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1InkStyle*, Matrix3x2*, void>)(lpVtbl[4]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), transform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, Matrix3x2*, void>)(lpVtbl[4]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), transform);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibTransform"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	[VtblIndex(5)]
 	public void GetNibTransform(Matrix3x2* transform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1InkStyle*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), transform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), transform);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::SetNibShape"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	[VtblIndex(6)]
 	public void SetNibShape(InkNibShape nibShape)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1InkStyle*, InkNibShape, void>)(lpVtbl[6]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), nibShape);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, InkNibShape, void>)(lpVtbl[6]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this), nibShape);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1InkStyle::GetNibShape"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1InkStyle : ID2D1InkStyle.Interface, INativeGui
 	[VtblIndex(7)]
 	public InkNibShape GetNibShape()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1InkStyle*, InkNibShape>)(lpVtbl[7]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1InkStyle*, InkNibShape>)(lpVtbl[7]))((ID2D1InkStyle*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : ID2D1Resource.Interface

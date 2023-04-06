@@ -22,7 +22,7 @@ public partial struct RgnDataHeader
     public uint nCount;
 
     /// <summary>
-    /// The size of the <see cref="RgnData"/> buffer required to receive the <see cref="RawRect"/> structures that make up the region.
+    /// The size of the <see cref="RgnData"/> buffer required to receive the <see cref="Rect"/> structures that make up the region.
     /// If the size is not known, this member can be zero.
     /// </summary>
     public uint nRgnSize;

@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedDataSettings1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedDataSettings1*, uint>)(lpVtbl[1]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, uint>)(lpVtbl[1]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedDataSettings1*, uint>)(lpVtbl[2]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, uint>)(lpVtbl[2]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedDataSettings.SetAutoBreadcrumbsEnablement" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	[VtblIndex(3)]
 	public void SetAutoBreadcrumbsEnablement(DredEnablement Enablement)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedDataSettings.SetPageFaultEnablement" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	[VtblIndex(4)]
 	public void SetPageFaultEnablement(DredEnablement Enablement)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedDataSettings.SetWatsonDumpEnablement" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	[VtblIndex(5)]
 	public void SetWatsonDumpEnablement(DredEnablement Enablement)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedDataSettings1::SetBreadcrumbContextEnablement"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedDataSettings1 : ID3D12De
 	[VtblIndex(6)]
 	public void SetBreadcrumbContextEnablement(DredEnablement Enablement)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedDataSettings1*, DredEnablement, void>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedDataSettings1*)Unsafe.AsPointer(ref this), Enablement);
+#endif
 	}
 
 	public interface Interface : ID3D12DeviceRemovedExtendedDataSettings.Interface

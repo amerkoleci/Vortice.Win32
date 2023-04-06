@@ -51,7 +51,11 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : ID3D11Shader
 	[VtblIndex(0)]
 	public HResult GetDesc(ShaderBufferDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderReflectionConstantBuffer*, ShaderBufferDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, ShaderBufferDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByIndex"]/*' />
@@ -59,7 +63,11 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : ID3D11Shader
 	[VtblIndex(1)]
 	public ID3D11ShaderReflectionVariable GetVariableByIndex(uint Index)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderReflectionConstantBuffer*, uint, ID3D11ShaderReflectionVariable>)(lpVtbl[1]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Index);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, uint, ID3D11ShaderReflectionVariable>)(lpVtbl[1]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Index);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionConstantBuffer::GetVariableByName"]/*' />
@@ -67,7 +75,11 @@ public unsafe partial struct ID3D11ShaderReflectionConstantBuffer : ID3D11Shader
 	[VtblIndex(2)]
 	public ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderReflectionConstantBuffer*, sbyte*, ID3D11ShaderReflectionVariable>)(lpVtbl[2]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionConstantBuffer*, sbyte*, ID3D11ShaderReflectionVariable>)(lpVtbl[2]))((ID3D11ShaderReflectionConstantBuffer*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	public interface Interface 

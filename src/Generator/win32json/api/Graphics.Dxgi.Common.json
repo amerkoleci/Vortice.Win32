@@ -74,6 +74,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Numerator","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Denominator","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -88,6 +89,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Quality","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -272,6 +274,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Red","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"Green","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -287,6 +290,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Scale","Type":{"Kind":"ApiRef","Name":"DXGI_RGB","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
 			,{"Name":"Offset","Type":{"Kind":"ApiRef","Name":"DXGI_RGB","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
@@ -302,6 +306,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ScaleAndOffsetSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"MaxConvertedValue","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -364,6 +369,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Width","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Height","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -382,6 +388,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CodeCounts","Type":{"Kind":"Array","Shape":{"Size":12},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"CodeValues","Type":{"Kind":"Array","Shape":{"Size":12},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -396,6 +403,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"CodeCounts","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"CodeValues","Type":{"Kind":"Array","Shape":{"Size":162},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -410,6 +418,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Elements","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 		]

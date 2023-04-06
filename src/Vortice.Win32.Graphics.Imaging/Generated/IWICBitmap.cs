@@ -53,7 +53,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmap*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmap*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, uint>)(lpVtbl[1]))((IWICBitmap*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, uint>)(lpVtbl[1]))((IWICBitmap*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, uint>)(lpVtbl[2]))((IWICBitmap*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, uint>)(lpVtbl[2]))((IWICBitmap*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(3)]
 	public HResult GetSize(uint* puiWidth, uint* puiHeight)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmap*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmap*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetPixelFormat" />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(4)]
 	public HResult GetPixelFormat(Guid* pPixelFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, Guid*, int>)(lpVtbl[4]))((IWICBitmap*)Unsafe.AsPointer(ref this), pPixelFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, Guid*, int>)(lpVtbl[4]))((IWICBitmap*)Unsafe.AsPointer(ref this), pPixelFormat);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetResolution" />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(5)]
 	public HResult GetResolution(double* pDpiX, double* pDpiY)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, double*, double*, int>)(lpVtbl[5]))((IWICBitmap*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, double*, double*, int>)(lpVtbl[5]))((IWICBitmap*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPalette" />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(6)]
 	public HResult CopyPalette(IWICPalette* pIPalette)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, IWICPalette*, int>)(lpVtbl[6]))((IWICBitmap*)Unsafe.AsPointer(ref this), pIPalette);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, IWICPalette*, int>)(lpVtbl[6]))((IWICBitmap*)Unsafe.AsPointer(ref this), pIPalette);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(7)]
 	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmap*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICBitmap*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmap::Lock"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult Lock(System.Drawing.Rectangle* prcLock, WICBitmapLockFlags flags, IWICBitmapLock** ppILock)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, System.Drawing.Rectangle*, WICBitmapLockFlags, IWICBitmapLock**, int>)(lpVtbl[8]))((IWICBitmap*)Unsafe.AsPointer(ref this), prcLock, flags, ppILock);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, System.Drawing.Rectangle*, WICBitmapLockFlags, IWICBitmapLock**, int>)(lpVtbl[8]))((IWICBitmap*)Unsafe.AsPointer(ref this), prcLock, flags, ppILock);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmap::SetPalette"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(9)]
 	public HResult SetPalette(IWICPalette* pIPalette)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, IWICPalette*, int>)(lpVtbl[9]))((IWICBitmap*)Unsafe.AsPointer(ref this), pIPalette);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, IWICPalette*, int>)(lpVtbl[9]))((IWICBitmap*)Unsafe.AsPointer(ref this), pIPalette);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmap::SetResolution"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IWICBitmap : IWICBitmap.Interface, INativeGuid
 	[VtblIndex(10)]
 	public HResult SetResolution(double dpiX, double dpiY)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmap*, double, double, int>)(lpVtbl[10]))((IWICBitmap*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmap*, double, double, int>)(lpVtbl[10]))((IWICBitmap*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+#endif
 	}
 
 	public interface Interface : IWICBitmapSource.Interface

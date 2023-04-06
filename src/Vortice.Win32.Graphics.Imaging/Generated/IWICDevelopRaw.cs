@@ -53,7 +53,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, Guid*, void**, int>)(lpVtbl[0]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, Guid*, void**, int>)(lpVtbl[0]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint>)(lpVtbl[1]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint>)(lpVtbl[1]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint>)(lpVtbl[2]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint>)(lpVtbl[2]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(3)]
 	public HResult GetSize(uint* puiWidth, uint* puiHeight)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint*, uint*, int>)(lpVtbl[3]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint*, uint*, int>)(lpVtbl[3]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetPixelFormat" />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(4)]
 	public HResult GetPixelFormat(Guid* pPixelFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, Guid*, int>)(lpVtbl[4]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pPixelFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, Guid*, int>)(lpVtbl[4]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pPixelFormat);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetResolution" />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(5)]
 	public HResult GetResolution(double* pDpiX, double* pDpiY)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, double*, int>)(lpVtbl[5]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, double*, int>)(lpVtbl[5]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPalette" />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(6)]
 	public HResult CopyPalette(IWICPalette* pIPalette)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, IWICPalette*, int>)(lpVtbl[6]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pIPalette);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICPalette*, int>)(lpVtbl[6]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pIPalette);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(7)]
 	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapFrameDecode.GetMetadataQueryReader" />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(8)]
 	public HResult GetMetadataQueryReader(IWICMetadataQueryReader** ppIMetadataQueryReader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, IWICMetadataQueryReader**, int>)(lpVtbl[8]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICMetadataQueryReader**, int>)(lpVtbl[8]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapFrameDecode.GetColorContexts" />
@@ -127,7 +163,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(9)]
 	public HResult GetColorContexts(uint cCount, IWICColorContext** ppIColorContexts, uint* pcActualCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint, IWICColorContext**, uint*, int>)(lpVtbl[9]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cCount, ppIColorContexts, pcActualCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, IWICColorContext**, uint*, int>)(lpVtbl[9]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cCount, ppIColorContexts, pcActualCount);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapFrameDecode.GetThumbnail" />
@@ -135,7 +175,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(10)]
 	public HResult GetThumbnail(IWICBitmapSource** ppIThumbnail)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, IWICBitmapSource**, int>)(lpVtbl[10]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppIThumbnail);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICBitmapSource**, int>)(lpVtbl[10]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppIThumbnail);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::QueryRawCapabilitiesInfo"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(11)]
 	public HResult QueryRawCapabilitiesInfo(WICRawCapabilitiesInfo* pInfo)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, WICRawCapabilitiesInfo*, int>)(lpVtbl[11]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pInfo);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, WICRawCapabilitiesInfo*, int>)(lpVtbl[11]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pInfo);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::LoadParameterSet"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(12)]
 	public HResult LoadParameterSet(WICRawParameterSet ParameterSet)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, WICRawParameterSet, int>)(lpVtbl[12]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ParameterSet);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, WICRawParameterSet, int>)(lpVtbl[12]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ParameterSet);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetCurrentParameterSet"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(13)]
 	public HResult GetCurrentParameterSet(Com.IPropertyBag2** ppCurrentParameterSet)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, Com.IPropertyBag2**, int>)(lpVtbl[13]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppCurrentParameterSet);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, Com.IPropertyBag2**, int>)(lpVtbl[13]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ppCurrentParameterSet);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetExposureCompensation"]/*' />
@@ -167,7 +223,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(14)]
 	public HResult SetExposureCompensation(double ev)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double, int>)(lpVtbl[14]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ev);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double, int>)(lpVtbl[14]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), ev);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetExposureCompensation"]/*' />
@@ -175,7 +235,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(15)]
 	public HResult GetExposureCompensation(double* pEV)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, int>)(lpVtbl[15]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pEV);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, int>)(lpVtbl[15]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pEV);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetWhitePointRGB"]/*' />
@@ -183,7 +247,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(16)]
 	public HResult SetWhitePointRGB(uint Red, uint Green, uint Blue)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint, uint, uint, int>)(lpVtbl[16]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Red, Green, Blue);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, uint, uint, int>)(lpVtbl[16]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Red, Green, Blue);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetWhitePointRGB"]/*' />
@@ -191,7 +259,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(17)]
 	public HResult GetWhitePointRGB(uint* pRed, uint* pGreen, uint* pBlue)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint*, uint*, uint*, int>)(lpVtbl[17]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pRed, pGreen, pBlue);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint*, uint*, uint*, int>)(lpVtbl[17]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pRed, pGreen, pBlue);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetNamedWhitePoint"]/*' />
@@ -199,7 +271,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(18)]
 	public HResult SetNamedWhitePoint(WICNamedWhitePoint WhitePoint)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, WICNamedWhitePoint, int>)(lpVtbl[18]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), WhitePoint);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, WICNamedWhitePoint, int>)(lpVtbl[18]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), WhitePoint);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetNamedWhitePoint"]/*' />
@@ -207,7 +283,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(19)]
 	public HResult GetNamedWhitePoint(WICNamedWhitePoint* pWhitePoint)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, WICNamedWhitePoint*, int>)(lpVtbl[19]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pWhitePoint);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, WICNamedWhitePoint*, int>)(lpVtbl[19]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pWhitePoint);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetWhitePointKelvin"]/*' />
@@ -215,7 +295,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(20)]
 	public HResult SetWhitePointKelvin(uint WhitePointKelvin)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint, int>)(lpVtbl[20]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), WhitePointKelvin);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, int>)(lpVtbl[20]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), WhitePointKelvin);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetWhitePointKelvin"]/*' />
@@ -223,7 +307,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(21)]
 	public HResult GetWhitePointKelvin(uint* pWhitePointKelvin)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint*, int>)(lpVtbl[21]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pWhitePointKelvin);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint*, int>)(lpVtbl[21]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pWhitePointKelvin);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetKelvinRangeInfo"]/*' />
@@ -231,7 +319,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(22)]
 	public HResult GetKelvinRangeInfo(uint* pMinKelvinTemp, uint* pMaxKelvinTemp, uint* pKelvinTempStepValue)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint*, uint*, uint*, int>)(lpVtbl[22]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pMinKelvinTemp, pMaxKelvinTemp, pKelvinTempStepValue);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint*, uint*, uint*, int>)(lpVtbl[22]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pMinKelvinTemp, pMaxKelvinTemp, pKelvinTempStepValue);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetContrast"]/*' />
@@ -239,7 +331,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(23)]
 	public HResult SetContrast(double Contrast)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double, int>)(lpVtbl[23]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Contrast);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double, int>)(lpVtbl[23]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Contrast);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetContrast"]/*' />
@@ -247,7 +343,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(24)]
 	public HResult GetContrast(double* pContrast)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, int>)(lpVtbl[24]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pContrast);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, int>)(lpVtbl[24]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pContrast);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetGamma"]/*' />
@@ -255,7 +355,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(25)]
 	public HResult SetGamma(double Gamma)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double, int>)(lpVtbl[25]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Gamma);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double, int>)(lpVtbl[25]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Gamma);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetGamma"]/*' />
@@ -263,7 +367,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(26)]
 	public HResult GetGamma(double* pGamma)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, int>)(lpVtbl[26]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pGamma);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, int>)(lpVtbl[26]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pGamma);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetSharpness"]/*' />
@@ -271,7 +379,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(27)]
 	public HResult SetSharpness(double Sharpness)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double, int>)(lpVtbl[27]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Sharpness);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double, int>)(lpVtbl[27]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Sharpness);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetSharpness"]/*' />
@@ -279,7 +391,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(28)]
 	public HResult GetSharpness(double* pSharpness)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, int>)(lpVtbl[28]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pSharpness);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, int>)(lpVtbl[28]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pSharpness);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetSaturation"]/*' />
@@ -287,7 +403,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(29)]
 	public HResult SetSaturation(double Saturation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double, int>)(lpVtbl[29]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Saturation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double, int>)(lpVtbl[29]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Saturation);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetSaturation"]/*' />
@@ -295,7 +415,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(30)]
 	public HResult GetSaturation(double* pSaturation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, int>)(lpVtbl[30]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pSaturation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, int>)(lpVtbl[30]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pSaturation);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetTint"]/*' />
@@ -303,7 +427,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(31)]
 	public HResult SetTint(double Tint)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double, int>)(lpVtbl[31]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Tint);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double, int>)(lpVtbl[31]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Tint);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetTint"]/*' />
@@ -311,7 +439,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(32)]
 	public HResult GetTint(double* pTint)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, int>)(lpVtbl[32]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pTint);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, int>)(lpVtbl[32]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pTint);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetNoiseReduction"]/*' />
@@ -319,7 +451,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(33)]
 	public HResult SetNoiseReduction(double NoiseReduction)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double, int>)(lpVtbl[33]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), NoiseReduction);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double, int>)(lpVtbl[33]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), NoiseReduction);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetNoiseReduction"]/*' />
@@ -327,7 +463,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(34)]
 	public HResult GetNoiseReduction(double* pNoiseReduction)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, int>)(lpVtbl[34]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pNoiseReduction);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, int>)(lpVtbl[34]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pNoiseReduction);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetDestinationColorContext"]/*' />
@@ -335,7 +475,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(35)]
 	public HResult SetDestinationColorContext(IWICColorContext* pColorContext)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, IWICColorContext*, int>)(lpVtbl[35]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pColorContext);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICColorContext*, int>)(lpVtbl[35]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pColorContext);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetToneCurve"]/*' />
@@ -343,7 +487,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(36)]
 	public HResult SetToneCurve(uint cbToneCurveSize, WICRawToneCurve* pToneCurve)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint, WICRawToneCurve*, int>)(lpVtbl[36]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cbToneCurveSize, pToneCurve);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, WICRawToneCurve*, int>)(lpVtbl[36]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cbToneCurveSize, pToneCurve);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetToneCurve"]/*' />
@@ -351,7 +499,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(37)]
 	public HResult GetToneCurve(uint cbToneCurveBufferSize, WICRawToneCurve* pToneCurve, uint* pcbActualToneCurveBufferSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, uint, WICRawToneCurve*, uint*, int>)(lpVtbl[37]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cbToneCurveBufferSize, pToneCurve, pcbActualToneCurveBufferSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, uint, WICRawToneCurve*, uint*, int>)(lpVtbl[37]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), cbToneCurveBufferSize, pToneCurve, pcbActualToneCurveBufferSize);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetRotation"]/*' />
@@ -359,7 +511,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(38)]
 	public HResult SetRotation(double Rotation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double, int>)(lpVtbl[38]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Rotation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double, int>)(lpVtbl[38]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), Rotation);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetRotation"]/*' />
@@ -367,7 +523,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(39)]
 	public HResult GetRotation(double* pRotation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, double*, int>)(lpVtbl[39]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pRotation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, double*, int>)(lpVtbl[39]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pRotation);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetRenderMode"]/*' />
@@ -375,7 +535,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(40)]
 	public HResult SetRenderMode(WICRawRenderMode RenderMode)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, WICRawRenderMode, int>)(lpVtbl[40]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), RenderMode);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, WICRawRenderMode, int>)(lpVtbl[40]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), RenderMode);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::GetRenderMode"]/*' />
@@ -383,7 +547,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(41)]
 	public HResult GetRenderMode(WICRawRenderMode* pRenderMode)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, WICRawRenderMode*, int>)(lpVtbl[41]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pRenderMode);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, WICRawRenderMode*, int>)(lpVtbl[41]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pRenderMode);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDevelopRaw::SetNotificationCallback"]/*' />
@@ -391,7 +559,11 @@ public unsafe partial struct IWICDevelopRaw : IWICDevelopRaw.Interface, INativeG
 	[VtblIndex(42)]
 	public HResult SetNotificationCallback(IWICDevelopRawNotificationCallback* pCallback)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDevelopRaw*, IWICDevelopRawNotificationCallback*, int>)(lpVtbl[42]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pCallback);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDevelopRaw*, IWICDevelopRawNotificationCallback*, int>)(lpVtbl[42]))((IWICDevelopRaw*)Unsafe.AsPointer(ref this), pCallback);
+#endif
 	}
 
 	public interface Interface : IWICBitmapFrameDecode.Interface

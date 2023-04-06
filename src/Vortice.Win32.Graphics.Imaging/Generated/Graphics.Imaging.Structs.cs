@@ -14,7 +14,7 @@ namespace Win32.Graphics.Imaging;
 public partial struct WICBitmapPattern
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::Position"]/*' />
-	public ULargeInteger Position;
+	public ulong Position;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPattern::Length"]/*' />
 	public uint Length;
@@ -298,7 +298,7 @@ public partial struct WICDdsFormatInfo
 public partial struct WICMetadataPattern
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern::Position"]/*' />
-	public ULargeInteger Position;
+	public ulong Position;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern::Length"]/*' />
 	public uint Length;
@@ -310,7 +310,7 @@ public partial struct WICMetadataPattern
 	public unsafe byte* Mask;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataPattern::DataOffset"]/*' />
-	public ULargeInteger DataOffset;
+	public ulong DataOffset;
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader"]/*' />
@@ -318,7 +318,7 @@ public partial struct WICMetadataPattern
 public partial struct WICMetadataHeader
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader::Position"]/*' />
-	public ULargeInteger Position;
+	public ulong Position;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader::Length"]/*' />
 	public uint Length;
@@ -327,5 +327,5 @@ public partial struct WICMetadataHeader
 	public unsafe byte* Header;
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataHeader::DataOffset"]/*' />
-	public ULargeInteger DataOffset;
+	public ulong DataOffset;
 }

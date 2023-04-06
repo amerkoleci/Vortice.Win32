@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Texture2D1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Texture2D1*, uint>)(lpVtbl[1]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, uint>)(lpVtbl[1]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Texture2D1*, uint>)(lpVtbl[2]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, uint>)(lpVtbl[2]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(3)]
 	public void GetDevice(ID3D11Device** ppDevice)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11Texture2D1*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), ppDevice);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), ppDevice);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(4)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Texture2D1*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(5)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Texture2D1*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(6)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Texture2D1*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11Resource.GetType" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(7)]
 	public void GetType(ResourceDimension* pResourceDimension)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11Texture2D1*, ResourceDimension*, void>)(lpVtbl[7]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pResourceDimension);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, ResourceDimension*, void>)(lpVtbl[7]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pResourceDimension);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11Resource.SetEvictionPriority" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(8)]
 	public void SetEvictionPriority(uint EvictionPriority)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11Texture2D1*, uint, void>)(lpVtbl[8]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), EvictionPriority);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, uint, void>)(lpVtbl[8]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), EvictionPriority);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11Resource.GetEvictionPriority" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(9)]
 	public uint GetEvictionPriority()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Texture2D1*, uint>)(lpVtbl[9]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, uint>)(lpVtbl[9]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11Texture2D.GetDesc" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(10)]
 	public void GetDesc(Texture2DDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11Texture2D1*, Texture2DDescription*, void>)(lpVtbl[10]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Texture2DDescription*, void>)(lpVtbl[10]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Texture2D1::GetDesc1"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct ID3D11Texture2D1 : ID3D11Texture2D1.Interface, INat
 	[VtblIndex(11)]
 	public void GetDesc1(Texture2DDescription1* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11Texture2D1*, Texture2DDescription1*, void>)(lpVtbl[11]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11Texture2D1*, Texture2DDescription1*, void>)(lpVtbl[11]))((ID3D11Texture2D1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	public interface Interface : ID3D11Texture2D.Interface

@@ -53,7 +53,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, Guid*, void**, int>)(lpVtbl[0]))((IWICColorTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, Guid*, void**, int>)(lpVtbl[0]))((IWICColorTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, uint>)(lpVtbl[1]))((IWICColorTransform*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, uint>)(lpVtbl[1]))((IWICColorTransform*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, uint>)(lpVtbl[2]))((IWICColorTransform*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, uint>)(lpVtbl[2]))((IWICColorTransform*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[VtblIndex(3)]
 	public HResult GetSize(uint* puiWidth, uint* puiHeight)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, uint*, uint*, int>)(lpVtbl[3]))((IWICColorTransform*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, uint*, uint*, int>)(lpVtbl[3]))((IWICColorTransform*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetPixelFormat" />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[VtblIndex(4)]
 	public HResult GetPixelFormat(Guid* pPixelFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, Guid*, int>)(lpVtbl[4]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pPixelFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, Guid*, int>)(lpVtbl[4]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pPixelFormat);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetResolution" />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[VtblIndex(5)]
 	public HResult GetResolution(double* pDpiX, double* pDpiY)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, double*, double*, int>)(lpVtbl[5]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, double*, double*, int>)(lpVtbl[5]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPalette" />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[VtblIndex(6)]
 	public HResult CopyPalette(IWICPalette* pIPalette)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, IWICPalette*, int>)(lpVtbl[6]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pIPalette);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, IWICPalette*, int>)(lpVtbl[6]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pIPalette);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[VtblIndex(7)]
 	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICColorTransform*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICColorTransform*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorTransform::Initialize"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICColorTransform : IWICColorTransform.Interface, 
 	[VtblIndex(8)]
 	public HResult Initialize(IWICBitmapSource* pIBitmapSource, IWICColorContext* pIContextSource, IWICColorContext* pIContextDest, Guid* pixelFmtDest)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorTransform*, IWICBitmapSource*, IWICColorContext*, IWICColorContext*, Guid*, int>)(lpVtbl[8]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pIBitmapSource, pIContextSource, pIContextDest, pixelFmtDest);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorTransform*, IWICBitmapSource*, IWICColorContext*, IWICColorContext*, Guid*, int>)(lpVtbl[8]))((IWICColorTransform*)Unsafe.AsPointer(ref this), pIBitmapSource, pIContextSource, pIContextDest, pixelFmtDest);
+#endif
 	}
 
 	public interface Interface : IWICBitmapSource.Interface

@@ -11,7 +11,7 @@ namespace Win32.Graphics.Direct2D;
 
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION"]/*' />
 /// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION</unmanaged>
-public enum InterpolationModeDefinition : int
+public enum InterpolationModeDefinition
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INTERPOLATION_MODE_DEFINITION::D2D1_INTERPOLATION_MODE_DEFINITION_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_INTERPOLATION_MODE_DEFINITION_NEAREST_NEIGHBOR</unmanaged>

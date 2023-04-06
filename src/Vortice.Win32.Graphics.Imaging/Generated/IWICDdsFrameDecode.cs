@@ -53,7 +53,11 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsFrameDecode*, Guid*, void**, int>)(lpVtbl[0]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, Guid*, void**, int>)(lpVtbl[0]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsFrameDecode*, uint>)(lpVtbl[1]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, uint>)(lpVtbl[1]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsFrameDecode*, uint>)(lpVtbl[2]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, uint>)(lpVtbl[2]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetSizeInBlocks"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	[VtblIndex(3)]
 	public HResult GetSizeInBlocks(uint* pWidthInBlocks, uint* pHeightInBlocks)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsFrameDecode*, uint*, uint*, int>)(lpVtbl[3]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pWidthInBlocks, pHeightInBlocks);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, uint*, uint*, int>)(lpVtbl[3]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pWidthInBlocks, pHeightInBlocks);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::GetFormatInfo"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	[VtblIndex(4)]
 	public HResult GetFormatInfo(WICDdsFormatInfo* pFormatInfo)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsFrameDecode*, WICDdsFormatInfo*, int>)(lpVtbl[4]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pFormatInfo);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, WICDdsFormatInfo*, int>)(lpVtbl[4]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), pFormatInfo);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICDdsFrameDecode::CopyBlocks"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICDdsFrameDecode : IWICDdsFrameDecode.Interface, 
 	[VtblIndex(5)]
 	public HResult CopyBlocks(System.Drawing.Rectangle* prcBoundsInBlocks, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICDdsFrameDecode*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[5]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), prcBoundsInBlocks, cbStride, cbBufferSize, pbBuffer);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICDdsFrameDecode*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[5]))((IWICDdsFrameDecode*)Unsafe.AsPointer(ref this), prcBoundsInBlocks, cbStride, cbBufferSize, pbBuffer);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

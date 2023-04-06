@@ -3,9 +3,9 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-unsafe partial struct BarrierSubResourceRange
+unsafe partial struct BarrierSubresourceRange
 {
-    public BarrierSubResourceRange(uint subresource)
+    public BarrierSubresourceRange(uint subresource)
     {
         IndexOrFirstMipLevel = subresource;
         NumMipLevels = 0;
@@ -15,7 +15,7 @@ unsafe partial struct BarrierSubResourceRange
         NumPlanes = 0;
     }
 
-    public BarrierSubResourceRange(
+    public BarrierSubresourceRange(
         uint firstMipLevel,
         uint numMips,
         uint firstArraySlice,

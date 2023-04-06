@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12Debug4 : ID3D12Debug4.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12Debug4*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12Debug4*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12Debug4 : ID3D12Debug4.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12Debug4*, uint>)(lpVtbl[1]))((ID3D12Debug4*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12Debug4*, uint>)(lpVtbl[1]))((ID3D12Debug4*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12Debug4 : ID3D12Debug4.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12Debug4*, uint>)(lpVtbl[2]))((ID3D12Debug4*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12Debug4*, uint>)(lpVtbl[2]))((ID3D12Debug4*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Debug.EnableDebugLayer" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12Debug4 : ID3D12Debug4.Interface, INativeGuid
 	[VtblIndex(3)]
 	public void EnableDebugLayer()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12Debug4*, void>)(lpVtbl[3]))((ID3D12Debug4*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12Debug4*, void>)(lpVtbl[3]))((ID3D12Debug4*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Debug3.SetEnableGPUBasedValidation" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12Debug4 : ID3D12Debug4.Interface, INativeGuid
 	[VtblIndex(4)]
 	public void SetEnableGPUBasedValidation(Bool32 Enable)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12Debug4*, Bool32, void>)(lpVtbl[4]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), Enable);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12Debug4*, Bool32, void>)(lpVtbl[4]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), Enable);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Debug3.SetEnableSynchronizedCommandQueueValidation" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12Debug4 : ID3D12Debug4.Interface, INativeGuid
 	[VtblIndex(5)]
 	public void SetEnableSynchronizedCommandQueueValidation(Bool32 Enable)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12Debug4*, Bool32, void>)(lpVtbl[5]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), Enable);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12Debug4*, Bool32, void>)(lpVtbl[5]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), Enable);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Debug3.SetGPUBasedValidationFlags" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D12Debug4 : ID3D12Debug4.Interface, INativeGuid
 	[VtblIndex(6)]
 	public void SetGPUBasedValidationFlags(GpuBasedValidationFlags Flags)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12Debug4*, GpuBasedValidationFlags, void>)(lpVtbl[6]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), Flags);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12Debug4*, GpuBasedValidationFlags, void>)(lpVtbl[6]))((ID3D12Debug4*)Unsafe.AsPointer(ref this), Flags);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Debug4::DisableDebugLayer"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D12Debug4 : ID3D12Debug4.Interface, INativeGuid
 	[VtblIndex(7)]
 	public void DisableDebugLayer()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12Debug4*, void>)(lpVtbl[7]))((ID3D12Debug4*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12Debug4*, void>)(lpVtbl[7]))((ID3D12Debug4*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : ID3D12Debug3.Interface

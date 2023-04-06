@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DescriptorHeap*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DescriptorHeap*, uint>)(lpVtbl[1]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, uint>)(lpVtbl[1]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DescriptorHeap*, uint>)(lpVtbl[2]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, uint>)(lpVtbl[2]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	[VtblIndex(3)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DescriptorHeap*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	[VtblIndex(4)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DescriptorHeap*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	[VtblIndex(5)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DescriptorHeap*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetName" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	[VtblIndex(6)]
 	public HResult SetName(ushort* Name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DescriptorHeap*, ushort*, int>)(lpVtbl[6]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), Name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, ushort*, int>)(lpVtbl[6]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	[VtblIndex(7)]
 	public HResult GetDevice(Guid* riid, void** ppvDevice)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DescriptorHeap*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetDesc"]/*' />
@@ -120,7 +152,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	public DescriptorHeapDescription GetDesc()
 	{
 		DescriptorHeapDescription result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID3D12DescriptorHeap*, DescriptorHeapDescription*, DescriptorHeapDescription*>)(lpVtbl[8]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, DescriptorHeapDescription*, DescriptorHeapDescription*>)(lpVtbl[8]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetCPUDescriptorHandleForHeapStart"]/*' />
@@ -129,7 +165,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	public CpuDescriptorHandle GetCPUDescriptorHandleForHeapStart()
 	{
 		CpuDescriptorHandle result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID3D12DescriptorHeap*, CpuDescriptorHandle*, CpuDescriptorHandle*>)(lpVtbl[9]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, CpuDescriptorHandle*, CpuDescriptorHandle*>)(lpVtbl[9]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DescriptorHeap::GetGPUDescriptorHandleForHeapStart"]/*' />
@@ -138,7 +178,11 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	public GpuDescriptorHandle GetGPUDescriptorHandleForHeapStart()
 	{
 		GpuDescriptorHandle result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID3D12DescriptorHeap*, GpuDescriptorHandle*, GpuDescriptorHandle*>)(lpVtbl[10]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID3D12DescriptorHeap*, GpuDescriptorHandle*, GpuDescriptorHandle*>)(lpVtbl[10]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	public interface Interface : ID3D12Pageable.Interface

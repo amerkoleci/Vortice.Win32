@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11AuthenticatedChannel*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11AuthenticatedChannel*, uint>)(lpVtbl[1]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, uint>)(lpVtbl[1]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11AuthenticatedChannel*, uint>)(lpVtbl[2]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, uint>)(lpVtbl[2]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[VtblIndex(3)]
 	public void GetDevice(ID3D11Device** ppDevice)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11AuthenticatedChannel*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), ppDevice);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), ppDevice);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[VtblIndex(4)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11AuthenticatedChannel*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[VtblIndex(5)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11AuthenticatedChannel*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[VtblIndex(6)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11AuthenticatedChannel*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetCertificateSize"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[VtblIndex(7)]
 	public HResult GetCertificateSize(uint* pCertificateSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11AuthenticatedChannel*, uint*, int>)(lpVtbl[7]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pCertificateSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, uint*, int>)(lpVtbl[7]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pCertificateSize);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetCertificate"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[VtblIndex(8)]
 	public HResult GetCertificate(uint CertificateSize, byte* pCertificate)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11AuthenticatedChannel*, uint, byte*, int>)(lpVtbl[8]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), CertificateSize, pCertificate);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, uint, byte*, int>)(lpVtbl[8]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), CertificateSize, pCertificate);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11AuthenticatedChannel::GetChannelHandle"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D11AuthenticatedChannel : ID3D11AuthenticatedCha
 	[VtblIndex(9)]
 	public void GetChannelHandle(Handle* pChannelHandle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11AuthenticatedChannel*, Handle*, void>)(lpVtbl[9]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pChannelHandle);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11AuthenticatedChannel*, Handle*, void>)(lpVtbl[9]))((ID3D11AuthenticatedChannel*)Unsafe.AsPointer(ref this), pChannelHandle);
+#endif
 	}
 
 	public interface Interface : ID3D11DeviceChild.Interface

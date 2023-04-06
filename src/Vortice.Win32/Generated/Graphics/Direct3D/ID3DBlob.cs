@@ -53,7 +53,11 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DBlob*, Guid*, void**, int>)(lpVtbl[0]))((ID3DBlob*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, Guid*, void**, int>)(lpVtbl[0]))((ID3DBlob*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DBlob*, uint>)(lpVtbl[1]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, uint>)(lpVtbl[1]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DBlob*, uint>)(lpVtbl[2]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, uint>)(lpVtbl[2]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DBlob::GetBufferPointer"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 	[VtblIndex(3)]
 	public void* GetBufferPointer()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DBlob*, void*>)(lpVtbl[3]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, void*>)(lpVtbl[3]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DBlob::GetBufferSize"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3DBlob : ID3DBlob.Interface, INativeGuid
 	[VtblIndex(4)]
 	public nuint GetBufferSize()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DBlob*, nuint>)(lpVtbl[4]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DBlob*, nuint>)(lpVtbl[4]))((ID3DBlob*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

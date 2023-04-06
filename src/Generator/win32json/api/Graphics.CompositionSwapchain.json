@@ -11,6 +11,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"value","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
@@ -24,6 +25,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"M11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"M12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -526,6 +528,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"displayAdapterLUID","Type":{"Kind":"ApiRef","Name":"LUID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"displayVidPnSourceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}

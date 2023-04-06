@@ -53,7 +53,11 @@ public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.I
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockReader*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.I
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockReader*, uint>)(lpVtbl[1]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, uint>)(lpVtbl[1]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.I
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockReader*, uint>)(lpVtbl[2]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, uint>)(lpVtbl[2]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockReader::GetContainerFormat"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.I
 	[VtblIndex(3)]
 	public HResult GetContainerFormat(Guid* pguidContainerFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockReader*, Guid*, int>)(lpVtbl[3]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), pguidContainerFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, Guid*, int>)(lpVtbl[3]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), pguidContainerFormat);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockReader::GetCount"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.I
 	[VtblIndex(4)]
 	public HResult GetCount(uint* pcCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockReader*, uint*, int>)(lpVtbl[4]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), pcCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, uint*, int>)(lpVtbl[4]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), pcCount);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockReader::GetReaderByIndex"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.I
 	[VtblIndex(5)]
 	public HResult GetReaderByIndex(uint nIndex, IWICMetadataReader** ppIMetadataReader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockReader*, uint, IWICMetadataReader**, int>)(lpVtbl[5]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, uint, IWICMetadataReader**, int>)(lpVtbl[5]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockReader::GetEnumerator"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICMetadataBlockReader : IWICMetadataBlockReader.I
 	[VtblIndex(6)]
 	public HResult GetEnumerator(Com.IEnumUnknown** ppIEnumMetadata)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockReader*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockReader*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockReader*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, uint>)(lpVtbl[1]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, uint>)(lpVtbl[1]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, uint>)(lpVtbl[2]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, uint>)(lpVtbl[2]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::SetFillMode"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[VtblIndex(3)]
 	public void SetFillMode(FillMode fillMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, FillMode, void>)(lpVtbl[3]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), fillMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, FillMode, void>)(lpVtbl[3]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), fillMode);
+#endif
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::SetSegmentFlags"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[VtblIndex(4)]
 	public void SetSegmentFlags(PathSegment vertexFlags)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, PathSegment, void>)(lpVtbl[4]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, PathSegment, void>)(lpVtbl[4]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
+#endif
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::BeginFigure"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[VtblIndex(5)]
 	public void BeginFigure(Vector2 startPoint, FigureBegin figureBegin)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, Vector2, FigureBegin, void>)(lpVtbl[5]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, Vector2, FigureBegin, void>)(lpVtbl[5]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
+#endif
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::AddLines"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[VtblIndex(6)]
 	public void AddLines(Vector2* points, uint pointsCount)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, Vector2*, uint, void>)(lpVtbl[6]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, Vector2*, uint, void>)(lpVtbl[6]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
+#endif
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::AddBeziers"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[VtblIndex(7)]
 	public void AddBeziers(BezierSegment* beziers, uint beziersCount)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, BezierSegment*, uint, void>)(lpVtbl[7]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, BezierSegment*, uint, void>)(lpVtbl[7]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
+#endif
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::EndFigure"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[VtblIndex(8)]
 	public void EndFigure(FigureEnd figureEnd)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, FigureEnd, void>)(lpVtbl[8]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, FigureEnd, void>)(lpVtbl[8]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
+#endif
 	}
 
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="ID2D1SimplifiedGeometrySink::Close"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct ID2D1SimplifiedGeometrySink : ID2D1SimplifiedGeomet
 	[VtblIndex(9)]
 	public HResult Close()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1SimplifiedGeometrySink*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

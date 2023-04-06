@@ -125,12 +125,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"lastFrameTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"lastFrameTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"currentCompositionRate","Type":{"Kind":"ApiRef","Name":"DXGI_RATIONAL","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
-			,{"Name":"currentTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"timeFrequency","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"nextEstimatedFrameTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"currentTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"timeFrequency","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"nextEstimatedFrameTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -156,6 +157,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"startTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"targetTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -171,6 +173,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"displayAdapterLuid","Type":{"Kind":"ApiRef","Name":"LUID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"renderAdapterLuid","Type":{"Kind":"ApiRef","Name":"LUID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -188,6 +191,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"presentCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"refreshCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -204,6 +208,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"outstandingPresents","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"presentTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -242,7 +247,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"beginTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					{"Name":"beginTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -4316,6 +4321,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}

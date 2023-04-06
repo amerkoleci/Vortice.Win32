@@ -6577,6 +6577,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -6758,6 +6759,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"blue","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"green","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6774,6 +6776,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"red","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"green","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -6790,6 +6793,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwColorSpaceLowValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwColorSpaceHighValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6804,6 +6808,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwDDFX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6837,6 +6842,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwAlphaSrcConst","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lpDDSAlphaSrc","Type":{"Kind":"ApiRef","Name":"IDirectDrawSurface","TargetKind":"Com","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -6851,6 +6857,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwZSrcConst","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lpDDSZBufferSrc","Type":{"Kind":"ApiRef","Name":"IDirectDrawSurface","TargetKind":"Com","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -6865,6 +6872,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwFillColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwFillDepth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6881,6 +6889,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwZDestConst","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lpDDSZBufferDest","Type":{"Kind":"ApiRef","Name":"IDirectDrawSurface","TargetKind":"Com","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -6895,6 +6904,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwAlphaDestConst","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lpDDSAlphaDest","Type":{"Kind":"ApiRef","Name":"IDirectDrawSurface","TargetKind":"Com","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -6911,6 +6921,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -6924,6 +6935,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -6937,6 +6949,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwCaps2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6950,6 +6963,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwCaps4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwVolumeDepth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6966,6 +6980,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6980,6 +6995,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwCaps4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwVolumeDepth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6996,6 +7012,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7044,6 +7061,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7107,6 +7125,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7175,6 +7194,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7244,6 +7264,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7313,6 +7334,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7331,6 +7353,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwRGBAlphaBitMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwYUVAlphaBitMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7348,6 +7371,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwGBitMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwUBitMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7363,6 +7387,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"wFlipMSTypes","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 							,{"Name":"wBltMSTypes","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -7379,6 +7404,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwRGBBitCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwYUVBitCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7398,6 +7424,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwBBitMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwVBitMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7414,6 +7441,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwRBitMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwYBitMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7434,6 +7462,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwAlphaEdgeBlendBitDepth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7456,6 +7485,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwAlphaSrcConst","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lpDDSAlphaSrc","Type":{"Kind":"ApiRef","Name":"IDirectDrawSurface","TargetKind":"Com","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -7470,6 +7500,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwAlphaDestConst","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lpDDSAlphaDest","Type":{"Kind":"ApiRef","Name":"IDirectDrawSurface","TargetKind":"Com","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -7486,6 +7517,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lprDest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSSrc","Type":{"Kind":"ApiRef","Name":"IDirectDrawSurface","TargetKind":"Com","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -7503,6 +7535,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"red","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
 			,{"Name":"green","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
@@ -7518,10 +7551,11 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"szDriver","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"szDescription","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-			,{"Name":"liDriverVersion","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"liDriverVersion","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"dwVendorId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwDeviceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwSubSysId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7538,10 +7572,11 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"szDriver","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"szDescription","Type":{"Kind":"Array","Shape":{"Size":512},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-			,{"Name":"liDriverVersion","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"liDriverVersion","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"dwVendorId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwDeviceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwSubSysId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11561,6 +11596,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11587,6 +11623,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwMipMapCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwZBufferBitDepth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11602,6 +11639,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lPitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"dwLinearSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11618,6 +11656,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11645,6 +11684,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ddckCKDestOverlay","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 					,{"Name":"dwEmptyFaceColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11659,6 +11699,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwBackBufferCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwDepth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11673,6 +11714,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwMipMapCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"dwRefreshRate","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11688,6 +11730,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lPitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"dwLinearSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11702,6 +11745,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ddpfPixelFormat","Type":{"Kind":"ApiRef","Name":"DDPIXELFORMAT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 					,{"Name":"dwFVF","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11718,6 +11762,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -11736,6 +11781,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12064,6 +12110,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwPortWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12081,6 +12128,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12112,6 +12160,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFieldWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12135,6 +12184,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwOriginX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12160,6 +12210,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12180,6 +12231,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"bInUse","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -12199,8 +12251,9 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"ApproximateTimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"ApproximateTimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"lField","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"dwSurfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lDone","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -12293,6 +12346,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12308,6 +12362,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 		]
@@ -12319,6 +12374,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Linear","Type":{"Kind":"ApiRef","Name":"_Linear_e__Struct","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"Rectangular","Type":{"Kind":"ApiRef","Name":"_Rectangular_e__Struct","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -12331,6 +12387,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"dwStartAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"dwPitchAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12347,6 +12404,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"dwXAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"dwYAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12367,6 +12425,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ddsCaps","Type":{"Kind":"ApiRef","Name":"DDSCAPS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -12389,6 +12448,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwInstance","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"dwHeap","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12406,6 +12466,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"next","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEML","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"ptr","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -12422,6 +12483,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"next","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMR","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"prev","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMR","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -12449,6 +12511,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"stride","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12462,7 +12525,7 @@
 			,{"Name":"Alignment","Type":{"Kind":"ApiRef","Name":"HEAPALIGNMENT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 			,{"Name":"ddsCapsEx","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 			,{"Name":"ddsCapsExAlt","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
-			,{"Name":"liPhysAGPBase","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"liPhysAGPBase","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"hdevAGP","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"pvPhysRsrv","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"pAgpCommitMask","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -12478,6 +12541,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpLink","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROCESS_LIST","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12495,6 +12559,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Manufacturer","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Product","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -12519,6 +12584,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"szName","Type":{"Kind":"Array","Shape":{"Size":260},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"szEntryPoint","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -12534,6 +12600,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwHALVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwReserved1","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -12562,6 +12629,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fpStart","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -12578,6 +12646,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"fpEnd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 					,{"Name":"dwWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12592,6 +12661,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMHEAP","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"dwHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12608,6 +12678,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fpPrimary","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12633,6 +12704,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fpVidMem","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"lpAlias","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -12648,6 +12720,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwRefCnt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12664,6 +12737,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpLink","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUNKNOWN_LIST","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -12836,6 +12910,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -12886,6 +12961,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13071,6 +13147,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13138,6 +13215,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13195,6 +13273,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13278,6 +13357,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13492,6 +13572,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13535,6 +13616,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13576,6 +13658,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13736,6 +13819,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13760,6 +13844,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwNLVBCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13778,6 +13863,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ddsCapsMore","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -13791,6 +13877,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ddsCapsEx","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 					,{"Name":"ddsCapsExAlt","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -13807,6 +13894,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13825,6 +13913,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVtbl","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"lpLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -13841,6 +13930,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwRefCnt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13861,6 +13951,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwReserved1","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 					,{"Name":"hHELGDIPalette","Type":{"Kind":"ApiRef","Name":"HPALETTE","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
@@ -13877,6 +13968,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpPalMore","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpGbl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -13899,6 +13991,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVtbl","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"lpLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWCLIPPER_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -13915,6 +14008,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwRefCnt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -13934,6 +14028,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpClipMore","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpGbl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWCLIPPER_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -13954,6 +14049,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpLink","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ATTACHLIST","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -13970,6 +14066,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"next","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DBLNODE","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"prev","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DBLNODE","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -13986,6 +14083,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpLink","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACCESSRECTLIST","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"rDest","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -14004,6 +14102,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVtbl","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"lpLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14020,6 +14119,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwRefCnt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwGlobalFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -14042,6 +14142,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"lpDDHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -14056,6 +14157,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpRectList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ACCESSRECTLIST","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"dwBlockSizeY","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -14071,6 +14173,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpVidMemHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMHEAP","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"dwBlockSizeX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -14085,6 +14188,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lPitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"dwLinearSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -14101,6 +14205,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -14130,6 +14235,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwPhysicalPageTable","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"fpPhysicalVidMem","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -14146,6 +14252,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpIUnknowns","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUNKNOWN_LIST","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14189,6 +14296,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpSurfMore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_MORE","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpGbl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14226,6 +14334,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpDDClipper","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWCLIPPER_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"lp16DDClipper","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWCLIPPER_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14240,6 +14349,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpDDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"lp16DDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14256,6 +14366,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -14278,6 +14389,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVtbl","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"lpLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14294,6 +14406,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cbDDCallbacks","Type":{"Kind":"ApiRef","Name":"DDHAL_DDCALLBACKS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 			,{"Name":"cbDDSurfaceCallbacks","Type":{"Kind":"ApiRef","Name":"DDHAL_DDSURFACECALLBACKS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -14328,6 +14441,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -14391,6 +14505,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwRefCnt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -14473,6 +14588,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDDMore","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpGbl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14488,7 +14604,7 @@
 			,{"Name":"lpPrimary","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpCB","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwPreferredMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"hD3DInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hD3DInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"pD3DIUnknown","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":[]}
 			,{"Name":"lpDDCB","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDHAL_CALLBACKS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"hDDVxd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -14511,6 +14627,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVtbl","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"lpLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14528,6 +14645,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"ddvpDesc","Type":{"Kind":"ApiRef","Name":"DDVIDEOPORTDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -14562,6 +14680,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVtbl","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"lpLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDMOTIONCOMP_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14578,6 +14697,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -14605,6 +14725,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpDDCallbacks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDHAL_DDCALLBACKS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14680,6 +14801,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpSetInfo","Type":{"Kind":"ApiRef","Name":"LPDDHAL_SETINFO","TargetKind":"FunctionPointer","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -14696,6 +14818,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDDestSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14723,6 +14846,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14743,6 +14867,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14759,6 +14884,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDDestSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14780,6 +14906,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSrcSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14799,6 +14926,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14817,6 +14945,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpSurfCurr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14837,6 +14966,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14853,6 +14983,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14869,6 +15000,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14886,6 +15018,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14904,6 +15037,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14921,6 +15055,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14938,6 +15073,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14954,6 +15090,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14973,6 +15110,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurfaceDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -14991,6 +15129,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurfaceDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15008,6 +15147,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15026,6 +15166,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15044,6 +15185,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"ddRVal","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -15059,6 +15201,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwModeIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15077,6 +15220,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15094,6 +15238,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwScanLine","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15110,6 +15255,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwEnterExcl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15127,6 +15273,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwToGDI","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15144,6 +15291,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDVideoPortDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15160,6 +15308,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDVideoPortDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15177,6 +15326,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15195,6 +15345,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15216,6 +15367,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15235,6 +15387,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15255,6 +15408,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15272,6 +15426,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15289,6 +15444,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwPortId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15307,6 +15463,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15323,6 +15480,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"fpSurface","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -15339,6 +15497,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15361,6 +15520,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15380,6 +15540,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15397,6 +15558,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDVIDEOPORT_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15415,6 +15577,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15433,6 +15596,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15453,6 +15617,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"DDSCaps","Type":{"Kind":"ApiRef","Name":"DDSCAPS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -15472,6 +15637,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwHeap","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15491,6 +15657,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwInstance","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"dwHeap","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15508,6 +15675,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpDDLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15524,6 +15692,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -15539,6 +15708,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwhContext","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 				]
@@ -15554,6 +15724,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pDDLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15569,6 +15740,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15596,6 +15768,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15618,6 +15791,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwNumGuids","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15635,6 +15809,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -15653,6 +15828,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDMOTIONCOMP_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15675,6 +15851,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwNumCompBuffers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15694,6 +15871,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -15715,6 +15893,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -15735,6 +15914,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDMOTIONCOMP_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15756,6 +15936,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDMOTIONCOMP_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15774,6 +15955,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpCompSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15791,6 +15973,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDMOTIONCOMP_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15814,6 +15997,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDMOTIONCOMP_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15832,6 +16016,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDMOTIONCOMP_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -15848,6 +16033,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -15860,6 +16046,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -15872,6 +16059,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 		]
 		,"NestedTypes":[
@@ -15884,6 +16072,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fpStart","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -15900,6 +16089,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"fpEnd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 					,{"Name":"dwWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15914,6 +16104,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMHEAP","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"dwHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -15930,6 +16121,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fpPrimary","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16084,6 +16276,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16120,6 +16313,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16187,6 +16381,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16244,6 +16439,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16287,6 +16483,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16472,6 +16669,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16708,6 +16906,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16751,6 +16950,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16792,6 +16992,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16938,6 +17139,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16962,6 +17164,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwNLVBCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -16980,6 +17183,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwReserved1","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 		]
@@ -16993,6 +17197,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwReserved0","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwReserved1","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -17007,6 +17212,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwReserved1","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 		]
@@ -17020,6 +17226,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwReserved1","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 		]
@@ -17033,6 +17240,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpLink","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_ATTACHLIST","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpAttached","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17047,6 +17255,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 		]
@@ -17060,6 +17269,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous2","Type":{"Kind":"ApiRef","Name":"_Anonymous2_e__Union","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -17082,6 +17292,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lPitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"dwLinearSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17096,6 +17307,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"dwBlockSizeY","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lSlicePitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -17110,6 +17322,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpVidMemHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VIDEOMEMORY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"dwBlockSizeX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17127,6 +17340,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwMipMapCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17144,6 +17358,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpGbl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17164,6 +17379,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ddckCKDestOverlay","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 					,{"Name":"ddckCKDestBlt","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -17178,6 +17394,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ddckCKSrcOverlay","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 					,{"Name":"ddckCKSrcBlt","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -17194,6 +17411,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwAlphaCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17215,6 +17433,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17278,6 +17497,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17297,6 +17517,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"vmiData","Type":{"Kind":"ApiRef","Name":"VIDEOMEMORYINFO","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -17314,6 +17535,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"vmiData","Type":{"Kind":"ApiRef","Name":"VIDEOMEMORYINFO","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -17334,6 +17556,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dhpdev","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"dwReserved1","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -17350,6 +17573,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpGbl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 		]
@@ -17363,6 +17587,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"ddvpDesc","Type":{"Kind":"ApiRef","Name":"DDVIDEOPORTDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -17385,6 +17610,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"guid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
@@ -17408,6 +17634,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ddsCapsMore","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -17421,6 +17648,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"ddsCapsEx","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 					,{"Name":"ddsCapsExAlt","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -17437,6 +17665,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17455,6 +17684,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwHeap","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17474,6 +17704,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwPrivateCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17488,6 +17719,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDDestSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17517,6 +17749,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17538,6 +17771,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17554,6 +17788,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDDestSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17575,6 +17810,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSrcSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17594,6 +17830,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17612,6 +17849,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpSurfCurr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17632,6 +17870,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17648,6 +17887,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17664,6 +17904,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17681,6 +17922,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17699,6 +17941,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17716,6 +17959,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17733,6 +17977,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_PALETTE_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17749,6 +17994,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_PALETTE_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17768,6 +18014,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurfaceDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17786,6 +18033,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurfaceDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17803,6 +18051,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_PALETTE_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17821,6 +18070,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17839,6 +18089,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17856,6 +18107,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwScanLine","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -17872,6 +18124,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"bMap","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -17889,6 +18142,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDVideoPortDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17905,6 +18159,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDVideoPortDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDESC","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17922,6 +18177,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17940,6 +18196,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17961,6 +18218,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -17980,6 +18238,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18000,6 +18259,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18017,6 +18277,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18034,6 +18295,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwPortId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18052,6 +18314,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18068,6 +18331,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"fpSurface","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -18084,6 +18348,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18106,6 +18371,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18125,6 +18391,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18142,6 +18409,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18160,6 +18428,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18178,6 +18447,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dhpdev","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18198,6 +18468,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"DDSCaps","Type":{"Kind":"ApiRef","Name":"DDSCAPS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -18216,6 +18487,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18232,6 +18504,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwEnterExcl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18249,6 +18522,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwToGDI","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18266,6 +18540,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpDDSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18289,6 +18564,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPort","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_VIDEOPORT_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18310,6 +18586,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwNumGuids","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18326,6 +18603,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -18343,6 +18621,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_MOTIONCOMP_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18364,6 +18643,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwNumCompBuffers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18383,6 +18663,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -18403,6 +18684,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
@@ -18422,6 +18704,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_MOTIONCOMP_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18442,6 +18725,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_MOTIONCOMP_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18459,6 +18743,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpCompSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_SURFACE_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18476,6 +18761,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_MOTIONCOMP_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18498,6 +18784,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_MOTIONCOMP_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18515,6 +18802,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpMoComp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_MOTIONCOMP_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18530,6 +18818,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpDDLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18546,6 +18835,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
@@ -18561,6 +18851,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_GLOBAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"dwhContext","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -18577,6 +18868,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pDDLcl","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DD_DIRECTDRAW_LOCAL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18592,6 +18884,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"MdlNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MDL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"MdlSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
@@ -18610,6 +18903,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 				]
 				,"NestedTypes":[
@@ -18624,6 +18918,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"ddsCaps","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwSurfaceOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18659,6 +18954,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwVideoPortId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwVPFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18679,6 +18975,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwIrqFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -18705,6 +19002,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -18718,6 +19016,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwIRQSources","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwLine","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18734,6 +19033,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVideoPortData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwSkipFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18748,6 +19048,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 		]
@@ -18761,6 +19062,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpSurfaceData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpVideoPortData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18775,6 +19077,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bSoftwareAutoflip","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"dwSurfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18790,6 +19093,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpSurfaceData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 		]
@@ -18803,6 +19107,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSurfacePtr","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 		]
@@ -18816,6 +19121,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpCurrentSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpTargetSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18831,6 +19137,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVideoPortData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpCurrentSurface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
@@ -18847,6 +19154,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVideoPortData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 		]
@@ -18860,6 +19168,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"bPolarity","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -18873,6 +19182,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVideoPortData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 		]
@@ -18886,6 +19196,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSurfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwVBISurfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18900,6 +19211,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpVideoPortData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDVIDEOPORTDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 		]
@@ -18913,6 +19225,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwSurfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwVBISurfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18927,6 +19240,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"lpSurfaceData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwStartLine","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -18945,6 +19259,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwBufferPolarity","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -18958,6 +19273,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwTransferID","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 		]
@@ -19166,6 +19482,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}

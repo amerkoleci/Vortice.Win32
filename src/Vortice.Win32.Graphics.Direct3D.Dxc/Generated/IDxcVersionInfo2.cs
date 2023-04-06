@@ -52,7 +52,11 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcVersionInfo2*, Guid*, void**, int>)(lpVtbl[0]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, Guid*, void**, int>)(lpVtbl[0]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -61,7 +65,11 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcVersionInfo2*, uint>)(lpVtbl[1]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, uint>)(lpVtbl[1]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -70,7 +78,11 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcVersionInfo2*, uint>)(lpVtbl[2]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, uint>)(lpVtbl[2]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDxcVersionInfo.GetVersion" />
@@ -78,7 +90,11 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	[VtblIndex(3)]
 	public HResult GetVersion(uint* pMajor, uint* pMinor)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcVersionInfo2*, uint*, uint*, int>)(lpVtbl[3]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pMajor, pMinor);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, uint*, uint*, int>)(lpVtbl[3]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pMajor, pMinor);
+#endif
 	}
 
 	/// <inheritdoc cref="IDxcVersionInfo.GetFlags" />
@@ -86,14 +102,22 @@ public unsafe partial struct IDxcVersionInfo2 : IDxcVersionInfo2.Interface, INat
 	[VtblIndex(4)]
 	public HResult GetFlags(DxcVersionInfoFlags* pFlags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcVersionInfo2*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pFlags);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, DxcVersionInfoFlags*, int>)(lpVtbl[4]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pFlags);
+#endif
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
 	public HResult GetCommitInfo(uint* pCommitCount, sbyte** pCommitHash)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcVersionInfo2*, uint*, sbyte**, int>)(lpVtbl[5]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pCommitCount, pCommitHash);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcVersionInfo2*, uint*, sbyte**, int>)(lpVtbl[5]))((IDxcVersionInfo2*)Unsafe.AsPointer(ref this), pCommitCount, pCommitHash);
+#endif
 	}
 
 	public interface Interface : IDxcVersionInfo.Interface

@@ -11,7 +11,7 @@ namespace Win32.Graphics.DirectComposition;
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BITMAP_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_BITMAP_INTERPOLATION_MODE</unmanaged>
-public enum BitmapInterpolationMode : int
+public enum BitmapInterpolationMode
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BITMAP_INTERPOLATION_MODE::DCOMPOSITION_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>DCOMPOSITION_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -26,7 +26,7 @@ public enum BitmapInterpolationMode : int
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BORDER_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_BORDER_MODE</unmanaged>
-public enum BorderMode : int
+public enum BorderMode
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BORDER_MODE::DCOMPOSITION_BORDER_MODE_SOFT"]/*' />
 	/// <unmanaged>DCOMPOSITION_BORDER_MODE_SOFT</unmanaged>
@@ -41,7 +41,7 @@ public enum BorderMode : int
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_COMPOSITE_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_COMPOSITE_MODE</unmanaged>
-public enum CompositeMode : int
+public enum CompositeMode
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_COMPOSITE_MODE::DCOMPOSITION_COMPOSITE_MODE_SOURCE_OVER"]/*' />
 	/// <unmanaged>DCOMPOSITION_COMPOSITE_MODE_SOURCE_OVER</unmanaged>
@@ -59,7 +59,7 @@ public enum CompositeMode : int
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BACKFACE_VISIBILITY"]/*' />
 /// <unmanaged>DCOMPOSITION_BACKFACE_VISIBILITY</unmanaged>
-public enum BackfaceVisibility : int
+public enum BackfaceVisibility
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_BACKFACE_VISIBILITY::DCOMPOSITION_BACKFACE_VISIBILITY_VISIBLE"]/*' />
 	/// <unmanaged>DCOMPOSITION_BACKFACE_VISIBILITY_VISIBLE</unmanaged>
@@ -74,7 +74,7 @@ public enum BackfaceVisibility : int
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_OPACITY_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_OPACITY_MODE</unmanaged>
-public enum OpacityMode : int
+public enum OpacityMode
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_OPACITY_MODE::DCOMPOSITION_OPACITY_MODE_LAYER"]/*' />
 	/// <unmanaged>DCOMPOSITION_OPACITY_MODE_LAYER</unmanaged>
@@ -89,7 +89,7 @@ public enum OpacityMode : int
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_DEPTH_MODE"]/*' />
 /// <unmanaged>DCOMPOSITION_DEPTH_MODE</unmanaged>
-public enum DepthMode : int
+public enum DepthMode
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_DEPTH_MODE::DCOMPOSITION_DEPTH_MODE_TREE"]/*' />
 	/// <unmanaged>DCOMPOSITION_DEPTH_MODE_TREE</unmanaged>
@@ -107,7 +107,7 @@ public enum DepthMode : int
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_ID_TYPE"]/*' />
 /// <unmanaged>COMPOSITION_FRAME_ID_TYPE</unmanaged>
-public enum CompositionFrameIdType : int
+public enum CompositionFrameIdType
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_ID_TYPE::COMPOSITION_FRAME_ID_CREATED"]/*' />
 	/// <unmanaged>COMPOSITION_FRAME_ID_CREATED</unmanaged>

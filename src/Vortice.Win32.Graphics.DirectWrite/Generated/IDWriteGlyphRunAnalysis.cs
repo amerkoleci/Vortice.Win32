@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGlyphRunAnalysis*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGlyphRunAnalysis*, uint>)(lpVtbl[1]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, uint>)(lpVtbl[1]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGlyphRunAnalysis*, uint>)(lpVtbl[2]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, uint>)(lpVtbl[2]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaTextureBounds"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	[VtblIndex(3)]
 	public HResult GetAlphaTextureBounds(TextureType textureType, Rect* textureBounds)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGlyphRunAnalysis*, TextureType, Rect*, int>)(lpVtbl[3]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, TextureType, Rect*, int>)(lpVtbl[3]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::CreateAlphaTexture"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	[VtblIndex(4)]
 	public HResult CreateAlphaTexture(TextureType textureType, Rect* textureBounds, byte* alphaValues, uint bufferSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGlyphRunAnalysis*, TextureType, Rect*, byte*, uint, int>)(lpVtbl[4]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds, alphaValues, bufferSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, TextureType, Rect*, byte*, uint, int>)(lpVtbl[4]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), textureType, textureBounds, alphaValues, bufferSize);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGlyphRunAnalysis::GetAlphaBlendParams"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteGlyphRunAnalysis : IDWriteGlyphRunAnalysis.I
 	[VtblIndex(5)]
 	public HResult GetAlphaBlendParams(IDWriteRenderingParams* renderingParams, float* blendGamma, float* blendEnhancedContrast, float* blendClearTypeLevel)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGlyphRunAnalysis*, IDWriteRenderingParams*, float*, float*, float*, int>)(lpVtbl[5]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), renderingParams, blendGamma, blendEnhancedContrast, blendClearTypeLevel);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGlyphRunAnalysis*, IDWriteRenderingParams*, float*, float*, float*, int>)(lpVtbl[5]))((IDWriteGlyphRunAnalysis*)Unsafe.AsPointer(ref this), renderingParams, blendGamma, blendEnhancedContrast, blendClearTypeLevel);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

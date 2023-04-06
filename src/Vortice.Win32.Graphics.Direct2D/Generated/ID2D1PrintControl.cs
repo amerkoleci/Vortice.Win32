@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1PrintControl*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1PrintControl*, uint>)(lpVtbl[1]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, uint>)(lpVtbl[1]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1PrintControl*, uint>)(lpVtbl[2]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, uint>)(lpVtbl[2]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::AddPage"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	[VtblIndex(3)]
 	public HResult AddPage(ID2D1CommandList* commandList, System.Drawing.SizeF pageSize, Com.IStream* pagePrintTicketStream, ulong* tag1, ulong* tag2)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1PrintControl*, ID2D1CommandList*, System.Drawing.SizeF, Com.IStream*, ulong*, ulong*, int>)(lpVtbl[3]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), commandList, pageSize, pagePrintTicketStream, tag1, tag2);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, ID2D1CommandList*, System.Drawing.SizeF, Com.IStream*, ulong*, ulong*, int>)(lpVtbl[3]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this), commandList, pageSize, pagePrintTicketStream, tag1, tag2);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1PrintControl::Close"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1PrintControl : ID2D1PrintControl.Interface, IN
 	[VtblIndex(4)]
 	public HResult Close()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1PrintControl*, int>)(lpVtbl[4]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1PrintControl*, int>)(lpVtbl[4]))((ID2D1PrintControl*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

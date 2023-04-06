@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : ID3D11RefDefaultT
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11RefDefaultTrackingOptions*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11RefDefaultTrackingOptions*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : ID3D11RefDefaultT
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11RefDefaultTrackingOptions*, uint>)(lpVtbl[1]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11RefDefaultTrackingOptions*, uint>)(lpVtbl[1]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : ID3D11RefDefaultT
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11RefDefaultTrackingOptions*, uint>)(lpVtbl[2]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11RefDefaultTrackingOptions*, uint>)(lpVtbl[2]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11RefDefaultTrackingOptions::SetTrackingOptions"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11RefDefaultTrackingOptions : ID3D11RefDefaultT
 	[VtblIndex(3)]
 	public HResult SetTrackingOptions(uint ResourceTypeFlags, uint Options)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11RefDefaultTrackingOptions*, uint, uint, int>)(lpVtbl[3]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this), ResourceTypeFlags, Options);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11RefDefaultTrackingOptions*, uint, uint, int>)(lpVtbl[3]))((ID3D11RefDefaultTrackingOptions*)Unsafe.AsPointer(ref this), ResourceTypeFlags, Options);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

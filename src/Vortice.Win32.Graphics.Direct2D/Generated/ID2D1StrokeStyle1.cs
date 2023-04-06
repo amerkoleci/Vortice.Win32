@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, uint>)(lpVtbl[1]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, uint>)(lpVtbl[1]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, uint>)(lpVtbl[2]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, uint>)(lpVtbl[2]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1StrokeStyle1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetStartCap" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(4)]
 	public CapStyle GetStartCap()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[4]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetEndCap" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(5)]
 	public CapStyle GetEndCap()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[5]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashCap" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(6)]
 	public CapStyle GetDashCap()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[6]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, CapStyle>)(lpVtbl[6]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetMiterLimit" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(7)]
 	public float GetMiterLimit()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, float>)(lpVtbl[7]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, float>)(lpVtbl[7]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetLineJoin" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(8)]
 	public LineJoin GetLineJoin()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, LineJoin>)(lpVtbl[8]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, LineJoin>)(lpVtbl[8]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashOffset" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(9)]
 	public float GetDashOffset()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, float>)(lpVtbl[9]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, float>)(lpVtbl[9]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashStyle" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(10)]
 	public DashStyle GetDashStyle()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, DashStyle>)(lpVtbl[10]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, DashStyle>)(lpVtbl[10]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashesCount" />
@@ -143,7 +187,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(11)]
 	public uint GetDashesCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, uint>)(lpVtbl[11]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, uint>)(lpVtbl[11]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1StrokeStyle.GetDashes" />
@@ -151,7 +199,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(12)]
 	public void GetDashes(float* dashes, uint dashesCount)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1StrokeStyle1*, float*, uint, void>)(lpVtbl[12]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this), dashes, dashesCount);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, float*, uint, void>)(lpVtbl[12]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this), dashes, dashesCount);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1StrokeStyle1::GetStrokeTransformType"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct ID2D1StrokeStyle1 : ID2D1StrokeStyle1.Interface, IN
 	[VtblIndex(13)]
 	public StrokeTransformType GetStrokeTransformType()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1StrokeStyle1*, StrokeTransformType>)(lpVtbl[13]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1StrokeStyle1*, StrokeTransformType>)(lpVtbl[13]))((ID2D1StrokeStyle1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : ID2D1StrokeStyle.Interface

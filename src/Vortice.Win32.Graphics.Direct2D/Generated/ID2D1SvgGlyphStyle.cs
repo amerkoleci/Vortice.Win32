@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgGlyphStyle*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgGlyphStyle*, uint>)(lpVtbl[1]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, uint>)(lpVtbl[1]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgGlyphStyle*, uint>)(lpVtbl[2]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, uint>)(lpVtbl[2]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SvgGlyphStyle*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgGlyphStyle::SetFill"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[VtblIndex(4)]
 	public HResult SetFill(ID2D1Brush* brush)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgGlyphStyle*, ID2D1Brush*, int>)(lpVtbl[4]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, ID2D1Brush*, int>)(lpVtbl[4]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgGlyphStyle::GetFill"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[VtblIndex(5)]
 	public void GetFill(ID2D1Brush** brush)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SvgGlyphStyle*, ID2D1Brush**, void>)(lpVtbl[5]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, ID2D1Brush**, void>)(lpVtbl[5]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgGlyphStyle::SetStroke"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[VtblIndex(6)]
 	public HResult SetStroke(ID2D1Brush* brush, float strokeWidth, float* dashes, uint dashesCount, float dashOffset)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgGlyphStyle*, ID2D1Brush*, float, float*, uint, float, int>)(lpVtbl[6]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush, strokeWidth, dashes, dashesCount, dashOffset);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, ID2D1Brush*, float, float*, uint, float, int>)(lpVtbl[6]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush, strokeWidth, dashes, dashesCount, dashOffset);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgGlyphStyle::GetStrokeDashesCount"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[VtblIndex(7)]
 	public uint GetStrokeDashesCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgGlyphStyle*, uint>)(lpVtbl[7]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, uint>)(lpVtbl[7]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgGlyphStyle::GetStroke"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1SvgGlyphStyle : ID2D1SvgGlyphStyle.Interface, 
 	[VtblIndex(8)]
 	public void GetStroke(ID2D1Brush** brush, float* strokeWidth, float* dashes, uint dashesCount, float* dashOffset)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SvgGlyphStyle*, ID2D1Brush**, float*, float*, uint, float*, void>)(lpVtbl[8]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush, strokeWidth, dashes, dashesCount, dashOffset);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SvgGlyphStyle*, ID2D1Brush**, float*, float*, uint, float*, void>)(lpVtbl[8]))((ID2D1SvgGlyphStyle*)Unsafe.AsPointer(ref this), brush, strokeWidth, dashes, dashesCount, dashOffset);
+#endif
 	}
 
 	public interface Interface : ID2D1Resource.Interface

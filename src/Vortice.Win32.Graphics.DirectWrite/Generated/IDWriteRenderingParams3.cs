@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, uint>)(lpVtbl[1]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, uint>)(lpVtbl[1]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, uint>)(lpVtbl[2]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, uint>)(lpVtbl[2]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetGamma" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(3)]
 	public float GetGamma()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, float>)(lpVtbl[3]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, float>)(lpVtbl[3]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetEnhancedContrast" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(4)]
 	public float GetEnhancedContrast()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, float>)(lpVtbl[4]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, float>)(lpVtbl[4]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetClearTypeLevel" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(5)]
 	public float GetClearTypeLevel()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, float>)(lpVtbl[5]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, float>)(lpVtbl[5]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetPixelGeometry" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(6)]
 	public PixelGeometry GetPixelGeometry()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, PixelGeometry>)(lpVtbl[6]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams.GetRenderingMode" />
@@ -111,7 +139,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(7)]
 	public RenderingMode GetRenderingMode()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, RenderingMode>)(lpVtbl[7]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams1.GetGrayscaleEnhancedContrast" />
@@ -119,7 +151,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(8)]
 	public float GetGrayscaleEnhancedContrast()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, float>)(lpVtbl[8]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, float>)(lpVtbl[8]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteRenderingParams2.GetGridFitMode" />
@@ -127,7 +163,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(9)]
 	public GridFitMode GetGridFitMode()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, GridFitMode>)(lpVtbl[9]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRenderingParams3::GetRenderingMode1"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IDWriteRenderingParams3 : IDWriteRenderingParams3.I
 	[VtblIndex(10)]
 	public RenderingMode1 GetRenderingMode1()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteRenderingParams3*, RenderingMode1>)(lpVtbl[10]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteRenderingParams3*, RenderingMode1>)(lpVtbl[10]))((IDWriteRenderingParams3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IDWriteRenderingParams2.Interface

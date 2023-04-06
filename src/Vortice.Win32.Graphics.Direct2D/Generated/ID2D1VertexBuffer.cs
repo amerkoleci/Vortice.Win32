@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1VertexBuffer*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1VertexBuffer*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1VertexBuffer*, uint>)(lpVtbl[1]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1VertexBuffer*, uint>)(lpVtbl[1]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1VertexBuffer*, uint>)(lpVtbl[2]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1VertexBuffer*, uint>)(lpVtbl[2]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer::Map"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	[VtblIndex(3)]
 	public HResult Map(byte** data, uint bufferSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1VertexBuffer*, byte**, uint, int>)(lpVtbl[3]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this), data, bufferSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1VertexBuffer*, byte**, uint, int>)(lpVtbl[3]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this), data, bufferSize);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1VertexBuffer::Unmap"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1VertexBuffer : ID2D1VertexBuffer.Interface, IN
 	[VtblIndex(4)]
 	public HResult Unmap()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1VertexBuffer*, int>)(lpVtbl[4]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1VertexBuffer*, int>)(lpVtbl[4]))((ID2D1VertexBuffer*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

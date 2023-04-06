@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Linker*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Linker*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Linker*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Linker*, uint>)(lpVtbl[1]))((ID3D11Linker*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, uint>)(lpVtbl[1]))((ID3D11Linker*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Linker*, uint>)(lpVtbl[2]))((ID3D11Linker*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, uint>)(lpVtbl[2]))((ID3D11Linker*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::Link"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	[VtblIndex(3)]
 	public HResult Link(ID3D11ModuleInstance* pEntry, sbyte* pEntryName, sbyte* pTargetName, uint uFlags, Graphics.Direct3D.ID3DBlob** ppShaderBlob, Graphics.Direct3D.ID3DBlob** ppErrorBuffer)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Linker*, ID3D11ModuleInstance*, sbyte*, sbyte*, uint, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[3]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pEntry, pEntryName, pTargetName, uFlags, ppShaderBlob, ppErrorBuffer);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, ID3D11ModuleInstance*, sbyte*, sbyte*, uint, Graphics.Direct3D.ID3DBlob**, Graphics.Direct3D.ID3DBlob**, int>)(lpVtbl[3]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pEntry, pEntryName, pTargetName, uFlags, ppShaderBlob, ppErrorBuffer);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::UseLibrary"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	[VtblIndex(4)]
 	public HResult UseLibrary(ID3D11ModuleInstance* pLibraryMI)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Linker*, ID3D11ModuleInstance*, int>)(lpVtbl[4]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pLibraryMI);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, ID3D11ModuleInstance*, int>)(lpVtbl[4]))((ID3D11Linker*)Unsafe.AsPointer(ref this), pLibraryMI);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Linker::AddClipPlaneFromCBuffer"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11Linker : ID3D11Linker.Interface, INativeGuid
 	[VtblIndex(5)]
 	public HResult AddClipPlaneFromCBuffer(uint uCBufferSlot, uint uCBufferEntry)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Linker*, uint, uint, int>)(lpVtbl[5]))((ID3D11Linker*)Unsafe.AsPointer(ref this), uCBufferSlot, uCBufferEntry);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Linker*, uint, uint, int>)(lpVtbl[5]))((ID3D11Linker*)Unsafe.AsPointer(ref this), uCBufferSlot, uCBufferEntry);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

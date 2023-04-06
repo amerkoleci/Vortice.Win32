@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObjectProperties*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObjectProperties*, uint>)(lpVtbl[1]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, uint>)(lpVtbl[1]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObjectProperties*, uint>)(lpVtbl[2]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, uint>)(lpVtbl[2]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderIdentifier"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	[VtblIndex(3)]
 	public void* GetShaderIdentifier(ushort* pExportName)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObjectProperties*, ushort*, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ushort*, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderStackSize"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	[VtblIndex(4)]
 	public ulong GetShaderStackSize(ushort* pExportName)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObjectProperties*, ushort*, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ushort*, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetPipelineStackSize"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	[VtblIndex(5)]
 	public ulong GetPipelineStackSize()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObjectProperties*, ulong>)(lpVtbl[5]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ulong>)(lpVtbl[5]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::SetPipelineStackSize"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	[VtblIndex(6)]
 	public void SetPipelineStackSize(ulong PipelineStackSizeInBytes)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12StateObjectProperties*, ulong, void>)(lpVtbl[6]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), PipelineStackSizeInBytes);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12StateObjectProperties*, ulong, void>)(lpVtbl[6]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), PipelineStackSizeInBytes);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

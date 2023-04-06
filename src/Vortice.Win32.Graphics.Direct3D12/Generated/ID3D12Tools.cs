@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12Tools : ID3D12Tools.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12Tools*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Tools*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12Tools*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12Tools*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12Tools : ID3D12Tools.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12Tools*, uint>)(lpVtbl[1]))((ID3D12Tools*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12Tools*, uint>)(lpVtbl[1]))((ID3D12Tools*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12Tools : ID3D12Tools.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12Tools*, uint>)(lpVtbl[2]))((ID3D12Tools*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12Tools*, uint>)(lpVtbl[2]))((ID3D12Tools*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools::EnableShaderInstrumentation"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12Tools : ID3D12Tools.Interface, INativeGuid
 	[VtblIndex(3)]
 	public void EnableShaderInstrumentation(Bool32 bEnable)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12Tools*, Bool32, void>)(lpVtbl[3]))((ID3D12Tools*)Unsafe.AsPointer(ref this), bEnable);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12Tools*, Bool32, void>)(lpVtbl[3]))((ID3D12Tools*)Unsafe.AsPointer(ref this), bEnable);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Tools::ShaderInstrumentationEnabled"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12Tools : ID3D12Tools.Interface, INativeGuid
 	[VtblIndex(4)]
 	public Bool32 ShaderInstrumentationEnabled()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12Tools*, Bool32>)(lpVtbl[4]))((ID3D12Tools*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12Tools*, Bool32>)(lpVtbl[4]))((ID3D12Tools*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

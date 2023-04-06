@@ -53,7 +53,11 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, Guid*, void**, int>)(lpVtbl[0]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, Guid*, void**, int>)(lpVtbl[0]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, uint>)(lpVtbl[1]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint>)(lpVtbl[1]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, uint>)(lpVtbl[2]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint>)(lpVtbl[2]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::GetFrameStatisticsMedia"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	[VtblIndex(3)]
 	public HResult GetFrameStatisticsMedia(FrameStatisticsMedia* pStats)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, FrameStatisticsMedia*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, FrameStatisticsMedia*, int>)(lpVtbl[3]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), pStats);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::SetPresentDuration"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	[VtblIndex(4)]
 	public HResult SetPresentDuration(uint Duration)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, uint, int>)(lpVtbl[4]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), Duration);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint, int>)(lpVtbl[4]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), Duration);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChainMedia::CheckPresentDurationSupport"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDXGISwapChainMedia : IDXGISwapChainMedia.Interface
 	[VtblIndex(5)]
 	public HResult CheckPresentDurationSupport(uint DesiredPresentDuration, uint* pClosestSmallerPresentDuration, uint* pClosestLargerPresentDuration)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISwapChainMedia*, uint, uint*, uint*, int>)(lpVtbl[5]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), DesiredPresentDuration, pClosestSmallerPresentDuration, pClosestLargerPresentDuration);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISwapChainMedia*, uint, uint*, uint*, int>)(lpVtbl[5]))((IDXGISwapChainMedia*)Unsafe.AsPointer(ref this), DesiredPresentDuration, pClosestSmallerPresentDuration, pClosestLargerPresentDuration);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

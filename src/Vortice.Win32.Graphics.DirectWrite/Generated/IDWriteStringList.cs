@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteStringList*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteStringList*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteStringList*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteStringList*, uint>)(lpVtbl[1]))((IDWriteStringList*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint>)(lpVtbl[1]))((IDWriteStringList*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteStringList*, uint>)(lpVtbl[2]))((IDWriteStringList*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint>)(lpVtbl[2]))((IDWriteStringList*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetCount"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	[VtblIndex(3)]
 	public uint GetCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteStringList*, uint>)(lpVtbl[3]))((IDWriteStringList*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint>)(lpVtbl[3]))((IDWriteStringList*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleNameLength"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	[VtblIndex(4)]
 	public HResult GetLocaleNameLength(uint listIndex, uint* length)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteStringList*, uint, uint*, int>)(lpVtbl[4]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, length);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint, uint*, int>)(lpVtbl[4]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, length);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleName"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	[VtblIndex(5)]
 	public HResult GetLocaleName(uint listIndex, ushort* localeName, uint size)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteStringList*, uint, ushort*, uint, int>)(lpVtbl[5]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, localeName, size);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint, ushort*, uint, int>)(lpVtbl[5]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, localeName, size);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetStringLength"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	[VtblIndex(6)]
 	public HResult GetStringLength(uint listIndex, uint* length)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteStringList*, uint, uint*, int>)(lpVtbl[6]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, length);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint, uint*, int>)(lpVtbl[6]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, length);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetString"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	[VtblIndex(7)]
 	public HResult GetString(uint listIndex, ushort* stringBuffer, uint stringBufferSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteStringList*, uint, ushort*, uint, int>)(lpVtbl[7]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteStringList*, uint, ushort*, uint, int>)(lpVtbl[7]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

@@ -51,7 +51,11 @@ public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection
 	[VtblIndex(0)]
 	public HResult GetDesc(FunctionDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11FunctionReflection*, FunctionDescription*, int>)(lpVtbl[0]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, FunctionDescription*, int>)(lpVtbl[0]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByIndex"]/*' />
@@ -59,7 +63,11 @@ public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection
 	[VtblIndex(1)]
 	public ID3D11ShaderReflectionConstantBuffer GetConstantBufferByIndex(uint BufferIndex)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11FunctionReflection*, uint, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[1]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), BufferIndex);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, uint, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[1]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), BufferIndex);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetConstantBufferByName"]/*' />
@@ -67,7 +75,11 @@ public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection
 	[VtblIndex(2)]
 	public ID3D11ShaderReflectionConstantBuffer GetConstantBufferByName(sbyte* Name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11FunctionReflection*, sbyte*, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDesc"]/*' />
@@ -75,7 +87,11 @@ public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection
 	[VtblIndex(3)]
 	public HResult GetResourceBindingDesc(uint ResourceIndex, ShaderInputBindDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11FunctionReflection*, uint, ShaderInputBindDescription*, int>)(lpVtbl[3]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ResourceIndex, pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, uint, ShaderInputBindDescription*, int>)(lpVtbl[3]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ResourceIndex, pDesc);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetVariableByName"]/*' />
@@ -83,7 +99,11 @@ public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection
 	[VtblIndex(4)]
 	public ID3D11ShaderReflectionVariable GetVariableByName(sbyte* Name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11FunctionReflection*, sbyte*, ID3D11ShaderReflectionVariable>)(lpVtbl[4]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ID3D11ShaderReflectionVariable>)(lpVtbl[4]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetResourceBindingDescByName"]/*' />
@@ -91,7 +111,11 @@ public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection
 	[VtblIndex(5)]
 	public HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11FunctionReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[5]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[5]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11FunctionReflection::GetFunctionParameter"]/*' />
@@ -99,7 +123,11 @@ public unsafe partial struct ID3D11FunctionReflection : ID3D11FunctionReflection
 	[VtblIndex(6)]
 	public ID3D11FunctionParameterReflection GetFunctionParameter(int ParameterIndex)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11FunctionReflection*, int, ID3D11FunctionParameterReflection>)(lpVtbl[6]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ParameterIndex);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11FunctionReflection*, int, ID3D11FunctionParameterReflection>)(lpVtbl[6]))((ID3D11FunctionReflection*)Unsafe.AsPointer(ref this), ParameterIndex);
+#endif
 	}
 
 	public interface Interface 

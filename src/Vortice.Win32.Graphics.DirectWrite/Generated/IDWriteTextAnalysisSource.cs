@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSource*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSource*, uint>)(lpVtbl[1]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint>)(lpVtbl[1]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSource*, uint>)(lpVtbl[2]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint>)(lpVtbl[2]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetTextAtPosition"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	[VtblIndex(3)]
 	public HResult GetTextAtPosition(uint textPosition, ushort** textString, uint* textLength)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSource*, uint, ushort**, uint*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint, ushort**, uint*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetTextBeforePosition"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	[VtblIndex(4)]
 	public HResult GetTextBeforePosition(uint textPosition, ushort** textString, uint* textLength)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSource*, uint, ushort**, uint*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint, ushort**, uint*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textString, textLength);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetParagraphReadingDirection"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	[VtblIndex(5)]
 	public ReadingDirection GetParagraphReadingDirection()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSource*, ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, ReadingDirection>)(lpVtbl[5]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetLocaleName"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	[VtblIndex(6)]
 	public HResult GetLocaleName(uint textPosition, uint* textLength, ushort** localeName)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSource*, uint, uint*, ushort**, int>)(lpVtbl[6]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textLength, localeName);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint, uint*, ushort**, int>)(lpVtbl[6]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textLength, localeName);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSource::GetNumberSubstitution"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDWriteTextAnalysisSource : IDWriteTextAnalysisSour
 	[VtblIndex(7)]
 	public HResult GetNumberSubstitution(uint textPosition, uint* textLength, IDWriteNumberSubstitution** numberSubstitution)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSource*, uint, uint*, IDWriteNumberSubstitution**, int>)(lpVtbl[7]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSource*, uint, uint*, IDWriteNumberSubstitution**, int>)(lpVtbl[7]))((IDWriteTextAnalysisSource*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

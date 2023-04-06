@@ -437,6 +437,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pBytecode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
 			,{"Name":"BytecodeLength","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}

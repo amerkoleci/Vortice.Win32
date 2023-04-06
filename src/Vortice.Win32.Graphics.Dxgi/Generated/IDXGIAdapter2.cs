@@ -53,7 +53,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, uint>)(lpVtbl[1]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, uint>)(lpVtbl[1]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, uint>)(lpVtbl[2]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, uint>)(lpVtbl[2]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(3)]
 	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(4)]
 	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(5)]
 	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(6)]
 	public HResult GetParent(Guid* riid, void** ppParent)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.EnumOutputs" />
@@ -111,7 +139,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(7)]
 	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, uint, IDXGIOutput**, int>)(lpVtbl[7]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, uint, IDXGIOutput**, int>)(lpVtbl[7]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
@@ -119,15 +151,23 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(8)]
 	public HResult GetDesc(AdapterDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInteger* pUMDVersion)
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, long* pUMDVersion)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, LargeInteger*, int>)(lpVtbl[9]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, Guid*, long*, int>)(lpVtbl[9]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, Guid*, long*, int>)(lpVtbl[9]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter1.GetDesc1" />
@@ -135,7 +175,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(10)]
 	public HResult GetDesc1(AdapterDescription1* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter2::GetDesc2"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IDXGIAdapter2 : IDXGIAdapter2.Interface, INativeGui
 	[VtblIndex(11)]
 	public HResult GetDesc2(AdapterDescription2* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter2*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter2*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter2*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	public interface Interface : IDXGIAdapter1.Interface

@@ -435,6 +435,7 @@
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_LINESTRIP","Value":3}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST","Value":4}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP","Value":5}
+			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN","Value":6}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ","Value":10}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ","Value":11}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ","Value":12}
@@ -682,6 +683,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Name","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"Definition","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -1326,12 +1328,77 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
+		"Name":"D3D_FORMAT_LAYOUT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3DFL_STANDARD","Value":0}
+			,{"Name":"D3DFL_CUSTOM","Value":-1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D_FORMAT_TYPE_LEVEL"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3DFTL_NO_TYPE","Value":0}
+			,{"Name":"D3DFTL_PARTIAL_TYPE","Value":-2}
+			,{"Name":"D3DFTL_FULL_TYPE","Value":-1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D_FORMAT_COMPONENT_NAME"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3DFCN_R","Value":-4}
+			,{"Name":"D3DFCN_G","Value":-3}
+			,{"Name":"D3DFCN_B","Value":-2}
+			,{"Name":"D3DFCN_A","Value":-1}
+			,{"Name":"D3DFCN_D","Value":0}
+			,{"Name":"D3DFCN_S","Value":1}
+			,{"Name":"D3DFCN_X","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D_FORMAT_COMPONENT_INTERPRETATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3DFCI_TYPELESS","Value":0}
+			,{"Name":"D3DFCI_FLOAT","Value":-4}
+			,{"Name":"D3DFCI_SNORM","Value":-3}
+			,{"Name":"D3DFCI_UNORM","Value":-2}
+			,{"Name":"D3DFCI_SINT","Value":-1}
+			,{"Name":"D3DFCI_UINT","Value":1}
+			,{"Name":"D3DFCI_UNORM_SRGB","Value":2}
+			,{"Name":"D3DFCI_BIASED_FIXED_2_8","Value":3}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
 		"Name":"D3DVECTOR"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -1347,6 +1414,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.Direct3D","Parents":[]},"Attrs":[]}
 		]
@@ -1358,6 +1426,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Graphics.Direct3D","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"m","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Single"}},"Attrs":[]}
@@ -1370,6 +1439,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"_12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}

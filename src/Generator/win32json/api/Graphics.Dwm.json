@@ -151,6 +151,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fEnable","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -191,7 +192,8 @@
 			,{"Name":"DWMWA_CAPTION_COLOR","Value":35}
 			,{"Name":"DWMWA_TEXT_COLOR","Value":36}
 			,{"Name":"DWMWA_VISIBLE_FRAME_BORDER_THICKNESS","Value":37}
-			,{"Name":"DWMWA_LAST","Value":38}
+			,{"Name":"DWMWA_SYSTEMBACKDROP_TYPE","Value":38}
+			,{"Name":"DWMWA_LAST","Value":39}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -207,6 +209,22 @@
 			,{"Name":"DWMWCP_DONOTROUND","Value":1}
 			,{"Name":"DWMWCP_ROUND","Value":2}
 			,{"Name":"DWMWCP_ROUNDSMALL","Value":3}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"DWM_SYSTEMBACKDROP_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DWMSBT_AUTO","Value":0}
+			,{"Name":"DWMSBT_NONE","Value":1}
+			,{"Name":"DWMSBT_MAINWINDOW","Value":2}
+			,{"Name":"DWMSBT_TRANSIENTWINDOW","Value":3}
+			,{"Name":"DWMSBT_TABBEDWINDOW","Value":4}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -247,6 +265,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rcDestination","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -265,6 +284,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"uiNumerator","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"uiDenominator","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -279,6 +299,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"rateRefresh","Type":{"Kind":"ApiRef","Name":"UNSIGNED_RATIO","TargetKind":"Default","Api":"Graphics.Dwm","Parents":[]},"Attrs":[]}
@@ -345,6 +366,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"fQueue","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -365,6 +387,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":1
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"S_11","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
 			,{"Name":"S_12","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
@@ -449,7 +472,7 @@
 			,{"Name":"DWMTWR_GROUP_POLICY","Value":256}
 			,{"Name":"DWMTWR_APP_COMPAT","Value":512}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 ]
 

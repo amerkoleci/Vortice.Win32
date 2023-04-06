@@ -53,7 +53,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, uint>)(lpVtbl[1]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint>)(lpVtbl[1]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, uint>)(lpVtbl[2]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint>)(lpVtbl[2]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(3)]
 	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(4)]
 	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(5)]
 	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(6)]
 	public HResult GetParent(Guid* riid, void** ppParent)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory.EnumAdapters" />
@@ -111,23 +139,35 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(7)]
 	public HResult EnumAdapters(uint Adapter, IDXGIAdapter** ppAdapter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, uint, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint, IDXGIAdapter**, int>)(lpVtbl[7]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory.MakeWindowAssociation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult MakeWindowAssociation(IntPtr WindowHandle, WindowAssociationFlags Flags)
+	public HResult MakeWindowAssociation(nint WindowHandle, WindowAssociationFlags Flags)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr, WindowAssociationFlags, int>)(lpVtbl[8]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, nint, WindowAssociationFlags, int>)(lpVtbl[8]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, nint, WindowAssociationFlags, int>)(lpVtbl[8]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, Flags);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory.GetWindowAssociation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetWindowAssociation(IntPtr* pWindowHandle)
+	public HResult GetWindowAssociation(nint* pWindowHandle)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr*, int>)(lpVtbl[9]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pWindowHandle);
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, nint*, int>)(lpVtbl[9]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pWindowHandle);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, nint*, int>)(lpVtbl[9]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pWindowHandle);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory.CreateSwapChain" />
@@ -135,15 +175,23 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(10)]
 	public HResult CreateSwapChain(IUnknown* pDevice, SwapChainDescription* pDesc, IDXGISwapChain** ppSwapChain)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, SwapChainDescription*, IDXGISwapChain**, int>)(lpVtbl[10]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pDesc, ppSwapChain);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory.CreateSoftwareAdapter" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreateSoftwareAdapter(IntPtr Module, IDXGIAdapter** ppAdapter)
+	public HResult CreateSoftwareAdapter(nint Module, IDXGIAdapter** ppAdapter)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, nint, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, nint, IDXGIAdapter**, int>)(lpVtbl[11]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Module, ppAdapter);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory1.EnumAdapters1" />
@@ -151,7 +199,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(12)]
 	public HResult EnumAdapters1(uint Adapter, IDXGIAdapter1** ppAdapter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, uint, IDXGIAdapter1**, int>)(lpVtbl[12]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint, IDXGIAdapter1**, int>)(lpVtbl[12]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Adapter, ppAdapter);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory1.IsCurrent" />
@@ -159,7 +211,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(13)]
 	public Bool32 IsCurrent()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Bool32>)(lpVtbl[13]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Bool32>)(lpVtbl[13]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.IsWindowedStereoEnabled" />
@@ -167,15 +223,23 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(14)]
 	public Bool32 IsWindowedStereoEnabled()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Bool32>)(lpVtbl[14]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Bool32>)(lpVtbl[14]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForHwnd" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, IntPtr hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
+	public HResult CreateSwapChainForHwnd(IUnknown* pDevice, nint hWnd, SwapChainDescription1* pDesc, SwapChainFullscreenDescription* pFullscreenDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, IntPtr, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[15]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IUnknown*, nint, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[15]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, nint, SwapChainDescription1*, SwapChainFullscreenDescription*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[15]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, hWnd, pDesc, pFullscreenDesc, pRestrictToOutput, ppSwapChain);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForCoreWindow" />
@@ -183,7 +247,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(16)]
 	public HResult CreateSwapChainForCoreWindow(IUnknown* pDevice, IUnknown* pWindow, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[16]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[16]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pWindow, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.GetSharedResourceAdapterLuid" />
@@ -191,15 +259,23 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(17)]
 	public HResult GetSharedResourceAdapterLuid(Handle hResource, Luid* pLuid)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Handle, Luid*, int>)(lpVtbl[17]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Handle, Luid*, int>)(lpVtbl[17]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hResource, pLuid);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusWindow" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult RegisterStereoStatusWindow(IntPtr WindowHandle, uint wMsg, uint* pdwCookie)
+	public HResult RegisterStereoStatusWindow(nint WindowHandle, uint wMsg, uint* pdwCookie)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr, uint, uint*, int>)(lpVtbl[18]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, nint, uint, uint*, int>)(lpVtbl[18]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, nint, uint, uint*, int>)(lpVtbl[18]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.RegisterStereoStatusEvent" />
@@ -207,7 +283,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(19)]
 	public HResult RegisterStereoStatusEvent(Handle hEvent, uint* pdwCookie)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Handle, uint*, int>)(lpVtbl[19]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Handle, uint*, int>)(lpVtbl[19]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.UnregisterStereoStatus" />
@@ -215,15 +295,23 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(20)]
 	public void UnregisterStereoStatus(uint dwCookie)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory5*, uint, void>)(lpVtbl[20]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), dwCookie);
+#else
 		((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint, void>)(lpVtbl[20]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusWindow" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult RegisterOcclusionStatusWindow(IntPtr WindowHandle, uint wMsg, uint* pdwCookie)
+	public HResult RegisterOcclusionStatusWindow(nint WindowHandle, uint wMsg, uint* pdwCookie)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IntPtr, uint, uint*, int>)(lpVtbl[21]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, nint, uint, uint*, int>)(lpVtbl[21]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, nint, uint, uint*, int>)(lpVtbl[21]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), WindowHandle, wMsg, pdwCookie);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.RegisterOcclusionStatusEvent" />
@@ -231,7 +319,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(22)]
 	public HResult RegisterOcclusionStatusEvent(Handle hEvent, uint* pdwCookie)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Handle, uint*, int>)(lpVtbl[22]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Handle, uint*, int>)(lpVtbl[22]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.UnregisterOcclusionStatus" />
@@ -239,7 +331,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(23)]
 	public void UnregisterOcclusionStatus(uint dwCookie)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIFactory5*, uint, void>)(lpVtbl[23]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), dwCookie);
+#else
 		((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint, void>)(lpVtbl[23]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory2.CreateSwapChainForComposition" />
@@ -247,7 +343,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(24)]
 	public HResult CreateSwapChainForComposition(IUnknown* pDevice, SwapChainDescription1* pDesc, IDXGIOutput* pRestrictToOutput, IDXGISwapChain1** ppSwapChain)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[24]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, IUnknown*, SwapChainDescription1*, IDXGIOutput*, IDXGISwapChain1**, int>)(lpVtbl[24]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), pDevice, pDesc, pRestrictToOutput, ppSwapChain);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory3.GetCreationFlags" />
@@ -255,7 +355,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(25)]
 	public uint GetCreationFlags()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, uint>)(lpVtbl[25]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, uint>)(lpVtbl[25]))((IDXGIFactory5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory4.EnumAdapterByLuid" />
@@ -263,7 +367,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(26)]
 	public HResult EnumAdapterByLuid(Luid AdapterLuid, Guid* riid, void** ppvAdapter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Luid, Guid*, void**, int>)(lpVtbl[26]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Luid, Guid*, void**, int>)(lpVtbl[26]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), AdapterLuid, riid, ppvAdapter);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIFactory4.EnumWarpAdapter" />
@@ -271,7 +379,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(27)]
 	public HResult EnumWarpAdapter(Guid* riid, void** ppvAdapter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Guid*, void**, int>)(lpVtbl[27]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), riid, ppvAdapter);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory5::CheckFeatureSupport"]/*' />
@@ -279,7 +391,11 @@ public unsafe partial struct IDXGIFactory5 : IDXGIFactory5.Interface, INativeGui
 	[VtblIndex(28)]
 	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIFactory5*, Feature, void*, int, int>)(lpVtbl[28]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIFactory5*, Feature, void*, int, int>)(lpVtbl[28]))((IDXGIFactory5*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
+#endif
 	}
 
 	public interface Interface : IDXGIFactory4.Interface

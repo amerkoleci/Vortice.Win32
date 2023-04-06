@@ -11,7 +11,7 @@ namespace Win32.Graphics.Imaging;
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICColorContextType"]/*' />
 /// <unmanaged>WICColorContextType</unmanaged>
-public enum WICColorContextType : int
+public enum WICColorContextType
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICColorContextType::WICColorContextUninitialized"]/*' />
 	/// <unmanaged>WICColorContextUninitialized</unmanaged>
@@ -26,7 +26,7 @@ public enum WICColorContextType : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption"]/*' />
 /// <unmanaged>WICBitmapCreateCacheOption</unmanaged>
-public enum WICBitmapCreateCacheOption : int
+public enum WICBitmapCreateCacheOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapCreateCacheOption::WICBitmapNoCache"]/*' />
 	/// <unmanaged>WICBitmapNoCache</unmanaged>
@@ -41,7 +41,7 @@ public enum WICBitmapCreateCacheOption : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDecodeOptions"]/*' />
 /// <unmanaged>WICDecodeOptions</unmanaged>
-public enum WICDecodeOptions : int
+public enum WICDecodeOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDecodeOptions::WICDecodeMetadataCacheOnDemand"]/*' />
 	/// <unmanaged>WICDecodeMetadataCacheOnDemand</unmanaged>
@@ -53,7 +53,7 @@ public enum WICDecodeOptions : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption"]/*' />
 /// <unmanaged>WICBitmapEncoderCacheOption</unmanaged>
-public enum WICBitmapEncoderCacheOption : int
+public enum WICBitmapEncoderCacheOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapEncoderCacheOption::WICBitmapEncoderCacheInMemory"]/*' />
 	/// <unmanaged>WICBitmapEncoderCacheInMemory</unmanaged>
@@ -68,7 +68,7 @@ public enum WICBitmapEncoderCacheOption : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType"]/*' />
 /// <unmanaged>WICComponentType</unmanaged>
-public enum WICComponentType : int
+public enum WICComponentType
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentType::WICDecoder"]/*' />
 	/// <unmanaged>WICDecoder</unmanaged>
@@ -95,7 +95,7 @@ public enum WICComponentType : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICComponentEnumerateOptions"]/*' />
 /// <unmanaged>WICComponentEnumerateOptions</unmanaged>
-public enum WICComponentEnumerateOptions : int
+public enum WICComponentEnumerateOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentEnumerateOptions::WICComponentEnumerateDefault"]/*' />
 	/// <unmanaged>WICComponentEnumerateDefault</unmanaged>
@@ -116,7 +116,7 @@ public enum WICComponentEnumerateOptions : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapInterpolationMode"]/*' />
 /// <unmanaged>WICBitmapInterpolationMode</unmanaged>
-public enum WICBitmapInterpolationMode : int
+public enum WICBitmapInterpolationMode
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapInterpolationMode::WICBitmapInterpolationModeNearestNeighbor"]/*' />
 	/// <unmanaged>WICBitmapInterpolationModeNearestNeighbor</unmanaged>
@@ -137,7 +137,7 @@ public enum WICBitmapInterpolationMode : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType"]/*' />
 /// <unmanaged>WICBitmapPaletteType</unmanaged>
-public enum WICBitmapPaletteType : int
+public enum WICBitmapPaletteType
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapPaletteType::WICBitmapPaletteTypeCustom"]/*' />
 	/// <unmanaged>WICBitmapPaletteTypeCustom</unmanaged>
@@ -185,7 +185,7 @@ public enum WICBitmapPaletteType : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType"]/*' />
 /// <unmanaged>WICBitmapDitherType</unmanaged>
-public enum WICBitmapDitherType : int
+public enum WICBitmapDitherType
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDitherType::WICBitmapDitherTypeNone"]/*' />
 	/// <unmanaged>WICBitmapDitherTypeNone</unmanaged>
@@ -221,7 +221,7 @@ public enum WICBitmapDitherType : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption"]/*' />
 /// <unmanaged>WICBitmapAlphaChannelOption</unmanaged>
-public enum WICBitmapAlphaChannelOption : int
+public enum WICBitmapAlphaChannelOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapAlphaChannelOption::WICBitmapUseAlpha"]/*' />
 	/// <unmanaged>WICBitmapUseAlpha</unmanaged>
@@ -236,7 +236,7 @@ public enum WICBitmapAlphaChannelOption : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions"]/*' />
 /// <unmanaged>WICBitmapTransformOptions</unmanaged>
-public enum WICBitmapTransformOptions : int
+public enum WICBitmapTransformOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapTransformOptions::WICBitmapTransformRotate0"]/*' />
 	/// <unmanaged>WICBitmapTransformRotate0</unmanaged>
@@ -261,7 +261,7 @@ public enum WICBitmapTransformOptions : int
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapLockFlags"]/*' />
 /// <unmanaged>WICBitmapLockFlags</unmanaged>
 [Flags]
-public enum WICBitmapLockFlags : int
+public enum WICBitmapLockFlags
 {
 	None = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapLockFlags::WICBitmapLockRead"]/*' />
@@ -274,7 +274,7 @@ public enum WICBitmapLockFlags : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities"]/*' />
 /// <unmanaged>WICBitmapDecoderCapabilities</unmanaged>
-public enum WICBitmapDecoderCapabilities : int
+public enum WICBitmapDecoderCapabilities
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICBitmapDecoderCapabilities::WICBitmapDecoderCapabilitySameEncoder"]/*' />
 	/// <unmanaged>WICBitmapDecoderCapabilitySameEncoder</unmanaged>
@@ -295,7 +295,7 @@ public enum WICBitmapDecoderCapabilities : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation"]/*' />
 /// <unmanaged>WICProgressOperation</unmanaged>
-public enum WICProgressOperation : int
+public enum WICProgressOperation
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressOperation::WICProgressOperationCopyPixels"]/*' />
 	/// <unmanaged>WICProgressOperationCopyPixels</unmanaged>
@@ -310,7 +310,7 @@ public enum WICProgressOperation : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification"]/*' />
 /// <unmanaged>WICProgressNotification</unmanaged>
-public enum WICProgressNotification : int
+public enum WICProgressNotification
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICProgressNotification::WICProgressNotificationBegin"]/*' />
 	/// <unmanaged>WICProgressNotificationBegin</unmanaged>
@@ -328,7 +328,7 @@ public enum WICProgressNotification : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning"]/*' />
 /// <unmanaged>WICComponentSigning</unmanaged>
-public enum WICComponentSigning : int
+public enum WICComponentSigning
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICComponentSigning::WICComponentSigned"]/*' />
 	/// <unmanaged>WICComponentSigned</unmanaged>
@@ -736,7 +736,7 @@ public enum WICPixelFormatNumericRepresentation : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPlanarOptions"]/*' />
 /// <unmanaged>WICPlanarOptions</unmanaged>
-public enum WICPlanarOptions : int
+public enum WICPlanarOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPlanarOptions::WICPlanarOptionsDefault"]/*' />
 	/// <unmanaged>WICPlanarOptionsDefault</unmanaged>
@@ -787,7 +787,7 @@ public enum WICJpegScanType : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption"]/*' />
 /// <unmanaged>WICTiffCompressionOption</unmanaged>
-public enum WICTiffCompressionOption : int
+public enum WICTiffCompressionOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionDontCare"]/*' />
 	/// <unmanaged>WICTiffCompressionDontCare</unmanaged>
@@ -817,7 +817,7 @@ public enum WICTiffCompressionOption : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption"]/*' />
 /// <unmanaged>WICJpegYCrCbSubsamplingOption</unmanaged>
-public enum WICJpegYCrCbSubsamplingOption : int
+public enum WICJpegYCrCbSubsamplingOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsamplingDefault"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsamplingDefault</unmanaged>
@@ -838,7 +838,7 @@ public enum WICJpegYCrCbSubsamplingOption : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption"]/*' />
 /// <unmanaged>WICPngFilterOption</unmanaged>
-public enum WICPngFilterOption : int
+public enum WICPngFilterOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterUnspecified"]/*' />
 	/// <unmanaged>WICPngFilterUnspecified</unmanaged>
@@ -865,7 +865,7 @@ public enum WICPngFilterOption : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint"]/*' />
 /// <unmanaged>WICNamedWhitePoint</unmanaged>
-public enum WICNamedWhitePoint : int
+public enum WICNamedWhitePoint
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointDefault"]/*' />
 	/// <unmanaged>WICWhitePointDefault</unmanaged>
@@ -904,7 +904,7 @@ public enum WICNamedWhitePoint : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities"]/*' />
 /// <unmanaged>WICRawCapabilities</unmanaged>
-public enum WICRawCapabilities : int
+public enum WICRawCapabilities
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityNotSupported"]/*' />
 	/// <unmanaged>WICRawCapabilityNotSupported</unmanaged>
@@ -919,7 +919,7 @@ public enum WICRawCapabilities : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities"]/*' />
 /// <unmanaged>WICRawRotationCapabilities</unmanaged>
-public enum WICRawRotationCapabilities : int
+public enum WICRawRotationCapabilities
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityNotSupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityNotSupported</unmanaged>
@@ -937,7 +937,7 @@ public enum WICRawRotationCapabilities : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet"]/*' />
 /// <unmanaged>WICRawParameterSet</unmanaged>
-public enum WICRawParameterSet : int
+public enum WICRawParameterSet
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICAsShotParameterSet"]/*' />
 	/// <unmanaged>WICAsShotParameterSet</unmanaged>
@@ -952,7 +952,7 @@ public enum WICRawParameterSet : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode"]/*' />
 /// <unmanaged>WICRawRenderMode</unmanaged>
-public enum WICRawRenderMode : int
+public enum WICRawRenderMode
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeDraft"]/*' />
 	/// <unmanaged>WICRawRenderModeDraft</unmanaged>
@@ -967,7 +967,7 @@ public enum WICRawRenderMode : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension"]/*' />
 /// <unmanaged>WICDdsDimension</unmanaged>
-public enum WICDdsDimension : int
+public enum WICDdsDimension
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture1D"]/*' />
 	/// <unmanaged>WICDdsTexture1D</unmanaged>
@@ -985,7 +985,7 @@ public enum WICDdsDimension : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode"]/*' />
 /// <unmanaged>WICDdsAlphaMode</unmanaged>
-public enum WICDdsAlphaMode : int
+public enum WICDdsAlphaMode
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeUnknown"]/*' />
 	/// <unmanaged>WICDdsAlphaModeUnknown</unmanaged>
@@ -1006,7 +1006,7 @@ public enum WICDdsAlphaMode : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions"]/*' />
 /// <unmanaged>WICMetadataCreationOptions</unmanaged>
-public enum WICMetadataCreationOptions : int
+public enum WICMetadataCreationOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationDefault"]/*' />
 	/// <unmanaged>WICMetadataCreationDefault</unmanaged>
@@ -1024,7 +1024,7 @@ public enum WICMetadataCreationOptions : int
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions"]/*' />
 /// <unmanaged>WICPersistOptions</unmanaged>
-public enum WICPersistOptions : int
+public enum WICPersistOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions::WICPersistOptionDefault"]/*' />
 	/// <unmanaged>WICPersistOptionDefault</unmanaged>

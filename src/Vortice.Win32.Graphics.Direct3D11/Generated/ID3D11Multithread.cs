@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Multithread*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Multithread*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Multithread*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Multithread*, uint>)(lpVtbl[1]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, uint>)(lpVtbl[1]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Multithread*, uint>)(lpVtbl[2]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, uint>)(lpVtbl[2]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::Enter"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 	[VtblIndex(3)]
 	public void Enter()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11Multithread*, void>)(lpVtbl[3]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11Multithread*, void>)(lpVtbl[3]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::Leave"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 	[VtblIndex(4)]
 	public void Leave()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11Multithread*, void>)(lpVtbl[4]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11Multithread*, void>)(lpVtbl[4]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::SetMultithreadProtected"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 	[VtblIndex(5)]
 	public Bool32 SetMultithreadProtected(Bool32 bMTProtect)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Multithread*, Bool32, Bool32>)(lpVtbl[5]))((ID3D11Multithread*)Unsafe.AsPointer(ref this), bMTProtect);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, Bool32, Bool32>)(lpVtbl[5]))((ID3D11Multithread*)Unsafe.AsPointer(ref this), bMTProtect);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Multithread::GetMultithreadProtected"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11Multithread : ID3D11Multithread.Interface, IN
 	[VtblIndex(6)]
 	public Bool32 GetMultithreadProtected()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Multithread*, Bool32>)(lpVtbl[6]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Multithread*, Bool32>)(lpVtbl[6]))((ID3D11Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

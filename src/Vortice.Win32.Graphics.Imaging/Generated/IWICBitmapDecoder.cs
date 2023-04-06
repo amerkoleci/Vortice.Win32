@@ -53,7 +53,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, uint>)(lpVtbl[1]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, uint>)(lpVtbl[1]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, uint>)(lpVtbl[2]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, uint>)(lpVtbl[2]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::QueryCapability"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(3)]
 	public HResult QueryCapability(Com.IStream* pIStream, uint* pdwCapability)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, Com.IStream*, uint*, int>)(lpVtbl[3]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pIStream, pdwCapability);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, Com.IStream*, uint*, int>)(lpVtbl[3]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pIStream, pdwCapability);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::Initialize"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(4)]
 	public HResult Initialize(Com.IStream* pIStream, WICDecodeOptions cacheOptions)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, Com.IStream*, WICDecodeOptions, int>)(lpVtbl[4]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pIStream, cacheOptions);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, Com.IStream*, WICDecodeOptions, int>)(lpVtbl[4]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pIStream, cacheOptions);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetContainerFormat"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(5)]
 	public HResult GetContainerFormat(Guid* pguidContainerFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, Guid*, int>)(lpVtbl[5]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pguidContainerFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, Guid*, int>)(lpVtbl[5]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pguidContainerFormat);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetDecoderInfo"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(6)]
 	public HResult GetDecoderInfo(IWICBitmapDecoderInfo** ppIDecoderInfo)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, IWICBitmapDecoderInfo**, int>)(lpVtbl[6]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIDecoderInfo);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapDecoderInfo**, int>)(lpVtbl[6]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIDecoderInfo);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::CopyPalette"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(7)]
 	public HResult CopyPalette(IWICPalette* pIPalette)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, IWICPalette*, int>)(lpVtbl[7]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pIPalette);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICPalette*, int>)(lpVtbl[7]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pIPalette);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetMetadataQueryReader"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(8)]
 	public HResult GetMetadataQueryReader(IWICMetadataQueryReader** ppIMetadataQueryReader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, IWICMetadataQueryReader**, int>)(lpVtbl[8]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICMetadataQueryReader**, int>)(lpVtbl[8]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryReader);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetPreview"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(9)]
 	public HResult GetPreview(IWICBitmapSource** ppIBitmapSource)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, IWICBitmapSource**, int>)(lpVtbl[9]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIBitmapSource);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapSource**, int>)(lpVtbl[9]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIBitmapSource);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetColorContexts"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(10)]
 	public HResult GetColorContexts(uint cCount, IWICColorContext** ppIColorContexts, uint* pcActualCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, uint, IWICColorContext**, uint*, int>)(lpVtbl[10]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), cCount, ppIColorContexts, pcActualCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, uint, IWICColorContext**, uint*, int>)(lpVtbl[10]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), cCount, ppIColorContexts, pcActualCount);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetThumbnail"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(11)]
 	public HResult GetThumbnail(IWICBitmapSource** ppIThumbnail)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, IWICBitmapSource**, int>)(lpVtbl[11]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIThumbnail);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, IWICBitmapSource**, int>)(lpVtbl[11]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), ppIThumbnail);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetFrameCount"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(12)]
 	public HResult GetFrameCount(uint* pCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, uint*, int>)(lpVtbl[12]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, uint*, int>)(lpVtbl[12]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), pCount);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoder::GetFrame"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct IWICBitmapDecoder : IWICBitmapDecoder.Interface, IN
 	[VtblIndex(13)]
 	public HResult GetFrame(uint index, IWICBitmapFrameDecode** ppIBitmapFrame)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapDecoder*, uint, IWICBitmapFrameDecode**, int>)(lpVtbl[13]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), index, ppIBitmapFrame);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoder*, uint, IWICBitmapFrameDecode**, int>)(lpVtbl[13]))((IWICBitmapDecoder*)Unsafe.AsPointer(ref this), index, ppIBitmapFrame);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

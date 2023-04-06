@@ -53,7 +53,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[0]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[0]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, uint>)(lpVtbl[1]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, uint>)(lpVtbl[1]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, uint>)(lpVtbl[2]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, uint>)(lpVtbl[2]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(3)]
 	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(4)]
 	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(5)]
 	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(6)]
 	public HResult GetParent(Guid* riid, void** ppParent)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
@@ -111,7 +139,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(7)]
 	public HResult GetDevice(Guid* riid, void** ppDevice)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISurface1*)Unsafe.AsPointer(ref this), riid, ppDevice);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGISurface.GetDesc" />
@@ -119,7 +151,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(8)]
 	public HResult GetDesc(SurfaceDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, SurfaceDescription*, int>)(lpVtbl[8]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, SurfaceDescription*, int>)(lpVtbl[8]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGISurface.Map" />
@@ -127,7 +163,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(9)]
 	public HResult Map(MappedRect* pLockedRect, uint MapFlags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, MappedRect*, uint, int>)(lpVtbl[9]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, MappedRect*, uint, int>)(lpVtbl[9]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGISurface.Unmap" />
@@ -135,7 +175,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(10)]
 	public HResult Unmap()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, int>)(lpVtbl[10]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, int>)(lpVtbl[10]))((IDXGISurface1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface1::GetDC"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(11)]
 	public HResult GetDC(Bool32 Discard, IntPtr* phdc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Bool32, IntPtr*, int>)(lpVtbl[11]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Discard, phdc);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Bool32, IntPtr*, int>)(lpVtbl[11]))((IDXGISurface1*)Unsafe.AsPointer(ref this), Discard, phdc);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface1::ReleaseDC"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IDXGISurface1 : IDXGISurface1.Interface, INativeGui
 	[VtblIndex(12)]
 	public HResult ReleaseDC(Rect* pDirtyRect)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGISurface1*, Rect*, int>)(lpVtbl[12]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDirtyRect);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGISurface1*, Rect*, int>)(lpVtbl[12]))((IDXGISurface1*)Unsafe.AsPointer(ref this), pDirtyRect);
+#endif
 	}
 
 	public interface Interface : IDXGISurface.Interface

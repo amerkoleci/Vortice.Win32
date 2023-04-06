@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionTransform3D : IDCompositionTransform3D
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTransform3D*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTransform3D*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTransform3D*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTransform3D*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionTransform3D : IDCompositionTransform3D
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTransform3D*, uint>)(lpVtbl[1]))((IDCompositionTransform3D*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTransform3D*, uint>)(lpVtbl[1]))((IDCompositionTransform3D*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionTransform3D : IDCompositionTransform3D
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTransform3D*, uint>)(lpVtbl[2]))((IDCompositionTransform3D*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTransform3D*, uint>)(lpVtbl[2]))((IDCompositionTransform3D*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 

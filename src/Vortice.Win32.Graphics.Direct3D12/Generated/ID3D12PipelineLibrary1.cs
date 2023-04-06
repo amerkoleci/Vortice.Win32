@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, uint>)(lpVtbl[1]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, uint>)(lpVtbl[1]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, uint>)(lpVtbl[2]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, uint>)(lpVtbl[2]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(3)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(4)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(5)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetName" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(6)]
 	public HResult SetName(ushort* Name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, ushort*, int>)(lpVtbl[6]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), Name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, int>)(lpVtbl[6]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(7)]
 	public HResult GetDevice(Guid* riid, void** ppvDevice)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.StorePipeline" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(8)]
 	public HResult StorePipeline(ushort* pName, ID3D12PipelineState* pPipeline)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, ushort*, ID3D12PipelineState*, int>)(lpVtbl[8]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pPipeline);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, ID3D12PipelineState*, int>)(lpVtbl[8]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pPipeline);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.LoadGraphicsPipeline" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(9)]
 	public HResult LoadGraphicsPipeline(ushort* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, ushort*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.LoadComputePipeline" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(10)]
 	public HResult LoadComputePipeline(ushort* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, ushort*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.GetSerializedSize" />
@@ -143,7 +187,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(11)]
 	public nuint GetSerializedSize()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, nuint>)(lpVtbl[11]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, nuint>)(lpVtbl[11]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12PipelineLibrary.Serialize" />
@@ -151,7 +199,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(12)]
 	public HResult Serialize(void* pData, nuint DataSizeInBytes)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, void*, nuint, int>)(lpVtbl[12]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pData, DataSizeInBytes);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, void*, nuint, int>)(lpVtbl[12]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pData, DataSizeInBytes);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary1::LoadPipeline"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct ID3D12PipelineLibrary1 : ID3D12PipelineLibrary1.Int
 	[VtblIndex(13)]
 	public HResult LoadPipeline(ushort* pName, PipelineStateStreamDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12PipelineLibrary1*, ushort*, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[13]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12PipelineLibrary1*, ushort*, PipelineStateStreamDescription*, Guid*, void**, int>)(lpVtbl[13]))((ID3D12PipelineLibrary1*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+#endif
 	}
 
 	public interface Interface : ID3D12PipelineLibrary.Interface

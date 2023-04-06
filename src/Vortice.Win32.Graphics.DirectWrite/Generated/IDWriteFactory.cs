@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, uint>)(lpVtbl[1]))((IDWriteFactory*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, uint>)(lpVtbl[1]))((IDWriteFactory*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, uint>)(lpVtbl[2]))((IDWriteFactory*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, uint>)(lpVtbl[2]))((IDWriteFactory*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::GetSystemFontCollection"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(3)]
 	public HResult GetSystemFontCollection(IDWriteFontCollection** fontCollection, Bool32 checkForUpdates)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteFontCollection**, Bool32, int>)(lpVtbl[3]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollection, checkForUpdates);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontCollection**, Bool32, int>)(lpVtbl[3]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollection, checkForUpdates);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomFontCollection"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(4)]
 	public HResult CreateCustomFontCollection(IDWriteFontCollectionLoader* collectionLoader, void* collectionKey, uint collectionKeySize, IDWriteFontCollection** fontCollection)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteFontCollectionLoader*, void*, uint, IDWriteFontCollection**, int>)(lpVtbl[4]))((IDWriteFactory*)Unsafe.AsPointer(ref this), collectionLoader, collectionKey, collectionKeySize, fontCollection);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontCollectionLoader*, void*, uint, IDWriteFontCollection**, int>)(lpVtbl[4]))((IDWriteFactory*)Unsafe.AsPointer(ref this), collectionLoader, collectionKey, collectionKeySize, fontCollection);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::RegisterFontCollectionLoader"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(5)]
 	public HResult RegisterFontCollectionLoader(IDWriteFontCollectionLoader* fontCollectionLoader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteFontCollectionLoader*, int>)(lpVtbl[5]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollectionLoader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontCollectionLoader*, int>)(lpVtbl[5]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollectionLoader);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::UnregisterFontCollectionLoader"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(6)]
 	public HResult UnregisterFontCollectionLoader(IDWriteFontCollectionLoader* fontCollectionLoader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteFontCollectionLoader*, int>)(lpVtbl[6]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollectionLoader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontCollectionLoader*, int>)(lpVtbl[6]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontCollectionLoader);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateFontFileReference"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(7)]
 	public HResult CreateFontFileReference(ushort* filePath, ulong* lastWriteTime, IDWriteFontFile** fontFile)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, ushort*, ulong*, IDWriteFontFile**, int>)(lpVtbl[7]))((IDWriteFactory*)Unsafe.AsPointer(ref this), filePath, lastWriteTime, fontFile);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, ushort*, ulong*, IDWriteFontFile**, int>)(lpVtbl[7]))((IDWriteFactory*)Unsafe.AsPointer(ref this), filePath, lastWriteTime, fontFile);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomFontFileReference"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(8)]
 	public HResult CreateCustomFontFileReference(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileLoader* fontFileLoader, IDWriteFontFile** fontFile)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, void*, uint, IDWriteFontFileLoader*, IDWriteFontFile**, int>)(lpVtbl[8]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileLoader, fontFile);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, void*, uint, IDWriteFontFileLoader*, IDWriteFontFile**, int>)(lpVtbl[8]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileLoader, fontFile);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateFontFace"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(9)]
 	public HResult CreateFontFace(FontFaceType fontFaceType, uint numberOfFiles, IDWriteFontFile** fontFiles, uint faceIndex, FontSimulations fontFaceSimulationFlags, IDWriteFontFace** fontFace)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, FontFaceType, uint, IDWriteFontFile**, uint, FontSimulations, IDWriteFontFace**, int>)(lpVtbl[9]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFaceType, numberOfFiles, fontFiles, faceIndex, fontFaceSimulationFlags, fontFace);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, FontFaceType, uint, IDWriteFontFile**, uint, FontSimulations, IDWriteFontFace**, int>)(lpVtbl[9]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFaceType, numberOfFiles, fontFiles, faceIndex, fontFaceSimulationFlags, fontFace);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateRenderingParams"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(10)]
 	public HResult CreateRenderingParams(IDWriteRenderingParams** renderingParams)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteRenderingParams**, int>)(lpVtbl[10]))((IDWriteFactory*)Unsafe.AsPointer(ref this), renderingParams);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteRenderingParams**, int>)(lpVtbl[10]))((IDWriteFactory*)Unsafe.AsPointer(ref this), renderingParams);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateMonitorRenderingParams"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(11)]
 	public HResult CreateMonitorRenderingParams(IntPtr monitor, IDWriteRenderingParams** renderingParams)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IntPtr, IDWriteRenderingParams**, int>)(lpVtbl[11]))((IDWriteFactory*)Unsafe.AsPointer(ref this), monitor, renderingParams);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IntPtr, IDWriteRenderingParams**, int>)(lpVtbl[11]))((IDWriteFactory*)Unsafe.AsPointer(ref this), monitor, renderingParams);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateCustomRenderingParams"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(12)]
 	public HResult CreateCustomRenderingParams(float gamma, float enhancedContrast, float clearTypeLevel, PixelGeometry pixelGeometry, RenderingMode renderingMode, IDWriteRenderingParams** renderingParams)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, float, float, float, PixelGeometry, RenderingMode, IDWriteRenderingParams**, int>)(lpVtbl[12]))((IDWriteFactory*)Unsafe.AsPointer(ref this), gamma, enhancedContrast, clearTypeLevel, pixelGeometry, renderingMode, renderingParams);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, float, float, float, PixelGeometry, RenderingMode, IDWriteRenderingParams**, int>)(lpVtbl[12]))((IDWriteFactory*)Unsafe.AsPointer(ref this), gamma, enhancedContrast, clearTypeLevel, pixelGeometry, renderingMode, renderingParams);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::RegisterFontFileLoader"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(13)]
 	public HResult RegisterFontFileLoader(IDWriteFontFileLoader* fontFileLoader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteFontFileLoader*, int>)(lpVtbl[13]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileLoader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontFileLoader*, int>)(lpVtbl[13]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileLoader);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::UnregisterFontFileLoader"]/*' />
@@ -167,7 +223,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(14)]
 	public HResult UnregisterFontFileLoader(IDWriteFontFileLoader* fontFileLoader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteFontFileLoader*, int>)(lpVtbl[14]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileLoader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteFontFileLoader*, int>)(lpVtbl[14]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFileLoader);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextFormat"]/*' />
@@ -175,7 +235,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(15)]
 	public HResult CreateTextFormat(ushort* fontFamilyName, IDWriteFontCollection* fontCollection, FontWeight fontWeight, FontStyle fontStyle, FontStretch fontStretch, float fontSize, ushort* localeName, IDWriteTextFormat** textFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, ushort*, IDWriteFontCollection*, FontWeight, FontStyle, FontStretch, float, ushort*, IDWriteTextFormat**, int>)(lpVtbl[15]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFamilyName, fontCollection, fontWeight, fontStyle, fontStretch, fontSize, localeName, textFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, ushort*, IDWriteFontCollection*, FontWeight, FontStyle, FontStretch, float, ushort*, IDWriteTextFormat**, int>)(lpVtbl[15]))((IDWriteFactory*)Unsafe.AsPointer(ref this), fontFamilyName, fontCollection, fontWeight, fontStyle, fontStretch, fontSize, localeName, textFormat);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTypography"]/*' />
@@ -183,7 +247,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(16)]
 	public HResult CreateTypography(IDWriteTypography** typography)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteTypography**, int>)(lpVtbl[16]))((IDWriteFactory*)Unsafe.AsPointer(ref this), typography);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteTypography**, int>)(lpVtbl[16]))((IDWriteFactory*)Unsafe.AsPointer(ref this), typography);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::GetGdiInterop"]/*' />
@@ -191,7 +259,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(17)]
 	public HResult GetGdiInterop(IDWriteGdiInterop** gdiInterop)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteGdiInterop**, int>)(lpVtbl[17]))((IDWriteFactory*)Unsafe.AsPointer(ref this), gdiInterop);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteGdiInterop**, int>)(lpVtbl[17]))((IDWriteFactory*)Unsafe.AsPointer(ref this), gdiInterop);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextLayout"]/*' />
@@ -199,7 +271,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(18)]
 	public HResult CreateTextLayout(ushort* @string, uint stringLength, IDWriteTextFormat* textFormat, float maxWidth, float maxHeight, IDWriteTextLayout** textLayout)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, ushort*, uint, IDWriteTextFormat*, float, float, IDWriteTextLayout**, int>)(lpVtbl[18]))((IDWriteFactory*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, maxWidth, maxHeight, textLayout);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, ushort*, uint, IDWriteTextFormat*, float, float, IDWriteTextLayout**, int>)(lpVtbl[18]))((IDWriteFactory*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, maxWidth, maxHeight, textLayout);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateGdiCompatibleTextLayout"]/*' />
@@ -207,7 +283,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(19)]
 	public HResult CreateGdiCompatibleTextLayout(ushort* @string, uint stringLength, IDWriteTextFormat* textFormat, float layoutWidth, float layoutHeight, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, IDWriteTextLayout** textLayout)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, ushort*, uint, IDWriteTextFormat*, float, float, float, Matrix3x2*, Bool32, IDWriteTextLayout**, int>)(lpVtbl[19]))((IDWriteFactory*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutWidth, layoutHeight, pixelsPerDip, transform, useGdiNatural, textLayout);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, ushort*, uint, IDWriteTextFormat*, float, float, float, Matrix3x2*, Bool32, IDWriteTextLayout**, int>)(lpVtbl[19]))((IDWriteFactory*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutWidth, layoutHeight, pixelsPerDip, transform, useGdiNatural, textLayout);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateEllipsisTrimmingSign"]/*' />
@@ -215,7 +295,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(20)]
 	public HResult CreateEllipsisTrimmingSign(IDWriteTextFormat* textFormat, IDWriteInlineObject** trimmingSign)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteTextFormat*, IDWriteInlineObject**, int>)(lpVtbl[20]))((IDWriteFactory*)Unsafe.AsPointer(ref this), textFormat, trimmingSign);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteTextFormat*, IDWriteInlineObject**, int>)(lpVtbl[20]))((IDWriteFactory*)Unsafe.AsPointer(ref this), textFormat, trimmingSign);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateTextAnalyzer"]/*' />
@@ -223,7 +307,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(21)]
 	public HResult CreateTextAnalyzer(IDWriteTextAnalyzer** textAnalyzer)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, IDWriteTextAnalyzer**, int>)(lpVtbl[21]))((IDWriteFactory*)Unsafe.AsPointer(ref this), textAnalyzer);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, IDWriteTextAnalyzer**, int>)(lpVtbl[21]))((IDWriteFactory*)Unsafe.AsPointer(ref this), textAnalyzer);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateNumberSubstitution"]/*' />
@@ -231,7 +319,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(22)]
 	public HResult CreateNumberSubstitution(NumberSubstitutionMethod substitutionMethod, ushort* localeName, Bool32 ignoreUserOverride, IDWriteNumberSubstitution** numberSubstitution)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, NumberSubstitutionMethod, ushort*, Bool32, IDWriteNumberSubstitution**, int>)(lpVtbl[22]))((IDWriteFactory*)Unsafe.AsPointer(ref this), substitutionMethod, localeName, ignoreUserOverride, numberSubstitution);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, NumberSubstitutionMethod, ushort*, Bool32, IDWriteNumberSubstitution**, int>)(lpVtbl[22]))((IDWriteFactory*)Unsafe.AsPointer(ref this), substitutionMethod, localeName, ignoreUserOverride, numberSubstitution);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFactory::CreateGlyphRunAnalysis"]/*' />
@@ -239,7 +331,11 @@ public unsafe partial struct IDWriteFactory : IDWriteFactory.Interface, INativeG
 	[VtblIndex(23)]
 	public HResult CreateGlyphRunAnalysis(GlyphRun* glyphRun, float pixelsPerDip, Matrix3x2* transform, RenderingMode renderingMode, MeasuringMode measuringMode, float baselineOriginX, float baselineOriginY, IDWriteGlyphRunAnalysis** glyphRunAnalysis)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFactory*, GlyphRun*, float, Matrix3x2*, RenderingMode, MeasuringMode, float, float, IDWriteGlyphRunAnalysis**, int>)(lpVtbl[23]))((IDWriteFactory*)Unsafe.AsPointer(ref this), glyphRun, pixelsPerDip, transform, renderingMode, measuringMode, baselineOriginX, baselineOriginY, glyphRunAnalysis);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFactory*, GlyphRun*, float, Matrix3x2*, RenderingMode, MeasuringMode, float, float, IDWriteGlyphRunAnalysis**, int>)(lpVtbl[23]))((IDWriteFactory*)Unsafe.AsPointer(ref this), glyphRun, pixelsPerDip, transform, renderingMode, measuringMode, baselineOriginX, baselineOriginY, glyphRunAnalysis);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

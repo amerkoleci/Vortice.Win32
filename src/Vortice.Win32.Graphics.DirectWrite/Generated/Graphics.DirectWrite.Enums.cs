@@ -32,7 +32,7 @@ public enum FontAxisTag : uint
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE"]/*' />
 /// <unmanaged>DWRITE_MEASURING_MODE</unmanaged>
-public enum MeasuringMode : int
+public enum MeasuringMode
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_MEASURING_MODE::DWRITE_MEASURING_MODE_NATURAL"]/*' />
 	/// <unmanaged>DWRITE_MEASURING_MODE_NATURAL</unmanaged>
@@ -48,7 +48,7 @@ public enum MeasuringMode : int
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS"]/*' />
 /// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS</unmanaged>
 [Flags]
-public enum GlyphImageFormats : uint
+public enum GlyphImageFormats
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_NONE"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_NONE</unmanaged>
@@ -81,7 +81,7 @@ public enum GlyphImageFormats : uint
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_FILE_TYPE</unmanaged>
-public enum FontFileType : int
+public enum FontFileType
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE::DWRITE_FONT_FILE_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_FONT_FILE_TYPE_UNKNOWN</unmanaged>
@@ -114,7 +114,7 @@ public enum FontFileType : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_FACE_TYPE</unmanaged>
-public enum FontFaceType : int
+public enum FontFaceType
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FACE_TYPE::DWRITE_FONT_FACE_TYPE_CFF"]/*' />
 	/// <unmanaged>DWRITE_FONT_FACE_TYPE_CFF</unmanaged>
@@ -148,7 +148,7 @@ public enum FontFaceType : int
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS"]/*' />
 /// <unmanaged>DWRITE_FONT_SIMULATIONS</unmanaged>
 [Flags]
-public enum FontSimulations : uint
+public enum FontSimulations
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SIMULATIONS::DWRITE_FONT_SIMULATIONS_NONE"]/*' />
 	/// <unmanaged>DWRITE_FONT_SIMULATIONS_NONE</unmanaged>
@@ -163,7 +163,7 @@ public enum FontSimulations : uint
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT"]/*' />
 /// <unmanaged>DWRITE_FONT_WEIGHT</unmanaged>
-public enum FontWeight : int
+public enum FontWeight
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_WEIGHT::DWRITE_FONT_WEIGHT_THIN"]/*' />
 	/// <unmanaged>DWRITE_FONT_WEIGHT_THIN</unmanaged>
@@ -220,7 +220,7 @@ public enum FontWeight : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH"]/*' />
 /// <unmanaged>DWRITE_FONT_STRETCH</unmanaged>
-public enum FontStretch : int
+public enum FontStretch
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STRETCH::DWRITE_FONT_STRETCH_UNDEFINED"]/*' />
 	/// <unmanaged>DWRITE_FONT_STRETCH_UNDEFINED</unmanaged>
@@ -259,7 +259,7 @@ public enum FontStretch : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE"]/*' />
 /// <unmanaged>DWRITE_FONT_STYLE</unmanaged>
-public enum FontStyle : int
+public enum FontStyle
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_STYLE::DWRITE_FONT_STYLE_NORMAL"]/*' />
 	/// <unmanaged>DWRITE_FONT_STYLE_NORMAL</unmanaged>
@@ -274,7 +274,7 @@ public enum FontStyle : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INFORMATIONAL_STRING_ID"]/*' />
 /// <unmanaged>DWRITE_INFORMATIONAL_STRING_ID</unmanaged>
-public enum InformationalStringId : int
+public enum InformationalStringId
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_INFORMATIONAL_STRING_ID::DWRITE_INFORMATIONAL_STRING_NONE"]/*' />
 	/// <unmanaged>DWRITE_INFORMATIONAL_STRING_NONE</unmanaged>
@@ -355,7 +355,7 @@ public enum InformationalStringId : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE"]/*' />
 /// <unmanaged>DWRITE_FACTORY_TYPE</unmanaged>
-public enum FactoryType : int
+public enum FactoryType
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FACTORY_TYPE::DWRITE_FACTORY_TYPE_SHARED"]/*' />
 	/// <unmanaged>DWRITE_FACTORY_TYPE_SHARED</unmanaged>
@@ -367,7 +367,7 @@ public enum FactoryType : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY"]/*' />
 /// <unmanaged>DWRITE_PIXEL_GEOMETRY</unmanaged>
-public enum PixelGeometry : int
+public enum PixelGeometry
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PIXEL_GEOMETRY::DWRITE_PIXEL_GEOMETRY_FLAT"]/*' />
 	/// <unmanaged>DWRITE_PIXEL_GEOMETRY_FLAT</unmanaged>
@@ -382,7 +382,7 @@ public enum PixelGeometry : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE"]/*' />
 /// <unmanaged>DWRITE_RENDERING_MODE</unmanaged>
-public enum RenderingMode : int
+public enum RenderingMode
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE::DWRITE_RENDERING_MODE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE_DEFAULT</unmanaged>
@@ -421,7 +421,7 @@ public enum RenderingMode : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_READING_DIRECTION"]/*' />
 /// <unmanaged>DWRITE_READING_DIRECTION</unmanaged>
-public enum ReadingDirection : int
+public enum ReadingDirection
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_READING_DIRECTION::DWRITE_READING_DIRECTION_LEFT_TO_RIGHT"]/*' />
 	/// <unmanaged>DWRITE_READING_DIRECTION_LEFT_TO_RIGHT</unmanaged>
@@ -439,7 +439,7 @@ public enum ReadingDirection : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION"]/*' />
 /// <unmanaged>DWRITE_FLOW_DIRECTION</unmanaged>
-public enum FlowDirection : int
+public enum FlowDirection
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FLOW_DIRECTION::DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM"]/*' />
 	/// <unmanaged>DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM</unmanaged>
@@ -457,7 +457,7 @@ public enum FlowDirection : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_TEXT_ALIGNMENT</unmanaged>
-public enum TextAlignment : int
+public enum TextAlignment
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ALIGNMENT::DWRITE_TEXT_ALIGNMENT_LEADING"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ALIGNMENT_LEADING</unmanaged>
@@ -475,7 +475,7 @@ public enum TextAlignment : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT</unmanaged>
-public enum ParagraphAlignment : int
+public enum ParagraphAlignment
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PARAGRAPH_ALIGNMENT::DWRITE_PARAGRAPH_ALIGNMENT_NEAR"]/*' />
 	/// <unmanaged>DWRITE_PARAGRAPH_ALIGNMENT_NEAR</unmanaged>
@@ -490,7 +490,7 @@ public enum ParagraphAlignment : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING"]/*' />
 /// <unmanaged>DWRITE_WORD_WRAPPING</unmanaged>
-public enum WordWrapping : int
+public enum WordWrapping
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_WORD_WRAPPING::DWRITE_WORD_WRAPPING_WRAP"]/*' />
 	/// <unmanaged>DWRITE_WORD_WRAPPING_WRAP</unmanaged>
@@ -511,7 +511,7 @@ public enum WordWrapping : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD"]/*' />
 /// <unmanaged>DWRITE_LINE_SPACING_METHOD</unmanaged>
-public enum LineSpacingMethod : int
+public enum LineSpacingMethod
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_SPACING_METHOD::DWRITE_LINE_SPACING_METHOD_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_LINE_SPACING_METHOD_DEFAULT</unmanaged>
@@ -526,7 +526,7 @@ public enum LineSpacingMethod : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY"]/*' />
 /// <unmanaged>DWRITE_TRIMMING_GRANULARITY</unmanaged>
-public enum TrimmingGranularity : int
+public enum TrimmingGranularity
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TRIMMING_GRANULARITY::DWRITE_TRIMMING_GRANULARITY_NONE"]/*' />
 	/// <unmanaged>DWRITE_TRIMMING_GRANULARITY_NONE</unmanaged>
@@ -791,7 +791,7 @@ public enum FontFeatureTag : uint
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES"]/*' />
 /// <unmanaged>DWRITE_SCRIPT_SHAPES</unmanaged>
 [Flags]
-public enum ScriptShapes : uint
+public enum ScriptShapes
 {
 	None = 0,
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_SCRIPT_SHAPES::DWRITE_SCRIPT_SHAPES_DEFAULT"]/*' />
@@ -804,7 +804,7 @@ public enum ScriptShapes : uint
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION"]/*' />
 /// <unmanaged>DWRITE_BREAK_CONDITION</unmanaged>
-public enum BreakCondition : int
+public enum BreakCondition
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BREAK_CONDITION::DWRITE_BREAK_CONDITION_NEUTRAL"]/*' />
 	/// <unmanaged>DWRITE_BREAK_CONDITION_NEUTRAL</unmanaged>
@@ -822,7 +822,7 @@ public enum BreakCondition : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD"]/*' />
 /// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD</unmanaged>
-public enum NumberSubstitutionMethod : int
+public enum NumberSubstitutionMethod
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_NUMBER_SUBSTITUTION_METHOD::DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE"]/*' />
 	/// <unmanaged>DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE</unmanaged>
@@ -843,7 +843,7 @@ public enum NumberSubstitutionMethod : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE"]/*' />
 /// <unmanaged>DWRITE_TEXTURE_TYPE</unmanaged>
-public enum TextureType : int
+public enum TextureType
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXTURE_TYPE::DWRITE_TEXTURE_ALIASED_1x1"]/*' />
 	/// <unmanaged>DWRITE_TEXTURE_ALIASED_1x1</unmanaged>
@@ -855,7 +855,7 @@ public enum TextureType : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY"]/*' />
 /// <unmanaged>DWRITE_PANOSE_FAMILY</unmanaged>
-public enum PanoseFamily : int
+public enum PanoseFamily
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FAMILY::DWRITE_PANOSE_FAMILY_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FAMILY_ANY</unmanaged>
@@ -882,7 +882,7 @@ public enum PanoseFamily : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SERIF_STYLE</unmanaged>
-public enum PanoseSerifStyle : int
+public enum PanoseSerifStyle
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SERIF_STYLE::DWRITE_PANOSE_SERIF_STYLE_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SERIF_STYLE_ANY</unmanaged>
@@ -945,7 +945,7 @@ public enum PanoseSerifStyle : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_WEIGHT</unmanaged>
-public enum PanoseWeight : int
+public enum PanoseWeight
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_WEIGHT::DWRITE_PANOSE_WEIGHT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_WEIGHT_ANY</unmanaged>
@@ -990,7 +990,7 @@ public enum PanoseWeight : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION"]/*' />
 /// <unmanaged>DWRITE_PANOSE_PROPORTION</unmanaged>
-public enum PanoseProportion : int
+public enum PanoseProportion
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_PROPORTION::DWRITE_PANOSE_PROPORTION_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_PROPORTION_ANY</unmanaged>
@@ -1026,7 +1026,7 @@ public enum PanoseProportion : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST"]/*' />
 /// <unmanaged>DWRITE_PANOSE_CONTRAST</unmanaged>
-public enum PanoseContrast : int
+public enum PanoseContrast
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CONTRAST::DWRITE_PANOSE_CONTRAST_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CONTRAST_ANY</unmanaged>
@@ -1074,7 +1074,7 @@ public enum PanoseContrast : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION"]/*' />
 /// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION</unmanaged>
-public enum PanoseStrokeVariation : int
+public enum PanoseStrokeVariation
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_STROKE_VARIATION::DWRITE_PANOSE_STROKE_VARIATION_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_STROKE_VARIATION_ANY</unmanaged>
@@ -1113,7 +1113,7 @@ public enum PanoseStrokeVariation : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE"]/*' />
 /// <unmanaged>DWRITE_PANOSE_ARM_STYLE</unmanaged>
-public enum PanoseArmStyle : int
+public enum PanoseArmStyle
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ARM_STYLE::DWRITE_PANOSE_ARM_STYLE_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ARM_STYLE_ANY</unmanaged>
@@ -1176,7 +1176,7 @@ public enum PanoseArmStyle : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM"]/*' />
 /// <unmanaged>DWRITE_PANOSE_LETTERFORM</unmanaged>
-public enum PanoseLetterform : int
+public enum PanoseLetterform
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LETTERFORM::DWRITE_PANOSE_LETTERFORM_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LETTERFORM_ANY</unmanaged>
@@ -1230,7 +1230,7 @@ public enum PanoseLetterform : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE"]/*' />
 /// <unmanaged>DWRITE_PANOSE_MIDLINE</unmanaged>
-public enum PanoseMidline : int
+public enum PanoseMidline
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_MIDLINE::DWRITE_PANOSE_MIDLINE_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_MIDLINE_ANY</unmanaged>
@@ -1278,7 +1278,7 @@ public enum PanoseMidline : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_XHEIGHT</unmanaged>
-public enum PanoseXheight : int
+public enum PanoseXheight
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XHEIGHT::DWRITE_PANOSE_XHEIGHT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XHEIGHT_ANY</unmanaged>
@@ -1314,7 +1314,7 @@ public enum PanoseXheight : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND"]/*' />
 /// <unmanaged>DWRITE_PANOSE_TOOL_KIND</unmanaged>
-public enum PanoseToolKind : int
+public enum PanoseToolKind
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_TOOL_KIND::DWRITE_PANOSE_TOOL_KIND_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_TOOL_KIND_ANY</unmanaged>
@@ -1350,7 +1350,7 @@ public enum PanoseToolKind : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SPACING</unmanaged>
-public enum PanoseSpacing : int
+public enum PanoseSpacing
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SPACING::DWRITE_PANOSE_SPACING_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SPACING_ANY</unmanaged>
@@ -1368,7 +1368,7 @@ public enum PanoseSpacing : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO"]/*' />
 /// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO</unmanaged>
-public enum PanoseAspectRatio : int
+public enum PanoseAspectRatio
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT_RATIO::DWRITE_PANOSE_ASPECT_RATIO_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_RATIO_ANY</unmanaged>
@@ -1395,7 +1395,7 @@ public enum PanoseAspectRatio : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY</unmanaged>
-public enum PanoseScriptTopology : int
+public enum PanoseScriptTopology
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_TOPOLOGY::DWRITE_PANOSE_SCRIPT_TOPOLOGY_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_TOPOLOGY_ANY</unmanaged>
@@ -1434,7 +1434,7 @@ public enum PanoseScriptTopology : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM</unmanaged>
-public enum PanoseScriptForm : int
+public enum PanoseScriptForm
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SCRIPT_FORM::DWRITE_PANOSE_SCRIPT_FORM_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SCRIPT_FORM_ANY</unmanaged>
@@ -1482,7 +1482,7 @@ public enum PanoseScriptForm : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS"]/*' />
 /// <unmanaged>DWRITE_PANOSE_FINIALS</unmanaged>
-public enum PanoseFinials : int
+public enum PanoseFinials
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FINIALS::DWRITE_PANOSE_FINIALS_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FINIALS_ANY</unmanaged>
@@ -1530,7 +1530,7 @@ public enum PanoseFinials : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_XASCENT</unmanaged>
-public enum PanoseXascent : int
+public enum PanoseXascent
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_XASCENT::DWRITE_PANOSE_XASCENT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_XASCENT_ANY</unmanaged>
@@ -1557,7 +1557,7 @@ public enum PanoseXascent : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS"]/*' />
 /// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS</unmanaged>
-public enum PanoseDecorativeClass : int
+public enum PanoseDecorativeClass
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_CLASS::DWRITE_PANOSE_DECORATIVE_CLASS_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_CLASS_ANY</unmanaged>
@@ -1602,7 +1602,7 @@ public enum PanoseDecorativeClass : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT"]/*' />
 /// <unmanaged>DWRITE_PANOSE_ASPECT</unmanaged>
-public enum PanoseAspect : int
+public enum PanoseAspect
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_ASPECT::DWRITE_PANOSE_ASPECT_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_ASPECT_ANY</unmanaged>
@@ -1638,7 +1638,7 @@ public enum PanoseAspect : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL"]/*' />
 /// <unmanaged>DWRITE_PANOSE_FILL</unmanaged>
-public enum PanoseFill : int
+public enum PanoseFill
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_FILL::DWRITE_PANOSE_FILL_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_FILL_ANY</unmanaged>
@@ -1668,7 +1668,7 @@ public enum PanoseFill : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING"]/*' />
 /// <unmanaged>DWRITE_PANOSE_LINING</unmanaged>
-public enum PanoseLining : int
+public enum PanoseLining
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_LINING::DWRITE_PANOSE_LINING_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_LINING_ANY</unmanaged>
@@ -1701,7 +1701,7 @@ public enum PanoseLining : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY"]/*' />
 /// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY</unmanaged>
-public enum PanoseDecorativeTopology : int
+public enum PanoseDecorativeTopology
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_DECORATIVE_TOPOLOGY::DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ANY</unmanaged>
@@ -1755,7 +1755,7 @@ public enum PanoseDecorativeTopology : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES"]/*' />
 /// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES</unmanaged>
-public enum PanoseCharacterRanges : int
+public enum PanoseCharacterRanges
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_CHARACTER_RANGES::DWRITE_PANOSE_CHARACTER_RANGES_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_CHARACTER_RANGES_ANY</unmanaged>
@@ -1779,7 +1779,7 @@ public enum PanoseCharacterRanges : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND</unmanaged>
-public enum PanoseSymbolKind : int
+public enum PanoseSymbolKind
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_KIND::DWRITE_PANOSE_SYMBOL_KIND_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_KIND_ANY</unmanaged>
@@ -1824,7 +1824,7 @@ public enum PanoseSymbolKind : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO"]/*' />
 /// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO</unmanaged>
-public enum PanoseSymbolAspectRatio : int
+public enum PanoseSymbolAspectRatio
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PANOSE_SYMBOL_ASPECT_RATIO::DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY"]/*' />
 	/// <unmanaged>DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY</unmanaged>
@@ -1860,7 +1860,7 @@ public enum PanoseSymbolAspectRatio : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD"]/*' />
 /// <unmanaged>DWRITE_OUTLINE_THRESHOLD</unmanaged>
-public enum OutlineThreshold : int
+public enum OutlineThreshold
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OUTLINE_THRESHOLD::DWRITE_OUTLINE_THRESHOLD_ANTIALIASED"]/*' />
 	/// <unmanaged>DWRITE_OUTLINE_THRESHOLD_ANTIALIASED</unmanaged>
@@ -1872,7 +1872,7 @@ public enum OutlineThreshold : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE"]/*' />
 /// <unmanaged>DWRITE_BASELINE</unmanaged>
-public enum Baseline : int
+public enum Baseline
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BASELINE::DWRITE_BASELINE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_BASELINE_DEFAULT</unmanaged>
@@ -1905,7 +1905,7 @@ public enum Baseline : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION"]/*' />
 /// <unmanaged>DWRITE_VERTICAL_GLYPH_ORIENTATION</unmanaged>
-public enum VerticalGlyphOrientation : int
+public enum VerticalGlyphOrientation
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_VERTICAL_GLYPH_ORIENTATION::DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT</unmanaged>
@@ -1917,7 +1917,7 @@ public enum VerticalGlyphOrientation : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE"]/*' />
 /// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE</unmanaged>
-public enum GlyphOrientationAngle : int
+public enum GlyphOrientationAngle
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_ORIENTATION_ANGLE::DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES</unmanaged>
@@ -1935,7 +1935,7 @@ public enum GlyphOrientationAngle : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE"]/*' />
 /// <unmanaged>DWRITE_TEXT_ANTIALIAS_MODE</unmanaged>
-public enum TextAntialiasMode : int
+public enum TextAntialiasMode
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_TEXT_ANTIALIAS_MODE::DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE"]/*' />
 	/// <unmanaged>DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE</unmanaged>
@@ -1947,7 +1947,7 @@ public enum TextAntialiasMode : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT"]/*' />
 /// <unmanaged>DWRITE_OPTICAL_ALIGNMENT</unmanaged>
-public enum OpticalAlignment : int
+public enum OpticalAlignment
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_OPTICAL_ALIGNMENT::DWRITE_OPTICAL_ALIGNMENT_NONE"]/*' />
 	/// <unmanaged>DWRITE_OPTICAL_ALIGNMENT_NONE</unmanaged>
@@ -1959,7 +1959,7 @@ public enum OpticalAlignment : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE"]/*' />
 /// <unmanaged>DWRITE_GRID_FIT_MODE</unmanaged>
-public enum GridFitMode : int
+public enum GridFitMode
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GRID_FIT_MODE::DWRITE_GRID_FIT_MODE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_GRID_FIT_MODE_DEFAULT</unmanaged>
@@ -1974,7 +1974,7 @@ public enum GridFitMode : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID"]/*' />
 /// <unmanaged>DWRITE_FONT_PROPERTY_ID</unmanaged>
-public enum FontPropertyId : int
+public enum FontPropertyId
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY_ID::DWRITE_FONT_PROPERTY_ID_NONE"]/*' />
 	/// <unmanaged>DWRITE_FONT_PROPERTY_ID_NONE</unmanaged>
@@ -2037,7 +2037,7 @@ public enum FontPropertyId : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY"]/*' />
 /// <unmanaged>DWRITE_LOCALITY</unmanaged>
-public enum Locality : int
+public enum Locality
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LOCALITY::DWRITE_LOCALITY_REMOTE"]/*' />
 	/// <unmanaged>DWRITE_LOCALITY_REMOTE</unmanaged>
@@ -2052,7 +2052,7 @@ public enum Locality : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1"]/*' />
 /// <unmanaged>DWRITE_RENDERING_MODE1</unmanaged>
-public enum RenderingMode1 : int
+public enum RenderingMode1
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_RENDERING_MODE1::DWRITE_RENDERING_MODE1_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_RENDERING_MODE1_DEFAULT</unmanaged>
@@ -2082,7 +2082,7 @@ public enum RenderingMode1 : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE"]/*' />
 /// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE</unmanaged>
-public enum FontLineGapUsage : int
+public enum FontLineGapUsage
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_LINE_GAP_USAGE::DWRITE_FONT_LINE_GAP_USAGE_DEFAULT"]/*' />
 	/// <unmanaged>DWRITE_FONT_LINE_GAP_USAGE_DEFAULT</unmanaged>
@@ -2097,7 +2097,7 @@ public enum FontLineGapUsage : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE"]/*' />
 /// <unmanaged>DWRITE_CONTAINER_TYPE</unmanaged>
-public enum ContainerType : int
+public enum ContainerType
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_CONTAINER_TYPE::DWRITE_CONTAINER_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_CONTAINER_TYPE_UNKNOWN</unmanaged>
@@ -2112,7 +2112,7 @@ public enum ContainerType : int
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL"]/*' />
 /// <unmanaged>DWRITE_FONT_FAMILY_MODEL</unmanaged>
-public enum FontFamilyModel : int
+public enum FontFamilyModel
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FAMILY_MODEL::DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC"]/*' />
 	/// <unmanaged>DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC</unmanaged>
@@ -2125,7 +2125,7 @@ public enum FontFamilyModel : int
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES"]/*' />
 /// <unmanaged>DWRITE_AUTOMATIC_FONT_AXES</unmanaged>
 [Flags]
-public enum AutomaticFontAxes : uint
+public enum AutomaticFontAxes
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_AUTOMATIC_FONT_AXES::DWRITE_AUTOMATIC_FONT_AXES_NONE"]/*' />
 	/// <unmanaged>DWRITE_AUTOMATIC_FONT_AXES_NONE</unmanaged>
@@ -2138,7 +2138,7 @@ public enum AutomaticFontAxes : uint
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_ATTRIBUTES"]/*' />
 /// <unmanaged>DWRITE_FONT_AXIS_ATTRIBUTES</unmanaged>
 [Flags]
-public enum FontAxisAttributes : uint
+public enum FontAxisAttributes
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_ATTRIBUTES::DWRITE_FONT_AXIS_ATTRIBUTES_NONE"]/*' />
 	/// <unmanaged>DWRITE_FONT_AXIS_ATTRIBUTES_NONE</unmanaged>
@@ -2153,7 +2153,7 @@ public enum FontAxisAttributes : uint
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE"]/*' />
 /// <unmanaged>DWRITE_FONT_SOURCE_TYPE</unmanaged>
-public enum FontSourceType : int
+public enum FontSourceType
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_UNKNOWN</unmanaged>

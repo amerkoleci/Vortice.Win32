@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteInlineObject*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteInlineObject*, uint>)(lpVtbl[1]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, uint>)(lpVtbl[1]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteInlineObject*, uint>)(lpVtbl[2]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, uint>)(lpVtbl[2]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::Draw"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	[VtblIndex(3)]
 	public HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteInlineObject*, void*, IDWriteTextRenderer*, float, float, Bool32, Bool32, IUnknown*, int>)(lpVtbl[3]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), clientDrawingContext, renderer, originX, originY, isSideways, isRightToLeft, clientDrawingEffect);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, void*, IDWriteTextRenderer*, float, float, Bool32, Bool32, IUnknown*, int>)(lpVtbl[3]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), clientDrawingContext, renderer, originX, originY, isSideways, isRightToLeft, clientDrawingEffect);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetMetrics"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	[VtblIndex(4)]
 	public HResult GetMetrics(InlineObjectMetrics* metrics)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteInlineObject*, InlineObjectMetrics*, int>)(lpVtbl[4]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), metrics);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, InlineObjectMetrics*, int>)(lpVtbl[4]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), metrics);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetOverhangMetrics"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	[VtblIndex(5)]
 	public HResult GetOverhangMetrics(OverhangMetrics* overhangs)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteInlineObject*, OverhangMetrics*, int>)(lpVtbl[5]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), overhangs);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, OverhangMetrics*, int>)(lpVtbl[5]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), overhangs);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteInlineObject::GetBreakConditions"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteInlineObject : IDWriteInlineObject.Interface
 	[VtblIndex(6)]
 	public HResult GetBreakConditions(BreakCondition* breakConditionBefore, BreakCondition* breakConditionAfter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteInlineObject*, BreakCondition*, BreakCondition*, int>)(lpVtbl[6]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), breakConditionBefore, breakConditionAfter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteInlineObject*, BreakCondition*, BreakCondition*, int>)(lpVtbl[6]))((IDWriteInlineObject*)Unsafe.AsPointer(ref this), breakConditionBefore, breakConditionAfter);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

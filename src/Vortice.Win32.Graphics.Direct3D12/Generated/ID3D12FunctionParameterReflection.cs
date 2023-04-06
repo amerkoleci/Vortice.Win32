@@ -51,7 +51,11 @@ public unsafe partial struct ID3D12FunctionParameterReflection : ID3D12FunctionP
 	[VtblIndex(0)]
 	public HResult GetDesc(ParameterDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12FunctionParameterReflection*, ParameterDescription*, int>)(lpVtbl[0]))((ID3D12FunctionParameterReflection*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12FunctionParameterReflection*, ParameterDescription*, int>)(lpVtbl[0]))((ID3D12FunctionParameterReflection*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	public interface Interface 

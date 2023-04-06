@@ -11,7 +11,7 @@ namespace Win32.Graphics.Dxgi.Common;
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_COLOR_SPACE_TYPE"]/*' />
 /// <unmanaged>DXGI_COLOR_SPACE_TYPE</unmanaged>
-public enum ColorSpaceType : int
+public enum ColorSpaceType
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_COLOR_SPACE_TYPE::DXGI_COLOR_SPACE_RGB_FULL_G22_NONE_P709"]/*' />
 	/// <unmanaged>DXGI_COLOR_SPACE_RGB_FULL_G22_NONE_P709</unmanaged>
@@ -464,7 +464,7 @@ public enum Format : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER"]/*' />
 /// <unmanaged>DXGI_MODE_SCANLINE_ORDER</unmanaged>
-public enum ModeScanlineOrder : int
+public enum ModeScanlineOrder
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER::DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED</unmanaged>
@@ -482,7 +482,7 @@ public enum ModeScanlineOrder : int
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCALING"]/*' />
 /// <unmanaged>DXGI_MODE_SCALING</unmanaged>
-public enum ModeScaling : int
+public enum ModeScaling
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCALING::DXGI_MODE_SCALING_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_MODE_SCALING_UNSPECIFIED</unmanaged>
@@ -497,7 +497,7 @@ public enum ModeScaling : int
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION"]/*' />
 /// <unmanaged>DXGI_MODE_ROTATION</unmanaged>
-public enum ModeRotation : int
+public enum ModeRotation
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_ROTATION::DXGI_MODE_ROTATION_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_MODE_ROTATION_UNSPECIFIED</unmanaged>

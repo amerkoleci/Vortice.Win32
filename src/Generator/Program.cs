@@ -59,12 +59,13 @@ public static class Program
         { "Foundation.BOOLEAN", "byte" },
         { "Foundation.BSTR", "char*" },
         { "Foundation.HANDLE", "Handle" },
-        { "Foundation.HINSTANCE", "IntPtr" },
+        { "Foundation.HINSTANCE", "nint" },
+        { "Foundation.HMODULE", "nint" },
         { "Foundation.HRESULT", "HResult" },
-        { "Foundation.HWND", "IntPtr" },
-        { "Foundation.LPARAM", "IntPtr" },
-        { "Foundation.LRESULT", "IntPtr" },
-        { "Foundation.WPARAM", "UIntPtr" },
+        { "Foundation.HWND", "nint" },
+        { "Foundation.LPARAM", "nint" },
+        { "Foundation.LRESULT", "nint" },
+        { "Foundation.WPARAM", "nuint" },
         { "Foundation.PSTR", "sbyte*" },
         { "Foundation.PWSTR", "ushort*" },
         { "Foundation.CHAR", "byte" },
@@ -1869,7 +1870,13 @@ public static class Program
             baseTypeName = "byte";
         }
 
-        using (writer.PushBlock($"public enum {csTypeName} : {baseTypeName}"))
+        string baseTypeDeclaration = $" : {baseTypeName}";
+        if (baseTypeName == "int")
+        {
+            baseTypeDeclaration = string.Empty;
+        }
+
+        using (writer.PushBlock($"public enum {csTypeName}{baseTypeDeclaration}"))
         {
             if (isFlags &&
                 !enumType.Values.Any(item => GetEnumItemName(enumType, item, enumPrefix, skipPrettify) == "None"))
@@ -2327,7 +2334,11 @@ public static class Program
                 writer.WriteLine("[VtblIndex(0)]");
                 using (writer.PushBlock($"public HResult QueryInterface([NativeTypeName(\"const IID &\")] Guid* riid, void** ppvObject)"))
                 {
+                    writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
+                    writer.WriteLine($"return ((delegate* unmanaged<{comType.Name}*, Guid*, void**, int>)(lpVtbl[0]))(({comType.Name}*)Unsafe.AsPointer(ref this), riid, ppvObject);");
+                    writer.WriteLineUndindented($"#else");
                     writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, Guid*, void**, int>)(lpVtbl[0]))(({comType.Name}*)Unsafe.AsPointer(ref this), riid, ppvObject);");
+                    writer.WriteLineUndindented($"#endif");
                 }
                 writer.WriteLine();
 
@@ -2338,7 +2349,11 @@ public static class Program
                 writer.WriteLine("[return: NativeTypeName(\"ULONG\")]");
                 using (writer.PushBlock($"public uint AddRef()"))
                 {
+                    writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
+                    writer.WriteLine($"return ((delegate* unmanaged<{comType.Name}*, uint>)(lpVtbl[1]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
+                    writer.WriteLineUndindented($"#else");
                     writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, uint>)(lpVtbl[1]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
+                    writer.WriteLineUndindented($"#endif");
                 }
                 writer.WriteLine();
 
@@ -2349,7 +2364,11 @@ public static class Program
                 writer.WriteLine("[return: NativeTypeName(\"ULONG\")]");
                 using (writer.PushBlock($"public uint Release()"))
                 {
+                    writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
+                    writer.WriteLine($"return ((delegate* unmanaged<{comType.Name}*, uint>)(lpVtbl[2]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
+                    writer.WriteLineUndindented($"#else");
                     writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, uint>)(lpVtbl[2]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
+                    writer.WriteLineUndindented($"#endif");
                 }
                 writer.WriteLine();
                 vtblIndex = 3;
@@ -2531,23 +2550,37 @@ public static class Program
 
                     using (writer.PushBlock($"public {methodSuffix}{returnType} {method.Name}({argumentsString})"))
                     {
+                        bool writeReturn = false;
                         if (returnType != "void")
                         {
                             if (useReturnAsParameter)
                             {
                                 writer.WriteLine($"{returnType} result;");
+                                writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
+                                writer.Write("return ");
+                                writer.WriteLine($"*((delegate* unmanaged<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
+                                writer.WriteLineUndindented($"#else");
                                 writer.Write("return ");
                                 writer.WriteLine($"*((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
+                                writer.WriteLineUndindented($"#endif");
                             }
                             else
                             {
-                                writer.Write("return ");
+                                writeReturn = true;
                             }
                         }
 
                         if (!useReturnAsParameter)
                         {
+                            writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
+                            if (writeReturn)
+                                writer.Write("return ");
+                            writer.WriteLine($"((delegate* unmanaged<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
+                            writer.WriteLineUndindented($"#else");
+                            if (writeReturn)
+                                writer.Write("return ");
                             writer.WriteLine($"((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
+                            writer.WriteLineUndindented($"#endif");
                         }
                     }
 

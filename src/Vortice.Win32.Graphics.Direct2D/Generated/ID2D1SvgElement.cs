@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, uint>)(lpVtbl[1]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, uint>)(lpVtbl[1]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, uint>)(lpVtbl[2]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, uint>)(lpVtbl[2]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SvgElement*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetDocument"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(4)]
 	public void GetDocument(ID2D1SvgDocument** document)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgDocument**, void>)(lpVtbl[4]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), document);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgDocument**, void>)(lpVtbl[4]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), document);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTagName"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(5)]
 	public HResult GetTagName(ushort* name, uint nameCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[5]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[5]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTagNameLength"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(6)]
 	public uint GetTagNameLength()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, uint>)(lpVtbl[6]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, uint>)(lpVtbl[6]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::IsTextContent"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(7)]
 	public Bool32 IsTextContent()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, Bool32>)(lpVtbl[7]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, Bool32>)(lpVtbl[7]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetParent"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(8)]
 	public void GetParent(ID2D1SvgElement** parent)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement**, void>)(lpVtbl[8]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), parent);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement**, void>)(lpVtbl[8]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), parent);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::HasChildren"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(9)]
 	public Bool32 HasChildren()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, Bool32>)(lpVtbl[9]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, Bool32>)(lpVtbl[9]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetFirstChild"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(10)]
 	public void GetFirstChild(ID2D1SvgElement** child)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement**, void>)(lpVtbl[10]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), child);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement**, void>)(lpVtbl[10]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), child);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetLastChild"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(11)]
 	public void GetLastChild(ID2D1SvgElement** child)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement**, void>)(lpVtbl[11]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), child);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement**, void>)(lpVtbl[11]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), child);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetPreviousChild"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(12)]
 	public HResult GetPreviousChild(ID2D1SvgElement* referenceChild, ID2D1SvgElement** previousChild)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement**, int>)(lpVtbl[12]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), referenceChild, previousChild);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement**, int>)(lpVtbl[12]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), referenceChild, previousChild);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetNextChild"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(13)]
 	public HResult GetNextChild(ID2D1SvgElement* referenceChild, ID2D1SvgElement** nextChild)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement**, int>)(lpVtbl[13]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), referenceChild, nextChild);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement**, int>)(lpVtbl[13]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), referenceChild, nextChild);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::InsertChildBefore"]/*' />
@@ -167,7 +223,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(14)]
 	public HResult InsertChildBefore(ID2D1SvgElement* newChild, ID2D1SvgElement* referenceChild)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement*, int>)(lpVtbl[14]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), newChild, referenceChild);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement*, int>)(lpVtbl[14]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), newChild, referenceChild);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::AppendChild"]/*' />
@@ -175,7 +235,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(15)]
 	public HResult AppendChild(ID2D1SvgElement* newChild)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement*, int>)(lpVtbl[15]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), newChild);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement*, int>)(lpVtbl[15]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), newChild);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::ReplaceChild"]/*' />
@@ -183,7 +247,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(16)]
 	public HResult ReplaceChild(ID2D1SvgElement* newChild, ID2D1SvgElement* oldChild)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement*, int>)(lpVtbl[16]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), newChild, oldChild);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement*, ID2D1SvgElement*, int>)(lpVtbl[16]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), newChild, oldChild);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::RemoveChild"]/*' />
@@ -191,7 +259,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(17)]
 	public HResult RemoveChild(ID2D1SvgElement* oldChild)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ID2D1SvgElement*, int>)(lpVtbl[17]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), oldChild);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ID2D1SvgElement*, int>)(lpVtbl[17]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), oldChild);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::CreateChild"]/*' />
@@ -199,7 +271,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(18)]
 	public HResult CreateChild(ushort* tagName, ID2D1SvgElement** newChild)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, ID2D1SvgElement**, int>)(lpVtbl[18]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), tagName, newChild);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, ID2D1SvgElement**, int>)(lpVtbl[18]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), tagName, newChild);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::IsAttributeSpecified"]/*' />
@@ -207,7 +283,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(19)]
 	public Bool32 IsAttributeSpecified(ushort* name, Bool32* inherited)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, Bool32*, Bool32>)(lpVtbl[19]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, inherited);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, Bool32*, Bool32>)(lpVtbl[19]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, inherited);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetSpecifiedAttributeCount"]/*' />
@@ -215,7 +295,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(20)]
 	public uint GetSpecifiedAttributeCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, uint>)(lpVtbl[20]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, uint>)(lpVtbl[20]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetSpecifiedAttributeName"]/*' />
@@ -223,7 +307,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(21)]
 	public HResult GetSpecifiedAttributeName(uint index, ushort* name, uint nameCount, Bool32* inherited)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, uint, ushort*, uint, Bool32*, int>)(lpVtbl[21]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), index, name, nameCount, inherited);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, uint, ushort*, uint, Bool32*, int>)(lpVtbl[21]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), index, name, nameCount, inherited);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetSpecifiedAttributeNameLength"]/*' />
@@ -231,7 +319,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(22)]
 	public HResult GetSpecifiedAttributeNameLength(uint index, uint* nameLength, Bool32* inherited)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, uint, uint*, Bool32*, int>)(lpVtbl[22]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), index, nameLength, inherited);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, uint, uint*, Bool32*, int>)(lpVtbl[22]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), index, nameLength, inherited);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::RemoveAttribute"]/*' />
@@ -239,7 +331,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(23)]
 	public HResult RemoveAttribute(ushort* name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, int>)(lpVtbl[23]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, int>)(lpVtbl[23]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetTextValue"]/*' />
@@ -247,7 +343,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(24)]
 	public HResult SetTextValue(ushort* name, uint nameCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[24]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[24]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTextValue"]/*' />
@@ -255,7 +355,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(25)]
 	public HResult GetTextValue(ushort* name, uint nameCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[25]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[25]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTextValueLength"]/*' />
@@ -263,7 +367,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(26)]
 	public uint GetTextValueLength()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, uint>)(lpVtbl[26]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, uint>)(lpVtbl[26]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetAttributeValue"]/*' />
@@ -271,7 +379,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(27)]
 	public HResult SetAttributeValue(ushort* name, ID2D1SvgAttribute* value)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, ID2D1SvgAttribute*, int>)(lpVtbl[27]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, value);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, ID2D1SvgAttribute*, int>)(lpVtbl[27]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, value);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetAttributeValue"]/*' />
@@ -279,7 +391,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(28)]
 	public HResult SetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, SvgAttributePodType, void*, uint, int>)(lpVtbl[28]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, SvgAttributePodType, void*, uint, int>)(lpVtbl[28]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetAttributeValue"]/*' />
@@ -287,7 +403,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(29)]
 	public HResult SetAttributeValue(ushort* name, SvgAttributeStringType type, ushort* value)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, SvgAttributeStringType, ushort*, int>)(lpVtbl[29]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, ushort*, int>)(lpVtbl[29]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
@@ -295,7 +415,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(30)]
 	public HResult GetAttributeValue(ushort* name, Guid* riid, void** value)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, Guid*, void**, int>)(lpVtbl[30]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, riid, value);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, Guid*, void**, int>)(lpVtbl[30]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, riid, value);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
@@ -303,7 +427,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(31)]
 	public HResult GetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, SvgAttributePodType, void*, uint, int>)(lpVtbl[31]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, SvgAttributePodType, void*, uint, int>)(lpVtbl[31]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
@@ -311,7 +439,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(32)]
 	public HResult GetAttributeValue(ushort* name, SvgAttributeStringType type, ushort* value, uint valueCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, SvgAttributeStringType, ushort*, uint, int>)(lpVtbl[32]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, ushort*, uint, int>)(lpVtbl[32]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueCount);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValueLength"]/*' />
@@ -319,7 +451,11 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	[VtblIndex(33)]
 	public HResult GetAttributeValueLength(ushort* name, SvgAttributeStringType type, uint* valueLength)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SvgElement*, ushort*, SvgAttributeStringType, uint*, int>)(lpVtbl[33]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, valueLength);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, uint*, int>)(lpVtbl[33]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, valueLength);
+#endif
 	}
 
 	public interface Interface : ID2D1Resource.Interface

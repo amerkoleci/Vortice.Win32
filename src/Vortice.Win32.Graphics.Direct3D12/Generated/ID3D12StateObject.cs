@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObject*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObject*, uint>)(lpVtbl[1]))((ID3D12StateObject*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, uint>)(lpVtbl[1]))((ID3D12StateObject*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObject*, uint>)(lpVtbl[2]))((ID3D12StateObject*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, uint>)(lpVtbl[2]))((ID3D12StateObject*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	[VtblIndex(3)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObject*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	[VtblIndex(4)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObject*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	[VtblIndex(5)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObject*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetName" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	[VtblIndex(6)]
 	public HResult SetName(ushort* Name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObject*, ushort*, int>)(lpVtbl[6]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), Name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, ushort*, int>)(lpVtbl[6]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D12StateObject : ID3D12StateObject.Interface, IN
 	[VtblIndex(7)]
 	public HResult GetDevice(Guid* riid, void** ppvDevice)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12StateObject*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12StateObject*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12StateObject*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+#endif
 	}
 
 	public interface Interface : ID3D12Pageable.Interface

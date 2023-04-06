@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, uint>)(lpVtbl[1]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, uint>)(lpVtbl[1]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, uint>)(lpVtbl[2]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, uint>)(lpVtbl[2]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CreateVideoDecoder"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(3)]
 	public HResult CreateVideoDecoder(VideoDecoderDescription* pVideoDesc, VideoDecoderConfig* pConfig, ID3D11VideoDecoder** ppDecoder)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, VideoDecoderDescription*, VideoDecoderConfig*, ID3D11VideoDecoder**, int>)(lpVtbl[3]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pVideoDesc, pConfig, ppDecoder);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, VideoDecoderDescription*, VideoDecoderConfig*, ID3D11VideoDecoder**, int>)(lpVtbl[3]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pVideoDesc, pConfig, ppDecoder);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CreateVideoProcessor"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(4)]
 	public HResult CreateVideoProcessor(ID3D11VideoProcessorEnumerator* pEnum, uint RateConversionIndex, ID3D11VideoProcessor** ppVideoProcessor)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, ID3D11VideoProcessorEnumerator*, uint, ID3D11VideoProcessor**, int>)(lpVtbl[4]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pEnum, RateConversionIndex, ppVideoProcessor);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, ID3D11VideoProcessorEnumerator*, uint, ID3D11VideoProcessor**, int>)(lpVtbl[4]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pEnum, RateConversionIndex, ppVideoProcessor);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CreateAuthenticatedChannel"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(5)]
 	public HResult CreateAuthenticatedChannel(AuthenticatedChannelType ChannelType, ID3D11AuthenticatedChannel** ppAuthenticatedChannel)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, AuthenticatedChannelType, ID3D11AuthenticatedChannel**, int>)(lpVtbl[5]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), ChannelType, ppAuthenticatedChannel);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, AuthenticatedChannelType, ID3D11AuthenticatedChannel**, int>)(lpVtbl[5]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), ChannelType, ppAuthenticatedChannel);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CreateCryptoSession"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(6)]
 	public HResult CreateCryptoSession(Guid* pCryptoType, Guid* pDecoderProfile, Guid* pKeyExchangeType, ID3D11CryptoSession** ppCryptoSession)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, Guid*, Guid*, Guid*, ID3D11CryptoSession**, int>)(lpVtbl[6]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, pKeyExchangeType, ppCryptoSession);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, Guid*, Guid*, ID3D11CryptoSession**, int>)(lpVtbl[6]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, pKeyExchangeType, ppCryptoSession);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CreateVideoDecoderOutputView"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(7)]
 	public HResult CreateVideoDecoderOutputView(ID3D11Resource* pResource, VideoDecoderOutputViewDescription* pDesc, ID3D11VideoDecoderOutputView** ppVDOVView)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, ID3D11Resource*, VideoDecoderOutputViewDescription*, ID3D11VideoDecoderOutputView**, int>)(lpVtbl[7]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pResource, pDesc, ppVDOVView);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, ID3D11Resource*, VideoDecoderOutputViewDescription*, ID3D11VideoDecoderOutputView**, int>)(lpVtbl[7]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pResource, pDesc, ppVDOVView);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CreateVideoProcessorInputView"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(8)]
 	public HResult CreateVideoProcessorInputView(ID3D11Resource* pResource, ID3D11VideoProcessorEnumerator* pEnum, VideoProcessorInputViewDescription* pDesc, ID3D11VideoProcessorInputView** ppVPIView)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, ID3D11Resource*, ID3D11VideoProcessorEnumerator*, VideoProcessorInputViewDescription*, ID3D11VideoProcessorInputView**, int>)(lpVtbl[8]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pResource, pEnum, pDesc, ppVPIView);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, ID3D11Resource*, ID3D11VideoProcessorEnumerator*, VideoProcessorInputViewDescription*, ID3D11VideoProcessorInputView**, int>)(lpVtbl[8]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pResource, pEnum, pDesc, ppVPIView);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CreateVideoProcessorOutputView"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(9)]
 	public HResult CreateVideoProcessorOutputView(ID3D11Resource* pResource, ID3D11VideoProcessorEnumerator* pEnum, VideoProcessorOutputViewDescription* pDesc, ID3D11VideoProcessorOutputView** ppVPOView)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, ID3D11Resource*, ID3D11VideoProcessorEnumerator*, VideoProcessorOutputViewDescription*, ID3D11VideoProcessorOutputView**, int>)(lpVtbl[9]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pResource, pEnum, pDesc, ppVPOView);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, ID3D11Resource*, ID3D11VideoProcessorEnumerator*, VideoProcessorOutputViewDescription*, ID3D11VideoProcessorOutputView**, int>)(lpVtbl[9]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pResource, pEnum, pDesc, ppVPOView);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CreateVideoProcessorEnumerator"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(10)]
 	public HResult CreateVideoProcessorEnumerator(VideoProcessorContentDescription* pDesc, ID3D11VideoProcessorEnumerator** ppEnum)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, VideoProcessorContentDescription*, ID3D11VideoProcessorEnumerator**, int>)(lpVtbl[10]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDesc, ppEnum);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, VideoProcessorContentDescription*, ID3D11VideoProcessorEnumerator**, int>)(lpVtbl[10]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDesc, ppEnum);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::GetVideoDecoderProfileCount"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(11)]
 	public uint GetVideoDecoderProfileCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, uint>)(lpVtbl[11]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, uint>)(lpVtbl[11]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::GetVideoDecoderProfile"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(12)]
 	public HResult GetVideoDecoderProfile(uint Index, Guid* pDecoderProfile)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, uint, Guid*, int>)(lpVtbl[12]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), Index, pDecoderProfile);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, uint, Guid*, int>)(lpVtbl[12]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), Index, pDecoderProfile);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CheckVideoDecoderFormat"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(13)]
 	public HResult CheckVideoDecoderFormat(Guid* pDecoderProfile, Graphics.Dxgi.Common.Format Format, Bool32* pSupported)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, Guid*, Graphics.Dxgi.Common.Format, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDecoderProfile, Format, pSupported);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, Graphics.Dxgi.Common.Format, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDecoderProfile, Format, pSupported);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::GetVideoDecoderConfigCount"]/*' />
@@ -167,7 +223,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(14)]
 	public HResult GetVideoDecoderConfigCount(VideoDecoderDescription* pDesc, uint* pCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, VideoDecoderDescription*, uint*, int>)(lpVtbl[14]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDesc, pCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, VideoDecoderDescription*, uint*, int>)(lpVtbl[14]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDesc, pCount);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::GetVideoDecoderConfig"]/*' />
@@ -175,7 +235,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(15)]
 	public HResult GetVideoDecoderConfig(VideoDecoderDescription* pDesc, uint Index, VideoDecoderConfig* pConfig)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, VideoDecoderDescription*, uint, VideoDecoderConfig*, int>)(lpVtbl[15]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDesc, Index, pConfig);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, VideoDecoderDescription*, uint, VideoDecoderConfig*, int>)(lpVtbl[15]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pDesc, Index, pConfig);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::GetContentProtectionCaps"]/*' />
@@ -183,7 +247,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(16)]
 	public HResult GetContentProtectionCaps(Guid* pCryptoType, Guid* pDecoderProfile, VideoContentProtectionCaps* pCaps)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, Guid*, Guid*, VideoContentProtectionCaps*, int>)(lpVtbl[16]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, pCaps);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, Guid*, VideoContentProtectionCaps*, int>)(lpVtbl[16]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, pCaps);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::CheckCryptoKeyExchange"]/*' />
@@ -191,7 +259,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(17)]
 	public HResult CheckCryptoKeyExchange(Guid* pCryptoType, Guid* pDecoderProfile, uint Index, Guid* pKeyExchangeType)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, Guid*, Guid*, uint, Guid*, int>)(lpVtbl[17]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, Index, pKeyExchangeType);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, Guid*, uint, Guid*, int>)(lpVtbl[17]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), pCryptoType, pDecoderProfile, Index, pKeyExchangeType);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::SetPrivateData"]/*' />
@@ -199,7 +271,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(18)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, Guid*, uint, void*, int>)(lpVtbl[18]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, uint, void*, int>)(lpVtbl[18]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoDevice::SetPrivateDataInterface"]/*' />
@@ -207,7 +283,11 @@ public unsafe partial struct ID3D11VideoDevice : ID3D11VideoDevice.Interface, IN
 	[VtblIndex(19)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoDevice*, Guid*, IUnknown*, int>)(lpVtbl[19]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoDevice*, Guid*, IUnknown*, int>)(lpVtbl[19]))((ID3D11VideoDevice*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

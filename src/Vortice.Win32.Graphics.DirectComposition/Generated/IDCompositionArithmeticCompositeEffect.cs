@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, uint>)(lpVtbl[1]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, uint>)(lpVtbl[1]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, uint>)(lpVtbl[2]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, uint>)(lpVtbl[2]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(3)]
 	public HResult SetInput(uint index, IUnknown* input, uint flags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), index, input, flags);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), index, input, flags);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficients"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(4)]
 	public HResult SetCoefficients(Vector4* coefficients)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, Vector4*, int>)(lpVtbl[4]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), coefficients);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, Vector4*, int>)(lpVtbl[4]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), coefficients);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetClampOutput"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(5)]
 	public HResult SetClampOutput(Bool32 clampoutput)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, Bool32, int>)(lpVtbl[5]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), clampoutput);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, Bool32, int>)(lpVtbl[5]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), clampoutput);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficient1"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(6)]
 	public HResult SetCoefficient1(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, IDCompositionAnimation*, int>)(lpVtbl[6]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, IDCompositionAnimation*, int>)(lpVtbl[6]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficient1"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(7)]
 	public HResult SetCoefficient1(float Coeffcient1)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[7]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coeffcient1);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[7]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coeffcient1);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficient2"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(8)]
 	public HResult SetCoefficient2(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, IDCompositionAnimation*, int>)(lpVtbl[8]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, IDCompositionAnimation*, int>)(lpVtbl[8]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficient2"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(9)]
 	public HResult SetCoefficient2(float Coefficient2)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[9]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coefficient2);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[9]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coefficient2);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficient3"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(10)]
 	public HResult SetCoefficient3(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, IDCompositionAnimation*, int>)(lpVtbl[10]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, IDCompositionAnimation*, int>)(lpVtbl[10]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficient3"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(11)]
 	public HResult SetCoefficient3(float Coefficient3)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[11]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coefficient3);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[11]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coefficient3);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficient4"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(12)]
 	public HResult SetCoefficient4(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, IDCompositionAnimation*, int>)(lpVtbl[12]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, IDCompositionAnimation*, int>)(lpVtbl[12]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionArithmeticCompositeEffect::SetCoefficient4"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct IDCompositionArithmeticCompositeEffect : IDComposit
 	[VtblIndex(13)]
 	public HResult SetCoefficient4(float Coefficient4)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[13]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coefficient4);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionArithmeticCompositeEffect*, float, int>)(lpVtbl[13]))((IDCompositionArithmeticCompositeEffect*)Unsafe.AsPointer(ref this), Coefficient4);
+#endif
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface

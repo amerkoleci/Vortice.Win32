@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTypography*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTypography*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTypography*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTypography*, uint>)(lpVtbl[1]))((IDWriteTypography*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, uint>)(lpVtbl[1]))((IDWriteTypography*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTypography*, uint>)(lpVtbl[2]))((IDWriteTypography*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, uint>)(lpVtbl[2]))((IDWriteTypography*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::AddFontFeature"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	[VtblIndex(3)]
 	public HResult AddFontFeature(FontFeature fontFeature)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTypography*, FontFeature, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, FontFeature, int>)(lpVtbl[3]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeature);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeatureCount"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	[VtblIndex(4)]
 	public uint GetFontFeatureCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTypography*, uint>)(lpVtbl[4]))((IDWriteTypography*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, uint>)(lpVtbl[4]))((IDWriteTypography*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTypography::GetFontFeature"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteTypography : IDWriteTypography.Interface, IN
 	[VtblIndex(5)]
 	public HResult GetFontFeature(uint fontFeatureIndex, FontFeature* fontFeature)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTypography*, uint, FontFeature*, int>)(lpVtbl[5]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeatureIndex, fontFeature);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTypography*, uint, FontFeature*, int>)(lpVtbl[5]))((IDWriteTypography*)Unsafe.AsPointer(ref this), fontFeatureIndex, fontFeature);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

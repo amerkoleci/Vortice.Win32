@@ -343,6 +343,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"HashDigest","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -499,6 +500,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Ptr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -514,6 +516,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Name","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -560,7 +563,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"argCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
@@ -573,7 +576,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"argCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
@@ -807,7 +810,7 @@
 					,{"Name":"pSourceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pEntryPoint","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pTargetProfile","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"argCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pDefines","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"ApiRef","Name":"DxcDefine","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"defineCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -826,7 +829,7 @@
 				,"Params":[
 					{"Name":"pSource","Type":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pSourceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"argCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pDefines","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"DxcDefine","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"defineCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -870,7 +873,7 @@
 					,{"Name":"pSourceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pEntryPoint","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pTargetProfile","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"argCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pDefines","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"ApiRef","Name":"DxcDefine","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"defineCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -1098,7 +1101,7 @@
 					{"Name":"pSourceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pEntryPoint","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pTargetProfile","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"argCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pDefines","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"ApiRef","Name":"DxcDefine","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"defineCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -1270,11 +1273,11 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pSource","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DxcBuffer","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["In","Const"]}
-					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pArguments","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"argCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pIncludeHandler","Type":{"Kind":"ApiRef","Name":"IDxcIncludeHandler","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 			,{
@@ -1288,7 +1291,7 @@
 				,"Params":[
 					{"Name":"pObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DxcBuffer","TargetKind":"Default","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+					,{"Name":"ppResult","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]
@@ -1626,7 +1629,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pBlob","Type":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppOptions","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"ppOptions","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"optionCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pOutputModule","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlob","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 					,{"Name":"ppOutputText","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDxcBlobEncoding","TargetKind":"Com","Api":"Graphics.Direct3D.Dxc","Parents":[]}},"Attrs":["Out","ComOutPtr","Optional"]}
@@ -1721,6 +1724,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"pName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"pValue","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}

@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, uint>)(lpVtbl[1]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, uint>)(lpVtbl[1]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, uint>)(lpVtbl[2]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, uint>)(lpVtbl[2]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1GradientStopCollection1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetGradientStopCount" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(4)]
 	public uint GetGradientStopCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, uint>)(lpVtbl[4]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, uint>)(lpVtbl[4]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetGradientStops" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(5)]
 	public void GetGradientStops(GradientStop* gradientStops, uint gradientStopsCount)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1GradientStopCollection1*, GradientStop*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, GradientStop*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetColorInterpolationGamma" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(6)]
 	public Gamma GetColorInterpolationGamma()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, Gamma>)(lpVtbl[6]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, Gamma>)(lpVtbl[6]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetExtendMode" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(7)]
 	public ExtendMode GetExtendMode()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ExtendMode>)(lpVtbl[7]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetGradientStops1"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(8)]
 	public void GetGradientStops1(GradientStop* gradientStops, uint gradientStopsCount)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1GradientStopCollection1*, GradientStop*, uint, void>)(lpVtbl[8]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, GradientStop*, uint, void>)(lpVtbl[8]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPreInterpolationSpace"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(9)]
 	public ColorSpace GetPreInterpolationSpace()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[9]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[9]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPostInterpolationSpace"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(10)]
 	public ColorSpace GetPostInterpolationSpace()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[10]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorSpace>)(lpVtbl[10]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetBufferPrecision"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(11)]
 	public BufferPrecision GetBufferPrecision()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, BufferPrecision>)(lpVtbl[11]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, BufferPrecision>)(lpVtbl[11]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetColorInterpolationMode"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	[VtblIndex(12)]
 	public ColorInterpolationMode GetColorInterpolationMode()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientStopCollection1*, ColorInterpolationMode>)(lpVtbl[12]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientStopCollection1*, ColorInterpolationMode>)(lpVtbl[12]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : ID2D1GradientStopCollection.Interface

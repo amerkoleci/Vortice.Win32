@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12DebugDevice1 : ID3D12DebugDevice1.Interface, 
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugDevice1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12DebugDevice1 : ID3D12DebugDevice1.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugDevice1*, uint>)(lpVtbl[1]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice1*, uint>)(lpVtbl[1]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12DebugDevice1 : ID3D12DebugDevice1.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugDevice1*, uint>)(lpVtbl[2]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice1*, uint>)(lpVtbl[2]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::SetDebugParameter"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12DebugDevice1 : ID3D12DebugDevice1.Interface, 
 	[VtblIndex(3)]
 	public HResult SetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugDevice1*, DebugDeviceParameterType, void*, uint, int>)(lpVtbl[3]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice1*, DebugDeviceParameterType, void*, uint, int>)(lpVtbl[3]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::GetDebugParameter"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12DebugDevice1 : ID3D12DebugDevice1.Interface, 
 	[VtblIndex(4)]
 	public HResult GetDebugParameter(DebugDeviceParameterType Type, void* pData, uint DataSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugDevice1*, DebugDeviceParameterType, void*, uint, int>)(lpVtbl[4]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice1*, DebugDeviceParameterType, void*, uint, int>)(lpVtbl[4]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugDevice1::ReportLiveDeviceObjects"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12DebugDevice1 : ID3D12DebugDevice1.Interface, 
 	[VtblIndex(5)]
 	public HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugDevice1*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[5]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), Flags);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugDevice1*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[5]))((ID3D12DebugDevice1*)Unsafe.AsPointer(ref this), Flags);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

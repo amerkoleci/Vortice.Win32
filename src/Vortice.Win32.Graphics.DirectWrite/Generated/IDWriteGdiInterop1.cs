@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, uint>)(lpVtbl[1]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, uint>)(lpVtbl[1]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, uint>)(lpVtbl[2]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, uint>)(lpVtbl[2]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteGdiInterop.CreateFontFromLOGFONT" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(3)]
 	public HResult CreateFontFromLOGFONT(Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFont** font)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, Win32.Graphics.Gdi.LogFontW*, IDWriteFont**, int>)(lpVtbl[3]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, font);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, Win32.Graphics.Gdi.LogFontW*, IDWriteFont**, int>)(lpVtbl[3]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, font);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteGdiInterop.ConvertFontToLOGFONT" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(4)]
 	public HResult ConvertFontToLOGFONT(IDWriteFont* font, Win32.Graphics.Gdi.LogFontW** logFont, Bool32* isSystemFont)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, IDWriteFont*, Win32.Graphics.Gdi.LogFontW**, Bool32*, int>)(lpVtbl[4]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, logFont, isSystemFont);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, IDWriteFont*, Win32.Graphics.Gdi.LogFontW**, Bool32*, int>)(lpVtbl[4]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, logFont, isSystemFont);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteGdiInterop.ConvertFontFaceToLOGFONT" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(5)]
 	public HResult ConvertFontFaceToLOGFONT(IDWriteFontFace* font, Win32.Graphics.Gdi.LogFontW** logFont)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, IDWriteFontFace*, Win32.Graphics.Gdi.LogFontW**, int>)(lpVtbl[5]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, logFont);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, IDWriteFontFace*, Win32.Graphics.Gdi.LogFontW**, int>)(lpVtbl[5]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, logFont);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteGdiInterop.CreateFontFaceFromHdc" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(6)]
 	public HResult CreateFontFaceFromHdc(IntPtr hdc, IDWriteFontFace** fontFace)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, IntPtr, IDWriteFontFace**, int>)(lpVtbl[6]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), hdc, fontFace);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, IntPtr, IDWriteFontFace**, int>)(lpVtbl[6]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), hdc, fontFace);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteGdiInterop.CreateBitmapRenderTarget" />
@@ -111,7 +139,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(7)]
 	public HResult CreateBitmapRenderTarget(IntPtr hdc, uint width, uint height, IDWriteBitmapRenderTarget** renderTarget)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, IntPtr, uint, uint, IDWriteBitmapRenderTarget**, int>)(lpVtbl[7]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), hdc, width, height, renderTarget);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, IntPtr, uint, uint, IDWriteBitmapRenderTarget**, int>)(lpVtbl[7]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), hdc, width, height, renderTarget);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop1::CreateFontFromLOGFONT"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(8)]
 	public HResult CreateFontFromLOGFONT(Win32.Graphics.Gdi.LogFontW* logFont, IDWriteFontCollection* fontCollection, IDWriteFont** font)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, Win32.Graphics.Gdi.LogFontW*, IDWriteFontCollection*, IDWriteFont**, int>)(lpVtbl[8]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, fontCollection, font);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, Win32.Graphics.Gdi.LogFontW*, IDWriteFontCollection*, IDWriteFont**, int>)(lpVtbl[8]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, fontCollection, font);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop1::GetFontSignature"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(9)]
 	public HResult GetFontSignature(IDWriteFontFace* fontFace, Win32.Graphics.Gdi.FontSignature** fontSignature)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, IDWriteFontFace*, Win32.Graphics.Gdi.FontSignature**, int>)(lpVtbl[9]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), fontFace, fontSignature);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, IDWriteFontFace*, Win32.Graphics.Gdi.FontSignature**, int>)(lpVtbl[9]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), fontFace, fontSignature);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop1::GetFontSignature"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(10)]
 	public HResult GetFontSignature(IDWriteFont* font, Win32.Graphics.Gdi.FontSignature** fontSignature)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, IDWriteFont*, Win32.Graphics.Gdi.FontSignature**, int>)(lpVtbl[10]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, fontSignature);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, IDWriteFont*, Win32.Graphics.Gdi.FontSignature**, int>)(lpVtbl[10]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), font, fontSignature);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteGdiInterop1::GetMatchingFontsByLOGFONT"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IDWriteGdiInterop1 : IDWriteGdiInterop1.Interface, 
 	[VtblIndex(11)]
 	public HResult GetMatchingFontsByLOGFONT(Win32.Graphics.Gdi.LogFontA* logFont, IDWriteFontSet* fontSet, IDWriteFontSet** filteredSet)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteGdiInterop1*, Win32.Graphics.Gdi.LogFontA*, IDWriteFontSet*, IDWriteFontSet**, int>)(lpVtbl[11]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, fontSet, filteredSet);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteGdiInterop1*, Win32.Graphics.Gdi.LogFontA*, IDWriteFontSet*, IDWriteFontSet**, int>)(lpVtbl[11]))((IDWriteGdiInterop1*)Unsafe.AsPointer(ref this), logFont, fontSet, filteredSet);
+#endif
 	}
 
 	public interface Interface : IDWriteGdiInterop.Interface

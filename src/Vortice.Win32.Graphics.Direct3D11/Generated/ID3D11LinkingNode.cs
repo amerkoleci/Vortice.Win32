@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11LinkingNode : ID3D11LinkingNode.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11LinkingNode*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11LinkingNode*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11LinkingNode*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11LinkingNode*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11LinkingNode : ID3D11LinkingNode.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11LinkingNode*, uint>)(lpVtbl[1]))((ID3D11LinkingNode*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11LinkingNode*, uint>)(lpVtbl[1]))((ID3D11LinkingNode*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11LinkingNode : ID3D11LinkingNode.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11LinkingNode*, uint>)(lpVtbl[2]))((ID3D11LinkingNode*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11LinkingNode*, uint>)(lpVtbl[2]))((ID3D11LinkingNode*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 

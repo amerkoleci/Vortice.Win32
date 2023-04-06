@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SpriteBatch*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SpriteBatch*, uint>)(lpVtbl[1]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint>)(lpVtbl[1]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SpriteBatch*, uint>)(lpVtbl[2]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint>)(lpVtbl[2]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SpriteBatch*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::AddSprites"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[VtblIndex(4)]
 	public HResult AddSprites(uint spriteCount, Win32.Numerics.RectF* destinationRectangles, Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SpriteBatch*, uint, Win32.Numerics.RectF*, Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[4]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint, Win32.Numerics.RectF*, Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[4]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::SetSprites"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[VtblIndex(5)]
 	public HResult SetSprites(uint startIndex, uint spriteCount, Win32.Numerics.RectF* destinationRectangles, Win32.Numerics.Rect* sourceRectangles, Color4* colors, Matrix3x2* transforms, uint destinationRectanglesStride, uint sourceRectanglesStride, uint colorsStride, uint transformsStride)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SpriteBatch*, uint, uint, Win32.Numerics.RectF*, Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[5]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint, uint, Win32.Numerics.RectF*, Win32.Numerics.Rect*, Color4*, Matrix3x2*, uint, uint, uint, uint, int>)(lpVtbl[5]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms, destinationRectanglesStride, sourceRectanglesStride, colorsStride, transformsStride);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSprites"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[VtblIndex(6)]
 	public HResult GetSprites(uint startIndex, uint spriteCount, Win32.Numerics.RectF** destinationRectangles, Win32.Numerics.Rect** sourceRectangles, Color4** colors, Matrix3x2* transforms)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SpriteBatch*, uint, uint, Win32.Numerics.RectF**, Win32.Numerics.Rect**, Color4**, Matrix3x2*, int>)(lpVtbl[6]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint, uint, Win32.Numerics.RectF**, Win32.Numerics.Rect**, Color4**, Matrix3x2*, int>)(lpVtbl[6]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this), startIndex, spriteCount, destinationRectangles, sourceRectangles, colors, transforms);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::GetSpriteCount"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[VtblIndex(7)]
 	public uint GetSpriteCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SpriteBatch*, uint>)(lpVtbl[7]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, uint>)(lpVtbl[7]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SpriteBatch::Clear"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1SpriteBatch : ID2D1SpriteBatch.Interface, INat
 	[VtblIndex(8)]
 	public void Clear()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SpriteBatch*, void>)(lpVtbl[8]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SpriteBatch*, void>)(lpVtbl[8]))((ID2D1SpriteBatch*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : ID2D1Resource.Interface

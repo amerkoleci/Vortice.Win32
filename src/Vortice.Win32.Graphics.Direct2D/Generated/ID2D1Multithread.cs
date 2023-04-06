@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1Multithread : ID2D1Multithread.Interface, INat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Multithread*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Multithread*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Multithread*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Multithread*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1Multithread : ID2D1Multithread.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Multithread*, uint>)(lpVtbl[1]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Multithread*, uint>)(lpVtbl[1]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1Multithread : ID2D1Multithread.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Multithread*, uint>)(lpVtbl[2]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Multithread*, uint>)(lpVtbl[2]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Multithread::GetMultithreadProtected"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1Multithread : ID2D1Multithread.Interface, INat
 	[VtblIndex(3)]
 	public Bool32 GetMultithreadProtected()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Multithread*, Bool32>)(lpVtbl[3]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Multithread*, Bool32>)(lpVtbl[3]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Multithread::Enter"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1Multithread : ID2D1Multithread.Interface, INat
 	[VtblIndex(4)]
 	public void Enter()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1Multithread*, void>)(lpVtbl[4]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1Multithread*, void>)(lpVtbl[4]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Multithread::Leave"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1Multithread : ID2D1Multithread.Interface, INat
 	[VtblIndex(5)]
 	public void Leave()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1Multithread*, void>)(lpVtbl[5]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1Multithread*, void>)(lpVtbl[5]))((ID2D1Multithread*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

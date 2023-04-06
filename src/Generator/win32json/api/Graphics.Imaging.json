@@ -2118,6 +2118,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"X","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"Y","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -2228,8 +2229,9 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"Position","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"Position","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Pattern","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"Mask","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2858,6 +2860,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"PixelFormat","Type":{"Kind":"ApiRef","Name":"D2D1_PIXEL_FORMAT","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 			,{"Name":"DpiX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -2877,6 +2880,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Format","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"Width","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2892,6 +2896,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Format","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"pbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2908,6 +2913,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Width","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Height","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2928,6 +2934,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cComponents","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"RestartInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -3615,8 +3622,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pIStream","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ulOffset","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ulMaxSize","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"ulOffset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+					,{"Name":"ulMaxSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
 				]
 			}
 		]
@@ -5030,7 +5037,7 @@
 				,"Params":[
 					{"Name":"wzFilename","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"pguidVendor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Optional","Const"]}
-					,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"dwDesiredAccess","Type":{"Kind":"ApiRef","Name":"GENERIC_ACCESS_RIGHTS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"metadataOptions","Type":{"Kind":"ApiRef","Name":"WICDecodeOptions","TargetKind":"Default","Api":"Graphics.Imaging","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppIDecoder","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWICBitmapDecoder","TargetKind":"Com","Api":"Graphics.Imaging","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
@@ -5482,6 +5489,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":"cbSize"
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CodecMajorVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -5542,6 +5550,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Input","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
 			,{"Name":"Output","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
@@ -5556,6 +5565,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"cPoints","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"aPoints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WICRawToneCurvePoint","TargetKind":"Default","Api":"Graphics.Imaging","Parents":[]}},"Attrs":[]}
@@ -6028,6 +6038,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Width","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Height","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6134,6 +6145,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"DxgiFormat","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
 			,{"Name":"BytesPerBlock","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -6919,12 +6931,13 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"Position","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"Position","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Pattern","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"Mask","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"DataOffset","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"DataOffset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -6988,11 +7001,12 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
-			{"Name":"Position","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"Position","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Header","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"DataOffset","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"DataOffset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7293,7 +7307,7 @@
 		,"Params":[
 			{"Name":"guidContainerFormat","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"pIWriter","Type":{"Kind":"ApiRef","Name":"IWICMetadataWriter","TargetKind":"Com","Api":"Graphics.Imaging","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pcbSize","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"pcbSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["Out"]}
 		]
 	}
 ]

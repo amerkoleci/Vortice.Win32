@@ -14,19 +14,19 @@ namespace Win32.Graphics.DirectComposition;
 public partial struct FrameStatistics
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS::lastFrameTime"]/*' />
-	public LargeInteger lastFrameTime;
+	public long lastFrameTime;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS::currentCompositionRate"]/*' />
 	public Graphics.Dxgi.Common.Rational currentCompositionRate;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS::currentTime"]/*' />
-	public LargeInteger currentTime;
+	public long currentTime;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS::timeFrequency"]/*' />
-	public LargeInteger timeFrequency;
+	public long timeFrequency;
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCOMPOSITION_FRAME_STATISTICS::nextEstimatedFrameTime"]/*' />
-	public LargeInteger nextEstimatedFrameTime;
+	public long nextEstimatedFrameTime;
 }
 
 /// <include file='../DirectComposition.xml' path='doc/member[@name="COMPOSITION_FRAME_STATS"]/*' />

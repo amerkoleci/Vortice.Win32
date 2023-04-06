@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SolidColorBrush*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SolidColorBrush*, uint>)(lpVtbl[1]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, uint>)(lpVtbl[1]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SolidColorBrush*, uint>)(lpVtbl[2]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, uint>)(lpVtbl[2]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SolidColorBrush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.SetOpacity" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[VtblIndex(4)]
 	public void SetOpacity(float opacity)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SolidColorBrush*, float, void>)(lpVtbl[4]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), opacity);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, float, void>)(lpVtbl[4]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), opacity);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.SetTransform" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[VtblIndex(5)]
 	public void SetTransform(Matrix3x2* transform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SolidColorBrush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), transform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), transform);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.GetOpacity" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[VtblIndex(6)]
 	public float GetOpacity()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1SolidColorBrush*, float>)(lpVtbl[6]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, float>)(lpVtbl[6]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.GetTransform" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[VtblIndex(7)]
 	public void GetTransform(Matrix3x2* transform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SolidColorBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), transform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), transform);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::SetColor"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	[VtblIndex(8)]
 	public void SetColor(Color4* color)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1SolidColorBrush*, Color4*, void>)(lpVtbl[8]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), color);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Color4*, void>)(lpVtbl[8]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), color);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SolidColorBrush::GetColor"]/*' />
@@ -128,7 +164,11 @@ public unsafe partial struct ID2D1SolidColorBrush : ID2D1SolidColorBrush.Interfa
 	public Color4 GetColor()
 	{
 		Color4 result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID2D1SolidColorBrush*, Color4*, Color4*>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID2D1SolidColorBrush*, Color4*, Color4*>)(lpVtbl[9]))((ID2D1SolidColorBrush*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	public interface Interface : ID2D1Brush.Interface

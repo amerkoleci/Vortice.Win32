@@ -53,7 +53,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint>)(lpVtbl[1]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint>)(lpVtbl[1]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint>)(lpVtbl[2]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint>)(lpVtbl[2]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetComponentType" />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(3)]
 	public HResult GetComponentType(WICComponentType* pType)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pType);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pType);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetCLSID" />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(4)]
 	public HResult GetCLSID(Guid* pclsid)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[4]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pclsid);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[4]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pclsid);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSigningStatus" />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(5)]
 	public HResult GetSigningStatus(uint* pStatus)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint*, int>)(lpVtbl[5]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pStatus);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint*, int>)(lpVtbl[5]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pStatus);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetAuthor" />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(6)]
 	public HResult GetAuthor(uint cchAuthor, ushort* wzAuthor, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVendorGUID" />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(7)]
 	public HResult GetVendorGUID(Guid* pguidVendor)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[7]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pguidVendor);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[7]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pguidVendor);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVersion" />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(8)]
 	public HResult GetVersion(uint cchVersion, ushort* wzVersion, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSpecVersion" />
@@ -127,7 +163,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(9)]
 	public HResult GetSpecVersion(uint cchSpecVersion, ushort* wzSpecVersion, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetFriendlyName" />
@@ -135,7 +175,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(10)]
 	public HResult GetFriendlyName(uint cchFriendlyName, ushort* wzFriendlyName, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetMetadataFormat" />
@@ -143,7 +187,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(11)]
 	public HResult GetMetadataFormat(Guid* pguidMetadataFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[11]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pguidMetadataFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, int>)(lpVtbl[11]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pguidMetadataFormat);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetContainerFormats" />
@@ -151,7 +199,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(12)]
 	public HResult GetContainerFormats(uint cContainerFormats, Guid* pguidContainerFormats, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint, Guid*, uint*, int>)(lpVtbl[12]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cContainerFormats, pguidContainerFormats, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint, Guid*, uint*, int>)(lpVtbl[12]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cContainerFormats, pguidContainerFormats, pcchActual);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetDeviceManufacturer" />
@@ -159,7 +211,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(13)]
 	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, ushort* wzDeviceManufacturer, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[13]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[13]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetDeviceModels" />
@@ -167,7 +223,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(14)]
 	public HResult GetDeviceModels(uint cchDeviceModels, ushort* wzDeviceModels, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[14]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, uint, ushort*, uint*, int>)(lpVtbl[14]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.DoesRequireFullStream" />
@@ -175,7 +235,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(15)]
 	public HResult DoesRequireFullStream(Bool32* pfRequiresFullStream)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[15]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfRequiresFullStream);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[15]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfRequiresFullStream);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.DoesSupportPadding" />
@@ -183,7 +247,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(16)]
 	public HResult DoesSupportPadding(Bool32* pfSupportsPadding)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[16]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfSupportsPadding);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[16]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfSupportsPadding);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.DoesRequireFixedSize" />
@@ -191,7 +259,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(17)]
 	public HResult DoesRequireFixedSize(Bool32* pfFixedSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[17]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfFixedSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Bool32*, int>)(lpVtbl[17]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), pfFixedSize);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::GetPatterns"]/*' />
@@ -199,7 +271,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(18)]
 	public HResult GetPatterns(Guid* guidContainerFormat, uint cbSize, WICMetadataPattern* pPattern, uint* pcCount, uint* pcbActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Guid*, uint, WICMetadataPattern*, uint*, uint*, int>)(lpVtbl[18]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pPattern, pcCount, pcbActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, uint, WICMetadataPattern*, uint*, uint*, int>)(lpVtbl[18]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, cbSize, pPattern, pcCount, pcbActual);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::MatchesPattern"]/*' />
@@ -207,7 +283,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(19)]
 	public HResult MatchesPattern(Guid* guidContainerFormat, Com.IStream* pIStream, Bool32* pfMatches)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, Guid*, Com.IStream*, Bool32*, int>)(lpVtbl[19]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, pIStream, pfMatches);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, Guid*, Com.IStream*, Bool32*, int>)(lpVtbl[19]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), guidContainerFormat, pIStream, pfMatches);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataReaderInfo::CreateInstance"]/*' />
@@ -215,7 +295,11 @@ public unsafe partial struct IWICMetadataReaderInfo : IWICMetadataReaderInfo.Int
 	[VtblIndex(20)]
 	public HResult CreateInstance(IWICMetadataReader** ppIReader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataReaderInfo*, IWICMetadataReader**, int>)(lpVtbl[20]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), ppIReader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataReaderInfo*, IWICMetadataReader**, int>)(lpVtbl[20]))((IWICMetadataReaderInfo*)Unsafe.AsPointer(ref this), ppIReader);
+#endif
 	}
 
 	public interface Interface : IWICMetadataHandlerInfo.Interface

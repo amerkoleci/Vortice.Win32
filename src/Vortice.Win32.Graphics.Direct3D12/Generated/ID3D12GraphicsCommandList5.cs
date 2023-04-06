@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint>)(lpVtbl[1]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint>)(lpVtbl[1]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint>)(lpVtbl[2]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint>)(lpVtbl[2]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.GetPrivateData" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(3)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, Guid*, uint*, void*, int>)(lpVtbl[3]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(4)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, Guid*, uint, void*, int>)(lpVtbl[4]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetPrivateDataInterface" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(5)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, Guid*, IUnknown*, int>)(lpVtbl[5]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12Object.SetName" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(6)]
 	public HResult SetName(ushort* Name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, ushort*, int>)(lpVtbl[6]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ushort*, int>)(lpVtbl[6]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(7)]
 	public HResult GetDevice(Guid* riid, void** ppvDevice)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), riid, ppvDevice);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12CommandList.GetType" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(8)]
 	public new CommandListType GetType()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, CommandListType>)(lpVtbl[8]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, CommandListType>)(lpVtbl[8]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.Close" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(9)]
 	public HResult Close()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, int>)(lpVtbl[9]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, int>)(lpVtbl[9]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.Reset" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(10)]
 	public HResult Reset(ID3D12CommandAllocator* pAllocator, ID3D12PipelineState* pInitialState)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12CommandAllocator*, ID3D12PipelineState*, int>)(lpVtbl[10]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pAllocator, pInitialState);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12CommandAllocator*, ID3D12PipelineState*, int>)(lpVtbl[10]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pAllocator, pInitialState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearState" />
@@ -143,7 +187,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(11)]
 	public void ClearState(ID3D12PipelineState* pPipelineState)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12PipelineState*, void>)(lpVtbl[11]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pPipelineState);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12PipelineState*, void>)(lpVtbl[11]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pPipelineState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.DrawInstanced" />
@@ -151,7 +199,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(12)]
 	public void DrawInstanced(uint VertexCountPerInstance, uint InstanceCount, uint StartVertexLocation, uint StartInstanceLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, uint, uint, void>)(lpVtbl[12]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), VertexCountPerInstance, InstanceCount, StartVertexLocation, StartInstanceLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, uint, uint, void>)(lpVtbl[12]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), VertexCountPerInstance, InstanceCount, StartVertexLocation, StartInstanceLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.DrawIndexedInstanced" />
@@ -159,7 +211,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(13)]
 	public void DrawIndexedInstanced(uint IndexCountPerInstance, uint InstanceCount, uint StartIndexLocation, int BaseVertexLocation, uint StartInstanceLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, uint, int, uint, void>)(lpVtbl[13]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), IndexCountPerInstance, InstanceCount, StartIndexLocation, BaseVertexLocation, StartInstanceLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, uint, int, uint, void>)(lpVtbl[13]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), IndexCountPerInstance, InstanceCount, StartIndexLocation, BaseVertexLocation, StartInstanceLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.Dispatch" />
@@ -167,7 +223,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(14)]
 	public void Dispatch(uint ThreadGroupCountX, uint ThreadGroupCountY, uint ThreadGroupCountZ)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, uint, void>)(lpVtbl[14]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), ThreadGroupCountX, ThreadGroupCountY, ThreadGroupCountZ);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, uint, void>)(lpVtbl[14]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), ThreadGroupCountX, ThreadGroupCountY, ThreadGroupCountZ);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.CopyBufferRegion" />
@@ -175,7 +235,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(15)]
 	public void CopyBufferRegion(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, ulong NumBytes)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, ulong, void>)(lpVtbl[15]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, NumBytes);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, ulong, void>)(lpVtbl[15]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, NumBytes);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.CopyTextureRegion" />
@@ -183,7 +247,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(16)]
 	public void CopyTextureRegion(TextureCopyLocation* pDst, uint DstX, uint DstY, uint DstZ, TextureCopyLocation* pSrc, Box* pSrcBox)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, TextureCopyLocation*, uint, uint, uint, TextureCopyLocation*, Box*, void>)(lpVtbl[16]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDst, DstX, DstY, DstZ, pSrc, pSrcBox);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, TextureCopyLocation*, uint, uint, uint, TextureCopyLocation*, Box*, void>)(lpVtbl[16]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDst, DstX, DstY, DstZ, pSrc, pSrcBox);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.CopyResource" />
@@ -191,7 +259,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(17)]
 	public void CopyResource(ID3D12Resource* pDstResource, ID3D12Resource* pSrcResource)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, ID3D12Resource*, void>)(lpVtbl[17]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstResource, pSrcResource);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ID3D12Resource*, void>)(lpVtbl[17]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstResource, pSrcResource);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.CopyTiles" />
@@ -199,7 +271,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(18)]
 	public void CopyTiles(ID3D12Resource* pTiledResource, TiledResourceCoordinate* pTileRegionStartCoordinate, TileRegionSize* pTileRegionSize, ID3D12Resource* pBuffer, ulong BufferStartOffsetInBytes, TileCopyFlags Flags)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, TiledResourceCoordinate*, TileRegionSize*, ID3D12Resource*, ulong, TileCopyFlags, void>)(lpVtbl[18]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, TiledResourceCoordinate*, TileRegionSize*, ID3D12Resource*, ulong, TileCopyFlags, void>)(lpVtbl[18]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ResolveSubresource" />
@@ -207,7 +283,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(19)]
 	public void ResolveSubresource(ID3D12Resource* pDstResource, uint DstSubresource, ID3D12Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.Format Format)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, uint, ID3D12Resource*, uint, Graphics.Dxgi.Common.Format, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, uint, ID3D12Resource*, uint, Graphics.Dxgi.Common.Format, void>)(lpVtbl[19]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.IASetPrimitiveTopology" />
@@ -215,7 +295,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(20)]
 	public void IASetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology PrimitiveTopology)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, Graphics.Direct3D.PrimitiveTopology, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), PrimitiveTopology);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, Graphics.Direct3D.PrimitiveTopology, void>)(lpVtbl[20]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), PrimitiveTopology);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.RSSetViewports" />
@@ -223,7 +307,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(21)]
 	public void RSSetViewports(uint NumViewports, Viewport* pViewports)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, Viewport*, void>)(lpVtbl[21]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, Viewport*, void>)(lpVtbl[21]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.RSSetScissorRects" />
@@ -231,7 +319,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(22)]
 	public void RSSetScissorRects(uint NumRects, Rect* pRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, Rect*, void>)(lpVtbl[22]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumRects, pRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, Rect*, void>)(lpVtbl[22]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumRects, pRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.OMSetBlendFactor" />
@@ -239,7 +331,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(23)]
 	public void OMSetBlendFactor(float* BlendFactor)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, float*, void>)(lpVtbl[23]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), BlendFactor);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, float*, void>)(lpVtbl[23]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), BlendFactor);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.OMSetStencilRef" />
@@ -247,7 +343,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(24)]
 	public void OMSetStencilRef(uint StencilRef)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, void>)(lpVtbl[24]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), StencilRef);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, void>)(lpVtbl[24]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), StencilRef);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetPipelineState" />
@@ -255,7 +355,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(25)]
 	public void SetPipelineState(ID3D12PipelineState* pPipelineState)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12PipelineState*, void>)(lpVtbl[25]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pPipelineState);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12PipelineState*, void>)(lpVtbl[25]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pPipelineState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ResourceBarrier" />
@@ -263,7 +367,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(26)]
 	public void ResourceBarrier(uint NumBarriers, ResourceBarrier* pBarriers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, ResourceBarrier*, void>)(lpVtbl[26]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumBarriers, pBarriers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ResourceBarrier*, void>)(lpVtbl[26]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumBarriers, pBarriers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ExecuteBundle" />
@@ -271,7 +379,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(27)]
 	public void ExecuteBundle(ID3D12GraphicsCommandList* pCommandList)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12GraphicsCommandList*, void>)(lpVtbl[27]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pCommandList);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12GraphicsCommandList*, void>)(lpVtbl[27]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pCommandList);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetDescriptorHeaps" />
@@ -279,7 +391,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(28)]
 	public void SetDescriptorHeaps(uint NumDescriptorHeaps, ID3D12DescriptorHeap** ppDescriptorHeaps)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[28]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ID3D12DescriptorHeap**, void>)(lpVtbl[28]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumDescriptorHeaps, ppDescriptorHeaps);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootSignature" />
@@ -287,7 +403,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(29)]
 	public void SetComputeRootSignature(ID3D12RootSignature* pRootSignature)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12RootSignature*, void>)(lpVtbl[29]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pRootSignature);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12RootSignature*, void>)(lpVtbl[29]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pRootSignature);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetGraphicsRootSignature" />
@@ -295,7 +415,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(30)]
 	public void SetGraphicsRootSignature(ID3D12RootSignature* pRootSignature)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12RootSignature*, void>)(lpVtbl[30]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pRootSignature);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12RootSignature*, void>)(lpVtbl[30]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pRootSignature);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootDescriptorTable" />
@@ -303,7 +427,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(31)]
 	public void SetComputeRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, GpuDescriptorHandle, void>)(lpVtbl[31]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, GpuDescriptorHandle, void>)(lpVtbl[31]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetGraphicsRootDescriptorTable" />
@@ -311,7 +439,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(32)]
 	public void SetGraphicsRootDescriptorTable(uint RootParameterIndex, GpuDescriptorHandle BaseDescriptor)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, GpuDescriptorHandle, void>)(lpVtbl[32]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, GpuDescriptorHandle, void>)(lpVtbl[32]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BaseDescriptor);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRoot32BitConstant" />
@@ -319,7 +451,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(33)]
 	public void SetComputeRoot32BitConstant(uint RootParameterIndex, uint SrcData, uint DestOffsetIn32BitValues)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, uint, void>)(lpVtbl[33]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, SrcData, DestOffsetIn32BitValues);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, uint, void>)(lpVtbl[33]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, SrcData, DestOffsetIn32BitValues);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetGraphicsRoot32BitConstant" />
@@ -327,7 +463,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(34)]
 	public void SetGraphicsRoot32BitConstant(uint RootParameterIndex, uint SrcData, uint DestOffsetIn32BitValues)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, uint, void>)(lpVtbl[34]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, SrcData, DestOffsetIn32BitValues);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, uint, void>)(lpVtbl[34]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, SrcData, DestOffsetIn32BitValues);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRoot32BitConstants" />
@@ -335,7 +475,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(35)]
 	public void SetComputeRoot32BitConstants(uint RootParameterIndex, uint Num32BitValuesToSet, void* pSrcData, uint DestOffsetIn32BitValues)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, void*, uint, void>)(lpVtbl[35]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, Num32BitValuesToSet, pSrcData, DestOffsetIn32BitValues);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, void*, uint, void>)(lpVtbl[35]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, Num32BitValuesToSet, pSrcData, DestOffsetIn32BitValues);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetGraphicsRoot32BitConstants" />
@@ -343,7 +487,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(36)]
 	public void SetGraphicsRoot32BitConstants(uint RootParameterIndex, uint Num32BitValuesToSet, void* pSrcData, uint DestOffsetIn32BitValues)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, void*, uint, void>)(lpVtbl[36]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, Num32BitValuesToSet, pSrcData, DestOffsetIn32BitValues);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, void*, uint, void>)(lpVtbl[36]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, Num32BitValuesToSet, pSrcData, DestOffsetIn32BitValues);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootConstantBufferView" />
@@ -351,7 +499,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(37)]
 	public void SetComputeRootConstantBufferView(uint RootParameterIndex, ulong BufferLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[37]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[37]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetGraphicsRootConstantBufferView" />
@@ -359,7 +511,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(38)]
 	public void SetGraphicsRootConstantBufferView(uint RootParameterIndex, ulong BufferLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[38]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[38]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootShaderResourceView" />
@@ -367,7 +523,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(39)]
 	public void SetComputeRootShaderResourceView(uint RootParameterIndex, ulong BufferLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[39]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[39]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetGraphicsRootShaderResourceView" />
@@ -375,7 +535,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(40)]
 	public void SetGraphicsRootShaderResourceView(uint RootParameterIndex, ulong BufferLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[40]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[40]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetComputeRootUnorderedAccessView" />
@@ -383,7 +547,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(41)]
 	public void SetComputeRootUnorderedAccessView(uint RootParameterIndex, ulong BufferLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[41]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[41]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetGraphicsRootUnorderedAccessView" />
@@ -391,7 +559,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(42)]
 	public void SetGraphicsRootUnorderedAccessView(uint RootParameterIndex, ulong BufferLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[42]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, ulong, void>)(lpVtbl[42]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RootParameterIndex, BufferLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.IASetIndexBuffer" />
@@ -399,7 +571,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(43)]
 	public void IASetIndexBuffer(IndexBufferView* pView)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, IndexBufferView*, void>)(lpVtbl[43]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pView);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, IndexBufferView*, void>)(lpVtbl[43]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pView);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.IASetVertexBuffers" />
@@ -407,7 +583,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(44)]
 	public void IASetVertexBuffers(uint StartSlot, uint NumViews, VertexBufferView* pViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, VertexBufferView*, void>)(lpVtbl[44]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, VertexBufferView*, void>)(lpVtbl[44]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SOSetTargets" />
@@ -415,7 +595,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(45)]
 	public void SOSetTargets(uint StartSlot, uint NumViews, StreamOutputBufferView* pViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, StreamOutputBufferView*, void>)(lpVtbl[45]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, StreamOutputBufferView*, void>)(lpVtbl[45]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), StartSlot, NumViews, pViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.OMSetRenderTargets" />
@@ -423,7 +607,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(46)]
 	public void OMSetRenderTargets(uint NumRenderTargetDescriptors, CpuDescriptorHandle* pRenderTargetDescriptors, Bool32 RTsSingleHandleToDescriptorRange, CpuDescriptorHandle* pDepthStencilDescriptor)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, CpuDescriptorHandle*, Bool32, CpuDescriptorHandle*, void>)(lpVtbl[46]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumRenderTargetDescriptors, pRenderTargetDescriptors, RTsSingleHandleToDescriptorRange, pDepthStencilDescriptor);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, CpuDescriptorHandle*, Bool32, CpuDescriptorHandle*, void>)(lpVtbl[46]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumRenderTargetDescriptors, pRenderTargetDescriptors, RTsSingleHandleToDescriptorRange, pDepthStencilDescriptor);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearDepthStencilView" />
@@ -431,7 +619,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(47)]
 	public void ClearDepthStencilView(CpuDescriptorHandle DepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil, uint NumRects, Rect* pRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, CpuDescriptorHandle, ClearFlags, float, byte, uint, Rect*, void>)(lpVtbl[47]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), DepthStencilView, ClearFlags, Depth, Stencil, NumRects, pRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, CpuDescriptorHandle, ClearFlags, float, byte, uint, Rect*, void>)(lpVtbl[47]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), DepthStencilView, ClearFlags, Depth, Stencil, NumRects, pRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearRenderTargetView" />
@@ -439,7 +631,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(48)]
 	public void ClearRenderTargetView(CpuDescriptorHandle RenderTargetView, float* ColorRGBA, uint NumRects, Rect* pRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, CpuDescriptorHandle, float*, uint, Rect*, void>)(lpVtbl[48]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RenderTargetView, ColorRGBA, NumRects, pRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, CpuDescriptorHandle, float*, uint, Rect*, void>)(lpVtbl[48]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), RenderTargetView, ColorRGBA, NumRects, pRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearUnorderedAccessViewUint" />
@@ -447,7 +643,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(49)]
 	public void ClearUnorderedAccessViewUint(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, uint* Values, uint NumRects, Rect* pRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, uint*, uint, Rect*, void>)(lpVtbl[49]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, uint*, uint, Rect*, void>)(lpVtbl[49]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ClearUnorderedAccessViewFloat" />
@@ -455,7 +655,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(50)]
 	public void ClearUnorderedAccessViewFloat(GpuDescriptorHandle ViewGPUHandleInCurrentHeap, CpuDescriptorHandle ViewCPUHandle, ID3D12Resource* pResource, float* Values, uint NumRects, Rect* pRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, float*, uint, Rect*, void>)(lpVtbl[50]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, GpuDescriptorHandle, CpuDescriptorHandle, ID3D12Resource*, float*, uint, Rect*, void>)(lpVtbl[50]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), ViewGPUHandleInCurrentHeap, ViewCPUHandle, pResource, Values, NumRects, pRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.DiscardResource" />
@@ -463,7 +667,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(51)]
 	public void DiscardResource(ID3D12Resource* pResource, DiscardRegion* pRegion)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, DiscardRegion*, void>)(lpVtbl[51]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pResource, pRegion);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, DiscardRegion*, void>)(lpVtbl[51]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pResource, pRegion);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.BeginQuery" />
@@ -471,7 +679,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(52)]
 	public void BeginQuery(ID3D12QueryHeap* pQueryHeap, QueryType Type, uint Index)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12QueryHeap*, QueryType, uint, void>)(lpVtbl[52]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pQueryHeap, Type, Index);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12QueryHeap*, QueryType, uint, void>)(lpVtbl[52]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pQueryHeap, Type, Index);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.EndQuery" />
@@ -479,7 +691,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(53)]
 	public void EndQuery(ID3D12QueryHeap* pQueryHeap, QueryType Type, uint Index)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12QueryHeap*, QueryType, uint, void>)(lpVtbl[53]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pQueryHeap, Type, Index);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12QueryHeap*, QueryType, uint, void>)(lpVtbl[53]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pQueryHeap, Type, Index);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ResolveQueryData" />
@@ -487,7 +703,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(54)]
 	public void ResolveQueryData(ID3D12QueryHeap* pQueryHeap, QueryType Type, uint StartIndex, uint NumQueries, ID3D12Resource* pDestinationBuffer, ulong AlignedDestinationBufferOffset)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12QueryHeap*, QueryType, uint, uint, ID3D12Resource*, ulong, void>)(lpVtbl[54]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pQueryHeap, Type, StartIndex, NumQueries, pDestinationBuffer, AlignedDestinationBufferOffset);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12QueryHeap*, QueryType, uint, uint, ID3D12Resource*, ulong, void>)(lpVtbl[54]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pQueryHeap, Type, StartIndex, NumQueries, pDestinationBuffer, AlignedDestinationBufferOffset);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetPredication" />
@@ -495,7 +715,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(55)]
 	public void SetPredication(ID3D12Resource* pBuffer, ulong AlignedBufferOffset, PredicationOperation Operation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, PredicationOperation, void>)(lpVtbl[55]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pBuffer, AlignedBufferOffset, Operation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, PredicationOperation, void>)(lpVtbl[55]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pBuffer, AlignedBufferOffset, Operation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.SetMarker" />
@@ -503,7 +727,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(56)]
 	public void SetMarker(uint Metadata, void* pData, uint Size)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, void*, uint, void>)(lpVtbl[56]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Metadata, pData, Size);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, void*, uint, void>)(lpVtbl[56]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Metadata, pData, Size);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.BeginEvent" />
@@ -511,7 +739,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(57)]
 	public void BeginEvent(uint Metadata, void* pData, uint Size)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, void*, uint, void>)(lpVtbl[57]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Metadata, pData, Size);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, void*, uint, void>)(lpVtbl[57]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Metadata, pData, Size);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.EndEvent" />
@@ -519,7 +751,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(58)]
 	public void EndEvent()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, void>)(lpVtbl[58]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, void>)(lpVtbl[58]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList.ExecuteIndirect" />
@@ -527,7 +763,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(59)]
 	public void ExecuteIndirect(ID3D12CommandSignature* pCommandSignature, uint MaxCommandCount, ID3D12Resource* pArgumentBuffer, ulong ArgumentBufferOffset, ID3D12Resource* pCountBuffer, ulong CountBufferOffset)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12CommandSignature*, uint, ID3D12Resource*, ulong, ID3D12Resource*, ulong, void>)(lpVtbl[59]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pCommandSignature, MaxCommandCount, pArgumentBuffer, ArgumentBufferOffset, pCountBuffer, CountBufferOffset);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12CommandSignature*, uint, ID3D12Resource*, ulong, ID3D12Resource*, ulong, void>)(lpVtbl[59]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pCommandSignature, MaxCommandCount, pArgumentBuffer, ArgumentBufferOffset, pCountBuffer, CountBufferOffset);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT" />
@@ -535,7 +775,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(60)]
 	public void AtomicCopyBufferUINT(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUInt64* pDependentSubresourceRanges)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUInt64*, void>)(lpVtbl[60]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUInt64*, void>)(lpVtbl[60]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.AtomicCopyBufferUINT64" />
@@ -543,7 +787,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(61)]
 	public void AtomicCopyBufferUINT64(ID3D12Resource* pDstBuffer, ulong DstOffset, ID3D12Resource* pSrcBuffer, ulong SrcOffset, uint Dependencies, ID3D12Resource** ppDependentResources, SubresourceRangeUInt64* pDependentSubresourceRanges)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUInt64*, void>)(lpVtbl[61]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, ulong, ID3D12Resource*, ulong, uint, ID3D12Resource**, SubresourceRangeUInt64*, void>)(lpVtbl[61]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstBuffer, DstOffset, pSrcBuffer, SrcOffset, Dependencies, ppDependentResources, pDependentSubresourceRanges);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.OMSetDepthBounds" />
@@ -551,7 +799,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(62)]
 	public void OMSetDepthBounds(float Min, float Max)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, float, float, void>)(lpVtbl[62]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Min, Max);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, float, float, void>)(lpVtbl[62]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Min, Max);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.SetSamplePositions" />
@@ -559,7 +811,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(63)]
 	public void SetSamplePositions(uint NumSamplesPerPixel, uint NumPixels, SamplePosition* pSamplePositions)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, uint, SamplePosition*, void>)(lpVtbl[63]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumSamplesPerPixel, NumPixels, pSamplePositions);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, uint, SamplePosition*, void>)(lpVtbl[63]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumSamplesPerPixel, NumPixels, pSamplePositions);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.ResolveSubresourceRegion" />
@@ -567,7 +823,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(64)]
 	public void ResolveSubresourceRegion(ID3D12Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, ID3D12Resource* pSrcResource, uint SrcSubresource, Rect* pSrcRect, Graphics.Dxgi.Common.Format Format, ResolveMode ResolveMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, Rect*, Graphics.Dxgi.Common.Format, ResolveMode, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, uint, uint, uint, ID3D12Resource*, uint, Rect*, Graphics.Dxgi.Common.Format, ResolveMode, void>)(lpVtbl[64]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, pSrcResource, SrcSubresource, pSrcRect, Format, ResolveMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList1.SetViewInstanceMask" />
@@ -575,7 +835,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(65)]
 	public void SetViewInstanceMask(uint Mask)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, void>)(lpVtbl[65]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Mask);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, void>)(lpVtbl[65]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Mask);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList2.WriteBufferImmediate" />
@@ -583,7 +847,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(66)]
 	public void WriteBufferImmediate(uint Count, WriteBufferImmediateParameter* pParams, WriteBufferImmediateMode* pModes)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, WriteBufferImmediateParameter*, WriteBufferImmediateMode*, void>)(lpVtbl[66]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Count, pParams, pModes);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, WriteBufferImmediateParameter*, WriteBufferImmediateMode*, void>)(lpVtbl[66]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), Count, pParams, pModes);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList3.SetProtectedResourceSession" />
@@ -591,7 +859,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(67)]
 	public void SetProtectedResourceSession(ID3D12ProtectedResourceSession* pProtectedResourceSession)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12ProtectedResourceSession*, void>)(lpVtbl[67]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pProtectedResourceSession);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12ProtectedResourceSession*, void>)(lpVtbl[67]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pProtectedResourceSession);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.BeginRenderPass" />
@@ -599,7 +871,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(68)]
 	public void BeginRenderPass(uint NumRenderTargets, RenderPassRenderTargetDescription* pRenderTargets, RenderPassDepthStencilDescription* pDepthStencil, RenderPassFlags Flags)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, uint, RenderPassRenderTargetDescription*, RenderPassDepthStencilDescription*, RenderPassFlags, void>)(lpVtbl[68]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumRenderTargets, pRenderTargets, pDepthStencil, Flags);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, uint, RenderPassRenderTargetDescription*, RenderPassDepthStencilDescription*, RenderPassFlags, void>)(lpVtbl[68]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), NumRenderTargets, pRenderTargets, pDepthStencil, Flags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.EndRenderPass" />
@@ -607,7 +883,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(69)]
 	public void EndRenderPass()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, void>)(lpVtbl[69]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, void>)(lpVtbl[69]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.InitializeMetaCommand" />
@@ -615,7 +895,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(70)]
 	public void InitializeMetaCommand(ID3D12MetaCommand* pMetaCommand, void* pInitializationParametersData, nuint InitializationParametersDataSizeInBytes)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12MetaCommand*, void*, nuint, void>)(lpVtbl[70]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pMetaCommand, pInitializationParametersData, InitializationParametersDataSizeInBytes);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12MetaCommand*, void*, nuint, void>)(lpVtbl[70]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pMetaCommand, pInitializationParametersData, InitializationParametersDataSizeInBytes);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.ExecuteMetaCommand" />
@@ -623,7 +907,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(71)]
 	public void ExecuteMetaCommand(ID3D12MetaCommand* pMetaCommand, void* pExecutionParametersData, nuint ExecutionParametersDataSizeInBytes)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12MetaCommand*, void*, nuint, void>)(lpVtbl[71]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pMetaCommand, pExecutionParametersData, ExecutionParametersDataSizeInBytes);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12MetaCommand*, void*, nuint, void>)(lpVtbl[71]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pMetaCommand, pExecutionParametersData, ExecutionParametersDataSizeInBytes);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.BuildRaytracingAccelerationStructure" />
@@ -631,7 +919,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(72)]
 	public void BuildRaytracingAccelerationStructure(BuildRaytracingAccelerationStructureDescription* pDesc, uint NumPostbuildInfoDescs, RaytracingAccelerationStructurePostbuildInfoDescription* pPostbuildInfoDescs)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, BuildRaytracingAccelerationStructureDescription*, uint, RaytracingAccelerationStructurePostbuildInfoDescription*, void>)(lpVtbl[72]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDesc, NumPostbuildInfoDescs, pPostbuildInfoDescs);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, BuildRaytracingAccelerationStructureDescription*, uint, RaytracingAccelerationStructurePostbuildInfoDescription*, void>)(lpVtbl[72]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDesc, NumPostbuildInfoDescs, pPostbuildInfoDescs);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.EmitRaytracingAccelerationStructurePostbuildInfo" />
@@ -639,7 +931,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(73)]
 	public void EmitRaytracingAccelerationStructurePostbuildInfo(RaytracingAccelerationStructurePostbuildInfoDescription* pDesc, uint NumSourceAccelerationStructures, ulong* pSourceAccelerationStructureData)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, RaytracingAccelerationStructurePostbuildInfoDescription*, uint, ulong*, void>)(lpVtbl[73]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDesc, NumSourceAccelerationStructures, pSourceAccelerationStructureData);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, RaytracingAccelerationStructurePostbuildInfoDescription*, uint, ulong*, void>)(lpVtbl[73]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDesc, NumSourceAccelerationStructures, pSourceAccelerationStructureData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.CopyRaytracingAccelerationStructure" />
@@ -647,7 +943,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(74)]
 	public void CopyRaytracingAccelerationStructure(ulong DestAccelerationStructureData, ulong SourceAccelerationStructureData, RaytracingAccelerationStructureCopyMode Mode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ulong, ulong, RaytracingAccelerationStructureCopyMode, void>)(lpVtbl[74]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), DestAccelerationStructureData, SourceAccelerationStructureData, Mode);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ulong, ulong, RaytracingAccelerationStructureCopyMode, void>)(lpVtbl[74]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), DestAccelerationStructureData, SourceAccelerationStructureData, Mode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.SetPipelineState1" />
@@ -655,7 +955,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(75)]
 	public void SetPipelineState1(ID3D12StateObject* pStateObject)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12StateObject*, void>)(lpVtbl[75]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pStateObject);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12StateObject*, void>)(lpVtbl[75]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pStateObject);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12GraphicsCommandList4.DispatchRays" />
@@ -663,7 +967,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(76)]
 	public void DispatchRays(DispatchRaysDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, DispatchRaysDescription*, void>)(lpVtbl[76]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, DispatchRaysDescription*, void>)(lpVtbl[76]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5::RSSetShadingRate"]/*' />
@@ -671,7 +979,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(77)]
 	public void RSSetShadingRate(ShadingRate baseShadingRate, ShadingRateCombiner* combiners)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ShadingRate, ShadingRateCombiner*, void>)(lpVtbl[77]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), baseShadingRate, combiners);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ShadingRate, ShadingRateCombiner*, void>)(lpVtbl[77]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), baseShadingRate, combiners);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12GraphicsCommandList5::RSSetShadingRateImage"]/*' />
@@ -679,7 +991,11 @@ public unsafe partial struct ID3D12GraphicsCommandList5 : ID3D12GraphicsCommandL
 	[VtblIndex(78)]
 	public void RSSetShadingRateImage(ID3D12Resource* shadingRateImage)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D12GraphicsCommandList5*, ID3D12Resource*, void>)(lpVtbl[78]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), shadingRateImage);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D12GraphicsCommandList5*, ID3D12Resource*, void>)(lpVtbl[78]))((ID3D12GraphicsCommandList5*)Unsafe.AsPointer(ref this), shadingRateImage);
+#endif
 	}
 
 	public interface Interface : ID3D12GraphicsCommandList4.Interface

@@ -53,7 +53,11 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapLock*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapLock*, uint>)(lpVtbl[1]))((IWICBitmapLock*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, uint>)(lpVtbl[1]))((IWICBitmapLock*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapLock*, uint>)(lpVtbl[2]))((IWICBitmapLock*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, uint>)(lpVtbl[2]))((IWICBitmapLock*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetSize"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	[VtblIndex(3)]
 	public HResult GetSize(uint* puiWidth, uint* puiHeight)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapLock*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, uint*, uint*, int>)(lpVtbl[3]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetStride"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	[VtblIndex(4)]
 	public HResult GetStride(uint* pcbStride)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapLock*, uint*, int>)(lpVtbl[4]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pcbStride);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, uint*, int>)(lpVtbl[4]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pcbStride);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetDataPointer"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	[VtblIndex(5)]
 	public HResult GetDataPointer(uint* pcbBufferSize, byte** ppbData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapLock*, uint*, byte**, int>)(lpVtbl[5]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pcbBufferSize, ppbData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, uint*, byte**, int>)(lpVtbl[5]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pcbBufferSize, ppbData);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapLock::GetPixelFormat"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICBitmapLock : IWICBitmapLock.Interface, INativeG
 	[VtblIndex(6)]
 	public HResult GetPixelFormat(Guid* pPixelFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapLock*, Guid*, int>)(lpVtbl[6]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pPixelFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapLock*, Guid*, int>)(lpVtbl[6]))((IWICBitmapLock*)Unsafe.AsPointer(ref this), pPixelFormat);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

@@ -11,6 +11,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"r","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"g","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -27,6 +28,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"r","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"g","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -59,6 +61,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"format","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
 			,{"Name":"alphaMode","Type":{"Kind":"ApiRef","Name":"D2D1_ALPHA_MODE","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
@@ -73,6 +76,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -87,6 +91,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -101,6 +106,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -115,6 +121,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -130,6 +137,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"y","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -146,6 +154,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"left","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"top","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -162,6 +171,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"left","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"top","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -178,6 +188,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"width","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"height","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -192,6 +203,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"width","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"height","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -206,6 +218,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 		]
@@ -217,6 +230,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Struct","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"Anonymous2","Type":{"Kind":"ApiRef","Name":"_Anonymous2_e__Struct","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
@@ -230,6 +244,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"m11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"m12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -248,6 +263,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"_12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -270,6 +286,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 		]
@@ -281,6 +298,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"m","Type":{"Kind":"Array","Shape":{"Size":12},"Child":{"Kind":"Native","Name":"Single"}},"Attrs":[]}
@@ -293,6 +311,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"_12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -321,6 +340,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 		]
@@ -332,6 +352,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"m","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Single"}},"Attrs":[]}
@@ -344,6 +365,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"_12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -376,6 +398,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 		]
@@ -387,6 +410,7 @@
 				,"Kind":"Union"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
 					,{"Name":"m","Type":{"Kind":"Array","Shape":{"Size":20},"Child":{"Kind":"Native","Name":"Single"}},"Attrs":[]}
@@ -399,6 +423,7 @@
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
+						,"SizeField":""
 						,"Fields":[
 							{"Name":"_11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 							,{"Name":"_12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -463,6 +488,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"point1","Type":{"Kind":"ApiRef","Name":"D2D_POINT_2F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
 			,{"Name":"point2","Type":{"Kind":"ApiRef","Name":"D2D_POINT_2F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}

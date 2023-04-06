@@ -52,7 +52,11 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcBlobUtf16*, Guid*, void**, int>)(lpVtbl[0]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, Guid*, void**, int>)(lpVtbl[0]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -61,7 +65,11 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcBlobUtf16*, uint>)(lpVtbl[1]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, uint>)(lpVtbl[1]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -70,7 +78,11 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcBlobUtf16*, uint>)(lpVtbl[2]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, uint>)(lpVtbl[2]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDxcBlob.GetBufferPointer" />
@@ -78,7 +90,11 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	[VtblIndex(3)]
 	public void* GetBufferPointer()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcBlobUtf16*, void*>)(lpVtbl[3]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, void*>)(lpVtbl[3]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDxcBlob.GetBufferSize" />
@@ -86,7 +102,11 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	[VtblIndex(4)]
 	public nuint GetBufferSize()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcBlobUtf16*, nuint>)(lpVtbl[4]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, nuint>)(lpVtbl[4]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDxcBlobEncoding.GetEncoding" />
@@ -94,21 +114,33 @@ public unsafe partial struct IDxcBlobUtf16 : IDxcBlobUtf16.Interface, INativeGui
 	[VtblIndex(5)]
 	public HResult GetEncoding(Bool32* pKnown, DxcCp* pCodePage)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcBlobUtf16*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, Bool32*, DxcCp*, int>)(lpVtbl[5]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this), pKnown, pCodePage);
+#endif
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
 	public ushort* GetStringPointer()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcBlobUtf16*, ushort*>)(lpVtbl[6]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, ushort*>)(lpVtbl[6]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
 	public nuint GetStringLength()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDxcBlobUtf16*, nuint>)(lpVtbl[7]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDxcBlobUtf16*, nuint>)(lpVtbl[7]))((IDxcBlobUtf16*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IDxcBlobEncoding.Interface

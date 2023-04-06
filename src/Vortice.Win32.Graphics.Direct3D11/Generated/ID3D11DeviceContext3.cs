@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, uint>)(lpVtbl[1]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint>)(lpVtbl[1]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, uint>)(lpVtbl[2]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint>)(lpVtbl[2]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(3)]
 	public void GetDevice(ID3D11Device** ppDevice)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDevice);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDevice);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(4)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(5)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(6)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSSetConstantBuffers" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(7)]
 	public void VSSetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[7]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[7]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSSetShaderResources" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(8)]
 	public void PSSetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[8]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[8]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSSetShader" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(9)]
 	public void PSSetShader(ID3D11PixelShader* pPixelShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11PixelShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[9]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pPixelShader, ppClassInstances, NumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11PixelShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[9]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pPixelShader, ppClassInstances, NumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSSetSamplers" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(10)]
 	public void PSSetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[10]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[10]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSSetShader" />
@@ -143,7 +187,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(11)]
 	public void VSSetShader(ID3D11VertexShader* pVertexShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11VertexShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[11]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pVertexShader, ppClassInstances, NumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11VertexShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[11]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pVertexShader, ppClassInstances, NumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DrawIndexed" />
@@ -151,7 +199,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(12)]
 	public void DrawIndexed(uint IndexCount, uint StartIndexLocation, int BaseVertexLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, int, void>)(lpVtbl[12]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), IndexCount, StartIndexLocation, BaseVertexLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, int, void>)(lpVtbl[12]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), IndexCount, StartIndexLocation, BaseVertexLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Draw" />
@@ -159,7 +211,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(13)]
 	public void Draw(uint VertexCount, uint StartVertexLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, void>)(lpVtbl[13]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), VertexCount, StartVertexLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, void>)(lpVtbl[13]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), VertexCount, StartVertexLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Map" />
@@ -167,7 +223,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(14)]
 	public HResult Map(ID3D11Resource* pResource, uint Subresource, MapMode MapType, MapFlags MapFlags, MappedSubresource* pMappedResource)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, uint, MapMode, MapFlags, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, MapMode, MapFlags, MappedSubresource*, int>)(lpVtbl[14]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource, Subresource, MapType, MapFlags, pMappedResource);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Unmap" />
@@ -175,7 +235,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(15)]
 	public void Unmap(ID3D11Resource* pResource, uint Subresource)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, uint, void>)(lpVtbl[15]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource, Subresource);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, void>)(lpVtbl[15]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource, Subresource);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSSetConstantBuffers" />
@@ -183,7 +247,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(16)]
 	public void PSSetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[16]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[16]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IASetInputLayout" />
@@ -191,7 +259,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(17)]
 	public void IASetInputLayout(ID3D11InputLayout* pInputLayout)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11InputLayout*, void>)(lpVtbl[17]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pInputLayout);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11InputLayout*, void>)(lpVtbl[17]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pInputLayout);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IASetVertexBuffers" />
@@ -199,7 +271,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(18)]
 	public void IASetVertexBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppVertexBuffers, uint* pStrides, uint* pOffsets)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[18]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppVertexBuffers, pStrides, pOffsets);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[18]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppVertexBuffers, pStrides, pOffsets);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IASetIndexBuffer" />
@@ -207,7 +283,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(19)]
 	public void IASetIndexBuffer(ID3D11Buffer* pIndexBuffer, Graphics.Dxgi.Common.Format Format, uint Offset)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Buffer*, Graphics.Dxgi.Common.Format, uint, void>)(lpVtbl[19]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer*, Graphics.Dxgi.Common.Format, uint, void>)(lpVtbl[19]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DrawIndexedInstanced" />
@@ -215,7 +295,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(20)]
 	public void DrawIndexedInstanced(uint IndexCountPerInstance, uint InstanceCount, uint StartIndexLocation, int BaseVertexLocation, uint StartInstanceLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, uint, int, uint, void>)(lpVtbl[20]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), IndexCountPerInstance, InstanceCount, StartIndexLocation, BaseVertexLocation, StartInstanceLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, uint, int, uint, void>)(lpVtbl[20]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), IndexCountPerInstance, InstanceCount, StartIndexLocation, BaseVertexLocation, StartInstanceLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DrawInstanced" />
@@ -223,7 +307,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(21)]
 	public void DrawInstanced(uint VertexCountPerInstance, uint InstanceCount, uint StartVertexLocation, uint StartInstanceLocation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, uint, uint, void>)(lpVtbl[21]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), VertexCountPerInstance, InstanceCount, StartVertexLocation, StartInstanceLocation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, uint, uint, void>)(lpVtbl[21]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), VertexCountPerInstance, InstanceCount, StartVertexLocation, StartInstanceLocation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSSetConstantBuffers" />
@@ -231,7 +319,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(22)]
 	public void GSSetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[22]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[22]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSSetShader" />
@@ -239,7 +331,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(23)]
 	public void GSSetShader(ID3D11GeometryShader* pShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[23]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pShader, ppClassInstances, NumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11GeometryShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[23]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pShader, ppClassInstances, NumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IASetPrimitiveTopology" />
@@ -247,7 +343,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(24)]
 	public void IASetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology Topology)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, Graphics.Direct3D.PrimitiveTopology, void>)(lpVtbl[24]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), Topology);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Graphics.Direct3D.PrimitiveTopology, void>)(lpVtbl[24]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), Topology);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSSetShaderResources" />
@@ -255,7 +355,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(25)]
 	public void VSSetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[25]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[25]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSSetSamplers" />
@@ -263,7 +367,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(26)]
 	public void VSSetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[26]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[26]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Begin" />
@@ -271,7 +379,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(27)]
 	public void Begin(ID3D11Asynchronous* pAsync)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Asynchronous*, void>)(lpVtbl[27]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pAsync);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Asynchronous*, void>)(lpVtbl[27]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pAsync);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.End" />
@@ -279,7 +391,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(28)]
 	public void End(ID3D11Asynchronous* pAsync)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Asynchronous*, void>)(lpVtbl[28]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pAsync);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Asynchronous*, void>)(lpVtbl[28]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pAsync);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetData" />
@@ -287,7 +403,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(29)]
 	public HResult GetData(ID3D11Asynchronous* pAsync, void* pData, uint DataSize, uint GetDataFlags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Asynchronous*, void*, uint, uint, int>)(lpVtbl[29]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pAsync, pData, DataSize, GetDataFlags);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Asynchronous*, void*, uint, uint, int>)(lpVtbl[29]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pAsync, pData, DataSize, GetDataFlags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.SetPredication" />
@@ -295,7 +415,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(30)]
 	public void SetPredication(ID3D11Predicate* pPredicate, Bool32 PredicateValue)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Predicate*, Bool32, void>)(lpVtbl[30]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pPredicate, PredicateValue);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Predicate*, Bool32, void>)(lpVtbl[30]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pPredicate, PredicateValue);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSSetShaderResources" />
@@ -303,7 +427,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(31)]
 	public void GSSetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[31]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[31]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSSetSamplers" />
@@ -311,7 +439,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(32)]
 	public void GSSetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[32]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[32]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMSetRenderTargets" />
@@ -319,7 +451,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(33)]
 	public void OMSetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* pDepthStencilView)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, void>)(lpVtbl[33]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, pDepthStencilView);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, void>)(lpVtbl[33]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, pDepthStencilView);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMSetRenderTargetsAndUnorderedAccessViews" />
@@ -327,7 +463,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(34)]
 	public void OMSetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView* pDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews, uint* pUAVInitialCounts)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, uint, uint, ID3D11UnorderedAccessView**, uint*, void>)(lpVtbl[34]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, pDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews, pUAVInitialCounts);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView*, uint, uint, ID3D11UnorderedAccessView**, uint*, void>)(lpVtbl[34]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, pDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews, pUAVInitialCounts);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMSetBlendState" />
@@ -335,7 +475,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(35)]
 	public void OMSetBlendState(ID3D11BlendState* pBlendState = default, float* BlendFactor = null, uint SampleMask = 0xffffffff)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11BlendState*, float*, uint, void>)(lpVtbl[35]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pBlendState, BlendFactor, SampleMask);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11BlendState*, float*, uint, void>)(lpVtbl[35]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pBlendState, BlendFactor, SampleMask);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMSetDepthStencilState" />
@@ -343,7 +487,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(36)]
 	public void OMSetDepthStencilState(ID3D11DepthStencilState* pDepthStencilState, uint StencilRef)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11DepthStencilState*, uint, void>)(lpVtbl[36]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDepthStencilState, StencilRef);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DepthStencilState*, uint, void>)(lpVtbl[36]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDepthStencilState, StencilRef);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.SOSetTargets" />
@@ -351,7 +499,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(37)]
 	public void SOSetTargets(uint NumBuffers, ID3D11Buffer** ppSOTargets, uint* pOffsets)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, ID3D11Buffer**, uint*, void>)(lpVtbl[37]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumBuffers, ppSOTargets, pOffsets);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11Buffer**, uint*, void>)(lpVtbl[37]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumBuffers, ppSOTargets, pOffsets);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DrawAuto" />
@@ -359,7 +511,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(38)]
 	public void DrawAuto()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, void>)(lpVtbl[38]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, void>)(lpVtbl[38]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DrawIndexedInstancedIndirect" />
@@ -367,7 +523,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(39)]
 	public void DrawIndexedInstancedIndirect(ID3D11Buffer* pBufferForArgs, uint AlignedByteOffsetForArgs)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Buffer*, uint, void>)(lpVtbl[39]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pBufferForArgs, AlignedByteOffsetForArgs);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer*, uint, void>)(lpVtbl[39]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pBufferForArgs, AlignedByteOffsetForArgs);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DrawInstancedIndirect" />
@@ -375,7 +535,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(40)]
 	public void DrawInstancedIndirect(ID3D11Buffer* pBufferForArgs, uint AlignedByteOffsetForArgs)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Buffer*, uint, void>)(lpVtbl[40]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pBufferForArgs, AlignedByteOffsetForArgs);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer*, uint, void>)(lpVtbl[40]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pBufferForArgs, AlignedByteOffsetForArgs);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Dispatch" />
@@ -383,7 +547,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(41)]
 	public void Dispatch(uint ThreadGroupCountX, uint ThreadGroupCountY, uint ThreadGroupCountZ)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, uint, void>)(lpVtbl[41]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ThreadGroupCountX, ThreadGroupCountY, ThreadGroupCountZ);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, uint, void>)(lpVtbl[41]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ThreadGroupCountX, ThreadGroupCountY, ThreadGroupCountZ);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DispatchIndirect" />
@@ -391,7 +559,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(42)]
 	public void DispatchIndirect(ID3D11Buffer* pBufferForArgs, uint AlignedByteOffsetForArgs)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Buffer*, uint, void>)(lpVtbl[42]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pBufferForArgs, AlignedByteOffsetForArgs);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer*, uint, void>)(lpVtbl[42]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pBufferForArgs, AlignedByteOffsetForArgs);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSSetState" />
@@ -399,7 +571,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(43)]
 	public void RSSetState(ID3D11RasterizerState* pRasterizerState)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11RasterizerState*, void>)(lpVtbl[43]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pRasterizerState);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11RasterizerState*, void>)(lpVtbl[43]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pRasterizerState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSSetViewports" />
@@ -407,7 +583,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(44)]
 	public void RSSetViewports(uint NumViewports, Viewport* pViewports)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, Viewport*, void>)(lpVtbl[44]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, Viewport*, void>)(lpVtbl[44]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumViewports, pViewports);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSSetScissorRects" />
@@ -415,7 +595,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(45)]
 	public void RSSetScissorRects(uint NumRects, Rect* pRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, Rect*, void>)(lpVtbl[45]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumRects, pRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, Rect*, void>)(lpVtbl[45]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumRects, pRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CopySubresourceRegion" />
@@ -423,7 +607,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(46)]
 	public void CopySubresourceRegion(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, Box*, void>)(lpVtbl[46]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, DstZ, pSrcResource, SrcSubresource, pSrcBox);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, Box*, void>)(lpVtbl[46]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, DstZ, pSrcResource, SrcSubresource, pSrcBox);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CopyResource" />
@@ -431,7 +619,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(47)]
 	public void CopyResource(ID3D11Resource* pDstResource, ID3D11Resource* pSrcResource)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, ID3D11Resource*, void>)(lpVtbl[47]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, pSrcResource);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, ID3D11Resource*, void>)(lpVtbl[47]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, pSrcResource);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.UpdateSubresource" />
@@ -439,7 +631,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(48)]
 	public void UpdateSubresource(ID3D11Resource* pDstResource, uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, uint, Box*, void*, uint, uint, void>)(lpVtbl[48]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, Box*, void*, uint, uint, void>)(lpVtbl[48]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CopyStructureCount" />
@@ -447,7 +643,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(49)]
 	public void CopyStructureCount(ID3D11Buffer* pDstBuffer, uint DstAlignedByteOffset, ID3D11UnorderedAccessView* pSrcView)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Buffer*, uint, ID3D11UnorderedAccessView*, void>)(lpVtbl[49]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstBuffer, DstAlignedByteOffset, pSrcView);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer*, uint, ID3D11UnorderedAccessView*, void>)(lpVtbl[49]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstBuffer, DstAlignedByteOffset, pSrcView);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.ClearRenderTargetView" />
@@ -455,7 +655,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(50)]
 	public void ClearRenderTargetView(ID3D11RenderTargetView* pRenderTargetView, float* ColorRGBA)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11RenderTargetView*, float*, void>)(lpVtbl[50]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pRenderTargetView, ColorRGBA);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11RenderTargetView*, float*, void>)(lpVtbl[50]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pRenderTargetView, ColorRGBA);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.ClearUnorderedAccessViewUint" />
@@ -463,7 +667,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(51)]
 	public void ClearUnorderedAccessViewUint(ID3D11UnorderedAccessView* pUnorderedAccessView, uint* Values)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11UnorderedAccessView*, uint*, void>)(lpVtbl[51]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pUnorderedAccessView, Values);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11UnorderedAccessView*, uint*, void>)(lpVtbl[51]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pUnorderedAccessView, Values);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.ClearUnorderedAccessViewFloat" />
@@ -471,7 +679,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(52)]
 	public void ClearUnorderedAccessViewFloat(ID3D11UnorderedAccessView* pUnorderedAccessView, float* Values)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11UnorderedAccessView*, float*, void>)(lpVtbl[52]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pUnorderedAccessView, Values);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11UnorderedAccessView*, float*, void>)(lpVtbl[52]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pUnorderedAccessView, Values);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.ClearDepthStencilView" />
@@ -479,7 +691,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(53)]
 	public void ClearDepthStencilView(ID3D11DepthStencilView* pDepthStencilView, ClearFlags ClearFlags, float Depth, byte Stencil)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11DepthStencilView*, ClearFlags, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DepthStencilView*, ClearFlags, float, byte, void>)(lpVtbl[53]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDepthStencilView, ClearFlags, Depth, Stencil);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GenerateMips" />
@@ -487,7 +703,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(54)]
 	public void GenerateMips(ID3D11ShaderResourceView* pShaderResourceView)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11ShaderResourceView*, void>)(lpVtbl[54]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pShaderResourceView);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11ShaderResourceView*, void>)(lpVtbl[54]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pShaderResourceView);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.SetResourceMinLOD" />
@@ -495,7 +715,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(55)]
 	public void SetResourceMinLOD(ID3D11Resource* pResource, float MinLOD)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, float, void>)(lpVtbl[55]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource, MinLOD);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, float, void>)(lpVtbl[55]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource, MinLOD);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetResourceMinLOD" />
@@ -503,7 +727,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(56)]
 	public float GetResourceMinLOD(ID3D11Resource* pResource)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, float>)(lpVtbl[56]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, float>)(lpVtbl[56]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.ResolveSubresource" />
@@ -511,7 +739,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(57)]
 	public void ResolveSubresource(ID3D11Resource* pDstResource, uint DstSubresource, ID3D11Resource* pSrcResource, uint SrcSubresource, Graphics.Dxgi.Common.Format Format)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, uint, ID3D11Resource*, uint, Graphics.Dxgi.Common.Format, void>)(lpVtbl[57]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, ID3D11Resource*, uint, Graphics.Dxgi.Common.Format, void>)(lpVtbl[57]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pSrcResource, SrcSubresource, Format);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.ExecuteCommandList" />
@@ -519,7 +751,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(58)]
 	public void ExecuteCommandList(ID3D11CommandList* pCommandList, Bool32 RestoreContextState)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11CommandList*, Bool32, void>)(lpVtbl[58]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pCommandList, RestoreContextState);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11CommandList*, Bool32, void>)(lpVtbl[58]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pCommandList, RestoreContextState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSSetShaderResources" />
@@ -527,7 +763,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(59)]
 	public void HSSetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[59]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[59]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSSetShader" />
@@ -535,7 +775,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(60)]
 	public void HSSetShader(ID3D11HullShader* pHullShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11HullShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[60]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pHullShader, ppClassInstances, NumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11HullShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[60]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pHullShader, ppClassInstances, NumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSSetSamplers" />
@@ -543,7 +787,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(61)]
 	public void HSSetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[61]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[61]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSSetConstantBuffers" />
@@ -551,7 +799,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(62)]
 	public void HSSetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[62]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[62]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSSetShaderResources" />
@@ -559,7 +811,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(63)]
 	public void DSSetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[63]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[63]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSSetShader" />
@@ -567,7 +823,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(64)]
 	public void DSSetShader(ID3D11DomainShader* pDomainShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11DomainShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[64]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDomainShader, ppClassInstances, NumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DomainShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[64]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDomainShader, ppClassInstances, NumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSSetSamplers" />
@@ -575,7 +835,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(65)]
 	public void DSSetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[65]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[65]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSSetConstantBuffers" />
@@ -583,7 +847,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(66)]
 	public void DSSetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[66]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[66]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSSetShaderResources" />
@@ -591,7 +859,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(67)]
 	public void CSSetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[67]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[67]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSSetUnorderedAccessViews" />
@@ -599,7 +871,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(68)]
 	public void CSSetUnorderedAccessViews(uint StartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews, uint* pUAVInitialCounts)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11UnorderedAccessView**, uint*, void>)(lpVtbl[68]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumUAVs, ppUnorderedAccessViews, pUAVInitialCounts);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11UnorderedAccessView**, uint*, void>)(lpVtbl[68]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumUAVs, ppUnorderedAccessViews, pUAVInitialCounts);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSSetShader" />
@@ -607,7 +883,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(69)]
 	public void CSSetShader(ID3D11ComputeShader* pComputeShader = null, ID3D11ClassInstance** ppClassInstances = null, uint NumClassInstances = 0)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[69]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pComputeShader, ppClassInstances, NumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11ComputeShader*, ID3D11ClassInstance**, uint, void>)(lpVtbl[69]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pComputeShader, ppClassInstances, NumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSSetSamplers" />
@@ -615,7 +895,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(70)]
 	public void CSSetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[70]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[70]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSSetConstantBuffers" />
@@ -623,7 +907,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(71)]
 	public void CSSetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[71]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[71]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetConstantBuffers" />
@@ -631,7 +919,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(72)]
 	public void VSGetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[72]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[72]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetShaderResources" />
@@ -639,7 +931,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(73)]
 	public void PSGetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[73]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[73]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetShader" />
@@ -647,7 +943,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(74)]
 	public void PSGetShader(ID3D11PixelShader** ppPixelShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11PixelShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[74]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11PixelShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[74]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppPixelShader, ppClassInstances, pNumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetSamplers" />
@@ -655,7 +955,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(75)]
 	public void PSGetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[75]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[75]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetShader" />
@@ -663,7 +967,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(76)]
 	public void VSGetShader(ID3D11VertexShader** ppVertexShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11VertexShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[76]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11VertexShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[76]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppVertexShader, ppClassInstances, pNumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.PSGetConstantBuffers" />
@@ -671,7 +979,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(77)]
 	public void PSGetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[77]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[77]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetInputLayout" />
@@ -679,7 +991,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(78)]
 	public void IAGetInputLayout(ID3D11InputLayout** ppInputLayout)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11InputLayout**, void>)(lpVtbl[78]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppInputLayout);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11InputLayout**, void>)(lpVtbl[78]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppInputLayout);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetVertexBuffers" />
@@ -687,7 +1003,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(79)]
 	public void IAGetVertexBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppVertexBuffers, uint* pStrides, uint* pOffsets)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[79]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppVertexBuffers, pStrides, pOffsets);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[79]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppVertexBuffers, pStrides, pOffsets);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetIndexBuffer" />
@@ -695,7 +1015,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(80)]
 	public void IAGetIndexBuffer(ID3D11Buffer** pIndexBuffer, Graphics.Dxgi.Common.Format* Format, uint* Offset)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Buffer**, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[80]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer**, Graphics.Dxgi.Common.Format*, uint*, void>)(lpVtbl[80]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pIndexBuffer, Format, Offset);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetConstantBuffers" />
@@ -703,7 +1027,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(81)]
 	public void GSGetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[81]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[81]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShader" />
@@ -711,7 +1039,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(82)]
 	public void GSGetShader(ID3D11GeometryShader** ppGeometryShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11GeometryShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[82]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11GeometryShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[82]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppGeometryShader, ppClassInstances, pNumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.IAGetPrimitiveTopology" />
@@ -719,7 +1051,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(83)]
 	public void IAGetPrimitiveTopology(Graphics.Direct3D.PrimitiveTopology* pTopology)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, Graphics.Direct3D.PrimitiveTopology*, void>)(lpVtbl[83]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTopology);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Graphics.Direct3D.PrimitiveTopology*, void>)(lpVtbl[83]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTopology);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetShaderResources" />
@@ -727,7 +1063,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(84)]
 	public void VSGetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[84]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[84]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.VSGetSamplers" />
@@ -735,7 +1075,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(85)]
 	public void VSGetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[85]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[85]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetPredication" />
@@ -743,7 +1087,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(86)]
 	public void GetPredication(ID3D11Predicate** ppPredicate, Bool32* pPredicateValue)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Predicate**, Bool32*, void>)(lpVtbl[86]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Predicate**, Bool32*, void>)(lpVtbl[86]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppPredicate, pPredicateValue);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetShaderResources" />
@@ -751,7 +1099,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(87)]
 	public void GSGetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[87]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[87]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GSGetSamplers" />
@@ -759,7 +1111,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(88)]
 	public void GSGetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[88]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[88]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargets" />
@@ -767,7 +1123,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(89)]
 	public void OMGetRenderTargets(uint NumViews, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, void>)(lpVtbl[89]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, void>)(lpVtbl[89]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumViews, ppRenderTargetViews, ppDepthStencilView);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetRenderTargetsAndUnorderedAccessViews" />
@@ -775,7 +1135,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(90)]
 	public void OMGetRenderTargetsAndUnorderedAccessViews(uint NumRTVs, ID3D11RenderTargetView** ppRenderTargetViews, ID3D11DepthStencilView** ppDepthStencilView, uint UAVStartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[90]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11RenderTargetView**, ID3D11DepthStencilView**, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[90]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumRTVs, ppRenderTargetViews, ppDepthStencilView, UAVStartSlot, NumUAVs, ppUnorderedAccessViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetBlendState" />
@@ -783,7 +1147,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(91)]
 	public void OMGetBlendState(ID3D11BlendState** ppBlendState, float* BlendFactor, uint* pSampleMask)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11BlendState**, float*, uint*, void>)(lpVtbl[91]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11BlendState**, float*, uint*, void>)(lpVtbl[91]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppBlendState, BlendFactor, pSampleMask);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.OMGetDepthStencilState" />
@@ -791,7 +1159,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(92)]
 	public void OMGetDepthStencilState(ID3D11DepthStencilState** ppDepthStencilState, uint* pStencilRef)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11DepthStencilState**, uint*, void>)(lpVtbl[92]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DepthStencilState**, uint*, void>)(lpVtbl[92]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDepthStencilState, pStencilRef);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.SOGetTargets" />
@@ -799,7 +1171,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(93)]
 	public void SOGetTargets(uint NumBuffers, ID3D11Buffer** ppSOTargets)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, ID3D11Buffer**, void>)(lpVtbl[93]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumBuffers, ppSOTargets);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, ID3D11Buffer**, void>)(lpVtbl[93]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), NumBuffers, ppSOTargets);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetState" />
@@ -807,7 +1183,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(94)]
 	public void RSGetState(ID3D11RasterizerState** ppRasterizerState)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11RasterizerState**, void>)(lpVtbl[94]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppRasterizerState);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11RasterizerState**, void>)(lpVtbl[94]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppRasterizerState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetViewports" />
@@ -815,7 +1195,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(95)]
 	public void RSGetViewports(uint* pNumViewports, Viewport* pViewports)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint*, Viewport*, void>)(lpVtbl[95]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pNumViewports, pViewports);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint*, Viewport*, void>)(lpVtbl[95]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pNumViewports, pViewports);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.RSGetScissorRects" />
@@ -823,7 +1207,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(96)]
 	public void RSGetScissorRects(uint* pNumRects, Rect* pRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint*, Rect*, void>)(lpVtbl[96]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pNumRects, pRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint*, Rect*, void>)(lpVtbl[96]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pNumRects, pRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetShaderResources" />
@@ -831,7 +1219,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(97)]
 	public void HSGetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[97]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[97]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetShader" />
@@ -839,7 +1231,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(98)]
 	public void HSGetShader(ID3D11HullShader** ppHullShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11HullShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[98]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11HullShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[98]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppHullShader, ppClassInstances, pNumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetSamplers" />
@@ -847,7 +1243,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(99)]
 	public void HSGetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[99]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[99]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.HSGetConstantBuffers" />
@@ -855,7 +1255,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(100)]
 	public void HSGetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[100]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[100]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetShaderResources" />
@@ -863,7 +1267,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(101)]
 	public void DSGetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[101]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[101]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetShader" />
@@ -871,7 +1279,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(102)]
 	public void DSGetShader(ID3D11DomainShader** ppDomainShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11DomainShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[102]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DomainShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[102]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppDomainShader, ppClassInstances, pNumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetSamplers" />
@@ -879,7 +1291,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(103)]
 	public void DSGetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[103]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[103]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.DSGetConstantBuffers" />
@@ -887,7 +1303,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(104)]
 	public void DSGetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[104]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[104]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetShaderResources" />
@@ -895,7 +1315,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(105)]
 	public void CSGetShaderResources(uint StartSlot, uint NumViews, ID3D11ShaderResourceView** ppShaderResourceViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[105]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11ShaderResourceView**, void>)(lpVtbl[105]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumViews, ppShaderResourceViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetUnorderedAccessViews" />
@@ -903,7 +1327,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(106)]
 	public void CSGetUnorderedAccessViews(uint StartSlot, uint NumUAVs, ID3D11UnorderedAccessView** ppUnorderedAccessViews)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[106]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumUAVs, ppUnorderedAccessViews);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11UnorderedAccessView**, void>)(lpVtbl[106]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumUAVs, ppUnorderedAccessViews);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetShader" />
@@ -911,7 +1339,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(107)]
 	public void CSGetShader(ID3D11ComputeShader** ppComputeShader, ID3D11ClassInstance** ppClassInstances, uint* pNumClassInstances)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11ComputeShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[107]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11ComputeShader**, ID3D11ClassInstance**, uint*, void>)(lpVtbl[107]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ppComputeShader, ppClassInstances, pNumClassInstances);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetSamplers" />
@@ -919,7 +1351,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(108)]
 	public void CSGetSamplers(uint StartSlot, uint NumSamplers, ID3D11SamplerState** ppSamplers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[108]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11SamplerState**, void>)(lpVtbl[108]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumSamplers, ppSamplers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.CSGetConstantBuffers" />
@@ -927,7 +1363,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(109)]
 	public void CSGetConstantBuffers(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[109]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, void>)(lpVtbl[109]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.ClearState" />
@@ -935,7 +1375,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(110)]
 	public void ClearState()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, void>)(lpVtbl[110]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, void>)(lpVtbl[110]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.Flush" />
@@ -943,7 +1387,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(111)]
 	public void Flush()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, void>)(lpVtbl[111]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, void>)(lpVtbl[111]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetType" />
@@ -951,7 +1399,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(112)]
 	public new DeviceContextType GetType()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, DeviceContextType>)(lpVtbl[112]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, DeviceContextType>)(lpVtbl[112]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.GetContextFlags" />
@@ -959,7 +1411,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(113)]
 	public uint GetContextFlags()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, uint>)(lpVtbl[113]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint>)(lpVtbl[113]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext.FinishCommandList" />
@@ -967,7 +1423,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(114)]
 	public HResult FinishCommandList(Bool32 RestoreDeferredContextState, ID3D11CommandList** ppCommandList)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, Bool32, ID3D11CommandList**, int>)(lpVtbl[114]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), RestoreDeferredContextState, ppCommandList);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Bool32, ID3D11CommandList**, int>)(lpVtbl[114]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), RestoreDeferredContextState, ppCommandList);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.CopySubresourceRegion1" />
@@ -975,7 +1435,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(115)]
 	public void CopySubresourceRegion1(ID3D11Resource* pDstResource, uint DstSubresource, uint DstX, uint DstY, uint DstZ, ID3D11Resource* pSrcResource, uint SrcSubresource, Box* pSrcBox, uint CopyFlags)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, Box*, uint, void>)(lpVtbl[115]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, DstZ, pSrcResource, SrcSubresource, pSrcBox, CopyFlags);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, uint, uint, uint, ID3D11Resource*, uint, Box*, uint, void>)(lpVtbl[115]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, DstX, DstY, DstZ, pSrcResource, SrcSubresource, pSrcBox, CopyFlags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.UpdateSubresource1" />
@@ -983,7 +1447,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(116)]
 	public void UpdateSubresource1(ID3D11Resource* pDstResource, uint DstSubresource, Box* pDstBox, void* pSrcData, uint SrcRowPitch, uint SrcDepthPitch, uint CopyFlags)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, uint, Box*, void*, uint, uint, uint, void>)(lpVtbl[116]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch, CopyFlags);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, Box*, void*, uint, uint, uint, void>)(lpVtbl[116]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDstResource, DstSubresource, pDstBox, pSrcData, SrcRowPitch, SrcDepthPitch, CopyFlags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.DiscardResource" />
@@ -991,7 +1459,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(117)]
 	public void DiscardResource(ID3D11Resource* pResource)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, void>)(lpVtbl[117]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, void>)(lpVtbl[117]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResource);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.DiscardView" />
@@ -999,7 +1471,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(118)]
 	public void DiscardView(ID3D11View* pResourceView)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11View*, void>)(lpVtbl[118]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResourceView);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11View*, void>)(lpVtbl[118]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResourceView);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.VSSetConstantBuffers1" />
@@ -1007,7 +1483,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(119)]
 	public void VSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[119]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[119]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.HSSetConstantBuffers1" />
@@ -1015,7 +1495,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(120)]
 	public void HSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[120]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[120]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.DSSetConstantBuffers1" />
@@ -1023,7 +1507,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(121)]
 	public void DSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[121]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[121]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.GSSetConstantBuffers1" />
@@ -1031,7 +1519,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(122)]
 	public void GSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[122]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[122]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.PSSetConstantBuffers1" />
@@ -1039,7 +1531,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(123)]
 	public void PSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[123]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[123]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.CSSetConstantBuffers1" />
@@ -1047,7 +1543,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(124)]
 	public void CSSetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[124]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[124]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.VSGetConstantBuffers1" />
@@ -1055,7 +1555,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(125)]
 	public void VSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[125]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[125]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.HSGetConstantBuffers1" />
@@ -1063,7 +1567,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(126)]
 	public void HSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[126]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[126]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.DSGetConstantBuffers1" />
@@ -1071,7 +1579,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(127)]
 	public void DSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[127]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[127]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.GSGetConstantBuffers1" />
@@ -1079,7 +1591,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(128)]
 	public void GSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[128]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[128]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.PSGetConstantBuffers1" />
@@ -1087,7 +1603,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(129)]
 	public void PSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[129]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[129]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.CSGetConstantBuffers1" />
@@ -1095,7 +1615,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(130)]
 	public void CSGetConstantBuffers1(uint StartSlot, uint NumBuffers, ID3D11Buffer** ppConstantBuffers, uint* pFirstConstant, uint* pNumConstants)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[130]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, uint, uint, ID3D11Buffer**, uint*, uint*, void>)(lpVtbl[130]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), StartSlot, NumBuffers, ppConstantBuffers, pFirstConstant, pNumConstants);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.SwapDeviceContextState" />
@@ -1103,7 +1627,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(131)]
 	public void SwapDeviceContextState(ID3DDeviceContextState* pState, ID3DDeviceContextState** ppPreviousState)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3DDeviceContextState*, ID3DDeviceContextState**, void>)(lpVtbl[131]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3DDeviceContextState*, ID3DDeviceContextState**, void>)(lpVtbl[131]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pState, ppPreviousState);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.ClearView" />
@@ -1111,7 +1639,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(132)]
 	public void ClearView(ID3D11View* pView, float* Color, Rect* pRect, uint NumRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11View*, float*, Rect*, uint, void>)(lpVtbl[132]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pView, Color, pRect, NumRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11View*, float*, Rect*, uint, void>)(lpVtbl[132]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pView, Color, pRect, NumRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext1.DiscardView1" />
@@ -1119,7 +1651,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(133)]
 	public void DiscardView1(ID3D11View* pResourceView, Rect* pRects, uint NumRects)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11View*, Rect*, uint, void>)(lpVtbl[133]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResourceView, pRects, NumRects);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11View*, Rect*, uint, void>)(lpVtbl[133]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pResourceView, pRects, NumRects);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.UpdateTileMappings" />
@@ -1127,7 +1663,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(134)]
 	public HResult UpdateTileMappings(ID3D11Resource* pTiledResource, uint NumTiledResourceRegions, TiledResourceCoordinate* pTiledResourceRegionStartCoordinates, TileRegionSize* pTiledResourceRegionSizes, ID3D11Buffer* pTilePool, uint NumRanges, uint* pRangeFlags, uint* pTilePoolStartOffsets, uint* pRangeTileCounts, uint Flags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, uint, TiledResourceCoordinate*, TileRegionSize*, ID3D11Buffer*, uint, uint*, uint*, uint*, uint, int>)(lpVtbl[134]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTiledResource, NumTiledResourceRegions, pTiledResourceRegionStartCoordinates, pTiledResourceRegionSizes, pTilePool, NumRanges, pRangeFlags, pTilePoolStartOffsets, pRangeTileCounts, Flags);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, uint, TiledResourceCoordinate*, TileRegionSize*, ID3D11Buffer*, uint, uint*, uint*, uint*, uint, int>)(lpVtbl[134]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTiledResource, NumTiledResourceRegions, pTiledResourceRegionStartCoordinates, pTiledResourceRegionSizes, pTilePool, NumRanges, pRangeFlags, pTilePoolStartOffsets, pRangeTileCounts, Flags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.CopyTileMappings" />
@@ -1135,7 +1675,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(135)]
 	public HResult CopyTileMappings(ID3D11Resource* pDestTiledResource, TiledResourceCoordinate* pDestRegionStartCoordinate, ID3D11Resource* pSourceTiledResource, TiledResourceCoordinate* pSourceRegionStartCoordinate, TileRegionSize* pTileRegionSize, uint Flags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, TiledResourceCoordinate*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, uint, int>)(lpVtbl[135]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDestTiledResource, pDestRegionStartCoordinate, pSourceTiledResource, pSourceRegionStartCoordinate, pTileRegionSize, Flags);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, TiledResourceCoordinate*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, uint, int>)(lpVtbl[135]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDestTiledResource, pDestRegionStartCoordinate, pSourceTiledResource, pSourceRegionStartCoordinate, pTileRegionSize, Flags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.CopyTiles" />
@@ -1143,7 +1687,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(136)]
 	public void CopyTiles(ID3D11Resource* pTiledResource, TiledResourceCoordinate* pTileRegionStartCoordinate, TileRegionSize* pTileRegionSize, ID3D11Buffer* pBuffer, ulong BufferStartOffsetInBytes, uint Flags)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, ID3D11Buffer*, ulong, uint, void>)(lpVtbl[136]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, ID3D11Buffer*, ulong, uint, void>)(lpVtbl[136]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTiledResource, pTileRegionStartCoordinate, pTileRegionSize, pBuffer, BufferStartOffsetInBytes, Flags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.UpdateTiles" />
@@ -1151,7 +1699,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(137)]
 	public void UpdateTiles(ID3D11Resource* pDestTiledResource, TiledResourceCoordinate* pDestTileRegionStartCoordinate, TileRegionSize* pDestTileRegionSize, void* pSourceTileData, uint Flags)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, void*, uint, void>)(lpVtbl[137]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDestTiledResource, pDestTileRegionStartCoordinate, pDestTileRegionSize, pSourceTileData, Flags);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Resource*, TiledResourceCoordinate*, TileRegionSize*, void*, uint, void>)(lpVtbl[137]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pDestTiledResource, pDestTileRegionStartCoordinate, pDestTileRegionSize, pSourceTileData, Flags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.ResizeTilePool" />
@@ -1159,7 +1711,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(138)]
 	public HResult ResizeTilePool(ID3D11Buffer* pTilePool, ulong NewSizeInBytes)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11Buffer*, ulong, int>)(lpVtbl[138]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTilePool, NewSizeInBytes);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11Buffer*, ulong, int>)(lpVtbl[138]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTilePool, NewSizeInBytes);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.TiledResourceBarrier" />
@@ -1167,7 +1723,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(139)]
 	public void TiledResourceBarrier(ID3D11DeviceChild* pTiledResourceOrViewAccessBeforeBarrier, ID3D11DeviceChild* pTiledResourceOrViewAccessAfterBarrier)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ID3D11DeviceChild*, ID3D11DeviceChild*, void>)(lpVtbl[139]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTiledResourceOrViewAccessBeforeBarrier, pTiledResourceOrViewAccessAfterBarrier);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ID3D11DeviceChild*, ID3D11DeviceChild*, void>)(lpVtbl[139]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pTiledResourceOrViewAccessBeforeBarrier, pTiledResourceOrViewAccessAfterBarrier);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.IsAnnotationEnabled" />
@@ -1175,7 +1735,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(140)]
 	public Bool32 IsAnnotationEnabled()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11DeviceContext3*, Bool32>)(lpVtbl[140]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Bool32>)(lpVtbl[140]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.SetMarkerInt" />
@@ -1183,7 +1747,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(141)]
 	public void SetMarkerInt(ushort* pLabel, int Data)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ushort*, int, void>)(lpVtbl[141]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pLabel, Data);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ushort*, int, void>)(lpVtbl[141]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pLabel, Data);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.BeginEventInt" />
@@ -1191,7 +1759,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(142)]
 	public void BeginEventInt(ushort* pLabel, int Data)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ushort*, int, void>)(lpVtbl[142]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pLabel, Data);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ushort*, int, void>)(lpVtbl[142]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pLabel, Data);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.EndEvent" />
@@ -1199,7 +1771,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(143)]
 	public void EndEvent()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, void>)(lpVtbl[143]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, void>)(lpVtbl[143]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::Flush1"]/*' />
@@ -1207,7 +1783,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(144)]
 	public void Flush1(ContextType ContextType, Handle hEvent)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, ContextType, Handle, void>)(lpVtbl[144]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ContextType, hEvent);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, ContextType, Handle, void>)(lpVtbl[144]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), ContextType, hEvent);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::SetHardwareProtectionState"]/*' />
@@ -1215,7 +1795,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(145)]
 	public void SetHardwareProtectionState(Bool32 HwProtectionEnable)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, Bool32, void>)(lpVtbl[145]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), HwProtectionEnable);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Bool32, void>)(lpVtbl[145]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), HwProtectionEnable);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext3::GetHardwareProtectionState"]/*' />
@@ -1223,7 +1807,11 @@ public unsafe partial struct ID3D11DeviceContext3 : ID3D11DeviceContext3.Interfa
 	[VtblIndex(146)]
 	public void GetHardwareProtectionState(Bool32* pHwProtectionEnable)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11DeviceContext3*, Bool32*, void>)(lpVtbl[146]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pHwProtectionEnable);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11DeviceContext3*, Bool32*, void>)(lpVtbl[146]))((ID3D11DeviceContext3*)Unsafe.AsPointer(ref this), pHwProtectionEnable);
+#endif
 	}
 
 	public interface Interface : ID3D11DeviceContext2.Interface

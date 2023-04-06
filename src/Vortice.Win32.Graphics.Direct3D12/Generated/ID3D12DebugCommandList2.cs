@@ -53,7 +53,11 @@ public unsafe partial struct ID3D12DebugCommandList2 : ID3D12DebugCommandList2.I
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugCommandList2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D12DebugCommandList2 : ID3D12DebugCommandList2.I
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugCommandList2*, uint>)(lpVtbl[1]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, uint>)(lpVtbl[1]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D12DebugCommandList2 : ID3D12DebugCommandList2.I
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugCommandList2*, uint>)(lpVtbl[2]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, uint>)(lpVtbl[2]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DebugCommandList.AssertResourceState" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D12DebugCommandList2 : ID3D12DebugCommandList2.I
 	[VtblIndex(3)]
 	public Bool32 AssertResourceState(ID3D12Resource* pResource, uint Subresource, uint State)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugCommandList2*, ID3D12Resource*, uint, uint, Bool32>)(lpVtbl[3]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), pResource, Subresource, State);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, ID3D12Resource*, uint, uint, Bool32>)(lpVtbl[3]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), pResource, Subresource, State);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DebugCommandList.SetFeatureMask" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D12DebugCommandList2 : ID3D12DebugCommandList2.I
 	[VtblIndex(4)]
 	public HResult SetFeatureMask(DebugFeature Mask)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugCommandList2*, DebugFeature, int>)(lpVtbl[4]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), Mask);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, DebugFeature, int>)(lpVtbl[4]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), Mask);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D12DebugCommandList.GetFeatureMask" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D12DebugCommandList2 : ID3D12DebugCommandList2.I
 	[VtblIndex(5)]
 	public DebugFeature GetFeatureMask()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugCommandList2*, DebugFeature>)(lpVtbl[5]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, DebugFeature>)(lpVtbl[5]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList2::SetDebugParameter"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D12DebugCommandList2 : ID3D12DebugCommandList2.I
 	[VtblIndex(6)]
 	public HResult SetDebugParameter(DebugCommandListParameterType Type, void* pData, uint DataSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugCommandList2*, DebugCommandListParameterType, void*, uint, int>)(lpVtbl[6]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, DebugCommandListParameterType, void*, uint, int>)(lpVtbl[6]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+#endif
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandList2::GetDebugParameter"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D12DebugCommandList2 : ID3D12DebugCommandList2.I
 	[VtblIndex(7)]
 	public HResult GetDebugParameter(DebugCommandListParameterType Type, void* pData, uint DataSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D12DebugCommandList2*, DebugCommandListParameterType, void*, uint, int>)(lpVtbl[7]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandList2*, DebugCommandListParameterType, void*, uint, int>)(lpVtbl[7]))((ID3D12DebugCommandList2*)Unsafe.AsPointer(ref this), Type, pData, DataSize);
+#endif
 	}
 
 	public interface Interface : ID3D12DebugCommandList.Interface

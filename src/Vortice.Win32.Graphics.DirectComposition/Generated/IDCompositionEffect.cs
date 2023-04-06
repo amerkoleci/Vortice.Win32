@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionEffect : IDCompositionEffect.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionEffect : IDCompositionEffect.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionEffect*, uint>)(lpVtbl[1]))((IDCompositionEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionEffect*, uint>)(lpVtbl[1]))((IDCompositionEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionEffect : IDCompositionEffect.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionEffect*, uint>)(lpVtbl[2]))((IDCompositionEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionEffect*, uint>)(lpVtbl[2]))((IDCompositionEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 

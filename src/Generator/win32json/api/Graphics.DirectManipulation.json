@@ -125,7 +125,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_HITTEST_TYPE_ASYNCHRONOUS","Value":0}
@@ -139,7 +139,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_CONFIGURATION_NONE","Value":0}
@@ -159,7 +159,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_GESTURE_NONE","Value":0}
@@ -175,7 +175,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_MOTION_NONE","Value":0}
@@ -193,7 +193,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_VIEWPORT_OPTIONS_DEFAULT","Value":0}
@@ -225,7 +225,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_COORDINATE_BOUNDARY","Value":0}
@@ -239,7 +239,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_HORIZONTALALIGNMENT_NONE","Value":0}
@@ -255,7 +255,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_VERTICALALIGNMENT_NONE","Value":0}
@@ -1166,7 +1166,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DIRECTMANIPULATION_DRAG_DROP_CONFIGURATION_VERTICAL","Value":1}

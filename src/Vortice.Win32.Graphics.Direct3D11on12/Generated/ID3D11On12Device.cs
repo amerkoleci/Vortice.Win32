@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11On12Device*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11On12Device*, uint>)(lpVtbl[1]))((ID3D11On12Device*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device*, uint>)(lpVtbl[1]))((ID3D11On12Device*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11On12Device*, uint>)(lpVtbl[2]))((ID3D11On12Device*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device*, uint>)(lpVtbl[2]))((ID3D11On12Device*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::CreateWrappedResource"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	[VtblIndex(3)]
 	public HResult CreateWrappedResource(IUnknown* pResource12, ResourceFlags* pFlags11, Graphics.Direct3D12.ResourceStates InState, Graphics.Direct3D12.ResourceStates OutState, Guid* riid, void** ppResource11)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11On12Device*, IUnknown*, ResourceFlags*, Graphics.Direct3D12.ResourceStates, Graphics.Direct3D12.ResourceStates, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11On12Device*, IUnknown*, ResourceFlags*, Graphics.Direct3D12.ResourceStates, Graphics.Direct3D12.ResourceStates, Guid*, void**, int>)(lpVtbl[3]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), pResource12, pFlags11, InState, OutState, riid, ppResource11);
+#endif
 	}
 
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::ReleaseWrappedResources"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	[VtblIndex(4)]
 	public void ReleaseWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11On12Device*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[4]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), ppResources, NumResources);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11On12Device*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[4]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), ppResources, NumResources);
+#endif
 	}
 
 	/// <include file='../../Vortice.Win32.Graphics.Direct3D11/Direct3D11.xml' path='doc/member[@name="ID3D11On12Device::AcquireWrappedResources"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11On12Device : ID3D11On12Device.Interface, INat
 	[VtblIndex(5)]
 	public void AcquireWrappedResources(Graphics.Direct3D11.ID3D11Resource** ppResources, uint NumResources)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11On12Device*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[5]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), ppResources, NumResources);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11On12Device*, Graphics.Direct3D11.ID3D11Resource**, uint, void>)(lpVtbl[5]))((ID3D11On12Device*)Unsafe.AsPointer(ref this), ppResources, NumResources);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, uint>)(lpVtbl[1]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint>)(lpVtbl[1]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, uint>)(lpVtbl[2]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint>)(lpVtbl[2]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::TraceReady"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(3)]
 	public HResult TraceReady(ulong* pTestCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, ulong*, int>)(lpVtbl[3]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pTestCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, ulong*, int>)(lpVtbl[3]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pTestCount);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::ResetTrace"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(4)]
 	public void ResetTrace()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11ShaderTrace*, void>)(lpVtbl[4]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, void>)(lpVtbl[4]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetTraceStats"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(5)]
 	public HResult GetTraceStats(TraceStats* pTraceStats)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, TraceStats*, int>)(lpVtbl[5]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pTraceStats);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, TraceStats*, int>)(lpVtbl[5]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pTraceStats);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::PSSelectStamp"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(6)]
 	public HResult PSSelectStamp(uint stampIndex)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, uint, int>)(lpVtbl[6]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stampIndex);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, int>)(lpVtbl[6]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stampIndex);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetInitialRegisterContents"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(7)]
 	public HResult GetInitialRegisterContents(TraceRegister* pRegister, TraceValue* pValue)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, TraceRegister*, TraceValue*, int>)(lpVtbl[7]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pRegister, pValue);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, TraceRegister*, TraceValue*, int>)(lpVtbl[7]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), pRegister, pValue);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetStep"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(8)]
 	public HResult GetStep(uint stepIndex, TraceStep* pTraceStep)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, uint, TraceStep*, int>)(lpVtbl[8]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, pTraceStep);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, TraceStep*, int>)(lpVtbl[8]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, pTraceStep);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetWrittenRegister"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(9)]
 	public HResult GetWrittenRegister(uint stepIndex, uint writtenRegisterIndex, TraceRegister* pRegister, TraceValue* pValue)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, uint, uint, TraceRegister*, TraceValue*, int>)(lpVtbl[9]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, writtenRegisterIndex, pRegister, pValue);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, uint, TraceRegister*, TraceValue*, int>)(lpVtbl[9]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, writtenRegisterIndex, pRegister, pValue);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTrace::GetReadRegister"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D11ShaderTrace : ID3D11ShaderTrace.Interface, IN
 	[VtblIndex(10)]
 	public HResult GetReadRegister(uint stepIndex, uint readRegisterIndex, TraceRegister* pRegister, TraceValue* pValue)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTrace*, uint, uint, TraceRegister*, TraceValue*, int>)(lpVtbl[10]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, readRegisterIndex, pRegister, pValue);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTrace*, uint, uint, TraceRegister*, TraceValue*, int>)(lpVtbl[10]))((ID3D11ShaderTrace*)Unsafe.AsPointer(ref this), stepIndex, readRegisterIndex, pRegister, pValue);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

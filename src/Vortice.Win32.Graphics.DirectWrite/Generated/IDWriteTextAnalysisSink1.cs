@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSink1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSink1*, uint>)(lpVtbl[1]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint>)(lpVtbl[1]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSink1*, uint>)(lpVtbl[2]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint>)(lpVtbl[2]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalysisSink.SetScriptAnalysis" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	[VtblIndex(3)]
 	public HResult SetScriptAnalysis(uint textPosition, uint textLength, ScriptAnalysis* scriptAnalysis)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSink1*, uint, uint, ScriptAnalysis*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, scriptAnalysis);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint, uint, ScriptAnalysis*, int>)(lpVtbl[3]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, scriptAnalysis);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalysisSink.SetLineBreakpoints" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	[VtblIndex(4)]
 	public HResult SetLineBreakpoints(uint textPosition, uint textLength, LineBreakpoint* lineBreakpoints)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSink1*, uint, uint, LineBreakpoint*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, lineBreakpoints);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint, uint, LineBreakpoint*, int>)(lpVtbl[4]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, lineBreakpoints);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalysisSink.SetBidiLevel" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	[VtblIndex(5)]
 	public HResult SetBidiLevel(uint textPosition, uint textLength, byte explicitLevel, byte resolvedLevel)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSink1*, uint, uint, byte, byte, int>)(lpVtbl[5]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, explicitLevel, resolvedLevel);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint, uint, byte, byte, int>)(lpVtbl[5]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, explicitLevel, resolvedLevel);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalysisSink.SetNumberSubstitution" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	[VtblIndex(6)]
 	public HResult SetNumberSubstitution(uint textPosition, uint textLength, IDWriteNumberSubstitution* numberSubstitution)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSink1*, uint, uint, IDWriteNumberSubstitution*, int>)(lpVtbl[6]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint, uint, IDWriteNumberSubstitution*, int>)(lpVtbl[6]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, numberSubstitution);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalysisSink1::SetGlyphOrientation"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDWriteTextAnalysisSink1 : IDWriteTextAnalysisSink1
 	[VtblIndex(7)]
 	public HResult SetGlyphOrientation(uint textPosition, uint textLength, GlyphOrientationAngle glyphOrientationAngle, byte adjustedBidiLevel, Bool32 isSideways, Bool32 isRightToLeft)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteTextAnalysisSink1*, uint, uint, GlyphOrientationAngle, byte, Bool32, Bool32, int>)(lpVtbl[7]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientationAngle, adjustedBidiLevel, isSideways, isRightToLeft);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteTextAnalysisSink1*, uint, uint, GlyphOrientationAngle, byte, Bool32, Bool32, int>)(lpVtbl[7]))((IDWriteTextAnalysisSink1*)Unsafe.AsPointer(ref this), textPosition, textLength, glyphOrientationAngle, adjustedBidiLevel, isSideways, isRightToLeft);
+#endif
 	}
 
 	public interface Interface : IDWriteTextAnalysisSink.Interface

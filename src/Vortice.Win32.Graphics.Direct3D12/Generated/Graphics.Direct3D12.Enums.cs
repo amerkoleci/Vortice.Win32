@@ -11,7 +11,7 @@ namespace Win32.Graphics.Direct3D12;
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE"]/*' />
 /// <unmanaged>D3D12_COMMAND_LIST_TYPE</unmanaged>
-public enum CommandListType : int
+public enum CommandListType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_DIRECT"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_DIRECT</unmanaged>
@@ -34,12 +34,15 @@ public enum CommandListType : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE</unmanaged>
 	VideoEncode = 6,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_TYPE::D3D12_COMMAND_LIST_TYPE_NONE"]/*' />
+	/// <unmanaged>D3D12_COMMAND_LIST_TYPE_NONE</unmanaged>
+	None = -1,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_FLAGS"]/*' />
 /// <unmanaged>D3D12_COMMAND_QUEUE_FLAGS</unmanaged>
 [Flags]
-public enum CommandQueueFlags : uint
+public enum CommandQueueFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_FLAGS::D3D12_COMMAND_QUEUE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_QUEUE_FLAG_NONE</unmanaged>
@@ -51,7 +54,7 @@ public enum CommandQueueFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY"]/*' />
 /// <unmanaged>D3D12_COMMAND_QUEUE_PRIORITY</unmanaged>
-public enum CommandQueuePriority : int
+public enum CommandQueuePriority
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_QUEUE_PRIORITY::D3D12_COMMAND_QUEUE_PRIORITY_NORMAL"]/*' />
 	/// <unmanaged>D3D12_COMMAND_QUEUE_PRIORITY_NORMAL</unmanaged>
@@ -66,7 +69,7 @@ public enum CommandQueuePriority : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE"]/*' />
 /// <unmanaged>D3D12_PRIMITIVE_TOPOLOGY_TYPE</unmanaged>
-public enum PrimitiveTopologyType : int
+public enum PrimitiveTopologyType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PRIMITIVE_TOPOLOGY_TYPE::D3D12_PRIMITIVE_TOPOLOGY_TYPE_UNDEFINED"]/*' />
 	/// <unmanaged>D3D12_PRIMITIVE_TOPOLOGY_TYPE_UNDEFINED</unmanaged>
@@ -87,7 +90,7 @@ public enum PrimitiveTopologyType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_CLASSIFICATION"]/*' />
 /// <unmanaged>D3D12_INPUT_CLASSIFICATION</unmanaged>
-public enum InputClassification : int
+public enum InputClassification
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_CLASSIFICATION::D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA"]/*' />
 	/// <unmanaged>D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA</unmanaged>
@@ -99,7 +102,7 @@ public enum InputClassification : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILL_MODE"]/*' />
 /// <unmanaged>D3D12_FILL_MODE</unmanaged>
-public enum FillMode : int
+public enum FillMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILL_MODE::D3D12_FILL_MODE_WIREFRAME"]/*' />
 	/// <unmanaged>D3D12_FILL_MODE_WIREFRAME</unmanaged>
@@ -111,7 +114,7 @@ public enum FillMode : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CULL_MODE"]/*' />
 /// <unmanaged>D3D12_CULL_MODE</unmanaged>
-public enum CullMode : int
+public enum CullMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CULL_MODE::D3D12_CULL_MODE_NONE"]/*' />
 	/// <unmanaged>D3D12_CULL_MODE_NONE</unmanaged>
@@ -126,8 +129,11 @@ public enum CullMode : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPARISON_FUNC"]/*' />
 /// <unmanaged>D3D12_COMPARISON_FUNC</unmanaged>
-public enum ComparisonFunction : int
+public enum ComparisonFunction
 {
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPARISON_FUNC::D3D12_COMPARISON_FUNC_NONE"]/*' />
+	/// <unmanaged>D3D12_COMPARISON_FUNC_NONE</unmanaged>
+	None = 0,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMPARISON_FUNC::D3D12_COMPARISON_FUNC_NEVER"]/*' />
 	/// <unmanaged>D3D12_COMPARISON_FUNC_NEVER</unmanaged>
 	Never = 1,
@@ -156,7 +162,7 @@ public enum ComparisonFunction : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_WRITE_MASK"]/*' />
 /// <unmanaged>D3D12_DEPTH_WRITE_MASK</unmanaged>
-public enum DepthWriteMask : int
+public enum DepthWriteMask
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEPTH_WRITE_MASK::D3D12_DEPTH_WRITE_MASK_ZERO"]/*' />
 	/// <unmanaged>D3D12_DEPTH_WRITE_MASK_ZERO</unmanaged>
@@ -168,7 +174,7 @@ public enum DepthWriteMask : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STENCIL_OP"]/*' />
 /// <unmanaged>D3D12_STENCIL_OP</unmanaged>
-public enum StencilOperation : int
+public enum StencilOperation
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STENCIL_OP::D3D12_STENCIL_OP_KEEP"]/*' />
 	/// <unmanaged>D3D12_STENCIL_OP_KEEP</unmanaged>
@@ -198,7 +204,7 @@ public enum StencilOperation : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND"]/*' />
 /// <unmanaged>D3D12_BLEND</unmanaged>
-public enum Blend : int
+public enum Blend
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_ZERO"]/*' />
 	/// <unmanaged>D3D12_BLEND_ZERO</unmanaged>
@@ -251,11 +257,17 @@ public enum Blend : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_SRC1_ALPHA"]/*' />
 	/// <unmanaged>D3D12_BLEND_INV_SRC1_ALPHA</unmanaged>
 	InverseSrc1Alpha = 19,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_ALPHA_FACTOR"]/*' />
+	/// <unmanaged>D3D12_BLEND_ALPHA_FACTOR</unmanaged>
+	AlphaFactor = 20,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND::D3D12_BLEND_INV_ALPHA_FACTOR"]/*' />
+	/// <unmanaged>D3D12_BLEND_INV_ALPHA_FACTOR</unmanaged>
+	InverseAlphaFactor = 21,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_OP"]/*' />
 /// <unmanaged>D3D12_BLEND_OP</unmanaged>
-public enum BlendOperation : int
+public enum BlendOperation
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BLEND_OP::D3D12_BLEND_OP_ADD"]/*' />
 	/// <unmanaged>D3D12_BLEND_OP_ADD</unmanaged>
@@ -299,7 +311,7 @@ public enum ColorWriteEnable : byte
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP"]/*' />
 /// <unmanaged>D3D12_LOGIC_OP</unmanaged>
-public enum LogicOperation : int
+public enum LogicOperation
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LOGIC_OP::D3D12_LOGIC_OP_CLEAR"]/*' />
 	/// <unmanaged>D3D12_LOGIC_OP_CLEAR</unmanaged>
@@ -353,7 +365,7 @@ public enum LogicOperation : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_MODE"]/*' />
 /// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_MODE</unmanaged>
-public enum ConservativeRasterizationMode : int
+public enum ConservativeRasterizationMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_MODE::D3D12_CONSERVATIVE_RASTERIZATION_MODE_OFF"]/*' />
 	/// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_MODE_OFF</unmanaged>
@@ -365,7 +377,7 @@ public enum ConservativeRasterizationMode : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE"]/*' />
 /// <unmanaged>D3D12_INDEX_BUFFER_STRIP_CUT_VALUE</unmanaged>
-public enum IndexBufferStripCutValue : int
+public enum IndexBufferStripCutValue
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE::D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_DISABLED"]/*' />
 	/// <unmanaged>D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_DISABLED</unmanaged>
@@ -381,7 +393,7 @@ public enum IndexBufferStripCutValue : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS"]/*' />
 /// <unmanaged>D3D12_PIPELINE_STATE_FLAGS</unmanaged>
 [Flags]
-public enum PipelineStateFlags : uint
+public enum PipelineStateFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_FLAG_NONE</unmanaged>
@@ -389,11 +401,17 @@ public enum PipelineStateFlags : uint
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_TOOL_DEBUG"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_FLAG_TOOL_DEBUG</unmanaged>
 	ToolDebug = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_DYNAMIC_DEPTH_BIAS"]/*' />
+	/// <unmanaged>D3D12_PIPELINE_STATE_FLAG_DYNAMIC_DEPTH_BIAS</unmanaged>
+	DynamicDepthBias = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS::D3D12_PIPELINE_STATE_FLAG_DYNAMIC_INDEX_BUFFER_STRIP_CUT"]/*' />
+	/// <unmanaged>D3D12_PIPELINE_STATE_FLAG_DYNAMIC_INDEX_BUFFER_STRIP_CUT</unmanaged>
+	DynamicIndexBufferStripCut = 8,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE"]/*' />
 /// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE</unmanaged>
-public enum PipelineStateSubObjectType : int
+public enum PipelineStateSubObjectType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE::D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_ROOT_SIGNATURE"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_ROOT_SIGNATURE</unmanaged>
@@ -470,14 +488,20 @@ public enum PipelineStateSubObjectType : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE::D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MS"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MS</unmanaged>
 	MS = 25,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE::D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_DEPTH_STENCIL2"]/*' />
+	/// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_DEPTH_STENCIL2</unmanaged>
+	DepthStencil2 = 26,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE::D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER1"]/*' />
+	/// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER1</unmanaged>
+	Rasterizer1 = 27,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE::D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MAX_VALID"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MAX_VALID</unmanaged>
-	MaxValid = 26,
+	MaxValid = 28,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE"]/*' />
 /// <unmanaged>D3D12_FEATURE</unmanaged>
-public enum Feature : int
+public enum Feature
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS"]/*' />
 	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS</unmanaged>
@@ -572,12 +596,27 @@ public enum Feature : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS11"]/*' />
 	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS11</unmanaged>
 	Options11 = 40,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS12"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS12</unmanaged>
+	Options12 = 41,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS13"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS13</unmanaged>
+	Options13 = 42,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS14"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS14</unmanaged>
+	Options14 = 43,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS15"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS15</unmanaged>
+	Options15 = 44,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS16"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS16</unmanaged>
+	Options16 = 45,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_MIN_PRECISION_SUPPORT"]/*' />
 /// <unmanaged>D3D12_SHADER_MIN_PRECISION_SUPPORT</unmanaged>
 [Flags]
-public enum ShaderMinPrecisionSupport : uint
+public enum ShaderMinPrecisionSupport
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_MIN_PRECISION_SUPPORT::D3D12_SHADER_MIN_PRECISION_SUPPORT_NONE"]/*' />
 	/// <unmanaged>D3D12_SHADER_MIN_PRECISION_SUPPORT_NONE</unmanaged>
@@ -592,7 +631,7 @@ public enum ShaderMinPrecisionSupport : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILED_RESOURCES_TIER"]/*' />
 /// <unmanaged>D3D12_TILED_RESOURCES_TIER</unmanaged>
-public enum TiledResourcesTier : int
+public enum TiledResourcesTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILED_RESOURCES_TIER::D3D12_TILED_RESOURCES_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_TILED_RESOURCES_TIER_NOT_SUPPORTED</unmanaged>
@@ -613,7 +652,7 @@ public enum TiledResourcesTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_BINDING_TIER</unmanaged>
-public enum ResourceBindingTier : int
+public enum ResourceBindingTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BINDING_TIER::D3D12_RESOURCE_BINDING_TIER_1"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BINDING_TIER_1</unmanaged>
@@ -628,7 +667,7 @@ public enum ResourceBindingTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER"]/*' />
 /// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_TIER</unmanaged>
-public enum ConservativeRasterizationTier : int
+public enum ConservativeRasterizationTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CONSERVATIVE_RASTERIZATION_TIER::D3D12_CONSERVATIVE_RASTERIZATION_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_CONSERVATIVE_RASTERIZATION_TIER_NOT_SUPPORTED</unmanaged>
@@ -647,7 +686,7 @@ public enum ConservativeRasterizationTier : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1"]/*' />
 /// <unmanaged>D3D12_FORMAT_SUPPORT1</unmanaged>
 [Flags]
-public enum FormatSupport1 : uint
+public enum FormatSupport1
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT1::D3D12_FORMAT_SUPPORT1_NONE"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT1_NONE</unmanaged>
@@ -744,7 +783,7 @@ public enum FormatSupport1 : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT2"]/*' />
 /// <unmanaged>D3D12_FORMAT_SUPPORT2</unmanaged>
 [Flags]
-public enum FormatSupport2 : uint
+public enum FormatSupport2
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FORMAT_SUPPORT2::D3D12_FORMAT_SUPPORT2_NONE"]/*' />
 	/// <unmanaged>D3D12_FORMAT_SUPPORT2_NONE</unmanaged>
@@ -790,7 +829,7 @@ public enum FormatSupport2 : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS"]/*' />
 /// <unmanaged>D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS</unmanaged>
 [Flags]
-public enum MultisampleQualityLevelFlags : uint
+public enum MultisampleQualityLevelFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS::D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_NONE</unmanaged>
@@ -802,7 +841,7 @@ public enum MultisampleQualityLevelFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER"]/*' />
 /// <unmanaged>D3D12_CROSS_NODE_SHARING_TIER</unmanaged>
-public enum CrossNodeSharingTier : int
+public enum CrossNodeSharingTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CROSS_NODE_SHARING_TIER::D3D12_CROSS_NODE_SHARING_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_CROSS_NODE_SHARING_TIER_NOT_SUPPORTED</unmanaged>
@@ -823,7 +862,7 @@ public enum CrossNodeSharingTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_HEAP_TIER"]/*' />
 /// <unmanaged>D3D12_RESOURCE_HEAP_TIER</unmanaged>
-public enum ResourceHeapTier : int
+public enum ResourceHeapTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_HEAP_TIER::D3D12_RESOURCE_HEAP_TIER_1"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_HEAP_TIER_1</unmanaged>
@@ -835,7 +874,7 @@ public enum ResourceHeapTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER"]/*' />
 /// <unmanaged>D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER</unmanaged>
-public enum ProgrammableSamplePositionsTier : int
+public enum ProgrammableSamplePositionsTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER::D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_PROGRAMMABLE_SAMPLE_POSITIONS_TIER_NOT_SUPPORTED</unmanaged>
@@ -850,7 +889,7 @@ public enum ProgrammableSamplePositionsTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_TIER"]/*' />
 /// <unmanaged>D3D12_VIEW_INSTANCING_TIER</unmanaged>
-public enum ViewInstancingTier : int
+public enum ViewInstancingTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_TIER::D3D12_VIEW_INSTANCING_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_VIEW_INSTANCING_TIER_NOT_SUPPORTED</unmanaged>
@@ -868,7 +907,7 @@ public enum ViewInstancingTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION"]/*' />
 /// <unmanaged>D3D_ROOT_SIGNATURE_VERSION</unmanaged>
-public enum RootSignatureVersion : int
+public enum RootSignatureVersion
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION::D3D_ROOT_SIGNATURE_VERSION_1_0"]/*' />
 	/// <unmanaged>D3D_ROOT_SIGNATURE_VERSION_1_0</unmanaged>
@@ -880,7 +919,7 @@ public enum RootSignatureVersion : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL"]/*' />
 /// <unmanaged>D3D_SHADER_MODEL</unmanaged>
-public enum ShaderModel : int
+public enum ShaderModel
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_5_1"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_5_1</unmanaged>
@@ -909,12 +948,18 @@ public enum ShaderModel : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_7"]/*' />
 	/// <unmanaged>D3D_SHADER_MODEL_6_7</unmanaged>
 	SM_6_7 = 103,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_SHADER_MODEL_6_8"]/*' />
+	/// <unmanaged>D3D_SHADER_MODEL_6_8</unmanaged>
+	SM_6_8 = 104,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL::D3D_HIGHEST_SHADER_MODEL"]/*' />
+	/// <unmanaged>D3D_HIGHEST_SHADER_MODEL</unmanaged>
+	D3D_HIGHEST_SHADER_MODEL = 104,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_FLAGS</unmanaged>
 [Flags]
-public enum ShaderCacheSupportFlags : uint
+public enum ShaderCacheSupportFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_SUPPORT_FLAGS::D3D12_SHADER_CACHE_SUPPORT_NONE"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_SUPPORT_NONE</unmanaged>
@@ -945,7 +990,7 @@ public enum ShaderCacheSupportFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAGS</unmanaged>
 [Flags]
-public enum CommandListSupportFlags : uint
+public enum CommandListSupportFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_SUPPORT_FLAGS::D3D12_COMMAND_LIST_SUPPORT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_SUPPORT_FLAG_NONE</unmanaged>
@@ -975,7 +1020,7 @@ public enum CommandListSupportFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER"]/*' />
 /// <unmanaged>D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER</unmanaged>
-public enum SharedResourceCompatibilityTier : int
+public enum SharedResourceCompatibilityTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER::D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_0"]/*' />
 	/// <unmanaged>D3D12_SHARED_RESOURCE_COMPATIBILITY_TIER_0</unmanaged>
@@ -990,7 +1035,7 @@ public enum SharedResourceCompatibilityTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_SERIALIZATION_TIER"]/*' />
 /// <unmanaged>D3D12_HEAP_SERIALIZATION_TIER</unmanaged>
-public enum HeapSerializationTier : int
+public enum HeapSerializationTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_SERIALIZATION_TIER::D3D12_HEAP_SERIALIZATION_TIER_0"]/*' />
 	/// <unmanaged>D3D12_HEAP_SERIALIZATION_TIER_0</unmanaged>
@@ -1002,7 +1047,7 @@ public enum HeapSerializationTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_TIER</unmanaged>
-public enum RenderPassTier : int
+public enum RenderPassTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_TIER::D3D12_RENDER_PASS_TIER_0"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_TIER_0</unmanaged>
@@ -1017,7 +1062,7 @@ public enum RenderPassTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_TIER"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_TIER</unmanaged>
-public enum RaytracingTier : int
+public enum RaytracingTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_TIER::D3D12_RAYTRACING_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_TIER_NOT_SUPPORTED</unmanaged>
@@ -1032,7 +1077,7 @@ public enum RaytracingTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VARIABLE_SHADING_RATE_TIER"]/*' />
 /// <unmanaged>D3D12_VARIABLE_SHADING_RATE_TIER</unmanaged>
-public enum VariableShadingRateTier : int
+public enum VariableShadingRateTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VARIABLE_SHADING_RATE_TIER::D3D12_VARIABLE_SHADING_RATE_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_VARIABLE_SHADING_RATE_TIER_NOT_SUPPORTED</unmanaged>
@@ -1047,7 +1092,7 @@ public enum VariableShadingRateTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESH_SHADER_TIER"]/*' />
 /// <unmanaged>D3D12_MESH_SHADER_TIER</unmanaged>
-public enum MeshShaderTier : int
+public enum MeshShaderTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESH_SHADER_TIER::D3D12_MESH_SHADER_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESH_SHADER_TIER_NOT_SUPPORTED</unmanaged>
@@ -1059,7 +1104,7 @@ public enum MeshShaderTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER"]/*' />
 /// <unmanaged>D3D12_SAMPLER_FEEDBACK_TIER</unmanaged>
-public enum SamplerFeedbackTier : int
+public enum SamplerFeedbackTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FEEDBACK_TIER::D3D12_SAMPLER_FEEDBACK_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_SAMPLER_FEEDBACK_TIER_NOT_SUPPORTED</unmanaged>
@@ -1074,7 +1119,7 @@ public enum SamplerFeedbackTier : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WAVE_MMA_TIER"]/*' />
 /// <unmanaged>D3D12_WAVE_MMA_TIER</unmanaged>
-public enum WaveMmaTier : int
+public enum WaveMmaTier
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WAVE_MMA_TIER::D3D12_WAVE_MMA_TIER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_WAVE_MMA_TIER_NOT_SUPPORTED</unmanaged>
@@ -1084,9 +1129,24 @@ public enum WaveMmaTier : int
 	Tier1_0 = 10,
 }
 
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRI_STATE"]/*' />
+/// <unmanaged>D3D12_TRI_STATE</unmanaged>
+public enum TriState
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRI_STATE::D3D12_TRI_STATE_UNKNOWN"]/*' />
+	/// <unmanaged>D3D12_TRI_STATE_UNKNOWN</unmanaged>
+	Unknown = -1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRI_STATE::D3D12_TRI_STATE_FALSE"]/*' />
+	/// <unmanaged>D3D12_TRI_STATE_FALSE</unmanaged>
+	False = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TRI_STATE::D3D12_TRI_STATE_TRUE"]/*' />
+	/// <unmanaged>D3D12_TRI_STATE_TRUE</unmanaged>
+	True = 1,
+}
+
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_TYPE"]/*' />
 /// <unmanaged>D3D12_HEAP_TYPE</unmanaged>
-public enum HeapType : int
+public enum HeapType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_TYPE::D3D12_HEAP_TYPE_DEFAULT"]/*' />
 	/// <unmanaged>D3D12_HEAP_TYPE_DEFAULT</unmanaged>
@@ -1104,7 +1164,7 @@ public enum HeapType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY"]/*' />
 /// <unmanaged>D3D12_CPU_PAGE_PROPERTY</unmanaged>
-public enum CpuPageProperty : int
+public enum CpuPageProperty
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY::D3D12_CPU_PAGE_PROPERTY_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_CPU_PAGE_PROPERTY_UNKNOWN</unmanaged>
@@ -1122,7 +1182,7 @@ public enum CpuPageProperty : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MEMORY_POOL"]/*' />
 /// <unmanaged>D3D12_MEMORY_POOL</unmanaged>
-public enum MemoryPool : int
+public enum MemoryPool
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MEMORY_POOL::D3D12_MEMORY_POOL_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_MEMORY_POOL_UNKNOWN</unmanaged>
@@ -1138,7 +1198,7 @@ public enum MemoryPool : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS"]/*' />
 /// <unmanaged>D3D12_HEAP_FLAGS</unmanaged>
 [Flags]
-public enum HeapFlags : uint
+public enum HeapFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_NONE</unmanaged>
@@ -1192,7 +1252,7 @@ public enum HeapFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_DIMENSION"]/*' />
 /// <unmanaged>D3D12_RESOURCE_DIMENSION</unmanaged>
-public enum ResourceDimension : int
+public enum ResourceDimension
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_DIMENSION::D3D12_RESOURCE_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_DIMENSION_UNKNOWN</unmanaged>
@@ -1213,7 +1273,7 @@ public enum ResourceDimension : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT"]/*' />
 /// <unmanaged>D3D12_TEXTURE_LAYOUT</unmanaged>
-public enum TextureLayout : int
+public enum TextureLayout
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_LAYOUT::D3D12_TEXTURE_LAYOUT_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_LAYOUT_UNKNOWN</unmanaged>
@@ -1232,7 +1292,7 @@ public enum TextureLayout : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_FLAGS"]/*' />
 /// <unmanaged>D3D12_RESOURCE_FLAGS</unmanaged>
 [Flags]
-public enum ResourceFlags : uint
+public enum ResourceFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_FLAGS::D3D12_RESOURCE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_FLAG_NONE</unmanaged>
@@ -1261,12 +1321,15 @@ public enum ResourceFlags : uint
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_FLAGS::D3D12_RESOURCE_FLAG_VIDEO_ENCODE_REFERENCE_ONLY"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_FLAG_VIDEO_ENCODE_REFERENCE_ONLY</unmanaged>
 	VideoEncodeReferenceOnly = 128,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_FLAGS::D3D12_RESOURCE_FLAG_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
+	/// <unmanaged>D3D12_RESOURCE_FLAG_RAYTRACING_ACCELERATION_STRUCTURE</unmanaged>
+	RaytracingAccelerationStructure = 256,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS"]/*' />
 /// <unmanaged>D3D12_TILE_RANGE_FLAGS</unmanaged>
 [Flags]
-public enum TileRangeFlags : int
+public enum TileRangeFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_RANGE_FLAGS::D3D12_TILE_RANGE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_TILE_RANGE_FLAG_NONE</unmanaged>
@@ -1285,7 +1348,7 @@ public enum TileRangeFlags : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_MAPPING_FLAGS"]/*' />
 /// <unmanaged>D3D12_TILE_MAPPING_FLAGS</unmanaged>
 [Flags]
-public enum TileMappingFlags : uint
+public enum TileMappingFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_MAPPING_FLAGS::D3D12_TILE_MAPPING_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_TILE_MAPPING_FLAG_NONE</unmanaged>
@@ -1298,7 +1361,7 @@ public enum TileMappingFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS"]/*' />
 /// <unmanaged>D3D12_TILE_COPY_FLAGS</unmanaged>
 [Flags]
-public enum TileCopyFlags : uint
+public enum TileCopyFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TILE_COPY_FLAGS::D3D12_TILE_COPY_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_TILE_COPY_FLAG_NONE</unmanaged>
@@ -1317,7 +1380,7 @@ public enum TileCopyFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES"]/*' />
 /// <unmanaged>D3D12_RESOURCE_STATES</unmanaged>
 [Flags]
-public enum ResourceStates : uint
+public enum ResourceStates
 {
 	None = 0,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_STATES::D3D12_RESOURCE_STATE_COMMON"]/*' />
@@ -1405,7 +1468,7 @@ public enum ResourceStates : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE"]/*' />
 /// <unmanaged>D3D12_RESOURCE_BARRIER_TYPE</unmanaged>
-public enum ResourceBarrierType : int
+public enum ResourceBarrierType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_TYPE::D3D12_RESOURCE_BARRIER_TYPE_TRANSITION"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BARRIER_TYPE_TRANSITION</unmanaged>
@@ -1421,7 +1484,7 @@ public enum ResourceBarrierType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS"]/*' />
 /// <unmanaged>D3D12_RESOURCE_BARRIER_FLAGS</unmanaged>
 [Flags]
-public enum ResourceBarrierFlags : uint
+public enum ResourceBarrierFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOURCE_BARRIER_FLAGS::D3D12_RESOURCE_BARRIER_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RESOURCE_BARRIER_FLAG_NONE</unmanaged>
@@ -1436,7 +1499,7 @@ public enum ResourceBarrierFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_TYPE"]/*' />
 /// <unmanaged>D3D12_TEXTURE_COPY_TYPE</unmanaged>
-public enum TextureCopyType : int
+public enum TextureCopyType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_COPY_TYPE::D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX</unmanaged>
@@ -1448,7 +1511,7 @@ public enum TextureCopyType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE"]/*' />
 /// <unmanaged>D3D12_RESOLVE_MODE</unmanaged>
-public enum ResolveMode : int
+public enum ResolveMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESOLVE_MODE::D3D12_RESOLVE_MODE_DECOMPRESS"]/*' />
 	/// <unmanaged>D3D12_RESOLVE_MODE_DECOMPRESS</unmanaged>
@@ -1473,7 +1536,7 @@ public enum ResolveMode : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_FLAGS"]/*' />
 /// <unmanaged>D3D12_VIEW_INSTANCING_FLAGS</unmanaged>
 [Flags]
-public enum ViewInstancingFlags : uint
+public enum ViewInstancingFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_VIEW_INSTANCING_FLAGS::D3D12_VIEW_INSTANCING_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_VIEW_INSTANCING_FLAG_NONE</unmanaged>
@@ -1485,7 +1548,7 @@ public enum ViewInstancingFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING"]/*' />
 /// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING</unmanaged>
-public enum ShaderComponentMapping : int
+public enum ShaderComponentMapping
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_COMPONENT_MAPPING::D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_0"]/*' />
 	/// <unmanaged>D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_0</unmanaged>
@@ -1510,7 +1573,7 @@ public enum ShaderComponentMapping : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV_FLAGS"]/*' />
 /// <unmanaged>D3D12_BUFFER_SRV_FLAGS</unmanaged>
 [Flags]
-public enum BufferSrvFlags : uint
+public enum BufferSrvFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_SRV_FLAGS::D3D12_BUFFER_SRV_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_BUFFER_SRV_FLAG_NONE</unmanaged>
@@ -1522,7 +1585,7 @@ public enum BufferSrvFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SRV_DIMENSION"]/*' />
 /// <unmanaged>D3D12_SRV_DIMENSION</unmanaged>
-public enum SrvDimension : int
+public enum SrvDimension
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SRV_DIMENSION::D3D12_SRV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_SRV_DIMENSION_UNKNOWN</unmanaged>
@@ -1564,7 +1627,7 @@ public enum SrvDimension : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER"]/*' />
 /// <unmanaged>D3D12_FILTER</unmanaged>
-public enum Filter : int
+public enum Filter
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MIN_MAG_MIP_POINT"]/*' />
 	/// <unmanaged>D3D12_FILTER_MIN_MAG_MIP_POINT</unmanaged>
@@ -1678,7 +1741,7 @@ public enum Filter : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER_TYPE"]/*' />
 /// <unmanaged>D3D12_FILTER_TYPE</unmanaged>
-public enum FilterType : int
+public enum FilterType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER_TYPE::D3D12_FILTER_TYPE_POINT"]/*' />
 	/// <unmanaged>D3D12_FILTER_TYPE_POINT</unmanaged>
@@ -1690,7 +1753,7 @@ public enum FilterType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER_REDUCTION_TYPE"]/*' />
 /// <unmanaged>D3D12_FILTER_REDUCTION_TYPE</unmanaged>
-public enum FilterReductionType : int
+public enum FilterReductionType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER_REDUCTION_TYPE::D3D12_FILTER_REDUCTION_TYPE_STANDARD"]/*' />
 	/// <unmanaged>D3D12_FILTER_REDUCTION_TYPE_STANDARD</unmanaged>
@@ -1708,7 +1771,7 @@ public enum FilterReductionType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_ADDRESS_MODE"]/*' />
 /// <unmanaged>D3D12_TEXTURE_ADDRESS_MODE</unmanaged>
-public enum TextureAddressMode : int
+public enum TextureAddressMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_ADDRESS_MODE::D3D12_TEXTURE_ADDRESS_MODE_WRAP"]/*' />
 	/// <unmanaged>D3D12_TEXTURE_ADDRESS_MODE_WRAP</unmanaged>
@@ -1727,10 +1790,23 @@ public enum TextureAddressMode : int
 	MirrorOnce = 5,
 }
 
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FLAGS"]/*' />
+/// <unmanaged>D3D12_SAMPLER_FLAGS</unmanaged>
+[Flags]
+public enum SamplerFlags
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FLAGS::D3D12_SAMPLER_FLAG_NONE"]/*' />
+	/// <unmanaged>D3D12_SAMPLER_FLAG_NONE</unmanaged>
+	None = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FLAGS::D3D12_SAMPLER_FLAG_UINT_BORDER_COLOR"]/*' />
+	/// <unmanaged>D3D12_SAMPLER_FLAG_UINT_BORDER_COLOR</unmanaged>
+	UintBorderColor = 1,
+}
+
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS"]/*' />
 /// <unmanaged>D3D12_BUFFER_UAV_FLAGS</unmanaged>
 [Flags]
-public enum BufferUavFlags : uint
+public enum BufferUavFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS::D3D12_BUFFER_UAV_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_BUFFER_UAV_FLAG_NONE</unmanaged>
@@ -1742,7 +1818,7 @@ public enum BufferUavFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UAV_DIMENSION"]/*' />
 /// <unmanaged>D3D12_UAV_DIMENSION</unmanaged>
-public enum UavDimension : int
+public enum UavDimension
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UAV_DIMENSION::D3D12_UAV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_UAV_DIMENSION_UNKNOWN</unmanaged>
@@ -1762,6 +1838,12 @@ public enum UavDimension : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UAV_DIMENSION::D3D12_UAV_DIMENSION_TEXTURE2DARRAY"]/*' />
 	/// <unmanaged>D3D12_UAV_DIMENSION_TEXTURE2DARRAY</unmanaged>
 	Texture2DArray = 5,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UAV_DIMENSION::D3D12_UAV_DIMENSION_TEXTURE2DMS"]/*' />
+	/// <unmanaged>D3D12_UAV_DIMENSION_TEXTURE2DMS</unmanaged>
+	Texture2DMs = 6,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UAV_DIMENSION::D3D12_UAV_DIMENSION_TEXTURE2DMSARRAY"]/*' />
+	/// <unmanaged>D3D12_UAV_DIMENSION_TEXTURE2DMSARRAY</unmanaged>
+	Texture2DMsArray = 7,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_UAV_DIMENSION::D3D12_UAV_DIMENSION_TEXTURE3D"]/*' />
 	/// <unmanaged>D3D12_UAV_DIMENSION_TEXTURE3D</unmanaged>
 	Texture3D = 8,
@@ -1769,7 +1851,7 @@ public enum UavDimension : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RTV_DIMENSION"]/*' />
 /// <unmanaged>D3D12_RTV_DIMENSION</unmanaged>
-public enum RtvDimension : int
+public enum RtvDimension
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RTV_DIMENSION::D3D12_RTV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_RTV_DIMENSION_UNKNOWN</unmanaged>
@@ -1803,7 +1885,7 @@ public enum RtvDimension : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS"]/*' />
 /// <unmanaged>D3D12_DSV_FLAGS</unmanaged>
 [Flags]
-public enum DsvFlags : uint
+public enum DsvFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DSV_FLAGS::D3D12_DSV_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_DSV_FLAG_NONE</unmanaged>
@@ -1818,7 +1900,7 @@ public enum DsvFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DSV_DIMENSION"]/*' />
 /// <unmanaged>D3D12_DSV_DIMENSION</unmanaged>
-public enum DsvDimension : int
+public enum DsvDimension
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DSV_DIMENSION::D3D12_DSV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_DSV_DIMENSION_UNKNOWN</unmanaged>
@@ -1846,7 +1928,7 @@ public enum DsvDimension : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_FLAGS"]/*' />
 /// <unmanaged>D3D12_CLEAR_FLAGS</unmanaged>
 [Flags]
-public enum ClearFlags : uint
+public enum ClearFlags
 {
 	None = 0,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CLEAR_FLAGS::D3D12_CLEAR_FLAG_DEPTH"]/*' />
@@ -1860,7 +1942,7 @@ public enum ClearFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS"]/*' />
 /// <unmanaged>D3D12_FENCE_FLAGS</unmanaged>
 [Flags]
-public enum FenceFlags : uint
+public enum FenceFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FENCE_FLAGS::D3D12_FENCE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_FENCE_FLAG_NONE</unmanaged>
@@ -1878,7 +1960,7 @@ public enum FenceFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_TYPE"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_HEAP_TYPE</unmanaged>
-public enum DescriptorHeapType : int
+public enum DescriptorHeapType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_TYPE::D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV</unmanaged>
@@ -1900,7 +1982,7 @@ public enum DescriptorHeapType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_FLAGS"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_HEAP_FLAGS</unmanaged>
 [Flags]
-public enum DescriptorHeapFlags : uint
+public enum DescriptorHeapFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_HEAP_FLAGS::D3D12_DESCRIPTOR_HEAP_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_HEAP_FLAG_NONE</unmanaged>
@@ -1912,7 +1994,7 @@ public enum DescriptorHeapFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_TYPE"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_RANGE_TYPE</unmanaged>
-public enum DescriptorRangeType : int
+public enum DescriptorRangeType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_TYPE::D3D12_DESCRIPTOR_RANGE_TYPE_SRV"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_RANGE_TYPE_SRV</unmanaged>
@@ -1930,7 +2012,7 @@ public enum DescriptorRangeType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY"]/*' />
 /// <unmanaged>D3D12_SHADER_VISIBILITY</unmanaged>
-public enum ShaderVisibility : int
+public enum ShaderVisibility
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VISIBILITY::D3D12_SHADER_VISIBILITY_ALL"]/*' />
 	/// <unmanaged>D3D12_SHADER_VISIBILITY_ALL</unmanaged>
@@ -1960,7 +2042,7 @@ public enum ShaderVisibility : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER_TYPE"]/*' />
 /// <unmanaged>D3D12_ROOT_PARAMETER_TYPE</unmanaged>
-public enum RootParameterType : int
+public enum RootParameterType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_PARAMETER_TYPE::D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE"]/*' />
 	/// <unmanaged>D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE</unmanaged>
@@ -1982,7 +2064,7 @@ public enum RootParameterType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_FLAGS"]/*' />
 /// <unmanaged>D3D12_ROOT_SIGNATURE_FLAGS</unmanaged>
 [Flags]
-public enum RootSignatureFlags : uint
+public enum RootSignatureFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_SIGNATURE_FLAGS::D3D12_ROOT_SIGNATURE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_ROOT_SIGNATURE_FLAG_NONE</unmanaged>
@@ -2027,7 +2109,7 @@ public enum RootSignatureFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR"]/*' />
 /// <unmanaged>D3D12_STATIC_BORDER_COLOR</unmanaged>
-public enum StaticBorderColor : int
+public enum StaticBorderColor
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_TRANSPARENT_BLACK"]/*' />
 	/// <unmanaged>D3D12_STATIC_BORDER_COLOR_TRANSPARENT_BLACK</unmanaged>
@@ -2038,12 +2120,18 @@ public enum StaticBorderColor : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_OPAQUE_WHITE"]/*' />
 	/// <unmanaged>D3D12_STATIC_BORDER_COLOR_OPAQUE_WHITE</unmanaged>
 	OpaqueWhite = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_OPAQUE_BLACK_UINT"]/*' />
+	/// <unmanaged>D3D12_STATIC_BORDER_COLOR_OPAQUE_BLACK_UINT</unmanaged>
+	OpaqueBlackUint = 3,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATIC_BORDER_COLOR::D3D12_STATIC_BORDER_COLOR_OPAQUE_WHITE_UINT"]/*' />
+	/// <unmanaged>D3D12_STATIC_BORDER_COLOR_OPAQUE_WHITE_UINT</unmanaged>
+	OpaqueWhiteUint = 4,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS"]/*' />
 /// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAGS</unmanaged>
 [Flags]
-public enum DescriptorRangeFlags : uint
+public enum DescriptorRangeFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DESCRIPTOR_RANGE_FLAGS::D3D12_DESCRIPTOR_RANGE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_DESCRIPTOR_RANGE_FLAG_NONE</unmanaged>
@@ -2068,7 +2156,7 @@ public enum DescriptorRangeFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_FLAGS"]/*' />
 /// <unmanaged>D3D12_ROOT_DESCRIPTOR_FLAGS</unmanaged>
 [Flags]
-public enum RootDescriptorFlags : uint
+public enum RootDescriptorFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ROOT_DESCRIPTOR_FLAGS::D3D12_ROOT_DESCRIPTOR_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_ROOT_DESCRIPTOR_FLAG_NONE</unmanaged>
@@ -2086,7 +2174,7 @@ public enum RootDescriptorFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE"]/*' />
 /// <unmanaged>D3D12_QUERY_HEAP_TYPE</unmanaged>
-public enum QueryHeapType : int
+public enum QueryHeapType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_HEAP_TYPE::D3D12_QUERY_HEAP_TYPE_OCCLUSION"]/*' />
 	/// <unmanaged>D3D12_QUERY_HEAP_TYPE_OCCLUSION</unmanaged>
@@ -2113,7 +2201,7 @@ public enum QueryHeapType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_TYPE"]/*' />
 /// <unmanaged>D3D12_QUERY_TYPE</unmanaged>
-public enum QueryType : int
+public enum QueryType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_QUERY_TYPE::D3D12_QUERY_TYPE_OCCLUSION"]/*' />
 	/// <unmanaged>D3D12_QUERY_TYPE_OCCLUSION</unmanaged>
@@ -2149,7 +2237,7 @@ public enum QueryType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PREDICATION_OP"]/*' />
 /// <unmanaged>D3D12_PREDICATION_OP</unmanaged>
-public enum PredicationOperation : int
+public enum PredicationOperation
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PREDICATION_OP::D3D12_PREDICATION_OP_EQUAL_ZERO"]/*' />
 	/// <unmanaged>D3D12_PREDICATION_OP_EQUAL_ZERO</unmanaged>
@@ -2161,7 +2249,7 @@ public enum PredicationOperation : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE"]/*' />
 /// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE</unmanaged>
-public enum IndirectArgumentType : int
+public enum IndirectArgumentType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDIRECT_ARGUMENT_TYPE::D3D12_INDIRECT_ARGUMENT_TYPE_DRAW"]/*' />
 	/// <unmanaged>D3D12_INDIRECT_ARGUMENT_TYPE_DRAW</unmanaged>
@@ -2200,7 +2288,7 @@ public enum IndirectArgumentType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE"]/*' />
 /// <unmanaged>D3D12_WRITEBUFFERIMMEDIATE_MODE</unmanaged>
-public enum WriteBufferImmediateMode : int
+public enum WriteBufferImmediateMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WRITEBUFFERIMMEDIATE_MODE::D3D12_WRITEBUFFERIMMEDIATE_MODE_DEFAULT"]/*' />
 	/// <unmanaged>D3D12_WRITEBUFFERIMMEDIATE_MODE_DEFAULT</unmanaged>
@@ -2216,7 +2304,7 @@ public enum WriteBufferImmediateMode : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS"]/*' />
 /// <unmanaged>D3D12_MULTIPLE_FENCE_WAIT_FLAGS</unmanaged>
 [Flags]
-public enum MultipleFenceWaitFlags : uint
+public enum MultipleFenceWaitFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MULTIPLE_FENCE_WAIT_FLAGS::D3D12_MULTIPLE_FENCE_WAIT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_MULTIPLE_FENCE_WAIT_FLAG_NONE</unmanaged>
@@ -2231,7 +2319,7 @@ public enum MultipleFenceWaitFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY"]/*' />
 /// <unmanaged>D3D12_RESIDENCY_PRIORITY</unmanaged>
-public enum ResidencyPriority : int
+public enum ResidencyPriority
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_PRIORITY::D3D12_RESIDENCY_PRIORITY_MINIMUM"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_PRIORITY_MINIMUM</unmanaged>
@@ -2253,7 +2341,7 @@ public enum ResidencyPriority : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_FLAGS"]/*' />
 /// <unmanaged>D3D12_RESIDENCY_FLAGS</unmanaged>
 [Flags]
-public enum ResidencyFlags : uint
+public enum ResidencyFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RESIDENCY_FLAGS::D3D12_RESIDENCY_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RESIDENCY_FLAG_NONE</unmanaged>
@@ -2266,7 +2354,7 @@ public enum ResidencyFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_FLAGS"]/*' />
 /// <unmanaged>D3D12_COMMAND_LIST_FLAGS</unmanaged>
 [Flags]
-public enum CommandListFlags : uint
+public enum CommandListFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_LIST_FLAGS::D3D12_COMMAND_LIST_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_LIST_FLAG_NONE</unmanaged>
@@ -2276,7 +2364,7 @@ public enum CommandListFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_POOL_FLAGS"]/*' />
 /// <unmanaged>D3D12_COMMAND_POOL_FLAGS</unmanaged>
 [Flags]
-public enum CommandPoolFlags : uint
+public enum CommandPoolFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_POOL_FLAGS::D3D12_COMMAND_POOL_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_POOL_FLAG_NONE</unmanaged>
@@ -2286,7 +2374,7 @@ public enum CommandPoolFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_RECORDER_FLAGS"]/*' />
 /// <unmanaged>D3D12_COMMAND_RECORDER_FLAGS</unmanaged>
 [Flags]
-public enum CommandRecorderFlags : uint
+public enum CommandRecorderFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_COMMAND_RECORDER_FLAGS::D3D12_COMMAND_RECORDER_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_COMMAND_RECORDER_FLAG_NONE</unmanaged>
@@ -2295,7 +2383,7 @@ public enum CommandRecorderFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_SESSION_STATUS"]/*' />
 /// <unmanaged>D3D12_PROTECTED_SESSION_STATUS</unmanaged>
-public enum ProtectedSessionStatus : int
+public enum ProtectedSessionStatus
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_SESSION_STATUS::D3D12_PROTECTED_SESSION_STATUS_OK"]/*' />
 	/// <unmanaged>D3D12_PROTECTED_SESSION_STATUS_OK</unmanaged>
@@ -2308,7 +2396,7 @@ public enum ProtectedSessionStatus : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_SUPPORT_FLAGS"]/*' />
 /// <unmanaged>D3D12_PROTECTED_RESOURCE_SESSION_SUPPORT_FLAGS</unmanaged>
 [Flags]
-public enum ProtectedResourceSessionSupportFlags : uint
+public enum ProtectedResourceSessionSupportFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_SUPPORT_FLAGS::D3D12_PROTECTED_RESOURCE_SESSION_SUPPORT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_PROTECTED_RESOURCE_SESSION_SUPPORT_FLAG_NONE</unmanaged>
@@ -2321,7 +2409,7 @@ public enum ProtectedResourceSessionSupportFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_FLAGS"]/*' />
 /// <unmanaged>D3D12_PROTECTED_RESOURCE_SESSION_FLAGS</unmanaged>
 [Flags]
-public enum ProtectedResourceSessionFlags : uint
+public enum ProtectedResourceSessionFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PROTECTED_RESOURCE_SESSION_FLAGS::D3D12_PROTECTED_RESOURCE_SESSION_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_PROTECTED_RESOURCE_SESSION_FLAG_NONE</unmanaged>
@@ -2330,7 +2418,7 @@ public enum ProtectedResourceSessionFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIFETIME_STATE"]/*' />
 /// <unmanaged>D3D12_LIFETIME_STATE</unmanaged>
-public enum LifetimeState : int
+public enum LifetimeState
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIFETIME_STATE::D3D12_LIFETIME_STATE_IN_USE"]/*' />
 	/// <unmanaged>D3D12_LIFETIME_STATE_IN_USE</unmanaged>
@@ -2342,7 +2430,7 @@ public enum LifetimeState : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE</unmanaged>
-public enum MetaCommandParameterType : int
+public enum MetaCommandParameterType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_TYPE::D3D12_META_COMMAND_PARAMETER_TYPE_FLOAT"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_TYPE_FLOAT</unmanaged>
@@ -2364,7 +2452,7 @@ public enum MetaCommandParameterType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_FLAGS"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_PARAMETER_FLAGS</unmanaged>
 [Flags]
-public enum MetaCommandParameterFlags : uint
+public enum MetaCommandParameterFlags
 {
 	None = 0,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_FLAGS::D3D12_META_COMMAND_PARAMETER_FLAG_INPUT"]/*' />
@@ -2377,7 +2465,7 @@ public enum MetaCommandParameterFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_STAGE"]/*' />
 /// <unmanaged>D3D12_META_COMMAND_PARAMETER_STAGE</unmanaged>
-public enum MetaCommandParameterStage : int
+public enum MetaCommandParameterStage
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_STAGE::D3D12_META_COMMAND_PARAMETER_STAGE_CREATION"]/*' />
 	/// <unmanaged>D3D12_META_COMMAND_PARAMETER_STAGE_CREATION</unmanaged>
@@ -2393,7 +2481,7 @@ public enum MetaCommandParameterStage : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GRAPHICS_STATES"]/*' />
 /// <unmanaged>D3D12_GRAPHICS_STATES</unmanaged>
 [Flags]
-public enum GraphicsStates : uint
+public enum GraphicsStates
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GRAPHICS_STATES::D3D12_GRAPHICS_STATE_NONE"]/*' />
 	/// <unmanaged>D3D12_GRAPHICS_STATE_NONE</unmanaged>
@@ -2453,7 +2541,7 @@ public enum GraphicsStates : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT_TYPE"]/*' />
 /// <unmanaged>D3D12_STATE_SUBOBJECT_TYPE</unmanaged>
-public enum StateSubObjectType : int
+public enum StateSubObjectType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_SUBOBJECT_TYPE::D3D12_STATE_SUBOBJECT_TYPE_STATE_OBJECT_CONFIG"]/*' />
 	/// <unmanaged>D3D12_STATE_SUBOBJECT_TYPE_STATE_OBJECT_CONFIG</unmanaged>
@@ -2499,7 +2587,7 @@ public enum StateSubObjectType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_FLAGS"]/*' />
 /// <unmanaged>D3D12_STATE_OBJECT_FLAGS</unmanaged>
 [Flags]
-public enum StateObjectFlags : uint
+public enum StateObjectFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_FLAGS::D3D12_STATE_OBJECT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_STATE_OBJECT_FLAG_NONE</unmanaged>
@@ -2518,7 +2606,7 @@ public enum StateObjectFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_FLAGS"]/*' />
 /// <unmanaged>D3D12_EXPORT_FLAGS</unmanaged>
 [Flags]
-public enum ExportFlags : uint
+public enum ExportFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_FLAGS::D3D12_EXPORT_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_EXPORT_FLAG_NONE</unmanaged>
@@ -2527,7 +2615,7 @@ public enum ExportFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_TYPE"]/*' />
 /// <unmanaged>D3D12_HIT_GROUP_TYPE</unmanaged>
-public enum HitGroupType : int
+public enum HitGroupType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_TYPE::D3D12_HIT_GROUP_TYPE_TRIANGLES"]/*' />
 	/// <unmanaged>D3D12_HIT_GROUP_TYPE_TRIANGLES</unmanaged>
@@ -2540,7 +2628,7 @@ public enum HitGroupType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_FLAGS"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_PIPELINE_FLAGS</unmanaged>
 [Flags]
-public enum RaytracingPipelineFlags : uint
+public enum RaytracingPipelineFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_PIPELINE_FLAGS::D3D12_RAYTRACING_PIPELINE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_PIPELINE_FLAG_NONE</unmanaged>
@@ -2555,7 +2643,7 @@ public enum RaytracingPipelineFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_TYPE"]/*' />
 /// <unmanaged>D3D12_STATE_OBJECT_TYPE</unmanaged>
-public enum StateObjectType : int
+public enum StateObjectType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STATE_OBJECT_TYPE::D3D12_STATE_OBJECT_TYPE_COLLECTION"]/*' />
 	/// <unmanaged>D3D12_STATE_OBJECT_TYPE_COLLECTION</unmanaged>
@@ -2568,7 +2656,7 @@ public enum StateObjectType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_FLAGS"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_GEOMETRY_FLAGS</unmanaged>
 [Flags]
-public enum RaytracingGeometryFlags : uint
+public enum RaytracingGeometryFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_FLAGS::D3D12_RAYTRACING_GEOMETRY_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_GEOMETRY_FLAG_NONE</unmanaged>
@@ -2583,7 +2671,7 @@ public enum RaytracingGeometryFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TYPE"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_GEOMETRY_TYPE</unmanaged>
-public enum RaytracingGeometryType : int
+public enum RaytracingGeometryType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_GEOMETRY_TYPE::D3D12_RAYTRACING_GEOMETRY_TYPE_TRIANGLES"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_GEOMETRY_TYPE_TRIANGLES</unmanaged>
@@ -2596,7 +2684,7 @@ public enum RaytracingGeometryType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAGS</unmanaged>
 [Flags]
-public enum RaytracingInstanceFlags : uint
+public enum RaytracingInstanceFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_INSTANCE_FLAGS::D3D12_RAYTRACING_INSTANCE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_INSTANCE_FLAG_NONE</unmanaged>
@@ -2618,7 +2706,7 @@ public enum RaytracingInstanceFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGS"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGS</unmanaged>
 [Flags]
-public enum RaytracingAccelerationStructureBuildFlags : uint
+public enum RaytracingAccelerationStructureBuildFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGS::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_NONE</unmanaged>
@@ -2645,7 +2733,7 @@ public enum RaytracingAccelerationStructureBuildFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE</unmanaged>
-public enum RaytracingAccelerationStructureCopyMode : int
+public enum RaytracingAccelerationStructureCopyMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE_CLONE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE_CLONE</unmanaged>
@@ -2666,7 +2754,7 @@ public enum RaytracingAccelerationStructureCopyMode : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE</unmanaged>
-public enum RaytracingAccelerationStructureType : int
+public enum RaytracingAccelerationStructureType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL</unmanaged>
@@ -2678,7 +2766,7 @@ public enum RaytracingAccelerationStructureType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT"]/*' />
 /// <unmanaged>D3D12_ELEMENTS_LAYOUT</unmanaged>
-public enum ElementsLayout : int
+public enum ElementsLayout
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_ELEMENTS_LAYOUT::D3D12_ELEMENTS_LAYOUT_ARRAY"]/*' />
 	/// <unmanaged>D3D12_ELEMENTS_LAYOUT_ARRAY</unmanaged>
@@ -2690,7 +2778,7 @@ public enum ElementsLayout : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_TYPE"]/*' />
 /// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_TYPE</unmanaged>
-public enum RaytracingAccelerationStructurePostbuildInfoType : int
+public enum RaytracingAccelerationStructurePostbuildInfoType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_TYPE::D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_COMPACTED_SIZE"]/*' />
 	/// <unmanaged>D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_COMPACTED_SIZE</unmanaged>
@@ -2708,7 +2796,7 @@ public enum RaytracingAccelerationStructurePostbuildInfoType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_TYPE"]/*' />
 /// <unmanaged>D3D12_SERIALIZED_DATA_TYPE</unmanaged>
-public enum SerializedDataType : int
+public enum SerializedDataType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SERIALIZED_DATA_TYPE::D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
 	/// <unmanaged>D3D12_SERIALIZED_DATA_RAYTRACING_ACCELERATION_STRUCTURE</unmanaged>
@@ -2717,7 +2805,7 @@ public enum SerializedDataType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS"]/*' />
 /// <unmanaged>D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS</unmanaged>
-public enum DriverMatchingIdentifierStatus : int
+public enum DriverMatchingIdentifierStatus
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS::D3D12_DRIVER_MATCHING_IDENTIFIER_COMPATIBLE_WITH_DEVICE"]/*' />
 	/// <unmanaged>D3D12_DRIVER_MATCHING_IDENTIFIER_COMPATIBLE_WITH_DEVICE</unmanaged>
@@ -2739,7 +2827,7 @@ public enum DriverMatchingIdentifierStatus : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAY_FLAGS"]/*' />
 /// <unmanaged>D3D12_RAY_FLAGS</unmanaged>
 [Flags]
-public enum RayFlags : uint
+public enum RayFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAY_FLAGS::D3D12_RAY_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RAY_FLAG_NONE</unmanaged>
@@ -2778,7 +2866,7 @@ public enum RayFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND"]/*' />
 /// <unmanaged>D3D12_HIT_KIND</unmanaged>
-public enum HitKind : int
+public enum HitKind
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_KIND::D3D12_HIT_KIND_TRIANGLE_FRONT_FACE"]/*' />
 	/// <unmanaged>D3D12_HIT_KIND_TRIANGLE_FRONT_FACE</unmanaged>
@@ -2790,7 +2878,7 @@ public enum HitKind : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP"]/*' />
 /// <unmanaged>D3D12_AUTO_BREADCRUMB_OP</unmanaged>
-public enum AutoBreadcrumbOperation : int
+public enum AutoBreadcrumbOperation
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_SETMARKER"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_SETMARKER</unmanaged>
@@ -2931,7 +3019,7 @@ public enum AutoBreadcrumbOperation : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION"]/*' />
 /// <unmanaged>D3D12_DRED_VERSION</unmanaged>
-public enum DredVersion : int
+public enum DredVersion
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION::D3D12_DRED_VERSION_1_0"]/*' />
 	/// <unmanaged>D3D12_DRED_VERSION_1_0</unmanaged>
@@ -2950,7 +3038,7 @@ public enum DredVersion : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS"]/*' />
 /// <unmanaged>D3D12_DRED_FLAGS</unmanaged>
 [Flags]
-public enum DredFlags : uint
+public enum DredFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_FLAGS::D3D12_DRED_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_DRED_FLAG_NONE</unmanaged>
@@ -2965,7 +3053,7 @@ public enum DredFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT"]/*' />
 /// <unmanaged>D3D12_DRED_ENABLEMENT</unmanaged>
-public enum DredEnablement : int
+public enum DredEnablement
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ENABLEMENT::D3D12_DRED_ENABLEMENT_SYSTEM_CONTROLLED"]/*' />
 	/// <unmanaged>D3D12_DRED_ENABLEMENT_SYSTEM_CONTROLLED</unmanaged>
@@ -2980,7 +3068,7 @@ public enum DredEnablement : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE"]/*' />
 /// <unmanaged>D3D12_DRED_ALLOCATION_TYPE</unmanaged>
-public enum DredAllocationType : int
+public enum DredAllocationType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_TYPE::D3D12_DRED_ALLOCATION_TYPE_COMMAND_QUEUE"]/*' />
 	/// <unmanaged>D3D12_DRED_ALLOCATION_TYPE_COMMAND_QUEUE</unmanaged>
@@ -3074,7 +3162,7 @@ public enum DredAllocationType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_FLAGS"]/*' />
 /// <unmanaged>D3D12_DRED_PAGE_FAULT_FLAGS</unmanaged>
 [Flags]
-public enum DredPageFaultFlags : uint
+public enum DredPageFaultFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_PAGE_FAULT_FLAGS::D3D12_DRED_PAGE_FAULT_FLAGS_NONE"]/*' />
 	/// <unmanaged>D3D12_DRED_PAGE_FAULT_FLAGS_NONE</unmanaged>
@@ -3083,7 +3171,7 @@ public enum DredPageFaultFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_DEVICE_STATE"]/*' />
 /// <unmanaged>D3D12_DRED_DEVICE_STATE</unmanaged>
-public enum DredDeviceState : int
+public enum DredDeviceState
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_DEVICE_STATE::D3D12_DRED_DEVICE_STATE_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_DRED_DEVICE_STATE_UNKNOWN</unmanaged>
@@ -3101,7 +3189,7 @@ public enum DredDeviceState : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE"]/*' />
 /// <unmanaged>D3D12_BACKGROUND_PROCESSING_MODE</unmanaged>
-public enum BackgroundProcessingMode : int
+public enum BackgroundProcessingMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BACKGROUND_PROCESSING_MODE::D3D12_BACKGROUND_PROCESSING_MODE_ALLOWED"]/*' />
 	/// <unmanaged>D3D12_BACKGROUND_PROCESSING_MODE_ALLOWED</unmanaged>
@@ -3119,7 +3207,7 @@ public enum BackgroundProcessingMode : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MEASUREMENTS_ACTION"]/*' />
 /// <unmanaged>D3D12_MEASUREMENTS_ACTION</unmanaged>
-public enum MeasurementsAction : int
+public enum MeasurementsAction
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MEASUREMENTS_ACTION::D3D12_MEASUREMENTS_ACTION_KEEP_ALL"]/*' />
 	/// <unmanaged>D3D12_MEASUREMENTS_ACTION_KEEP_ALL</unmanaged>
@@ -3137,7 +3225,7 @@ public enum MeasurementsAction : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE</unmanaged>
-public enum RenderPassBeginningAccessType : int
+public enum RenderPassBeginningAccessType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_DISCARD"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_DISCARD</unmanaged>
@@ -3155,7 +3243,7 @@ public enum RenderPassBeginningAccessType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_TYPE"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_TYPE</unmanaged>
-public enum RenderPassEndingAccessType : int
+public enum RenderPassEndingAccessType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_TYPE::D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_DISCARD"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_DISCARD</unmanaged>
@@ -3174,7 +3262,7 @@ public enum RenderPassEndingAccessType : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_FLAGS"]/*' />
 /// <unmanaged>D3D12_RENDER_PASS_FLAGS</unmanaged>
 [Flags]
-public enum RenderPassFlags : uint
+public enum RenderPassFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_FLAGS::D3D12_RENDER_PASS_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_FLAG_NONE</unmanaged>
@@ -3192,7 +3280,7 @@ public enum RenderPassFlags : uint
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_MODE</unmanaged>
-public enum ShaderCacheMode : int
+public enum ShaderCacheMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE::D3D12_SHADER_CACHE_MODE_MEMORY"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_MODE_MEMORY</unmanaged>
@@ -3205,7 +3293,7 @@ public enum ShaderCacheMode : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_FLAGS</unmanaged>
 [Flags]
-public enum ShaderCacheFlags : uint
+public enum ShaderCacheFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_FLAGS::D3D12_SHADER_CACHE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_SHADER_CACHE_FLAG_NONE</unmanaged>
@@ -3218,10 +3306,308 @@ public enum ShaderCacheFlags : uint
 	UseWorkingDir = 2,
 }
 
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT"]/*' />
+/// <unmanaged>D3D12_BARRIER_LAYOUT</unmanaged>
+public enum BarrierLayout
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_UNDEFINED"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_UNDEFINED</unmanaged>
+	Undefined = -1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COMMON"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COMMON</unmanaged>
+	Common = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_PRESENT"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_PRESENT</unmanaged>
+	Present = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_GENERIC_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_GENERIC_READ</unmanaged>
+	GenericRead = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_RENDER_TARGET"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_RENDER_TARGET</unmanaged>
+	RenderTarget = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_UNORDERED_ACCESS"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_UNORDERED_ACCESS</unmanaged>
+	UnorderedAccess = 3,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_DEPTH_STENCIL_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_DEPTH_STENCIL_WRITE</unmanaged>
+	DepthStencilWrite = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_DEPTH_STENCIL_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_DEPTH_STENCIL_READ</unmanaged>
+	DepthStencilRead = 5,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_SHADER_RESOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_SHADER_RESOURCE</unmanaged>
+	ShaderResource = 6,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COPY_SOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COPY_SOURCE</unmanaged>
+	CopySource = 7,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COPY_DEST"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COPY_DEST</unmanaged>
+	CopyDest = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_RESOLVE_SOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_RESOLVE_SOURCE</unmanaged>
+	ResolveSource = 9,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_RESOLVE_DEST"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_RESOLVE_DEST</unmanaged>
+	ResolveDest = 10,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_SHADING_RATE_SOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_SHADING_RATE_SOURCE</unmanaged>
+	ShadingRateSource = 11,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_VIDEO_DECODE_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_VIDEO_DECODE_READ</unmanaged>
+	VideoDecodeRead = 12,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_VIDEO_DECODE_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_VIDEO_DECODE_WRITE</unmanaged>
+	VideoDecodeWrite = 13,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_VIDEO_PROCESS_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_VIDEO_PROCESS_READ</unmanaged>
+	VideoProcessRead = 14,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_VIDEO_PROCESS_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_VIDEO_PROCESS_WRITE</unmanaged>
+	VideoProcessWrite = 15,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_VIDEO_ENCODE_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_VIDEO_ENCODE_READ</unmanaged>
+	VideoEncodeRead = 16,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_VIDEO_ENCODE_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_VIDEO_ENCODE_WRITE</unmanaged>
+	VideoEncodeWrite = 17,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_COMMON"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_COMMON</unmanaged>
+	DirectQueueCommon = 18,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_GENERIC_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_GENERIC_READ</unmanaged>
+	DirectQueueGenericRead = 19,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_UNORDERED_ACCESS"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_UNORDERED_ACCESS</unmanaged>
+	DirectQueueUnorderedAccess = 20,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_SHADER_RESOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_SHADER_RESOURCE</unmanaged>
+	DirectQueueShaderResource = 21,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_COPY_SOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_COPY_SOURCE</unmanaged>
+	DirectQueueCopySource = 22,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_COPY_DEST"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_DIRECT_QUEUE_COPY_DEST</unmanaged>
+	DirectQueueCopyDest = 23,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_COMMON"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_COMMON</unmanaged>
+	ComputeQueueCommon = 24,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_GENERIC_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_GENERIC_READ</unmanaged>
+	ComputeQueueGenericRead = 25,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_UNORDERED_ACCESS"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_UNORDERED_ACCESS</unmanaged>
+	ComputeQueueUnorderedAccess = 26,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_SHADER_RESOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_SHADER_RESOURCE</unmanaged>
+	ComputeQueueShaderResource = 27,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_COPY_SOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_COPY_SOURCE</unmanaged>
+	ComputeQueueCopySource = 28,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_COPY_DEST"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_COMPUTE_QUEUE_COPY_DEST</unmanaged>
+	ComputeQueueCopyDest = 29,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_LAYOUT::D3D12_BARRIER_LAYOUT_VIDEO_QUEUE_COMMON"]/*' />
+	/// <unmanaged>D3D12_BARRIER_LAYOUT_VIDEO_QUEUE_COMMON</unmanaged>
+	VideoQueueCommon = 30,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC"]/*' />
+/// <unmanaged>D3D12_BARRIER_SYNC</unmanaged>
+[Flags]
+public enum BarrierSync
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_NONE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_NONE</unmanaged>
+	None = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_ALL"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_ALL</unmanaged>
+	All = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_DRAW"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_DRAW</unmanaged>
+	Draw = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_INDEX_INPUT"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_INDEX_INPUT</unmanaged>
+	IndexInput = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_VERTEX_SHADING"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_VERTEX_SHADING</unmanaged>
+	VertexShading = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_PIXEL_SHADING"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_PIXEL_SHADING</unmanaged>
+	PixelShading = 16,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_DEPTH_STENCIL"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_DEPTH_STENCIL</unmanaged>
+	DepthStencil = 32,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_RENDER_TARGET"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_RENDER_TARGET</unmanaged>
+	RenderTarget = 64,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_COMPUTE_SHADING"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_COMPUTE_SHADING</unmanaged>
+	ComputeShading = 128,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_RAYTRACING"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_RAYTRACING</unmanaged>
+	Raytracing = 256,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_COPY"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_COPY</unmanaged>
+	Copy = 512,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_RESOLVE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_RESOLVE</unmanaged>
+	Resolve = 1024,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_EXECUTE_INDIRECT"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_EXECUTE_INDIRECT</unmanaged>
+	ExecuteIndirect = 2048,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_PREDICATION"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_PREDICATION</unmanaged>
+	Predication = 2048,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_ALL_SHADING"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_ALL_SHADING</unmanaged>
+	AllShading = 4096,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_NON_PIXEL_SHADING"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_NON_PIXEL_SHADING</unmanaged>
+	NonPixelShading = 8192,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_EMIT_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_EMIT_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO</unmanaged>
+	EmitRaytracingAccelerationStructurePostbuildInfo = 16384,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_CLEAR_UNORDERED_ACCESS_VIEW"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_CLEAR_UNORDERED_ACCESS_VIEW</unmanaged>
+	ClearUnorderedAccessView = 32768,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_VIDEO_DECODE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_VIDEO_DECODE</unmanaged>
+	VideoDecode = 1048576,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_VIDEO_PROCESS"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_VIDEO_PROCESS</unmanaged>
+	VideoProcess = 2097152,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_VIDEO_ENCODE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_VIDEO_ENCODE</unmanaged>
+	VideoEncode = 4194304,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_BUILD_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_BUILD_RAYTRACING_ACCELERATION_STRUCTURE</unmanaged>
+	BuildRaytracingAccelerationStructure = 8388608,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_COPY_RAYTRACING_ACCELERATION_STRUCTURE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_COPY_RAYTRACING_ACCELERATION_STRUCTURE</unmanaged>
+	CopyRaytracingAccelerationStructure = 16777216,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_SYNC::D3D12_BARRIER_SYNC_SPLIT"]/*' />
+	/// <unmanaged>D3D12_BARRIER_SYNC_SPLIT</unmanaged>
+	Split = -2147483648,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS"]/*' />
+/// <unmanaged>D3D12_BARRIER_ACCESS</unmanaged>
+[Flags]
+public enum BarrierAccess
+{
+	None = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_COMMON"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_COMMON</unmanaged>
+	Common = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_VERTEX_BUFFER"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_VERTEX_BUFFER</unmanaged>
+	VertexBuffer = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_CONSTANT_BUFFER"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_CONSTANT_BUFFER</unmanaged>
+	ConstantBuffer = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_INDEX_BUFFER"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_INDEX_BUFFER</unmanaged>
+	IndexBuffer = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_RENDER_TARGET"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_RENDER_TARGET</unmanaged>
+	RenderTarget = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_UNORDERED_ACCESS"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_UNORDERED_ACCESS</unmanaged>
+	UnorderedAccess = 16,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_DEPTH_STENCIL_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_DEPTH_STENCIL_WRITE</unmanaged>
+	DepthStencilWrite = 32,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_DEPTH_STENCIL_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_DEPTH_STENCIL_READ</unmanaged>
+	DepthStencilRead = 64,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_SHADER_RESOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_SHADER_RESOURCE</unmanaged>
+	ShaderResource = 128,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_STREAM_OUTPUT"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_STREAM_OUTPUT</unmanaged>
+	StreamOutput = 256,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_INDIRECT_ARGUMENT"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_INDIRECT_ARGUMENT</unmanaged>
+	IndirectArgument = 512,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_PREDICATION"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_PREDICATION</unmanaged>
+	Predication = 512,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_COPY_DEST"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_COPY_DEST</unmanaged>
+	CopyDest = 1024,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_COPY_SOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_COPY_SOURCE</unmanaged>
+	CopySource = 2048,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_RESOLVE_DEST"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_RESOLVE_DEST</unmanaged>
+	ResolveDest = 4096,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_RESOLVE_SOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_RESOLVE_SOURCE</unmanaged>
+	ResolveSource = 8192,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_RAYTRACING_ACCELERATION_STRUCTURE_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_RAYTRACING_ACCELERATION_STRUCTURE_READ</unmanaged>
+	RaytracingAccelerationStructureRead = 16384,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_RAYTRACING_ACCELERATION_STRUCTURE_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_RAYTRACING_ACCELERATION_STRUCTURE_WRITE</unmanaged>
+	RaytracingAccelerationStructureWrite = 32768,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_SHADING_RATE_SOURCE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_SHADING_RATE_SOURCE</unmanaged>
+	ShadingRateSource = 65536,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_VIDEO_DECODE_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_VIDEO_DECODE_READ</unmanaged>
+	VideoDecodeRead = 131072,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_VIDEO_DECODE_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_VIDEO_DECODE_WRITE</unmanaged>
+	VideoDecodeWrite = 262144,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_VIDEO_PROCESS_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_VIDEO_PROCESS_READ</unmanaged>
+	VideoProcessRead = 524288,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_VIDEO_PROCESS_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_VIDEO_PROCESS_WRITE</unmanaged>
+	VideoProcessWrite = 1048576,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_VIDEO_ENCODE_READ"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_VIDEO_ENCODE_READ</unmanaged>
+	VideoEncodeRead = 2097152,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_VIDEO_ENCODE_WRITE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_VIDEO_ENCODE_WRITE</unmanaged>
+	VideoEncodeWrite = 4194304,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_ACCESS::D3D12_BARRIER_ACCESS_NO_ACCESS"]/*' />
+	/// <unmanaged>D3D12_BARRIER_ACCESS_NO_ACCESS</unmanaged>
+	NoAccess = -2147483648,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_TYPE"]/*' />
+/// <unmanaged>D3D12_BARRIER_TYPE</unmanaged>
+public enum BarrierType
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_TYPE::D3D12_BARRIER_TYPE_GLOBAL"]/*' />
+	/// <unmanaged>D3D12_BARRIER_TYPE_GLOBAL</unmanaged>
+	Global = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_TYPE::D3D12_BARRIER_TYPE_TEXTURE"]/*' />
+	/// <unmanaged>D3D12_BARRIER_TYPE_TEXTURE</unmanaged>
+	Texture = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BARRIER_TYPE::D3D12_BARRIER_TYPE_BUFFER"]/*' />
+	/// <unmanaged>D3D12_BARRIER_TYPE_BUFFER</unmanaged>
+	Buffer = 2,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_BARRIER_FLAGS"]/*' />
+/// <unmanaged>D3D12_TEXTURE_BARRIER_FLAGS</unmanaged>
+[Flags]
+public enum TextureBarrierFlags
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_BARRIER_FLAGS::D3D12_TEXTURE_BARRIER_FLAG_NONE"]/*' />
+	/// <unmanaged>D3D12_TEXTURE_BARRIER_FLAG_NONE</unmanaged>
+	None = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_TEXTURE_BARRIER_FLAGS::D3D12_TEXTURE_BARRIER_FLAG_DISCARD"]/*' />
+	/// <unmanaged>D3D12_TEXTURE_BARRIER_FLAG_DISCARD</unmanaged>
+	Discard = 1,
+}
+
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_KIND_FLAGS</unmanaged>
 [Flags]
-public enum ShaderCacheKindFlags : uint
+public enum ShaderCacheKindFlags
 {
 	None = 0,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_KIND_FLAGS::D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_D3D_CACHE_FOR_DRIVER"]/*' />
@@ -3241,7 +3627,7 @@ public enum ShaderCacheKindFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_CONTROL_FLAGS"]/*' />
 /// <unmanaged>D3D12_SHADER_CACHE_CONTROL_FLAGS</unmanaged>
 [Flags]
-public enum ShaderCacheControlFlags : uint
+public enum ShaderCacheControlFlags
 {
 	None = 0,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_CONTROL_FLAGS::D3D12_SHADER_CACHE_CONTROL_FLAG_DISABLE"]/*' />
@@ -3258,7 +3644,7 @@ public enum ShaderCacheControlFlags : uint
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS"]/*' />
 /// <unmanaged>D3D12_GPU_BASED_VALIDATION_FLAGS</unmanaged>
 [Flags]
-public enum GpuBasedValidationFlags : int
+public enum GpuBasedValidationFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_FLAGS::D3D12_GPU_BASED_VALIDATION_FLAGS_NONE"]/*' />
 	/// <unmanaged>D3D12_GPU_BASED_VALIDATION_FLAGS_NONE</unmanaged>
@@ -3271,7 +3657,7 @@ public enum GpuBasedValidationFlags : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RLDO_FLAGS"]/*' />
 /// <unmanaged>D3D12_RLDO_FLAGS</unmanaged>
 [Flags]
-public enum ReportLiveDeviceObjectFlags : int
+public enum ReportLiveDeviceObjectFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RLDO_FLAGS::D3D12_RLDO_NONE"]/*' />
 	/// <unmanaged>D3D12_RLDO_NONE</unmanaged>
@@ -3289,7 +3675,7 @@ public enum ReportLiveDeviceObjectFlags : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_PARAMETER_TYPE"]/*' />
 /// <unmanaged>D3D12_DEBUG_DEVICE_PARAMETER_TYPE</unmanaged>
-public enum DebugDeviceParameterType : int
+public enum DebugDeviceParameterType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_DEVICE_PARAMETER_TYPE::D3D12_DEBUG_DEVICE_PARAMETER_FEATURE_FLAGS"]/*' />
 	/// <unmanaged>D3D12_DEBUG_DEVICE_PARAMETER_FEATURE_FLAGS</unmanaged>
@@ -3304,7 +3690,8 @@ public enum DebugDeviceParameterType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE"]/*' />
 /// <unmanaged>D3D12_DEBUG_FEATURE</unmanaged>
-public enum DebugFeature : int
+[Flags]
+public enum DebugFeature
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_FEATURE::D3D12_DEBUG_FEATURE_NONE"]/*' />
 	/// <unmanaged>D3D12_DEBUG_FEATURE_NONE</unmanaged>
@@ -3325,7 +3712,7 @@ public enum DebugFeature : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_SHADER_PATCH_MODE"]/*' />
 /// <unmanaged>D3D12_GPU_BASED_VALIDATION_SHADER_PATCH_MODE</unmanaged>
-public enum GpuBasedValidationShaderPatchMode : int
+public enum GpuBasedValidationShaderPatchMode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_SHADER_PATCH_MODE::D3D12_GPU_BASED_VALIDATION_SHADER_PATCH_MODE_NONE"]/*' />
 	/// <unmanaged>D3D12_GPU_BASED_VALIDATION_SHADER_PATCH_MODE_NONE</unmanaged>
@@ -3347,7 +3734,7 @@ public enum GpuBasedValidationShaderPatchMode : int
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAGS"]/*' />
 /// <unmanaged>D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAGS</unmanaged>
 [Flags]
-public enum GpuBasedValidationPipelineStateCreateFlags : int
+public enum GpuBasedValidationPipelineStateCreateFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAGS::D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAG_NONE</unmanaged>
@@ -3368,7 +3755,7 @@ public enum GpuBasedValidationPipelineStateCreateFlags : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE"]/*' />
 /// <unmanaged>D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE</unmanaged>
-public enum DebugCommandListParameterType : int
+public enum DebugCommandListParameterType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE::D3D12_DEBUG_COMMAND_LIST_PARAMETER_GPU_BASED_VALIDATION_SETTINGS"]/*' />
 	/// <unmanaged>D3D12_DEBUG_COMMAND_LIST_PARAMETER_GPU_BASED_VALIDATION_SETTINGS</unmanaged>
@@ -3377,7 +3764,7 @@ public enum DebugCommandListParameterType : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY"]/*' />
 /// <unmanaged>D3D12_MESSAGE_CATEGORY</unmanaged>
-public enum MessageCategory : int
+public enum MessageCategory
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CATEGORY::D3D12_MESSAGE_CATEGORY_APPLICATION_DEFINED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CATEGORY_APPLICATION_DEFINED</unmanaged>
@@ -3416,7 +3803,7 @@ public enum MessageCategory : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_SEVERITY"]/*' />
 /// <unmanaged>D3D12_MESSAGE_SEVERITY</unmanaged>
-public enum MessageSeverity : int
+public enum MessageSeverity
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_SEVERITY::D3D12_MESSAGE_SEVERITY_CORRUPTION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_SEVERITY_CORRUPTION</unmanaged>
@@ -3437,7 +3824,7 @@ public enum MessageSeverity : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID"]/*' />
 /// <unmanaged>D3D12_MESSAGE_ID</unmanaged>
-public enum MessageId : int
+public enum MessageId
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_UNKNOWN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_UNKNOWN</unmanaged>
@@ -6112,12 +6499,135 @@ public enum MessageId : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SHADERCACHECONTROL_SHADERCACHECLEAR_NOTSUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SHADERCACHECONTROL_SHADERCACHECLEAR_NOTSUPPORTED</unmanaged>
 	ShaderCacheControlShaderCacheClearNotSupported = 1327,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_STATE_IGNORED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_STATE_IGNORED</unmanaged>
+	CreateResourceStateIgnored = 1328,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_UNUSED_CROSS_EXECUTE_SPLIT_BARRIER"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_UNUSED_CROSS_EXECUTE_SPLIT_BARRIER</unmanaged>
+	UnusedCrossExecuteSplitBarrier = 1329,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DEVICE_OPEN_SHARED_HANDLE_ACCESS_DENIED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DEVICE_OPEN_SHARED_HANDLE_ACCESS_DENIED</unmanaged>
+	DeviceOpenSharedHandleAccessDenied = 1330,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_VALUES"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_VALUES</unmanaged>
+	IncompatibleBarrierValues = 1331,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_ACCESS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_ACCESS</unmanaged>
+	IncompatibleBarrierAccess = 1332,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_SYNC"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_SYNC</unmanaged>
+	IncompatibleBarrierSync = 1333,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_LAYOUT"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_LAYOUT</unmanaged>
+	IncompatibleBarrierLayout = 1334,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_TYPE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_TYPE</unmanaged>
+	IncompatibleBarrierType = 1335,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_OUT_OF_BOUNDS_BARRIER_SUBRESOURCE_RANGE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_OUT_OF_BOUNDS_BARRIER_SUBRESOURCE_RANGE</unmanaged>
+	OutOfBoundsBarrierSubresourceRange = 1336,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_RESOURCE_DIMENSION"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_INCOMPATIBLE_BARRIER_RESOURCE_DIMENSION</unmanaged>
+	IncompatibleBarrierResourceDimension = 1337,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SET_SCISSOR_RECTS_INVALID_RECT"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_SET_SCISSOR_RECTS_INVALID_RECT</unmanaged>
+	SetScissorRectsInvalidRect = 1338,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SHADING_RATE_SOURCE_REQUIRES_DIMENSION_TEXTURE2D"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_SHADING_RATE_SOURCE_REQUIRES_DIMENSION_TEXTURE2D</unmanaged>
+	ShadingRateSourceRequiresDimensionTexture2D = 1339,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_BUFFER_BARRIER_SUBREGION_OUT_OF_BOUNDS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_BUFFER_BARRIER_SUBREGION_OUT_OF_BOUNDS</unmanaged>
+	BufferBarrierSubregionOutOfBounds = 1340,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_UNSUPPORTED_BARRIER_LAYOUT"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_UNSUPPORTED_BARRIER_LAYOUT</unmanaged>
+	UnsupportedBarrierLayout = 1341,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALID_PARAMETERS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALID_PARAMETERS</unmanaged>
+	CreateResourceAndHeapInvalidParameters = 1342,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_ENHANCED_BARRIERS_NOT_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_ENHANCED_BARRIERS_NOT_SUPPORTED</unmanaged>
+	EnhancedBarriersNotSupported = 1343,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LEGACY_BARRIER_VALIDATION_FORCED_ON"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_LEGACY_BARRIER_VALIDATION_FORCED_ON</unmanaged>
+	LegacyBarrierValidationForcedOn = 1346,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EMPTY_ROOT_DESCRIPTOR_TABLE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_EMPTY_ROOT_DESCRIPTOR_TABLE</unmanaged>
+	EmptyRootDescriptorTable = 1347,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COMMAND_LIST_DRAW_ELEMENT_OFFSET_UNALIGNED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_COMMAND_LIST_DRAW_ELEMENT_OFFSET_UNALIGNED</unmanaged>
+	CommandListDrawElementOffsetUnaligned = 1348,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_ALPHA_BLEND_FACTOR_NOT_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_ALPHA_BLEND_FACTOR_NOT_SUPPORTED</unmanaged>
+	AlphaBlendFactorNotSupported = 1349,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_BARRIER_INTEROP_INVALID_LAYOUT"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_BARRIER_INTEROP_INVALID_LAYOUT</unmanaged>
+	BarrierInteropInvalidLayout = 1350,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_BARRIER_INTEROP_INVALID_STATE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_BARRIER_INTEROP_INVALID_STATE</unmanaged>
+	BarrierInteropInvalidState = 1351,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GRAPHICS_PIPELINE_STATE_DESC_ZERO_SAMPLE_MASK"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_GRAPHICS_PIPELINE_STATE_DESC_ZERO_SAMPLE_MASK</unmanaged>
+	GraphicsPipelineStateDescZeroSampleMask = 1352,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INDEPENDENT_STENCIL_REF_NOT_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_INDEPENDENT_STENCIL_REF_NOT_SUPPORTED</unmanaged>
+	IndependentStencilRefNotSupported = 1353,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEDEPTHSTENCILSTATE_INDEPENDENT_MASKS_UNSUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATEDEPTHSTENCILSTATE_INDEPENDENT_MASKS_UNSUPPORTED</unmanaged>
+	CreateDepthStencilStateIndependentMasksUnsupported = 1354,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_TEXTURE_BARRIER_SUBRESOURCES_OUT_OF_BOUNDS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_TEXTURE_BARRIER_SUBRESOURCES_OUT_OF_BOUNDS</unmanaged>
+	TextureBarrierSubresourcesOutOfBounds = 1355,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_NON_OPTIMAL_BARRIER_ONLY_EXECUTE_COMMAND_LISTS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_NON_OPTIMAL_BARRIER_ONLY_EXECUTE_COMMAND_LISTS</unmanaged>
+	NonOptimalBarrierOnlyExecuteCommandLists = 1356,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_EXECUTE_INDIRECT_ZERO_COMMAND_COUNT"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_EXECUTE_INDIRECT_ZERO_COMMAND_COUNT</unmanaged>
+	ExecuteIndirectZeroCommandCount = 1357,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_GPU_BASED_VALIDATION_INCOMPATIBLE_TEXTURE_LAYOUT"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_GPU_BASED_VALIDATION_INCOMPATIBLE_TEXTURE_LAYOUT</unmanaged>
+	GpuBasedValidationIncompatibleTextureLayout = 1358,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_NOT_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_NOT_SUPPORTED</unmanaged>
+	DynamicIndexBufferStripCutNotSupported = 1359,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_PRIMITIVE_TOPOLOGY_TRIANGLE_FANS_NOT_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_PRIMITIVE_TOPOLOGY_TRIANGLE_FANS_NOT_SUPPORTED</unmanaged>
+	PrimitiveTopologyTriangleFansNotSupported = 1360,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_SAMPLER_COMPARISON_FUNC_IGNORED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_SAMPLER_COMPARISON_FUNC_IGNORED</unmanaged>
+	CreateSamplerComparisonFuncIgnored = 1361,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEHEAP_INVALIDHEAPTYPE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATEHEAP_INVALIDHEAPTYPE</unmanaged>
+	CreateHeapInvalidHeapType = 1362,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALIDHEAPTYPE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCEANDHEAP_INVALIDHEAPTYPE</unmanaged>
+	CreateResourceAndHeapInvalidHeapType = 1363,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DYNAMIC_DEPTH_BIAS_NOT_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DYNAMIC_DEPTH_BIAS_NOT_SUPPORTED</unmanaged>
+	DynamicDepthBiasNotSupported = 1364,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERASTERIZERSTATE_NON_WHOLE_DYNAMIC_DEPTH_BIAS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATERASTERIZERSTATE_NON_WHOLE_DYNAMIC_DEPTH_BIAS</unmanaged>
+	CreateRasterizerStateNonWholeDynamicDepthBias = 1365,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DYNAMIC_DEPTH_BIAS_FLAG_MISSING"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DYNAMIC_DEPTH_BIAS_FLAG_MISSING</unmanaged>
+	DynamicDepthBiasFlagMissing = 1366,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DYNAMIC_DEPTH_BIAS_NO_PIPELINE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DYNAMIC_DEPTH_BIAS_NO_PIPELINE</unmanaged>
+	DynamicDepthBiasNoPipeline = 1367,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_FLAG_MISSING"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_FLAG_MISSING</unmanaged>
+	DynamicIndexBufferStripCutFlagMissing = 1368,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_NO_PIPELINE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_NO_PIPELINE</unmanaged>
+	DynamicIndexBufferStripCutNoPipeline = 1369,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INVALID_CAST_TARGET"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_INVALID_CAST_TARGET</unmanaged>
+	InvalidCastTarget = 1371,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS"]/*' />
 /// <unmanaged>D3D12_MESSAGE_CALLBACK_FLAGS</unmanaged>
 [Flags]
-public enum MessageCallbackFlags : int
+public enum MessageCallbackFlags
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS::D3D12_MESSAGE_CALLBACK_FLAG_NONE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_CALLBACK_FLAG_NONE</unmanaged>
@@ -6127,9 +6637,71 @@ public enum MessageCallbackFlags : int
 	IgnoreFilters = 1,
 }
 
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FACTORY_FLAGS"]/*' />
+/// <unmanaged>D3D12_DEVICE_FACTORY_FLAGS</unmanaged>
+[Flags]
+public enum DeviceFactoryFlags
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FACTORY_FLAGS::D3D12_DEVICE_FACTORY_FLAG_NONE"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FACTORY_FLAG_NONE</unmanaged>
+	None = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FACTORY_FLAGS::D3D12_DEVICE_FACTORY_FLAG_ALLOW_RETURNING_EXISTING_DEVICE"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FACTORY_FLAG_ALLOW_RETURNING_EXISTING_DEVICE</unmanaged>
+	AllowReturningExistingDevice = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FACTORY_FLAGS::D3D12_DEVICE_FACTORY_FLAG_ALLOW_RETURNING_INCOMPATIBLE_EXISTING_DEVICE"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FACTORY_FLAG_ALLOW_RETURNING_INCOMPATIBLE_EXISTING_DEVICE</unmanaged>
+	AllowReturningIncompatibleExistingDevice = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FACTORY_FLAGS::D3D12_DEVICE_FACTORY_FLAG_DISALLOW_STORING_NEW_DEVICE_AS_SINGLETON"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FACTORY_FLAG_DISALLOW_STORING_NEW_DEVICE_AS_SINGLETON</unmanaged>
+	DisallowStoringNewDeviceAsSingleton = 4,
+}
+
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS"]/*' />
+/// <unmanaged>D3D12_DEVICE_FLAGS</unmanaged>
+[Flags]
+public enum DeviceFlags
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_NONE"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_NONE</unmanaged>
+	None = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_DEBUG_LAYER_ENABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_DEBUG_LAYER_ENABLED</unmanaged>
+	DebugLayerEnabled = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_GPU_BASED_VALIDATION_ENABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_GPU_BASED_VALIDATION_ENABLED</unmanaged>
+	GpuBasedValidationEnabled = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_SYNCHRONIZED_COMMAND_QUEUE_VALIDATION_DISABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_SYNCHRONIZED_COMMAND_QUEUE_VALIDATION_DISABLED</unmanaged>
+	SynchronizedCommandQueueValidationDisabled = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_DRED_AUTO_BREADCRUMBS_ENABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_DRED_AUTO_BREADCRUMBS_ENABLED</unmanaged>
+	DredAutoBreadcrumbsEnabled = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_DRED_PAGE_FAULT_REPORTING_ENABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_DRED_PAGE_FAULT_REPORTING_ENABLED</unmanaged>
+	DredPageFaultReportingEnabled = 16,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_DRED_WATSON_REPORTING_ENABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_DRED_WATSON_REPORTING_ENABLED</unmanaged>
+	DredWatsonReportingEnabled = 32,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_DRED_BREADCRUMB_CONTEXT_ENABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_DRED_BREADCRUMB_CONTEXT_ENABLED</unmanaged>
+	DredBreadcrumbContextEnabled = 64,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_DRED_USE_MARKERS_ONLY_BREADCRUMBS"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_DRED_USE_MARKERS_ONLY_BREADCRUMBS</unmanaged>
+	DredUseMarkersOnlyBreadcrumbs = 128,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_SHADER_INSTRUMENTATION_ENABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_SHADER_INSTRUMENTATION_ENABLED</unmanaged>
+	ShaderInstrumentationEnabled = 256,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_AUTO_DEBUG_NAME_ENABLED"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_AUTO_DEBUG_NAME_ENABLED</unmanaged>
+	AutoDebugNameEnabled = 512,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DEVICE_FLAGS::D3D12_DEVICE_FLAG_FORCE_LEGACY_STATE_VALIDATION"]/*' />
+	/// <unmanaged>D3D12_DEVICE_FLAG_FORCE_LEGACY_STATE_VALIDATION</unmanaged>
+	ForceLegacyStateValidation = 1024,
+}
+
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE"]/*' />
 /// <unmanaged>D3D12_AXIS_SHADING_RATE</unmanaged>
-public enum AxisShadingRate : int
+public enum AxisShadingRate
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AXIS_SHADING_RATE::D3D12_AXIS_SHADING_RATE_1X"]/*' />
 	/// <unmanaged>D3D12_AXIS_SHADING_RATE_1X</unmanaged>
@@ -6144,7 +6716,7 @@ public enum AxisShadingRate : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE"]/*' />
 /// <unmanaged>D3D12_SHADING_RATE</unmanaged>
-public enum ShadingRate : int
+public enum ShadingRate
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE::D3D12_SHADING_RATE_1X1"]/*' />
 	/// <unmanaged>D3D12_SHADING_RATE_1X1</unmanaged>
@@ -6171,7 +6743,7 @@ public enum ShadingRate : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER"]/*' />
 /// <unmanaged>D3D12_SHADING_RATE_COMBINER</unmanaged>
-public enum ShadingRateCombiner : int
+public enum ShadingRateCombiner
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADING_RATE_COMBINER::D3D12_SHADING_RATE_COMBINER_PASSTHROUGH"]/*' />
 	/// <unmanaged>D3D12_SHADING_RATE_COMBINER_PASSTHROUGH</unmanaged>
@@ -6192,7 +6764,7 @@ public enum ShadingRateCombiner : int
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE"]/*' />
 /// <unmanaged>D3D12_SHADER_VERSION_TYPE</unmanaged>
-public enum ShaderVersionType : int
+public enum ShaderVersionType
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_PIXEL_SHADER"]/*' />
 	/// <unmanaged>D3D12_SHVER_PIXEL_SHADER</unmanaged>
@@ -6212,6 +6784,33 @@ public enum ShaderVersionType : int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_COMPUTE_SHADER"]/*' />
 	/// <unmanaged>D3D12_SHVER_COMPUTE_SHADER</unmanaged>
 	ComputeShader = 5,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_LIBRARY"]/*' />
+	/// <unmanaged>D3D12_SHVER_LIBRARY</unmanaged>
+	Library = 6,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_RAY_GENERATION_SHADER"]/*' />
+	/// <unmanaged>D3D12_SHVER_RAY_GENERATION_SHADER</unmanaged>
+	RayGenerationShader = 7,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_INTERSECTION_SHADER"]/*' />
+	/// <unmanaged>D3D12_SHVER_INTERSECTION_SHADER</unmanaged>
+	IntersectionShader = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_ANY_HIT_SHADER"]/*' />
+	/// <unmanaged>D3D12_SHVER_ANY_HIT_SHADER</unmanaged>
+	AnyHitShader = 9,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_CLOSEST_HIT_SHADER"]/*' />
+	/// <unmanaged>D3D12_SHVER_CLOSEST_HIT_SHADER</unmanaged>
+	ClosestHitShader = 10,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_MISS_SHADER"]/*' />
+	/// <unmanaged>D3D12_SHVER_MISS_SHADER</unmanaged>
+	MissShader = 11,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_CALLABLE_SHADER"]/*' />
+	/// <unmanaged>D3D12_SHVER_CALLABLE_SHADER</unmanaged>
+	CallableShader = 12,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_MESH_SHADER"]/*' />
+	/// <unmanaged>D3D12_SHVER_MESH_SHADER</unmanaged>
+	MeshShader = 13,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_AMPLIFICATION_SHADER"]/*' />
+	/// <unmanaged>D3D12_SHVER_AMPLIFICATION_SHADER</unmanaged>
+	AmplificationShader = 14,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VERSION_TYPE::D3D12_SHVER_RESERVED0"]/*' />
 	/// <unmanaged>D3D12_SHVER_RESERVED0</unmanaged>
 	Reserved0 = 65520,

@@ -53,7 +53,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, uint>)(lpVtbl[1]))((IWICComponentInfo*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint>)(lpVtbl[1]))((IWICComponentInfo*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, uint>)(lpVtbl[2]))((IWICComponentInfo*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint>)(lpVtbl[2]))((IWICComponentInfo*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetComponentType"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(3)]
 	public HResult GetComponentType(WICComponentType* pType)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pType);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pType);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetCLSID"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(4)]
 	public HResult GetCLSID(Guid* pclsid)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, Guid*, int>)(lpVtbl[4]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pclsid);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, Guid*, int>)(lpVtbl[4]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pclsid);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSigningStatus"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(5)]
 	public HResult GetSigningStatus(uint* pStatus)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, uint*, int>)(lpVtbl[5]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pStatus);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint*, int>)(lpVtbl[5]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pStatus);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetAuthor"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(6)]
 	public HResult GetAuthor(uint cchAuthor, ushort* wzAuthor, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVendorGUID"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(7)]
 	public HResult GetVendorGUID(Guid* pguidVendor)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, Guid*, int>)(lpVtbl[7]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pguidVendor);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, Guid*, int>)(lpVtbl[7]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), pguidVendor);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVersion"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(8)]
 	public HResult GetVersion(uint cchVersion, ushort* wzVersion, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSpecVersion"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(9)]
 	public HResult GetSpecVersion(uint cchSpecVersion, ushort* wzSpecVersion, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetFriendlyName"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	[VtblIndex(10)]
 	public HResult GetFriendlyName(uint cchFriendlyName, ushort* wzFriendlyName, uint* pcchActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICComponentInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

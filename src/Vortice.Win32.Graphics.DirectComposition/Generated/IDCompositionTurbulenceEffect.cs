@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, uint>)(lpVtbl[1]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, uint>)(lpVtbl[1]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, uint>)(lpVtbl[2]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, uint>)(lpVtbl[2]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(3)]
 	public HResult SetInput(uint index, IUnknown* input, uint flags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), index, input, flags);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), index, input, flags);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetOffset"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(4)]
 	public HResult SetOffset(Vector2* offset)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[4]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), offset);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[4]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), offset);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetBaseFrequency"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(5)]
 	public HResult SetBaseFrequency(Vector2* frequency)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[5]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), frequency);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[5]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), frequency);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetSize"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(6)]
 	public HResult SetSize(Vector2* size)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[6]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), size);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, Vector2*, int>)(lpVtbl[6]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), size);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetNumOctaves"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(7)]
 	public HResult SetNumOctaves(uint numOctaves)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, uint, int>)(lpVtbl[7]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), numOctaves);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, uint, int>)(lpVtbl[7]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), numOctaves);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetSeed"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(8)]
 	public HResult SetSeed(uint seed)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, uint, int>)(lpVtbl[8]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), seed);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, uint, int>)(lpVtbl[8]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), seed);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetNoise"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(9)]
 	public HResult SetNoise(Graphics.Direct2D.Common.TurbulenceNoise noise)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, Graphics.Direct2D.Common.TurbulenceNoise, int>)(lpVtbl[9]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), noise);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, Graphics.Direct2D.Common.TurbulenceNoise, int>)(lpVtbl[9]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), noise);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTurbulenceEffect::SetStitchable"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IDCompositionTurbulenceEffect : IDCompositionTurbul
 	[VtblIndex(10)]
 	public HResult SetStitchable(Bool32 stitchable)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionTurbulenceEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), stitchable);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionTurbulenceEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTurbulenceEffect*)Unsafe.AsPointer(ref this), stitchable);
+#endif
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface

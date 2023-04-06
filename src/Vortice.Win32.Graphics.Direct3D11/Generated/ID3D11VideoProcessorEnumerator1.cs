@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, uint>)(lpVtbl[1]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, uint>)(lpVtbl[1]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, uint>)(lpVtbl[2]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, uint>)(lpVtbl[2]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(3)]
 	public void GetDevice(ID3D11Device** ppDevice)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), ppDevice);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), ppDevice);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(4)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(5)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(6)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorContentDesc" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(7)]
 	public HResult GetVideoProcessorContentDesc(VideoProcessorContentDescription* pContentDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, VideoProcessorContentDescription*, int>)(lpVtbl[7]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pContentDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, VideoProcessorContentDescription*, int>)(lpVtbl[7]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pContentDesc);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.CheckVideoProcessorFormat" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(8)]
 	public HResult CheckVideoProcessorFormat(Graphics.Dxgi.Common.Format Format, uint* pFlags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[8]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Format, pFlags);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[8]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Format, pFlags);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorCaps" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(9)]
 	public HResult GetVideoProcessorCaps(VideoProcessorCaps* pCaps)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, VideoProcessorCaps*, int>)(lpVtbl[9]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pCaps);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, VideoProcessorCaps*, int>)(lpVtbl[9]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), pCaps);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorRateConversionCaps" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(10)]
 	public HResult GetVideoProcessorRateConversionCaps(uint TypeIndex, VideoProcessorRateConversionCaps* pCaps)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, uint, VideoProcessorRateConversionCaps*, int>)(lpVtbl[10]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, pCaps);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, uint, VideoProcessorRateConversionCaps*, int>)(lpVtbl[10]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, pCaps);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorCustomRate" />
@@ -143,7 +187,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(11)]
 	public HResult GetVideoProcessorCustomRate(uint TypeIndex, uint CustomRateIndex, VideoProcessorCustomRate* pRate)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, uint, uint, VideoProcessorCustomRate*, int>)(lpVtbl[11]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, CustomRateIndex, pRate);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, uint, uint, VideoProcessorCustomRate*, int>)(lpVtbl[11]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), TypeIndex, CustomRateIndex, pRate);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoProcessorEnumerator.GetVideoProcessorFilterRange" />
@@ -151,7 +199,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(12)]
 	public HResult GetVideoProcessorFilterRange(VideoProcessorFilter Filter, VideoProcessorFilterRange* pRange)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, VideoProcessorFilter, VideoProcessorFilterRange*, int>)(lpVtbl[12]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Filter, pRange);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, VideoProcessorFilter, VideoProcessorFilterRange*, int>)(lpVtbl[12]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), Filter, pRange);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoProcessorEnumerator1::CheckVideoProcessorFormatConversion"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct ID3D11VideoProcessorEnumerator1 : ID3D11VideoProces
 	[VtblIndex(13)]
 	public HResult CheckVideoProcessorFormatConversion(Graphics.Dxgi.Common.Format InputFormat, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, Graphics.Dxgi.Common.Format OutputFormat, Graphics.Dxgi.Common.ColorSpaceType OutputColorSpace, Bool32* pSupported)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), InputFormat, InputColorSpace, OutputFormat, OutputColorSpace, pSupported);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoProcessorEnumerator1*, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.ColorSpaceType, Bool32*, int>)(lpVtbl[13]))((ID3D11VideoProcessorEnumerator1*)Unsafe.AsPointer(ref this), InputFormat, InputColorSpace, OutputFormat, OutputColorSpace, pSupported);
+#endif
 	}
 
 	public interface Interface : ID3D11VideoProcessorEnumerator.Interface

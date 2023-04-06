@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1BitmapBrush1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1BitmapBrush1*, uint>)(lpVtbl[1]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, uint>)(lpVtbl[1]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1BitmapBrush1*, uint>)(lpVtbl[2]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, uint>)(lpVtbl[2]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.SetOpacity" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(4)]
 	public void SetOpacity(float opacity)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, float, void>)(lpVtbl[4]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), opacity);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, float, void>)(lpVtbl[4]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), opacity);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.SetTransform" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(5)]
 	public void SetTransform(Matrix3x2* transform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), transform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), transform);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.GetOpacity" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(6)]
 	public float GetOpacity()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1BitmapBrush1*, float>)(lpVtbl[6]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, float>)(lpVtbl[6]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.GetTransform" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(7)]
 	public void GetTransform(Matrix3x2* transform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), transform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), transform);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.SetExtendModeX" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(8)]
 	public void SetExtendModeX(ExtendMode extendModeX)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, ExtendMode, void>)(lpVtbl[8]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), extendModeX);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ExtendMode, void>)(lpVtbl[8]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), extendModeX);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.SetExtendModeY" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(9)]
 	public void SetExtendModeY(ExtendMode extendModeY)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, ExtendMode, void>)(lpVtbl[9]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), extendModeY);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ExtendMode, void>)(lpVtbl[9]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), extendModeY);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.SetInterpolationMode" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(10)]
 	public void SetInterpolationMode(BitmapInterpolationMode interpolationMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, BitmapInterpolationMode, void>)(lpVtbl[10]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), interpolationMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, BitmapInterpolationMode, void>)(lpVtbl[10]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), interpolationMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.SetBitmap" />
@@ -143,7 +187,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(11)]
 	public void SetBitmap(ID2D1Bitmap* bitmap)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, ID2D1Bitmap*, void>)(lpVtbl[11]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), bitmap);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ID2D1Bitmap*, void>)(lpVtbl[11]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), bitmap);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.GetExtendModeX" />
@@ -151,7 +199,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(12)]
 	public ExtendMode GetExtendModeX()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1BitmapBrush1*, ExtendMode>)(lpVtbl[12]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ExtendMode>)(lpVtbl[12]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.GetExtendModeY" />
@@ -159,7 +211,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(13)]
 	public ExtendMode GetExtendModeY()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1BitmapBrush1*, ExtendMode>)(lpVtbl[13]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ExtendMode>)(lpVtbl[13]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.GetInterpolationMode" />
@@ -167,7 +223,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(14)]
 	public BitmapInterpolationMode GetInterpolationMode()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1BitmapBrush1*, BitmapInterpolationMode>)(lpVtbl[14]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, BitmapInterpolationMode>)(lpVtbl[14]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1BitmapBrush.GetBitmap" />
@@ -175,7 +235,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(15)]
 	public void GetBitmap(ID2D1Bitmap** bitmap)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, ID2D1Bitmap**, void>)(lpVtbl[15]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), bitmap);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, ID2D1Bitmap**, void>)(lpVtbl[15]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), bitmap);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::SetInterpolationMode1"]/*' />
@@ -183,7 +247,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(16)]
 	public void SetInterpolationMode1(InterpolationMode interpolationMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1BitmapBrush1*, InterpolationMode, void>)(lpVtbl[16]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), interpolationMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, InterpolationMode, void>)(lpVtbl[16]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this), interpolationMode);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1BitmapBrush1::GetInterpolationMode1"]/*' />
@@ -191,7 +259,11 @@ public unsafe partial struct ID2D1BitmapBrush1 : ID2D1BitmapBrush1.Interface, IN
 	[VtblIndex(17)]
 	public InterpolationMode GetInterpolationMode1()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1BitmapBrush1*, InterpolationMode>)(lpVtbl[17]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1BitmapBrush1*, InterpolationMode>)(lpVtbl[17]))((ID2D1BitmapBrush1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : ID2D1BitmapBrush.Interface

@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, uint>)(lpVtbl[1]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, uint>)(lpVtbl[1]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, uint>)(lpVtbl[2]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, uint>)(lpVtbl[2]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(3)]
 	public HResult SetInput(uint index, IUnknown* input, uint flags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), index, input, flags);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), index, input, flags);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetStandardDeviation"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(4)]
 	public HResult SetStandardDeviation(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[4]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[4]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetStandardDeviation"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(5)]
 	public HResult SetStandardDeviation(float amount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, float, int>)(lpVtbl[5]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, float, int>)(lpVtbl[5]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetColor"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(6)]
 	public HResult SetColor(Vector4* color)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, Vector4*, int>)(lpVtbl[6]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), color);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, Vector4*, int>)(lpVtbl[6]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), color);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetRed"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(7)]
 	public HResult SetRed(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetRed"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(8)]
 	public HResult SetRed(float amount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, float, int>)(lpVtbl[8]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, float, int>)(lpVtbl[8]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetGreen"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(9)]
 	public HResult SetGreen(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetGreen"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(10)]
 	public HResult SetGreen(float amount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, float, int>)(lpVtbl[10]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, float, int>)(lpVtbl[10]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetBlue"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(11)]
 	public HResult SetBlue(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetBlue"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(12)]
 	public HResult SetBlue(float amount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, float, int>)(lpVtbl[12]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, float, int>)(lpVtbl[12]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetAlpha"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(13)]
 	public HResult SetAlpha(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionShadowEffect::SetAlpha"]/*' />
@@ -167,7 +223,11 @@ public unsafe partial struct IDCompositionShadowEffect : IDCompositionShadowEffe
 	[VtblIndex(14)]
 	public HResult SetAlpha(float amount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionShadowEffect*, float, int>)(lpVtbl[14]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionShadowEffect*, float, int>)(lpVtbl[14]))((IDCompositionShadowEffect*)Unsafe.AsPointer(ref this), amount);
+#endif
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface

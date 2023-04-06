@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1EffectImpl*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1EffectImpl*, uint>)(lpVtbl[1]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, uint>)(lpVtbl[1]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1EffectImpl*, uint>)(lpVtbl[2]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, uint>)(lpVtbl[2]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::Initialize"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	[VtblIndex(3)]
 	public HResult Initialize(ID2D1EffectContext* effectContext, ID2D1TransformGraph* transformGraph)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1EffectImpl*, ID2D1EffectContext*, ID2D1TransformGraph*, int>)(lpVtbl[3]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), effectContext, transformGraph);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, ID2D1EffectContext*, ID2D1TransformGraph*, int>)(lpVtbl[3]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), effectContext, transformGraph);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::PrepareForRender"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	[VtblIndex(4)]
 	public HResult PrepareForRender(ChangeType changeType)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1EffectImpl*, ChangeType, int>)(lpVtbl[4]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), changeType);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, ChangeType, int>)(lpVtbl[4]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), changeType);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectImpl::SetGraph"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1EffectImpl : ID2D1EffectImpl.Interface, INativ
 	[VtblIndex(5)]
 	public HResult SetGraph(ID2D1TransformGraph* transformGraph)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1EffectImpl*, ID2D1TransformGraph*, int>)(lpVtbl[5]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), transformGraph);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1EffectImpl*, ID2D1TransformGraph*, int>)(lpVtbl[5]))((ID2D1EffectImpl*)Unsafe.AsPointer(ref this), transformGraph);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

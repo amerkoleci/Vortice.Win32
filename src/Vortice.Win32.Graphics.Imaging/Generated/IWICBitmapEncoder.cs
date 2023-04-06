@@ -53,7 +53,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, uint>)(lpVtbl[1]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, uint>)(lpVtbl[1]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, uint>)(lpVtbl[2]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, uint>)(lpVtbl[2]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Initialize"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(3)]
 	public HResult Initialize(Com.IStream* pIStream, WICBitmapEncoderCacheOption cacheOption)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, Com.IStream*, WICBitmapEncoderCacheOption, int>)(lpVtbl[3]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIStream, cacheOption);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, Com.IStream*, WICBitmapEncoderCacheOption, int>)(lpVtbl[3]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIStream, cacheOption);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetContainerFormat"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(4)]
 	public HResult GetContainerFormat(Guid* pguidContainerFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, Guid*, int>)(lpVtbl[4]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pguidContainerFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, Guid*, int>)(lpVtbl[4]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pguidContainerFormat);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetEncoderInfo"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(5)]
 	public HResult GetEncoderInfo(IWICBitmapEncoderInfo** ppIEncoderInfo)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, IWICBitmapEncoderInfo**, int>)(lpVtbl[5]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIEncoderInfo);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapEncoderInfo**, int>)(lpVtbl[5]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIEncoderInfo);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetColorContexts"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(6)]
 	public HResult SetColorContexts(uint cCount, IWICColorContext** ppIColorContext)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, uint, IWICColorContext**, int>)(lpVtbl[6]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), cCount, ppIColorContext);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, uint, IWICColorContext**, int>)(lpVtbl[6]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), cCount, ppIColorContext);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetPalette"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(7)]
 	public HResult SetPalette(IWICPalette* pIPalette)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, IWICPalette*, int>)(lpVtbl[7]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIPalette);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICPalette*, int>)(lpVtbl[7]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIPalette);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetThumbnail"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(8)]
 	public HResult SetThumbnail(IWICBitmapSource* pIThumbnail)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, IWICBitmapSource*, int>)(lpVtbl[8]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIThumbnail);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapSource*, int>)(lpVtbl[8]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIThumbnail);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::SetPreview"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(9)]
 	public HResult SetPreview(IWICBitmapSource* pIPreview)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, IWICBitmapSource*, int>)(lpVtbl[9]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIPreview);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapSource*, int>)(lpVtbl[9]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), pIPreview);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::CreateNewFrame"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(10)]
 	public HResult CreateNewFrame(IWICBitmapFrameEncode** ppIFrameEncode, Com.IPropertyBag2** ppIEncoderOptions)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, IWICBitmapFrameEncode**, Com.IPropertyBag2**, int>)(lpVtbl[10]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, ppIEncoderOptions);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICBitmapFrameEncode**, Com.IPropertyBag2**, int>)(lpVtbl[10]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIFrameEncode, ppIEncoderOptions);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::Commit"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(11)]
 	public HResult Commit()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, int>)(lpVtbl[11]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, int>)(lpVtbl[11]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapEncoder::GetMetadataQueryWriter"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IWICBitmapEncoder : IWICBitmapEncoder.Interface, IN
 	[VtblIndex(12)]
 	public HResult GetMetadataQueryWriter(IWICMetadataQueryWriter** ppIMetadataQueryWriter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICBitmapEncoder*, IWICMetadataQueryWriter**, int>)(lpVtbl[12]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICBitmapEncoder*, IWICMetadataQueryWriter**, int>)(lpVtbl[12]))((IWICBitmapEncoder*)Unsafe.AsPointer(ref this), ppIMetadataQueryWriter);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

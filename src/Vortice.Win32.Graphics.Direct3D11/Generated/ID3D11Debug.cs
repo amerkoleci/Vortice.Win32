@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Debug*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Debug*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, uint>)(lpVtbl[1]))((ID3D11Debug*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, uint>)(lpVtbl[1]))((ID3D11Debug*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, uint>)(lpVtbl[2]))((ID3D11Debug*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, uint>)(lpVtbl[2]))((ID3D11Debug*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::SetFeatureMask"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(3)]
 	public HResult SetFeatureMask(uint Mask)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, uint, int>)(lpVtbl[3]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Mask);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, uint, int>)(lpVtbl[3]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Mask);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::GetFeatureMask"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(4)]
 	public uint GetFeatureMask()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, uint>)(lpVtbl[4]))((ID3D11Debug*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, uint>)(lpVtbl[4]))((ID3D11Debug*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::SetPresentPerRenderOpDelay"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(5)]
 	public HResult SetPresentPerRenderOpDelay(uint Milliseconds)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, uint, int>)(lpVtbl[5]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Milliseconds);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, uint, int>)(lpVtbl[5]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Milliseconds);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::GetPresentPerRenderOpDelay"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(6)]
 	public uint GetPresentPerRenderOpDelay()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, uint>)(lpVtbl[6]))((ID3D11Debug*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, uint>)(lpVtbl[6]))((ID3D11Debug*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::SetSwapChain"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(7)]
 	public HResult SetSwapChain(Graphics.Dxgi.IDXGISwapChain* pSwapChain)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, Graphics.Dxgi.IDXGISwapChain*, int>)(lpVtbl[7]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pSwapChain);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, Graphics.Dxgi.IDXGISwapChain*, int>)(lpVtbl[7]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pSwapChain);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::GetSwapChain"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult GetSwapChain(Graphics.Dxgi.IDXGISwapChain** ppSwapChain)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, Graphics.Dxgi.IDXGISwapChain**, int>)(lpVtbl[8]))((ID3D11Debug*)Unsafe.AsPointer(ref this), ppSwapChain);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, Graphics.Dxgi.IDXGISwapChain**, int>)(lpVtbl[8]))((ID3D11Debug*)Unsafe.AsPointer(ref this), ppSwapChain);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ValidateContext"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(9)]
 	public HResult ValidateContext(ID3D11DeviceContext* pContext)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, ID3D11DeviceContext*, int>)(lpVtbl[9]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pContext);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, ID3D11DeviceContext*, int>)(lpVtbl[9]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pContext);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ReportLiveDeviceObjects"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(10)]
 	public HResult ReportLiveDeviceObjects(ReportLiveDeviceObjectFlags Flags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[10]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Flags);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, ReportLiveDeviceObjectFlags, int>)(lpVtbl[10]))((ID3D11Debug*)Unsafe.AsPointer(ref this), Flags);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Debug::ValidateContextForDispatch"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct ID3D11Debug : ID3D11Debug.Interface, INativeGuid
 	[VtblIndex(11)]
 	public HResult ValidateContextForDispatch(ID3D11DeviceContext* pContext)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11Debug*, ID3D11DeviceContext*, int>)(lpVtbl[11]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pContext);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11Debug*, ID3D11DeviceContext*, int>)(lpVtbl[11]))((ID3D11Debug*)Unsafe.AsPointer(ref this), pContext);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

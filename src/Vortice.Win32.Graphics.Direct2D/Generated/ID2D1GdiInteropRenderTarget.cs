@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GdiInteropRenderTarget*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GdiInteropRenderTarget*, uint>)(lpVtbl[1]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, uint>)(lpVtbl[1]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GdiInteropRenderTarget*, uint>)(lpVtbl[2]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, uint>)(lpVtbl[2]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::GetDC"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	[VtblIndex(3)]
 	public HResult GetDC(DCInitializeMode mode, IntPtr* hdc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GdiInteropRenderTarget*, DCInitializeMode, IntPtr*, int>)(lpVtbl[3]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), mode, hdc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, DCInitializeMode, IntPtr*, int>)(lpVtbl[3]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), mode, hdc);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiInteropRenderTarget::ReleaseDC"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1GdiInteropRenderTarget : ID2D1GdiInteropRender
 	[VtblIndex(4)]
 	public HResult ReleaseDC(Rect* update)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GdiInteropRenderTarget*, Rect*, int>)(lpVtbl[4]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), update);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GdiInteropRenderTarget*, Rect*, int>)(lpVtbl[4]))((ID2D1GdiInteropRenderTarget*)Unsafe.AsPointer(ref this), update);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

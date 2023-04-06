@@ -120,6 +120,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"vendorID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"deviceID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -136,6 +137,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"vendorID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"deviceID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -153,6 +155,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nodeIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"segmentGroup","Type":{"Kind":"ApiRef","Name":"DXCoreSegmentGroup","TargetKind":"Default","Api":"Graphics.DXCore","Parents":[]},"Attrs":[]}
@@ -167,6 +170,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"budget","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"currentUsage","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}

@@ -11,7 +11,7 @@ namespace Win32.Graphics.Direct3D;
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE"]/*' />
 /// <unmanaged>D3D_DRIVER_TYPE</unmanaged>
-public enum DriverType : int
+public enum DriverType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_DRIVER_TYPE::D3D_DRIVER_TYPE_UNKNOWN"]/*' />
 	/// <unmanaged>D3D_DRIVER_TYPE_UNKNOWN</unmanaged>
@@ -35,7 +35,7 @@ public enum DriverType : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL"]/*' />
 /// <unmanaged>D3D_FEATURE_LEVEL</unmanaged>
-public enum FeatureLevel : int
+public enum FeatureLevel
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_1_0_CORE"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_1_0_CORE</unmanaged>
@@ -74,7 +74,7 @@ public enum FeatureLevel : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY"]/*' />
 /// <unmanaged>D3D_PRIMITIVE_TOPOLOGY</unmanaged>
-public enum PrimitiveTopology : int
+public enum PrimitiveTopology
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_UNDEFINED</unmanaged>
@@ -94,6 +94,9 @@ public enum PrimitiveTopology : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP</unmanaged>
 	TriangleStrip = 5,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN"]/*' />
+	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN</unmanaged>
+	Trianglefan = 6,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ</unmanaged>
 	LineListAdj = 10,
@@ -206,7 +209,7 @@ public enum PrimitiveTopology : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE"]/*' />
 /// <unmanaged>D3D_PRIMITIVE</unmanaged>
-public enum Primitive : int
+public enum Primitive
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE::D3D_PRIMITIVE_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_UNDEFINED</unmanaged>
@@ -326,7 +329,7 @@ public enum Primitive : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION"]/*' />
 /// <unmanaged>D3D_SRV_DIMENSION</unmanaged>
-public enum SrvDimension : int
+public enum SrvDimension
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SRV_DIMENSION::D3D_SRV_DIMENSION_UNKNOWN"]/*' />
 	/// <unmanaged>D3D_SRV_DIMENSION_UNKNOWN</unmanaged>
@@ -368,7 +371,7 @@ public enum SrvDimension : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE"]/*' />
 /// <unmanaged>D3D_INCLUDE_TYPE</unmanaged>
-public enum IncludeType : int
+public enum IncludeType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INCLUDE_TYPE::D3D_INCLUDE_LOCAL"]/*' />
 	/// <unmanaged>D3D_INCLUDE_LOCAL</unmanaged>
@@ -380,7 +383,7 @@ public enum IncludeType : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS"]/*' />
 /// <unmanaged>D3D_SHADER_VARIABLE_CLASS</unmanaged>
-public enum ShaderVariableClass : int
+public enum ShaderVariableClass
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_CLASS::D3D_SVC_SCALAR"]/*' />
 	/// <unmanaged>D3D_SVC_SCALAR</unmanaged>
@@ -411,7 +414,7 @@ public enum ShaderVariableClass : int
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_VARIABLE_FLAGS</unmanaged>
 [Flags]
-public enum ShaderVariableFlags : int
+public enum ShaderVariableFlags
 {
 	None = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_FLAGS::D3D_SVF_USERPACKED"]/*' />
@@ -430,7 +433,7 @@ public enum ShaderVariableFlags : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE"]/*' />
 /// <unmanaged>D3D_SHADER_VARIABLE_TYPE</unmanaged>
-public enum ShaderVariableType : int
+public enum ShaderVariableType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_VOID"]/*' />
 	/// <unmanaged>D3D_SVT_VOID</unmanaged>
@@ -626,7 +629,7 @@ public enum ShaderVariableType : int
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_INPUT_FLAGS</unmanaged>
 [Flags]
-public enum ShaderInputFlags : int
+public enum ShaderInputFlags
 {
 	None = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_FLAGS::D3D_SIF_USERPACKED"]/*' />
@@ -651,7 +654,7 @@ public enum ShaderInputFlags : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE"]/*' />
 /// <unmanaged>D3D_SHADER_INPUT_TYPE</unmanaged>
-public enum ShaderInputType : int
+public enum ShaderInputType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_SIT_CBUFFER</unmanaged>
@@ -700,7 +703,7 @@ public enum ShaderInputType : int
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_CBUFFER_FLAGS</unmanaged>
 [Flags]
-public enum ShaderCBufferFlags : int
+public enum ShaderCBufferFlags
 {
 	None = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS::D3D_CBF_USERPACKED"]/*' />
@@ -710,7 +713,7 @@ public enum ShaderCBufferFlags : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE"]/*' />
 /// <unmanaged>D3D_CBUFFER_TYPE</unmanaged>
-public enum CBufferType : int
+public enum CBufferType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_CT_CBUFFER</unmanaged>
@@ -728,7 +731,7 @@ public enum CBufferType : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME"]/*' />
 /// <unmanaged>D3D_NAME</unmanaged>
-public enum Name : int
+public enum Name
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_NAME::D3D_NAME_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_NAME_UNDEFINED</unmanaged>
@@ -815,7 +818,7 @@ public enum Name : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE"]/*' />
 /// <unmanaged>D3D_RESOURCE_RETURN_TYPE</unmanaged>
-public enum ResourceReturnType : int
+public enum ResourceReturnType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_RESOURCE_RETURN_TYPE::D3D_RETURN_TYPE_UNORM"]/*' />
 	/// <unmanaged>D3D_RETURN_TYPE_UNORM</unmanaged>
@@ -845,7 +848,7 @@ public enum ResourceReturnType : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE"]/*' />
 /// <unmanaged>D3D_REGISTER_COMPONENT_TYPE</unmanaged>
-public enum RegisterComponentType : int
+public enum RegisterComponentType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UNKNOWN"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_UNKNOWN</unmanaged>
@@ -863,7 +866,7 @@ public enum RegisterComponentType : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN"]/*' />
 /// <unmanaged>D3D_TESSELLATOR_DOMAIN</unmanaged>
-public enum TessellatorDomain : int
+public enum TessellatorDomain
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN::D3D_TESSELLATOR_DOMAIN_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_DOMAIN_UNDEFINED</unmanaged>
@@ -881,7 +884,7 @@ public enum TessellatorDomain : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING"]/*' />
 /// <unmanaged>D3D_TESSELLATOR_PARTITIONING</unmanaged>
-public enum TessellatorPartitioning : int
+public enum TessellatorPartitioning
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_PARTITIONING::D3D_TESSELLATOR_PARTITIONING_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_PARTITIONING_UNDEFINED</unmanaged>
@@ -902,7 +905,7 @@ public enum TessellatorPartitioning : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE"]/*' />
 /// <unmanaged>D3D_TESSELLATOR_OUTPUT_PRIMITIVE</unmanaged>
-public enum TessellatorOutputPrimitive : int
+public enum TessellatorOutputPrimitive
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_OUTPUT_PRIMITIVE::D3D_TESSELLATOR_OUTPUT_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_TESSELLATOR_OUTPUT_UNDEFINED</unmanaged>
@@ -923,7 +926,7 @@ public enum TessellatorOutputPrimitive : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_MIN_PRECISION"]/*' />
 /// <unmanaged>D3D_MIN_PRECISION</unmanaged>
-public enum MinPrecision : int
+public enum MinPrecision
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_MIN_PRECISION::D3D_MIN_PRECISION_DEFAULT"]/*' />
 	/// <unmanaged>D3D_MIN_PRECISION_DEFAULT</unmanaged>
@@ -953,7 +956,7 @@ public enum MinPrecision : int
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D3D_INTERPOLATION_MODE</unmanaged>
-public enum InterpolationMode : int
+public enum InterpolationMode
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_INTERPOLATION_MODE::D3D_INTERPOLATION_UNDEFINED"]/*' />
 	/// <unmanaged>D3D_INTERPOLATION_UNDEFINED</unmanaged>
@@ -984,7 +987,7 @@ public enum InterpolationMode : int
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS"]/*' />
 /// <unmanaged>D3D_PARAMETER_FLAGS</unmanaged>
 [Flags]
-public enum ParameterFlags : int
+public enum ParameterFlags
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_NONE"]/*' />
 	/// <unmanaged>D3D_PF_NONE</unmanaged>
@@ -995,4 +998,88 @@ public enum ParameterFlags : int
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PARAMETER_FLAGS::D3D_PF_OUT"]/*' />
 	/// <unmanaged>D3D_PF_OUT</unmanaged>
 	Out = 2,
+}
+
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_LAYOUT"]/*' />
+/// <unmanaged>D3D_FORMAT_LAYOUT</unmanaged>
+public enum FormatLayout
+{
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_LAYOUT::D3DFL_STANDARD"]/*' />
+	/// <unmanaged>D3DFL_STANDARD</unmanaged>
+	D3DFL_STANDARD = 0,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_LAYOUT::D3DFL_CUSTOM"]/*' />
+	/// <unmanaged>D3DFL_CUSTOM</unmanaged>
+	D3DFL_CUSTOM = -1,
+}
+
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_TYPE_LEVEL"]/*' />
+/// <unmanaged>D3D_FORMAT_TYPE_LEVEL</unmanaged>
+public enum FormatTypeLevel
+{
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_TYPE_LEVEL::D3DFTL_NO_TYPE"]/*' />
+	/// <unmanaged>D3DFTL_NO_TYPE</unmanaged>
+	D3DFTL_NO_TYPE = 0,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_TYPE_LEVEL::D3DFTL_PARTIAL_TYPE"]/*' />
+	/// <unmanaged>D3DFTL_PARTIAL_TYPE</unmanaged>
+	D3DFTL_PARTIAL_TYPE = -2,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_TYPE_LEVEL::D3DFTL_FULL_TYPE"]/*' />
+	/// <unmanaged>D3DFTL_FULL_TYPE</unmanaged>
+	D3DFTL_FULL_TYPE = -1,
+}
+
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_NAME"]/*' />
+/// <unmanaged>D3D_FORMAT_COMPONENT_NAME</unmanaged>
+public enum FormatComponentName
+{
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_NAME::D3DFCN_R"]/*' />
+	/// <unmanaged>D3DFCN_R</unmanaged>
+	D3DFCN_R = -4,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_NAME::D3DFCN_G"]/*' />
+	/// <unmanaged>D3DFCN_G</unmanaged>
+	D3DFCN_G = -3,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_NAME::D3DFCN_B"]/*' />
+	/// <unmanaged>D3DFCN_B</unmanaged>
+	D3DFCN_B = -2,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_NAME::D3DFCN_A"]/*' />
+	/// <unmanaged>D3DFCN_A</unmanaged>
+	D3DFCN_A = -1,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_NAME::D3DFCN_D"]/*' />
+	/// <unmanaged>D3DFCN_D</unmanaged>
+	D3DFCN_D = 0,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_NAME::D3DFCN_S"]/*' />
+	/// <unmanaged>D3DFCN_S</unmanaged>
+	D3DFCN_S = 1,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_NAME::D3DFCN_X"]/*' />
+	/// <unmanaged>D3DFCN_X</unmanaged>
+	D3DFCN_X = 2,
+}
+
+/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION"]/*' />
+/// <unmanaged>D3D_FORMAT_COMPONENT_INTERPRETATION</unmanaged>
+public enum FormatComponentInterpretation
+{
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION::D3DFCI_TYPELESS"]/*' />
+	/// <unmanaged>D3DFCI_TYPELESS</unmanaged>
+	D3DFCI_TYPELESS = 0,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION::D3DFCI_FLOAT"]/*' />
+	/// <unmanaged>D3DFCI_FLOAT</unmanaged>
+	D3DFCI_FLOAT = -4,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION::D3DFCI_SNORM"]/*' />
+	/// <unmanaged>D3DFCI_SNORM</unmanaged>
+	D3DFCI_SNORM = -3,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION::D3DFCI_UNORM"]/*' />
+	/// <unmanaged>D3DFCI_UNORM</unmanaged>
+	D3DFCI_UNORM = -2,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION::D3DFCI_SINT"]/*' />
+	/// <unmanaged>D3DFCI_SINT</unmanaged>
+	D3DFCI_SINT = -1,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION::D3DFCI_UINT"]/*' />
+	/// <unmanaged>D3DFCI_UINT</unmanaged>
+	D3DFCI_UINT = 1,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION::D3DFCI_UNORM_SRGB"]/*' />
+	/// <unmanaged>D3DFCI_UNORM_SRGB</unmanaged>
+	D3DFCI_UNORM_SRGB = 2,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FORMAT_COMPONENT_INTERPRETATION::D3DFCI_BIASED_FIXED_2_8"]/*' />
+	/// <unmanaged>D3DFCI_BIASED_FIXED_2_8</unmanaged>
+	D3DFCI_BIASED_FIXED_2_8 = 3,
 }

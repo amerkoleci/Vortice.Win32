@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, uint>)(lpVtbl[1]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, uint>)(lpVtbl[1]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, uint>)(lpVtbl[2]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, uint>)(lpVtbl[2]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.CreateFontFace" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(3)]
 	public HResult CreateFontFace(IDWriteFontFace3** fontFace)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, IDWriteFontFace3**, int>)(lpVtbl[3]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFace);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, IDWriteFontFace3**, int>)(lpVtbl[3]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFace);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.CreateFontFaceWithSimulations" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(4)]
 	public HResult CreateFontFaceWithSimulations(FontSimulations fontFaceSimulationFlags, IDWriteFontFace3** fontFace)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, FontSimulations, IDWriteFontFace3**, int>)(lpVtbl[4]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFaceSimulationFlags, fontFace);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, FontSimulations, IDWriteFontFace3**, int>)(lpVtbl[4]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFaceSimulationFlags, fontFace);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.Equals" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(5)]
 	public Bool32 Equals(IDWriteFontFaceReference* fontFaceReference)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, IDWriteFontFaceReference*, Bool32>)(lpVtbl[5]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFaceReference);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, IDWriteFontFaceReference*, Bool32>)(lpVtbl[5]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFaceReference);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetFontFaceIndex" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(6)]
 	public uint GetFontFaceIndex()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, uint>)(lpVtbl[6]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, uint>)(lpVtbl[6]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetSimulations" />
@@ -111,7 +139,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(7)]
 	public FontSimulations GetSimulations()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, FontSimulations>)(lpVtbl[7]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetFontFile" />
@@ -119,7 +151,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(8)]
 	public HResult GetFontFile(IDWriteFontFile** fontFile)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, IDWriteFontFile**, int>)(lpVtbl[8]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFile);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, IDWriteFontFile**, int>)(lpVtbl[8]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFile);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetLocalFileSize" />
@@ -127,7 +163,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(9)]
 	public ulong GetLocalFileSize()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, ulong>)(lpVtbl[9]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, ulong>)(lpVtbl[9]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetFileSize" />
@@ -135,7 +175,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(10)]
 	public ulong GetFileSize()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, ulong>)(lpVtbl[10]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, ulong>)(lpVtbl[10]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetFileTime" />
@@ -143,7 +187,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(11)]
 	public HResult GetFileTime(ulong* lastWriteTime)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, ulong*, int>)(lpVtbl[11]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), lastWriteTime);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, ulong*, int>)(lpVtbl[11]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), lastWriteTime);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.GetLocality" />
@@ -151,7 +199,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(12)]
 	public Locality GetLocality()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, Locality>)(lpVtbl[12]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, Locality>)(lpVtbl[12]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.EnqueueFontDownloadRequest" />
@@ -159,7 +211,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(13)]
 	public HResult EnqueueFontDownloadRequest()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, int>)(lpVtbl[13]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, int>)(lpVtbl[13]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.EnqueueCharacterDownloadRequest" />
@@ -167,7 +223,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(14)]
 	public HResult EnqueueCharacterDownloadRequest(ushort* characters, uint characterCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, ushort*, uint, int>)(lpVtbl[14]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), characters, characterCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, ushort*, uint, int>)(lpVtbl[14]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), characters, characterCount);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.EnqueueGlyphDownloadRequest" />
@@ -175,7 +235,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(15)]
 	public HResult EnqueueGlyphDownloadRequest(ushort* glyphIndices, uint glyphCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, ushort*, uint, int>)(lpVtbl[15]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), glyphIndices, glyphCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, ushort*, uint, int>)(lpVtbl[15]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), glyphIndices, glyphCount);
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.EnqueueFileFragmentDownloadRequest" />
@@ -183,7 +247,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(16)]
 	public HResult EnqueueFileFragmentDownloadRequest(ulong fileOffset, ulong fragmentSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, ulong, ulong, int>)(lpVtbl[16]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fileOffset, fragmentSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, ulong, ulong, int>)(lpVtbl[16]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fileOffset, fragmentSize);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::CreateFontFace"]/*' />
@@ -191,7 +259,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(17)]
 	public HResult CreateFontFace(IDWriteFontFace5** fontFace)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, IDWriteFontFace5**, int>)(lpVtbl[17]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFace);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, IDWriteFontFace5**, int>)(lpVtbl[17]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontFace);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::GetFontAxisValueCount"]/*' />
@@ -199,7 +271,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(18)]
 	public uint GetFontAxisValueCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, uint>)(lpVtbl[18]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, uint>)(lpVtbl[18]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference1::GetFontAxisValues"]/*' />
@@ -207,7 +283,11 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	[VtblIndex(19)]
 	public HResult GetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteFontFaceReference1*, FontAxisValue*, uint, int>)(lpVtbl[19]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteFontFaceReference1*, FontAxisValue*, uint, int>)(lpVtbl[19]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount);
+#endif
 	}
 
 	public interface Interface : IDWriteFontFaceReference.Interface

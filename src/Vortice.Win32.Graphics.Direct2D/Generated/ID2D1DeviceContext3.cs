@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, uint>)(lpVtbl[1]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, uint>)(lpVtbl[1]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, uint>)(lpVtbl[2]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, uint>)(lpVtbl[2]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmap" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(4)]
 	public HResult CreateBitmap(System.Drawing.Size size, void* srcData, uint pitch, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[4]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.Size, void*, uint, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[4]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, srcData, pitch, bitmapProperties, bitmap);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapFromWicBitmap" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(5)]
 	public HResult CreateBitmapFromWicBitmap(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.Imaging.IWICBitmapSource*, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[5]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Imaging.IWICBitmapSource*, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[5]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateSharedBitmap" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(6)]
 	public HResult CreateSharedBitmap(Guid* riid, void* data, BitmapProperties* bitmapProperties, ID2D1Bitmap** bitmap)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Guid*, void*, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[6]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), riid, data, bitmapProperties, bitmap);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Guid*, void*, BitmapProperties*, ID2D1Bitmap**, int>)(lpVtbl[6]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), riid, data, bitmapProperties, bitmap);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateBitmapBrush" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(7)]
 	public HResult CreateBitmapBrush(ID2D1Bitmap* bitmap, BitmapBrushProperties* bitmapBrushProperties, BrushProperties* brushProperties, ID2D1BitmapBrush** bitmapBrush)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Bitmap*, BitmapBrushProperties*, BrushProperties*, ID2D1BitmapBrush**, int>)(lpVtbl[7]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bitmap, bitmapBrushProperties, brushProperties, bitmapBrush);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Bitmap*, BitmapBrushProperties*, BrushProperties*, ID2D1BitmapBrush**, int>)(lpVtbl[7]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bitmap, bitmapBrushProperties, brushProperties, bitmapBrush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateSolidColorBrush" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(8)]
 	public HResult CreateSolidColorBrush(Color4* color, BrushProperties* brushProperties, ID2D1SolidColorBrush** solidColorBrush)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Color4*, BrushProperties*, ID2D1SolidColorBrush**, int>)(lpVtbl[8]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), color, brushProperties, solidColorBrush);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Color4*, BrushProperties*, ID2D1SolidColorBrush**, int>)(lpVtbl[8]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), color, brushProperties, solidColorBrush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateGradientStopCollection" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(9)]
 	public HResult CreateGradientStopCollection(GradientStop* gradientStops, uint gradientStopsCount, Gamma colorInterpolationGamma, ExtendMode extendMode, ID2D1GradientStopCollection** gradientStopCollection)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, GradientStop*, uint, Gamma, ExtendMode, ID2D1GradientStopCollection**, int>)(lpVtbl[9]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, gradientStopCollection);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, GradientStop*, uint, Gamma, ExtendMode, ID2D1GradientStopCollection**, int>)(lpVtbl[9]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount, colorInterpolationGamma, extendMode, gradientStopCollection);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLinearGradientBrush" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(10)]
 	public HResult CreateLinearGradientBrush(LinearGradientBrushProperties* linearGradientBrushProperties, BrushProperties* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1LinearGradientBrush** linearGradientBrush)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, LinearGradientBrushProperties*, BrushProperties*, ID2D1GradientStopCollection*, ID2D1LinearGradientBrush**, int>)(lpVtbl[10]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), linearGradientBrushProperties, brushProperties, gradientStopCollection, linearGradientBrush);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, LinearGradientBrushProperties*, BrushProperties*, ID2D1GradientStopCollection*, ID2D1LinearGradientBrush**, int>)(lpVtbl[10]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), linearGradientBrushProperties, brushProperties, gradientStopCollection, linearGradientBrush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateRadialGradientBrush" />
@@ -143,7 +187,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(11)]
 	public HResult CreateRadialGradientBrush(RadialGradientBrushProperties* radialGradientBrushProperties, BrushProperties* brushProperties, ID2D1GradientStopCollection* gradientStopCollection, ID2D1RadialGradientBrush** radialGradientBrush)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, RadialGradientBrushProperties*, BrushProperties*, ID2D1GradientStopCollection*, ID2D1RadialGradientBrush**, int>)(lpVtbl[11]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), radialGradientBrushProperties, brushProperties, gradientStopCollection, radialGradientBrush);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, RadialGradientBrushProperties*, BrushProperties*, ID2D1GradientStopCollection*, ID2D1RadialGradientBrush**, int>)(lpVtbl[11]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), radialGradientBrushProperties, brushProperties, gradientStopCollection, radialGradientBrush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateCompatibleRenderTarget" />
@@ -151,7 +199,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(12)]
 	public HResult CreateCompatibleRenderTarget(System.Drawing.SizeF* desiredSize, System.Drawing.Size* desiredPixelSize, Common.PixelFormat* desiredFormat, CompatibleRenderTargetOptions options, ID2D1BitmapRenderTarget** bitmapRenderTarget)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[12]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.SizeF*, System.Drawing.Size*, Common.PixelFormat*, CompatibleRenderTargetOptions, ID2D1BitmapRenderTarget**, int>)(lpVtbl[12]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), desiredSize, desiredPixelSize, desiredFormat, options, bitmapRenderTarget);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateLayer" />
@@ -159,7 +211,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(13)]
 	public HResult CreateLayer(System.Drawing.SizeF* size, ID2D1Layer** layer)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, System.Drawing.SizeF*, ID2D1Layer**, int>)(lpVtbl[13]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, layer);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.SizeF*, ID2D1Layer**, int>)(lpVtbl[13]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, layer);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.CreateMesh" />
@@ -167,7 +223,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(14)]
 	public HResult CreateMesh(ID2D1Mesh** mesh)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Mesh**, int>)(lpVtbl[14]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), mesh);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Mesh**, int>)(lpVtbl[14]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), mesh);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawLine" />
@@ -175,7 +235,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(15)]
 	public void DrawLine(Vector2 point0, Vector2 point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Vector2, Vector2, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[15]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Vector2, Vector2, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[15]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRectangle" />
@@ -183,7 +247,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(16)]
 	public void DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[16]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillRectangle" />
@@ -191,7 +259,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(17)]
 	public void FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Win32.Numerics.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), rect, brush);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Win32.Numerics.RectF*, ID2D1Brush*, void>)(lpVtbl[17]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), rect, brush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawRoundedRectangle" />
@@ -199,7 +271,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(18)]
 	public void DrawRoundedRectangle(RoundedRect* roundedRect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, RoundedRect*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[18]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), roundedRect, brush, strokeWidth, strokeStyle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, RoundedRect*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[18]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), roundedRect, brush, strokeWidth, strokeStyle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillRoundedRectangle" />
@@ -207,7 +283,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(19)]
 	public void FillRoundedRectangle(RoundedRect* roundedRect, ID2D1Brush* brush)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, RoundedRect*, ID2D1Brush*, void>)(lpVtbl[19]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), roundedRect, brush);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, RoundedRect*, ID2D1Brush*, void>)(lpVtbl[19]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), roundedRect, brush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawEllipse" />
@@ -215,7 +295,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(20)]
 	public void DrawEllipse(Ellipse* ellipse, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Ellipse*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[20]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), ellipse, brush, strokeWidth, strokeStyle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Ellipse*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[20]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), ellipse, brush, strokeWidth, strokeStyle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillEllipse" />
@@ -223,7 +307,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(21)]
 	public void FillEllipse(Ellipse* ellipse, ID2D1Brush* brush)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Ellipse*, ID2D1Brush*, void>)(lpVtbl[21]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), ellipse, brush);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Ellipse*, ID2D1Brush*, void>)(lpVtbl[21]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), ellipse, brush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawGeometry" />
@@ -231,7 +319,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(22)]
 	public void DrawGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Geometry*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[22]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometry, brush, strokeWidth, strokeStyle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Geometry*, ID2D1Brush*, float, ID2D1StrokeStyle*, void>)(lpVtbl[22]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometry, brush, strokeWidth, strokeStyle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillGeometry" />
@@ -239,7 +331,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(23)]
 	public void FillGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, ID2D1Brush* opacityBrush)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Geometry*, ID2D1Brush*, ID2D1Brush*, void>)(lpVtbl[23]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometry, brush, opacityBrush);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Geometry*, ID2D1Brush*, ID2D1Brush*, void>)(lpVtbl[23]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometry, brush, opacityBrush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillMesh" />
@@ -247,7 +343,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(24)]
 	public void FillMesh(ID2D1Mesh* mesh, ID2D1Brush* brush)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Mesh*, ID2D1Brush*, void>)(lpVtbl[24]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), mesh, brush);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Mesh*, ID2D1Brush*, void>)(lpVtbl[24]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), mesh, brush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.FillOpacityMask" />
@@ -255,7 +355,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(25)]
 	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, OpacityMaskContent content, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[25]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Bitmap*, ID2D1Brush*, OpacityMaskContent, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[25]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), opacityMask, brush, content, destinationRectangle, sourceRectangle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawBitmap" />
@@ -263,7 +367,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(26)]
 	public void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, BitmapInterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, BitmapInterpolationMode, Win32.Numerics.RectF*, void>)(lpVtbl[26]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, BitmapInterpolationMode, Win32.Numerics.RectF*, void>)(lpVtbl[26]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawText" />
@@ -271,7 +379,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(27)]
 	public void DrawText(ushort* @string, uint stringLength, Graphics.DirectWrite.IDWriteTextFormat* textFormat, Win32.Numerics.RectF* layoutRect, ID2D1Brush* defaultFillBrush, DrawTextOptions options, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ushort*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Win32.Numerics.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ushort*, uint, Graphics.DirectWrite.IDWriteTextFormat*, Win32.Numerics.RectF*, ID2D1Brush*, DrawTextOptions, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[27]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), @string, stringLength, textFormat, layoutRect, defaultFillBrush, options, measuringMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawTextLayout" />
@@ -279,7 +391,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(28)]
 	public void DrawTextLayout(Vector2 origin, Graphics.DirectWrite.IDWriteTextLayout* textLayout, ID2D1Brush* defaultFillBrush, DrawTextOptions options)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Vector2, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, DrawTextOptions, void>)(lpVtbl[28]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Vector2, Graphics.DirectWrite.IDWriteTextLayout*, ID2D1Brush*, DrawTextOptions, void>)(lpVtbl[28]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), origin, textLayout, defaultFillBrush, options);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.DrawGlyphRun" />
@@ -287,7 +403,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(29)]
 	public void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Vector2, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[29]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Vector2, Graphics.DirectWrite.GlyphRun*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[29]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, foregroundBrush, measuringMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTransform" />
@@ -295,7 +415,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(30)]
 	public void SetTransform(Matrix3x2* transform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Matrix3x2*, void>)(lpVtbl[30]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), transform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Matrix3x2*, void>)(lpVtbl[30]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), transform);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTransform" />
@@ -303,7 +427,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(31)]
 	public void GetTransform(Matrix3x2* transform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Matrix3x2*, void>)(lpVtbl[31]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), transform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Matrix3x2*, void>)(lpVtbl[31]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), transform);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetAntialiasMode" />
@@ -311,7 +439,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(32)]
 	public void SetAntialiasMode(AntialiasMode antialiasMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, AntialiasMode, void>)(lpVtbl[32]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), antialiasMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, AntialiasMode, void>)(lpVtbl[32]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), antialiasMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetAntialiasMode" />
@@ -319,7 +451,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(33)]
 	public AntialiasMode GetAntialiasMode()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, AntialiasMode>)(lpVtbl[33]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, AntialiasMode>)(lpVtbl[33]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextAntialiasMode" />
@@ -327,7 +463,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(34)]
 	public void SetTextAntialiasMode(TextAntialiasMode textAntialiasMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, TextAntialiasMode, void>)(lpVtbl[34]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), textAntialiasMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, TextAntialiasMode, void>)(lpVtbl[34]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), textAntialiasMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextAntialiasMode" />
@@ -335,7 +475,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(35)]
 	public TextAntialiasMode GetTextAntialiasMode()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, TextAntialiasMode>)(lpVtbl[35]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, TextAntialiasMode>)(lpVtbl[35]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTextRenderingParams" />
@@ -343,7 +487,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(36)]
 	public void SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.DirectWrite.IDWriteRenderingParams*, void>)(lpVtbl[36]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), textRenderingParams);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.DirectWrite.IDWriteRenderingParams*, void>)(lpVtbl[36]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), textRenderingParams);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTextRenderingParams" />
@@ -351,7 +499,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(37)]
 	public void GetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams** textRenderingParams)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.DirectWrite.IDWriteRenderingParams**, void>)(lpVtbl[37]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), textRenderingParams);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.DirectWrite.IDWriteRenderingParams**, void>)(lpVtbl[37]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), textRenderingParams);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetTags" />
@@ -359,7 +511,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(38)]
 	public void SetTags(ulong tag1, ulong tag2)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ulong, ulong, void>)(lpVtbl[38]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ulong, ulong, void>)(lpVtbl[38]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetTags" />
@@ -367,7 +523,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(39)]
 	public void GetTags(ulong* tag1, ulong* tag2)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ulong*, ulong*, void>)(lpVtbl[39]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ulong*, ulong*, void>)(lpVtbl[39]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.PushLayer" />
@@ -375,7 +535,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(40)]
 	public void PushLayer(LayerParameters* layerParameters, ID2D1Layer* layer)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, LayerParameters*, ID2D1Layer*, void>)(lpVtbl[40]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), layerParameters, layer);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, LayerParameters*, ID2D1Layer*, void>)(lpVtbl[40]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), layerParameters, layer);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.PopLayer" />
@@ -383,7 +547,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(41)]
 	public void PopLayer()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, void>)(lpVtbl[41]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, void>)(lpVtbl[41]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.Flush" />
@@ -391,7 +559,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(42)]
 	public HResult Flush(ulong* tag1, ulong* tag2)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ulong*, ulong*, int>)(lpVtbl[42]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ulong*, ulong*, int>)(lpVtbl[42]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SaveDrawingState" />
@@ -399,7 +571,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(43)]
 	public void SaveDrawingState(ID2D1DrawingStateBlock* drawingStateBlock)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1DrawingStateBlock*, void>)(lpVtbl[43]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), drawingStateBlock);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1DrawingStateBlock*, void>)(lpVtbl[43]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), drawingStateBlock);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.RestoreDrawingState" />
@@ -407,7 +583,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(44)]
 	public void RestoreDrawingState(ID2D1DrawingStateBlock* drawingStateBlock)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1DrawingStateBlock*, void>)(lpVtbl[44]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), drawingStateBlock);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1DrawingStateBlock*, void>)(lpVtbl[44]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), drawingStateBlock);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.PushAxisAlignedClip" />
@@ -415,7 +595,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(45)]
 	public void PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Win32.Numerics.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Win32.Numerics.RectF*, AntialiasMode, void>)(lpVtbl[45]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.PopAxisAlignedClip" />
@@ -423,7 +607,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(46)]
 	public void PopAxisAlignedClip()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, void>)(lpVtbl[46]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, void>)(lpVtbl[46]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.Clear" />
@@ -431,7 +619,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(47)]
 	public void Clear(Color4* clearColor)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Color4*, void>)(lpVtbl[47]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), clearColor);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Color4*, void>)(lpVtbl[47]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), clearColor);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.BeginDraw" />
@@ -439,7 +631,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(48)]
 	public void BeginDraw()
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, void>)(lpVtbl[48]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, void>)(lpVtbl[48]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.EndDraw" />
@@ -447,7 +643,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(49)]
 	public HResult EndDraw(ulong* tag1 = null, ulong* tag2 = null)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ulong*, ulong*, int>)(lpVtbl[49]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ulong*, ulong*, int>)(lpVtbl[49]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), tag1, tag2);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelFormat" />
@@ -456,7 +656,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	public Common.PixelFormat GetPixelFormat()
 	{
 		Common.PixelFormat result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID2D1DeviceContext3*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[50]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[50]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.SetDpi" />
@@ -464,7 +668,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(51)]
 	public void SetDpi(float dpiX, float dpiY)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, float, float, void>)(lpVtbl[51]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, float, float, void>)(lpVtbl[51]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetDpi" />
@@ -472,7 +680,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(52)]
 	public void GetDpi(float* dpiX, float* dpiY)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, float*, float*, void>)(lpVtbl[52]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, float*, float*, void>)(lpVtbl[52]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetSize" />
@@ -481,7 +693,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	public System.Drawing.SizeF GetSize()
 	{
 		System.Drawing.SizeF result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID2D1DeviceContext3*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[53]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[53]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetPixelSize" />
@@ -490,7 +706,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	public System.Drawing.Size GetPixelSize()
 	{
 		System.Drawing.Size result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID2D1DeviceContext3*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[54]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[54]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.GetMaximumBitmapSize" />
@@ -498,7 +718,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(55)]
 	public uint GetMaximumBitmapSize()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, uint>)(lpVtbl[55]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, uint>)(lpVtbl[55]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1RenderTarget.IsSupported" />
@@ -506,7 +730,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(56)]
 	public Bool32 IsSupported(RenderTargetProperties* renderTargetProperties)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, RenderTargetProperties*, Bool32>)(lpVtbl[56]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), renderTargetProperties);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, RenderTargetProperties*, Bool32>)(lpVtbl[56]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), renderTargetProperties);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmap" />
@@ -514,7 +742,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(57)]
 	public HResult CreateBitmap(System.Drawing.Size size, void* sourceData, uint pitch, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[57]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, System.Drawing.Size, void*, uint, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[57]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), size, sourceData, pitch, bitmapProperties, bitmap);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapFromWicBitmap" />
@@ -522,7 +754,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(58)]
 	public HResult CreateBitmapFromWicBitmap(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.Imaging.IWICBitmapSource*, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[58]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Imaging.IWICBitmapSource*, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[58]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), wicBitmapSource, bitmapProperties, bitmap);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateColorContext" />
@@ -530,7 +766,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(59)]
 	public HResult CreateColorContext(ColorSpace space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ColorSpace, byte*, uint, ID2D1ColorContext**, int>)(lpVtbl[59]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), space, profile, profileSize, colorContext);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ColorSpace, byte*, uint, ID2D1ColorContext**, int>)(lpVtbl[59]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), space, profile, profileSize, colorContext);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateColorContextFromFilename" />
@@ -538,7 +778,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(60)]
 	public HResult CreateColorContextFromFilename(ushort* filename, ID2D1ColorContext** colorContext)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ushort*, ID2D1ColorContext**, int>)(lpVtbl[60]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), filename, colorContext);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ushort*, ID2D1ColorContext**, int>)(lpVtbl[60]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), filename, colorContext);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateColorContextFromWicColorContext" />
@@ -546,7 +790,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(61)]
 	public HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.Imaging.IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[61]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Imaging.IWICColorContext*, ID2D1ColorContext**, int>)(lpVtbl[61]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), wicColorContext, colorContext);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapFromDxgiSurface" />
@@ -554,7 +802,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(62)]
 	public HResult CreateBitmapFromDxgiSurface(Graphics.Dxgi.IDXGISurface* surface, BitmapProperties1* bitmapProperties, ID2D1Bitmap1** bitmap)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.Dxgi.IDXGISurface*, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[62]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), surface, bitmapProperties, bitmap);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Dxgi.IDXGISurface*, BitmapProperties1*, ID2D1Bitmap1**, int>)(lpVtbl[62]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), surface, bitmapProperties, bitmap);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateEffect" />
@@ -562,7 +814,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(63)]
 	public HResult CreateEffect(Guid* effectId, ID2D1Effect** effect)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Guid*, ID2D1Effect**, int>)(lpVtbl[63]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), effectId, effect);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Guid*, ID2D1Effect**, int>)(lpVtbl[63]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), effectId, effect);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateGradientStopCollection" />
@@ -570,7 +826,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(64)]
 	public HResult CreateGradientStopCollection(GradientStop* straightAlphaGradientStops, uint straightAlphaGradientStopsCount, ColorSpace preInterpolationSpace, ColorSpace postInterpolationSpace, BufferPrecision bufferPrecision, ExtendMode extendMode, ColorInterpolationMode colorInterpolationMode, ID2D1GradientStopCollection1** gradientStopCollection1)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, GradientStop*, uint, ColorSpace, ColorSpace, BufferPrecision, ExtendMode, ColorInterpolationMode, ID2D1GradientStopCollection1**, int>)(lpVtbl[64]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), straightAlphaGradientStops, straightAlphaGradientStopsCount, preInterpolationSpace, postInterpolationSpace, bufferPrecision, extendMode, colorInterpolationMode, gradientStopCollection1);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, GradientStop*, uint, ColorSpace, ColorSpace, BufferPrecision, ExtendMode, ColorInterpolationMode, ID2D1GradientStopCollection1**, int>)(lpVtbl[64]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), straightAlphaGradientStops, straightAlphaGradientStopsCount, preInterpolationSpace, postInterpolationSpace, bufferPrecision, extendMode, colorInterpolationMode, gradientStopCollection1);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateImageBrush" />
@@ -578,7 +838,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(65)]
 	public HResult CreateImageBrush(ID2D1Image* image, ImageBrushProperties* imageBrushProperties, BrushProperties* brushProperties, ID2D1ImageBrush** imageBrush)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Image*, ImageBrushProperties*, BrushProperties*, ID2D1ImageBrush**, int>)(lpVtbl[65]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image, imageBrushProperties, brushProperties, imageBrush);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Image*, ImageBrushProperties*, BrushProperties*, ID2D1ImageBrush**, int>)(lpVtbl[65]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image, imageBrushProperties, brushProperties, imageBrush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateBitmapBrush" />
@@ -586,7 +850,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(66)]
 	public HResult CreateBitmapBrush(ID2D1Bitmap* bitmap, BitmapBrushProperties1* bitmapBrushProperties, BrushProperties* brushProperties, ID2D1BitmapBrush1** bitmapBrush)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Bitmap*, BitmapBrushProperties1*, BrushProperties*, ID2D1BitmapBrush1**, int>)(lpVtbl[66]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bitmap, bitmapBrushProperties, brushProperties, bitmapBrush);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Bitmap*, BitmapBrushProperties1*, BrushProperties*, ID2D1BitmapBrush1**, int>)(lpVtbl[66]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bitmap, bitmapBrushProperties, brushProperties, bitmapBrush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateCommandList" />
@@ -594,7 +862,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(67)]
 	public HResult CreateCommandList(ID2D1CommandList** commandList)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1CommandList**, int>)(lpVtbl[67]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), commandList);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1CommandList**, int>)(lpVtbl[67]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), commandList);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.IsDxgiFormatSupported" />
@@ -602,7 +874,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(68)]
 	public Bool32 IsDxgiFormatSupported(Graphics.Dxgi.Common.Format format)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.Dxgi.Common.Format, Bool32>)(lpVtbl[68]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), format);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Dxgi.Common.Format, Bool32>)(lpVtbl[68]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), format);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.IsBufferPrecisionSupported" />
@@ -610,7 +886,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(69)]
 	public Bool32 IsBufferPrecisionSupported(BufferPrecision bufferPrecision)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, BufferPrecision, Bool32>)(lpVtbl[69]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bufferPrecision);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, BufferPrecision, Bool32>)(lpVtbl[69]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bufferPrecision);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetImageLocalBounds" />
@@ -618,7 +898,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(70)]
 	public HResult GetImageLocalBounds(ID2D1Image* image, Win32.Numerics.RectF** localBounds)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Image*, Win32.Numerics.RectF**, int>)(lpVtbl[70]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image, localBounds);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Image*, Win32.Numerics.RectF**, int>)(lpVtbl[70]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image, localBounds);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetImageWorldBounds" />
@@ -626,7 +910,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(71)]
 	public HResult GetImageWorldBounds(ID2D1Image* image, Win32.Numerics.RectF** worldBounds)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Image*, Win32.Numerics.RectF**, int>)(lpVtbl[71]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image, worldBounds);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Image*, Win32.Numerics.RectF**, int>)(lpVtbl[71]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image, worldBounds);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetGlyphRunWorldBounds" />
@@ -634,7 +922,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(72)]
 	public HResult GetGlyphRunWorldBounds(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.MeasuringMode measuringMode, Win32.Numerics.RectF** bounds)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Win32.Numerics.RectF**, int>)(lpVtbl[72]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.MeasuringMode, Win32.Numerics.RectF**, int>)(lpVtbl[72]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, measuringMode, bounds);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetDevice" />
@@ -642,7 +934,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(73)]
 	public void GetDevice(ID2D1Device** device)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Device**, void>)(lpVtbl[73]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), device);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Device**, void>)(lpVtbl[73]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), device);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetTarget" />
@@ -650,7 +946,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(74)]
 	public void SetTarget(ID2D1Image* image)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Image*, void>)(lpVtbl[74]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Image*, void>)(lpVtbl[74]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetTarget" />
@@ -658,7 +958,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(75)]
 	public void GetTarget(ID2D1Image** image)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Image**, void>)(lpVtbl[75]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Image**, void>)(lpVtbl[75]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetRenderingControls" />
@@ -666,7 +970,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(76)]
 	public void SetRenderingControls(RenderingControls* renderingControls)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, RenderingControls*, void>)(lpVtbl[76]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), renderingControls);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, RenderingControls*, void>)(lpVtbl[76]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), renderingControls);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetRenderingControls" />
@@ -674,7 +982,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(77)]
 	public void GetRenderingControls(RenderingControls* renderingControls)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, RenderingControls*, void>)(lpVtbl[77]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), renderingControls);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, RenderingControls*, void>)(lpVtbl[77]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), renderingControls);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetPrimitiveBlend" />
@@ -682,7 +994,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(78)]
 	public void SetPrimitiveBlend(PrimitiveBlend primitiveBlend)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, PrimitiveBlend, void>)(lpVtbl[78]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), primitiveBlend);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, PrimitiveBlend, void>)(lpVtbl[78]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), primitiveBlend);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetPrimitiveBlend" />
@@ -690,7 +1006,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(79)]
 	public PrimitiveBlend GetPrimitiveBlend()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, PrimitiveBlend>)(lpVtbl[79]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, PrimitiveBlend>)(lpVtbl[79]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.SetUnitMode" />
@@ -698,7 +1018,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(80)]
 	public void SetUnitMode(UnitMode unitMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, UnitMode, void>)(lpVtbl[80]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), unitMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, UnitMode, void>)(lpVtbl[80]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), unitMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetUnitMode" />
@@ -706,7 +1030,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(81)]
 	public UnitMode GetUnitMode()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, UnitMode>)(lpVtbl[81]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, UnitMode>)(lpVtbl[81]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGlyphRun" />
@@ -714,7 +1042,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(82)]
 	public void DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[82]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, void>)(lpVtbl[82]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawImage" />
@@ -722,7 +1054,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(83)]
 	public void DrawImage(ID2D1Image* image, Vector2* targetOffset, Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, void>)(lpVtbl[83]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawGdiMetafile" />
@@ -730,7 +1066,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(84)]
 	public void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Vector2* targetOffset)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1GdiMetafile*, Vector2*, void>)(lpVtbl[84]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1GdiMetafile*, Vector2*, void>)(lpVtbl[84]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.DrawBitmap" />
@@ -738,7 +1078,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(85)]
 	public void DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, void>)(lpVtbl[85]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, void>)(lpVtbl[85]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.PushLayer" />
@@ -746,7 +1090,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(86)]
 	public void PushLayer(LayerParameters1* layerParameters, ID2D1Layer* layer)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, LayerParameters1*, ID2D1Layer*, void>)(lpVtbl[86]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), layerParameters, layer);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, LayerParameters1*, ID2D1Layer*, void>)(lpVtbl[86]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), layerParameters, layer);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.InvalidateEffectInputRectangle" />
@@ -754,7 +1102,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(87)]
 	public HResult InvalidateEffectInputRectangle(ID2D1Effect* effect, uint input, Win32.Numerics.RectF* inputRectangle)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Effect*, uint, Win32.Numerics.RectF*, int>)(lpVtbl[87]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), effect, input, inputRectangle);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Effect*, uint, Win32.Numerics.RectF*, int>)(lpVtbl[87]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), effect, input, inputRectangle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetEffectInvalidRectangleCount" />
@@ -762,7 +1114,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(88)]
 	public HResult GetEffectInvalidRectangleCount(ID2D1Effect* effect, uint* rectangleCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Effect*, uint*, int>)(lpVtbl[88]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), effect, rectangleCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Effect*, uint*, int>)(lpVtbl[88]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), effect, rectangleCount);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetEffectInvalidRectangles" />
@@ -770,7 +1126,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(89)]
 	public HResult GetEffectInvalidRectangles(ID2D1Effect* effect, Win32.Numerics.RectF** rectangles, uint rectanglesCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Effect*, Win32.Numerics.RectF**, uint, int>)(lpVtbl[89]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), effect, rectangles, rectanglesCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Effect*, Win32.Numerics.RectF**, uint, int>)(lpVtbl[89]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), effect, rectangles, rectanglesCount);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.GetEffectRequiredInputRectangles" />
@@ -778,7 +1138,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(90)]
 	public HResult GetEffectRequiredInputRectangles(ID2D1Effect* renderEffect, Win32.Numerics.RectF* renderImageRectangle, EffectInputDescription* inputDescriptions, Win32.Numerics.RectF** requiredInputRects, uint inputCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Effect*, Win32.Numerics.RectF*, EffectInputDescription*, Win32.Numerics.RectF**, uint, int>)(lpVtbl[90]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), renderEffect, renderImageRectangle, inputDescriptions, requiredInputRects, inputCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Effect*, Win32.Numerics.RectF*, EffectInputDescription*, Win32.Numerics.RectF**, uint, int>)(lpVtbl[90]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), renderEffect, renderImageRectangle, inputDescriptions, requiredInputRects, inputCount);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.FillOpacityMask" />
@@ -786,7 +1150,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(91)]
 	public void FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[91]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext1.CreateFilledGeometryRealization" />
@@ -794,7 +1162,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(92)]
 	public HResult CreateFilledGeometryRealization(ID2D1Geometry* geometry, float flatteningTolerance, ID2D1GeometryRealization** geometryRealization)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Geometry*, float, ID2D1GeometryRealization**, int>)(lpVtbl[92]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometry, flatteningTolerance, geometryRealization);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Geometry*, float, ID2D1GeometryRealization**, int>)(lpVtbl[92]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometry, flatteningTolerance, geometryRealization);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext1.CreateStrokedGeometryRealization" />
@@ -802,7 +1174,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(93)]
 	public HResult CreateStrokedGeometryRealization(ID2D1Geometry* geometry, float flatteningTolerance, float strokeWidth, ID2D1StrokeStyle* strokeStyle, ID2D1GeometryRealization** geometryRealization)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Geometry*, float, float, ID2D1StrokeStyle*, ID2D1GeometryRealization**, int>)(lpVtbl[93]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometry, flatteningTolerance, strokeWidth, strokeStyle, geometryRealization);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Geometry*, float, float, ID2D1StrokeStyle*, ID2D1GeometryRealization**, int>)(lpVtbl[93]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometry, flatteningTolerance, strokeWidth, strokeStyle, geometryRealization);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext1.DrawGeometryRealization" />
@@ -810,7 +1186,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(94)]
 	public void DrawGeometryRealization(ID2D1GeometryRealization* geometryRealization, ID2D1Brush* brush)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1GeometryRealization*, ID2D1Brush*, void>)(lpVtbl[94]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometryRealization, brush);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1GeometryRealization*, ID2D1Brush*, void>)(lpVtbl[94]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), geometryRealization, brush);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.CreateInk" />
@@ -818,7 +1198,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(95)]
 	public HResult CreateInk(InkPoint* startPoint, ID2D1Ink** ink)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, InkPoint*, ID2D1Ink**, int>)(lpVtbl[95]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), startPoint, ink);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, InkPoint*, ID2D1Ink**, int>)(lpVtbl[95]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), startPoint, ink);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.CreateInkStyle" />
@@ -826,7 +1210,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(96)]
 	public HResult CreateInkStyle(InkStyleProperties* inkStyleProperties, ID2D1InkStyle** inkStyle)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, InkStyleProperties*, ID2D1InkStyle**, int>)(lpVtbl[96]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), inkStyleProperties, inkStyle);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, InkStyleProperties*, ID2D1InkStyle**, int>)(lpVtbl[96]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), inkStyleProperties, inkStyle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.CreateGradientMesh" />
@@ -834,7 +1222,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(97)]
 	public HResult CreateGradientMesh(GradientMeshPatch* patches, uint patchesCount, ID2D1GradientMesh** gradientMesh)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, GradientMeshPatch*, uint, ID2D1GradientMesh**, int>)(lpVtbl[97]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), patches, patchesCount, gradientMesh);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, GradientMeshPatch*, uint, ID2D1GradientMesh**, int>)(lpVtbl[97]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), patches, patchesCount, gradientMesh);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.CreateImageSourceFromWic" />
@@ -842,7 +1234,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(98)]
 	public HResult CreateImageSourceFromWic(Graphics.Imaging.IWICBitmapSource* wicBitmapSource, ImageSourceLoadingOptions loadingOptions, Common.AlphaMode alphaMode, ID2D1ImageSourceFromWic** imageSource)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.Imaging.IWICBitmapSource*, ImageSourceLoadingOptions, Common.AlphaMode, ID2D1ImageSourceFromWic**, int>)(lpVtbl[98]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), wicBitmapSource, loadingOptions, alphaMode, imageSource);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Imaging.IWICBitmapSource*, ImageSourceLoadingOptions, Common.AlphaMode, ID2D1ImageSourceFromWic**, int>)(lpVtbl[98]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), wicBitmapSource, loadingOptions, alphaMode, imageSource);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.CreateLookupTable3D" />
@@ -850,7 +1246,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(99)]
 	public HResult CreateLookupTable3D(BufferPrecision precision, uint* extents, byte* data, uint dataCount, uint* strides, ID2D1LookupTable3D** lookupTable)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, BufferPrecision, uint*, byte*, uint, uint*, ID2D1LookupTable3D**, int>)(lpVtbl[99]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), precision, extents, data, dataCount, strides, lookupTable);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, BufferPrecision, uint*, byte*, uint, uint*, ID2D1LookupTable3D**, int>)(lpVtbl[99]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), precision, extents, data, dataCount, strides, lookupTable);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.CreateImageSourceFromDxgi" />
@@ -858,7 +1258,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(100)]
 	public HResult CreateImageSourceFromDxgi(Graphics.Dxgi.IDXGISurface** surfaces, uint surfaceCount, Graphics.Dxgi.Common.ColorSpaceType colorSpace, ImageSourceFromDxgiOptions options, ID2D1ImageSource** imageSource)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, Graphics.Dxgi.IDXGISurface**, uint, Graphics.Dxgi.Common.ColorSpaceType, ImageSourceFromDxgiOptions, ID2D1ImageSource**, int>)(lpVtbl[100]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), surfaces, surfaceCount, colorSpace, options, imageSource);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, Graphics.Dxgi.IDXGISurface**, uint, Graphics.Dxgi.Common.ColorSpaceType, ImageSourceFromDxgiOptions, ID2D1ImageSource**, int>)(lpVtbl[100]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), surfaces, surfaceCount, colorSpace, options, imageSource);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.GetGradientMeshWorldBounds" />
@@ -866,7 +1270,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(101)]
 	public HResult GetGradientMeshWorldBounds(ID2D1GradientMesh* gradientMesh, Win32.Numerics.RectF** pBounds)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1GradientMesh*, Win32.Numerics.RectF**, int>)(lpVtbl[101]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gradientMesh, pBounds);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1GradientMesh*, Win32.Numerics.RectF**, int>)(lpVtbl[101]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gradientMesh, pBounds);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.DrawInk" />
@@ -874,7 +1282,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(102)]
 	public void DrawInk(ID2D1Ink* ink, ID2D1Brush* brush, ID2D1InkStyle* inkStyle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1Ink*, ID2D1Brush*, ID2D1InkStyle*, void>)(lpVtbl[102]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), ink, brush, inkStyle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1Ink*, ID2D1Brush*, ID2D1InkStyle*, void>)(lpVtbl[102]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), ink, brush, inkStyle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.DrawGradientMesh" />
@@ -882,7 +1294,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(103)]
 	public void DrawGradientMesh(ID2D1GradientMesh* gradientMesh)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1GradientMesh*, void>)(lpVtbl[103]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gradientMesh);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1GradientMesh*, void>)(lpVtbl[103]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gradientMesh);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.DrawGdiMetafile" />
@@ -890,7 +1306,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(104)]
 	public void DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1GdiMetafile*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[104]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gdiMetafile, destinationRectangle, sourceRectangle);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1GdiMetafile*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, void>)(lpVtbl[104]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), gdiMetafile, destinationRectangle, sourceRectangle);
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext2.CreateTransformedImageSource" />
@@ -898,7 +1318,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(105)]
 	public HResult CreateTransformedImageSource(ID2D1ImageSource* imageSource, TransformedImageSourceProperties* properties, ID2D1TransformedImageSource** transformedImageSource)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1ImageSource*, TransformedImageSourceProperties*, ID2D1TransformedImageSource**, int>)(lpVtbl[105]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), imageSource, properties, transformedImageSource);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1ImageSource*, TransformedImageSourceProperties*, ID2D1TransformedImageSource**, int>)(lpVtbl[105]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), imageSource, properties, transformedImageSource);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext3::CreateSpriteBatch"]/*' />
@@ -906,7 +1330,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(106)]
 	public HResult CreateSpriteBatch(ID2D1SpriteBatch** spriteBatch)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1SpriteBatch**, int>)(lpVtbl[106]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), spriteBatch);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1SpriteBatch**, int>)(lpVtbl[106]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), spriteBatch);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1DeviceContext3::DrawSpriteBatch"]/*' />
@@ -914,7 +1342,11 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	[VtblIndex(107)]
 	public void DrawSpriteBatch(ID2D1SpriteBatch* spriteBatch, uint startIndex, uint spriteCount, ID2D1Bitmap* bitmap, BitmapInterpolationMode interpolationMode, SpriteOptions spriteOptions)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1DeviceContext3*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, void>)(lpVtbl[107]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1DeviceContext3*, ID2D1SpriteBatch*, uint, uint, ID2D1Bitmap*, BitmapInterpolationMode, SpriteOptions, void>)(lpVtbl[107]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), spriteBatch, startIndex, spriteCount, bitmap, interpolationMode, spriteOptions);
+#endif
 	}
 
 	public interface Interface : ID2D1DeviceContext2.Interface

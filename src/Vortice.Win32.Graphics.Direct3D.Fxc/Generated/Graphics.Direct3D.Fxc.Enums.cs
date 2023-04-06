@@ -12,7 +12,7 @@ namespace Win32.Graphics.Direct3D.Fxc;
 /// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS"]/*' />
 /// <unmanaged>D3DCOMPILER_STRIP_FLAGS</unmanaged>
 [Flags]
-public enum StripFlags : int
+public enum StripFlags
 {
 	None = 0,
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3DCOMPILER_STRIP_FLAGS::D3DCOMPILER_STRIP_REFLECTION_DATA"]/*' />
@@ -34,7 +34,7 @@ public enum StripFlags : int
 
 /// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3D_BLOB_PART"]/*' />
 /// <unmanaged>D3D_BLOB_PART</unmanaged>
-public enum BlobPart : int
+public enum BlobPart
 {
 	/// <include file='../../Vortice.Win32/Generated/Graphics/Direct3D.xml' path='doc/member[@name="D3D_BLOB_PART::D3D_BLOB_INPUT_SIGNATURE_BLOB"]/*' />
 	/// <unmanaged>D3D_BLOB_INPUT_SIGNATURE_BLOB</unmanaged>

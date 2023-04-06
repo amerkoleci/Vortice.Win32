@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionDelegatedInkTrail*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionDelegatedInkTrail*, uint>)(lpVtbl[1]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, uint>)(lpVtbl[1]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionDelegatedInkTrail*, uint>)(lpVtbl[2]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, uint>)(lpVtbl[2]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::AddTrailPoints"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	[VtblIndex(3)]
 	public HResult AddTrailPoints(InkTrailPoint* inkPoints, uint inkPointsCount, uint* generationId)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionDelegatedInkTrail*, InkTrailPoint*, uint, uint*, int>)(lpVtbl[3]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, generationId);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, InkTrailPoint*, uint, uint*, int>)(lpVtbl[3]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, generationId);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::AddTrailPointsWithPrediction"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	[VtblIndex(4)]
 	public HResult AddTrailPointsWithPrediction(InkTrailPoint* inkPoints, uint inkPointsCount, InkTrailPoint* predictedInkPoints, uint predictedInkPointsCount, uint* generationId)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionDelegatedInkTrail*, InkTrailPoint*, uint, InkTrailPoint*, uint, uint*, int>)(lpVtbl[4]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, predictedInkPoints, predictedInkPointsCount, generationId);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, InkTrailPoint*, uint, InkTrailPoint*, uint, uint*, int>)(lpVtbl[4]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), inkPoints, inkPointsCount, predictedInkPoints, predictedInkPointsCount, generationId);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::RemoveTrailPoints"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	[VtblIndex(5)]
 	public HResult RemoveTrailPoints(uint generationId)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionDelegatedInkTrail*, uint, int>)(lpVtbl[5]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), generationId);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, uint, int>)(lpVtbl[5]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), generationId);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDelegatedInkTrail::StartNewTrail"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDCompositionDelegatedInkTrail : IDCompositionDeleg
 	[VtblIndex(6)]
 	public HResult StartNewTrail(Color4* color)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionDelegatedInkTrail*, Color4*, int>)(lpVtbl[6]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), color);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionDelegatedInkTrail*, Color4*, int>)(lpVtbl[6]))((IDCompositionDelegatedInkTrail*)Unsafe.AsPointer(ref this), color);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

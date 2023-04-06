@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Bitmap*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Bitmap*, uint>)(lpVtbl[1]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, uint>)(lpVtbl[1]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Bitmap*, uint>)(lpVtbl[2]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, uint>)(lpVtbl[2]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1Bitmap*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetSize"]/*' />
@@ -88,7 +104,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	public System.Drawing.SizeF GetSize()
 	{
 		System.Drawing.SizeF result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID2D1Bitmap*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.SizeF*, System.Drawing.SizeF*>)(lpVtbl[4]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelSize"]/*' />
@@ -97,7 +117,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	public System.Drawing.Size GetPixelSize()
 	{
 		System.Drawing.Size result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID2D1Bitmap*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Size*, System.Drawing.Size*>)(lpVtbl[5]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetPixelFormat"]/*' />
@@ -106,7 +130,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	public Common.PixelFormat GetPixelFormat()
 	{
 		Common.PixelFormat result;
+#if NET6_0_OR_GREATER
+		return *((delegate* unmanaged<ID2D1Bitmap*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[6]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+#else
 		return *((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Common.PixelFormat*, Common.PixelFormat*>)(lpVtbl[6]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), &result);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::GetDpi"]/*' />
@@ -114,7 +142,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[VtblIndex(7)]
 	public void GetDpi(float* dpiX, float* dpiY)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1Bitmap*, float*, float*, void>)(lpVtbl[7]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, float*, float*, void>)(lpVtbl[7]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), dpiX, dpiY);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromBitmap"]/*' />
@@ -122,7 +154,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult CopyFromBitmap(System.Drawing.Point* destPoint, ID2D1Bitmap* bitmap, Win32.Numerics.Rect* srcRect)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Bitmap*, System.Drawing.Point*, ID2D1Bitmap*, Win32.Numerics.Rect*, int>)(lpVtbl[8]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1Bitmap*, Win32.Numerics.Rect*, int>)(lpVtbl[8]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, bitmap, srcRect);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromRenderTarget"]/*' />
@@ -130,7 +166,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[VtblIndex(9)]
 	public HResult CopyFromRenderTarget(System.Drawing.Point* destPoint, ID2D1RenderTarget* renderTarget, Win32.Numerics.Rect* srcRect)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Bitmap*, System.Drawing.Point*, ID2D1RenderTarget*, Win32.Numerics.Rect*, int>)(lpVtbl[9]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, System.Drawing.Point*, ID2D1RenderTarget*, Win32.Numerics.Rect*, int>)(lpVtbl[9]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), destPoint, renderTarget, srcRect);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Bitmap::CopyFromMemory"]/*' />
@@ -138,7 +178,11 @@ public unsafe partial struct ID2D1Bitmap : ID2D1Bitmap.Interface, INativeGuid
 	[VtblIndex(10)]
 	public HResult CopyFromMemory(Win32.Numerics.Rect* dstRect, void* srcData, uint pitch)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1Bitmap*, Win32.Numerics.Rect*, void*, uint, int>)(lpVtbl[10]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), dstRect, srcData, pitch);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1Bitmap*, Win32.Numerics.Rect*, void*, uint, int>)(lpVtbl[10]))((ID2D1Bitmap*)Unsafe.AsPointer(ref this), dstRect, srcData, pitch);
+#endif
 	}
 
 	public interface Interface : ID2D1Image.Interface

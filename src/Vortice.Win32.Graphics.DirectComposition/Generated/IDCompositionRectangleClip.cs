@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, uint>)(lpVtbl[1]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, uint>)(lpVtbl[1]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, uint>)(lpVtbl[2]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, uint>)(lpVtbl[2]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetLeft"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(3)]
 	public HResult SetLeft(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetLeft"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(4)]
 	public HResult SetLeft(float left)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[4]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), left);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[4]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), left);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTop"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(5)]
 	public HResult SetTop(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTop"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(6)]
 	public HResult SetTop(float top)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[6]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), top);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[6]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), top);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetRight"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(7)]
 	public HResult SetRight(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetRight"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(8)]
 	public HResult SetRight(float right)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[8]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), right);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[8]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), right);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottom"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(9)]
 	public HResult SetBottom(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottom"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(10)]
 	public HResult SetBottom(float bottom)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[10]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), bottom);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[10]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), bottom);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTopLeftRadiusX"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(11)]
 	public HResult SetTopLeftRadiusX(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTopLeftRadiusX"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(12)]
 	public HResult SetTopLeftRadiusX(float radius)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[12]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[12]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTopLeftRadiusY"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(13)]
 	public HResult SetTopLeftRadiusY(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTopLeftRadiusY"]/*' />
@@ -167,7 +223,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(14)]
 	public HResult SetTopLeftRadiusY(float radius)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[14]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[14]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTopRightRadiusX"]/*' />
@@ -175,7 +235,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(15)]
 	public HResult SetTopRightRadiusX(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[15]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[15]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTopRightRadiusX"]/*' />
@@ -183,7 +247,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(16)]
 	public HResult SetTopRightRadiusX(float radius)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[16]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[16]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTopRightRadiusY"]/*' />
@@ -191,7 +259,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(17)]
 	public HResult SetTopRightRadiusY(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[17]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[17]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetTopRightRadiusY"]/*' />
@@ -199,7 +271,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(18)]
 	public HResult SetTopRightRadiusY(float radius)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[18]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[18]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottomLeftRadiusX"]/*' />
@@ -207,7 +283,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(19)]
 	public HResult SetBottomLeftRadiusX(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[19]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[19]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottomLeftRadiusX"]/*' />
@@ -215,7 +295,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(20)]
 	public HResult SetBottomLeftRadiusX(float radius)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[20]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[20]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottomLeftRadiusY"]/*' />
@@ -223,7 +307,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(21)]
 	public HResult SetBottomLeftRadiusY(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[21]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[21]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottomLeftRadiusY"]/*' />
@@ -231,7 +319,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(22)]
 	public HResult SetBottomLeftRadiusY(float radius)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[22]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[22]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottomRightRadiusX"]/*' />
@@ -239,7 +331,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(23)]
 	public HResult SetBottomRightRadiusX(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[23]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[23]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottomRightRadiusX"]/*' />
@@ -247,7 +343,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(24)]
 	public HResult SetBottomRightRadiusX(float radius)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[24]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[24]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottomRightRadiusY"]/*' />
@@ -255,7 +355,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(25)]
 	public HResult SetBottomRightRadiusY(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[25]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, IDCompositionAnimation*, int>)(lpVtbl[25]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRectangleClip::SetBottomRightRadiusY"]/*' />
@@ -263,7 +367,11 @@ public unsafe partial struct IDCompositionRectangleClip : IDCompositionRectangle
 	[VtblIndex(26)]
 	public HResult SetBottomRightRadiusY(float radius)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionRectangleClip*, float, int>)(lpVtbl[26]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionRectangleClip*, float, int>)(lpVtbl[26]))((IDCompositionRectangleClip*)Unsafe.AsPointer(ref this), radius);
+#endif
 	}
 
 	public interface Interface : IDCompositionClip.Interface

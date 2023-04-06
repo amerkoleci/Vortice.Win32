@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientMesh*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientMesh*, uint>)(lpVtbl[1]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, uint>)(lpVtbl[1]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientMesh*, uint>)(lpVtbl[2]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, uint>)(lpVtbl[2]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1GradientMesh*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), factory);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), factory);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh::GetPatchCount"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	[VtblIndex(4)]
 	public uint GetPatchCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientMesh*, uint>)(lpVtbl[4]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, uint>)(lpVtbl[4]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientMesh::GetPatches"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1GradientMesh : ID2D1GradientMesh.Interface, IN
 	[VtblIndex(5)]
 	public HResult GetPatches(uint startIndex, GradientMeshPatch* patches, uint patchesCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1GradientMesh*, uint, GradientMeshPatch*, uint, int>)(lpVtbl[5]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), startIndex, patches, patchesCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1GradientMesh*, uint, GradientMeshPatch*, uint, int>)(lpVtbl[5]))((ID2D1GradientMesh*)Unsafe.AsPointer(ref this), startIndex, patches, patchesCount);
+#endif
 	}
 
 	public interface Interface : ID2D1Resource.Interface

@@ -53,7 +53,11 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DUserDefinedAnnotation*, Guid*, void**, int>)(lpVtbl[0]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, Guid*, void**, int>)(lpVtbl[0]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DUserDefinedAnnotation*, uint>)(lpVtbl[1]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, uint>)(lpVtbl[1]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DUserDefinedAnnotation*, uint>)(lpVtbl[2]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, uint>)(lpVtbl[2]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::BeginEvent"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	[VtblIndex(3)]
 	public int BeginEvent(ushort* Name)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DUserDefinedAnnotation*, ushort*, int>)(lpVtbl[3]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, ushort*, int>)(lpVtbl[3]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::EndEvent"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	[VtblIndex(4)]
 	public int EndEvent()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DUserDefinedAnnotation*, int>)(lpVtbl[4]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, int>)(lpVtbl[4]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::SetMarker"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	[VtblIndex(5)]
 	public void SetMarker(ushort* Name)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3DUserDefinedAnnotation*, ushort*, void>)(lpVtbl[5]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
+#else
 		((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, ushort*, void>)(lpVtbl[5]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::GetStatus"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	[VtblIndex(6)]
 	public Bool32 GetStatus()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3DUserDefinedAnnotation*, Bool32>)(lpVtbl[6]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3DUserDefinedAnnotation*, Bool32>)(lpVtbl[6]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

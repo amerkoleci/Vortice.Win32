@@ -53,7 +53,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, uint>)(lpVtbl[1]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint>)(lpVtbl[1]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, uint>)(lpVtbl[2]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint>)(lpVtbl[2]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(3)]
 	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
@@ -87,7 +103,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(4)]
 	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, pUnknown);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(5)]
 	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
@@ -103,7 +127,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(6)]
 	public HResult GetParent(Guid* riid, void** ppParent)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), riid, ppParent);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.EnumOutputs" />
@@ -111,7 +139,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(7)]
 	public HResult EnumOutputs(uint Output, IDXGIOutput** ppOutput)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, uint, IDXGIOutput**, int>)(lpVtbl[7]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, IDXGIOutput**, int>)(lpVtbl[7]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), Output, ppOutput);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.GetDesc" />
@@ -119,15 +151,23 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(8)]
 	public HResult GetDesc(AdapterDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, AdapterDescription*, int>)(lpVtbl[8]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter.CheckInterfaceSupport" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult CheckInterfaceSupport(Guid* InterfaceName, LargeInteger* pUMDVersion)
+	public HResult CheckInterfaceSupport(Guid* InterfaceName, long* pUMDVersion)
 	{
-		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, LargeInteger*, int>)(lpVtbl[9]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Guid*, long*, int>)(lpVtbl[9]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#else
+		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Guid*, long*, int>)(lpVtbl[9]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), InterfaceName, pUMDVersion);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter1.GetDesc1" />
@@ -135,7 +175,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(10)]
 	public HResult GetDesc1(AdapterDescription1* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, AdapterDescription1*, int>)(lpVtbl[10]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <inheritdoc cref="IDXGIAdapter2.GetDesc2" />
@@ -143,7 +187,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(11)]
 	public HResult GetDesc2(AdapterDescription2* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, AdapterDescription2*, int>)(lpVtbl[11]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::RegisterHardwareContentProtectionTeardownStatusEvent"]/*' />
@@ -151,7 +199,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(12)]
 	public HResult RegisterHardwareContentProtectionTeardownStatusEvent(Handle hEvent, uint* pdwCookie)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Handle, uint*, int>)(lpVtbl[12]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Handle, uint*, int>)(lpVtbl[12]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterHardwareContentProtectionTeardownStatus"]/*' />
@@ -159,7 +211,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(13)]
 	public void UnregisterHardwareContentProtectionTeardownStatus(uint dwCookie)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIAdapter3*, uint, void>)(lpVtbl[13]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+#else
 		((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, void>)(lpVtbl[13]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::QueryVideoMemoryInfo"]/*' />
@@ -167,7 +223,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(14)]
 	public HResult QueryVideoMemoryInfo(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, QueryVideoMemoryInfo* pVideoMemoryInfo)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, uint, MemorySegmentGroup, QueryVideoMemoryInfo*, int>)(lpVtbl[14]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, MemorySegmentGroup, QueryVideoMemoryInfo*, int>)(lpVtbl[14]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, pVideoMemoryInfo);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::SetVideoMemoryReservation"]/*' />
@@ -175,7 +235,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(15)]
 	public HResult SetVideoMemoryReservation(uint NodeIndex, MemorySegmentGroup MemorySegmentGroup, ulong Reservation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, uint, MemorySegmentGroup, ulong, int>)(lpVtbl[15]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, MemorySegmentGroup, ulong, int>)(lpVtbl[15]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), NodeIndex, MemorySegmentGroup, Reservation);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::RegisterVideoMemoryBudgetChangeNotificationEvent"]/*' />
@@ -183,7 +247,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(16)]
 	public HResult RegisterVideoMemoryBudgetChangeNotificationEvent(Handle hEvent, uint* pdwCookie)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDXGIAdapter3*, Handle, uint*, int>)(lpVtbl[16]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, Handle, uint*, int>)(lpVtbl[16]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), hEvent, pdwCookie);
+#endif
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIAdapter3::UnregisterVideoMemoryBudgetChangeNotification"]/*' />
@@ -191,7 +259,11 @@ public unsafe partial struct IDXGIAdapter3 : IDXGIAdapter3.Interface, INativeGui
 	[VtblIndex(17)]
 	public void UnregisterVideoMemoryBudgetChangeNotification(uint dwCookie)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<IDXGIAdapter3*, uint, void>)(lpVtbl[17]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+#else
 		((delegate* unmanaged[Stdcall]<IDXGIAdapter3*, uint, void>)(lpVtbl[17]))((IDXGIAdapter3*)Unsafe.AsPointer(ref this), dwCookie);
+#endif
 	}
 
 	public interface Interface : IDXGIAdapter2.Interface

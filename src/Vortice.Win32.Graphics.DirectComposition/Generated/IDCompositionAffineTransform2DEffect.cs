@@ -53,7 +53,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, uint>)(lpVtbl[1]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, uint>)(lpVtbl[1]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, uint>)(lpVtbl[2]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, uint>)(lpVtbl[2]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(3)]
 	public HResult SetInput(uint index, IUnknown* input, uint flags)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), index, input, flags);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), index, input, flags);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetInterpolationMode"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(4)]
 	public HResult SetInterpolationMode(Graphics.Direct2D.Common.AffineTransform2DInterpolationMode interpolationMode)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, Graphics.Direct2D.Common.AffineTransform2DInterpolationMode, int>)(lpVtbl[4]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), interpolationMode);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, Graphics.Direct2D.Common.AffineTransform2DInterpolationMode, int>)(lpVtbl[4]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), interpolationMode);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetBorderMode"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(5)]
 	public HResult SetBorderMode(Graphics.Direct2D.Common.BorderMode borderMode)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, Graphics.Direct2D.Common.BorderMode, int>)(lpVtbl[5]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), borderMode);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, Graphics.Direct2D.Common.BorderMode, int>)(lpVtbl[5]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), borderMode);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetTransformMatrix"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(6)]
 	public HResult SetTransformMatrix(Matrix3x2* transformMatrix)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, Matrix3x2*, int>)(lpVtbl[6]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), transformMatrix);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, Matrix3x2*, int>)(lpVtbl[6]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), transformMatrix);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetTransformMatrixElement"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(7)]
 	public HResult SetTransformMatrixElement(int row, int column, IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, int, int, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), row, column, animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, int, int, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), row, column, animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetTransformMatrixElement"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(8)]
 	public HResult SetTransformMatrixElement(int row, int column, float value)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, int, int, float, int>)(lpVtbl[8]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), row, column, value);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, int, int, float, int>)(lpVtbl[8]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), row, column, value);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetSharpness"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(9)]
 	public HResult SetSharpness(IDCompositionAnimation* animation)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), animation);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), animation);
+#endif
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAffineTransform2DEffect::SetSharpness"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IDCompositionAffineTransform2DEffect : IDCompositio
 	[VtblIndex(10)]
 	public HResult SetSharpness(float sharpness)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDCompositionAffineTransform2DEffect*, float, int>)(lpVtbl[10]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), sharpness);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDCompositionAffineTransform2DEffect*, float, int>)(lpVtbl[10]))((IDCompositionAffineTransform2DEffect*)Unsafe.AsPointer(ref this), sharpness);
+#endif
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface

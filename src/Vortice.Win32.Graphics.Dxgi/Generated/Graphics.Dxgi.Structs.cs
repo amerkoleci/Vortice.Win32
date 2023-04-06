@@ -23,10 +23,10 @@ public partial struct FrameStatistics
 	public uint SyncRefreshCount;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncQPCTime"]/*' />
-	public LargeInteger SyncQPCTime;
+	public long SyncQPCTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS::SyncGPUTime"]/*' />
-	public LargeInteger SyncGPUTime;
+	public long SyncGPUTime;
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAPPED_RECT"]/*' />
@@ -134,7 +134,7 @@ public partial struct SwapChainDescription
 	public uint BufferCount;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::OutputWindow"]/*' />
-	public IntPtr OutputWindow;
+	public nint OutputWindow;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SWAP_CHAIN_DESC::Windowed"]/*' />
 	public Bool32 Windowed;
@@ -253,10 +253,10 @@ public partial struct OutduplPointerShapeInfo
 public partial struct OutduplFrameInfo
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastPresentTime"]/*' />
-	public LargeInteger LastPresentTime;
+	public long LastPresentTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::LastMouseUpdateTime"]/*' />
-	public LargeInteger LastMouseUpdateTime;
+	public long LastMouseUpdateTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTDUPL_FRAME_INFO::AccumulatedFrames"]/*' />
 	public uint AccumulatedFrames;
@@ -438,10 +438,10 @@ public partial struct FrameStatisticsMedia
 	public uint SyncRefreshCount;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncQPCTime"]/*' />
-	public LargeInteger SyncQPCTime;
+	public long SyncQPCTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::SyncGPUTime"]/*' />
-	public LargeInteger SyncGPUTime;
+	public long SyncGPUTime;
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_FRAME_STATISTICS_MEDIA::CompositionMode"]/*' />
 	public FramePresentationMode CompositionMode;

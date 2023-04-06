@@ -51,7 +51,11 @@ public unsafe partial struct ID3D11ShaderReflectionVariable : ID3D11ShaderReflec
 	[VtblIndex(0)]
 	public HResult GetDesc(ShaderVariableDescription* pDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderReflectionVariable*, ShaderVariableDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this), pDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, ShaderVariableDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this), pDesc);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionVariable::GetType"]/*' />
@@ -59,7 +63,11 @@ public unsafe partial struct ID3D11ShaderReflectionVariable : ID3D11ShaderReflec
 	[VtblIndex(1)]
 	public new ID3D11ShaderReflectionType GetType()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderReflectionVariable*, ID3D11ShaderReflectionType>)(lpVtbl[1]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, ID3D11ShaderReflectionType>)(lpVtbl[1]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionVariable::GetBuffer"]/*' />
@@ -67,7 +75,11 @@ public unsafe partial struct ID3D11ShaderReflectionVariable : ID3D11ShaderReflec
 	[VtblIndex(2)]
 	public ID3D11ShaderReflectionConstantBuffer GetBuffer()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderReflectionVariable*, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, ID3D11ShaderReflectionConstantBuffer>)(lpVtbl[2]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionVariable::GetInterfaceSlot"]/*' />
@@ -75,7 +87,11 @@ public unsafe partial struct ID3D11ShaderReflectionVariable : ID3D11ShaderReflec
 	[VtblIndex(3)]
 	public uint GetInterfaceSlot(uint uArrayIndex)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderReflectionVariable*, uint, uint>)(lpVtbl[3]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this), uArrayIndex);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionVariable*, uint, uint>)(lpVtbl[3]))((ID3D11ShaderReflectionVariable*)Unsafe.AsPointer(ref this), uArrayIndex);
+#endif
 	}
 
 	public interface Interface 

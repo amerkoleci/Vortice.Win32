@@ -50,6 +50,13 @@
 		,"Value":-2003283952
 		,"Attrs":[]
 	}
+	,{
+		"Name":"DWRITE_STANDARD_FONT_AXIS_COUNT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -76,6 +83,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"r","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"g","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -117,7 +125,7 @@
 			,{"Name":"DWRITE_GLYPH_IMAGE_FORMATS_TIFF","Value":64}
 			,{"Name":"DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8","Value":128}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DWRITE_FONT_FILE_TYPE"
@@ -171,7 +179,7 @@
 			,{"Name":"DWRITE_FONT_SIMULATIONS_BOLD","Value":1}
 			,{"Name":"DWRITE_FONT_SIMULATIONS_OBLIQUE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DWRITE_FONT_WEIGHT"
@@ -280,6 +288,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"designUnitsPerEm","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ascent","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -302,6 +311,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"leftSideBearing","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"advanceWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -321,6 +331,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"advanceOffset","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"ascenderOffset","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -572,6 +583,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"m11","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"m12","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -1513,6 +1525,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"startPosition","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1527,6 +1540,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"nameTag","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_FEATURE_TAG","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"parameter","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1541,6 +1555,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"features","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DWRITE_FONT_FEATURE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":[]}
 			,{"Name":"featureCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1555,6 +1570,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"granularity","Type":{"Kind":"ApiRef","Name":"DWRITE_TRIMMING_GRANULARITY","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"delimiter","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1926,7 +1942,7 @@
 			{"Name":"DWRITE_SCRIPT_SHAPES_DEFAULT","Value":0}
 			,{"Name":"DWRITE_SCRIPT_SHAPES_NO_VISUAL","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DWRITE_SCRIPT_ANALYSIS"
@@ -1935,6 +1951,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"script","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"shapes","Type":{"Kind":"ApiRef","Name":"DWRITE_SCRIPT_SHAPES","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
@@ -1964,6 +1981,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 		]
@@ -2003,6 +2021,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 		]
@@ -2016,6 +2035,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 		]
@@ -2332,6 +2352,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fontFace","Type":{"Kind":"ApiRef","Name":"IDWriteFontFace","TargetKind":"Com","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"fontEmSize","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -2352,6 +2373,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"localeName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"string","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -2369,6 +2391,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"width","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"thickness","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -2389,6 +2412,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"width","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"thickness","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -2408,6 +2432,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"trailingWhitespaceLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2426,6 +2451,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"width","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -2441,6 +2467,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"left","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"top","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -2462,6 +2489,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"width","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"height","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -2478,6 +2506,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"left","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"top","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -2494,6 +2523,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"textPosition","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4435,6 +4465,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_METRICS","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"glyphBoxLeft","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
@@ -4461,6 +4492,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"slopeRise","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"slopeRun","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
@@ -4476,6 +4508,7 @@
 		,"Kind":"Union"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"values","Type":{"Kind":"Array","Shape":{"Size":10},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"familyKind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4492,6 +4525,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"familyKind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"decorativeClass","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4514,6 +4548,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"familyKind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"serifStyle","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4536,6 +4571,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"familyKind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"symbolKind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4558,6 +4594,7 @@
 				,"Kind":"Struct"
 				,"Size":0
 				,"PackingSize":0
+				,"SizeField":""
 				,"Fields":[
 					{"Name":"familyKind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 					,{"Name":"toolKind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
@@ -4582,6 +4619,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"first","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"last","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4596,6 +4634,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"isoScriptCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"isoScriptNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4613,6 +4652,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"expansionMinimum","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"expansionMaximum","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -5296,6 +5336,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"DWRITE_TEXT_METRICS","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"heightIncludingTrailingWhitespace","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -5856,6 +5897,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"glyphRun","Type":{"Kind":"ApiRef","Name":"DWRITE_GLYPH_RUN","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"glyphRunDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DWRITE_GLYPH_RUN_DESCRIPTION","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":[]}
@@ -6051,6 +6093,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_PROPERTY_ID","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"propertyValue","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
@@ -7281,6 +7324,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"DWRITE_LINE_METRICS","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"leadingBefore","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -7310,6 +7354,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"method","Type":{"Kind":"ApiRef","Name":"DWRITE_LINE_SPACING_METHOD","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"height","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -7420,6 +7465,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"Base","Type":{"Kind":"ApiRef","Name":"DWRITE_COLOR_GLYPH_RUN","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"glyphImageFormat","Type":{"Kind":"ApiRef","Name":"DWRITE_GLYPH_IMAGE_FORMATS","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
@@ -7435,6 +7481,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"imageData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
 			,{"Name":"imageDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -7655,6 +7702,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"fileOffset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"fragmentSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -7912,6 +7960,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"axisTag","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_AXIS_TAG","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"value","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -7926,6 +7975,7 @@
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
+		,"SizeField":""
 		,"Fields":[
 			{"Name":"axisTag","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_AXIS_TAG","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":[]}
 			,{"Name":"minValue","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
@@ -7958,7 +8008,7 @@
 			{"Name":"DWRITE_AUTOMATIC_FONT_AXES_NONE","Value":0}
 			,{"Name":"DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DWRITE_FONT_AXIS_ATTRIBUTES"
@@ -7972,7 +8022,7 @@
 			,{"Name":"DWRITE_FONT_AXIS_ATTRIBUTES_VARIABLE","Value":1}
 			,{"Name":"DWRITE_FONT_AXIS_ATTRIBUTES_HIDDEN","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"IDWriteFactory6"
@@ -9070,6 +9120,50 @@
 				,"Params":[
 					{"Name":"fontFamilyModel","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_FAMILY_MODEL","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
 					,{"Name":"names","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDWriteLocalizedStrings","TargetKind":"Com","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IDWriteFontSet4"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"eec175fc-bea9-4c86-8b53-ccbdd7df0c82"
+		,"Interface":{"Kind":"ApiRef","Name":"IDWriteFontSet3","TargetKind":"Com","Api":"Graphics.DirectWrite","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"ConvertWeightStretchStyleToFontAxisValues"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"inputAxisValues","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"DWRITE_FONT_AXIS_VALUE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["In","Optional","Const"]}
+					,{"Name":"inputAxisCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"fontWeight","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_WEIGHT","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fontStretch","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_STRETCH","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fontStyle","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_STYLE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fontSize","Type":{"Kind":"Native","Name":"Single"},"Attrs":["In"]}
+					,{"Name":"outputAxisValues","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":5,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"DWRITE_FONT_AXIS_VALUE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetMatchingFonts"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"familyName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"fontAxisValues","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"DWRITE_FONT_AXIS_VALUE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"fontAxisValueCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"allowedSimulations","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_SIMULATIONS","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"matchingFonts","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDWriteFontSet4","TargetKind":"Com","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]

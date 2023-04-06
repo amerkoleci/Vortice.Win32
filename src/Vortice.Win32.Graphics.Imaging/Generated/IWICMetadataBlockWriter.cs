@@ -53,7 +53,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, Guid*, void**, int>)(lpVtbl[0]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, uint>)(lpVtbl[1]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint>)(lpVtbl[1]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, uint>)(lpVtbl[2]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint>)(lpVtbl[2]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetContainerFormat" />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(3)]
 	public HResult GetContainerFormat(Guid* pguidContainerFormat)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, Guid*, int>)(lpVtbl[3]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pguidContainerFormat);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, Guid*, int>)(lpVtbl[3]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pguidContainerFormat);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetCount" />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(4)]
 	public HResult GetCount(uint* pcCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, uint*, int>)(lpVtbl[4]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pcCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint*, int>)(lpVtbl[4]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pcCount);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetReaderByIndex" />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(5)]
 	public HResult GetReaderByIndex(uint nIndex, IWICMetadataReader** ppIMetadataReader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, uint, IWICMetadataReader**, int>)(lpVtbl[5]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataReader**, int>)(lpVtbl[5]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataReader);
+#endif
 	}
 
 	/// <inheritdoc cref="IWICMetadataBlockReader.GetEnumerator" />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(6)]
 	public HResult GetEnumerator(Com.IEnumUnknown** ppIEnumMetadata)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, Com.IEnumUnknown**, int>)(lpVtbl[6]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), ppIEnumMetadata);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::InitializeFromBlockReader"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(7)]
 	public HResult InitializeFromBlockReader(IWICMetadataBlockReader* pIMDBlockReader)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, IWICMetadataBlockReader*, int>)(lpVtbl[7]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pIMDBlockReader);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, IWICMetadataBlockReader*, int>)(lpVtbl[7]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pIMDBlockReader);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::GetWriterByIndex"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(8)]
 	public HResult GetWriterByIndex(uint nIndex, IWICMetadataWriter** ppIMetadataWriter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, uint, IWICMetadataWriter**, int>)(lpVtbl[8]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataWriter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataWriter**, int>)(lpVtbl[8]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, ppIMetadataWriter);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::AddWriter"]/*' />
@@ -127,7 +163,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(9)]
 	public HResult AddWriter(IWICMetadataWriter* pIMetadataWriter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, IWICMetadataWriter*, int>)(lpVtbl[9]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pIMetadataWriter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, IWICMetadataWriter*, int>)(lpVtbl[9]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), pIMetadataWriter);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::SetWriterByIndex"]/*' />
@@ -135,7 +175,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(10)]
 	public HResult SetWriterByIndex(uint nIndex, IWICMetadataWriter* pIMetadataWriter)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, uint, IWICMetadataWriter*, int>)(lpVtbl[10]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, pIMetadataWriter);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, IWICMetadataWriter*, int>)(lpVtbl[10]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex, pIMetadataWriter);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataBlockWriter::RemoveWriterByIndex"]/*' />
@@ -143,7 +187,11 @@ public unsafe partial struct IWICMetadataBlockWriter : IWICMetadataBlockWriter.I
 	[VtblIndex(11)]
 	public HResult RemoveWriterByIndex(uint nIndex)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICMetadataBlockWriter*, uint, int>)(lpVtbl[11]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICMetadataBlockWriter*, uint, int>)(lpVtbl[11]))((IWICMetadataBlockWriter*)Unsafe.AsPointer(ref this), nIndex);
+#endif
 	}
 
 	public interface Interface : IWICMetadataBlockReader.Interface

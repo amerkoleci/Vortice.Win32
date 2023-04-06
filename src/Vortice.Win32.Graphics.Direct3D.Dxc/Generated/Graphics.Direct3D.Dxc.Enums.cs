@@ -21,7 +21,7 @@ public enum DxcCp : uint
 }
 
 /// <unmanaged>DXC_OUT_KIND</unmanaged>
-public enum DxcOutKind : int
+public enum DxcOutKind
 {
 	/// <unmanaged>DXC_OUT_NONE</unmanaged>
 	None = 0,

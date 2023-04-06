@@ -45,5 +45,5 @@ public static unsafe partial class Apis
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGetMetadataContentSize"]/*' />
 	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICGetMetadataContentSize(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, ULargeInteger* pcbSize);
+	public static extern HResult WICGetMetadataContentSize(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, ulong* pcbSize);
 }

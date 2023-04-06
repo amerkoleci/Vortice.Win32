@@ -53,7 +53,11 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ConcreteTransform*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ConcreteTransform*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ConcreteTransform*, uint>)(lpVtbl[1]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ConcreteTransform*, uint>)(lpVtbl[1]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ConcreteTransform*, uint>)(lpVtbl[2]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ConcreteTransform*, uint>)(lpVtbl[2]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID2D1TransformNode.GetInputCount" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	[VtblIndex(3)]
 	public uint GetInputCount()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ConcreteTransform*, uint>)(lpVtbl[3]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ConcreteTransform*, uint>)(lpVtbl[3]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ConcreteTransform::SetOutputBuffer"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	[VtblIndex(4)]
 	public HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID2D1ConcreteTransform*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID2D1ConcreteTransform*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
+#endif
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ConcreteTransform::SetCached"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct ID2D1ConcreteTransform : ID2D1ConcreteTransform.Int
 	[VtblIndex(5)]
 	public void SetCached(Bool32 isCached)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID2D1ConcreteTransform*, Bool32, void>)(lpVtbl[5]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), isCached);
+#else
 		((delegate* unmanaged[Stdcall]<ID2D1ConcreteTransform*, Bool32, void>)(lpVtbl[5]))((ID2D1ConcreteTransform*)Unsafe.AsPointer(ref this), isCached);
+#endif
 	}
 
 	public interface Interface : ID2D1TransformNode.Interface

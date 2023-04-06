@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, uint>)(lpVtbl[1]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, uint>)(lpVtbl[1]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, uint>)(lpVtbl[2]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, uint>)(lpVtbl[2]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(3)]
 	public void GetDevice(ID3D11Device** ppDevice)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), ppDevice);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11Device**, void>)(lpVtbl[3]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), ppDevice);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -87,7 +103,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(4)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
@@ -95,7 +115,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(5)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
@@ -103,7 +127,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(6)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), guid, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), guid, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.GetDecoderBuffer" />
@@ -111,7 +139,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(7)]
 	public HResult GetDecoderBuffer(ID3D11VideoDecoder* pDecoder, VideoDecoderBufferType Type, uint* pBufferSize, void** ppBuffer)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, VideoDecoderBufferType, uint*, void**, int>)(lpVtbl[7]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, Type, pBufferSize, ppBuffer);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, VideoDecoderBufferType, uint*, void**, int>)(lpVtbl[7]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, Type, pBufferSize, ppBuffer);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.ReleaseDecoderBuffer" />
@@ -119,7 +151,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(8)]
 	public HResult ReleaseDecoderBuffer(ID3D11VideoDecoder* pDecoder, VideoDecoderBufferType Type)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, VideoDecoderBufferType, int>)(lpVtbl[8]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, Type);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, VideoDecoderBufferType, int>)(lpVtbl[8]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, Type);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.DecoderBeginFrame" />
@@ -127,7 +163,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(9)]
 	public HResult DecoderBeginFrame(ID3D11VideoDecoder* pDecoder, ID3D11VideoDecoderOutputView* pView, uint ContentKeySize, void* pContentKey)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, ID3D11VideoDecoderOutputView*, uint, void*, int>)(lpVtbl[9]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pView, ContentKeySize, pContentKey);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, ID3D11VideoDecoderOutputView*, uint, void*, int>)(lpVtbl[9]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pView, ContentKeySize, pContentKey);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.DecoderEndFrame" />
@@ -135,7 +175,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(10)]
 	public HResult DecoderEndFrame(ID3D11VideoDecoder* pDecoder)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, int>)(lpVtbl[10]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, int>)(lpVtbl[10]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.SubmitDecoderBuffers" />
@@ -143,7 +187,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(11)]
 	public HResult SubmitDecoderBuffers(ID3D11VideoDecoder* pDecoder, uint NumBuffers, VideoDecoderBufferDescription* pBufferDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription*, int>)(lpVtbl[11]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription*, int>)(lpVtbl[11]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.DecoderExtension" />
@@ -151,7 +199,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(12)]
 	public int DecoderExtension(ID3D11VideoDecoder* pDecoder, VideoDecoderExtension* pExtensionData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, VideoDecoderExtension*, int>)(lpVtbl[12]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pExtensionData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, VideoDecoderExtension*, int>)(lpVtbl[12]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pExtensionData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputTargetRect" />
@@ -159,7 +211,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(13)]
 	public void VideoProcessorSetOutputTargetRect(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, Rect* pRect)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, Rect*, void>)(lpVtbl[13]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, pRect);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, Rect*, void>)(lpVtbl[13]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, pRect);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputBackgroundColor" />
@@ -167,7 +223,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(14)]
 	public void VideoProcessorSetOutputBackgroundColor(ID3D11VideoProcessor* pVideoProcessor, Bool32 YCbCr, VideoColor* pColor)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, VideoColor*, void>)(lpVtbl[14]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, YCbCr, pColor);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, VideoColor*, void>)(lpVtbl[14]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, YCbCr, pColor);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputColorSpace" />
@@ -175,7 +235,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(15)]
 	public void VideoProcessorSetOutputColorSpace(ID3D11VideoProcessor* pVideoProcessor, VideoProcessorColorSpace* pColorSpace)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, VideoProcessorColorSpace*, void>)(lpVtbl[15]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pColorSpace);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, VideoProcessorColorSpace*, void>)(lpVtbl[15]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pColorSpace);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputAlphaFillMode" />
@@ -183,7 +247,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(16)]
 	public void VideoProcessorSetOutputAlphaFillMode(ID3D11VideoProcessor* pVideoProcessor, VideoProcessorAlphaFillMode AlphaFillMode, uint StreamIndex)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, VideoProcessorAlphaFillMode, uint, void>)(lpVtbl[16]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, AlphaFillMode, StreamIndex);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, VideoProcessorAlphaFillMode, uint, void>)(lpVtbl[16]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, AlphaFillMode, StreamIndex);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputConstriction" />
@@ -191,7 +259,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(17)]
 	public void VideoProcessorSetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable, System.Drawing.Size Size)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size, void>)(lpVtbl[17]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, System.Drawing.Size, void>)(lpVtbl[17]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable, Size);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputStereoMode" />
@@ -199,7 +271,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(18)]
 	public void VideoProcessorSetOutputStereoMode(ID3D11VideoProcessor* pVideoProcessor, Bool32 Enable)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, void>)(lpVtbl[18]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, void>)(lpVtbl[18]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enable);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetOutputExtension" />
@@ -207,7 +283,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(19)]
 	public int VideoProcessorSetOutputExtension(ID3D11VideoProcessor* pVideoProcessor, Guid* pExtensionGuid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Guid*, uint, void*, int>)(lpVtbl[19]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pExtensionGuid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Guid*, uint, void*, int>)(lpVtbl[19]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pExtensionGuid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputTargetRect" />
@@ -215,7 +295,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(20)]
 	public void VideoProcessorGetOutputTargetRect(ID3D11VideoProcessor* pVideoProcessor, Bool32* Enabled, Rect* pRect)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, Rect*, void>)(lpVtbl[20]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enabled, pRect);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, Rect*, void>)(lpVtbl[20]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Enabled, pRect);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputBackgroundColor" />
@@ -223,7 +307,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(21)]
 	public void VideoProcessorGetOutputBackgroundColor(ID3D11VideoProcessor* pVideoProcessor, Bool32* pYCbCr, VideoColor* pColor)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, VideoColor*, void>)(lpVtbl[21]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pYCbCr, pColor);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, VideoColor*, void>)(lpVtbl[21]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pYCbCr, pColor);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputColorSpace" />
@@ -231,7 +319,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(22)]
 	public void VideoProcessorGetOutputColorSpace(ID3D11VideoProcessor* pVideoProcessor, VideoProcessorColorSpace* pColorSpace)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, VideoProcessorColorSpace*, void>)(lpVtbl[22]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pColorSpace);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, VideoProcessorColorSpace*, void>)(lpVtbl[22]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pColorSpace);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputAlphaFillMode" />
@@ -239,7 +331,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(23)]
 	public void VideoProcessorGetOutputAlphaFillMode(ID3D11VideoProcessor* pVideoProcessor, VideoProcessorAlphaFillMode* pAlphaFillMode, uint* pStreamIndex)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, VideoProcessorAlphaFillMode*, uint*, void>)(lpVtbl[23]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pAlphaFillMode, pStreamIndex);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, VideoProcessorAlphaFillMode*, uint*, void>)(lpVtbl[23]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pAlphaFillMode, pStreamIndex);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputConstriction" />
@@ -247,7 +343,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(24)]
 	public void VideoProcessorGetOutputConstriction(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled, System.Drawing.Size* pSize)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[24]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, System.Drawing.Size*, void>)(lpVtbl[24]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled, pSize);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputStereoMode" />
@@ -255,7 +355,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(25)]
 	public void VideoProcessorGetOutputStereoMode(ID3D11VideoProcessor* pVideoProcessor, Bool32* pEnabled)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, void>)(lpVtbl[25]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, void>)(lpVtbl[25]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pEnabled);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetOutputExtension" />
@@ -263,7 +367,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(26)]
 	public int VideoProcessorGetOutputExtension(ID3D11VideoProcessor* pVideoProcessor, Guid* pExtensionGuid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Guid*, uint, void*, int>)(lpVtbl[26]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pExtensionGuid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Guid*, uint, void*, int>)(lpVtbl[26]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pExtensionGuid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamFrameFormat" />
@@ -271,7 +379,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(27)]
 	public void VideoProcessorSetStreamFrameFormat(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoFrameFormat FrameFormat)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoFrameFormat, void>)(lpVtbl[27]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, FrameFormat);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoFrameFormat, void>)(lpVtbl[27]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, FrameFormat);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamColorSpace" />
@@ -279,7 +391,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(28)]
 	public void VideoProcessorSetStreamColorSpace(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorColorSpace* pColorSpace)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorColorSpace*, void>)(lpVtbl[28]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pColorSpace);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorColorSpace*, void>)(lpVtbl[28]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pColorSpace);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamOutputRate" />
@@ -287,7 +403,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(29)]
 	public void VideoProcessorSetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorOutputRate OutputRate, Bool32 RepeatFrame, Graphics.Dxgi.Common.Rational* pCustomRate)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorOutputRate, Bool32, Graphics.Dxgi.Common.Rational*, void>)(lpVtbl[29]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, OutputRate, RepeatFrame, pCustomRate);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorOutputRate, Bool32, Graphics.Dxgi.Common.Rational*, void>)(lpVtbl[29]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, OutputRate, RepeatFrame, pCustomRate);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamSourceRect" />
@@ -295,7 +415,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(30)]
 	public void VideoProcessorSetStreamSourceRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Rect* pRect)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, Rect*, void>)(lpVtbl[30]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pRect);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, Rect*, void>)(lpVtbl[30]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pRect);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamDestRect" />
@@ -303,7 +427,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(31)]
 	public void VideoProcessorSetStreamDestRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Rect* pRect)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, Rect*, void>)(lpVtbl[31]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pRect);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, Rect*, void>)(lpVtbl[31]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pRect);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamAlpha" />
@@ -311,7 +439,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(32)]
 	public void VideoProcessorSetStreamAlpha(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, float Alpha)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, float, void>)(lpVtbl[32]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, Alpha);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, float, void>)(lpVtbl[32]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, Alpha);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamPalette" />
@@ -319,7 +451,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(33)]
 	public void VideoProcessorSetStreamPalette(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, uint Count, uint* pEntries)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, uint, uint*, void>)(lpVtbl[33]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Count, pEntries);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, uint, uint*, void>)(lpVtbl[33]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Count, pEntries);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamPixelAspectRatio" />
@@ -327,7 +463,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(34)]
 	public void VideoProcessorSetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Graphics.Dxgi.Common.Rational* pSourceAspectRatio, Graphics.Dxgi.Common.Rational* pDestinationAspectRatio)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, Graphics.Dxgi.Common.Rational*, Graphics.Dxgi.Common.Rational*, void>)(lpVtbl[34]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pSourceAspectRatio, pDestinationAspectRatio);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, Graphics.Dxgi.Common.Rational*, Graphics.Dxgi.Common.Rational*, void>)(lpVtbl[34]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, pSourceAspectRatio, pDestinationAspectRatio);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamLumaKey" />
@@ -335,7 +475,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(35)]
 	public void VideoProcessorSetStreamLumaKey(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, float Lower, float Upper)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, float, float, void>)(lpVtbl[35]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, Lower, Upper);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, float, float, void>)(lpVtbl[35]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, Lower, Upper);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamStereoFormat" />
@@ -343,7 +487,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(36)]
 	public void VideoProcessorSetStreamStereoFormat(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, VideoProcessorStereoFormat Format, Bool32 LeftViewFrame0, Bool32 BaseViewFrame0, VideoProcessorStereoFlipMode FlipMode, int MonoOffset)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, VideoProcessorStereoFormat, Bool32, Bool32, VideoProcessorStereoFlipMode, int, void>)(lpVtbl[36]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, Format, LeftViewFrame0, BaseViewFrame0, FlipMode, MonoOffset);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, VideoProcessorStereoFormat, Bool32, Bool32, VideoProcessorStereoFlipMode, int, void>)(lpVtbl[36]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, Format, LeftViewFrame0, BaseViewFrame0, FlipMode, MonoOffset);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamAutoProcessingMode" />
@@ -351,7 +499,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(37)]
 	public void VideoProcessorSetStreamAutoProcessingMode(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, void>)(lpVtbl[37]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, void>)(lpVtbl[37]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamFilter" />
@@ -359,7 +511,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(38)]
 	public void VideoProcessorSetStreamFilter(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorFilter Filter, Bool32 Enable, int Level)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorFilter, Bool32, int, void>)(lpVtbl[38]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Filter, Enable, Level);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorFilter, Bool32, int, void>)(lpVtbl[38]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Filter, Enable, Level);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamExtension" />
@@ -367,7 +523,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(39)]
 	public int VideoProcessorSetStreamExtension(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Guid* pExtensionGuid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Guid*, uint, void*, int>)(lpVtbl[39]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pExtensionGuid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Guid*, uint, void*, int>)(lpVtbl[39]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pExtensionGuid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamFrameFormat" />
@@ -375,7 +535,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(40)]
 	public void VideoProcessorGetStreamFrameFormat(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoFrameFormat* pFrameFormat)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoFrameFormat*, void>)(lpVtbl[40]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pFrameFormat);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoFrameFormat*, void>)(lpVtbl[40]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pFrameFormat);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamColorSpace" />
@@ -383,7 +547,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(41)]
 	public void VideoProcessorGetStreamColorSpace(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorColorSpace* pColorSpace)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorColorSpace*, void>)(lpVtbl[41]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pColorSpace);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorColorSpace*, void>)(lpVtbl[41]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pColorSpace);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamOutputRate" />
@@ -391,7 +559,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(42)]
 	public void VideoProcessorGetStreamOutputRate(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorOutputRate* pOutputRate, Bool32* pRepeatFrame, Graphics.Dxgi.Common.Rational* pCustomRate)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorOutputRate*, Bool32*, Graphics.Dxgi.Common.Rational*, void>)(lpVtbl[42]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pOutputRate, pRepeatFrame, pCustomRate);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorOutputRate*, Bool32*, Graphics.Dxgi.Common.Rational*, void>)(lpVtbl[42]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pOutputRate, pRepeatFrame, pCustomRate);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamSourceRect" />
@@ -399,7 +571,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(43)]
 	public void VideoProcessorGetStreamSourceRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, Rect* pRect)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, Rect*, void>)(lpVtbl[43]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pRect);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, Rect*, void>)(lpVtbl[43]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pRect);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamDestRect" />
@@ -407,7 +583,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(44)]
 	public void VideoProcessorGetStreamDestRect(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, Rect* pRect)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, Rect*, void>)(lpVtbl[44]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pRect);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, Rect*, void>)(lpVtbl[44]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pRect);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamAlpha" />
@@ -415,7 +595,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(45)]
 	public void VideoProcessorGetStreamAlpha(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, float* pAlpha)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, float*, void>)(lpVtbl[45]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pAlpha);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, float*, void>)(lpVtbl[45]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pAlpha);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamPalette" />
@@ -423,7 +607,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(46)]
 	public void VideoProcessorGetStreamPalette(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, uint Count, uint* pEntries)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, uint, uint*, void>)(lpVtbl[46]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Count, pEntries);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, uint, uint*, void>)(lpVtbl[46]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Count, pEntries);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamPixelAspectRatio" />
@@ -431,7 +619,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(47)]
 	public void VideoProcessorGetStreamPixelAspectRatio(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, Graphics.Dxgi.Common.Rational* pSourceAspectRatio, Graphics.Dxgi.Common.Rational* pDestinationAspectRatio)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, Graphics.Dxgi.Common.Rational*, Graphics.Dxgi.Common.Rational*, void>)(lpVtbl[47]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pSourceAspectRatio, pDestinationAspectRatio);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, Graphics.Dxgi.Common.Rational*, Graphics.Dxgi.Common.Rational*, void>)(lpVtbl[47]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pSourceAspectRatio, pDestinationAspectRatio);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamLumaKey" />
@@ -439,7 +631,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(48)]
 	public void VideoProcessorGetStreamLumaKey(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled, float* pLower, float* pUpper)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, float*, float*, void>)(lpVtbl[48]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pLower, pUpper);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, float*, float*, void>)(lpVtbl[48]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled, pLower, pUpper);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamStereoFormat" />
@@ -447,7 +643,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(49)]
 	public void VideoProcessorGetStreamStereoFormat(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnable, VideoProcessorStereoFormat* pFormat, Bool32* pLeftViewFrame0, Bool32* pBaseViewFrame0, VideoProcessorStereoFlipMode* pFlipMode, int* MonoOffset)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, VideoProcessorStereoFormat*, Bool32*, Bool32*, VideoProcessorStereoFlipMode*, int*, void>)(lpVtbl[49]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnable, pFormat, pLeftViewFrame0, pBaseViewFrame0, pFlipMode, MonoOffset);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, VideoProcessorStereoFormat*, Bool32*, Bool32*, VideoProcessorStereoFlipMode*, int*, void>)(lpVtbl[49]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnable, pFormat, pLeftViewFrame0, pBaseViewFrame0, pFlipMode, MonoOffset);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamAutoProcessingMode" />
@@ -455,7 +655,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(50)]
 	public void VideoProcessorGetStreamAutoProcessingMode(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnabled)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, void>)(lpVtbl[50]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, void>)(lpVtbl[50]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnabled);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamFilter" />
@@ -463,7 +667,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(51)]
 	public void VideoProcessorGetStreamFilter(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, VideoProcessorFilter Filter, Bool32* pEnabled, int* pLevel)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorFilter, Bool32*, int*, void>)(lpVtbl[51]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Filter, pEnabled, pLevel);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, VideoProcessorFilter, Bool32*, int*, void>)(lpVtbl[51]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Filter, pEnabled, pLevel);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamExtension" />
@@ -471,7 +679,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(52)]
 	public int VideoProcessorGetStreamExtension(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Guid* pExtensionGuid, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Guid*, uint, void*, int>)(lpVtbl[52]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pExtensionGuid, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Guid*, uint, void*, int>)(lpVtbl[52]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pExtensionGuid, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorBlt" />
@@ -479,7 +691,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(53)]
 	public HResult VideoProcessorBlt(ID3D11VideoProcessor* pVideoProcessor, ID3D11VideoProcessorOutputView* pView, uint OutputFrame, uint StreamCount, VideoProcessorStream* pStreams)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, ID3D11VideoProcessorOutputView*, uint, uint, VideoProcessorStream*, int>)(lpVtbl[53]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pView, OutputFrame, StreamCount, pStreams);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, ID3D11VideoProcessorOutputView*, uint, uint, VideoProcessorStream*, int>)(lpVtbl[53]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pView, OutputFrame, StreamCount, pStreams);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.NegotiateCryptoSessionKeyExchange" />
@@ -487,7 +703,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(54)]
 	public HResult NegotiateCryptoSessionKeyExchange(ID3D11CryptoSession* pCryptoSession, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11CryptoSession*, uint, void*, int>)(lpVtbl[54]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11CryptoSession*, uint, void*, int>)(lpVtbl[54]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.EncryptionBlt" />
@@ -495,7 +715,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(55)]
 	public void EncryptionBlt(ID3D11CryptoSession* pCryptoSession, ID3D11Texture2D* pSrcSurface, ID3D11Texture2D* pDstSurface, uint IVSize, void* pIV)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11CryptoSession*, ID3D11Texture2D*, ID3D11Texture2D*, uint, void*, void>)(lpVtbl[55]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, pSrcSurface, pDstSurface, IVSize, pIV);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11CryptoSession*, ID3D11Texture2D*, ID3D11Texture2D*, uint, void*, void>)(lpVtbl[55]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, pSrcSurface, pDstSurface, IVSize, pIV);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.DecryptionBlt" />
@@ -503,7 +727,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(56)]
 	public void DecryptionBlt(ID3D11CryptoSession* pCryptoSession, ID3D11Texture2D* pSrcSurface, ID3D11Texture2D* pDstSurface, EncryptedBlockInfo* pEncryptedBlockInfo, uint ContentKeySize, void* pContentKey, uint IVSize, void* pIV)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11CryptoSession*, ID3D11Texture2D*, ID3D11Texture2D*, EncryptedBlockInfo*, uint, void*, uint, void*, void>)(lpVtbl[56]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, pSrcSurface, pDstSurface, pEncryptedBlockInfo, ContentKeySize, pContentKey, IVSize, pIV);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11CryptoSession*, ID3D11Texture2D*, ID3D11Texture2D*, EncryptedBlockInfo*, uint, void*, uint, void*, void>)(lpVtbl[56]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, pSrcSurface, pDstSurface, pEncryptedBlockInfo, ContentKeySize, pContentKey, IVSize, pIV);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.StartSessionKeyRefresh" />
@@ -511,7 +739,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(57)]
 	public void StartSessionKeyRefresh(ID3D11CryptoSession* pCryptoSession, uint RandomNumberSize, void* pRandomNumber)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11CryptoSession*, uint, void*, void>)(lpVtbl[57]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, RandomNumberSize, pRandomNumber);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11CryptoSession*, uint, void*, void>)(lpVtbl[57]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, RandomNumberSize, pRandomNumber);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.FinishSessionKeyRefresh" />
@@ -519,7 +751,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(58)]
 	public void FinishSessionKeyRefresh(ID3D11CryptoSession* pCryptoSession)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11CryptoSession*, void>)(lpVtbl[58]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11CryptoSession*, void>)(lpVtbl[58]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.GetEncryptionBltKey" />
@@ -527,7 +763,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(59)]
 	public HResult GetEncryptionBltKey(ID3D11CryptoSession* pCryptoSession, uint KeySize, void* pReadbackKey)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11CryptoSession*, uint, void*, int>)(lpVtbl[59]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, KeySize, pReadbackKey);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11CryptoSession*, uint, void*, int>)(lpVtbl[59]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, KeySize, pReadbackKey);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.NegotiateAuthenticatedChannelKeyExchange" />
@@ -535,7 +775,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(60)]
 	public HResult NegotiateAuthenticatedChannelKeyExchange(ID3D11AuthenticatedChannel* pChannel, uint DataSize, void* pData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11AuthenticatedChannel*, uint, void*, int>)(lpVtbl[60]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pChannel, DataSize, pData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11AuthenticatedChannel*, uint, void*, int>)(lpVtbl[60]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pChannel, DataSize, pData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.QueryAuthenticatedChannel" />
@@ -543,7 +787,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(61)]
 	public HResult QueryAuthenticatedChannel(ID3D11AuthenticatedChannel* pChannel, uint InputSize, void* pInput, uint OutputSize, void* pOutput)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11AuthenticatedChannel*, uint, void*, uint, void*, int>)(lpVtbl[61]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pChannel, InputSize, pInput, OutputSize, pOutput);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11AuthenticatedChannel*, uint, void*, uint, void*, int>)(lpVtbl[61]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pChannel, InputSize, pInput, OutputSize, pOutput);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.ConfigureAuthenticatedChannel" />
@@ -551,7 +799,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(62)]
 	public HResult ConfigureAuthenticatedChannel(ID3D11AuthenticatedChannel* pChannel, uint InputSize, void* pInput, AuthenticatedConfigureOutput* pOutput)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11AuthenticatedChannel*, uint, void*, AuthenticatedConfigureOutput*, int>)(lpVtbl[62]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pChannel, InputSize, pInput, pOutput);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11AuthenticatedChannel*, uint, void*, AuthenticatedConfigureOutput*, int>)(lpVtbl[62]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pChannel, InputSize, pInput, pOutput);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorSetStreamRotation" />
@@ -559,7 +811,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(63)]
 	public void VideoProcessorSetStreamRotation(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, VideoProcessorRotation Rotation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, VideoProcessorRotation, void>)(lpVtbl[63]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, Rotation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, VideoProcessorRotation, void>)(lpVtbl[63]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, Rotation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext.VideoProcessorGetStreamRotation" />
@@ -567,7 +823,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(64)]
 	public void VideoProcessorGetStreamRotation(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnable, VideoProcessorRotation* pRotation)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, VideoProcessorRotation*, void>)(lpVtbl[64]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnable, pRotation);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, VideoProcessorRotation*, void>)(lpVtbl[64]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnable, pRotation);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.SubmitDecoderBuffers1" />
@@ -575,7 +835,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(65)]
 	public HResult SubmitDecoderBuffers1(ID3D11VideoDecoder* pDecoder, uint NumBuffers, VideoDecoderBufferDescription1* pBufferDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription1*, int>)(lpVtbl[65]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription1*, int>)(lpVtbl[65]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.GetDataForNewHardwareKey" />
@@ -583,7 +847,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(66)]
 	public HResult GetDataForNewHardwareKey(ID3D11CryptoSession* pCryptoSession, uint PrivateInputSize, void* pPrivatInputData, ulong* pPrivateOutputData)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11CryptoSession*, uint, void*, ulong*, int>)(lpVtbl[66]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, PrivateInputSize, pPrivatInputData, pPrivateOutputData);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11CryptoSession*, uint, void*, ulong*, int>)(lpVtbl[66]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, PrivateInputSize, pPrivatInputData, pPrivateOutputData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.CheckCryptoSessionStatus" />
@@ -591,7 +859,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(67)]
 	public HResult CheckCryptoSessionStatus(ID3D11CryptoSession* pCryptoSession, CryptoSessionStatus* pStatus)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11CryptoSession*, CryptoSessionStatus*, int>)(lpVtbl[67]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, pStatus);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11CryptoSession*, CryptoSessionStatus*, int>)(lpVtbl[67]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pCryptoSession, pStatus);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.DecoderEnableDownsampling" />
@@ -599,7 +871,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(68)]
 	public HResult DecoderEnableDownsampling(ID3D11VideoDecoder* pDecoder, Graphics.Dxgi.Common.ColorSpaceType InputColorSpace, VideoSampleDescription* pOutputDesc, uint ReferenceFrameCount)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, Graphics.Dxgi.Common.ColorSpaceType, VideoSampleDescription*, uint, int>)(lpVtbl[68]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, InputColorSpace, pOutputDesc, ReferenceFrameCount);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, Graphics.Dxgi.Common.ColorSpaceType, VideoSampleDescription*, uint, int>)(lpVtbl[68]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, InputColorSpace, pOutputDesc, ReferenceFrameCount);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.DecoderUpdateDownsampling" />
@@ -607,7 +883,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(69)]
 	public HResult DecoderUpdateDownsampling(ID3D11VideoDecoder* pDecoder, VideoSampleDescription* pOutputDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, VideoSampleDescription*, int>)(lpVtbl[69]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pOutputDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, VideoSampleDescription*, int>)(lpVtbl[69]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pOutputDesc);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorSetOutputColorSpace1" />
@@ -615,7 +895,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(70)]
 	public void VideoProcessorSetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.Common.ColorSpaceType ColorSpace)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.Common.ColorSpaceType, void>)(lpVtbl[70]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, ColorSpace);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.Common.ColorSpaceType, void>)(lpVtbl[70]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, ColorSpace);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorSetOutputShaderUsage" />
@@ -623,7 +907,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(71)]
 	public void VideoProcessorSetOutputShaderUsage(ID3D11VideoProcessor* pVideoProcessor, Bool32 ShaderUsage)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, void>)(lpVtbl[71]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, ShaderUsage);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32, void>)(lpVtbl[71]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, ShaderUsage);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorGetOutputColorSpace1" />
@@ -631,7 +919,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(72)]
 	public void VideoProcessorGetOutputColorSpace1(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.Common.ColorSpaceType* pColorSpace)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.Common.ColorSpaceType*, void>)(lpVtbl[72]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pColorSpace);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.Common.ColorSpaceType*, void>)(lpVtbl[72]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pColorSpace);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorGetOutputShaderUsage" />
@@ -639,7 +931,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(73)]
 	public void VideoProcessorGetOutputShaderUsage(ID3D11VideoProcessor* pVideoProcessor, Bool32* pShaderUsage)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, void>)(lpVtbl[73]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pShaderUsage);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Bool32*, void>)(lpVtbl[73]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pShaderUsage);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorSetStreamColorSpace1" />
@@ -647,7 +943,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(74)]
 	public void VideoProcessorSetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.Common.ColorSpaceType ColorSpace)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.Common.ColorSpaceType, void>)(lpVtbl[74]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, ColorSpace);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.Common.ColorSpaceType, void>)(lpVtbl[74]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, ColorSpace);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorSetStreamMirror" />
@@ -655,7 +955,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(75)]
 	public void VideoProcessorSetStreamMirror(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32 Enable, Bool32 FlipHorizontal, Bool32 FlipVertical)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, Bool32, Bool32, void>)(lpVtbl[75]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, FlipHorizontal, FlipVertical);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32, Bool32, Bool32, void>)(lpVtbl[75]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Enable, FlipHorizontal, FlipVertical);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorGetStreamColorSpace1" />
@@ -663,7 +967,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(76)]
 	public void VideoProcessorGetStreamColorSpace1(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.Common.ColorSpaceType* pColorSpace)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.Common.ColorSpaceType*, void>)(lpVtbl[76]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pColorSpace);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.Common.ColorSpaceType*, void>)(lpVtbl[76]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pColorSpace);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorGetStreamMirror" />
@@ -671,7 +979,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(77)]
 	public void VideoProcessorGetStreamMirror(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Bool32* pEnable, Bool32* pFlipHorizontal, Bool32* pFlipVertical)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, Bool32*, Bool32*, void>)(lpVtbl[77]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnable, pFlipHorizontal, pFlipVertical);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Bool32*, Bool32*, Bool32*, void>)(lpVtbl[77]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pEnable, pFlipHorizontal, pFlipVertical);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext1.VideoProcessorGetBehaviorHints" />
@@ -679,7 +991,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(78)]
 	public HResult VideoProcessorGetBehaviorHints(ID3D11VideoProcessor* pVideoProcessor, uint OutputWidth, uint OutputHeight, Graphics.Dxgi.Common.Format OutputFormat, uint StreamCount, VideoProcessorStreamBehaviorHint* pStreams, uint* pBehaviorHints)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, uint, Graphics.Dxgi.Common.Format, uint, VideoProcessorStreamBehaviorHint*, uint*, int>)(lpVtbl[78]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, OutputWidth, OutputHeight, OutputFormat, StreamCount, pStreams, pBehaviorHints);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, uint, Graphics.Dxgi.Common.Format, uint, VideoProcessorStreamBehaviorHint*, uint*, int>)(lpVtbl[78]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, OutputWidth, OutputHeight, OutputFormat, StreamCount, pStreams, pBehaviorHints);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext2.VideoProcessorSetOutputHDRMetaData" />
@@ -687,7 +1003,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(79)]
 	public void VideoProcessorSetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HDRMetadataType Type, uint Size, void* pHDRMetaData)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.HDRMetadataType, uint, void*, void>)(lpVtbl[79]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Type, Size, pHDRMetaData);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.HDRMetadataType, uint, void*, void>)(lpVtbl[79]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, Type, Size, pHDRMetaData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext2.VideoProcessorGetOutputHDRMetaData" />
@@ -695,7 +1015,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(80)]
 	public void VideoProcessorGetOutputHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[80]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pType, Size, pMetaData);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[80]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, pType, Size, pMetaData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext2.VideoProcessorSetStreamHDRMetaData" />
@@ -703,7 +1027,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(81)]
 	public void VideoProcessorSetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType Type, uint Size, void* pHDRMetaData)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType, uint, void*, void>)(lpVtbl[81]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Type, Size, pHDRMetaData);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType, uint, void*, void>)(lpVtbl[81]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, Type, Size, pHDRMetaData);
+#endif
 	}
 
 	/// <inheritdoc cref="ID3D11VideoContext2.VideoProcessorGetStreamHDRMetaData" />
@@ -711,7 +1039,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(82)]
 	public void VideoProcessorGetStreamHDRMetaData(ID3D11VideoProcessor* pVideoProcessor, uint StreamIndex, Graphics.Dxgi.HDRMetadataType* pType, uint Size, void* pMetaData)
 	{
+#if NET6_0_OR_GREATER
+		((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[82]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pType, Size, pMetaData);
+#else
 		((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoProcessor*, uint, Graphics.Dxgi.HDRMetadataType*, uint, void*, void>)(lpVtbl[82]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pVideoProcessor, StreamIndex, pType, Size, pMetaData);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3::DecoderBeginFrame1"]/*' />
@@ -719,7 +1051,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(83)]
 	public HResult DecoderBeginFrame1(ID3D11VideoDecoder* pDecoder, ID3D11VideoDecoderOutputView* pView, uint ContentKeySize, void* pContentKey, uint NumComponentHistograms, uint* pHistogramOffsets, ID3D11Buffer** ppHistogramBuffers)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, ID3D11VideoDecoderOutputView*, uint, void*, uint, uint*, ID3D11Buffer**, int>)(lpVtbl[83]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pView, ContentKeySize, pContentKey, NumComponentHistograms, pHistogramOffsets, ppHistogramBuffers);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, ID3D11VideoDecoderOutputView*, uint, void*, uint, uint*, ID3D11Buffer**, int>)(lpVtbl[83]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, pView, ContentKeySize, pContentKey, NumComponentHistograms, pHistogramOffsets, ppHistogramBuffers);
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11VideoContext3::SubmitDecoderBuffers2"]/*' />
@@ -727,7 +1063,11 @@ public unsafe partial struct ID3D11VideoContext3 : ID3D11VideoContext3.Interface
 	[VtblIndex(84)]
 	public HResult SubmitDecoderBuffers2(ID3D11VideoDecoder* pDecoder, uint NumBuffers, VideoDecoderBufferDescription2* pBufferDesc)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription2*, int>)(lpVtbl[84]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11VideoContext3*, ID3D11VideoDecoder*, uint, VideoDecoderBufferDescription2*, int>)(lpVtbl[84]))((ID3D11VideoContext3*)Unsafe.AsPointer(ref this), pDecoder, NumBuffers, pBufferDesc);
+#endif
 	}
 
 	public interface Interface : ID3D11VideoContext2.Interface

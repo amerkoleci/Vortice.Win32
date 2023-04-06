@@ -53,7 +53,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, Guid*, void**, int>)(lpVtbl[0]))((IWICColorContext*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, Guid*, void**, int>)(lpVtbl[0]))((IWICColorContext*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, uint>)(lpVtbl[1]))((IWICColorContext*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint>)(lpVtbl[1]))((IWICColorContext*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, uint>)(lpVtbl[2]))((IWICColorContext*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint>)(lpVtbl[2]))((IWICColorContext*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromFilename"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[VtblIndex(3)]
 	public HResult InitializeFromFilename(ushort* wzFilename)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, ushort*, int>)(lpVtbl[3]))((IWICColorContext*)Unsafe.AsPointer(ref this), wzFilename);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, ushort*, int>)(lpVtbl[3]))((IWICColorContext*)Unsafe.AsPointer(ref this), wzFilename);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromMemory"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[VtblIndex(4)]
 	public HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, byte*, uint, int>)(lpVtbl[4]))((IWICColorContext*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, byte*, uint, int>)(lpVtbl[4]))((IWICColorContext*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromExifColorSpace"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[VtblIndex(5)]
 	public HResult InitializeFromExifColorSpace(uint value)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, uint, int>)(lpVtbl[5]))((IWICColorContext*)Unsafe.AsPointer(ref this), value);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint, int>)(lpVtbl[5]))((IWICColorContext*)Unsafe.AsPointer(ref this), value);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::GetType"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[VtblIndex(6)]
 	public HResult GetType(WICColorContextType* pType)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, WICColorContextType*, int>)(lpVtbl[6]))((IWICColorContext*)Unsafe.AsPointer(ref this), pType);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, WICColorContextType*, int>)(lpVtbl[6]))((IWICColorContext*)Unsafe.AsPointer(ref this), pType);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::GetProfileBytes"]/*' />
@@ -111,7 +139,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[VtblIndex(7)]
 	public HResult GetProfileBytes(uint cbBuffer, byte* pbBuffer, uint* pcbActual)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, uint, byte*, uint*, int>)(lpVtbl[7]))((IWICColorContext*)Unsafe.AsPointer(ref this), cbBuffer, pbBuffer, pcbActual);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint, byte*, uint*, int>)(lpVtbl[7]))((IWICColorContext*)Unsafe.AsPointer(ref this), cbBuffer, pbBuffer, pcbActual);
+#endif
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::GetExifColorSpace"]/*' />
@@ -119,7 +151,11 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	[VtblIndex(8)]
 	public HResult GetExifColorSpace(uint* pValue)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IWICColorContext*, uint*, int>)(lpVtbl[8]))((IWICColorContext*)Unsafe.AsPointer(ref this), pValue);
+#else
 		return ((delegate* unmanaged[Stdcall]<IWICColorContext*, uint*, int>)(lpVtbl[8]))((IWICColorContext*)Unsafe.AsPointer(ref this), pValue);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

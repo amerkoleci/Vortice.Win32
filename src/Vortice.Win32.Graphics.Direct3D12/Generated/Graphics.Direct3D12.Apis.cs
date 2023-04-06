@@ -561,6 +561,8 @@ public static partial class Apis
 
 	public const uint D3D12_PIXEL_ADDRESS_RANGE_BIT_COUNT = 15;
 
+	public const uint D3D12_PREVIEW_SDK_VERSION = 707;
+
 	public const uint D3D12_PRE_SCISSOR_PIXEL_ADDRESS_RANGE_BIT_COUNT = 16;
 
 	public const uint D3D12_PS_CS_UAV_REGISTER_COMPONENTS = 1;
@@ -695,7 +697,7 @@ public static partial class Apis
 
 	public const uint D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT = 2;
 
-	public const uint D3D12_SDK_VERSION = 5;
+	public const uint D3D12_SDK_VERSION = 608;
 
 	public const uint D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES = 32;
 
@@ -995,6 +997,30 @@ public static partial class Apis
 		}
 	}
 
+	public static ref readonly Guid CLSID_D3D12DeviceFactory
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			ReadOnlySpan<byte> data = new byte[] {
+				0xBF, 0x63, 0x48, 0x11,
+				0x86, 0xC3,
+				0xEE, 0x4A,
+				0xB3,
+				0x9D,
+				0x8F,
+				0x0B,
+				0xBB,
+				0x06,
+				0x29,
+				0x55
+			};
+
+			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
+			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
+		}
+	}
+
 	public const uint D3D12_SHADING_RATE_X_AXIS_SHIFT = 2;
 
 	public const uint D3D12_SHADING_RATE_VALID_MASK = 3;
@@ -1089,6 +1115,10 @@ public static partial class Apis
 
 	public const uint D3D_SHADER_REQUIRES_ATOMIC_INT64_ON_DESCRIPTOR_HEAP_RESOURCE = 268435456;
 
+	public const uint D3D_SHADER_FEATURE_ADVANCED_TEXTURE_OPS = 536870912;
+
+	public const uint D3D_SHADER_FEATURE_WRITEABLE_MSAA_TEXTURES = 1073741824;
+
 	public static ref readonly Guid D3D12ExperimentalShaderModels
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1130,30 +1160,6 @@ public static partial class Apis
 				0xD6,
 				0x94,
 				0xFB
-			};
-
-			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
-			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
-		}
-	}
-
-	public static ref readonly Guid D3D12MetaCommand
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			ReadOnlySpan<byte> data = new byte[] {
-				0x7E, 0xC9, 0x34, 0xC7,
-				0x77, 0x80,
-				0xC8, 0x48,
-				0x9F,
-				0xDC,
-				0xD9,
-				0xD1,
-				0xDD,
-				0x31,
-				0xDD,
-				0x77
 			};
 
 			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());

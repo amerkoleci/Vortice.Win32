@@ -53,7 +53,11 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTraceFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTraceFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTraceFactory*, uint>)(lpVtbl[1]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTraceFactory*, uint>)(lpVtbl[1]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTraceFactory*, uint>)(lpVtbl[2]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTraceFactory*, uint>)(lpVtbl[2]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderTraceFactory::CreateShaderTrace"]/*' />
@@ -79,7 +91,11 @@ public unsafe partial struct ID3D11ShaderTraceFactory : ID3D11ShaderTraceFactory
 	[VtblIndex(3)]
 	public HResult CreateShaderTrace(IUnknown* pShader, ShaderTraceDescription* pTraceDesc, ID3D11ShaderTrace** ppShaderTrace)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<ID3D11ShaderTraceFactory*, IUnknown*, ShaderTraceDescription*, ID3D11ShaderTrace**, int>)(lpVtbl[3]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), pShader, pTraceDesc, ppShaderTrace);
+#else
 		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderTraceFactory*, IUnknown*, ShaderTraceDescription*, ID3D11ShaderTrace**, int>)(lpVtbl[3]))((ID3D11ShaderTraceFactory*)Unsafe.AsPointer(ref this), pShader, pTraceDesc, ppShaderTrace);
+#endif
 	}
 
 	public interface Interface : IUnknown.Interface

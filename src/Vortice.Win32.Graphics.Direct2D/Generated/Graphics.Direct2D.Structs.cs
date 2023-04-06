@@ -240,7 +240,7 @@ public partial struct RenderTargetProperties
 public partial struct HwndRenderTargetProperties
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::hwnd"]/*' />
-	public IntPtr hwnd;
+	public nint hwnd;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_HWND_RENDER_TARGET_PROPERTIES::pixelSize"]/*' />
 	public System.Drawing.Size pixelSize;

@@ -53,7 +53,11 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteLocalFontFileLoader*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), riid, ppvObject);
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -62,7 +66,11 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteLocalFontFileLoader*, uint>)(lpVtbl[1]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, uint>)(lpVtbl[1]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -71,7 +79,11 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteLocalFontFileLoader*, uint>)(lpVtbl[2]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this));
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, uint>)(lpVtbl[2]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this));
+#endif
 	}
 
 	/// <inheritdoc cref="IDWriteFontFileLoader.CreateStreamFromKey" />
@@ -79,7 +91,11 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	[VtblIndex(3)]
 	public HResult CreateStreamFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, IDWriteFontFileStream** fontFileStream)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteLocalFontFileLoader*, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[3]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, IDWriteFontFileStream**, int>)(lpVtbl[3]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, fontFileStream);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetFilePathLengthFromKey"]/*' />
@@ -87,7 +103,11 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	[VtblIndex(4)]
 	public HResult GetFilePathLengthFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, uint* filePathLength)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteLocalFontFileLoader*, void*, uint, uint*, int>)(lpVtbl[4]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, filePathLength);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, uint*, int>)(lpVtbl[4]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, filePathLength);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetFilePathFromKey"]/*' />
@@ -95,7 +115,11 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	[VtblIndex(5)]
 	public HResult GetFilePathFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ushort* filePath, uint filePathSize)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteLocalFontFileLoader*, void*, uint, ushort*, uint, int>)(lpVtbl[5]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, filePath, filePathSize);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, ushort*, uint, int>)(lpVtbl[5]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, filePath, filePathSize);
+#endif
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetLastWriteTimeFromKey"]/*' />
@@ -103,7 +127,11 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	[VtblIndex(6)]
 	public HResult GetLastWriteTimeFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ulong* lastWriteTime)
 	{
+#if NET6_0_OR_GREATER
+		return ((delegate* unmanaged<IDWriteLocalFontFileLoader*, void*, uint, ulong*, int>)(lpVtbl[6]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, lastWriteTime);
+#else
 		return ((delegate* unmanaged[Stdcall]<IDWriteLocalFontFileLoader*, void*, uint, ulong*, int>)(lpVtbl[6]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, lastWriteTime);
+#endif
 	}
 
 	public interface Interface : IDWriteFontFileLoader.Interface
