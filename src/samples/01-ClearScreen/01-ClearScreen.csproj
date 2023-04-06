@@ -15,6 +15,7 @@
     <ProjectReference Include="..\..\Vortice.Win32.Graphics.Direct2D\Vortice.Win32.Graphics.Direct2D.csproj" />
     <ProjectReference Include="..\..\Vortice.Win32.Graphics.Direct3D.Dxc\Vortice.Win32.Graphics.Direct3D.Dxc.csproj" />
     <ProjectReference Include="..\..\Vortice.Win32.Graphics.Direct3D.Fxc\Vortice.Win32.Graphics.Direct3D.Fxc.csproj" />
+    <ProjectReference Include="..\..\Vortice.Win32.Media.Audio.XAudio2\Vortice.Win32.Media.Audio.XAudio2.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,3 +11,4 @@
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct3D.Dxc")]
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.Direct3D.Fxc")]
 [assembly: InternalsVisibleTo("Vortice.Win32.Graphics.DirectComposition")]
+[assembly: InternalsVisibleTo("Vortice.Win32.Media.Audio.XAudio2")]

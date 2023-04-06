@@ -31,7 +31,7 @@ public static class Program
 
         // Media
         //"Media.Audio.json",
-        //"Media.Audio.XAudio2.json",
+        "Media.Audio.XAudio2.json",
     };
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
@@ -127,6 +127,10 @@ public static class Program
         { "Graphics.Direct3D11.D3D11_VIEWPORT", "Viewport" },
         { "Graphics.Direct3D12.D3D12_VIEWPORT", "Viewport" },
 
+        // Media
+        { "Media.Audio.AUDIO_STREAM_CATEGORY", "Media.Audio.AudioStreamCategory" },
+        { "Media.Audio.WAVEFORMATEX", "Media.Audio.WaveFormatEx" },
+
         // TODO: Understand those ->
         { "Foundation.RECT", "Rect" },
         { "Foundation.RECTL", "Rect" },
@@ -216,6 +220,7 @@ public static class Program
         { "SAT", "Saturate" },
         { "INV", "Inverse" },
         { "REV", "Reverse" },
+        { "XAUDIO2FX", "FX" },
     };
 
     private static readonly HashSet<string> s_partRenamesSet = new(StringComparer.OrdinalIgnoreCase)
@@ -733,6 +738,22 @@ public static class Program
         "ShaderCacheClear",
         "VideoExtensionCommand",
         "VideoMotionEstimator",
+        "LockForProcess",
+        "FxMasteringLimiter",
+        "FxReverb",
+        "FxEcho",
+        "InitData",
+        "VolumeMeter",
+        "HrtfDirectivityType",
+        "HrtfEnvironment",
+        "HrtfDistanceDecayType",
+        "HrtfPosition",
+        "HrtfOrientation",
+        "HrtfDirectivity",
+        "HrtfDirectivityCardioid",
+        "HrtfDirectivityCone",
+        "HrtfDistanceDecay",
+        "HrtfApoInit",
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
@@ -768,6 +789,9 @@ public static class Program
         "HDR",
         "DC",
         "XNA",
+        "XAPO",
+        "FXEQ",
+        "I3DL2",
     };
 
     private static readonly Dictionary<string, string> s_knownTypesPrefixes = new()
@@ -874,6 +898,10 @@ public static class Program
         { "D2D1_BUFFER_PRECISION_16BPC_UNORM", "Precision16BitUnorm" },
         { "D2D1_BUFFER_PRECISION_16BPC_FLOAT", "Precision16BitFloat" },
         { "D2D1_BUFFER_PRECISION_32BPC_FLOAT", "Precision32BitFloat" },
+
+        // XAudio2
+        { "XAPO_BUFFER_SILENT", "Silent" },
+        { "XAPO_BUFFER_VALID", "Valid" },
     };
 
     private static readonly Dictionary<string, bool> s_generatedEnums = new()
@@ -910,6 +938,7 @@ public static class Program
         "D3DCOMPILER",
         "DCOMPOSITION",
         "D3DADAPTER",
+        "XAUDIO2",
     };
 
     private static readonly HashSet<string> s_ignoredParts = new(StringComparer.OrdinalIgnoreCase)
@@ -1022,6 +1051,7 @@ public static class Program
         { "D3D12_RENDER_TARGET_BLEND_DESC::RenderTargetWriteMask", "D3D12_COLOR_WRITE_ENABLE" },
 
         // Dxc
+        { "DxcBuffer::Encoding", "DXC_CP" },
         { "DxcShaderHash::Flags", "DXC_HASHFLAG" },
     };
 
@@ -1115,6 +1145,7 @@ public static class Program
         string dxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D.Dxc");
         string fxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D.Fxc");
         string directCompositionPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.DirectComposition");
+        string XAudio2Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Media.Audio.XAudio2");
 
         // Generate docs
         //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
@@ -1127,6 +1158,7 @@ public static class Program
         //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(d3d11Path, "Direct3D11.xml"));
         //DocGenerator.Generate(new[] { "D3D12" }, Path.Combine(d3d12Path, "Direct3D12.xml"));
         //DocGenerator.Generate(new[] { "DComposition" }, Path.Combine(directCompositionPath, "DirectComposition.xml"));
+        //DocGenerator.Generate(new[] { "XAudio2" }, Path.Combine(XAudio2Path, "XAudio2.xml"));
 
         foreach (string jsonFile in jsons)
         {
@@ -1199,6 +1231,11 @@ public static class Program
                 outputPath = d3d9Path;
                 useSubFolders = false;
             }
+            else if (jsonFile == "Media.Audio.XAudio2.json")
+            {
+                outputPath = XAudio2Path;
+                useSubFolders = false;
+            }
 
             outputPath = Path.Combine(outputPath, "Generated");
 
@@ -1267,6 +1304,10 @@ public static class Program
         else if (jsonFile == "Graphics.Direct3D.Fxc.json")
         {
             docFile = $"../Vortice.Win32/Generated/Graphics/Direct3D";
+        }
+        else if (jsonFile == "Media.Audio.XAudio2.json")
+        {
+            docFile = "XAudio2";
         }
 
         string apiName = ns;
@@ -1809,7 +1850,8 @@ public static class Program
             && !enumType.Name.StartsWith("D3D11_")
             && !enumType.Name.StartsWith("D3D12_")
             && !enumType.Name.StartsWith("D3DCOMPILER_")
-            && !enumType.Name.StartsWith("D3DCOMPILE"))
+            && !enumType.Name.StartsWith("D3DCOMPILE")
+            && !enumType.Name.StartsWith("XAUDIO2_"))
         {
             csTypeName = enumType.Name.Substring(3);
             skipPrettify = true;

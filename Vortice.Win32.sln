@@ -44,6 +44,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.Dire
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Graphics.DirectComposition", "src\Vortice.Win32.Graphics.DirectComposition\Vortice.Win32.Graphics.DirectComposition.csproj", "{F7EBB80F-26EA-4C64-9454-C087BBC43549}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vortice.Win32.Media.Audio.XAudio2", "src\Vortice.Win32.Media.Audio.XAudio2\Vortice.Win32.Media.Audio.XAudio2.csproj", "{6458F6C9-12ED-407E-A91D-9F155362E8E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,10 @@ Global
 		{F7EBB80F-26EA-4C64-9454-C087BBC43549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7EBB80F-26EA-4C64-9454-C087BBC43549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7EBB80F-26EA-4C64-9454-C087BBC43549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6458F6C9-12ED-407E-A91D-9F155362E8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6458F6C9-12ED-407E-A91D-9F155362E8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6458F6C9-12ED-407E-A91D-9F155362E8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6458F6C9-12ED-407E-A91D-9F155362E8E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

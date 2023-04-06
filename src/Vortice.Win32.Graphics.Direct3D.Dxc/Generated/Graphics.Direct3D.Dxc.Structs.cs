@@ -24,7 +24,7 @@ public partial struct DxcBuffer
 
 	public nuint Size;
 
-	public uint Encoding;
+	public DxcCp Encoding;
 }
 
 /// <unmanaged>DxcDefine</unmanaged>
