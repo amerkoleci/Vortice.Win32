@@ -19,6 +19,15 @@ namespace Win32.Numerics;
 [StructLayout(LayoutKind.Sequential, Pack = 4)]
 public readonly struct Viewport : IEquatable<Viewport>
 {
+    // Note: intentionally using fields, as autoproperties fail to compile on .NET Native (UWP).
+    // This applies to all targets (including .NET NET 6+), as there's no performance difference.
+    private readonly float _x;
+    private readonly float _y;
+    private readonly float _width;
+    private readonly float _height;
+    private readonly float _minDepth;
+    private readonly float _maxDepth;
+
     /// <summary>
     /// Initializes a new instance of the <see cref="Viewport"/> struct.
     /// </summary>
@@ -26,12 +35,12 @@ public readonly struct Viewport : IEquatable<Viewport>
     /// <param name="height">The height of the viewport in pixels.</param>
     public Viewport(float width, float height)
     {
-        X = 0.0f;
-        Y = 0.0f;
-        Width = width;
-        Height = height;
-        MinDepth = 0.0f;
-        MaxDepth = 1.0f;
+        _x = 0.0f;
+        _y = 0.0f;
+        _width = width;
+        _height = height;
+        _minDepth = 0.0f;
+        _maxDepth = 1.0f;
     }
 
     /// <summary>
@@ -43,12 +52,12 @@ public readonly struct Viewport : IEquatable<Viewport>
     /// <param name="height">The height of the viewport in pixels.</param>
     public Viewport(float x, float y, float width, float height)
     {
-        X = x;
-        Y = y;
-        Width = width;
-        Height = height;
-        MinDepth = 0.0f;
-        MaxDepth = 1.0f;
+        _x = x;
+        _y = y;
+        _width = width;
+        _height = height;
+        _minDepth = 0.0f;
+        _maxDepth = 1.0f;
     }
 
     /// <summary>
@@ -62,12 +71,12 @@ public readonly struct Viewport : IEquatable<Viewport>
     /// <param name="maxDepth">The maximum depth of the clip volume.</param>
     public Viewport(float x, float y, float width, float height, float minDepth, float maxDepth)
     {
-        X = x;
-        Y = y;
-        Width = width;
-        Height = height;
-        MinDepth = minDepth;
-        MaxDepth = maxDepth;
+        _x = x;
+        _y = y;
+        _width = width;
+        _height = height;
+        _minDepth = minDepth;
+        _maxDepth = maxDepth;
     }
 
     /// <summary>
@@ -76,12 +85,12 @@ public readonly struct Viewport : IEquatable<Viewport>
     /// <param name="bounds">A <see cref="RectangleF"/> that defines the location and size of the viewport in a render target.</param>
     public Viewport(in RectangleF bounds)
     {
-        X = bounds.X;
-        Y = bounds.Y;
-        Width = bounds.Width;
-        Height = bounds.Height;
-        MinDepth = 0.0f;
-        MaxDepth = 1.0f;
+        _x = bounds.X;
+        _y = bounds.Y;
+        _width = bounds.Width;
+        _height = bounds.Height;
+        _minDepth = 0.0f;
+        _maxDepth = 1.0f;
     }
 
     /// <summary>
@@ -90,12 +99,12 @@ public readonly struct Viewport : IEquatable<Viewport>
     /// <param name="bounds">A <see cref="Rectangle"/> that defines the location and size of the viewport in a render target.</param>
     public Viewport(in Rectangle bounds)
     {
-        X = bounds.X;
-        Y = bounds.Y;
-        Width = bounds.Width;
-        Height = bounds.Height;
-        MinDepth = 0.0f;
-        MaxDepth = 1.0f;
+        _x = bounds.X;
+        _y = bounds.Y;
+        _width = bounds.Width;
+        _height = bounds.Height;
+        _minDepth = 0.0f;
+        _maxDepth = 1.0f;
     }
 
     /// <summary>
@@ -104,43 +113,43 @@ public readonly struct Viewport : IEquatable<Viewport>
     /// <param name="bounds">A <see cref="Vector4"/> that defines the location and size of the viewport in a render target.</param>
     public Viewport(in Vector4 bounds)
     {
-        X = bounds.X;
-        Y = bounds.Y;
-        Width = bounds.Z;
-        Height = bounds.W;
-        MinDepth = 0.0f;
-        MaxDepth = 1.0f;
+        _x = bounds.X;
+        _y = bounds.Y;
+        _width = bounds.Z;
+        _height = bounds.W;
+        _minDepth = 0.0f;
+        _maxDepth = 1.0f;
     }
 
     /// <summary>
     /// Position of the pixel coordinate of the upper-left corner of the viewport.
     /// </summary>
-    public float X { get; }
+    public float X => _x;
 
     /// <summary>
     /// Position of the pixel coordinate of the upper-left corner of the viewport.
     /// </summary>
-    public float Y { get; }
+    public float Y => _y;
 
     /// <summary>
     /// Width dimension of the viewport.
     /// </summary>
-    public float Width { get; }
+    public float Width => _width;
 
     /// <summary>
     /// Height dimension of the viewport.
     /// </summary>
-    public float Height { get; }
+    public float Height => _height;
 
     /// <summary>
     /// Gets or sets the minimum depth of the clip volume.
     /// </summary>
-    public float MinDepth { get; }
+    public float MinDepth => _minDepth;
 
     /// <summary>
     /// Gets or sets the maximum depth of the clip volume.
     /// </summary>
-    public float MaxDepth { get; }
+    public float MaxDepth => _maxDepth;
 
     /// <summary>
     /// Gets or sets the bounds of the viewport.
