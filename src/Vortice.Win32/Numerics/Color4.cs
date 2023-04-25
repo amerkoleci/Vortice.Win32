@@ -20,6 +20,12 @@ public readonly struct Color4
 {
 #if NET6_0_OR_GREATER
     private readonly Vector128<float> _value;
+#else
+    // Note: intentionally using fields, as autoproperties fail to compile on .NET Native (UWP)
+    private readonly float _a;
+    private readonly float _r;
+    private readonly float _g;
+    private readonly float _b;
 #endif
 
     /// <summary>
@@ -31,7 +37,7 @@ public readonly struct Color4
 #if NET6_0_OR_GREATER
         _value = Vector128.Create(value, value, value, value);
 #else
-        A = R = G = B = value;
+        _a = _r = _g = _b = value;
 #endif
     }
 
@@ -47,10 +53,10 @@ public readonly struct Color4
 #if NET6_0_OR_GREATER
         _value = Vector128.Create(red, green, blue, alpha);
 #else
-        R = red;
-        G = green;
-        B = blue;
-        A = alpha;
+        _r = red;
+        _g = green;
+        _b = blue;
+        _a = alpha;
 #endif
     }
 
@@ -63,10 +69,10 @@ public readonly struct Color4
 #if NET6_0_OR_GREATER
         _value = value.AsVector128();
 #else
-        R = value.X;
-        G = value.Y;
-        B = value.Z;
-        A = value.W;
+        _r = value.X;
+        _g = value.Y;
+        _b = value.Z;
+        _a = value.W;
 #endif
     }
 
@@ -80,10 +86,10 @@ public readonly struct Color4
 #if NET6_0_OR_GREATER
         _value = Vector128.Create(value.X, value.Y, value.Z, alpha);
 #else
-        R = value.X;
-        G = value.Y;
-        B = value.Z;
-        A = alpha;
+        _r = value.X;
+        _g = value.Y;
+        _b = value.Z;
+        _a = alpha;
 #endif
     }
 
@@ -140,16 +146,16 @@ public readonly struct Color4
     }
 #else
     /// <summary>Gets the value of the red component.</summary>
-    public float R { get; }
+    public float R => _r;
 
     /// <summary>Gets the value of the green component.</summary>
-    public float G { get; }
+    public float G => _g;
 
     /// <summary>Gets the value of the blue component.</summary>
-    public float B { get; }
+    public float B => _b;
 
     /// <summary>Gets the value of the alpha component.</summary>
-    public float A { get; }
+    public float A => _a;
 #endif
 
     public readonly float this[int index]
