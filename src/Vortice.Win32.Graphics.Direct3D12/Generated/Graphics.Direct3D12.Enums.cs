@@ -5412,16 +5412,16 @@ public enum MessageId
 	GpuBasedValidationRootDescriptorAccessOutOfBounds = 961,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINELIBRARY_INVALIDLIBRARYBLOB"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINELIBRARY_INVALIDLIBRARYBLOB</unmanaged>
-	CreatepipelinelibraryInvalidlibraryblob = 962,
+	CreatePipelinelibraryInvalidLibraryBlob = 962,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINELIBRARY_DRIVERVERSIONMISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINELIBRARY_DRIVERVERSIONMISMATCH</unmanaged>
-	CreatepipelinelibraryDriverversionmismatch = 963,
+	CreatePipelinelibraryDriverVersionMismatch = 963,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINELIBRARY_ADAPTERVERSIONMISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINELIBRARY_ADAPTERVERSIONMISMATCH</unmanaged>
-	CreatepipelinelibraryAdapterversionmismatch = 964,
+	CreatePipelinelibraryAdapterVersionMismatch = 964,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPIPELINELIBRARY_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPIPELINELIBRARY_UNSUPPORTED</unmanaged>
-	CreatepipelinelibraryUnsupported = 965,
+	CreatePipelinelibraryUnsupported = 965,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_PIPELINELIBRARY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_PIPELINELIBRARY</unmanaged>
 	CreatePipelinelibrary = 966,
@@ -5433,25 +5433,25 @@ public enum MessageId
 	DestroyPipelinelibrary = 968,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_STOREPIPELINE_NONAME"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_STOREPIPELINE_NONAME</unmanaged>
-	StorepipelineNoname = 969,
+	StorePipelineNoname = 969,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_STOREPIPELINE_DUPLICATENAME"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_STOREPIPELINE_DUPLICATENAME</unmanaged>
-	StorepipelineDuplicatename = 970,
+	StorePipelineDuplicateName = 970,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LOADPIPELINE_NAMENOTFOUND"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LOADPIPELINE_NAMENOTFOUND</unmanaged>
-	LoadpipelineNamenotfound = 971,
+	LoadPipelineNameNotFound = 971,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LOADPIPELINE_INVALIDDESC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LOADPIPELINE_INVALIDDESC</unmanaged>
-	LoadpipelineInvalidDesc = 972,
+	LoadPipelineInvalidDesc = 972,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_PIPELINELIBRARY_SERIALIZE_NOTENOUGHMEMORY"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_PIPELINELIBRARY_SERIALIZE_NOTENOUGHMEMORY</unmanaged>
-	PipelinelibrarySerializeNotenoughmemory = 973,
+	PipelinelibrarySerializeNotEnoughMemory = 973,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_PS_OUTPUT_RT_OUTPUT_MISMATCH"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEGRAPHICSPIPELINESTATE_PS_OUTPUT_RT_OUTPUT_MISMATCH</unmanaged>
 	CreateGraphicsPipelineStatePSOutputRtOutputMismatch = 974,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SETEVENTONMULTIPLEFENCECOMPLETION_INVALIDFLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SETEVENTONMULTIPLEFENCECOMPLETION_INVALIDFLAGS</unmanaged>
-	SeteventonmultiplefencecompletionInvalidFlags = 975,
+	SetEventOnMultipleFenceCompletionInvalidFlags = 975,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_QUEUE_VIDEO_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_QUEUE_VIDEO_NOT_SUPPORTED</unmanaged>
 	CreateQueueVideoNotSupported = 976,
@@ -5664,34 +5664,34 @@ public enum MessageId
 	ProgrammableMsaaUnsupported = 1048,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SETSAMPLEPOSITIONS_INVALIDARGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SETSAMPLEPOSITIONS_INVALIDARGS</unmanaged>
-	SetsamplepositionsInvalidArgs = 1049,
+	SetSamplePositionsInvalidArgs = 1049,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RESOLVESUBRESOURCEREGION_INVALID_RECT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_RESOLVESUBRESOURCEREGION_INVALID_RECT</unmanaged>
 	ResolveSubresourceRegionInvalidRect = 1050,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_VIDEODECODECOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_VIDEODECODECOMMANDQUEUE</unmanaged>
-	CreateVideodecodecommandqueue = 1051,
+	CreateVideoDecodeCommandQueue = 1051,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_VIDEOPROCESSCOMMANDLIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_VIDEOPROCESSCOMMANDLIST</unmanaged>
-	CreateVideoprocesscommandlist = 1052,
+	CreateVideoProcessCommandList = 1052,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_VIDEOPROCESSCOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_VIDEOPROCESSCOMMANDQUEUE</unmanaged>
 	CreateVideoProcessCommandQueue = 1053,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_VIDEODECODECOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_VIDEODECODECOMMANDQUEUE</unmanaged>
-	LiveVideodecodecommandqueue = 1054,
+	LiveVideoDecodeCommandQueue = 1054,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_VIDEOPROCESSCOMMANDLIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_VIDEOPROCESSCOMMANDLIST</unmanaged>
-	LiveVideoprocesscommandlist = 1055,
+	LiveVideoProcessCommandList = 1055,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_VIDEOPROCESSCOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_VIDEOPROCESSCOMMANDQUEUE</unmanaged>
 	LiveVideoProcessCommandQueue = 1056,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_VIDEODECODECOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_VIDEODECODECOMMANDQUEUE</unmanaged>
-	DestroyVideodecodecommandqueue = 1057,
+	DestroyVideoDecodeCommandQueue = 1057,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_VIDEOPROCESSCOMMANDLIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_VIDEOPROCESSCOMMANDLIST</unmanaged>
-	DestroyVideoprocesscommandlist = 1058,
+	DestroyVideoProcessCommandList = 1058,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_VIDEOPROCESSCOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_VIDEOPROCESSCOMMANDQUEUE</unmanaged>
 	DestroyVideoProcessCommandQueue = 1059,
@@ -5757,22 +5757,22 @@ public enum MessageId
 	CreateQueryHeapCopyQueueTimestampsNotSupported = 1079,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SAMPLEPOSITIONS_MISMATCH_DEFERRED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SAMPLEPOSITIONS_MISMATCH_DEFERRED</unmanaged>
-	SamplepositionsMismatchDeferred = 1080,
+	SamplePositionsMismatchDeferred = 1080,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SAMPLEPOSITIONS_MISMATCH_RECORDTIME_ASSUMEDFROMFIRSTUSE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SAMPLEPOSITIONS_MISMATCH_RECORDTIME_ASSUMEDFROMFIRSTUSE</unmanaged>
-	SamplepositionsMismatchRecordtimeAssumedfromfirstuse = 1081,
+	SamplePositionsMismatchRecordtimeAssumedfromfirstuse = 1081,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_SAMPLEPOSITIONS_MISMATCH_RECORDTIME_ASSUMEDFROMCLEAR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_SAMPLEPOSITIONS_MISMATCH_RECORDTIME_ASSUMEDFROMCLEAR</unmanaged>
-	SamplepositionsMismatchRecordtimeAssumedfromclear = 1082,
+	SamplePositionsMismatchRecordtimeAssumedfromclear = 1082,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_VIDEODECODERHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_VIDEODECODERHEAP</unmanaged>
-	CreateVideodecoderheap = 1083,
+	CreateVideoDecoderHeap = 1083,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_VIDEODECODERHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_VIDEODECODERHEAP</unmanaged>
-	LiveVideodecoderheap = 1084,
+	LiveVideoDecoderHeap = 1084,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_VIDEODECODERHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_VIDEODECODERHEAP</unmanaged>
-	DestroyVideodecoderheap = 1085,
+	DestroyVideoDecoderHeap = 1085,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_OPENEXISTINGHEAP_INVALIDARG_RETURN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_OPENEXISTINGHEAP_INVALIDARG_RETURN</unmanaged>
 	OpenExistingHeapInvalidArgReturn = 1086,
@@ -5862,13 +5862,13 @@ public enum MessageId
 	VideoDecodeSupportUnsupported = 1114,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_COMMANDRECORDER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_COMMANDRECORDER</unmanaged>
-	CreateCommandrecorder = 1115,
+	CreateCommandRecorder = 1115,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_COMMANDRECORDER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_COMMANDRECORDER</unmanaged>
-	LiveCommandrecorder = 1116,
+	LiveCommandRecorder = 1116,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_COMMANDRECORDER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_COMMANDRECORDER</unmanaged>
-	DestroyCommandrecorder = 1117,
+	DestroyCommandRecorder = 1117,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_COMMAND_RECORDER_VIDEO_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_COMMAND_RECORDER_VIDEO_NOT_SUPPORTED</unmanaged>
 	CreateCommandRecorderVideoNotSupported = 1118,
@@ -5883,13 +5883,13 @@ public enum MessageId
 	CreateCommandRecorderMoreRecordersThanLogicalProcessors = 1121,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_COMMANDPOOL"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_COMMANDPOOL</unmanaged>
-	CreateCommandpool = 1122,
+	CreateCommandPool = 1122,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_COMMANDPOOL"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_COMMANDPOOL</unmanaged>
-	LiveCommandpool = 1123,
+	LiveCommandPool = 1123,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_COMMANDPOOL"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_COMMANDPOOL</unmanaged>
-	DestroyCommandpool = 1124,
+	DestroyCommandPool = 1124,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_COMMAND_POOL_INVALID_FLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_COMMAND_POOL_INVALID_FLAGS</unmanaged>
 	CreateCommandPoolInvalidFlags = 1125,
@@ -5904,7 +5904,7 @@ public enum MessageId
 	CommandRecorderContention = 1128,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COMMAND_RECORDER_USAGE_WITH_CREATECOMMANDLIST_COMMAND_LIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COMMAND_RECORDER_USAGE_WITH_CREATECOMMANDLIST_COMMAND_LIST</unmanaged>
-	CommandRecorderUsageWithCreatecommandlistCommandList = 1129,
+	CommandRecorderUsageWithCreateCommandListCommandList = 1129,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_COMMAND_ALLOCATOR_USAGE_WITH_CREATECOMMANDLIST1_COMMAND_LIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_COMMAND_ALLOCATOR_USAGE_WITH_CREATECOMMANDLIST1_COMMAND_LIST</unmanaged>
 	CommandAllocatorUsageWithCreatecommandlist1CommandList = 1130,
@@ -5949,31 +5949,31 @@ public enum MessageId
 	AtomicCopyBufferInvalidSrcResource = 1143,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_NULL_BUFFER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_NULL_BUFFER</unmanaged>
-	CreateplacedresourceonbufferNullBuffer = 1144,
+	CreatePlacedResourceOnBufferNullBuffer = 1144,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_NULL_RESOURCE_DESC"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_NULL_RESOURCE_DESC</unmanaged>
-	CreateplacedresourceonbufferNullResourceDesc = 1145,
+	CreatePlacedResourceOnBufferNullResourceDesc = 1145,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_UNSUPPORTED</unmanaged>
-	CreateplacedresourceonbufferUnsupported = 1146,
+	CreatePlacedResourceOnBufferUnsupported = 1146,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_BUFFER_DIMENSION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_BUFFER_DIMENSION</unmanaged>
-	CreateplacedresourceonbufferInvalidBufferDimension = 1147,
+	CreatePlacedResourceOnBufferInvalidBufferDimension = 1147,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_BUFFER_FLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_BUFFER_FLAGS</unmanaged>
-	CreateplacedresourceonbufferInvalidBufferFlags = 1148,
+	CreatePlacedResourceOnBufferInvalidBufferFlags = 1148,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_BUFFER_OFFSET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_BUFFER_OFFSET</unmanaged>
-	CreateplacedresourceonbufferInvalidBufferOffset = 1149,
+	CreatePlacedResourceOnBufferInvalidBufferOffset = 1149,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_RESOURCE_DIMENSION"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_RESOURCE_DIMENSION</unmanaged>
-	CreateplacedresourceonbufferInvalidResourceDimension = 1150,
+	CreatePlacedResourceOnBufferInvalidResourceDimension = 1150,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_RESOURCE_FLAGS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_INVALID_RESOURCE_FLAGS</unmanaged>
-	CreateplacedresourceonbufferInvalidResourceFlags = 1151,
+	CreatePlacedResourceOnBufferInvalidResourceFlags = 1151,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEPLACEDRESOURCEONBUFFER_OUTOFMEMORY_RETURN</unmanaged>
-	CreateplacedresourceonbufferOutOfMemoryReturn = 1152,
+	CreatePlacedResourceOnBufferOutOfMemoryReturn = 1152,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CANNOT_CREATE_GRAPHICS_AND_VIDEO_COMMAND_RECORDER"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CANNOT_CREATE_GRAPHICS_AND_VIDEO_COMMAND_RECORDER</unmanaged>
 	CannotCreateGraphicsAndVideoCommandRecorder = 1153,
@@ -6048,22 +6048,22 @@ public enum MessageId
 	MetaCommandInvalidGpuVirtualAddress = 1176,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_VIDEOENCODECOMMANDLIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_VIDEOENCODECOMMANDLIST</unmanaged>
-	CreateVideoencodecommandlist = 1177,
+	CreateVideoEncodeCommandList = 1177,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_VIDEOENCODECOMMANDLIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_VIDEOENCODECOMMANDLIST</unmanaged>
-	LiveVideoencodecommandlist = 1178,
+	LiveVideoEncodeCommandList = 1178,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_VIDEOENCODECOMMANDLIST"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_VIDEOENCODECOMMANDLIST</unmanaged>
-	DestroyVideoencodecommandlist = 1179,
+	DestroyVideoEncodeCommandList = 1179,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_VIDEOENCODECOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_VIDEOENCODECOMMANDQUEUE</unmanaged>
-	CreateVideoencodecommandqueue = 1180,
+	CreateVideoEncodeCommandQueue = 1180,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_VIDEOENCODECOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_VIDEOENCODECOMMANDQUEUE</unmanaged>
-	LiveVideoencodecommandqueue = 1181,
+	LiveVideoEncodeCommandQueue = 1181,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_VIDEOENCODECOMMANDQUEUE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_VIDEOENCODECOMMANDQUEUE</unmanaged>
-	DestroyVideoencodecommandqueue = 1182,
+	DestroyVideoEncodeCommandQueue = 1182,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_VIDEOMOTIONESTIMATOR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_VIDEOMOTIONESTIMATOR</unmanaged>
 	CreateVideoMotionEstimator = 1183,
@@ -6075,13 +6075,13 @@ public enum MessageId
 	DestroyVideoMotionEstimator = 1185,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATE_VIDEOMOTIONVECTORHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATE_VIDEOMOTIONVECTORHEAP</unmanaged>
-	CreateVideomotionvectorheap = 1186,
+	CreateVideoMotionVectorHeap = 1186,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_LIVE_VIDEOMOTIONVECTORHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_LIVE_VIDEOMOTIONVECTORHEAP</unmanaged>
-	LiveVideomotionvectorheap = 1187,
+	LiveVideoMotionVectorHeap = 1187,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DESTROY_VIDEOMOTIONVECTORHEAP"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DESTROY_VIDEOMOTIONVECTORHEAP</unmanaged>
-	DestroyVideomotionvectorheap = 1188,
+	DestroyVideoMotionVectorHeap = 1188,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_MULTIPLE_TRACKED_WORKLOADS"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_MULTIPLE_TRACKED_WORKLOADS</unmanaged>
 	MultipleTrackedWorkloads = 1189,
@@ -6456,7 +6456,7 @@ public enum MessageId
 	CreateVideoEncoderHeapUnsupportedParameters = 1312,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATECOMMANDLIST_NULL_COMMANDALLOCATOR"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATECOMMANDLIST_NULL_COMMANDALLOCATOR</unmanaged>
-	CreatecommandlistNullCommandAllocator = 1313,
+	CreateCommandListNullCommandAllocator = 1313,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CLEAR_UNORDERED_ACCESS_VIEW_INVALID_DESCRIPTOR_HANDLE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CLEAR_UNORDERED_ACCESS_VIEW_INVALID_DESCRIPTOR_HANDLE</unmanaged>
 	ClearUnorderedAccessViewInvalidDescriptorHandle = 1314,
@@ -6465,10 +6465,10 @@ public enum MessageId
 	DescriptorHeapNotShaderVisible = 1315,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEBLENDSTATE_BLENDOP_WARNING"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEBLENDSTATE_BLENDOP_WARNING</unmanaged>
-	CreateBlendStateBlendopWarning = 1316,
+	CreateBlendStateBlendOpWarning = 1316,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATEBLENDSTATE_BLENDOPALPHA_WARNING"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_CREATEBLENDSTATE_BLENDOPALPHA_WARNING</unmanaged>
-	CreateBlendStateBlendopalphaWarning = 1317,
+	CreateBlendStateBlendOpAlphaWarning = 1317,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_WRITE_COMBINE_PERFORMANCE_WARNING"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_WRITE_COMBINE_PERFORMANCE_WARNING</unmanaged>
 	WriteCombinePerformanceWarning = 1318,

@@ -3,7 +3,7 @@
 
 namespace Win32.Graphics.Direct3D12;
 
-public unsafe partial struct Box : IEquatable<Box>
+public partial struct Box : IEquatable<Box>
 {
     public Box(int left, int right)
     {
