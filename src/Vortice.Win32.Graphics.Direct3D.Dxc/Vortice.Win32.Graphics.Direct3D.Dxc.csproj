@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="build\**" PackagePath="build" Pack="true" />
+    <Content Include="runtimes\**" PackagePath="runtimes" Pack="true" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="System.Numerics" />
     <Using Include="System.Diagnostics" />
     <Using Include="System.Runtime.CompilerServices" />

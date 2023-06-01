@@ -17,8 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Vortice.Win32.Graphics.Direct3D11\Vortice.Win32.Graphics.Direct3D11.csproj" />
-    <ProjectReference Include="..\Vortice.Win32.Graphics.Direct3D12\Vortice.Win32.Graphics.Direct3D12.csproj" />
+    <ProjectReference Include="..\Vortice.Win32\Vortice.Win32.csproj" />
   </ItemGroup>
 
 </Project>
