@@ -2114,21 +2114,7 @@ public static class Program
                     fieldValueName = "Mask";
                 }
 
-                bool asPointer = false;
-                if (field.Type.Kind == "ApiRef")
-                {
-                    string lookupApiName = GetApiName(field.Type);
-                    string fullTypeName = $"{lookupApiName}.{field.Type.Name}";
-
-                    if (IsKnownComType(fullTypeName) ||
-                        s_visitedComTypes.ContainsKey(fullTypeName) ||
-                        api.Types.Any(item => item.Name == field.Type.Name && item.Kind.ToLowerInvariant() == "com"))
-                    {
-                        asPointer = true;
-                    }
-                }
-
-                string fieldTypeName = GetTypeName(field.Type, asPointer);
+                string fieldTypeName = GetTypeNameWithPointerCheck(api, field.Type);
                 if (string.IsNullOrEmpty(writer.DocFileName) == false)
                 {
                     writer.WriteLine($"/// <include file='{writer.DocFileName}.xml' path='doc/member[@name=\"{structType.Name}::{field.Name}\"]/*' />");
@@ -2460,7 +2446,7 @@ public static class Program
                     }
 
                     // TODO: Handle inherit
-                    string returnType = GetTypeName(method.ReturnType);
+                    string returnType = GetTypeNameWithPointerCheck(api, method.ReturnType);
 
                     StringBuilder argumentBuilder = new();
                     StringBuilder argumentsTypesBuilder = new();
@@ -3223,6 +3209,25 @@ public static class Program
         }
 
         return apiName;
+    }
+
+    private static string GetTypeNameWithPointerCheck(ApiData api, ApiDataType dataType)
+    {
+        bool asPointer = false;
+        if (dataType.Kind == "ApiRef")
+        {
+            string lookupApiName = GetApiName(dataType);
+            string fullTypeName = $"{lookupApiName}.{dataType.Name}";
+
+            if (IsKnownComType(fullTypeName) ||
+                s_visitedComTypes.ContainsKey(fullTypeName) ||
+                api.Types.Any(item => item.Name == dataType.Name && item.Kind.ToLowerInvariant() == "com"))
+            {
+                asPointer = true;
+            }
+        }
+
+        return GetTypeName(dataType, asPointer);
     }
 
     private static string GetTypeName(ApiDataType dataType, bool asPointer = false)

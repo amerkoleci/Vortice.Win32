@@ -101,12 +101,12 @@ public unsafe partial struct ID3D11LibraryReflection : ID3D11LibraryReflection.I
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11LibraryReflection::GetFunctionByIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public ID3D11FunctionReflection GetFunctionByIndex(int FunctionIndex)
+	public ID3D11FunctionReflection* GetFunctionByIndex(int FunctionIndex)
 	{
 #if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11LibraryReflection*, int, ID3D11FunctionReflection>)(lpVtbl[4]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
+		return ((delegate* unmanaged<ID3D11LibraryReflection*, int, ID3D11FunctionReflection*>)(lpVtbl[4]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
 #else
-		return ((delegate* unmanaged[Stdcall]<ID3D11LibraryReflection*, int, ID3D11FunctionReflection>)(lpVtbl[4]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
+		return ((delegate* unmanaged[Stdcall]<ID3D11LibraryReflection*, int, ID3D11FunctionReflection*>)(lpVtbl[4]))((ID3D11LibraryReflection*)Unsafe.AsPointer(ref this), FunctionIndex);
 #endif
 	}
 
@@ -116,7 +116,7 @@ public unsafe partial struct ID3D11LibraryReflection : ID3D11LibraryReflection.I
 		HResult GetDesc(LibraryDescription* pDesc);
 
 		[VtblIndex(4)]
-		ID3D11FunctionReflection GetFunctionByIndex(int FunctionIndex);
+		ID3D11FunctionReflection* GetFunctionByIndex(int FunctionIndex);
 	}
 }
 
