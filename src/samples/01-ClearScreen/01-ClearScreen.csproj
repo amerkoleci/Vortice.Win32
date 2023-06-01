@@ -18,6 +18,22 @@
     <ProjectReference Include="..\..\Vortice.Win32.Media.Audio.XAudio2\Vortice.Win32.Media.Audio.XAudio2.csproj" />
   </ItemGroup>
 
+  <Choose>
+    <When Condition="($([MSBuild]::IsOsPlatform('windows')) and '$(RuntimeIdentifier)'=='') or '$(RuntimeIdentifier)'=='win-x64'">
+      <ItemGroup>
+        <None Include="..\..\Vortice.Win32.Graphics.Direct3D.Dxc\runtimes\win-x64\native\dxil.dll" Link="dxil.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="..\..\Vortice.Win32.Graphics.Direct3D.Dxc\runtimes\win-x64\native\dxcompiler.dll" Link="dxil.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
+      </ItemGroup>
+    </When>
+    <When Condition="($([MSBuild]::IsOsPlatform('windows')) and '$(RuntimeIdentifier)'=='') or '$(RuntimeIdentifier)'=='win-arm64'">
+      <ItemGroup>
+        <None Include="..\..\Vortice.Win32.Graphics.Direct3D.Dxc\runtimes\win-arm64\native\dxil.dll" Link="dxil.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="..\..\Vortice.Win32.Graphics.Direct3D.Dxc\runtimes\win-arm64\native\dxcompiler.dll" Link="dxil.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
+      </ItemGroup>
+    </When>
+  </Choose>
+
+
   <ItemGroup>
     <Content Include="Assets\**" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
