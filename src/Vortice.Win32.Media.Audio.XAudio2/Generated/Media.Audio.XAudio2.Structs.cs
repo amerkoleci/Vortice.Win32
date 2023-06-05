@@ -341,10 +341,10 @@ public partial struct PerformanceData
 public partial struct DebugConfiguration
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::TraceMask"]/*' />
-	public uint TraceMask;
+	public LogType TraceMask;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::BreakMask"]/*' />
-	public uint BreakMask;
+	public LogType BreakMask;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAUDIO2_DEBUG_CONFIGURATION::LogThreadID"]/*' />
 	public Bool32 LogThreadID;

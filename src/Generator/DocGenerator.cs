@@ -16,17 +16,17 @@ public static class DocGenerator
     private static readonly Regex Italics = new(@"\*([^ ^\*][^\*^\n]*)\*");
     private static readonly Regex MultilineCode = new(@"```[A-z]*([^`]+)```");
     private static readonly Regex InlineCode = new(@"`([^`]+)`");
-    private static readonly Regex Struct = new Regex(@"struct DML_[A-z0-9_]+_OPERATOR_DESC\r\n{[^}]+};", RegexOptions.Multiline);
+    private static readonly Regex Struct = new(@"struct DML_[A-z0-9_]+_OPERATOR_DESC\r\n{[^}]+};", RegexOptions.Multiline);
 
-    public static void Generate(string[] prefixes, string outputPath)
+    public static void Generate(string repoRoot, string[] prefixes, string outputPath)
     {
-        using FileStream docsStream = File.OpenRead(@"C:\Users\amerk\.nuget\packages\microsoft.windows.sdk.win32docs\0.1.8-alpha\apidocs.msgpack");
+        using FileStream docsStream = File.OpenRead(Path.Combine(repoRoot, "docs", "apidocs.msgpack"));
         var data = MessagePackSerializer.Deserialize<Dictionary<string, ApiDetails>>(docsStream);
         var documentationData = new Dictionary<string, ApiDetails>();
 
         foreach (string key in data.Keys)
         {
-            //Debug.WriteLine(key);
+            //System.Diagnostics.Debug.WriteLine(key);
 
             foreach (string prefix in prefixes)
             {
@@ -69,8 +69,10 @@ public static class DocGenerator
 
                 if (!string.IsNullOrEmpty(doc.Description) || doc.Parameters.Count > 0)
                 {
+                    string memberName = item.Replace(".", "::");
+                    
                     writer.WriteStartElement(null, "member", null);
-                    writer.WriteAttributeString("name", item.Replace(".", "::"));
+                    writer.WriteAttributeString("name", memberName);
                     {
                         writer.WriteStartElement(null, "summary", null);
                         {
@@ -98,6 +100,9 @@ public static class DocGenerator
                                 {
                                     writer.WriteStartElement(null, "param", null);
                                     string paramName = param.Key;
+                                    if (paramName == "DEFAULT" || paramName == "X2DEFAULT")
+                                        continue;
+
                                     //if (paramName.StartsWith("pp") && char.IsUpper(paramName[2]))
                                     //{
                                     //    paramName = paramName.Substring(2);
@@ -166,8 +171,12 @@ public static class DocGenerator
                     if (!field.StartsWith("Type:"))
                     {
                         // Enum value
+                        string memberName = $"{item.Replace(".", "::")}::{fieldName}";
+
                         writer.WriteStartElement(null, "member", null);
-                        writer.WriteAttributeString("name", $"{item.Replace(".", "::")}::{fieldName}");
+                        
+
+                        writer.WriteAttributeString("name", memberName);
                         {
                             writer.WriteStartElement(null, "summary", null);
                             {
@@ -181,8 +190,15 @@ public static class DocGenerator
                     else
                     {
                         // Struct field
+                        string memberName = $"{item.Replace(".", "::")}::{fieldName}";
+
+                        if (memberName == "IXAudio2::CreateMasteringVoice")
+                        {
+                            Console.Write("");
+                        }
+
                         writer.WriteStartElement(null, "member", null);
-                        writer.WriteAttributeString("name", $"{item.Replace(".", "::")}::{fieldName}");
+                        writer.WriteAttributeString("name", memberName);
                         {
                             writer.WriteStartElement(null, "summary", null);
                             {
@@ -213,6 +229,7 @@ public static class DocGenerator
         value = value.Replace("<code>s<code>", "<c>s</c>");
         value = value.Replace("ns-d3d12video-d3d12_video_process_luma_key\"\"", "\"ns-d3d12video-d3d12_video_process_luma_key\"");
         value = value.Replace("&L", "&amp;l");
+        value = value.Replace("<a href=\"https://docs.microsoft.com/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2\">IXAudio2</a>", "<see cref=\"IXAudio2\" />");
 
         value = value.Replace("& ", "&amp; ");
         value = value.Replace(" > ", " &gt; ");

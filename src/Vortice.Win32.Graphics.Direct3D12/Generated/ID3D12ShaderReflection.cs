@@ -104,7 +104,7 @@ public unsafe partial struct ID3D12ShaderReflection : ID3D12ShaderReflection.Int
 	public ID3D12ShaderReflectionConstantBuffer* GetConstantBufferByIndex(uint Index)
 	{
 #if NET6_0_OR_GREATER
-        return ((delegate* unmanaged<ID3D12ShaderReflection*, uint, ID3D12ShaderReflectionConstantBuffer*>)(lpVtbl[4]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged<ID3D12ShaderReflection*, uint, ID3D12ShaderReflectionConstantBuffer*>)(lpVtbl[4]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Index);
 #else
 		return ((delegate* unmanaged[Stdcall]<ID3D12ShaderReflection*, uint, ID3D12ShaderReflectionConstantBuffer*>)(lpVtbl[4]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Index);
 #endif

@@ -3936,7 +3936,7 @@ public partial struct ShaderBufferDescription
 	public unsafe sbyte* Name;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_BUFFER_DESC::Type"]/*' />
-	public Graphics.Direct3D.CBufferType Type;
+	public Graphics.Direct3D.ConstantBufferType Type;
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_BUFFER_DESC::Variables"]/*' />
 	public uint Variables;

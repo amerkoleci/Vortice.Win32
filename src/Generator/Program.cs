@@ -1,7 +1,6 @@
 ﻿// Copyright © Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Dynamic;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -130,6 +129,7 @@ public static class Program
         // Media
         { "Media.Audio.AUDIO_STREAM_CATEGORY", "Media.Audio.AudioStreamCategory" },
         { "Media.Audio.WAVEFORMATEX", "Media.Audio.WaveFormatEx" },
+        //{ "Media.Audio.XAudio2.HrtfPosition", "Vector3" },
 
         // TODO: Understand those ->
         { "Foundation.RECT", "Rect" },
@@ -141,8 +141,8 @@ public static class Program
 
     private static readonly Dictionary<string, string> s_partRenames = new()
     {
-        { "CBUFFER", "CBuffer" },
-        { "TBUFFER", "TBuffer" },
+        { "CBUFFER", "ConstantBuffer" },
+        { "TBUFFER", "TextureBuffer" },
         { "NOPERSPECTIVE", "NoPerspective" },
         { "TEXTURE1D", "Texture1D" },
         { "TEXTURE1DARRAY", "Texture1DArray" },
@@ -1077,6 +1077,10 @@ public static class Program
         // Dxc
         { "DxcBuffer::Encoding", "DXC_CP" },
         { "DxcShaderHash::Flags", "DXC_HASHFLAG" },
+
+        // XAudio2
+        { "XAUDIO2_DEBUG_CONFIGURATION::TraceMask", "LogType" },
+        { "XAUDIO2_DEBUG_CONFIGURATION::BreakMask", "LogType" },
     };
 
     private static readonly Dictionary<string, string> s_mapFunctionParameters = new()
@@ -1158,18 +1162,19 @@ public static class Program
     public static int Main(string[] args)
     {
         string repoRoot = FindRepoRoot();
-        string dxgiPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Dxgi");
-        string d3d9Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D9");
-        string d3d11Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D11");
-        string d3d12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D12");
-        string d3d11on12Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D11on12");
-        string dwritePath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.DirectWrite");
-        string wicPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Imaging");
-        string d2dPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct2D");
-        string dxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D.Dxc");
-        string fxcPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.Direct3D.Fxc");
-        string directCompositionPath = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Graphics.DirectComposition");
-        string XAudio2Path = Path.Combine(new DirectoryInfo(repoRoot).Parent.FullName, "Vortice.Win32.Media.Audio.XAudio2");
+        string rootPath = new DirectoryInfo(repoRoot).Parent!.FullName;
+        string dxgiPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Dxgi");
+        string d3d9Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D9");
+        string d3d11Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D11");
+        string d3d12Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D12");
+        string d3d11on12Path = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D11on12");
+        string dwritePath = Path.Combine(rootPath, "Vortice.Win32.Graphics.DirectWrite");
+        string wicPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Imaging");
+        string d2dPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct2D");
+        string dxcPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D.Dxc");
+        string fxcPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.Direct3D.Fxc");
+        string directCompositionPath = Path.Combine(rootPath, "Vortice.Win32.Graphics.DirectComposition");
+        string XAudio2Path = Path.Combine(rootPath, "Vortice.Win32.Media.Audio.XAudio2");
 
         // Generate docs
         //DocGenerator.Generate(new[] { "DXGI" }, Path.Combine(repoRoot, "Generated", "Graphics", "Dxgi.xml"));
@@ -1182,7 +1187,7 @@ public static class Program
         //DocGenerator.Generate(new[] { "D3D11" }, Path.Combine(d3d11Path, "Direct3D11.xml"));
         //DocGenerator.Generate(new[] { "D3D12" }, Path.Combine(d3d12Path, "Direct3D12.xml"));
         //DocGenerator.Generate(new[] { "DComposition" }, Path.Combine(directCompositionPath, "DirectComposition.xml"));
-        //DocGenerator.Generate(new[] { "XAudio2" }, Path.Combine(XAudio2Path, "XAudio2.xml"));
+        //DocGenerator.Generate(rootPath, new[] { "XAudio2", "XAUDIO2", "Hrtf", "XAPO", "X3DAUDIO" }, Path.Combine(XAudio2Path, "XAudio2.xml"));
 
         foreach (string jsonFile in jsons)
         {

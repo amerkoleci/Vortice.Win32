@@ -515,10 +515,10 @@ public enum ShaderVariableType
 	Buffer = 25,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_CBUFFER</unmanaged>
-	CBuffer = 26,
+	ConstantBuffer = 26,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TBUFFER"]/*' />
 	/// <unmanaged>D3D_SVT_TBUFFER</unmanaged>
-	TBuffer = 27,
+	TextureBuffer = 27,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_VARIABLE_TYPE::D3D_SVT_TEXTURE1DARRAY"]/*' />
 	/// <unmanaged>D3D_SVT_TEXTURE1DARRAY</unmanaged>
 	Texture1DArray = 28,
@@ -658,10 +658,10 @@ public enum ShaderInputType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_SIT_CBUFFER</unmanaged>
-	CBuffer = 0,
+	ConstantBuffer = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_TBUFFER"]/*' />
 	/// <unmanaged>D3D_SIT_TBUFFER</unmanaged>
-	TBuffer = 1,
+	TextureBuffer = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_INPUT_TYPE::D3D_SIT_TEXTURE"]/*' />
 	/// <unmanaged>D3D_SIT_TEXTURE</unmanaged>
 	Texture = 2,
@@ -703,7 +703,7 @@ public enum ShaderInputType
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS"]/*' />
 /// <unmanaged>D3D_SHADER_CBUFFER_FLAGS</unmanaged>
 [Flags]
-public enum ShaderCBufferFlags
+public enum ShaderConstantBufferFlags
 {
 	None = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_CBUFFER_FLAGS::D3D_CBF_USERPACKED"]/*' />
@@ -713,14 +713,14 @@ public enum ShaderCBufferFlags
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE"]/*' />
 /// <unmanaged>D3D_CBUFFER_TYPE</unmanaged>
-public enum CBufferType
+public enum ConstantBufferType
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_CBUFFER"]/*' />
 	/// <unmanaged>D3D_CT_CBUFFER</unmanaged>
-	CBuffer = 0,
+	ConstantBuffer = 0,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_TBUFFER"]/*' />
 	/// <unmanaged>D3D_CT_TBUFFER</unmanaged>
-	TBuffer = 1,
+	TextureBuffer = 1,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_CBUFFER_TYPE::D3D_CT_INTERFACE_POINTERS"]/*' />
 	/// <unmanaged>D3D_CT_INTERFACE_POINTERS</unmanaged>
 	InterfacePointers = 2,
