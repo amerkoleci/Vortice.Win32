@@ -303,10 +303,10 @@ public enum Format : uint
 	R9G9B9E5SharedExp = 67,
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_FORMAT::DXGI_FORMAT_R8G8_B8G8_UNORM"]/*' />
 	/// <unmanaged>DXGI_FORMAT_R8G8_B8G8_UNORM</unmanaged>
-	R8G8B8G8Unorm = 68,
+	R8G8_B8G8Unorm = 68,
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_FORMAT::DXGI_FORMAT_G8R8_G8B8_UNORM"]/*' />
 	/// <unmanaged>DXGI_FORMAT_G8R8_G8B8_UNORM</unmanaged>
-	G8R8G8B8Unorm = 69,
+	G8R8_G8B8Unorm = 69,
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_FORMAT::DXGI_FORMAT_BC1_TYPELESS"]/*' />
 	/// <unmanaged>DXGI_FORMAT_BC1_TYPELESS</unmanaged>
 	BC1Typeless = 70,
@@ -460,6 +460,23 @@ public enum Format : uint
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_FORMAT::DXGI_FORMAT_SAMPLER_FEEDBACK_MIP_REGION_USED_OPAQUE"]/*' />
 	/// <unmanaged>DXGI_FORMAT_SAMPLER_FEEDBACK_MIP_REGION_USED_OPAQUE</unmanaged>
 	SamplerFeedbackMipRegionUsedOpaque = 190,
+	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_FORMAT::DXGI_FORMAT_A4B4G4R4_UNORM"]/*' />
+	/// <unmanaged>DXGI_FORMAT_A4B4G4R4_UNORM</unmanaged>
+	A4B4G4R4Unorm = 191,
+	/// <unmanaged>DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT</unmanaged>
+	Xbox_R10G10B10_7E3_A2Float = 116u,
+	/// <unmanaged>DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT</unmanaged>
+	Xbox_R10G10B10_6E4_A2Float = 117u,
+	/// <unmanaged>DXGI_FORMAT_D16_UNORM_S8_UINT</unmanaged>
+	Xbox_D16Unorm_S8Uint = 118u,
+	/// <unmanaged>DXGI_FORMAT_R16_UNORM_X8_TYPELESS</unmanaged>
+	Xbox_R16Unorm_X8Typeless = 119u,
+	/// <unmanaged>DXGI_FORMAT_X16_TYPELESS_G8_UINT</unmanaged>
+	Xbox_X16Typeless_G8Uint = 120u,
+	/// <unmanaged>DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM</unmanaged>
+	Xbox_R10G10B10Snorm_A2Unorm = 189u,
+	/// <unmanaged>DXGI_FORMAT_R4G4_UNORM</unmanaged>
+	Xbox_R4G4Unorm = 190u,
 }
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_MODE_SCANLINE_ORDER"]/*' />

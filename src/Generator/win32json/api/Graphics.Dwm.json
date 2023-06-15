@@ -587,7 +587,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwAttribute","Type":{"Kind":"ApiRef","Name":"DWMWINDOWATTRIBUTE","TargetKind":"Default","Api":"Graphics.Dwm","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwAttribute","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"DWMWINDOWATTRIBUTE"}]}
 			,{"Name":"pvAttribute","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"cbAttribute","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -688,7 +688,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwAttribute","Type":{"Kind":"ApiRef","Name":"DWMWINDOWATTRIBUTE","TargetKind":"Default","Api":"Graphics.Dwm","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwAttribute","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"DWMWINDOWATTRIBUTE"}]}
 			,{"Name":"pvAttribute","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3},"Const"]}
 			,{"Name":"cbAttribute","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]

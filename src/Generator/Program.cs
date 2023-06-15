@@ -550,6 +550,7 @@ public static class Program
         "CreateFence",
         "SynchronizedChannel",
         "DecoderBeginFrame",
+        "DecoderEndFrame",
         "VideoProcessorGetStreamMirror",
         "BackbufferNotSupported",
         "DimensionsTooLarge",
@@ -778,6 +779,56 @@ public static class Program
         "CreateCommandList",
         "BlendOp",
         "BlendOpAlpha",
+        "BlendOpAlpha",
+        "SetBlendState",
+        "OMSetDepthStencil",
+        "VSShaderResources",
+        "NegativeScissor",
+        "NumUAVs",
+        "RefCount",
+        "DiscardView",
+        "NtHandle",
+        "DrawIndexed",
+        "CopySubresourceRegion1",
+        "GetVideoDecoderProfile",
+        "GetVideoDecoderProfileCount",
+        "CheckVideoDecoderFormat",
+        "GetVideoDecoderConfig",
+        "GetVideoDecoderConfigCount",
+        "InvalidIndex",
+        "InvalidType",
+        "InvalidArray",
+        "GetDecoderCreationParams",
+        "GetDecoderDriverHandle",
+        "GetDecoderBuffer",
+        "ReleaseDecoderBuffer",
+        "SubmitDecoderBuffers",
+        "DecoderExtension",
+        "CreateVideoProcessorEnumerator",
+        "GetVideoProcessorContentDesc",
+        "CheckVideoProcessorFormat",
+        "GetVideoProcessorCaps",
+        "GetVideoProcessorCustomRate",
+        "GetVideoProcessorRateConversionCaps",
+        "CreateAuthenticatedChannel",
+        "AcquireHandleForCapture",
+        "CreateVideoProcessorInputView",
+        "CreateVideoProcessorOutputView",
+        "InvalidMsaa",
+        "EmptySourceBox",
+        "EmptyDestBox",
+        "NegotiateCryptoSessionKeyExchangeMt",
+        "InvalidKeyExchangeType",
+        "InvalidContext",
+        "SetHardwareProtection",
+        "UnsupportedContexttTypeForQuery",
+        "VideoProcessorSetOutputHDRMetadata",
+        "VideoProcessorGetOutputHDRMetadata",
+        "VideoProcessorSetStreamHDRMetadata",
+        "VideoProcessorGetStreamHDRMetadata",
+        "VideoProcessorGetStreamColorSpace",
+        "VideoProcessorGetStreamFrameFormat",
+        "VideoProcessorSetStreamColorSpace",
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)
@@ -895,6 +946,9 @@ public static class Program
     private static readonly Dictionary<string, string> s_knownEnumValueNames = new()
     {
         { "DXGI_FORMAT_420_OPAQUE", "Opaque420" },
+        { "DXGI_FORMAT_R8G8_B8G8_UNORM", "R8G8_B8G8Unorm" },
+        { "DXGI_FORMAT_G8R8_G8B8_UNORM", "G8R8_G8B8Unorm" },
+
         { "DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY", "CompositedUICaptureOnly" },
         { "D3D_FEATURE_LEVEL_9_1", "Level_9_1" },
 
@@ -1782,7 +1836,13 @@ public static class Program
         if (string.IsNullOrEmpty(function.DllImport) == false)
         {
             functionSuffix = "static extern ";
-            writer.WriteLine($"[DllImport(\"{function.DllImport}\", ExactSpelling = true)]");
+            string dllImport = function.DllImport;
+            if (dllImport == "XAudio2_8.dll")
+            {
+                dllImport = "xaudio2_9";
+            }
+
+            writer.WriteLine($"[DllImport(\"{dllImport}\", ExactSpelling = true)]");
         }
 
         StringBuilder argumentBuilder = new();
@@ -2018,6 +2078,31 @@ public static class Program
                     writer.WriteLine("/// <unmanaged>D3DCOMPILE_OPTIMIZATION_LEVEL2</unmanaged>");
                     writer.WriteLine($"OptimizationLevel2 = 49152,");
                 }
+            }
+
+            if (enumType.Name == "DXGI_FORMAT")
+            {
+                // Add Xbox enums
+                writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R10G10B10_7E3_A2_FLOAT</unmanaged>");
+                writer.WriteLine($"Xbox_R10G10B10_7E3_A2Float = 116u,");
+
+                writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R10G10B10_6E4_A2_FLOAT</unmanaged>");
+                writer.WriteLine($"Xbox_R10G10B10_6E4_A2Float = 117u,");
+
+                writer.WriteLine("/// <unmanaged>DXGI_FORMAT_D16_UNORM_S8_UINT</unmanaged>");
+                writer.WriteLine($"Xbox_D16Unorm_S8Uint = 118u,");
+
+                writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R16_UNORM_X8_TYPELESS</unmanaged>");
+                writer.WriteLine($"Xbox_R16Unorm_X8Typeless = 119u,");
+
+                writer.WriteLine("/// <unmanaged>DXGI_FORMAT_X16_TYPELESS_G8_UINT</unmanaged>");
+                writer.WriteLine($"Xbox_X16Typeless_G8Uint = 120u,");
+
+                writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R10G10B10_SNORM_A2_UNORM</unmanaged>");
+                writer.WriteLine($"Xbox_R10G10B10Snorm_A2Unorm = 189u,");
+
+                writer.WriteLine("/// <unmanaged>DXGI_FORMAT_R4G4_UNORM</unmanaged>");
+                writer.WriteLine($"Xbox_R4G4Unorm = 190u,");
             }
         }
     }

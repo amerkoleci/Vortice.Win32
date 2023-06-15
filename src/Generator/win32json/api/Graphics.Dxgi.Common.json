@@ -263,7 +263,7 @@
 			,{"Name":"DXGI_FORMAT_V408","Value":132}
 			,{"Name":"DXGI_FORMAT_SAMPLER_FEEDBACK_MIN_MIP_OPAQUE","Value":189}
 			,{"Name":"DXGI_FORMAT_SAMPLER_FEEDBACK_MIP_REGION_USED_OPAQUE","Value":190}
-			,{"Name":"DXGI_FORMAT_FORCE_UINT","Value":4294967295}
+			,{"Name":"DXGI_FORMAT_A4B4G4R4_UNORM","Value":191}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -437,7 +437,6 @@
 			,{"Name":"DXGI_ALPHA_MODE_PREMULTIPLIED","Value":1}
 			,{"Name":"DXGI_ALPHA_MODE_STRAIGHT","Value":2}
 			,{"Name":"DXGI_ALPHA_MODE_IGNORE","Value":3}
-			,{"Name":"DXGI_ALPHA_MODE_FORCE_DWORD","Value":4294967295}
 		]
 		,"IntegerBase":"UInt32"
 	}

@@ -375,6 +375,24 @@ public enum ConservativeRasterizationMode
 	On = 1,
 }
 
+/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LINE_RASTERIZATION_MODE"]/*' />
+/// <unmanaged>D3D12_LINE_RASTERIZATION_MODE</unmanaged>
+public enum LineRasterizationMode
+{
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LINE_RASTERIZATION_MODE::D3D12_LINE_RASTERIZATION_MODE_ALIASED"]/*' />
+	/// <unmanaged>D3D12_LINE_RASTERIZATION_MODE_ALIASED</unmanaged>
+	Aliased = 0,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LINE_RASTERIZATION_MODE::D3D12_LINE_RASTERIZATION_MODE_ALPHA_ANTIALIASED"]/*' />
+	/// <unmanaged>D3D12_LINE_RASTERIZATION_MODE_ALPHA_ANTIALIASED</unmanaged>
+	AlphaAntialiased = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LINE_RASTERIZATION_MODE::D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_WIDE"]/*' />
+	/// <unmanaged>D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_WIDE</unmanaged>
+	QuadrilateralWide = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LINE_RASTERIZATION_MODE::D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_NARROW"]/*' />
+	/// <unmanaged>D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_NARROW</unmanaged>
+	QuadrilateralNarrow = 3,
+}
+
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INDEX_BUFFER_STRIP_CUT_VALUE"]/*' />
 /// <unmanaged>D3D12_INDEX_BUFFER_STRIP_CUT_VALUE</unmanaged>
 public enum IndexBufferStripCutValue
@@ -494,9 +512,12 @@ public enum PipelineStateSubObjectType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE::D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER1"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER1</unmanaged>
 	Rasterizer1 = 27,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE::D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER2"]/*' />
+	/// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER2</unmanaged>
+	Rasterizer2 = 28,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_SUBOBJECT_TYPE::D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MAX_VALID"]/*' />
 	/// <unmanaged>D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MAX_VALID</unmanaged>
-	MaxValid = 28,
+	MaxValid = 29,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE"]/*' />
@@ -611,6 +632,15 @@ public enum Feature
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS16"]/*' />
 	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS16</unmanaged>
 	Options16 = 45,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS17"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS17</unmanaged>
+	Options17 = 46,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS18"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS18</unmanaged>
+	Options18 = 47,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FEATURE::D3D12_FEATURE_D3D12_OPTIONS19"]/*' />
+	/// <unmanaged>D3D12_FEATURE_D3D12_OPTIONS19</unmanaged>
+	Options19 = 48,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_MIN_PRECISION_SUPPORT"]/*' />
@@ -915,6 +945,9 @@ public enum RootSignatureVersion
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION::D3D_ROOT_SIGNATURE_VERSION_1_1"]/*' />
 	/// <unmanaged>D3D_ROOT_SIGNATURE_VERSION_1_1</unmanaged>
 	V1_1 = 2,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_ROOT_SIGNATURE_VERSION::D3D_ROOT_SIGNATURE_VERSION_1_2"]/*' />
+	/// <unmanaged>D3D_ROOT_SIGNATURE_VERSION_1_2</unmanaged>
+	V1_2 = 3,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D_SHADER_MODEL"]/*' />
@@ -1160,6 +1193,9 @@ public enum HeapType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_TYPE::D3D12_HEAP_TYPE_CUSTOM"]/*' />
 	/// <unmanaged>D3D12_HEAP_TYPE_CUSTOM</unmanaged>
 	Custom = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_TYPE::D3D12_HEAP_TYPE_GPU_UPLOAD"]/*' />
+	/// <unmanaged>D3D12_HEAP_TYPE_GPU_UPLOAD</unmanaged>
+	GpuUpload = 5,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_CPU_PAGE_PROPERTY"]/*' />
@@ -1236,6 +1272,9 @@ public enum HeapFlags
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_CREATE_NOT_ZEROED"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_CREATE_NOT_ZEROED</unmanaged>
 	CreateNotZeroed = 4096,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_TOOLS_USE_MANUAL_WRITE_TRACKING"]/*' />
+	/// <unmanaged>D3D12_HEAP_FLAG_TOOLS_USE_MANUAL_WRITE_TRACKING</unmanaged>
+	ToolsUseManualWriteTracking = 8192,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HEAP_FLAGS::D3D12_HEAP_FLAG_ALLOW_ALL_BUFFERS_AND_TEXTURES"]/*' />
 	/// <unmanaged>D3D12_HEAP_FLAG_ALLOW_ALL_BUFFERS_AND_TEXTURES</unmanaged>
 	AllowAllBuffersAndTextures = 0,
@@ -1653,6 +1692,9 @@ public enum Filter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MIN_MAG_MIP_LINEAR"]/*' />
 	/// <unmanaged>D3D12_FILTER_MIN_MAG_MIP_LINEAR</unmanaged>
 	MinMagMipLinear = 21,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MIN_MAG_ANISOTROPIC_MIP_POINT"]/*' />
+	/// <unmanaged>D3D12_FILTER_MIN_MAG_ANISOTROPIC_MIP_POINT</unmanaged>
+	MinMagAnisotropicMipPoint = 84,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_ANISOTROPIC"]/*' />
 	/// <unmanaged>D3D12_FILTER_ANISOTROPIC</unmanaged>
 	Anisotropic = 85,
@@ -1680,6 +1722,9 @@ public enum Filter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_COMPARISON_MIN_MAG_MIP_LINEAR"]/*' />
 	/// <unmanaged>D3D12_FILTER_COMPARISON_MIN_MAG_MIP_LINEAR</unmanaged>
 	ComparisonMinMagMipLinear = 149,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_COMPARISON_MIN_MAG_ANISOTROPIC_MIP_POINT"]/*' />
+	/// <unmanaged>D3D12_FILTER_COMPARISON_MIN_MAG_ANISOTROPIC_MIP_POINT</unmanaged>
+	ComparisonMinMagAnisotropicMipPoint = 212,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_COMPARISON_ANISOTROPIC"]/*' />
 	/// <unmanaged>D3D12_FILTER_COMPARISON_ANISOTROPIC</unmanaged>
 	ComparisonAnisotropic = 213,
@@ -1707,6 +1752,9 @@ public enum Filter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MINIMUM_MIN_MAG_MIP_LINEAR"]/*' />
 	/// <unmanaged>D3D12_FILTER_MINIMUM_MIN_MAG_MIP_LINEAR</unmanaged>
 	MinimumMinMagMipLinear = 277,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MINIMUM_MIN_MAG_ANISOTROPIC_MIP_POINT"]/*' />
+	/// <unmanaged>D3D12_FILTER_MINIMUM_MIN_MAG_ANISOTROPIC_MIP_POINT</unmanaged>
+	MinimumMinMagAnisotropicMipPoint = 340,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MINIMUM_ANISOTROPIC"]/*' />
 	/// <unmanaged>D3D12_FILTER_MINIMUM_ANISOTROPIC</unmanaged>
 	MinimumAnisotropic = 341,
@@ -1734,6 +1782,9 @@ public enum Filter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MAXIMUM_MIN_MAG_MIP_LINEAR"]/*' />
 	/// <unmanaged>D3D12_FILTER_MAXIMUM_MIN_MAG_MIP_LINEAR</unmanaged>
 	MaximumMinMagMipLinear = 405,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MAXIMUM_MIN_MAG_ANISOTROPIC_MIP_POINT"]/*' />
+	/// <unmanaged>D3D12_FILTER_MAXIMUM_MIN_MAG_ANISOTROPIC_MIP_POINT</unmanaged>
+	MaximumMinMagAnisotropicMipPoint = 468,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FILTER::D3D12_FILTER_MAXIMUM_ANISOTROPIC"]/*' />
 	/// <unmanaged>D3D12_FILTER_MAXIMUM_ANISOTROPIC</unmanaged>
 	MaximumAnisotropic = 469,
@@ -1801,6 +1852,9 @@ public enum SamplerFlags
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FLAGS::D3D12_SAMPLER_FLAG_UINT_BORDER_COLOR"]/*' />
 	/// <unmanaged>D3D12_SAMPLER_FLAG_UINT_BORDER_COLOR</unmanaged>
 	UintBorderColor = 1,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SAMPLER_FLAGS::D3D12_SAMPLER_FLAG_NON_NORMALIZED_COORDINATES"]/*' />
+	/// <unmanaged>D3D12_SAMPLER_FLAG_NON_NORMALIZED_COORDINATES</unmanaged>
+	NonNormalizedCoordinates = 2,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_BUFFER_UAV_FLAGS"]/*' />
@@ -3015,6 +3069,9 @@ public enum AutoBreadcrumbOperation
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_RESOLVEENCODEROUTPUTMETADATA"]/*' />
 	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_RESOLVEENCODEROUTPUTMETADATA</unmanaged>
 	ResolveEncoderOutputMetadata = 44,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_OP::D3D12_AUTO_BREADCRUMB_OP_BARRIER"]/*' />
+	/// <unmanaged>D3D12_AUTO_BREADCRUMB_OP_BARRIER</unmanaged>
+	Barrier = 45,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_VERSION"]/*' />
@@ -3239,6 +3296,15 @@ public enum RenderPassBeginningAccessType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_NO_ACCESS"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_NO_ACCESS</unmanaged>
 	NoAccess = 3,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_RENDER"]/*' />
+	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_RENDER</unmanaged>
+	PreserveLocalRender = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_SRV"]/*' />
+	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_SRV</unmanaged>
+	PreserveLocalSrv = 5,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE::D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_UAV"]/*' />
+	/// <unmanaged>D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_UAV</unmanaged>
+	PreserveLocalUav = 6,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_TYPE"]/*' />
@@ -3257,6 +3323,15 @@ public enum RenderPassEndingAccessType
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_TYPE::D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_NO_ACCESS"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_NO_ACCESS</unmanaged>
 	NoAccess = 3,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_TYPE::D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_RENDER"]/*' />
+	/// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_RENDER</unmanaged>
+	PreserveLocalRender = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_TYPE::D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_SRV"]/*' />
+	/// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_SRV</unmanaged>
+	PreserveLocalSrv = 5,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_ENDING_ACCESS_TYPE::D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_UAV"]/*' />
+	/// <unmanaged>D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_UAV</unmanaged>
+	PreserveLocalUav = 6,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_FLAGS"]/*' />
@@ -3276,6 +3351,12 @@ public enum RenderPassFlags
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_FLAGS::D3D12_RENDER_PASS_FLAG_RESUMING_PASS"]/*' />
 	/// <unmanaged>D3D12_RENDER_PASS_FLAG_RESUMING_PASS</unmanaged>
 	ResumingPass = 4,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_FLAGS::D3D12_RENDER_PASS_FLAG_BIND_READ_ONLY_DEPTH"]/*' />
+	/// <unmanaged>D3D12_RENDER_PASS_FLAG_BIND_READ_ONLY_DEPTH</unmanaged>
+	BindReadOnlyDepth = 8,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RENDER_PASS_FLAGS::D3D12_RENDER_PASS_FLAG_BIND_READ_ONLY_STENCIL"]/*' />
+	/// <unmanaged>D3D12_RENDER_PASS_FLAG_BIND_READ_ONLY_STENCIL</unmanaged>
+	BindReadOnlyStencil = 16,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_CACHE_MODE"]/*' />
@@ -5403,7 +5484,7 @@ public enum MessageId
 	GpuBasedValidationInvalidResource = 958,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_USE_OF_ZERO_REFCOUNT_OBJECT"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_USE_OF_ZERO_REFCOUNT_OBJECT</unmanaged>
-	UseOfZeroRefcountObject = 959,
+	UseOfZeroRefCountObject = 959,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_OBJECT_EVICTED_WHILE_STILL_IN_USE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_OBJECT_EVICTED_WHILE_STILL_IN_USE</unmanaged>
 	ObjectEvictedWhileStillInUse = 960,
@@ -6619,9 +6700,39 @@ public enum MessageId
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_NO_PIPELINE"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_NO_PIPELINE</unmanaged>
 	DynamicIndexBufferStripCutNoPipeline = 1369,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_NONNORMALIZED_COORDINATE_SAMPLING_NOT_SUPPORTED"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_NONNORMALIZED_COORDINATE_SAMPLING_NOT_SUPPORTED</unmanaged>
+	NonnormalizedCoordinateSamplingNotSupported = 1370,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_INVALID_CAST_TARGET"]/*' />
 	/// <unmanaged>D3D12_MESSAGE_ID_INVALID_CAST_TARGET</unmanaged>
 	InvalidCastTarget = 1371,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_PASS_COMMANDLIST_INVALID_END_STATE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_PASS_COMMANDLIST_INVALID_END_STATE</unmanaged>
+	RenderPassCommandlistInvalidEndState = 1372,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_PASS_COMMANDLIST_INVALID_START_STATE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_PASS_COMMANDLIST_INVALID_START_STATE</unmanaged>
+	RenderPassCommandlistInvalidStartState = 1373,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_PASS_MISMATCHING_ACCESS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_PASS_MISMATCHING_ACCESS</unmanaged>
+	RenderPassMismatchingAccess = 1374,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_PASS_MISMATCHING_LOCAL_PRESERVE_PARAMETERS"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_PASS_MISMATCHING_LOCAL_PRESERVE_PARAMETERS</unmanaged>
+	RenderPassMismatchingLocalPreserveParameters = 1375,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_PASS_LOCAL_PRESERVE_RENDER_PARAMETERS_ERROR"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_PASS_LOCAL_PRESERVE_RENDER_PARAMETERS_ERROR</unmanaged>
+	RenderPassLocalPreserveRenderParametersError = 1376,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_RENDER_PASS_LOCAL_DEPTH_STENCIL_ERROR"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_RENDER_PASS_LOCAL_DEPTH_STENCIL_ERROR</unmanaged>
+	RenderPassLocalDepthStencilError = 1377,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_DRAW_POTENTIALLY_OUTSIDE_OF_VALID_RENDER_AREA"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_DRAW_POTENTIALLY_OUTSIDE_OF_VALID_RENDER_AREA</unmanaged>
+	DrawPotentiallyOutsideOfValidRenderArea = 1378,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERASTERIZERSTATE_INVALID_LINERASTERIZATIONMODE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATERASTERIZERSTATE_INVALID_LINERASTERIZATIONMODE</unmanaged>
+	CreateRasterizerStateInvalidLinerasterizationmode = 1379,
+	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_ID::D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDALIGNMENT_SMALLRESOURCE"]/*' />
+	/// <unmanaged>D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDALIGNMENT_SMALLRESOURCE</unmanaged>
+	CreateResourceInvalidAlignmentSmallresource = 1380,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_MESSAGE_CALLBACK_FLAGS"]/*' />

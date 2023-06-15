@@ -8,20 +8,12 @@ namespace Win32.Graphics.Dxgi.Common;
 /// </summary>
 public static class FormatHelper
 {
-    public const Format Xbox_R10G10B10_7E3_A2_Float = (Format)116;
-    public const Format Xbox_R10G10B10_6E4_A2_Float = (Format)117;
-    public const Format Xbox_D16_UNorm_S8_UInt = (Format)118;
-    public const Format Xbox_R16_UNorm_X8_Typeless = (Format)119;
-    public const Format Xbox_X16_Typeless_G8_UInt = (Format)120;
-    public const Format Xbox_R10G10B10_SNorm_A2_UNorm = (Format)189;
-    public const Format Xbox_R4G4_UNorm = (Format)190;
-
     /// <summary>
     /// Return the BPP for a given <see cref="Format"/>.
     /// </summary>
     /// <param name="format">The DXGI format.</param>
     /// <returns>BPP of </returns>
-    public static int GetBitsPerPixel(this Format format)
+    public static int BitsPerPixel(this Format format)
     {
         switch (format)
         {
@@ -82,8 +74,8 @@ public static class FormatHelper
             case Format.R24UnormX8Typeless:
             case Format.X24TypelessG8Uint:
             case Format.R9G9B9E5SharedExp:
-            case Format.R8G8B8G8Unorm:
-            case Format.G8R8G8B8Unorm:
+            case Format.R8G8_B8G8Unorm:
+            case Format.G8R8_G8B8Unorm:
             case Format.B8G8R8A8Unorm:
             case Format.B8G8R8X8Unorm:
             case Format.R10G10B10XRBiasA2Unorm:
@@ -94,16 +86,16 @@ public static class FormatHelper
             case Format.AYUV:
             case Format.Y410:
             case Format.YUY2:
-            case Xbox_R10G10B10_7E3_A2_Float:
-            case Xbox_R10G10B10_6E4_A2_Float:
-            case Xbox_R10G10B10_SNorm_A2_UNorm:
+            case Format.Xbox_R10G10B10_7E3_A2Float:
+            case Format.Xbox_R10G10B10_6E4_A2Float:
+            case Format.Xbox_R10G10B10Snorm_A2Unorm:
                 return 32;
 
             case Format.P010:
             case Format.P016:
-            case Xbox_D16_UNorm_S8_UInt:
-            case Xbox_R16_UNorm_X8_Typeless:
-            case Xbox_X16_Typeless_G8_UInt:
+            case Format.Xbox_D16Unorm_S8Uint:
+            case Format.Xbox_R16Unorm_X8Typeless:
+            case Format.Xbox_X16Typeless_G8Uint:
             case Format.V408:
                 return 24;
 
@@ -125,6 +117,7 @@ public static class FormatHelper
             case Format.B4G4R4A4Unorm:
             case Format.P208:
             case Format.V208:
+            case Format.A4B4G4R4Unorm:
                 return 16;
 
             case Format.NV12:
@@ -156,7 +149,7 @@ public static class FormatHelper
             case Format.AI44:
             case Format.IA44:
             case Format.P8:
-            case Xbox_R4G4_UNorm:
+            case Format.Xbox_R4G4Unorm:
                 return 8;
 
             case Format.R1Unorm:
@@ -175,6 +168,166 @@ public static class FormatHelper
         }
     }
 
+    public static int BitsPerColor(this Format format)
+    {
+        switch (format)
+        {
+            case Format.R32G32B32A32Typeless:
+            case Format.R32G32B32A32Float:
+            case Format.R32G32B32A32Uint:
+            case Format.R32G32B32A32Sint:
+            case Format.R32G32B32Typeless:
+            case Format.R32G32B32Float:
+            case Format.R32G32B32Uint:
+            case Format.R32G32B32Sint:
+            case Format.R32G32Typeless:
+            case Format.R32G32Float:
+            case Format.R32G32Uint:
+            case Format.R32G32Sint:
+            case Format.R32G8X24Typeless:
+            case Format.D32FloatS8X24Uint:
+            case Format.R32FloatX8X24Typeless:
+            case Format.X32TypelessG8X24Uint:
+            case Format.R32Typeless:
+            case Format.D32Float:
+            case Format.R32Float:
+            case Format.R32Uint:
+            case Format.R32Sint:
+                return 32;
+
+            case Format.R24G8Typeless:
+            case Format.D24UnormS8Uint:
+            case Format.R24UnormX8Typeless:
+            case Format.X24TypelessG8Uint:
+                return 24;
+
+            case Format.R16G16B16A16Typeless:
+            case Format.R16G16B16A16Float:
+            case Format.R16G16B16A16Unorm:
+            case Format.R16G16B16A16Uint:
+            case Format.R16G16B16A16Snorm:
+            case Format.R16G16B16A16Sint:
+            case Format.R16G16Typeless:
+            case Format.R16G16Float:
+            case Format.R16G16Unorm:
+            case Format.R16G16Uint:
+            case Format.R16G16Snorm:
+            case Format.R16G16Sint:
+            case Format.R16Typeless:
+            case Format.R16Float:
+            case Format.D16Unorm:
+            case Format.R16Unorm:
+            case Format.R16Uint:
+            case Format.R16Snorm:
+            case Format.R16Sint:
+            case Format.BC6HTypeless:
+            case Format.BC6HUF16:
+            case Format.BC6HSF16:
+            case Format.Y416:
+            case Format.P016:
+            case Format.Y216:
+            case Format.Xbox_D16Unorm_S8Uint:
+            case Format.Xbox_R16Unorm_X8Typeless:
+            case Format.Xbox_X16Typeless_G8Uint:
+                return 16;
+
+            case Format.R9G9B9E5SharedExp:
+                return 14;
+
+            case Format.R11G11B10Float:
+                return 11;
+
+            case Format.R10G10B10A2Typeless:
+            case Format.R10G10B10A2Unorm:
+            case Format.R10G10B10A2Uint:
+            case Format.R10G10B10XRBiasA2Unorm:
+            case Format.Y410:
+            case Format.P010:
+            case Format.Y210:
+            case Format.Xbox_R10G10B10_7E3_A2Float:
+            case Format.Xbox_R10G10B10_6E4_A2Float:
+            case Format.Xbox_R10G10B10Snorm_A2Unorm:
+                return 10;
+
+            case Format.R8G8B8A8Typeless:
+            case Format.R8G8B8A8Unorm:
+            case Format.R8G8B8A8UnormSrgb:
+            case Format.R8G8B8A8Uint:
+            case Format.R8G8B8A8Snorm:
+            case Format.R8G8B8A8Sint:
+            case Format.R8G8Typeless:
+            case Format.R8G8Unorm:
+            case Format.R8G8Uint:
+            case Format.R8G8Snorm:
+            case Format.R8G8Sint:
+            case Format.R8Typeless:
+            case Format.R8Unorm:
+            case Format.R8Uint:
+            case Format.R8Snorm:
+            case Format.R8Sint:
+            case Format.A8Unorm:
+            case Format.R8G8_B8G8Unorm:
+            case Format.G8R8_G8B8Unorm:
+            case Format.BC4Typeless:
+            case Format.BC4Unorm:
+            case Format.BC4Snorm:
+            case Format.BC5Typeless:
+            case Format.BC5Unorm:
+            case Format.BC5Snorm:
+            case Format.B8G8R8A8Unorm:
+            case Format.B8G8R8X8Unorm:
+            case Format.B8G8R8A8Typeless:
+            case Format.B8G8R8A8UnormSrgb:
+            case Format.B8G8R8X8Typeless:
+            case Format.B8G8R8X8UnormSrgb:
+            case Format.AYUV:
+            case Format.NV12:
+            case Format.Opaque420:
+            case Format.YUY2:
+            case Format.NV11:
+            case Format.P208:
+            case Format.V208:
+            case Format.V408:
+                return 8;
+
+            case Format.BC7Typeless:
+            case Format.BC7Unorm:
+            case Format.BC7UnormSrgb:
+                return 7;
+
+            case Format.BC1Typeless:
+            case Format.BC1Unorm:
+            case Format.BC1UnormSrgb:
+            case Format.BC2Typeless:
+            case Format.BC2Unorm:
+            case Format.BC2UnormSrgb:
+            case Format.BC3Typeless:
+            case Format.BC3Unorm:
+            case Format.BC3UnormSrgb:
+            case Format.B5G6R5Unorm:
+                return 6;
+
+            case Format.B5G5R5A1Unorm:
+                return 5;
+
+            case Format.B4G4R4A4Unorm:
+            case Format.Xbox_R4G4Unorm:
+            case Format.A4B4G4R4Unorm:
+                return 4;
+
+            case Format.R1Unorm:
+                return 1;
+
+            // Palettized formats return 0 for this function
+            case Format.AI44:
+            case Format.IA44:
+            case Format.P8:
+            case Format.A8P8:
+            default:
+                return 0;
+        }
+    }
+
     /// <summary>
     /// Returns true if the <see cref="Format"/> is valid.
     /// </summary>
@@ -182,7 +335,7 @@ public static class FormatHelper
     /// <returns>True if the <see cref="Format"/> is valid.</returns>
     public static bool IsValid(this Format format)
     {
-        return ((int)(format) >= 1 && (int)(format) <= 115);
+        return ((int)(format) >= 1 && (int)(format) <= 191);
     }
 
     /// <summary>
@@ -231,8 +384,8 @@ public static class FormatHelper
     {
         switch (format)
         {
-            case Format.R8G8B8G8Unorm:
-            case Format.G8R8G8B8Unorm:
+            case Format.R8G8_B8G8Unorm:
+            case Format.G8R8_G8B8Unorm:
             case Format.YUY2: // 4:2:2 8-bit
             case Format.Y210: // 4:2:2 10-bit
             case Format.Y216: // 4:2:2 16-bit
@@ -296,9 +449,9 @@ public static class FormatHelper
             case Format.V208: // 4:4:0 8-bit
             case Format.V408: // 4:4:4 8-bit
                               // These are JPEG Hardware decode formats (DXGI 1.4)
-            case Xbox_D16_UNorm_S8_UInt:
-            case Xbox_R16_UNorm_X8_Typeless:
-            case Xbox_X16_Typeless_G8_UInt:
+            case Format.Xbox_D16Unorm_S8Uint:
+            case Format.Xbox_R16Unorm_X8Typeless:
+            case Format.Xbox_X16Typeless_G8Uint:
                 // These are Xbox One platform specific types
                 return true;
 
@@ -336,9 +489,9 @@ public static class FormatHelper
             case Format.R24UnormX8Typeless:
             case Format.X24TypelessG8Uint:
             case Format.D16Unorm:
-            case Xbox_D16_UNorm_S8_UInt:
-            case Xbox_R16_UNorm_X8_Typeless:
-            case Xbox_X16_Typeless_G8_UInt:
+            case Format.Xbox_D16Unorm_S8Uint:
+            case Format.Xbox_R16Unorm_X8Typeless:
+            case Format.Xbox_X16Typeless_G8Uint:
                 return true;
 
             default:
@@ -356,11 +509,11 @@ public static class FormatHelper
         switch (format)
         {
             case Format.R8G8B8A8UnormSrgb:
+            case Format.B8G8R8A8UnormSrgb:
+            case Format.B8G8R8X8UnormSrgb:
             case Format.BC1UnormSrgb:
             case Format.BC2UnormSrgb:
             case Format.BC3UnormSrgb:
-            case Format.B8G8R8A8UnormSrgb:
-            case Format.B8G8R8X8UnormSrgb:
             case Format.BC7UnormSrgb:
                 return true;
 
@@ -407,8 +560,8 @@ public static class FormatHelper
             case Format.X32TypelessG8X24Uint:
             case Format.R24UnormX8Typeless:
             case Format.X24TypelessG8Uint:
-            case Xbox_R16_UNorm_X8_Typeless:
-            case Xbox_X16_Typeless_G8_UInt:
+            case Format.Xbox_R16Unorm_X8Typeless:
+            case Format.Xbox_X16Typeless_G8Uint:
                 return partialTypeless;
 
             default:
@@ -429,6 +582,7 @@ public static class FormatHelper
             case Format.B8G8R8X8Typeless:
             case Format.B8G8R8X8UnormSrgb:
             case Format.B4G4R4A4Unorm:
+            case Format.A4B4G4R4Unorm:
                 return true;
 
             default:
@@ -437,7 +591,7 @@ public static class FormatHelper
     }
 
     public static void GetSurfaceInfo(
-        Format format,
+        this Format format,
         int width,
         int height,
         out int rowPitch,
@@ -480,8 +634,8 @@ public static class FormatHelper
                 bpe = 16;
                 break;
 
-            case Format.R8G8B8G8Unorm:
-            case Format.G8R8G8B8Unorm:
+            case Format.R8G8_B8G8Unorm:
+            case Format.G8R8_G8B8Unorm:
             case Format.YUY2:
                 packed = true;
                 bpe = 4;
@@ -546,14 +700,14 @@ public static class FormatHelper
         }
         else
         {
-            int bpp = GetBitsPerPixel(format);
+            int bpp = BitsPerPixel(format);
             rowPitch = (width * bpp + 7) / 8; // round up to nearest byte
             rowCount = height;
             slicePitch = rowPitch * height;
         }
     }
 
-    public static void GetSurfaceInfo(Format format, int width, int height, out int rowPitch, out int slicePitch)
+    public static void GetSurfaceInfo(this Format format, int width, int height, out int rowPitch, out int slicePitch)
     {
         GetSurfaceInfo(format, width, height, out rowPitch, out slicePitch, out _);
     }

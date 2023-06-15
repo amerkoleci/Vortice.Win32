@@ -4506,7 +4506,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pBlendState","Type":{"Kind":"ApiRef","Name":"ID3D10BlendState","TargetKind":"Com","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"BlendFactor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
+					,{"Name":"BlendFactor","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
 					,{"Name":"SampleMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
@@ -4645,7 +4645,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pRenderTargetView","Type":{"Kind":"ApiRef","Name":"ID3D10RenderTargetView","TargetKind":"Com","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ColorRGBA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
+					,{"Name":"ColorRGBA","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
 				]
 			}
 			,{
@@ -4944,7 +4944,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"ppBlendState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D10BlendState","TargetKind":"Com","Api":"Graphics.Direct3D10","Parents":[]}},"Attrs":["Out","Optional"]}
-					,{"Name":"BlendFactor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["Out","Optional"]}
+					,{"Name":"BlendFactor","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Single"}},"Attrs":["Out","Optional"]}
 					,{"Name":"pSampleMask","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 				]
 			}
@@ -9330,7 +9330,6 @@
 			,{"Name":"D3D10_SHADER_DEBUG_REG_UNUSED","Value":10}
 			,{"Name":"D3D11_SHADER_DEBUG_REG_INTERFACE_POINTERS","Value":11}
 			,{"Name":"D3D11_SHADER_DEBUG_REG_UAV","Value":12}
-			,{"Name":"D3D10_SHADER_DEBUG_REG_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -9350,7 +9349,6 @@
 			,{"Name":"D3D10_SHADER_DEBUG_SCOPE_STATEBLOCK","Value":5}
 			,{"Name":"D3D10_SHADER_DEBUG_SCOPE_NAMESPACE","Value":6}
 			,{"Name":"D3D10_SHADER_DEBUG_SCOPE_ANNOTATION","Value":7}
-			,{"Name":"D3D10_SHADER_DEBUG_SCOPE_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -9364,7 +9362,6 @@
 		,"Values":[
 			{"Name":"D3D10_SHADER_DEBUG_VAR_VARIABLE","Value":0}
 			,{"Name":"D3D10_SHADER_DEBUG_VAR_FUNCTION","Value":1}
-			,{"Name":"D3D10_SHADER_DEBUG_VAR_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}

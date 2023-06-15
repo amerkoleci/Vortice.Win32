@@ -2,6 +2,41 @@
 
 "Constants":[
 	{
+		"Name":"DXGI_RESOURCE_PRIORITY_MINIMUM"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":671088640
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXGI_RESOURCE_PRIORITY_LOW"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1342177280
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXGI_RESOURCE_PRIORITY_NORMAL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2013265920
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXGI_RESOURCE_PRIORITY_HIGH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2684354560
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DXGI_RESOURCE_PRIORITY_MAXIMUM"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3355443200
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DXGI_MAP_READ"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -470,22 +505,6 @@
 		]
 	}
 	,{
-		"Name":"DXGI_RESOURCE_PRIORITY"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"DXGI_RESOURCE_PRIORITY_MINIMUM","Value":671088640}
-			,{"Name":"DXGI_RESOURCE_PRIORITY_LOW","Value":1342177280}
-			,{"Name":"DXGI_RESOURCE_PRIORITY_NORMAL","Value":2013265920}
-			,{"Name":"DXGI_RESOURCE_PRIORITY_HIGH","Value":2684354560}
-			,{"Name":"DXGI_RESOURCE_PRIORITY_MAXIMUM","Value":3355443200}
-		]
-		,"IntegerBase":"UInt32"
-	}
-	,{
 		"Name":"DXGI_USAGE"
 		,"Architectures":[]
 		,"Platform":null
@@ -809,7 +828,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"EvictionPriority","Type":{"Kind":"ApiRef","Name":"DXGI_RESOURCE_PRIORITY","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
+					{"Name":"EvictionPriority","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3475,7 +3494,6 @@
 			,{"Name":"DXGI_ADAPTER_FLAG3_SUPPORT_MONITORED_FENCES","Value":8}
 			,{"Name":"DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES","Value":16}
 			,{"Name":"DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE","Value":32}
-			,{"Name":"DXGI_ADAPTER_FLAG3_FORCE_DWORD","Value":4294967295}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -4771,6 +4789,18 @@
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows10.0.17134"
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"DXGIDisableVBlankVirtualization"
+		,"SetLastError":false
+		,"DllImport":"dxgi.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
 		]

@@ -173,12 +173,12 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIResource.SetEvictionPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
+	public HResult SetEvictionPriority(uint EvictionPriority)
 	{
 #if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIResource1*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
+		return ((delegate* unmanaged<IDXGIResource1*, uint, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
 #else
-		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource1*, uint, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
 #endif
 	}
 

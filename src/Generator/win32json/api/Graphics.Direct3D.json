@@ -784,7 +784,6 @@
 			,{"Name":"D3D_INCLUDE_SYSTEM","Value":1}
 			,{"Name":"D3D10_INCLUDE_LOCAL","Value":0}
 			,{"Name":"D3D10_INCLUDE_SYSTEM","Value":1}
-			,{"Name":"D3D_INCLUDE_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -850,7 +849,6 @@
 			,{"Name":"D3D10_SVC_STRUCT","Value":5}
 			,{"Name":"D3D11_SVC_INTERFACE_CLASS","Value":6}
 			,{"Name":"D3D11_SVC_INTERFACE_POINTER","Value":7}
-			,{"Name":"D3D_SVC_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -870,7 +868,6 @@
 			,{"Name":"D3D10_SVF_USED","Value":2}
 			,{"Name":"D3D11_SVF_INTERFACE_POINTER","Value":4}
 			,{"Name":"D3D11_SVF_INTERFACE_PARAMETER","Value":8}
-			,{"Name":"D3D_SVF_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -997,7 +994,6 @@
 			,{"Name":"D3D11_SVT_RWSTRUCTURED_BUFFER","Value":49}
 			,{"Name":"D3D11_SVT_APPEND_STRUCTURED_BUFFER","Value":50}
 			,{"Name":"D3D11_SVT_CONSUME_STRUCTURED_BUFFER","Value":51}
-			,{"Name":"D3D_SVT_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -1020,7 +1016,6 @@
 			,{"Name":"D3D10_SIF_TEXTURE_COMPONENT_0","Value":4}
 			,{"Name":"D3D10_SIF_TEXTURE_COMPONENT_1","Value":8}
 			,{"Name":"D3D10_SIF_TEXTURE_COMPONENTS","Value":12}
-			,{"Name":"D3D_SIF_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -1071,7 +1066,6 @@
 		,"Values":[
 			{"Name":"D3D_CBF_USERPACKED","Value":1}
 			,{"Name":"D3D10_CBF_USERPACKED","Value":1}
-			,{"Name":"D3D_CBF_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -1323,7 +1317,6 @@
 			{"Name":"D3D_PF_NONE","Value":0}
 			,{"Name":"D3D_PF_IN","Value":1}
 			,{"Name":"D3D_PF_OUT","Value":2}
-			,{"Name":"D3D_PF_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}

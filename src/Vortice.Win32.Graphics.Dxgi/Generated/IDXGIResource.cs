@@ -173,12 +173,12 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface, INativeGui
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::SetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
+	public HResult SetEvictionPriority(uint EvictionPriority)
 	{
 #if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIResource*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
+		return ((delegate* unmanaged<IDXGIResource*, uint, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
 #else
-		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
+		return ((delegate* unmanaged[Stdcall]<IDXGIResource*, uint, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
 #endif
 	}
 
@@ -203,7 +203,7 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface, INativeGui
 		HResult GetUsage(Usage* pUsage);
 
 		[VtblIndex(10)]
-		HResult SetEvictionPriority(ResourcePriority EvictionPriority);
+		HResult SetEvictionPriority(uint EvictionPriority);
 
 		[VtblIndex(11)]
 		HResult GetEvictionPriority(uint* pEvictionPriority);

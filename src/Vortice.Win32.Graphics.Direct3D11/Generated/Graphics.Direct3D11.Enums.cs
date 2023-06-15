@@ -261,7 +261,7 @@ public enum ResourceMiscFlags
 	GDICompatible = 512,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_SHARED_NTHANDLE"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_SHARED_NTHANDLE</unmanaged>
-	SharedNthandle = 2048,
+	SharedNtHandle = 2048,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_RESOURCE_MISC_FLAG::D3D11_RESOURCE_MISC_RESTRICTED_CONTENT"]/*' />
 	/// <unmanaged>D3D11_RESOURCE_MISC_RESTRICTED_CONTENT</unmanaged>
 	RestrictedContent = 4096,
@@ -2982,7 +2982,7 @@ public enum MessageId
 	DeviceDrawVertexPosOverflow = 335,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAWINDEXED_INDEXPOS_OVERFLOW"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAWINDEXED_INDEXPOS_OVERFLOW</unmanaged>
-	DeviceDrawindexedIndexPosOverflow = 336,
+	DeviceDrawIndexedIndexPosOverflow = 336,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAWINSTANCED_VERTEXPOS_OVERFLOW"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAWINSTANCED_VERTEXPOS_OVERFLOW</unmanaged>
 	DeviceDrawInstancedVertexPosOverflow = 337,
@@ -3378,7 +3378,7 @@ public enum MessageId
 	CreateRasterizerStateDepthclipenableMustBeTrue = 1048601,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DRAWINDEXED_STARTINDEXLOCATION_MUST_BE_POSITIVE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DRAWINDEXED_STARTINDEXLOCATION_MUST_BE_POSITIVE</unmanaged>
-	DrawindexedStartindexlocationMustBePositive = 1048602,
+	DrawIndexedStartindexlocationMustBePositive = 1048602,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATESHADERRESOURCEVIEW_MUST_USE_LOWEST_LOD"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATESHADERRESOURCEVIEW_MUST_USE_LOWEST_LOD</unmanaged>
 	CreateShaderResourceViewMustUseLowestLod = 1048603,
@@ -3426,7 +3426,7 @@ public enum MessageId
 	CreateResourceDxgiFormatR8g8b8a8CannotBeShared = 1048617,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VSSHADERRESOURCES_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VSSHADERRESOURCES_NOT_SUPPORTED</unmanaged>
-	VsshaderresourcesNotSupported = 1048618,
+	VSShaderResourcesNotSupported = 1048618,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GEOMETRY_SHADER_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GEOMETRY_SHADER_NOT_SUPPORTED</unmanaged>
 	GeometryShaderNotSupported = 1048619,
@@ -3456,10 +3456,10 @@ public enum MessageId
 	DrawIndexedInstancedNotSupportedBelow93 = 1048627,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DRAWINDEXED_POINTLIST_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DRAWINDEXED_POINTLIST_UNSUPPORTED</unmanaged>
-	DrawindexedPointListUnsupported = 1048628,
+	DrawIndexedPointListUnsupported = 1048628,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_SETBLENDSTATE_SAMPLE_MASK_CANNOT_BE_ZERO"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_SETBLENDSTATE_SAMPLE_MASK_CANNOT_BE_ZERO</unmanaged>
-	SetblendstateSampleMaskCannotBeZero = 1048629,
+	SetBlendStateSampleMaskCannotBeZero = 1048629,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATERESOURCE_DIMENSION_EXCEEDS_FEATURE_LEVEL_DEFINITION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATERESOURCE_DIMENSION_EXCEEDS_FEATURE_LEVEL_DEFINITION</unmanaged>
 	CreateResourceDimensionExceedsFeatureLevelDefinition = 1048630,
@@ -3468,7 +3468,7 @@ public enum MessageId
 	CreateResourceOnlySingleMipLevelDepthStencilSupported = 1048631,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_RSSETSCISSORRECTS_NEGATIVESCISSOR"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_RSSETSCISSORRECTS_NEGATIVESCISSOR</unmanaged>
-	DeviceRSSetScissorRectsNegativescissor = 1048632,
+	DeviceRSSetScissorRectsNegativeScissor = 1048632,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_SLOT_ZERO_MUST_BE_D3D10_INPUT_PER_VERTEX_DATA"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_SLOT_ZERO_MUST_BE_D3D10_INPUT_PER_VERTEX_DATA</unmanaged>
 	SlotZeroMustBeD3D10InputPerVertexData = 1048633,
@@ -4116,7 +4116,7 @@ public enum MessageId
 	DeviceDispatchIndirectOffsetOverflow = 2097362,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_SETRESOURCEMINLOD_INVALIDCONTEXT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_SETRESOURCEMINLOD_INVALIDCONTEXT</unmanaged>
-	DeviceSetresourceminlodInvalidcontext = 2097363,
+	DeviceSetresourceminlodInvalidContext = 2097363,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_SETRESOURCEMINLOD_INVALIDRESOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_SETRESOURCEMINLOD_INVALIDRESOURCE</unmanaged>
 	DeviceSetresourceminlodInvalidResource = 2097364,
@@ -4125,13 +4125,13 @@ public enum MessageId
 	DeviceSetresourceminlodInvalidMinLod = 2097365,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_GETRESOURCEMINLOD_INVALIDCONTEXT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_GETRESOURCEMINLOD_INVALIDCONTEXT</unmanaged>
-	DeviceGetresourceminlodInvalidcontext = 2097366,
+	DeviceGetresourceminlodInvalidContext = 2097366,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_GETRESOURCEMINLOD_INVALIDRESOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_GETRESOURCEMINLOD_INVALIDRESOURCE</unmanaged>
 	DeviceGetresourceminlodInvalidResource = 2097367,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_OMSETDEPTHSTENCIL_UNBINDDELETINGOBJECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_OMSETDEPTHSTENCIL_UNBINDDELETINGOBJECT</unmanaged>
-	OmsetdepthstencilUnbindDeletingObject = 2097368,
+	OMSetDepthStencilUnbindDeletingObject = 2097368,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_DEPTH_READONLY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CLEARDEPTHSTENCILVIEW_DEPTH_READONLY</unmanaged>
 	ClearDepthStencilViewDepthReadonly = 2097369,
@@ -4293,10 +4293,10 @@ public enum MessageId
 	EnqueueSetEventAccessdeniedReturn = 2097421,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_OMSETRENDERTARGETSANDUNORDEREDACCESSVIEWS_NUMUAVS_INVALIDRANGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_OMSETRENDERTARGETSANDUNORDEREDACCESSVIEWS_NUMUAVS_INVALIDRANGE</unmanaged>
-	DeviceOMSetRenderTargetsAndUnorderedAccessViewsNumuavsInvalidRange = 2097422,
+	DeviceOMSetRenderTargetsAndUnorderedAccessViewsNumUAVsInvalidRange = 2097422,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_USE_OF_ZERO_REFCOUNT_OBJECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_USE_OF_ZERO_REFCOUNT_OBJECT</unmanaged>
-	UseOfZeroRefcountObject = 2097423,
+	UseOfZeroRefCountObject = 2097423,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATE_VIDEODECODER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATE_VIDEODECODER</unmanaged>
 	CreateVideoDecoder = 3145729,
@@ -4374,10 +4374,10 @@ public enum MessageId
 	CreateDeviceContextStateInvalidrefiid = 3145753,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DISCARDVIEW_INVALIDVIEW"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DISCARDVIEW_INVALIDVIEW</unmanaged>
-	DeviceDiscardviewInvalidView = 3145754,
+	DeviceDiscardViewInvalidView = 3145754,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYSUBRESOURCEREGION1_INVALIDCOPYFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYSUBRESOURCEREGION1_INVALIDCOPYFLAGS</unmanaged>
-	Copysubresourceregion1InvalidCopyFlags = 3145755,
+	CopySubresourceRegion1InvalidCopyFlags = 3145755,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_UPDATESUBRESOURCE1_INVALIDCOPYFLAGS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_UPDATESUBRESOURCE1_INVALIDCOPYFLAGS</unmanaged>
 	UpdateSubresource1InvalidCopyFlags = 3145756,
@@ -4404,64 +4404,64 @@ public enum MessageId
 	CreateVideoDecoderDriverInvalidBufferUsage = 3145763,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERPROFILECOUNT_OUTOFMEMORY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERPROFILECOUNT_OUTOFMEMORY</unmanaged>
-	GetvideodecoderprofilecountOutOfMemory = 3145764,
+	GetVideoDecoderProfileCountOutOfMemory = 3145764,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERPROFILE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERPROFILE_NULLPARAM</unmanaged>
-	GetvideodecoderprofileNullParam = 3145765,
+	GetVideoDecoderProfileNullParam = 3145765,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERPROFILE_INVALIDINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERPROFILE_INVALIDINDEX</unmanaged>
-	GetvideodecoderprofileInvalidindex = 3145766,
+	GetVideoDecoderProfileInvalidIndex = 3145766,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERPROFILE_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERPROFILE_OUTOFMEMORY_RETURN</unmanaged>
-	GetvideodecoderprofileOutOfMemoryReturn = 3145767,
+	GetVideoDecoderProfileOutOfMemoryReturn = 3145767,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CHECKVIDEODECODERFORMAT_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CHECKVIDEODECODERFORMAT_NULLPARAM</unmanaged>
-	CheckvideodecoderformatNullParam = 3145768,
+	CheckVideoDecoderFormatNullParam = 3145768,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CHECKVIDEODECODERFORMAT_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CHECKVIDEODECODERFORMAT_OUTOFMEMORY_RETURN</unmanaged>
-	CheckvideodecoderformatOutOfMemoryReturn = 3145769,
+	CheckVideoDecoderFormatOutOfMemoryReturn = 3145769,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERCONFIGCOUNT_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERCONFIGCOUNT_NULLPARAM</unmanaged>
-	GetvideodecoderconfigcountNullParam = 3145770,
+	GetVideoDecoderConfigCountNullParam = 3145770,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERCONFIGCOUNT_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERCONFIGCOUNT_OUTOFMEMORY_RETURN</unmanaged>
-	GetvideodecoderconfigcountOutOfMemoryReturn = 3145771,
+	GetVideoDecoderConfigCountOutOfMemoryReturn = 3145771,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERCONFIG_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERCONFIG_NULLPARAM</unmanaged>
-	GetvideodecoderconfigNullParam = 3145772,
+	GetVideoDecoderConfigNullParam = 3145772,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERCONFIG_INVALIDINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERCONFIG_INVALIDINDEX</unmanaged>
-	GetvideodecoderconfigInvalidindex = 3145773,
+	GetVideoDecoderConfigInvalidIndex = 3145773,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEODECODERCONFIG_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEODECODERCONFIG_OUTOFMEMORY_RETURN</unmanaged>
-	GetvideodecoderconfigOutOfMemoryReturn = 3145774,
+	GetVideoDecoderConfigOutOfMemoryReturn = 3145774,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETDECODERCREATIONPARAMS_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETDECODERCREATIONPARAMS_NULLPARAM</unmanaged>
-	GetdecodercreationparamsNullParam = 3145775,
+	GetDecoderCreationParamsNullParam = 3145775,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETDECODERDRIVERHANDLE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETDECODERDRIVERHANDLE_NULLPARAM</unmanaged>
-	GetdecoderdriverhandleNullParam = 3145776,
+	GetDecoderDriverHandleNullParam = 3145776,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETDECODERBUFFER_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETDECODERBUFFER_NULLPARAM</unmanaged>
-	GetdecoderbufferNullParam = 3145777,
+	GetDecoderBufferNullParam = 3145777,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETDECODERBUFFER_INVALIDBUFFER"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETDECODERBUFFER_INVALIDBUFFER</unmanaged>
-	GetdecoderbufferInvalidBuffer = 3145778,
+	GetDecoderBufferInvalidBuffer = 3145778,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETDECODERBUFFER_INVALIDTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETDECODERBUFFER_INVALIDTYPE</unmanaged>
-	GetdecoderbufferInvalidtype = 3145779,
+	GetDecoderBufferInvalidType = 3145779,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETDECODERBUFFER_LOCKED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETDECODERBUFFER_LOCKED</unmanaged>
-	GetdecoderbufferLocked = 3145780,
+	GetDecoderBufferLocked = 3145780,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_RELEASEDECODERBUFFER_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_RELEASEDECODERBUFFER_NULLPARAM</unmanaged>
-	ReleasedecoderbufferNullParam = 3145781,
+	ReleaseDecoderBufferNullParam = 3145781,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_RELEASEDECODERBUFFER_INVALIDTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_RELEASEDECODERBUFFER_INVALIDTYPE</unmanaged>
-	ReleasedecoderbufferInvalidtype = 3145782,
+	ReleaseDecoderBufferInvalidType = 3145782,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_RELEASEDECODERBUFFER_NOTLOCKED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_RELEASEDECODERBUFFER_NOTLOCKED</unmanaged>
-	ReleasedecoderbufferNotlocked = 3145783,
+	ReleaseDecoderBufferNotlocked = 3145783,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_NULLPARAM</unmanaged>
 	DecoderBeginFrameNullParam = 3145784,
@@ -4470,61 +4470,61 @@ public enum MessageId
 	DecoderBeginFrameHazard = 3145785,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERENDFRAME_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERENDFRAME_NULLPARAM</unmanaged>
-	DecoderendframeNullParam = 3145786,
+	DecoderEndFrameNullParam = 3145786,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_SUBMITDECODERBUFFERS_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_SUBMITDECODERBUFFERS_NULLPARAM</unmanaged>
-	SubmitdecoderbuffersNullParam = 3145787,
+	SubmitDecoderBuffersNullParam = 3145787,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_SUBMITDECODERBUFFERS_INVALIDTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_SUBMITDECODERBUFFERS_INVALIDTYPE</unmanaged>
-	SubmitdecoderbuffersInvalidtype = 3145788,
+	SubmitDecoderBuffersInvalidType = 3145788,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODEREXTENSION_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODEREXTENSION_NULLPARAM</unmanaged>
-	DecoderextensionNullParam = 3145789,
+	DecoderExtensionNullParam = 3145789,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODEREXTENSION_INVALIDRESOURCE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODEREXTENSION_INVALIDRESOURCE</unmanaged>
-	DecoderextensionInvalidResource = 3145790,
+	DecoderExtensionInvalidResource = 3145790,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_OUTOFMEMORY_RETURN</unmanaged>
-	CreatevideoprocessorenumeratorOutOfMemoryReturn = 3145791,
+	CreateVideoProcessorEnumeratorOutOfMemoryReturn = 3145791,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_NULLPARAM</unmanaged>
-	CreatevideoprocessorenumeratorNullParam = 3145792,
+	CreateVideoProcessorEnumeratorNullParam = 3145792,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDFRAMEFORMAT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDFRAMEFORMAT</unmanaged>
-	CreatevideoprocessorenumeratorInvalidframeformat = 3145793,
+	CreateVideoProcessorEnumeratorInvalidframeformat = 3145793,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDUSAGE</unmanaged>
-	CreatevideoprocessorenumeratorInvalidUsage = 3145794,
+	CreateVideoProcessorEnumeratorInvalidUsage = 3145794,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDINPUTFRAMERATE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDINPUTFRAMERATE</unmanaged>
-	CreatevideoprocessorenumeratorInvalidinputframerate = 3145795,
+	CreateVideoProcessorEnumeratorInvalidinputframerate = 3145795,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDOUTPUTFRAMERATE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDOUTPUTFRAMERATE</unmanaged>
-	CreatevideoprocessorenumeratorInvalidoutputframerate = 3145796,
+	CreateVideoProcessorEnumeratorInvalidoutputframerate = 3145796,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDWIDTHHEIGHT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORENUMERATOR_INVALIDWIDTHHEIGHT</unmanaged>
-	CreatevideoprocessorenumeratorInvalidwidthheight = 3145797,
+	CreateVideoProcessorEnumeratorInvalidwidthheight = 3145797,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEOPROCESSORCONTENTDESC_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEOPROCESSORCONTENTDESC_NULLPARAM</unmanaged>
-	GetvideoprocessorcontentdescNullParam = 3145798,
+	GetVideoProcessorContentDescNullParam = 3145798,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CHECKVIDEOPROCESSORFORMAT_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CHECKVIDEOPROCESSORFORMAT_NULLPARAM</unmanaged>
-	CheckvideoprocessorformatNullParam = 3145799,
+	CheckVideoProcessorFormatNullParam = 3145799,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEOPROCESSORCAPS_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEOPROCESSORCAPS_NULLPARAM</unmanaged>
-	GetvideoprocessorcapsNullParam = 3145800,
+	GetVideoProcessorCapsNullParam = 3145800,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEOPROCESSORRATECONVERSIONCAPS_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEOPROCESSORRATECONVERSIONCAPS_NULLPARAM</unmanaged>
-	GetvideoprocessorrateconversioncapsNullParam = 3145801,
+	GetVideoProcessorRateConversionCapsNullParam = 3145801,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEOPROCESSORRATECONVERSIONCAPS_INVALIDINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEOPROCESSORRATECONVERSIONCAPS_INVALIDINDEX</unmanaged>
-	GetvideoprocessorrateconversioncapsInvalidindex = 3145802,
+	GetVideoProcessorRateConversionCapsInvalidIndex = 3145802,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEOPROCESSORCUSTOMRATE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEOPROCESSORCUSTOMRATE_NULLPARAM</unmanaged>
-	GetvideoprocessorcustomrateNullParam = 3145803,
+	GetVideoProcessorCustomRateNullParam = 3145803,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEOPROCESSORCUSTOMRATE_INVALIDINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEOPROCESSORCUSTOMRATE_INVALIDINDEX</unmanaged>
-	GetvideoprocessorcustomrateInvalidindex = 3145804,
+	GetVideoProcessorCustomRateInvalidIndex = 3145804,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETVIDEOPROCESSORFILTERRANGE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETVIDEOPROCESSORFILTERRANGE_NULLPARAM</unmanaged>
 	GetvideoprocessorfilterrangeNullParam = 3145805,
@@ -4611,10 +4611,10 @@ public enum MessageId
 	VideoprocessorsetstreamframeformatInvalidStream = 3145832,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMCOLORSPACE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMCOLORSPACE_NULLPARAM</unmanaged>
-	VideoprocessorsetstreamcolorspaceNullParam = 3145833,
+	VideoProcessorSetStreamColorSpaceNullParam = 3145833,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMCOLORSPACE_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMCOLORSPACE_INVALIDSTREAM</unmanaged>
-	VideoprocessorsetstreamcolorspaceInvalidStream = 3145834,
+	VideoProcessorSetStreamColorSpaceInvalidStream = 3145834,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMOUTPUTRATE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMOUTPUTRATE_NULLPARAM</unmanaged>
 	VideoprocessorsetstreamoutputrateNullParam = 3145835,
@@ -4737,10 +4737,10 @@ public enum MessageId
 	VideoprocessorsetstreamextensionInvalidStream = 3145874,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMFRAMEFORMAT_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMFRAMEFORMAT_NULLPARAM</unmanaged>
-	VideoprocessorgetstreamframeformatNullParam = 3145875,
+	VideoProcessorGetStreamFrameFormatNullParam = 3145875,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMCOLORSPACE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMCOLORSPACE_NULLPARAM</unmanaged>
-	VideoprocessorgetstreamcolorspaceNullParam = 3145876,
+	VideoProcessorGetStreamColorSpaceNullParam = 3145876,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMOUTPUTRATE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMOUTPUTRATE_NULLPARAM</unmanaged>
 	VideoprocessorgetstreamoutputrateNullParam = 3145877,
@@ -4809,7 +4809,7 @@ public enum MessageId
 	VideoprocessorbltInvalidarraysize = 3145898,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORBLT_INVALIDARRAY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORBLT_INVALIDARRAY</unmanaged>
-	VideoprocessorbltInvalidarray = 3145899,
+	VideoprocessorbltInvalidArray = 3145899,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORBLT_RIGHTEXPECTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORBLT_RIGHTEXPECTED</unmanaged>
 	VideoprocessorbltRightexpected = 3145900,
@@ -4839,7 +4839,7 @@ public enum MessageId
 	CreatevideodecoderoutputviewNullParam = 3145908,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEODECODEROUTPUTVIEW_INVALIDTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEODECODEROUTPUTVIEW_INVALIDTYPE</unmanaged>
-	CreatevideodecoderoutputviewInvalidtype = 3145909,
+	CreatevideodecoderoutputviewInvalidType = 3145909,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEODECODEROUTPUTVIEW_INVALIDBIND"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEODECODEROUTPUTVIEW_INVALIDBIND</unmanaged>
 	CreatevideodecoderoutputviewInvalidbind = 3145910,
@@ -4857,79 +4857,79 @@ public enum MessageId
 	CreatevideodecoderoutputviewInvalidarraysize = 3145914,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEODECODEROUTPUTVIEW_INVALIDARRAY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEODECODEROUTPUTVIEW_INVALIDARRAY</unmanaged>
-	CreatevideodecoderoutputviewInvalidarray = 3145915,
+	CreatevideodecoderoutputviewInvalidArray = 3145915,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEODECODEROUTPUTVIEW_INVALIDDIMENSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEODECODEROUTPUTVIEW_INVALIDDIMENSION</unmanaged>
 	CreatevideodecoderoutputviewInvaliddimension = 3145916,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_OUTOFMEMORY_RETURN</unmanaged>
-	CreatevideoprocessorinputviewOutOfMemoryReturn = 3145917,
+	CreateVideoProcessorInputViewOutOfMemoryReturn = 3145917,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_NULLPARAM</unmanaged>
-	CreatevideoprocessorinputviewNullParam = 3145918,
+	CreateVideoProcessorInputViewNullParam = 3145918,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDTYPE</unmanaged>
-	CreatevideoprocessorinputviewInvalidtype = 3145919,
+	CreateVideoProcessorInputViewInvalidType = 3145919,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDBIND"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDBIND</unmanaged>
-	CreatevideoprocessorinputviewInvalidbind = 3145920,
+	CreateVideoProcessorInputViewInvalidbind = 3145920,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDMISC"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDMISC</unmanaged>
-	CreatevideoprocessorinputviewInvalidmisc = 3145921,
+	CreateVideoProcessorInputViewInvalidmisc = 3145921,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDUSAGE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDUSAGE</unmanaged>
-	CreatevideoprocessorinputviewInvalidUsage = 3145922,
+	CreateVideoProcessorInputViewInvalidUsage = 3145922,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDFORMAT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDFORMAT</unmanaged>
-	CreatevideoprocessorinputviewInvalidFormat = 3145923,
+	CreateVideoProcessorInputViewInvalidFormat = 3145923,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDFOURCC"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDFOURCC</unmanaged>
-	CreatevideoprocessorinputviewInvalidfourcc = 3145924,
+	CreateVideoProcessorInputViewInvalidfourcc = 3145924,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDMIP"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDMIP</unmanaged>
-	CreatevideoprocessorinputviewInvalidmip = 3145925,
+	CreateVideoProcessorInputViewInvalidmip = 3145925,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_UNSUPPORTEDMIP"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_UNSUPPORTEDMIP</unmanaged>
-	CreatevideoprocessorinputviewUnsupportedmip = 3145926,
+	CreateVideoProcessorInputViewUnsupportedmip = 3145926,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDARRAYSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDARRAYSIZE</unmanaged>
-	CreatevideoprocessorinputviewInvalidarraysize = 3145927,
+	CreateVideoProcessorInputViewInvalidarraysize = 3145927,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDARRAY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDARRAY</unmanaged>
-	CreatevideoprocessorinputviewInvalidarray = 3145928,
+	CreateVideoProcessorInputViewInvalidArray = 3145928,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDDIMENSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDDIMENSION</unmanaged>
-	CreatevideoprocessorinputviewInvaliddimension = 3145929,
+	CreateVideoProcessorInputViewInvaliddimension = 3145929,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_OUTOFMEMORY_RETURN</unmanaged>
-	CreatevideoprocessoroutputviewOutOfMemoryReturn = 3145930,
+	CreateVideoProcessorOutputViewOutOfMemoryReturn = 3145930,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_NULLPARAM</unmanaged>
-	CreatevideoprocessoroutputviewNullParam = 3145931,
+	CreateVideoProcessorOutputViewNullParam = 3145931,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDTYPE</unmanaged>
-	CreatevideoprocessoroutputviewInvalidtype = 3145932,
+	CreateVideoProcessorOutputViewInvalidType = 3145932,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDBIND"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDBIND</unmanaged>
-	CreatevideoprocessoroutputviewInvalidbind = 3145933,
+	CreateVideoProcessorOutputViewInvalidbind = 3145933,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDFORMAT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDFORMAT</unmanaged>
-	CreatevideoprocessoroutputviewInvalidFormat = 3145934,
+	CreateVideoProcessorOutputViewInvalidFormat = 3145934,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDMIP"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDMIP</unmanaged>
-	CreatevideoprocessoroutputviewInvalidmip = 3145935,
+	CreateVideoProcessorOutputViewInvalidmip = 3145935,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_UNSUPPORTEDMIP"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_UNSUPPORTEDMIP</unmanaged>
-	CreatevideoprocessoroutputviewUnsupportedmip = 3145936,
+	CreateVideoProcessorOutputViewUnsupportedmip = 3145936,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_UNSUPPORTEDARRAY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_UNSUPPORTEDARRAY</unmanaged>
-	CreatevideoprocessoroutputviewUnsupportedarray = 3145937,
+	CreateVideoProcessorOutputViewUnsupportedarray = 3145937,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDARRAY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDARRAY</unmanaged>
-	CreatevideoprocessoroutputviewInvalidarray = 3145938,
+	CreateVideoProcessorOutputViewInvalidArray = 3145938,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDDIMENSION"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDDIMENSION</unmanaged>
-	CreatevideoprocessoroutputviewInvaliddimension = 3145939,
+	CreateVideoProcessorOutputViewInvaliddimension = 3145939,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_INVALID_USE_OF_FORCED_SAMPLE_COUNT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_INVALID_USE_OF_FORCED_SAMPLE_COUNT</unmanaged>
 	DeviceDrawInvalidUseOfForcedSampleCount = 3145940,
@@ -5094,19 +5094,19 @@ public enum MessageId
 	CheckcryptokeyexchangeNullParam = 3145993,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CHECKCRYPTOKEYEXCHANGE_INVALIDINDEX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CHECKCRYPTOKEYEXCHANGE_INVALIDINDEX</unmanaged>
-	CheckcryptokeyexchangeInvalidindex = 3145994,
+	CheckcryptokeyexchangeInvalidIndex = 3145994,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEAUTHENTICATEDCHANNEL_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEAUTHENTICATEDCHANNEL_NULLPARAM</unmanaged>
-	CreateauthenticatedchannelNullParam = 3145995,
+	CreateAuthenticatedChannelNullParam = 3145995,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEAUTHENTICATEDCHANNEL_UNSUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEAUTHENTICATEDCHANNEL_UNSUPPORTED</unmanaged>
-	CreateauthenticatedchannelUnsupported = 3145996,
+	CreateAuthenticatedChannelUnsupported = 3145996,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEAUTHENTICATEDCHANNEL_INVALIDTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEAUTHENTICATEDCHANNEL_INVALIDTYPE</unmanaged>
-	CreateauthenticatedchannelInvalidtype = 3145997,
+	CreateAuthenticatedChannelInvalidType = 3145997,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEAUTHENTICATEDCHANNEL_OUTOFMEMORY_RETURN"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEAUTHENTICATEDCHANNEL_OUTOFMEMORY_RETURN</unmanaged>
-	CreateauthenticatedchannelOutOfMemoryReturn = 3145998,
+	CreateAuthenticatedChannelOutOfMemoryReturn = 3145998,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_GETAUTHENTICATEDCHANNELCERTIFICATESIZE_INVALIDCHANNEL"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_GETAUTHENTICATEDCHANNELCERTIFICATESIZE_INVALIDCHANNEL</unmanaged>
 	GetauthenticatedchannelcertificatesizeInvalidchannel = 3145999,
@@ -5190,16 +5190,16 @@ public enum MessageId
 	GetcryptosessionhandleOutOfMemory = 3146025,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_ACQUIREHANDLEFORCAPTURE_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_ACQUIREHANDLEFORCAPTURE_NULLPARAM</unmanaged>
-	AcquirehandleforcaptureNullParam = 3146026,
+	AcquireHandleForCaptureNullParam = 3146026,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_ACQUIREHANDLEFORCAPTURE_INVALIDTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_ACQUIREHANDLEFORCAPTURE_INVALIDTYPE</unmanaged>
-	AcquirehandleforcaptureInvalidtype = 3146027,
+	AcquireHandleForCaptureInvalidType = 3146027,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_ACQUIREHANDLEFORCAPTURE_INVALIDBIND"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_ACQUIREHANDLEFORCAPTURE_INVALIDBIND</unmanaged>
-	AcquirehandleforcaptureInvalidbind = 3146028,
+	AcquireHandleForCaptureInvalidbind = 3146028,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_ACQUIREHANDLEFORCAPTURE_INVALIDARRAY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_ACQUIREHANDLEFORCAPTURE_INVALIDARRAY</unmanaged>
-	AcquirehandleforcaptureInvalidarray = 3146029,
+	AcquireHandleForCaptureInvalidArray = 3146029,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMROTATION_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMROTATION_NULLPARAM</unmanaged>
 	VideoprocessorsetstreamrotationNullParam = 3146030,
@@ -5331,10 +5331,10 @@ public enum MessageId
 	OfferResourcesInaccessible = 3146072,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDMSAA"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSORINPUTVIEW_INVALIDMSAA</unmanaged>
-	CreatevideoprocessorinputviewInvalidmsaa = 3146073,
+	CreateVideoProcessorInputViewInvalidMsaa = 3146073,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDMSAA"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEVIDEOPROCESSOROUTPUTVIEW_INVALIDMSAA</unmanaged>
-	CreatevideoprocessoroutputviewInvalidmsaa = 3146074,
+	CreateVideoProcessorOutputViewInvalidMsaa = 3146074,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_CLEARVIEW_INVALIDSOURCERECT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_CLEARVIEW_INVALIDSOURCERECT</unmanaged>
 	DeviceClearViewInvalidSourceRect = 3146075,
@@ -5343,10 +5343,10 @@ public enum MessageId
 	DeviceClearViewEmptyRect = 3146076,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_UPDATESUBRESOURCE_EMPTYDESTBOX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_UPDATESUBRESOURCE_EMPTYDESTBOX</unmanaged>
-	UpdateSubresourceEmptydestbox = 3146077,
+	UpdateSubresourceEmptyDestBox = 3146077,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_COPYSUBRESOURCEREGION_EMPTYSOURCEBOX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_COPYSUBRESOURCEREGION_EMPTYSOURCEBOX</unmanaged>
-	CopySubresourceRegionEmptysourcebox = 3146078,
+	CopySubresourceRegionEmptySourceBox = 3146078,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_DRAW_OM_RENDER_TARGET_DOES_NOT_SUPPORT_LOGIC_OPS"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_DRAW_OM_RENDER_TARGET_DOES_NOT_SUPPORT_LOGIC_OPS</unmanaged>
 	DeviceDrawOMRenderTargetDoesNotSupportLogicOps = 3146079,
@@ -5637,7 +5637,7 @@ public enum MessageId
 	JpegDecodeInvalidMipLevel = 3146178,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_EMPTYDESTBOX"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_EMPTYDESTBOX</unmanaged>
-	JpegDecodeEmptydestbox = 3146179,
+	JpegDecodeEmptyDestBox = 3146179,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_JPEGDECODE_DESTBOXNOT2D"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_JPEGDECODE_DESTBOXNOT2D</unmanaged>
 	JpegDecodeDestboxnot2d = 3146180,
@@ -5766,49 +5766,49 @@ public enum MessageId
 	JpegEncodeBackbufferNotSupported = 3146221,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_UNSUPPORTEDCONTEXTTTYPEFORQUERY"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_CREATEQUERYORPREDICATE_UNSUPPORTEDCONTEXTTTYPEFORQUERY</unmanaged>
-	CreateQueryOrPredicateUnsupportedcontextttypeforquery = 3146222,
+	CreateQueryOrPredicateUnsupportedContexttTypeForQuery = 3146222,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_FLUSH1_INVALIDCONTEXTTYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_FLUSH1_INVALIDCONTEXTTYPE</unmanaged>
 	Flush1InvalidContextType = 3146223,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DEVICE_SETHARDWAREPROTECTION_INVALIDCONTEXT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DEVICE_SETHARDWAREPROTECTION_INVALIDCONTEXT</unmanaged>
-	DeviceSethardwareprotectionInvalidcontext = 3146224,
+	DeviceSetHardwareProtectionInvalidContext = 3146224,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETOUTPUTHDRMETADATA_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETOUTPUTHDRMETADATA_NULLPARAM</unmanaged>
-	VideoprocessorsetoutputhdrmetadataNullParam = 3146225,
+	VideoProcessorSetOutputHDRMetadataNullParam = 3146225,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETOUTPUTHDRMETADATA_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETOUTPUTHDRMETADATA_INVALIDSIZE</unmanaged>
-	VideoprocessorsetoutputhdrmetadataInvalidSize = 3146226,
+	VideoProcessorSetOutputHDRMetadataInvalidSize = 3146226,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETOUTPUTHDRMETADATA_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETOUTPUTHDRMETADATA_NULLPARAM</unmanaged>
-	VideoprocessorgetoutputhdrmetadataNullParam = 3146227,
+	VideoProcessorGetOutputHDRMetadataNullParam = 3146227,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETOUTPUTHDRMETADATA_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETOUTPUTHDRMETADATA_INVALIDSIZE</unmanaged>
-	VideoprocessorgetoutputhdrmetadataInvalidSize = 3146228,
+	VideoProcessorGetOutputHDRMetadataInvalidSize = 3146228,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_NULLPARAM</unmanaged>
-	VideoprocessorsetstreamhdrmetadataNullParam = 3146229,
+	VideoProcessorSetStreamHDRMetadataNullParam = 3146229,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_INVALIDSTREAM</unmanaged>
-	VideoprocessorsetstreamhdrmetadataInvalidStream = 3146230,
+	VideoProcessorSetStreamHDRMetadataInvalidStream = 3146230,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORSETSTREAMHDRMETADATA_INVALIDSIZE</unmanaged>
-	VideoprocessorsetstreamhdrmetadataInvalidSize = 3146231,
+	VideoProcessorSetStreamHDRMetadataInvalidSize = 3146231,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_NULLPARAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_NULLPARAM</unmanaged>
-	VideoprocessorgetstreamhdrmetadataNullParam = 3146232,
+	VideoProcessorGetStreamHDRMetadataNullParam = 3146232,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamhdrmetadataInvalidStream = 3146233,
+	VideoProcessorGetStreamHDRMetadataInvalidStream = 3146233,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_INVALIDSIZE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMHDRMETADATA_INVALIDSIZE</unmanaged>
-	VideoprocessorgetstreamhdrmetadataInvalidSize = 3146234,
+	VideoProcessorGetStreamHDRMetadataInvalidSize = 3146234,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMFRAMEFORMAT_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMFRAMEFORMAT_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamframeformatInvalidStream = 3146235,
+	VideoProcessorGetStreamFrameFormatInvalidStream = 3146235,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMCOLORSPACE_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMCOLORSPACE_INVALIDSTREAM</unmanaged>
-	VideoprocessorgetstreamcolorspaceInvalidStream = 3146236,
+	VideoProcessorGetStreamColorSpaceInvalidStream = 3146236,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMOUTPUTRATE_INVALIDSTREAM"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_VIDEOPROCESSORGETSTREAMOUTPUTRATE_INVALIDSTREAM</unmanaged>
 	VideoprocessorgetstreamoutputrateInvalidStream = 3146237,
@@ -5871,10 +5871,10 @@ public enum MessageId
 	CreateFenceInvalidFlags = 3146256,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_NEGOTIATECRYPTOSESSIONKEYEXCHANGEMT_INVALIDKEYEXCHANGETYPE"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_NEGOTIATECRYPTOSESSIONKEYEXCHANGEMT_INVALIDKEYEXCHANGETYPE</unmanaged>
-	NegotiatecryptosessionkeyexchangemtInvalidkeyexchangetype = 3146259,
+	NegotiateCryptoSessionKeyExchangeMtInvalidKeyExchangeType = 3146259,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_NEGOTIATECRYPTOSESSIONKEYEXCHANGEMT_NOT_SUPPORTED"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_NEGOTIATECRYPTOSESSIONKEYEXCHANGEMT_NOT_SUPPORTED</unmanaged>
-	NegotiatecryptosessionkeyexchangemtNotSupported = 3146260,
+	NegotiateCryptoSessionKeyExchangeMtNotSupported = 3146260,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_MESSAGE_ID::D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT_COUNT"]/*' />
 	/// <unmanaged>D3D11_MESSAGE_ID_DECODERBEGINFRAME_INVALID_HISTOGRAM_COMPONENT_COUNT</unmanaged>
 	DecoderBeginFrameInvalidHistogramComponentCount = 3146261,

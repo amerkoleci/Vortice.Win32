@@ -30,4 +30,8 @@ public static unsafe partial class Apis
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIDeclareAdapterRemovalSupport"]/*' />
 	[DllImport("dxgi.dll", ExactSpelling = true)]
 	public static extern HResult DXGIDeclareAdapterRemovalSupport();
+
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIDisableVBlankVirtualization"]/*' />
+	[DllImport("dxgi.dll", ExactSpelling = true)]
+	public static extern HResult DXGIDisableVBlankVirtualization();
 }

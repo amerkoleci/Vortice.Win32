@@ -6571,17 +6571,40 @@
 
 ,"Types":[
 	{
-		"Name":"_DDFXROP"
+		"Name":"PDD_DESTROYDRIVERDATA"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"SizeField":""
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"PDD_GETVPORTAUTOFLIPSURFACEDATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"PDD_SETMODEDATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"LPDDFXROP"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"LPDDENUMCALLBACKA"
@@ -12640,21 +12663,6 @@
 		]
 		,"NestedTypes":[
 			{
-				"Name":"_Anonymous1_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"fpEnd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-					,{"Name":"dwWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous2_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -12665,6 +12673,21 @@
 				,"Fields":[
 					{"Name":"lpHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMHEAP","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"dwHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous1_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"fpEnd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+					,{"Name":"dwWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -13867,7 +13890,7 @@
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ddsCapsMore","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
-			,{"Name":"ddsExtendedHeapRestrictions","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ExtendedHeapRestrictions","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+			,{"Name":"ddsExtendedHeapRestrictions","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ExtendedHeapRestrictions","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -14136,7 +14159,7 @@
 		]
 		,"NestedTypes":[
 			{
-				"Name":"_Anonymous3_e__Union"
+				"Name":"_Anonymous4_e__Union"
 				,"Architectures":[]
 				,"Platform":null
 				,"Kind":"Union"
@@ -14144,8 +14167,23 @@
 				,"PackingSize":0
 				,"SizeField":""
 				,"Fields":[
-					{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
-					,{"Name":"lpDDHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+					{"Name":"lPitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+					,{"Name":"dwLinearSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous2_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"lpVidMemHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMHEAP","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+					,{"Name":"dwBlockSizeX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -14167,7 +14205,7 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous2_e__Union"
+				"Name":"_Anonymous3_e__Union"
 				,"Architectures":[]
 				,"Platform":null
 				,"Kind":"Union"
@@ -14175,23 +14213,8 @@
 				,"PackingSize":0
 				,"SizeField":""
 				,"Fields":[
-					{"Name":"lpVidMemHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMHEAP","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
-					,{"Name":"dwBlockSizeX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
-				"Name":"_Anonymous4_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"lPitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-					,{"Name":"dwLinearSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					{"Name":"lpDD","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DIRECTDRAW_GBL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+					,{"Name":"lpDDHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -14328,21 +14351,6 @@
 		]
 		,"NestedTypes":[
 			{
-				"Name":"_Anonymous2_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"lpDDClipper","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWCLIPPER_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
-					,{"Name":"lp16DDClipper","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWCLIPPER_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous1_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -14353,6 +14361,21 @@
 				,"Fields":[
 					{"Name":"lpDDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"lp16DDPalette","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWPALETTE_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous2_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"lpDDClipper","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWCLIPPER_LCL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+					,{"Name":"lp16DDClipper","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWCLIPPER_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -14604,7 +14627,7 @@
 			,{"Name":"lpPrimary","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpCB","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDRAWI_DDRAWSURFACE_INT","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwPreferredMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"hD3DInstance","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hD3DInstance","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"pD3DIUnknown","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":[]}
 			,{"Name":"lpDDCB","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDHAL_CALLBACKS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"hDDVxd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
@@ -16027,45 +16050,6 @@
 		]
 	}
 	,{
-		"Name":"_DD_DESTROYDRIVERDATA"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"SizeField":""
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"_DD_SETMODEDATA"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"SizeField":""
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"_DD_GETVPORTAUTOFLIPSURFACEDATA"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"SizeField":""
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"VIDEOMEMORY"
 		,"Architectures":[]
 		,"Platform":null
@@ -16083,21 +16067,6 @@
 		]
 		,"NestedTypes":[
 			{
-				"Name":"_Anonymous1_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"fpEnd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-					,{"Name":"dwWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous2_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -16108,6 +16077,21 @@
 				,"Fields":[
 					{"Name":"lpHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VMEMHEAP","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 					,{"Name":"dwHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous1_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"fpEnd","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+					,{"Name":"dwWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -16201,7 +16185,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_DD_DESTROYDRIVERDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PDD_DESTROYDRIVERDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -16214,7 +16198,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_DD_SETMODEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PDD_SETMODEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -16779,7 +16763,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_DD_GETVPORTAUTOFLIPSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PDD_GETVPORTAUTOFLIPSURFACEDATA","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -17286,6 +17270,22 @@
 		]
 		,"NestedTypes":[
 			{
+				"Name":"_Anonymous2_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"lpVidMemHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VIDEOMEMORY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+					,{"Name":"dwBlockSizeX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					,{"Name":"dwUserMemSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
 				"Name":"_Anonymous3_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -17311,22 +17311,6 @@
 				,"Fields":[
 					{"Name":"dwBlockSizeY","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"lSlicePitch","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
-				"Name":"_Anonymous2_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"lpVidMemHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VIDEOMEMORY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
-					,{"Name":"dwBlockSizeX","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-					,{"Name":"dwUserMemSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -17373,21 +17357,6 @@
 		]
 		,"NestedTypes":[
 			{
-				"Name":"_Anonymous2_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"ddckCKDestOverlay","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
-					,{"Name":"ddckCKDestBlt","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous1_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -17398,6 +17367,21 @@
 				,"Fields":[
 					{"Name":"ddckCKSrcOverlay","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 					,{"Name":"ddckCKSrcBlt","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous2_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"ddckCKDestOverlay","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
+					,{"Name":"ddckCKDestBlt","Type":{"Kind":"ApiRef","Name":"DDCOLORKEY","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -17638,7 +17622,7 @@
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ddsCapsMore","Type":{"Kind":"ApiRef","Name":"DDSCAPSEX","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]},"Attrs":[]}
-			,{"Name":"ddsExtendedHeapRestrictions","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NTExtendedHeapRestrictions","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+			,{"Name":"ddsExtendedHeapRestrictions","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NTExtendedHeapRestrictions","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -18878,7 +18862,7 @@
 		]
 	}
 	,{
-		"Name":"MDL"
+		"Name":"DDMDL"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -18886,29 +18870,16 @@
 		,"PackingSize":0
 		,"SizeField":""
 		,"Fields":[
-			{"Name":"MdlNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MDL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+			{"Name":"MdlNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDMDL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 			,{"Name":"MdlSize","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"MdlFlags","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"Process","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_EPROCESS","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+			,{"Name":"Process","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"lpMappedSystemVa","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 			,{"Name":"lpStartVa","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 			,{"Name":"ByteCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ByteOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
-			{
-				"Name":"_EPROCESS"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Struct"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-				]
-				,"NestedTypes":[
-				]
-			}
 		]
 	}
 	,{
@@ -19247,7 +19218,7 @@
 			,{"Name":"dwEndLine","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwTransferID","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"dwTransferFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"lpDestMDL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MDL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
+			,{"Name":"lpDestMDL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DDMDL","TargetKind":"Default","Api":"Graphics.DirectDraw","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
