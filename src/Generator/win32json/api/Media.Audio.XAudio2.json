@@ -3190,7 +3190,7 @@
 	{
 		"Name":"CreateFX"
 		,"SetLastError":false
-		,"DllImport":"XAudio2_9.dll"
+		,"DllImport":"XAudio2_8.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3206,7 +3206,7 @@
 	,{
 		"Name":"XAudio2CreateWithVersionInfo"
 		,"SetLastError":false
-		,"DllImport":"XAudio2_9.dll"
+		,"DllImport":"XAudio2_8.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3222,7 +3222,7 @@
 	,{
 		"Name":"CreateAudioVolumeMeter"
 		,"SetLastError":false
-		,"DllImport":"xaudio2_9.dll"
+		,"DllImport":"XAudio2_8.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -3235,7 +3235,7 @@
 	,{
 		"Name":"CreateAudioReverb"
 		,"SetLastError":false
-		,"DllImport":"xaudio2_9.dll"
+		,"DllImport":"XAudio2_8.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

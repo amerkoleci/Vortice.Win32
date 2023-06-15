@@ -398,7 +398,6 @@
 			,{"Name":"D3DCOMPILER_STRIP_TEST_BLOBS","Value":4}
 			,{"Name":"D3DCOMPILER_STRIP_PRIVATE_DATA","Value":8}
 			,{"Name":"D3DCOMPILER_STRIP_ROOT_SIGNATURE","Value":16}
-			,{"Name":"D3DCOMPILER_STRIP_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}

@@ -1143,7 +1143,6 @@
 			,{"Name":"DXC_OUT_REFLECTION","Value":8}
 			,{"Name":"DXC_OUT_ROOT_SIGNATURE","Value":9}
 			,{"Name":"DXC_OUT_EXTRA_OUTPUTS","Value":10}
-			,{"Name":"DXC_OUT_FORCE_DWORD","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
