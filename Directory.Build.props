@@ -9,6 +9,7 @@
     <LangVersion>11.0</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <DebugType>embedded</DebugType>
     <Features>strict</Features>
     <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
