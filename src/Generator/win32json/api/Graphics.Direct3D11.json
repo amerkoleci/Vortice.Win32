@@ -8624,7 +8624,7 @@
 		,"PackingSize":0
 		,"SizeField":""
 		,"Fields":[
-			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"NativeBitfield","Name":"Usage","Offset":"0","Length":"1"},{"Kind":"NativeBitfield","Name":"RGB_Range","Offset":"1","Length":"1"},{"Kind":"NativeBitfield","Name":"YCbCr_Matrix","Offset":"2","Length":"1"},{"Kind":"NativeBitfield","Name":"YCbCr_xvYCC","Offset":"3","Length":"1"},{"Kind":"NativeBitfield","Name":"Nominal_Range","Offset":"4","Length":"2"},{"Kind":"NativeBitfield","Name":"Reserved","Offset":"6","Length":"26"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -8895,7 +8895,7 @@
 				,"PackingSize":0
 				,"SizeField":""
 				,"Fields":[
-					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"NativeBitfield","Name":"ProtectionEnabled","Offset":"0","Length":"1"},{"Kind":"NativeBitfield","Name":"OverlayOrFullscreenRequired","Offset":"1","Length":"1"},{"Kind":"NativeBitfield","Name":"Reserved","Offset":"2","Length":"30"}]}
 				]
 				,"NestedTypes":[
 				]

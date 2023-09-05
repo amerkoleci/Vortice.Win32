@@ -346,7 +346,7 @@ public enum WICComponentSigning
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties"]/*' />
 /// <unmanaged>WICGifLogicalScreenDescriptorProperties</unmanaged>
-public enum WICGifLogicalScreenDescriptorProperties : uint
+public enum WICGifLogicalScreenDescriptorProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenSignature"]/*' />
 	/// <unmanaged>WICGifLogicalScreenSignature</unmanaged>
@@ -379,7 +379,7 @@ public enum WICGifLogicalScreenDescriptorProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties"]/*' />
 /// <unmanaged>WICGifImageDescriptorProperties</unmanaged>
-public enum WICGifImageDescriptorProperties : uint
+public enum WICGifImageDescriptorProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLeft"]/*' />
 	/// <unmanaged>WICGifImageDescriptorLeft</unmanaged>
@@ -409,7 +409,7 @@ public enum WICGifImageDescriptorProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties"]/*' />
 /// <unmanaged>WICGifGraphicControlExtensionProperties</unmanaged>
-public enum WICGifGraphicControlExtensionProperties : uint
+public enum WICGifGraphicControlExtensionProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionDisposal"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionDisposal</unmanaged>
@@ -430,7 +430,7 @@ public enum WICGifGraphicControlExtensionProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties"]/*' />
 /// <unmanaged>WICGifApplicationExtensionProperties</unmanaged>
-public enum WICGifApplicationExtensionProperties : uint
+public enum WICGifApplicationExtensionProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties::WICGifApplicationExtensionApplication"]/*' />
 	/// <unmanaged>WICGifApplicationExtensionApplication</unmanaged>
@@ -442,7 +442,7 @@ public enum WICGifApplicationExtensionProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifCommentExtensionProperties"]/*' />
 /// <unmanaged>WICGifCommentExtensionProperties</unmanaged>
-public enum WICGifCommentExtensionProperties : uint
+public enum WICGifCommentExtensionProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifCommentExtensionProperties::WICGifCommentExtensionText"]/*' />
 	/// <unmanaged>WICGifCommentExtensionText</unmanaged>
@@ -451,7 +451,7 @@ public enum WICGifCommentExtensionProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegCommentProperties"]/*' />
 /// <unmanaged>WICJpegCommentProperties</unmanaged>
-public enum WICJpegCommentProperties : uint
+public enum WICJpegCommentProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegCommentProperties::WICJpegCommentText"]/*' />
 	/// <unmanaged>WICJpegCommentText</unmanaged>
@@ -460,7 +460,7 @@ public enum WICJpegCommentProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegLuminanceProperties"]/*' />
 /// <unmanaged>WICJpegLuminanceProperties</unmanaged>
-public enum WICJpegLuminanceProperties : uint
+public enum WICJpegLuminanceProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegLuminanceProperties::WICJpegLuminanceTable"]/*' />
 	/// <unmanaged>WICJpegLuminanceTable</unmanaged>
@@ -469,7 +469,7 @@ public enum WICJpegLuminanceProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegChrominanceProperties"]/*' />
 /// <unmanaged>WICJpegChrominanceProperties</unmanaged>
-public enum WICJpegChrominanceProperties : uint
+public enum WICJpegChrominanceProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegChrominanceProperties::WICJpegChrominanceTable"]/*' />
 	/// <unmanaged>WICJpegChrominanceTable</unmanaged>
@@ -478,7 +478,7 @@ public enum WICJpegChrominanceProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties"]/*' />
 /// <unmanaged>WIC8BIMIptcProperties</unmanaged>
-public enum WIC8BIMIptcProperties : uint
+public enum WIC8BIMIptcProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties::WIC8BIMIptcPString"]/*' />
 	/// <unmanaged>WIC8BIMIptcPString</unmanaged>
@@ -490,7 +490,7 @@ public enum WIC8BIMIptcProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties"]/*' />
 /// <unmanaged>WIC8BIMResolutionInfoProperties</unmanaged>
-public enum WIC8BIMResolutionInfoProperties : uint
+public enum WIC8BIMResolutionInfoProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties::WIC8BIMResolutionInfoPString"]/*' />
 	/// <unmanaged>WIC8BIMResolutionInfoPString</unmanaged>
@@ -517,7 +517,7 @@ public enum WIC8BIMResolutionInfoProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcDigestProperties"]/*' />
 /// <unmanaged>WIC8BIMIptcDigestProperties</unmanaged>
-public enum WIC8BIMIptcDigestProperties : uint
+public enum WIC8BIMIptcDigestProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcDigestProperties::WIC8BIMIptcDigestPString"]/*' />
 	/// <unmanaged>WIC8BIMIptcDigestPString</unmanaged>
@@ -529,7 +529,7 @@ public enum WIC8BIMIptcDigestProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngGamaProperties"]/*' />
 /// <unmanaged>WICPngGamaProperties</unmanaged>
-public enum WICPngGamaProperties : uint
+public enum WICPngGamaProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngGamaProperties::WICPngGamaGamma"]/*' />
 	/// <unmanaged>WICPngGamaGamma</unmanaged>
@@ -538,7 +538,7 @@ public enum WICPngGamaProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngBkgdProperties"]/*' />
 /// <unmanaged>WICPngBkgdProperties</unmanaged>
-public enum WICPngBkgdProperties : uint
+public enum WICPngBkgdProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngBkgdProperties::WICPngBkgdBackgroundColor"]/*' />
 	/// <unmanaged>WICPngBkgdBackgroundColor</unmanaged>
@@ -547,7 +547,7 @@ public enum WICPngBkgdProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties"]/*' />
 /// <unmanaged>WICPngItxtProperties</unmanaged>
-public enum WICPngItxtProperties : uint
+public enum WICPngItxtProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtKeyword"]/*' />
 	/// <unmanaged>WICPngItxtKeyword</unmanaged>
@@ -568,7 +568,7 @@ public enum WICPngItxtProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties"]/*' />
 /// <unmanaged>WICPngChrmProperties</unmanaged>
-public enum WICPngChrmProperties : uint
+public enum WICPngChrmProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmWhitePointX"]/*' />
 	/// <unmanaged>WICPngChrmWhitePointX</unmanaged>
@@ -598,7 +598,7 @@ public enum WICPngChrmProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngHistProperties"]/*' />
 /// <unmanaged>WICPngHistProperties</unmanaged>
-public enum WICPngHistProperties : uint
+public enum WICPngHistProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngHistProperties::WICPngHistFrequencies"]/*' />
 	/// <unmanaged>WICPngHistFrequencies</unmanaged>
@@ -607,7 +607,7 @@ public enum WICPngHistProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngIccpProperties"]/*' />
 /// <unmanaged>WICPngIccpProperties</unmanaged>
-public enum WICPngIccpProperties : uint
+public enum WICPngIccpProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngIccpProperties::WICPngIccpProfileName"]/*' />
 	/// <unmanaged>WICPngIccpProfileName</unmanaged>
@@ -619,7 +619,7 @@ public enum WICPngIccpProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngSrgbProperties"]/*' />
 /// <unmanaged>WICPngSrgbProperties</unmanaged>
-public enum WICPngSrgbProperties : uint
+public enum WICPngSrgbProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngSrgbProperties::WICPngSrgbRenderingIntent"]/*' />
 	/// <unmanaged>WICPngSrgbRenderingIntent</unmanaged>
@@ -628,7 +628,7 @@ public enum WICPngSrgbProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties"]/*' />
 /// <unmanaged>WICPngTimeProperties</unmanaged>
-public enum WICPngTimeProperties : uint
+public enum WICPngTimeProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties::WICPngTimeYear"]/*' />
 	/// <unmanaged>WICPngTimeYear</unmanaged>
@@ -652,7 +652,7 @@ public enum WICPngTimeProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICHeifProperties"]/*' />
 /// <unmanaged>WICHeifProperties</unmanaged>
-public enum WICHeifProperties : uint
+public enum WICHeifProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifProperties::WICHeifOrientation"]/*' />
 	/// <unmanaged>WICHeifOrientation</unmanaged>
@@ -661,7 +661,7 @@ public enum WICHeifProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties"]/*' />
 /// <unmanaged>WICHeifHdrProperties</unmanaged>
-public enum WICHeifHdrProperties : uint
+public enum WICHeifHdrProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMaximumLuminanceLevel</unmanaged>
@@ -682,7 +682,7 @@ public enum WICHeifHdrProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnimProperties"]/*' />
 /// <unmanaged>WICWebpAnimProperties</unmanaged>
-public enum WICWebpAnimProperties : uint
+public enum WICWebpAnimProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnimProperties::WICWebpAnimLoopCount"]/*' />
 	/// <unmanaged>WICWebpAnimLoopCount</unmanaged>
@@ -691,7 +691,7 @@ public enum WICWebpAnimProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnmfProperties"]/*' />
 /// <unmanaged>WICWebpAnmfProperties</unmanaged>
-public enum WICWebpAnmfProperties : uint
+public enum WICWebpAnmfProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnmfProperties::WICWebpAnmfFrameDuration"]/*' />
 	/// <unmanaged>WICWebpAnmfFrameDuration</unmanaged>
@@ -700,7 +700,7 @@ public enum WICWebpAnmfProperties : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel"]/*' />
 /// <unmanaged>WICSectionAccessLevel</unmanaged>
-public enum WICSectionAccessLevel : uint
+public enum WICSectionAccessLevel
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel::WICSectionAccessLevelRead"]/*' />
 	/// <unmanaged>WICSectionAccessLevelRead</unmanaged>
@@ -712,7 +712,7 @@ public enum WICSectionAccessLevel : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation"]/*' />
 /// <unmanaged>WICPixelFormatNumericRepresentation</unmanaged>
-public enum WICPixelFormatNumericRepresentation : uint
+public enum WICPixelFormatNumericRepresentation
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation::WICPixelFormatNumericRepresentationUnspecified"]/*' />
 	/// <unmanaged>WICPixelFormatNumericRepresentationUnspecified</unmanaged>
@@ -748,7 +748,7 @@ public enum WICPlanarOptions
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions"]/*' />
 /// <unmanaged>WICJpegIndexingOptions</unmanaged>
-public enum WICJpegIndexingOptions : uint
+public enum WICJpegIndexingOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions::WICJpegIndexingOptionsGenerateOnDemand"]/*' />
 	/// <unmanaged>WICJpegIndexingOptionsGenerateOnDemand</unmanaged>
@@ -760,7 +760,7 @@ public enum WICJpegIndexingOptions : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix"]/*' />
 /// <unmanaged>WICJpegTransferMatrix</unmanaged>
-public enum WICJpegTransferMatrix : uint
+public enum WICJpegTransferMatrix
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix::WICJpegTransferMatrixIdentity"]/*' />
 	/// <unmanaged>WICJpegTransferMatrixIdentity</unmanaged>
@@ -772,7 +772,7 @@ public enum WICJpegTransferMatrix : uint
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType"]/*' />
 /// <unmanaged>WICJpegScanType</unmanaged>
-public enum WICJpegScanType : uint
+public enum WICJpegScanType
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypeInterleaved"]/*' />
 	/// <unmanaged>WICJpegScanTypeInterleaved</unmanaged>

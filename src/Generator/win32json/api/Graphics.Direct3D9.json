@@ -5132,7 +5132,7 @@
 			,{"Name":"D3DBLEND_SRCCOLOR2","Value":16}
 			,{"Name":"D3DBLEND_INVSRCCOLOR2","Value":17}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3DBLENDOP"
@@ -5148,7 +5148,7 @@
 			,{"Name":"D3DBLENDOP_MIN","Value":4}
 			,{"Name":"D3DBLENDOP_MAX","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3DTEXTUREADDRESS"
@@ -5178,7 +5178,7 @@
 			,{"Name":"D3DCULL_CW","Value":2}
 			,{"Name":"D3DCULL_CCW","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3DCMPFUNC"
@@ -5216,7 +5216,7 @@
 			,{"Name":"D3DSTENCILOP_INCR","Value":7}
 			,{"Name":"D3DSTENCILOP_DECR","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3DFOGMODE"
@@ -5970,7 +5970,7 @@
 			,{"Name":"D3DDEVTYPE_SW","Value":3}
 			,{"Name":"D3DDEVTYPE_NULLREF","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3DMULTISAMPLE_TYPE"
@@ -6124,7 +6124,7 @@
 			,{"Name":"D3DSWAPEFFECT_OVERLAY","Value":4}
 			,{"Name":"D3DSWAPEFFECT_FLIPEX","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3DPOOL"
@@ -6139,7 +6139,7 @@
 			,{"Name":"D3DPOOL_SYSTEMMEM","Value":2}
 			,{"Name":"D3DPOOL_SCRATCH","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3DPRESENT_PARAMETERS"
@@ -6196,7 +6196,7 @@
 			,{"Name":"D3DBACKBUFFER_TYPE_LEFT","Value":1}
 			,{"Name":"D3DBACKBUFFER_TYPE_RIGHT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3DRESOURCETYPE"
@@ -6886,7 +6886,7 @@
 						,"PackingSize":0
 						,"SizeField":""
 						,"Fields":[
-							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"NativeBitfield","Name":"ProtectionEnabled","Offset":"0","Length":"1"},{"Kind":"NativeBitfield","Name":"OverlayOrFullscreenRequired","Offset":"1","Length":"1"},{"Kind":"NativeBitfield","Name":"Reserved","Offset":"2","Length":"30"}]}
 						]
 						,"NestedTypes":[
 						]

@@ -517,7 +517,7 @@
 			{"Name":"D2D1_GAMMA_2_2","Value":0}
 			,{"Name":"D2D1_GAMMA_1_0","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_OPACITY_MASK_CONTENT"
@@ -531,7 +531,7 @@
 			,{"Name":"D2D1_OPACITY_MASK_CONTENT_TEXT_NATURAL","Value":1}
 			,{"Name":"D2D1_OPACITY_MASK_CONTENT_TEXT_GDI_COMPATIBLE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_EXTEND_MODE"
@@ -545,7 +545,7 @@
 			,{"Name":"D2D1_EXTEND_MODE_WRAP","Value":1}
 			,{"Name":"D2D1_EXTEND_MODE_MIRROR","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_ANTIALIAS_MODE"
@@ -558,7 +558,7 @@
 			{"Name":"D2D1_ANTIALIAS_MODE_PER_PRIMITIVE","Value":0}
 			,{"Name":"D2D1_ANTIALIAS_MODE_ALIASED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TEXT_ANTIALIAS_MODE"
@@ -573,7 +573,7 @@
 			,{"Name":"D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE","Value":2}
 			,{"Name":"D2D1_TEXT_ANTIALIAS_MODE_ALIASED","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BITMAP_INTERPOLATION_MODE"
@@ -586,7 +586,7 @@
 			{"Name":"D2D1_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR","Value":0}
 			,{"Name":"D2D1_BITMAP_INTERPOLATION_MODE_LINEAR","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DRAW_TEXT_OPTIONS"
@@ -602,7 +602,7 @@
 			,{"Name":"D2D1_DRAW_TEXT_OPTIONS_DISABLE_COLOR_BITMAP_SNAPPING","Value":8}
 			,{"Name":"D2D1_DRAW_TEXT_OPTIONS_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BITMAP_PROPERTIES"
@@ -709,7 +709,7 @@
 			{"Name":"D2D1_ARC_SIZE_SMALL","Value":0}
 			,{"Name":"D2D1_ARC_SIZE_LARGE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_CAP_STYLE"
@@ -724,7 +724,7 @@
 			,{"Name":"D2D1_CAP_STYLE_ROUND","Value":2}
 			,{"Name":"D2D1_CAP_STYLE_TRIANGLE","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DASH_STYLE"
@@ -741,7 +741,7 @@
 			,{"Name":"D2D1_DASH_STYLE_DASH_DOT_DOT","Value":4}
 			,{"Name":"D2D1_DASH_STYLE_CUSTOM","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_LINE_JOIN"
@@ -756,7 +756,7 @@
 			,{"Name":"D2D1_LINE_JOIN_ROUND","Value":2}
 			,{"Name":"D2D1_LINE_JOIN_MITER_OR_BEVEL","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COMBINE_MODE"
@@ -771,7 +771,7 @@
 			,{"Name":"D2D1_COMBINE_MODE_XOR","Value":2}
 			,{"Name":"D2D1_COMBINE_MODE_EXCLUDE","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_GEOMETRY_RELATION"
@@ -787,7 +787,7 @@
 			,{"Name":"D2D1_GEOMETRY_RELATION_CONTAINS","Value":3}
 			,{"Name":"D2D1_GEOMETRY_RELATION_OVERLAP","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_GEOMETRY_SIMPLIFICATION_OPTION"
@@ -800,7 +800,7 @@
 			{"Name":"D2D1_GEOMETRY_SIMPLIFICATION_OPTION_CUBICS_AND_LINES","Value":0}
 			,{"Name":"D2D1_GEOMETRY_SIMPLIFICATION_OPTION_LINES","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TRIANGLE"
@@ -829,7 +829,7 @@
 			{"Name":"D2D1_SWEEP_DIRECTION_COUNTER_CLOCKWISE","Value":0}
 			,{"Name":"D2D1_SWEEP_DIRECTION_CLOCKWISE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_ARC_SEGMENT"
@@ -927,7 +927,7 @@
 			{"Name":"D2D1_LAYER_OPTIONS_NONE","Value":0}
 			,{"Name":"D2D1_LAYER_OPTIONS_INITIALIZE_FOR_CLEARTYPE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_LAYER_PARAMETERS"
@@ -960,7 +960,7 @@
 			{"Name":"D2D1_WINDOW_STATE_NONE","Value":0}
 			,{"Name":"D2D1_WINDOW_STATE_OCCLUDED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_RENDER_TARGET_TYPE"
@@ -974,7 +974,7 @@
 			,{"Name":"D2D1_RENDER_TARGET_TYPE_SOFTWARE","Value":1}
 			,{"Name":"D2D1_RENDER_TARGET_TYPE_HARDWARE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_FEATURE_LEVEL"
@@ -988,7 +988,7 @@
 			,{"Name":"D2D1_FEATURE_LEVEL_9","Value":37120}
 			,{"Name":"D2D1_FEATURE_LEVEL_10","Value":40960}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_RENDER_TARGET_USAGE"
@@ -1002,7 +1002,7 @@
 			,{"Name":"D2D1_RENDER_TARGET_USAGE_FORCE_BITMAP_REMOTING","Value":1}
 			,{"Name":"D2D1_RENDER_TARGET_USAGE_GDI_COMPATIBLE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_PRESENT_OPTIONS"
@@ -1016,7 +1016,7 @@
 			,{"Name":"D2D1_PRESENT_OPTIONS_RETAIN_CONTENTS","Value":1}
 			,{"Name":"D2D1_PRESENT_OPTIONS_IMMEDIATELY","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_RENDER_TARGET_PROPERTIES"
@@ -1064,7 +1064,7 @@
 			{"Name":"D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE","Value":0}
 			,{"Name":"D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_GDI_COMPATIBLE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DRAWING_STATE_DESCRIPTION"
@@ -1095,7 +1095,7 @@
 			{"Name":"D2D1_DC_INITIALIZE_MODE_COPY","Value":0}
 			,{"Name":"D2D1_DC_INITIALIZE_MODE_CLEAR","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DEBUG_LEVEL"
@@ -1110,7 +1110,7 @@
 			,{"Name":"D2D1_DEBUG_LEVEL_WARNING","Value":2}
 			,{"Name":"D2D1_DEBUG_LEVEL_INFORMATION","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_FACTORY_TYPE"
@@ -1123,7 +1123,7 @@
 			{"Name":"D2D1_FACTORY_TYPE_SINGLE_THREADED","Value":0}
 			,{"Name":"D2D1_FACTORY_TYPE_MULTI_THREADED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_FACTORY_OPTIONS"
@@ -3477,7 +3477,7 @@
 			,{"Name":"D2D1_CHANNEL_SELECTOR_B","Value":2}
 			,{"Name":"D2D1_CHANNEL_SELECTOR_A","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BITMAPSOURCE_ORIENTATION"
@@ -3496,7 +3496,7 @@
 			,{"Name":"D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE90_FLIP_HORIZONTAL","Value":7}
 			,{"Name":"D2D1_BITMAPSOURCE_ORIENTATION_ROTATE_CLOCKWISE270","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_GAUSSIANBLUR_PROP"
@@ -3510,7 +3510,7 @@
 			,{"Name":"D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION","Value":1}
 			,{"Name":"D2D1_GAUSSIANBLUR_PROP_BORDER_MODE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_GAUSSIANBLUR_OPTIMIZATION"
@@ -3524,7 +3524,7 @@
 			,{"Name":"D2D1_GAUSSIANBLUR_OPTIMIZATION_BALANCED","Value":1}
 			,{"Name":"D2D1_GAUSSIANBLUR_OPTIMIZATION_QUALITY","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DIRECTIONALBLUR_PROP"
@@ -3539,7 +3539,7 @@
 			,{"Name":"D2D1_DIRECTIONALBLUR_PROP_OPTIMIZATION","Value":2}
 			,{"Name":"D2D1_DIRECTIONALBLUR_PROP_BORDER_MODE","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DIRECTIONALBLUR_OPTIMIZATION"
@@ -3553,7 +3553,7 @@
 			,{"Name":"D2D1_DIRECTIONALBLUR_OPTIMIZATION_BALANCED","Value":1}
 			,{"Name":"D2D1_DIRECTIONALBLUR_OPTIMIZATION_QUALITY","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SHADOW_PROP"
@@ -3567,7 +3567,7 @@
 			,{"Name":"D2D1_SHADOW_PROP_COLOR","Value":1}
 			,{"Name":"D2D1_SHADOW_PROP_OPTIMIZATION","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SHADOW_OPTIMIZATION"
@@ -3581,7 +3581,7 @@
 			,{"Name":"D2D1_SHADOW_OPTIMIZATION_BALANCED","Value":1}
 			,{"Name":"D2D1_SHADOW_OPTIMIZATION_QUALITY","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BLEND_PROP"
@@ -3593,7 +3593,7 @@
 		,"Values":[
 			{"Name":"D2D1_BLEND_PROP_MODE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SATURATION_PROP"
@@ -3605,7 +3605,7 @@
 		,"Values":[
 			{"Name":"D2D1_SATURATION_PROP_SATURATION","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_HUEROTATION_PROP"
@@ -3617,7 +3617,7 @@
 		,"Values":[
 			{"Name":"D2D1_HUEROTATION_PROP_ANGLE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COLORMATRIX_PROP"
@@ -3631,7 +3631,7 @@
 			,{"Name":"D2D1_COLORMATRIX_PROP_ALPHA_MODE","Value":1}
 			,{"Name":"D2D1_COLORMATRIX_PROP_CLAMP_OUTPUT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BITMAPSOURCE_PROP"
@@ -3648,7 +3648,7 @@
 			,{"Name":"D2D1_BITMAPSOURCE_PROP_ALPHA_MODE","Value":4}
 			,{"Name":"D2D1_BITMAPSOURCE_PROP_ORIENTATION","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BITMAPSOURCE_INTERPOLATION_MODE"
@@ -3664,7 +3664,7 @@
 			,{"Name":"D2D1_BITMAPSOURCE_INTERPOLATION_MODE_FANT","Value":6}
 			,{"Name":"D2D1_BITMAPSOURCE_INTERPOLATION_MODE_MIPMAP_LINEAR","Value":7}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BITMAPSOURCE_ALPHA_MODE"
@@ -3677,7 +3677,7 @@
 			{"Name":"D2D1_BITMAPSOURCE_ALPHA_MODE_PREMULTIPLIED","Value":1}
 			,{"Name":"D2D1_BITMAPSOURCE_ALPHA_MODE_STRAIGHT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COMPOSITE_PROP"
@@ -3689,7 +3689,7 @@
 		,"Values":[
 			{"Name":"D2D1_COMPOSITE_PROP_MODE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_3DTRANSFORM_PROP"
@@ -3703,7 +3703,7 @@
 			,{"Name":"D2D1_3DTRANSFORM_PROP_BORDER_MODE","Value":1}
 			,{"Name":"D2D1_3DTRANSFORM_PROP_TRANSFORM_MATRIX","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_3DTRANSFORM_INTERPOLATION_MODE"
@@ -3719,7 +3719,7 @@
 			,{"Name":"D2D1_3DTRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR","Value":3}
 			,{"Name":"D2D1_3DTRANSFORM_INTERPOLATION_MODE_ANISOTROPIC","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_3DPERSPECTIVETRANSFORM_PROP"
@@ -3738,7 +3738,7 @@
 			,{"Name":"D2D1_3DPERSPECTIVETRANSFORM_PROP_ROTATION_ORIGIN","Value":6}
 			,{"Name":"D2D1_3DPERSPECTIVETRANSFORM_PROP_ROTATION","Value":7}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE"
@@ -3754,7 +3754,7 @@
 			,{"Name":"D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_MULTI_SAMPLE_LINEAR","Value":3}
 			,{"Name":"D2D1_3DPERSPECTIVETRANSFORM_INTERPOLATION_MODE_ANISOTROPIC","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_2DAFFINETRANSFORM_PROP"
@@ -3769,7 +3769,7 @@
 			,{"Name":"D2D1_2DAFFINETRANSFORM_PROP_TRANSFORM_MATRIX","Value":2}
 			,{"Name":"D2D1_2DAFFINETRANSFORM_PROP_SHARPNESS","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DPICOMPENSATION_PROP"
@@ -3783,7 +3783,7 @@
 			,{"Name":"D2D1_DPICOMPENSATION_PROP_BORDER_MODE","Value":1}
 			,{"Name":"D2D1_DPICOMPENSATION_PROP_INPUT_DPI","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DPICOMPENSATION_INTERPOLATION_MODE"
@@ -3800,7 +3800,7 @@
 			,{"Name":"D2D1_DPICOMPENSATION_INTERPOLATION_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_DPICOMPENSATION_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SCALE_PROP"
@@ -3816,7 +3816,7 @@
 			,{"Name":"D2D1_SCALE_PROP_BORDER_MODE","Value":3}
 			,{"Name":"D2D1_SCALE_PROP_SHARPNESS","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SCALE_INTERPOLATION_MODE"
@@ -3833,7 +3833,7 @@
 			,{"Name":"D2D1_SCALE_INTERPOLATION_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_SCALE_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TURBULENCE_PROP"
@@ -3851,7 +3851,7 @@
 			,{"Name":"D2D1_TURBULENCE_PROP_NOISE","Value":5}
 			,{"Name":"D2D1_TURBULENCE_PROP_STITCHABLE","Value":6}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DISPLACEMENTMAP_PROP"
@@ -3865,7 +3865,7 @@
 			,{"Name":"D2D1_DISPLACEMENTMAP_PROP_X_CHANNEL_SELECT","Value":1}
 			,{"Name":"D2D1_DISPLACEMENTMAP_PROP_Y_CHANNEL_SELECT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COLORMANAGEMENT_PROP"
@@ -3882,7 +3882,7 @@
 			,{"Name":"D2D1_COLORMANAGEMENT_PROP_ALPHA_MODE","Value":4}
 			,{"Name":"D2D1_COLORMANAGEMENT_PROP_QUALITY","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COLORMANAGEMENT_ALPHA_MODE"
@@ -3895,7 +3895,7 @@
 			{"Name":"D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED","Value":1}
 			,{"Name":"D2D1_COLORMANAGEMENT_ALPHA_MODE_STRAIGHT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COLORMANAGEMENT_QUALITY"
@@ -3909,7 +3909,7 @@
 			,{"Name":"D2D1_COLORMANAGEMENT_QUALITY_NORMAL","Value":1}
 			,{"Name":"D2D1_COLORMANAGEMENT_QUALITY_BEST","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COLORMANAGEMENT_RENDERING_INTENT"
@@ -3924,7 +3924,7 @@
 			,{"Name":"D2D1_COLORMANAGEMENT_RENDERING_INTENT_SATURATION","Value":2}
 			,{"Name":"D2D1_COLORMANAGEMENT_RENDERING_INTENT_ABSOLUTE_COLORIMETRIC","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_HISTOGRAM_PROP"
@@ -3938,7 +3938,7 @@
 			,{"Name":"D2D1_HISTOGRAM_PROP_CHANNEL_SELECT","Value":1}
 			,{"Name":"D2D1_HISTOGRAM_PROP_HISTOGRAM_OUTPUT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_POINTSPECULAR_PROP"
@@ -3956,7 +3956,7 @@
 			,{"Name":"D2D1_POINTSPECULAR_PROP_KERNEL_UNIT_LENGTH","Value":5}
 			,{"Name":"D2D1_POINTSPECULAR_PROP_SCALE_MODE","Value":6}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_POINTSPECULAR_SCALE_MODE"
@@ -3973,7 +3973,7 @@
 			,{"Name":"D2D1_POINTSPECULAR_SCALE_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_POINTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SPOTSPECULAR_PROP"
@@ -3994,7 +3994,7 @@
 			,{"Name":"D2D1_SPOTSPECULAR_PROP_KERNEL_UNIT_LENGTH","Value":8}
 			,{"Name":"D2D1_SPOTSPECULAR_PROP_SCALE_MODE","Value":9}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SPOTSPECULAR_SCALE_MODE"
@@ -4011,7 +4011,7 @@
 			,{"Name":"D2D1_SPOTSPECULAR_SCALE_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_SPOTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DISTANTSPECULAR_PROP"
@@ -4030,7 +4030,7 @@
 			,{"Name":"D2D1_DISTANTSPECULAR_PROP_KERNEL_UNIT_LENGTH","Value":6}
 			,{"Name":"D2D1_DISTANTSPECULAR_PROP_SCALE_MODE","Value":7}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DISTANTSPECULAR_SCALE_MODE"
@@ -4047,7 +4047,7 @@
 			,{"Name":"D2D1_DISTANTSPECULAR_SCALE_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_DISTANTSPECULAR_SCALE_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_POINTDIFFUSE_PROP"
@@ -4064,7 +4064,7 @@
 			,{"Name":"D2D1_POINTDIFFUSE_PROP_KERNEL_UNIT_LENGTH","Value":4}
 			,{"Name":"D2D1_POINTDIFFUSE_PROP_SCALE_MODE","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_POINTDIFFUSE_SCALE_MODE"
@@ -4081,7 +4081,7 @@
 			,{"Name":"D2D1_POINTDIFFUSE_SCALE_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_POINTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SPOTDIFFUSE_PROP"
@@ -4101,7 +4101,7 @@
 			,{"Name":"D2D1_SPOTDIFFUSE_PROP_KERNEL_UNIT_LENGTH","Value":7}
 			,{"Name":"D2D1_SPOTDIFFUSE_PROP_SCALE_MODE","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SPOTDIFFUSE_SCALE_MODE"
@@ -4118,7 +4118,7 @@
 			,{"Name":"D2D1_SPOTDIFFUSE_SCALE_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_SPOTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DISTANTDIFFUSE_PROP"
@@ -4136,7 +4136,7 @@
 			,{"Name":"D2D1_DISTANTDIFFUSE_PROP_KERNEL_UNIT_LENGTH","Value":5}
 			,{"Name":"D2D1_DISTANTDIFFUSE_PROP_SCALE_MODE","Value":6}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DISTANTDIFFUSE_SCALE_MODE"
@@ -4153,7 +4153,7 @@
 			,{"Name":"D2D1_DISTANTDIFFUSE_SCALE_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_DISTANTDIFFUSE_SCALE_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_FLOOD_PROP"
@@ -4165,7 +4165,7 @@
 		,"Values":[
 			{"Name":"D2D1_FLOOD_PROP_COLOR","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_LINEARTRANSFER_PROP"
@@ -4189,7 +4189,7 @@
 			,{"Name":"D2D1_LINEARTRANSFER_PROP_ALPHA_DISABLE","Value":11}
 			,{"Name":"D2D1_LINEARTRANSFER_PROP_CLAMP_OUTPUT","Value":12}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_GAMMATRANSFER_PROP"
@@ -4217,7 +4217,7 @@
 			,{"Name":"D2D1_GAMMATRANSFER_PROP_ALPHA_DISABLE","Value":15}
 			,{"Name":"D2D1_GAMMATRANSFER_PROP_CLAMP_OUTPUT","Value":16}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TABLETRANSFER_PROP"
@@ -4237,7 +4237,7 @@
 			,{"Name":"D2D1_TABLETRANSFER_PROP_ALPHA_DISABLE","Value":7}
 			,{"Name":"D2D1_TABLETRANSFER_PROP_CLAMP_OUTPUT","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DISCRETETRANSFER_PROP"
@@ -4257,7 +4257,7 @@
 			,{"Name":"D2D1_DISCRETETRANSFER_PROP_ALPHA_DISABLE","Value":7}
 			,{"Name":"D2D1_DISCRETETRANSFER_PROP_CLAMP_OUTPUT","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_CONVOLVEMATRIX_PROP"
@@ -4279,7 +4279,7 @@
 			,{"Name":"D2D1_CONVOLVEMATRIX_PROP_BORDER_MODE","Value":9}
 			,{"Name":"D2D1_CONVOLVEMATRIX_PROP_CLAMP_OUTPUT","Value":10}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_CONVOLVEMATRIX_SCALE_MODE"
@@ -4296,7 +4296,7 @@
 			,{"Name":"D2D1_CONVOLVEMATRIX_SCALE_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_CONVOLVEMATRIX_SCALE_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BRIGHTNESS_PROP"
@@ -4309,7 +4309,7 @@
 			{"Name":"D2D1_BRIGHTNESS_PROP_WHITE_POINT","Value":0}
 			,{"Name":"D2D1_BRIGHTNESS_PROP_BLACK_POINT","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_ARITHMETICCOMPOSITE_PROP"
@@ -4322,7 +4322,7 @@
 			{"Name":"D2D1_ARITHMETICCOMPOSITE_PROP_COEFFICIENTS","Value":0}
 			,{"Name":"D2D1_ARITHMETICCOMPOSITE_PROP_CLAMP_OUTPUT","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_CROP_PROP"
@@ -4335,7 +4335,7 @@
 			{"Name":"D2D1_CROP_PROP_RECT","Value":0}
 			,{"Name":"D2D1_CROP_PROP_BORDER_MODE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BORDER_PROP"
@@ -4348,7 +4348,7 @@
 			{"Name":"D2D1_BORDER_PROP_EDGE_MODE_X","Value":0}
 			,{"Name":"D2D1_BORDER_PROP_EDGE_MODE_Y","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BORDER_EDGE_MODE"
@@ -4362,7 +4362,7 @@
 			,{"Name":"D2D1_BORDER_EDGE_MODE_WRAP","Value":1}
 			,{"Name":"D2D1_BORDER_EDGE_MODE_MIRROR","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_MORPHOLOGY_PROP"
@@ -4376,7 +4376,7 @@
 			,{"Name":"D2D1_MORPHOLOGY_PROP_WIDTH","Value":1}
 			,{"Name":"D2D1_MORPHOLOGY_PROP_HEIGHT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_MORPHOLOGY_MODE"
@@ -4389,7 +4389,7 @@
 			{"Name":"D2D1_MORPHOLOGY_MODE_ERODE","Value":0}
 			,{"Name":"D2D1_MORPHOLOGY_MODE_DILATE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TILE_PROP"
@@ -4401,7 +4401,7 @@
 		,"Values":[
 			{"Name":"D2D1_TILE_PROP_RECT","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_ATLAS_PROP"
@@ -4414,7 +4414,7 @@
 			{"Name":"D2D1_ATLAS_PROP_INPUT_RECT","Value":0}
 			,{"Name":"D2D1_ATLAS_PROP_INPUT_PADDING_RECT","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_OPACITYMETADATA_PROP"
@@ -4426,7 +4426,7 @@
 		,"Values":[
 			{"Name":"D2D1_OPACITYMETADATA_PROP_INPUT_OPAQUE_RECT","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PD2D1_EFFECT_FACTORY"
@@ -4469,7 +4469,7 @@
 			,{"Name":"D2D1_PROPERTY_TYPE_MATRIX_5X4","Value":17}
 			,{"Name":"D2D1_PROPERTY_TYPE_COLOR_CONTEXT","Value":18}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_PROPERTY"
@@ -4479,18 +4479,18 @@
 		,"Flags":false
 		,"Scoped":false
 		,"Values":[
-			{"Name":"D2D1_PROPERTY_CLSID","Value":2147483648}
-			,{"Name":"D2D1_PROPERTY_DISPLAYNAME","Value":2147483649}
-			,{"Name":"D2D1_PROPERTY_AUTHOR","Value":2147483650}
-			,{"Name":"D2D1_PROPERTY_CATEGORY","Value":2147483651}
-			,{"Name":"D2D1_PROPERTY_DESCRIPTION","Value":2147483652}
-			,{"Name":"D2D1_PROPERTY_INPUTS","Value":2147483653}
-			,{"Name":"D2D1_PROPERTY_CACHED","Value":2147483654}
-			,{"Name":"D2D1_PROPERTY_PRECISION","Value":2147483655}
-			,{"Name":"D2D1_PROPERTY_MIN_INPUTS","Value":2147483656}
-			,{"Name":"D2D1_PROPERTY_MAX_INPUTS","Value":2147483657}
+			{"Name":"D2D1_PROPERTY_CLSID","Value":-2147483648}
+			,{"Name":"D2D1_PROPERTY_DISPLAYNAME","Value":-2147483647}
+			,{"Name":"D2D1_PROPERTY_AUTHOR","Value":-2147483646}
+			,{"Name":"D2D1_PROPERTY_CATEGORY","Value":-2147483645}
+			,{"Name":"D2D1_PROPERTY_DESCRIPTION","Value":-2147483644}
+			,{"Name":"D2D1_PROPERTY_INPUTS","Value":-2147483643}
+			,{"Name":"D2D1_PROPERTY_CACHED","Value":-2147483642}
+			,{"Name":"D2D1_PROPERTY_PRECISION","Value":-2147483641}
+			,{"Name":"D2D1_PROPERTY_MIN_INPUTS","Value":-2147483640}
+			,{"Name":"D2D1_PROPERTY_MAX_INPUTS","Value":-2147483639}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SUBPROPERTY"
@@ -4500,15 +4500,15 @@
 		,"Flags":false
 		,"Scoped":false
 		,"Values":[
-			{"Name":"D2D1_SUBPROPERTY_DISPLAYNAME","Value":2147483648}
-			,{"Name":"D2D1_SUBPROPERTY_ISREADONLY","Value":2147483649}
-			,{"Name":"D2D1_SUBPROPERTY_MIN","Value":2147483650}
-			,{"Name":"D2D1_SUBPROPERTY_MAX","Value":2147483651}
-			,{"Name":"D2D1_SUBPROPERTY_DEFAULT","Value":2147483652}
-			,{"Name":"D2D1_SUBPROPERTY_FIELDS","Value":2147483653}
-			,{"Name":"D2D1_SUBPROPERTY_INDEX","Value":2147483654}
+			{"Name":"D2D1_SUBPROPERTY_DISPLAYNAME","Value":-2147483648}
+			,{"Name":"D2D1_SUBPROPERTY_ISREADONLY","Value":-2147483647}
+			,{"Name":"D2D1_SUBPROPERTY_MIN","Value":-2147483646}
+			,{"Name":"D2D1_SUBPROPERTY_MAX","Value":-2147483645}
+			,{"Name":"D2D1_SUBPROPERTY_DEFAULT","Value":-2147483644}
+			,{"Name":"D2D1_SUBPROPERTY_FIELDS","Value":-2147483643}
+			,{"Name":"D2D1_SUBPROPERTY_INDEX","Value":-2147483642}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BITMAP_OPTIONS"
@@ -4524,7 +4524,7 @@
 			,{"Name":"D2D1_BITMAP_OPTIONS_CPU_READ","Value":4}
 			,{"Name":"D2D1_BITMAP_OPTIONS_GDI_COMPATIBLE","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BUFFER_PRECISION"
@@ -4541,7 +4541,7 @@
 			,{"Name":"D2D1_BUFFER_PRECISION_16BPC_FLOAT","Value":4}
 			,{"Name":"D2D1_BUFFER_PRECISION_32BPC_FLOAT","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_MAP_OPTIONS"
@@ -4556,7 +4556,7 @@
 			,{"Name":"D2D1_MAP_OPTIONS_WRITE","Value":2}
 			,{"Name":"D2D1_MAP_OPTIONS_DISCARD","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_INTERPOLATION_MODE"
@@ -4573,7 +4573,7 @@
 			,{"Name":"D2D1_INTERPOLATION_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_UNIT_MODE"
@@ -4586,7 +4586,7 @@
 			{"Name":"D2D1_UNIT_MODE_DIPS","Value":0}
 			,{"Name":"D2D1_UNIT_MODE_PIXELS","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COLOR_SPACE"
@@ -4600,7 +4600,7 @@
 			,{"Name":"D2D1_COLOR_SPACE_SRGB","Value":1}
 			,{"Name":"D2D1_COLOR_SPACE_SCRGB","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DEVICE_CONTEXT_OPTIONS"
@@ -4613,7 +4613,7 @@
 			{"Name":"D2D1_DEVICE_CONTEXT_OPTIONS_NONE","Value":0}
 			,{"Name":"D2D1_DEVICE_CONTEXT_OPTIONS_ENABLE_MULTITHREADED_OPTIMIZATIONS","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_STROKE_TRANSFORM_TYPE"
@@ -4627,7 +4627,7 @@
 			,{"Name":"D2D1_STROKE_TRANSFORM_TYPE_FIXED","Value":1}
 			,{"Name":"D2D1_STROKE_TRANSFORM_TYPE_HAIRLINE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_PRIMITIVE_BLEND"
@@ -4643,7 +4643,7 @@
 			,{"Name":"D2D1_PRIMITIVE_BLEND_ADD","Value":3}
 			,{"Name":"D2D1_PRIMITIVE_BLEND_MAX","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_THREADING_MODE"
@@ -4656,7 +4656,7 @@
 			{"Name":"D2D1_THREADING_MODE_SINGLE_THREADED","Value":0}
 			,{"Name":"D2D1_THREADING_MODE_MULTI_THREADED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COLOR_INTERPOLATION_MODE"
@@ -4669,7 +4669,7 @@
 			{"Name":"D2D1_COLOR_INTERPOLATION_MODE_STRAIGHT","Value":0}
 			,{"Name":"D2D1_COLOR_INTERPOLATION_MODE_PREMULTIPLIED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BITMAP_PROPERTIES1"
@@ -4819,7 +4819,7 @@
 			,{"Name":"D2D1_LAYER_OPTIONS1_INITIALIZE_FROM_BACKGROUND","Value":1}
 			,{"Name":"D2D1_LAYER_OPTIONS1_IGNORE_ALPHA","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_LAYER_PARAMETERS1"
@@ -4853,7 +4853,7 @@
 			,{"Name":"D2D1_PRINT_FONT_SUBSET_MODE_EACHPAGE","Value":1}
 			,{"Name":"D2D1_PRINT_FONT_SUBSET_MODE_NONE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_DRAWING_STATE_DESCRIPTION1"
@@ -6821,7 +6821,7 @@
 			,{"Name":"D2D1_CHANGE_TYPE_CONTEXT","Value":2}
 			,{"Name":"D2D1_CHANGE_TYPE_GRAPH","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_PIXEL_OPTIONS"
@@ -6834,7 +6834,7 @@
 			{"Name":"D2D1_PIXEL_OPTIONS_NONE","Value":0}
 			,{"Name":"D2D1_PIXEL_OPTIONS_TRIVIAL_SAMPLING","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_VERTEX_OPTIONS"
@@ -6849,7 +6849,7 @@
 			,{"Name":"D2D1_VERTEX_OPTIONS_USE_DEPTH_BUFFER","Value":2}
 			,{"Name":"D2D1_VERTEX_OPTIONS_ASSUME_NO_OVERLAP","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_VERTEX_USAGE"
@@ -6862,7 +6862,7 @@
 			{"Name":"D2D1_VERTEX_USAGE_STATIC","Value":0}
 			,{"Name":"D2D1_VERTEX_USAGE_DYNAMIC","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BLEND_OPERATION"
@@ -6878,7 +6878,7 @@
 			,{"Name":"D2D1_BLEND_OPERATION_MIN","Value":4}
 			,{"Name":"D2D1_BLEND_OPERATION_MAX","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_BLEND"
@@ -6902,7 +6902,7 @@
 			,{"Name":"D2D1_BLEND_BLEND_FACTOR","Value":14}
 			,{"Name":"D2D1_BLEND_INV_BLEND_FACTOR","Value":15}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_CHANNEL_DEPTH"
@@ -6916,7 +6916,7 @@
 			,{"Name":"D2D1_CHANNEL_DEPTH_1","Value":1}
 			,{"Name":"D2D1_CHANNEL_DEPTH_4","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_FILTER"
@@ -6936,7 +6936,7 @@
 			,{"Name":"D2D1_FILTER_MIN_MAG_MIP_LINEAR","Value":21}
 			,{"Name":"D2D1_FILTER_ANISOTROPIC","Value":85}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_FEATURE"
@@ -6949,7 +6949,7 @@
 			{"Name":"D2D1_FEATURE_DOUBLES","Value":0}
 			,{"Name":"D2D1_FEATURE_D3D10_X_HARDWARE_OPTIONS","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_PROPERTY_BINDING"
@@ -8224,7 +8224,7 @@
 			,{"Name":"D2D1_YCBCR_PROP_TRANSFORM_MATRIX","Value":1}
 			,{"Name":"D2D1_YCBCR_PROP_INTERPOLATION_MODE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_YCBCR_CHROMA_SUBSAMPLING"
@@ -8240,7 +8240,7 @@
 			,{"Name":"D2D1_YCBCR_CHROMA_SUBSAMPLING_444","Value":3}
 			,{"Name":"D2D1_YCBCR_CHROMA_SUBSAMPLING_440","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_YCBCR_INTERPOLATION_MODE"
@@ -8257,7 +8257,7 @@
 			,{"Name":"D2D1_YCBCR_INTERPOLATION_MODE_ANISOTROPIC","Value":4}
 			,{"Name":"D2D1_YCBCR_INTERPOLATION_MODE_HIGH_QUALITY_CUBIC","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_CONTRAST_PROP"
@@ -8270,7 +8270,7 @@
 			{"Name":"D2D1_CONTRAST_PROP_CONTRAST","Value":0}
 			,{"Name":"D2D1_CONTRAST_PROP_CLAMP_INPUT","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_RGBTOHUE_PROP"
@@ -8282,7 +8282,7 @@
 		,"Values":[
 			{"Name":"D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE"
@@ -8295,7 +8295,7 @@
 			{"Name":"D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_VALUE","Value":0}
 			,{"Name":"D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_HUETORGB_PROP"
@@ -8307,7 +8307,7 @@
 		,"Values":[
 			{"Name":"D2D1_HUETORGB_PROP_INPUT_COLOR_SPACE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_HUETORGB_INPUT_COLOR_SPACE"
@@ -8320,7 +8320,7 @@
 			{"Name":"D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_VALUE","Value":0}
 			,{"Name":"D2D1_HUETORGB_INPUT_COLOR_SPACE_HUE_SATURATION_LIGHTNESS","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_CHROMAKEY_PROP"
@@ -8335,7 +8335,7 @@
 			,{"Name":"D2D1_CHROMAKEY_PROP_INVERT_ALPHA","Value":2}
 			,{"Name":"D2D1_CHROMAKEY_PROP_FEATHER","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_EMBOSS_PROP"
@@ -8348,7 +8348,7 @@
 			{"Name":"D2D1_EMBOSS_PROP_HEIGHT","Value":0}
 			,{"Name":"D2D1_EMBOSS_PROP_DIRECTION","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_EXPOSURE_PROP"
@@ -8360,7 +8360,7 @@
 		,"Values":[
 			{"Name":"D2D1_EXPOSURE_PROP_EXPOSURE_VALUE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_POSTERIZE_PROP"
@@ -8374,7 +8374,7 @@
 			,{"Name":"D2D1_POSTERIZE_PROP_GREEN_VALUE_COUNT","Value":1}
 			,{"Name":"D2D1_POSTERIZE_PROP_BLUE_VALUE_COUNT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SEPIA_PROP"
@@ -8387,7 +8387,7 @@
 			{"Name":"D2D1_SEPIA_PROP_INTENSITY","Value":0}
 			,{"Name":"D2D1_SEPIA_PROP_ALPHA_MODE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SHARPEN_PROP"
@@ -8400,7 +8400,7 @@
 			{"Name":"D2D1_SHARPEN_PROP_SHARPNESS","Value":0}
 			,{"Name":"D2D1_SHARPEN_PROP_THRESHOLD","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_STRAIGHTEN_PROP"
@@ -8414,7 +8414,7 @@
 			,{"Name":"D2D1_STRAIGHTEN_PROP_MAINTAIN_SIZE","Value":1}
 			,{"Name":"D2D1_STRAIGHTEN_PROP_SCALE_MODE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_STRAIGHTEN_SCALE_MODE"
@@ -8430,7 +8430,7 @@
 			,{"Name":"D2D1_STRAIGHTEN_SCALE_MODE_MULTI_SAMPLE_LINEAR","Value":3}
 			,{"Name":"D2D1_STRAIGHTEN_SCALE_MODE_ANISOTROPIC","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TEMPERATUREANDTINT_PROP"
@@ -8443,7 +8443,7 @@
 			{"Name":"D2D1_TEMPERATUREANDTINT_PROP_TEMPERATURE","Value":0}
 			,{"Name":"D2D1_TEMPERATUREANDTINT_PROP_TINT","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_VIGNETTE_PROP"
@@ -8457,7 +8457,7 @@
 			,{"Name":"D2D1_VIGNETTE_PROP_TRANSITION_SIZE","Value":1}
 			,{"Name":"D2D1_VIGNETTE_PROP_STRENGTH","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_EDGEDETECTION_PROP"
@@ -8473,7 +8473,7 @@
 			,{"Name":"D2D1_EDGEDETECTION_PROP_OVERLAY_EDGES","Value":3}
 			,{"Name":"D2D1_EDGEDETECTION_PROP_ALPHA_MODE","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_EDGEDETECTION_MODE"
@@ -8486,7 +8486,7 @@
 			{"Name":"D2D1_EDGEDETECTION_MODE_SOBEL","Value":0}
 			,{"Name":"D2D1_EDGEDETECTION_MODE_PREWITT","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_HIGHLIGHTSANDSHADOWS_PROP"
@@ -8502,7 +8502,7 @@
 			,{"Name":"D2D1_HIGHLIGHTSANDSHADOWS_PROP_INPUT_GAMMA","Value":3}
 			,{"Name":"D2D1_HIGHLIGHTSANDSHADOWS_PROP_MASK_BLUR_RADIUS","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA"
@@ -8515,7 +8515,7 @@
 			{"Name":"D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_LINEAR","Value":0}
 			,{"Name":"D2D1_HIGHLIGHTSANDSHADOWS_INPUT_GAMMA_SRGB","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_LOOKUPTABLE3D_PROP"
@@ -8528,7 +8528,7 @@
 			{"Name":"D2D1_LOOKUPTABLE3D_PROP_LUT","Value":0}
 			,{"Name":"D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_OPACITY_PROP"
@@ -8540,7 +8540,7 @@
 		,"Values":[
 			{"Name":"D2D1_OPACITY_PROP_OPACITY","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_CROSSFADE_PROP"
@@ -8552,7 +8552,7 @@
 		,"Values":[
 			{"Name":"D2D1_CROSSFADE_PROP_WEIGHT","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TINT_PROP"
@@ -8565,7 +8565,7 @@
 			{"Name":"D2D1_TINT_PROP_COLOR","Value":0}
 			,{"Name":"D2D1_TINT_PROP_CLAMP_OUTPUT","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_WHITELEVELADJUSTMENT_PROP"
@@ -8578,7 +8578,7 @@
 			{"Name":"D2D1_WHITELEVELADJUSTMENT_PROP_INPUT_WHITE_LEVEL","Value":0}
 			,{"Name":"D2D1_WHITELEVELADJUSTMENT_PROP_OUTPUT_WHITE_LEVEL","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_HDRTONEMAP_PROP"
@@ -8592,7 +8592,7 @@
 			,{"Name":"D2D1_HDRTONEMAP_PROP_OUTPUT_MAX_LUMINANCE","Value":1}
 			,{"Name":"D2D1_HDRTONEMAP_PROP_DISPLAY_MODE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_HDRTONEMAP_DISPLAY_MODE"
@@ -8605,7 +8605,7 @@
 			{"Name":"D2D1_HDRTONEMAP_DISPLAY_MODE_SDR","Value":0}
 			,{"Name":"D2D1_HDRTONEMAP_DISPLAY_MODE_HDR","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_RENDERING_PRIORITY"
@@ -8618,7 +8618,7 @@
 			{"Name":"D2D1_RENDERING_PRIORITY_NORMAL","Value":0}
 			,{"Name":"D2D1_RENDERING_PRIORITY_LOW","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"ID2D1GeometryRealization"
@@ -8790,7 +8790,7 @@
 			,{"Name":"D2D1_SVG_PAINT_TYPE_URI_COLOR","Value":5}
 			,{"Name":"D2D1_SVG_PAINT_TYPE_URI_CURRENT_COLOR","Value":6}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_LENGTH_UNITS"
@@ -8803,7 +8803,7 @@
 			{"Name":"D2D1_SVG_LENGTH_UNITS_NUMBER","Value":0}
 			,{"Name":"D2D1_SVG_LENGTH_UNITS_PERCENTAGE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_DISPLAY"
@@ -8816,7 +8816,7 @@
 			{"Name":"D2D1_SVG_DISPLAY_INLINE","Value":0}
 			,{"Name":"D2D1_SVG_DISPLAY_NONE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_VISIBILITY"
@@ -8829,7 +8829,7 @@
 			{"Name":"D2D1_SVG_VISIBILITY_VISIBLE","Value":0}
 			,{"Name":"D2D1_SVG_VISIBILITY_HIDDEN","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_OVERFLOW"
@@ -8842,7 +8842,7 @@
 			{"Name":"D2D1_SVG_OVERFLOW_VISIBLE","Value":0}
 			,{"Name":"D2D1_SVG_OVERFLOW_HIDDEN","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_LINE_CAP"
@@ -8856,7 +8856,7 @@
 			,{"Name":"D2D1_SVG_LINE_CAP_SQUARE","Value":1}
 			,{"Name":"D2D1_SVG_LINE_CAP_ROUND","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_LINE_JOIN"
@@ -8870,7 +8870,7 @@
 			,{"Name":"D2D1_SVG_LINE_JOIN_MITER","Value":3}
 			,{"Name":"D2D1_SVG_LINE_JOIN_ROUND","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_ASPECT_ALIGN"
@@ -8891,7 +8891,7 @@
 			,{"Name":"D2D1_SVG_ASPECT_ALIGN_X_MID_Y_MAX","Value":8}
 			,{"Name":"D2D1_SVG_ASPECT_ALIGN_X_MAX_Y_MAX","Value":9}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_ASPECT_SCALING"
@@ -8904,7 +8904,7 @@
 			{"Name":"D2D1_SVG_ASPECT_SCALING_MEET","Value":0}
 			,{"Name":"D2D1_SVG_ASPECT_SCALING_SLICE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_PATH_COMMAND"
@@ -8934,7 +8934,7 @@
 			,{"Name":"D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_ABSOLUTE","Value":17}
 			,{"Name":"D2D1_SVG_PATH_COMMAND_QUADRADIC_SMOOTH_RELATIVE","Value":18}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_UNIT_TYPE"
@@ -8947,7 +8947,7 @@
 			{"Name":"D2D1_SVG_UNIT_TYPE_USER_SPACE_ON_USE","Value":0}
 			,{"Name":"D2D1_SVG_UNIT_TYPE_OBJECT_BOUNDING_BOX","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_ATTRIBUTE_STRING_TYPE"
@@ -8960,7 +8960,7 @@
 			{"Name":"D2D1_SVG_ATTRIBUTE_STRING_TYPE_SVG","Value":0}
 			,{"Name":"D2D1_SVG_ATTRIBUTE_STRING_TYPE_ID","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_ATTRIBUTE_POD_TYPE"
@@ -8985,7 +8985,7 @@
 			,{"Name":"D2D1_SVG_ATTRIBUTE_POD_TYPE_VIEWBOX","Value":12}
 			,{"Name":"D2D1_SVG_ATTRIBUTE_POD_TYPE_LENGTH","Value":13}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SVG_LENGTH"
@@ -9998,7 +9998,7 @@
 			{"Name":"D2D1_INK_NIB_SHAPE_ROUND","Value":0}
 			,{"Name":"D2D1_INK_NIB_SHAPE_SQUARE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_ORIENTATION"
@@ -10017,7 +10017,7 @@
 			,{"Name":"D2D1_ORIENTATION_ROTATE_CLOCKWISE270_FLIP_HORIZONTAL","Value":7}
 			,{"Name":"D2D1_ORIENTATION_ROTATE_CLOCKWISE90","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_IMAGE_SOURCE_LOADING_OPTIONS"
@@ -10031,7 +10031,7 @@
 			,{"Name":"D2D1_IMAGE_SOURCE_LOADING_OPTIONS_RELEASE_SOURCE","Value":1}
 			,{"Name":"D2D1_IMAGE_SOURCE_LOADING_OPTIONS_CACHE_ON_DEMAND","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS"
@@ -10044,7 +10044,7 @@
 			{"Name":"D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_NONE","Value":0}
 			,{"Name":"D2D1_IMAGE_SOURCE_FROM_DXGI_OPTIONS_LOW_QUALITY_PRIMARY_CONVERSION","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS"
@@ -10057,7 +10057,7 @@
 			{"Name":"D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS_NONE","Value":0}
 			,{"Name":"D2D1_TRANSFORMED_IMAGE_SOURCE_OPTIONS_DISABLE_DPI_SCALE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_TRANSFORMED_IMAGE_SOURCE_PROPERTIES"
@@ -10136,7 +10136,7 @@
 			,{"Name":"D2D1_PATCH_EDGE_MODE_ANTIALIASED","Value":1}
 			,{"Name":"D2D1_PATCH_EDGE_MODE_ALIASED_INFLATED","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_GRADIENT_MESH_PATCH"
@@ -10186,7 +10186,7 @@
 			{"Name":"D2D1_SPRITE_OPTIONS_NONE","Value":0}
 			,{"Name":"D2D1_SPRITE_OPTIONS_CLAMP_TO_SOURCE_RECTANGLE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION"
@@ -10199,7 +10199,7 @@
 			{"Name":"D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DEFAULT","Value":0}
 			,{"Name":"D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION_DISABLE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_GAMMA1"
@@ -10213,7 +10213,7 @@
 			,{"Name":"D2D1_GAMMA1_G10","Value":1}
 			,{"Name":"D2D1_GAMMA1_G2084","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D2D1_SIMPLE_COLOR_PROFILE"
@@ -10245,7 +10245,7 @@
 			,{"Name":"D2D1_COLOR_CONTEXT_TYPE_SIMPLE","Value":1}
 			,{"Name":"D2D1_COLOR_CONTEXT_TYPE_DXGI","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"ID2D1InkStyle"

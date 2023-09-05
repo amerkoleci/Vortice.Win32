@@ -2419,7 +2419,7 @@
 			,{"Name":"WICGifLogicalScreenDescriptorBackgroundColorIndex","Value":8}
 			,{"Name":"WICGifLogicalScreenDescriptorPixelAspectRatio","Value":9}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICGifImageDescriptorProperties"
@@ -2438,7 +2438,7 @@
 			,{"Name":"WICGifImageDescriptorSortFlag","Value":7}
 			,{"Name":"WICGifImageDescriptorLocalColorTableSize","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICGifGraphicControlExtensionProperties"
@@ -2454,7 +2454,7 @@
 			,{"Name":"WICGifGraphicControlExtensionDelay","Value":4}
 			,{"Name":"WICGifGraphicControlExtensionTransparentColorIndex","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICGifApplicationExtensionProperties"
@@ -2467,7 +2467,7 @@
 			{"Name":"WICGifApplicationExtensionApplication","Value":1}
 			,{"Name":"WICGifApplicationExtensionData","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICGifCommentExtensionProperties"
@@ -2479,7 +2479,7 @@
 		,"Values":[
 			{"Name":"WICGifCommentExtensionText","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICJpegCommentProperties"
@@ -2491,7 +2491,7 @@
 		,"Values":[
 			{"Name":"WICJpegCommentText","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICJpegLuminanceProperties"
@@ -2503,7 +2503,7 @@
 		,"Values":[
 			{"Name":"WICJpegLuminanceTable","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICJpegChrominanceProperties"
@@ -2515,7 +2515,7 @@
 		,"Values":[
 			{"Name":"WICJpegChrominanceTable","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WIC8BIMIptcProperties"
@@ -2528,7 +2528,7 @@
 			{"Name":"WIC8BIMIptcPString","Value":0}
 			,{"Name":"WIC8BIMIptcEmbeddedIPTC","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WIC8BIMResolutionInfoProperties"
@@ -2546,7 +2546,7 @@
 			,{"Name":"WIC8BIMResolutionInfoVResolutionUnit","Value":6}
 			,{"Name":"WIC8BIMResolutionInfoHeightUnit","Value":7}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WIC8BIMIptcDigestProperties"
@@ -2559,7 +2559,7 @@
 			{"Name":"WIC8BIMIptcDigestPString","Value":1}
 			,{"Name":"WIC8BIMIptcDigestIptcDigest","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPngGamaProperties"
@@ -2571,7 +2571,7 @@
 		,"Values":[
 			{"Name":"WICPngGamaGamma","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPngBkgdProperties"
@@ -2583,7 +2583,7 @@
 		,"Values":[
 			{"Name":"WICPngBkgdBackgroundColor","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPngItxtProperties"
@@ -2599,7 +2599,7 @@
 			,{"Name":"WICPngItxtTranslatedKeyword","Value":4}
 			,{"Name":"WICPngItxtText","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPngChrmProperties"
@@ -2618,7 +2618,7 @@
 			,{"Name":"WICPngChrmBlueX","Value":7}
 			,{"Name":"WICPngChrmBlueY","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPngHistProperties"
@@ -2630,7 +2630,7 @@
 		,"Values":[
 			{"Name":"WICPngHistFrequencies","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPngIccpProperties"
@@ -2643,7 +2643,7 @@
 			{"Name":"WICPngIccpProfileName","Value":1}
 			,{"Name":"WICPngIccpProfileData","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPngSrgbProperties"
@@ -2655,7 +2655,7 @@
 		,"Values":[
 			{"Name":"WICPngSrgbRenderingIntent","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPngTimeProperties"
@@ -2672,7 +2672,7 @@
 			,{"Name":"WICPngTimeMinute","Value":5}
 			,{"Name":"WICPngTimeSecond","Value":6}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICHeifProperties"
@@ -2684,7 +2684,7 @@
 		,"Values":[
 			{"Name":"WICHeifOrientation","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICHeifHdrProperties"
@@ -2700,7 +2700,7 @@
 			,{"Name":"WICHeifHdrMaximumMasteringDisplayLuminanceLevel","Value":4}
 			,{"Name":"WICHeifHdrCustomVideoPrimaries","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICWebpAnimProperties"
@@ -2712,7 +2712,7 @@
 		,"Values":[
 			{"Name":"WICWebpAnimLoopCount","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICWebpAnmfProperties"
@@ -2724,7 +2724,7 @@
 		,"Values":[
 			{"Name":"WICWebpAnmfFrameDuration","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICSectionAccessLevel"
@@ -2737,7 +2737,7 @@
 			{"Name":"WICSectionAccessLevelRead","Value":1}
 			,{"Name":"WICSectionAccessLevelReadWrite","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPixelFormatNumericRepresentation"
@@ -2754,7 +2754,7 @@
 			,{"Name":"WICPixelFormatNumericRepresentationFixed","Value":4}
 			,{"Name":"WICPixelFormatNumericRepresentationFloat","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICPlanarOptions"
@@ -2780,7 +2780,7 @@
 			{"Name":"WICJpegIndexingOptionsGenerateOnDemand","Value":0}
 			,{"Name":"WICJpegIndexingOptionsGenerateOnLoad","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICJpegTransferMatrix"
@@ -2793,7 +2793,7 @@
 			{"Name":"WICJpegTransferMatrixIdentity","Value":0}
 			,{"Name":"WICJpegTransferMatrixBT601","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICJpegScanType"
@@ -2807,7 +2807,7 @@
 			,{"Name":"WICJpegScanTypePlanarComponents","Value":1}
 			,{"Name":"WICJpegScanTypeProgressive","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WICImageParameters"

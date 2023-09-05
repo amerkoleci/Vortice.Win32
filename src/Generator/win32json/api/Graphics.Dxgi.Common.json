@@ -265,7 +265,7 @@
 			,{"Name":"DXGI_FORMAT_SAMPLER_FEEDBACK_MIP_REGION_USED_OPAQUE","Value":190}
 			,{"Name":"DXGI_FORMAT_A4B4G4R4_UNORM","Value":191}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DXGI_RGB"
@@ -438,7 +438,7 @@
 			,{"Name":"DXGI_ALPHA_MODE_STRAIGHT","Value":2}
 			,{"Name":"DXGI_ALPHA_MODE_IGNORE","Value":3}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 ]
 

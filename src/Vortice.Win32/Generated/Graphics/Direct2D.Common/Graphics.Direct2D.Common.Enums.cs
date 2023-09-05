@@ -11,7 +11,7 @@ namespace Win32.Graphics.Direct2D.Common;
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_ALPHA_MODE</unmanaged>
-public enum AlphaMode : uint
+public enum AlphaMode
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_ALPHA_MODE::D2D1_ALPHA_MODE_UNKNOWN"]/*' />
 	/// <unmanaged>D2D1_ALPHA_MODE_UNKNOWN</unmanaged>
@@ -29,7 +29,7 @@ public enum AlphaMode : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_BEGIN"]/*' />
 /// <unmanaged>D2D1_FIGURE_BEGIN</unmanaged>
-public enum FigureBegin : uint
+public enum FigureBegin
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_BEGIN::D2D1_FIGURE_BEGIN_FILLED"]/*' />
 	/// <unmanaged>D2D1_FIGURE_BEGIN_FILLED</unmanaged>
@@ -41,7 +41,7 @@ public enum FigureBegin : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_END"]/*' />
 /// <unmanaged>D2D1_FIGURE_END</unmanaged>
-public enum FigureEnd : uint
+public enum FigureEnd
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FIGURE_END::D2D1_FIGURE_END_OPEN"]/*' />
 	/// <unmanaged>D2D1_FIGURE_END_OPEN</unmanaged>
@@ -54,7 +54,7 @@ public enum FigureEnd : uint
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_PATH_SEGMENT"]/*' />
 /// <unmanaged>D2D1_PATH_SEGMENT</unmanaged>
 [Flags]
-public enum PathSegment : uint
+public enum PathSegment
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_PATH_SEGMENT::D2D1_PATH_SEGMENT_NONE"]/*' />
 	/// <unmanaged>D2D1_PATH_SEGMENT_NONE</unmanaged>
@@ -69,7 +69,7 @@ public enum PathSegment : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FILL_MODE"]/*' />
 /// <unmanaged>D2D1_FILL_MODE</unmanaged>
-public enum FillMode : uint
+public enum FillMode
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_FILL_MODE::D2D1_FILL_MODE_ALTERNATE"]/*' />
 	/// <unmanaged>D2D1_FILL_MODE_ALTERNATE</unmanaged>
@@ -81,7 +81,7 @@ public enum FillMode : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BORDER_MODE"]/*' />
 /// <unmanaged>D2D1_BORDER_MODE</unmanaged>
-public enum BorderMode : uint
+public enum BorderMode
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BORDER_MODE::D2D1_BORDER_MODE_SOFT"]/*' />
 	/// <unmanaged>D2D1_BORDER_MODE_SOFT</unmanaged>
@@ -93,7 +93,7 @@ public enum BorderMode : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE"]/*' />
 /// <unmanaged>D2D1_BLEND_MODE</unmanaged>
-public enum BlendMode : uint
+public enum BlendMode
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BLEND_MODE::D2D1_BLEND_MODE_MULTIPLY"]/*' />
 	/// <unmanaged>D2D1_BLEND_MODE_MULTIPLY</unmanaged>
@@ -177,7 +177,7 @@ public enum BlendMode : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_COLORMATRIX_ALPHA_MODE"]/*' />
 /// <unmanaged>D2D1_COLORMATRIX_ALPHA_MODE</unmanaged>
-public enum ColorMatrixAlphaMode : uint
+public enum ColorMatrixAlphaMode
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_COLORMATRIX_ALPHA_MODE::D2D1_COLORMATRIX_ALPHA_MODE_PREMULTIPLIED"]/*' />
 	/// <unmanaged>D2D1_COLORMATRIX_ALPHA_MODE_PREMULTIPLIED</unmanaged>
@@ -189,7 +189,7 @@ public enum ColorMatrixAlphaMode : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE"]/*' />
 /// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE</unmanaged>
-public enum AffineTransform2DInterpolationMode : uint
+public enum AffineTransform2DInterpolationMode
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE::D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR"]/*' />
 	/// <unmanaged>D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_NEAREST_NEIGHBOR</unmanaged>
@@ -213,7 +213,7 @@ public enum AffineTransform2DInterpolationMode : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE"]/*' />
 /// <unmanaged>D2D1_TURBULENCE_NOISE</unmanaged>
-public enum TurbulenceNoise : uint
+public enum TurbulenceNoise
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_TURBULENCE_NOISE::D2D1_TURBULENCE_NOISE_FRACTAL_SUM"]/*' />
 	/// <unmanaged>D2D1_TURBULENCE_NOISE_FRACTAL_SUM</unmanaged>
@@ -225,7 +225,7 @@ public enum TurbulenceNoise : uint
 
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_COMPOSITE_MODE"]/*' />
 /// <unmanaged>D2D1_COMPOSITE_MODE</unmanaged>
-public enum CompositeMode : uint
+public enum CompositeMode
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_COMPOSITE_MODE::D2D1_COMPOSITE_MODE_SOURCE_OVER"]/*' />
 	/// <unmanaged>D2D1_COMPOSITE_MODE_SOURCE_OVER</unmanaged>

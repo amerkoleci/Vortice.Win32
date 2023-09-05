@@ -535,7 +535,7 @@ public enum ModeRotation
 
 /// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_ALPHA_MODE"]/*' />
 /// <unmanaged>DXGI_ALPHA_MODE</unmanaged>
-public enum AlphaMode : uint
+public enum AlphaMode
 {
 	/// <include file='../../../../Vortice.Win32.Graphics.Dxgi/Dxgi.xml' path='doc/member[@name="DXGI_ALPHA_MODE::DXGI_ALPHA_MODE_UNSPECIFIED"]/*' />
 	/// <unmanaged>DXGI_ALPHA_MODE_UNSPECIFIED</unmanaged>

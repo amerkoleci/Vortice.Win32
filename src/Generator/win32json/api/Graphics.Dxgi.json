@@ -1469,7 +1469,7 @@
 			,{"Name":"DXGI_ADAPTER_FLAG_REMOTE","Value":1}
 			,{"Name":"DXGI_ADAPTER_FLAG_SOFTWARE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DXGI_ADAPTER_DESC1"
@@ -2023,7 +2023,7 @@
 			,{"Name":"Scaling","Type":{"Kind":"ApiRef","Name":"DXGI_SCALING","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}
 			,{"Name":"SwapEffect","Type":{"Kind":"ApiRef","Name":"DXGI_SWAP_EFFECT","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}
 			,{"Name":"AlphaMode","Type":{"Kind":"ApiRef","Name":"DXGI_ALPHA_MODE","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"AssociatedEnum","Value":"DXGI_SWAP_CHAIN_FLAG"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -3495,7 +3495,7 @@
 			,{"Name":"DXGI_ADAPTER_FLAG3_SUPPORT_NON_MONITORED_FENCES","Value":16}
 			,{"Name":"DXGI_ADAPTER_FLAG3_KEYED_MUTEX_CONFORMANCE","Value":32}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DXGI_ADAPTER_DESC3"

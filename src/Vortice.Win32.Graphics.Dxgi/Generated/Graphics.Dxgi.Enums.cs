@@ -121,7 +121,7 @@ public enum SwapChainFlags
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG</unmanaged>
 [Flags]
-public enum AdapterFlags : uint
+public enum AdapterFlags
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG::DXGI_ADAPTER_FLAG_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG_NONE</unmanaged>
@@ -371,7 +371,7 @@ public enum Feature
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3"]/*' />
 /// <unmanaged>DXGI_ADAPTER_FLAG3</unmanaged>
 [Flags]
-public enum AdapterFlags3 : uint
+public enum AdapterFlags3
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_FLAG3::DXGI_ADAPTER_FLAG3_NONE"]/*' />
 	/// <unmanaged>DXGI_ADAPTER_FLAG3_NONE</unmanaged>

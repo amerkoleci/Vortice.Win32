@@ -2002,7 +2002,11 @@ public static class Program
         }
 
         string baseTypeDeclaration = $" : {baseTypeName}";
-        if (baseTypeName == "int")
+        if (enumType.Name == "DXGI_FORMAT")
+        {
+            baseTypeDeclaration = $" : uint";
+        }
+        else if (baseTypeName == "int")
         {
             baseTypeDeclaration = string.Empty;
         }

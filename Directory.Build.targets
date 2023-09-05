@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <!-- Settings that are only set for libraries -->
-  <PropertyGroup Condition="'$(OutputType)' == 'Library'">
+  <PropertyGroup Condition=" '$(OutputType)' == 'Library' AND '$(TargetFramework)' != 'netstandard2.0' AND '$(TargetFramework)' != 'netstandard2.1' ">
+    <EnableAotAnalyzer>true</EnableAotAnalyzer>
+    <EnableSingleFileAnalyzer>true</EnableSingleFileAnalyzer>
     <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
     <IsTrimmable>true</IsTrimmable>
   </PropertyGroup>

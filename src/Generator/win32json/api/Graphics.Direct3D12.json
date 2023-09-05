@@ -11471,8 +11471,8 @@
 		,"SizeField":""
 		,"Fields":[
 			{"Name":"Transform","Type":{"Kind":"Array","Shape":{"Size":12},"Child":{"Kind":"Native","Name":"Single"}},"Attrs":[]}
-			,{"Name":"_bitfield1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"_bitfield2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"_bitfield1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"NativeBitfield","Name":"InstanceID","Offset":"0","Length":"24"},{"Kind":"NativeBitfield","Name":"InstanceMask","Offset":"24","Length":"8"}]}
+			,{"Name":"_bitfield2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"NativeBitfield","Name":"InstanceContributionToHitGroupIndex","Offset":"0","Length":"24"},{"Kind":"NativeBitfield","Name":"Flags","Offset":"24","Length":"8"}]}
 			,{"Name":"AccelerationStructure","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[

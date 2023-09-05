@@ -1983,7 +1983,7 @@
 		,"PackingSize":0
 		,"SizeField":""
 		,"Fields":[
-			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[{"Kind":"NativeBitfield","Name":"breakConditionBefore","Offset":"0","Length":"2"},{"Kind":"NativeBitfield","Name":"breakConditionAfter","Offset":"2","Length":"2"},{"Kind":"NativeBitfield","Name":"isWhitespace","Offset":"4","Length":"1"},{"Kind":"NativeBitfield","Name":"isSoftHyphen","Offset":"5","Length":"1"},{"Kind":"NativeBitfield","Name":"padding","Offset":"6","Length":"2"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -2023,7 +2023,7 @@
 		,"PackingSize":0
 		,"SizeField":""
 		,"Fields":[
-			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[{"Kind":"NativeBitfield","Name":"isShapedAlone","Offset":"0","Length":"1"},{"Kind":"NativeBitfield","Name":"reserved1","Offset":"1","Length":"1"},{"Kind":"NativeBitfield","Name":"canBreakShapingAfter","Offset":"2","Length":"1"},{"Kind":"NativeBitfield","Name":"reserved","Offset":"3","Length":"13"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -2037,7 +2037,7 @@
 		,"PackingSize":0
 		,"SizeField":""
 		,"Fields":[
-			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[{"Kind":"NativeBitfield","Name":"justification","Offset":"0","Length":"4"},{"Kind":"NativeBitfield","Name":"isClusterStart","Offset":"4","Length":"1"},{"Kind":"NativeBitfield","Name":"isDiacritic","Offset":"5","Length":"1"},{"Kind":"NativeBitfield","Name":"isZeroWidthSpace","Offset":"6","Length":"1"},{"Kind":"NativeBitfield","Name":"reserved","Offset":"7","Length":"9"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -2455,7 +2455,7 @@
 		,"Fields":[
 			{"Name":"width","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[{"Kind":"NativeBitfield","Name":"canWrapLineAfter","Offset":"0","Length":"1"},{"Kind":"NativeBitfield","Name":"isWhitespace","Offset":"1","Length":"1"},{"Kind":"NativeBitfield","Name":"isNewline","Offset":"2","Length":"1"},{"Kind":"NativeBitfield","Name":"isSoftHyphen","Offset":"3","Length":"1"},{"Kind":"NativeBitfield","Name":"isRightToLeft","Offset":"4","Length":"1"},{"Kind":"NativeBitfield","Name":"padding","Offset":"5","Length":"11"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -4640,7 +4640,7 @@
 			,{"Name":"isoScriptNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"clusterLookahead","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"justificationCharacter","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"NativeBitfield","Name":"restrictCaretToClusters","Offset":"0","Length":"1"},{"Kind":"NativeBitfield","Name":"usesWordDividers","Offset":"1","Length":"1"},{"Kind":"NativeBitfield","Name":"isDiscreteWriting","Offset":"2","Length":"1"},{"Kind":"NativeBitfield","Name":"isBlockWriting","Offset":"3","Length":"1"},{"Kind":"NativeBitfield","Name":"isDistributedWithinCluster","Offset":"4","Length":"1"},{"Kind":"NativeBitfield","Name":"isConnectedWriting","Offset":"5","Length":"1"},{"Kind":"NativeBitfield","Name":"isCursiveWriting","Offset":"6","Length":"1"},{"Kind":"NativeBitfield","Name":"reserved","Offset":"7","Length":"25"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -4657,7 +4657,7 @@
 			{"Name":"expansionMinimum","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"expansionMaximum","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 			,{"Name":"compressionMaximum","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"_bitfield","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"NativeBitfield","Name":"expansionPriority","Offset":"0","Length":"8"},{"Kind":"NativeBitfield","Name":"compressionPriority","Offset":"8","Length":"8"},{"Kind":"NativeBitfield","Name":"allowResidualExpansion","Offset":"16","Length":"1"},{"Kind":"NativeBitfield","Name":"allowResidualCompression","Offset":"17","Length":"1"},{"Kind":"NativeBitfield","Name":"applyToLeadingEdge","Offset":"18","Length":"1"},{"Kind":"NativeBitfield","Name":"applyToTrailingEdge","Offset":"19","Length":"1"},{"Kind":"NativeBitfield","Name":"reserved","Offset":"20","Length":"12"}]}
 		]
 		,"NestedTypes":[
 		]
