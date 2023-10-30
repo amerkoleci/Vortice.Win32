@@ -1,16 +1,10 @@
-﻿// Copyright © Amer Koleci and Contributors.
+﻿// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Diagnostics;
 using System.Globalization;
-using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Text;
-
-#if NET6_0_OR_GREATER
 using System.Runtime.Intrinsics;
+using System.Text;
 using static Win32.Numerics.VectorUtilities;
-#endif
 
 namespace Win32.Numerics;
 
@@ -18,15 +12,7 @@ namespace Win32.Numerics;
 [StructLayout(LayoutKind.Sequential, Pack = 4)]
 public readonly struct Color4
 {
-#if NET6_0_OR_GREATER
     private readonly Vector128<float> _value;
-#else
-    // Note: intentionally using fields, as autoproperties fail to compile on .NET Native (UWP)
-    private readonly float _a;
-    private readonly float _r;
-    private readonly float _g;
-    private readonly float _b;
-#endif
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Color4"/> struct.
@@ -34,11 +20,7 @@ public readonly struct Color4
     /// <param name="value">The value that will be assigned to all components.</param>
     public Color4(float value)
     {
-#if NET6_0_OR_GREATER
         _value = Vector128.Create(value, value, value, value);
-#else
-        _a = _r = _g = _b = value;
-#endif
     }
 
     /// <summary>
@@ -50,14 +32,7 @@ public readonly struct Color4
     /// <param name="alpha">The value of the alpha component.</param>
     public Color4(float red, float green, float blue, float alpha = 1.0f)
     {
-#if NET6_0_OR_GREATER
         _value = Vector128.Create(red, green, blue, alpha);
-#else
-        _r = red;
-        _g = green;
-        _b = blue;
-        _a = alpha;
-#endif
     }
 
     /// <summary>
@@ -66,14 +41,7 @@ public readonly struct Color4
     /// <param name="value">The red, green, blue, and alpha components of the color.</param>
     public Color4(in Vector4 value)
     {
-#if NET6_0_OR_GREATER
         _value = value.AsVector128();
-#else
-        _r = value.X;
-        _g = value.Y;
-        _b = value.Z;
-        _a = value.W;
-#endif
     }
 
     /// <summary>
@@ -83,14 +51,7 @@ public readonly struct Color4
     /// <param name="alpha">The alpha component of the color.</param>
     public Color4(in Vector3 value, float alpha)
     {
-#if NET6_0_OR_GREATER
         _value = Vector128.Create(value.X, value.Y, value.Z, alpha);
-#else
-        _r = value.X;
-        _g = value.Y;
-        _b = value.Z;
-        _a = alpha;
-#endif
     }
 
     /// <summary>
@@ -107,7 +68,6 @@ public readonly struct Color4
         this = Unsafe.ReadUnaligned<Color4>(ref Unsafe.As<float, byte>(ref MemoryMarshal.GetReference(values)));
     }
 
-#if NET6_0_OR_GREATER
     /// <summary>
     /// Initializes a new instance of the <see cref="Color4" /> struct.
     /// </summary>
@@ -144,19 +104,6 @@ public readonly struct Color4
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         get => _value.GetElement(3);
     }
-#else
-    /// <summary>Gets the value of the red component.</summary>
-    public float R => _r;
-
-    /// <summary>Gets the value of the green component.</summary>
-    public float G => _g;
-
-    /// <summary>Gets the value of the blue component.</summary>
-    public float B => _b;
-
-    /// <summary>Gets the value of the alpha component.</summary>
-    public float A => _a;
-#endif
 
     public readonly float this[int index]
     {
@@ -170,11 +117,7 @@ public readonly struct Color4
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool operator ==(Color4 left, Color4 right)
     {
-#if NET6_0_OR_GREATER
         return CompareEqualAll(left._value, right._value);
-#else
-        return left.A == right.A && left.R == right.R && left.G == right.G && left.B == right.B;
-#endif
     }
 
     /// <summary>Compares two colors to determine equality.</summary>
@@ -184,11 +127,7 @@ public readonly struct Color4
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool operator !=(Color4 left, Color4 right)
     {
-#if NET6_0_OR_GREATER
         return CompareNotEqualAny(left._value, right._value);
-#else
-        return left.A != right.A || left.R != right.R || left.G != right.G || left.B != right.B;
-#endif
     }
 
     /// <inheritdoc />

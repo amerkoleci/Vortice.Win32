@@ -40,11 +40,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteColorGlyphRunEnumerator1));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteColorGlyphRunEnumerator1));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteColorGlyphRunEnumerator1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteColorGlyphRunEnumerator1*, uint>)(lpVtbl[1]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator1*, uint>)(lpVtbl[1]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, uint>)(lpVtbl[1]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteColorGlyphRunEnumerator1*, uint>)(lpVtbl[2]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator1*, uint>)(lpVtbl[2]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, uint>)(lpVtbl[2]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteColorGlyphRunEnumerator.MoveNext" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 	[VtblIndex(3)]
 	public HResult MoveNext(Bool32* hasRun)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteColorGlyphRunEnumerator1*, Bool32*, int>)(lpVtbl[3]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), hasRun);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator1*, Bool32*, int>)(lpVtbl[3]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), hasRun);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, Bool32*, int>)(lpVtbl[3]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), hasRun);
 	}
 
 	/// <inheritdoc cref="IDWriteColorGlyphRunEnumerator.GetCurrentRun" />
@@ -103,11 +83,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 	[VtblIndex(4)]
 	public HResult GetCurrentRun(ColorGlyphRun** colorGlyphRun)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun**, int>)(lpVtbl[4]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteColorGlyphRunEnumerator1::GetCurrentRun"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IDWriteColorGlyphRunEnumerator1 : IDWriteColorGlyph
 	[VtblIndex(5)]
 	public HResult GetCurrentRun(ColorGlyphRun1** colorGlyphRun)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun1**, int>)(lpVtbl[5]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun1**, int>)(lpVtbl[5]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteColorGlyphRunEnumerator1*, ColorGlyphRun1**, int>)(lpVtbl[5]))((IDWriteColorGlyphRunEnumerator1*)Unsafe.AsPointer(ref this), colorGlyphRun);
 	}
 
 	public interface Interface : IDWriteColorGlyphRunEnumerator.Interface

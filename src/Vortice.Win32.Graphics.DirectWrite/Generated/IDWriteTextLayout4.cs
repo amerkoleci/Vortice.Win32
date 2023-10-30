@@ -40,11 +40,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout4));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextLayout4));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint>)(lpVtbl[1]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint>)(lpVtbl[1]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint>)(lpVtbl[1]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint>)(lpVtbl[2]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint>)(lpVtbl[2]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint>)(lpVtbl[2]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetTextAlignment" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(3)]
 	public HResult SetTextAlignment(TextAlignment textAlignment)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, TextAlignment, int>)(lpVtbl[3]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textAlignment);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, TextAlignment, int>)(lpVtbl[3]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textAlignment);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, TextAlignment, int>)(lpVtbl[3]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textAlignment);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetParagraphAlignment" />
@@ -103,11 +83,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(4)]
 	public HResult SetParagraphAlignment(ParagraphAlignment paragraphAlignment)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ParagraphAlignment, int>)(lpVtbl[4]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), paragraphAlignment);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ParagraphAlignment, int>)(lpVtbl[4]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), paragraphAlignment);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ParagraphAlignment, int>)(lpVtbl[4]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), paragraphAlignment);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetWordWrapping" />
@@ -115,11 +91,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(5)]
 	public HResult SetWordWrapping(WordWrapping wordWrapping)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, WordWrapping, int>)(lpVtbl[5]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), wordWrapping);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, WordWrapping, int>)(lpVtbl[5]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), wordWrapping);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, WordWrapping, int>)(lpVtbl[5]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), wordWrapping);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetReadingDirection" />
@@ -127,11 +99,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(6)]
 	public HResult SetReadingDirection(ReadingDirection readingDirection)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ReadingDirection, int>)(lpVtbl[6]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), readingDirection);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ReadingDirection, int>)(lpVtbl[6]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), readingDirection);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ReadingDirection, int>)(lpVtbl[6]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), readingDirection);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetFlowDirection" />
@@ -139,11 +107,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(7)]
 	public HResult SetFlowDirection(FlowDirection flowDirection)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FlowDirection, int>)(lpVtbl[7]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), flowDirection);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FlowDirection, int>)(lpVtbl[7]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), flowDirection);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FlowDirection, int>)(lpVtbl[7]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), flowDirection);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetIncrementalTabStop" />
@@ -151,11 +115,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(8)]
 	public HResult SetIncrementalTabStop(float incrementalTabStop)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float, int>)(lpVtbl[8]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), incrementalTabStop);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float, int>)(lpVtbl[8]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), incrementalTabStop);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float, int>)(lpVtbl[8]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), incrementalTabStop);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetTrimming" />
@@ -163,11 +123,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(9)]
 	public HResult SetTrimming(Trimming* trimmingOptions, IDWriteInlineObject* trimmingSign)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, Trimming*, IDWriteInlineObject*, int>)(lpVtbl[9]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Trimming*, IDWriteInlineObject*, int>)(lpVtbl[9]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, Trimming*, IDWriteInlineObject*, int>)(lpVtbl[9]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.SetLineSpacing" />
@@ -175,11 +131,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(10)]
 	public HResult SetLineSpacing(LineSpacingMethod lineSpacingMethod, float lineSpacing, float baseline)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, LineSpacingMethod, float, float, int>)(lpVtbl[10]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, LineSpacingMethod, float, float, int>)(lpVtbl[10]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, LineSpacingMethod, float, float, int>)(lpVtbl[10]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetTextAlignment" />
@@ -187,11 +139,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(11)]
 	public TextAlignment GetTextAlignment()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, TextAlignment>)(lpVtbl[11]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, TextAlignment>)(lpVtbl[11]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, TextAlignment>)(lpVtbl[11]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetParagraphAlignment" />
@@ -199,11 +147,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(12)]
 	public ParagraphAlignment GetParagraphAlignment()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ParagraphAlignment>)(lpVtbl[12]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetWordWrapping" />
@@ -211,11 +155,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(13)]
 	public WordWrapping GetWordWrapping()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, WordWrapping>)(lpVtbl[13]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, WordWrapping>)(lpVtbl[13]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, WordWrapping>)(lpVtbl[13]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetReadingDirection" />
@@ -223,11 +163,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(14)]
 	public ReadingDirection GetReadingDirection()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ReadingDirection>)(lpVtbl[14]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ReadingDirection>)(lpVtbl[14]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ReadingDirection>)(lpVtbl[14]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFlowDirection" />
@@ -235,11 +171,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(15)]
 	public FlowDirection GetFlowDirection()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FlowDirection>)(lpVtbl[15]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FlowDirection>)(lpVtbl[15]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FlowDirection>)(lpVtbl[15]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetIncrementalTabStop" />
@@ -247,11 +179,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(16)]
 	public float GetIncrementalTabStop()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float>)(lpVtbl[16]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float>)(lpVtbl[16]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float>)(lpVtbl[16]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetTrimming" />
@@ -259,11 +187,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(17)]
 	public HResult GetTrimming(Trimming* trimmingOptions, IDWriteInlineObject** trimmingSign)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, Trimming*, IDWriteInlineObject**, int>)(lpVtbl[17]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Trimming*, IDWriteInlineObject**, int>)(lpVtbl[17]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, Trimming*, IDWriteInlineObject**, int>)(lpVtbl[17]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), trimmingOptions, trimmingSign);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetLineSpacing" />
@@ -271,11 +195,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(18)]
 	public HResult GetLineSpacing(LineSpacingMethod* lineSpacingMethod, float* lineSpacing, float* baseline)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, LineSpacingMethod*, float*, float*, int>)(lpVtbl[18]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, LineSpacingMethod*, float*, float*, int>)(lpVtbl[18]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, LineSpacingMethod*, float*, float*, int>)(lpVtbl[18]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingMethod, lineSpacing, baseline);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontCollection" />
@@ -283,11 +203,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(19)]
 	public HResult GetFontCollection(IDWriteFontCollection** fontCollection)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, IDWriteFontCollection**, int>)(lpVtbl[19]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontCollection);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, IDWriteFontCollection**, int>)(lpVtbl[19]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontCollection);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, IDWriteFontCollection**, int>)(lpVtbl[19]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontCollection);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontFamilyNameLength" />
@@ -295,11 +211,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(20)]
 	public uint GetFontFamilyNameLength()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint>)(lpVtbl[20]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint>)(lpVtbl[20]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint>)(lpVtbl[20]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontFamilyName" />
@@ -307,11 +219,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(21)]
 	public HResult GetFontFamilyName(ushort* fontFamilyName, uint nameSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ushort*, uint, int>)(lpVtbl[21]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ushort*, uint, int>)(lpVtbl[21]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ushort*, uint, int>)(lpVtbl[21]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
@@ -319,11 +227,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(22)]
 	public FontWeight GetFontWeight()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FontWeight>)(lpVtbl[22]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontWeight>)(lpVtbl[22]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FontWeight>)(lpVtbl[22]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStyle" />
@@ -331,11 +235,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(23)]
 	public FontStyle GetFontStyle()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FontStyle>)(lpVtbl[23]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontStyle>)(lpVtbl[23]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FontStyle>)(lpVtbl[23]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontStretch" />
@@ -343,11 +243,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(24)]
 	public FontStretch GetFontStretch()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FontStretch>)(lpVtbl[24]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontStretch>)(lpVtbl[24]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FontStretch>)(lpVtbl[24]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontSize" />
@@ -355,11 +251,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(25)]
 	public float GetFontSize()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float>)(lpVtbl[25]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float>)(lpVtbl[25]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float>)(lpVtbl[25]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetLocaleNameLength" />
@@ -367,11 +259,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(26)]
 	public uint GetLocaleNameLength()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint>)(lpVtbl[26]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint>)(lpVtbl[26]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint>)(lpVtbl[26]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetLocaleName" />
@@ -379,11 +267,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(27)]
 	public HResult GetLocaleName(ushort* localeName, uint nameSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), localeName, nameSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), localeName, nameSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), localeName, nameSize);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetMaxWidth" />
@@ -391,11 +275,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(28)]
 	public HResult SetMaxWidth(float maxWidth)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float, int>)(lpVtbl[28]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), maxWidth);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float, int>)(lpVtbl[28]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), maxWidth);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float, int>)(lpVtbl[28]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), maxWidth);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetMaxHeight" />
@@ -403,11 +283,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(29)]
 	public HResult SetMaxHeight(float maxHeight)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float, int>)(lpVtbl[29]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), maxHeight);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float, int>)(lpVtbl[29]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), maxHeight);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float, int>)(lpVtbl[29]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), maxHeight);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetFontCollection" />
@@ -415,11 +291,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(30)]
 	public HResult SetFontCollection(IDWriteFontCollection* fontCollection, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, IDWriteFontCollection*, TextRange, int>)(lpVtbl[30]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontCollection, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, IDWriteFontCollection*, TextRange, int>)(lpVtbl[30]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontCollection, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, IDWriteFontCollection*, TextRange, int>)(lpVtbl[30]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontCollection, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetFontFamilyName" />
@@ -427,11 +299,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(31)]
 	public HResult SetFontFamilyName(ushort* fontFamilyName, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ushort*, TextRange, int>)(lpVtbl[31]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ushort*, TextRange, int>)(lpVtbl[31]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ushort*, TextRange, int>)(lpVtbl[31]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetFontWeight" />
@@ -439,11 +307,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(32)]
 	public HResult SetFontWeight(FontWeight fontWeight, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FontWeight, TextRange, int>)(lpVtbl[32]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontWeight, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontWeight, TextRange, int>)(lpVtbl[32]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontWeight, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FontWeight, TextRange, int>)(lpVtbl[32]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontWeight, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetFontStyle" />
@@ -451,11 +315,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(33)]
 	public HResult SetFontStyle(FontStyle fontStyle, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FontStyle, TextRange, int>)(lpVtbl[33]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontStyle, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontStyle, TextRange, int>)(lpVtbl[33]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontStyle, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FontStyle, TextRange, int>)(lpVtbl[33]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontStyle, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetFontStretch" />
@@ -463,11 +323,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(34)]
 	public HResult SetFontStretch(FontStretch fontStretch, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FontStretch, TextRange, int>)(lpVtbl[34]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontStretch, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontStretch, TextRange, int>)(lpVtbl[34]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontStretch, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FontStretch, TextRange, int>)(lpVtbl[34]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontStretch, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetFontSize" />
@@ -475,11 +331,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(35)]
 	public HResult SetFontSize(float fontSize, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float, TextRange, int>)(lpVtbl[35]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontSize, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float, TextRange, int>)(lpVtbl[35]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontSize, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float, TextRange, int>)(lpVtbl[35]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontSize, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetUnderline" />
@@ -487,11 +339,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(36)]
 	public HResult SetUnderline(Bool32 hasUnderline, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[36]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), hasUnderline, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[36]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), hasUnderline, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[36]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), hasUnderline, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetStrikethrough" />
@@ -499,11 +347,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(37)]
 	public HResult SetStrikethrough(Bool32 hasStrikethrough, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[37]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), hasStrikethrough, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[37]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), hasStrikethrough, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[37]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), hasStrikethrough, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetDrawingEffect" />
@@ -511,11 +355,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(38)]
 	public HResult SetDrawingEffect(IUnknown* drawingEffect, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, IUnknown*, TextRange, int>)(lpVtbl[38]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), drawingEffect, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, IUnknown*, TextRange, int>)(lpVtbl[38]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), drawingEffect, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, IUnknown*, TextRange, int>)(lpVtbl[38]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), drawingEffect, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetInlineObject" />
@@ -523,11 +363,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(39)]
 	public HResult SetInlineObject(IDWriteInlineObject* inlineObject, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, IDWriteInlineObject*, TextRange, int>)(lpVtbl[39]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), inlineObject, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, IDWriteInlineObject*, TextRange, int>)(lpVtbl[39]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), inlineObject, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, IDWriteInlineObject*, TextRange, int>)(lpVtbl[39]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), inlineObject, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetTypography" />
@@ -535,11 +371,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(40)]
 	public HResult SetTypography(IDWriteTypography* typography, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, IDWriteTypography*, TextRange, int>)(lpVtbl[40]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), typography, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, IDWriteTypography*, TextRange, int>)(lpVtbl[40]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), typography, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, IDWriteTypography*, TextRange, int>)(lpVtbl[40]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), typography, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.SetLocaleName" />
@@ -547,11 +379,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(41)]
 	public HResult SetLocaleName(ushort* localeName, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ushort*, TextRange, int>)(lpVtbl[41]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), localeName, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ushort*, TextRange, int>)(lpVtbl[41]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), localeName, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ushort*, TextRange, int>)(lpVtbl[41]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), localeName, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetMaxWidth" />
@@ -559,11 +387,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(42)]
 	public float GetMaxWidth()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float>)(lpVtbl[42]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float>)(lpVtbl[42]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float>)(lpVtbl[42]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetMaxHeight" />
@@ -571,11 +395,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(43)]
 	public float GetMaxHeight()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float>)(lpVtbl[43]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float>)(lpVtbl[43]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float>)(lpVtbl[43]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetFontCollection" />
@@ -583,11 +403,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(44)]
 	public HResult GetFontCollection(uint currentPosition, IDWriteFontCollection** fontCollection, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, IDWriteFontCollection**, TextRange*, int>)(lpVtbl[44]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontCollection, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, IDWriteFontCollection**, TextRange*, int>)(lpVtbl[44]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontCollection, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, IDWriteFontCollection**, TextRange*, int>)(lpVtbl[44]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontCollection, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetFontFamilyNameLength" />
@@ -595,11 +411,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(45)]
 	public HResult GetFontFamilyNameLength(uint currentPosition, uint* nameLength, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, uint*, TextRange*, int>)(lpVtbl[45]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, uint*, TextRange*, int>)(lpVtbl[45]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, uint*, TextRange*, int>)(lpVtbl[45]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetFontFamilyName" />
@@ -607,11 +419,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(46)]
 	public HResult GetFontFamilyName(uint currentPosition, ushort* fontFamilyName, uint nameSize, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, ushort*, uint, TextRange*, int>)(lpVtbl[46]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontFamilyName, nameSize, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, ushort*, uint, TextRange*, int>)(lpVtbl[46]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontFamilyName, nameSize, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, ushort*, uint, TextRange*, int>)(lpVtbl[46]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontFamilyName, nameSize, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetFontWeight" />
@@ -619,11 +427,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(47)]
 	public HResult GetFontWeight(uint currentPosition, FontWeight* fontWeight, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, FontWeight*, TextRange*, int>)(lpVtbl[47]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontWeight, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, FontWeight*, TextRange*, int>)(lpVtbl[47]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontWeight, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, FontWeight*, TextRange*, int>)(lpVtbl[47]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontWeight, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetFontStyle" />
@@ -631,11 +435,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(48)]
 	public HResult GetFontStyle(uint currentPosition, FontStyle* fontStyle, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, FontStyle*, TextRange*, int>)(lpVtbl[48]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontStyle, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, FontStyle*, TextRange*, int>)(lpVtbl[48]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontStyle, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, FontStyle*, TextRange*, int>)(lpVtbl[48]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontStyle, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetFontStretch" />
@@ -643,11 +443,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(49)]
 	public HResult GetFontStretch(uint currentPosition, FontStretch* fontStretch, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, FontStretch*, TextRange*, int>)(lpVtbl[49]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontStretch, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, FontStretch*, TextRange*, int>)(lpVtbl[49]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontStretch, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, FontStretch*, TextRange*, int>)(lpVtbl[49]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontStretch, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetFontSize" />
@@ -655,11 +451,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(50)]
 	public HResult GetFontSize(uint currentPosition, float* fontSize, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, float*, TextRange*, int>)(lpVtbl[50]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontSize, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, float*, TextRange*, int>)(lpVtbl[50]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontSize, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, float*, TextRange*, int>)(lpVtbl[50]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontSize, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetUnderline" />
@@ -667,11 +459,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(51)]
 	public HResult GetUnderline(uint currentPosition, Bool32* hasUnderline, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[51]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, hasUnderline, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[51]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, hasUnderline, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[51]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, hasUnderline, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetStrikethrough" />
@@ -679,11 +467,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(52)]
 	public HResult GetStrikethrough(uint currentPosition, Bool32* hasStrikethrough, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[52]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, hasStrikethrough, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[52]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, hasStrikethrough, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[52]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, hasStrikethrough, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetDrawingEffect" />
@@ -691,11 +475,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(53)]
 	public HResult GetDrawingEffect(uint currentPosition, IUnknown** drawingEffect, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, IUnknown**, TextRange*, int>)(lpVtbl[53]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, drawingEffect, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, IUnknown**, TextRange*, int>)(lpVtbl[53]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, drawingEffect, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, IUnknown**, TextRange*, int>)(lpVtbl[53]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, drawingEffect, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetInlineObject" />
@@ -703,11 +483,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(54)]
 	public HResult GetInlineObject(uint currentPosition, IDWriteInlineObject** inlineObject, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, IDWriteInlineObject**, TextRange*, int>)(lpVtbl[54]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, inlineObject, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, IDWriteInlineObject**, TextRange*, int>)(lpVtbl[54]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, inlineObject, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, IDWriteInlineObject**, TextRange*, int>)(lpVtbl[54]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, inlineObject, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetTypography" />
@@ -715,11 +491,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(55)]
 	public HResult GetTypography(uint currentPosition, IDWriteTypography** typography, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, IDWriteTypography**, TextRange*, int>)(lpVtbl[55]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, typography, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, IDWriteTypography**, TextRange*, int>)(lpVtbl[55]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, typography, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, IDWriteTypography**, TextRange*, int>)(lpVtbl[55]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, typography, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetLocaleNameLength" />
@@ -727,11 +499,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(56)]
 	public HResult GetLocaleNameLength(uint currentPosition, uint* nameLength, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, uint*, TextRange*, int>)(lpVtbl[56]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, uint*, TextRange*, int>)(lpVtbl[56]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, uint*, TextRange*, int>)(lpVtbl[56]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, nameLength, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetLocaleName" />
@@ -739,11 +507,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(57)]
 	public HResult GetLocaleName(uint currentPosition, ushort* localeName, uint nameSize, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, ushort*, uint, TextRange*, int>)(lpVtbl[57]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, localeName, nameSize, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, ushort*, uint, TextRange*, int>)(lpVtbl[57]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, localeName, nameSize, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, ushort*, uint, TextRange*, int>)(lpVtbl[57]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, localeName, nameSize, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.Draw" />
@@ -751,11 +515,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(58)]
 	public HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, void*, IDWriteTextRenderer*, float, float, int>)(lpVtbl[58]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), clientDrawingContext, renderer, originX, originY);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, void*, IDWriteTextRenderer*, float, float, int>)(lpVtbl[58]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), clientDrawingContext, renderer, originX, originY);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, void*, IDWriteTextRenderer*, float, float, int>)(lpVtbl[58]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), clientDrawingContext, renderer, originX, originY);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetLineMetrics" />
@@ -763,11 +523,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(59)]
 	public HResult GetLineMetrics(LineMetrics* lineMetrics, uint maxLineCount, uint* actualLineCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, LineMetrics*, uint, uint*, int>)(lpVtbl[59]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, LineMetrics*, uint, uint*, int>)(lpVtbl[59]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, LineMetrics*, uint, uint*, int>)(lpVtbl[59]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetMetrics" />
@@ -775,11 +531,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(60)]
 	public HResult GetMetrics(TextMetrics* textMetrics)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, TextMetrics*, int>)(lpVtbl[60]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textMetrics);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, TextMetrics*, int>)(lpVtbl[60]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textMetrics);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, TextMetrics*, int>)(lpVtbl[60]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetOverhangMetrics" />
@@ -787,11 +539,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(61)]
 	public HResult GetOverhangMetrics(OverhangMetrics* overhangs)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, OverhangMetrics*, int>)(lpVtbl[61]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), overhangs);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, OverhangMetrics*, int>)(lpVtbl[61]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), overhangs);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, OverhangMetrics*, int>)(lpVtbl[61]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), overhangs);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.GetClusterMetrics" />
@@ -799,11 +547,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(62)]
 	public HResult GetClusterMetrics(ClusterMetrics* clusterMetrics, uint maxClusterCount, uint* actualClusterCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, ClusterMetrics*, uint, uint*, int>)(lpVtbl[62]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), clusterMetrics, maxClusterCount, actualClusterCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, ClusterMetrics*, uint, uint*, int>)(lpVtbl[62]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), clusterMetrics, maxClusterCount, actualClusterCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, ClusterMetrics*, uint, uint*, int>)(lpVtbl[62]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), clusterMetrics, maxClusterCount, actualClusterCount);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.DetermineMinWidth" />
@@ -811,11 +555,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(63)]
 	public HResult DetermineMinWidth(float* minWidth)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float*, int>)(lpVtbl[63]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), minWidth);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float*, int>)(lpVtbl[63]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), minWidth);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float*, int>)(lpVtbl[63]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), minWidth);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.HitTestPoint" />
@@ -823,11 +563,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(64)]
 	public HResult HitTestPoint(float pointX, float pointY, Bool32* isTrailingHit, Bool32* isInside, HitTestMetrics* hitTestMetrics)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float, float, Bool32*, Bool32*, HitTestMetrics*, int>)(lpVtbl[64]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), pointX, pointY, isTrailingHit, isInside, hitTestMetrics);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float, float, Bool32*, Bool32*, HitTestMetrics*, int>)(lpVtbl[64]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), pointX, pointY, isTrailingHit, isInside, hitTestMetrics);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float, float, Bool32*, Bool32*, HitTestMetrics*, int>)(lpVtbl[64]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), pointX, pointY, isTrailingHit, isInside, hitTestMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.HitTestTextPosition" />
@@ -835,11 +571,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(65)]
 	public HResult HitTestTextPosition(uint textPosition, Bool32 isTrailingHit, float* pointX, float* pointY, HitTestMetrics* hitTestMetrics)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, Bool32, float*, float*, HitTestMetrics*, int>)(lpVtbl[65]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textPosition, isTrailingHit, pointX, pointY, hitTestMetrics);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, Bool32, float*, float*, HitTestMetrics*, int>)(lpVtbl[65]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textPosition, isTrailingHit, pointX, pointY, hitTestMetrics);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, Bool32, float*, float*, HitTestMetrics*, int>)(lpVtbl[65]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textPosition, isTrailingHit, pointX, pointY, hitTestMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout.HitTestTextRange" />
@@ -847,11 +579,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(66)]
 	public HResult HitTestTextRange(uint textPosition, uint textLength, float originX, float originY, HitTestMetrics* hitTestMetrics, uint maxHitTestMetricsCount, uint* actualHitTestMetricsCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, uint, float, float, HitTestMetrics*, uint, uint*, int>)(lpVtbl[66]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textPosition, textLength, originX, originY, hitTestMetrics, maxHitTestMetricsCount, actualHitTestMetricsCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, uint, float, float, HitTestMetrics*, uint, uint*, int>)(lpVtbl[66]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textPosition, textLength, originX, originY, hitTestMetrics, maxHitTestMetricsCount, actualHitTestMetricsCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, uint, float, float, HitTestMetrics*, uint, uint*, int>)(lpVtbl[66]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textPosition, textLength, originX, originY, hitTestMetrics, maxHitTestMetricsCount, actualHitTestMetricsCount);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout1.SetPairKerning" />
@@ -859,11 +587,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(67)]
 	public HResult SetPairKerning(Bool32 isPairKerningEnabled, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[67]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), isPairKerningEnabled, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[67]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), isPairKerningEnabled, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, Bool32, TextRange, int>)(lpVtbl[67]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), isPairKerningEnabled, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout1.GetPairKerning" />
@@ -871,11 +595,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(68)]
 	public HResult GetPairKerning(uint currentPosition, Bool32* isPairKerningEnabled, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[68]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, isPairKerningEnabled, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[68]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, isPairKerningEnabled, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, Bool32*, TextRange*, int>)(lpVtbl[68]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, isPairKerningEnabled, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout1.SetCharacterSpacing" />
@@ -883,11 +603,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(69)]
 	public HResult SetCharacterSpacing(float leadingSpacing, float trailingSpacing, float minimumAdvanceWidth, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, float, float, float, TextRange, int>)(lpVtbl[69]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, float, float, float, TextRange, int>)(lpVtbl[69]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, float, float, float, TextRange, int>)(lpVtbl[69]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout1.GetCharacterSpacing" />
@@ -895,11 +611,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(70)]
 	public HResult GetCharacterSpacing(uint currentPosition, float* leadingSpacing, float* trailingSpacing, float* minimumAdvanceWidth, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, float*, float*, float*, TextRange*, int>)(lpVtbl[70]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, float*, float*, float*, TextRange*, int>)(lpVtbl[70]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, float*, float*, float*, TextRange*, int>)(lpVtbl[70]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, leadingSpacing, trailingSpacing, minimumAdvanceWidth, textRange);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.GetMetrics" />
@@ -907,11 +619,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(71)]
 	public HResult GetMetrics(TextMetrics1* textMetrics)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, TextMetrics1*, int>)(lpVtbl[71]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textMetrics);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, TextMetrics1*, int>)(lpVtbl[71]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textMetrics);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, TextMetrics1*, int>)(lpVtbl[71]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), textMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.SetVerticalGlyphOrientation" />
@@ -919,11 +627,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(72)]
 	public HResult SetVerticalGlyphOrientation(VerticalGlyphOrientation glyphOrientation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, VerticalGlyphOrientation, int>)(lpVtbl[72]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), glyphOrientation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, VerticalGlyphOrientation, int>)(lpVtbl[72]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), glyphOrientation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, VerticalGlyphOrientation, int>)(lpVtbl[72]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), glyphOrientation);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.GetVerticalGlyphOrientation" />
@@ -931,11 +635,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(73)]
 	public VerticalGlyphOrientation GetVerticalGlyphOrientation()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, VerticalGlyphOrientation>)(lpVtbl[73]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, VerticalGlyphOrientation>)(lpVtbl[73]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, VerticalGlyphOrientation>)(lpVtbl[73]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.SetLastLineWrapping" />
@@ -943,11 +643,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(74)]
 	public HResult SetLastLineWrapping(Bool32 isLastLineWrappingEnabled)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, Bool32, int>)(lpVtbl[74]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), isLastLineWrappingEnabled);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Bool32, int>)(lpVtbl[74]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), isLastLineWrappingEnabled);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, Bool32, int>)(lpVtbl[74]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), isLastLineWrappingEnabled);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.GetLastLineWrapping" />
@@ -955,11 +651,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(75)]
 	public Bool32 GetLastLineWrapping()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, Bool32>)(lpVtbl[75]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, Bool32>)(lpVtbl[75]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, Bool32>)(lpVtbl[75]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.SetOpticalAlignment" />
@@ -967,11 +659,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(76)]
 	public HResult SetOpticalAlignment(OpticalAlignment opticalAlignment)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, OpticalAlignment, int>)(lpVtbl[76]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), opticalAlignment);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, OpticalAlignment, int>)(lpVtbl[76]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), opticalAlignment);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, OpticalAlignment, int>)(lpVtbl[76]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), opticalAlignment);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.GetOpticalAlignment" />
@@ -979,11 +667,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(77)]
 	public OpticalAlignment GetOpticalAlignment()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, OpticalAlignment>)(lpVtbl[77]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, OpticalAlignment>)(lpVtbl[77]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, OpticalAlignment>)(lpVtbl[77]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.SetFontFallback" />
@@ -991,11 +675,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(78)]
 	public HResult SetFontFallback(IDWriteFontFallback* fontFallback)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, IDWriteFontFallback*, int>)(lpVtbl[78]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFallback);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, IDWriteFontFallback*, int>)(lpVtbl[78]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFallback);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, IDWriteFontFallback*, int>)(lpVtbl[78]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFallback);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout2.GetFontFallback" />
@@ -1003,11 +683,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(79)]
 	public HResult GetFontFallback(IDWriteFontFallback** fontFallback)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, IDWriteFontFallback**, int>)(lpVtbl[79]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFallback);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, IDWriteFontFallback**, int>)(lpVtbl[79]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFallback);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, IDWriteFontFallback**, int>)(lpVtbl[79]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontFallback);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout3.InvalidateLayout" />
@@ -1015,11 +691,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(80)]
 	public HResult InvalidateLayout()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, int>)(lpVtbl[80]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, int>)(lpVtbl[80]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, int>)(lpVtbl[80]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout3.SetLineSpacing" />
@@ -1027,11 +699,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(81)]
 	public HResult SetLineSpacing(LineSpacing* lineSpacingOptions)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, LineSpacing*, int>)(lpVtbl[81]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingOptions);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, LineSpacing*, int>)(lpVtbl[81]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingOptions);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, LineSpacing*, int>)(lpVtbl[81]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout3.GetLineSpacing" />
@@ -1039,11 +707,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(82)]
 	public HResult GetLineSpacing(LineSpacing* lineSpacingOptions)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, LineSpacing*, int>)(lpVtbl[82]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingOptions);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, LineSpacing*, int>)(lpVtbl[82]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingOptions);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, LineSpacing*, int>)(lpVtbl[82]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineSpacingOptions);
 	}
 
 	/// <inheritdoc cref="IDWriteTextLayout3.GetLineMetrics" />
@@ -1051,11 +715,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(83)]
 	public HResult GetLineMetrics(LineMetrics1* lineMetrics, uint maxLineCount, uint* actualLineCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, LineMetrics1*, uint, uint*, int>)(lpVtbl[83]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, LineMetrics1*, uint, uint*, int>)(lpVtbl[83]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, LineMetrics1*, uint, uint*, int>)(lpVtbl[83]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), lineMetrics, maxLineCount, actualLineCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::SetFontAxisValues"]/*' />
@@ -1063,11 +723,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(84)]
 	public HResult SetFontAxisValues(FontAxisValue* fontAxisValues, uint fontAxisValueCount, TextRange textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, FontAxisValue*, uint, TextRange, int>)(lpVtbl[84]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, FontAxisValue*, uint, TextRange, int>)(lpVtbl[84]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, FontAxisValue*, uint, TextRange, int>)(lpVtbl[84]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), fontAxisValues, fontAxisValueCount, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetFontAxisValueCount"]/*' />
@@ -1075,11 +731,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(85)]
 	public uint GetFontAxisValueCount(uint currentPosition)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, uint>)(lpVtbl[85]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, uint>)(lpVtbl[85]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, uint>)(lpVtbl[85]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetFontAxisValues"]/*' />
@@ -1087,11 +739,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(86)]
 	public HResult GetFontAxisValues(uint currentPosition, FontAxisValue* fontAxisValues, uint fontAxisValueCount, TextRange* textRange)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, uint, FontAxisValue*, uint, TextRange*, int>)(lpVtbl[86]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontAxisValues, fontAxisValueCount, textRange);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, uint, FontAxisValue*, uint, TextRange*, int>)(lpVtbl[86]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontAxisValues, fontAxisValueCount, textRange);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, uint, FontAxisValue*, uint, TextRange*, int>)(lpVtbl[86]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), currentPosition, fontAxisValues, fontAxisValueCount, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::GetAutomaticFontAxes"]/*' />
@@ -1099,11 +747,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(87)]
 	public AutomaticFontAxes GetAutomaticFontAxes()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, AutomaticFontAxes>)(lpVtbl[87]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, AutomaticFontAxes>)(lpVtbl[87]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, AutomaticFontAxes>)(lpVtbl[87]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout4::SetAutomaticFontAxes"]/*' />
@@ -1111,11 +755,7 @@ public unsafe partial struct IDWriteTextLayout4 : IDWriteTextLayout4.Interface, 
 	[VtblIndex(88)]
 	public HResult SetAutomaticFontAxes(AutomaticFontAxes automaticFontAxes)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextLayout4*, AutomaticFontAxes, int>)(lpVtbl[88]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), automaticFontAxes);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextLayout4*, AutomaticFontAxes, int>)(lpVtbl[88]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), automaticFontAxes);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout4*, AutomaticFontAxes, int>)(lpVtbl[88]))((IDWriteTextLayout4*)Unsafe.AsPointer(ref this), automaticFontAxes);
 	}
 
 	public interface Interface : IDWriteTextLayout3.Interface

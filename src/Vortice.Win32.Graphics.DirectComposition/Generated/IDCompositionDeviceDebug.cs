@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionDeviceDebug));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionDeviceDebug));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDeviceDebug*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDeviceDebug*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDeviceDebug*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDeviceDebug*, uint>)(lpVtbl[1]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDeviceDebug*, uint>)(lpVtbl[1]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDeviceDebug*, uint>)(lpVtbl[1]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDeviceDebug*, uint>)(lpVtbl[2]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDeviceDebug*, uint>)(lpVtbl[2]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDeviceDebug*, uint>)(lpVtbl[2]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDeviceDebug::EnableDebugCounters"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	[VtblIndex(3)]
 	public HResult EnableDebugCounters()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDeviceDebug*, int>)(lpVtbl[3]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDeviceDebug*, int>)(lpVtbl[3]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDeviceDebug*, int>)(lpVtbl[3]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDeviceDebug::DisableDebugCounters"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionDeviceDebug : IDCompositionDeviceDebug
 	[VtblIndex(4)]
 	public HResult DisableDebugCounters()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDeviceDebug*, int>)(lpVtbl[4]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDeviceDebug*, int>)(lpVtbl[4]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDeviceDebug*, int>)(lpVtbl[4]))((IDCompositionDeviceDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IUnknown.Interface

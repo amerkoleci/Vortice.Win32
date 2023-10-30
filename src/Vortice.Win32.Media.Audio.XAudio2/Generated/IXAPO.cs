@@ -40,11 +40,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAPO));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAPO));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, Guid*, void**, int>)(lpVtbl[0]))((IXAPO*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, Guid*, void**, int>)(lpVtbl[0]))((IXAPO*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, Guid*, void**, int>)(lpVtbl[0]))((IXAPO*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, uint>)(lpVtbl[1]))((IXAPO*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, uint>)(lpVtbl[1]))((IXAPO*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, uint>)(lpVtbl[1]))((IXAPO*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, uint>)(lpVtbl[2]))((IXAPO*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, uint>)(lpVtbl[2]))((IXAPO*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, uint>)(lpVtbl[2]))((IXAPO*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::GetRegistrationProperties"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(3)]
 	public HResult GetRegistrationProperties(XAPORegistrationProperties** ppRegistrationProperties)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, XAPORegistrationProperties**, int>)(lpVtbl[3]))((IXAPO*)Unsafe.AsPointer(ref this), ppRegistrationProperties);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, XAPORegistrationProperties**, int>)(lpVtbl[3]))((IXAPO*)Unsafe.AsPointer(ref this), ppRegistrationProperties);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, XAPORegistrationProperties**, int>)(lpVtbl[3]))((IXAPO*)Unsafe.AsPointer(ref this), ppRegistrationProperties);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::IsInputFormatSupported"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(4)]
 	public HResult IsInputFormatSupported(Media.Audio.WaveFormatEx* pOutputFormat, Media.Audio.WaveFormatEx* pRequestedInputFormat, Media.Audio.WaveFormatEx** ppSupportedInputFormat)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx**, int>)(lpVtbl[4]))((IXAPO*)Unsafe.AsPointer(ref this), pOutputFormat, pRequestedInputFormat, ppSupportedInputFormat);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx**, int>)(lpVtbl[4]))((IXAPO*)Unsafe.AsPointer(ref this), pOutputFormat, pRequestedInputFormat, ppSupportedInputFormat);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx**, int>)(lpVtbl[4]))((IXAPO*)Unsafe.AsPointer(ref this), pOutputFormat, pRequestedInputFormat, ppSupportedInputFormat);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::IsOutputFormatSupported"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(5)]
 	public HResult IsOutputFormatSupported(Media.Audio.WaveFormatEx* pInputFormat, Media.Audio.WaveFormatEx* pRequestedOutputFormat, Media.Audio.WaveFormatEx** ppSupportedOutputFormat)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx**, int>)(lpVtbl[5]))((IXAPO*)Unsafe.AsPointer(ref this), pInputFormat, pRequestedOutputFormat, ppSupportedOutputFormat);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx**, int>)(lpVtbl[5]))((IXAPO*)Unsafe.AsPointer(ref this), pInputFormat, pRequestedOutputFormat, ppSupportedOutputFormat);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx*, Media.Audio.WaveFormatEx**, int>)(lpVtbl[5]))((IXAPO*)Unsafe.AsPointer(ref this), pInputFormat, pRequestedOutputFormat, ppSupportedOutputFormat);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::Initialize"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(6)]
 	public HResult Initialize(void* pData, uint DataByteSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, void*, uint, int>)(lpVtbl[6]))((IXAPO*)Unsafe.AsPointer(ref this), pData, DataByteSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, void*, uint, int>)(lpVtbl[6]))((IXAPO*)Unsafe.AsPointer(ref this), pData, DataByteSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, void*, uint, int>)(lpVtbl[6]))((IXAPO*)Unsafe.AsPointer(ref this), pData, DataByteSize);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::Reset"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(7)]
 	public void Reset()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAPO*, void>)(lpVtbl[7]))((IXAPO*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<IXAPO*, void>)(lpVtbl[7]))((IXAPO*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAPO*, void>)(lpVtbl[7]))((IXAPO*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::LockForProcess"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult LockForProcess(uint InputLockedParameterCount, XAPOLockForProcessParameters* pInputLockedParameters, uint OutputLockedParameterCount, XAPOLockForProcessParameters* pOutputLockedParameters)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, uint, XAPOLockForProcessParameters*, uint, XAPOLockForProcessParameters*, int>)(lpVtbl[8]))((IXAPO*)Unsafe.AsPointer(ref this), InputLockedParameterCount, pInputLockedParameters, OutputLockedParameterCount, pOutputLockedParameters);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, uint, XAPOLockForProcessParameters*, uint, XAPOLockForProcessParameters*, int>)(lpVtbl[8]))((IXAPO*)Unsafe.AsPointer(ref this), InputLockedParameterCount, pInputLockedParameters, OutputLockedParameterCount, pOutputLockedParameters);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, uint, XAPOLockForProcessParameters*, uint, XAPOLockForProcessParameters*, int>)(lpVtbl[8]))((IXAPO*)Unsafe.AsPointer(ref this), InputLockedParameterCount, pInputLockedParameters, OutputLockedParameterCount, pOutputLockedParameters);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::UnlockForProcess"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(9)]
 	public void UnlockForProcess()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAPO*, void>)(lpVtbl[9]))((IXAPO*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<IXAPO*, void>)(lpVtbl[9]))((IXAPO*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAPO*, void>)(lpVtbl[9]))((IXAPO*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::Process"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(10)]
 	public void Process(uint InputProcessParameterCount, XAPOProcessBufferParameters* pInputProcessParameters, uint OutputProcessParameterCount, XAPOProcessBufferParameters* pOutputProcessParameters, Bool32 IsEnabled)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAPO*, uint, XAPOProcessBufferParameters*, uint, XAPOProcessBufferParameters*, Bool32, void>)(lpVtbl[10]))((IXAPO*)Unsafe.AsPointer(ref this), InputProcessParameterCount, pInputProcessParameters, OutputProcessParameterCount, pOutputProcessParameters, IsEnabled);
-#else
-		((delegate* unmanaged[Stdcall]<IXAPO*, uint, XAPOProcessBufferParameters*, uint, XAPOProcessBufferParameters*, Bool32, void>)(lpVtbl[10]))((IXAPO*)Unsafe.AsPointer(ref this), InputProcessParameterCount, pInputProcessParameters, OutputProcessParameterCount, pOutputProcessParameters, IsEnabled);
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAPO*, uint, XAPOProcessBufferParameters*, uint, XAPOProcessBufferParameters*, Bool32, void>)(lpVtbl[10]))((IXAPO*)Unsafe.AsPointer(ref this), InputProcessParameterCount, pInputProcessParameters, OutputProcessParameterCount, pOutputProcessParameters, IsEnabled);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::CalcInputFrames"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(11)]
 	public uint CalcInputFrames(uint OutputFrameCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, uint, uint>)(lpVtbl[11]))((IXAPO*)Unsafe.AsPointer(ref this), OutputFrameCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, uint, uint>)(lpVtbl[11]))((IXAPO*)Unsafe.AsPointer(ref this), OutputFrameCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, uint, uint>)(lpVtbl[11]))((IXAPO*)Unsafe.AsPointer(ref this), OutputFrameCount);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPO::CalcOutputFrames"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct IXAPO : IXAPO.Interface, INativeGuid
 	[VtblIndex(12)]
 	public uint CalcOutputFrames(uint InputFrameCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPO*, uint, uint>)(lpVtbl[12]))((IXAPO*)Unsafe.AsPointer(ref this), InputFrameCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPO*, uint, uint>)(lpVtbl[12]))((IXAPO*)Unsafe.AsPointer(ref this), InputFrameCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPO*, uint, uint>)(lpVtbl[12]))((IXAPO*)Unsafe.AsPointer(ref this), InputFrameCount);
 	}
 
 	public interface Interface : IUnknown.Interface

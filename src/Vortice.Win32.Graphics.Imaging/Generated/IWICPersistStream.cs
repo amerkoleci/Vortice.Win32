@@ -40,11 +40,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPersistStream));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPersistStream));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPersistStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICPersistStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICPersistStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICPersistStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPersistStream*, uint>)(lpVtbl[1]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, uint>)(lpVtbl[1]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, uint>)(lpVtbl[1]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPersistStream*, uint>)(lpVtbl[2]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, uint>)(lpVtbl[2]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, uint>)(lpVtbl[2]))((IWICPersistStream*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::LoadEx"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	[VtblIndex(8)]
 	public HResult LoadEx(Com.IStream* pIStream, Guid* pguidPreferredVendor, WICPersistOptions dwPersistOptions)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPersistStream*, Com.IStream*, Guid*, WICPersistOptions, int>)(lpVtbl[8]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, pguidPreferredVendor, dwPersistOptions);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Com.IStream*, Guid*, WICPersistOptions, int>)(lpVtbl[8]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, pguidPreferredVendor, dwPersistOptions);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, Com.IStream*, Guid*, WICPersistOptions, int>)(lpVtbl[8]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, pguidPreferredVendor, dwPersistOptions);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPersistStream::SaveEx"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IWICPersistStream : IWICPersistStream.Interface, IN
 	[VtblIndex(9)]
 	public HResult SaveEx(Com.IStream* pIStream, WICPersistOptions dwPersistOptions, Bool32 fClearDirty)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPersistStream*, Com.IStream*, WICPersistOptions, Bool32, int>)(lpVtbl[9]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, dwPersistOptions, fClearDirty);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPersistStream*, Com.IStream*, WICPersistOptions, Bool32, int>)(lpVtbl[9]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, dwPersistOptions, fClearDirty);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPersistStream*, Com.IStream*, WICPersistOptions, Bool32, int>)(lpVtbl[9]))((IWICPersistStream*)Unsafe.AsPointer(ref this), pIStream, dwPersistOptions, fClearDirty);
 	}
 
 	public interface Interface : Win32.Com.IPersistStream.Interface

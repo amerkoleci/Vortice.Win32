@@ -40,11 +40,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput5));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGIOutput5));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Guid*, void**, int>)(lpVtbl[0]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, uint>)(lpVtbl[1]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, uint>)(lpVtbl[1]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, uint>)(lpVtbl[1]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, uint>)(lpVtbl[2]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, uint>)(lpVtbl[2]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, uint>)(lpVtbl[2]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(3)]
 	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
@@ -103,11 +83,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(4)]
 	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pUnknown);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pUnknown);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
@@ -115,11 +91,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(5)]
 	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
@@ -127,11 +99,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(6)]
 	public HResult GetParent(Guid* riid, void** ppParent)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), riid, ppParent);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), riid, ppParent);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Guid*, void**, int>)(lpVtbl[6]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.GetDesc" />
@@ -139,11 +107,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(7)]
 	public HResult GetDesc(OutputDescription* pDesc)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, OutputDescription*, int>)(lpVtbl[7]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDesc);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, OutputDescription*, int>)(lpVtbl[7]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDesc);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, OutputDescription*, int>)(lpVtbl[7]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.GetDisplayModeList" />
@@ -151,11 +115,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult GetDisplayModeList(Common.Format EnumFormat, EnumModesFlags Flags, uint* pNumModes, Common.ModeDescription* pDesc)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Common.Format, EnumModesFlags, uint*, Common.ModeDescription*, int>)(lpVtbl[8]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, EnumModesFlags, uint*, Common.ModeDescription*, int>)(lpVtbl[8]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.Format, EnumModesFlags, uint*, Common.ModeDescription*, int>)(lpVtbl[8]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.FindClosestMatchingMode" />
@@ -163,11 +123,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(9)]
 	public HResult FindClosestMatchingMode(Common.ModeDescription* pModeToMatch, Common.ModeDescription* pClosestMatch, IUnknown* pConcernedDevice)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.ModeDescription*, Common.ModeDescription*, IUnknown*, int>)(lpVtbl[9]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.WaitForVBlank" />
@@ -175,11 +131,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(10)]
 	public HResult WaitForVBlank()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, int>)(lpVtbl[10]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, int>)(lpVtbl[10]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, int>)(lpVtbl[10]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.TakeOwnership" />
@@ -187,11 +139,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(11)]
 	public HResult TakeOwnership(IUnknown* pDevice, Bool32 Exclusive)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, IUnknown*, Bool32, int>)(lpVtbl[11]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, Bool32, int>)(lpVtbl[11]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, IUnknown*, Bool32, int>)(lpVtbl[11]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Exclusive);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.ReleaseOwnership" />
@@ -199,11 +147,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(12)]
 	public void ReleaseOwnership()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IDXGIOutput5*, void>)(lpVtbl[12]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<IDXGIOutput5*, void>)(lpVtbl[12]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, void>)(lpVtbl[12]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.GetGammaControlCapabilities" />
@@ -211,11 +155,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(13)]
 	public HResult GetGammaControlCapabilities(Common.GammaControlCapabilities* pGammaCaps)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Common.GammaControlCapabilities*, int>)(lpVtbl[13]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pGammaCaps);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.GammaControlCapabilities*, int>)(lpVtbl[13]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pGammaCaps);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.GammaControlCapabilities*, int>)(lpVtbl[13]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pGammaCaps);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.SetGammaControl" />
@@ -223,11 +163,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(14)]
 	public HResult SetGammaControl(Common.GammaControl* pArray)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[14]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[14]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[14]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.GetGammaControl" />
@@ -235,11 +171,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(15)]
 	public HResult GetGammaControl(Common.GammaControl* pArray)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.GammaControl*, int>)(lpVtbl[15]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pArray);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.SetDisplaySurface" />
@@ -247,11 +179,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(16)]
 	public HResult SetDisplaySurface(IDXGISurface* pScanoutSurface)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[16]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pScanoutSurface);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[16]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pScanoutSurface);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[16]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pScanoutSurface);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.GetDisplaySurfaceData" />
@@ -259,11 +187,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(17)]
 	public HResult GetDisplaySurfaceData(IDXGISurface* pDestination)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, IDXGISurface*, int>)(lpVtbl[17]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput.GetFrameStatistics" />
@@ -271,11 +195,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(18)]
 	public HResult GetFrameStatistics(FrameStatistics* pStats)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pStats);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pStats);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, FrameStatistics*, int>)(lpVtbl[18]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pStats);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput1.GetDisplayModeList1" />
@@ -283,11 +203,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(19)]
 	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput1.FindClosestMatchingMode1" />
@@ -295,11 +211,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(20)]
 	public HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, ModeDescription1*, ModeDescription1*, IUnknown*, int>)(lpVtbl[20]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pModeToMatch, pClosestMatch, pConcernedDevice);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput1.GetDisplaySurfaceData1" />
@@ -307,11 +219,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(21)]
 	public HResult GetDisplaySurfaceData1(IDXGIResource* pDestination)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, IDXGIResource*, int>)(lpVtbl[21]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IDXGIResource*, int>)(lpVtbl[21]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, IDXGIResource*, int>)(lpVtbl[21]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDestination);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput1.DuplicateOutput" />
@@ -319,11 +227,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(22)]
 	public HResult DuplicateOutput(IUnknown* pDevice, IDXGIOutputDuplication** ppOutputDuplication)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, IUnknown*, IDXGIOutputDuplication**, int>)(lpVtbl[22]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, ppOutputDuplication);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput2.SupportsOverlays" />
@@ -331,11 +235,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(23)]
 	public Bool32 SupportsOverlays()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Bool32>)(lpVtbl[23]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Bool32>)(lpVtbl[23]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Bool32>)(lpVtbl[23]))((IDXGIOutput5*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGIOutput3.CheckOverlaySupport" />
@@ -343,11 +243,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(24)]
 	public HResult CheckOverlaySupport(Common.Format EnumFormat, IUnknown* pConcernedDevice, uint* pFlags)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.Format, IUnknown*, uint*, int>)(lpVtbl[24]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, pConcernedDevice, pFlags);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput4.CheckOverlayColorSpaceSupport" />
@@ -355,11 +251,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(25)]
 	public HResult CheckOverlayColorSpaceSupport(Common.Format Format, Common.ColorSpaceType ColorSpace, IUnknown* pConcernedDevice, uint* pFlags)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[25]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[25]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.Format, Common.ColorSpaceType, IUnknown*, uint*, int>)(lpVtbl[25]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), Format, ColorSpace, pConcernedDevice, pFlags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput5::DuplicateOutput1"]/*' />
@@ -367,11 +259,7 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	[VtblIndex(26)]
 	public HResult DuplicateOutput1(IUnknown* pDevice, uint Flags, uint SupportedFormatsCount, Common.Format* pSupportedFormats, IDXGIOutputDuplication** ppOutputDuplication)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGIOutput5*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGIOutput5*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, IUnknown*, uint, uint, Common.Format*, IDXGIOutputDuplication**, int>)(lpVtbl[26]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), pDevice, Flags, SupportedFormatsCount, pSupportedFormats, ppOutputDuplication);
 	}
 
 	public interface Interface : IDXGIOutput4.Interface

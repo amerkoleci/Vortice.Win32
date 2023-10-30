@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ComputeInfo));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ComputeInfo));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ComputeInfo*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ComputeInfo*, uint>)(lpVtbl[1]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, uint>)(lpVtbl[1]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, uint>)(lpVtbl[1]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ComputeInfo*, uint>)(lpVtbl[2]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, uint>)(lpVtbl[2]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, uint>)(lpVtbl[2]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1RenderInfo.SetInputDescription" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[VtblIndex(3)]
 	public HResult SetInputDescription(uint inputIndex, InputDescription inputDescription)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ComputeInfo*, uint, InputDescription, int>)(lpVtbl[3]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, uint, InputDescription, int>)(lpVtbl[3]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, uint, InputDescription, int>)(lpVtbl[3]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), inputIndex, inputDescription);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderInfo.SetOutputBuffer" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[VtblIndex(4)]
 	public HResult SetOutputBuffer(BufferPrecision bufferPrecision, ChannelDepth channelDepth)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ComputeInfo*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, BufferPrecision, ChannelDepth, int>)(lpVtbl[4]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), bufferPrecision, channelDepth);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderInfo.SetCached" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[VtblIndex(5)]
 	public void SetCached(Bool32 isCached)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ComputeInfo*, Bool32, void>)(lpVtbl[5]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), isCached);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, Bool32, void>)(lpVtbl[5]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), isCached);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, Bool32, void>)(lpVtbl[5]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), isCached);
 	}
 
 	/// <inheritdoc cref="ID2D1RenderInfo.SetInstructionCountHint" />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[VtblIndex(6)]
 	public void SetInstructionCountHint(uint instructionCount)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ComputeInfo*, uint, void>)(lpVtbl[6]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), instructionCount);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, uint, void>)(lpVtbl[6]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), instructionCount);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, uint, void>)(lpVtbl[6]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), instructionCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetComputeShaderConstantBuffer"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[VtblIndex(7)]
 	public HResult SetComputeShaderConstantBuffer(byte* buffer, uint bufferCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ComputeInfo*, byte*, uint, int>)(lpVtbl[7]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, byte*, uint, int>)(lpVtbl[7]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, byte*, uint, int>)(lpVtbl[7]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), buffer, bufferCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetComputeShader"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[VtblIndex(8)]
 	public HResult SetComputeShader(Guid* shaderId)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ComputeInfo*, Guid*, int>)(lpVtbl[8]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), shaderId);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, Guid*, int>)(lpVtbl[8]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), shaderId);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, Guid*, int>)(lpVtbl[8]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), shaderId);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ComputeInfo::SetResourceTexture"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1ComputeInfo : ID2D1ComputeInfo.Interface, INat
 	[VtblIndex(9)]
 	public HResult SetResourceTexture(uint textureIndex, ID2D1ResourceTexture* resourceTexture)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ComputeInfo*, uint, ID2D1ResourceTexture*, int>)(lpVtbl[9]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), textureIndex, resourceTexture);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ComputeInfo*, uint, ID2D1ResourceTexture*, int>)(lpVtbl[9]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), textureIndex, resourceTexture);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ComputeInfo*, uint, ID2D1ResourceTexture*, int>)(lpVtbl[9]))((ID2D1ComputeInfo*)Unsafe.AsPointer(ref this), textureIndex, resourceTexture);
 	}
 
 	public interface Interface : ID2D1RenderInfo.Interface

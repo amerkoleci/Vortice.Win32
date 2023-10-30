@@ -1,8 +1,5 @@
-﻿// Copyright © Amer Koleci and Contributors.
+﻿// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
-
-using System;
-using System.Runtime.CompilerServices;
 
 namespace Win32;
 
@@ -10,9 +7,7 @@ namespace Win32;
 /// A locally unique identifier for a graphics device.
 /// </summary>
 public struct Luid : IEquatable<Luid>
-#if NET6_0_OR_GREATER
     , ISpanFormattable
-#endif
 {
     /// <summary>
     /// The low bits of the luid.
@@ -71,7 +66,6 @@ public struct Luid : IEquatable<Luid>
         return luid;
     }
 
-#if NET6_0_OR_GREATER
     /// <inheritdoc/>
     public string ToString(string? format, IFormatProvider? formatProvider)
     {
@@ -83,7 +77,6 @@ public struct Luid : IEquatable<Luid>
     {
         return (((long)HighPart) << 32 | LowPart).TryFormat(destination, out charsWritten, format, provider);
     }
-#endif
 
     /// <summary>
     /// Check whether two <see cref="Luid"/> values are equal.

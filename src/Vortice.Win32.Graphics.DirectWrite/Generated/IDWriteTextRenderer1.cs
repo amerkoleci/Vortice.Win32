@@ -40,11 +40,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextRenderer1));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteTextRenderer1));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, uint>)(lpVtbl[1]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, uint>)(lpVtbl[1]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, uint>)(lpVtbl[1]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, uint>)(lpVtbl[2]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, uint>)(lpVtbl[2]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, uint>)(lpVtbl[2]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWritePixelSnapping.IsPixelSnappingDisabled" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(3)]
 	public HResult IsPixelSnappingDisabled(void* clientDrawingContext, Bool32* isDisabled)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, Bool32*, int>)(lpVtbl[3]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, isDisabled);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, Bool32*, int>)(lpVtbl[3]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, isDisabled);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, Bool32*, int>)(lpVtbl[3]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, isDisabled);
 	}
 
 	/// <inheritdoc cref="IDWritePixelSnapping.GetCurrentTransform" />
@@ -103,11 +83,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(4)]
 	public HResult GetCurrentTransform(void* clientDrawingContext, Matrix3x2* transform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, Matrix3x2*, int>)(lpVtbl[4]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, transform);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, Matrix3x2*, int>)(lpVtbl[4]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, transform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, Matrix3x2*, int>)(lpVtbl[4]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, transform);
 	}
 
 	/// <inheritdoc cref="IDWritePixelSnapping.GetPixelsPerDip" />
@@ -115,11 +91,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(5)]
 	public HResult GetPixelsPerDip(void* clientDrawingContext, float* pixelsPerDip)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float*, int>)(lpVtbl[5]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, pixelsPerDip);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float*, int>)(lpVtbl[5]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, pixelsPerDip);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float*, int>)(lpVtbl[5]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, pixelsPerDip);
 	}
 
 	/// <inheritdoc cref="IDWriteTextRenderer.DrawGlyphRun" />
@@ -127,11 +99,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(6)]
 	public HResult DrawGlyphRun(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, MeasuringMode measuringMode, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, IUnknown* clientDrawingEffect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float, float, MeasuringMode, GlyphRun*, GlyphRunDescription*, IUnknown*, int>)(lpVtbl[6]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, measuringMode, glyphRun, glyphRunDescription, clientDrawingEffect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, MeasuringMode, GlyphRun*, GlyphRunDescription*, IUnknown*, int>)(lpVtbl[6]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, measuringMode, glyphRun, glyphRunDescription, clientDrawingEffect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float, float, MeasuringMode, GlyphRun*, GlyphRunDescription*, IUnknown*, int>)(lpVtbl[6]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, measuringMode, glyphRun, glyphRunDescription, clientDrawingEffect);
 	}
 
 	/// <inheritdoc cref="IDWriteTextRenderer.DrawUnderline" />
@@ -139,11 +107,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(7)]
 	public HResult DrawUnderline(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, Underline* underline, IUnknown* clientDrawingEffect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float, float, Underline*, IUnknown*, int>)(lpVtbl[7]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, underline, clientDrawingEffect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, Underline*, IUnknown*, int>)(lpVtbl[7]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, underline, clientDrawingEffect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float, float, Underline*, IUnknown*, int>)(lpVtbl[7]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, underline, clientDrawingEffect);
 	}
 
 	/// <inheritdoc cref="IDWriteTextRenderer.DrawStrikethrough" />
@@ -151,11 +115,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(8)]
 	public HResult DrawStrikethrough(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, Strikethrough* strikethrough, IUnknown* clientDrawingEffect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float, float, Strikethrough*, IUnknown*, int>)(lpVtbl[8]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, strikethrough, clientDrawingEffect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, Strikethrough*, IUnknown*, int>)(lpVtbl[8]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, strikethrough, clientDrawingEffect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float, float, Strikethrough*, IUnknown*, int>)(lpVtbl[8]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, strikethrough, clientDrawingEffect);
 	}
 
 	/// <inheritdoc cref="IDWriteTextRenderer.DrawInlineObject" />
@@ -163,11 +123,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(9)]
 	public HResult DrawInlineObject(void* clientDrawingContext, float originX, float originY, IDWriteInlineObject* inlineObject, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float, float, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[9]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[9]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float, float, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[9]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer1::DrawGlyphRun"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(10)]
 	public HResult DrawGlyphRun(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, GlyphOrientationAngle orientationAngle, MeasuringMode measuringMode, GlyphRun* glyphRun, GlyphRunDescription* glyphRunDescription, IUnknown* clientDrawingEffect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, MeasuringMode, GlyphRun*, GlyphRunDescription*, IUnknown*, int>)(lpVtbl[10]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, measuringMode, glyphRun, glyphRunDescription, clientDrawingEffect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, MeasuringMode, GlyphRun*, GlyphRunDescription*, IUnknown*, int>)(lpVtbl[10]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, measuringMode, glyphRun, glyphRunDescription, clientDrawingEffect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, MeasuringMode, GlyphRun*, GlyphRunDescription*, IUnknown*, int>)(lpVtbl[10]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, measuringMode, glyphRun, glyphRunDescription, clientDrawingEffect);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer1::DrawUnderline"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(11)]
 	public HResult DrawUnderline(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, GlyphOrientationAngle orientationAngle, Underline* underline, IUnknown* clientDrawingEffect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, Underline*, IUnknown*, int>)(lpVtbl[11]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, underline, clientDrawingEffect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, Underline*, IUnknown*, int>)(lpVtbl[11]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, underline, clientDrawingEffect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, Underline*, IUnknown*, int>)(lpVtbl[11]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, underline, clientDrawingEffect);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer1::DrawStrikethrough"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(12)]
 	public HResult DrawStrikethrough(void* clientDrawingContext, float baselineOriginX, float baselineOriginY, GlyphOrientationAngle orientationAngle, Strikethrough* strikethrough, IUnknown* clientDrawingEffect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, Strikethrough*, IUnknown*, int>)(lpVtbl[12]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, strikethrough, clientDrawingEffect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, Strikethrough*, IUnknown*, int>)(lpVtbl[12]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, strikethrough, clientDrawingEffect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, Strikethrough*, IUnknown*, int>)(lpVtbl[12]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, baselineOriginX, baselineOriginY, orientationAngle, strikethrough, clientDrawingEffect);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextRenderer1::DrawInlineObject"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct IDWriteTextRenderer1 : IDWriteTextRenderer1.Interfa
 	[VtblIndex(13)]
 	public HResult DrawInlineObject(void* clientDrawingContext, float originX, float originY, GlyphOrientationAngle orientationAngle, IDWriteInlineObject* inlineObject, Bool32 isSideways, Bool32 isRightToLeft, IUnknown* clientDrawingEffect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[13]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, orientationAngle, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[13]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, orientationAngle, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextRenderer1*, void*, float, float, GlyphOrientationAngle, IDWriteInlineObject*, Bool32, Bool32, IUnknown*, int>)(lpVtbl[13]))((IDWriteTextRenderer1*)Unsafe.AsPointer(ref this), clientDrawingContext, originX, originY, orientationAngle, inlineObject, isSideways, isRightToLeft, clientDrawingEffect);
 	}
 
 	public interface Interface : IDWriteTextRenderer.Interface

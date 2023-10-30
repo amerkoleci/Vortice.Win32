@@ -40,11 +40,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAPOHrtfParameters));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAPOHrtfParameters));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPOHrtfParameters*, Guid*, void**, int>)(lpVtbl[0]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPOHrtfParameters*, Guid*, void**, int>)(lpVtbl[0]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, Guid*, void**, int>)(lpVtbl[0]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPOHrtfParameters*, uint>)(lpVtbl[1]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPOHrtfParameters*, uint>)(lpVtbl[1]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, uint>)(lpVtbl[1]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPOHrtfParameters*, uint>)(lpVtbl[2]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPOHrtfParameters*, uint>)(lpVtbl[2]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, uint>)(lpVtbl[2]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPOHrtfParameters::SetSourcePosition"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	[VtblIndex(3)]
 	public HResult SetSourcePosition(HrtfPosition* position)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPOHrtfParameters*, HrtfPosition*, int>)(lpVtbl[3]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), position);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPOHrtfParameters*, HrtfPosition*, int>)(lpVtbl[3]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), position);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, HrtfPosition*, int>)(lpVtbl[3]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), position);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPOHrtfParameters::SetSourceOrientation"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	[VtblIndex(4)]
 	public HResult SetSourceOrientation(HrtfOrientation* orientation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPOHrtfParameters*, HrtfOrientation*, int>)(lpVtbl[4]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), orientation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPOHrtfParameters*, HrtfOrientation*, int>)(lpVtbl[4]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), orientation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, HrtfOrientation*, int>)(lpVtbl[4]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), orientation);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPOHrtfParameters::SetSourceGain"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	[VtblIndex(5)]
 	public HResult SetSourceGain(float gain)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPOHrtfParameters*, float, int>)(lpVtbl[5]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), gain);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPOHrtfParameters*, float, int>)(lpVtbl[5]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), gain);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, float, int>)(lpVtbl[5]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), gain);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAPOHrtfParameters::SetEnvironment"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IXAPOHrtfParameters : IXAPOHrtfParameters.Interface
 	[VtblIndex(6)]
 	public HResult SetEnvironment(HrtfEnvironment environment)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAPOHrtfParameters*, HrtfEnvironment, int>)(lpVtbl[6]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), environment);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAPOHrtfParameters*, HrtfEnvironment, int>)(lpVtbl[6]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), environment);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAPOHrtfParameters*, HrtfEnvironment, int>)(lpVtbl[6]))((IXAPOHrtfParameters*)Unsafe.AsPointer(ref this), environment);
 	}
 
 	public interface Interface : IUnknown.Interface

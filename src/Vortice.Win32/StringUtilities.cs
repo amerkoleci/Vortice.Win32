@@ -140,11 +140,7 @@ public static unsafe class StringUtilities
         if (span.GetPointer() == null)
             return null;
 
-#if NET6_0_OR_GREATER
         return new string(span.As<ushort, char>());
-#else
-        return new string(span.As<ushort, char>().GetPointer(), 0, span.Length);
-#endif
     }
 
     /// <summary>Gets a string for a given span.</summary>

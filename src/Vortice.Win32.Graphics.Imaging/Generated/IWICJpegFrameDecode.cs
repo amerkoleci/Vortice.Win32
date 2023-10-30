@@ -40,11 +40,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICJpegFrameDecode));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICJpegFrameDecode));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, Guid*, void**, int>)(lpVtbl[0]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, Guid*, void**, int>)(lpVtbl[0]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, Guid*, void**, int>)(lpVtbl[0]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, uint>)(lpVtbl[1]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint>)(lpVtbl[1]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint>)(lpVtbl[1]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, uint>)(lpVtbl[2]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint>)(lpVtbl[2]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint>)(lpVtbl[2]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::DoesSupportIndexing"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(3)]
 	public HResult DoesSupportIndexing(Bool32* pfIndexingSupported)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, Bool32*, int>)(lpVtbl[3]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pfIndexingSupported);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, Bool32*, int>)(lpVtbl[3]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pfIndexingSupported);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, Bool32*, int>)(lpVtbl[3]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pfIndexingSupported);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::SetIndexing"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(4)]
 	public HResult SetIndexing(WICJpegIndexingOptions options, uint horizontalIntervalSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, WICJpegIndexingOptions, uint, int>)(lpVtbl[4]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), options, horizontalIntervalSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, WICJpegIndexingOptions, uint, int>)(lpVtbl[4]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), options, horizontalIntervalSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, WICJpegIndexingOptions, uint, int>)(lpVtbl[4]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), options, horizontalIntervalSize);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::ClearIndexing"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(5)]
 	public HResult ClearIndexing()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, int>)(lpVtbl[5]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, int>)(lpVtbl[5]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, int>)(lpVtbl[5]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetAcHuffmanTable"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(6)]
 	public HResult GetAcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegAcHuffmanTable* pAcHuffmanTable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegAcHuffmanTable*, int>)(lpVtbl[6]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegAcHuffmanTable*, int>)(lpVtbl[6]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegAcHuffmanTable*, int>)(lpVtbl[6]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pAcHuffmanTable);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetDcHuffmanTable"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(7)]
 	public HResult GetDcHuffmanTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegDCHuffmanTable* pDcHuffmanTable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegDCHuffmanTable*, int>)(lpVtbl[7]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegDCHuffmanTable*, int>)(lpVtbl[7]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegDCHuffmanTable*, int>)(lpVtbl[7]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pDcHuffmanTable);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetQuantizationTable"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(8)]
 	public HResult GetQuantizationTable(uint scanIndex, uint tableIndex, Graphics.Dxgi.Common.JpegQuantizationTable* pQuantizationTable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegQuantizationTable*, int>)(lpVtbl[8]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegQuantizationTable*, int>)(lpVtbl[8]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, Graphics.Dxgi.Common.JpegQuantizationTable*, int>)(lpVtbl[8]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, tableIndex, pQuantizationTable);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetFrameHeader"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(9)]
 	public HResult GetFrameHeader(WICJpegFrameHeader* pFrameHeader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, WICJpegFrameHeader*, int>)(lpVtbl[9]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pFrameHeader);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, WICJpegFrameHeader*, int>)(lpVtbl[9]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pFrameHeader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, WICJpegFrameHeader*, int>)(lpVtbl[9]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), pFrameHeader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::GetScanHeader"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(10)]
 	public HResult GetScanHeader(uint scanIndex, WICJpegScanHeader* pScanHeader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, uint, WICJpegScanHeader*, int>)(lpVtbl[10]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, pScanHeader);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, WICJpegScanHeader*, int>)(lpVtbl[10]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, pScanHeader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, WICJpegScanHeader*, int>)(lpVtbl[10]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, pScanHeader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::CopyScan"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(11)]
 	public HResult CopyScan(uint scanIndex, uint scanOffset, uint cbScanData, byte* pbScanData, uint* pcbScanDataActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, uint, uint, uint, byte*, uint*, int>)(lpVtbl[11]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, scanOffset, cbScanData, pbScanData, pcbScanDataActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, uint, byte*, uint*, int>)(lpVtbl[11]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, scanOffset, cbScanData, pbScanData, pcbScanDataActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, uint, byte*, uint*, int>)(lpVtbl[11]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), scanIndex, scanOffset, cbScanData, pbScanData, pcbScanDataActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICJpegFrameDecode::CopyMinimalStream"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct IWICJpegFrameDecode : IWICJpegFrameDecode.Interface
 	[VtblIndex(12)]
 	public HResult CopyMinimalStream(uint streamOffset, uint cbStreamData, byte* pbStreamData, uint* pcbStreamDataActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICJpegFrameDecode*, uint, uint, byte*, uint*, int>)(lpVtbl[12]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), streamOffset, cbStreamData, pbStreamData, pcbStreamDataActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICJpegFrameDecode*, uint, uint, byte*, uint*, int>)(lpVtbl[12]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), streamOffset, cbStreamData, pbStreamData, pcbStreamDataActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICJpegFrameDecode*, uint, uint, byte*, uint*, int>)(lpVtbl[12]))((IWICJpegFrameDecode*)Unsafe.AsPointer(ref this), streamOffset, cbStreamData, pbStreamData, pcbStreamDataActual);
 	}
 
 	public interface Interface : IUnknown.Interface

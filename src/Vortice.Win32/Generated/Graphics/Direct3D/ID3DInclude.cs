@@ -20,11 +20,7 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	[VtblIndex(0)]
 	public HResult Open(IncludeType IncludeType, sbyte* pFileName, void* pParentData, void** ppData, uint* pBytes)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DInclude*, IncludeType, sbyte*, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, IncludeType, sbyte*, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3DInclude*, IncludeType, sbyte*, void*, void**, uint*, int>)(lpVtbl[0]))((ID3DInclude*)Unsafe.AsPointer(ref this), IncludeType, pFileName, pParentData, ppData, pBytes);
 	}
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="ID3DInclude::Close"]/*' />
@@ -32,11 +28,7 @@ public unsafe partial struct ID3DInclude : ID3DInclude.Interface
 	[VtblIndex(1)]
 	public HResult Close(void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3DInclude*, void*, int>)(lpVtbl[1]))((ID3DInclude*)Unsafe.AsPointer(ref this), pData);
 	}
 
 	public interface Interface 

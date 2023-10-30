@@ -40,11 +40,7 @@ public unsafe partial struct IXAudio2Extension : IXAudio2Extension.Interface, IN
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAudio2Extension));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAudio2Extension));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IXAudio2Extension : IXAudio2Extension.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2Extension*, Guid*, void**, int>)(lpVtbl[0]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2Extension*, Guid*, void**, int>)(lpVtbl[0]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2Extension*, Guid*, void**, int>)(lpVtbl[0]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IXAudio2Extension : IXAudio2Extension.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2Extension*, uint>)(lpVtbl[1]))((IXAudio2Extension*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2Extension*, uint>)(lpVtbl[1]))((IXAudio2Extension*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2Extension*, uint>)(lpVtbl[1]))((IXAudio2Extension*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IXAudio2Extension : IXAudio2Extension.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2Extension*, uint>)(lpVtbl[2]))((IXAudio2Extension*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2Extension*, uint>)(lpVtbl[2]))((IXAudio2Extension*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2Extension*, uint>)(lpVtbl[2]))((IXAudio2Extension*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2Extension::GetProcessingQuantum"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IXAudio2Extension : IXAudio2Extension.Interface, IN
 	[VtblIndex(3)]
 	public void GetProcessingQuantum(uint* quantumNumerator, uint* quantumDenominator)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2Extension*, uint*, uint*, void>)(lpVtbl[3]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), quantumNumerator, quantumDenominator);
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2Extension*, uint*, uint*, void>)(lpVtbl[3]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), quantumNumerator, quantumDenominator);
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2Extension*, uint*, uint*, void>)(lpVtbl[3]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), quantumNumerator, quantumDenominator);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2Extension::GetProcessor"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IXAudio2Extension : IXAudio2Extension.Interface, IN
 	[VtblIndex(4)]
 	public void GetProcessor(uint* processor)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2Extension*, uint*, void>)(lpVtbl[4]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), processor);
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2Extension*, uint*, void>)(lpVtbl[4]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), processor);
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2Extension*, uint*, void>)(lpVtbl[4]))((IXAudio2Extension*)Unsafe.AsPointer(ref this), processor);
 	}
 
 	public interface Interface : IUnknown.Interface

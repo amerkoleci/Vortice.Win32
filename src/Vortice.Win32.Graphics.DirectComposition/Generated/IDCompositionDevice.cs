@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionDevice));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionDevice));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, uint>)(lpVtbl[1]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, uint>)(lpVtbl[1]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, uint>)(lpVtbl[1]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, uint>)(lpVtbl[2]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, uint>)(lpVtbl[2]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, uint>)(lpVtbl[2]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::Commit"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(3)]
 	public HResult Commit()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, int>)(lpVtbl[3]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, int>)(lpVtbl[3]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, int>)(lpVtbl[3]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::WaitForCommitCompletion"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(4)]
 	public HResult WaitForCommitCompletion()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, int>)(lpVtbl[4]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, int>)(lpVtbl[4]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, int>)(lpVtbl[4]))((IDCompositionDevice*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::GetFrameStatistics"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(5)]
 	public HResult GetFrameStatistics(FrameStatistics* statistics)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, FrameStatistics*, int>)(lpVtbl[5]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), statistics);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, FrameStatistics*, int>)(lpVtbl[5]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), statistics);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, FrameStatistics*, int>)(lpVtbl[5]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), statistics);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateTargetForHwnd"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(6)]
 	public HResult CreateTargetForHwnd(nint hwnd, Bool32 topmost, IDCompositionTarget** target)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, nint, Bool32, IDCompositionTarget**, int>)(lpVtbl[6]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), hwnd, topmost, target);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, nint, Bool32, IDCompositionTarget**, int>)(lpVtbl[6]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), hwnd, topmost, target);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, nint, Bool32, IDCompositionTarget**, int>)(lpVtbl[6]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), hwnd, topmost, target);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateVisual"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(7)]
 	public HResult CreateVisual(IDCompositionVisual** visual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionVisual**, int>)(lpVtbl[7]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), visual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionVisual**, int>)(lpVtbl[7]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), visual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionVisual**, int>)(lpVtbl[7]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), visual);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateSurface"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(8)]
 	public HResult CreateSurface(uint width, uint height, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionSurface** surface)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionSurface**, int>)(lpVtbl[8]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), width, height, pixelFormat, alphaMode, surface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateVirtualSurface"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(9)]
 	public HResult CreateVirtualSurface(uint initialWidth, uint initialHeight, Graphics.Dxgi.Common.Format pixelFormat, Graphics.Dxgi.Common.AlphaMode alphaMode, IDCompositionVirtualSurface** virtualSurface)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, uint, uint, Graphics.Dxgi.Common.Format, Graphics.Dxgi.Common.AlphaMode, IDCompositionVirtualSurface**, int>)(lpVtbl[9]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), initialWidth, initialHeight, pixelFormat, alphaMode, virtualSurface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateSurfaceFromHandle"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(10)]
 	public HResult CreateSurfaceFromHandle(Handle handle, IUnknown** surface)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, Handle, IUnknown**, int>)(lpVtbl[10]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), handle, surface);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, Handle, IUnknown**, int>)(lpVtbl[10]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), handle, surface);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, Handle, IUnknown**, int>)(lpVtbl[10]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), handle, surface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateSurfaceFromHwnd"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(11)]
 	public HResult CreateSurfaceFromHwnd(nint hwnd, IUnknown** surface)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, nint, IUnknown**, int>)(lpVtbl[11]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), hwnd, surface);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, nint, IUnknown**, int>)(lpVtbl[11]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), hwnd, surface);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, nint, IUnknown**, int>)(lpVtbl[11]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), hwnd, surface);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateTranslateTransform"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(12)]
 	public HResult CreateTranslateTransform(IDCompositionTranslateTransform** translateTransform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionTranslateTransform**, int>)(lpVtbl[12]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), translateTransform);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionTranslateTransform**, int>)(lpVtbl[12]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), translateTransform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionTranslateTransform**, int>)(lpVtbl[12]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), translateTransform);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateScaleTransform"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(13)]
 	public HResult CreateScaleTransform(IDCompositionScaleTransform** scaleTransform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionScaleTransform**, int>)(lpVtbl[13]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), scaleTransform);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionScaleTransform**, int>)(lpVtbl[13]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), scaleTransform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionScaleTransform**, int>)(lpVtbl[13]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), scaleTransform);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateRotateTransform"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(14)]
 	public HResult CreateRotateTransform(IDCompositionRotateTransform** rotateTransform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionRotateTransform**, int>)(lpVtbl[14]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), rotateTransform);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionRotateTransform**, int>)(lpVtbl[14]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), rotateTransform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionRotateTransform**, int>)(lpVtbl[14]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), rotateTransform);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateSkewTransform"]/*' />
@@ -235,11 +171,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(15)]
 	public HResult CreateSkewTransform(IDCompositionSkewTransform** skewTransform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionSkewTransform**, int>)(lpVtbl[15]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), skewTransform);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionSkewTransform**, int>)(lpVtbl[15]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), skewTransform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionSkewTransform**, int>)(lpVtbl[15]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), skewTransform);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateMatrixTransform"]/*' />
@@ -247,11 +179,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(16)]
 	public HResult CreateMatrixTransform(IDCompositionMatrixTransform** matrixTransform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionMatrixTransform**, int>)(lpVtbl[16]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), matrixTransform);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionMatrixTransform**, int>)(lpVtbl[16]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), matrixTransform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionMatrixTransform**, int>)(lpVtbl[16]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), matrixTransform);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateTransformGroup"]/*' />
@@ -259,11 +187,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(17)]
 	public HResult CreateTransformGroup(IDCompositionTransform** transforms, uint elements, IDCompositionTransform** transformGroup)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionTransform**, uint, IDCompositionTransform**, int>)(lpVtbl[17]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), transforms, elements, transformGroup);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionTransform**, uint, IDCompositionTransform**, int>)(lpVtbl[17]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), transforms, elements, transformGroup);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionTransform**, uint, IDCompositionTransform**, int>)(lpVtbl[17]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), transforms, elements, transformGroup);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateTranslateTransform3D"]/*' />
@@ -271,11 +195,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(18)]
 	public HResult CreateTranslateTransform3D(IDCompositionTranslateTransform3D** translateTransform3D)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionTranslateTransform3D**, int>)(lpVtbl[18]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), translateTransform3D);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionTranslateTransform3D**, int>)(lpVtbl[18]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), translateTransform3D);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionTranslateTransform3D**, int>)(lpVtbl[18]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), translateTransform3D);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateScaleTransform3D"]/*' />
@@ -283,11 +203,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(19)]
 	public HResult CreateScaleTransform3D(IDCompositionScaleTransform3D** scaleTransform3D)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionScaleTransform3D**, int>)(lpVtbl[19]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), scaleTransform3D);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionScaleTransform3D**, int>)(lpVtbl[19]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), scaleTransform3D);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionScaleTransform3D**, int>)(lpVtbl[19]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), scaleTransform3D);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateRotateTransform3D"]/*' />
@@ -295,11 +211,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(20)]
 	public HResult CreateRotateTransform3D(IDCompositionRotateTransform3D** rotateTransform3D)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionRotateTransform3D**, int>)(lpVtbl[20]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), rotateTransform3D);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionRotateTransform3D**, int>)(lpVtbl[20]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), rotateTransform3D);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionRotateTransform3D**, int>)(lpVtbl[20]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), rotateTransform3D);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateMatrixTransform3D"]/*' />
@@ -307,11 +219,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(21)]
 	public HResult CreateMatrixTransform3D(IDCompositionMatrixTransform3D** matrixTransform3D)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionMatrixTransform3D**, int>)(lpVtbl[21]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), matrixTransform3D);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionMatrixTransform3D**, int>)(lpVtbl[21]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), matrixTransform3D);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionMatrixTransform3D**, int>)(lpVtbl[21]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), matrixTransform3D);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateTransform3DGroup"]/*' />
@@ -319,11 +227,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(22)]
 	public HResult CreateTransform3DGroup(IDCompositionTransform3D** transforms3D, uint elements, IDCompositionTransform3D** transform3DGroup)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionTransform3D**, uint, IDCompositionTransform3D**, int>)(lpVtbl[22]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), transforms3D, elements, transform3DGroup);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionTransform3D**, uint, IDCompositionTransform3D**, int>)(lpVtbl[22]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), transforms3D, elements, transform3DGroup);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionTransform3D**, uint, IDCompositionTransform3D**, int>)(lpVtbl[22]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), transforms3D, elements, transform3DGroup);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateEffectGroup"]/*' />
@@ -331,11 +235,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(23)]
 	public HResult CreateEffectGroup(IDCompositionEffectGroup** effectGroup)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionEffectGroup**, int>)(lpVtbl[23]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), effectGroup);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionEffectGroup**, int>)(lpVtbl[23]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), effectGroup);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionEffectGroup**, int>)(lpVtbl[23]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), effectGroup);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateRectangleClip"]/*' />
@@ -343,11 +243,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(24)]
 	public HResult CreateRectangleClip(IDCompositionRectangleClip** clip)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionRectangleClip**, int>)(lpVtbl[24]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), clip);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionRectangleClip**, int>)(lpVtbl[24]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), clip);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionRectangleClip**, int>)(lpVtbl[24]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), clip);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CreateAnimation"]/*' />
@@ -355,11 +251,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(25)]
 	public HResult CreateAnimation(IDCompositionAnimation** animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, IDCompositionAnimation**, int>)(lpVtbl[25]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, IDCompositionAnimation**, int>)(lpVtbl[25]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, IDCompositionAnimation**, int>)(lpVtbl[25]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionDevice::CheckDeviceState"]/*' />
@@ -367,11 +259,7 @@ public unsafe partial struct IDCompositionDevice : IDCompositionDevice.Interface
 	[VtblIndex(26)]
 	public HResult CheckDeviceState(Bool32* pfValid)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionDevice*, Bool32*, int>)(lpVtbl[26]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), pfValid);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionDevice*, Bool32*, int>)(lpVtbl[26]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), pfValid);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionDevice*, Bool32*, int>)(lpVtbl[26]))((IDCompositionDevice*)Unsafe.AsPointer(ref this), pfValid);
 	}
 
 	public interface Interface : IUnknown.Interface

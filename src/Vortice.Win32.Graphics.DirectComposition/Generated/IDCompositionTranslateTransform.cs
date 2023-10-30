@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionTranslateTransform));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionTranslateTransform));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTranslateTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTranslateTransform*, uint>)(lpVtbl[1]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform*, uint>)(lpVtbl[1]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, uint>)(lpVtbl[1]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTranslateTransform*, uint>)(lpVtbl[2]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform*, uint>)(lpVtbl[2]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, uint>)(lpVtbl[2]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform::SetOffsetX"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	[VtblIndex(3)]
 	public HResult SetOffsetX(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTranslateTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform::SetOffsetX"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	[VtblIndex(4)]
 	public HResult SetOffsetX(float offsetX)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTranslateTransform*, float, int>)(lpVtbl[4]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetX);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform*, float, int>)(lpVtbl[4]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetX);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, float, int>)(lpVtbl[4]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetX);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform::SetOffsetY"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	[VtblIndex(5)]
 	public HResult SetOffsetY(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTranslateTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTranslateTransform::SetOffsetY"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IDCompositionTranslateTransform : IDCompositionTran
 	[VtblIndex(6)]
 	public HResult SetOffsetY(float offsetY)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTranslateTransform*, float, int>)(lpVtbl[6]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetY);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTranslateTransform*, float, int>)(lpVtbl[6]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetY);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTranslateTransform*, float, int>)(lpVtbl[6]))((IDCompositionTranslateTransform*)Unsafe.AsPointer(ref this), offsetY);
 	}
 
 	public interface Interface : IDCompositionTransform.Interface

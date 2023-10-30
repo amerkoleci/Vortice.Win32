@@ -38,11 +38,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11ShaderReflectionType));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11ShaderReflectionType));
-#endif
 
 	public void** lpVtbl;
 
@@ -51,11 +47,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(0)]
 	public HResult GetDesc(ShaderTypeDescription* pDesc)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, ShaderTypeDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pDesc);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ShaderTypeDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pDesc);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, ShaderTypeDescription*, int>)(lpVtbl[0]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeByIndex"]/*' />
@@ -63,11 +55,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(1)]
 	public ID3D11ShaderReflectionType* GetMemberTypeByIndex(uint Index)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, uint, ID3D11ShaderReflectionType*>)(lpVtbl[1]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, ID3D11ShaderReflectionType*>)(lpVtbl[1]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, uint, ID3D11ShaderReflectionType*>)(lpVtbl[1]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeByName"]/*' />
@@ -75,11 +63,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(2)]
 	public ID3D11ShaderReflectionType* GetMemberTypeByName(sbyte* Name)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, sbyte*, ID3D11ShaderReflectionType*>)(lpVtbl[2]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, sbyte*, ID3D11ShaderReflectionType*>)(lpVtbl[2]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, sbyte*, ID3D11ShaderReflectionType*>)(lpVtbl[2]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetMemberTypeName"]/*' />
@@ -87,11 +71,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(3)]
 	public sbyte* GetMemberTypeName(uint Index)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, uint, sbyte*>)(lpVtbl[3]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, sbyte*>)(lpVtbl[3]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, uint, sbyte*>)(lpVtbl[3]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::IsEqual"]/*' />
@@ -99,11 +79,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(4)]
 	public HResult IsEqual(ID3D11ShaderReflectionType* pType)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[4]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pType);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[4]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pType);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[4]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pType);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetSubType"]/*' />
@@ -111,11 +87,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(5)]
 	public ID3D11ShaderReflectionType* GetSubType()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*>)(lpVtbl[5]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*>)(lpVtbl[5]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*>)(lpVtbl[5]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetBaseClass"]/*' />
@@ -123,11 +95,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(6)]
 	public ID3D11ShaderReflectionType* GetBaseClass()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*>)(lpVtbl[6]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*>)(lpVtbl[6]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*>)(lpVtbl[6]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetNumInterfaces"]/*' />
@@ -135,11 +103,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(7)]
 	public uint GetNumInterfaces()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, uint>)(lpVtbl[7]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint>)(lpVtbl[7]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, uint>)(lpVtbl[7]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::GetInterfaceByIndex"]/*' />
@@ -147,11 +111,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(8)]
 	public ID3D11ShaderReflectionType* GetInterfaceByIndex(uint uIndex)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, uint, ID3D11ShaderReflectionType*>)(lpVtbl[8]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), uIndex);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, uint, ID3D11ShaderReflectionType*>)(lpVtbl[8]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), uIndex);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, uint, ID3D11ShaderReflectionType*>)(lpVtbl[8]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), uIndex);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::IsOfType"]/*' />
@@ -159,11 +119,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(9)]
 	public HResult IsOfType(ID3D11ShaderReflectionType* pType)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[9]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pType);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[9]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pType);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[9]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pType);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11ShaderReflectionType::ImplementsInterface"]/*' />
@@ -171,11 +127,7 @@ public unsafe partial struct ID3D11ShaderReflectionType : ID3D11ShaderReflection
 	[VtblIndex(10)]
 	public HResult ImplementsInterface(ID3D11ShaderReflectionType* pBase)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[10]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pBase);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[10]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pBase);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11ShaderReflectionType*, ID3D11ShaderReflectionType*, int>)(lpVtbl[10]))((ID3D11ShaderReflectionType*)Unsafe.AsPointer(ref this), pBase);
 	}
 
 	public interface Interface 

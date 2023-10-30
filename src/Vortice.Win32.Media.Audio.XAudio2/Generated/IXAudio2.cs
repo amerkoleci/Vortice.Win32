@@ -40,11 +40,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAudio2));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IXAudio2));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, Guid*, void**, int>)(lpVtbl[0]))((IXAudio2*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, Guid*, void**, int>)(lpVtbl[0]))((IXAudio2*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, Guid*, void**, int>)(lpVtbl[0]))((IXAudio2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, uint>)(lpVtbl[1]))((IXAudio2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, uint>)(lpVtbl[1]))((IXAudio2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, uint>)(lpVtbl[1]))((IXAudio2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, uint>)(lpVtbl[2]))((IXAudio2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, uint>)(lpVtbl[2]))((IXAudio2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, uint>)(lpVtbl[2]))((IXAudio2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::RegisterForCallbacks"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(3)]
 	public HResult RegisterForCallbacks(IXAudio2EngineCallback* pCallback)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, IXAudio2EngineCallback*, int>)(lpVtbl[3]))((IXAudio2*)Unsafe.AsPointer(ref this), pCallback);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, IXAudio2EngineCallback*, int>)(lpVtbl[3]))((IXAudio2*)Unsafe.AsPointer(ref this), pCallback);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2EngineCallback*, int>)(lpVtbl[3]))((IXAudio2*)Unsafe.AsPointer(ref this), pCallback);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::UnregisterForCallbacks"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(4)]
 	public void UnregisterForCallbacks(IXAudio2EngineCallback* pCallback)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2*, IXAudio2EngineCallback*, void>)(lpVtbl[4]))((IXAudio2*)Unsafe.AsPointer(ref this), pCallback);
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2*, IXAudio2EngineCallback*, void>)(lpVtbl[4]))((IXAudio2*)Unsafe.AsPointer(ref this), pCallback);
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2EngineCallback*, void>)(lpVtbl[4]))((IXAudio2*)Unsafe.AsPointer(ref this), pCallback);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::CreateSourceVoice"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(5)]
 	public HResult CreateSourceVoice(IXAudio2SourceVoice** ppSourceVoice, Media.Audio.WaveFormatEx* pSourceFormat, uint Flags, float MaxFrequencyRatio, IXAudio2VoiceCallback* pCallback, VoiceSends* pSendList, EffectChain* pEffectChain)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, IXAudio2SourceVoice**, Media.Audio.WaveFormatEx*, uint, float, IXAudio2VoiceCallback*, VoiceSends*, EffectChain*, int>)(lpVtbl[5]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSourceVoice, pSourceFormat, Flags, MaxFrequencyRatio, pCallback, pSendList, pEffectChain);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, IXAudio2SourceVoice**, Media.Audio.WaveFormatEx*, uint, float, IXAudio2VoiceCallback*, VoiceSends*, EffectChain*, int>)(lpVtbl[5]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSourceVoice, pSourceFormat, Flags, MaxFrequencyRatio, pCallback, pSendList, pEffectChain);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2SourceVoice**, Media.Audio.WaveFormatEx*, uint, float, IXAudio2VoiceCallback*, VoiceSends*, EffectChain*, int>)(lpVtbl[5]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSourceVoice, pSourceFormat, Flags, MaxFrequencyRatio, pCallback, pSendList, pEffectChain);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::CreateSubmixVoice"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(6)]
 	public HResult CreateSubmixVoice(IXAudio2SubmixVoice** ppSubmixVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint ProcessingStage, VoiceSends* pSendList, EffectChain* pEffectChain)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, IXAudio2SubmixVoice**, uint, uint, uint, uint, VoiceSends*, EffectChain*, int>)(lpVtbl[6]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSubmixVoice, InputChannels, InputSampleRate, Flags, ProcessingStage, pSendList, pEffectChain);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, IXAudio2SubmixVoice**, uint, uint, uint, uint, VoiceSends*, EffectChain*, int>)(lpVtbl[6]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSubmixVoice, InputChannels, InputSampleRate, Flags, ProcessingStage, pSendList, pEffectChain);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2SubmixVoice**, uint, uint, uint, uint, VoiceSends*, EffectChain*, int>)(lpVtbl[6]))((IXAudio2*)Unsafe.AsPointer(ref this), ppSubmixVoice, InputChannels, InputSampleRate, Flags, ProcessingStage, pSendList, pEffectChain);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::CreateMasteringVoice"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(7)]
 	public HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, ushort* szDeviceId, EffectChain* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, IXAudio2MasteringVoice**, uint, uint, uint, ushort*, EffectChain*, Media.Audio.AudioStreamCategory, int>)(lpVtbl[7]))((IXAudio2*)Unsafe.AsPointer(ref this), ppMasteringVoice, InputChannels, InputSampleRate, Flags, szDeviceId, pEffectChain, StreamCategory);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, IXAudio2MasteringVoice**, uint, uint, uint, ushort*, EffectChain*, Media.Audio.AudioStreamCategory, int>)(lpVtbl[7]))((IXAudio2*)Unsafe.AsPointer(ref this), ppMasteringVoice, InputChannels, InputSampleRate, Flags, szDeviceId, pEffectChain, StreamCategory);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2MasteringVoice**, uint, uint, uint, ushort*, EffectChain*, Media.Audio.AudioStreamCategory, int>)(lpVtbl[7]))((IXAudio2*)Unsafe.AsPointer(ref this), ppMasteringVoice, InputChannels, InputSampleRate, Flags, szDeviceId, pEffectChain, StreamCategory);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::StartEngine"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult StartEngine()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, int>)(lpVtbl[8]))((IXAudio2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, int>)(lpVtbl[8]))((IXAudio2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, int>)(lpVtbl[8]))((IXAudio2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::StopEngine"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(9)]
 	public void StopEngine()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2*, void>)(lpVtbl[9]))((IXAudio2*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2*, void>)(lpVtbl[9]))((IXAudio2*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2*, void>)(lpVtbl[9]))((IXAudio2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::CommitChanges"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(10)]
 	public HResult CommitChanges(uint OperationSet)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IXAudio2*, uint, int>)(lpVtbl[10]))((IXAudio2*)Unsafe.AsPointer(ref this), OperationSet);
-#else
-		return ((delegate* unmanaged[Stdcall]<IXAudio2*, uint, int>)(lpVtbl[10]))((IXAudio2*)Unsafe.AsPointer(ref this), OperationSet);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, uint, int>)(lpVtbl[10]))((IXAudio2*)Unsafe.AsPointer(ref this), OperationSet);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::GetPerformanceData"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(11)]
 	public void GetPerformanceData(PerformanceData* pPerfData)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2*, PerformanceData*, void>)(lpVtbl[11]))((IXAudio2*)Unsafe.AsPointer(ref this), pPerfData);
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2*, PerformanceData*, void>)(lpVtbl[11]))((IXAudio2*)Unsafe.AsPointer(ref this), pPerfData);
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2*, PerformanceData*, void>)(lpVtbl[11]))((IXAudio2*)Unsafe.AsPointer(ref this), pPerfData);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::SetDebugConfiguration"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	[VtblIndex(12)]
 	public void SetDebugConfiguration(DebugConfiguration* pDebugConfiguration, void* pReserved = null)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2*, DebugConfiguration*, void*, void>)(lpVtbl[12]))((IXAudio2*)Unsafe.AsPointer(ref this), pDebugConfiguration, pReserved);
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2*, DebugConfiguration*, void*, void>)(lpVtbl[12]))((IXAudio2*)Unsafe.AsPointer(ref this), pDebugConfiguration, pReserved);
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2*, DebugConfiguration*, void*, void>)(lpVtbl[12]))((IXAudio2*)Unsafe.AsPointer(ref this), pDebugConfiguration, pReserved);
 	}
 
 	public interface Interface : IUnknown.Interface

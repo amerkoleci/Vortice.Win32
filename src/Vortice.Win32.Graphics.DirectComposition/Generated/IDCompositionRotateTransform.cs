@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionRotateTransform));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionRotateTransform));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, uint>)(lpVtbl[1]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, uint>)(lpVtbl[1]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, uint>)(lpVtbl[1]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, uint>)(lpVtbl[2]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, uint>)(lpVtbl[2]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, uint>)(lpVtbl[2]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetAngle"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[VtblIndex(3)]
 	public HResult SetAngle(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetAngle"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[VtblIndex(4)]
 	public HResult SetAngle(float angle)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, float, int>)(lpVtbl[4]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), angle);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, float, int>)(lpVtbl[4]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), angle);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, float, int>)(lpVtbl[4]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), angle);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetCenterX"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[VtblIndex(5)]
 	public HResult SetCenterX(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetCenterX"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[VtblIndex(6)]
 	public HResult SetCenterX(float centerX)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, float, int>)(lpVtbl[6]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerX);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, float, int>)(lpVtbl[6]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerX);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, float, int>)(lpVtbl[6]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerX);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetCenterY"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[VtblIndex(7)]
 	public HResult SetCenterY(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionRotateTransform::SetCenterY"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IDCompositionRotateTransform : IDCompositionRotateT
 	[VtblIndex(8)]
 	public HResult SetCenterY(float centerY)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionRotateTransform*, float, int>)(lpVtbl[8]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerY);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionRotateTransform*, float, int>)(lpVtbl[8]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerY);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionRotateTransform*, float, int>)(lpVtbl[8]))((IDCompositionRotateTransform*)Unsafe.AsPointer(ref this), centerY);
 	}
 
 	public interface Interface : IDCompositionTransform.Interface

@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1TransformGraph));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1TransformGraph));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, uint>)(lpVtbl[1]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint>)(lpVtbl[1]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, uint>)(lpVtbl[1]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, uint>)(lpVtbl[2]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint>)(lpVtbl[2]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, uint>)(lpVtbl[2]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::GetInputCount"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(3)]
 	public uint GetInputCount()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, uint>)(lpVtbl[3]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint>)(lpVtbl[3]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, uint>)(lpVtbl[3]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetSingleTransformNode"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(4)]
 	public HResult SetSingleTransformNode(ID2D1TransformNode* node)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[4]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[4]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[4]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::AddNode"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(5)]
 	public HResult AddNode(ID2D1TransformNode* node)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[5]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[5]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[5]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::RemoveNode"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(6)]
 	public HResult RemoveNode(ID2D1TransformNode* node)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[6]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[6]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[6]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetOutputNode"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(7)]
 	public HResult SetOutputNode(ID2D1TransformNode* node)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[7]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[7]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, int>)(lpVtbl[7]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), node);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::ConnectNode"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(8)]
 	public HResult ConnectNode(ID2D1TransformNode* fromNode, ID2D1TransformNode* toNode, uint toNodeInputIndex)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, ID2D1TransformNode*, ID2D1TransformNode*, uint, int>)(lpVtbl[8]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), fromNode, toNode, toNodeInputIndex);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, ID2D1TransformNode*, ID2D1TransformNode*, uint, int>)(lpVtbl[8]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), fromNode, toNode, toNodeInputIndex);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, ID2D1TransformNode*, ID2D1TransformNode*, uint, int>)(lpVtbl[8]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), fromNode, toNode, toNodeInputIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::ConnectToEffectInput"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(9)]
 	public HResult ConnectToEffectInput(uint toEffectInputIndex, ID2D1TransformNode* node, uint toNodeInputIndex)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, uint, ID2D1TransformNode*, uint, int>)(lpVtbl[9]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), toEffectInputIndex, node, toNodeInputIndex);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint, ID2D1TransformNode*, uint, int>)(lpVtbl[9]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), toEffectInputIndex, node, toNodeInputIndex);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, uint, ID2D1TransformNode*, uint, int>)(lpVtbl[9]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), toEffectInputIndex, node, toNodeInputIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::Clear"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(10)]
 	public void Clear()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1TransformGraph*, void>)(lpVtbl[10]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, void>)(lpVtbl[10]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, void>)(lpVtbl[10]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformGraph::SetPassthroughGraph"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1TransformGraph : ID2D1TransformGraph.Interface
 	[VtblIndex(11)]
 	public HResult SetPassthroughGraph(uint effectInputIndex)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformGraph*, uint, int>)(lpVtbl[11]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), effectInputIndex);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformGraph*, uint, int>)(lpVtbl[11]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), effectInputIndex);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformGraph*, uint, int>)(lpVtbl[11]))((ID2D1TransformGraph*)Unsafe.AsPointer(ref this), effectInputIndex);
 	}
 
 	public interface Interface : IUnknown.Interface

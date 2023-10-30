@@ -31,11 +31,7 @@ public static unsafe partial class Apis
     public static unsafe UuidOfType __uuidof<T>(T value) // for type inference similar to C++'s __uuidof
         where T : unmanaged, INativeGuid
     {
-#if NET6_0_OR_GREATER
         return new UuidOfType(T.NativeGuid);
-#else
-        return new UuidOfType(UUID<T>.RIID);
-#endif
     }
 
     /// <summary>Retrieves the GUID of of a specified type.</summary>
@@ -46,11 +42,7 @@ public static unsafe partial class Apis
     public static unsafe UuidOfType __uuidof<T>(T* value) // for type inference similar to C++'s __uuidof
         where T : unmanaged, INativeGuid
     {
-#if NET6_0_OR_GREATER
         return new UuidOfType(T.NativeGuid);
-#else
-        return new UuidOfType(UUID<T>.RIID);
-#endif
     }
 
     /// <summary>Retrieves the GUID of of a specified type.</summary>
@@ -60,11 +52,7 @@ public static unsafe partial class Apis
     public static unsafe UuidOfType __uuidof<T>()
         where T : unmanaged, INativeGuid
     {
-#if NET6_0_OR_GREATER
         return new UuidOfType(T.NativeGuid);
-#else
-        return new UuidOfType(UUID<T>.RIID);
-#endif
     }
 
     /// <summary>A proxy type that wraps a pointer to GUID data. Values of this type can be implicitly converted to and assigned to <see cref="Guid"/>* or <see cref="Guid"/> parameters.</summary>
@@ -86,27 +74,6 @@ public static unsafe partial class Apis
         /// <param name="guid">The input <see cref="UuidOfType"/> instance to read data for.</param>
         public static implicit operator Guid*(UuidOfType guid) => guid._value;
     }
-
-#if !NET6_0_OR_GREATER
-    /// <summary>A helper type to provide static GUID buffers for specific types.</summary>
-    /// <typeparam name="T">The type to allocate a GUID buffer for.</typeparam>
-    private static unsafe class UUID<T>
-        where T : unmanaged
-    {
-        /// <summary>The pointer to the <see cref="Guid"/> value for the current type.</summary>
-        /// <remarks>The target memory area should never be written to.</remarks>
-        public static readonly Guid* RIID = CreateRIID();
-
-        /// <summary>Allocates memory for a <see cref="Guid"/> value and initializes it.</summary>
-        /// <returns>A pointer to memory holding the <see cref="Guid"/> value for the current type.</returns>
-        private static Guid* CreateRIID()
-        {
-            var p = (Guid*)Marshal.AllocHGlobal(sizeof(Guid));
-            *p = typeof(T).GUID;
-            return p;
-        }
-    }
-#endif
 
     public const int CLSCTX_INPROC_SERVER = 0x1;
     public const int CLSCTX_INPROC_HANDLER = 0x2;

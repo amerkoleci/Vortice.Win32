@@ -40,11 +40,7 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12VirtualizationGuestDevice));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12VirtualizationGuestDevice));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12VirtualizationGuestDevice*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12VirtualizationGuestDevice*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12VirtualizationGuestDevice*, uint>)(lpVtbl[1]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12VirtualizationGuestDevice*, uint>)(lpVtbl[1]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, uint>)(lpVtbl[1]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12VirtualizationGuestDevice*, uint>)(lpVtbl[2]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12VirtualizationGuestDevice*, uint>)(lpVtbl[2]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, uint>)(lpVtbl[2]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VirtualizationGuestDevice::ShareWithHost"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 	[VtblIndex(3)]
 	public HResult ShareWithHost(ID3D12DeviceChild* pObject, Handle* pHandle)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12VirtualizationGuestDevice*, ID3D12DeviceChild*, Handle*, int>)(lpVtbl[3]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pObject, pHandle);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12VirtualizationGuestDevice*, ID3D12DeviceChild*, Handle*, int>)(lpVtbl[3]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pObject, pHandle);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, ID3D12DeviceChild*, Handle*, int>)(lpVtbl[3]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pObject, pHandle);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12VirtualizationGuestDevice::CreateFenceFd"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct ID3D12VirtualizationGuestDevice : ID3D12Virtualizat
 	[VtblIndex(4)]
 	public HResult CreateFenceFd(ID3D12Fence* pFence, ulong FenceValue, int* pFenceFd)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12VirtualizationGuestDevice*, ID3D12Fence*, ulong, int*, int>)(lpVtbl[4]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pFence, FenceValue, pFenceFd);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12VirtualizationGuestDevice*, ID3D12Fence*, ulong, int*, int>)(lpVtbl[4]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pFence, FenceValue, pFenceFd);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12VirtualizationGuestDevice*, ID3D12Fence*, ulong, int*, int>)(lpVtbl[4]))((ID3D12VirtualizationGuestDevice*)Unsafe.AsPointer(ref this), pFence, FenceValue, pFenceFd);
 	}
 
 	public interface Interface : IUnknown.Interface

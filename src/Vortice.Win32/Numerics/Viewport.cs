@@ -1,17 +1,9 @@
-﻿// Copyright © Amer Koleci and Contributors.
+﻿// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
-using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
-using System.Numerics;
-using System.Runtime.CompilerServices;
 using System.Text;
-
-#if NET6_0_OR_GREATER
-using System.Runtime.Intrinsics;
-using static Win32.Numerics.VectorUtilities;
-#endif
 
 namespace Win32.Numerics;
 

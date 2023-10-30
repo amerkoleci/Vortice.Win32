@@ -40,11 +40,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11Device2));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11Device2));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Device2*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Device2*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11Device2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint>)(lpVtbl[1]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint>)(lpVtbl[1]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint>)(lpVtbl[1]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint>)(lpVtbl[2]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint>)(lpVtbl[2]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint>)(lpVtbl[2]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateBuffer" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(3)]
 	public HResult CreateBuffer(BufferDescription* pDesc, SubresourceData* pInitialData, ID3D11Buffer** ppBuffer)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, BufferDescription*, SubresourceData*, ID3D11Buffer**, int>)(lpVtbl[3]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppBuffer);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, BufferDescription*, SubresourceData*, ID3D11Buffer**, int>)(lpVtbl[3]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppBuffer);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, BufferDescription*, SubresourceData*, ID3D11Buffer**, int>)(lpVtbl[3]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppBuffer);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateTexture1D" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(4)]
 	public HResult CreateTexture1D(Texture1DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture1D** ppTexture1D)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Texture1DDescription*, SubresourceData*, ID3D11Texture1D**, int>)(lpVtbl[4]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture1D);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Texture1DDescription*, SubresourceData*, ID3D11Texture1D**, int>)(lpVtbl[4]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture1D);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Texture1DDescription*, SubresourceData*, ID3D11Texture1D**, int>)(lpVtbl[4]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture1D);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateTexture2D" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(5)]
 	public HResult CreateTexture2D(Texture2DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture2D** ppTexture2D)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Texture2DDescription*, SubresourceData*, ID3D11Texture2D**, int>)(lpVtbl[5]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture2D);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Texture2DDescription*, SubresourceData*, ID3D11Texture2D**, int>)(lpVtbl[5]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture2D);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Texture2DDescription*, SubresourceData*, ID3D11Texture2D**, int>)(lpVtbl[5]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture2D);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateTexture3D" />
@@ -127,11 +99,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(6)]
 	public HResult CreateTexture3D(Texture3DDescription* pDesc, SubresourceData* pInitialData, ID3D11Texture3D** ppTexture3D)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Texture3DDescription*, SubresourceData*, ID3D11Texture3D**, int>)(lpVtbl[6]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture3D);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Texture3DDescription*, SubresourceData*, ID3D11Texture3D**, int>)(lpVtbl[6]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture3D);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Texture3DDescription*, SubresourceData*, ID3D11Texture3D**, int>)(lpVtbl[6]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pInitialData, ppTexture3D);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateShaderResourceView" />
@@ -139,11 +107,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(7)]
 	public HResult CreateShaderResourceView(ID3D11Resource* pResource, ShaderResourceViewDescription* pDesc, ID3D11ShaderResourceView** ppSRView)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, ID3D11Resource*, ShaderResourceViewDescription*, ID3D11ShaderResourceView**, int>)(lpVtbl[7]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppSRView);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11Resource*, ShaderResourceViewDescription*, ID3D11ShaderResourceView**, int>)(lpVtbl[7]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppSRView);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11Resource*, ShaderResourceViewDescription*, ID3D11ShaderResourceView**, int>)(lpVtbl[7]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppSRView);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateUnorderedAccessView" />
@@ -151,11 +115,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(8)]
 	public HResult CreateUnorderedAccessView(ID3D11Resource* pResource, UnorderedAccessViewDescription* pDesc, ID3D11UnorderedAccessView** ppUAView)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, ID3D11Resource*, UnorderedAccessViewDescription*, ID3D11UnorderedAccessView**, int>)(lpVtbl[8]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppUAView);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11Resource*, UnorderedAccessViewDescription*, ID3D11UnorderedAccessView**, int>)(lpVtbl[8]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppUAView);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11Resource*, UnorderedAccessViewDescription*, ID3D11UnorderedAccessView**, int>)(lpVtbl[8]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppUAView);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateRenderTargetView" />
@@ -163,11 +123,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(9)]
 	public HResult CreateRenderTargetView(ID3D11Resource* pResource, RenderTargetViewDescription* pDesc, ID3D11RenderTargetView** ppRTView)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, ID3D11Resource*, RenderTargetViewDescription*, ID3D11RenderTargetView**, int>)(lpVtbl[9]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppRTView);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11Resource*, RenderTargetViewDescription*, ID3D11RenderTargetView**, int>)(lpVtbl[9]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppRTView);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11Resource*, RenderTargetViewDescription*, ID3D11RenderTargetView**, int>)(lpVtbl[9]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppRTView);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateDepthStencilView" />
@@ -175,11 +131,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(10)]
 	public HResult CreateDepthStencilView(ID3D11Resource* pResource, DepthStencilViewDescription* pDesc, ID3D11DepthStencilView** ppDepthStencilView)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, ID3D11Resource*, DepthStencilViewDescription*, ID3D11DepthStencilView**, int>)(lpVtbl[10]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppDepthStencilView);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11Resource*, DepthStencilViewDescription*, ID3D11DepthStencilView**, int>)(lpVtbl[10]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppDepthStencilView);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11Resource*, DepthStencilViewDescription*, ID3D11DepthStencilView**, int>)(lpVtbl[10]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pResource, pDesc, ppDepthStencilView);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateInputLayout" />
@@ -187,11 +139,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(11)]
 	public HResult CreateInputLayout(InputElementDescription* pInputElementDescs, uint NumElements, void* pShaderBytecodeWithInputSignature, nuint BytecodeLength, ID3D11InputLayout** ppInputLayout)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, InputElementDescription*, uint, void*, nuint, ID3D11InputLayout**, int>)(lpVtbl[11]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pInputElementDescs, NumElements, pShaderBytecodeWithInputSignature, BytecodeLength, ppInputLayout);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, InputElementDescription*, uint, void*, nuint, ID3D11InputLayout**, int>)(lpVtbl[11]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pInputElementDescs, NumElements, pShaderBytecodeWithInputSignature, BytecodeLength, ppInputLayout);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, InputElementDescription*, uint, void*, nuint, ID3D11InputLayout**, int>)(lpVtbl[11]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pInputElementDescs, NumElements, pShaderBytecodeWithInputSignature, BytecodeLength, ppInputLayout);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateVertexShader" />
@@ -199,11 +147,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(12)]
 	public HResult CreateVertexShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11VertexShader** ppVertexShader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11VertexShader**, int>)(lpVtbl[12]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppVertexShader);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11VertexShader**, int>)(lpVtbl[12]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppVertexShader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11VertexShader**, int>)(lpVtbl[12]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppVertexShader);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateGeometryShader" />
@@ -211,11 +155,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(13)]
 	public HResult CreateGeometryShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[13]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppGeometryShader);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[13]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppGeometryShader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[13]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppGeometryShader);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateGeometryShaderWithStreamOutput" />
@@ -223,11 +163,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(14)]
 	public HResult CreateGeometryShaderWithStreamOutput(void* pShaderBytecode, nuint BytecodeLength, SODeclarationEntry* pSODeclaration, uint NumEntries, uint* pBufferStrides, uint NumStrides, uint RasterizedStream, ID3D11ClassLinkage* pClassLinkage, ID3D11GeometryShader** ppGeometryShader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, void*, nuint, SODeclarationEntry*, uint, uint*, uint, uint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[14]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pSODeclaration, NumEntries, pBufferStrides, NumStrides, RasterizedStream, pClassLinkage, ppGeometryShader);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, void*, nuint, SODeclarationEntry*, uint, uint*, uint, uint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[14]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pSODeclaration, NumEntries, pBufferStrides, NumStrides, RasterizedStream, pClassLinkage, ppGeometryShader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, void*, nuint, SODeclarationEntry*, uint, uint*, uint, uint, ID3D11ClassLinkage*, ID3D11GeometryShader**, int>)(lpVtbl[14]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pSODeclaration, NumEntries, pBufferStrides, NumStrides, RasterizedStream, pClassLinkage, ppGeometryShader);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreatePixelShader" />
@@ -235,11 +171,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(15)]
 	public HResult CreatePixelShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11PixelShader** ppPixelShader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11PixelShader**, int>)(lpVtbl[15]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppPixelShader);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11PixelShader**, int>)(lpVtbl[15]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppPixelShader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11PixelShader**, int>)(lpVtbl[15]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppPixelShader);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateHullShader" />
@@ -247,11 +179,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(16)]
 	public HResult CreateHullShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11HullShader** ppHullShader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11HullShader**, int>)(lpVtbl[16]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppHullShader);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11HullShader**, int>)(lpVtbl[16]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppHullShader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11HullShader**, int>)(lpVtbl[16]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppHullShader);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateDomainShader" />
@@ -259,11 +187,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(17)]
 	public HResult CreateDomainShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11DomainShader** ppDomainShader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11DomainShader**, int>)(lpVtbl[17]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppDomainShader);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11DomainShader**, int>)(lpVtbl[17]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppDomainShader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11DomainShader**, int>)(lpVtbl[17]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppDomainShader);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateComputeShader" />
@@ -271,11 +195,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(18)]
 	public HResult CreateComputeShader(void* pShaderBytecode, nuint BytecodeLength, ID3D11ClassLinkage* pClassLinkage, ID3D11ComputeShader** ppComputeShader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11ComputeShader**, int>)(lpVtbl[18]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppComputeShader);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11ComputeShader**, int>)(lpVtbl[18]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppComputeShader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, void*, nuint, ID3D11ClassLinkage*, ID3D11ComputeShader**, int>)(lpVtbl[18]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pShaderBytecode, BytecodeLength, pClassLinkage, ppComputeShader);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateClassLinkage" />
@@ -283,11 +203,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(19)]
 	public HResult CreateClassLinkage(ID3D11ClassLinkage** ppLinkage)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, ID3D11ClassLinkage**, int>)(lpVtbl[19]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppLinkage);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11ClassLinkage**, int>)(lpVtbl[19]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppLinkage);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11ClassLinkage**, int>)(lpVtbl[19]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppLinkage);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateBlendState" />
@@ -295,11 +211,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(20)]
 	public HResult CreateBlendState(BlendDescription* pBlendStateDesc, ID3D11BlendState** ppBlendState)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, BlendDescription*, ID3D11BlendState**, int>)(lpVtbl[20]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, BlendDescription*, ID3D11BlendState**, int>)(lpVtbl[20]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, BlendDescription*, ID3D11BlendState**, int>)(lpVtbl[20]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateDepthStencilState" />
@@ -307,11 +219,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(21)]
 	public HResult CreateDepthStencilState(DepthStencilDescription* pDepthStencilDesc, ID3D11DepthStencilState** ppDepthStencilState)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, DepthStencilDescription*, ID3D11DepthStencilState**, int>)(lpVtbl[21]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDepthStencilDesc, ppDepthStencilState);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, DepthStencilDescription*, ID3D11DepthStencilState**, int>)(lpVtbl[21]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDepthStencilDesc, ppDepthStencilState);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, DepthStencilDescription*, ID3D11DepthStencilState**, int>)(lpVtbl[21]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDepthStencilDesc, ppDepthStencilState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateRasterizerState" />
@@ -319,11 +227,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(22)]
 	public HResult CreateRasterizerState(RasterizerDescription* pRasterizerDesc, ID3D11RasterizerState** ppRasterizerState)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, RasterizerDescription*, ID3D11RasterizerState**, int>)(lpVtbl[22]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, RasterizerDescription*, ID3D11RasterizerState**, int>)(lpVtbl[22]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, RasterizerDescription*, ID3D11RasterizerState**, int>)(lpVtbl[22]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateSamplerState" />
@@ -331,11 +235,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(23)]
 	public HResult CreateSamplerState(SamplerDescription* pSamplerDesc, ID3D11SamplerState** ppSamplerState)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, SamplerDescription*, ID3D11SamplerState**, int>)(lpVtbl[23]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pSamplerDesc, ppSamplerState);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, SamplerDescription*, ID3D11SamplerState**, int>)(lpVtbl[23]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pSamplerDesc, ppSamplerState);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, SamplerDescription*, ID3D11SamplerState**, int>)(lpVtbl[23]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pSamplerDesc, ppSamplerState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateQuery" />
@@ -343,11 +243,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(24)]
 	public HResult CreateQuery(QueryDescription* pQueryDesc, ID3D11Query** ppQuery)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, QueryDescription*, ID3D11Query**, int>)(lpVtbl[24]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pQueryDesc, ppQuery);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, QueryDescription*, ID3D11Query**, int>)(lpVtbl[24]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pQueryDesc, ppQuery);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, QueryDescription*, ID3D11Query**, int>)(lpVtbl[24]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pQueryDesc, ppQuery);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreatePredicate" />
@@ -355,11 +251,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(25)]
 	public HResult CreatePredicate(QueryDescription* pPredicateDesc, ID3D11Predicate** ppPredicate)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, QueryDescription*, ID3D11Predicate**, int>)(lpVtbl[25]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pPredicateDesc, ppPredicate);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, QueryDescription*, ID3D11Predicate**, int>)(lpVtbl[25]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pPredicateDesc, ppPredicate);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, QueryDescription*, ID3D11Predicate**, int>)(lpVtbl[25]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pPredicateDesc, ppPredicate);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateCounter" />
@@ -367,11 +259,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(26)]
 	public HResult CreateCounter(CounterDescription* pCounterDesc, ID3D11Counter** ppCounter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, CounterDescription*, ID3D11Counter**, int>)(lpVtbl[26]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pCounterDesc, ppCounter);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, CounterDescription*, ID3D11Counter**, int>)(lpVtbl[26]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pCounterDesc, ppCounter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, CounterDescription*, ID3D11Counter**, int>)(lpVtbl[26]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pCounterDesc, ppCounter);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CreateDeferredContext" />
@@ -379,11 +267,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(27)]
 	public HResult CreateDeferredContext(uint ContextFlags, ID3D11DeviceContext** ppDeferredContext)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint, ID3D11DeviceContext**, int>)(lpVtbl[27]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint, ID3D11DeviceContext**, int>)(lpVtbl[27]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint, ID3D11DeviceContext**, int>)(lpVtbl[27]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.OpenSharedResource" />
@@ -391,11 +275,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(28)]
 	public HResult OpenSharedResource(Handle hResource, Guid* ReturnedInterface, void** ppResource)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Handle, Guid*, void**, int>)(lpVtbl[28]))((ID3D11Device2*)Unsafe.AsPointer(ref this), hResource, ReturnedInterface, ppResource);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Handle, Guid*, void**, int>)(lpVtbl[28]))((ID3D11Device2*)Unsafe.AsPointer(ref this), hResource, ReturnedInterface, ppResource);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Handle, Guid*, void**, int>)(lpVtbl[28]))((ID3D11Device2*)Unsafe.AsPointer(ref this), hResource, ReturnedInterface, ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CheckFormatSupport" />
@@ -403,11 +283,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(29)]
 	public HResult CheckFormatSupport(Graphics.Dxgi.Common.Format Format, uint* pFormatSupport)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[29]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, pFormatSupport);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[29]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, pFormatSupport);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint*, int>)(lpVtbl[29]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, pFormatSupport);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CheckMultisampleQualityLevels" />
@@ -415,11 +291,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(30)]
 	public HResult CheckMultisampleQualityLevels(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint* pNumQualityLevels)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint*, int>)(lpVtbl[30]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, pNumQualityLevels);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint*, int>)(lpVtbl[30]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, pNumQualityLevels);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint*, int>)(lpVtbl[30]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, pNumQualityLevels);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CheckCounterInfo" />
@@ -427,11 +299,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(31)]
 	public void CheckCounterInfo(CounterInfo* pCounterInfo)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11Device2*, CounterInfo*, void>)(lpVtbl[31]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pCounterInfo);
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11Device2*, CounterInfo*, void>)(lpVtbl[31]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pCounterInfo);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11Device2*, CounterInfo*, void>)(lpVtbl[31]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pCounterInfo);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CheckCounter" />
@@ -439,11 +307,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(32)]
 	public HResult CheckCounter(CounterDescription* pDesc, CounterType* pType, uint* pActiveCounters, byte* szName, uint* pNameLength, byte* szUnits, uint* pUnitsLength, byte* szDescription, uint* pDescriptionLength)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, CounterDescription*, CounterType*, uint*, byte*, uint*, byte*, uint*, byte*, uint*, int>)(lpVtbl[32]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pType, pActiveCounters, szName, pNameLength, szUnits, pUnitsLength, szDescription, pDescriptionLength);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, CounterDescription*, CounterType*, uint*, byte*, uint*, byte*, uint*, byte*, uint*, int>)(lpVtbl[32]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pType, pActiveCounters, szName, pNameLength, szUnits, pUnitsLength, szDescription, pDescriptionLength);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, CounterDescription*, CounterType*, uint*, byte*, uint*, byte*, uint*, byte*, uint*, int>)(lpVtbl[32]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pDesc, pType, pActiveCounters, szName, pNameLength, szUnits, pUnitsLength, szDescription, pDescriptionLength);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.CheckFeatureSupport" />
@@ -451,11 +315,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(33)]
 	public HResult CheckFeatureSupport(Feature Feature, void* pFeatureSupportData, int FeatureSupportDataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Feature, void*, int, int>)(lpVtbl[33]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Feature, void*, int, int>)(lpVtbl[33]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Feature, void*, int, int>)(lpVtbl[33]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Feature, pFeatureSupportData, FeatureSupportDataSize);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.GetPrivateData" />
@@ -463,11 +323,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(34)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Guid*, uint*, void*, int>)(lpVtbl[34]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Guid*, uint*, void*, int>)(lpVtbl[34]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Guid*, uint*, void*, int>)(lpVtbl[34]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.SetPrivateData" />
@@ -475,11 +331,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(35)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Guid*, uint, void*, int>)(lpVtbl[35]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Guid*, uint, void*, int>)(lpVtbl[35]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Guid*, uint, void*, int>)(lpVtbl[35]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.SetPrivateDataInterface" />
@@ -487,11 +339,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(36)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Guid*, IUnknown*, int>)(lpVtbl[36]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Guid*, IUnknown*, int>)(lpVtbl[36]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Guid*, IUnknown*, int>)(lpVtbl[36]))((ID3D11Device2*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.GetFeatureLevel" />
@@ -499,11 +347,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(37)]
 	public Graphics.Direct3D.FeatureLevel GetFeatureLevel()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Graphics.Direct3D.FeatureLevel>)(lpVtbl[37]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Graphics.Direct3D.FeatureLevel>)(lpVtbl[37]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Graphics.Direct3D.FeatureLevel>)(lpVtbl[37]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11Device.GetCreationFlags" />
@@ -511,11 +355,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(38)]
 	public uint GetCreationFlags()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint>)(lpVtbl[38]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint>)(lpVtbl[38]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint>)(lpVtbl[38]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11Device.GetDeviceRemovedReason" />
@@ -523,11 +363,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(39)]
 	public HResult GetDeviceRemovedReason()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, int>)(lpVtbl[39]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, int>)(lpVtbl[39]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, int>)(lpVtbl[39]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11Device.GetImmediateContext" />
@@ -535,11 +371,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(40)]
 	public void GetImmediateContext(ID3D11DeviceContext** ppImmediateContext)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11Device2*, ID3D11DeviceContext**, void>)(lpVtbl[40]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext**, void>)(lpVtbl[40]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11DeviceContext**, void>)(lpVtbl[40]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.SetExceptionMode" />
@@ -547,11 +379,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(41)]
 	public HResult SetExceptionMode(uint RaiseFlags)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint, int>)(lpVtbl[41]))((ID3D11Device2*)Unsafe.AsPointer(ref this), RaiseFlags);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint, int>)(lpVtbl[41]))((ID3D11Device2*)Unsafe.AsPointer(ref this), RaiseFlags);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint, int>)(lpVtbl[41]))((ID3D11Device2*)Unsafe.AsPointer(ref this), RaiseFlags);
 	}
 
 	/// <inheritdoc cref="ID3D11Device.GetExceptionMode" />
@@ -559,11 +387,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(42)]
 	public uint GetExceptionMode()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint>)(lpVtbl[42]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint>)(lpVtbl[42]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint>)(lpVtbl[42]))((ID3D11Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.GetImmediateContext1" />
@@ -571,11 +395,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(43)]
 	public void GetImmediateContext1(ID3D11DeviceContext1** ppImmediateContext)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11Device2*, ID3D11DeviceContext1**, void>)(lpVtbl[43]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext1**, void>)(lpVtbl[43]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11DeviceContext1**, void>)(lpVtbl[43]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.CreateDeferredContext1" />
@@ -583,11 +403,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(44)]
 	public HResult CreateDeferredContext1(uint ContextFlags, ID3D11DeviceContext1** ppDeferredContext)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint, ID3D11DeviceContext1**, int>)(lpVtbl[44]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint, ID3D11DeviceContext1**, int>)(lpVtbl[44]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint, ID3D11DeviceContext1**, int>)(lpVtbl[44]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.CreateBlendState1" />
@@ -595,11 +411,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(45)]
 	public HResult CreateBlendState1(BlendDescription1* pBlendStateDesc, ID3D11BlendState1** ppBlendState)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, BlendDescription1*, ID3D11BlendState1**, int>)(lpVtbl[45]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, BlendDescription1*, ID3D11BlendState1**, int>)(lpVtbl[45]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, BlendDescription1*, ID3D11BlendState1**, int>)(lpVtbl[45]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pBlendStateDesc, ppBlendState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.CreateRasterizerState1" />
@@ -607,11 +419,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(46)]
 	public HResult CreateRasterizerState1(RasterizerDescription1* pRasterizerDesc, ID3D11RasterizerState1** ppRasterizerState)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, RasterizerDescription1*, ID3D11RasterizerState1**, int>)(lpVtbl[46]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, RasterizerDescription1*, ID3D11RasterizerState1**, int>)(lpVtbl[46]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, RasterizerDescription1*, ID3D11RasterizerState1**, int>)(lpVtbl[46]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pRasterizerDesc, ppRasterizerState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.CreateDeviceContextState" />
@@ -619,11 +427,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(47)]
 	public HResult CreateDeviceContextState(uint Flags, Graphics.Direct3D.FeatureLevel* pFeatureLevels, uint FeatureLevels, uint SDKVersion, Guid* EmulatedInterface, Graphics.Direct3D.FeatureLevel* pChosenFeatureLevel, ID3DDeviceContextState** ppContextState)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[47]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[47]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint, Graphics.Direct3D.FeatureLevel*, uint, uint, Guid*, Graphics.Direct3D.FeatureLevel*, ID3DDeviceContextState**, int>)(lpVtbl[47]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Flags, pFeatureLevels, FeatureLevels, SDKVersion, EmulatedInterface, pChosenFeatureLevel, ppContextState);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResource1" />
@@ -631,11 +435,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(48)]
 	public HResult OpenSharedResource1(Handle hResource, Guid* returnedInterface, void** ppResource)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Handle, Guid*, void**, int>)(lpVtbl[48]))((ID3D11Device2*)Unsafe.AsPointer(ref this), hResource, returnedInterface, ppResource);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Handle, Guid*, void**, int>)(lpVtbl[48]))((ID3D11Device2*)Unsafe.AsPointer(ref this), hResource, returnedInterface, ppResource);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Handle, Guid*, void**, int>)(lpVtbl[48]))((ID3D11Device2*)Unsafe.AsPointer(ref this), hResource, returnedInterface, ppResource);
 	}
 
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResourceByName" />
@@ -643,11 +443,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(49)]
 	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device2*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device2*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device2*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::GetImmediateContext2"]/*' />
@@ -655,11 +451,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(50)]
 	public void GetImmediateContext2(ID3D11DeviceContext2** ppImmediateContext)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11Device2*, ID3D11DeviceContext2**, void>)(lpVtbl[50]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11DeviceContext2**, void>)(lpVtbl[50]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11DeviceContext2**, void>)(lpVtbl[50]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ppImmediateContext);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::CreateDeferredContext2"]/*' />
@@ -667,11 +459,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(51)]
 	public HResult CreateDeferredContext2(uint ContextFlags, ID3D11DeviceContext2** ppDeferredContext)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, uint, ID3D11DeviceContext2**, int>)(lpVtbl[51]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, uint, ID3D11DeviceContext2**, int>)(lpVtbl[51]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, uint, ID3D11DeviceContext2**, int>)(lpVtbl[51]))((ID3D11Device2*)Unsafe.AsPointer(ref this), ContextFlags, ppDeferredContext);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::GetResourceTiling"]/*' />
@@ -679,11 +467,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(52)]
 	public void GetResourceTiling(ID3D11Resource* pTiledResource, uint* pNumTilesForEntireResource, PackedMipDescription* pPackedMipDesc, TileShape* pStandardTileShapeForNonPackedMips, uint* pNumSubresourceTilings, uint FirstSubresourceTilingToGet, SubresourceTiling* pSubresourceTilingsForNonPackedMips)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11Device2*, ID3D11Resource*, uint*, PackedMipDescription*, TileShape*, uint*, uint, SubresourceTiling*, void>)(lpVtbl[52]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pTiledResource, pNumTilesForEntireResource, pPackedMipDesc, pStandardTileShapeForNonPackedMips, pNumSubresourceTilings, FirstSubresourceTilingToGet, pSubresourceTilingsForNonPackedMips);
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11Device2*, ID3D11Resource*, uint*, PackedMipDescription*, TileShape*, uint*, uint, SubresourceTiling*, void>)(lpVtbl[52]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pTiledResource, pNumTilesForEntireResource, pPackedMipDesc, pStandardTileShapeForNonPackedMips, pNumSubresourceTilings, FirstSubresourceTilingToGet, pSubresourceTilingsForNonPackedMips);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ID3D11Resource*, uint*, PackedMipDescription*, TileShape*, uint*, uint, SubresourceTiling*, void>)(lpVtbl[52]))((ID3D11Device2*)Unsafe.AsPointer(ref this), pTiledResource, pNumTilesForEntireResource, pPackedMipDesc, pStandardTileShapeForNonPackedMips, pNumSubresourceTilings, FirstSubresourceTilingToGet, pSubresourceTilingsForNonPackedMips);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::CheckMultisampleQualityLevels1"]/*' />
@@ -691,11 +475,7 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	[VtblIndex(53)]
 	public HResult CheckMultisampleQualityLevels1(Graphics.Dxgi.Common.Format Format, uint SampleCount, uint Flags, uint* pNumQualityLevels)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint, uint*, int>)(lpVtbl[53]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, Flags, pNumQualityLevels);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint, uint*, int>)(lpVtbl[53]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, Flags, pNumQualityLevels);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, Graphics.Dxgi.Common.Format, uint, uint, uint*, int>)(lpVtbl[53]))((ID3D11Device2*)Unsafe.AsPointer(ref this), Format, SampleCount, Flags, pNumQualityLevels);
 	}
 
 	public interface Interface : ID3D11Device1.Interface

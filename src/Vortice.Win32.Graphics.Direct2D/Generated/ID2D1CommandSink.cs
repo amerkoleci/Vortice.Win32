@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1CommandSink));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1CommandSink));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, uint>)(lpVtbl[1]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, uint>)(lpVtbl[1]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, uint>)(lpVtbl[1]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, uint>)(lpVtbl[2]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, uint>)(lpVtbl[2]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, uint>)(lpVtbl[2]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::BeginDraw"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(3)]
 	public HResult BeginDraw()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, int>)(lpVtbl[3]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, int>)(lpVtbl[3]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, int>)(lpVtbl[3]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::EndDraw"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(4)]
 	public HResult EndDraw()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, int>)(lpVtbl[4]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, int>)(lpVtbl[4]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, int>)(lpVtbl[4]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::SetAntialiasMode"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(5)]
 	public HResult SetAntialiasMode(AntialiasMode antialiasMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, AntialiasMode, int>)(lpVtbl[5]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), antialiasMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, AntialiasMode, int>)(lpVtbl[5]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), antialiasMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, AntialiasMode, int>)(lpVtbl[5]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), antialiasMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::SetTags"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(6)]
 	public HResult SetTags(ulong tag1, ulong tag2)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, ulong, ulong, int>)(lpVtbl[6]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), tag1, tag2);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, ulong, ulong, int>)(lpVtbl[6]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), tag1, tag2);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ulong, ulong, int>)(lpVtbl[6]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), tag1, tag2);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::SetTextAntialiasMode"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(7)]
 	public HResult SetTextAntialiasMode(TextAntialiasMode textAntialiasMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, TextAntialiasMode, int>)(lpVtbl[7]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), textAntialiasMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, TextAntialiasMode, int>)(lpVtbl[7]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), textAntialiasMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, TextAntialiasMode, int>)(lpVtbl[7]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), textAntialiasMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::SetTextRenderingParams"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(8)]
 	public HResult SetTextRenderingParams(Graphics.DirectWrite.IDWriteRenderingParams* textRenderingParams)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Graphics.DirectWrite.IDWriteRenderingParams*, int>)(lpVtbl[8]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), textRenderingParams);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Graphics.DirectWrite.IDWriteRenderingParams*, int>)(lpVtbl[8]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), textRenderingParams);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Graphics.DirectWrite.IDWriteRenderingParams*, int>)(lpVtbl[8]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), textRenderingParams);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::SetTransform"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(9)]
 	public HResult SetTransform(Matrix3x2* transform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Matrix3x2*, int>)(lpVtbl[9]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), transform);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Matrix3x2*, int>)(lpVtbl[9]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), transform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Matrix3x2*, int>)(lpVtbl[9]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::SetPrimitiveBlend"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(10)]
 	public HResult SetPrimitiveBlend(PrimitiveBlend primitiveBlend)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, PrimitiveBlend, int>)(lpVtbl[10]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), primitiveBlend);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, PrimitiveBlend, int>)(lpVtbl[10]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), primitiveBlend);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, PrimitiveBlend, int>)(lpVtbl[10]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), primitiveBlend);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::SetUnitMode"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(11)]
 	public HResult SetUnitMode(UnitMode unitMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, UnitMode, int>)(lpVtbl[11]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), unitMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, UnitMode, int>)(lpVtbl[11]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), unitMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, UnitMode, int>)(lpVtbl[11]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), unitMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::Clear"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(12)]
 	public HResult Clear(Color4* color)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Color4*, int>)(lpVtbl[12]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), color);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Color4*, int>)(lpVtbl[12]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), color);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Color4*, int>)(lpVtbl[12]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), color);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawGlyphRun"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(13)]
 	public HResult DrawGlyphRun(Vector2 baselineOrigin, Graphics.DirectWrite.GlyphRun* glyphRun, Graphics.DirectWrite.GlyphRunDescription* glyphRunDescription, ID2D1Brush* foregroundBrush, Graphics.DirectWrite.MeasuringMode measuringMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, int>)(lpVtbl[13]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, int>)(lpVtbl[13]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Vector2, Graphics.DirectWrite.GlyphRun*, Graphics.DirectWrite.GlyphRunDescription*, ID2D1Brush*, Graphics.DirectWrite.MeasuringMode, int>)(lpVtbl[13]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), baselineOrigin, glyphRun, glyphRunDescription, foregroundBrush, measuringMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawLine"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(14)]
 	public HResult DrawLine(Vector2 point0, Vector2 point1, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Vector2, Vector2, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[14]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Vector2, Vector2, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[14]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Vector2, Vector2, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[14]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), point0, point1, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawGeometry"]/*' />
@@ -235,11 +171,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(15)]
 	public HResult DrawGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, ID2D1Geometry*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[15]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), geometry, brush, strokeWidth, strokeStyle);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, ID2D1Geometry*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[15]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), geometry, brush, strokeWidth, strokeStyle);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Geometry*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[15]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), geometry, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawRectangle"]/*' />
@@ -247,11 +179,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(16)]
 	public HResult DrawRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[16]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[16]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Win32.Numerics.RectF*, ID2D1Brush*, float, ID2D1StrokeStyle*, int>)(lpVtbl[16]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush, strokeWidth, strokeStyle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawBitmap"]/*' />
@@ -259,11 +187,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(17)]
 	public HResult DrawBitmap(ID2D1Bitmap* bitmap, Win32.Numerics.RectF* destinationRectangle, float opacity, InterpolationMode interpolationMode, Win32.Numerics.RectF* sourceRectangle, Matrix4x4* perspectiveTransform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Bitmap*, Win32.Numerics.RectF*, float, InterpolationMode, Win32.Numerics.RectF*, Matrix4x4*, int>)(lpVtbl[17]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), bitmap, destinationRectangle, opacity, interpolationMode, sourceRectangle, perspectiveTransform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawImage"]/*' />
@@ -271,11 +195,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(18)]
 	public HResult DrawImage(ID2D1Image* image, Vector2* targetOffset, Win32.Numerics.RectF* imageRectangle, InterpolationMode interpolationMode, Common.CompositeMode compositeMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Image*, Vector2*, Win32.Numerics.RectF*, InterpolationMode, Common.CompositeMode, int>)(lpVtbl[18]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), image, targetOffset, imageRectangle, interpolationMode, compositeMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::DrawGdiMetafile"]/*' />
@@ -283,11 +203,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(19)]
 	public HResult DrawGdiMetafile(ID2D1GdiMetafile* gdiMetafile, Vector2* targetOffset)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, ID2D1GdiMetafile*, Vector2*, int>)(lpVtbl[19]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, ID2D1GdiMetafile*, Vector2*, int>)(lpVtbl[19]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1GdiMetafile*, Vector2*, int>)(lpVtbl[19]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), gdiMetafile, targetOffset);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::FillMesh"]/*' />
@@ -295,11 +211,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(20)]
 	public HResult FillMesh(ID2D1Mesh* mesh, ID2D1Brush* brush)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, ID2D1Mesh*, ID2D1Brush*, int>)(lpVtbl[20]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), mesh, brush);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, ID2D1Mesh*, ID2D1Brush*, int>)(lpVtbl[20]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), mesh, brush);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Mesh*, ID2D1Brush*, int>)(lpVtbl[20]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), mesh, brush);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::FillOpacityMask"]/*' />
@@ -307,11 +219,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(21)]
 	public HResult FillOpacityMask(ID2D1Bitmap* opacityMask, ID2D1Brush* brush, Win32.Numerics.RectF* destinationRectangle, Win32.Numerics.RectF* sourceRectangle)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, int>)(lpVtbl[21]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, int>)(lpVtbl[21]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Bitmap*, ID2D1Brush*, Win32.Numerics.RectF*, Win32.Numerics.RectF*, int>)(lpVtbl[21]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), opacityMask, brush, destinationRectangle, sourceRectangle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::FillGeometry"]/*' />
@@ -319,11 +227,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(22)]
 	public HResult FillGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, ID2D1Brush* opacityBrush)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, ID2D1Geometry*, ID2D1Brush*, ID2D1Brush*, int>)(lpVtbl[22]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), geometry, brush, opacityBrush);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, ID2D1Geometry*, ID2D1Brush*, ID2D1Brush*, int>)(lpVtbl[22]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), geometry, brush, opacityBrush);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, ID2D1Geometry*, ID2D1Brush*, ID2D1Brush*, int>)(lpVtbl[22]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), geometry, brush, opacityBrush);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::FillRectangle"]/*' />
@@ -331,11 +235,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(23)]
 	public HResult FillRectangle(Win32.Numerics.RectF* rect, ID2D1Brush* brush)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Win32.Numerics.RectF*, ID2D1Brush*, int>)(lpVtbl[23]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Win32.Numerics.RectF*, ID2D1Brush*, int>)(lpVtbl[23]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Win32.Numerics.RectF*, ID2D1Brush*, int>)(lpVtbl[23]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), rect, brush);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::PushAxisAlignedClip"]/*' />
@@ -343,11 +243,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(24)]
 	public HResult PushAxisAlignedClip(Win32.Numerics.RectF* clipRect, AntialiasMode antialiasMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, Win32.Numerics.RectF*, AntialiasMode, int>)(lpVtbl[24]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, Win32.Numerics.RectF*, AntialiasMode, int>)(lpVtbl[24]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, Win32.Numerics.RectF*, AntialiasMode, int>)(lpVtbl[24]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), clipRect, antialiasMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::PushLayer"]/*' />
@@ -355,11 +251,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(25)]
 	public HResult PushLayer(LayerParameters1* layerParameters1, ID2D1Layer* layer)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, LayerParameters1*, ID2D1Layer*, int>)(lpVtbl[25]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), layerParameters1, layer);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, LayerParameters1*, ID2D1Layer*, int>)(lpVtbl[25]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), layerParameters1, layer);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, LayerParameters1*, ID2D1Layer*, int>)(lpVtbl[25]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this), layerParameters1, layer);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::PopAxisAlignedClip"]/*' />
@@ -367,11 +259,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(26)]
 	public HResult PopAxisAlignedClip()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, int>)(lpVtbl[26]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, int>)(lpVtbl[26]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, int>)(lpVtbl[26]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1CommandSink::PopLayer"]/*' />
@@ -379,11 +267,7 @@ public unsafe partial struct ID2D1CommandSink : ID2D1CommandSink.Interface, INat
 	[VtblIndex(27)]
 	public HResult PopLayer()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1CommandSink*, int>)(lpVtbl[27]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1CommandSink*, int>)(lpVtbl[27]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1CommandSink*, int>)(lpVtbl[27]))((ID2D1CommandSink*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IUnknown.Interface

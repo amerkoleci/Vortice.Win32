@@ -40,11 +40,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICComponentFactory));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICComponentFactory));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Guid*, void**, int>)(lpVtbl[0]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, void**, int>)(lpVtbl[0]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Guid*, void**, int>)(lpVtbl[0]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, uint>)(lpVtbl[1]))((IWICComponentFactory*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint>)(lpVtbl[1]))((IWICComponentFactory*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, uint>)(lpVtbl[1]))((IWICComponentFactory*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, uint>)(lpVtbl[2]))((IWICComponentFactory*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint>)(lpVtbl[2]))((IWICComponentFactory*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, uint>)(lpVtbl[2]))((IWICComponentFactory*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromFilename" />
@@ -91,11 +75,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(3)]
 	public HResult CreateDecoderFromFilename(ushort* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, ushort*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, ushort*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, ushort*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromStream" />
@@ -103,11 +83,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(4)]
 	public HResult CreateDecoderFromStream(Com.IStream* pIStream, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Com.IStream*, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[4]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIStream, pguidVendor, metadataOptions, ppIDecoder);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Com.IStream*, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[4]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIStream, pguidVendor, metadataOptions, ppIDecoder);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Com.IStream*, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[4]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIStream, pguidVendor, metadataOptions, ppIDecoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromFileHandle" />
@@ -115,11 +91,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(5)]
 	public HResult CreateDecoderFromFileHandle(nuint hFile, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, nuint, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[5]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hFile, pguidVendor, metadataOptions, ppIDecoder);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, nuint, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[5]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hFile, pguidVendor, metadataOptions, ppIDecoder);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, nuint, Guid*, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[5]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hFile, pguidVendor, metadataOptions, ppIDecoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateComponentInfo" />
@@ -127,11 +99,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(6)]
 	public HResult CreateComponentInfo(Guid* clsidComponent, IWICComponentInfo** ppIInfo)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Guid*, IWICComponentInfo**, int>)(lpVtbl[6]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), clsidComponent, ppIInfo);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, IWICComponentInfo**, int>)(lpVtbl[6]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), clsidComponent, ppIInfo);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Guid*, IWICComponentInfo**, int>)(lpVtbl[6]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), clsidComponent, ppIInfo);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoder" />
@@ -139,11 +107,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(7)]
 	public HResult CreateDecoder(Guid* guidContainerFormat, Guid* pguidVendor, IWICBitmapDecoder** ppIDecoder)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Guid*, Guid*, IWICBitmapDecoder**, int>)(lpVtbl[7]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, ppIDecoder);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, IWICBitmapDecoder**, int>)(lpVtbl[7]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, ppIDecoder);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Guid*, Guid*, IWICBitmapDecoder**, int>)(lpVtbl[7]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, ppIDecoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateEncoder" />
@@ -151,11 +115,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(8)]
 	public HResult CreateEncoder(Guid* guidContainerFormat, Guid* pguidVendor, IWICBitmapEncoder** ppIEncoder)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Guid*, Guid*, IWICBitmapEncoder**, int>)(lpVtbl[8]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, ppIEncoder);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, IWICBitmapEncoder**, int>)(lpVtbl[8]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, ppIEncoder);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Guid*, Guid*, IWICBitmapEncoder**, int>)(lpVtbl[8]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, ppIEncoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreatePalette" />
@@ -163,11 +123,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(9)]
 	public HResult CreatePalette(IWICPalette** ppIPalette)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICPalette**, int>)(lpVtbl[9]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIPalette);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICPalette**, int>)(lpVtbl[9]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIPalette);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICPalette**, int>)(lpVtbl[9]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIPalette);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateFormatConverter" />
@@ -175,11 +131,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(10)]
 	public HResult CreateFormatConverter(IWICFormatConverter** ppIFormatConverter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICFormatConverter**, int>)(lpVtbl[10]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIFormatConverter);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICFormatConverter**, int>)(lpVtbl[10]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIFormatConverter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICFormatConverter**, int>)(lpVtbl[10]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIFormatConverter);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapScaler" />
@@ -187,11 +139,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(11)]
 	public HResult CreateBitmapScaler(IWICBitmapScaler** ppIBitmapScaler)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICBitmapScaler**, int>)(lpVtbl[11]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapScaler);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapScaler**, int>)(lpVtbl[11]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapScaler);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICBitmapScaler**, int>)(lpVtbl[11]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapScaler);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapClipper" />
@@ -199,11 +147,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(12)]
 	public HResult CreateBitmapClipper(IWICBitmapClipper** ppIBitmapClipper)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICBitmapClipper**, int>)(lpVtbl[12]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapClipper);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapClipper**, int>)(lpVtbl[12]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapClipper);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICBitmapClipper**, int>)(lpVtbl[12]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapClipper);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFlipRotator" />
@@ -211,11 +155,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(13)]
 	public HResult CreateBitmapFlipRotator(IWICBitmapFlipRotator** ppIBitmapFlipRotator)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICBitmapFlipRotator**, int>)(lpVtbl[13]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapFlipRotator);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapFlipRotator**, int>)(lpVtbl[13]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapFlipRotator);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICBitmapFlipRotator**, int>)(lpVtbl[13]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIBitmapFlipRotator);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateStream" />
@@ -223,11 +163,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(14)]
 	public HResult CreateStream(IWICStream** ppIWICStream)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICStream**, int>)(lpVtbl[14]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICStream);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICStream**, int>)(lpVtbl[14]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICStream);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICStream**, int>)(lpVtbl[14]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICStream);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateColorContext" />
@@ -235,11 +171,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(15)]
 	public HResult CreateColorContext(IWICColorContext** ppIWICColorContext)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICColorContext**, int>)(lpVtbl[15]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorContext);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICColorContext**, int>)(lpVtbl[15]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorContext);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICColorContext**, int>)(lpVtbl[15]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorContext);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateColorTransformer" />
@@ -247,11 +179,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(16)]
 	public HResult CreateColorTransformer(IWICColorTransform** ppIWICColorTransform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICColorTransform**, int>)(lpVtbl[16]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorTransform);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICColorTransform**, int>)(lpVtbl[16]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorTransform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICColorTransform**, int>)(lpVtbl[16]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppIWICColorTransform);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmap" />
@@ -259,11 +187,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(17)]
 	public HResult CreateBitmap(uint uiWidth, uint uiHeight, Guid* pixelFormat, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[17]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, option, ppIBitmap);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[17]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, option, ppIBitmap);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, uint, uint, Guid*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[17]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, option, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromSource" />
@@ -271,11 +195,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(18)]
 	public HResult CreateBitmapFromSource(IWICBitmapSource* pIBitmapSource, WICBitmapCreateCacheOption option, IWICBitmap** ppIBitmap)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[18]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, option, ppIBitmap);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[18]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, option, ppIBitmap);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICBitmapSource*, WICBitmapCreateCacheOption, IWICBitmap**, int>)(lpVtbl[18]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, option, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromSourceRect" />
@@ -283,11 +203,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(19)]
 	public HResult CreateBitmapFromSourceRect(IWICBitmapSource* pIBitmapSource, uint x, uint y, uint width, uint height, IWICBitmap** ppIBitmap)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap**, int>)(lpVtbl[19]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, x, y, width, height, ppIBitmap);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap**, int>)(lpVtbl[19]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, x, y, width, height, ppIBitmap);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICBitmapSource*, uint, uint, uint, uint, IWICBitmap**, int>)(lpVtbl[19]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBitmapSource, x, y, width, height, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromMemory" />
@@ -295,11 +211,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(20)]
 	public HResult CreateBitmapFromMemory(uint uiWidth, uint uiHeight, Guid* pixelFormat, uint cbStride, uint cbBufferSize, byte* pbBuffer, IWICBitmap** ppIBitmap)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap**, int>)(lpVtbl[20]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, cbStride, cbBufferSize, pbBuffer, ppIBitmap);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap**, int>)(lpVtbl[20]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, cbStride, cbBufferSize, pbBuffer, ppIBitmap);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, uint, uint, Guid*, uint, uint, byte*, IWICBitmap**, int>)(lpVtbl[20]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), uiWidth, uiHeight, pixelFormat, cbStride, cbBufferSize, pbBuffer, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromHBITMAP" />
@@ -307,11 +219,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(21)]
 	public HResult CreateBitmapFromHBITMAP(IntPtr hBitmap, IntPtr hPalette, WICBitmapAlphaChannelOption options, IWICBitmap** ppIBitmap)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap**, int>)(lpVtbl[21]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hBitmap, hPalette, options, ppIBitmap);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap**, int>)(lpVtbl[21]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hBitmap, hPalette, options, ppIBitmap);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IntPtr, IntPtr, WICBitmapAlphaChannelOption, IWICBitmap**, int>)(lpVtbl[21]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hBitmap, hPalette, options, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateBitmapFromHICON" />
@@ -319,11 +227,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(22)]
 	public HResult CreateBitmapFromHICON(IntPtr hIcon, IWICBitmap** ppIBitmap)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IntPtr, IWICBitmap**, int>)(lpVtbl[22]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hIcon, ppIBitmap);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IntPtr, IWICBitmap**, int>)(lpVtbl[22]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hIcon, ppIBitmap);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IntPtr, IWICBitmap**, int>)(lpVtbl[22]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), hIcon, ppIBitmap);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateComponentEnumerator" />
@@ -331,11 +235,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(23)]
 	public HResult CreateComponentEnumerator(uint componentTypes, uint options, Com.IEnumUnknown** ppIEnumUnknown)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, uint, uint, Com.IEnumUnknown**, int>)(lpVtbl[23]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), componentTypes, options, ppIEnumUnknown);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, uint, uint, Com.IEnumUnknown**, int>)(lpVtbl[23]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), componentTypes, options, ppIEnumUnknown);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, uint, uint, Com.IEnumUnknown**, int>)(lpVtbl[23]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), componentTypes, options, ppIEnumUnknown);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateFastMetadataEncoderFromDecoder" />
@@ -343,11 +243,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(24)]
 	public HResult CreateFastMetadataEncoderFromDecoder(IWICBitmapDecoder* pIDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICBitmapDecoder*, IWICFastMetadataEncoder**, int>)(lpVtbl[24]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIDecoder, ppIFastEncoder);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapDecoder*, IWICFastMetadataEncoder**, int>)(lpVtbl[24]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIDecoder, ppIFastEncoder);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICBitmapDecoder*, IWICFastMetadataEncoder**, int>)(lpVtbl[24]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIDecoder, ppIFastEncoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateFastMetadataEncoderFromFrameDecode" />
@@ -355,11 +251,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(25)]
 	public HResult CreateFastMetadataEncoderFromFrameDecode(IWICBitmapFrameDecode* pIFrameDecoder, IWICFastMetadataEncoder** ppIFastEncoder)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder**, int>)(lpVtbl[25]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIFrameDecoder, ppIFastEncoder);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder**, int>)(lpVtbl[25]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIFrameDecoder, ppIFastEncoder);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICBitmapFrameDecode*, IWICFastMetadataEncoder**, int>)(lpVtbl[25]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIFrameDecoder, ppIFastEncoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateQueryWriter" />
@@ -367,11 +259,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(26)]
 	public HResult CreateQueryWriter(Guid* guidMetadataFormat, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Guid*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[26]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, ppIQueryWriter);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[26]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, ppIQueryWriter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Guid*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[26]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, ppIQueryWriter);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateQueryWriterFromReader" />
@@ -379,11 +267,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(27)]
 	public HResult CreateQueryWriterFromReader(IWICMetadataQueryReader* pIQueryReader, Guid* pguidVendor, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[27]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[27]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICMetadataQueryReader*, Guid*, IWICMetadataQueryWriter**, int>)(lpVtbl[27]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIQueryReader, pguidVendor, ppIQueryWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataReader"]/*' />
@@ -391,11 +275,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(28)]
 	public HResult CreateMetadataReader(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader** ppIReader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[28]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwOptions, pIStream, ppIReader);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[28]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwOptions, pIStream, ppIReader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[28]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwOptions, pIStream, ppIReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataReaderFromContainer"]/*' />
@@ -403,11 +283,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(29)]
 	public HResult CreateMetadataReaderFromContainer(Guid* guidContainerFormat, Guid* pguidVendor, uint dwOptions, Com.IStream* pIStream, IWICMetadataReader** ppIReader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[29]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, dwOptions, pIStream, ppIReader);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[29]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, dwOptions, pIStream, ppIReader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Guid*, Guid*, uint, Com.IStream*, IWICMetadataReader**, int>)(lpVtbl[29]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidContainerFormat, pguidVendor, dwOptions, pIStream, ppIReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataWriter"]/*' />
@@ -415,11 +291,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(30)]
 	public HResult CreateMetadataWriter(Guid* guidMetadataFormat, Guid* pguidVendor, uint dwMetadataOptions, IWICMetadataWriter** ppIWriter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Guid*, Guid*, uint, IWICMetadataWriter**, int>)(lpVtbl[30]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwMetadataOptions, ppIWriter);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Guid*, Guid*, uint, IWICMetadataWriter**, int>)(lpVtbl[30]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwMetadataOptions, ppIWriter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Guid*, Guid*, uint, IWICMetadataWriter**, int>)(lpVtbl[30]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), guidMetadataFormat, pguidVendor, dwMetadataOptions, ppIWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateMetadataWriterFromReader"]/*' />
@@ -427,11 +299,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(31)]
 	public HResult CreateMetadataWriterFromReader(IWICMetadataReader* pIReader, Guid* pguidVendor, IWICMetadataWriter** ppIWriter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICMetadataReader*, Guid*, IWICMetadataWriter**, int>)(lpVtbl[31]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIReader, pguidVendor, ppIWriter);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataReader*, Guid*, IWICMetadataWriter**, int>)(lpVtbl[31]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIReader, pguidVendor, ppIWriter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICMetadataReader*, Guid*, IWICMetadataWriter**, int>)(lpVtbl[31]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIReader, pguidVendor, ppIWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateQueryReaderFromBlockReader"]/*' />
@@ -439,11 +307,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(32)]
 	public HResult CreateQueryReaderFromBlockReader(IWICMetadataBlockReader* pIBlockReader, IWICMetadataQueryReader** ppIQueryReader)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICMetadataBlockReader*, IWICMetadataQueryReader**, int>)(lpVtbl[32]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockReader, ppIQueryReader);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataBlockReader*, IWICMetadataQueryReader**, int>)(lpVtbl[32]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockReader, ppIQueryReader);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICMetadataBlockReader*, IWICMetadataQueryReader**, int>)(lpVtbl[32]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockReader, ppIQueryReader);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateQueryWriterFromBlockWriter"]/*' />
@@ -451,11 +315,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(33)]
 	public HResult CreateQueryWriterFromBlockWriter(IWICMetadataBlockWriter* pIBlockWriter, IWICMetadataQueryWriter** ppIQueryWriter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, IWICMetadataBlockWriter*, IWICMetadataQueryWriter**, int>)(lpVtbl[33]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockWriter, ppIQueryWriter);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, IWICMetadataBlockWriter*, IWICMetadataQueryWriter**, int>)(lpVtbl[33]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockWriter, ppIQueryWriter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, IWICMetadataBlockWriter*, IWICMetadataQueryWriter**, int>)(lpVtbl[33]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), pIBlockWriter, ppIQueryWriter);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentFactory::CreateEncoderPropertyBag"]/*' />
@@ -463,11 +323,7 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	[VtblIndex(34)]
 	public HResult CreateEncoderPropertyBag(Com.PropertyBagMetadata** ppropOptions, uint cCount, Com.IPropertyBag2** ppIPropertyBag)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICComponentFactory*, Com.PropertyBagMetadata**, uint, Com.IPropertyBag2**, int>)(lpVtbl[34]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppropOptions, cCount, ppIPropertyBag);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICComponentFactory*, Com.PropertyBagMetadata**, uint, Com.IPropertyBag2**, int>)(lpVtbl[34]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppropOptions, cCount, ppIPropertyBag);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, Com.PropertyBagMetadata**, uint, Com.IPropertyBag2**, int>)(lpVtbl[34]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), ppropOptions, cCount, ppIPropertyBag);
 	}
 
 	public interface Interface : IWICImagingFactory.Interface

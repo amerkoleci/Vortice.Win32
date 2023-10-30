@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionAnimation));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionAnimation));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, uint>)(lpVtbl[1]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, uint>)(lpVtbl[1]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, uint>)(lpVtbl[1]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, uint>)(lpVtbl[2]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, uint>)(lpVtbl[2]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, uint>)(lpVtbl[2]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::Reset"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[VtblIndex(3)]
 	public HResult Reset()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::SetAbsoluteBeginTime"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[VtblIndex(4)]
 	public HResult SetAbsoluteBeginTime(long beginTime)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, long, int>)(lpVtbl[4]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginTime);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, long, int>)(lpVtbl[4]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginTime);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, long, int>)(lpVtbl[4]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginTime);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::AddCubic"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[VtblIndex(5)]
 	public HResult AddCubic(double beginOffset, float constantCoefficient, float linearCoefficient, float quadraticCoefficient, float cubicCoefficient)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, double, float, float, float, float, int>)(lpVtbl[5]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, constantCoefficient, linearCoefficient, quadraticCoefficient, cubicCoefficient);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, double, float, float, float, float, int>)(lpVtbl[5]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, constantCoefficient, linearCoefficient, quadraticCoefficient, cubicCoefficient);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, double, float, float, float, float, int>)(lpVtbl[5]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, constantCoefficient, linearCoefficient, quadraticCoefficient, cubicCoefficient);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::AddSinusoidal"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[VtblIndex(6)]
 	public HResult AddSinusoidal(double beginOffset, float bias, float amplitude, float frequency, float phase)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, double, float, float, float, float, int>)(lpVtbl[6]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, bias, amplitude, frequency, phase);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, double, float, float, float, float, int>)(lpVtbl[6]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, bias, amplitude, frequency, phase);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, double, float, float, float, float, int>)(lpVtbl[6]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, bias, amplitude, frequency, phase);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::AddRepeat"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[VtblIndex(7)]
 	public HResult AddRepeat(double beginOffset, double durationToRepeat)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, double, double, int>)(lpVtbl[7]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, durationToRepeat);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, double, double, int>)(lpVtbl[7]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, durationToRepeat);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, double, double, int>)(lpVtbl[7]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), beginOffset, durationToRepeat);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionAnimation::End"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IDCompositionAnimation : IDCompositionAnimation.Int
 	[VtblIndex(8)]
 	public HResult End(double endOffset, float endValue)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionAnimation*, double, float, int>)(lpVtbl[8]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), endOffset, endValue);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionAnimation*, double, float, int>)(lpVtbl[8]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), endOffset, endValue);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionAnimation*, double, float, int>)(lpVtbl[8]))((IDCompositionAnimation*)Unsafe.AsPointer(ref this), endOffset, endValue);
 	}
 
 	public interface Interface : IUnknown.Interface

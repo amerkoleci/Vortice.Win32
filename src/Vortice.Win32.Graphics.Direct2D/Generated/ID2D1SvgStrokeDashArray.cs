@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SvgStrokeDashArray));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1SvgStrokeDashArray));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[1]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[1]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[1]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[2]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[2]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[2]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1SvgStrokeDashArray*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), factory);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), factory);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), factory);
 	}
 
 	/// <inheritdoc cref="ID2D1SvgAttribute.GetElement" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(4)]
 	public void GetElement(ID2D1SvgElement** element)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1SvgStrokeDashArray*, ID2D1SvgElement**, void>)(lpVtbl[4]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), element);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, ID2D1SvgElement**, void>)(lpVtbl[4]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), element);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, ID2D1SvgElement**, void>)(lpVtbl[4]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), element);
 	}
 
 	/// <inheritdoc cref="ID2D1SvgAttribute.Clone" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(5)]
 	public HResult Clone(ID2D1SvgAttribute** attribute)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), attribute);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), attribute);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, ID2D1SvgAttribute**, int>)(lpVtbl[5]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), attribute);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::RemoveDashesAtEnd"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(6)]
 	public HResult RemoveDashesAtEnd(uint dashesCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, uint, int>)(lpVtbl[6]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashesCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, uint, int>)(lpVtbl[6]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashesCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, uint, int>)(lpVtbl[6]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashesCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(7)]
 	public HResult UpdateDashes(SvgLength* dashes, uint dashesCount, uint startIndex)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[7]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::UpdateDashes"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(8)]
 	public HResult UpdateDashes(float* dashes, uint dashesCount, uint startIndex)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[8]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(9)]
 	public HResult GetDashes(SvgLength* dashes, uint dashesCount, uint startIndex)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[9]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[9]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, SvgLength*, uint, uint, int>)(lpVtbl[9]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashes"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(10)]
 	public HResult GetDashes(float* dashes, uint dashesCount, uint startIndex)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[10]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[10]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, float*, uint, uint, int>)(lpVtbl[10]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this), dashes, dashesCount, startIndex);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgStrokeDashArray::GetDashesCount"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1SvgStrokeDashArray : ID2D1SvgStrokeDashArray.I
 	[VtblIndex(11)]
 	public uint GetDashesCount()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[11]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[11]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgStrokeDashArray*, uint>)(lpVtbl[11]))((ID2D1SvgStrokeDashArray*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID2D1SvgAttribute.Interface

@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionScaleTransform3D));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionScaleTransform3D));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, uint>)(lpVtbl[1]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, uint>)(lpVtbl[1]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, uint>)(lpVtbl[1]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, uint>)(lpVtbl[2]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, uint>)(lpVtbl[2]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, uint>)(lpVtbl[2]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleX"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(3)]
 	public HResult SetScaleX(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleX"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(4)]
 	public HResult SetScaleX(float scaleX)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[4]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleX);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[4]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleX);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[4]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleX);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleY"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(5)]
 	public HResult SetScaleY(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleY"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(6)]
 	public HResult SetScaleY(float scaleY)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[6]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleY);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[6]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleY);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[6]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleY);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleZ"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(7)]
 	public HResult SetScaleZ(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[7]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetScaleZ"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(8)]
 	public HResult SetScaleZ(float scaleZ)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[8]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleZ);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[8]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleZ);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[8]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), scaleZ);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterX"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(9)]
 	public HResult SetCenterX(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[9]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterX"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(10)]
 	public HResult SetCenterX(float centerX)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[10]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerX);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[10]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerX);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[10]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerX);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterY"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(11)]
 	public HResult SetCenterY(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[11]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterY"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(12)]
 	public HResult SetCenterY(float centerY)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[12]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerY);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[12]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerY);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[12]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerY);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterZ"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(13)]
 	public HResult SetCenterZ(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionScaleTransform3D::SetCenterZ"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct IDCompositionScaleTransform3D : IDCompositionScaleT
 	[VtblIndex(14)]
 	public HResult SetCenterZ(float centerZ)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[14]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerZ);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[14]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerZ);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionScaleTransform3D*, float, int>)(lpVtbl[14]))((IDCompositionScaleTransform3D*)Unsafe.AsPointer(ref this), centerZ);
 	}
 
 	public interface Interface : IDCompositionTransform3D.Interface

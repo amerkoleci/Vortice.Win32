@@ -90,11 +90,7 @@ public static unsafe partial class Apis
 
     public static float XAudio2DecibelsToAmplitudeRatio(float Decibels)
     {
-#if NETSTANDARD2_1 || NET6_0_OR_GREATER
         return MathF.Pow(10.0f, Decibels / 20.0f);
-#else
-        return (float)Math.Pow(10.0f, Decibels / 20.0f);
-#endif
     }
 
     public static float XAudio2AmplitudeRatioToDecibels(float Volume)
@@ -104,29 +100,17 @@ public static unsafe partial class Apis
             return -3.402823466e+38f;
         }
 
-#if NETSTANDARD2_1 || NET6_0_OR_GREATER
         return 20.0f * MathF.Log10(Volume);
-#else
-        return 20.0f * (float)Math.Log10(Volume);
-#endif
     }
 
     public static float XAudio2SemitonesToFrequencyRatio(float Semitones)
     {
-#if NETSTANDARD2_1 || NET6_0_OR_GREATER
         return MathF.Pow(2.0f, Semitones / 12.0f);
-#else
-        return (float)Math.Pow(2.0f, Semitones / 12.0f);
-#endif
     }
 
     public static float XAudio2FrequencyRatioToSemitones(float FrequencyRatio)
     {
-#if NETSTANDARD2_1 || NET6_0_OR_GREATER
         return 39.86313713864835f * MathF.Log10(FrequencyRatio);
-#else
-        return 39.86313713864835f * (float)Math.Log10(FrequencyRatio);
-#endif
     }
 
     public static float XAudio2CutoffFrequencyToRadians(float CutoffFrequency, [NativeTypeName("UINT32")] uint SampleRate)
@@ -136,20 +120,12 @@ public static unsafe partial class Apis
             return 1.0f;
         }
 
-#if NETSTANDARD2_1 || NET6_0_OR_GREATER
         return 2.0f * MathF.Sin((float)3.14159265358979323846 * CutoffFrequency / SampleRate);
-#else
-        return 2.0f * (float)Math.Sin(3.14159265358979323846 * CutoffFrequency / SampleRate);
-#endif
     }
 
     public static float XAudio2RadiansToCutoffFrequency(float Radians, float SampleRate)
     {
-#if NETSTANDARD2_1 || NET6_0_OR_GREATER
         return SampleRate * MathF.Asin(Radians / 2.0f) / (float)3.14159265358979323846;
-#else
-        return SampleRate * (float)Math.Asin(Radians / 2.0f) / (float)3.14159265358979323846;
-#endif
     }
 
     public static float XAudio2CutoffFrequencyToOnePoleCoefficient(float CutoffFrequency, [NativeTypeName("UINT32")] uint SampleRate)
@@ -159,11 +135,7 @@ public static unsafe partial class Apis
             return 1.0f;
         }
 
-#if NETSTANDARD2_1 || NET6_0_OR_GREATER
         return (1.0f - MathF.Pow(1.0f - 2.0f * CutoffFrequency / SampleRate, 2.0f));
-#else
-        return (1.0f - (float)Math.Pow(1.0f - 2.0f * CutoffFrequency / SampleRate, 2.0f));
-#endif
     }
 
     /// <include file='XAudio2.xml' path='doc/member[@name="XAudio2Create"]/*' />

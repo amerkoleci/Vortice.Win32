@@ -1,4 +1,4 @@
-﻿// Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+﻿// Copyright (c) Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 // Ported from winrt/wrl/client.h in the Windows SDK for Windows 10.0.22621.0
 // Original source is Copyright © Microsoft. All rights reserved.
 
@@ -267,15 +267,10 @@ public unsafe struct ComPtr<T> : IDisposable
 
     /// <summary>Gets the address of the current <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer.</summary>
     /// <returns>The raw pointer to the current <see cref="ComPtr{T}"/> instance.</returns>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [EditorBrowsable(EditorBrowsableState.Never)]
-    public readonly ref T* GetPinnableReference()
-    {
-        fixed (T** ptr = &ptr_)
-        {
-            return ref *ptr;
-        }
-    }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    [UnscopedRef]
+    public readonly ref readonly T* GetPinnableReference() => ref ptr_;
 
     /// <summary>Releases the current COM object in use and gets the address of the <see cref="ComPtr{T}"/> instance as a raw <typeparamref name="T"/> double pointer. This method is only valid when the current <see cref="ComPtr{T}"/> instance is on the stack or pinned.</summary>
     /// <returns>The raw pointer to the current <see cref="ComPtr{T}"/> instance.</returns>

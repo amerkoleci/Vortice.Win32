@@ -40,11 +40,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12SDKConfiguration1));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12SDKConfiguration1));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12SDKConfiguration1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12SDKConfiguration1*, uint>)(lpVtbl[1]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration1*, uint>)(lpVtbl[1]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint>)(lpVtbl[1]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12SDKConfiguration1*, uint>)(lpVtbl[2]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration1*, uint>)(lpVtbl[2]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint>)(lpVtbl[2]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12SDKConfiguration.SetSDKVersion" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	[VtblIndex(3)]
 	public HResult SetSDKVersion(uint SDKVersion, sbyte* SDKPath)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12SDKConfiguration1*, uint, sbyte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration1*, uint, sbyte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint, sbyte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration1::CreateDeviceFactory"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	[VtblIndex(4)]
 	public HResult CreateDeviceFactory(uint SDKVersion, sbyte* SDKPath, Guid* riid, void** ppvFactory)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12SDKConfiguration1*, uint, sbyte*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath, riid, ppvFactory);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration1*, uint, sbyte*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath, riid, ppvFactory);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint, sbyte*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath, riid, ppvFactory);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration1::FreeUnusedSDKs"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	[VtblIndex(5)]
 	public void FreeUnusedSDKs()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D12SDKConfiguration1*, void>)(lpVtbl[5]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<ID3D12SDKConfiguration1*, void>)(lpVtbl[5]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, void>)(lpVtbl[5]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : ID3D12SDKConfiguration.Interface

@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionColorMatrixEffect));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionColorMatrixEffect));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, uint>)(lpVtbl[1]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, uint>)(lpVtbl[1]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, uint>)(lpVtbl[1]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, uint>)(lpVtbl[2]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, uint>)(lpVtbl[2]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, uint>)(lpVtbl[2]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[VtblIndex(3)]
 	public HResult SetInput(uint index, IUnknown* input, uint flags)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), index, input, flags);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), index, input, flags);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionColorMatrixEffect::SetMatrix"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[VtblIndex(4)]
 	public HResult SetMatrix(Matrix5x4* matrix)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, Matrix5x4*, int>)(lpVtbl[4]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), matrix);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, Matrix5x4*, int>)(lpVtbl[4]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), matrix);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, Matrix5x4*, int>)(lpVtbl[4]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), matrix);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionColorMatrixEffect::SetMatrixElement"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[VtblIndex(5)]
 	public HResult SetMatrixElement(int row, int column, IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, int, int, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), row, column, animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, int, int, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), row, column, animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, int, int, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), row, column, animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionColorMatrixEffect::SetMatrixElement"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[VtblIndex(6)]
 	public HResult SetMatrixElement(int row, int column, float value)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, int, int, float, int>)(lpVtbl[6]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), row, column, value);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, int, int, float, int>)(lpVtbl[6]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), row, column, value);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, int, int, float, int>)(lpVtbl[6]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), row, column, value);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionColorMatrixEffect::SetAlphaMode"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[VtblIndex(7)]
 	public HResult SetAlphaMode(Graphics.Direct2D.Common.ColorMatrixAlphaMode mode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, Graphics.Direct2D.Common.ColorMatrixAlphaMode, int>)(lpVtbl[7]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), mode);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, Graphics.Direct2D.Common.ColorMatrixAlphaMode, int>)(lpVtbl[7]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), mode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, Graphics.Direct2D.Common.ColorMatrixAlphaMode, int>)(lpVtbl[7]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionColorMatrixEffect::SetClampOutput"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IDCompositionColorMatrixEffect : IDCompositionColor
 	[VtblIndex(8)]
 	public HResult SetClampOutput(Bool32 clamp)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionColorMatrixEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), clamp);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionColorMatrixEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), clamp);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionColorMatrixEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionColorMatrixEffect*)Unsafe.AsPointer(ref this), clamp);
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface

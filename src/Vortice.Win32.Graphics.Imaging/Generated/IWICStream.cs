@@ -40,11 +40,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICStream));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICStream));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStream*, Guid*, void**, int>)(lpVtbl[0]))((IWICStream*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStream*, uint>)(lpVtbl[1]))((IWICStream*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, uint>)(lpVtbl[1]))((IWICStream*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStream*, uint>)(lpVtbl[1]))((IWICStream*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStream*, uint>)(lpVtbl[2]))((IWICStream*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, uint>)(lpVtbl[2]))((IWICStream*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStream*, uint>)(lpVtbl[2]))((IWICStream*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStream"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	[VtblIndex(14)]
 	public HResult InitializeFromIStream(Com.IStream* pIStream)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStream*, Com.IStream*, int>)(lpVtbl[14]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, int>)(lpVtbl[14]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStream*, Com.IStream*, int>)(lpVtbl[14]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromFilename"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	[VtblIndex(15)]
 	public HResult InitializeFromFilename(ushort* wzFileName, uint dwDesiredAccess)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStream*, ushort*, uint, int>)(lpVtbl[15]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, ushort*, uint, int>)(lpVtbl[15]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStream*, ushort*, uint, int>)(lpVtbl[15]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromMemory"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	[VtblIndex(16)]
 	public HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStream*, byte*, uint, int>)(lpVtbl[16]))((IWICStream*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, byte*, uint, int>)(lpVtbl[16]))((IWICStream*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStream*, byte*, uint, int>)(lpVtbl[16]))((IWICStream*)Unsafe.AsPointer(ref this), pbBuffer, cbBufferSize);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromIStreamRegion"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	[VtblIndex(17)]
 	public HResult InitializeFromIStreamRegion(Com.IStream* pIStream, ulong ulOffset, ulong ulMaxSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStream*, Com.IStream*, ulong, ulong, int>)(lpVtbl[17]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStream*, Com.IStream*, ulong, ulong, int>)(lpVtbl[17]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStream*, Com.IStream*, ulong, ulong, int>)(lpVtbl[17]))((IWICStream*)Unsafe.AsPointer(ref this), pIStream, ulOffset, ulMaxSize);
 	}
 
 	public interface Interface : Win32.Com.IStream.Interface

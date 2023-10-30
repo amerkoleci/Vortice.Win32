@@ -9,7 +9,6 @@ public static unsafe partial class Apis
 {
     public static ref readonly Guid CLSID_DxcUtils => ref CLSID_DxcLibrary;
 
-#if NET6_0_OR_GREATER
     static Apis()
     {
         NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), OnDllImport);
@@ -90,7 +89,6 @@ public static unsafe partial class Apis
         nativeLibrary = IntPtr.Zero;
         return false;
     }
-#endif
 
     public static HResult DxcCreateInstance(in Guid rclsid, Guid* riid, void** ppv)
     {

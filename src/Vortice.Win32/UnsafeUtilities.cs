@@ -1,8 +1,6 @@
 ﻿// Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and Contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
-
-using System.Runtime.CompilerServices;
 
 namespace Win32;
 
@@ -41,4 +39,27 @@ public static unsafe class UnsafeUtilities
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static T* GetPointer<T>(this ReadOnlySpan<T> span)
         where T : unmanaged => (T*)Unsafe.AsPointer(ref Unsafe.AsRef(in span.GetReference()));
+
+#if NETSTANDARD2_0
+    /// <summary>
+    /// Creates a new read-only span for a <see langword="null"/>-terminated UTF-8 string.
+    /// </summary>
+    /// <param name="value">The pointer to the <see langword="null"/>-terminated string of bytes.</param>
+    /// <returns>A read-only span representing the specified <see langword="null"/>-terminated string, or an empty span if the pointer is <see langword="null"/>.</returns>
+    /// <remarks>The returned span does not include the <see langword="null"/> terminator, nor does it validate the well-formedness of the UTF-8 data.</remarks>
+    /// <exception cref="ArgumentException">The string is longer than <see cref="int.MaxValue"/>.</exception>
+    public static unsafe ReadOnlySpan<byte> CreateReadOnlySpanFromNullTerminated(byte* value)
+    {
+        for (int i = 0; i < int.MaxValue; i++)
+        {
+            // Stop when the null-terminator has been found
+            if (value[i] == 0)
+            {
+                return new(value, i);
+            }
+        }
+
+        throw new ArgumentException("The string must be null-terminated.");
+    }
+#endif
 }

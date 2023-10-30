@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1RadialGradientBrush));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1RadialGradientBrush));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1RadialGradientBrush*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1RadialGradientBrush*, uint>)(lpVtbl[1]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, uint>)(lpVtbl[1]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, uint>)(lpVtbl[1]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1RadialGradientBrush*, uint>)(lpVtbl[2]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, uint>)(lpVtbl[2]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, uint>)(lpVtbl[2]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), factory);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), factory);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), factory);
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.SetOpacity" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(4)]
 	public void SetOpacity(float opacity)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[4]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), opacity);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[4]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), opacity);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[4]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), opacity);
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.SetTransform" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(5)]
 	public void SetTransform(Matrix3x2* transform)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), transform);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), transform);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.GetOpacity" />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(6)]
 	public float GetOpacity()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1RadialGradientBrush*, float>)(lpVtbl[6]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float>)(lpVtbl[6]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, float>)(lpVtbl[6]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.GetTransform" />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(7)]
 	public void GetTransform(Matrix3x2* transform)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), transform);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), transform);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetCenter"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(8)]
 	public void SetCenter(Vector2 center)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, Vector2, void>)(lpVtbl[8]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), center);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, Vector2, void>)(lpVtbl[8]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), center);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Vector2, void>)(lpVtbl[8]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), center);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetGradientOriginOffset"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(9)]
 	public void SetGradientOriginOffset(Vector2 gradientOriginOffset)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, Vector2, void>)(lpVtbl[9]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientOriginOffset);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, Vector2, void>)(lpVtbl[9]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientOriginOffset);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Vector2, void>)(lpVtbl[9]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientOriginOffset);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetRadiusX"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(10)]
 	public void SetRadiusX(float radiusX)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[10]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), radiusX);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[10]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), radiusX);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[10]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), radiusX);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::SetRadiusY"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(11)]
 	public void SetRadiusY(float radiusY)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[11]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), radiusY);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[11]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), radiusY);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, float, void>)(lpVtbl[11]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), radiusY);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetCenter"]/*' />
@@ -200,11 +148,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	public Vector2 GetCenter()
 	{
 		Vector2 result;
-#if NET6_0_OR_GREATER
-		return *((delegate* unmanaged<ID2D1RadialGradientBrush*, Vector2*, Vector2*>)(lpVtbl[12]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
-#else
-		return *((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, Vector2*, Vector2*>)(lpVtbl[12]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
-#endif
+		return *((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Vector2*, Vector2*>)(lpVtbl[12]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetGradientOriginOffset"]/*' />
@@ -213,11 +157,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	public Vector2 GetGradientOriginOffset()
 	{
 		Vector2 result;
-#if NET6_0_OR_GREATER
-		return *((delegate* unmanaged<ID2D1RadialGradientBrush*, Vector2*, Vector2*>)(lpVtbl[13]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
-#else
-		return *((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, Vector2*, Vector2*>)(lpVtbl[13]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
-#endif
+		return *((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, Vector2*, Vector2*>)(lpVtbl[13]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetRadiusX"]/*' />
@@ -225,11 +165,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(14)]
 	public float GetRadiusX()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1RadialGradientBrush*, float>)(lpVtbl[14]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float>)(lpVtbl[14]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, float>)(lpVtbl[14]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetRadiusY"]/*' />
@@ -237,11 +173,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(15)]
 	public float GetRadiusY()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1RadialGradientBrush*, float>)(lpVtbl[15]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, float>)(lpVtbl[15]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, float>)(lpVtbl[15]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1RadialGradientBrush::GetGradientStopCollection"]/*' />
@@ -249,11 +181,7 @@ public unsafe partial struct ID2D1RadialGradientBrush : ID2D1RadialGradientBrush
 	[VtblIndex(16)]
 	public void GetGradientStopCollection(ID2D1GradientStopCollection** gradientStopCollection)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1RadialGradientBrush*, ID2D1GradientStopCollection**, void>)(lpVtbl[16]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientStopCollection);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1RadialGradientBrush*, ID2D1GradientStopCollection**, void>)(lpVtbl[16]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientStopCollection);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1RadialGradientBrush*, ID2D1GradientStopCollection**, void>)(lpVtbl[16]))((ID2D1RadialGradientBrush*)Unsafe.AsPointer(ref this), gradientStopCollection);
 	}
 
 	public interface Interface : ID2D1Brush.Interface

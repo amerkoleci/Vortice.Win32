@@ -40,11 +40,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain3));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDXGISwapChain3));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[0]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[0]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[0]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint>)(lpVtbl[1]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint>)(lpVtbl[1]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint>)(lpVtbl[1]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint>)(lpVtbl[2]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint>)(lpVtbl[2]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint>)(lpVtbl[2]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateData" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(3)]
 	public HResult SetPrivateData(Guid* Name, uint DataSize, void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Guid*, uint, void*, int>)(lpVtbl[3]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, DataSize, pData);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.SetPrivateDataInterface" />
@@ -103,11 +83,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(4)]
 	public HResult SetPrivateDataInterface(Guid* Name, IUnknown* pUnknown)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pUnknown);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pUnknown);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Guid*, IUnknown*, int>)(lpVtbl[4]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pUnknown);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetPrivateData" />
@@ -115,11 +91,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(5)]
 	public HResult GetPrivateData(Guid* Name, uint* pDataSize, void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Guid*, uint*, void*, int>)(lpVtbl[5]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Name, pDataSize, pData);
 	}
 
 	/// <inheritdoc cref="IDXGIObject.GetParent" />
@@ -127,11 +99,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(6)]
 	public HResult GetParent(Guid* riid, void** ppParent)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppParent);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppParent);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[6]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppParent);
 	}
 
 	/// <inheritdoc cref="IDXGIDeviceSubObject.GetDevice" />
@@ -139,11 +107,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(7)]
 	public HResult GetDevice(Guid* riid, void** ppDevice)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppDevice);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppDevice);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[7]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), riid, ppDevice);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.Present" />
@@ -151,11 +115,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(8)]
 	public HResult Present(uint SyncInterval, PresentFlags Flags)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint, PresentFlags, int>)(lpVtbl[8]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, PresentFlags, int>)(lpVtbl[8]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, PresentFlags, int>)(lpVtbl[8]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, Flags);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetBuffer" />
@@ -163,11 +123,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(9)]
 	public HResult GetBuffer(uint Buffer, Guid* riid, void** ppSurface)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint, Guid*, void**, int>)(lpVtbl[9]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, Guid*, void**, int>)(lpVtbl[9]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, Guid*, void**, int>)(lpVtbl[9]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Buffer, riid, ppSurface);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.SetFullscreenState" />
@@ -175,11 +131,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(10)]
 	public HResult SetFullscreenState(Bool32 Fullscreen, IDXGIOutput* pTarget)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Bool32, IDXGIOutput*, int>)(lpVtbl[10]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Bool32, IDXGIOutput*, int>)(lpVtbl[10]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Bool32, IDXGIOutput*, int>)(lpVtbl[10]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Fullscreen, pTarget);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetFullscreenState" />
@@ -187,11 +139,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(11)]
 	public HResult GetFullscreenState(Bool32* pFullscreen, IDXGIOutput** ppTarget)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Bool32*, IDXGIOutput**, int>)(lpVtbl[11]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Bool32*, IDXGIOutput**, int>)(lpVtbl[11]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Bool32*, IDXGIOutput**, int>)(lpVtbl[11]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pFullscreen, ppTarget);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetDesc" />
@@ -199,11 +147,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(12)]
 	public HResult GetDesc(SwapChainDescription* pDesc)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, SwapChainDescription*, int>)(lpVtbl[12]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, SwapChainDescription*, int>)(lpVtbl[12]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, SwapChainDescription*, int>)(lpVtbl[12]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.ResizeBuffers" />
@@ -211,11 +155,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(13)]
 	public HResult ResizeBuffers(uint BufferCount, uint Width, uint Height, Common.Format NewFormat, SwapChainFlags SwapChainFlags)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, uint, Common.Format, SwapChainFlags, int>)(lpVtbl[13]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, uint, Common.Format, SwapChainFlags, int>)(lpVtbl[13]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, uint, uint, Common.Format, SwapChainFlags, int>)(lpVtbl[13]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, NewFormat, SwapChainFlags);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.ResizeTarget" />
@@ -223,11 +163,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(14)]
 	public HResult ResizeTarget(Common.ModeDescription* pNewTargetParameters)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ModeDescription*, int>)(lpVtbl[14]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pNewTargetParameters);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ModeDescription*, int>)(lpVtbl[14]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pNewTargetParameters);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.ModeDescription*, int>)(lpVtbl[14]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pNewTargetParameters);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetContainingOutput" />
@@ -235,11 +171,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(15)]
 	public HResult GetContainingOutput(IDXGIOutput** ppOutput)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[15]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppOutput);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[15]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppOutput);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[15]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppOutput);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetFrameStatistics" />
@@ -247,11 +179,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(16)]
 	public HResult GetFrameStatistics(FrameStatistics* pStats)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, FrameStatistics*, int>)(lpVtbl[16]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pStats);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, FrameStatistics*, int>)(lpVtbl[16]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pStats);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, FrameStatistics*, int>)(lpVtbl[16]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pStats);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain.GetLastPresentCount" />
@@ -259,11 +187,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(17)]
 	public HResult GetLastPresentCount(uint* pLastPresentCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint*, int>)(lpVtbl[17]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pLastPresentCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint*, int>)(lpVtbl[17]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pLastPresentCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint*, int>)(lpVtbl[17]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pLastPresentCount);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetDesc1" />
@@ -271,11 +195,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(18)]
 	public HResult GetDesc1(SwapChainDescription1* pDesc)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, SwapChainDescription1*, int>)(lpVtbl[18]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, SwapChainDescription1*, int>)(lpVtbl[18]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, SwapChainDescription1*, int>)(lpVtbl[18]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetFullscreenDesc" />
@@ -283,11 +203,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(19)]
 	public HResult GetFullscreenDesc(SwapChainFullscreenDescription* pDesc)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, SwapChainFullscreenDescription*, int>)(lpVtbl[19]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, SwapChainFullscreenDescription*, int>)(lpVtbl[19]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, SwapChainFullscreenDescription*, int>)(lpVtbl[19]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetHwnd" />
@@ -295,11 +211,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(20)]
 	public HResult GetHwnd(nint* pHwnd)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, nint*, int>)(lpVtbl[20]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pHwnd);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, nint*, int>)(lpVtbl[20]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pHwnd);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, nint*, int>)(lpVtbl[20]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pHwnd);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetCoreWindow" />
@@ -307,11 +219,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(21)]
 	public HResult GetCoreWindow(Guid* refiid, void** ppUnk)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[21]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), refiid, ppUnk);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[21]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), refiid, ppUnk);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Guid*, void**, int>)(lpVtbl[21]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), refiid, ppUnk);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.Present1" />
@@ -319,11 +227,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(22)]
 	public HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, uint, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.IsTemporaryMonoSupported" />
@@ -331,11 +235,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(23)]
 	public Bool32 IsTemporaryMonoSupported()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Bool32>)(lpVtbl[23]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Bool32>)(lpVtbl[23]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Bool32>)(lpVtbl[23]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetRestrictToOutput" />
@@ -343,11 +243,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(24)]
 	public HResult GetRestrictToOutput(IDXGIOutput** ppRestrictToOutput)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[24]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[24]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, IDXGIOutput**, int>)(lpVtbl[24]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ppRestrictToOutput);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.SetBackgroundColor" />
@@ -355,11 +251,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(25)]
 	public HResult SetBackgroundColor(Color4* pColor)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Color4*, int>)(lpVtbl[25]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Color4*, int>)(lpVtbl[25]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Color4*, int>)(lpVtbl[25]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetBackgroundColor" />
@@ -367,11 +259,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(26)]
 	public HResult GetBackgroundColor(Color4** pColor)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Color4**, int>)(lpVtbl[26]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Color4**, int>)(lpVtbl[26]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Color4**, int>)(lpVtbl[26]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pColor);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.SetRotation" />
@@ -379,11 +267,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(27)]
 	public HResult SetRotation(Common.ModeRotation Rotation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ModeRotation, int>)(lpVtbl[27]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Rotation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ModeRotation, int>)(lpVtbl[27]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Rotation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.ModeRotation, int>)(lpVtbl[27]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Rotation);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.GetRotation" />
@@ -391,11 +275,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(28)]
 	public HResult GetRotation(Common.ModeRotation* pRotation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pRotation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pRotation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.ModeRotation*, int>)(lpVtbl[28]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pRotation);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.SetSourceSize" />
@@ -403,11 +283,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(29)]
 	public HResult SetSourceSize(uint Width, uint Height)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, int>)(lpVtbl[29]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Width, Height);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, int>)(lpVtbl[29]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Width, Height);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, uint, int>)(lpVtbl[29]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), Width, Height);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.GetSourceSize" />
@@ -415,11 +291,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(30)]
 	public HResult GetSourceSize(uint* pWidth, uint* pHeight)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint*, uint*, int>)(lpVtbl[30]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pWidth, pHeight);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint*, uint*, int>)(lpVtbl[30]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pWidth, pHeight);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint*, uint*, int>)(lpVtbl[30]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pWidth, pHeight);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.SetMaximumFrameLatency" />
@@ -427,11 +299,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(31)]
 	public HResult SetMaximumFrameLatency(uint MaxLatency)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint, int>)(lpVtbl[31]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), MaxLatency);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, int>)(lpVtbl[31]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), MaxLatency);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, int>)(lpVtbl[31]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), MaxLatency);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.GetMaximumFrameLatency" />
@@ -439,11 +307,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(32)]
 	public HResult GetMaximumFrameLatency(uint* pMaxLatency)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint*, int>)(lpVtbl[32]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMaxLatency);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint*, int>)(lpVtbl[32]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMaxLatency);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint*, int>)(lpVtbl[32]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMaxLatency);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.GetFrameLatencyWaitableObject" />
@@ -451,11 +315,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(33)]
 	public Handle GetFrameLatencyWaitableObject()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Handle>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Handle>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Handle>)(lpVtbl[33]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.SetMatrixTransform" />
@@ -463,11 +323,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(34)]
 	public HResult SetMatrixTransform(Matrix3x2* pMatrix)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[34]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[34]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[34]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain2.GetMatrixTransform" />
@@ -475,11 +331,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(35)]
 	public HResult GetMatrixTransform(Matrix3x2* pMatrix)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[35]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[35]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Matrix3x2*, int>)(lpVtbl[35]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), pMatrix);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::GetCurrentBackBufferIndex"]/*' />
@@ -487,11 +339,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(36)]
 	public uint GetCurrentBackBufferIndex()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint>)(lpVtbl[36]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint>)(lpVtbl[36]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint>)(lpVtbl[36]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::CheckColorSpaceSupport"]/*' />
@@ -499,11 +347,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(37)]
 	public HResult CheckColorSpaceSupport(Common.ColorSpaceType ColorSpace, uint* pColorSpaceSupport)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ColorSpaceType, uint*, int>)(lpVtbl[37]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ColorSpaceType, uint*, int>)(lpVtbl[37]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.ColorSpaceType, uint*, int>)(lpVtbl[37]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace, pColorSpaceSupport);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::SetColorSpace1"]/*' />
@@ -511,11 +355,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(38)]
 	public HResult SetColorSpace1(Common.ColorSpaceType ColorSpace)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, Common.ColorSpaceType, int>)(lpVtbl[38]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, Common.ColorSpaceType, int>)(lpVtbl[38]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, Common.ColorSpaceType, int>)(lpVtbl[38]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), ColorSpace);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain3::ResizeBuffers1"]/*' />
@@ -523,11 +363,7 @@ public unsafe partial struct IDXGISwapChain3 : IDXGISwapChain3.Interface, INativ
 	[VtblIndex(39)]
 	public HResult ResizeBuffers1(uint BufferCount, uint Width, uint Height, Common.Format Format, uint SwapChainFlags, uint* pCreationNodeMask, IUnknown** ppPresentQueue)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, uint*, IUnknown**, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, uint*, IUnknown**, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain3*, uint, uint, uint, Common.Format, uint, uint*, IUnknown**, int>)(lpVtbl[39]))((IDXGISwapChain3*)Unsafe.AsPointer(ref this), BufferCount, Width, Height, Format, SwapChainFlags, pCreationNodeMask, ppPresentQueue);
 	}
 
 	public interface Interface : IDXGISwapChain2.Interface

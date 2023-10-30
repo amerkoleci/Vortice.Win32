@@ -40,11 +40,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPlanarFormatConverter));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPlanarFormatConverter));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, Guid*, void**, int>)(lpVtbl[0]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, Guid*, void**, int>)(lpVtbl[0]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, Guid*, void**, int>)(lpVtbl[0]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, uint>)(lpVtbl[1]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, uint>)(lpVtbl[1]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, uint>)(lpVtbl[1]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, uint>)(lpVtbl[2]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, uint>)(lpVtbl[2]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, uint>)(lpVtbl[2]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetSize" />
@@ -91,11 +75,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[VtblIndex(3)]
 	public HResult GetSize(uint* puiWidth, uint* puiHeight)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, uint*, uint*, int>)(lpVtbl[3]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, uint*, uint*, int>)(lpVtbl[3]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, uint*, uint*, int>)(lpVtbl[3]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), puiWidth, puiHeight);
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetPixelFormat" />
@@ -103,11 +83,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[VtblIndex(4)]
 	public HResult GetPixelFormat(Guid* pPixelFormat)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, Guid*, int>)(lpVtbl[4]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pPixelFormat);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, Guid*, int>)(lpVtbl[4]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pPixelFormat);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, Guid*, int>)(lpVtbl[4]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pPixelFormat);
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.GetResolution" />
@@ -115,11 +91,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[VtblIndex(5)]
 	public HResult GetResolution(double* pDpiX, double* pDpiY)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, double*, double*, int>)(lpVtbl[5]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, double*, double*, int>)(lpVtbl[5]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, double*, double*, int>)(lpVtbl[5]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pDpiX, pDpiY);
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPalette" />
@@ -127,11 +99,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[VtblIndex(6)]
 	public HResult CopyPalette(IWICPalette* pIPalette)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, IWICPalette*, int>)(lpVtbl[6]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pIPalette);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, IWICPalette*, int>)(lpVtbl[6]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pIPalette);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, IWICPalette*, int>)(lpVtbl[6]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pIPalette);
 	}
 
 	/// <inheritdoc cref="IWICBitmapSource.CopyPixels" />
@@ -139,11 +107,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[VtblIndex(7)]
 	public HResult CopyPixels(System.Drawing.Rectangle* prc, uint cbStride, uint cbBufferSize, byte* pbBuffer)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, System.Drawing.Rectangle*, uint, uint, byte*, int>)(lpVtbl[7]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), prc, cbStride, cbBufferSize, pbBuffer);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::Initialize"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[VtblIndex(8)]
 	public HResult Initialize(IWICBitmapSource** ppPlanes, uint cPlanes, Guid* dstFormat, WICBitmapDitherType dither, IWICPalette* pIPalette, double alphaThresholdPercent, WICBitmapPaletteType paletteTranslate)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, IWICBitmapSource**, uint, Guid*, WICBitmapDitherType, IWICPalette*, double, WICBitmapPaletteType, int>)(lpVtbl[8]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, dstFormat, dither, pIPalette, alphaThresholdPercent, paletteTranslate);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, IWICBitmapSource**, uint, Guid*, WICBitmapDitherType, IWICPalette*, double, WICBitmapPaletteType, int>)(lpVtbl[8]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, dstFormat, dither, pIPalette, alphaThresholdPercent, paletteTranslate);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, IWICBitmapSource**, uint, Guid*, WICBitmapDitherType, IWICPalette*, double, WICBitmapPaletteType, int>)(lpVtbl[8]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), ppPlanes, cPlanes, dstFormat, dither, pIPalette, alphaThresholdPercent, paletteTranslate);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPlanarFormatConverter::CanConvert"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct IWICPlanarFormatConverter : IWICPlanarFormatConvert
 	[VtblIndex(9)]
 	public HResult CanConvert(Guid* pSrcPixelFormats, uint cSrcPlanes, Guid* dstPixelFormat, Bool32* pfCanConvert)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPlanarFormatConverter*, Guid*, uint, Guid*, Bool32*, int>)(lpVtbl[9]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pSrcPixelFormats, cSrcPlanes, dstPixelFormat, pfCanConvert);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPlanarFormatConverter*, Guid*, uint, Guid*, Bool32*, int>)(lpVtbl[9]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pSrcPixelFormats, cSrcPlanes, dstPixelFormat, pfCanConvert);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPlanarFormatConverter*, Guid*, uint, Guid*, Bool32*, int>)(lpVtbl[9]))((IWICPlanarFormatConverter*)Unsafe.AsPointer(ref this), pSrcPixelFormats, cSrcPlanes, dstPixelFormat, pfCanConvert);
 	}
 
 	public interface Interface : IWICBitmapSource.Interface

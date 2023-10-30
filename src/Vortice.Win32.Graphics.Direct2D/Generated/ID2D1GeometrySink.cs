@@ -42,11 +42,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GeometrySink));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GeometrySink));
-#endif
 
 	public void** lpVtbl;
 
@@ -55,11 +51,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -68,11 +60,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GeometrySink*, uint>)(lpVtbl[1]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, uint>)(lpVtbl[1]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, uint>)(lpVtbl[1]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -81,11 +69,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GeometrySink*, uint>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, uint>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, uint>)(lpVtbl[2]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetFillMode" />
@@ -93,11 +77,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(3)]
 	public void SetFillMode(Common.FillMode fillMode)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, Common.FillMode, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), fillMode);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.FillMode, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), fillMode);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.FillMode, void>)(lpVtbl[3]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), fillMode);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.SetSegmentFlags" />
@@ -105,11 +85,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(4)]
 	public void SetSegmentFlags(Common.PathSegment vertexFlags)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, Common.PathSegment, void>)(lpVtbl[4]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.PathSegment, void>)(lpVtbl[4]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.PathSegment, void>)(lpVtbl[4]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), vertexFlags);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.BeginFigure" />
@@ -117,11 +93,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(5)]
 	public void BeginFigure(Vector2 startPoint, Common.FigureBegin figureBegin)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, Vector2, Common.FigureBegin, void>)(lpVtbl[5]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Vector2, Common.FigureBegin, void>)(lpVtbl[5]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Vector2, Common.FigureBegin, void>)(lpVtbl[5]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), startPoint, figureBegin);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddLines" />
@@ -129,11 +101,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(6)]
 	public void AddLines(Vector2* points, uint pointsCount)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, Vector2*, uint, void>)(lpVtbl[6]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Vector2*, uint, void>)(lpVtbl[6]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Vector2*, uint, void>)(lpVtbl[6]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), points, pointsCount);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.AddBeziers" />
@@ -141,11 +109,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(7)]
 	public void AddBeziers(Common.BezierSegment* beziers, uint beziersCount)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, Common.BezierSegment*, uint, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.BezierSegment*, uint, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.BezierSegment*, uint, void>)(lpVtbl[7]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.EndFigure" />
@@ -153,11 +117,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(8)]
 	public void EndFigure(Common.FigureEnd figureEnd)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, Common.FigureEnd, void>)(lpVtbl[8]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.FigureEnd, void>)(lpVtbl[8]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.FigureEnd, void>)(lpVtbl[8]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), figureEnd);
 	}
 
 	/// <inheritdoc cref="Win32.Graphics.Direct2D.Common.ID2D1SimplifiedGeometrySink.Close" />
@@ -165,11 +125,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(9)]
 	public HResult Close()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GeometrySink*, int>)(lpVtbl[9]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, int>)(lpVtbl[9]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, int>)(lpVtbl[9]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddLine"]/*' />
@@ -177,11 +133,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(10)]
 	public void AddLine(Vector2 point)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, Vector2, void>)(lpVtbl[10]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), point);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Vector2, void>)(lpVtbl[10]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), point);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Vector2, void>)(lpVtbl[10]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), point);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddBezier"]/*' />
@@ -189,11 +141,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(11)]
 	public void AddBezier(Common.BezierSegment* bezier)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, Common.BezierSegment*, void>)(lpVtbl[11]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, Common.BezierSegment*, void>)(lpVtbl[11]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, Common.BezierSegment*, void>)(lpVtbl[11]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddQuadraticBezier"]/*' />
@@ -201,11 +149,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(12)]
 	public void AddQuadraticBezier(QuadraticBezierSegment* bezier)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, QuadraticBezierSegment*, void>)(lpVtbl[12]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, QuadraticBezierSegment*, void>)(lpVtbl[12]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, QuadraticBezierSegment*, void>)(lpVtbl[12]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), bezier);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddQuadraticBeziers"]/*' />
@@ -213,11 +157,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(13)]
 	public void AddQuadraticBeziers(QuadraticBezierSegment* beziers, uint beziersCount)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, QuadraticBezierSegment*, uint, void>)(lpVtbl[13]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, QuadraticBezierSegment*, uint, void>)(lpVtbl[13]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, QuadraticBezierSegment*, uint, void>)(lpVtbl[13]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), beziers, beziersCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GeometrySink::AddArc"]/*' />
@@ -225,11 +165,7 @@ public unsafe partial struct ID2D1GeometrySink : ID2D1GeometrySink.Interface, IN
 	[VtblIndex(14)]
 	public void AddArc(ArcSegment* arc)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GeometrySink*, ArcSegment*, void>)(lpVtbl[14]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), arc);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GeometrySink*, ArcSegment*, void>)(lpVtbl[14]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), arc);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GeometrySink*, ArcSegment*, void>)(lpVtbl[14]))((ID2D1GeometrySink*)Unsafe.AsPointer(ref this), arc);
 	}
 
 	public interface Interface : ID2D1SimplifiedGeometrySink.Interface

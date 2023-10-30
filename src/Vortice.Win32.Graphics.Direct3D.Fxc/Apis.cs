@@ -168,9 +168,7 @@ public static unsafe partial class Apis
         }
     }
 
-#if NET6_0_OR_GREATER
     [DoesNotReturn]
-#endif
     [MethodImpl(MethodImplOptions.NoInlining)]
     private static void ThrowHslsCompilationException(ID3DBlob* d3DOperationResult)
     {

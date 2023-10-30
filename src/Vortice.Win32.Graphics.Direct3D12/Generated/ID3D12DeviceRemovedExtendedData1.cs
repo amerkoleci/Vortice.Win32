@@ -40,11 +40,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData1 : ID3D12DeviceRemo
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DeviceRemovedExtendedData1));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DeviceRemovedExtendedData1));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData1 : ID3D12DeviceRemo
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedData1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData1 : ID3D12DeviceRemo
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedData1*, uint>)(lpVtbl[1]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData1*, uint>)(lpVtbl[1]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData1*, uint>)(lpVtbl[1]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData1 : ID3D12DeviceRemo
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedData1*, uint>)(lpVtbl[2]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData1*, uint>)(lpVtbl[2]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData1*, uint>)(lpVtbl[2]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedData.GetAutoBreadcrumbsOutput" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData1 : ID3D12DeviceRemo
 	[VtblIndex(3)]
 	public HResult GetAutoBreadcrumbsOutput(DredAutoBreadcrumbsOutput* pOutput)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedData1*, DredAutoBreadcrumbsOutput*, int>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData1*, DredAutoBreadcrumbsOutput*, int>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData1*, DredAutoBreadcrumbsOutput*, int>)(lpVtbl[3]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceRemovedExtendedData.GetPageFaultAllocationOutput" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData1 : ID3D12DeviceRemo
 	[VtblIndex(4)]
 	public HResult GetPageFaultAllocationOutput(DredPageFaultOutput* pOutput)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedData1*, DredPageFaultOutput*, int>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData1*, DredPageFaultOutput*, int>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData1*, DredPageFaultOutput*, int>)(lpVtbl[4]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData1::GetAutoBreadcrumbsOutput1"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData1 : ID3D12DeviceRemo
 	[VtblIndex(5)]
 	public HResult GetAutoBreadcrumbsOutput1(DredAutoBreadcrumbsOutput1* pOutput)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedData1*, DredAutoBreadcrumbsOutput1*, int>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData1*, DredAutoBreadcrumbsOutput1*, int>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData1*, DredAutoBreadcrumbsOutput1*, int>)(lpVtbl[5]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceRemovedExtendedData1::GetPageFaultAllocationOutput1"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct ID3D12DeviceRemovedExtendedData1 : ID3D12DeviceRemo
 	[VtblIndex(6)]
 	public HResult GetPageFaultAllocationOutput1(DredPageFaultOutput1* pOutput)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DeviceRemovedExtendedData1*, DredPageFaultOutput1*, int>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DeviceRemovedExtendedData1*, DredPageFaultOutput1*, int>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceRemovedExtendedData1*, DredPageFaultOutput1*, int>)(lpVtbl[6]))((ID3D12DeviceRemovedExtendedData1*)Unsafe.AsPointer(ref this), pOutput);
 	}
 
 	public interface Interface : ID3D12DeviceRemovedExtendedData.Interface

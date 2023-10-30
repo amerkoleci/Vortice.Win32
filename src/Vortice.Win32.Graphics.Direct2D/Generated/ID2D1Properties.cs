@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Properties));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Properties));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Properties*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Properties*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Properties*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint>)(lpVtbl[1]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint>)(lpVtbl[1]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint>)(lpVtbl[1]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint>)(lpVtbl[2]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint>)(lpVtbl[2]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint>)(lpVtbl[2]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyCount"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(3)]
 	public uint GetPropertyCount()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint>)(lpVtbl[3]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint>)(lpVtbl[3]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint>)(lpVtbl[3]))((ID2D1Properties*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyName"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(4)]
 	public HResult GetPropertyName(uint index, ushort* name, uint nameCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, name, nameCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, name, nameCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, name, nameCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyNameLength"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(5)]
 	public uint GetPropertyNameLength(uint index)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint, uint>)(lpVtbl[5]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, uint>)(lpVtbl[5]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, uint>)(lpVtbl[5]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetType"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(6)]
 	public PropertyType GetType(uint index)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyIndex"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(7)]
 	public uint GetPropertyIndex(ushort* name)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, ushort*, uint>)(lpVtbl[7]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, ushort*, uint>)(lpVtbl[7]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, ushort*, uint>)(lpVtbl[7]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::SetValueByName"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(8)]
 	public HResult SetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::SetValue"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(9)]
 	public HResult SetValue(uint index, PropertyType type, byte* data, uint dataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValueByName"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(10)]
 	public HResult GetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Properties*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValue"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(11)]
 	public HResult GetValue(uint index, PropertyType type, byte* data, uint dataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetValueSize"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(12)]
 	public uint GetValueSize(uint index)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint, uint>)(lpVtbl[12]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, uint>)(lpVtbl[12]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, uint>)(lpVtbl[12]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetSubProperties"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	[VtblIndex(13)]
 	public HResult GetSubProperties(uint index, ID2D1Properties** subProperties)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Properties*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, subProperties);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Properties*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, subProperties);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, subProperties);
 	}
 
 	public interface Interface : IUnknown.Interface

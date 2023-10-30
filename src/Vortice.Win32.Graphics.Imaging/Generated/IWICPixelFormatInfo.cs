@@ -40,11 +40,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPixelFormatInfo));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICPixelFormatInfo));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint>)(lpVtbl[1]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint>)(lpVtbl[1]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint>)(lpVtbl[1]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint>)(lpVtbl[2]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint>)(lpVtbl[2]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint>)(lpVtbl[2]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetComponentType" />
@@ -91,11 +75,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(3)]
 	public HResult GetComponentType(WICComponentType* pType)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pType);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pType);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pType);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetCLSID" />
@@ -103,11 +83,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(4)]
 	public HResult GetCLSID(Guid* pclsid)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[4]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pclsid);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[4]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pclsid);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[4]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pclsid);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSigningStatus" />
@@ -115,11 +91,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(5)]
 	public HResult GetSigningStatus(uint* pStatus)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[5]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pStatus);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[5]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pStatus);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[5]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pStatus);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetAuthor" />
@@ -127,11 +99,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(6)]
 	public HResult GetAuthor(uint cchAuthor, ushort* wzAuthor, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVendorGUID" />
@@ -139,11 +107,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(7)]
 	public HResult GetVendorGUID(Guid* pguidVendor)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[7]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pguidVendor);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[7]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pguidVendor);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[7]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pguidVendor);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVersion" />
@@ -151,11 +115,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(8)]
 	public HResult GetVersion(uint cchVersion, ushort* wzVersion, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSpecVersion" />
@@ -163,11 +123,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(9)]
 	public HResult GetSpecVersion(uint cchSpecVersion, ushort* wzSpecVersion, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetFriendlyName" />
@@ -175,11 +131,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(10)]
 	public HResult GetFriendlyName(uint cchFriendlyName, ushort* wzFriendlyName, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetFormatGUID"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(11)]
 	public HResult GetFormatGUID(Guid* pFormat)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[11]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pFormat);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[11]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pFormat);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, Guid*, int>)(lpVtbl[11]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), pFormat);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetColorContext"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(12)]
 	public HResult GetColorContext(IWICColorContext** ppIColorContext)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, IWICColorContext**, int>)(lpVtbl[12]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), ppIColorContext);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, IWICColorContext**, int>)(lpVtbl[12]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), ppIColorContext);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, IWICColorContext**, int>)(lpVtbl[12]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), ppIColorContext);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetBitsPerPixel"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(13)]
 	public HResult GetBitsPerPixel(uint* puiBitsPerPixel)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[13]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), puiBitsPerPixel);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[13]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), puiBitsPerPixel);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[13]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), puiBitsPerPixel);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetChannelCount"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(14)]
 	public HResult GetChannelCount(uint* puiChannelCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[14]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), puiChannelCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[14]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), puiChannelCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint*, int>)(lpVtbl[14]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), puiChannelCount);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICPixelFormatInfo::GetChannelMask"]/*' />
@@ -235,11 +171,7 @@ public unsafe partial struct IWICPixelFormatInfo : IWICPixelFormatInfo.Interface
 	[VtblIndex(15)]
 	public HResult GetChannelMask(uint uiChannelIndex, uint cbMaskBuffer, byte* pbMaskBuffer, uint* pcbActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICPixelFormatInfo*, uint, uint, byte*, uint*, int>)(lpVtbl[15]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), uiChannelIndex, cbMaskBuffer, pbMaskBuffer, pcbActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICPixelFormatInfo*, uint, uint, byte*, uint*, int>)(lpVtbl[15]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), uiChannelIndex, cbMaskBuffer, pbMaskBuffer, pcbActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICPixelFormatInfo*, uint, uint, byte*, uint*, int>)(lpVtbl[15]))((IWICPixelFormatInfo*)Unsafe.AsPointer(ref this), uiChannelIndex, cbMaskBuffer, pbMaskBuffer, pcbActual);
 	}
 
 	public interface Interface : IWICComponentInfo.Interface

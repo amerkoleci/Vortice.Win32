@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionCompositeEffect));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionCompositeEffect));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionCompositeEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionCompositeEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionCompositeEffect*, uint>)(lpVtbl[1]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionCompositeEffect*, uint>)(lpVtbl[1]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, uint>)(lpVtbl[1]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionCompositeEffect*, uint>)(lpVtbl[2]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionCompositeEffect*, uint>)(lpVtbl[2]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, uint>)(lpVtbl[2]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	[VtblIndex(3)]
 	public HResult SetInput(uint index, IUnknown* input, uint flags)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionCompositeEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), index, input, flags);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionCompositeEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), index, input, flags);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionCompositeEffect::SetMode"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionCompositeEffect : IDCompositionComposi
 	[VtblIndex(4)]
 	public HResult SetMode(Graphics.Direct2D.Common.CompositeMode mode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionCompositeEffect*, Graphics.Direct2D.Common.CompositeMode, int>)(lpVtbl[4]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), mode);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionCompositeEffect*, Graphics.Direct2D.Common.CompositeMode, int>)(lpVtbl[4]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), mode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionCompositeEffect*, Graphics.Direct2D.Common.CompositeMode, int>)(lpVtbl[4]))((IDCompositionCompositeEffect*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface

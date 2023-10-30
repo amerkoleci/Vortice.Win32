@@ -40,11 +40,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapDecoderInfo));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICBitmapDecoderInfo));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Guid*, void**, int>)(lpVtbl[0]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint>)(lpVtbl[1]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint>)(lpVtbl[1]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint>)(lpVtbl[1]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint>)(lpVtbl[2]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint>)(lpVtbl[2]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint>)(lpVtbl[2]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetComponentType" />
@@ -91,11 +75,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(3)]
 	public HResult GetComponentType(WICComponentType* pType)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pType);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pType);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, WICComponentType*, int>)(lpVtbl[3]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pType);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetCLSID" />
@@ -103,11 +83,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(4)]
 	public HResult GetCLSID(Guid* pclsid)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[4]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pclsid);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[4]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pclsid);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[4]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pclsid);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSigningStatus" />
@@ -115,11 +91,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(5)]
 	public HResult GetSigningStatus(uint* pStatus)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint*, int>)(lpVtbl[5]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pStatus);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint*, int>)(lpVtbl[5]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pStatus);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint*, int>)(lpVtbl[5]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pStatus);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetAuthor" />
@@ -127,11 +99,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(6)]
 	public HResult GetAuthor(uint cchAuthor, ushort* wzAuthor, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVendorGUID" />
@@ -139,11 +107,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(7)]
 	public HResult GetVendorGUID(Guid* pguidVendor)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[7]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pguidVendor);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[7]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pguidVendor);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[7]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pguidVendor);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVersion" />
@@ -151,11 +115,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(8)]
 	public HResult GetVersion(uint cchVersion, ushort* wzVersion, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSpecVersion" />
@@ -163,11 +123,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(9)]
 	public HResult GetSpecVersion(uint cchSpecVersion, ushort* wzSpecVersion, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetFriendlyName" />
@@ -175,11 +131,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(10)]
 	public HResult GetFriendlyName(uint cchFriendlyName, ushort* wzFriendlyName, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetContainerFormat" />
@@ -187,11 +139,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(11)]
 	public HResult GetContainerFormat(Guid* pguidContainerFormat)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[11]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pguidContainerFormat);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[11]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pguidContainerFormat);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Guid*, int>)(lpVtbl[11]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pguidContainerFormat);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetPixelFormats" />
@@ -199,11 +147,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(12)]
 	public HResult GetPixelFormats(uint cFormats, Guid* pguidPixelFormats, uint* pcActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, Guid*, uint*, int>)(lpVtbl[12]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cFormats, pguidPixelFormats, pcActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, Guid*, uint*, int>)(lpVtbl[12]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cFormats, pguidPixelFormats, pcActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, Guid*, uint*, int>)(lpVtbl[12]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cFormats, pguidPixelFormats, pcActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetColorManagementVersion" />
@@ -211,11 +155,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(13)]
 	public HResult GetColorManagementVersion(uint cchColorManagementVersion, ushort* wzColorManagementVersion, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[13]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchColorManagementVersion, wzColorManagementVersion, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[13]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchColorManagementVersion, wzColorManagementVersion, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[13]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchColorManagementVersion, wzColorManagementVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetDeviceManufacturer" />
@@ -223,11 +163,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(14)]
 	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, ushort* wzDeviceManufacturer, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[14]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[14]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[14]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetDeviceModels" />
@@ -235,11 +171,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(15)]
 	public HResult GetDeviceModels(uint cchDeviceModels, ushort* wzDeviceModels, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[15]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[15]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[15]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetMimeTypes" />
@@ -247,11 +179,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(16)]
 	public HResult GetMimeTypes(uint cchMimeTypes, ushort* wzMimeTypes, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[16]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchMimeTypes, wzMimeTypes, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[16]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchMimeTypes, wzMimeTypes, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[16]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchMimeTypes, wzMimeTypes, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetFileExtensions" />
@@ -259,11 +187,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(17)]
 	public HResult GetFileExtensions(uint cchFileExtensions, ushort* wzFileExtensions, uint* pcchActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[17]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchFileExtensions, wzFileExtensions, pcchActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[17]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchFileExtensions, wzFileExtensions, pcchActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[17]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cchFileExtensions, wzFileExtensions, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.DoesSupportAnimation" />
@@ -271,11 +195,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(18)]
 	public HResult DoesSupportAnimation(Bool32* pfSupportAnimation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[18]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportAnimation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[18]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportAnimation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[18]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportAnimation);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.DoesSupportChromakey" />
@@ -283,11 +203,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(19)]
 	public HResult DoesSupportChromakey(Bool32* pfSupportChromakey)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[19]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportChromakey);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[19]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportChromakey);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[19]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportChromakey);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.DoesSupportLossless" />
@@ -295,11 +211,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(20)]
 	public HResult DoesSupportLossless(Bool32* pfSupportLossless)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[20]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportLossless);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[20]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportLossless);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[20]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportLossless);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.DoesSupportMultiframe" />
@@ -307,11 +219,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(21)]
 	public HResult DoesSupportMultiframe(Bool32* pfSupportMultiframe)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[21]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportMultiframe);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[21]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportMultiframe);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Bool32*, int>)(lpVtbl[21]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pfSupportMultiframe);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.MatchesMimeType" />
@@ -319,11 +227,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(22)]
 	public HResult MatchesMimeType(ushort* wzMimeType, Bool32* pfMatches)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::GetPatterns"]/*' />
@@ -331,11 +235,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(23)]
 	public HResult GetPatterns(uint cbSizePatterns, WICBitmapPattern* pPatterns, uint* pcPatterns, uint* pcbPatternsActual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, uint, WICBitmapPattern*, uint*, uint*, int>)(lpVtbl[23]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cbSizePatterns, pPatterns, pcPatterns, pcbPatternsActual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, uint, WICBitmapPattern*, uint*, uint*, int>)(lpVtbl[23]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cbSizePatterns, pPatterns, pcPatterns, pcbPatternsActual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, uint, WICBitmapPattern*, uint*, uint*, int>)(lpVtbl[23]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), cbSizePatterns, pPatterns, pcPatterns, pcbPatternsActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::MatchesPattern"]/*' />
@@ -343,11 +243,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(24)]
 	public HResult MatchesPattern(Com.IStream* pIStream, Bool32* pfMatches)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, Com.IStream*, Bool32*, int>)(lpVtbl[24]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pIStream, pfMatches);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, Com.IStream*, Bool32*, int>)(lpVtbl[24]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pIStream, pfMatches);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, Com.IStream*, Bool32*, int>)(lpVtbl[24]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), pIStream, pfMatches);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapDecoderInfo::CreateInstance"]/*' />
@@ -355,11 +251,7 @@ public unsafe partial struct IWICBitmapDecoderInfo : IWICBitmapDecoderInfo.Inter
 	[VtblIndex(25)]
 	public HResult CreateInstance(IWICBitmapDecoder** ppIBitmapDecoder)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICBitmapDecoderInfo*, IWICBitmapDecoder**, int>)(lpVtbl[25]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapDecoder);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICBitmapDecoderInfo*, IWICBitmapDecoder**, int>)(lpVtbl[25]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapDecoder);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapDecoderInfo*, IWICBitmapDecoder**, int>)(lpVtbl[25]))((IWICBitmapDecoderInfo*)Unsafe.AsPointer(ref this), ppIBitmapDecoder);
 	}
 
 	public interface Interface : IWICBitmapCodecInfo.Interface

@@ -40,11 +40,7 @@ public unsafe partial struct ID3D12DebugCommandQueue1 : ID3D12DebugCommandQueue1
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DebugCommandQueue1));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DebugCommandQueue1));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID3D12DebugCommandQueue1 : ID3D12DebugCommandQueue1
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DebugCommandQueue1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandQueue1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID3D12DebugCommandQueue1 : ID3D12DebugCommandQueue1
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DebugCommandQueue1*, uint>)(lpVtbl[1]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandQueue1*, uint>)(lpVtbl[1]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, uint>)(lpVtbl[1]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID3D12DebugCommandQueue1 : ID3D12DebugCommandQueue1
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DebugCommandQueue1*, uint>)(lpVtbl[2]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandQueue1*, uint>)(lpVtbl[2]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, uint>)(lpVtbl[2]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D12DebugCommandQueue.AssertResourceState" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID3D12DebugCommandQueue1 : ID3D12DebugCommandQueue1
 	[VtblIndex(3)]
 	public Bool32 AssertResourceState(ID3D12Resource* pResource, uint Subresource, uint State)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, uint, Bool32>)(lpVtbl[3]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, State);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, uint, Bool32>)(lpVtbl[3]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, State);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, uint, Bool32>)(lpVtbl[3]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, State);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandQueue1::AssertResourceAccess"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct ID3D12DebugCommandQueue1 : ID3D12DebugCommandQueue1
 	[VtblIndex(4)]
 	public void AssertResourceAccess(ID3D12Resource* pResource, uint Subresource, BarrierAccess Access)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, BarrierAccess, void>)(lpVtbl[4]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Access);
-#else
-		((delegate* unmanaged[Stdcall]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, BarrierAccess, void>)(lpVtbl[4]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Access);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, BarrierAccess, void>)(lpVtbl[4]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Access);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DebugCommandQueue1::AssertTextureLayout"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct ID3D12DebugCommandQueue1 : ID3D12DebugCommandQueue1
 	[VtblIndex(5)]
 	public void AssertTextureLayout(ID3D12Resource* pResource, uint Subresource, BarrierLayout Layout)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, BarrierLayout, void>)(lpVtbl[5]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Layout);
-#else
-		((delegate* unmanaged[Stdcall]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, BarrierLayout, void>)(lpVtbl[5]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Layout);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D12DebugCommandQueue1*, ID3D12Resource*, uint, BarrierLayout, void>)(lpVtbl[5]))((ID3D12DebugCommandQueue1*)Unsafe.AsPointer(ref this), pResource, Subresource, Layout);
 	}
 
 	public interface Interface : ID3D12DebugCommandQueue.Interface

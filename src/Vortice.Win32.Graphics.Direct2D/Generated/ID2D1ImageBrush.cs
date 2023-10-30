@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ImageBrush));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1ImageBrush));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ImageBrush*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ImageBrush*, uint>)(lpVtbl[1]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, uint>)(lpVtbl[1]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, uint>)(lpVtbl[1]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ImageBrush*, uint>)(lpVtbl[2]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, uint>)(lpVtbl[2]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, uint>)(lpVtbl[2]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), factory);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), factory);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), factory);
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.SetOpacity" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(4)]
 	public void SetOpacity(float opacity)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, float, void>)(lpVtbl[4]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), opacity);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, float, void>)(lpVtbl[4]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), opacity);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, float, void>)(lpVtbl[4]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), opacity);
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.SetTransform" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(5)]
 	public void SetTransform(Matrix3x2* transform)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), transform);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), transform);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, Matrix3x2*, void>)(lpVtbl[5]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.GetOpacity" />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(6)]
 	public float GetOpacity()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ImageBrush*, float>)(lpVtbl[6]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, float>)(lpVtbl[6]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, float>)(lpVtbl[6]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Brush.GetTransform" />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(7)]
 	public void GetTransform(Matrix3x2* transform)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), transform);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), transform);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, Matrix3x2*, void>)(lpVtbl[7]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetImage"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(8)]
 	public void SetImage(ID2D1Image* image)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, ID2D1Image*, void>)(lpVtbl[8]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), image);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ID2D1Image*, void>)(lpVtbl[8]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), image);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, ID2D1Image*, void>)(lpVtbl[8]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), image);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetExtendModeX"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(9)]
 	public void SetExtendModeX(ExtendMode extendModeX)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, ExtendMode, void>)(lpVtbl[9]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), extendModeX);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode, void>)(lpVtbl[9]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), extendModeX);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, ExtendMode, void>)(lpVtbl[9]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), extendModeX);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetExtendModeY"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(10)]
 	public void SetExtendModeY(ExtendMode extendModeY)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, ExtendMode, void>)(lpVtbl[10]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), extendModeY);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode, void>)(lpVtbl[10]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), extendModeY);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, ExtendMode, void>)(lpVtbl[10]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), extendModeY);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetInterpolationMode"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(11)]
 	public void SetInterpolationMode(InterpolationMode interpolationMode)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, InterpolationMode, void>)(lpVtbl[11]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), interpolationMode);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, InterpolationMode, void>)(lpVtbl[11]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), interpolationMode);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, InterpolationMode, void>)(lpVtbl[11]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::SetSourceRectangle"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(12)]
 	public void SetSourceRectangle(Win32.Numerics.RectF* sourceRectangle)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, Win32.Numerics.RectF*, void>)(lpVtbl[12]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Win32.Numerics.RectF*, void>)(lpVtbl[12]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, Win32.Numerics.RectF*, void>)(lpVtbl[12]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetImage"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(13)]
 	public void GetImage(ID2D1Image** image)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, ID2D1Image**, void>)(lpVtbl[13]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), image);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ID2D1Image**, void>)(lpVtbl[13]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), image);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, ID2D1Image**, void>)(lpVtbl[13]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), image);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetExtendModeX"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(14)]
 	public ExtendMode GetExtendModeX()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[14]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[14]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[14]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetExtendModeY"]/*' />
@@ -235,11 +171,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(15)]
 	public ExtendMode GetExtendModeY()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[15]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[15]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, ExtendMode>)(lpVtbl[15]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetInterpolationMode"]/*' />
@@ -247,11 +179,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(16)]
 	public InterpolationMode GetInterpolationMode()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1ImageBrush*, InterpolationMode>)(lpVtbl[16]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, InterpolationMode>)(lpVtbl[16]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, InterpolationMode>)(lpVtbl[16]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1ImageBrush::GetSourceRectangle"]/*' />
@@ -259,11 +187,7 @@ public unsafe partial struct ID2D1ImageBrush : ID2D1ImageBrush.Interface, INativ
 	[VtblIndex(17)]
 	public void GetSourceRectangle(Win32.Numerics.RectF** sourceRectangle)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1ImageBrush*, Win32.Numerics.RectF**, void>)(lpVtbl[17]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1ImageBrush*, Win32.Numerics.RectF**, void>)(lpVtbl[17]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1ImageBrush*, Win32.Numerics.RectF**, void>)(lpVtbl[17]))((ID2D1ImageBrush*)Unsafe.AsPointer(ref this), sourceRectangle);
 	}
 
 	public interface Interface : ID2D1Brush.Interface

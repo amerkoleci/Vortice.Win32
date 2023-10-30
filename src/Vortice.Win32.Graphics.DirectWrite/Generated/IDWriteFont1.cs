@@ -40,11 +40,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFont1));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDWriteFont1));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFont1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFont1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, Guid*, void**, int>)(lpVtbl[0]))((IDWriteFont1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, uint>)(lpVtbl[1]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, uint>)(lpVtbl[1]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, uint>)(lpVtbl[1]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, uint>)(lpVtbl[2]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, uint>)(lpVtbl[2]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, uint>)(lpVtbl[2]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetFontFamily" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(3)]
 	public HResult GetFontFamily(IDWriteFontFamily** fontFamily)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, IDWriteFontFamily**, int>)(lpVtbl[3]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontFamily);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, IDWriteFontFamily**, int>)(lpVtbl[3]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontFamily);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, IDWriteFontFamily**, int>)(lpVtbl[3]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontFamily);
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetWeight" />
@@ -103,11 +83,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(4)]
 	public FontWeight GetWeight()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, FontWeight>)(lpVtbl[4]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontWeight>)(lpVtbl[4]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, FontWeight>)(lpVtbl[4]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStretch" />
@@ -115,11 +91,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(5)]
 	public FontStretch GetStretch()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, FontStretch>)(lpVtbl[5]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontStretch>)(lpVtbl[5]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, FontStretch>)(lpVtbl[5]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetStyle" />
@@ -127,11 +99,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(6)]
 	public FontStyle GetStyle()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, FontStyle>)(lpVtbl[6]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontStyle>)(lpVtbl[6]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, FontStyle>)(lpVtbl[6]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.IsSymbolFont" />
@@ -139,11 +107,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(7)]
 	public Bool32 IsSymbolFont()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, Bool32>)(lpVtbl[7]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Bool32>)(lpVtbl[7]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, Bool32>)(lpVtbl[7]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetFaceNames" />
@@ -151,11 +115,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult GetFaceNames(IDWriteLocalizedStrings** names)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, IDWriteLocalizedStrings**, int>)(lpVtbl[8]))((IDWriteFont1*)Unsafe.AsPointer(ref this), names);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, IDWriteLocalizedStrings**, int>)(lpVtbl[8]))((IDWriteFont1*)Unsafe.AsPointer(ref this), names);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, IDWriteLocalizedStrings**, int>)(lpVtbl[8]))((IDWriteFont1*)Unsafe.AsPointer(ref this), names);
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetInformationalStrings" />
@@ -163,11 +123,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(9)]
 	public HResult GetInformationalStrings(InformationalStringId informationalStringID, IDWriteLocalizedStrings** informationalStrings, Bool32* exists)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, InformationalStringId, IDWriteLocalizedStrings**, Bool32*, int>)(lpVtbl[9]))((IDWriteFont1*)Unsafe.AsPointer(ref this), informationalStringID, informationalStrings, exists);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, InformationalStringId, IDWriteLocalizedStrings**, Bool32*, int>)(lpVtbl[9]))((IDWriteFont1*)Unsafe.AsPointer(ref this), informationalStringID, informationalStrings, exists);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, InformationalStringId, IDWriteLocalizedStrings**, Bool32*, int>)(lpVtbl[9]))((IDWriteFont1*)Unsafe.AsPointer(ref this), informationalStringID, informationalStrings, exists);
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetSimulations" />
@@ -175,11 +131,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(10)]
 	public FontSimulations GetSimulations()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, FontSimulations>)(lpVtbl[10]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontSimulations>)(lpVtbl[10]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, FontSimulations>)(lpVtbl[10]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDWriteFont.GetMetrics" />
@@ -187,11 +139,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(11)]
 	public void GetMetrics(FontMetrics* fontMetrics)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IDWriteFont1*, FontMetrics*, void>)(lpVtbl[11]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontMetrics);
-#else
-		((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontMetrics*, void>)(lpVtbl[11]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontMetrics);
-#endif
+		((delegate* unmanaged[MemberFunction]<IDWriteFont1*, FontMetrics*, void>)(lpVtbl[11]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontMetrics);
 	}
 
 	/// <inheritdoc cref="IDWriteFont.HasCharacter" />
@@ -199,11 +147,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(12)]
 	public HResult HasCharacter(uint unicodeValue, Bool32* exists)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, uint, Bool32*, int>)(lpVtbl[12]))((IDWriteFont1*)Unsafe.AsPointer(ref this), unicodeValue, exists);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, uint, Bool32*, int>)(lpVtbl[12]))((IDWriteFont1*)Unsafe.AsPointer(ref this), unicodeValue, exists);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, uint, Bool32*, int>)(lpVtbl[12]))((IDWriteFont1*)Unsafe.AsPointer(ref this), unicodeValue, exists);
 	}
 
 	/// <inheritdoc cref="IDWriteFont.CreateFontFace" />
@@ -211,11 +155,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(13)]
 	public HResult CreateFontFace(IDWriteFontFace** fontFace)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, IDWriteFontFace**, int>)(lpVtbl[13]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontFace);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, IDWriteFontFace**, int>)(lpVtbl[13]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontFace);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, IDWriteFontFace**, int>)(lpVtbl[13]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontFace);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetMetrics"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(14)]
 	public void GetMetrics(FontMetrics1* fontMetrics)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IDWriteFont1*, FontMetrics1*, void>)(lpVtbl[14]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontMetrics);
-#else
-		((delegate* unmanaged[Stdcall]<IDWriteFont1*, FontMetrics1*, void>)(lpVtbl[14]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontMetrics);
-#endif
+		((delegate* unmanaged[MemberFunction]<IDWriteFont1*, FontMetrics1*, void>)(lpVtbl[14]))((IDWriteFont1*)Unsafe.AsPointer(ref this), fontMetrics);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetPanose"]/*' />
@@ -235,11 +171,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(15)]
 	public void GetPanose(Panose* panose)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IDWriteFont1*, Panose*, void>)(lpVtbl[15]))((IDWriteFont1*)Unsafe.AsPointer(ref this), panose);
-#else
-		((delegate* unmanaged[Stdcall]<IDWriteFont1*, Panose*, void>)(lpVtbl[15]))((IDWriteFont1*)Unsafe.AsPointer(ref this), panose);
-#endif
+		((delegate* unmanaged[MemberFunction]<IDWriteFont1*, Panose*, void>)(lpVtbl[15]))((IDWriteFont1*)Unsafe.AsPointer(ref this), panose);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont1::GetUnicodeRanges"]/*' />
@@ -247,11 +179,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(16)]
 	public HResult GetUnicodeRanges(uint maxRangeCount, UnicodeRange* unicodeRanges, uint* actualRangeCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, uint, UnicodeRange*, uint*, int>)(lpVtbl[16]))((IDWriteFont1*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, uint, UnicodeRange*, uint*, int>)(lpVtbl[16]))((IDWriteFont1*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, uint, UnicodeRange*, uint*, int>)(lpVtbl[16]))((IDWriteFont1*)Unsafe.AsPointer(ref this), maxRangeCount, unicodeRanges, actualRangeCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFont1::IsMonospacedFont"]/*' />
@@ -259,11 +187,7 @@ public unsafe partial struct IDWriteFont1 : IDWriteFont1.Interface, INativeGuid
 	[VtblIndex(17)]
 	public Bool32 IsMonospacedFont()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDWriteFont1*, Bool32>)(lpVtbl[17]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDWriteFont1*, Bool32>)(lpVtbl[17]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFont1*, Bool32>)(lpVtbl[17]))((IDWriteFont1*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IDWriteFont.Interface

@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Device2));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Device2));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Device2*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Device2*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Device2*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, uint>)(lpVtbl[1]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, uint>)(lpVtbl[1]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, uint>)(lpVtbl[1]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, uint>)(lpVtbl[2]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, uint>)(lpVtbl[2]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, uint>)(lpVtbl[2]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Device2*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Device2*)Unsafe.AsPointer(ref this), factory);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Device2*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Device2*)Unsafe.AsPointer(ref this), factory);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Device2*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Device2*)Unsafe.AsPointer(ref this), factory);
 	}
 
 	/// <inheritdoc cref="ID2D1Device.CreateDeviceContext" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(4)]
 	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext** deviceContext)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext**, int>)(lpVtbl[4]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext);
 	}
 
 	/// <inheritdoc cref="ID2D1Device.SetMaximumTextureMemory" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(5)]
 	public void SetMaximumTextureMemory(ulong maximumInBytes)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Device2*, ulong, void>)(lpVtbl[5]))((ID2D1Device2*)Unsafe.AsPointer(ref this), maximumInBytes);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Device2*, ulong, void>)(lpVtbl[5]))((ID2D1Device2*)Unsafe.AsPointer(ref this), maximumInBytes);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Device2*, ulong, void>)(lpVtbl[5]))((ID2D1Device2*)Unsafe.AsPointer(ref this), maximumInBytes);
 	}
 
 	/// <inheritdoc cref="ID2D1Device.GetMaximumTextureMemory" />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(6)]
 	public ulong GetMaximumTextureMemory()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, ulong>)(lpVtbl[6]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, ulong>)(lpVtbl[6]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, ulong>)(lpVtbl[6]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Device.ClearResources" />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(7)]
 	public void ClearResources(uint millisecondsSinceUse)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Device2*, uint, void>)(lpVtbl[7]))((ID2D1Device2*)Unsafe.AsPointer(ref this), millisecondsSinceUse);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Device2*, uint, void>)(lpVtbl[7]))((ID2D1Device2*)Unsafe.AsPointer(ref this), millisecondsSinceUse);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Device2*, uint, void>)(lpVtbl[7]))((ID2D1Device2*)Unsafe.AsPointer(ref this), millisecondsSinceUse);
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.GetRenderingPriority" />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(8)]
 	public RenderingPriority GetRenderingPriority()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, RenderingPriority>)(lpVtbl[8]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, RenderingPriority>)(lpVtbl[8]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, RenderingPriority>)(lpVtbl[8]))((ID2D1Device2*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.SetRenderingPriority" />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(9)]
 	public void SetRenderingPriority(RenderingPriority renderingPriority)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Device2*, RenderingPriority, void>)(lpVtbl[9]))((ID2D1Device2*)Unsafe.AsPointer(ref this), renderingPriority);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Device2*, RenderingPriority, void>)(lpVtbl[9]))((ID2D1Device2*)Unsafe.AsPointer(ref this), renderingPriority);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Device2*, RenderingPriority, void>)(lpVtbl[9]))((ID2D1Device2*)Unsafe.AsPointer(ref this), renderingPriority);
 	}
 
 	/// <inheritdoc cref="ID2D1Device1.CreateDeviceContext" />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(10)]
 	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext1** deviceContext1)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext1);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext1);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext1**, int>)(lpVtbl[10]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext1);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device2::CreateDeviceContext"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(11)]
 	public HResult CreateDeviceContext(DeviceContextOptions options, ID2D1DeviceContext2** deviceContext2)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext2**, int>)(lpVtbl[11]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext2);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext2**, int>)(lpVtbl[11]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext2);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, DeviceContextOptions, ID2D1DeviceContext2**, int>)(lpVtbl[11]))((ID2D1Device2*)Unsafe.AsPointer(ref this), options, deviceContext2);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device2::FlushDeviceContexts"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(12)]
 	public void FlushDeviceContexts(ID2D1Bitmap* bitmap)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Device2*, ID2D1Bitmap*, void>)(lpVtbl[12]))((ID2D1Device2*)Unsafe.AsPointer(ref this), bitmap);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Device2*, ID2D1Bitmap*, void>)(lpVtbl[12]))((ID2D1Device2*)Unsafe.AsPointer(ref this), bitmap);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Device2*, ID2D1Bitmap*, void>)(lpVtbl[12]))((ID2D1Device2*)Unsafe.AsPointer(ref this), bitmap);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Device2::GetDxgiDevice"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct ID2D1Device2 : ID2D1Device2.Interface, INativeGuid
 	[VtblIndex(13)]
 	public HResult GetDxgiDevice(Graphics.Dxgi.IDXGIDevice** dxgiDevice)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Device2*, Graphics.Dxgi.IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device2*)Unsafe.AsPointer(ref this), dxgiDevice);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Device2*, Graphics.Dxgi.IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device2*)Unsafe.AsPointer(ref this), dxgiDevice);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Device2*, Graphics.Dxgi.IDXGIDevice**, int>)(lpVtbl[13]))((ID2D1Device2*)Unsafe.AsPointer(ref this), dxgiDevice);
 	}
 
 	public interface Interface : ID2D1Device1.Interface

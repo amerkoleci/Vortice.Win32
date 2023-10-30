@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Effect));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Effect));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Effect*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Effect*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Effect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint>)(lpVtbl[1]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint>)(lpVtbl[1]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint>)(lpVtbl[1]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint>)(lpVtbl[2]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint>)(lpVtbl[2]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint>)(lpVtbl[2]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyCount" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(3)]
 	public uint GetPropertyCount()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint>)(lpVtbl[3]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint>)(lpVtbl[3]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint>)(lpVtbl[3]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyName" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(4)]
 	public HResult GetPropertyName(uint index, ushort* name, uint nameCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, name, nameCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, name, nameCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, name, nameCount);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyNameLength" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(5)]
 	public uint GetPropertyNameLength(uint index)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint, uint>)(lpVtbl[5]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, uint>)(lpVtbl[5]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, uint>)(lpVtbl[5]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetType" />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(6)]
 	public PropertyType GetType(uint index)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, PropertyType>)(lpVtbl[6]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyIndex" />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(7)]
 	public uint GetPropertyIndex(ushort* name)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, ushort*, uint>)(lpVtbl[7]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, ushort*, uint>)(lpVtbl[7]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, ushort*, uint>)(lpVtbl[7]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.SetValueByName" />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult SetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.SetValue" />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(9)]
 	public HResult SetValue(uint index, PropertyType type, byte* data, uint dataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, PropertyType, byte*, uint, int>)(lpVtbl[9]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetValueByName" />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(10)]
 	public HResult GetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetValue" />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(11)]
 	public HResult GetValue(uint index, PropertyType type, byte* data, uint dataSize)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, PropertyType, byte*, uint, int>)(lpVtbl[11]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetValueSize" />
@@ -199,11 +147,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(12)]
 	public uint GetValueSize(uint index)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint, uint>)(lpVtbl[12]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, uint>)(lpVtbl[12]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, uint>)(lpVtbl[12]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetSubProperties" />
@@ -211,11 +155,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(13)]
 	public HResult GetSubProperties(uint index, ID2D1Properties** subProperties)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, subProperties);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, subProperties);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, ID2D1Properties**, int>)(lpVtbl[13]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, subProperties);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Effect::SetInput"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(14)]
 	public void SetInput(uint index, ID2D1Image* input, Bool32 invalidate)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Effect*, uint, ID2D1Image*, Bool32, void>)(lpVtbl[14]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, input, invalidate);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, ID2D1Image*, Bool32, void>)(lpVtbl[14]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, input, invalidate);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, ID2D1Image*, Bool32, void>)(lpVtbl[14]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, input, invalidate);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Effect::SetInputCount"]/*' />
@@ -235,11 +171,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(15)]
 	public HResult SetInputCount(uint inputCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint, int>)(lpVtbl[15]))((ID2D1Effect*)Unsafe.AsPointer(ref this), inputCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, int>)(lpVtbl[15]))((ID2D1Effect*)Unsafe.AsPointer(ref this), inputCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, int>)(lpVtbl[15]))((ID2D1Effect*)Unsafe.AsPointer(ref this), inputCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetInput"]/*' />
@@ -247,11 +179,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(16)]
 	public void GetInput(uint index, ID2D1Image** input)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Effect*, uint, ID2D1Image**, void>)(lpVtbl[16]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, input);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint, ID2D1Image**, void>)(lpVtbl[16]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, input);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, ID2D1Image**, void>)(lpVtbl[16]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, input);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetInputCount"]/*' />
@@ -259,11 +187,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(17)]
 	public uint GetInputCount()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Effect*, uint>)(lpVtbl[17]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Effect*, uint>)(lpVtbl[17]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint>)(lpVtbl[17]))((ID2D1Effect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Effect::GetOutput"]/*' />
@@ -271,11 +195,7 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	[VtblIndex(18)]
 	public void GetOutput(ID2D1Image** outputImage)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Effect*, ID2D1Image**, void>)(lpVtbl[18]))((ID2D1Effect*)Unsafe.AsPointer(ref this), outputImage);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Effect*, ID2D1Image**, void>)(lpVtbl[18]))((ID2D1Effect*)Unsafe.AsPointer(ref this), outputImage);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Effect*, ID2D1Image**, void>)(lpVtbl[18]))((ID2D1Effect*)Unsafe.AsPointer(ref this), outputImage);
 	}
 
 	public interface Interface : ID2D1Properties.Interface

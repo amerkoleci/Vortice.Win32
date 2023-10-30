@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GdiMetafile1));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1GdiMetafile1));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GdiMetafile1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GdiMetafile1*, uint>)(lpVtbl[1]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, uint>)(lpVtbl[1]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, uint>)(lpVtbl[1]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GdiMetafile1*, uint>)(lpVtbl[2]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, uint>)(lpVtbl[2]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, uint>)(lpVtbl[2]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1GdiMetafile1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), factory);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), factory);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), factory);
 	}
 
 	/// <inheritdoc cref="ID2D1GdiMetafile.Stream" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	[VtblIndex(4)]
 	public HResult Stream(ID2D1GdiMetafileSink* sink)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GdiMetafile1*, ID2D1GdiMetafileSink*, int>)(lpVtbl[4]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), sink);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, ID2D1GdiMetafileSink*, int>)(lpVtbl[4]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), sink);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, ID2D1GdiMetafileSink*, int>)(lpVtbl[4]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), sink);
 	}
 
 	/// <inheritdoc cref="ID2D1GdiMetafile.GetBounds" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	[VtblIndex(5)]
 	public HResult GetBounds(Win32.Numerics.RectF** bounds)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GdiMetafile1*, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1::GetDpi"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	[VtblIndex(6)]
 	public HResult GetDpi(float* dpiX, float* dpiY)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GdiMetafile1*, float*, float*, int>)(lpVtbl[6]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), dpiX, dpiY);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, float*, float*, int>)(lpVtbl[6]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), dpiX, dpiY);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, float*, float*, int>)(lpVtbl[6]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), dpiX, dpiY);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GdiMetafile1::GetSourceBounds"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1GdiMetafile1 : ID2D1GdiMetafile1.Interface, IN
 	[VtblIndex(7)]
 	public HResult GetSourceBounds(Win32.Numerics.RectF** bounds)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1GdiMetafile1*, Win32.Numerics.RectF**, int>)(lpVtbl[7]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1GdiMetafile1*, Win32.Numerics.RectF**, int>)(lpVtbl[7]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1GdiMetafile1*, Win32.Numerics.RectF**, int>)(lpVtbl[7]))((ID2D1GdiMetafile1*)Unsafe.AsPointer(ref this), bounds);
 	}
 
 	public interface Interface : ID2D1GdiMetafile.Interface

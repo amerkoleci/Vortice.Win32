@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Ink));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1Ink));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Ink*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Ink*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1Ink*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, uint>)(lpVtbl[1]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint>)(lpVtbl[1]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint>)(lpVtbl[1]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, uint>)(lpVtbl[2]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint>)(lpVtbl[2]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint>)(lpVtbl[2]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Ink*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Ink*)Unsafe.AsPointer(ref this), factory);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Ink*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Ink*)Unsafe.AsPointer(ref this), factory);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1Ink*)Unsafe.AsPointer(ref this), factory);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetStartPoint"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(4)]
 	public void SetStartPoint(InkPoint* startPoint)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1Ink*, InkPoint*, void>)(lpVtbl[4]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startPoint);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkPoint*, void>)(lpVtbl[4]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startPoint);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1Ink*, InkPoint*, void>)(lpVtbl[4]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startPoint);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetStartPoint"]/*' />
@@ -116,11 +92,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	public InkPoint GetStartPoint()
 	{
 		InkPoint result;
-#if NET6_0_OR_GREATER
-		return *((delegate* unmanaged<ID2D1Ink*, InkPoint*, InkPoint*>)(lpVtbl[5]))((ID2D1Ink*)Unsafe.AsPointer(ref this), &result);
-#else
-		return *((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkPoint*, InkPoint*>)(lpVtbl[5]))((ID2D1Ink*)Unsafe.AsPointer(ref this), &result);
-#endif
+		return *((delegate* unmanaged[MemberFunction]<ID2D1Ink*, InkPoint*, InkPoint*>)(lpVtbl[5]))((ID2D1Ink*)Unsafe.AsPointer(ref this), &result);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::AddSegments"]/*' />
@@ -128,11 +100,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(6)]
 	public HResult AddSegments(InkBezierSegment* segments, uint segmentsCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, InkBezierSegment*, uint, int>)(lpVtbl[6]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segments, segmentsCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkBezierSegment*, uint, int>)(lpVtbl[6]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segments, segmentsCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, InkBezierSegment*, uint, int>)(lpVtbl[6]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segments, segmentsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::RemoveSegmentsAtEnd"]/*' />
@@ -140,11 +108,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(7)]
 	public HResult RemoveSegmentsAtEnd(uint segmentsCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, uint, int>)(lpVtbl[7]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segmentsCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint, int>)(lpVtbl[7]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segmentsCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, int>)(lpVtbl[7]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segmentsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegments"]/*' />
@@ -152,11 +116,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(8)]
 	public HResult SetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[8]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[8]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[8]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::SetSegmentAtEnd"]/*' />
@@ -164,11 +124,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(9)]
 	public HResult SetSegmentAtEnd(InkBezierSegment* segment)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, InkBezierSegment*, int>)(lpVtbl[9]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segment);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, InkBezierSegment*, int>)(lpVtbl[9]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segment);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, InkBezierSegment*, int>)(lpVtbl[9]))((ID2D1Ink*)Unsafe.AsPointer(ref this), segment);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegmentCount"]/*' />
@@ -176,11 +132,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(10)]
 	public uint GetSegmentCount()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, uint>)(lpVtbl[10]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint>)(lpVtbl[10]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint>)(lpVtbl[10]))((ID2D1Ink*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetSegments"]/*' />
@@ -188,11 +140,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(11)]
 	public HResult GetSegments(uint startSegment, InkBezierSegment* segments, uint segmentsCount)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[11]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[11]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, uint, InkBezierSegment*, uint, int>)(lpVtbl[11]))((ID2D1Ink*)Unsafe.AsPointer(ref this), startSegment, segments, segmentsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::StreamAsGeometry"]/*' />
@@ -200,11 +148,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(12)]
 	public HResult StreamAsGeometry(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, flatteningTolerance, geometrySink);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, flatteningTolerance, geometrySink);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Ink::GetBounds"]/*' />
@@ -212,11 +156,7 @@ public unsafe partial struct ID2D1Ink : ID2D1Ink.Interface, INativeGuid
 	[VtblIndex(13)]
 	public HResult GetBounds(ID2D1InkStyle* inkStyle, Matrix3x2* worldTransform, Win32.Numerics.RectF** bounds)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[13]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, bounds);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[13]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, bounds);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Ink*, ID2D1InkStyle*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[13]))((ID2D1Ink*)Unsafe.AsPointer(ref this), inkStyle, worldTransform, bounds);
 	}
 
 	public interface Interface : ID2D1Resource.Interface

@@ -40,11 +40,7 @@ public unsafe partial struct ID3DDeviceContextState : ID3DDeviceContextState.Int
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DDeviceContextState));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3DDeviceContextState));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID3DDeviceContextState : ID3DDeviceContextState.Int
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDeviceContextState*, Guid*, void**, int>)(lpVtbl[0]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, Guid*, void**, int>)(lpVtbl[0]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3DDeviceContextState*, Guid*, void**, int>)(lpVtbl[0]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID3DDeviceContextState : ID3DDeviceContextState.Int
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDeviceContextState*, uint>)(lpVtbl[1]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, uint>)(lpVtbl[1]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3DDeviceContextState*, uint>)(lpVtbl[1]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID3DDeviceContextState : ID3DDeviceContextState.Int
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDeviceContextState*, uint>)(lpVtbl[2]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, uint>)(lpVtbl[2]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3DDeviceContextState*, uint>)(lpVtbl[2]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetDevice" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID3DDeviceContextState : ID3DDeviceContextState.Int
 	[VtblIndex(3)]
 	public void GetDevice(ID3D11Device** ppDevice)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3DDeviceContextState*, ID3D11Device**, void>)(lpVtbl[3]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), ppDevice);
-#else
-		((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, ID3D11Device**, void>)(lpVtbl[3]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), ppDevice);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3DDeviceContextState*, ID3D11Device**, void>)(lpVtbl[3]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), ppDevice);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.GetPrivateData" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID3DDeviceContextState : ID3DDeviceContextState.Int
 	[VtblIndex(4)]
 	public HResult GetPrivateData(Guid* guid, uint* pDataSize, void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDeviceContextState*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3DDeviceContextState*, Guid*, uint*, void*, int>)(lpVtbl[4]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, pDataSize, pData);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateData" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID3DDeviceContextState : ID3DDeviceContextState.Int
 	[VtblIndex(5)]
 	public HResult SetPrivateData(Guid* guid, uint DataSize, void* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDeviceContextState*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3DDeviceContextState*, Guid*, uint, void*, int>)(lpVtbl[5]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, DataSize, pData);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceChild.SetPrivateDataInterface" />
@@ -127,11 +99,7 @@ public unsafe partial struct ID3DDeviceContextState : ID3DDeviceContextState.Int
 	[VtblIndex(6)]
 	public HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3DDeviceContextState*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, pData);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3DDeviceContextState*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, pData);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3DDeviceContextState*, Guid*, IUnknown*, int>)(lpVtbl[6]))((ID3DDeviceContextState*)Unsafe.AsPointer(ref this), guid, pData);
 	}
 
 	public interface Interface : ID3D11DeviceChild.Interface

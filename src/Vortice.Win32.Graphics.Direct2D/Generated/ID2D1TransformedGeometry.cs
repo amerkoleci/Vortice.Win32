@@ -40,11 +40,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1TransformedGeometry));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID2D1TransformedGeometry));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Guid*, void**, int>)(lpVtbl[0]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, uint>)(lpVtbl[1]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, uint>)(lpVtbl[1]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, uint>)(lpVtbl[1]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, uint>)(lpVtbl[2]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, uint>)(lpVtbl[2]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, uint>)(lpVtbl[2]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="ID2D1Resource.GetFactory" />
@@ -91,11 +75,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(3)]
 	public void GetFactory(ID2D1Factory** factory)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1TransformedGeometry*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), factory);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), factory);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, ID2D1Factory**, void>)(lpVtbl[3]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), factory);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.GetBounds" />
@@ -103,11 +83,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(4)]
 	public HResult GetBounds(Matrix3x2* worldTransform, Win32.Numerics.RectF** bounds)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[4]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[4]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Matrix3x2*, Win32.Numerics.RectF**, int>)(lpVtbl[4]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, bounds);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.GetWidenedBounds" />
@@ -115,11 +91,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(5)]
 	public HResult GetWidenedBounds(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Win32.Numerics.RectF** bounds)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Win32.Numerics.RectF**, int>)(lpVtbl[5]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, bounds);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.StrokeContainsPoint" />
@@ -127,11 +99,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(6)]
 	public HResult StrokeContainsPoint(Vector2 point, float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, Vector2, float, ID2D1StrokeStyle*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[6]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), point, strokeWidth, strokeStyle, worldTransform, flatteningTolerance, contains);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Vector2, float, ID2D1StrokeStyle*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[6]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), point, strokeWidth, strokeStyle, worldTransform, flatteningTolerance, contains);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Vector2, float, ID2D1StrokeStyle*, Matrix3x2*, float, Bool32*, int>)(lpVtbl[6]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), point, strokeWidth, strokeStyle, worldTransform, flatteningTolerance, contains);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.FillContainsPoint" />
@@ -139,11 +107,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(7)]
 	public HResult FillContainsPoint(Vector2 point, Matrix3x2* worldTransform, float flatteningTolerance, Bool32* contains)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, Vector2, Matrix3x2*, float, Bool32*, int>)(lpVtbl[7]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), point, worldTransform, flatteningTolerance, contains);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Vector2, Matrix3x2*, float, Bool32*, int>)(lpVtbl[7]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), point, worldTransform, flatteningTolerance, contains);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Vector2, Matrix3x2*, float, Bool32*, int>)(lpVtbl[7]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), point, worldTransform, flatteningTolerance, contains);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.CompareWithGeometry" />
@@ -151,11 +115,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(8)]
 	public HResult CompareWithGeometry(ID2D1Geometry* inputGeometry, Matrix3x2* inputGeometryTransform, float flatteningTolerance, GeometryRelation* relation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, ID2D1Geometry*, Matrix3x2*, float, GeometryRelation*, int>)(lpVtbl[8]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), inputGeometry, inputGeometryTransform, flatteningTolerance, relation);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, ID2D1Geometry*, Matrix3x2*, float, GeometryRelation*, int>)(lpVtbl[8]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), inputGeometry, inputGeometryTransform, flatteningTolerance, relation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, ID2D1Geometry*, Matrix3x2*, float, GeometryRelation*, int>)(lpVtbl[8]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), inputGeometry, inputGeometryTransform, flatteningTolerance, relation);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Simplify" />
@@ -163,11 +123,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(9)]
 	public HResult Simplify(GeometrySimplificationOption simplificationOption, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, GeometrySimplificationOption, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), simplificationOption, worldTransform, flatteningTolerance, geometrySink);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, GeometrySimplificationOption, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), simplificationOption, worldTransform, flatteningTolerance, geometrySink);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, GeometrySimplificationOption, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[9]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), simplificationOption, worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Tessellate" />
@@ -175,11 +131,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(10)]
 	public HResult Tessellate(Matrix3x2* worldTransform, float flatteningTolerance, ID2D1TessellationSink* tessellationSink)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, Matrix3x2*, float, ID2D1TessellationSink*, int>)(lpVtbl[10]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, tessellationSink);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, float, ID2D1TessellationSink*, int>)(lpVtbl[10]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, tessellationSink);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Matrix3x2*, float, ID2D1TessellationSink*, int>)(lpVtbl[10]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, tessellationSink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.CombineWithGeometry" />
@@ -187,11 +139,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(11)]
 	public HResult CombineWithGeometry(ID2D1Geometry* inputGeometry, CombineMode combineMode, Matrix3x2* inputGeometryTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, ID2D1Geometry*, CombineMode, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[11]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), inputGeometry, combineMode, inputGeometryTransform, flatteningTolerance, geometrySink);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, ID2D1Geometry*, CombineMode, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[11]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), inputGeometry, combineMode, inputGeometryTransform, flatteningTolerance, geometrySink);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, ID2D1Geometry*, CombineMode, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[11]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), inputGeometry, combineMode, inputGeometryTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Outline" />
@@ -199,11 +147,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(12)]
 	public HResult Outline(Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, geometrySink);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, geometrySink);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[12]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.ComputeArea" />
@@ -211,11 +155,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(13)]
 	public HResult ComputeArea(Matrix3x2* worldTransform, float flatteningTolerance, float* area)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, Matrix3x2*, float, float*, int>)(lpVtbl[13]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, area);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, float, float*, int>)(lpVtbl[13]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, area);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Matrix3x2*, float, float*, int>)(lpVtbl[13]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, area);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.ComputeLength" />
@@ -223,11 +163,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(14)]
 	public HResult ComputeLength(Matrix3x2* worldTransform, float flatteningTolerance, float* length)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, Matrix3x2*, float, float*, int>)(lpVtbl[14]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, length);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, float, float*, int>)(lpVtbl[14]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, length);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Matrix3x2*, float, float*, int>)(lpVtbl[14]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), worldTransform, flatteningTolerance, length);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.ComputePointAtLength" />
@@ -235,11 +171,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(15)]
 	public HResult ComputePointAtLength(float length, Matrix3x2* worldTransform, float flatteningTolerance, Vector2* point, Vector2* unitTangentVector)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, float, Matrix3x2*, float, Vector2*, Vector2*, int>)(lpVtbl[15]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), length, worldTransform, flatteningTolerance, point, unitTangentVector);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, float, Matrix3x2*, float, Vector2*, Vector2*, int>)(lpVtbl[15]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), length, worldTransform, flatteningTolerance, point, unitTangentVector);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, float, Matrix3x2*, float, Vector2*, Vector2*, int>)(lpVtbl[15]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), length, worldTransform, flatteningTolerance, point, unitTangentVector);
 	}
 
 	/// <inheritdoc cref="ID2D1Geometry.Widen" />
@@ -247,11 +179,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(16)]
 	public HResult Widen(float strokeWidth, ID2D1StrokeStyle* strokeStyle, Matrix3x2* worldTransform, float flatteningTolerance, Common.ID2D1SimplifiedGeometrySink* geometrySink)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, float, ID2D1StrokeStyle*, Matrix3x2*, float, Common.ID2D1SimplifiedGeometrySink*, int>)(lpVtbl[16]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), strokeWidth, strokeStyle, worldTransform, flatteningTolerance, geometrySink);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedGeometry::GetSourceGeometry"]/*' />
@@ -259,11 +187,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(17)]
 	public void GetSourceGeometry(ID2D1Geometry** sourceGeometry)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1TransformedGeometry*, ID2D1Geometry**, void>)(lpVtbl[17]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), sourceGeometry);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, ID2D1Geometry**, void>)(lpVtbl[17]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), sourceGeometry);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, ID2D1Geometry**, void>)(lpVtbl[17]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), sourceGeometry);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1TransformedGeometry::GetTransform"]/*' />
@@ -271,11 +195,7 @@ public unsafe partial struct ID2D1TransformedGeometry : ID2D1TransformedGeometry
 	[VtblIndex(18)]
 	public void GetTransform(Matrix3x2* transform)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID2D1TransformedGeometry*, Matrix3x2*, void>)(lpVtbl[18]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), transform);
-#else
-		((delegate* unmanaged[Stdcall]<ID2D1TransformedGeometry*, Matrix3x2*, void>)(lpVtbl[18]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), transform);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID2D1TransformedGeometry*, Matrix3x2*, void>)(lpVtbl[18]))((ID2D1TransformedGeometry*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	public interface Interface : ID2D1Geometry.Interface

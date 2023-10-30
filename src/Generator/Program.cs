@@ -2437,11 +2437,7 @@ public static class Program
                 WriteGuid(writer, comType.Guid, $"IID_{csTypeName}");
                 writer.WriteLine();
 
-                writer.WriteLineUndindented("#if NET6_0_OR_GREATER");
                 writer.WriteLine($"static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
-                writer.WriteLineUndindented("#else");
-                writer.WriteLine($"public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_{csTypeName}));");
-                writer.WriteLineUndindented("#endif");
                 writer.WriteLine();
             }
 
@@ -2480,11 +2476,7 @@ public static class Program
                 writer.WriteLine("[VtblIndex(0)]");
                 using (writer.PushBlock($"public HResult QueryInterface([NativeTypeName(\"const IID &\")] Guid* riid, void** ppvObject)"))
                 {
-                    writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
-                    writer.WriteLine($"return ((delegate* unmanaged<{comType.Name}*, Guid*, void**, int>)(lpVtbl[0]))(({comType.Name}*)Unsafe.AsPointer(ref this), riid, ppvObject);");
-                    writer.WriteLineUndindented($"#else");
-                    writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, Guid*, void**, int>)(lpVtbl[0]))(({comType.Name}*)Unsafe.AsPointer(ref this), riid, ppvObject);");
-                    writer.WriteLineUndindented($"#endif");
+                    writer.WriteLine($"return ((delegate* unmanaged[MemberFunction]<{comType.Name}*, Guid*, void**, int>)(lpVtbl[0]))(({comType.Name}*)Unsafe.AsPointer(ref this), riid, ppvObject);");
                 }
                 writer.WriteLine();
 
@@ -2495,11 +2487,7 @@ public static class Program
                 writer.WriteLine("[return: NativeTypeName(\"ULONG\")]");
                 using (writer.PushBlock($"public uint AddRef()"))
                 {
-                    writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
-                    writer.WriteLine($"return ((delegate* unmanaged<{comType.Name}*, uint>)(lpVtbl[1]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
-                    writer.WriteLineUndindented($"#else");
-                    writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, uint>)(lpVtbl[1]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
-                    writer.WriteLineUndindented($"#endif");
+                    writer.WriteLine($"return ((delegate* unmanaged[MemberFunction]<{comType.Name}*, uint>)(lpVtbl[1]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
                 }
                 writer.WriteLine();
 
@@ -2510,11 +2498,7 @@ public static class Program
                 writer.WriteLine("[return: NativeTypeName(\"ULONG\")]");
                 using (writer.PushBlock($"public uint Release()"))
                 {
-                    writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
-                    writer.WriteLine($"return ((delegate* unmanaged<{comType.Name}*, uint>)(lpVtbl[2]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
-                    writer.WriteLineUndindented($"#else");
-                    writer.WriteLine($"return ((delegate* unmanaged[Stdcall]<{comType.Name}*, uint>)(lpVtbl[2]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
-                    writer.WriteLineUndindented($"#endif");
+                    writer.WriteLine($"return ((delegate* unmanaged[MemberFunction]<{comType.Name}*, uint>)(lpVtbl[2]))(({comType.Name}*)Unsafe.AsPointer(ref this));");
                 }
                 writer.WriteLine();
                 vtblIndex = 3;
@@ -2707,13 +2691,8 @@ public static class Program
                             if (useReturnAsParameter)
                             {
                                 writer.WriteLine($"{returnType} result;");
-                                writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
                                 writer.Write("return ");
-                                writer.WriteLine($"*((delegate* unmanaged<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
-                                writer.WriteLineUndindented($"#else");
-                                writer.Write("return ");
-                                writer.WriteLine($"*((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
-                                writer.WriteLineUndindented($"#endif");
+                                writer.WriteLine($"*((delegate* unmanaged[MemberFunction]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this), &result{argumentNamesString});");
                             }
                             else
                             {
@@ -2723,15 +2702,9 @@ public static class Program
 
                         if (!useReturnAsParameter)
                         {
-                            writer.WriteLineUndindented($"#if NET6_0_OR_GREATER");
                             if (writeReturn)
                                 writer.Write("return ");
-                            writer.WriteLine($"((delegate* unmanaged<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
-                            writer.WriteLineUndindented($"#else");
-                            if (writeReturn)
-                                writer.Write("return ");
-                            writer.WriteLine($"((delegate* unmanaged[Stdcall]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
-                            writer.WriteLineUndindented($"#endif");
+                            writer.WriteLine($"((delegate* unmanaged[MemberFunction]<{comType.Name}*, {argumentTypesString}>)(lpVtbl[{vtblIndex}]))(({comType.Name}*)Unsafe.AsPointer(ref this){argumentNamesString});");
                         }
                     }
 

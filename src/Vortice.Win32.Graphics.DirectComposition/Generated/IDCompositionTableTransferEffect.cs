@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionTableTransferEffect));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionTableTransferEffect));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint>)(lpVtbl[1]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint>)(lpVtbl[1]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint>)(lpVtbl[1]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint>)(lpVtbl[2]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint>)(lpVtbl[2]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint>)(lpVtbl[2]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDCompositionFilterEffect.SetInput" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(3)]
 	public HResult SetInput(uint index, IUnknown* input, uint flags)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, input, flags);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, input, flags);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IUnknown*, uint, int>)(lpVtbl[3]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, input, flags);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetRedTable"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(4)]
 	public HResult SetRedTable(float* tableValues, uint count)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[4]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[4]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[4]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetGreenTable"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(5)]
 	public HResult SetGreenTable(float* tableValues, uint count)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[5]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[5]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[5]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetBlueTable"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(6)]
 	public HResult SetBlueTable(float* tableValues, uint count)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[6]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[6]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[6]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetAlphaTable"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(7)]
 	public HResult SetAlphaTable(float* tableValues, uint count)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[7]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[7]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, float*, uint, int>)(lpVtbl[7]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), tableValues, count);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetRedDisable"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(8)]
 	public HResult SetRedDisable(Bool32 redDisable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), redDisable);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), redDisable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[8]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), redDisable);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetGreenDisable"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(9)]
 	public HResult SetGreenDisable(Bool32 greenDisable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[9]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), greenDisable);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[9]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), greenDisable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[9]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), greenDisable);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetBlueDisable"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(10)]
 	public HResult SetBlueDisable(Bool32 blueDisable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), blueDisable);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), blueDisable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[10]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), blueDisable);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetAlphaDisable"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(11)]
 	public HResult SetAlphaDisable(Bool32 alphaDisable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[11]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), alphaDisable);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[11]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), alphaDisable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[11]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), alphaDisable);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetClampOutput"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(12)]
 	public HResult SetClampOutput(Bool32 clampOutput)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[12]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), clampOutput);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[12]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), clampOutput);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, Bool32, int>)(lpVtbl[12]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), clampOutput);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetRedTableValue"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(13)]
 	public HResult SetRedTableValue(uint index, IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[13]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetRedTableValue"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(14)]
 	public HResult SetRedTableValue(uint index, float value)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[14]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[14]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[14]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetGreenTableValue"]/*' />
@@ -235,11 +171,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(15)]
 	public HResult SetGreenTableValue(uint index, IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[15]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[15]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[15]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetGreenTableValue"]/*' />
@@ -247,11 +179,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(16)]
 	public HResult SetGreenTableValue(uint index, float value)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[16]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[16]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[16]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetBlueTableValue"]/*' />
@@ -259,11 +187,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(17)]
 	public HResult SetBlueTableValue(uint index, IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[17]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[17]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[17]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetBlueTableValue"]/*' />
@@ -271,11 +195,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(18)]
 	public HResult SetBlueTableValue(uint index, float value)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[18]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[18]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[18]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetAlphaTableValue"]/*' />
@@ -283,11 +203,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(19)]
 	public HResult SetAlphaTableValue(uint index, IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[19]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[19]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, IDCompositionAnimation*, int>)(lpVtbl[19]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, animation);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionTableTransferEffect::SetAlphaTableValue"]/*' />
@@ -295,11 +211,7 @@ public unsafe partial struct IDCompositionTableTransferEffect : IDCompositionTab
 	[VtblIndex(20)]
 	public HResult SetAlphaTableValue(uint index, float value)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[20]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[20]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionTableTransferEffect*, uint, float, int>)(lpVtbl[20]))((IDCompositionTableTransferEffect*)Unsafe.AsPointer(ref this), index, value);
 	}
 
 	public interface Interface : IDCompositionFilterEffect.Interface

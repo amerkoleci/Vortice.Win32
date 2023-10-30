@@ -40,11 +40,7 @@ public unsafe partial struct ID3D12DSRDeviceFactory : ID3D12DSRDeviceFactory.Int
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DSRDeviceFactory));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D12DSRDeviceFactory));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID3D12DSRDeviceFactory : ID3D12DSRDeviceFactory.Int
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DSRDeviceFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DSRDeviceFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DSRDeviceFactory*, Guid*, void**, int>)(lpVtbl[0]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID3D12DSRDeviceFactory : ID3D12DSRDeviceFactory.Int
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DSRDeviceFactory*, uint>)(lpVtbl[1]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DSRDeviceFactory*, uint>)(lpVtbl[1]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DSRDeviceFactory*, uint>)(lpVtbl[1]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID3D12DSRDeviceFactory : ID3D12DSRDeviceFactory.Int
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DSRDeviceFactory*, uint>)(lpVtbl[2]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DSRDeviceFactory*, uint>)(lpVtbl[2]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DSRDeviceFactory*, uint>)(lpVtbl[2]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DSRDeviceFactory::CreateDSRDevice"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct ID3D12DSRDeviceFactory : ID3D12DSRDeviceFactory.Int
 	[VtblIndex(3)]
 	public HResult CreateDSRDevice(ID3D12Device* pD3D12Device, uint NodeMask, Guid* riid, void** ppvDSRDevice)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D12DSRDeviceFactory*, ID3D12Device*, uint, Guid*, void**, int>)(lpVtbl[3]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this), pD3D12Device, NodeMask, riid, ppvDSRDevice);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D12DSRDeviceFactory*, ID3D12Device*, uint, Guid*, void**, int>)(lpVtbl[3]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this), pD3D12Device, NodeMask, riid, ppvDSRDevice);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DSRDeviceFactory*, ID3D12Device*, uint, Guid*, void**, int>)(lpVtbl[3]))((ID3D12DSRDeviceFactory*)Unsafe.AsPointer(ref this), pD3D12Device, NodeMask, riid, ppvDSRDevice);
 	}
 
 	public interface Interface : IUnknown.Interface

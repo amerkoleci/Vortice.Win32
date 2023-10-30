@@ -40,11 +40,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICStreamProvider));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IWICStreamProvider));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStreamProvider*, Guid*, void**, int>)(lpVtbl[0]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, Guid*, void**, int>)(lpVtbl[0]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, Guid*, void**, int>)(lpVtbl[0]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStreamProvider*, uint>)(lpVtbl[1]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, uint>)(lpVtbl[1]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, uint>)(lpVtbl[1]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStreamProvider*, uint>)(lpVtbl[2]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, uint>)(lpVtbl[2]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, uint>)(lpVtbl[2]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::GetStream"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	[VtblIndex(3)]
 	public HResult GetStream(Com.IStream** ppIStream)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStreamProvider*, Com.IStream**, int>)(lpVtbl[3]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), ppIStream);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, Com.IStream**, int>)(lpVtbl[3]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), ppIStream);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, Com.IStream**, int>)(lpVtbl[3]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), ppIStream);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::GetPersistOptions"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	[VtblIndex(4)]
 	public HResult GetPersistOptions(uint* pdwPersistOptions)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStreamProvider*, uint*, int>)(lpVtbl[4]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), pdwPersistOptions);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, uint*, int>)(lpVtbl[4]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), pdwPersistOptions);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, uint*, int>)(lpVtbl[4]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), pdwPersistOptions);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::GetPreferredVendorGUID"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	[VtblIndex(5)]
 	public HResult GetPreferredVendorGUID(Guid* pguidPreferredVendor)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStreamProvider*, Guid*, int>)(lpVtbl[5]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), pguidPreferredVendor);
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, Guid*, int>)(lpVtbl[5]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), pguidPreferredVendor);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, Guid*, int>)(lpVtbl[5]))((IWICStreamProvider*)Unsafe.AsPointer(ref this), pguidPreferredVendor);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStreamProvider::RefreshStream"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct IWICStreamProvider : IWICStreamProvider.Interface, 
 	[VtblIndex(6)]
 	public HResult RefreshStream()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IWICStreamProvider*, int>)(lpVtbl[6]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IWICStreamProvider*, int>)(lpVtbl[6]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IWICStreamProvider*, int>)(lpVtbl[6]))((IWICStreamProvider*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IUnknown.Interface

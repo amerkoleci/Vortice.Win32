@@ -40,11 +40,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionVisualDebug));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_IDCompositionVisualDebug));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, Guid*, void**, int>)(lpVtbl[0]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, uint>)(lpVtbl[1]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, uint>)(lpVtbl[1]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, uint>)(lpVtbl[1]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, uint>)(lpVtbl[2]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, uint>)(lpVtbl[2]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, uint>)(lpVtbl[2]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetOffsetX" />
@@ -91,11 +75,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(3)]
 	public HResult SetOffsetX(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionAnimation*, int>)(lpVtbl[3]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetOffsetX" />
@@ -103,11 +83,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(4)]
 	public HResult SetOffsetX(float offsetX)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, float, int>)(lpVtbl[4]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), offsetX);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, float, int>)(lpVtbl[4]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), offsetX);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, float, int>)(lpVtbl[4]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), offsetX);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetOffsetY" />
@@ -115,11 +91,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(5)]
 	public HResult SetOffsetY(IDCompositionAnimation* animation)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), animation);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), animation);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionAnimation*, int>)(lpVtbl[5]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), animation);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetOffsetY" />
@@ -127,11 +99,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(6)]
 	public HResult SetOffsetY(float offsetY)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, float, int>)(lpVtbl[6]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), offsetY);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, float, int>)(lpVtbl[6]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), offsetY);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, float, int>)(lpVtbl[6]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), offsetY);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetTransform" />
@@ -139,11 +107,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(7)]
 	public HResult SetTransform(IDCompositionTransform* transform)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IDCompositionTransform*, int>)(lpVtbl[7]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), transform);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IDCompositionTransform*, int>)(lpVtbl[7]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), transform);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionTransform*, int>)(lpVtbl[7]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), transform);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetTransform" />
@@ -151,11 +115,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(8)]
 	public HResult SetTransform(Matrix3x2* matrix)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, Matrix3x2*, int>)(lpVtbl[8]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), matrix);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, Matrix3x2*, int>)(lpVtbl[8]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), matrix);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, Matrix3x2*, int>)(lpVtbl[8]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), matrix);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetTransformParent" />
@@ -163,11 +123,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(9)]
 	public HResult SetTransformParent(IDCompositionVisual* visual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IDCompositionVisual*, int>)(lpVtbl[9]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IDCompositionVisual*, int>)(lpVtbl[9]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionVisual*, int>)(lpVtbl[9]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetEffect" />
@@ -175,11 +131,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(10)]
 	public HResult SetEffect(IDCompositionEffect* effect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IDCompositionEffect*, int>)(lpVtbl[10]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), effect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IDCompositionEffect*, int>)(lpVtbl[10]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), effect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionEffect*, int>)(lpVtbl[10]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), effect);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetBitmapInterpolationMode" />
@@ -187,11 +139,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(11)]
 	public HResult SetBitmapInterpolationMode(BitmapInterpolationMode interpolationMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, BitmapInterpolationMode, int>)(lpVtbl[11]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), interpolationMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, BitmapInterpolationMode, int>)(lpVtbl[11]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), interpolationMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, BitmapInterpolationMode, int>)(lpVtbl[11]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), interpolationMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetBorderMode" />
@@ -199,11 +147,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(12)]
 	public HResult SetBorderMode(BorderMode borderMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, BorderMode, int>)(lpVtbl[12]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), borderMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, BorderMode, int>)(lpVtbl[12]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), borderMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, BorderMode, int>)(lpVtbl[12]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), borderMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetClip" />
@@ -211,11 +155,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(13)]
 	public HResult SetClip(IDCompositionClip* clip)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IDCompositionClip*, int>)(lpVtbl[13]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), clip);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IDCompositionClip*, int>)(lpVtbl[13]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), clip);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionClip*, int>)(lpVtbl[13]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), clip);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetClip" />
@@ -223,11 +163,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(14)]
 	public HResult SetClip(Win32.Numerics.RectF* rect)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), rect);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), rect);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, Win32.Numerics.RectF*, int>)(lpVtbl[14]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), rect);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetContent" />
@@ -235,11 +171,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(15)]
 	public HResult SetContent(IUnknown* content)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IUnknown*, int>)(lpVtbl[15]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), content);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IUnknown*, int>)(lpVtbl[15]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), content);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IUnknown*, int>)(lpVtbl[15]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), content);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.AddVisual" />
@@ -247,11 +179,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(16)]
 	public HResult AddVisual(IDCompositionVisual* visual, Bool32 insertAbove, IDCompositionVisual* referenceVisual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IDCompositionVisual*, Bool32, IDCompositionVisual*, int>)(lpVtbl[16]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual, insertAbove, referenceVisual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IDCompositionVisual*, Bool32, IDCompositionVisual*, int>)(lpVtbl[16]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual, insertAbove, referenceVisual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionVisual*, Bool32, IDCompositionVisual*, int>)(lpVtbl[16]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual, insertAbove, referenceVisual);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.RemoveVisual" />
@@ -259,11 +187,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(17)]
 	public HResult RemoveVisual(IDCompositionVisual* visual)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, IDCompositionVisual*, int>)(lpVtbl[17]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, IDCompositionVisual*, int>)(lpVtbl[17]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, IDCompositionVisual*, int>)(lpVtbl[17]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visual);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.RemoveAllVisuals" />
@@ -271,11 +195,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(18)]
 	public HResult RemoveAllVisuals()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, int>)(lpVtbl[18]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, int>)(lpVtbl[18]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, int>)(lpVtbl[18]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual.SetCompositeMode" />
@@ -283,11 +203,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(19)]
 	public HResult SetCompositeMode(CompositeMode compositeMode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, CompositeMode, int>)(lpVtbl[19]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), compositeMode);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, CompositeMode, int>)(lpVtbl[19]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), compositeMode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, CompositeMode, int>)(lpVtbl[19]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), compositeMode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual2.SetOpacityMode" />
@@ -295,11 +211,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(20)]
 	public HResult SetOpacityMode(OpacityMode mode)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, OpacityMode, int>)(lpVtbl[20]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), mode);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, OpacityMode, int>)(lpVtbl[20]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), mode);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, OpacityMode, int>)(lpVtbl[20]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), mode);
 	}
 
 	/// <inheritdoc cref="IDCompositionVisual2.SetBackFaceVisibility" />
@@ -307,11 +219,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(21)]
 	public HResult SetBackFaceVisibility(BackfaceVisibility visibility)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, BackfaceVisibility, int>)(lpVtbl[21]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visibility);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, BackfaceVisibility, int>)(lpVtbl[21]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visibility);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, BackfaceVisibility, int>)(lpVtbl[21]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), visibility);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::EnableHeatMap"]/*' />
@@ -319,11 +227,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(22)]
 	public HResult EnableHeatMap(Color4* color)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, Color4*, int>)(lpVtbl[22]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), color);
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, Color4*, int>)(lpVtbl[22]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), color);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, Color4*, int>)(lpVtbl[22]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this), color);
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::DisableHeatMap"]/*' />
@@ -331,11 +235,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(23)]
 	public HResult DisableHeatMap()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, int>)(lpVtbl[23]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, int>)(lpVtbl[23]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, int>)(lpVtbl[23]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::EnableRedrawRegions"]/*' />
@@ -343,11 +243,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(24)]
 	public HResult EnableRedrawRegions()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, int>)(lpVtbl[24]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, int>)(lpVtbl[24]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, int>)(lpVtbl[24]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="IDCompositionVisualDebug::DisableRedrawRegions"]/*' />
@@ -355,11 +251,7 @@ public unsafe partial struct IDCompositionVisualDebug : IDCompositionVisualDebug
 	[VtblIndex(25)]
 	public HResult DisableRedrawRegions()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<IDCompositionVisualDebug*, int>)(lpVtbl[25]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<IDCompositionVisualDebug*, int>)(lpVtbl[25]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<IDCompositionVisualDebug*, int>)(lpVtbl[25]))((IDCompositionVisualDebug*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IDCompositionVisual2.Interface

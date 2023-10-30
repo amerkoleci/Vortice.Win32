@@ -20,11 +20,7 @@ public unsafe partial struct IXAudio2EngineCallback : IXAudio2EngineCallback.Int
 	[VtblIndex(0)]
 	public void OnProcessingPassStart()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2EngineCallback*, void>)(lpVtbl[0]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2EngineCallback*, void>)(lpVtbl[0]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2EngineCallback*, void>)(lpVtbl[0]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2EngineCallback::OnProcessingPassEnd"]/*' />
@@ -32,11 +28,7 @@ public unsafe partial struct IXAudio2EngineCallback : IXAudio2EngineCallback.Int
 	[VtblIndex(1)]
 	public void OnProcessingPassEnd()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2EngineCallback*, void>)(lpVtbl[1]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2EngineCallback*, void>)(lpVtbl[1]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2EngineCallback*, void>)(lpVtbl[1]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2EngineCallback::OnCriticalError"]/*' />
@@ -44,11 +36,7 @@ public unsafe partial struct IXAudio2EngineCallback : IXAudio2EngineCallback.Int
 	[VtblIndex(2)]
 	public void OnCriticalError(HResult Error)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<IXAudio2EngineCallback*, HResult, void>)(lpVtbl[2]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this), Error);
-#else
-		((delegate* unmanaged[Stdcall]<IXAudio2EngineCallback*, HResult, void>)(lpVtbl[2]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this), Error);
-#endif
+		((delegate* unmanaged[MemberFunction]<IXAudio2EngineCallback*, HResult, void>)(lpVtbl[2]))((IXAudio2EngineCallback*)Unsafe.AsPointer(ref this), Error);
 	}
 
 	public interface Interface 

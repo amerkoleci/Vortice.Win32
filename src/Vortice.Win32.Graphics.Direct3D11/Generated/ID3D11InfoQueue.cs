@@ -40,11 +40,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 		}
 	}
 
-#if NET6_0_OR_GREATER
 	static Guid* INativeGuid.NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11InfoQueue));
-#else
-	public static Guid* NativeGuid => (Guid*)Unsafe.AsPointer(ref Unsafe.AsRef(in IID_ID3D11InfoQueue));
-#endif
 
 	public void** lpVtbl;
 
@@ -53,11 +49,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(0)]
 	public HResult QueryInterface([NativeTypeName("const IID &")] Guid* riid, void** ppvObject)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), riid, ppvObject);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, Guid*, void**, int>)(lpVtbl[0]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), riid, ppvObject);
 	}
 
 	/// <inheritdoc cref="IUnknown.AddRef" />
@@ -66,11 +58,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint AddRef()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, uint>)(lpVtbl[1]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, uint>)(lpVtbl[1]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, uint>)(lpVtbl[1]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IUnknown.Release" />
@@ -79,11 +67,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[return: NativeTypeName("ULONG")]
 	public uint Release()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, uint>)(lpVtbl[2]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, uint>)(lpVtbl[2]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, uint>)(lpVtbl[2]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetMessageCountLimit"]/*' />
@@ -91,11 +75,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(3)]
 	public HResult SetMessageCountLimit(ulong MessageCountLimit)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, ulong, int>)(lpVtbl[3]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), MessageCountLimit);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, ulong, int>)(lpVtbl[3]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), MessageCountLimit);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong, int>)(lpVtbl[3]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), MessageCountLimit);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::ClearStoredMessages"]/*' />
@@ -103,11 +83,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(4)]
 	public void ClearStoredMessages()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11InfoQueue*, void>)(lpVtbl[4]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, void>)(lpVtbl[4]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, void>)(lpVtbl[4]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetMessage"]/*' />
@@ -115,11 +91,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(5)]
 	public HResult GetMessage(ulong MessageIndex, Message* pMessage, nuint* pMessageByteLength)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, ulong, Message*, nuint*, int>)(lpVtbl[5]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, ulong, Message*, nuint*, int>)(lpVtbl[5]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong, Message*, nuint*, int>)(lpVtbl[5]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), MessageIndex, pMessage, pMessageByteLength);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetNumMessagesAllowedByStorageFilter"]/*' />
@@ -127,11 +99,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(6)]
 	public ulong GetNumMessagesAllowedByStorageFilter()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, ulong>)(lpVtbl[6]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, ulong>)(lpVtbl[6]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong>)(lpVtbl[6]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetNumMessagesDeniedByStorageFilter"]/*' />
@@ -139,11 +107,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(7)]
 	public ulong GetNumMessagesDeniedByStorageFilter()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, ulong>)(lpVtbl[7]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, ulong>)(lpVtbl[7]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong>)(lpVtbl[7]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetNumStoredMessages"]/*' />
@@ -151,11 +115,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(8)]
 	public ulong GetNumStoredMessages()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, ulong>)(lpVtbl[8]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, ulong>)(lpVtbl[8]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong>)(lpVtbl[8]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetNumStoredMessagesAllowedByRetrievalFilter"]/*' />
@@ -163,11 +123,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(9)]
 	public ulong GetNumStoredMessagesAllowedByRetrievalFilter()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, ulong>)(lpVtbl[9]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, ulong>)(lpVtbl[9]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong>)(lpVtbl[9]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetNumMessagesDiscardedByMessageCountLimit"]/*' />
@@ -175,11 +131,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(10)]
 	public ulong GetNumMessagesDiscardedByMessageCountLimit()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, ulong>)(lpVtbl[10]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, ulong>)(lpVtbl[10]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong>)(lpVtbl[10]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetMessageCountLimit"]/*' />
@@ -187,11 +139,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(11)]
 	public ulong GetMessageCountLimit()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, ulong>)(lpVtbl[11]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, ulong>)(lpVtbl[11]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, ulong>)(lpVtbl[11]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddStorageFilterEntries"]/*' />
@@ -199,11 +147,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(12)]
 	public HResult AddStorageFilterEntries(InfoQueueFilter* pFilter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[12]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[12]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[12]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetStorageFilter"]/*' />
@@ -211,11 +155,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(13)]
 	public HResult GetStorageFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[13]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::ClearStorageFilter"]/*' />
@@ -223,11 +163,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(14)]
 	public void ClearStorageFilter()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11InfoQueue*, void>)(lpVtbl[14]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, void>)(lpVtbl[14]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, void>)(lpVtbl[14]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PushEmptyStorageFilter"]/*' />
@@ -235,11 +171,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(15)]
 	public HResult PushEmptyStorageFilter()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, int>)(lpVtbl[15]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, int>)(lpVtbl[15]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, int>)(lpVtbl[15]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PushCopyOfStorageFilter"]/*' />
@@ -247,11 +179,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(16)]
 	public HResult PushCopyOfStorageFilter()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, int>)(lpVtbl[16]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, int>)(lpVtbl[16]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, int>)(lpVtbl[16]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PushStorageFilter"]/*' />
@@ -259,11 +187,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(17)]
 	public HResult PushStorageFilter(InfoQueueFilter* pFilter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[17]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[17]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[17]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PopStorageFilter"]/*' />
@@ -271,11 +195,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(18)]
 	public void PopStorageFilter()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11InfoQueue*, void>)(lpVtbl[18]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, void>)(lpVtbl[18]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, void>)(lpVtbl[18]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetStorageFilterStackSize"]/*' />
@@ -283,11 +203,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(19)]
 	public uint GetStorageFilterStackSize()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, uint>)(lpVtbl[19]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, uint>)(lpVtbl[19]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, uint>)(lpVtbl[19]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddRetrievalFilterEntries"]/*' />
@@ -295,11 +211,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(20)]
 	public HResult AddRetrievalFilterEntries(InfoQueueFilter* pFilter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[20]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[20]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[20]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetRetrievalFilter"]/*' />
@@ -307,11 +219,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(21)]
 	public HResult GetRetrievalFilter(InfoQueueFilter* pFilter, nuint* pFilterByteLength)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[21]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[21]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, nuint*, int>)(lpVtbl[21]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter, pFilterByteLength);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::ClearRetrievalFilter"]/*' />
@@ -319,11 +227,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(22)]
 	public void ClearRetrievalFilter()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11InfoQueue*, void>)(lpVtbl[22]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, void>)(lpVtbl[22]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, void>)(lpVtbl[22]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PushEmptyRetrievalFilter"]/*' />
@@ -331,11 +235,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(23)]
 	public HResult PushEmptyRetrievalFilter()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, int>)(lpVtbl[23]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, int>)(lpVtbl[23]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, int>)(lpVtbl[23]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PushCopyOfRetrievalFilter"]/*' />
@@ -343,11 +243,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(24)]
 	public HResult PushCopyOfRetrievalFilter()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, int>)(lpVtbl[24]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, int>)(lpVtbl[24]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, int>)(lpVtbl[24]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PushRetrievalFilter"]/*' />
@@ -355,11 +251,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(25)]
 	public HResult PushRetrievalFilter(InfoQueueFilter* pFilter)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[25]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[25]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, InfoQueueFilter*, int>)(lpVtbl[25]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), pFilter);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::PopRetrievalFilter"]/*' />
@@ -367,11 +259,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(26)]
 	public void PopRetrievalFilter()
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11InfoQueue*, void>)(lpVtbl[26]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, void>)(lpVtbl[26]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, void>)(lpVtbl[26]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetRetrievalFilterStackSize"]/*' />
@@ -379,11 +267,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(27)]
 	public uint GetRetrievalFilterStackSize()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, uint>)(lpVtbl[27]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, uint>)(lpVtbl[27]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, uint>)(lpVtbl[27]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddMessage"]/*' />
@@ -391,11 +275,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(28)]
 	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, sbyte* pDescription)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, MessageCategory, MessageSeverity, MessageId, sbyte*, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageCategory, MessageSeverity, MessageId, sbyte*, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageCategory, MessageSeverity, MessageId, sbyte*, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddApplicationMessage"]/*' />
@@ -403,11 +283,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(29)]
 	public HResult AddApplicationMessage(MessageSeverity Severity, sbyte* pDescription)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, MessageSeverity, sbyte*, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageSeverity, sbyte*, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageSeverity, sbyte*, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetBreakOnCategory"]/*' />
@@ -415,11 +291,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(30)]
 	public HResult SetBreakOnCategory(MessageCategory Category, Bool32 bEnable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, MessageCategory, Bool32, int>)(lpVtbl[30]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, bEnable);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageCategory, Bool32, int>)(lpVtbl[30]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, bEnable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageCategory, Bool32, int>)(lpVtbl[30]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, bEnable);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetBreakOnSeverity"]/*' />
@@ -427,11 +299,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(31)]
 	public HResult SetBreakOnSeverity(MessageSeverity Severity, Bool32 bEnable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, MessageSeverity, Bool32, int>)(lpVtbl[31]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, bEnable);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageSeverity, Bool32, int>)(lpVtbl[31]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, bEnable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageSeverity, Bool32, int>)(lpVtbl[31]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, bEnable);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetBreakOnID"]/*' />
@@ -439,11 +307,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(32)]
 	public HResult SetBreakOnID(MessageId ID, Bool32 bEnable)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, MessageId, Bool32, int>)(lpVtbl[32]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID, bEnable);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageId, Bool32, int>)(lpVtbl[32]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID, bEnable);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageId, Bool32, int>)(lpVtbl[32]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID, bEnable);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetBreakOnCategory"]/*' />
@@ -451,11 +315,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(33)]
 	public Bool32 GetBreakOnCategory(MessageCategory Category)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, MessageCategory, Bool32>)(lpVtbl[33]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageCategory, Bool32>)(lpVtbl[33]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageCategory, Bool32>)(lpVtbl[33]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetBreakOnSeverity"]/*' />
@@ -463,11 +323,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(34)]
 	public Bool32 GetBreakOnSeverity(MessageSeverity Severity)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, MessageSeverity, Bool32>)(lpVtbl[34]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageSeverity, Bool32>)(lpVtbl[34]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageSeverity, Bool32>)(lpVtbl[34]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetBreakOnID"]/*' />
@@ -475,11 +331,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(35)]
 	public Bool32 GetBreakOnID(MessageId ID)
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, MessageId, Bool32>)(lpVtbl[35]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID);
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, MessageId, Bool32>)(lpVtbl[35]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID);
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageId, Bool32>)(lpVtbl[35]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), ID);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetMuteDebugOutput"]/*' />
@@ -487,11 +339,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(36)]
 	public void SetMuteDebugOutput(Bool32 bMute)
 	{
-#if NET6_0_OR_GREATER
-		((delegate* unmanaged<ID3D11InfoQueue*, Bool32, void>)(lpVtbl[36]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), bMute);
-#else
-		((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, Bool32, void>)(lpVtbl[36]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), bMute);
-#endif
+		((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, Bool32, void>)(lpVtbl[36]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), bMute);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::GetMuteDebugOutput"]/*' />
@@ -499,11 +347,7 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	[VtblIndex(37)]
 	public Bool32 GetMuteDebugOutput()
 	{
-#if NET6_0_OR_GREATER
-		return ((delegate* unmanaged<ID3D11InfoQueue*, Bool32>)(lpVtbl[37]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#else
-		return ((delegate* unmanaged[Stdcall]<ID3D11InfoQueue*, Bool32>)(lpVtbl[37]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
-#endif
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, Bool32>)(lpVtbl[37]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IUnknown.Interface
