@@ -25,7 +25,7 @@ public static unsafe partial class Apis
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMapGuidToShortName"]/*' />
 	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICMapGuidToShortName(Guid* guid, uint cchName, ushort* wzName, uint* pcchActual);
+	public static extern HResult WICMapGuidToShortName(Guid* guid, uint cchName, char** wzName, uint* pcchActual);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMapShortNameToGuid"]/*' />
 	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
@@ -33,7 +33,7 @@ public static unsafe partial class Apis
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMapSchemaToName"]/*' />
 	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICMapSchemaToName(Guid* guidMetadataFormat, ushort* pwzSchema, uint cchName, ushort* wzName, uint* pcchActual);
+	public static extern HResult WICMapSchemaToName(Guid* guidMetadataFormat, ushort* pwzSchema, uint cchName, char** wzName, uint* pcchActual);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMatchMetadataContent"]/*' />
 	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]

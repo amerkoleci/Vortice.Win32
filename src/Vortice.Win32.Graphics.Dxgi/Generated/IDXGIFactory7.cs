@@ -249,9 +249,9 @@ public unsafe partial struct IDXGIFactory7 : IDXGIFactory7.Interface, INativeGui
 	/// <inheritdoc cref="IDXGIFactory3.GetCreationFlags" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public uint GetCreationFlags()
+	public CreateFactoryFlags GetCreationFlags()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory7*, uint>)(lpVtbl[25]))((IDXGIFactory7*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory7*, CreateFactoryFlags>)(lpVtbl[25]))((IDXGIFactory7*)Unsafe.AsPointer(ref this));
 	}
 
 	/// <inheritdoc cref="IDXGIFactory4.EnumAdapterByLuid" />

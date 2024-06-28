@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTagName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetTagName(ushort* name, uint nameCount)
+	public HResult GetTagName(char** name, uint nameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[5]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char**, uint, int>)(lpVtbl[5]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTagNameLength"]/*' />
@@ -217,9 +217,9 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetSpecifiedAttributeName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetSpecifiedAttributeName(uint index, ushort* name, uint nameCount, Bool32* inherited)
+	public HResult GetSpecifiedAttributeName(uint index, char** name, uint nameCount, Bool32* inherited)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, uint, ushort*, uint, Bool32*, int>)(lpVtbl[21]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), index, name, nameCount, inherited);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, uint, char**, uint, Bool32*, int>)(lpVtbl[21]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), index, name, nameCount, inherited);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetSpecifiedAttributeNameLength"]/*' />
@@ -241,17 +241,17 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetTextValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(24)]
-	public HResult SetTextValue(ushort* name, uint nameCount)
+	public HResult SetTextValue(char* name, uint nameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[24]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, uint, int>)(lpVtbl[24]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTextValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult GetTextValue(ushort* name, uint nameCount)
+	public HResult GetTextValue(char** name, uint nameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, uint, int>)(lpVtbl[25]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char**, uint, int>)(lpVtbl[25]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTextValueLength"]/*' />
@@ -305,9 +305,9 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult GetAttributeValue(ushort* name, SvgAttributeStringType type, ushort* value, uint valueCount)
+	public HResult GetAttributeValue(ushort* name, SvgAttributeStringType type, char** value, uint valueCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, ushort*, uint, int>)(lpVtbl[32]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, char**, uint, int>)(lpVtbl[32]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValueLength"]/*' />
@@ -324,7 +324,7 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 		void GetDocument(ID2D1SvgDocument** document);
 
 		[VtblIndex(5)]
-		HResult GetTagName(ushort* name, uint nameCount);
+		HResult GetTagName(char** name, uint nameCount);
 
 		[VtblIndex(6)]
 		uint GetTagNameLength();
@@ -372,7 +372,7 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 		uint GetSpecifiedAttributeCount();
 
 		[VtblIndex(21)]
-		HResult GetSpecifiedAttributeName(uint index, ushort* name, uint nameCount, Bool32* inherited);
+		HResult GetSpecifiedAttributeName(uint index, char** name, uint nameCount, Bool32* inherited);
 
 		[VtblIndex(22)]
 		HResult GetSpecifiedAttributeNameLength(uint index, uint* nameLength, Bool32* inherited);
@@ -381,10 +381,10 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 		HResult RemoveAttribute(ushort* name);
 
 		[VtblIndex(24)]
-		HResult SetTextValue(ushort* name, uint nameCount);
+		HResult SetTextValue(char* name, uint nameCount);
 
 		[VtblIndex(25)]
-		HResult GetTextValue(ushort* name, uint nameCount);
+		HResult GetTextValue(char** name, uint nameCount);
 
 		[VtblIndex(26)]
 		uint GetTextValueLength();
@@ -405,7 +405,7 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 		HResult GetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
 
 		[VtblIndex(32)]
-		HResult GetAttributeValue(ushort* name, SvgAttributeStringType type, ushort* value, uint valueCount);
+		HResult GetAttributeValue(ushort* name, SvgAttributeStringType type, char** value, uint valueCount);
 
 		[VtblIndex(33)]
 		HResult GetAttributeValueLength(ushort* name, SvgAttributeStringType type, uint* valueLength);

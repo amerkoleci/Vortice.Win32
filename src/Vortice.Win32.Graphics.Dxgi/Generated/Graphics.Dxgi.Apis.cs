@@ -11,21 +11,7 @@ namespace Win32.Graphics.Dxgi;
 
 public static partial class Apis
 {
-	public const uint DXGI_RESOURCE_PRIORITY_MINIMUM = 671088640;
-
-	public const uint DXGI_RESOURCE_PRIORITY_LOW = 1342177280;
-
-	public const uint DXGI_RESOURCE_PRIORITY_NORMAL = 2013265920;
-
-	public const uint DXGI_RESOURCE_PRIORITY_HIGH = 2684354560;
-
-	public const uint DXGI_RESOURCE_PRIORITY_MAXIMUM = 3355443200;
-
 	public const uint DXGI_MAX_SWAP_CHAIN_BUFFERS = 16;
-
-	public const uint DXGI_SHARED_RESOURCE_READ = 2147483648;
-
-	public const uint DXGI_SHARED_RESOURCE_WRITE = 1;
 
 	public const uint DXGI_DEBUG_BINARY_VERSION = 1;
 
@@ -128,8 +114,6 @@ public static partial class Apis
 	public const uint DXGI_INFO_QUEUE_MESSAGE_ID_STRING_FROM_APPLICATION = 0;
 
 	public const uint DXGI_INFO_QUEUE_DEFAULT_MESSAGE_COUNT_LIMIT = 1024;
-
-	public const uint DXGI_CREATE_FACTORY_DEBUG = 1;
 
 	public static readonly HResult DXGI_ERROR_INVALID_CALL = -2005270527;
 

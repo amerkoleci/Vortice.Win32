@@ -1,9 +1,7 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 #nullable disable
-
-using System.Text;
 
 namespace Generator;
 

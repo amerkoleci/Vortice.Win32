@@ -10716,21 +10716,6 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous3_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"hz","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvHZ","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous1_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -10741,6 +10726,21 @@
 				,"Fields":[
 					{"Name":"hx","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 					,{"Name":"dvHX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous3_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"hz","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvHZ","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -10827,7 +10827,7 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous8_e__Union"
+				"Name":"_Anonymous6_e__Union"
 				,"Architectures":[]
 				,"Platform":null
 				,"Kind":"Union"
@@ -10835,23 +10835,8 @@
 				,"PackingSize":0
 				,"SizeField":""
 				,"Fields":[
-					{"Name":"tv","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvTV","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
-				"Name":"_Anonymous4_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"rhw","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvRHW","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					{"Name":"specular","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					,{"Name":"dcSpecular","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -10872,7 +10857,7 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous6_e__Union"
+				"Name":"_Anonymous4_e__Union"
 				,"Architectures":[]
 				,"Platform":null
 				,"Kind":"Union"
@@ -10880,8 +10865,23 @@
 				,"PackingSize":0
 				,"SizeField":""
 				,"Fields":[
-					{"Name":"specular","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-					,{"Name":"dcSpecular","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					{"Name":"rhw","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvRHW","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous8_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"tv","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvTV","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -10968,7 +10968,7 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous4_e__Union"
+				"Name":"_Anonymous6_e__Union"
 				,"Architectures":[]
 				,"Platform":null
 				,"Kind":"Union"
@@ -10976,8 +10976,8 @@
 				,"PackingSize":0
 				,"SizeField":""
 				,"Fields":[
-					{"Name":"color","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-					,{"Name":"dcColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					{"Name":"tu","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvTU","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -10998,7 +10998,7 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous6_e__Union"
+				"Name":"_Anonymous4_e__Union"
 				,"Architectures":[]
 				,"Platform":null
 				,"Kind":"Union"
@@ -11006,8 +11006,8 @@
 				,"PackingSize":0
 				,"SizeField":""
 				,"Fields":[
-					{"Name":"tu","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvTU","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					{"Name":"color","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					,{"Name":"dcColor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -11094,6 +11094,36 @@
 				]
 			}
 			,{
+				"Name":"_Anonymous7_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"tu","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvTU","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous3_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"z","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+					,{"Name":"dvZ","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
 				"Name":"_Anonymous5_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -11119,36 +11149,6 @@
 				,"Fields":[
 					{"Name":"x","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 					,{"Name":"dvX","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
-				"Name":"_Anonymous3_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"z","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvZ","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
-				"Name":"_Anonymous7_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"tu","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-					,{"Name":"dvTU","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -11310,6 +11310,21 @@
 				]
 			}
 			,{
+				"Name":"_Anonymous3_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"specular","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
+					,{"Name":"dcvSpecular","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
 				"Name":"_Anonymous5_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -11335,21 +11350,6 @@
 				,"Fields":[
 					{"Name":"diffuse","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
 					,{"Name":"dcvDiffuse","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
-				"Name":"_Anonymous3_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"specular","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
-					,{"Name":"dcvSpecular","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -11418,21 +11418,6 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous4_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"emissive","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
-					,{"Name":"dcvEmissive","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous2_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -11443,6 +11428,21 @@
 				,"Fields":[
 					{"Name":"ambient","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
 					,{"Name":"dcvAmbient","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous4_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"emissive","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
+					,{"Name":"dcvEmissive","Type":{"Kind":"ApiRef","Name":"D3DCOLORVALUE","TargetKind":"Default","Api":"Graphics.Direct3D9","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -11869,21 +11869,6 @@
 				]
 			}
 			,{
-				"Name":"_Anonymous1_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"SizeField":""
-				,"Fields":[
-					{"Name":"v1","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-					,{"Name":"wV1","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous3_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -11894,6 +11879,21 @@
 				,"Fields":[
 					{"Name":"v3","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 					,{"Name":"wV3","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous1_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"SizeField":""
+				,"Fields":[
+					{"Name":"v1","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+					,{"Name":"wV1","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]

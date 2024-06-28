@@ -201,9 +201,9 @@ public unsafe partial struct IDXGIOutput5 : IDXGIOutput5.Interface, INativeGuid
 	/// <inheritdoc cref="IDXGIOutput1.GetDisplayModeList1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
+	public HResult GetDisplayModeList1(Common.Format EnumFormat, EnumModesFlags Flags, uint* pNumModes, ModeDescription1* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput5*, Common.Format, EnumModesFlags, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput5*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
 	}
 
 	/// <inheritdoc cref="IDXGIOutput1.FindClosestMatchingMode1" />

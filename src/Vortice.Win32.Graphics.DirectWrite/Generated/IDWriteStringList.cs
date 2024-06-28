@@ -89,9 +89,9 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetLocaleName(uint listIndex, ushort* localeName, uint size)
+	public HResult GetLocaleName(uint listIndex, char** localeName, uint size)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, uint, ushort*, uint, int>)(lpVtbl[5]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, localeName, size);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, uint, char**, uint, int>)(lpVtbl[5]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, localeName, size);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetStringLength"]/*' />
@@ -105,9 +105,9 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteStringList::GetString"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetString(uint listIndex, ushort* stringBuffer, uint stringBufferSize)
+	public HResult GetString(uint listIndex, char** stringBuffer, uint stringBufferSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, uint, ushort*, uint, int>)(lpVtbl[7]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteStringList*, uint, char**, uint, int>)(lpVtbl[7]))((IDWriteStringList*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -119,13 +119,13 @@ public unsafe partial struct IDWriteStringList : IDWriteStringList.Interface, IN
 		HResult GetLocaleNameLength(uint listIndex, uint* length);
 
 		[VtblIndex(5)]
-		HResult GetLocaleName(uint listIndex, ushort* localeName, uint size);
+		HResult GetLocaleName(uint listIndex, char** localeName, uint size);
 
 		[VtblIndex(6)]
 		HResult GetStringLength(uint listIndex, uint* length);
 
 		[VtblIndex(7)]
-		HResult GetString(uint listIndex, ushort* stringBuffer, uint stringBufferSize);
+		HResult GetString(uint listIndex, char** stringBuffer, uint stringBufferSize);
 	}
 }
 

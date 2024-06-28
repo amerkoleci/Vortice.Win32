@@ -89,9 +89,9 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetFilePathFromKey"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetFilePathFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ushort* filePath, uint filePathSize)
+	public HResult GetFilePathFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, char** filePath, uint filePathSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteLocalFontFileLoader*, void*, uint, ushort*, uint, int>)(lpVtbl[5]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, filePath, filePathSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteLocalFontFileLoader*, void*, uint, char**, uint, int>)(lpVtbl[5]))((IDWriteLocalFontFileLoader*)Unsafe.AsPointer(ref this), fontFileReferenceKey, fontFileReferenceKeySize, filePath, filePathSize);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteLocalFontFileLoader::GetLastWriteTimeFromKey"]/*' />
@@ -108,7 +108,7 @@ public unsafe partial struct IDWriteLocalFontFileLoader : IDWriteLocalFontFileLo
 		HResult GetFilePathLengthFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, uint* filePathLength);
 
 		[VtblIndex(5)]
-		HResult GetFilePathFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ushort* filePath, uint filePathSize);
+		HResult GetFilePathFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, char** filePath, uint filePathSize);
 
 		[VtblIndex(6)]
 		HResult GetLastWriteTimeFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, ulong* lastWriteTime);

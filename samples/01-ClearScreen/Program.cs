@@ -1,4 +1,4 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Numerics;
@@ -120,14 +120,14 @@ public static unsafe class Program
         TestD2D1AndDWrite();
 
         using ComPtr<IDXGIFactory2> factory = default;
-        uint factoryFlags = 0;
+        CreateFactoryFlags factoryFlags = CreateFactoryFlags.None;
 
 #if DEBUG
         {
             using ComPtr<IDXGIInfoQueue> dxgiInfoQueue = default;
             if (DXGIGetDebugInterface1(0, __uuidof<IDXGIInfoQueue>(), (void**)dxgiInfoQueue.GetAddressOf()).Success)
             {
-                factoryFlags = DXGI_CREATE_FACTORY_DEBUG;
+                factoryFlags = CreateFactoryFlags.Debug;
 
                 dxgiInfoQueue.Get()->SetBreakOnSeverity(DXGI_DEBUG_ALL, InfoQueueMessageSeverity.Error, true);
                 dxgiInfoQueue.Get()->SetBreakOnSeverity(DXGI_DEBUG_ALL, InfoQueueMessageSeverity.Corruption, true);

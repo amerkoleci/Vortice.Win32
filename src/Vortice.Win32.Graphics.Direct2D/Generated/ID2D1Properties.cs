@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPropertyName(uint index, ushort* name, uint nameCount)
+	public HResult GetPropertyName(uint index, char** name, uint nameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, name, nameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Properties*, uint, char**, uint, int>)(lpVtbl[4]))((ID2D1Properties*)Unsafe.AsPointer(ref this), index, name, nameCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Properties::GetPropertyNameLength"]/*' />
@@ -164,7 +164,7 @@ public unsafe partial struct ID2D1Properties : ID2D1Properties.Interface, INativ
 		uint GetPropertyCount();
 
 		[VtblIndex(4)]
-		HResult GetPropertyName(uint index, ushort* name, uint nameCount);
+		HResult GetPropertyName(uint index, char** name, uint nameCount);
 
 		[VtblIndex(5)]
 		uint GetPropertyNameLength(uint index);

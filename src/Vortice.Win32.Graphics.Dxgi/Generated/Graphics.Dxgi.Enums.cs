@@ -38,6 +38,144 @@ public enum Usage : uint
 	UnorderedAccess = 1024,
 }
 
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT"]/*' />
+/// <unmanaged>DXGI_PRESENT</unmanaged>
+[Flags]
+public enum PresentFlags : uint
+{
+	None = 0,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_TEST"]/*' />
+	/// <unmanaged>DXGI_PRESENT_TEST</unmanaged>
+	Test = 1,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_DO_NOT_SEQUENCE"]/*' />
+	/// <unmanaged>DXGI_PRESENT_DO_NOT_SEQUENCE</unmanaged>
+	DoNotSequence = 2,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_RESTART"]/*' />
+	/// <unmanaged>DXGI_PRESENT_RESTART</unmanaged>
+	Restart = 4,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_DO_NOT_WAIT"]/*' />
+	/// <unmanaged>DXGI_PRESENT_DO_NOT_WAIT</unmanaged>
+	DoNotWait = 8,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_STEREO_PREFER_RIGHT"]/*' />
+	/// <unmanaged>DXGI_PRESENT_STEREO_PREFER_RIGHT</unmanaged>
+	StereoPreferRight = 16,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_STEREO_TEMPORARY_MONO"]/*' />
+	/// <unmanaged>DXGI_PRESENT_STEREO_TEMPORARY_MONO</unmanaged>
+	StereoTemporaryMono = 32,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_RESTRICT_TO_OUTPUT"]/*' />
+	/// <unmanaged>DXGI_PRESENT_RESTRICT_TO_OUTPUT</unmanaged>
+	RestrictToOutput = 64,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_USE_DURATION"]/*' />
+	/// <unmanaged>DXGI_PRESENT_USE_DURATION</unmanaged>
+	UseDuration = 256,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_PRESENT::DXGI_PRESENT_ALLOW_TEARING"]/*' />
+	/// <unmanaged>DXGI_PRESENT_ALLOW_TEARING</unmanaged>
+	AllowTearing = 512,
+}
+
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES"]/*' />
+/// <unmanaged>DXGI_ENUM_MODES</unmanaged>
+[Flags]
+public enum EnumModesFlags : uint
+{
+	None = 0,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES::DXGI_ENUM_MODES_INTERLACED"]/*' />
+	/// <unmanaged>DXGI_ENUM_MODES_INTERLACED</unmanaged>
+	Interlaced = 1,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES::DXGI_ENUM_MODES_SCALING"]/*' />
+	/// <unmanaged>DXGI_ENUM_MODES_SCALING</unmanaged>
+	Scaling = 2,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES::DXGI_ENUM_MODES_STEREO"]/*' />
+	/// <unmanaged>DXGI_ENUM_MODES_STEREO</unmanaged>
+	Stereo = 4,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ENUM_MODES::DXGI_ENUM_MODES_DISABLED_STEREO"]/*' />
+	/// <unmanaged>DXGI_ENUM_MODES_DISABLED_STEREO</unmanaged>
+	DisabledStereo = 8,
+}
+
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS"]/*' />
+/// <unmanaged>DXGI_MWA_FLAGS</unmanaged>
+[Flags]
+public enum WindowAssociationFlags : uint
+{
+	None = 0,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_WINDOW_CHANGES"]/*' />
+	/// <unmanaged>DXGI_MWA_NO_WINDOW_CHANGES</unmanaged>
+	DXGI_MWA_NO_WINDOW_CHANGES = 1,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_ALT_ENTER"]/*' />
+	/// <unmanaged>DXGI_MWA_NO_ALT_ENTER</unmanaged>
+	DXGI_MWA_NO_ALT_ENTER = 2,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_PRINT_SCREEN"]/*' />
+	/// <unmanaged>DXGI_MWA_NO_PRINT_SCREEN</unmanaged>
+	DXGI_MWA_NO_PRINT_SCREEN = 4,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_VALID"]/*' />
+	/// <unmanaged>DXGI_MWA_VALID</unmanaged>
+	DXGI_MWA_VALID = 7,
+}
+
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS"]/*' />
+/// <unmanaged>DXGI_MAP_FLAGS</unmanaged>
+[Flags]
+public enum MapFlags : uint
+{
+	None = 0,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_READ"]/*' />
+	/// <unmanaged>DXGI_MAP_READ</unmanaged>
+	DXGI_MAP_READ = 1,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_WRITE"]/*' />
+	/// <unmanaged>DXGI_MAP_WRITE</unmanaged>
+	DXGI_MAP_WRITE = 2,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_DISCARD"]/*' />
+	/// <unmanaged>DXGI_MAP_DISCARD</unmanaged>
+	DXGI_MAP_DISCARD = 4,
+}
+
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY"]/*' />
+/// <unmanaged>DXGI_RESOURCE_PRIORITY</unmanaged>
+public enum ResourcePriority : uint
+{
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MINIMUM"]/*' />
+	/// <unmanaged>DXGI_RESOURCE_PRIORITY_MINIMUM</unmanaged>
+	Minimum = 671088640,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_LOW"]/*' />
+	/// <unmanaged>DXGI_RESOURCE_PRIORITY_LOW</unmanaged>
+	Low = 1342177280,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_NORMAL"]/*' />
+	/// <unmanaged>DXGI_RESOURCE_PRIORITY_NORMAL</unmanaged>
+	Normal = 2013265920,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_HIGH"]/*' />
+	/// <unmanaged>DXGI_RESOURCE_PRIORITY_HIGH</unmanaged>
+	High = 2684354560,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY::DXGI_RESOURCE_PRIORITY_MAXIMUM"]/*' />
+	/// <unmanaged>DXGI_RESOURCE_PRIORITY_MAXIMUM</unmanaged>
+	Maximum = 3355443200,
+}
+
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE_RW"]/*' />
+/// <unmanaged>DXGI_SHARED_RESOURCE_RW</unmanaged>
+[Flags]
+public enum SharedResourceRw : uint
+{
+	None = 0,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE_RW::DXGI_SHARED_RESOURCE_READ"]/*' />
+	/// <unmanaged>DXGI_SHARED_RESOURCE_READ</unmanaged>
+	Read = 2147483648,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_SHARED_RESOURCE_RW::DXGI_SHARED_RESOURCE_WRITE"]/*' />
+	/// <unmanaged>DXGI_SHARED_RESOURCE_WRITE</unmanaged>
+	Write = 1,
+}
+
+/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_CREATE_FACTORY_FLAGS"]/*' />
+/// <unmanaged>DXGI_CREATE_FACTORY_FLAGS</unmanaged>
+[Flags]
+public enum CreateFactoryFlags : uint
+{
+	None = 0,
+	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_CREATE_FACTORY_FLAGS::DXGI_CREATE_FACTORY_DEBUG"]/*' />
+	/// <unmanaged>DXGI_CREATE_FACTORY_DEBUG</unmanaged>
+	Debug = 1,
+}
+
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESIDENCY"]/*' />
 /// <unmanaged>DXGI_RESIDENCY</unmanaged>
 public enum Residency
@@ -1505,71 +1643,4 @@ public enum MessageId
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_Message_Id::DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired"]/*' />
 	/// <unmanaged>DXGI_MSG_Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired</unmanaged>
 	Phone_IDXGISwapChain_GetBackgroundColor_FlipSequentialRequired = 1031,
-}
-/// <unmanaged>DXGI_MAP</unmanaged>
-[Flags]
-public enum MapFlags : uint
-{
-	None = 0,
-	/// <unmanaged>DXGI_MAP_READ</unmanaged>
-	Read = 1,
-	/// <unmanaged>DXGI_MAP_WRITE</unmanaged>
-	Write = 2,
-	/// <unmanaged>DXGI_MAP_DISCARD</unmanaged>
-	Discard = 4,
-}
-
-/// <unmanaged>DXGI_ENUM_MODES</unmanaged>
-[Flags]
-public enum EnumModesFlags : uint
-{
-	None = 0,
-	/// <unmanaged>DXGI_ENUM_MODES_INTERLACED</unmanaged>
-	Interlaced = 1,
-	/// <unmanaged>DXGI_ENUM_MODES_SCALING</unmanaged>
-	Scaling = 2,
-	/// <unmanaged>DXGI_ENUM_MODES_STEREO</unmanaged>
-	Stereo = 4,
-	/// <unmanaged>DXGI_ENUM_MODES_DISABLED_STEREO</unmanaged>
-	DisabledStereo = 8,
-}
-
-/// <unmanaged>DXGI_PRESENT</unmanaged>
-[Flags]
-public enum PresentFlags : uint
-{
-	None = 0,
-	/// <unmanaged>DXGI_PRESENT_TEST</unmanaged>
-	Test = 1,
-	/// <unmanaged>DXGI_PRESENT_DO_NOT_SEQUENCE</unmanaged>
-	DoNotSequence = 2,
-	/// <unmanaged>DXGI_PRESENT_RESTART</unmanaged>
-	Restart = 4,
-	/// <unmanaged>DXGI_PRESENT_DO_NOT_WAIT</unmanaged>
-	DoNotWait = 8,
-	/// <unmanaged>DXGI_PRESENT_STEREO_PREFER_RIGHT</unmanaged>
-	StereoPreferRight = 16,
-	/// <unmanaged>DXGI_PRESENT_STEREO_TEMPORARY_MONO</unmanaged>
-	StereoTemporaryMono = 32,
-	/// <unmanaged>DXGI_PRESENT_RESTRICT_TO_OUTPUT</unmanaged>
-	RestrictToOutput = 64,
-	/// <unmanaged>DXGI_PRESENT_USE_DURATION</unmanaged>
-	UseDuration = 256,
-	/// <unmanaged>DXGI_PRESENT_ALLOW_TEARING</unmanaged>
-	AllowTearing = 512,
-}
-
-/// <unmanaged>DXGI_MWA</unmanaged>
-[Flags]
-public enum WindowAssociationFlags : uint
-{
-	None = 0,
-	/// <unmanaged>DXGI_MWA_NO_WINDOW_CHANGES</unmanaged>
-	NoWindowChanges = 1,
-	/// <unmanaged>DXGI_MWA_NO_ALT_ENTER</unmanaged>
-	NoAltEnter = 2,
-	/// <unmanaged>DXGI_MWA_NO_PRINT_SCREEN</unmanaged>
-	NoPrintScreen = 4,
-	/// <unmanaged>DXGI_MWA_VALID</unmanaged>
-	Valid = 7,
 }

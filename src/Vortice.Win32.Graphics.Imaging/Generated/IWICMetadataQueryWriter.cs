@@ -81,9 +81,9 @@ public unsafe partial struct IWICMetadataQueryWriter : IWICMetadataQueryWriter.I
 	/// <inheritdoc cref="IWICMetadataQueryReader.GetLocation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetLocation(uint cchMaxLength, ushort* wzNamespace, uint* pcchActualLength)
+	public HResult GetLocation(uint cchMaxLength, char** wzNamespace, uint* pcchActualLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, uint, ushort*, uint*, int>)(lpVtbl[4]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), cchMaxLength, wzNamespace, pcchActualLength);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, uint, char**, uint*, int>)(lpVtbl[4]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), cchMaxLength, wzNamespace, pcchActualLength);
 	}
 
 	/// <inheritdoc cref="IWICMetadataQueryReader.GetMetadataByName" />

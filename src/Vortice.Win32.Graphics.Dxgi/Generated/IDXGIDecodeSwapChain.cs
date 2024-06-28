@@ -73,9 +73,9 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::PresentBuffer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, uint Flags)
+	public HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, PresentFlags Flags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIDecodeSwapChain*, uint, uint, uint, int>)(lpVtbl[3]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), BufferToPresent, SyncInterval, Flags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIDecodeSwapChain*, uint, uint, PresentFlags, int>)(lpVtbl[3]))((IDXGIDecodeSwapChain*)Unsafe.AsPointer(ref this), BufferToPresent, SyncInterval, Flags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIDecodeSwapChain::SetSourceRect"]/*' />
@@ -145,7 +145,7 @@ public unsafe partial struct IDXGIDecodeSwapChain : IDXGIDecodeSwapChain.Interfa
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, uint Flags);
+		HResult PresentBuffer(uint BufferToPresent, uint SyncInterval, PresentFlags Flags);
 
 		[VtblIndex(4)]
 		HResult SetSourceRect(Rect* pRect);

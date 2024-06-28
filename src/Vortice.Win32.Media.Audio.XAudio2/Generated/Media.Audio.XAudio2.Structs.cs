@@ -17,10 +17,10 @@ public partial struct XAPORegistrationProperties
 	public Guid clsid;
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES::FriendlyName"]/*' />
-	public unsafe fixed ushort FriendlyName[256];
+	public unsafe fixed char FriendlyName[256];
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES::CopyrightInfo"]/*' />
-	public unsafe fixed ushort CopyrightInfo[256];
+	public unsafe fixed char CopyrightInfo[256];
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAPO_REGISTRATION_PROPERTIES::MajorVersion"]/*' />
 	public uint MajorVersion;

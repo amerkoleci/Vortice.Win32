@@ -161,9 +161,9 @@ public unsafe partial struct IDWriteFontFaceReference1 : IDWriteFontFaceReferenc
 	/// <inheritdoc cref="IDWriteFontFaceReference.EnqueueCharacterDownloadRequest" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult EnqueueCharacterDownloadRequest(ushort* characters, uint characterCount)
+	public HResult EnqueueCharacterDownloadRequest(char* characters, uint characterCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, ushort*, uint, int>)(lpVtbl[14]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), characters, characterCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference1*, char*, uint, int>)(lpVtbl[14]))((IDWriteFontFaceReference1*)Unsafe.AsPointer(ref this), characters, characterCount);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFaceReference.EnqueueGlyphDownloadRequest" />

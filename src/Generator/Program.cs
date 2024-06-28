@@ -1,4 +1,4 @@
-﻿// Copyright © Amer Koleci and Contributors.
+﻿// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Globalization;
@@ -10,8 +10,8 @@ namespace Generator;
 
 public static class Program
 {
-    private static readonly string[] jsons = new[]
-    {
+    private static readonly string[] s_jsons =
+    [
         "Graphics.Dxgi.Common.json",
         "Graphics.Dxgi.json",
         "Graphics.Direct3D.json",
@@ -31,7 +31,7 @@ public static class Program
         // Media
         //"Media.Audio.json",
         "Media.Audio.XAudio2.json",
-    };
+    ];
 
     private static readonly Dictionary<string, string> s_csNameMappings = new()
     {
@@ -52,7 +52,7 @@ public static class Program
         {"IntPtr", "nint" },
         {"UIntPtr", "nuint" },
 
-        {"Char", "ushort" },
+        {"Char", "char" },
 
         { "Foundation.BOOL", "Bool32" },
         { "Foundation.BOOLEAN", "byte" },
@@ -879,6 +879,8 @@ public static class Program
         { "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS", "DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAG" },
         { "DXGI_DEBUG_RLO_FLAGS", "DXGI_DEBUG_RLO" },
         { "DXGI_OFFER_RESOURCE_FLAGS", "DXGI_OFFER_RESOURCE_FLAG" },
+        { "DXGI_SHARED_RESOURCE_RW", "DXGI_SHARED_RESOURCE" },
+        { "DXGI_CREATE_FACTORY_FLAGS", "DXGI_CREATE_FACTORY" },
 
         // D3D
         { "D3D_INTERPOLATION_MODE", "D3D_INTERPOLATION" },
@@ -988,7 +990,7 @@ public static class Program
         {"DXGI_USAGE", true },
         {"DXGI_MAP", true },
         {"DXGI_PRESENT", true },
-        {"DXGI_MWA", true },
+        {"DXGI_MWA_FLAGS", true },
         {"DXGI_ENUM_MODES", true },
         {"DXC_HASHFLAG", true },
         {"DxcValidatorFlags", true },
@@ -1029,7 +1031,7 @@ public static class Program
         // Generated
         { "DXGI_MAP", "MapFlags" },
         { "DXGI_ENUM_MODES", "EnumModesFlags" },
-        { "DXGI_MWA", "WindowAssociationFlags" },
+        { "DXGI_MWA_FLAGS", "WindowAssociationFlags" },
         { "DXGI_PRESENT", "PresentFlags" },
         { "DXGI_DEBUG_RLO_FLAGS", "ReportLiveObjectFlags" },
 
@@ -1137,6 +1139,12 @@ public static class Program
         { "XAUDIO2_DEBUG_CONFIGURATION::BreakMask", "LogType" },
     };
 
+    private static readonly Dictionary<string, string> s_structFieldNameRemap = new()
+    {
+        { "D3D12_SAMPLE_MASK::SampleMask", "Mask" },
+        { "D3D12_DEPTH_STENCIL_FORMAT::DepthStencilFormat", "Format" },
+    };
+
     private static readonly Dictionary<string, string> s_mapFunctionParameters = new()
     {
         // DXGI
@@ -1144,7 +1152,7 @@ public static class Program
         { "IDXGIOutput::GetDisplayModeList::Flags", "DXGI_ENUM_MODES" },
         { "IDXGISwapChain::Present::Flags", "DXGI_PRESENT" },
         { "IDXGISwapChain::ResizeBuffers::SwapChainFlags", "DXGI_SWAP_CHAIN_FLAG" },
-        { "IDXGIFactory::MakeWindowAssociation::Flags", "DXGI_MWA" },
+        { "IDXGIFactory::MakeWindowAssociation::Flags", "DXGI_MWA_FLAGS" },
 
         // D3D11
         { "ID3D11DeviceContext::Map::MapFlags", "D3D11_MAP_FLAG" },
@@ -1243,7 +1251,7 @@ public static class Program
         //DocGenerator.Generate(new[] { "DComposition" }, Path.Combine(directCompositionPath, "DirectComposition.xml"));
         //DocGenerator.Generate(rootPath, new[] { "XAudio2", "XAUDIO2", "Hrtf", "XAPO", "X3DAUDIO" }, Path.Combine(XAudio2Path, "XAudio2.xml"));
 
-        foreach (string jsonFile in jsons)
+        foreach (string jsonFile in s_jsons)
         {
             string finalPath = Path.Combine(AppContext.BaseDirectory, "win32json", "api", jsonFile);
             string jsonData = File.ReadAllText(finalPath);
@@ -2206,6 +2214,10 @@ public static class Program
                 else if (structType.Name == "D3D12_NODE_MASK")
                 {
                     fieldValueName = "Mask";
+                }
+                else if (s_structFieldNameRemap.TryGetValue($"{structType.Name}::{field.Name}", out string? remapFieldName))
+                {
+                    fieldValueName = remapFieldName;
                 }
 
                 string fieldTypeName = GetTypeNameWithPointerCheck(api, field.Type);

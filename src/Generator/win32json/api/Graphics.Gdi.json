@@ -1332,13 +1332,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"LCS_CALIBRATED_RGB"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
 		"Name":"LCS_GM_BUSINESS"
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
@@ -7598,7 +7591,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"HGDIOBJ"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"DeleteObject"
 	}
 	,{
@@ -7607,7 +7600,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"HGDIOBJ"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"DeleteObject"
 	}
 	,{
@@ -7616,7 +7609,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"HGDIOBJ"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"DeleteObject"
 	}
 	,{
@@ -7625,7 +7618,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"HGDIOBJ"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"DeleteObject"
 	}
 	,{
@@ -7634,7 +7627,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"HGDIOBJ"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"DeleteObject"
 	}
 	,{
@@ -7643,7 +7636,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"DeleteMetaFile"
 	}
 	,{
@@ -7652,7 +7645,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"DeleteEnhMetaFile"
 	}
 	,{
@@ -7661,7 +7654,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"HGDIOBJ"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"DeleteObject"
 	}
 	,{
@@ -7670,7 +7663,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":null
 	}
 	,{
@@ -7679,8 +7672,8 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
+		,"FreeFunc":"DeleteObject"
 	}
 	,{
 		"Name":"HMONITOR"
@@ -7688,7 +7681,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":null
 	}
 	,{

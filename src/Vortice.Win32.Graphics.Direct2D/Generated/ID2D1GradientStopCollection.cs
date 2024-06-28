@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1GradientStopCollection : ID2D1GradientStopColl
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection::GetGradientStops"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetGradientStops(GradientStop* gradientStops, uint gradientStopsCount)
+	public void GetGradientStops(Common.GradientStop* gradientStops, uint gradientStopsCount)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection*, GradientStop*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection*, Common.GradientStop*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection::GetColorInterpolationGamma"]/*' />
@@ -116,7 +116,7 @@ public unsafe partial struct ID2D1GradientStopCollection : ID2D1GradientStopColl
 		uint GetGradientStopCount();
 
 		[VtblIndex(5)]
-		void GetGradientStops(GradientStop* gradientStops, uint gradientStopsCount);
+		void GetGradientStops(Common.GradientStop* gradientStops, uint gradientStopsCount);
 
 		[VtblIndex(6)]
 		Gamma GetColorInterpolationGamma();

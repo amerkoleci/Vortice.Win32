@@ -99,6 +99,12 @@ public static partial class Apis
 
 	public const uint D3D_SHADER_FEATURE_ATOMIC_INT64_ON_DESCRIPTOR_HEAP_RESOURCE = 268435456;
 
+	public const uint D3D_SHADER_FEATURE_ADVANCED_TEXTURE_OPS = 536870912;
+
+	public const uint D3D_SHADER_FEATURE_WRITEABLE_MSAA_TEXTURES = 1073741824;
+
+	public const uint D3D_SHADER_FEATURE_SAMPLE_CMP_GRADIENT_OR_BIAS = 2147483648;
+
 	public static ref readonly Guid WKPDID_D3DDebugObjectName
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]

@@ -217,9 +217,9 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontFamilyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetFontFamilyName(ushort* fontFamilyName, uint nameSize)
+	public HResult GetFontFamilyName(char** fontFamilyName, uint nameSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, ushort*, uint, int>)(lpVtbl[21]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, char**, uint, int>)(lpVtbl[21]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
@@ -265,9 +265,9 @@ public unsafe partial struct IDWriteTextFormat3 : IDWriteTextFormat3.Interface, 
 	/// <inheritdoc cref="IDWriteTextFormat.GetLocaleName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult GetLocaleName(ushort* localeName, uint nameSize)
+	public HResult GetLocaleName(char** localeName, uint nameSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), localeName, nameSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat3*, char**, uint, int>)(lpVtbl[27]))((IDWriteTextFormat3*)Unsafe.AsPointer(ref this), localeName, nameSize);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat1.SetVerticalGlyphOrientation" />

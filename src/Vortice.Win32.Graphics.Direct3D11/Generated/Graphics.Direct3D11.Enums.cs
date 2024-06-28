@@ -895,6 +895,9 @@ public enum FormatSupport2
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FORMAT_SUPPORT2::D3D11_FORMAT_SUPPORT2_MULTIPLANE_OVERLAY"]/*' />
 	/// <unmanaged>D3D11_FORMAT_SUPPORT2_MULTIPLANE_OVERLAY</unmanaged>
 	MultiplaneOverlay = 16384,
+	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_FORMAT_SUPPORT2::D3D11_FORMAT_SUPPORT2_DISPLAYABLE"]/*' />
+	/// <unmanaged>D3D11_FORMAT_SUPPORT2_DISPLAYABLE</unmanaged>
+	Displayable = 65536,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_ASYNC_GETDATA_FLAG"]/*' />

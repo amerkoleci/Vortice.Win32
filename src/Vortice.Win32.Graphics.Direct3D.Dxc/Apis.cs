@@ -1,4 +1,4 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using System.Reflection;
@@ -7,8 +7,6 @@ namespace Win32.Graphics.Direct3D.Dxc;
 
 public static unsafe partial class Apis
 {
-    public static ref readonly Guid CLSID_DxcUtils => ref CLSID_DxcLibrary;
-
     static Apis()
     {
         NativeLibrary.SetDllImportResolver(Assembly.GetExecutingAssembly(), OnDllImport);

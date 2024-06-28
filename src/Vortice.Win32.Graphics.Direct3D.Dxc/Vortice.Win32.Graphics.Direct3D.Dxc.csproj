@@ -1,14 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
-    <Description>DXC bindings.</Description>
-    
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <Description>DXC (DirectXShaderCompiler) bindings.</Description>
+
     <NoWarn>$(NoWarn);CS0419;IDE0017</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="build\**" PackagePath="build" Pack="true" />
     <Content Include="runtimes\**" PackagePath="runtimes" Pack="true" />
   </ItemGroup>
 

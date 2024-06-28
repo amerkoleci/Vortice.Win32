@@ -310,6 +310,27 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"D3D_SHADER_FEATURE_ADVANCED_TEXTURE_OPS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":536870912
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D_SHADER_FEATURE_WRITEABLE_MSAA_TEXTURES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1073741824
+		,"Attrs":[]
+	}
+	,{
+		"Name":"D3D_SHADER_FEATURE_SAMPLE_CMP_GRADIENT_OR_BIAS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483648
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WKPDID_D3DDebugObjectName"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -407,7 +428,8 @@
 		,"Flags":false
 		,"Scoped":false
 		,"Values":[
-			{"Name":"D3D_FEATURE_LEVEL_1_0_CORE","Value":4096}
+			{"Name":"D3D_FEATURE_LEVEL_1_0_GENERIC","Value":256}
+			,{"Name":"D3D_FEATURE_LEVEL_1_0_CORE","Value":4096}
 			,{"Name":"D3D_FEATURE_LEVEL_9_1","Value":37120}
 			,{"Name":"D3D_FEATURE_LEVEL_9_2","Value":37376}
 			,{"Name":"D3D_FEATURE_LEVEL_9_3","Value":37632}
@@ -1200,10 +1222,22 @@
 			,{"Name":"D3D_REGISTER_COMPONENT_UINT32","Value":1}
 			,{"Name":"D3D_REGISTER_COMPONENT_SINT32","Value":2}
 			,{"Name":"D3D_REGISTER_COMPONENT_FLOAT32","Value":3}
+			,{"Name":"D3D_REGISTER_COMPONENT_UINT16","Value":4}
+			,{"Name":"D3D_REGISTER_COMPONENT_SINT16","Value":5}
+			,{"Name":"D3D_REGISTER_COMPONENT_FLOAT16","Value":6}
+			,{"Name":"D3D_REGISTER_COMPONENT_UINT64","Value":7}
+			,{"Name":"D3D_REGISTER_COMPONENT_SINT64","Value":8}
+			,{"Name":"D3D_REGISTER_COMPONENT_FLOAT64","Value":9}
 			,{"Name":"D3D10_REGISTER_COMPONENT_UNKNOWN","Value":0}
 			,{"Name":"D3D10_REGISTER_COMPONENT_UINT32","Value":1}
 			,{"Name":"D3D10_REGISTER_COMPONENT_SINT32","Value":2}
 			,{"Name":"D3D10_REGISTER_COMPONENT_FLOAT32","Value":3}
+			,{"Name":"D3D10_REGISTER_COMPONENT_UINT16","Value":4}
+			,{"Name":"D3D10_REGISTER_COMPONENT_SINT16","Value":5}
+			,{"Name":"D3D10_REGISTER_COMPONENT_FLOAT16","Value":6}
+			,{"Name":"D3D10_REGISTER_COMPONENT_UINT64","Value":7}
+			,{"Name":"D3D10_REGISTER_COMPONENT_SINT64","Value":8}
+			,{"Name":"D3D10_REGISTER_COMPONENT_FLOAT64","Value":9}
 		]
 		,"IntegerBase":"Int32"
 	}

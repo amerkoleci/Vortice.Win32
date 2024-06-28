@@ -129,17 +129,17 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <inheritdoc cref="IDXGIResource.SetEvictionPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetEvictionPriority(uint EvictionPriority)
+	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, uint, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource1*)Unsafe.AsPointer(ref this), EvictionPriority);
 	}
 
 	/// <inheritdoc cref="IDXGIResource.GetEvictionPriority" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetEvictionPriority(uint* pEvictionPriority)
+	public HResult GetEvictionPriority(ResourcePriority* pEvictionPriority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, uint*, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, ResourcePriority*, int>)(lpVtbl[11]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pEvictionPriority);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSubresourceSurface"]/*' />

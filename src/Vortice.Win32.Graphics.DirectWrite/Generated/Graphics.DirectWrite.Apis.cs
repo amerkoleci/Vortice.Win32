@@ -26,5 +26,7 @@ public static partial class Apis
 	public static readonly HResult DWRITE_E_TOOMANYDOWNLOADS = -2003283952;
 
 	public const uint DWRITE_STANDARD_FONT_AXIS_COUNT = 5;
+
+	public const uint DWRITE_NO_PALETTE_INDEX = 65535;
 }
 

@@ -201,9 +201,9 @@ public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::GetDisplayModeList1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc)
+	public HResult GetDisplayModeList1(Common.Format EnumFormat, EnumModesFlags Flags, uint* pNumModes, ModeDescription1* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput1*, Common.Format, uint, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIOutput1*, Common.Format, EnumModesFlags, uint*, ModeDescription1*, int>)(lpVtbl[19]))((IDXGIOutput1*)Unsafe.AsPointer(ref this), EnumFormat, Flags, pNumModes, pDesc);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIOutput1::FindClosestMatchingMode1"]/*' />
@@ -233,7 +233,7 @@ public unsafe partial struct IDXGIOutput1 : IDXGIOutput1.Interface, INativeGuid
 	public interface Interface : IDXGIOutput.Interface
 	{
 		[VtblIndex(19)]
-		HResult GetDisplayModeList1(Common.Format EnumFormat, uint Flags, uint* pNumModes, ModeDescription1* pDesc);
+		HResult GetDisplayModeList1(Common.Format EnumFormat, EnumModesFlags Flags, uint* pNumModes, ModeDescription1* pDesc);
 
 		[VtblIndex(20)]
 		HResult FindClosestMatchingMode1(ModeDescription1* pModeToMatch, ModeDescription1* pClosestMatch, IUnknown* pConcernedDevice);

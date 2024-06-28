@@ -833,3 +833,293 @@ public partial struct FontAxisRange
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_AXIS_RANGE::maxValue"]/*' />
 	public float maxValue;
 }
+
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BITMAP_DATA_BGRA32"]/*' />
+/// <unmanaged>DWRITE_BITMAP_DATA_BGRA32</unmanaged>
+public partial struct BitmapDataBgra32
+{
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BITMAP_DATA_BGRA32::width"]/*' />
+	public uint width;
+
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BITMAP_DATA_BGRA32::height"]/*' />
+	public uint height;
+
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_BITMAP_DATA_BGRA32::pixels"]/*' />
+	public unsafe uint* pixels;
+}
+
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_COLOR"]/*' />
+/// <unmanaged>DWRITE_PAINT_COLOR</unmanaged>
+public partial struct PaintColor
+{
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_COLOR::value"]/*' />
+	public Color4 value;
+
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_COLOR::paletteEntryIndex"]/*' />
+	public ushort paletteEntryIndex;
+
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_COLOR::alphaMultiplier"]/*' />
+	public float alphaMultiplier;
+
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_COLOR::colorAttributes"]/*' />
+	public PaintAttributes colorAttributes;
+}
+
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ELEMENT"]/*' />
+/// <unmanaged>DWRITE_PAINT_ELEMENT</unmanaged>
+public partial struct PaintElement
+{
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ELEMENT::paintType"]/*' />
+	public PaintType paintType;
+
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ELEMENT::paint"]/*' />
+	public PAINT_UNION paint;
+
+	[UnscopedRef]
+	public ref PAINT_UNION.PAINT_LAYERS layers
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.layers;
+		}
+	}
+
+	[UnscopedRef]
+	public ref PAINT_UNION.PAINT_SOLID_GLYPH solidGlyph
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.solidGlyph;
+		}
+	}
+
+	[UnscopedRef]
+	public ref PaintColor solid
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.solid;
+		}
+	}
+
+	[UnscopedRef]
+	public ref PAINT_UNION.PAINT_LINEAR_GRADIENT linearGradient
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.linearGradient;
+		}
+	}
+
+	[UnscopedRef]
+	public ref PAINT_UNION.PAINT_RADIAL_GRADIENT radialGradient
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.radialGradient;
+		}
+	}
+
+	[UnscopedRef]
+	public ref PAINT_UNION.PAINT_SWEEP_GRADIENT sweepGradient
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.sweepGradient;
+		}
+	}
+
+	[UnscopedRef]
+	public ref PAINT_UNION.PAINT_GLYPH glyph
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.glyph;
+		}
+	}
+
+	[UnscopedRef]
+	public ref PAINT_UNION.PAINT_COLOR_GLYPH colorGlyph
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.colorGlyph;
+		}
+	}
+
+	[UnscopedRef]
+	public ref Matrix3x2 transform
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.transform;
+		}
+	}
+
+	[UnscopedRef]
+	public ref PAINT_UNION.PAINT_COMPOSITE composite
+	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		get
+		{
+			return ref paint.composite;
+		}
+	}
+
+	[StructLayout(LayoutKind.Explicit)]
+	public partial struct PAINT_UNION
+	{
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::layers"]/*' />
+		[FieldOffset(0)]
+		public PAINT_UNION.PAINT_LAYERS layers;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::solidGlyph"]/*' />
+		[FieldOffset(0)]
+		public PAINT_UNION.PAINT_SOLID_GLYPH solidGlyph;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::solid"]/*' />
+		[FieldOffset(0)]
+		public PaintColor solid;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::linearGradient"]/*' />
+		[FieldOffset(0)]
+		public PAINT_UNION.PAINT_LINEAR_GRADIENT linearGradient;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::radialGradient"]/*' />
+		[FieldOffset(0)]
+		public PAINT_UNION.PAINT_RADIAL_GRADIENT radialGradient;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::sweepGradient"]/*' />
+		[FieldOffset(0)]
+		public PAINT_UNION.PAINT_SWEEP_GRADIENT sweepGradient;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::glyph"]/*' />
+		[FieldOffset(0)]
+		public PAINT_UNION.PAINT_GLYPH glyph;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::colorGlyph"]/*' />
+		[FieldOffset(0)]
+		public PAINT_UNION.PAINT_COLOR_GLYPH colorGlyph;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::transform"]/*' />
+		[FieldOffset(0)]
+		public Matrix3x2 transform;
+
+		/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_UNION::composite"]/*' />
+		[FieldOffset(0)]
+		public PAINT_UNION.PAINT_COMPOSITE composite;
+
+		public partial struct PAINT_COMPOSITE
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_COMPOSITE::mode"]/*' />
+			public ColorCompositeMode mode;
+		}
+		public partial struct PAINT_GLYPH
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_GLYPH::glyphIndex"]/*' />
+			public uint glyphIndex;
+		}
+		public partial struct PAINT_RADIAL_GRADIENT
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_RADIAL_GRADIENT::extendMode"]/*' />
+			public uint extendMode;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_RADIAL_GRADIENT::gradientStopCount"]/*' />
+			public uint gradientStopCount;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_RADIAL_GRADIENT::x0"]/*' />
+			public float x0;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_RADIAL_GRADIENT::y0"]/*' />
+			public float y0;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_RADIAL_GRADIENT::radius0"]/*' />
+			public float radius0;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_RADIAL_GRADIENT::x1"]/*' />
+			public float x1;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_RADIAL_GRADIENT::y1"]/*' />
+			public float y1;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_RADIAL_GRADIENT::radius1"]/*' />
+			public float radius1;
+		}
+		public partial struct PAINT_SOLID_GLYPH
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SOLID_GLYPH::glyphIndex"]/*' />
+			public uint glyphIndex;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SOLID_GLYPH::color"]/*' />
+			public PaintColor color;
+		}
+		public partial struct PAINT_COLOR_GLYPH
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_COLOR_GLYPH::glyphIndex"]/*' />
+			public uint glyphIndex;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_COLOR_GLYPH::clipBox"]/*' />
+			public Win32.Numerics.RectF clipBox;
+		}
+		public partial struct PAINT_LINEAR_GRADIENT
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::extendMode"]/*' />
+			public uint extendMode;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::gradientStopCount"]/*' />
+			public uint gradientStopCount;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::x0"]/*' />
+			public float x0;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::y0"]/*' />
+			public float y0;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::x1"]/*' />
+			public float x1;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::y1"]/*' />
+			public float y1;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::x2"]/*' />
+			public float x2;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LINEAR_GRADIENT::y2"]/*' />
+			public float y2;
+		}
+		public partial struct PAINT_LAYERS
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_LAYERS::childCount"]/*' />
+			public uint childCount;
+		}
+		public partial struct PAINT_SWEEP_GRADIENT
+		{
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::extendMode"]/*' />
+			public uint extendMode;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::gradientStopCount"]/*' />
+			public uint gradientStopCount;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::centerX"]/*' />
+			public float centerX;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::centerY"]/*' />
+			public float centerY;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::startAngle"]/*' />
+			public float startAngle;
+
+			/// <include file='../DirectWrite.xml' path='doc/member[@name="PAINT_SWEEP_GRADIENT::endAngle"]/*' />
+			public float endAngle;
+		}
+	}
+}

@@ -281,9 +281,9 @@ public unsafe partial struct IDWriteFontSet4 : IDWriteFontSet4.Interface, INativ
 	/// <inheritdoc cref="IDWriteFontSet3.GetFontSourceName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult GetFontSourceName(uint listIndex, ushort* stringBuffer, uint stringBufferSize)
+	public HResult GetFontSourceName(uint listIndex, char** stringBuffer, uint stringBufferSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet4*, uint, ushort*, uint, int>)(lpVtbl[29]))((IDWriteFontSet4*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet4*, uint, char**, uint, int>)(lpVtbl[29]))((IDWriteFontSet4*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet4::ConvertWeightStretchStyleToFontAxisValues"]/*' />

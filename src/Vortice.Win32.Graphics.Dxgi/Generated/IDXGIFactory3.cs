@@ -249,15 +249,15 @@ public unsafe partial struct IDXGIFactory3 : IDXGIFactory3.Interface, INativeGui
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIFactory3::GetCreationFlags"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public uint GetCreationFlags()
+	public CreateFactoryFlags GetCreationFlags()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory3*, uint>)(lpVtbl[25]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDXGIFactory3*, CreateFactoryFlags>)(lpVtbl[25]))((IDXGIFactory3*)Unsafe.AsPointer(ref this));
 	}
 
 	public interface Interface : IDXGIFactory2.Interface
 	{
 		[VtblIndex(25)]
-		uint GetCreationFlags();
+		CreateFactoryFlags GetCreationFlags();
 	}
 }
 

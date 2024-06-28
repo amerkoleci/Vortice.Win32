@@ -2126,223 +2126,319 @@
 
 ,"Types":[
 	{
-		"Name":"PathData"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
-	}
-	,{
 		"Name":"GpGraphics"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpBrush"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpTexture"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpSolidFill"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpLineGradient"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpPathGradient"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpHatch"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpPen"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpCustomLineCap"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpAdjustableArrowCap"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpImage"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpBitmap"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpMetafile"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpImageAttributes"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpPath"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpRegion"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpPathIterator"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpFontFamily"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpFont"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpStringFormat"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpFontCollection"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpInstalledFontCollection"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpPrivateFontCollection"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"GpCachedBitmap"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"SizeField":""
+		,"Fields":[
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"PathData"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"NativeTypedef"

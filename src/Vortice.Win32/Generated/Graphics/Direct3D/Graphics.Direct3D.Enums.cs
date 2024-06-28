@@ -37,6 +37,9 @@ public enum DriverType
 /// <unmanaged>D3D_FEATURE_LEVEL</unmanaged>
 public enum FeatureLevel
 {
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_1_0_GENERIC"]/*' />
+	/// <unmanaged>D3D_FEATURE_LEVEL_1_0_GENERIC</unmanaged>
+	Level_1_0_Generic = 256,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_1_0_CORE"]/*' />
 	/// <unmanaged>D3D_FEATURE_LEVEL_1_0_CORE</unmanaged>
 	Level_1_0_Core = 4096,
@@ -862,6 +865,24 @@ public enum RegisterComponentType
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_FLOAT32"]/*' />
 	/// <unmanaged>D3D_REGISTER_COMPONENT_FLOAT32</unmanaged>
 	Float32 = 3,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UINT16"]/*' />
+	/// <unmanaged>D3D_REGISTER_COMPONENT_UINT16</unmanaged>
+	UInt16 = 4,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_SINT16"]/*' />
+	/// <unmanaged>D3D_REGISTER_COMPONENT_SINT16</unmanaged>
+	Sint16 = 5,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_FLOAT16"]/*' />
+	/// <unmanaged>D3D_REGISTER_COMPONENT_FLOAT16</unmanaged>
+	Float16 = 6,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_UINT64"]/*' />
+	/// <unmanaged>D3D_REGISTER_COMPONENT_UINT64</unmanaged>
+	UInt64 = 7,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_SINT64"]/*' />
+	/// <unmanaged>D3D_REGISTER_COMPONENT_SINT64</unmanaged>
+	Sint64 = 8,
+	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_REGISTER_COMPONENT_TYPE::D3D_REGISTER_COMPONENT_FLOAT64"]/*' />
+	/// <unmanaged>D3D_REGISTER_COMPONENT_FLOAT64</unmanaged>
+	Float64 = 9,
 }
 
 /// <include file='../Direct3D.xml' path='doc/member[@name="D3D_TESSELLATOR_DOMAIN"]/*' />

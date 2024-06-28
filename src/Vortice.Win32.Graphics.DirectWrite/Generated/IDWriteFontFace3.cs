@@ -425,9 +425,9 @@ public unsafe partial struct IDWriteFontFace3 : IDWriteFontFace3.Interface, INat
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace3::AreCharactersLocal"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public HResult AreCharactersLocal(ushort* characters, uint characterCount, Bool32 enqueueIfNotLocal, Bool32* isLocal)
+	public HResult AreCharactersLocal(char* characters, uint characterCount, Bool32 enqueueIfNotLocal, Bool32* isLocal)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace3*, ushort*, uint, Bool32, Bool32*, int>)(lpVtbl[47]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this), characters, characterCount, enqueueIfNotLocal, isLocal);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace3*, char*, uint, Bool32, Bool32*, int>)(lpVtbl[47]))((IDWriteFontFace3*)Unsafe.AsPointer(ref this), characters, characterCount, enqueueIfNotLocal, isLocal);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFace3::AreGlyphsLocal"]/*' />
@@ -477,7 +477,7 @@ public unsafe partial struct IDWriteFontFace3 : IDWriteFontFace3.Interface, INat
 		Bool32 IsGlyphLocal(ushort glyphId);
 
 		[VtblIndex(47)]
-		HResult AreCharactersLocal(ushort* characters, uint characterCount, Bool32 enqueueIfNotLocal, Bool32* isLocal);
+		HResult AreCharactersLocal(char* characters, uint characterCount, Bool32 enqueueIfNotLocal, Bool32* isLocal);
 
 		[VtblIndex(48)]
 		HResult AreGlyphsLocal(ushort* glyphIndices, uint glyphCount, Bool32 enqueueIfNotLocal, Bool32* isLocal);

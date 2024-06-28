@@ -77,6 +77,9 @@ public enum GlyphImageFormats
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8"]/*' />
 	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8</unmanaged>
 	PremultipliedB8g8r8a8 = 128,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_IMAGE_FORMATS::DWRITE_GLYPH_IMAGE_FORMATS_COLR_PAINT_TREE"]/*' />
+	/// <unmanaged>DWRITE_GLYPH_IMAGE_FORMATS_COLR_PAINT_TREE</unmanaged>
+	ColrPaintTree = 256,
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_FILE_TYPE"]/*' />
@@ -2170,4 +2173,164 @@ public enum FontSourceType
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_SOURCE_TYPE::DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER"]/*' />
 	/// <unmanaged>DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER</unmanaged>
 	RemoteFontProvider = 4,
+}
+
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_FEATURE_LEVEL"]/*' />
+/// <unmanaged>DWRITE_PAINT_FEATURE_LEVEL</unmanaged>
+public enum PaintFeatureLevel
+{
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_FEATURE_LEVEL::DWRITE_PAINT_FEATURE_LEVEL_NONE"]/*' />
+	/// <unmanaged>DWRITE_PAINT_FEATURE_LEVEL_NONE</unmanaged>
+	None = 0,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_FEATURE_LEVEL::DWRITE_PAINT_FEATURE_LEVEL_COLR_V0"]/*' />
+	/// <unmanaged>DWRITE_PAINT_FEATURE_LEVEL_COLR_V0</unmanaged>
+	ColrV0 = 1,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_FEATURE_LEVEL::DWRITE_PAINT_FEATURE_LEVEL_COLR_V1"]/*' />
+	/// <unmanaged>DWRITE_PAINT_FEATURE_LEVEL_COLR_V1</unmanaged>
+	ColrV1 = 2,
+}
+
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ATTRIBUTES"]/*' />
+/// <unmanaged>DWRITE_PAINT_ATTRIBUTES</unmanaged>
+[Flags]
+public enum PaintAttributes
+{
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ATTRIBUTES::DWRITE_PAINT_ATTRIBUTES_NONE"]/*' />
+	/// <unmanaged>DWRITE_PAINT_ATTRIBUTES_NONE</unmanaged>
+	None = 0,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ATTRIBUTES::DWRITE_PAINT_ATTRIBUTES_USES_PALETTE"]/*' />
+	/// <unmanaged>DWRITE_PAINT_ATTRIBUTES_USES_PALETTE</unmanaged>
+	UsesPalette = 1,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_ATTRIBUTES::DWRITE_PAINT_ATTRIBUTES_USES_TEXT_COLOR"]/*' />
+	/// <unmanaged>DWRITE_PAINT_ATTRIBUTES_USES_TEXT_COLOR</unmanaged>
+	UsesTextColor = 2,
+}
+
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE"]/*' />
+/// <unmanaged>DWRITE_COLOR_COMPOSITE_MODE</unmanaged>
+public enum ColorCompositeMode
+{
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_CLEAR"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_CLEAR</unmanaged>
+	DWRITE_COLOR_COMPOSITE_CLEAR = 0,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_SRC"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_SRC</unmanaged>
+	DWRITE_COLOR_COMPOSITE_SRC = 1,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_DEST"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_DEST</unmanaged>
+	DWRITE_COLOR_COMPOSITE_DEST = 2,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_SRC_OVER"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_SRC_OVER</unmanaged>
+	DWRITE_COLOR_COMPOSITE_SRC_OVER = 3,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_DEST_OVER"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_DEST_OVER</unmanaged>
+	DWRITE_COLOR_COMPOSITE_DEST_OVER = 4,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_SRC_IN"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_SRC_IN</unmanaged>
+	DWRITE_COLOR_COMPOSITE_SRC_IN = 5,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_DEST_IN"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_DEST_IN</unmanaged>
+	DWRITE_COLOR_COMPOSITE_DEST_IN = 6,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_SRC_OUT"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_SRC_OUT</unmanaged>
+	DWRITE_COLOR_COMPOSITE_SRC_OUT = 7,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_DEST_OUT"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_DEST_OUT</unmanaged>
+	DWRITE_COLOR_COMPOSITE_DEST_OUT = 8,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_SRC_ATOP"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_SRC_ATOP</unmanaged>
+	DWRITE_COLOR_COMPOSITE_SRC_ATOP = 9,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_DEST_ATOP"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_DEST_ATOP</unmanaged>
+	DWRITE_COLOR_COMPOSITE_DEST_ATOP = 10,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_XOR"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_XOR</unmanaged>
+	DWRITE_COLOR_COMPOSITE_XOR = 11,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_PLUS"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_PLUS</unmanaged>
+	DWRITE_COLOR_COMPOSITE_PLUS = 12,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_SCREEN"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_SCREEN</unmanaged>
+	DWRITE_COLOR_COMPOSITE_SCREEN = 13,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_OVERLAY"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_OVERLAY</unmanaged>
+	DWRITE_COLOR_COMPOSITE_OVERLAY = 14,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_DARKEN"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_DARKEN</unmanaged>
+	DWRITE_COLOR_COMPOSITE_DARKEN = 15,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_LIGHTEN"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_LIGHTEN</unmanaged>
+	DWRITE_COLOR_COMPOSITE_LIGHTEN = 16,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_COLOR_DODGE"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_COLOR_DODGE</unmanaged>
+	DWRITE_COLOR_COMPOSITE_COLOR_DODGE = 17,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_COLOR_BURN"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_COLOR_BURN</unmanaged>
+	DWRITE_COLOR_COMPOSITE_COLOR_BURN = 18,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_HARD_LIGHT"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_HARD_LIGHT</unmanaged>
+	DWRITE_COLOR_COMPOSITE_HARD_LIGHT = 19,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_SOFT_LIGHT"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_SOFT_LIGHT</unmanaged>
+	DWRITE_COLOR_COMPOSITE_SOFT_LIGHT = 20,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_DIFFERENCE"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_DIFFERENCE</unmanaged>
+	DWRITE_COLOR_COMPOSITE_DIFFERENCE = 21,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_EXCLUSION"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_EXCLUSION</unmanaged>
+	DWRITE_COLOR_COMPOSITE_EXCLUSION = 22,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_MULTIPLY"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_MULTIPLY</unmanaged>
+	DWRITE_COLOR_COMPOSITE_MULTIPLY = 23,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_HSL_HUE"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_HSL_HUE</unmanaged>
+	DWRITE_COLOR_COMPOSITE_HSL_HUE = 24,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_HSL_SATURATION"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_HSL_SATURATION</unmanaged>
+	DWRITE_COLOR_COMPOSITE_HSL_SATURATION = 25,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_HSL_COLOR"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_HSL_COLOR</unmanaged>
+	DWRITE_COLOR_COMPOSITE_HSL_COLOR = 26,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_COLOR_COMPOSITE_MODE::DWRITE_COLOR_COMPOSITE_HSL_LUMINOSITY"]/*' />
+	/// <unmanaged>DWRITE_COLOR_COMPOSITE_HSL_LUMINOSITY</unmanaged>
+	DWRITE_COLOR_COMPOSITE_HSL_LUMINOSITY = 27,
+}
+
+/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE"]/*' />
+/// <unmanaged>DWRITE_PAINT_TYPE</unmanaged>
+public enum PaintType
+{
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_NONE"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_NONE</unmanaged>
+	None = 0,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_LAYERS"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_LAYERS</unmanaged>
+	Layers = 1,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_SOLID_GLYPH"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_SOLID_GLYPH</unmanaged>
+	SolidGlyph = 2,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_SOLID"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_SOLID</unmanaged>
+	Solid = 3,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_LINEAR_GRADIENT"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_LINEAR_GRADIENT</unmanaged>
+	LinearGradient = 4,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_RADIAL_GRADIENT"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_RADIAL_GRADIENT</unmanaged>
+	RadialGradient = 5,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_SWEEP_GRADIENT"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_SWEEP_GRADIENT</unmanaged>
+	SweepGradient = 6,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_GLYPH"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_GLYPH</unmanaged>
+	Glyph = 7,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_COLOR_GLYPH"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_COLOR_GLYPH</unmanaged>
+	ColorGlyph = 8,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_TRANSFORM"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_TRANSFORM</unmanaged>
+	Transform = 9,
+	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_PAINT_TYPE::DWRITE_PAINT_TYPE_COMPOSITE"]/*' />
+	/// <unmanaged>DWRITE_PAINT_TYPE_COMPOSITE</unmanaged>
+	Composite = 10,
 }

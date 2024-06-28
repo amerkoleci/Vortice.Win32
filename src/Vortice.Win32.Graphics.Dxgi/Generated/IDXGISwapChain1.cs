@@ -225,9 +225,9 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface, INativ
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::Present1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters)
+	public HResult Present1(uint SyncInterval, PresentFlags PresentFlags, PresentParameters* pPresentParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain1*, uint, uint, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain1*, uint, PresentFlags, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain1*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISwapChain1::IsTemporaryMonoSupported"]/*' />
@@ -293,7 +293,7 @@ public unsafe partial struct IDXGISwapChain1 : IDXGISwapChain1.Interface, INativ
 		HResult GetCoreWindow(Guid* refiid, void** ppUnk);
 
 		[VtblIndex(22)]
-		HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters);
+		HResult Present1(uint SyncInterval, PresentFlags PresentFlags, PresentParameters* pPresentParameters);
 
 		[VtblIndex(23)]
 		Bool32 IsTemporaryMonoSupported();

@@ -2,6 +2,13 @@
 
 "Constants":[
 	{
+		"Name":"CLSID_DxcUtils"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"6245d6af-66e0-48fd-80b4-4d271796748c"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DXC_HASHFLAG_INCLUDES_SOURCE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"

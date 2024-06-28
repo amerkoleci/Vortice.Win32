@@ -281,9 +281,9 @@ public unsafe partial struct IDWriteFontSet3 : IDWriteFontSet3.Interface, INativ
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet3::GetFontSourceName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult GetFontSourceName(uint listIndex, ushort* stringBuffer, uint stringBufferSize)
+	public HResult GetFontSourceName(uint listIndex, char** stringBuffer, uint stringBufferSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet3*, uint, ushort*, uint, int>)(lpVtbl[29]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet3*, uint, char**, uint, int>)(lpVtbl[29]))((IDWriteFontSet3*)Unsafe.AsPointer(ref this), listIndex, stringBuffer, stringBufferSize);
 	}
 
 	public interface Interface : IDWriteFontSet2.Interface
@@ -295,7 +295,7 @@ public unsafe partial struct IDWriteFontSet3 : IDWriteFontSet3.Interface, INativ
 		uint GetFontSourceNameLength(uint listIndex);
 
 		[VtblIndex(29)]
-		HResult GetFontSourceName(uint listIndex, ushort* stringBuffer, uint stringBufferSize);
+		HResult GetFontSourceName(uint listIndex, char** stringBuffer, uint stringBufferSize);
 	}
 }
 

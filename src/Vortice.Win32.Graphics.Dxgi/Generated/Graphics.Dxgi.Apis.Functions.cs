@@ -21,7 +21,7 @@ public static unsafe partial class Apis
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="CreateDXGIFactory2"]/*' />
 	[DllImport("dxgi.dll", ExactSpelling = true)]
-	public static extern HResult CreateDXGIFactory2(uint Flags, Guid* riid, void** ppFactory);
+	public static extern HResult CreateDXGIFactory2(CreateFactoryFlags Flags, Guid* riid, void** ppFactory);
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGIGetDebugInterface1"]/*' />
 	[DllImport("dxgi.dll", ExactSpelling = true)]

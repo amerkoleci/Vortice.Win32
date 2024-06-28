@@ -621,21 +621,6 @@
 		]
 	}
 	,{
-		"Name":"D2D1_GRADIENT_STOP"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"SizeField":""
-		,"Fields":[
-			{"Name":"position","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
-			,{"Name":"color","Type":{"Kind":"ApiRef","Name":"D2D1_COLOR_F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"D2D1_BRUSH_PROPERTIES"
 		,"Architectures":[]
 		,"Platform":null
@@ -1297,7 +1282,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"gradientStops","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D2D1_GRADIENT_STOP","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"gradientStops","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D2D1_GRADIENT_STOP","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"gradientStopsCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
@@ -2516,7 +2501,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"gradientStops","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D2D1_GRADIENT_STOP","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]}},"Attrs":["In","Const"]}
+					{"Name":"gradientStops","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D2D1_GRADIENT_STOP","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"gradientStopsCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"colorInterpolationGamma","Type":{"Kind":"ApiRef","Name":"D2D1_GAMMA","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In"]}
 					,{"Name":"extendMode","Type":{"Kind":"ApiRef","Name":"D2D1_EXTEND_MODE","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In"]}
@@ -5941,7 +5926,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"gradientStops","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D2D1_GRADIENT_STOP","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"gradientStops","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D2D1_GRADIENT_STOP","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"gradientStopsCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
@@ -6140,7 +6125,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"straightAlphaGradientStops","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D2D1_GRADIENT_STOP","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]}},"Attrs":["In","Const"]}
+					{"Name":"straightAlphaGradientStops","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D2D1_GRADIENT_STOP","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"straightAlphaGradientStopsCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"preInterpolationSpace","Type":{"Kind":"ApiRef","Name":"D2D1_COLOR_SPACE","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In"]}
 					,{"Name":"postInterpolationSpace","Type":{"Kind":"ApiRef","Name":"D2D1_COLOR_SPACE","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In"]}
@@ -11697,6 +11682,108 @@
 				,"Params":[
 					{"Name":"dxgiDevice","Type":{"Kind":"ApiRef","Name":"IDXGIDevice","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"d2dDevice6","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID2D1Device6","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID2D1DeviceContext7"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"ec891cf7-9b69-4851-9def-4e0915771e62"
+		,"Interface":{"Kind":"ApiRef","Name":"ID2D1DeviceContext6","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetPaintFeatureLevel"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"DWRITE_PAINT_FEATURE_LEVEL","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"DrawPaintGlyphRun"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"baselineOrigin","Type":{"Kind":"ApiRef","Name":"D2D_POINT_2F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":["In"]}
+					,{"Name":"glyphRun","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DWRITE_GLYPH_RUN","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"defaultFillBrush","Type":{"Kind":"ApiRef","Name":"ID2D1Brush","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In","Optional"]}
+					,{"Name":"colorPaletteIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"measuringMode","Type":{"Kind":"ApiRef","Name":"DWRITE_MEASURING_MODE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"DrawGlyphRunWithColorSupport"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"baselineOrigin","Type":{"Kind":"ApiRef","Name":"D2D_POINT_2F","TargetKind":"Default","Api":"Graphics.Direct2D.Common","Parents":[]},"Attrs":["In"]}
+					,{"Name":"glyphRun","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DWRITE_GLYPH_RUN","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"glyphRunDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DWRITE_GLYPH_RUN_DESCRIPTION","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["In","Optional","Const"]}
+					,{"Name":"foregroundBrush","Type":{"Kind":"ApiRef","Name":"ID2D1Brush","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In","Optional"]}
+					,{"Name":"svgGlyphStyle","Type":{"Kind":"ApiRef","Name":"ID2D1SvgGlyphStyle","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In","Optional"]}
+					,{"Name":"colorPaletteIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"measuringMode","Type":{"Kind":"ApiRef","Name":"DWRITE_MEASURING_MODE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"bitmapSnapOption","Type":{"Kind":"ApiRef","Name":"D2D1_COLOR_BITMAP_GLYPH_SNAP_OPTION","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID2D1Device7"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"f07c8968-dd4e-4ba6-9cbd-eb6d3752dcbb"
+		,"Interface":{"Kind":"ApiRef","Name":"ID2D1Device6","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"CreateDeviceContext"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"options","Type":{"Kind":"ApiRef","Name":"D2D1_DEVICE_CONTEXT_OPTIONS","TargetKind":"Default","Api":"Graphics.Direct2D","Parents":[]},"Attrs":["In"]}
+					,{"Name":"deviceContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID2D1DeviceContext7","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID2D1Factory8"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"677c9311-f36d-4b1f-ae86-86d1223ffd3a"
+		,"Interface":{"Kind":"ApiRef","Name":"ID2D1Factory7","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"CreateDevice"
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"dxgiDevice","Type":{"Kind":"ApiRef","Name":"IDXGIDevice","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
+					,{"Name":"d2dDevice6","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID2D1Device7","TargetKind":"Com","Api":"Graphics.Direct2D","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]

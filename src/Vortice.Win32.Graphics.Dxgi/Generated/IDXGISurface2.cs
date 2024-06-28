@@ -121,9 +121,9 @@ public unsafe partial struct IDXGISurface2 : IDXGISurface2.Interface, INativeGui
 	/// <inheritdoc cref="IDXGISurface.Map" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Map(MappedRect* pLockedRect, uint MapFlags)
+	public HResult Map(MappedRect* pLockedRect, MapFlags MapFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISurface2*, MappedRect*, uint, int>)(lpVtbl[9]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISurface2*, MappedRect*, MapFlags, int>)(lpVtbl[9]))((IDXGISurface2*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
 	}
 
 	/// <inheritdoc cref="IDXGISurface.Unmap" />

@@ -1,4 +1,4 @@
-﻿// Copyright © Amer Koleci and Contributors.
+﻿// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 // Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
@@ -17,7 +17,7 @@ public static unsafe class StringUtilities
         return GetUtf8Span(pointer, maxLength).GetString();
     }
 
-    public static string? GetString(ushort* pointer, int maxLength = -1)
+    public static string? GetString(char* pointer, int maxLength = -1)
     {
         return GetUtf16Span(pointer, maxLength).GetString();
     }
@@ -62,14 +62,14 @@ public static unsafe class StringUtilities
     {
         ReadOnlySpan<sbyte> result;
 
-        if (!IsNullRef(in source))
+        if (!Unsafe.IsNullRef(in source))
         {
             if (maxLength < 0)
             {
                 maxLength = int.MaxValue;
             }
 
-            result = CreateReadOnlySpan(in source, maxLength);
+            result = MemoryMarshal.CreateReadOnlySpan(in source, maxLength);
             var length = result.IndexOf((sbyte)'\0');
 
             if (length != -1)
@@ -89,14 +89,14 @@ public static unsafe class StringUtilities
     /// <param name="source">The string for which to get the null-terminated UTF16 character sequence.</param>
     /// <returns>A null-terminated UTF16 character sequence created from <paramref name="source" />.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ReadOnlySpan<ushort> GetUtf16Span(this string? source) => source.AsSpan().As<char, ushort>();
+    public static ReadOnlySpan<char> GetUtf16Span(this string? source) => source.AsSpan();
 
     /// <summary>Marshals a null-terminated UTF16 string to a <see cref="ReadOnlySpan{UInt16}" />.</summary>
     /// <param name="source">The pointer to a null-terminated UTF16 string.</param>
     /// <param name="maxLength">The maxmimum length of <paramref name="source" /> or <c>-1</c> if the maximum length is unknown.</param>
     /// <returns>A <see cref="ReadOnlySpan{UInt16}" /> that starts at <paramref name="source" /> and extends to <paramref name="maxLength" /> or the first null character, whichever comes first.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ReadOnlySpan<ushort> GetUtf16Span(ushort* source, int maxLength = -1)
+    public static ReadOnlySpan<char> GetUtf16Span(char* source, int maxLength = -1)
         => (source != null) ? GetUtf16Span(in source[0], maxLength) : null;
 
     /// <summary>Marshals a null-terminated UTF16 string to a <see cref="ReadOnlySpan{UInt16}" />.</summary>
@@ -104,18 +104,18 @@ public static unsafe class StringUtilities
     /// <param name="maxLength">The maxmimum length of <paramref name="source" /> or <c>-1</c> if the maximum length is unknown.</param>
     /// <returns>A <see cref="ReadOnlySpan{UInt16}" /> that starts at <paramref name="source" /> and extends to <paramref name="maxLength" /> or the first null character, whichever comes first.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ReadOnlySpan<ushort> GetUtf16Span(in ushort source, int maxLength = -1)
+    public static ReadOnlySpan<char> GetUtf16Span(in char source, int maxLength = -1)
     {
-        ReadOnlySpan<ushort> result;
+        ReadOnlySpan<char> result;
 
-        if (!IsNullRef(in source))
+        if (!Unsafe.IsNullRef(in source))
         {
             if (maxLength < 0)
             {
                 maxLength = int.MaxValue;
             }
 
-            result = CreateReadOnlySpan(in source, maxLength);
+            result = MemoryMarshal.CreateReadOnlySpan(in source, maxLength);
             var length = result.IndexOf('\0');
 
             if (length != -1)
@@ -135,12 +135,12 @@ public static unsafe class StringUtilities
     /// <param name="span">The span for which to create the string.</param>
     /// <returns>A string created from <paramref name="span" />.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static string? GetString(this ReadOnlySpan<ushort> span)
+    public static string? GetString(this ReadOnlySpan<char> span)
     {
         if (span.GetPointer() == null)
             return null;
 
-        return new string(span.As<ushort, char>());
+        return new string(span);
     }
 
     /// <summary>Gets a string for a given span.</summary>

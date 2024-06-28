@@ -225,9 +225,9 @@ public unsafe partial struct IDXGISwapChain2 : IDXGISwapChain2.Interface, INativ
 	/// <inheritdoc cref="IDXGISwapChain1.Present1" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult Present1(uint SyncInterval, uint PresentFlags, PresentParameters* pPresentParameters)
+	public HResult Present1(uint SyncInterval, PresentFlags PresentFlags, PresentParameters* pPresentParameters)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, uint, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISwapChain2*, uint, PresentFlags, PresentParameters*, int>)(lpVtbl[22]))((IDXGISwapChain2*)Unsafe.AsPointer(ref this), SyncInterval, PresentFlags, pPresentParameters);
 	}
 
 	/// <inheritdoc cref="IDXGISwapChain1.IsTemporaryMonoSupported" />

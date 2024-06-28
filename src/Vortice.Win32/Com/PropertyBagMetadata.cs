@@ -1,4 +1,4 @@
-﻿// Copyright © Amer Koleci and Contributors.
+﻿// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using static Win32.StringUtilities;
@@ -24,7 +24,7 @@ public unsafe partial struct PropertyBagMetadata
     public VariantFullType VariantType;
     public ushort ClipboardFormat;
     public uint Hint;
-    public ushort* pstrName;
+    public char* pstrName;
     public Guid ClassId;
 
     public readonly string? GetName()

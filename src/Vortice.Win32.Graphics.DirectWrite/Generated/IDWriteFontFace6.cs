@@ -425,9 +425,9 @@ public unsafe partial struct IDWriteFontFace6 : IDWriteFontFace6.Interface, INat
 	/// <inheritdoc cref="IDWriteFontFace3.AreCharactersLocal" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(47)]
-	public HResult AreCharactersLocal(ushort* characters, uint characterCount, Bool32 enqueueIfNotLocal, Bool32* isLocal)
+	public HResult AreCharactersLocal(char* characters, uint characterCount, Bool32 enqueueIfNotLocal, Bool32* isLocal)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace6*, ushort*, uint, Bool32, Bool32*, int>)(lpVtbl[47]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this), characters, characterCount, enqueueIfNotLocal, isLocal);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFace6*, char*, uint, Bool32, Bool32*, int>)(lpVtbl[47]))((IDWriteFontFace6*)Unsafe.AsPointer(ref this), characters, characterCount, enqueueIfNotLocal, isLocal);
 	}
 
 	/// <inheritdoc cref="IDWriteFontFace3.AreGlyphsLocal" />

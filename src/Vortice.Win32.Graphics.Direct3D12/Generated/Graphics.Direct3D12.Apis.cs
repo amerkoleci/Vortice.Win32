@@ -561,7 +561,7 @@ public static partial class Apis
 
 	public const uint D3D12_PIXEL_ADDRESS_RANGE_BIT_COUNT = 15;
 
-	public const uint D3D12_PREVIEW_SDK_VERSION = 710;
+	public const uint D3D12_PREVIEW_SDK_VERSION = 714;
 
 	public const uint D3D12_PRE_SCISSOR_PIXEL_ADDRESS_RANGE_BIT_COUNT = 16;
 
@@ -697,7 +697,7 @@ public static partial class Apis
 
 	public const uint D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT = 2;
 
-	public const uint D3D12_SDK_VERSION = 610;
+	public const uint D3D12_SDK_VERSION = 614;
 
 	public const uint D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES = 32;
 
@@ -823,6 +823,16 @@ public static partial class Apis
 
 	public const uint D3D12_VIDEO_DECODE_STATUS_MACROBLOCKS_AFFECTED_UNKNOWN = 4294967295;
 
+	public const uint D3D12_VIDEO_ENCODER_AV1_INVALID_DPB_RESOURCE_INDEX = 255;
+
+	public const uint D3D12_VIDEO_ENCODER_AV1_MAX_TILE_COLS = 64;
+
+	public const uint D3D12_VIDEO_ENCODER_AV1_MAX_TILE_ROWS = 64;
+
+	public const uint D3D12_VIDEO_ENCODER_AV1_SUPERRES_DENOM_MIN = 9;
+
+	public const uint D3D12_VIDEO_ENCODER_AV1_SUPERRES_NUM = 8;
+
 	public const uint D3D12_VIDEO_PROCESS_MAX_FILTERS = 32;
 
 	public const uint D3D12_VIDEO_PROCESS_STEREO_VIEWS = 2;
@@ -856,6 +866,10 @@ public static partial class Apis
 	public const uint D3D12_WHQL_DRAWINDEXED_INDEX_COUNT_2_TO_EXP = 25;
 
 	public const uint D3D12_WHQL_DRAW_VERTEX_COUNT_2_TO_EXP = 25;
+
+	public const uint D3D12_WORK_GRAPHS_BACKING_MEMORY_ALIGNMENT_IN_BYTES = 8;
+
+	public const uint D3D12_WORK_GRAPHS_MAX_NODE_DEPTH = 32;
 
 	public const uint D3D12_SHADER_COMPONENT_MAPPING_MASK = 7;
 
@@ -1021,30 +1035,6 @@ public static partial class Apis
 		}
 	}
 
-	public static ref readonly Guid CLSID_D3D12DSRDeviceFactory
-	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		get
-		{
-			ReadOnlySpan<byte> data = new byte[] {
-				0xAC, 0xDC, 0x9B, 0x7F,
-				0x29, 0xF6,
-				0x5E, 0x45,
-				0xAB,
-				0x13,
-				0xA8,
-				0x07,
-				0xFB,
-				0xE9,
-				0xAB,
-				0xA4
-			};
-
-			Debug.Assert(data.Length == Unsafe.SizeOf<Guid>());
-			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
-		}
-	}
-
 	public const uint D3D12_SHADING_RATE_X_AXIS_SHIFT = 2;
 
 	public const uint D3D12_SHADING_RATE_VALID_MASK = 3;
@@ -1139,9 +1129,11 @@ public static partial class Apis
 
 	public const uint D3D_SHADER_REQUIRES_ATOMIC_INT64_ON_DESCRIPTOR_HEAP_RESOURCE = 268435456;
 
-	public const uint D3D_SHADER_FEATURE_ADVANCED_TEXTURE_OPS = 536870912;
+	public const uint D3D_SHADER_REQUIRES_ADVANCED_TEXTURE_OPS = 536870912;
 
-	public const uint D3D_SHADER_FEATURE_WRITEABLE_MSAA_TEXTURES = 1073741824;
+	public const uint D3D_SHADER_REQUIRES_WRITEABLE_MSAA_TEXTURES = 1073741824;
+
+	public const uint D3D_SHADER_REQUIRES_SAMPLE_CMP_GRADIENT_OR_BIAS = 2147483648;
 
 	public static ref readonly Guid D3D12ExperimentalShaderModels
 	{

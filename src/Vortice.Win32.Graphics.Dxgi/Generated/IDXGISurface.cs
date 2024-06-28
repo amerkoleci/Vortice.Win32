@@ -121,9 +121,9 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface, INativeGuid
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface::Map"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult Map(MappedRect* pLockedRect, uint MapFlags)
+	public HResult Map(MappedRect* pLockedRect, MapFlags MapFlags)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGISurface*, MappedRect*, uint, int>)(lpVtbl[9]))((IDXGISurface*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
+		return ((delegate* unmanaged[MemberFunction]<IDXGISurface*, MappedRect*, MapFlags, int>)(lpVtbl[9]))((IDXGISurface*)Unsafe.AsPointer(ref this), pLockedRect, MapFlags);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGISurface::Unmap"]/*' />
@@ -140,7 +140,7 @@ public unsafe partial struct IDXGISurface : IDXGISurface.Interface, INativeGuid
 		HResult GetDesc(SurfaceDescription* pDesc);
 
 		[VtblIndex(9)]
-		HResult Map(MappedRect* pLockedRect, uint MapFlags);
+		HResult Map(MappedRect* pLockedRect, MapFlags MapFlags);
 
 		[VtblIndex(10)]
 		HResult Unmap();

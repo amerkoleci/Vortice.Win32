@@ -2,199 +2,10 @@
 
 "Constants":[
 	{
-		"Name":"DXGI_RESOURCE_PRIORITY_MINIMUM"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":671088640
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_RESOURCE_PRIORITY_LOW"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1342177280
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_RESOURCE_PRIORITY_NORMAL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2013265920
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_RESOURCE_PRIORITY_HIGH"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2684354560
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_RESOURCE_PRIORITY_MAXIMUM"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":3355443200
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_MAP_READ"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_MAP_WRITE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_MAP_DISCARD"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_ENUM_MODES_INTERLACED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_ENUM_MODES_SCALING"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
 		"Name":"DXGI_MAX_SWAP_CHAIN_BUFFERS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_TEST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_DO_NOT_SEQUENCE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_RESTART"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_DO_NOT_WAIT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_STEREO_PREFER_RIGHT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_STEREO_TEMPORARY_MONO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_RESTRICT_TO_OUTPUT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":64
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_USE_DURATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":256
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_PRESENT_ALLOW_TEARING"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":512
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_MWA_NO_WINDOW_CHANGES"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_MWA_NO_ALT_ENTER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_MWA_NO_PRINT_SCREEN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_MWA_VALID"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":7
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_ENUM_MODES_STEREO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_ENUM_MODES_DISABLED_STEREO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_SHARED_RESOURCE_READ"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2147483648
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_SHARED_RESOURCE_WRITE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
 		,"Attrs":[]
 	}
 	,{
@@ -244,13 +55,6 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1024
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DXGI_CREATE_FACTORY_DEBUG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
 		,"Attrs":[]
 	}
 	,{
@@ -523,6 +327,111 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"DXGI_PRESENT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DXGI_PRESENT_TEST","Value":1}
+			,{"Name":"DXGI_PRESENT_DO_NOT_SEQUENCE","Value":2}
+			,{"Name":"DXGI_PRESENT_RESTART","Value":4}
+			,{"Name":"DXGI_PRESENT_DO_NOT_WAIT","Value":8}
+			,{"Name":"DXGI_PRESENT_STEREO_PREFER_RIGHT","Value":16}
+			,{"Name":"DXGI_PRESENT_STEREO_TEMPORARY_MONO","Value":32}
+			,{"Name":"DXGI_PRESENT_RESTRICT_TO_OUTPUT","Value":64}
+			,{"Name":"DXGI_PRESENT_USE_DURATION","Value":256}
+			,{"Name":"DXGI_PRESENT_ALLOW_TEARING","Value":512}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXGI_ENUM_MODES"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DXGI_ENUM_MODES_INTERLACED","Value":1}
+			,{"Name":"DXGI_ENUM_MODES_SCALING","Value":2}
+			,{"Name":"DXGI_ENUM_MODES_STEREO","Value":4}
+			,{"Name":"DXGI_ENUM_MODES_DISABLED_STEREO","Value":8}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXGI_MWA_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DXGI_MWA_NO_WINDOW_CHANGES","Value":1}
+			,{"Name":"DXGI_MWA_NO_ALT_ENTER","Value":2}
+			,{"Name":"DXGI_MWA_NO_PRINT_SCREEN","Value":4}
+			,{"Name":"DXGI_MWA_VALID","Value":7}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXGI_MAP_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DXGI_MAP_READ","Value":1}
+			,{"Name":"DXGI_MAP_WRITE","Value":2}
+			,{"Name":"DXGI_MAP_DISCARD","Value":4}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXGI_RESOURCE_PRIORITY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DXGI_RESOURCE_PRIORITY_MINIMUM","Value":671088640}
+			,{"Name":"DXGI_RESOURCE_PRIORITY_LOW","Value":1342177280}
+			,{"Name":"DXGI_RESOURCE_PRIORITY_NORMAL","Value":2013265920}
+			,{"Name":"DXGI_RESOURCE_PRIORITY_HIGH","Value":2684354560}
+			,{"Name":"DXGI_RESOURCE_PRIORITY_MAXIMUM","Value":3355443200}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXGI_SHARED_RESOURCE_RW"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DXGI_SHARED_RESOURCE_READ","Value":2147483648}
+			,{"Name":"DXGI_SHARED_RESOURCE_WRITE","Value":1}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DXGI_CREATE_FACTORY_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DXGI_CREATE_FACTORY_DEBUG","Value":1}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"DXGI_FRAME_STATISTICS"
 		,"Architectures":[]
 		,"Platform":null
@@ -660,7 +569,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DXGI_SWAP_CHAIN_FLAG_NONPREROTATED","Value":1}
@@ -695,7 +604,7 @@
 			,{"Name":"OutputWindow","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Windowed","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"SwapEffect","Type":{"Kind":"ApiRef","Name":"DXGI_SWAP_EFFECT","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"AssociatedEnum","Value":"DXGI_SWAP_CHAIN_FLAG"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -828,7 +737,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"EvictionPriority","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					{"Name":"EvictionPriority","Type":{"Kind":"ApiRef","Name":"DXGI_RESOURCE_PRIORITY","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -840,7 +749,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pEvictionPriority","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					{"Name":"pEvictionPriority","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_RESOURCE_PRIORITY","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -897,7 +806,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SURFACE_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SURFACE_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -910,7 +819,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pLockedRect","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_MAPPED_RECT","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"MapFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"MapFlags","Type":{"Kind":"ApiRef","Name":"DXGI_MAP_FLAGS","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -991,7 +900,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_ADAPTER_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_ADAPTER_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1026,7 +935,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_OUTPUT_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_OUTPUT_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1039,7 +948,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"EnumFormat","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"DXGI_ENUM_MODES","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pNumModes","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 					,{"Name":"pDesc","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"DXGI_MODE_DESC","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]}},"Attrs":["Out","Optional"]}
 				]
@@ -1185,7 +1094,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"SyncInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"DXGI_PRESENT","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -1237,7 +1146,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SWAP_CHAIN_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SWAP_CHAIN_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1253,7 +1162,7 @@
 					,{"Name":"Width","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"Height","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"NewFormat","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":["In"]}
-					,{"Name":"SwapChainFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"SwapChainFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"DXGI_SWAP_CHAIN_FLAG"}]}
 				]
 			}
 			,{
@@ -1337,7 +1246,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"WindowHandle","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"DXGI_MWA_FLAGS","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -1489,7 +1398,7 @@
 			,{"Name":"DedicatedSystemMemory","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"SharedSystemMemory","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"AdapterLuid","Type":{"Kind":"ApiRef","Name":"LUID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"AssociatedEnum","Value":"DXGI_ADAPTER_FLAG"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -1560,7 +1469,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_ADAPTER_DESC1","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_ADAPTER_DESC1","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1748,7 +1657,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_OUTDUPL_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_OUTDUPL_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2079,7 +1988,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SWAP_CHAIN_DESC1","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SWAP_CHAIN_DESC1","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2091,7 +2000,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SWAP_CHAIN_FULLSCREEN_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SWAP_CHAIN_FULLSCREEN_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2129,7 +2038,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"SyncInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"PresentFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"PresentFlags","Type":{"Kind":"ApiRef","Name":"DXGI_PRESENT","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pPresentParameters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_PRESENT_PARAMETERS","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["In","Const"]}
 				]
 			}
@@ -2416,7 +2325,7 @@
 			,{"Name":"DedicatedSystemMemory","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"SharedSystemMemory","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"AdapterLuid","Type":{"Kind":"ApiRef","Name":"LUID","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"AssociatedEnum","Value":"DXGI_ADAPTER_FLAG"}]}
 			,{"Name":"GraphicsPreemptionGranularity","Type":{"Kind":"ApiRef","Name":"DXGI_GRAPHICS_PREEMPTION_GRANULARITY","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}
 			,{"Name":"ComputePreemptionGranularity","Type":{"Kind":"ApiRef","Name":"DXGI_COMPUTE_PREEMPTION_GRANULARITY","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":[]}
 		]
@@ -2440,7 +2349,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_ADAPTER_DESC2","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_ADAPTER_DESC2","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2463,7 +2372,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"EnumFormat","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"DXGI_ENUM_MODES","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pNumModes","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 					,{"Name":"pDesc","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"DXGI_MODE_DESC1","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","Optional"]}
 				]
@@ -2676,7 +2585,7 @@
 			{
 				"Name":"GetCreationFlags"
 				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+				,"ReturnType":{"Kind":"ApiRef","Name":"DXGI_CREATE_FACTORY_FLAGS","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}
 				,"ReturnAttrs":[]
 				,"Architectures":[]
 				,"Platform":null
@@ -2695,7 +2604,7 @@
 		,"PackingSize":0
 		,"SizeField":""
 		,"Fields":[
-			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[{"Kind":"AssociatedEnum","Value":"DXGI_SWAP_CHAIN_FLAG"}]}
 		]
 		,"NestedTypes":[
 		]
@@ -2705,7 +2614,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DXGI_MULTIPLANE_OVERLAY_YCbCr_FLAG_NOMINAL_RANGE","Value":1}
@@ -2733,7 +2642,7 @@
 				,"Params":[
 					{"Name":"BufferToPresent","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"SyncInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"DXGI_PRESENT","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2966,7 +2875,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DXGI_OVERLAY_SUPPORT_FLAG_DIRECT","Value":1}
@@ -2993,7 +2902,7 @@
 				,"Params":[
 					{"Name":"EnumFormat","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pConcernedDevice","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					,{"Name":"pFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out",{"Kind":"AssociatedEnum","Enum":"DXGI_OVERLAY_SUPPORT_FLAG"}]}
 				]
 			}
 		]
@@ -3003,7 +2912,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG_PRESENT","Value":1}
@@ -3040,7 +2949,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"ColorSpace","Type":{"Kind":"ApiRef","Name":"DXGI_COLOR_SPACE_TYPE","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pColorSpaceSupport","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					,{"Name":"pColorSpaceSupport","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out",{"Kind":"AssociatedEnum","Enum":"DXGI_SWAP_CHAIN_COLOR_SPACE_SUPPORT_FLAG"}]}
 				]
 			}
 			,{
@@ -3068,7 +2977,7 @@
 					,{"Name":"Width","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"Height","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"Format","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":["In"]}
-					,{"Name":"SwapChainFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"SwapChainFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"DXGI_SWAP_CHAIN_FLAG"}]}
 					,{"Name":"pCreationNodeMask","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Const"]}
 					,{"Name":"ppPresentQueue","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
 				]
@@ -3080,7 +2989,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG_PRESENT","Value":1}
@@ -3107,7 +3016,7 @@
 					{"Name":"Format","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ColorSpace","Type":{"Kind":"ApiRef","Name":"DXGI_COLOR_SPACE_TYPE","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pConcernedDevice","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					,{"Name":"pFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out",{"Kind":"AssociatedEnum","Enum":"DXGI_OVERLAY_COLOR_SPACE_SUPPORT_FLAG"}]}
 				]
 			}
 		]
@@ -3272,7 +3181,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY","Value":1}
@@ -3383,7 +3292,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"DXGI_OFFER_RESOURCE_FLAG_ALLOW_DECOMMIT","Value":1}
@@ -3424,7 +3333,7 @@
 					{"Name":"NumResources","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"ppResources","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IDXGIResource","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"Priority","Type":{"Kind":"ApiRef","Name":"DXGI_OFFER_RESOURCE_PRIORITY","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
-					,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"DXGI_OFFER_RESOURCE_FLAGS"}]}
 				]
 			}
 			,{
@@ -3539,7 +3448,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_ADAPTER_DESC3","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_ADAPTER_DESC3","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -3602,7 +3511,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_OUTPUT_DESC1","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_OUTPUT_DESC1","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3614,7 +3523,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					{"Name":"pFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out",{"Kind":"AssociatedEnum","Enum":"DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS"}]}
 				]
 			}
 		]
@@ -4761,7 +4670,7 @@
 		,"Platform":"windows8.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"DXGI_CREATE_FACTORY_FLAGS","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"ppFactory","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 		]

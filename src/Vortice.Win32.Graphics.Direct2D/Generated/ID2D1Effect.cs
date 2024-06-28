@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPropertyName(uint index, ushort* name, uint nameCount)
+	public HResult GetPropertyName(uint index, char** name, uint nameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, ushort*, uint, int>)(lpVtbl[4]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, name, nameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, char**, uint, int>)(lpVtbl[4]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, name, nameCount);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyNameLength" />

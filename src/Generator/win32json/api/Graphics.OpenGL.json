@@ -4988,7 +4988,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"wglDeleteContext"
 	}
 	,{

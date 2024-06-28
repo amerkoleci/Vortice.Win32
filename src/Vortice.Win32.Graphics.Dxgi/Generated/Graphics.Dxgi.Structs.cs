@@ -45,7 +45,7 @@ public partial struct MappedRect
 public partial struct AdapterDescription
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
-	public unsafe fixed ushort Description[128];
+	public unsafe fixed char Description[128];
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::VendorId"]/*' />
 	public uint VendorId;
@@ -77,7 +77,7 @@ public partial struct AdapterDescription
 public partial struct OutputDescription
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DeviceName"]/*' />
-	public unsafe fixed ushort DeviceName[32];
+	public unsafe fixed char DeviceName[32];
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC::DesktopCoordinates"]/*' />
 	public Rect DesktopCoordinates;
@@ -151,7 +151,7 @@ public partial struct SwapChainDescription
 public partial struct AdapterDescription1
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
-	public unsafe fixed ushort Description[128];
+	public unsafe fixed char Description[128];
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::VendorId"]/*' />
 	public uint VendorId;
@@ -380,7 +380,7 @@ public partial struct PresentParameters
 public partial struct AdapterDescription2
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
-	public unsafe fixed ushort Description[128];
+	public unsafe fixed char Description[128];
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::VendorId"]/*' />
 	public uint VendorId;
@@ -509,7 +509,7 @@ public partial struct HDRMetadataHdr10plus
 public partial struct AdapterDescription3
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::Description"]/*' />
-	public unsafe fixed ushort Description[128];
+	public unsafe fixed char Description[128];
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC3::VendorId"]/*' />
 	public uint VendorId;
@@ -550,7 +550,7 @@ public partial struct AdapterDescription3
 public partial struct OutputDescription1
 {
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DeviceName"]/*' />
-	public unsafe fixed ushort DeviceName[32];
+	public unsafe fixed char DeviceName[32];
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_OUTPUT_DESC1::DesktopCoordinates"]/*' />
 	public Rect DesktopCoordinates;

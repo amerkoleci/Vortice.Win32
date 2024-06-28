@@ -161,9 +161,9 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueCharacterDownloadRequest"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult EnqueueCharacterDownloadRequest(ushort* characters, uint characterCount)
+	public HResult EnqueueCharacterDownloadRequest(char* characters, uint characterCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference*, ushort*, uint, int>)(lpVtbl[14]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), characters, characterCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFaceReference*, char*, uint, int>)(lpVtbl[14]))((IDWriteFontFaceReference*)Unsafe.AsPointer(ref this), characters, characterCount);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFaceReference::EnqueueGlyphDownloadRequest"]/*' />
@@ -218,7 +218,7 @@ public unsafe partial struct IDWriteFontFaceReference : IDWriteFontFaceReference
 		HResult EnqueueFontDownloadRequest();
 
 		[VtblIndex(14)]
-		HResult EnqueueCharacterDownloadRequest(ushort* characters, uint characterCount);
+		HResult EnqueueCharacterDownloadRequest(char* characters, uint characterCount);
 
 		[VtblIndex(15)]
 		HResult EnqueueGlyphDownloadRequest(ushort* glyphIndices, uint glyphCount);

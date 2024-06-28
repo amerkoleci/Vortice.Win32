@@ -20,6 +20,17 @@ public partial struct PixelFormat
 	public AlphaMode alphaMode;
 }
 
+/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP"]/*' />
+/// <unmanaged>D2D1_GRADIENT_STOP</unmanaged>
+public partial struct GradientStop
+{
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::position"]/*' />
+	public float position;
+
+	/// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::color"]/*' />
+	public Color4 color;
+}
+
 /// <include file='../../../../Vortice.Win32.Graphics.Direct2D/Direct2D.xml' path='doc/member[@name="D2D1_BEZIER_SEGMENT"]/*' />
 /// <unmanaged>D2D1_BEZIER_SEGMENT</unmanaged>
 public partial struct BezierSegment

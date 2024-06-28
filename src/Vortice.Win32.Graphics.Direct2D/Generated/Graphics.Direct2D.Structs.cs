@@ -23,17 +23,6 @@ public partial struct BitmapProperties
 	public float dpiY;
 }
 
-/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP"]/*' />
-/// <unmanaged>D2D1_GRADIENT_STOP</unmanaged>
-public partial struct GradientStop
-{
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::position"]/*' />
-	public float position;
-
-	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_GRADIENT_STOP::color"]/*' />
-	public Color4 color;
-}
-
 /// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_BRUSH_PROPERTIES"]/*' />
 /// <unmanaged>D2D1_BRUSH_PROPERTIES</unmanaged>
 public partial struct BrushProperties

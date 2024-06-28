@@ -129,17 +129,17 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface, INativeGui
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::SetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetEvictionPriority(uint EvictionPriority)
+	public HResult SetEvictionPriority(ResourcePriority EvictionPriority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource*, uint, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource*, ResourcePriority, int>)(lpVtbl[10]))((IDXGIResource*)Unsafe.AsPointer(ref this), EvictionPriority);
 	}
 
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource::GetEvictionPriority"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetEvictionPriority(uint* pEvictionPriority)
+	public HResult GetEvictionPriority(ResourcePriority* pEvictionPriority)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource*, uint*, int>)(lpVtbl[11]))((IDXGIResource*)Unsafe.AsPointer(ref this), pEvictionPriority);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource*, ResourcePriority*, int>)(lpVtbl[11]))((IDXGIResource*)Unsafe.AsPointer(ref this), pEvictionPriority);
 	}
 
 	public interface Interface : IDXGIDeviceSubObject.Interface
@@ -151,10 +151,10 @@ public unsafe partial struct IDXGIResource : IDXGIResource.Interface, INativeGui
 		HResult GetUsage(Usage* pUsage);
 
 		[VtblIndex(10)]
-		HResult SetEvictionPriority(uint EvictionPriority);
+		HResult SetEvictionPriority(ResourcePriority EvictionPriority);
 
 		[VtblIndex(11)]
-		HResult GetEvictionPriority(uint* pEvictionPriority);
+		HResult GetEvictionPriority(ResourcePriority* pEvictionPriority);
 	}
 }
 

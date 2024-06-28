@@ -1,4 +1,4 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using static Win32.Apis;
@@ -11,7 +11,7 @@ public unsafe partial struct AdapterDescription
     /// <include file='Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC::Description"]/*' />
     public readonly string GetDescription()
     {
-        fixed (ushort* ptr = Description)
+        fixed (char* ptr = Description)
         {
             return GetString(ptr, 128) ?? string.Empty;
         }
@@ -23,7 +23,7 @@ public unsafe partial struct AdapterDescription1
     /// <include file='Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC1::Description"]/*' />
     public readonly string GetDescription()
     {
-        fixed (ushort* ptr = Description)
+        fixed (char* ptr = Description)
         {
             return GetString(ptr, 128) ?? string.Empty;
         }
@@ -35,7 +35,7 @@ public unsafe partial struct AdapterDescription2
     /// <include file='Dxgi.xml' path='doc/member[@name="DXGI_ADAPTER_DESC2::Description"]/*' />
     public readonly string GetDescription()
     {
-        fixed (ushort* ptr = Description)
+        fixed (char* ptr = Description)
         {
             return GetString(ptr, 128) ?? string.Empty;
         }

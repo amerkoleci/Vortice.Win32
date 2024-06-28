@@ -97,9 +97,9 @@ public unsafe partial struct IWICBitmapEncoderInfo : IWICBitmapEncoderInfo.Inter
 	/// <inheritdoc cref="IWICComponentInfo.GetAuthor" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAuthor(uint cchAuthor, ushort* wzAuthor, uint* pcchActual)
+	public HResult GetAuthor(uint cchAuthor, char** wzAuthor, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[6]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[6]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVendorGUID" />
@@ -113,25 +113,25 @@ public unsafe partial struct IWICBitmapEncoderInfo : IWICBitmapEncoderInfo.Inter
 	/// <inheritdoc cref="IWICComponentInfo.GetVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVersion(uint cchVersion, ushort* wzVersion, uint* pcchActual)
+	public HResult GetVersion(uint cchVersion, char** wzVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[8]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[8]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSpecVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSpecVersion(uint cchSpecVersion, ushort* wzSpecVersion, uint* pcchActual)
+	public HResult GetSpecVersion(uint cchSpecVersion, char** wzSpecVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[9]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[9]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetFriendlyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFriendlyName(uint cchFriendlyName, ushort* wzFriendlyName, uint* pcchActual)
+	public HResult GetFriendlyName(uint cchFriendlyName, char** wzFriendlyName, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[10]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[10]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetContainerFormat" />
@@ -153,41 +153,41 @@ public unsafe partial struct IWICBitmapEncoderInfo : IWICBitmapEncoderInfo.Inter
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetColorManagementVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetColorManagementVersion(uint cchColorManagementVersion, ushort* wzColorManagementVersion, uint* pcchActual)
+	public HResult GetColorManagementVersion(uint cchColorManagementVersion, char** wzColorManagementVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[13]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchColorManagementVersion, wzColorManagementVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[13]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchColorManagementVersion, wzColorManagementVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetDeviceManufacturer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, ushort* wzDeviceManufacturer, uint* pcchActual)
+	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, char** wzDeviceManufacturer, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[14]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[14]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetDeviceModels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetDeviceModels(uint cchDeviceModels, ushort* wzDeviceModels, uint* pcchActual)
+	public HResult GetDeviceModels(uint cchDeviceModels, char** wzDeviceModels, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[15]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[15]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetMimeTypes" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetMimeTypes(uint cchMimeTypes, ushort* wzMimeTypes, uint* pcchActual)
+	public HResult GetMimeTypes(uint cchMimeTypes, char** wzMimeTypes, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[16]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchMimeTypes, wzMimeTypes, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[16]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchMimeTypes, wzMimeTypes, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.GetFileExtensions" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetFileExtensions(uint cchFileExtensions, ushort* wzFileExtensions, uint* pcchActual)
+	public HResult GetFileExtensions(uint cchFileExtensions, char** wzFileExtensions, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, ushort*, uint*, int>)(lpVtbl[17]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchFileExtensions, wzFileExtensions, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapEncoderInfo*, uint, char**, uint*, int>)(lpVtbl[17]))((IWICBitmapEncoderInfo*)Unsafe.AsPointer(ref this), cchFileExtensions, wzFileExtensions, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICBitmapCodecInfo.DoesSupportAnimation" />

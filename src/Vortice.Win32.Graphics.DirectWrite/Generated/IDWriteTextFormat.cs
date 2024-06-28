@@ -217,9 +217,9 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetFontFamilyName(ushort* fontFamilyName, uint nameSize)
+	public HResult GetFontFamilyName(char** fontFamilyName, uint nameSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, ushort*, uint, int>)(lpVtbl[21]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, char**, uint, int>)(lpVtbl[21]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetFontWeight"]/*' />
@@ -265,9 +265,9 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextFormat::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult GetLocaleName(ushort* localeName, uint nameSize)
+	public HResult GetLocaleName(char** localeName, uint nameSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, ushort*, uint, int>)(lpVtbl[27]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), localeName, nameSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextFormat*, char**, uint, int>)(lpVtbl[27]))((IDWriteTextFormat*)Unsafe.AsPointer(ref this), localeName, nameSize);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -327,7 +327,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 		uint GetFontFamilyNameLength();
 
 		[VtblIndex(21)]
-		HResult GetFontFamilyName(ushort* fontFamilyName, uint nameSize);
+		HResult GetFontFamilyName(char** fontFamilyName, uint nameSize);
 
 		[VtblIndex(22)]
 		FontWeight GetFontWeight();
@@ -345,7 +345,7 @@ public unsafe partial struct IDWriteTextFormat : IDWriteTextFormat.Interface, IN
 		uint GetLocaleNameLength();
 
 		[VtblIndex(27)]
-		HResult GetLocaleName(ushort* localeName, uint nameSize);
+		HResult GetLocaleName(char** localeName, uint nameSize);
 	}
 }
 

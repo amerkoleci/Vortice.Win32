@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetGradientStops" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void GetGradientStops(GradientStop* gradientStops, uint gradientStopsCount)
+	public void GetGradientStops(Common.GradientStop* gradientStops, uint gradientStopsCount)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, GradientStop*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, Common.GradientStop*, uint, void>)(lpVtbl[5]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
 	}
 
 	/// <inheritdoc cref="ID2D1GradientStopCollection.GetColorInterpolationGamma" />
@@ -113,9 +113,9 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetGradientStops1"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public void GetGradientStops1(GradientStop* gradientStops, uint gradientStopsCount)
+	public void GetGradientStops1(Common.GradientStop* gradientStops, uint gradientStopsCount)
 	{
-		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, GradientStop*, uint, void>)(lpVtbl[8]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
+		((delegate* unmanaged[MemberFunction]<ID2D1GradientStopCollection1*, Common.GradientStop*, uint, void>)(lpVtbl[8]))((ID2D1GradientStopCollection1*)Unsafe.AsPointer(ref this), gradientStops, gradientStopsCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1GradientStopCollection1::GetPreInterpolationSpace"]/*' />
@@ -153,7 +153,7 @@ public unsafe partial struct ID2D1GradientStopCollection1 : ID2D1GradientStopCol
 	public interface Interface : ID2D1GradientStopCollection.Interface
 	{
 		[VtblIndex(8)]
-		void GetGradientStops1(GradientStop* gradientStops, uint gradientStopsCount);
+		void GetGradientStops1(Common.GradientStop* gradientStops, uint gradientStopsCount);
 
 		[VtblIndex(9)]
 		ColorSpace GetPreInterpolationSpace();
