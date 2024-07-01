@@ -121,9 +121,9 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSetBuilder2::AddFontFile"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult AddFontFile(ushort* filePath)
+	public HResult AddFontFile(char* filePath)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, ushort*, int>)(lpVtbl[9]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), filePath);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSetBuilder2*, char*, int>)(lpVtbl[9]))((IDWriteFontSetBuilder2*)Unsafe.AsPointer(ref this), filePath);
 	}
 
 	public interface Interface : IDWriteFontSetBuilder1.Interface
@@ -132,7 +132,7 @@ public unsafe partial struct IDWriteFontSetBuilder2 : IDWriteFontSetBuilder2.Int
 		HResult AddFont(IDWriteFontFile* fontFile, uint fontFaceIndex, FontSimulations fontSimulations, FontAxisValue* fontAxisValues, uint fontAxisValueCount, FontAxisRange* fontAxisRanges, uint fontAxisRangeCount, FontProperty* properties, uint propertyCount);
 
 		[VtblIndex(9)]
-		HResult AddFontFile(ushort* filePath);
+		HResult AddFontFile(char* filePath);
 	}
 }
 

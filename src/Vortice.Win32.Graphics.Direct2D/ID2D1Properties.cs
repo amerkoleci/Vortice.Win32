@@ -24,7 +24,7 @@ public static unsafe partial class ID2D1PropertiesExtensions
         {
             fixed (T* dataPtr = data)
             {
-                return self.SetValueByName((ushort*)namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
+                return self.SetValueByName(namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
             }
         }
     }
@@ -34,11 +34,11 @@ public static unsafe partial class ID2D1PropertiesExtensions
     {
         fixed (char* namePtr = name)
         {
-            return self.SetValueByName((ushort*)namePtr, PropertyType.Unknown, data, dataSize);
+            return self.SetValueByName(namePtr, PropertyType.Unknown, data, dataSize);
         }
     }
 
-    public static HResult SetValueByName<TD2D1Properties>(ref this TD2D1Properties self, ushort* name, byte* data, uint dataSize)
+    public static HResult SetValueByName<TD2D1Properties>(ref this TD2D1Properties self, char* name, byte* data, uint dataSize)
         where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
         return self.SetValueByName(name, PropertyType.Unknown, data, dataSize);
@@ -49,7 +49,7 @@ public static unsafe partial class ID2D1PropertiesExtensions
     {
         fixed (char* namePtr = name)
         {
-            return self.GetValueByName((ushort*)namePtr, PropertyType.Unknown, data, dataSize);
+            return self.GetValueByName(namePtr, PropertyType.Unknown, data, dataSize);
         }
     }
 
@@ -61,12 +61,12 @@ public static unsafe partial class ID2D1PropertiesExtensions
         {
             fixed (T* dataPtr = data)
             {
-                return self.GetValueByName((ushort*)namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
+                return self.GetValueByName(namePtr, PropertyType.Unknown, (byte*)dataPtr, (uint)(data.Length * sizeof(T)));
             }
         }
     }
 
-    public static HResult GetValueByName<TD2D1Properties>(ref this TD2D1Properties self, ushort* name, byte* data, uint dataSize)
+    public static HResult GetValueByName<TD2D1Properties>(ref this TD2D1Properties self, char* name, byte* data, uint dataSize)
         where TD2D1Properties : unmanaged, ID2D1Properties.Interface
     {
         return self.GetValueByName(name, PropertyType.Unknown, data, dataSize);

@@ -9,7 +9,7 @@ unsafe partial struct ID3DUserDefinedAnnotation
     {
         fixed (char* namePtr = name)
         {
-            return BeginEvent((ushort*)namePtr);
+            return BeginEvent(namePtr);
         }
     }
 
@@ -17,7 +17,7 @@ unsafe partial struct ID3DUserDefinedAnnotation
     {
         fixed (char* namePtr = name)
         {
-            return BeginEvent((ushort*)namePtr);
+            return BeginEvent(namePtr);
         }
     }
 
@@ -25,7 +25,7 @@ unsafe partial struct ID3DUserDefinedAnnotation
     {
         fixed (char* namePtr = name)
         {
-            SetMarker((ushort*)namePtr);
+            SetMarker(namePtr);
         }
     }
 
@@ -33,7 +33,7 @@ unsafe partial struct ID3DUserDefinedAnnotation
     {
         fixed (char* namePtr = name)
         {
-            SetMarker((ushort*)namePtr);
+            SetMarker(namePtr);
         }
     }
 }

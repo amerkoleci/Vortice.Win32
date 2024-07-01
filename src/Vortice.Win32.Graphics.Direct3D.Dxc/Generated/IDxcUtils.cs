@@ -99,9 +99,9 @@ public unsafe partial struct IDxcUtils : IDxcUtils.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult LoadFile(ushort* pFileName, DxcCp* pCodePage, IDxcBlobEncoding** pBlobEncoding)
+	public HResult LoadFile(char* pFileName, DxcCp* pCodePage, IDxcBlobEncoding** pBlobEncoding)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, ushort*, DxcCp*, IDxcBlobEncoding**, int>)(lpVtbl[7]))((IDxcUtils*)Unsafe.AsPointer(ref this), pFileName, pCodePage, pBlobEncoding);
+		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, char*, DxcCp*, IDxcBlobEncoding**, int>)(lpVtbl[7]))((IDxcUtils*)Unsafe.AsPointer(ref this), pFileName, pCodePage, pBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -148,9 +148,9 @@ public unsafe partial struct IDxcUtils : IDxcUtils.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult BuildArguments(ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcCompilerArgs** ppArgs)
+	public HResult BuildArguments(char* pSourceName, char* pEntryPoint, char* pTargetProfile, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcCompilerArgs** ppArgs)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, ushort*, ushort*, ushort*, ushort**, uint, DxcDefine*, uint, IDxcCompilerArgs**, int>)(lpVtbl[14]))((IDxcUtils*)Unsafe.AsPointer(ref this), pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, ppArgs);
+		return ((delegate* unmanaged[MemberFunction]<IDxcUtils*, char*, char*, char*, char**, uint, DxcDefine*, uint, IDxcCompilerArgs**, int>)(lpVtbl[14]))((IDxcUtils*)Unsafe.AsPointer(ref this), pSourceName, pEntryPoint, pTargetProfile, pArguments, argCount, pDefines, defineCount, ppArgs);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -175,7 +175,7 @@ public unsafe partial struct IDxcUtils : IDxcUtils.Interface, INativeGuid
 		HResult CreateBlob(void* pData, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(7)]
-		HResult LoadFile(ushort* pFileName, DxcCp* pCodePage, IDxcBlobEncoding** pBlobEncoding);
+		HResult LoadFile(char* pFileName, DxcCp* pCodePage, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(8)]
 		HResult CreateReadOnlyStreamFromBlob(IDxcBlob* pBlob, Com.IStream** ppStream);
@@ -196,7 +196,7 @@ public unsafe partial struct IDxcUtils : IDxcUtils.Interface, INativeGuid
 		HResult CreateReflection(DxcBuffer* pData, Guid* iid, void** ppvReflection);
 
 		[VtblIndex(14)]
-		HResult BuildArguments(ushort* pSourceName, ushort* pEntryPoint, ushort* pTargetProfile, ushort** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcCompilerArgs** ppArgs);
+		HResult BuildArguments(char* pSourceName, char* pEntryPoint, char* pTargetProfile, char** pArguments, uint argCount, DxcDefine* pDefines, uint defineCount, IDxcCompilerArgs** ppArgs);
 
 		[VtblIndex(15)]
 		HResult GetPDBContents(IDxcBlob* pPDBBlob, IDxcBlob** ppHash, IDxcBlob** ppContainer);

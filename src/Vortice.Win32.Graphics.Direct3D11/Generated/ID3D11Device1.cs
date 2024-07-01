@@ -441,9 +441,9 @@ public unsafe partial struct ID3D11Device1 : ID3D11Device1.Interface, INativeGui
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device1::OpenSharedResourceByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
+	public HResult OpenSharedResourceByName(char* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device1*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device1*, char*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device1*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
 	public interface Interface : ID3D11Device.Interface
@@ -467,7 +467,7 @@ public unsafe partial struct ID3D11Device1 : ID3D11Device1.Interface, INativeGui
 		HResult OpenSharedResource1(Handle hResource, Guid* returnedInterface, void** ppResource);
 
 		[VtblIndex(49)]
-		HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource);
+		HResult OpenSharedResourceByName(char* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource);
 	}
 }
 

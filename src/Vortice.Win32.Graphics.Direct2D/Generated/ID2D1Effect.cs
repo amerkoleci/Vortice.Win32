@@ -81,9 +81,9 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetPropertyName(uint index, char** name, uint nameCount)
+	public HResult GetPropertyName(uint index, char* name, uint nameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, char**, uint, int>)(lpVtbl[4]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, name, nameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, uint, char*, uint, int>)(lpVtbl[4]))((ID2D1Effect*)Unsafe.AsPointer(ref this), index, name, nameCount);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyNameLength" />
@@ -105,17 +105,17 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Properties.GetPropertyIndex" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public uint GetPropertyIndex(ushort* name)
+	public uint GetPropertyIndex(char* name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, ushort*, uint>)(lpVtbl[7]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, char*, uint>)(lpVtbl[7]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.SetValueByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult SetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize)
+	public HResult SetValueByName(char* name, PropertyType type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, char*, PropertyType, byte*, uint, int>)(lpVtbl[8]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.SetValue" />
@@ -129,9 +129,9 @@ public unsafe partial struct ID2D1Effect : ID2D1Effect.Interface, INativeGuid
 	/// <inheritdoc cref="ID2D1Properties.GetValueByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetValueByName(ushort* name, PropertyType type, byte* data, uint dataSize)
+	public HResult GetValueByName(char* name, PropertyType type, byte* data, uint dataSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, ushort*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Effect*, char*, PropertyType, byte*, uint, int>)(lpVtbl[10]))((ID2D1Effect*)Unsafe.AsPointer(ref this), name, type, data, dataSize);
 	}
 
 	/// <inheritdoc cref="ID2D1Properties.GetValue" />

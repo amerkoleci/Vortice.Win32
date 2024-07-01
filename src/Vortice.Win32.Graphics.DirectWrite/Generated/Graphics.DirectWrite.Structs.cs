@@ -356,10 +356,10 @@ public partial struct GlyphRun
 public partial struct GlyphRunDescription
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::localeName"]/*' />
-	public unsafe ushort* localeName;
+	public unsafe char* localeName;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::string"]/*' />
-	public unsafe ushort* @string;
+	public unsafe char* @string;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_GLYPH_RUN_DESCRIPTION::stringLength"]/*' />
 	public uint stringLength;
@@ -394,7 +394,7 @@ public partial struct Underline
 	public FlowDirection flowDirection;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::localeName"]/*' />
-	public unsafe ushort* localeName;
+	public unsafe char* localeName;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_UNDERLINE::measuringMode"]/*' />
 	public MeasuringMode measuringMode;
@@ -420,7 +420,7 @@ public partial struct Strikethrough
 	public FlowDirection flowDirection;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::localeName"]/*' />
-	public unsafe ushort* localeName;
+	public unsafe char* localeName;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_STRIKETHROUGH::measuringMode"]/*' />
 	public MeasuringMode measuringMode;
@@ -712,10 +712,10 @@ public partial struct FontProperty
 	public FontPropertyId propertyId;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY::propertyValue"]/*' />
-	public unsafe ushort* propertyValue;
+	public unsafe char* propertyValue;
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_FONT_PROPERTY::localeName"]/*' />
-	public unsafe ushort* localeName;
+	public unsafe char* localeName;
 }
 
 /// <include file='../DirectWrite.xml' path='doc/member[@name="DWRITE_LINE_METRICS1"]/*' />

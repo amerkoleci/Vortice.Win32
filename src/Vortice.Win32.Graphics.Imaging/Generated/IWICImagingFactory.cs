@@ -73,9 +73,9 @@ public unsafe partial struct IWICImagingFactory : IWICImagingFactory.Interface, 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateDecoderFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateDecoderFromFilename(ushort* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
+	public HResult CreateDecoderFromFilename(char* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory*, ushort*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
+		return ((delegate* unmanaged[MemberFunction]<IWICImagingFactory*, char*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICImagingFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICImagingFactory::CreateDecoderFromStream"]/*' />
@@ -273,7 +273,7 @@ public unsafe partial struct IWICImagingFactory : IWICImagingFactory.Interface, 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult CreateDecoderFromFilename(ushort* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder);
+		HResult CreateDecoderFromFilename(char* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder);
 
 		[VtblIndex(4)]
 		HResult CreateDecoderFromStream(Com.IStream* pIStream, Guid* pguidVendor, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder);

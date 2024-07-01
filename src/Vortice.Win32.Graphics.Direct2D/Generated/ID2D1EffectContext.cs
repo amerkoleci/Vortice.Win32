@@ -209,9 +209,9 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateColorContextFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateColorContextFromFilename(ushort* filename, ID2D1ColorContext** colorContext)
+	public HResult CreateColorContextFromFilename(char* filename, ID2D1ColorContext** colorContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, ushort*, ID2D1ColorContext**, int>)(lpVtbl[20]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), filename, colorContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext*, char*, ID2D1ColorContext**, int>)(lpVtbl[20]))((ID2D1EffectContext*)Unsafe.AsPointer(ref this), filename, colorContext);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1EffectContext::CreateColorContextFromWicColorContext"]/*' />
@@ -292,7 +292,7 @@ public unsafe partial struct ID2D1EffectContext : ID2D1EffectContext.Interface, 
 		HResult CreateColorContext(ColorSpace space, byte* profile, uint profileSize, ID2D1ColorContext** colorContext);
 
 		[VtblIndex(20)]
-		HResult CreateColorContextFromFilename(ushort* filename, ID2D1ColorContext** colorContext);
+		HResult CreateColorContextFromFilename(char* filename, ID2D1ColorContext** colorContext);
 
 		[VtblIndex(21)]
 		HResult CreateColorContextFromWicColorContext(Graphics.Imaging.IWICColorContext* wicColorContext, ID2D1ColorContext** colorContext);

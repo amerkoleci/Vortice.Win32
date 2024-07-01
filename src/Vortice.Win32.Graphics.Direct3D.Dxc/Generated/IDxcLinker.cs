@@ -71,25 +71,25 @@ public unsafe partial struct IDxcLinker : IDxcLinker.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult RegisterLibrary(ushort* pLibName, IDxcBlob* pLib)
+	public HResult RegisterLibrary(char* pLibName, IDxcBlob* pLib)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcLinker*, ushort*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcLinker*)Unsafe.AsPointer(ref this), pLibName, pLib);
+		return ((delegate* unmanaged[MemberFunction]<IDxcLinker*, char*, IDxcBlob*, int>)(lpVtbl[3]))((IDxcLinker*)Unsafe.AsPointer(ref this), pLibName, pLib);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult Link(ushort* pEntryName, ushort* pTargetProfile, ushort** pLibNames, uint libCount, ushort** pArguments, uint argCount, IDxcOperationResult** ppResult)
+	public HResult Link(char* pEntryName, char* pTargetProfile, char** pLibNames, uint libCount, char** pArguments, uint argCount, IDxcOperationResult** ppResult)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcLinker*, ushort*, ushort*, ushort**, uint, ushort**, uint, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcLinker*)Unsafe.AsPointer(ref this), pEntryName, pTargetProfile, pLibNames, libCount, pArguments, argCount, ppResult);
+		return ((delegate* unmanaged[MemberFunction]<IDxcLinker*, char*, char*, char**, uint, char**, uint, IDxcOperationResult**, int>)(lpVtbl[4]))((IDxcLinker*)Unsafe.AsPointer(ref this), pEntryName, pTargetProfile, pLibNames, libCount, pArguments, argCount, ppResult);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult RegisterLibrary(ushort* pLibName, IDxcBlob* pLib);
+		HResult RegisterLibrary(char* pLibName, IDxcBlob* pLib);
 
 		[VtblIndex(4)]
-		HResult Link(ushort* pEntryName, ushort* pTargetProfile, ushort** pLibNames, uint libCount, ushort** pArguments, uint argCount, IDxcOperationResult** ppResult);
+		HResult Link(char* pEntryName, char* pTargetProfile, char** pLibNames, uint libCount, char** pArguments, uint argCount, IDxcOperationResult** ppResult);
 	}
 }
 

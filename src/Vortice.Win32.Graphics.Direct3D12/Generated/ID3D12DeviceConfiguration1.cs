@@ -106,15 +106,15 @@ public unsafe partial struct ID3D12DeviceConfiguration1 : ID3D12DeviceConfigurat
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12DeviceConfiguration1::CreateVersionedRootSignatureDeserializerFromSubobjectInLibrary"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateVersionedRootSignatureDeserializerFromSubobjectInLibrary(void* pLibraryBlob, nuint Size, ushort* RootSignatureSubobjectName, Guid* riid, void** ppvDeserializer)
+	public HResult CreateVersionedRootSignatureDeserializerFromSubobjectInLibrary(void* pLibraryBlob, nuint Size, char* RootSignatureSubobjectName, Guid* riid, void** ppvDeserializer)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration1*, void*, nuint, ushort*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12DeviceConfiguration1*)Unsafe.AsPointer(ref this), pLibraryBlob, Size, RootSignatureSubobjectName, riid, ppvDeserializer);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DeviceConfiguration1*, void*, nuint, char*, Guid*, void**, int>)(lpVtbl[7]))((ID3D12DeviceConfiguration1*)Unsafe.AsPointer(ref this), pLibraryBlob, Size, RootSignatureSubobjectName, riid, ppvDeserializer);
 	}
 
 	public interface Interface : ID3D12DeviceConfiguration.Interface
 	{
 		[VtblIndex(7)]
-		HResult CreateVersionedRootSignatureDeserializerFromSubobjectInLibrary(void* pLibraryBlob, nuint Size, ushort* RootSignatureSubobjectName, Guid* riid, void** ppvDeserializer);
+		HResult CreateVersionedRootSignatureDeserializerFromSubobjectInLibrary(void* pLibraryBlob, nuint Size, char* RootSignatureSubobjectName, Guid* riid, void** ppvDeserializer);
 	}
 }
 

@@ -73,23 +73,23 @@ public unsafe partial struct IDWriteFontFallback1 : IDWriteFontFallback1.Interfa
 	/// <inheritdoc cref="IDWriteFontFallback.MapCharacters" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, ushort* baseFamilyName, FontWeight baseWeight, FontStyle baseStyle, FontStretch baseStretch, uint* mappedLength, IDWriteFont** mappedFont, float* scale)
+	public HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, char* baseFamilyName, FontWeight baseWeight, FontStyle baseStyle, FontStretch baseStretch, uint* mappedLength, IDWriteFont** mappedFont, float* scale)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallback1*, IDWriteTextAnalysisSource*, uint, uint, IDWriteFontCollection*, ushort*, FontWeight, FontStyle, FontStretch, uint*, IDWriteFont**, float*, int>)(lpVtbl[3]))((IDWriteFontFallback1*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, baseFontCollection, baseFamilyName, baseWeight, baseStyle, baseStretch, mappedLength, mappedFont, scale);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallback1*, IDWriteTextAnalysisSource*, uint, uint, IDWriteFontCollection*, char*, FontWeight, FontStyle, FontStretch, uint*, IDWriteFont**, float*, int>)(lpVtbl[3]))((IDWriteFontFallback1*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, baseFontCollection, baseFamilyName, baseWeight, baseStyle, baseStretch, mappedLength, mappedFont, scale);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontFallback1::MapCharacters"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, ushort* baseFamilyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, uint* mappedLength, float* scale, IDWriteFontFace5** mappedFontFace)
+	public HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, char* baseFamilyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, uint* mappedLength, float* scale, IDWriteFontFace5** mappedFontFace)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallback1*, IDWriteTextAnalysisSource*, uint, uint, IDWriteFontCollection*, ushort*, FontAxisValue*, uint, uint*, float*, IDWriteFontFace5**, int>)(lpVtbl[4]))((IDWriteFontFallback1*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, baseFontCollection, baseFamilyName, fontAxisValues, fontAxisValueCount, mappedLength, scale, mappedFontFace);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontFallback1*, IDWriteTextAnalysisSource*, uint, uint, IDWriteFontCollection*, char*, FontAxisValue*, uint, uint*, float*, IDWriteFontFace5**, int>)(lpVtbl[4]))((IDWriteFontFallback1*)Unsafe.AsPointer(ref this), analysisSource, textPosition, textLength, baseFontCollection, baseFamilyName, fontAxisValues, fontAxisValueCount, mappedLength, scale, mappedFontFace);
 	}
 
 	public interface Interface : IDWriteFontFallback.Interface
 	{
 		[VtblIndex(4)]
-		HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, ushort* baseFamilyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, uint* mappedLength, float* scale, IDWriteFontFace5** mappedFontFace);
+		HResult MapCharacters(IDWriteTextAnalysisSource* analysisSource, uint textPosition, uint textLength, IDWriteFontCollection* baseFontCollection, char* baseFamilyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, uint* mappedLength, float* scale, IDWriteFontFace5** mappedFontFace);
 	}
 }
 

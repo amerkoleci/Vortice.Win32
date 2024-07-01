@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12Object : ID3D12Object.Interface, INativeGuid
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12Object::SetName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(ushort* Name)
+	public HResult SetName(char* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Object*, ushort*, int>)(lpVtbl[6]))((ID3D12Object*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Object*, char*, int>)(lpVtbl[6]))((ID3D12Object*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -114,7 +114,7 @@ public unsafe partial struct ID3D12Object : ID3D12Object.Interface, INativeGuid
 		HResult SetPrivateDataInterface(Guid* guid, IUnknown* pData);
 
 		[VtblIndex(6)]
-		HResult SetName(ushort* Name);
+		HResult SetName(char* Name);
 	}
 }
 

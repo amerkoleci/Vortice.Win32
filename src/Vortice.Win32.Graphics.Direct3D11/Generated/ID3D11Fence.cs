@@ -105,9 +105,9 @@ public unsafe partial struct ID3D11Fence : ID3D11Fence.Interface, INativeGuid
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle)
+	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Fence*, Security.SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[7]))((ID3D11Fence*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Fence::GetCompletedValue"]/*' />
@@ -129,7 +129,7 @@ public unsafe partial struct ID3D11Fence : ID3D11Fence.Interface, INativeGuid
 	public interface Interface : ID3D11DeviceChild.Interface
 	{
 		[VtblIndex(7)]
-		HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle);
+		HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, Handle* pHandle);
 
 		[VtblIndex(8)]
 		ulong GetCompletedValue();

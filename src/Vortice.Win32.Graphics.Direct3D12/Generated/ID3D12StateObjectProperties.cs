@@ -73,17 +73,17 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderIdentifier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void* GetShaderIdentifier(ushort* pExportName)
+	public void* GetShaderIdentifier(char* pExportName)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties*, ushort*, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties*, char*, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetShaderStackSize"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public ulong GetShaderStackSize(ushort* pExportName)
+	public ulong GetShaderStackSize(char* pExportName)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties*, ushort*, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties*, char*, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties*)Unsafe.AsPointer(ref this), pExportName);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties::GetPipelineStackSize"]/*' />
@@ -105,10 +105,10 @@ public unsafe partial struct ID3D12StateObjectProperties : ID3D12StateObjectProp
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		void* GetShaderIdentifier(ushort* pExportName);
+		void* GetShaderIdentifier(char* pExportName);
 
 		[VtblIndex(4)]
-		ulong GetShaderStackSize(ushort* pExportName);
+		ulong GetShaderStackSize(char* pExportName);
 
 		[VtblIndex(5)]
 		ulong GetPipelineStackSize();

@@ -81,17 +81,17 @@ public unsafe partial struct IWICMetadataQueryWriter : IWICMetadataQueryWriter.I
 	/// <inheritdoc cref="IWICMetadataQueryReader.GetLocation" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetLocation(uint cchMaxLength, char** wzNamespace, uint* pcchActualLength)
+	public HResult GetLocation(uint cchMaxLength, char* wzNamespace, uint* pcchActualLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, uint, char**, uint*, int>)(lpVtbl[4]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), cchMaxLength, wzNamespace, pcchActualLength);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, uint, char*, uint*, int>)(lpVtbl[4]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), cchMaxLength, wzNamespace, pcchActualLength);
 	}
 
 	/// <inheritdoc cref="IWICMetadataQueryReader.GetMetadataByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetMetadataByName(ushort* wzName, Com.Variant** pvarValue)
+	public HResult GetMetadataByName(char* wzName, Com.Variant** pvarValue)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, ushort*, Com.Variant**, int>)(lpVtbl[5]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName, pvarValue);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, char*, Com.Variant**, int>)(lpVtbl[5]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName, pvarValue);
 	}
 
 	/// <inheritdoc cref="IWICMetadataQueryReader.GetEnumerator" />
@@ -105,26 +105,26 @@ public unsafe partial struct IWICMetadataQueryWriter : IWICMetadataQueryWriter.I
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter::SetMetadataByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult SetMetadataByName(ushort* wzName, Com.Variant* pvarValue)
+	public HResult SetMetadataByName(char* wzName, Com.Variant* pvarValue)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, ushort*, Com.Variant*, int>)(lpVtbl[7]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName, pvarValue);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, char*, Com.Variant*, int>)(lpVtbl[7]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName, pvarValue);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICMetadataQueryWriter::RemoveMetadataByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult RemoveMetadataByName(ushort* wzName)
+	public HResult RemoveMetadataByName(char* wzName)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, ushort*, int>)(lpVtbl[8]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataQueryWriter*, char*, int>)(lpVtbl[8]))((IWICMetadataQueryWriter*)Unsafe.AsPointer(ref this), wzName);
 	}
 
 	public interface Interface : IWICMetadataQueryReader.Interface
 	{
 		[VtblIndex(7)]
-		HResult SetMetadataByName(ushort* wzName, Com.Variant* pvarValue);
+		HResult SetMetadataByName(char* wzName, Com.Variant* pvarValue);
 
 		[VtblIndex(8)]
-		HResult RemoveMetadataByName(ushort* wzName);
+		HResult RemoveMetadataByName(char* wzName);
 	}
 }
 

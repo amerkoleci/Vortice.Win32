@@ -71,15 +71,15 @@ public unsafe partial struct IDxcIncludeHandler : IDxcIncludeHandler.Interface, 
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult LoadSource(ushort* pFilename, IDxcBlob** ppIncludeSource)
+	public HResult LoadSource(char* pFilename, IDxcBlob** ppIncludeSource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcIncludeHandler*, ushort*, IDxcBlob**, int>)(lpVtbl[3]))((IDxcIncludeHandler*)Unsafe.AsPointer(ref this), pFilename, ppIncludeSource);
+		return ((delegate* unmanaged[MemberFunction]<IDxcIncludeHandler*, char*, IDxcBlob**, int>)(lpVtbl[3]))((IDxcIncludeHandler*)Unsafe.AsPointer(ref this), pFilename, ppIncludeSource);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult LoadSource(ushort* pFilename, IDxcBlob** ppIncludeSource);
+		HResult LoadSource(char* pFilename, IDxcBlob** ppIncludeSource);
 	}
 }
 

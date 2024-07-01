@@ -12,22 +12,22 @@ namespace Win32.Media.Audio.XAudio2;
 public static unsafe partial class Apis
 {
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateFX"]/*' />
-	[DllImport("xaudio2_9", ExactSpelling = true)]
-	public static extern HResult CreateFX(Guid* clsid, IUnknown** pEffect, void* pInitDat, uint InitDataByteSize);
+	[LibraryImport("xaudio2_9")]
+	public static partial HResult CreateFX(Guid* clsid, IUnknown** pEffect, void* pInitDat, uint InitDataByteSize);
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="XAudio2CreateWithVersionInfo"]/*' />
-	[DllImport("xaudio2_9", ExactSpelling = true)]
-	public static extern HResult XAudio2CreateWithVersionInfo(IXAudio2** ppXAudio2, uint Flags, uint XAudio2Processor, uint ntddiVersion);
+	[LibraryImport("xaudio2_9")]
+	public static partial HResult XAudio2CreateWithVersionInfo(IXAudio2** ppXAudio2, uint Flags, uint XAudio2Processor, uint ntddiVersion);
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateAudioVolumeMeter"]/*' />
-	[DllImport("xaudio2_9", ExactSpelling = true)]
-	public static extern HResult CreateAudioVolumeMeter(IUnknown** ppApo);
+	[LibraryImport("xaudio2_9")]
+	public static partial HResult CreateAudioVolumeMeter(IUnknown** ppApo);
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateAudioReverb"]/*' />
-	[DllImport("xaudio2_9", ExactSpelling = true)]
-	public static extern HResult CreateAudioReverb(IUnknown** ppApo);
+	[LibraryImport("xaudio2_9")]
+	public static partial HResult CreateAudioReverb(IUnknown** ppApo);
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="CreateHrtfApo"]/*' />
-	[DllImport("HrtfApo.dll", ExactSpelling = true)]
-	public static extern HResult CreateHrtfApo(HrtfApoInit* init, IXAPO** xApo);
+	[LibraryImport("HrtfApo.dll")]
+	public static partial HResult CreateHrtfApo(HrtfApoInit* init, IXAPO** xApo);
 }

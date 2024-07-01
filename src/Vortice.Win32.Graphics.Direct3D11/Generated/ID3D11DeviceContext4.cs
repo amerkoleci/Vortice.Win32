@@ -1177,17 +1177,17 @@ public unsafe partial struct ID3D11DeviceContext4 : ID3D11DeviceContext4.Interfa
 	/// <inheritdoc cref="ID3D11DeviceContext2.SetMarkerInt" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(141)]
-	public void SetMarkerInt(ushort* pLabel, int Data)
+	public void SetMarkerInt(char* pLabel, int Data)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext4*, ushort*, int, void>)(lpVtbl[141]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext4*, char*, int, void>)(lpVtbl[141]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.BeginEventInt" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(142)]
-	public void BeginEventInt(ushort* pLabel, int Data)
+	public void BeginEventInt(char* pLabel, int Data)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext4*, ushort*, int, void>)(lpVtbl[142]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext4*, char*, int, void>)(lpVtbl[142]))((ID3D11DeviceContext4*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <inheritdoc cref="ID3D11DeviceContext2.EndEvent" />

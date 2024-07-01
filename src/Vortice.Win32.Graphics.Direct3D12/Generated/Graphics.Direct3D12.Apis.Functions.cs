@@ -12,34 +12,34 @@ namespace Win32.Graphics.Direct3D12;
 public static unsafe partial class Apis
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12SerializeRootSignature"]/*' />
-	[DllImport("d3d12.dll", ExactSpelling = true)]
-	public static extern HResult D3D12SerializeRootSignature(RootSignatureDescription* pRootSignature, RootSignatureVersion Version, Graphics.Direct3D.ID3DBlob** ppBlob, Graphics.Direct3D.ID3DBlob** ppErrorBlob);
+	[LibraryImport("d3d12.dll")]
+	public static partial HResult D3D12SerializeRootSignature(RootSignatureDescription* pRootSignature, RootSignatureVersion Version, Graphics.Direct3D.ID3DBlob** ppBlob, Graphics.Direct3D.ID3DBlob** ppErrorBlob);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12CreateRootSignatureDeserializer"]/*' />
-	[DllImport("d3d12.dll", ExactSpelling = true)]
-	public static extern HResult D3D12CreateRootSignatureDeserializer(void* pSrcData, nuint SrcDataSizeInBytes, Guid* pRootSignatureDeserializerInterface, void** ppRootSignatureDeserializer);
+	[LibraryImport("d3d12.dll")]
+	public static partial HResult D3D12CreateRootSignatureDeserializer(void* pSrcData, nuint SrcDataSizeInBytes, Guid* pRootSignatureDeserializerInterface, void** ppRootSignatureDeserializer);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12SerializeVersionedRootSignature"]/*' />
-	[DllImport("d3d12.dll", ExactSpelling = true)]
-	public static extern HResult D3D12SerializeVersionedRootSignature(VersionedRootSignatureDescription* pRootSignature, Graphics.Direct3D.ID3DBlob** ppBlob, Graphics.Direct3D.ID3DBlob** ppErrorBlob);
+	[LibraryImport("d3d12.dll")]
+	public static partial HResult D3D12SerializeVersionedRootSignature(VersionedRootSignatureDescription* pRootSignature, Graphics.Direct3D.ID3DBlob** ppBlob, Graphics.Direct3D.ID3DBlob** ppErrorBlob);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12CreateVersionedRootSignatureDeserializer"]/*' />
-	[DllImport("d3d12.dll", ExactSpelling = true)]
-	public static extern HResult D3D12CreateVersionedRootSignatureDeserializer(void* pSrcData, nuint SrcDataSizeInBytes, Guid* pRootSignatureDeserializerInterface, void** ppRootSignatureDeserializer);
+	[LibraryImport("d3d12.dll")]
+	public static partial HResult D3D12CreateVersionedRootSignatureDeserializer(void* pSrcData, nuint SrcDataSizeInBytes, Guid* pRootSignatureDeserializerInterface, void** ppRootSignatureDeserializer);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12CreateDevice"]/*' />
-	[DllImport("d3d12.dll", ExactSpelling = true)]
-	public static extern HResult D3D12CreateDevice(IUnknown* pAdapter, Graphics.Direct3D.FeatureLevel MinimumFeatureLevel, Guid* riid, void** ppDevice);
+	[LibraryImport("d3d12.dll")]
+	public static partial HResult D3D12CreateDevice(IUnknown* pAdapter, Graphics.Direct3D.FeatureLevel MinimumFeatureLevel, Guid* riid, void** ppDevice);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12GetDebugInterface"]/*' />
-	[DllImport("d3d12.dll", ExactSpelling = true)]
-	public static extern HResult D3D12GetDebugInterface(Guid* riid, void** ppvDebug);
+	[LibraryImport("d3d12.dll")]
+	public static partial HResult D3D12GetDebugInterface(Guid* riid, void** ppvDebug);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12EnableExperimentalFeatures"]/*' />
-	[DllImport("d3d12.dll", ExactSpelling = true)]
-	public static extern HResult D3D12EnableExperimentalFeatures(uint NumFeatures, Guid* pIIDs, void* pConfigurationStructs, uint* pConfigurationStructSizes);
+	[LibraryImport("d3d12.dll")]
+	public static partial HResult D3D12EnableExperimentalFeatures(uint NumFeatures, Guid* pIIDs, void* pConfigurationStructs, uint* pConfigurationStructSizes);
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12GetInterface"]/*' />
-	[DllImport("d3d12.dll", ExactSpelling = true)]
-	public static extern HResult D3D12GetInterface(Guid* rclsid, Guid* riid, void** ppvDebug);
+	[LibraryImport("d3d12.dll")]
+	public static partial HResult D3D12GetInterface(Guid* rclsid, Guid* riid, void** ppvDebug);
 }

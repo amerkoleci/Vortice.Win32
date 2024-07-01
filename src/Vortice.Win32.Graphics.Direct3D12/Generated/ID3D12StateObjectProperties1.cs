@@ -73,17 +73,17 @@ public unsafe partial struct ID3D12StateObjectProperties1 : ID3D12StateObjectPro
 	/// <inheritdoc cref="ID3D12StateObjectProperties.GetShaderIdentifier" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public void* GetShaderIdentifier(ushort* pExportName)
+	public void* GetShaderIdentifier(char* pExportName)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties1*, ushort*, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties1*)Unsafe.AsPointer(ref this), pExportName);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties1*, char*, void*>)(lpVtbl[3]))((ID3D12StateObjectProperties1*)Unsafe.AsPointer(ref this), pExportName);
 	}
 
 	/// <inheritdoc cref="ID3D12StateObjectProperties.GetShaderStackSize" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public ulong GetShaderStackSize(ushort* pExportName)
+	public ulong GetShaderStackSize(char* pExportName)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties1*, ushort*, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties1*)Unsafe.AsPointer(ref this), pExportName);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties1*, char*, ulong>)(lpVtbl[4]))((ID3D12StateObjectProperties1*)Unsafe.AsPointer(ref this), pExportName);
 	}
 
 	/// <inheritdoc cref="ID3D12StateObjectProperties.GetPipelineStackSize" />
@@ -105,16 +105,16 @@ public unsafe partial struct ID3D12StateObjectProperties1 : ID3D12StateObjectPro
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12StateObjectProperties1::GetProgramIdentifier"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public ProgramIdentifier GetProgramIdentifier(ushort* pProgramName)
+	public ProgramIdentifier GetProgramIdentifier(char* pProgramName)
 	{
 		ProgramIdentifier result;
-		return *((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties1*, ProgramIdentifier*, ushort*, ProgramIdentifier*>)(lpVtbl[7]))((ID3D12StateObjectProperties1*)Unsafe.AsPointer(ref this), &result, pProgramName);
+		return *((delegate* unmanaged[MemberFunction]<ID3D12StateObjectProperties1*, ProgramIdentifier*, char*, ProgramIdentifier*>)(lpVtbl[7]))((ID3D12StateObjectProperties1*)Unsafe.AsPointer(ref this), &result, pProgramName);
 	}
 
 	public interface Interface : ID3D12StateObjectProperties.Interface
 	{
 		[VtblIndex(7)]
-		ProgramIdentifier GetProgramIdentifier(ushort* pProgramName);
+		ProgramIdentifier GetProgramIdentifier(char* pProgramName);
 	}
 }
 

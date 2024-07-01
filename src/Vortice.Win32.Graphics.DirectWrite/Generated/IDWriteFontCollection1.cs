@@ -89,9 +89,9 @@ public unsafe partial struct IDWriteFontCollection1 : IDWriteFontCollection1.Int
 	/// <inheritdoc cref="IDWriteFontCollection.FindFamilyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult FindFamilyName(ushort* familyName, uint* index, Bool32* exists)
+	public HResult FindFamilyName(char* familyName, uint* index, Bool32* exists)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection1*, ushort*, uint*, Bool32*, int>)(lpVtbl[5]))((IDWriteFontCollection1*)Unsafe.AsPointer(ref this), familyName, index, exists);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection1*, char*, uint*, Bool32*, int>)(lpVtbl[5]))((IDWriteFontCollection1*)Unsafe.AsPointer(ref this), familyName, index, exists);
 	}
 
 	/// <inheritdoc cref="IDWriteFontCollection.GetFontFromFontFace" />

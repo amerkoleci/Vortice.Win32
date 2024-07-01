@@ -73,9 +73,9 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult InitializeFromFilename(ushort* wzFilename)
+	public HResult InitializeFromFilename(char* wzFilename)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, ushort*, int>)(lpVtbl[3]))((IWICColorContext*)Unsafe.AsPointer(ref this), wzFilename);
+		return ((delegate* unmanaged[MemberFunction]<IWICColorContext*, char*, int>)(lpVtbl[3]))((IWICColorContext*)Unsafe.AsPointer(ref this), wzFilename);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICColorContext::InitializeFromMemory"]/*' />
@@ -121,7 +121,7 @@ public unsafe partial struct IWICColorContext : IWICColorContext.Interface, INat
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult InitializeFromFilename(ushort* wzFilename);
+		HResult InitializeFromFilename(char* wzFilename);
 
 		[VtblIndex(4)]
 		HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);

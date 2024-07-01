@@ -114,9 +114,9 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::FindElementById"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult FindElementById(ushort* id, ID2D1SvgElement** svgElement)
+	public HResult FindElementById(char* id, ID2D1SvgElement** svgElement)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, ushort*, ID2D1SvgElement**, int>)(lpVtbl[8]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), id, svgElement);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, char*, ID2D1SvgElement**, int>)(lpVtbl[8]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), id, svgElement);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::Serialize"]/*' />
@@ -138,9 +138,9 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreatePaint"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult CreatePaint(SvgPaintType paintType, Color4* color, ushort* id, ID2D1SvgPaint** paint)
+	public HResult CreatePaint(SvgPaintType paintType, Color4* color, char* id, ID2D1SvgPaint** paint)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, SvgPaintType, Color4*, ushort*, ID2D1SvgPaint**, int>)(lpVtbl[11]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), paintType, color, id, paint);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgDocument*, SvgPaintType, Color4*, char*, ID2D1SvgPaint**, int>)(lpVtbl[11]))((ID2D1SvgDocument*)Unsafe.AsPointer(ref this), paintType, color, id, paint);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgDocument::CreateStrokeDashArray"]/*' />
@@ -182,7 +182,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 		void GetRoot(ID2D1SvgElement** root);
 
 		[VtblIndex(8)]
-		HResult FindElementById(ushort* id, ID2D1SvgElement** svgElement);
+		HResult FindElementById(char* id, ID2D1SvgElement** svgElement);
 
 		[VtblIndex(9)]
 		HResult Serialize(Com.IStream* outputXmlStream, ID2D1SvgElement* subtree);
@@ -191,7 +191,7 @@ public unsafe partial struct ID2D1SvgDocument : ID2D1SvgDocument.Interface, INat
 		HResult Deserialize(Com.IStream* inputXmlStream, ID2D1SvgElement** subtree);
 
 		[VtblIndex(11)]
-		HResult CreatePaint(SvgPaintType paintType, Color4* color, ushort* id, ID2D1SvgPaint** paint);
+		HResult CreatePaint(SvgPaintType paintType, Color4* color, char* id, ID2D1SvgPaint** paint);
 
 		[VtblIndex(12)]
 		HResult CreateStrokeDashArray(SvgLength* dashes, uint dashesCount, ID2D1SvgStrokeDashArray** strokeDashArray);

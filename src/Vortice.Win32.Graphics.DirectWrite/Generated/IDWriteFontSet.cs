@@ -113,9 +113,9 @@ public unsafe partial struct IDWriteFontSet : IDWriteFontSet.Interface, INativeG
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet::GetPropertyValues"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetPropertyValues(FontPropertyId propertyID, ushort* preferredLocaleNames, IDWriteStringList** values)
+	public HResult GetPropertyValues(FontPropertyId propertyID, char* preferredLocaleNames, IDWriteStringList** values)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet*, FontPropertyId, ushort*, IDWriteStringList**, int>)(lpVtbl[8]))((IDWriteFontSet*)Unsafe.AsPointer(ref this), propertyID, preferredLocaleNames, values);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet*, FontPropertyId, char*, IDWriteStringList**, int>)(lpVtbl[8]))((IDWriteFontSet*)Unsafe.AsPointer(ref this), propertyID, preferredLocaleNames, values);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet::GetPropertyValues"]/*' />
@@ -137,9 +137,9 @@ public unsafe partial struct IDWriteFontSet : IDWriteFontSet.Interface, INativeG
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet::GetMatchingFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetMatchingFonts(ushort* familyName, FontWeight fontWeight, FontStretch fontStretch, FontStyle fontStyle, IDWriteFontSet** filteredSet)
+	public HResult GetMatchingFonts(char* familyName, FontWeight fontWeight, FontStretch fontStretch, FontStyle fontStyle, IDWriteFontSet** filteredSet)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet*, ushort*, FontWeight, FontStretch, FontStyle, IDWriteFontSet**, int>)(lpVtbl[11]))((IDWriteFontSet*)Unsafe.AsPointer(ref this), familyName, fontWeight, fontStretch, fontStyle, filteredSet);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontSet*, char*, FontWeight, FontStretch, FontStyle, IDWriteFontSet**, int>)(lpVtbl[11]))((IDWriteFontSet*)Unsafe.AsPointer(ref this), familyName, fontWeight, fontStretch, fontStyle, filteredSet);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontSet::GetMatchingFonts"]/*' />
@@ -168,7 +168,7 @@ public unsafe partial struct IDWriteFontSet : IDWriteFontSet.Interface, INativeG
 		HResult GetPropertyValues(FontPropertyId propertyID, IDWriteStringList** values);
 
 		[VtblIndex(8)]
-		HResult GetPropertyValues(FontPropertyId propertyID, ushort* preferredLocaleNames, IDWriteStringList** values);
+		HResult GetPropertyValues(FontPropertyId propertyID, char* preferredLocaleNames, IDWriteStringList** values);
 
 		[VtblIndex(9)]
 		HResult GetPropertyValues(uint listIndex, FontPropertyId propertyId, Bool32* exists, IDWriteLocalizedStrings** values);
@@ -177,7 +177,7 @@ public unsafe partial struct IDWriteFontSet : IDWriteFontSet.Interface, INativeG
 		HResult GetPropertyOccurrenceCount(FontProperty* property, uint* propertyOccurrenceCount);
 
 		[VtblIndex(11)]
-		HResult GetMatchingFonts(ushort* familyName, FontWeight fontWeight, FontStretch fontStretch, FontStyle fontStyle, IDWriteFontSet** filteredSet);
+		HResult GetMatchingFonts(char* familyName, FontWeight fontWeight, FontStretch fontStretch, FontStyle fontStyle, IDWriteFontSet** filteredSet);
 
 		[VtblIndex(12)]
 		HResult GetMatchingFonts(FontProperty* properties, uint propertyCount, IDWriteFontSet** filteredSet);

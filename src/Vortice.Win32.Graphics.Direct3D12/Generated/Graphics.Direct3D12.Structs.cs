@@ -3747,7 +3747,7 @@ public partial struct ProtectedResourceSessionDescription
 public partial struct MetaCommandParameterDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Name"]/*' />
-	public unsafe ushort* Name;
+	public unsafe char* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_PARAMETER_DESC::Type"]/*' />
 	public MetaCommandParameterType Type;
@@ -3770,7 +3770,7 @@ public partial struct MetaCommandDescription
 	public Guid Id;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::Name"]/*' />
-	public unsafe ushort* Name;
+	public unsafe char* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_META_COMMAND_DESC::InitializationDirtyState"]/*' />
 	public GraphicsStates InitializationDirtyState;
@@ -3792,7 +3792,7 @@ public partial struct ProgramIdentifier
 public partial struct NodeId
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_ID::Name"]/*' />
-	public unsafe ushort* Name;
+	public unsafe char* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_NODE_ID::ArrayIndex"]/*' />
 	public uint ArrayIndex;
@@ -3892,10 +3892,10 @@ public partial struct DepthStencilFormat
 public partial struct ExportDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Name"]/*' />
-	public unsafe ushort* Name;
+	public unsafe char* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::ExportToRename"]/*' />
-	public unsafe ushort* ExportToRename;
+	public unsafe char* ExportToRename;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_EXPORT_DESC::Flags"]/*' />
 	public ExportFlags Flags;
@@ -3940,7 +3940,7 @@ public partial struct SubObjectToExportsAssociation
 	public uint NumExports;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pExports"]/*' />
-	public unsafe ushort** pExports;
+	public unsafe char** pExports;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION"]/*' />
@@ -3948,13 +3948,13 @@ public partial struct SubObjectToExportsAssociation
 public partial struct DxilSubObjectToExportsAssociation
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION::SubobjectToAssociate"]/*' />
-	public unsafe ushort* SubobjectToAssociate;
+	public unsafe char* SubobjectToAssociate;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION::NumExports"]/*' />
 	public uint NumExports;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DXIL_SUBOBJECT_TO_EXPORTS_ASSOCIATION::pExports"]/*' />
-	public unsafe ushort** pExports;
+	public unsafe char** pExports;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC"]/*' />
@@ -3962,19 +3962,19 @@ public partial struct DxilSubObjectToExportsAssociation
 public partial struct HitGroupDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::HitGroupExport"]/*' />
-	public unsafe ushort* HitGroupExport;
+	public unsafe char* HitGroupExport;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::Type"]/*' />
 	public HitGroupType Type;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::AnyHitShaderImport"]/*' />
-	public unsafe ushort* AnyHitShaderImport;
+	public unsafe char* AnyHitShaderImport;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::ClosestHitShaderImport"]/*' />
-	public unsafe ushort* ClosestHitShaderImport;
+	public unsafe char* ClosestHitShaderImport;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_HIT_GROUP_DESC::IntersectionShaderImport"]/*' />
-	public unsafe ushort* IntersectionShaderImport;
+	public unsafe char* IntersectionShaderImport;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_RAYTRACING_SHADER_CONFIG"]/*' />
@@ -4130,7 +4130,7 @@ public partial struct CommonComputeNodeOverrides
 public partial struct ShaderNode
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_NODE::Shader"]/*' />
-	public unsafe ushort* Shader;
+	public unsafe char* Shader;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_NODE::OverridesType"]/*' />
 	public NodeOverridesType OverridesType;
@@ -4233,7 +4233,7 @@ public partial struct Node
 public partial struct WorkGraphDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WORK_GRAPH_DESC::ProgramName"]/*' />
-	public unsafe ushort* ProgramName;
+	public unsafe char* ProgramName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_WORK_GRAPH_DESC::Flags"]/*' />
 	public WorkGraphFlags Flags;
@@ -4256,13 +4256,13 @@ public partial struct WorkGraphDescription
 public partial struct GenericProgramDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GENERIC_PROGRAM_DESC::ProgramName"]/*' />
-	public unsafe ushort* ProgramName;
+	public unsafe char* ProgramName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GENERIC_PROGRAM_DESC::NumExports"]/*' />
 	public uint NumExports;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GENERIC_PROGRAM_DESC::pExports"]/*' />
-	public unsafe ushort** pExports;
+	public unsafe char** pExports;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_GENERIC_PROGRAM_DESC::NumSubobjects"]/*' />
 	public uint NumSubobjects;
@@ -4634,13 +4634,13 @@ public partial struct AutoBreadcrumbNode
 	public unsafe byte* pCommandListDebugNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandListDebugNameW"]/*' />
-	public unsafe ushort* pCommandListDebugNameW;
+	public unsafe char* pCommandListDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandQueueDebugNameA"]/*' />
 	public unsafe byte* pCommandQueueDebugNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandQueueDebugNameW"]/*' />
-	public unsafe ushort* pCommandQueueDebugNameW;
+	public unsafe char* pCommandQueueDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE::pCommandList"]/*' />
 	public unsafe ID3D12GraphicsCommandList* pCommandList;
@@ -4669,7 +4669,7 @@ public partial struct DredBreadcrumbContext
 	public uint BreadcrumbIndex;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_BREADCRUMB_CONTEXT::pContextString"]/*' />
-	public unsafe ushort* pContextString;
+	public unsafe char* pContextString;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1"]/*' />
@@ -4680,13 +4680,13 @@ public partial struct AutoBreadcrumbNode1
 	public unsafe byte* pCommandListDebugNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandListDebugNameW"]/*' />
-	public unsafe ushort* pCommandListDebugNameW;
+	public unsafe char* pCommandListDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueueDebugNameA"]/*' />
 	public unsafe byte* pCommandQueueDebugNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandQueueDebugNameW"]/*' />
-	public unsafe ushort* pCommandQueueDebugNameW;
+	public unsafe char* pCommandQueueDebugNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_AUTO_BREADCRUMB_NODE1::pCommandList"]/*' />
 	public unsafe ID3D12GraphicsCommandList* pCommandList;
@@ -4732,7 +4732,7 @@ public partial struct DredAllocationNode
 	public unsafe byte* ObjectNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE::ObjectNameW"]/*' />
-	public unsafe ushort* ObjectNameW;
+	public unsafe char* ObjectNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE::AllocationType"]/*' />
 	public DredAllocationType AllocationType;
@@ -4749,7 +4749,7 @@ public partial struct DredAllocationNode1
 	public unsafe byte* ObjectNameA;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE1::ObjectNameW"]/*' />
-	public unsafe ushort* ObjectNameW;
+	public unsafe char* ObjectNameW;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_DRED_ALLOCATION_NODE1::AllocationType"]/*' />
 	public DredAllocationType AllocationType;

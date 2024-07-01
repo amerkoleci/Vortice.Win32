@@ -85,9 +85,9 @@ public unsafe partial struct IDxcOptimizer : IDxcOptimizer.Interface, INativeGui
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult RunOptimizer(IDxcBlob* pBlob, ushort** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText)
+	public HResult RunOptimizer(IDxcBlob* pBlob, char** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizer*, IDxcBlob*, ushort**, uint, IDxcBlob**, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), pBlob, ppOptions, optionCount, pOutputModule, ppOutputText);
+		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizer*, IDxcBlob*, char**, uint, IDxcBlob**, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcOptimizer*)Unsafe.AsPointer(ref this), pBlob, ppOptions, optionCount, pOutputModule, ppOutputText);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -99,7 +99,7 @@ public unsafe partial struct IDxcOptimizer : IDxcOptimizer.Interface, INativeGui
 		HResult GetAvailablePass(uint index, IDxcOptimizerPass** ppResult);
 
 		[VtblIndex(5)]
-		HResult RunOptimizer(IDxcBlob* pBlob, ushort** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText);
+		HResult RunOptimizer(IDxcBlob* pBlob, char** ppOptions, uint optionCount, IDxcBlob** pOutputModule, IDxcBlobEncoding** ppOutputText);
 	}
 }
 

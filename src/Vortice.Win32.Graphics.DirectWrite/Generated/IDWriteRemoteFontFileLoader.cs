@@ -97,9 +97,9 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteRemoteFontFileLoader::CreateFontFileReferenceFromUrl"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, ushort* baseUrl, ushort* fontFileUrl, IDWriteFontFile** fontFile)
+	public HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, char* baseUrl, char* fontFileUrl, IDWriteFontFile** fontFile)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, IDWriteFactory*, ushort*, ushort*, IDWriteFontFile**, int>)(lpVtbl[6]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), factory, baseUrl, fontFileUrl, fontFile);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteRemoteFontFileLoader*, IDWriteFactory*, char*, char*, IDWriteFontFile**, int>)(lpVtbl[6]))((IDWriteRemoteFontFileLoader*)Unsafe.AsPointer(ref this), factory, baseUrl, fontFileUrl, fontFile);
 	}
 
 	public interface Interface : IDWriteFontFileLoader.Interface
@@ -111,7 +111,7 @@ public unsafe partial struct IDWriteRemoteFontFileLoader : IDWriteRemoteFontFile
 		HResult GetLocalityFromKey(void* fontFileReferenceKey, uint fontFileReferenceKeySize, Locality* locality);
 
 		[VtblIndex(6)]
-		HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, ushort* baseUrl, ushort* fontFileUrl, IDWriteFontFile** fontFile);
+		HResult CreateFontFileReferenceFromUrl(IDWriteFactory* factory, char* baseUrl, char* fontFileUrl, IDWriteFontFile** fontFile);
 	}
 }
 

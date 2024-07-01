@@ -97,9 +97,9 @@ public unsafe partial struct IWICBitmapCodecInfo : IWICBitmapCodecInfo.Interface
 	/// <inheritdoc cref="IWICComponentInfo.GetAuthor" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAuthor(uint cchAuthor, char** wzAuthor, uint* pcchActual)
+	public HResult GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[6]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[6]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVendorGUID" />
@@ -113,25 +113,25 @@ public unsafe partial struct IWICBitmapCodecInfo : IWICBitmapCodecInfo.Interface
 	/// <inheritdoc cref="IWICComponentInfo.GetVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVersion(uint cchVersion, char** wzVersion, uint* pcchActual)
+	public HResult GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[8]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[8]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSpecVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSpecVersion(uint cchSpecVersion, char** wzSpecVersion, uint* pcchActual)
+	public HResult GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[9]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[9]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetFriendlyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFriendlyName(uint cchFriendlyName, char** wzFriendlyName, uint* pcchActual)
+	public HResult GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[10]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[10]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecInfo::GetContainerFormat"]/*' />
@@ -153,41 +153,41 @@ public unsafe partial struct IWICBitmapCodecInfo : IWICBitmapCodecInfo.Interface
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecInfo::GetColorManagementVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetColorManagementVersion(uint cchColorManagementVersion, char** wzColorManagementVersion, uint* pcchActual)
+	public HResult GetColorManagementVersion(uint cchColorManagementVersion, char* wzColorManagementVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[13]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchColorManagementVersion, wzColorManagementVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[13]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchColorManagementVersion, wzColorManagementVersion, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecInfo::GetDeviceManufacturer"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, char** wzDeviceManufacturer, uint* pcchActual)
+	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, char* wzDeviceManufacturer, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[14]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[14]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecInfo::GetDeviceModels"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult GetDeviceModels(uint cchDeviceModels, char** wzDeviceModels, uint* pcchActual)
+	public HResult GetDeviceModels(uint cchDeviceModels, char* wzDeviceModels, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[15]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[15]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecInfo::GetMimeTypes"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(16)]
-	public HResult GetMimeTypes(uint cchMimeTypes, char** wzMimeTypes, uint* pcchActual)
+	public HResult GetMimeTypes(uint cchMimeTypes, char* wzMimeTypes, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[16]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchMimeTypes, wzMimeTypes, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[16]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchMimeTypes, wzMimeTypes, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecInfo::GetFileExtensions"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(17)]
-	public HResult GetFileExtensions(uint cchFileExtensions, char** wzFileExtensions, uint* pcchActual)
+	public HResult GetFileExtensions(uint cchFileExtensions, char* wzFileExtensions, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char**, uint*, int>)(lpVtbl[17]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchFileExtensions, wzFileExtensions, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, uint, char*, uint*, int>)(lpVtbl[17]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), cchFileExtensions, wzFileExtensions, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecInfo::DoesSupportAnimation"]/*' />
@@ -225,9 +225,9 @@ public unsafe partial struct IWICBitmapCodecInfo : IWICBitmapCodecInfo.Interface
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICBitmapCodecInfo::MatchesMimeType"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult MatchesMimeType(ushort* wzMimeType, Bool32* pfMatches)
+	public HResult MatchesMimeType(char* wzMimeType, Bool32* pfMatches)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, ushort*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
+		return ((delegate* unmanaged[MemberFunction]<IWICBitmapCodecInfo*, char*, Bool32*, int>)(lpVtbl[22]))((IWICBitmapCodecInfo*)Unsafe.AsPointer(ref this), wzMimeType, pfMatches);
 	}
 
 	public interface Interface : IWICComponentInfo.Interface
@@ -239,19 +239,19 @@ public unsafe partial struct IWICBitmapCodecInfo : IWICBitmapCodecInfo.Interface
 		HResult GetPixelFormats(uint cFormats, Guid* pguidPixelFormats, uint* pcActual);
 
 		[VtblIndex(13)]
-		HResult GetColorManagementVersion(uint cchColorManagementVersion, char** wzColorManagementVersion, uint* pcchActual);
+		HResult GetColorManagementVersion(uint cchColorManagementVersion, char* wzColorManagementVersion, uint* pcchActual);
 
 		[VtblIndex(14)]
-		HResult GetDeviceManufacturer(uint cchDeviceManufacturer, char** wzDeviceManufacturer, uint* pcchActual);
+		HResult GetDeviceManufacturer(uint cchDeviceManufacturer, char* wzDeviceManufacturer, uint* pcchActual);
 
 		[VtblIndex(15)]
-		HResult GetDeviceModels(uint cchDeviceModels, char** wzDeviceModels, uint* pcchActual);
+		HResult GetDeviceModels(uint cchDeviceModels, char* wzDeviceModels, uint* pcchActual);
 
 		[VtblIndex(16)]
-		HResult GetMimeTypes(uint cchMimeTypes, char** wzMimeTypes, uint* pcchActual);
+		HResult GetMimeTypes(uint cchMimeTypes, char* wzMimeTypes, uint* pcchActual);
 
 		[VtblIndex(17)]
-		HResult GetFileExtensions(uint cchFileExtensions, char** wzFileExtensions, uint* pcchActual);
+		HResult GetFileExtensions(uint cchFileExtensions, char* wzFileExtensions, uint* pcchActual);
 
 		[VtblIndex(18)]
 		HResult DoesSupportAnimation(Bool32* pfSupportAnimation);
@@ -266,7 +266,7 @@ public unsafe partial struct IWICBitmapCodecInfo : IWICBitmapCodecInfo.Interface
 		HResult DoesSupportMultiframe(Bool32* pfSupportMultiframe);
 
 		[VtblIndex(22)]
-		HResult MatchesMimeType(ushort* wzMimeType, Bool32* pfMatches);
+		HResult MatchesMimeType(char* wzMimeType, Bool32* pfMatches);
 	}
 }
 

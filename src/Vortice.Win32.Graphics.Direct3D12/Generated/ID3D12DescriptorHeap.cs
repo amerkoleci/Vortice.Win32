@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12DescriptorHeap : ID3D12DescriptorHeap.Interfa
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(ushort* Name)
+	public HResult SetName(char* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12DescriptorHeap*, ushort*, int>)(lpVtbl[6]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12DescriptorHeap*, char*, int>)(lpVtbl[6]))((ID3D12DescriptorHeap*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />

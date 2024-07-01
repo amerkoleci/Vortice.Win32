@@ -209,9 +209,9 @@ public unsafe partial struct ID2D1EffectContext2 : ID2D1EffectContext2.Interface
 	/// <inheritdoc cref="ID2D1EffectContext.CreateColorContextFromFilename" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(20)]
-	public HResult CreateColorContextFromFilename(ushort* filename, ID2D1ColorContext** colorContext)
+	public HResult CreateColorContextFromFilename(char* filename, ID2D1ColorContext** colorContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext2*, ushort*, ID2D1ColorContext**, int>)(lpVtbl[20]))((ID2D1EffectContext2*)Unsafe.AsPointer(ref this), filename, colorContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1EffectContext2*, char*, ID2D1ColorContext**, int>)(lpVtbl[20]))((ID2D1EffectContext2*)Unsafe.AsPointer(ref this), filename, colorContext);
 	}
 
 	/// <inheritdoc cref="ID2D1EffectContext.CreateColorContextFromWicColorContext" />

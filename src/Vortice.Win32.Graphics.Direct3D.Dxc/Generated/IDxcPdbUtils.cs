@@ -232,9 +232,9 @@ public unsafe partial struct IDxcPdbUtils : IDxcPdbUtils.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(26)]
-	public HResult OverrideRootSignature(ushort* pRootSignature)
+	public HResult OverrideRootSignature(char* pRootSignature)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, ushort*, int>)(lpVtbl[26]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pRootSignature);
+		return ((delegate* unmanaged[MemberFunction]<IDxcPdbUtils*, char*, int>)(lpVtbl[26]))((IDxcPdbUtils*)Unsafe.AsPointer(ref this), pRootSignature);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -309,7 +309,7 @@ public unsafe partial struct IDxcPdbUtils : IDxcPdbUtils.Interface, INativeGuid
 		HResult OverrideArgs(DxcArgPair* pArgPairs, uint uNumArgPairs);
 
 		[VtblIndex(26)]
-		HResult OverrideRootSignature(ushort* pRootSignature);
+		HResult OverrideRootSignature(char* pRootSignature);
 	}
 }
 

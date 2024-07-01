@@ -71,9 +71,9 @@ public unsafe partial struct IDxcCompiler3 : IDxcCompiler3.Interface, INativeGui
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult Compile(DxcBuffer* pSource, ushort** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult)
+	public HResult Compile(DxcBuffer* pSource, char** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler3*, DxcBuffer*, ushort**, uint, IDxcIncludeHandler*, Guid*, void**, int>)(lpVtbl[3]))((IDxcCompiler3*)Unsafe.AsPointer(ref this), pSource, pArguments, argCount, pIncludeHandler, riid, ppResult);
+		return ((delegate* unmanaged[MemberFunction]<IDxcCompiler3*, DxcBuffer*, char**, uint, IDxcIncludeHandler*, Guid*, void**, int>)(lpVtbl[3]))((IDxcCompiler3*)Unsafe.AsPointer(ref this), pSource, pArguments, argCount, pIncludeHandler, riid, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -86,7 +86,7 @@ public unsafe partial struct IDxcCompiler3 : IDxcCompiler3.Interface, INativeGui
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult Compile(DxcBuffer* pSource, ushort** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult);
+		HResult Compile(DxcBuffer* pSource, char** pArguments, uint argCount, IDxcIncludeHandler* pIncludeHandler, Guid* riid, void** ppResult);
 
 		[VtblIndex(4)]
 		HResult Disassemble(DxcBuffer* pObject, Guid* riid, void** ppResult);

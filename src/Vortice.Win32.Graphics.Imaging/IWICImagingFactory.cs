@@ -27,7 +27,7 @@ public unsafe partial struct IWICImagingFactory
         fixed (char* filenamePtr = filename)
         {
             ThrowIfFailed(CreateDecoderFromFilename(
-                (ushort*)filenamePtr,
+                filenamePtr,
                 null,
                 nativeAccess,
                 metadataOptions,

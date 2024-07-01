@@ -97,9 +97,9 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetAuthor"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAuthor(uint cchAuthor, char** wzAuthor, uint* pcchActual)
+	public HResult GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char**, uint*, int>)(lpVtbl[6]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char*, uint*, int>)(lpVtbl[6]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVendorGUID"]/*' />
@@ -113,25 +113,25 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVersion(uint cchVersion, char** wzVersion, uint* pcchActual)
+	public HResult GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char**, uint*, int>)(lpVtbl[8]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char*, uint*, int>)(lpVtbl[8]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetSpecVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSpecVersion(uint cchSpecVersion, char** wzSpecVersion, uint* pcchActual)
+	public HResult GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char**, uint*, int>)(lpVtbl[9]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char*, uint*, int>)(lpVtbl[9]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICComponentInfo::GetFriendlyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFriendlyName(uint cchFriendlyName, char** wzFriendlyName, uint* pcchActual)
+	public HResult GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char**, uint*, int>)(lpVtbl[10]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentInfo*, uint, char*, uint*, int>)(lpVtbl[10]))((IWICComponentInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
 	public interface Interface : IUnknown.Interface
@@ -146,19 +146,19 @@ public unsafe partial struct IWICComponentInfo : IWICComponentInfo.Interface, IN
 		HResult GetSigningStatus(uint* pStatus);
 
 		[VtblIndex(6)]
-		HResult GetAuthor(uint cchAuthor, char** wzAuthor, uint* pcchActual);
+		HResult GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual);
 
 		[VtblIndex(7)]
 		HResult GetVendorGUID(Guid* pguidVendor);
 
 		[VtblIndex(8)]
-		HResult GetVersion(uint cchVersion, char** wzVersion, uint* pcchActual);
+		HResult GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual);
 
 		[VtblIndex(9)]
-		HResult GetSpecVersion(uint cchSpecVersion, char** wzSpecVersion, uint* pcchActual);
+		HResult GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual);
 
 		[VtblIndex(10)]
-		HResult GetFriendlyName(uint cchFriendlyName, char** wzFriendlyName, uint* pcchActual);
+		HResult GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual);
 	}
 }
 

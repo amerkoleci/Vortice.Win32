@@ -81,9 +81,9 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromFilename"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult InitializeFromFilename(ushort* wzFileName, uint dwDesiredAccess)
+	public HResult InitializeFromFilename(char* wzFileName, uint dwDesiredAccess)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICStream*, ushort*, uint, int>)(lpVtbl[15]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
+		return ((delegate* unmanaged[MemberFunction]<IWICStream*, char*, uint, int>)(lpVtbl[15]))((IWICStream*)Unsafe.AsPointer(ref this), wzFileName, dwDesiredAccess);
 	}
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="IWICStream::InitializeFromMemory"]/*' />
@@ -108,7 +108,7 @@ public unsafe partial struct IWICStream : IWICStream.Interface, INativeGuid
 		HResult InitializeFromIStream(Com.IStream* pIStream);
 
 		[VtblIndex(15)]
-		HResult InitializeFromFilename(ushort* wzFileName, uint dwDesiredAccess);
+		HResult InitializeFromFilename(char* wzFileName, uint dwDesiredAccess);
 
 		[VtblIndex(16)]
 		HResult InitializeFromMemory(byte* pbBuffer, uint cbBufferSize);

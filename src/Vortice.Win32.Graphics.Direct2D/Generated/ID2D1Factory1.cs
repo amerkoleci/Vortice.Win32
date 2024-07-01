@@ -233,9 +233,9 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::RegisterEffectFromString"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult RegisterEffectFromString(Guid* classId, ushort* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
+	public HResult RegisterEffectFromString(Guid* classId, char* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, ushort*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[23]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory1*, Guid*, char*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[23]))((ID2D1Factory1*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1Factory1::UnregisterEffect"]/*' />
@@ -283,7 +283,7 @@ public unsafe partial struct ID2D1Factory1 : ID2D1Factory1.Interface, INativeGui
 		HResult RegisterEffectFromStream(Guid* classId, Com.IStream* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
 
 		[VtblIndex(23)]
-		HResult RegisterEffectFromString(Guid* classId, ushort* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
+		HResult RegisterEffectFromString(Guid* classId, char* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory);
 
 		[VtblIndex(24)]
 		HResult UnregisterEffect(Guid* classId);

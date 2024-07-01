@@ -81,17 +81,18 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetProgramName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public ushort* GetProgramName(uint WorkGraphIndex)
+	public char* GetProgramName(uint WorkGraphIndex)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, uint, ushort*>)(lpVtbl[4]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), WorkGraphIndex);
+		char* result;
+		return *((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, char**, uint, char**>)(lpVtbl[4]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), &result, WorkGraphIndex);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetWorkGraphIndex"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public uint GetWorkGraphIndex(ushort* pProgramName)
+	public uint GetWorkGraphIndex(char* pProgramName)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, ushort*, uint>)(lpVtbl[5]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), pProgramName);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12WorkGraphProperties*, char*, uint>)(lpVtbl[5]))((ID3D12WorkGraphProperties*)Unsafe.AsPointer(ref this), pProgramName);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12WorkGraphProperties::GetNumNodes"]/*' />
@@ -182,10 +183,10 @@ public unsafe partial struct ID3D12WorkGraphProperties : ID3D12WorkGraphProperti
 		uint GetNumWorkGraphs();
 
 		[VtblIndex(4)]
-		ushort* GetProgramName(uint WorkGraphIndex);
+		char* GetProgramName(uint WorkGraphIndex);
 
 		[VtblIndex(5)]
-		uint GetWorkGraphIndex(ushort* pProgramName);
+		uint GetWorkGraphIndex(char* pProgramName);
 
 		[VtblIndex(6)]
 		uint GetNumNodes(uint WorkGraphIndex);

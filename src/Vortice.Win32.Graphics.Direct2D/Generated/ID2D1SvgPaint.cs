@@ -129,17 +129,17 @@ public unsafe partial struct ID2D1SvgPaint : ID2D1SvgPaint.Interface, INativeGui
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint::SetId"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult SetId(ushort* id)
+	public HResult SetId(char* id)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPaint*, ushort*, int>)(lpVtbl[10]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this), id);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPaint*, char*, int>)(lpVtbl[10]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this), id);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint::GetId"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetId(char** id, uint idCount)
+	public HResult GetId(char* id, uint idCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPaint*, char**, uint, int>)(lpVtbl[11]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this), id, idCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgPaint*, char*, uint, int>)(lpVtbl[11]))((ID2D1SvgPaint*)Unsafe.AsPointer(ref this), id, idCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgPaint::GetIdLength"]/*' />
@@ -165,10 +165,10 @@ public unsafe partial struct ID2D1SvgPaint : ID2D1SvgPaint.Interface, INativeGui
 		void GetColor(Color4** color);
 
 		[VtblIndex(10)]
-		HResult SetId(ushort* id);
+		HResult SetId(char* id);
 
 		[VtblIndex(11)]
-		HResult GetId(char** id, uint idCount);
+		HResult GetId(char* id, uint idCount);
 
 		[VtblIndex(12)]
 		uint GetIdLength();

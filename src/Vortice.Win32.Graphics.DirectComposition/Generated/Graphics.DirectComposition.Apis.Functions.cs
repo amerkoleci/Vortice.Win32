@@ -12,46 +12,46 @@ namespace Win32.Graphics.DirectComposition;
 public static unsafe partial class Apis
 {
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionCreateDevice"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionCreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, Guid* iid, void** dcompositionDevice);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionCreateDevice(Graphics.Dxgi.IDXGIDevice* dxgiDevice, Guid* iid, void** dcompositionDevice);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionCreateDevice2"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionCreateDevice2(IUnknown* renderingDevice, Guid* iid, void** dcompositionDevice);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionCreateDevice2(IUnknown* renderingDevice, Guid* iid, void** dcompositionDevice);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionCreateDevice3"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionCreateDevice3(IUnknown* renderingDevice, Guid* iid, void** dcompositionDevice);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionCreateDevice3(IUnknown* renderingDevice, Guid* iid, void** dcompositionDevice);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionCreateSurfaceHandle"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionCreateSurfaceHandle(uint desiredAccess, Security.SECURITY_ATTRIBUTES* securityAttributes, Handle* surfaceHandle);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionCreateSurfaceHandle(uint desiredAccess, Security.SECURITY_ATTRIBUTES* securityAttributes, Handle* surfaceHandle);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionAttachMouseWheelToHwnd"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionAttachMouseWheelToHwnd(IDCompositionVisual* visual, nint hwnd, Bool32 enable);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionAttachMouseWheelToHwnd(IDCompositionVisual* visual, nint hwnd, Bool32 enable);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionAttachMouseDragToHwnd"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionAttachMouseDragToHwnd(IDCompositionVisual* visual, nint hwnd, Bool32 enable);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionAttachMouseDragToHwnd(IDCompositionVisual* visual, nint hwnd, Bool32 enable);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionGetFrameId"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionGetFrameId(CompositionFrameIdType frameIdType, ulong* frameId);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionGetFrameId(CompositionFrameIdType frameIdType, ulong* frameId);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionGetStatistics"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionGetStatistics(ulong frameId, CompositionFrameStats* frameStats, uint targetIdCount, CompositionTargetId* targetIds, uint* actualTargetIdCount);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionGetStatistics(ulong frameId, CompositionFrameStats* frameStats, uint targetIdCount, CompositionTargetId* targetIds, uint* actualTargetIdCount);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionGetTargetStatistics"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionGetTargetStatistics(ulong frameId, CompositionTargetId* targetId, CompositionTargetStats* targetStats);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionGetTargetStatistics(ulong frameId, CompositionTargetId* targetId, CompositionTargetStats* targetStats);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionBoostCompositorClock"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern HResult DCompositionBoostCompositorClock(Bool32 enable);
+	[LibraryImport("dcomp.dll")]
+	public static partial HResult DCompositionBoostCompositorClock(Bool32 enable);
 
 	/// <include file='../DirectComposition.xml' path='doc/member[@name="DCompositionWaitForCompositorClock"]/*' />
-	[DllImport("dcomp.dll", ExactSpelling = true)]
-	public static extern uint DCompositionWaitForCompositorClock(uint count, Handle* handles, uint timeoutInMs);
+	[LibraryImport("dcomp.dll")]
+	public static partial uint DCompositionWaitForCompositorClock(uint count, Handle* handles, uint timeoutInMs);
 }

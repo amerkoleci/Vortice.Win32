@@ -153,9 +153,9 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 	/// <include file='../Dxgi.xml' path='doc/member[@name="IDXGIResource1::CreateSharedHandle"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle)
+	public HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<IDXGIResource1*, Security.SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[13]))((IDXGIResource1*)Unsafe.AsPointer(ref this), pAttributes, dwAccess, lpName, pHandle);
 	}
 
 	public interface Interface : IDXGIResource.Interface
@@ -164,7 +164,7 @@ public unsafe partial struct IDXGIResource1 : IDXGIResource1.Interface, INativeG
 		HResult CreateSubresourceSurface(uint index, IDXGISurface2** ppSurface);
 
 		[VtblIndex(13)]
-		HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, ushort* lpName, Handle* pHandle);
+		HResult CreateSharedHandle(Security.SECURITY_ATTRIBUTES* pAttributes, uint dwAccess, char* lpName, Handle* pHandle);
 	}
 }
 

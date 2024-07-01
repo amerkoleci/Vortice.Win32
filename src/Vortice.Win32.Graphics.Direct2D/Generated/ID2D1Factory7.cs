@@ -233,9 +233,9 @@ public unsafe partial struct ID2D1Factory7 : ID2D1Factory7.Interface, INativeGui
 	/// <inheritdoc cref="ID2D1Factory1.RegisterEffectFromString" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult RegisterEffectFromString(Guid* classId, ushort* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
+	public HResult RegisterEffectFromString(Guid* classId, char* propertyXml, PropertyBinding* bindings, uint bindingsCount, delegate* unmanaged[Stdcall]<IUnknown**, HResult> effectFactory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory7*, Guid*, ushort*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[23]))((ID2D1Factory7*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1Factory7*, Guid*, char*, PropertyBinding*, uint, delegate* unmanaged[Stdcall]<IUnknown**, HResult>, int>)(lpVtbl[23]))((ID2D1Factory7*)Unsafe.AsPointer(ref this), classId, propertyXml, bindings, bindingsCount, effectFactory);
 	}
 
 	/// <inheritdoc cref="ID2D1Factory1.UnregisterEffect" />

@@ -105,9 +105,9 @@ public unsafe partial struct IDWriteFactory2 : IDWriteFactory2.Interface, INativ
 	/// <inheritdoc cref="IDWriteFactory.CreateFontFileReference" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateFontFileReference(ushort* filePath, ulong* lastWriteTime, IDWriteFontFile** fontFile)
+	public HResult CreateFontFileReference(char* filePath, ulong* lastWriteTime, IDWriteFontFile** fontFile)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFactory2*, ushort*, ulong*, IDWriteFontFile**, int>)(lpVtbl[7]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), filePath, lastWriteTime, fontFile);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFactory2*, char*, ulong*, IDWriteFontFile**, int>)(lpVtbl[7]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), filePath, lastWriteTime, fontFile);
 	}
 
 	/// <inheritdoc cref="IDWriteFactory.CreateCustomFontFileReference" />
@@ -169,9 +169,9 @@ public unsafe partial struct IDWriteFactory2 : IDWriteFactory2.Interface, INativ
 	/// <inheritdoc cref="IDWriteFactory.CreateTextFormat" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(15)]
-	public HResult CreateTextFormat(ushort* fontFamilyName, IDWriteFontCollection* fontCollection, FontWeight fontWeight, FontStyle fontStyle, FontStretch fontStretch, float fontSize, ushort* localeName, IDWriteTextFormat** textFormat)
+	public HResult CreateTextFormat(char* fontFamilyName, IDWriteFontCollection* fontCollection, FontWeight fontWeight, FontStyle fontStyle, FontStretch fontStretch, float fontSize, char* localeName, IDWriteTextFormat** textFormat)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFactory2*, ushort*, IDWriteFontCollection*, FontWeight, FontStyle, FontStretch, float, ushort*, IDWriteTextFormat**, int>)(lpVtbl[15]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), fontFamilyName, fontCollection, fontWeight, fontStyle, fontStretch, fontSize, localeName, textFormat);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFactory2*, char*, IDWriteFontCollection*, FontWeight, FontStyle, FontStretch, float, char*, IDWriteTextFormat**, int>)(lpVtbl[15]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), fontFamilyName, fontCollection, fontWeight, fontStyle, fontStretch, fontSize, localeName, textFormat);
 	}
 
 	/// <inheritdoc cref="IDWriteFactory.CreateTypography" />
@@ -225,9 +225,9 @@ public unsafe partial struct IDWriteFactory2 : IDWriteFactory2.Interface, INativ
 	/// <inheritdoc cref="IDWriteFactory.CreateNumberSubstitution" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(22)]
-	public HResult CreateNumberSubstitution(NumberSubstitutionMethod substitutionMethod, ushort* localeName, Bool32 ignoreUserOverride, IDWriteNumberSubstitution** numberSubstitution)
+	public HResult CreateNumberSubstitution(NumberSubstitutionMethod substitutionMethod, char* localeName, Bool32 ignoreUserOverride, IDWriteNumberSubstitution** numberSubstitution)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFactory2*, NumberSubstitutionMethod, ushort*, Bool32, IDWriteNumberSubstitution**, int>)(lpVtbl[22]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), substitutionMethod, localeName, ignoreUserOverride, numberSubstitution);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFactory2*, NumberSubstitutionMethod, char*, Bool32, IDWriteNumberSubstitution**, int>)(lpVtbl[22]))((IDWriteFactory2*)Unsafe.AsPointer(ref this), substitutionMethod, localeName, ignoreUserOverride, numberSubstitution);
 	}
 
 	/// <inheritdoc cref="IDWriteFactory.CreateGlyphRunAnalysis" />

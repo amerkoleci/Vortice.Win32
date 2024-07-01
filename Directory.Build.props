@@ -1,12 +1,17 @@
 <Project>
   <PropertyGroup>
+    <RepoRootDirectory>$(MSBuildThisFileDirectory)</RepoRootDirectory>
+    <RepoSrcDirectory>$(MSBuildThisFileDirectory)src/</RepoSrcDirectory>
+  </PropertyGroup>
+  
+  <PropertyGroup>
     <RepositoryUrl>https://github.com/amerkoleci/Vortice.Win32</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <!-- Version -->
   <PropertyGroup>
-    <VersionPrefix>2.2.0</VersionPrefix>
+    <VersionPrefix>2.2.1</VersionPrefix>
     <VersionSuffix Condition="'$(VersionSuffix)' == ''"></VersionSuffix>
   </PropertyGroup>
   
@@ -18,11 +23,8 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <DebugType>embedded</DebugType>
     <Features>strict</Features>
-    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
     <RestoreConfigFile>$(MSBuildThisFileDirectory)NuGet.config</RestoreConfigFile>
-    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
-
-    
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>    
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);AD0001;CS1591;CS1701;CA2252;</NoWarn>
   </PropertyGroup>
@@ -38,6 +40,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)artifacts/</PackageOutputPath>
   </PropertyGroup>
 
   <!-- https://github.com/dotnet/sourcelink -->

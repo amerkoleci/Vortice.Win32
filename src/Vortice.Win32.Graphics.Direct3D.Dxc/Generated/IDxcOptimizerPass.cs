@@ -71,16 +71,16 @@ public unsafe partial struct IDxcOptimizerPass : IDxcOptimizerPass.Interface, IN
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult GetOptionName(ushort** ppResult)
+	public HResult GetOptionName(char** ppResult)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, ushort**, int>)(lpVtbl[3]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), ppResult);
+		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, char**, int>)(lpVtbl[3]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult GetDescription(ushort** ppResult)
+	public HResult GetDescription(char** ppResult)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, ushort**, int>)(lpVtbl[4]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), ppResult);
+		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, char**, int>)(lpVtbl[4]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -92,34 +92,34 @@ public unsafe partial struct IDxcOptimizerPass : IDxcOptimizerPass.Interface, IN
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetOptionArgName(uint argIndex, ushort** ppResult)
+	public HResult GetOptionArgName(uint argIndex, char** ppResult)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, uint, ushort**, int>)(lpVtbl[6]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
+		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, uint, char**, int>)(lpVtbl[6]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetOptionArgDescription(uint argIndex, ushort** ppResult)
+	public HResult GetOptionArgDescription(uint argIndex, char** ppResult)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, uint, ushort**, int>)(lpVtbl[7]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
+		return ((delegate* unmanaged[MemberFunction]<IDxcOptimizerPass*, uint, char**, int>)(lpVtbl[7]))((IDxcOptimizerPass*)Unsafe.AsPointer(ref this), argIndex, ppResult);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult GetOptionName(ushort** ppResult);
+		HResult GetOptionName(char** ppResult);
 
 		[VtblIndex(4)]
-		HResult GetDescription(ushort** ppResult);
+		HResult GetDescription(char** ppResult);
 
 		[VtblIndex(5)]
 		HResult GetOptionArgCount(uint* pCount);
 
 		[VtblIndex(6)]
-		HResult GetOptionArgName(uint argIndex, ushort** ppResult);
+		HResult GetOptionArgName(uint argIndex, char** ppResult);
 
 		[VtblIndex(7)]
-		HResult GetOptionArgDescription(uint argIndex, ushort** ppResult);
+		HResult GetOptionArgDescription(uint argIndex, char** ppResult);
 	}
 }
 

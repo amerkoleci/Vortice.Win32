@@ -97,9 +97,9 @@ public unsafe partial struct IWICMetadataWriterInfo : IWICMetadataWriterInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetAuthor" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult GetAuthor(uint cchAuthor, char** wzAuthor, uint* pcchActual)
+	public HResult GetAuthor(uint cchAuthor, char* wzAuthor, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char**, uint*, int>)(lpVtbl[6]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char*, uint*, int>)(lpVtbl[6]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchAuthor, wzAuthor, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetVendorGUID" />
@@ -113,25 +113,25 @@ public unsafe partial struct IWICMetadataWriterInfo : IWICMetadataWriterInfo.Int
 	/// <inheritdoc cref="IWICComponentInfo.GetVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetVersion(uint cchVersion, char** wzVersion, uint* pcchActual)
+	public HResult GetVersion(uint cchVersion, char* wzVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char**, uint*, int>)(lpVtbl[8]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char*, uint*, int>)(lpVtbl[8]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchVersion, wzVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetSpecVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetSpecVersion(uint cchSpecVersion, char** wzSpecVersion, uint* pcchActual)
+	public HResult GetSpecVersion(uint cchSpecVersion, char* wzSpecVersion, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char**, uint*, int>)(lpVtbl[9]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char*, uint*, int>)(lpVtbl[9]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchSpecVersion, wzSpecVersion, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICComponentInfo.GetFriendlyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetFriendlyName(uint cchFriendlyName, char** wzFriendlyName, uint* pcchActual)
+	public HResult GetFriendlyName(uint cchFriendlyName, char* wzFriendlyName, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char**, uint*, int>)(lpVtbl[10]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char*, uint*, int>)(lpVtbl[10]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchFriendlyName, wzFriendlyName, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetMetadataFormat" />
@@ -153,17 +153,17 @@ public unsafe partial struct IWICMetadataWriterInfo : IWICMetadataWriterInfo.Int
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetDeviceManufacturer" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(13)]
-	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, char** wzDeviceManufacturer, uint* pcchActual)
+	public HResult GetDeviceManufacturer(uint cchDeviceManufacturer, char* wzDeviceManufacturer, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char**, uint*, int>)(lpVtbl[13]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char*, uint*, int>)(lpVtbl[13]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchDeviceManufacturer, wzDeviceManufacturer, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.GetDeviceModels" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(14)]
-	public HResult GetDeviceModels(uint cchDeviceModels, char** wzDeviceModels, uint* pcchActual)
+	public HResult GetDeviceModels(uint cchDeviceModels, char* wzDeviceModels, uint* pcchActual)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char**, uint*, int>)(lpVtbl[14]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
+		return ((delegate* unmanaged[MemberFunction]<IWICMetadataWriterInfo*, uint, char*, uint*, int>)(lpVtbl[14]))((IWICMetadataWriterInfo*)Unsafe.AsPointer(ref this), cchDeviceModels, wzDeviceModels, pcchActual);
 	}
 
 	/// <inheritdoc cref="IWICMetadataHandlerInfo.DoesRequireFullStream" />

@@ -532,9 +532,9 @@ public unsafe partial struct ID2D1DeviceContext3 : ID2D1DeviceContext3.Interface
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateColorContextFromFilename" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(60)]
-	public HResult CreateColorContextFromFilename(ushort* filename, ID2D1ColorContext** colorContext)
+	public HResult CreateColorContextFromFilename(char* filename, ID2D1ColorContext** colorContext)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext3*, ushort*, ID2D1ColorContext**, int>)(lpVtbl[60]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), filename, colorContext);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1DeviceContext3*, char*, ID2D1ColorContext**, int>)(lpVtbl[60]))((ID2D1DeviceContext3*)Unsafe.AsPointer(ref this), filename, colorContext);
 	}
 
 	/// <inheritdoc cref="ID2D1DeviceContext.CreateColorContextFromWicColorContext" />

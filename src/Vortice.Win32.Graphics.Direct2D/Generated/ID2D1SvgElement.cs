@@ -89,9 +89,9 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTagName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult GetTagName(char** name, uint nameCount)
+	public HResult GetTagName(char* name, uint nameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char**, uint, int>)(lpVtbl[5]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, uint, int>)(lpVtbl[5]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTagNameLength"]/*' />
@@ -193,17 +193,17 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::CreateChild"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(18)]
-	public HResult CreateChild(ushort* tagName, ID2D1SvgElement** newChild)
+	public HResult CreateChild(char* tagName, ID2D1SvgElement** newChild)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, ID2D1SvgElement**, int>)(lpVtbl[18]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), tagName, newChild);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, ID2D1SvgElement**, int>)(lpVtbl[18]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), tagName, newChild);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::IsAttributeSpecified"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(19)]
-	public Bool32 IsAttributeSpecified(ushort* name, Bool32* inherited)
+	public Bool32 IsAttributeSpecified(char* name, Bool32* inherited)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, Bool32*, Bool32>)(lpVtbl[19]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, inherited);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, Bool32*, Bool32>)(lpVtbl[19]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, inherited);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetSpecifiedAttributeCount"]/*' />
@@ -217,9 +217,9 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetSpecifiedAttributeName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetSpecifiedAttributeName(uint index, char** name, uint nameCount, Bool32* inherited)
+	public HResult GetSpecifiedAttributeName(uint index, char* name, uint nameCount, Bool32* inherited)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, uint, char**, uint, Bool32*, int>)(lpVtbl[21]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), index, name, nameCount, inherited);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, uint, char*, uint, Bool32*, int>)(lpVtbl[21]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), index, name, nameCount, inherited);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetSpecifiedAttributeNameLength"]/*' />
@@ -233,9 +233,9 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::RemoveAttribute"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(23)]
-	public HResult RemoveAttribute(ushort* name)
+	public HResult RemoveAttribute(char* name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, int>)(lpVtbl[23]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, int>)(lpVtbl[23]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetTextValue"]/*' />
@@ -249,9 +249,9 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTextValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(25)]
-	public HResult GetTextValue(char** name, uint nameCount)
+	public HResult GetTextValue(char* name, uint nameCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char**, uint, int>)(lpVtbl[25]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, uint, int>)(lpVtbl[25]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, nameCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetTextValueLength"]/*' />
@@ -265,57 +265,57 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult SetAttributeValue(ushort* name, ID2D1SvgAttribute* value)
+	public HResult SetAttributeValue(char* name, ID2D1SvgAttribute* value)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, ID2D1SvgAttribute*, int>)(lpVtbl[27]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, value);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, ID2D1SvgAttribute*, int>)(lpVtbl[27]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, value);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult SetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes)
+	public HResult SetAttributeValue(char* name, SvgAttributePodType type, void* value, uint valueSizeInBytes)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, SvgAttributePodType, void*, uint, int>)(lpVtbl[28]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributePodType, void*, uint, int>)(lpVtbl[28]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::SetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult SetAttributeValue(ushort* name, SvgAttributeStringType type, ushort* value)
+	public HResult SetAttributeValue(char* name, SvgAttributeStringType type, char* value)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, ushort*, int>)(lpVtbl[29]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributeStringType, char*, int>)(lpVtbl[29]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(30)]
-	public HResult GetAttributeValue(ushort* name, Guid* riid, void** value)
+	public HResult GetAttributeValue(char* name, Guid* riid, void** value)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, Guid*, void**, int>)(lpVtbl[30]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, riid, value);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, Guid*, void**, int>)(lpVtbl[30]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, riid, value);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult GetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes)
+	public HResult GetAttributeValue(char* name, SvgAttributePodType type, void* value, uint valueSizeInBytes)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, SvgAttributePodType, void*, uint, int>)(lpVtbl[31]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributePodType, void*, uint, int>)(lpVtbl[31]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueSizeInBytes);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValue"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(32)]
-	public HResult GetAttributeValue(ushort* name, SvgAttributeStringType type, char** value, uint valueCount)
+	public HResult GetAttributeValue(char* name, SvgAttributeStringType type, char* value, uint valueCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, char**, uint, int>)(lpVtbl[32]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueCount);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributeStringType, char*, uint, int>)(lpVtbl[32]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, value, valueCount);
 	}
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="ID2D1SvgElement::GetAttributeValueLength"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult GetAttributeValueLength(ushort* name, SvgAttributeStringType type, uint* valueLength)
+	public HResult GetAttributeValueLength(char* name, SvgAttributeStringType type, uint* valueLength)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, ushort*, SvgAttributeStringType, uint*, int>)(lpVtbl[33]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, valueLength);
+		return ((delegate* unmanaged[MemberFunction]<ID2D1SvgElement*, char*, SvgAttributeStringType, uint*, int>)(lpVtbl[33]))((ID2D1SvgElement*)Unsafe.AsPointer(ref this), name, type, valueLength);
 	}
 
 	public interface Interface : ID2D1Resource.Interface
@@ -324,7 +324,7 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 		void GetDocument(ID2D1SvgDocument** document);
 
 		[VtblIndex(5)]
-		HResult GetTagName(char** name, uint nameCount);
+		HResult GetTagName(char* name, uint nameCount);
 
 		[VtblIndex(6)]
 		uint GetTagNameLength();
@@ -363,52 +363,52 @@ public unsafe partial struct ID2D1SvgElement : ID2D1SvgElement.Interface, INativ
 		HResult RemoveChild(ID2D1SvgElement* oldChild);
 
 		[VtblIndex(18)]
-		HResult CreateChild(ushort* tagName, ID2D1SvgElement** newChild);
+		HResult CreateChild(char* tagName, ID2D1SvgElement** newChild);
 
 		[VtblIndex(19)]
-		Bool32 IsAttributeSpecified(ushort* name, Bool32* inherited);
+		Bool32 IsAttributeSpecified(char* name, Bool32* inherited);
 
 		[VtblIndex(20)]
 		uint GetSpecifiedAttributeCount();
 
 		[VtblIndex(21)]
-		HResult GetSpecifiedAttributeName(uint index, char** name, uint nameCount, Bool32* inherited);
+		HResult GetSpecifiedAttributeName(uint index, char* name, uint nameCount, Bool32* inherited);
 
 		[VtblIndex(22)]
 		HResult GetSpecifiedAttributeNameLength(uint index, uint* nameLength, Bool32* inherited);
 
 		[VtblIndex(23)]
-		HResult RemoveAttribute(ushort* name);
+		HResult RemoveAttribute(char* name);
 
 		[VtblIndex(24)]
 		HResult SetTextValue(char* name, uint nameCount);
 
 		[VtblIndex(25)]
-		HResult GetTextValue(char** name, uint nameCount);
+		HResult GetTextValue(char* name, uint nameCount);
 
 		[VtblIndex(26)]
 		uint GetTextValueLength();
 
 		[VtblIndex(27)]
-		HResult SetAttributeValue(ushort* name, ID2D1SvgAttribute* value);
+		HResult SetAttributeValue(char* name, ID2D1SvgAttribute* value);
 
 		[VtblIndex(28)]
-		HResult SetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
+		HResult SetAttributeValue(char* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
 
 		[VtblIndex(29)]
-		HResult SetAttributeValue(ushort* name, SvgAttributeStringType type, ushort* value);
+		HResult SetAttributeValue(char* name, SvgAttributeStringType type, char* value);
 
 		[VtblIndex(30)]
-		HResult GetAttributeValue(ushort* name, Guid* riid, void** value);
+		HResult GetAttributeValue(char* name, Guid* riid, void** value);
 
 		[VtblIndex(31)]
-		HResult GetAttributeValue(ushort* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
+		HResult GetAttributeValue(char* name, SvgAttributePodType type, void* value, uint valueSizeInBytes);
 
 		[VtblIndex(32)]
-		HResult GetAttributeValue(ushort* name, SvgAttributeStringType type, char** value, uint valueCount);
+		HResult GetAttributeValue(char* name, SvgAttributeStringType type, char* value, uint valueCount);
 
 		[VtblIndex(33)]
-		HResult GetAttributeValueLength(ushort* name, SvgAttributeStringType type, uint* valueLength);
+		HResult GetAttributeValueLength(char* name, SvgAttributeStringType type, uint* valueLength);
 	}
 }
 

@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12GraphicsCommandList : ID3D12GraphicsCommandLi
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(ushort* Name)
+	public HResult SetName(char* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, ushort*, int>)(lpVtbl[6]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12GraphicsCommandList*, char*, int>)(lpVtbl[6]))((ID3D12GraphicsCommandList*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />

@@ -11,9 +11,9 @@ namespace Win32.Graphics.Direct3D.Dxc;
 
 public static unsafe partial class Apis
 {
-	[DllImport("dxcompiler.dll", ExactSpelling = true)]
-	public static extern HResult DxcCreateInstance(Guid* rclsid, Guid* riid, void** ppv);
+	[LibraryImport("dxcompiler.dll")]
+	public static partial HResult DxcCreateInstance(Guid* rclsid, Guid* riid, void** ppv);
 
-	[DllImport("dxcompiler.dll", ExactSpelling = true)]
-	public static extern HResult DxcCreateInstance2(Com.IMalloc* pMalloc, Guid* rclsid, Guid* riid, void** ppv);
+	[LibraryImport("dxcompiler.dll")]
+	public static partial HResult DxcCreateInstance2(Com.IMalloc* pMalloc, Guid* rclsid, Guid* riid, void** ppv);
 }

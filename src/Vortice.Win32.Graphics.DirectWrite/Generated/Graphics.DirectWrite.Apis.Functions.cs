@@ -12,6 +12,6 @@ namespace Win32.Graphics.DirectWrite;
 public static unsafe partial class Apis
 {
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="DWriteCreateFactory"]/*' />
-	[DllImport("DWrite.dll", ExactSpelling = true)]
-	public static extern HResult DWriteCreateFactory(FactoryType factoryType, Guid* iid, void** factory);
+	[LibraryImport("DWrite.dll")]
+	public static partial HResult DWriteCreateFactory(FactoryType factoryType, Guid* iid, void** factory);
 }

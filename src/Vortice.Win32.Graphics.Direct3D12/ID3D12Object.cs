@@ -1,4 +1,4 @@
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 namespace Win32.Graphics.Direct3D12;
@@ -10,7 +10,7 @@ public static unsafe class ID3D12ObjectExtensions
     {
         fixed (char* namePtr = name)
         {
-            _ = self.SetName((ushort*)namePtr);
+            _ = self.SetName(namePtr);
         }
     }
 
@@ -19,7 +19,7 @@ public static unsafe class ID3D12ObjectExtensions
     {
         fixed (char* namePtr = name)
         {
-            _ = self.SetName((ushort*)namePtr);
+            _ = self.SetName(namePtr);
         }
     }
 }

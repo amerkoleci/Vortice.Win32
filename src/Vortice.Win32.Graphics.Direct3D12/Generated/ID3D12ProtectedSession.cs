@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12ProtectedSession : ID3D12ProtectedSession.Int
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(ushort* Name)
+	public HResult SetName(char* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, ushort*, int>)(lpVtbl[6]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ProtectedSession*, char*, int>)(lpVtbl[6]))((ID3D12ProtectedSession*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />

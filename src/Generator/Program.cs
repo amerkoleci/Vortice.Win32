@@ -66,7 +66,7 @@ public static class Program
         { "Foundation.LRESULT", "nint" },
         { "Foundation.WPARAM", "nuint" },
         { "Foundation.PSTR", "sbyte*" },
-        { "Foundation.PWSTR", "ushort*" },
+        { "Foundation.PWSTR", "char*" },
         { "Foundation.CHAR", "byte" },
         { "Foundation.COLORREF", "uint" },
 
@@ -1843,14 +1843,14 @@ public static class Program
 
         if (string.IsNullOrEmpty(function.DllImport) == false)
         {
-            functionSuffix = "static extern ";
+            functionSuffix = "static partial ";
             string dllImport = function.DllImport;
             if (dllImport == "XAudio2_8.dll")
             {
                 dllImport = "xaudio2_9";
             }
 
-            writer.WriteLine($"[DllImport(\"{dllImport}\", ExactSpelling = true)]");
+            writer.WriteLine($"[LibraryImport(\"{dllImport}\")]");
         }
 
         StringBuilder argumentBuilder = new();
@@ -2399,14 +2399,14 @@ public static class Program
         Dictionary<string, List<ApiType>> methodsToGenerate)
     {
         string csTypeName = comType.Name;
-        List<string> namespaces = new();
+        List<string> namespaces = [];
 
         if (comType.Name == "ID2D1GeometrySink")
         {
             namespaces.Add("Win32.Graphics.Direct2D.Common");
         }
 
-        using var writer = new CodeWriter(
+        using CodeWriter writer = new(
             Path.Combine(folder, $"{csTypeName}.cs"),
             apiName,
             docFileName,
@@ -2523,7 +2523,7 @@ public static class Program
                 vtblIndex = 8;
 
             bool needNewLine = false;
-            List<Tuple<int, string>> interfaceMethods = new();
+            List<Tuple<int, string>> interfaceMethods = [];
             foreach (KeyValuePair<string, List<ApiType>> methodPair in methodsToGenerate)
             {
                 string docName = methodPair.Key;
@@ -3365,6 +3365,7 @@ public static class Program
             case "ulong":
             case "float":
             case "double":
+            case "char":
                 return true;
 
             case "nint":

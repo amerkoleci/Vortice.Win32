@@ -73,9 +73,9 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::BeginEvent"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public int BeginEvent(ushort* Name)
+	public int BeginEvent(char* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3DUserDefinedAnnotation*, ushort*, int>)(lpVtbl[3]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3DUserDefinedAnnotation*, char*, int>)(lpVtbl[3]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::EndEvent"]/*' />
@@ -89,9 +89,9 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::SetMarker"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public void SetMarker(ushort* Name)
+	public void SetMarker(char* Name)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3DUserDefinedAnnotation*, ushort*, void>)(lpVtbl[5]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
+		((delegate* unmanaged[MemberFunction]<ID3DUserDefinedAnnotation*, char*, void>)(lpVtbl[5]))((ID3DUserDefinedAnnotation*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3DUserDefinedAnnotation::GetStatus"]/*' />
@@ -105,13 +105,13 @@ public unsafe partial struct ID3DUserDefinedAnnotation : ID3DUserDefinedAnnotati
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		int BeginEvent(ushort* Name);
+		int BeginEvent(char* Name);
 
 		[VtblIndex(4)]
 		int EndEvent();
 
 		[VtblIndex(5)]
-		void SetMarker(ushort* Name);
+		void SetMarker(char* Name);
 
 		[VtblIndex(6)]
 		Bool32 GetStatus();

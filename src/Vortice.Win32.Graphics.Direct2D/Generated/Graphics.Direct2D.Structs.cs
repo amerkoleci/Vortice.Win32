@@ -487,7 +487,7 @@ public partial struct CreationProperties
 public partial struct PropertyBinding
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::propertyName"]/*' />
-	public unsafe ushort* propertyName;
+	public unsafe char* propertyName;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_PROPERTY_BINDING::setFunction"]/*' />
 	public unsafe delegate* unmanaged[Stdcall]<IUnknown*, byte*, uint, HResult> setFunction;

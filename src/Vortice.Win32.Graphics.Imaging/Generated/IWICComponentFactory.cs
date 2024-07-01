@@ -73,9 +73,9 @@ public unsafe partial struct IWICComponentFactory : IWICComponentFactory.Interfa
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromFilename" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult CreateDecoderFromFilename(ushort* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
+	public HResult CreateDecoderFromFilename(char* wzFilename, Guid* pguidVendor, NativeFileAccess dwDesiredAccess, WICDecodeOptions metadataOptions, IWICBitmapDecoder** ppIDecoder)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, ushort*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
+		return ((delegate* unmanaged[MemberFunction]<IWICComponentFactory*, char*, Guid*, NativeFileAccess, WICDecodeOptions, IWICBitmapDecoder**, int>)(lpVtbl[3]))((IWICComponentFactory*)Unsafe.AsPointer(ref this), wzFilename, pguidVendor, dwDesiredAccess, metadataOptions, ppIDecoder);
 	}
 
 	/// <inheritdoc cref="IWICImagingFactory.CreateDecoderFromStream" />

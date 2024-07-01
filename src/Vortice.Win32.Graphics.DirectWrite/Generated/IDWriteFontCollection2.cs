@@ -89,9 +89,9 @@ public unsafe partial struct IDWriteFontCollection2 : IDWriteFontCollection2.Int
 	/// <inheritdoc cref="IDWriteFontCollection.FindFamilyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult FindFamilyName(ushort* familyName, uint* index, Bool32* exists)
+	public HResult FindFamilyName(char* familyName, uint* index, Bool32* exists)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection2*, ushort*, uint*, Bool32*, int>)(lpVtbl[5]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this), familyName, index, exists);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection2*, char*, uint*, Bool32*, int>)(lpVtbl[5]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this), familyName, index, exists);
 	}
 
 	/// <inheritdoc cref="IDWriteFontCollection.GetFontFromFontFace" />
@@ -129,9 +129,9 @@ public unsafe partial struct IDWriteFontCollection2 : IDWriteFontCollection2.Int
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetMatchingFonts"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult GetMatchingFonts(ushort* familyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList)
+	public HResult GetMatchingFonts(char* familyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection2*, ushort*, FontAxisValue*, uint, IDWriteFontList2**, int>)(lpVtbl[10]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this), familyName, fontAxisValues, fontAxisValueCount, fontList);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteFontCollection2*, char*, FontAxisValue*, uint, IDWriteFontList2**, int>)(lpVtbl[10]))((IDWriteFontCollection2*)Unsafe.AsPointer(ref this), familyName, fontAxisValues, fontAxisValueCount, fontList);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteFontCollection2::GetFontFamilyModel"]/*' />
@@ -156,7 +156,7 @@ public unsafe partial struct IDWriteFontCollection2 : IDWriteFontCollection2.Int
 		HResult GetFontFamily(uint index, IDWriteFontFamily2** fontFamily);
 
 		[VtblIndex(10)]
-		HResult GetMatchingFonts(ushort* familyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList);
+		HResult GetMatchingFonts(char* familyName, FontAxisValue* fontAxisValues, uint fontAxisValueCount, IDWriteFontList2** fontList);
 
 		[VtblIndex(11)]
 		FontFamilyModel GetFontFamilyModel();

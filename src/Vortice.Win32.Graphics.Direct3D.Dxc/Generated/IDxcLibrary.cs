@@ -85,9 +85,9 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public HResult CreateBlobFromFile(ushort* pFileName, DxcCp* codePage, IDxcBlobEncoding** pBlobEncoding)
+	public HResult CreateBlobFromFile(char* pFileName, DxcCp* codePage, IDxcBlobEncoding** pBlobEncoding)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, ushort*, DxcCp*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pFileName, codePage, pBlobEncoding);
+		return ((delegate* unmanaged[MemberFunction]<IDxcLibrary*, char*, DxcCp*, IDxcBlobEncoding**, int>)(lpVtbl[5]))((IDxcLibrary*)Unsafe.AsPointer(ref this), pFileName, codePage, pBlobEncoding);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -148,7 +148,7 @@ public unsafe partial struct IDxcLibrary : IDxcLibrary.Interface, INativeGuid
 		HResult CreateBlobFromBlob(IDxcBlob* pBlob, uint offset, uint length, IDxcBlob** ppResult);
 
 		[VtblIndex(5)]
-		HResult CreateBlobFromFile(ushort* pFileName, DxcCp* codePage, IDxcBlobEncoding** pBlobEncoding);
+		HResult CreateBlobFromFile(char* pFileName, DxcCp* codePage, IDxcBlobEncoding** pBlobEncoding);
 
 		[VtblIndex(6)]
 		HResult CreateBlobWithEncodingFromPinned(void* pText, uint size, DxcCp codePage, IDxcBlobEncoding** pBlobEncoding);

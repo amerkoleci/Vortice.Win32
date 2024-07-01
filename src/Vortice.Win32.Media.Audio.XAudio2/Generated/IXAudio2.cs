@@ -105,9 +105,9 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::CreateMasteringVoice"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, ushort* szDeviceId, EffectChain* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory)
+	public HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, char* szDeviceId, EffectChain* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2MasteringVoice**, uint, uint, uint, ushort*, EffectChain*, Media.Audio.AudioStreamCategory, int>)(lpVtbl[7]))((IXAudio2*)Unsafe.AsPointer(ref this), ppMasteringVoice, InputChannels, InputSampleRate, Flags, szDeviceId, pEffectChain, StreamCategory);
+		return ((delegate* unmanaged[MemberFunction]<IXAudio2*, IXAudio2MasteringVoice**, uint, uint, uint, char*, EffectChain*, Media.Audio.AudioStreamCategory, int>)(lpVtbl[7]))((IXAudio2*)Unsafe.AsPointer(ref this), ppMasteringVoice, InputChannels, InputSampleRate, Flags, szDeviceId, pEffectChain, StreamCategory);
 	}
 
 	/// <include file='../XAudio2.xml' path='doc/member[@name="IXAudio2::StartEngine"]/*' />
@@ -165,7 +165,7 @@ public unsafe partial struct IXAudio2 : IXAudio2.Interface, INativeGuid
 		HResult CreateSubmixVoice(IXAudio2SubmixVoice** ppSubmixVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint ProcessingStage, VoiceSends* pSendList, EffectChain* pEffectChain);
 
 		[VtblIndex(7)]
-		HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, ushort* szDeviceId, EffectChain* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory);
+		HResult CreateMasteringVoice(IXAudio2MasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, char* szDeviceId, EffectChain* pEffectChain, Media.Audio.AudioStreamCategory StreamCategory);
 
 		[VtblIndex(8)]
 		HResult StartEngine();

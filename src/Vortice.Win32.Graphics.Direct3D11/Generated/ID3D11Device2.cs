@@ -441,9 +441,9 @@ public unsafe partial struct ID3D11Device2 : ID3D11Device2.Interface, INativeGui
 	/// <inheritdoc cref="ID3D11Device1.OpenSharedResourceByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(49)]
-	public HResult OpenSharedResourceByName(ushort* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
+	public HResult OpenSharedResourceByName(char* lpName, uint dwDesiredAccess, Guid* returnedInterface, void** ppResource)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, ushort*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device2*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11Device2*, char*, uint, Guid*, void**, int>)(lpVtbl[49]))((ID3D11Device2*)Unsafe.AsPointer(ref this), lpName, dwDesiredAccess, returnedInterface, ppResource);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11Device2::GetImmediateContext2"]/*' />

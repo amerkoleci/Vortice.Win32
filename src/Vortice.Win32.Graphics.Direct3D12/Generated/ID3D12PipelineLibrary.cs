@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12PipelineLibrary : ID3D12PipelineLibrary.Inter
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(ushort* Name)
+	public HResult SetName(char* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, ushort*, int>)(lpVtbl[6]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, char*, int>)(lpVtbl[6]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <inheritdoc cref="ID3D12DeviceChild.GetDevice" />
@@ -113,25 +113,25 @@ public unsafe partial struct ID3D12PipelineLibrary : ID3D12PipelineLibrary.Inter
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::StorePipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult StorePipeline(ushort* pName, ID3D12PipelineState* pPipeline)
+	public HResult StorePipeline(char* pName, ID3D12PipelineState* pPipeline)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, ushort*, ID3D12PipelineState*, int>)(lpVtbl[8]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pPipeline);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, char*, ID3D12PipelineState*, int>)(lpVtbl[8]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pPipeline);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadGraphicsPipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult LoadGraphicsPipeline(ushort* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadGraphicsPipeline(char* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, ushort*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, char*, GraphicsPipelineStateDescription*, Guid*, void**, int>)(lpVtbl[9]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::LoadComputePipeline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public HResult LoadComputePipeline(ushort* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
+	public HResult LoadComputePipeline(char* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, ushort*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12PipelineLibrary*, char*, ComputePipelineStateDescription*, Guid*, void**, int>)(lpVtbl[10]))((ID3D12PipelineLibrary*)Unsafe.AsPointer(ref this), pName, pDesc, riid, ppPipelineState);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12PipelineLibrary::GetSerializedSize"]/*' />
@@ -153,13 +153,13 @@ public unsafe partial struct ID3D12PipelineLibrary : ID3D12PipelineLibrary.Inter
 	public interface Interface : ID3D12DeviceChild.Interface
 	{
 		[VtblIndex(8)]
-		HResult StorePipeline(ushort* pName, ID3D12PipelineState* pPipeline);
+		HResult StorePipeline(char* pName, ID3D12PipelineState* pPipeline);
 
 		[VtblIndex(9)]
-		HResult LoadGraphicsPipeline(ushort* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
+		HResult LoadGraphicsPipeline(char* pName, GraphicsPipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
 
 		[VtblIndex(10)]
-		HResult LoadComputePipeline(ushort* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
+		HResult LoadComputePipeline(char* pName, ComputePipelineStateDescription* pDesc, Guid* riid, void** ppPipelineState);
 
 		[VtblIndex(11)]
 		nuint GetSerializedSize();

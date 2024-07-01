@@ -105,25 +105,25 @@ public unsafe partial struct IDWriteTextAnalyzer1 : IDWriteTextAnalyzer1.Interfa
 	/// <inheritdoc cref="IDWriteTextAnalyzer.GetGlyphs" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(7)]
-	public HResult GetGlyphs(char* textString, uint textLength, IDWriteFontFace* fontFace, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, IDWriteNumberSubstitution* numberSubstitution, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, uint maxGlyphCount, ushort* clusterMap, ShapingTextProperties* textProps, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint* actualGlyphCount)
+	public HResult GetGlyphs(char* textString, uint textLength, IDWriteFontFace* fontFace, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, char* localeName, IDWriteNumberSubstitution* numberSubstitution, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, uint maxGlyphCount, ushort* clusterMap, ShapingTextProperties* textProps, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint* actualGlyphCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer1*, char*, uint, IDWriteFontFace*, Bool32, Bool32, ScriptAnalysis*, ushort*, IDWriteNumberSubstitution*, TypographicFeatures**, uint*, uint, uint, ushort*, ShapingTextProperties*, ushort*, ShapingGlyphProperties*, uint*, int>)(lpVtbl[7]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), textString, textLength, fontFace, isSideways, isRightToLeft, scriptAnalysis, localeName, numberSubstitution, features, featureRangeLengths, featureRanges, maxGlyphCount, clusterMap, textProps, glyphIndices, glyphProps, actualGlyphCount);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer1*, char*, uint, IDWriteFontFace*, Bool32, Bool32, ScriptAnalysis*, char*, IDWriteNumberSubstitution*, TypographicFeatures**, uint*, uint, uint, ushort*, ShapingTextProperties*, ushort*, ShapingGlyphProperties*, uint*, int>)(lpVtbl[7]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), textString, textLength, fontFace, isSideways, isRightToLeft, scriptAnalysis, localeName, numberSubstitution, features, featureRangeLengths, featureRanges, maxGlyphCount, clusterMap, textProps, glyphIndices, glyphProps, actualGlyphCount);
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalyzer.GetGlyphPlacements" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(8)]
-	public HResult GetGlyphPlacements(char* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets)
+	public HResult GetGlyphPlacements(char* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, char* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer1*, char*, ushort*, ShapingTextProperties*, uint, ushort*, ShapingGlyphProperties*, uint, IDWriteFontFace*, float, Bool32, Bool32, ScriptAnalysis*, ushort*, TypographicFeatures**, uint*, uint, float*, GlyphOffset*, int>)(lpVtbl[8]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer1*, char*, ushort*, ShapingTextProperties*, uint, ushort*, ShapingGlyphProperties*, uint, IDWriteFontFace*, float, Bool32, Bool32, ScriptAnalysis*, char*, TypographicFeatures**, uint*, uint, float*, GlyphOffset*, int>)(lpVtbl[8]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
 	}
 
 	/// <inheritdoc cref="IDWriteTextAnalyzer.GetGdiCompatibleGlyphPlacements" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(9)]
-	public HResult GetGdiCompatibleGlyphPlacements(char* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, ushort* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets)
+	public HResult GetGdiCompatibleGlyphPlacements(char* textString, ushort* clusterMap, ShapingTextProperties* textProps, uint textLength, ushort* glyphIndices, ShapingGlyphProperties* glyphProps, uint glyphCount, IDWriteFontFace* fontFace, float fontEmSize, float pixelsPerDip, Matrix3x2* transform, Bool32 useGdiNatural, Bool32 isSideways, Bool32 isRightToLeft, ScriptAnalysis* scriptAnalysis, char* localeName, TypographicFeatures** features, uint* featureRangeLengths, uint featureRanges, float* glyphAdvances, GlyphOffset* glyphOffsets)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer1*, char*, ushort*, ShapingTextProperties*, uint, ushort*, ShapingGlyphProperties*, uint, IDWriteFontFace*, float, float, Matrix3x2*, Bool32, Bool32, Bool32, ScriptAnalysis*, ushort*, TypographicFeatures**, uint*, uint, float*, GlyphOffset*, int>)(lpVtbl[9]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, pixelsPerDip, transform, useGdiNatural, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer1*, char*, ushort*, ShapingTextProperties*, uint, ushort*, ShapingGlyphProperties*, uint, IDWriteFontFace*, float, float, Matrix3x2*, Bool32, Bool32, Bool32, ScriptAnalysis*, char*, TypographicFeatures**, uint*, uint, float*, GlyphOffset*, int>)(lpVtbl[9]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), textString, clusterMap, textProps, textLength, glyphIndices, glyphProps, glyphCount, fontFace, fontEmSize, pixelsPerDip, transform, useGdiNatural, isSideways, isRightToLeft, scriptAnalysis, localeName, features, featureRangeLengths, featureRanges, glyphAdvances, glyphOffsets);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer1::ApplyCharacterSpacing"]/*' />
@@ -137,9 +137,9 @@ public unsafe partial struct IDWriteTextAnalyzer1 : IDWriteTextAnalyzer1.Interfa
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer1::GetBaseline"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetBaseline(IDWriteFontFace* fontFace, Baseline baseline, Bool32 isVertical, Bool32 isSimulationAllowed, ScriptAnalysis scriptAnalysis, ushort* localeName, int* baselineCoordinate, Bool32* exists)
+	public HResult GetBaseline(IDWriteFontFace* fontFace, Baseline baseline, Bool32 isVertical, Bool32 isSimulationAllowed, ScriptAnalysis scriptAnalysis, char* localeName, int* baselineCoordinate, Bool32* exists)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer1*, IDWriteFontFace*, Baseline, Bool32, Bool32, ScriptAnalysis, ushort*, int*, Bool32*, int>)(lpVtbl[11]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), fontFace, baseline, isVertical, isSimulationAllowed, scriptAnalysis, localeName, baselineCoordinate, exists);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextAnalyzer1*, IDWriteFontFace*, Baseline, Bool32, Bool32, ScriptAnalysis, char*, int*, Bool32*, int>)(lpVtbl[11]))((IDWriteTextAnalyzer1*)Unsafe.AsPointer(ref this), fontFace, baseline, isVertical, isSimulationAllowed, scriptAnalysis, localeName, baselineCoordinate, exists);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextAnalyzer1::AnalyzeVerticalGlyphOrientation"]/*' />
@@ -204,7 +204,7 @@ public unsafe partial struct IDWriteTextAnalyzer1 : IDWriteTextAnalyzer1.Interfa
 		HResult ApplyCharacterSpacing(float leadingSpacing, float trailingSpacing, float minimumAdvanceWidth, uint textLength, uint glyphCount, ushort* clusterMap, float* glyphAdvances, GlyphOffset* glyphOffsets, ShapingGlyphProperties* glyphProperties, float* modifiedGlyphAdvances, GlyphOffset* modifiedGlyphOffsets);
 
 		[VtblIndex(11)]
-		HResult GetBaseline(IDWriteFontFace* fontFace, Baseline baseline, Bool32 isVertical, Bool32 isSimulationAllowed, ScriptAnalysis scriptAnalysis, ushort* localeName, int* baselineCoordinate, Bool32* exists);
+		HResult GetBaseline(IDWriteFontFace* fontFace, Baseline baseline, Bool32 isVertical, Bool32 isSimulationAllowed, ScriptAnalysis scriptAnalysis, char* localeName, int* baselineCoordinate, Bool32* exists);
 
 		[VtblIndex(12)]
 		HResult AnalyzeVerticalGlyphOrientation(IDWriteTextAnalysisSource1* analysisSource, uint textPosition, uint textLength, IDWriteTextAnalysisSink1* analysisSink);

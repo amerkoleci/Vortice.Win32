@@ -217,9 +217,9 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontFamilyName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(21)]
-	public HResult GetFontFamilyName(char** fontFamilyName, uint nameSize)
+	public HResult GetFontFamilyName(char* fontFamilyName, uint nameSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char**, uint, int>)(lpVtbl[21]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char*, uint, int>)(lpVtbl[21]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, nameSize);
 	}
 
 	/// <inheritdoc cref="IDWriteTextFormat.GetFontWeight" />
@@ -265,9 +265,9 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <inheritdoc cref="IDWriteTextFormat.GetLocaleName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(27)]
-	public HResult GetLocaleName(char** localeName, uint nameSize)
+	public HResult GetLocaleName(char* localeName, uint nameSize)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char**, uint, int>)(lpVtbl[27]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, nameSize);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char*, uint, int>)(lpVtbl[27]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, nameSize);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetMaxWidth"]/*' />
@@ -297,9 +297,9 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult SetFontFamilyName(ushort* fontFamilyName, TextRange textRange)
+	public HResult SetFontFamilyName(char* fontFamilyName, TextRange textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, ushort*, TextRange, int>)(lpVtbl[31]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char*, TextRange, int>)(lpVtbl[31]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), fontFamilyName, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetFontWeight"]/*' />
@@ -377,9 +377,9 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::SetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(41)]
-	public HResult SetLocaleName(ushort* localeName, TextRange textRange)
+	public HResult SetLocaleName(char* localeName, TextRange textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, ushort*, TextRange, int>)(lpVtbl[41]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, char*, TextRange, int>)(lpVtbl[41]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), localeName, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetMaxWidth"]/*' />
@@ -417,9 +417,9 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontFamilyName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(46)]
-	public HResult GetFontFamilyName(uint currentPosition, char** fontFamilyName, uint nameSize, TextRange* textRange)
+	public HResult GetFontFamilyName(uint currentPosition, char* fontFamilyName, uint nameSize, TextRange* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, char**, uint, TextRange*, int>)(lpVtbl[46]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontFamilyName, nameSize, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, char*, uint, TextRange*, int>)(lpVtbl[46]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, fontFamilyName, nameSize, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetFontWeight"]/*' />
@@ -505,9 +505,9 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::GetLocaleName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(57)]
-	public HResult GetLocaleName(uint currentPosition, char** localeName, uint nameSize, TextRange* textRange)
+	public HResult GetLocaleName(uint currentPosition, char* localeName, uint nameSize, TextRange* textRange)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, char**, uint, TextRange*, int>)(lpVtbl[57]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, localeName, nameSize, textRange);
+		return ((delegate* unmanaged[MemberFunction]<IDWriteTextLayout*, uint, char*, uint, TextRange*, int>)(lpVtbl[57]))((IDWriteTextLayout*)Unsafe.AsPointer(ref this), currentPosition, localeName, nameSize, textRange);
 	}
 
 	/// <include file='../DirectWrite.xml' path='doc/member[@name="IDWriteTextLayout::Draw"]/*' />
@@ -594,7 +594,7 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 		HResult SetFontCollection(IDWriteFontCollection* fontCollection, TextRange textRange);
 
 		[VtblIndex(31)]
-		HResult SetFontFamilyName(ushort* fontFamilyName, TextRange textRange);
+		HResult SetFontFamilyName(char* fontFamilyName, TextRange textRange);
 
 		[VtblIndex(32)]
 		HResult SetFontWeight(FontWeight fontWeight, TextRange textRange);
@@ -624,7 +624,7 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 		HResult SetTypography(IDWriteTypography* typography, TextRange textRange);
 
 		[VtblIndex(41)]
-		HResult SetLocaleName(ushort* localeName, TextRange textRange);
+		HResult SetLocaleName(char* localeName, TextRange textRange);
 
 		[VtblIndex(42)]
 		float GetMaxWidth();
@@ -639,7 +639,7 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 		HResult GetFontFamilyNameLength(uint currentPosition, uint* nameLength, TextRange* textRange);
 
 		[VtblIndex(46)]
-		HResult GetFontFamilyName(uint currentPosition, char** fontFamilyName, uint nameSize, TextRange* textRange);
+		HResult GetFontFamilyName(uint currentPosition, char* fontFamilyName, uint nameSize, TextRange* textRange);
 
 		[VtblIndex(47)]
 		HResult GetFontWeight(uint currentPosition, FontWeight* fontWeight, TextRange* textRange);
@@ -672,7 +672,7 @@ public unsafe partial struct IDWriteTextLayout : IDWriteTextLayout.Interface, IN
 		HResult GetLocaleNameLength(uint currentPosition, uint* nameLength, TextRange* textRange);
 
 		[VtblIndex(57)]
-		HResult GetLocaleName(uint currentPosition, char** localeName, uint nameSize, TextRange* textRange);
+		HResult GetLocaleName(uint currentPosition, char* localeName, uint nameSize, TextRange* textRange);
 
 		[VtblIndex(58)]
 		HResult Draw(void* clientDrawingContext, IDWriteTextRenderer* renderer, float originX, float originY);

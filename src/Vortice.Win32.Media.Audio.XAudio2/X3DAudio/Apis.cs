@@ -15,9 +15,12 @@ public static unsafe partial class Apis
         X3DAudioCalculate(Instance, pListener, pEmitter, (uint)Flags, pDSPSettings);
     }
 
-    [DllImport("xaudio2_9", ExactSpelling = true)]
-    public static extern HResult X3DAudioInitialize(uint SpeakerChannelMask, float SpeedOfSound, out X3DAudioHandle Instance);
+    [LibraryImport("xaudio2_9")]
+    public static partial HResult X3DAudioInitialize(uint SpeakerChannelMask, float SpeedOfSound, out X3DAudioHandle Instance);
 
-    [DllImport("xaudio2_9", ExactSpelling = true)]
-    public static extern void X3DAudioCalculate(in X3DAudioHandle Instance, X3DAudioListener* pListener, X3DAudioEmitter* pEmitter, uint Flags, X3DAudioDSPSettings* pDSPSettings);
+    [LibraryImport("xaudio2_9")]
+    public static partial void X3DAudioCalculate(in X3DAudioHandle Instance, X3DAudioListener* pListener, X3DAudioEmitter* pEmitter, uint Flags, X3DAudioDSPSettings* pDSPSettings);
+
+    [LibraryImport("xaudio2_9")]
+    public static partial void X3DAudioCalculate(X3DAudioHandle* Instance, X3DAudioListener* pListener, X3DAudioEmitter* pEmitter, uint Flags, X3DAudioDSPSettings* pDSPSettings);
 }

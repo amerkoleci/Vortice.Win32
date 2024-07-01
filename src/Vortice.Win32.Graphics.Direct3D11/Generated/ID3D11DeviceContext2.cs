@@ -1177,17 +1177,17 @@ public unsafe partial struct ID3D11DeviceContext2 : ID3D11DeviceContext2.Interfa
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::SetMarkerInt"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(141)]
-	public void SetMarkerInt(ushort* pLabel, int Data)
+	public void SetMarkerInt(char* pLabel, int Data)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext2*, ushort*, int, void>)(lpVtbl[141]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext2*, char*, int, void>)(lpVtbl[141]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::BeginEventInt"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(142)]
-	public void BeginEventInt(ushort* pLabel, int Data)
+	public void BeginEventInt(char* pLabel, int Data)
 	{
-		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext2*, ushort*, int, void>)(lpVtbl[142]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
+		((delegate* unmanaged[MemberFunction]<ID3D11DeviceContext2*, char*, int, void>)(lpVtbl[142]))((ID3D11DeviceContext2*)Unsafe.AsPointer(ref this), pLabel, Data);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11DeviceContext2::EndEvent"]/*' />
@@ -1222,10 +1222,10 @@ public unsafe partial struct ID3D11DeviceContext2 : ID3D11DeviceContext2.Interfa
 		Bool32 IsAnnotationEnabled();
 
 		[VtblIndex(141)]
-		void SetMarkerInt(ushort* pLabel, int Data);
+		void SetMarkerInt(char* pLabel, int Data);
 
 		[VtblIndex(142)]
-		void BeginEventInt(ushort* pLabel, int Data);
+		void BeginEventInt(char* pLabel, int Data);
 
 		[VtblIndex(143)]
 		void EndEvent();

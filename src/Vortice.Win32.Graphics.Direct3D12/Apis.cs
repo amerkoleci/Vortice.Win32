@@ -2,7 +2,7 @@
 
 // Ported from d3dx12.h in DirectX-Graphics-Samples commit a7a87f1853b5540f10920518021d91ae641033fb
 // Original source is Copyright © Microsoft. All rights reserved. Licensed under the MIT License (MIT).
-// Copyright © Amer Koleci and Contributors.
+// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
 
 using Win32.Graphics.Direct3D;

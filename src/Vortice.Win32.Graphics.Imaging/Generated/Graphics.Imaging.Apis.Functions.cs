@@ -12,38 +12,38 @@ namespace Win32.Graphics.Imaging;
 public static unsafe partial class Apis
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICConvertBitmapSource"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICConvertBitmapSource(Guid* dstFormat, IWICBitmapSource* pISrc, IWICBitmapSource** ppIDst);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICConvertBitmapSource(Guid* dstFormat, IWICBitmapSource* pISrc, IWICBitmapSource** ppIDst);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICCreateBitmapFromSection"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICCreateBitmapFromSection(uint width, uint height, Guid* pixelFormat, Handle hSection, uint stride, uint offset, IWICBitmap** ppIBitmap);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICCreateBitmapFromSection(uint width, uint height, Guid* pixelFormat, Handle hSection, uint stride, uint offset, IWICBitmap** ppIBitmap);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICCreateBitmapFromSectionEx"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICCreateBitmapFromSectionEx(uint width, uint height, Guid* pixelFormat, Handle hSection, uint stride, uint offset, WICSectionAccessLevel desiredAccessLevel, IWICBitmap** ppIBitmap);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICCreateBitmapFromSectionEx(uint width, uint height, Guid* pixelFormat, Handle hSection, uint stride, uint offset, WICSectionAccessLevel desiredAccessLevel, IWICBitmap** ppIBitmap);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMapGuidToShortName"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICMapGuidToShortName(Guid* guid, uint cchName, char** wzName, uint* pcchActual);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICMapGuidToShortName(Guid* guid, uint cchName, char* wzName, uint* pcchActual);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMapShortNameToGuid"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICMapShortNameToGuid(ushort* wzName, Guid* pguid);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICMapShortNameToGuid(char* wzName, Guid* pguid);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMapSchemaToName"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICMapSchemaToName(Guid* guidMetadataFormat, ushort* pwzSchema, uint cchName, char** wzName, uint* pcchActual);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICMapSchemaToName(Guid* guidMetadataFormat, char* pwzSchema, uint cchName, char* wzName, uint* pcchActual);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMatchMetadataContent"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICMatchMetadataContent(Guid* guidContainerFormat, Guid* pguidVendor, Com.IStream* pIStream, Guid* pguidMetadataFormat);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICMatchMetadataContent(Guid* guidContainerFormat, Guid* pguidVendor, Com.IStream* pIStream, Guid* pguidMetadataFormat);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICSerializeMetadataContent"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICSerializeMetadataContent(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, uint dwPersistOptions, Com.IStream* pIStream);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICSerializeMetadataContent(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, uint dwPersistOptions, Com.IStream* pIStream);
 
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGetMetadataContentSize"]/*' />
-	[DllImport("WindowsCodecs.dll", ExactSpelling = true)]
-	public static extern HResult WICGetMetadataContentSize(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, ulong* pcbSize);
+	[LibraryImport("WindowsCodecs.dll")]
+	public static partial HResult WICGetMetadataContentSize(Guid* guidContainerFormat, IWICMetadataWriter* pIWriter, ulong* pcbSize);
 }

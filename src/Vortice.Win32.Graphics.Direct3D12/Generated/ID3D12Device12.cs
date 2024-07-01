@@ -97,9 +97,9 @@ public unsafe partial struct ID3D12Device12 : ID3D12Device12.Interface, INativeG
 	/// <inheritdoc cref="ID3D12Object.SetName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult SetName(ushort* Name)
+	public HResult SetName(char* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device12*, ushort*, int>)(lpVtbl[6]))((ID3D12Device12*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device12*, char*, int>)(lpVtbl[6]))((ID3D12Device12*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.GetNodeCount" />
@@ -299,9 +299,9 @@ public unsafe partial struct ID3D12Device12 : ID3D12Device12.Interface, INativeG
 	/// <inheritdoc cref="ID3D12Device.CreateSharedHandle" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(31)]
-	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, ushort* Name, Handle* pHandle)
+	public HResult CreateSharedHandle(ID3D12DeviceChild* pObject, Security.SECURITY_ATTRIBUTES* pAttributes, uint Access, char* Name, Handle* pHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device12*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, ushort*, Handle*, int>)(lpVtbl[31]))((ID3D12Device12*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device12*, ID3D12DeviceChild*, Security.SECURITY_ATTRIBUTES*, uint, char*, Handle*, int>)(lpVtbl[31]))((ID3D12Device12*)Unsafe.AsPointer(ref this), pObject, pAttributes, Access, Name, pHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandle" />
@@ -315,9 +315,9 @@ public unsafe partial struct ID3D12Device12 : ID3D12Device12.Interface, INativeG
 	/// <inheritdoc cref="ID3D12Device.OpenSharedHandleByName" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(33)]
-	public HResult OpenSharedHandleByName(ushort* Name, uint Access, Handle* pNTHandle)
+	public HResult OpenSharedHandleByName(char* Name, uint Access, Handle* pNTHandle)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12Device12*, ushort*, uint, Handle*, int>)(lpVtbl[33]))((ID3D12Device12*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12Device12*, char*, uint, Handle*, int>)(lpVtbl[33]))((ID3D12Device12*)Unsafe.AsPointer(ref this), Name, Access, pNTHandle);
 	}
 
 	/// <inheritdoc cref="ID3D12Device.MakeResident" />
