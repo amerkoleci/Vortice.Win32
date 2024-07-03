@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net4.6.1;net8.0</TargetFrameworks>
+    <Description>WinPixEventRuntime native libraries</Description>
+    <PackageVersion>1.0.0</PackageVersion>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/microsoft/PixEvents</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(RepoRootDirectory)/README.md" Pack="true" PackagePath="\" />
+    <Content Include="license.txt" PackagePath="" />
+    <Content Include="ThirdPartyNotices.txt" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="build\**" PackagePath="build/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="runtimes\**" PackagePath="runtimes/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="$(MSBuildThisFileDirectory)_._" PackagePath="lib/net8.0" />
+    <Content Include="$(MSBuildThisFileDirectory)_._" PackagePath="lib/net461" />
+    <Content Include="$(MSBuildThisFileDirectory)_._" PackagePath="lib/netstandard2.0" />
+  </ItemGroup>
+
+</Project>

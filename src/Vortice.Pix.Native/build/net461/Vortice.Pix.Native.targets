@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_Vortice_Pix_Native_IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</_Vortice_Pix_Native_IsWindows>
+    <_Vortice_Pix_Native_NativeRuntime Condition=" '$(_Vortice_Pix_Native_NativeRuntime)' == '' And '$(_Vortice_Pix_Native_IsWindows)' == 'true' And ('$(Prefer32Bit)' == 'false' Or '$(PlatformTarget)' == 'x64')">win-x64</_Vortice_Pix_Native_NativeRuntime>
+    <_Vortice_Pix_Native_NativeRuntime Condition=" '$(_Vortice_Pix_Native_NativeRuntime)' == '' And '$(_Vortice_Pix_Native_IsWindows)' == 'true' And '$(PlatformTarget)' == 'ARM64'">win-arm64</_Vortice_Pix_Native_NativeRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Condition="'$(_Vortice_Pix_Native_NativeRuntime)' != ''" Include="$(MSBuildThisFileDirectory)..\..\runtimes\$(_Vortice_Pix_Native_NativeRuntime)\native\WinPixEventRuntime.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </Content>
+  </ItemGroup>
+</Project>
