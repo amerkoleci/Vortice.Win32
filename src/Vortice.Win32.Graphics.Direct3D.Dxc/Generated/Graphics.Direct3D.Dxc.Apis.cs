@@ -340,5 +340,29 @@ public static partial class Apis
 			return ref Unsafe.As<byte, Guid>(ref MemoryMarshal.GetReference(data));
 		}
 	}
+
+	public const DxcCp DXC_CP_ACP = DxcCp.Acp;
+	public const DxcCp DXC_CP_UTF16 = DxcCp.Utf16;
+	public const DxcCp DXC_CP_UTF8 = DxcCp.Utf8;
+	public const DxcOutKind DXC_OUT_NONE = DxcOutKind.None;
+	public const DxcOutKind DXC_OUT_OBJECT = DxcOutKind.Object;
+	public const DxcOutKind DXC_OUT_ERRORS = DxcOutKind.Errors;
+	public const DxcOutKind DXC_OUT_PDB = DxcOutKind.Pdb;
+	public const DxcOutKind DXC_OUT_SHADER_HASH = DxcOutKind.ShaderHash;
+	public const DxcOutKind DXC_OUT_DISASSEMBLY = DxcOutKind.Disassembly;
+	public const DxcOutKind DXC_OUT_HLSL = DxcOutKind.Hlsl;
+	public const DxcOutKind DXC_OUT_TEXT = DxcOutKind.Text;
+	public const DxcOutKind DXC_OUT_REFLECTION = DxcOutKind.Reflection;
+	public const DxcOutKind DXC_OUT_ROOT_SIGNATURE = DxcOutKind.RootSignature;
+	public const DxcOutKind DXC_OUT_EXTRA_OUTPUTS = DxcOutKind.ExtraOutputs;
+	public const DxcHashFlags DXC_HASHFLAG_INCLUDES_SOURCE = DxcHashFlags.IncludesSource;
+	public const DxcValidatorFlags DxcValidatorFlags_Default = DxcValidatorFlags.Default;
+	public const DxcValidatorFlags DxcValidatorFlags_InPlaceEdit = DxcValidatorFlags.InPlaceEdit;
+	public const DxcValidatorFlags DxcValidatorFlags_RootSignatureOnly = DxcValidatorFlags.RootSignatureOnly;
+	public const DxcValidatorFlags DxcValidatorFlags_ModuleOnly = DxcValidatorFlags.ModuleOnly;
+	public const DxcValidatorFlags DxcValidatorFlags_ValidMask = DxcValidatorFlags.ValidMask;
+	public const DxcVersionInfoFlags DxcVersionInfoFlags_None = DxcVersionInfoFlags.None;
+	public const DxcVersionInfoFlags DxcVersionInfoFlags_Debug = DxcVersionInfoFlags.Debug;
+	public const DxcVersionInfoFlags DxcVersionInfoFlags_Internal = DxcVersionInfoFlags.Internal;
 }
 

@@ -458,5 +458,23 @@ public static partial class Apis
 	public const uint X3DAUDIO_CALCULATE_ZEROCENTER = 65536;
 
 	public const uint X3DAUDIO_CALCULATE_REDIRECT_TO_LFE = 131072;
+
+	public const XAPOBufferFlags XAPO_BUFFER_SILENT = XAPOBufferFlags.Silent;
+	public const XAPOBufferFlags XAPO_BUFFER_VALID = XAPOBufferFlags.Valid;
+	public const FilterType LowPassFilter = FilterType.LowPassFilter;
+	public const FilterType BandPassFilter = FilterType.BandPassFilter;
+	public const FilterType HighPassFilter = FilterType.HighPassFilter;
+	public const FilterType NotchFilter = FilterType.NotchFilter;
+	public const FilterType LowPassOnePoleFilter = FilterType.LowPassOnePoleFilter;
+	public const FilterType HighPassOnePoleFilter = FilterType.HighPassOnePoleFilter;
+	public const HrtfDirectivityType OmniDirectional = HrtfDirectivityType.OmniDirectional;
+	public const HrtfDirectivityType Cardioid = HrtfDirectivityType.Cardioid;
+	public const HrtfDirectivityType Cone = HrtfDirectivityType.Cone;
+	public const HrtfEnvironment Small = HrtfEnvironment.Small;
+	public const HrtfEnvironment Medium = HrtfEnvironment.Medium;
+	public const HrtfEnvironment Large = HrtfEnvironment.Large;
+	public const HrtfEnvironment Outdoors = HrtfEnvironment.Outdoors;
+	public const HrtfDistanceDecayType NaturalDecay = HrtfDistanceDecayType.NaturalDecay;
+	public const HrtfDistanceDecayType CustomDecay = HrtfDistanceDecayType.CustomDecay;
 }
 

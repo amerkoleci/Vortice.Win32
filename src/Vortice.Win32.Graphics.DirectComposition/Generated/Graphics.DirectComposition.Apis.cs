@@ -18,5 +18,29 @@ public static partial class Apis
 	public const uint DCOMPOSITION_MAX_WAITFORCOMPOSITORCLOCK_OBJECTS = 32;
 
 	public const uint COMPOSITION_STATS_MAX_TARGETS = 256;
+
+	public const BitmapInterpolationMode DCOMPOSITION_BITMAP_INTERPOLATION_MODE_NEAREST_NEIGHBOR = BitmapInterpolationMode.NearestNeighbor;
+	public const BitmapInterpolationMode DCOMPOSITION_BITMAP_INTERPOLATION_MODE_LINEAR = BitmapInterpolationMode.Linear;
+	public const BitmapInterpolationMode DCOMPOSITION_BITMAP_INTERPOLATION_MODE_INHERIT = BitmapInterpolationMode.Inherit;
+	public const BorderMode DCOMPOSITION_BORDER_MODE_SOFT = BorderMode.Soft;
+	public const BorderMode DCOMPOSITION_BORDER_MODE_HARD = BorderMode.Hard;
+	public const BorderMode DCOMPOSITION_BORDER_MODE_INHERIT = BorderMode.Inherit;
+	public const CompositeMode DCOMPOSITION_COMPOSITE_MODE_SOURCE_OVER = CompositeMode.SourceOver;
+	public const CompositeMode DCOMPOSITION_COMPOSITE_MODE_DESTINATION_INVERT = CompositeMode.DestinationInvert;
+	public const CompositeMode DCOMPOSITION_COMPOSITE_MODE_MIN_BLEND = CompositeMode.MinBlend;
+	public const CompositeMode DCOMPOSITION_COMPOSITE_MODE_INHERIT = CompositeMode.Inherit;
+	public const BackfaceVisibility DCOMPOSITION_BACKFACE_VISIBILITY_VISIBLE = BackfaceVisibility.Visible;
+	public const BackfaceVisibility DCOMPOSITION_BACKFACE_VISIBILITY_HIDDEN = BackfaceVisibility.Hidden;
+	public const BackfaceVisibility DCOMPOSITION_BACKFACE_VISIBILITY_INHERIT = BackfaceVisibility.Inherit;
+	public const OpacityMode DCOMPOSITION_OPACITY_MODE_LAYER = OpacityMode.Layer;
+	public const OpacityMode DCOMPOSITION_OPACITY_MODE_MULTIPLY = OpacityMode.Multiply;
+	public const OpacityMode DCOMPOSITION_OPACITY_MODE_INHERIT = OpacityMode.Inherit;
+	public const DepthMode DCOMPOSITION_DEPTH_MODE_TREE = DepthMode.Tree;
+	public const DepthMode DCOMPOSITION_DEPTH_MODE_SPATIAL = DepthMode.Spatial;
+	public const DepthMode DCOMPOSITION_DEPTH_MODE_SORTED = DepthMode.Sorted;
+	public const DepthMode DCOMPOSITION_DEPTH_MODE_INHERIT = DepthMode.Inherit;
+	public const CompositionFrameIdType COMPOSITION_FRAME_ID_CREATED = CompositionFrameIdType.Created;
+	public const CompositionFrameIdType COMPOSITION_FRAME_ID_CONFIRMED = CompositionFrameIdType.Confirmed;
+	public const CompositionFrameIdType COMPOSITION_FRAME_ID_COMPLETED = CompositionFrameIdType.Completed;
 }
 
