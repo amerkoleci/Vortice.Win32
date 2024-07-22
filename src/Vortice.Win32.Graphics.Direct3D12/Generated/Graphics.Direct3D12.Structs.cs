@@ -31,7 +31,7 @@ public partial struct CommandQueueDescription
 public partial struct InputElementDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::SemanticName"]/*' />
-	public unsafe sbyte* SemanticName;
+	public unsafe byte* SemanticName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_INPUT_ELEMENT_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -60,7 +60,7 @@ public partial struct SODeclarationEntry
 	public uint Stream;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::SemanticName"]/*' />
-	public unsafe sbyte* SemanticName;
+	public unsafe byte* SemanticName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SO_DECLARATION_ENTRY::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -5748,7 +5748,7 @@ public partial struct DispatchMeshArguments
 public partial struct SignatureParameterDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SemanticName"]/*' />
-	public unsafe sbyte* SemanticName;
+	public unsafe byte* SemanticName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SIGNATURE_PARAMETER_DESC::SemanticIndex"]/*' />
 	public uint SemanticIndex;
@@ -5780,7 +5780,7 @@ public partial struct SignatureParameterDescription
 public partial struct ShaderBufferDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Name"]/*' />
-	public unsafe sbyte* Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_BUFFER_DESC::Type"]/*' />
 	public Graphics.Direct3D.ConstantBufferType Type;
@@ -5800,7 +5800,7 @@ public partial struct ShaderBufferDescription
 public partial struct ShaderVariableDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VARIABLE_DESC::Name"]/*' />
-	public unsafe sbyte* Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_VARIABLE_DESC::StartOffset"]/*' />
 	public uint StartOffset;
@@ -5853,7 +5853,7 @@ public partial struct ShaderTypeDescription
 	public uint Offset;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_TYPE_DESC::Name"]/*' />
-	public unsafe sbyte* Name;
+	public unsafe byte* Name;
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_DESC"]/*' />
@@ -5864,7 +5864,7 @@ public partial struct ShaderDescription
 	public uint Version;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_DESC::Creator"]/*' />
-	public unsafe sbyte* Creator;
+	public unsafe byte* Creator;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_DESC::Flags"]/*' />
 	public uint Flags;
@@ -5980,7 +5980,7 @@ public partial struct ShaderDescription
 public partial struct ShaderInputBindDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Name"]/*' />
-	public unsafe sbyte* Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_SHADER_INPUT_BIND_DESC::Type"]/*' />
 	public Graphics.Direct3D.ShaderInputType Type;
@@ -6015,7 +6015,7 @@ public partial struct ShaderInputBindDescription
 public partial struct LibraryDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIBRARY_DESC::Creator"]/*' />
-	public unsafe sbyte* Creator;
+	public unsafe byte* Creator;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_LIBRARY_DESC::Flags"]/*' />
 	public uint Flags;
@@ -6032,7 +6032,7 @@ public partial struct FunctionDescription
 	public uint Version;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::Creator"]/*' />
-	public unsafe sbyte* Creator;
+	public unsafe byte* Creator;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::Flags"]/*' />
 	public uint Flags;
@@ -6113,7 +6113,7 @@ public partial struct FunctionDescription
 	public ulong RequiredFeatureFlags;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::Name"]/*' />
-	public unsafe sbyte* Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_FUNCTION_DESC::FunctionParameterCount"]/*' />
 	public int FunctionParameterCount;
@@ -6133,10 +6133,10 @@ public partial struct FunctionDescription
 public partial struct ParameterDescription
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PARAMETER_DESC::Name"]/*' />
-	public unsafe sbyte* Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PARAMETER_DESC::SemanticName"]/*' />
-	public unsafe sbyte* SemanticName;
+	public unsafe byte* SemanticName;
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PARAMETER_DESC::Type"]/*' />
 	public Graphics.Direct3D.ShaderVariableType Type;

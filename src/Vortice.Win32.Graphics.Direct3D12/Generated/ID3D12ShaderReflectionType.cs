@@ -61,17 +61,17 @@ public unsafe partial struct ID3D12ShaderReflectionType : ID3D12ShaderReflection
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetMemberTypeByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(2)]
-	public ID3D12ShaderReflectionType* GetMemberTypeByName(sbyte* Name)
+	public ID3D12ShaderReflectionType* GetMemberTypeByName(byte* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflectionType*, sbyte*, ID3D12ShaderReflectionType*>)(lpVtbl[2]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflectionType*, byte*, ID3D12ShaderReflectionType*>)(lpVtbl[2]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::GetMemberTypeName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public sbyte* GetMemberTypeName(uint Index)
+	public byte* GetMemberTypeName(uint Index)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflectionType*, uint, sbyte*>)(lpVtbl[3]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflectionType*, uint, byte*>)(lpVtbl[3]))((ID3D12ShaderReflectionType*)Unsafe.AsPointer(ref this), Index);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflectionType::IsEqual"]/*' />
@@ -139,10 +139,10 @@ public unsafe partial struct ID3D12ShaderReflectionType : ID3D12ShaderReflection
 		ID3D12ShaderReflectionType* GetMemberTypeByIndex(uint Index);
 
 		[VtblIndex(2)]
-		ID3D12ShaderReflectionType* GetMemberTypeByName(sbyte* Name);
+		ID3D12ShaderReflectionType* GetMemberTypeByName(byte* Name);
 
 		[VtblIndex(3)]
-		sbyte* GetMemberTypeName(uint Index);
+		byte* GetMemberTypeName(uint Index);
 
 		[VtblIndex(4)]
 		HResult IsEqual(ID3D12ShaderReflectionType* pType);

@@ -6290,25 +6290,25 @@ public enum ShaderVersionType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE::D3D11_SHVER_PIXEL_SHADER"]/*' />
 	/// <unmanaged>D3D11_SHVER_PIXEL_SHADER</unmanaged>
-	D3D11_SHVER_PIXEL_SHADER = 0,
+	PixelShader = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE::D3D11_SHVER_VERTEX_SHADER"]/*' />
 	/// <unmanaged>D3D11_SHVER_VERTEX_SHADER</unmanaged>
-	D3D11_SHVER_VERTEX_SHADER = 1,
+	VertexShader = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE::D3D11_SHVER_GEOMETRY_SHADER"]/*' />
 	/// <unmanaged>D3D11_SHVER_GEOMETRY_SHADER</unmanaged>
-	D3D11_SHVER_GEOMETRY_SHADER = 2,
+	GeometryShader = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE::D3D11_SHVER_HULL_SHADER"]/*' />
 	/// <unmanaged>D3D11_SHVER_HULL_SHADER</unmanaged>
-	D3D11_SHVER_HULL_SHADER = 3,
+	HullShader = 3,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE::D3D11_SHVER_DOMAIN_SHADER"]/*' />
 	/// <unmanaged>D3D11_SHVER_DOMAIN_SHADER</unmanaged>
-	D3D11_SHVER_DOMAIN_SHADER = 4,
+	DomainShader = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE::D3D11_SHVER_COMPUTE_SHADER"]/*' />
 	/// <unmanaged>D3D11_SHVER_COMPUTE_SHADER</unmanaged>
-	D3D11_SHVER_COMPUTE_SHADER = 5,
+	ComputeShader = 5,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_VERSION_TYPE::D3D11_SHVER_RESERVED0"]/*' />
 	/// <unmanaged>D3D11_SHVER_RESERVED0</unmanaged>
-	D3D11_SHVER_RESERVED0 = 65520,
+	Reserved0 = 65520,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE"]/*' />
@@ -6317,22 +6317,22 @@ public enum ShaderType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE::D3D11_VERTEX_SHADER"]/*' />
 	/// <unmanaged>D3D11_VERTEX_SHADER</unmanaged>
-	D3D11_VERTEX_SHADER = 1,
+	VertexShader = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE::D3D11_HULL_SHADER"]/*' />
 	/// <unmanaged>D3D11_HULL_SHADER</unmanaged>
-	D3D11_HULL_SHADER = 2,
+	HullShader = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE::D3D11_DOMAIN_SHADER"]/*' />
 	/// <unmanaged>D3D11_DOMAIN_SHADER</unmanaged>
-	D3D11_DOMAIN_SHADER = 3,
+	DomainShader = 3,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE::D3D11_GEOMETRY_SHADER"]/*' />
 	/// <unmanaged>D3D11_GEOMETRY_SHADER</unmanaged>
-	D3D11_GEOMETRY_SHADER = 4,
+	GeometryShader = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE::D3D11_PIXEL_SHADER"]/*' />
 	/// <unmanaged>D3D11_PIXEL_SHADER</unmanaged>
-	D3D11_PIXEL_SHADER = 5,
+	PixelShader = 5,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_SHADER_TYPE::D3D11_COMPUTE_SHADER"]/*' />
 	/// <unmanaged>D3D11_COMPUTE_SHADER</unmanaged>
-	D3D11_COMPUTE_SHADER = 6,
+	ComputeShader = 6,
 }
 
 /// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_GS_INPUT_PRIMITIVE"]/*' />
@@ -6365,110 +6365,110 @@ public enum TraceRegisterType
 {
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_NULL_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_NULL_REGISTER</unmanaged>
-	D3D11_TRACE_OUTPUT_NULL_REGISTER = 0,
+	OutputNullRegister = 0,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_REGISTER = 1,
+	InputRegister = 1,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_PRIMITIVE_ID_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_PRIMITIVE_ID_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_PRIMITIVE_ID_REGISTER = 2,
+	InputPrimitiveIdRegister = 2,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_IMMEDIATE_CONSTANT_BUFFER"]/*' />
 	/// <unmanaged>D3D11_TRACE_IMMEDIATE_CONSTANT_BUFFER</unmanaged>
-	D3D11_TRACE_IMMEDIATE_CONSTANT_BUFFER = 3,
+	ImmediateConstantBuffer = 3,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_TEMP_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_TEMP_REGISTER</unmanaged>
-	D3D11_TRACE_TEMP_REGISTER = 4,
+	TempRegister = 4,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INDEXABLE_TEMP_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INDEXABLE_TEMP_REGISTER</unmanaged>
-	D3D11_TRACE_INDEXABLE_TEMP_REGISTER = 5,
+	IndexableTempRegister = 5,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_REGISTER</unmanaged>
-	D3D11_TRACE_OUTPUT_REGISTER = 6,
+	OutputRegister = 6,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_DEPTH_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_DEPTH_REGISTER</unmanaged>
-	D3D11_TRACE_OUTPUT_DEPTH_REGISTER = 7,
+	OutputDepthRegister = 7,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_CONSTANT_BUFFER"]/*' />
 	/// <unmanaged>D3D11_TRACE_CONSTANT_BUFFER</unmanaged>
-	D3D11_TRACE_CONSTANT_BUFFER = 8,
+	ConstantBuffer = 8,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_IMMEDIATE32"]/*' />
 	/// <unmanaged>D3D11_TRACE_IMMEDIATE32</unmanaged>
-	D3D11_TRACE_IMMEDIATE32 = 9,
+	Immediate32 = 9,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_SAMPLER"]/*' />
 	/// <unmanaged>D3D11_TRACE_SAMPLER</unmanaged>
-	D3D11_TRACE_SAMPLER = 10,
+	Sampler = 10,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_RESOURCE"]/*' />
 	/// <unmanaged>D3D11_TRACE_RESOURCE</unmanaged>
-	D3D11_TRACE_RESOURCE = 11,
+	Resource = 11,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_RASTERIZER"]/*' />
 	/// <unmanaged>D3D11_TRACE_RASTERIZER</unmanaged>
-	D3D11_TRACE_RASTERIZER = 12,
+	Rasterizer = 12,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_COVERAGE_MASK"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_COVERAGE_MASK</unmanaged>
-	D3D11_TRACE_OUTPUT_COVERAGE_MASK = 13,
+	OutputCoverageMask = 13,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_STREAM"]/*' />
 	/// <unmanaged>D3D11_TRACE_STREAM</unmanaged>
-	D3D11_TRACE_STREAM = 14,
+	Stream = 14,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_THIS_POINTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_THIS_POINTER</unmanaged>
-	D3D11_TRACE_THIS_POINTER = 15,
+	ThisPointer = 15,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_CONTROL_POINT_ID_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_CONTROL_POINT_ID_REGISTER</unmanaged>
-	D3D11_TRACE_OUTPUT_CONTROL_POINT_ID_REGISTER = 16,
+	OutputControlPointIdRegister = 16,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_FORK_INSTANCE_ID_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_FORK_INSTANCE_ID_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_FORK_INSTANCE_ID_REGISTER = 17,
+	InputForkInstanceIdRegister = 17,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_JOIN_INSTANCE_ID_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_JOIN_INSTANCE_ID_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_JOIN_INSTANCE_ID_REGISTER = 18,
+	InputJoinInstanceIdRegister = 18,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_CONTROL_POINT_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_CONTROL_POINT_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_CONTROL_POINT_REGISTER = 19,
+	InputControlPointRegister = 19,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_CONTROL_POINT_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_CONTROL_POINT_REGISTER</unmanaged>
-	D3D11_TRACE_OUTPUT_CONTROL_POINT_REGISTER = 20,
+	OutputControlPointRegister = 20,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_PATCH_CONSTANT_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_PATCH_CONSTANT_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_PATCH_CONSTANT_REGISTER = 21,
+	InputPatchConstantRegister = 21,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_DOMAIN_POINT_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_DOMAIN_POINT_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_DOMAIN_POINT_REGISTER = 22,
+	InputDomainPointRegister = 22,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_UNORDERED_ACCESS_VIEW"]/*' />
 	/// <unmanaged>D3D11_TRACE_UNORDERED_ACCESS_VIEW</unmanaged>
-	D3D11_TRACE_UNORDERED_ACCESS_VIEW = 23,
+	UnorderedAccessView = 23,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_THREAD_GROUP_SHARED_MEMORY"]/*' />
 	/// <unmanaged>D3D11_TRACE_THREAD_GROUP_SHARED_MEMORY</unmanaged>
-	D3D11_TRACE_THREAD_GROUP_SHARED_MEMORY = 24,
+	ThreadGroupSharedMemory = 24,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_THREAD_ID_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_THREAD_ID_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_THREAD_ID_REGISTER = 25,
+	InputThreadIdRegister = 25,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_THREAD_GROUP_ID_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_THREAD_GROUP_ID_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_THREAD_GROUP_ID_REGISTER = 26,
+	InputThreadGroupIdRegister = 26,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_REGISTER = 27,
+	InputThreadIdInGroupRegister = 27,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_COVERAGE_MASK_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_COVERAGE_MASK_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_COVERAGE_MASK_REGISTER = 28,
+	InputCoverageMaskRegister = 28,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_FLATTENED_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_FLATTENED_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_THREAD_ID_IN_GROUP_FLATTENED_REGISTER = 29,
+	InputThreadIdInGroupFlattenedRegister = 29,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_GS_INSTANCE_ID_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_GS_INSTANCE_ID_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_GS_INSTANCE_ID_REGISTER = 30,
+	InputGSInstanceIdRegister = 30,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_DEPTH_GREATER_EQUAL_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_DEPTH_GREATER_EQUAL_REGISTER</unmanaged>
-	D3D11_TRACE_OUTPUT_DEPTH_GREATER_EQUAL_REGISTER = 31,
+	OutputDepthGreaterEqualRegister = 31,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_OUTPUT_DEPTH_LESS_EQUAL_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_OUTPUT_DEPTH_LESS_EQUAL_REGISTER</unmanaged>
-	D3D11_TRACE_OUTPUT_DEPTH_LESS_EQUAL_REGISTER = 32,
+	OutputDepthLessEqualRegister = 32,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_IMMEDIATE64"]/*' />
 	/// <unmanaged>D3D11_TRACE_IMMEDIATE64</unmanaged>
-	D3D11_TRACE_IMMEDIATE64 = 33,
+	Immediate64 = 33,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INPUT_CYCLE_COUNTER_REGISTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INPUT_CYCLE_COUNTER_REGISTER</unmanaged>
-	D3D11_TRACE_INPUT_CYCLE_COUNTER_REGISTER = 34,
+	InputCycleCounterRegister = 34,
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="D3D11_TRACE_REGISTER_TYPE::D3D11_TRACE_INTERFACE_POINTER"]/*' />
 	/// <unmanaged>D3D11_TRACE_INTERFACE_POINTER</unmanaged>
-	D3D11_TRACE_INTERFACE_POINTER = 35,
+	InterfacePointer = 35,
 }

@@ -524,7 +524,7 @@ public partial struct ResourceTextureProperties
 public partial struct InputElementDescription
 {
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::semanticName"]/*' />
-	public unsafe sbyte* semanticName;
+	public unsafe byte* semanticName;
 
 	/// <include file='../Direct2D.xml' path='doc/member[@name="D2D1_INPUT_ELEMENT_DESC::semanticIndex"]/*' />
 	public uint semanticIndex;

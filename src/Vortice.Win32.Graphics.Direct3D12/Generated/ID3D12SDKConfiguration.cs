@@ -73,15 +73,15 @@ public unsafe partial struct ID3D12SDKConfiguration : ID3D12SDKConfiguration.Int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration::SetSDKVersion"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetSDKVersion(uint SDKVersion, sbyte* SDKPath)
+	public HResult SetSDKVersion(uint SDKVersion, byte* SDKPath)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration*, uint, sbyte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration*, uint, byte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
 	}
 
 	public interface Interface : IUnknown.Interface
 	{
 		[VtblIndex(3)]
-		HResult SetSDKVersion(uint SDKVersion, sbyte* SDKPath);
+		HResult SetSDKVersion(uint SDKVersion, byte* SDKPath);
 	}
 }
 

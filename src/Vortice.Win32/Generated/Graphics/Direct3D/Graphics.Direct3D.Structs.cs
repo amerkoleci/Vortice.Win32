@@ -14,8 +14,8 @@ namespace Win32.Graphics.Direct3D;
 public partial struct ShaderMacro
 {
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Name"]/*' />
-	public unsafe sbyte* Name;
+	public unsafe byte* Name;
 
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_SHADER_MACRO::Definition"]/*' />
-	public unsafe sbyte* Definition;
+	public unsafe byte* Definition;
 }

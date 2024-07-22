@@ -65,7 +65,7 @@ public static class Program
         { "Foundation.LPARAM", "nint" },
         { "Foundation.LRESULT", "nint" },
         { "Foundation.WPARAM", "nuint" },
-        { "Foundation.PSTR", "sbyte*" },
+        { "Foundation.PSTR", "byte*" },
         { "Foundation.PWSTR", "char*" },
         { "Foundation.CHAR", "byte" },
         { "Foundation.COLORREF", "uint" },
@@ -899,6 +899,9 @@ public static class Program
 
         // D3D11 -> most is handled in code
         { "D3D11_AUTHENTICATED_PROCESS_IDENTIFIER_TYPE", "D3D11_PROCESSIDTYPE" },
+        { "D3D11_SHADER_VERSION_TYPE", "D3D11_SHVER" },
+        { "D3D11_SHADER_TYPE", "D3D11" },
+        { "D3D11_TRACE_REGISTER_TYPE", "D3D11_TRACE" },
 
         // D3D12 -> most is handled in code
         { "D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS", "D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG" },

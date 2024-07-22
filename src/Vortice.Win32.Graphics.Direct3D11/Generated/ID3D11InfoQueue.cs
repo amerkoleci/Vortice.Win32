@@ -273,17 +273,17 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(28)]
-	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, sbyte* pDescription)
+	public HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte* pDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageCategory, MessageSeverity, MessageId, sbyte*, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageCategory, MessageSeverity, MessageId, byte*, int>)(lpVtbl[28]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Category, Severity, ID, pDescription);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::AddApplicationMessage"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(29)]
-	public HResult AddApplicationMessage(MessageSeverity Severity, sbyte* pDescription)
+	public HResult AddApplicationMessage(MessageSeverity Severity, byte* pDescription)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageSeverity, sbyte*, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
+		return ((delegate* unmanaged[MemberFunction]<ID3D11InfoQueue*, MessageSeverity, byte*, int>)(lpVtbl[29]))((ID3D11InfoQueue*)Unsafe.AsPointer(ref this), Severity, pDescription);
 	}
 
 	/// <include file='../Direct3D11.xml' path='doc/member[@name="ID3D11InfoQueue::SetBreakOnCategory"]/*' />
@@ -428,10 +428,10 @@ public unsafe partial struct ID3D11InfoQueue : ID3D11InfoQueue.Interface, INativ
 		uint GetRetrievalFilterStackSize();
 
 		[VtblIndex(28)]
-		HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, sbyte* pDescription);
+		HResult AddMessage(MessageCategory Category, MessageSeverity Severity, MessageId ID, byte* pDescription);
 
 		[VtblIndex(29)]
-		HResult AddApplicationMessage(MessageSeverity Severity, sbyte* pDescription);
+		HResult AddApplicationMessage(MessageSeverity Severity, byte* pDescription);
 
 		[VtblIndex(30)]
 		HResult SetBreakOnCategory(MessageCategory Category, Bool32 bEnable);

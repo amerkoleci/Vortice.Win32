@@ -92,9 +92,9 @@ public unsafe partial struct IDxcCompilerArgs : IDxcCompilerArgs.Interface, INat
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public HResult AddArgumentsUTF8(sbyte** pArguments, uint argCount)
+	public HResult AddArgumentsUTF8(byte** pArguments, uint argCount)
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcCompilerArgs*, sbyte**, uint, int>)(lpVtbl[6]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pArguments, argCount);
+		return ((delegate* unmanaged[MemberFunction]<IDxcCompilerArgs*, byte**, uint, int>)(lpVtbl[6]))((IDxcCompilerArgs*)Unsafe.AsPointer(ref this), pArguments, argCount);
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -116,7 +116,7 @@ public unsafe partial struct IDxcCompilerArgs : IDxcCompilerArgs.Interface, INat
 		HResult AddArguments(char** pArguments, uint argCount);
 
 		[VtblIndex(6)]
-		HResult AddArgumentsUTF8(sbyte** pArguments, uint argCount);
+		HResult AddArgumentsUTF8(byte** pArguments, uint argCount);
 
 		[VtblIndex(7)]
 		HResult AddDefines(DxcDefine* pDefines, uint defineCount);

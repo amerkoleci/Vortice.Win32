@@ -95,9 +95,9 @@ public unsafe partial struct IDxcBlobUtf8 : IDxcBlobUtf8.Interface, INativeGuid
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(6)]
-	public sbyte* GetStringPointer()
+	public byte* GetStringPointer()
 	{
-		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf8*, sbyte*>)(lpVtbl[6]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this));
+		return ((delegate* unmanaged[MemberFunction]<IDxcBlobUtf8*, byte*>)(lpVtbl[6]))((IDxcBlobUtf8*)Unsafe.AsPointer(ref this));
 	}
 
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -110,7 +110,7 @@ public unsafe partial struct IDxcBlobUtf8 : IDxcBlobUtf8.Interface, INativeGuid
 	public interface Interface : IDxcBlobEncoding.Interface
 	{
 		[VtblIndex(6)]
-		sbyte* GetStringPointer();
+		byte* GetStringPointer();
 
 		[VtblIndex(7)]
 		nuint GetStringLength();

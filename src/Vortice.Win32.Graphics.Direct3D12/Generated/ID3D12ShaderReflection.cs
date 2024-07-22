@@ -89,9 +89,9 @@ public unsafe partial struct ID3D12ShaderReflection : ID3D12ShaderReflection.Int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetConstantBufferByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(5)]
-	public ID3D12ShaderReflectionConstantBuffer* GetConstantBufferByName(sbyte* Name)
+	public ID3D12ShaderReflectionConstantBuffer* GetConstantBufferByName(byte* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflection*, sbyte*, ID3D12ShaderReflectionConstantBuffer*>)(lpVtbl[5]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflection*, byte*, ID3D12ShaderReflectionConstantBuffer*>)(lpVtbl[5]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetResourceBindingDesc"]/*' />
@@ -129,17 +129,17 @@ public unsafe partial struct ID3D12ShaderReflection : ID3D12ShaderReflection.Int
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetVariableByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(10)]
-	public ID3D12ShaderReflectionVariable* GetVariableByName(sbyte* Name)
+	public ID3D12ShaderReflectionVariable* GetVariableByName(byte* Name)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflection*, sbyte*, ID3D12ShaderReflectionVariable*>)(lpVtbl[10]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflection*, byte*, ID3D12ShaderReflectionVariable*>)(lpVtbl[10]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetResourceBindingDescByName"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(11)]
-	public HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc)
+	public HResult GetResourceBindingDescByName(byte* Name, ShaderInputBindDescription* pDesc)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflection*, sbyte*, ShaderInputBindDescription*, int>)(lpVtbl[11]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12ShaderReflection*, byte*, ShaderInputBindDescription*, int>)(lpVtbl[11]))((ID3D12ShaderReflection*)Unsafe.AsPointer(ref this), Name, pDesc);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12ShaderReflection::GetMovInstructionCount"]/*' />
@@ -231,7 +231,7 @@ public unsafe partial struct ID3D12ShaderReflection : ID3D12ShaderReflection.Int
 		ID3D12ShaderReflectionConstantBuffer* GetConstantBufferByIndex(uint Index);
 
 		[VtblIndex(5)]
-		ID3D12ShaderReflectionConstantBuffer* GetConstantBufferByName(sbyte* Name);
+		ID3D12ShaderReflectionConstantBuffer* GetConstantBufferByName(byte* Name);
 
 		[VtblIndex(6)]
 		HResult GetResourceBindingDesc(uint ResourceIndex, ShaderInputBindDescription* pDesc);
@@ -246,10 +246,10 @@ public unsafe partial struct ID3D12ShaderReflection : ID3D12ShaderReflection.Int
 		HResult GetPatchConstantParameterDesc(uint ParameterIndex, SignatureParameterDescription* pDesc);
 
 		[VtblIndex(10)]
-		ID3D12ShaderReflectionVariable* GetVariableByName(sbyte* Name);
+		ID3D12ShaderReflectionVariable* GetVariableByName(byte* Name);
 
 		[VtblIndex(11)]
-		HResult GetResourceBindingDescByName(sbyte* Name, ShaderInputBindDescription* pDesc);
+		HResult GetResourceBindingDescByName(byte* Name, ShaderInputBindDescription* pDesc);
 
 		[VtblIndex(12)]
 		uint GetMovInstructionCount();

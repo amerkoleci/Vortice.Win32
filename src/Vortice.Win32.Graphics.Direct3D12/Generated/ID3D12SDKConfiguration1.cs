@@ -73,17 +73,17 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	/// <inheritdoc cref="ID3D12SDKConfiguration.SetSDKVersion" />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(3)]
-	public HResult SetSDKVersion(uint SDKVersion, sbyte* SDKPath)
+	public HResult SetSDKVersion(uint SDKVersion, byte* SDKPath)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint, sbyte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint, byte*, int>)(lpVtbl[3]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration1::CreateDeviceFactory"]/*' />
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	[VtblIndex(4)]
-	public HResult CreateDeviceFactory(uint SDKVersion, sbyte* SDKPath, Guid* riid, void** ppvFactory)
+	public HResult CreateDeviceFactory(uint SDKVersion, byte* SDKPath, Guid* riid, void** ppvFactory)
 	{
-		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint, sbyte*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath, riid, ppvFactory);
+		return ((delegate* unmanaged[MemberFunction]<ID3D12SDKConfiguration1*, uint, byte*, Guid*, void**, int>)(lpVtbl[4]))((ID3D12SDKConfiguration1*)Unsafe.AsPointer(ref this), SDKVersion, SDKPath, riid, ppvFactory);
 	}
 
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="ID3D12SDKConfiguration1::FreeUnusedSDKs"]/*' />
@@ -97,7 +97,7 @@ public unsafe partial struct ID3D12SDKConfiguration1 : ID3D12SDKConfiguration1.I
 	public interface Interface : ID3D12SDKConfiguration.Interface
 	{
 		[VtblIndex(4)]
-		HResult CreateDeviceFactory(uint SDKVersion, sbyte* SDKPath, Guid* riid, void** ppvFactory);
+		HResult CreateDeviceFactory(uint SDKVersion, byte* SDKPath, Guid* riid, void** ppvFactory);
 
 		[VtblIndex(5)]
 		void FreeUnusedSDKs();
