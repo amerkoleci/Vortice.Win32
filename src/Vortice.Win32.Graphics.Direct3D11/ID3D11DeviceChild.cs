@@ -10,7 +10,7 @@ public static unsafe class ID3D11DeviceChildExtensions
     public static string? GetDebugName<TD3D11DeviceChild>(ref this TD3D11DeviceChild self)
         where TD3D11DeviceChild : unmanaged, ID3D11DeviceChild.Interface
     {
-        sbyte* pname = stackalloc sbyte[1024];
+        byte* pname = stackalloc byte[1024];
         uint size = 1024 - 1;
         if (self.GetPrivateData(ID3D11DeviceChild.D3DDebugObjectNameGuid, &size, pname).Failure)
         {
@@ -30,7 +30,7 @@ public static unsafe class ID3D11DeviceChildExtensions
         }
         else
         {
-            fixed (sbyte* valuePtr = value.GetUtf8Span())
+            fixed (byte* valuePtr = value.GetUtf8Span())
             {
                 _ = self.SetPrivateData(ID3D11DeviceChild.D3DDebugObjectNameGuid, (uint)value!.Length, valuePtr);
             }

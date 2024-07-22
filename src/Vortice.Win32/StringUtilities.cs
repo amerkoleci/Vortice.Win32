@@ -1,9 +1,7 @@
 ﻿// Copyright (c) Amer Koleci and contributors.
 // Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
-// Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
 
 using System.Text;
-using static Win32.UnsafeUtilities;
 
 namespace Win32;
 
@@ -12,7 +10,7 @@ namespace Win32;
 /// </summary>
 public static unsafe class StringUtilities
 {
-    public static string? GetString(sbyte* pointer, int maxLength = -1)
+    public static string? GetString(byte* pointer, int maxLength = -1)
     {
         return GetUtf8Span(pointer, maxLength).GetString();
     }
@@ -26,7 +24,7 @@ public static unsafe class StringUtilities
     /// <param name="source">The string for which to get the null-terminated UTF8 character sequence.</param>
     /// <returns>A null-terminated UTF8 character sequence created from <paramref name="source" />.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ReadOnlySpan<sbyte> GetUtf8Span(this string? source)
+    public static ReadOnlySpan<byte> GetUtf8Span(this string? source)
     {
         ReadOnlySpan<byte> result;
 
@@ -42,7 +40,7 @@ public static unsafe class StringUtilities
             result = null;
         }
 
-        return result.As<byte, sbyte>();
+        return result;
     }
 
     /// <summary>Gets a span for a null-terminated UTF8 character sequence.</summary>
@@ -50,7 +48,7 @@ public static unsafe class StringUtilities
     /// <param name="maxLength">The maxmimum length of <paramref name="source" /> or <c>-1</c> if the maximum length is unknown.</param>
     /// <returns>A span that starts at <paramref name="source" /> and extends to <paramref name="maxLength" /> or the first null character, whichever comes first.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ReadOnlySpan<sbyte> GetUtf8Span(sbyte* source, int maxLength = -1)
+    public static ReadOnlySpan<byte> GetUtf8Span(byte* source, int maxLength = -1)
         => (source != null) ? GetUtf8Span(in source[0], maxLength) : null;
 
     /// <summary>Gets a span for a null-terminated UTF8 character sequence.</summary>
@@ -58,9 +56,9 @@ public static unsafe class StringUtilities
     /// <param name="maxLength">The maxmimum length of <paramref name="source" /> or <c>-1</c> if the maximum length is unknown.</param>
     /// <returns>A span that starts at <paramref name="source" /> and extends to <paramref name="maxLength" /> or the first null character, whichever comes first.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ReadOnlySpan<sbyte> GetUtf8Span(in sbyte source, int maxLength = -1)
+    public static ReadOnlySpan<byte> GetUtf8Span(in byte source, int maxLength = -1)
     {
-        ReadOnlySpan<sbyte> result;
+        ReadOnlySpan<byte> result;
 
         if (!Unsafe.IsNullRef(in source))
         {
@@ -70,7 +68,7 @@ public static unsafe class StringUtilities
             }
 
             result = MemoryMarshal.CreateReadOnlySpan(in source, maxLength);
-            var length = result.IndexOf((sbyte)'\0');
+            var length = result.IndexOf((byte)'\0');
 
             if (length != -1)
             {
@@ -147,11 +145,11 @@ public static unsafe class StringUtilities
     /// <param name="span">The span for which to create the string.</param>
     /// <returns>A string created from <paramref name="span" />.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static string? GetString(this ReadOnlySpan<sbyte> span)
+    public static string? GetString(this ReadOnlySpan<byte> span)
     {
         if (span.GetPointer() == null)
             return null;
 
-        return Encoding.UTF8.GetString(span.As<sbyte, byte>());
+        return Encoding.UTF8.GetString(span);
     }
 }
