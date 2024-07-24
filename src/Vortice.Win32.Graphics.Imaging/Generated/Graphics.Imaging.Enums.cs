@@ -350,31 +350,31 @@ public enum WICGifLogicalScreenDescriptorProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenSignature"]/*' />
 	/// <unmanaged>WICGifLogicalScreenSignature</unmanaged>
-	WICGifLogicalScreenSignature = 1,
+	Signature = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorWidth"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorWidth</unmanaged>
-	WICGifLogicalScreenDescriptorWidth = 2,
+	DescriptorWidth = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorHeight"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorHeight</unmanaged>
-	WICGifLogicalScreenDescriptorHeight = 3,
+	DescriptorHeight = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorGlobalColorTableFlag"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorGlobalColorTableFlag</unmanaged>
-	WICGifLogicalScreenDescriptorGlobalColorTableFlag = 4,
+	DescriptorGlobalColorTableFlag = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorColorResolution"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorColorResolution</unmanaged>
-	WICGifLogicalScreenDescriptorColorResolution = 5,
+	DescriptorColorResolution = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorSortFlag"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorSortFlag</unmanaged>
-	WICGifLogicalScreenDescriptorSortFlag = 6,
+	DescriptorSortFlag = 6,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorGlobalColorTableSize"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorGlobalColorTableSize</unmanaged>
-	WICGifLogicalScreenDescriptorGlobalColorTableSize = 7,
+	DescriptorGlobalColorTableSize = 7,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorBackgroundColorIndex"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorBackgroundColorIndex</unmanaged>
-	WICGifLogicalScreenDescriptorBackgroundColorIndex = 8,
+	DescriptorBackgroundColorIndex = 8,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifLogicalScreenDescriptorProperties::WICGifLogicalScreenDescriptorPixelAspectRatio"]/*' />
 	/// <unmanaged>WICGifLogicalScreenDescriptorPixelAspectRatio</unmanaged>
-	WICGifLogicalScreenDescriptorPixelAspectRatio = 9,
+	DescriptorPixelAspectRatio = 9,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties"]/*' />
@@ -383,28 +383,28 @@ public enum WICGifImageDescriptorProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLeft"]/*' />
 	/// <unmanaged>WICGifImageDescriptorLeft</unmanaged>
-	WICGifImageDescriptorLeft = 1,
+	Left = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorTop"]/*' />
 	/// <unmanaged>WICGifImageDescriptorTop</unmanaged>
-	WICGifImageDescriptorTop = 2,
+	Top = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorWidth"]/*' />
 	/// <unmanaged>WICGifImageDescriptorWidth</unmanaged>
-	WICGifImageDescriptorWidth = 3,
+	Width = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorHeight"]/*' />
 	/// <unmanaged>WICGifImageDescriptorHeight</unmanaged>
-	WICGifImageDescriptorHeight = 4,
+	Height = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLocalColorTableFlag"]/*' />
 	/// <unmanaged>WICGifImageDescriptorLocalColorTableFlag</unmanaged>
-	WICGifImageDescriptorLocalColorTableFlag = 5,
+	LocalColorTableFlag = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorInterlaceFlag"]/*' />
 	/// <unmanaged>WICGifImageDescriptorInterlaceFlag</unmanaged>
-	WICGifImageDescriptorInterlaceFlag = 6,
+	InterlaceFlag = 6,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorSortFlag"]/*' />
 	/// <unmanaged>WICGifImageDescriptorSortFlag</unmanaged>
-	WICGifImageDescriptorSortFlag = 7,
+	SortFlag = 7,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifImageDescriptorProperties::WICGifImageDescriptorLocalColorTableSize"]/*' />
 	/// <unmanaged>WICGifImageDescriptorLocalColorTableSize</unmanaged>
-	WICGifImageDescriptorLocalColorTableSize = 8,
+	LocalColorTableSize = 8,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties"]/*' />
@@ -413,19 +413,19 @@ public enum WICGifGraphicControlExtensionProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionDisposal"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionDisposal</unmanaged>
-	WICGifGraphicControlExtensionDisposal = 1,
+	Disposal = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionUserInputFlag"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionUserInputFlag</unmanaged>
-	WICGifGraphicControlExtensionUserInputFlag = 2,
+	UserInputFlag = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionTransparencyFlag"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionTransparencyFlag</unmanaged>
-	WICGifGraphicControlExtensionTransparencyFlag = 3,
+	TransparencyFlag = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionDelay"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionDelay</unmanaged>
-	WICGifGraphicControlExtensionDelay = 4,
+	Delay = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifGraphicControlExtensionProperties::WICGifGraphicControlExtensionTransparentColorIndex"]/*' />
 	/// <unmanaged>WICGifGraphicControlExtensionTransparentColorIndex</unmanaged>
-	WICGifGraphicControlExtensionTransparentColorIndex = 5,
+	TransparentColorIndex = 5,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties"]/*' />
@@ -434,10 +434,10 @@ public enum WICGifApplicationExtensionProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties::WICGifApplicationExtensionApplication"]/*' />
 	/// <unmanaged>WICGifApplicationExtensionApplication</unmanaged>
-	WICGifApplicationExtensionApplication = 1,
+	Application = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifApplicationExtensionProperties::WICGifApplicationExtensionData"]/*' />
 	/// <unmanaged>WICGifApplicationExtensionData</unmanaged>
-	WICGifApplicationExtensionData = 2,
+	Data = 2,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICGifCommentExtensionProperties"]/*' />
@@ -446,7 +446,7 @@ public enum WICGifCommentExtensionProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICGifCommentExtensionProperties::WICGifCommentExtensionText"]/*' />
 	/// <unmanaged>WICGifCommentExtensionText</unmanaged>
-	WICGifCommentExtensionText = 1,
+	Text = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegCommentProperties"]/*' />
@@ -455,7 +455,7 @@ public enum WICJpegCommentProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegCommentProperties::WICJpegCommentText"]/*' />
 	/// <unmanaged>WICJpegCommentText</unmanaged>
-	WICJpegCommentText = 1,
+	Text = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegLuminanceProperties"]/*' />
@@ -464,7 +464,7 @@ public enum WICJpegLuminanceProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegLuminanceProperties::WICJpegLuminanceTable"]/*' />
 	/// <unmanaged>WICJpegLuminanceTable</unmanaged>
-	WICJpegLuminanceTable = 1,
+	Table = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegChrominanceProperties"]/*' />
@@ -473,7 +473,7 @@ public enum WICJpegChrominanceProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegChrominanceProperties::WICJpegChrominanceTable"]/*' />
 	/// <unmanaged>WICJpegChrominanceTable</unmanaged>
-	WICJpegChrominanceTable = 1,
+	Table = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties"]/*' />
@@ -482,10 +482,10 @@ public enum WIC8BIMIptcProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties::WIC8BIMIptcPString"]/*' />
 	/// <unmanaged>WIC8BIMIptcPString</unmanaged>
-	WIC8BIMIptcPString = 0,
+	PString = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcProperties::WIC8BIMIptcEmbeddedIPTC"]/*' />
 	/// <unmanaged>WIC8BIMIptcEmbeddedIPTC</unmanaged>
-	WIC8BIMIptcEmbeddedIPTC = 1,
+	EmbeddedIPTC = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties"]/*' />
@@ -494,25 +494,25 @@ public enum WIC8BIMResolutionInfoProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties::WIC8BIMResolutionInfoPString"]/*' />
 	/// <unmanaged>WIC8BIMResolutionInfoPString</unmanaged>
-	WIC8BIMResolutionInfoPString = 1,
+	PString = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties::WIC8BIMResolutionInfoHResolution"]/*' />
 	/// <unmanaged>WIC8BIMResolutionInfoHResolution</unmanaged>
-	WIC8BIMResolutionInfoHResolution = 2,
+	HResolution = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties::WIC8BIMResolutionInfoHResolutionUnit"]/*' />
 	/// <unmanaged>WIC8BIMResolutionInfoHResolutionUnit</unmanaged>
-	WIC8BIMResolutionInfoHResolutionUnit = 3,
+	HResolutionUnit = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties::WIC8BIMResolutionInfoWidthUnit"]/*' />
 	/// <unmanaged>WIC8BIMResolutionInfoWidthUnit</unmanaged>
-	WIC8BIMResolutionInfoWidthUnit = 4,
+	WidthUnit = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties::WIC8BIMResolutionInfoVResolution"]/*' />
 	/// <unmanaged>WIC8BIMResolutionInfoVResolution</unmanaged>
-	WIC8BIMResolutionInfoVResolution = 5,
+	VResolution = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties::WIC8BIMResolutionInfoVResolutionUnit"]/*' />
 	/// <unmanaged>WIC8BIMResolutionInfoVResolutionUnit</unmanaged>
-	WIC8BIMResolutionInfoVResolutionUnit = 6,
+	VResolutionUnit = 6,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMResolutionInfoProperties::WIC8BIMResolutionInfoHeightUnit"]/*' />
 	/// <unmanaged>WIC8BIMResolutionInfoHeightUnit</unmanaged>
-	WIC8BIMResolutionInfoHeightUnit = 7,
+	HeightUnit = 7,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcDigestProperties"]/*' />
@@ -521,10 +521,10 @@ public enum WIC8BIMIptcDigestProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcDigestProperties::WIC8BIMIptcDigestPString"]/*' />
 	/// <unmanaged>WIC8BIMIptcDigestPString</unmanaged>
-	WIC8BIMIptcDigestPString = 1,
+	PString = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WIC8BIMIptcDigestProperties::WIC8BIMIptcDigestIptcDigest"]/*' />
 	/// <unmanaged>WIC8BIMIptcDigestIptcDigest</unmanaged>
-	WIC8BIMIptcDigestIptcDigest = 2,
+	IptcDigest = 2,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngGamaProperties"]/*' />
@@ -533,7 +533,7 @@ public enum WICPngGamaProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngGamaProperties::WICPngGamaGamma"]/*' />
 	/// <unmanaged>WICPngGamaGamma</unmanaged>
-	WICPngGamaGamma = 1,
+	Gamma = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngBkgdProperties"]/*' />
@@ -542,7 +542,7 @@ public enum WICPngBkgdProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngBkgdProperties::WICPngBkgdBackgroundColor"]/*' />
 	/// <unmanaged>WICPngBkgdBackgroundColor</unmanaged>
-	WICPngBkgdBackgroundColor = 1,
+	BackgroundColor = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties"]/*' />
@@ -551,19 +551,19 @@ public enum WICPngItxtProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtKeyword"]/*' />
 	/// <unmanaged>WICPngItxtKeyword</unmanaged>
-	WICPngItxtKeyword = 1,
+	Keyword = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtCompressionFlag"]/*' />
 	/// <unmanaged>WICPngItxtCompressionFlag</unmanaged>
-	WICPngItxtCompressionFlag = 2,
+	CompressionFlag = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtLanguageTag"]/*' />
 	/// <unmanaged>WICPngItxtLanguageTag</unmanaged>
-	WICPngItxtLanguageTag = 3,
+	LanguageTag = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtTranslatedKeyword"]/*' />
 	/// <unmanaged>WICPngItxtTranslatedKeyword</unmanaged>
-	WICPngItxtTranslatedKeyword = 4,
+	TranslatedKeyword = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngItxtProperties::WICPngItxtText"]/*' />
 	/// <unmanaged>WICPngItxtText</unmanaged>
-	WICPngItxtText = 5,
+	Text = 5,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties"]/*' />
@@ -572,28 +572,28 @@ public enum WICPngChrmProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmWhitePointX"]/*' />
 	/// <unmanaged>WICPngChrmWhitePointX</unmanaged>
-	WICPngChrmWhitePointX = 1,
+	WhitePointX = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmWhitePointY"]/*' />
 	/// <unmanaged>WICPngChrmWhitePointY</unmanaged>
-	WICPngChrmWhitePointY = 2,
+	WhitePointY = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmRedX"]/*' />
 	/// <unmanaged>WICPngChrmRedX</unmanaged>
-	WICPngChrmRedX = 3,
+	RedX = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmRedY"]/*' />
 	/// <unmanaged>WICPngChrmRedY</unmanaged>
-	WICPngChrmRedY = 4,
+	RedY = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmGreenX"]/*' />
 	/// <unmanaged>WICPngChrmGreenX</unmanaged>
-	WICPngChrmGreenX = 5,
+	GreenX = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmGreenY"]/*' />
 	/// <unmanaged>WICPngChrmGreenY</unmanaged>
-	WICPngChrmGreenY = 6,
+	GreenY = 6,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmBlueX"]/*' />
 	/// <unmanaged>WICPngChrmBlueX</unmanaged>
-	WICPngChrmBlueX = 7,
+	BlueX = 7,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngChrmProperties::WICPngChrmBlueY"]/*' />
 	/// <unmanaged>WICPngChrmBlueY</unmanaged>
-	WICPngChrmBlueY = 8,
+	BlueY = 8,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngHistProperties"]/*' />
@@ -602,7 +602,7 @@ public enum WICPngHistProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngHistProperties::WICPngHistFrequencies"]/*' />
 	/// <unmanaged>WICPngHistFrequencies</unmanaged>
-	WICPngHistFrequencies = 1,
+	Frequencies = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngIccpProperties"]/*' />
@@ -611,10 +611,10 @@ public enum WICPngIccpProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngIccpProperties::WICPngIccpProfileName"]/*' />
 	/// <unmanaged>WICPngIccpProfileName</unmanaged>
-	WICPngIccpProfileName = 1,
+	ProfileName = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngIccpProperties::WICPngIccpProfileData"]/*' />
 	/// <unmanaged>WICPngIccpProfileData</unmanaged>
-	WICPngIccpProfileData = 2,
+	ProfileData = 2,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngSrgbProperties"]/*' />
@@ -623,7 +623,7 @@ public enum WICPngSrgbProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngSrgbProperties::WICPngSrgbRenderingIntent"]/*' />
 	/// <unmanaged>WICPngSrgbRenderingIntent</unmanaged>
-	WICPngSrgbRenderingIntent = 1,
+	RenderingIntent = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties"]/*' />
@@ -632,22 +632,22 @@ public enum WICPngTimeProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties::WICPngTimeYear"]/*' />
 	/// <unmanaged>WICPngTimeYear</unmanaged>
-	WICPngTimeYear = 1,
+	Year = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties::WICPngTimeMonth"]/*' />
 	/// <unmanaged>WICPngTimeMonth</unmanaged>
-	WICPngTimeMonth = 2,
+	Month = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties::WICPngTimeDay"]/*' />
 	/// <unmanaged>WICPngTimeDay</unmanaged>
-	WICPngTimeDay = 3,
+	Day = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties::WICPngTimeHour"]/*' />
 	/// <unmanaged>WICPngTimeHour</unmanaged>
-	WICPngTimeHour = 4,
+	Hour = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties::WICPngTimeMinute"]/*' />
 	/// <unmanaged>WICPngTimeMinute</unmanaged>
-	WICPngTimeMinute = 5,
+	Minute = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngTimeProperties::WICPngTimeSecond"]/*' />
 	/// <unmanaged>WICPngTimeSecond</unmanaged>
-	WICPngTimeSecond = 6,
+	Second = 6,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICHeifProperties"]/*' />
@@ -656,7 +656,7 @@ public enum WICHeifProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifProperties::WICHeifOrientation"]/*' />
 	/// <unmanaged>WICHeifOrientation</unmanaged>
-	WICHeifOrientation = 1,
+	Orientation = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties"]/*' />
@@ -665,19 +665,19 @@ public enum WICHeifHdrProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMaximumLuminanceLevel</unmanaged>
-	WICHeifHdrMaximumLuminanceLevel = 1,
+	MaximumLuminanceLevel = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumFrameAverageLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMaximumFrameAverageLuminanceLevel</unmanaged>
-	WICHeifHdrMaximumFrameAverageLuminanceLevel = 2,
+	MaximumFrameAverageLuminanceLevel = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMinimumMasteringDisplayLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMinimumMasteringDisplayLuminanceLevel</unmanaged>
-	WICHeifHdrMinimumMasteringDisplayLuminanceLevel = 3,
+	MinimumMasteringDisplayLuminanceLevel = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrMaximumMasteringDisplayLuminanceLevel"]/*' />
 	/// <unmanaged>WICHeifHdrMaximumMasteringDisplayLuminanceLevel</unmanaged>
-	WICHeifHdrMaximumMasteringDisplayLuminanceLevel = 4,
+	MaximumMasteringDisplayLuminanceLevel = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICHeifHdrProperties::WICHeifHdrCustomVideoPrimaries"]/*' />
 	/// <unmanaged>WICHeifHdrCustomVideoPrimaries</unmanaged>
-	WICHeifHdrCustomVideoPrimaries = 5,
+	CustomVideoPrimaries = 5,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnimProperties"]/*' />
@@ -686,7 +686,7 @@ public enum WICWebpAnimProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnimProperties::WICWebpAnimLoopCount"]/*' />
 	/// <unmanaged>WICWebpAnimLoopCount</unmanaged>
-	WICWebpAnimLoopCount = 1,
+	LoopCount = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnmfProperties"]/*' />
@@ -695,7 +695,7 @@ public enum WICWebpAnmfProperties
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICWebpAnmfProperties::WICWebpAnmfFrameDuration"]/*' />
 	/// <unmanaged>WICWebpAnmfFrameDuration</unmanaged>
-	WICWebpAnmfFrameDuration = 1,
+	FrameDuration = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel"]/*' />
@@ -704,10 +704,10 @@ public enum WICSectionAccessLevel
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel::WICSectionAccessLevelRead"]/*' />
 	/// <unmanaged>WICSectionAccessLevelRead</unmanaged>
-	WICSectionAccessLevelRead = 1,
+	Read = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICSectionAccessLevel::WICSectionAccessLevelReadWrite"]/*' />
 	/// <unmanaged>WICSectionAccessLevelReadWrite</unmanaged>
-	WICSectionAccessLevelReadWrite = 3,
+	ReadWrite = 3,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPixelFormatNumericRepresentation"]/*' />
@@ -752,10 +752,10 @@ public enum WICJpegIndexingOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions::WICJpegIndexingOptionsGenerateOnDemand"]/*' />
 	/// <unmanaged>WICJpegIndexingOptionsGenerateOnDemand</unmanaged>
-	WICJpegIndexingOptionsGenerateOnDemand = 0,
+	GenerateOnDemand = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegIndexingOptions::WICJpegIndexingOptionsGenerateOnLoad"]/*' />
 	/// <unmanaged>WICJpegIndexingOptionsGenerateOnLoad</unmanaged>
-	WICJpegIndexingOptionsGenerateOnLoad = 1,
+	GenerateOnLoad = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix"]/*' />
@@ -764,10 +764,10 @@ public enum WICJpegTransferMatrix
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix::WICJpegTransferMatrixIdentity"]/*' />
 	/// <unmanaged>WICJpegTransferMatrixIdentity</unmanaged>
-	WICJpegTransferMatrixIdentity = 0,
+	Identity = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegTransferMatrix::WICJpegTransferMatrixBT601"]/*' />
 	/// <unmanaged>WICJpegTransferMatrixBT601</unmanaged>
-	WICJpegTransferMatrixBT601 = 1,
+	BT601 = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType"]/*' />
@@ -776,13 +776,13 @@ public enum WICJpegScanType
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypeInterleaved"]/*' />
 	/// <unmanaged>WICJpegScanTypeInterleaved</unmanaged>
-	WICJpegScanTypeInterleaved = 0,
+	Interleaved = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypePlanarComponents"]/*' />
 	/// <unmanaged>WICJpegScanTypePlanarComponents</unmanaged>
-	WICJpegScanTypePlanarComponents = 1,
+	PlanarComponents = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegScanType::WICJpegScanTypeProgressive"]/*' />
 	/// <unmanaged>WICJpegScanTypeProgressive</unmanaged>
-	WICJpegScanTypeProgressive = 2,
+	Progressive = 2,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption"]/*' />
@@ -791,28 +791,28 @@ public enum WICTiffCompressionOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionDontCare"]/*' />
 	/// <unmanaged>WICTiffCompressionDontCare</unmanaged>
-	WICTiffCompressionDontCare = 0,
+	DontCare = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionNone"]/*' />
 	/// <unmanaged>WICTiffCompressionNone</unmanaged>
-	WICTiffCompressionNone = 1,
+	None = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionCCITT3"]/*' />
 	/// <unmanaged>WICTiffCompressionCCITT3</unmanaged>
-	WICTiffCompressionCCITT3 = 2,
+	CCITT3 = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionCCITT4"]/*' />
 	/// <unmanaged>WICTiffCompressionCCITT4</unmanaged>
-	WICTiffCompressionCCITT4 = 3,
+	CCITT4 = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionLZW"]/*' />
 	/// <unmanaged>WICTiffCompressionLZW</unmanaged>
-	WICTiffCompressionLZW = 4,
+	LZW = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionRLE"]/*' />
 	/// <unmanaged>WICTiffCompressionRLE</unmanaged>
-	WICTiffCompressionRLE = 5,
+	RLE = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionZIP"]/*' />
 	/// <unmanaged>WICTiffCompressionZIP</unmanaged>
-	WICTiffCompressionZIP = 6,
+	ZIP = 6,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICTiffCompressionOption::WICTiffCompressionLZWHDifferencing"]/*' />
 	/// <unmanaged>WICTiffCompressionLZWHDifferencing</unmanaged>
-	WICTiffCompressionLZWHDifferencing = 7,
+	LZWHDifferencing = 7,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption"]/*' />
@@ -821,19 +821,19 @@ public enum WICJpegYCrCbSubsamplingOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsamplingDefault"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsamplingDefault</unmanaged>
-	WICJpegYCrCbSubsamplingDefault = 0,
+	SubsamplingDefault = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling420"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsampling420</unmanaged>
-	WICJpegYCrCbSubsampling420 = 1,
+	Subsampling420 = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling422"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsampling422</unmanaged>
-	WICJpegYCrCbSubsampling422 = 2,
+	Subsampling422 = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling444"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsampling444</unmanaged>
-	WICJpegYCrCbSubsampling444 = 3,
+	Subsampling444 = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICJpegYCrCbSubsamplingOption::WICJpegYCrCbSubsampling440"]/*' />
 	/// <unmanaged>WICJpegYCrCbSubsampling440</unmanaged>
-	WICJpegYCrCbSubsampling440 = 4,
+	Subsampling440 = 4,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption"]/*' />
@@ -842,25 +842,25 @@ public enum WICPngFilterOption
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterUnspecified"]/*' />
 	/// <unmanaged>WICPngFilterUnspecified</unmanaged>
-	WICPngFilterUnspecified = 0,
+	Unspecified = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterNone"]/*' />
 	/// <unmanaged>WICPngFilterNone</unmanaged>
-	WICPngFilterNone = 1,
+	None = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterSub"]/*' />
 	/// <unmanaged>WICPngFilterSub</unmanaged>
-	WICPngFilterSub = 2,
+	Sub = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterUp"]/*' />
 	/// <unmanaged>WICPngFilterUp</unmanaged>
-	WICPngFilterUp = 3,
+	Up = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterAverage"]/*' />
 	/// <unmanaged>WICPngFilterAverage</unmanaged>
-	WICPngFilterAverage = 4,
+	Average = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterPaeth"]/*' />
 	/// <unmanaged>WICPngFilterPaeth</unmanaged>
-	WICPngFilterPaeth = 5,
+	Paeth = 5,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICPngFilterOption::WICPngFilterAdaptive"]/*' />
 	/// <unmanaged>WICPngFilterAdaptive</unmanaged>
-	WICPngFilterAdaptive = 6,
+	Adaptive = 6,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint"]/*' />
@@ -869,37 +869,37 @@ public enum WICNamedWhitePoint
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointDefault"]/*' />
 	/// <unmanaged>WICWhitePointDefault</unmanaged>
-	WICWhitePointDefault = 1,
+	Default = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointDaylight"]/*' />
 	/// <unmanaged>WICWhitePointDaylight</unmanaged>
-	WICWhitePointDaylight = 2,
+	Daylight = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointCloudy"]/*' />
 	/// <unmanaged>WICWhitePointCloudy</unmanaged>
-	WICWhitePointCloudy = 4,
+	Cloudy = 4,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointShade"]/*' />
 	/// <unmanaged>WICWhitePointShade</unmanaged>
-	WICWhitePointShade = 8,
+	Shade = 8,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointTungsten"]/*' />
 	/// <unmanaged>WICWhitePointTungsten</unmanaged>
-	WICWhitePointTungsten = 16,
+	Tungsten = 16,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointFluorescent"]/*' />
 	/// <unmanaged>WICWhitePointFluorescent</unmanaged>
-	WICWhitePointFluorescent = 32,
+	Fluorescent = 32,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointFlash"]/*' />
 	/// <unmanaged>WICWhitePointFlash</unmanaged>
-	WICWhitePointFlash = 64,
+	Flash = 64,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointUnderwater"]/*' />
 	/// <unmanaged>WICWhitePointUnderwater</unmanaged>
-	WICWhitePointUnderwater = 128,
+	Underwater = 128,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointCustom"]/*' />
 	/// <unmanaged>WICWhitePointCustom</unmanaged>
-	WICWhitePointCustom = 256,
+	Custom = 256,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointAutoWhiteBalance"]/*' />
 	/// <unmanaged>WICWhitePointAutoWhiteBalance</unmanaged>
-	WICWhitePointAutoWhiteBalance = 512,
+	AutoWhiteBalance = 512,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICNamedWhitePoint::WICWhitePointAsShot"]/*' />
 	/// <unmanaged>WICWhitePointAsShot</unmanaged>
-	WICWhitePointAsShot = 1,
+	AsShot = 1,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities"]/*' />
@@ -908,13 +908,13 @@ public enum WICRawCapabilities
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityNotSupported"]/*' />
 	/// <unmanaged>WICRawCapabilityNotSupported</unmanaged>
-	WICRawCapabilityNotSupported = 0,
+	NotSupported = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityGetSupported"]/*' />
 	/// <unmanaged>WICRawCapabilityGetSupported</unmanaged>
-	WICRawCapabilityGetSupported = 1,
+	GetSupported = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawCapabilities::WICRawCapabilityFullySupported"]/*' />
 	/// <unmanaged>WICRawCapabilityFullySupported</unmanaged>
-	WICRawCapabilityFullySupported = 2,
+	FullySupported = 2,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities"]/*' />
@@ -923,16 +923,16 @@ public enum WICRawRotationCapabilities
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityNotSupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityNotSupported</unmanaged>
-	WICRawRotationCapabilityNotSupported = 0,
+	NotSupported = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityGetSupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityGetSupported</unmanaged>
-	WICRawRotationCapabilityGetSupported = 1,
+	GetSupported = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityNinetyDegreesSupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityNinetyDegreesSupported</unmanaged>
-	WICRawRotationCapabilityNinetyDegreesSupported = 2,
+	NinetyDegreesSupported = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRotationCapabilities::WICRawRotationCapabilityFullySupported"]/*' />
 	/// <unmanaged>WICRawRotationCapabilityFullySupported</unmanaged>
-	WICRawRotationCapabilityFullySupported = 3,
+	FullySupported = 3,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet"]/*' />
@@ -941,13 +941,13 @@ public enum WICRawParameterSet
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICAsShotParameterSet"]/*' />
 	/// <unmanaged>WICAsShotParameterSet</unmanaged>
-	WICAsShotParameterSet = 1,
+	AsShot = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICUserAdjustedParameterSet"]/*' />
 	/// <unmanaged>WICUserAdjustedParameterSet</unmanaged>
-	WICUserAdjustedParameterSet = 2,
+	UserAdjusted = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawParameterSet::WICAutoAdjustedParameterSet"]/*' />
 	/// <unmanaged>WICAutoAdjustedParameterSet</unmanaged>
-	WICAutoAdjustedParameterSet = 3,
+	AutoAdjusted = 3,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode"]/*' />
@@ -956,13 +956,13 @@ public enum WICRawRenderMode
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeDraft"]/*' />
 	/// <unmanaged>WICRawRenderModeDraft</unmanaged>
-	WICRawRenderModeDraft = 1,
+	Draft = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeNormal"]/*' />
 	/// <unmanaged>WICRawRenderModeNormal</unmanaged>
-	WICRawRenderModeNormal = 2,
+	Normal = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICRawRenderMode::WICRawRenderModeBestQuality"]/*' />
 	/// <unmanaged>WICRawRenderModeBestQuality</unmanaged>
-	WICRawRenderModeBestQuality = 3,
+	BestQuality = 3,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension"]/*' />
@@ -971,16 +971,16 @@ public enum WICDdsDimension
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture1D"]/*' />
 	/// <unmanaged>WICDdsTexture1D</unmanaged>
-	WICDdsTexture1D = 0,
+	Texture1D = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture2D"]/*' />
 	/// <unmanaged>WICDdsTexture2D</unmanaged>
-	WICDdsTexture2D = 1,
+	Texture2D = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTexture3D"]/*' />
 	/// <unmanaged>WICDdsTexture3D</unmanaged>
-	WICDdsTexture3D = 2,
+	Texture3D = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsDimension::WICDdsTextureCube"]/*' />
 	/// <unmanaged>WICDdsTextureCube</unmanaged>
-	WICDdsTextureCube = 3,
+	TextureCube = 3,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode"]/*' />
@@ -989,19 +989,19 @@ public enum WICDdsAlphaMode
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeUnknown"]/*' />
 	/// <unmanaged>WICDdsAlphaModeUnknown</unmanaged>
-	WICDdsAlphaModeUnknown = 0,
+	Unknown = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeStraight"]/*' />
 	/// <unmanaged>WICDdsAlphaModeStraight</unmanaged>
-	WICDdsAlphaModeStraight = 1,
+	Straight = 1,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModePremultiplied"]/*' />
 	/// <unmanaged>WICDdsAlphaModePremultiplied</unmanaged>
-	WICDdsAlphaModePremultiplied = 2,
+	Premultiplied = 2,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeOpaque"]/*' />
 	/// <unmanaged>WICDdsAlphaModeOpaque</unmanaged>
-	WICDdsAlphaModeOpaque = 3,
+	Opaque = 3,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICDdsAlphaMode::WICDdsAlphaModeCustom"]/*' />
 	/// <unmanaged>WICDdsAlphaModeCustom</unmanaged>
-	WICDdsAlphaModeCustom = 4,
+	Custom = 4,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions"]/*' />
@@ -1010,16 +1010,16 @@ public enum WICMetadataCreationOptions
 {
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationDefault"]/*' />
 	/// <unmanaged>WICMetadataCreationDefault</unmanaged>
-	WICMetadataCreationDefault = 0,
+	Default = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationAllowUnknown"]/*' />
 	/// <unmanaged>WICMetadataCreationAllowUnknown</unmanaged>
-	WICMetadataCreationAllowUnknown = 0,
+	AllowUnknown = 0,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationFailUnknown"]/*' />
 	/// <unmanaged>WICMetadataCreationFailUnknown</unmanaged>
-	WICMetadataCreationFailUnknown = 65536,
+	FailUnknown = 65536,
 	/// <include file='../Imaging.xml' path='doc/member[@name="WICMetadataCreationOptions::WICMetadataCreationMask"]/*' />
 	/// <unmanaged>WICMetadataCreationMask</unmanaged>
-	WICMetadataCreationMask = -65536,
+	Mask = -65536,
 }
 
 /// <include file='../Imaging.xml' path='doc/member[@name="WICPersistOptions"]/*' />

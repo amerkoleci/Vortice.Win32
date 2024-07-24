@@ -414,10 +414,10 @@ public enum StandardMultisampleQualityLevels
 {
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D12_STANDARD_MULTISAMPLE_PATTERN"]/*' />
 	/// <unmanaged>D3D12_STANDARD_MULTISAMPLE_PATTERN</unmanaged>
-	D3D12_STANDARD_MULTISAMPLE_PATTERN = -1,
+	StandardMultisamplePattern = -1,
 	/// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_STANDARD_MULTISAMPLE_QUALITY_LEVELS::D3D12_CENTER_MULTISAMPLE_PATTERN"]/*' />
 	/// <unmanaged>D3D12_CENTER_MULTISAMPLE_PATTERN</unmanaged>
-	D3D12_CENTER_MULTISAMPLE_PATTERN = -2,
+	CenterMultisamplePattern = -2,
 }
 
 /// <include file='../Direct3D12.xml' path='doc/member[@name="D3D12_PIPELINE_STATE_FLAGS"]/*' />

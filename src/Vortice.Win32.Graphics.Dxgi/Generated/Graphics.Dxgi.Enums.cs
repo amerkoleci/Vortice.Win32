@@ -101,16 +101,16 @@ public enum WindowAssociationFlags : uint
 	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_WINDOW_CHANGES"]/*' />
 	/// <unmanaged>DXGI_MWA_NO_WINDOW_CHANGES</unmanaged>
-	DXGI_MWA_NO_WINDOW_CHANGES = 1,
+	NoWindowChanges = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_ALT_ENTER"]/*' />
 	/// <unmanaged>DXGI_MWA_NO_ALT_ENTER</unmanaged>
-	DXGI_MWA_NO_ALT_ENTER = 2,
+	NoAltEnter = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_NO_PRINT_SCREEN"]/*' />
 	/// <unmanaged>DXGI_MWA_NO_PRINT_SCREEN</unmanaged>
-	DXGI_MWA_NO_PRINT_SCREEN = 4,
+	NoPrintScreen = 4,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MWA_FLAGS::DXGI_MWA_VALID"]/*' />
 	/// <unmanaged>DXGI_MWA_VALID</unmanaged>
-	DXGI_MWA_VALID = 7,
+	Valid = 7,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS"]/*' />
@@ -121,13 +121,13 @@ public enum MapFlags : uint
 	None = 0,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_READ"]/*' />
 	/// <unmanaged>DXGI_MAP_READ</unmanaged>
-	DXGI_MAP_READ = 1,
+	Read = 1,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_WRITE"]/*' />
 	/// <unmanaged>DXGI_MAP_WRITE</unmanaged>
-	DXGI_MAP_WRITE = 2,
+	Write = 2,
 	/// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_MAP_FLAGS::DXGI_MAP_DISCARD"]/*' />
 	/// <unmanaged>DXGI_MAP_DISCARD</unmanaged>
-	DXGI_MAP_DISCARD = 4,
+	Discard = 4,
 }
 
 /// <include file='../Dxgi.xml' path='doc/member[@name="DXGI_RESOURCE_PRIORITY"]/*' />
