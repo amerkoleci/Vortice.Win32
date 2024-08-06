@@ -10,6 +10,7 @@
     <PackageLicenseFile>license.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/microsoft/PixEvents</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>false</IncludeSymbols>
   </PropertyGroup>
 
   <ItemGroup>
