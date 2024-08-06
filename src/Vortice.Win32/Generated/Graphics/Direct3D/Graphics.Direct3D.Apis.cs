@@ -281,7 +281,7 @@ public static partial class Apis
 	public const PrimitiveTopology D3D_PRIMITIVE_TOPOLOGY_LINESTRIP = PrimitiveTopology.LineStrip;
 	public const PrimitiveTopology D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST = PrimitiveTopology.TriangleList;
 	public const PrimitiveTopology D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP = PrimitiveTopology.TriangleStrip;
-	public const PrimitiveTopology D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN = PrimitiveTopology.Trianglefan;
+	public const PrimitiveTopology D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN = PrimitiveTopology.TriangleFan;
 	public const PrimitiveTopology D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ = PrimitiveTopology.LineListAdj;
 	public const PrimitiveTopology D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ = PrimitiveTopology.LineStripAdj;
 	public const PrimitiveTopology D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ = PrimitiveTopology.TriangleListAdj;

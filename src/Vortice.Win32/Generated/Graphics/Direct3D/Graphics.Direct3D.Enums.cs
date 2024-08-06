@@ -99,7 +99,7 @@ public enum PrimitiveTopology
 	TriangleStrip = 5,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN</unmanaged>
-	Trianglefan = 6,
+	TriangleFan = 6,
 	/// <include file='../Direct3D.xml' path='doc/member[@name="D3D_PRIMITIVE_TOPOLOGY::D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ"]/*' />
 	/// <unmanaged>D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ</unmanaged>
 	LineListAdj = 10,

@@ -829,6 +829,7 @@ public static class Program
         "VideoProcessorGetStreamColorSpace",
         "VideoProcessorGetStreamFrameFormat",
         "VideoProcessorSetStreamColorSpace",
+        "TriangleFan",
     };
 
     private static readonly HashSet<string> s_preserveCaps = new(StringComparer.OrdinalIgnoreCase)

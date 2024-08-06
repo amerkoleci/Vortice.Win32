@@ -3,18 +3,19 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net4.6.1;net8.0</TargetFrameworks>
     <Description>Dxc native libraries</Description>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE-MS.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/microsoft/DirectXShaderCompiler</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>false</IncludeSymbols>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="$(RepoRootDirectory)/README.md" Pack="true" PackagePath="\" />
-    <Content Include="LICENCE-MIT.txt" PackagePath="" />
+    <Content Include="LICENSE-MIT.txt" PackagePath="" />
     <Content Include="LICENSE-LLVM.txt" PackagePath="" />
     <Content Include="LICENSE-MS.txt" PackagePath="" />
   </ItemGroup>
