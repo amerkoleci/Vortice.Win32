@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks>net9.0</TargetFrameworks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <IsPackable>false</IsPackable>
     <RootNamespace>ClearScreen</RootNamespace>
@@ -9,6 +9,7 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Vortice.Win32.Graphics.D3D12MemoryAllocator\Vortice.Win32.Graphics.D3D12MemoryAllocator.csproj" />
     <ProjectReference Include="..\..\src\Vortice.Win32.Graphics.Direct3D11\Vortice.Win32.Graphics.Direct3D11.csproj" />
     <ProjectReference Include="..\..\src\Vortice.Win32.Graphics.Direct3D12\Vortice.Win32.Graphics.Direct3D12.csproj" />
     <ProjectReference Include="..\..\src\Vortice.Win32.Graphics.Direct3D11on12\Vortice.Win32.Graphics.Direct3D11on12.csproj" />
@@ -24,12 +25,14 @@
       <ItemGroup>
         <None Include="..\..\src\Vortice.Dxc.Native\runtimes\win-x64\native\dxil.dll" Link="dxil.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
         <None Include="..\..\src\Vortice.Dxc.Native\runtimes\win-x64\native\dxcompiler.dll" Link="dxil.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="..\..\src\Vortice.D3D12MA.Native\runtimes\win-x64\native\D3D12MA.dll" Link="D3D12MA.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
       </ItemGroup>
     </When>
     <When Condition="($([MSBuild]::IsOsPlatform('windows')) and '$(RuntimeIdentifier)'=='') or '$(RuntimeIdentifier)'=='win-arm64'">
       <ItemGroup>
         <None Include="..\..\src\Vortice.Dxc.Native\runtimes\win-arm64\native\dxil.dll" Link="dxil.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
         <None Include="..\..\src\Vortice.Dxc.Native\runtimes\win-arm64\native\dxcompiler.dll" Link="dxil.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
+        <None Include="..\..\src\Vortice.D3D12MA.Native\runtimes\win-arm64\native\D3D12MA.dll" Link="D3D12MA.dll" Visible="False" CopyToOutputDirectory="PreserveNewest" />
       </ItemGroup>
     </When>
   </Choose>

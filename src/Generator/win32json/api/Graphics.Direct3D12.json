@@ -9103,7 +9103,7 @@
 					,{"Name":"Depth","Type":{"Kind":"Native","Name":"Single"},"Attrs":["In"]}
 					,{"Name":"Stencil","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
 					,{"Name":"NumRects","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pRects","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"pRects","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 				]
 			}
 			,{

@@ -2,22 +2,20 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net4.6.1;net8.0;net9.0</TargetFrameworks>
-    <Description>Dxc native libraries</Description>
-    <PackageVersion>1.0.3</PackageVersion>
+    <Description>D3D12MemoryAllocator native libraries with C bindings</Description>
+    <PackageVersion>1.0.0</PackageVersion>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression></PackageLicenseExpression>
-    <PackageLicenseFile>LICENSE-MS.txt</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/microsoft/DirectXShaderCompiler</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <IncludeSymbols>false</IncludeSymbols>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="$(RepoRootDirectory)/README.md" Pack="true" PackagePath="\" />
-    <Content Include="LICENSE-MIT.txt" PackagePath="" />
-    <Content Include="LICENSE-LLVM.txt" PackagePath="" />
-    <Content Include="LICENSE-MS.txt" PackagePath="" />
+    <Content Include="LICENSE.txt" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,7 +10,7 @@ public static unsafe partial class Apis
     [DoesNotReturn]
     public static void ThrowExternalException(string methodName, int errorCode)
     {
-        var message = string.Format("'{0}' failed with an error code of '{1}'", methodName, errorCode);
+        string message = string.Format("'{0}' failed with an error code of '{1}'", methodName, errorCode);
         throw new ExternalException(message, errorCode);
     }
 

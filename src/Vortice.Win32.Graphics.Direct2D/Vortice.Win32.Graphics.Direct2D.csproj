@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
-    <Description>Direct2D1 bindings.</Description>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <Description>Direct2D1 bindings</Description>
     
     <NoWarn>$(NoWarn);CS0419;IDE0017</NoWarn>
   </PropertyGroup>

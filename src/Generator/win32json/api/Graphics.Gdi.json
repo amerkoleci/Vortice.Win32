@@ -3579,111 +3579,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"DISPLAY_DEVICE_ATTACHED_TO_DESKTOP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_MULTI_DRIVER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_PRIMARY_DEVICE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_MIRRORING_DRIVER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_VGA_COMPATIBLE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_REMOVABLE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_ACC_DRIVER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":64
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_MODESPRUNED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":134217728
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_RDPUDD"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16777216
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_REMOTE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":67108864
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_DISCONNECT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":33554432
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_TS_COMPATIBLE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2097152
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_UNSAFE_MODES_ON"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":524288
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_ACTIVE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"DISPLAY_DEVICE_ATTACHED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
 		"Name":"DISPLAYCONFIG_MAXPATH"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -7586,6 +7481,32 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"DISPLAY_DEVICE_STATE_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DISPLAY_DEVICE_ATTACHED_TO_DESKTOP","Value":1}
+			,{"Name":"DISPLAY_DEVICE_MULTI_DRIVER","Value":2}
+			,{"Name":"DISPLAY_DEVICE_PRIMARY_DEVICE","Value":4}
+			,{"Name":"DISPLAY_DEVICE_MIRRORING_DRIVER","Value":8}
+			,{"Name":"DISPLAY_DEVICE_VGA_COMPATIBLE","Value":16}
+			,{"Name":"DISPLAY_DEVICE_REMOVABLE","Value":32}
+			,{"Name":"DISPLAY_DEVICE_ACC_DRIVER","Value":64}
+			,{"Name":"DISPLAY_DEVICE_MODESPRUNED","Value":134217728}
+			,{"Name":"DISPLAY_DEVICE_RDPUDD","Value":16777216}
+			,{"Name":"DISPLAY_DEVICE_REMOTE","Value":67108864}
+			,{"Name":"DISPLAY_DEVICE_DISCONNECT","Value":33554432}
+			,{"Name":"DISPLAY_DEVICE_TS_COMPATIBLE","Value":2097152}
+			,{"Name":"DISPLAY_DEVICE_UNSAFE_MODES_ON","Value":524288}
+			,{"Name":"DISPLAY_DEVICE_ACTIVE","Value":1}
+			,{"Name":"DISPLAY_DEVICE_ATTACHED","Value":2}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"HBITMAP"
 		,"Architectures":[]
 		,"Platform":null
@@ -8740,7 +8661,7 @@
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DeviceName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"DeviceString","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-			,{"Name":"StateFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"StateFlags","Type":{"Kind":"ApiRef","Name":"DISPLAY_DEVICE_STATE_FLAGS","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"DeviceID","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"DeviceKey","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 		]
@@ -8759,7 +8680,7 @@
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DeviceName","Type":{"Kind":"Array","Shape":{"Size":32},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"DeviceString","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
-			,{"Name":"StateFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"StateFlags","Type":{"Kind":"ApiRef","Name":"DISPLAY_DEVICE_STATE_FLAGS","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"DeviceID","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"DeviceKey","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 		]
@@ -11477,10 +11398,10 @@
 			,{"Name":"bItalic","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"bUnderline","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"bStrikeOut","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"iCharSet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"iOutPrecision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"iClipPrecision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"iQuality","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"iCharSet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"FONT_CHARSET"}]}
+			,{"Name":"iOutPrecision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"FONT_OUTPUT_PRECISION"}]}
+			,{"Name":"iClipPrecision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"FONT_CLIP_PRECISION"}]}
+			,{"Name":"iQuality","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"FONT_QUALITY"}]}
 			,{"Name":"iPitchAndFamily","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pszFaceName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 		]
@@ -11503,10 +11424,10 @@
 			,{"Name":"bItalic","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"bUnderline","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"bStrikeOut","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"iCharSet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"iOutPrecision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"iClipPrecision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"iQuality","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"iCharSet","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"FONT_CHARSET"}]}
+			,{"Name":"iOutPrecision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"FONT_OUTPUT_PRECISION"}]}
+			,{"Name":"iClipPrecision","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"FONT_CLIP_PRECISION"}]}
+			,{"Name":"iQuality","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In",{"Kind":"AssociatedEnum","Enum":"FONT_QUALITY"}]}
 			,{"Name":"iPitchAndFamily","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pszFaceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 		]

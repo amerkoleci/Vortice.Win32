@@ -16,17 +16,22 @@ using Win32.Media.Audio.XAudio2;
 using static Win32.Apis;
 using static Win32.Graphics.Direct2D.Apis;
 using static Win32.Graphics.Direct3D.Dxc.Apis;
+using static Win32.Graphics.Direct3D12.Apis;
 using static Win32.Graphics.Direct3D11.Apis;
 using static Win32.Graphics.DirectWrite.Apis;
 using static Win32.Graphics.Dxgi.Apis;
 using static Win32.Graphics.Imaging.D2D.Apis;
 using static Win32.Media.Audio.XAudio2.Apis;
+using static Win32.Graphics.D3D12MemoryAllocator.Apis;
 
 using DWriteFactoryType = Win32.Graphics.DirectWrite.FactoryType;
 using FactoryType = Win32.Graphics.Direct2D.FactoryType;
 using FeatureLevel = Win32.Graphics.Direct3D.FeatureLevel;
 using InfoQueueFilter = Win32.Graphics.Direct3D11.InfoQueueFilter;
 using MessageId = Win32.Graphics.Direct3D11.MessageId;
+using D3D11MessageSeverity = Win32.Graphics.Direct3D11.MessageSeverity;
+using Win32.Graphics.Direct3D12;
+using Win32.Graphics.D3D12MemoryAllocator;
 
 namespace ClearScreen;
 
@@ -147,6 +152,7 @@ public static unsafe class Program
         }
 
         using ComPtr<IDXGIAdapter1> adapter = default;
+        bool supportD3D12 = false;
 
         using ComPtr<IDXGIFactory6> factory6 = default;
         if (factory.CopyTo(&factory6).Success)
@@ -165,6 +171,13 @@ public static unsafe class Program
                 if ((desc.Flags & AdapterFlags.Software) != AdapterFlags.None)
                     continue;
 
+                // Check to see if the adapter supports Direct3D 12, but don't create the actual device yet.
+                if (D3D12CreateDevice((IUnknown*)adapter.Get(), FeatureLevel.Level_11_0, __uuidof<ID3D12Device>(), null).Success)
+                {
+                    supportD3D12 = true;
+                    break;
+                }
+
                 break;
                 //string name = desc.DescriptionStr;
             }
@@ -182,85 +195,129 @@ public static unsafe class Program
                 if ((desc.Flags & AdapterFlags.Software) != AdapterFlags.None)
                     continue;
 
+                // Check to see if the adapter supports Direct3D 12, but don't create the actual device yet.
+                if (D3D12CreateDevice((IUnknown*)adapter.Get(), FeatureLevel.Level_11_0, __uuidof<ID3D12Device>(), null).Success)
+                {
+                    supportD3D12 = true;
+                    break;
+                }
+
                 //string name = desc.DescriptionStr;
                 break;
             }
         }
 
-        ReadOnlySpan<FeatureLevel> featureLevels = stackalloc FeatureLevel[1]
+        if (supportD3D12)
         {
-            FeatureLevel.Level_11_0
-        };
+            using ComPtr<ID3D12Device> device = default;
 
-        CreateDeviceFlags creationFlags = CreateDeviceFlags.BgraSupport;
-#if DEBUG
-        if (SdkLayersAvailable())
-        {
-            // If the project is in a debug build, enable debugging via SDK Layers with this flag.
-            creationFlags |= CreateDeviceFlags.Debug;
+            // Create the DX12 API device object.
+            hr = D3D12CreateDevice(
+                (IUnknown*)adapter.Get(),
+                FeatureLevel.Level_11_0,
+                __uuidof<ID3D12Device>(),
+                device.GetVoidAddressOf()
+                );
+            ThrowIfFailed(hr);
+
+            AllocatorDesc allocatorDesc = new()
+            {
+                pDevice = device.Get(),
+                pAdapter = (IDXGIAdapter*)adapter.Get()
+            };
+            hr = CreateAllocator(in allocatorDesc, out Allocator allocator);
+
+            AllocationDesc allocationDesc = new();
+            allocationDesc.HeapType = HeapType.Default;
+
+            using ComPtr<ID3D12Resource> buffer = default;
+            ResourceDescription bufferDesc = ResourceDescription.Buffer(256u);
+
+            Allocation allocation = default;
+            hr = allocator.CreateResource<ID3D12Resource>(&allocationDesc, in bufferDesc, ResourceStates.Common,
+                null, &allocation, buffer.GetAddressOf());
+            //var test = allocator.IsUMA;
+            ThrowIfFailed(hr);
+            uint cnt = allocation.Release();
         }
+        else
+        {
+
+            ReadOnlySpan<FeatureLevel> featureLevels =
+            [
+                FeatureLevel.Level_11_0
+            ];
+
+            CreateDeviceFlags creationFlags = CreateDeviceFlags.BgraSupport;
+#if DEBUG
+            if (SdkLayersAvailable())
+            {
+                // If the project is in a debug build, enable debugging via SDK Layers with this flag.
+                creationFlags |= CreateDeviceFlags.Debug;
+            }
 #endif
 
-        using ComPtr<ID3D11Device> tempDevice = default;
-        FeatureLevel featureLevel;
-        using ComPtr<ID3D11DeviceContext> tempImmediateContext = default;
+            using ComPtr<ID3D11Device> tempDevice = default;
+            FeatureLevel featureLevel;
+            using ComPtr<ID3D11DeviceContext> tempImmediateContext = default;
 
-        ThrowIfFailed(D3D11CreateDevice(
-            (IDXGIAdapter*)adapter.Get(),
-            DriverType.Unknown,
-            creationFlags,
-            featureLevels,
-            tempDevice.GetAddressOf(),
-            &featureLevel,
-            tempImmediateContext.GetAddressOf()));
+            ThrowIfFailed(D3D11CreateDevice(
+                (IDXGIAdapter*)adapter.Get(),
+                DriverType.Unknown,
+                creationFlags,
+                featureLevels,
+                tempDevice.GetAddressOf(),
+                &featureLevel,
+                tempImmediateContext.GetAddressOf()));
 
 #if DEBUG
-        using ComPtr<ID3D11Debug> d3dDebug = default;
-        if (tempDevice.CopyTo(&d3dDebug).Success)
-        {
-            using ComPtr<ID3D11InfoQueue> d3dInfoQueue = default;
-            if (d3dDebug.CopyTo(&d3dInfoQueue).Success)
+            using ComPtr<ID3D11Debug> d3dDebug = default;
+            if (tempDevice.CopyTo(&d3dDebug).Success)
             {
-                d3dInfoQueue.Get()->SetBreakOnSeverity(MessageSeverity.Corruption, true);
-                d3dInfoQueue.Get()->SetBreakOnSeverity(MessageSeverity.Error, true);
-
-                MessageId* hide = stackalloc MessageId[1]
+                using ComPtr<ID3D11InfoQueue> d3dInfoQueue = default;
+                if (d3dDebug.CopyTo(&d3dInfoQueue).Success)
                 {
+                    d3dInfoQueue.Get()->SetBreakOnSeverity(D3D11MessageSeverity.Corruption, true);
+                    d3dInfoQueue.Get()->SetBreakOnSeverity(D3D11MessageSeverity.Error, true);
+
+                    MessageId* hide = stackalloc MessageId[1]
+                    {
                     MessageId.SetPrivateDataChangingParams,
                 };
 
-                InfoQueueFilter filter = new();
-                filter.DenyList.NumIDs = 1u;
-                filter.DenyList.pIDList = hide;
-                d3dInfoQueue.Get()->AddStorageFilterEntries(&filter);
+                    InfoQueueFilter filter = new();
+                    filter.DenyList.NumIDs = 1u;
+                    filter.DenyList.pIDList = hide;
+                    d3dInfoQueue.Get()->AddStorageFilterEntries(&filter);
+                }
             }
-        }
 #endif
 
-        using ComPtr<ID3D11Device1> d3dDevice = default;
-        using ComPtr<ID3D11DeviceContext1> immediateContext = default;
+            using ComPtr<ID3D11Device1> d3dDevice = default;
+            using ComPtr<ID3D11DeviceContext1> immediateContext = default;
 
-        ThrowIfFailed(tempDevice.CopyTo(&d3dDevice));
-        ThrowIfFailed(tempImmediateContext.CopyTo(&immediateContext));
+            ThrowIfFailed(tempDevice.CopyTo(&d3dDevice));
+            ThrowIfFailed(tempImmediateContext.CopyTo(&immediateContext));
 
-        ReadOnlySpan<VertexPositionColor> triangleVertices = stackalloc VertexPositionColor[]
-        {
+            ReadOnlySpan<VertexPositionColor> triangleVertices = stackalloc VertexPositionColor[]
+            {
             new VertexPositionColor(new Vector3(0f, 0.5f, 0.0f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f)),
             new VertexPositionColor(new Vector3(0.5f, -0.5f, 0.0f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f)),
             new VertexPositionColor(new Vector3(-0.5f, -0.5f, 0.0f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f))
         };
 
-        using ComPtr<ID3D11Buffer> vertexBuffer = ((ID3D11Device*)d3dDevice.Get())->CreateBuffer(triangleVertices, BindFlags.VertexBuffer);
+            using ComPtr<ID3D11Buffer> vertexBuffer = ((ID3D11Device*)d3dDevice.Get())->CreateBuffer(triangleVertices, BindFlags.VertexBuffer);
 
-        using ComPtr<ID3D11Texture2D> depthStencilTexture = default;
-        using ComPtr<ID3D11DepthStencilView> depthStencilTextureView = default;
+            using ComPtr<ID3D11Texture2D> depthStencilTexture = default;
+            using ComPtr<ID3D11DepthStencilView> depthStencilTextureView = default;
 
-        Texture2DDescription texture2DDesc = new(Format.D32Float, 256, 256, 1, 1, BindFlags.DepthStencil);
-        ThrowIfFailed(tempDevice.Get()->CreateTexture2D(&texture2DDesc, null, depthStencilTexture.GetAddressOf()));
-        depthStencilTexture.Get()->GetDesc(&texture2DDesc);
-        depthStencilTexture.Get()->SetDebugName("CIAO");
+            Texture2DDescription texture2DDesc = new(Format.D32Float, 256, 256, 1, 1, BindFlags.DepthStencil);
+            ThrowIfFailed(tempDevice.Get()->CreateTexture2D(&texture2DDesc, null, depthStencilTexture.GetAddressOf()));
+            depthStencilTexture.Get()->GetDesc(&texture2DDesc);
+            depthStencilTexture.Get()->SetDebugName("CIAO");
 
-        ThrowIfFailed(tempDevice.Get()->CreateDepthStencilView(
-            (ID3D11Resource*)depthStencilTexture.Get(), null, depthStencilTextureView.GetAddressOf()));
+            ThrowIfFailed(tempDevice.Get()->CreateDepthStencilView(
+                (ID3D11Resource*)depthStencilTexture.Get(), null, depthStencilTextureView.GetAddressOf()));
+        }
     }
 }

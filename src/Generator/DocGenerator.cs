@@ -21,8 +21,8 @@ public static class DocGenerator
     public static void Generate(string repoRoot, string[] prefixes, string outputPath)
     {
         using FileStream docsStream = File.OpenRead(Path.Combine(repoRoot, "docs", "apidocs.msgpack"));
-        var data = MessagePackSerializer.Deserialize<Dictionary<string, ApiDetails>>(docsStream);
-        var documentationData = new Dictionary<string, ApiDetails>();
+        Dictionary<string, ApiDetails> data = MessagePackSerializer.Deserialize<Dictionary<string, ApiDetails>>(docsStream);
+        Dictionary<string, ApiDetails> documentationData = new();
 
         foreach (string key in data.Keys)
         {
@@ -70,7 +70,7 @@ public static class DocGenerator
                 if (!string.IsNullOrEmpty(doc.Description) || doc.Parameters.Count > 0)
                 {
                     string memberName = item.Replace(".", "::");
-                    
+
                     writer.WriteStartElement(null, "member", null);
                     writer.WriteAttributeString("name", memberName);
                     {
@@ -174,7 +174,7 @@ public static class DocGenerator
                         string memberName = $"{item.Replace(".", "::")}::{fieldName}";
 
                         writer.WriteStartElement(null, "member", null);
-                        
+
 
                         writer.WriteAttributeString("name", memberName);
                         {

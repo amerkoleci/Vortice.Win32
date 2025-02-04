@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
-    <Description>DirectComposition bindings</Description>
+    <Description>D3D12MemoryAllocator bindings</Description>
+    
     <NoWarn>$(NoWarn);CS0419;IDE0017</NoWarn>
   </PropertyGroup>
 
@@ -16,6 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Vortice.D3D12MA.Native\Vortice.D3D12MA.Native.csproj" />
+    <ProjectReference Include="..\Vortice.Win32.Graphics.Direct3D12\Vortice.Win32.Graphics.Direct3D12.csproj" />
     <ProjectReference Include="..\Vortice.Win32.Graphics.Dxgi\Vortice.Win32.Graphics.Dxgi.csproj" />
   </ItemGroup>
 

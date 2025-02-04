@@ -349,7 +349,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DCOMPOSITION_FRAME_STATISTICS","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DCOMPOSITION_FRAME_STATISTICS","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2257,7 +2257,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DCOMPOSITION_FRAME_STATISTICS","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DCOMPOSITION_FRAME_STATISTICS","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4484,7 +4484,7 @@
 				,"Params":[
 					{"Name":"fenceValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["Out"]}
 					,{"Name":"iid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-					,{"Name":"availableFence","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+					,{"Name":"availableFence","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]
@@ -4645,7 +4645,7 @@
 			{"Name":"frameId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
 			,{"Name":"frameStats","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"COMPOSITION_FRAME_STATS","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"targetIdCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"targetIds","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"COMPOSITION_TARGET_ID","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"targetIds","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"COMPOSITION_TARGET_ID","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out","Optional"]}
 			,{"Name":"actualTargetIdCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 		]
 	}
@@ -4661,7 +4661,7 @@
 		,"Params":[
 			{"Name":"frameId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
 			,{"Name":"targetId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"COMPOSITION_TARGET_ID","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["In","Const"]}
-			,{"Name":"targetStats","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"COMPOSITION_TARGET_STATS","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"targetStats","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"COMPOSITION_TARGET_STATS","TargetKind":"Default","Api":"Graphics.DirectComposition","Parents":[]}},"Attrs":["Out","RetVal"]}
 		]
 	}
 	,{
